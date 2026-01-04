@@ -3,17 +3,39 @@ import type {VocabProgress, Vocabulary} from "../models/vocabulary.model.ts";
 import {CONSTANTS} from "../commons/constants.ts";
 
 export class SRSService {
-    static getAvailableVocabulary(knownKanjiCount: number, learnedWords: Set<string>): Vocabulary[] {
-        const knownKanji = SAMPLE_KANJI
-            .filter(k => k.kklcOrder <= knownKanjiCount)
-            .map(k => k.character);
+    static applyAnswer(
+        queue: VocabProgress[],
+        index: number,
+        isCorrect: boolean
+    ): { queue: VocabProgress[]; graduatedVocabId?: string } {
+        const [current, ...rest] = queue;
 
-        return SAMPLE_VOCABULARY
-            .filter(vocab => {
-                if (learnedWords.has(vocab.id)) return false;
-                return vocab.containedKanji.some(kanji => knownKanji.includes(kanji));
-            })
-            .sort((a, b) => a.frequency - b.frequency);
+        const updated = {
+            ...current,
+            correctCount: isCorrect
+                ? Math.min(current.correctCount + 1, CONSTANTS.srs.maximumAnswerPoints)
+                : CONSTANTS.srs.minimumAnswerPoints,
+            lastReviewed: new Date(),
+        };
+
+        if (updated.correctCount >= CONSTANTS.srs.maximumAnswerPoints) {
+            return {
+                queue: rest,
+                graduatedVocabId: current.vocabId,
+            };
+        }
+
+        return {
+            queue: [...rest, updated], // ALWAYS move to back
+        };
+    }
+
+    static cleanupAndRefill(
+        queue: VocabProgress[],
+        knownKanjiCount: number,
+        learnedWords: Set<string>
+    ): VocabProgress[] {
+        return this.fillQueue(queue, knownKanjiCount, learnedWords);
     }
 
     static fillQueue(
@@ -27,7 +49,9 @@ export class SRSService {
 
         const available = this.getAvailableVocabulary(knownKanjiCount, learnedWords)
             .filter(vocab => !activeIds.has(vocab.id));
+        console.debug('first before fill', queue[0].vocabId)
 
+        console.debug()
         while (queue.length < maxQueueSize && available.length > 0) {
             const vocab = available.shift()!;
             queue.push({
@@ -37,37 +61,21 @@ export class SRSService {
             });
         }
 
+        console.debug('first after fill', queue[0].vocabId)
+
         return queue;
     }
 
-    static handleAnswer(
-        vocabId: string,
-        isCorrect: boolean,
-        currentQueue: VocabProgress[]
-    ): { newQueue: VocabProgress[]; graduated: boolean } {
-        const queue = [...currentQueue];
-        const itemIndex = queue.findIndex(item => item.vocabId === vocabId);
+    private static getAvailableVocabulary(knownKanjiCount: number, learnedWords: Set<string>): Vocabulary[] {
+        const knownKanji = SAMPLE_KANJI
+            .filter(k => k.kklcOrder <= knownKanjiCount)
+            .map(k => k.character);
 
-        if (itemIndex === -1) {
-            return { newQueue: queue, graduated: false };
-        }
-
-        const item = { ...queue[itemIndex] };
-
-        if (isCorrect) {
-            item.correctCount = Math.min(item.correctCount + CONSTANTS.srs.correctAnswerPointModification, CONSTANTS.srs.maximumAnswerPoints);
-        } else {
-            item.correctCount = Math.max(item.correctCount + CONSTANTS.srs.incorrectAnswerPointModidication, CONSTANTS.srs.minimumAnswerPoints);
-        }
-
-        item.lastReviewed = new Date();
-
-        if (item.correctCount >= CONSTANTS.srs.maximumAnswerPoints) {
-            queue.splice(itemIndex, 1);
-            return { newQueue: queue, graduated: true };
-        }
-
-        queue[itemIndex] = item;
-        return { newQueue: queue, graduated: false };
+        return SAMPLE_VOCABULARY
+            .filter(vocab => {
+                if (learnedWords.has(vocab.id)) return false;
+                return vocab.containedKanji.some(kanji => knownKanji.includes(kanji));
+            })
+            .sort((a, b) => a.frequency - b.frequency);
     }
 }

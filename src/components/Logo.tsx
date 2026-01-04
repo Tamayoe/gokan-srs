@@ -23,8 +23,11 @@ export const Logo: React.FC<{ className?: string }> = ({ className = '' }) => (
     <div className={`flex items-center gap-3 ${className}`}>
         <LogoMark size={48} />
         <span
-            className="text-2xl font-serif tracking-wide"
-            style={{ color: THEME.colors.primary }}
+            className="text-2xl tracking-wide"
+            style={{
+                color: THEME.colors.primary,
+                fontFamily: THEME.fonts.serif,
+            }}
         >
       Gokan SRS
     </span>

@@ -6,12 +6,14 @@ export const CONSTANTS = {
     },
     quiz: {
         hiraganaAnswerPlaceholder: "ひらがな",
+        correctAnswerAutoAdvanceDelay: 1800,
+        incorrectAnswerRevealDelay: 400,
     },
     srs: {
         queueSize: 5,
         minimumAnswerPoints: 0,
         maximumAnswerPoints: 3,
         correctAnswerPointModification: 1,
-        incorrectAnswerPointModidication: -1
+        incorrectAnswerPointModification: -1
     }
 } as const;

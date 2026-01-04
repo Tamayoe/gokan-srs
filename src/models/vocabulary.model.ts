@@ -11,4 +11,5 @@ export interface VocabProgress {
     vocabId: string;
     correctCount: number;
     lastReviewed: Date;
+    graduated?: boolean;
 }

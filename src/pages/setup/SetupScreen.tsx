@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {THEME} from "../../commons/theme.ts";
 import {CONSTANTS} from "../../commons/constants.ts";
 import {Logo} from "../../components/Logo.tsx";
+import {FONT_IMPORTS} from "../../main.tsx";
 
 export const SetupScreen: React.FC<{ onComplete: (kanjiCount: number) => void }> = ({ onComplete }) => {
     const [kanjiCount, setKanjiCount] = useState<string>(CONSTANTS.setup.defaultKanjiCount);
@@ -24,12 +25,16 @@ export const SetupScreen: React.FC<{ onComplete: (kanjiCount: number) => void }>
             className="min-h-screen flex items-center justify-center p-8"
             style={{ backgroundColor: THEME.colors.background }}
         >
+            <style>{FONT_IMPORTS}</style>
             <div className="w-full max-w-lg">
                 <div className="text-center mb-16">
                     <Logo className="justify-center mb-6" />
                     <p
-                        className="font-sans text-sm"
-                        style={{ color: THEME.colors.secondary }}
+                        className="text-sm"
+                        style={{
+                            color: THEME.colors.secondary,
+                            fontFamily: THEME.fonts.serif,
+                        }}
                     >
                         A focused vocabulary learning system
                     </p>
@@ -45,8 +50,11 @@ export const SetupScreen: React.FC<{ onComplete: (kanjiCount: number) => void }>
                     <div>
                         <label
                             htmlFor="kanjiCount"
-                            className="block text-sm font-sans font-medium mb-3"
-                            style={{ color: THEME.colors.primary }}
+                            className="block text-sm font-medium mb-3"
+                            style={{
+                                color: THEME.colors.primary,
+                                fontFamily: THEME.fonts.serif,
+                            }}
                         >
                             Known kanji count (KKLC order)
                         </label>
@@ -58,18 +66,22 @@ export const SetupScreen: React.FC<{ onComplete: (kanjiCount: number) => void }>
                             value={kanjiCount}
                             onChange={(e) => setKanjiCount(e.target.value)}
                             onKeyPress={handleKeyPress}
-                            className="w-full px-4 py-3 border-2 rounded font-sans text-lg focus:outline-none transition-colors"
+                            className="w-full px-4 py-3 border-2 rounded text-lg focus:outline-none transition-colors"
                             style={{
                                 borderColor: THEME.colors.divider,
                                 color: THEME.colors.primary,
+                                fontFamily: THEME.fonts.serif,
                             }}
                             onFocus={(e) => e.target.style.borderColor = THEME.colors.accent}
                             onBlur={(e) => e.target.style.borderColor = THEME.colors.divider}
                             placeholder="e.g., 100"
                         />
                         <p
-                            className="mt-2 text-xs font-sans"
-                            style={{ color: THEME.colors.secondary }}
+                            className="mt-2 text-xs"
+                            style={{
+                                color: THEME.colors.secondary,
+                                fontFamily: THEME.fonts.serif,
+                            }}
                         >
                             Enter the number of kanji you have learned (1–2300)
                         </p>
@@ -77,10 +89,11 @@ export const SetupScreen: React.FC<{ onComplete: (kanjiCount: number) => void }>
 
                     <button
                         onClick={handleSubmit}
-                        className="w-full font-sans font-medium py-3 px-6 rounded transition-colors"
+                        className="w-full font-medium py-3 px-6 rounded transition-colors"
                         style={{
                             backgroundColor: THEME.colors.accent,
                             color: THEME.colors.surface,
+                            fontFamily: THEME.fonts.serif,
                         }}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = THEME.colors.accentHover}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = THEME.colors.accent}
@@ -90,8 +103,11 @@ export const SetupScreen: React.FC<{ onComplete: (kanjiCount: number) => void }>
                 </div>
 
                 <div
-                    className="mt-6 text-center text-xs font-sans"
-                    style={{ color: THEME.colors.secondary }}
+                    className="mt-6 text-center text-xs"
+                    style={{
+                        color: THEME.colors.secondary,
+                        fontFamily: THEME.fonts.serif,
+                    }}
                 >
                     Vocabulary is selected based on kanji you already know
                 </div>
