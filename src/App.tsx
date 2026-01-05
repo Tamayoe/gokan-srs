@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './App.css'
 import type {UserProgress} from "./models/user.model.ts";
 import {StorageService} from "./services/storage.service.ts";
@@ -17,20 +17,14 @@ type PendingAnswer = {
     isCorrect: boolean;
 };
 
-export default function App() {
-    const [isSetup, setIsSetup] = useState(true);
-    const [progress, setProgress] = useState<UserProgress | null>(null);
+export const App: React.FC<{
+    user: UserProgress | null
+}> = ({user}) => {
+    const [isSetup, setIsSetup] = useState(!!user);
+    const [progress, setProgress] = useState<UserProgress | null>(user);
     const [feedback, setFeedback] = useState<{ show: boolean; correct: boolean; message: string } | null>(null);
     const [pendingAnswer, setPendingAnswer] = useState<PendingAnswer | null>(null);
 
-    useEffect(() => {
-        const saved = StorageService.loadProgress();
-        if (saved) {
-            console.debug('progress updated by storage', saved.activeQueue)
-            setProgress(saved);
-            setIsSetup(false);
-        }
-    }, []);
 
     useEffect(() => {
         if (progress) {
@@ -89,8 +83,8 @@ export default function App() {
             setProgress(progress => {
                 if (!progress) return progress;
 
-                const { queue, graduatedVocabId } =
-                    SRSService.applyAnswer(progress.activeQueue, 0, prev.isCorrect);
+                const { queue, graduatedVocabId } = SRSService.applyAnswer(progress.activeQueue, 0, prev.isCorrect);
+                console.debug('queue points', queue.map((elem) => console.debug(elem.vocabId + ' -> ' + elem.correctCount)))
 
                 let learnedWords = progress.learnedWords;
                 let totalLearned = progress.stats.totalLearned;

@@ -26,7 +26,7 @@ export class SRSService {
         }
 
         return {
-            queue: [...rest, updated], // ALWAYS move to back
+            queue: [...rest, updated],
         };
     }
 
@@ -49,9 +49,6 @@ export class SRSService {
 
         const available = this.getAvailableVocabulary(knownKanjiCount, learnedWords)
             .filter(vocab => !activeIds.has(vocab.id));
-        console.debug('first before fill', queue[0].vocabId)
-
-        console.debug()
         while (queue.length < maxQueueSize && available.length > 0) {
             const vocab = available.shift()!;
             queue.push({
@@ -60,8 +57,6 @@ export class SRSService {
                 lastReviewed: new Date(),
             });
         }
-
-        console.debug('first after fill', queue[0].vocabId)
 
         return queue;
     }
