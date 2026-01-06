@@ -1,10 +1,12 @@
 export interface Vocabulary {
-    id: string;
-    kanji: string;
-    reading: string;
-    meaning: string;
-    frequency: number;
+    id: string;               // JMdict ID
+    kanji: string;            // primary written form
+    reading: string;          // primary kana
+    meanings: string[];       // multiple glosses
+    frequency?: number;       // JPDB rank (lower = more frequent)
+    hiraganaFrequency?: number;
     containedKanji: string[];
+    pos?: string[];           // parts of speech
 }
 
 export interface VocabProgress {

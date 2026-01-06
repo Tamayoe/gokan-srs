@@ -51,6 +51,10 @@ export const QuizCard: React.FC<{
         onContinue();
     };
 
+    if (!vocabulary) {
+        return <div>Loading…</div>;
+    }
+
     return (
         <form
             onSubmit={(e) => {

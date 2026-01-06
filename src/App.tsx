@@ -12,6 +12,8 @@ import {QuizCard} from "./pages/quiz/QuizCard.tsx";
 import {QuizService} from "./services/quiz.service.ts";
 import {CONSTANTS} from "./commons/constants.ts";
 import {FONT_IMPORTS} from "./main.tsx";
+import {VocabularyService} from "./services/vocabulary.service.ts";
+import type {Vocabulary} from "./models/vocabulary.model.ts";
 
 type PendingAnswer = {
     isCorrect: boolean;
@@ -24,6 +26,7 @@ export const App: React.FC<{
     const [progress, setProgress] = useState<UserProgress | null>(user);
     const [feedback, setFeedback] = useState<{ show: boolean; correct: boolean; message: string } | null>(null);
     const [pendingAnswer, setPendingAnswer] = useState<PendingAnswer | null>(null);
+    const [currentVocab, setCurrentVocab] = useState<Vocabulary | null>(null);
 
 
     useEffect(() => {
@@ -32,7 +35,18 @@ export const App: React.FC<{
         }
     }, [progress]);
 
-    const handleSetupComplete = (kanjiCount: number) => {
+    useEffect(() => {
+        if (!progress || progress.activeQueue.length === 0) {
+            setCurrentVocab(null);
+            return;
+        }
+
+        const id = progress.activeQueue[0].vocabId;
+
+        VocabularyService.loadVocab(id).then(setCurrentVocab);
+    }, [progress?.activeQueue]);
+
+    const handleSetupComplete = async (kanjiCount: number) => {
         const newProgress: UserProgress = {
             knownKanjiCount: kanjiCount,
             activeQueue: [],
@@ -43,7 +57,7 @@ export const App: React.FC<{
             },
         };
 
-        newProgress.activeQueue = SRSService.fillQueue(
+        newProgress.activeQueue = await SRSService.fillQueue(
             newProgress.activeQueue,
             newProgress.knownKanjiCount,
             newProgress.learnedWords
@@ -53,13 +67,12 @@ export const App: React.FC<{
     };
 
     const handleAnswer = (answer: string) => {
-        if (!progress || feedback) return;
+        if (!progress || !currentVocab || feedback) return;
 
-        const current = progress.activeQueue[0];
-        const vocab = SAMPLE_VOCABULARY.find(v => v.id === current.vocabId);
-        if (!vocab) return;
-
-        const isCorrect = QuizService.validateAnswer(answer, vocab.reading);
+        const isCorrect = QuizService.validateAnswer(
+            answer,
+            currentVocab.reading
+        );
 
         setPendingAnswer({ isCorrect });
 
@@ -70,53 +83,48 @@ export const App: React.FC<{
         });
 
         if (isCorrect) {
-            setTimeout(() => {
-                handleContinue();
-            }, CONSTANTS.quiz.correctAnswerAutoAdvanceDelay);
+            setTimeout(handleContinue, CONSTANTS.quiz.correctAnswerAutoAdvanceDelay);
         }
     };
 
-    const handleContinue = () => {
-        setPendingAnswer(prev => {
-            if (!prev) return null; // already handled → do nothing
+    const handleContinue = async () => {
+        if (!pendingAnswer || !progress) return;
 
-            setProgress(progress => {
-                if (!progress) return progress;
+        const { isCorrect } = pendingAnswer;
 
-                const { queue, graduatedVocabId } = SRSService.applyAnswer(progress.activeQueue, 0, prev.isCorrect);
-                console.debug('queue points', queue.map((elem) => console.debug(elem.vocabId + ' -> ' + elem.correctCount)))
+        const { queue, graduatedVocabId } = SRSService.applyAnswer(
+            progress.activeQueue,
+            0,
+            isCorrect
+        );
 
-                let learnedWords = progress.learnedWords;
-                let totalLearned = progress.stats.totalLearned;
+        let learnedWords = progress.learnedWords;
+        let totalLearned = progress.stats.totalLearned;
 
-                if (graduatedVocabId) {
-                    learnedWords = new Set(progress.learnedWords);
-                    learnedWords.add(graduatedVocabId);
-                    totalLearned += 1;
-                }
+        if (graduatedVocabId) {
+            learnedWords = new Set(progress.learnedWords);
+            learnedWords.add(graduatedVocabId);
+            totalLearned += 1;
+        }
 
-                const cleanedQueue = SRSService.cleanupAndRefill(
-                    queue,
-                    progress.knownKanjiCount,
-                    learnedWords
-                );
+        const filledQueue = await SRSService.cleanupAndRefill(
+            queue,
+            progress.knownKanjiCount,
+            learnedWords
+        );
 
-                return {
-                    ...progress,
-                    activeQueue: cleanedQueue,
-                    learnedWords,
-                    stats: {
-                        ...progress.stats,
-                        totalReviews: progress.stats.totalReviews + 1,
-                        totalLearned,
-                    },
-                };
-            });
-
-            return null; // consume the pending answer
+        setProgress({
+            ...progress,
+            activeQueue: filledQueue,
+            learnedWords,
+            stats: {
+                ...progress.stats,
+                totalReviews: progress.stats.totalReviews + 1,
+                totalLearned,
+            },
         });
 
-        console.debug('set feedback null')
+        setPendingAnswer(null);
         setFeedback(null);
     };
 
@@ -182,7 +190,6 @@ export const App: React.FC<{
     }
 
     const currentProgress = progress.activeQueue[0]
-    const currentVocab = SAMPLE_VOCABULARY.find(v => v.id === currentProgress.vocabId);
 
     if (!currentVocab) return null;
 
