@@ -1,6 +1,9 @@
 export interface Kanji {
     character: string;
-    kklcOrder: number;
-    jlptLevel?: number;
-    frequency?: number;
+    steps: {
+        kklc?: number;
+        jlpt?: number;
+        frequency?: number;
+    };
+    frequency?: number; // JPDB kanji frequency
 }

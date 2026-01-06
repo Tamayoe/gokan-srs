@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:data": "bun scripts/build-kanji.ts && bun scripts/build-vocabulary.ts",
+    "build:kanji": "bun scripts/build-kanji.ts",
+    "build:vocab": "bun scripts/build-vocabulary.ts"
   },
   "dependencies": {
     "react": "^19.2.0",
