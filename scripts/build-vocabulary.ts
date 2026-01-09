@@ -4,8 +4,9 @@ import type { Vocabulary } from '../src/models/vocabulary.model';
 import { parseJPDBEntry } from './common';
 import { BUILD_LIMITS } from './constants';
 import type { Kanji } from '../src/models/kanji.model';
+import { JMDict } from "../src/models/data.model";
 
-const jmdict = JSON.parse(fs.readFileSync('./data/raw/jmdict.json', 'utf-8'));
+const jmdict: JMDict = JSON.parse(fs.readFileSync('./data/raw/jmdict.json', 'utf-8'));
 const jpdb = JSON.parse(fs.readFileSync('./data/raw/jpdb_v2.json', 'utf-8'));
 const kanjiData: Kanji[] = JSON.parse(
     fs.readFileSync('./data/compiled/kanji.json', 'utf-8'),
@@ -28,8 +29,14 @@ const allVocabulary: (Vocabulary & { kklcStep: number })[] = [];
 for (const entry of jmdict.words) {
     if (!entry.kanji.length || !entry.kana.length) continue;
 
-    const kanjiForm = entry.kanji[0].text;
-    const reading = entry.kana[0].text;
+    const kanji = entry.kanji.find((k) => k.common && k.text)
+
+    if (!kanji) {
+        continue;
+    }
+
+    const kanjiForm = kanji.text;
+    const readings = entry.kana.filter(k => k.common && k.appliesToKanji.includes("*")).map((k) => k.text);
     const containedKanji = extractKanji(kanjiForm);
 
     if (!containedKanji.length) continue;
@@ -49,7 +56,7 @@ for (const entry of jmdict.words) {
     allVocabulary.push({
         id: entry.id,
         kanji: kanjiForm,
-        reading,
+        readings,
         meanings: entry.sense.flatMap((s: any) =>
             s.gloss.map((g: any) => g.text),
         ),
@@ -66,12 +73,21 @@ const selected = allVocabulary
     .sort((a, b) => a.frequency - b.frequency)
     .slice(0, BUILD_LIMITS.MAX_VOCABULARY);
 
+console.debug('selected', selected.filter(s => s.kanji === '二'))
+
 // Ensure output dirs
 fs.mkdirSync('./data/compiled/vocab', { recursive: true });
 fs.mkdirSync('./data/compiled/index', { recursive: true });
 
-// Build KKLC index
+// Build KKLC index (step-by-step mode)
 const kklcIndex: Record<number, string[]> = {};
+
+// Build frequency index (frequency mode)
+interface FrequencyIndexEntry {
+    id: string;
+    containedKanji: string[];
+}
+const frequencyIndex: FrequencyIndexEntry[] = [];
 
 for (const vocab of selected) {
     const { kklcStep, ...clean } = vocab;
@@ -82,23 +98,37 @@ for (const vocab of selected) {
         JSON.stringify(clean, null, 2),
     );
 
+    // Add to KKLC step index
     if (!kklcIndex[kklcStep]) {
         kklcIndex[kklcStep] = [];
     }
-
     kklcIndex[kklcStep].push(vocab.id);
+
+    // Add to frequency index (already sorted by frequency)
+    frequencyIndex.push({
+        id: vocab.id,
+        containedKanji: vocab.containedKanji,
+    });
 }
 
-// Sort index entries by frequency order (already sorted globally)
-for (const step in kklcIndex) {
-    kklcIndex[step] = kklcIndex[step];
-}
-
+// Write KKLC step index
 fs.writeFileSync(
     './data/compiled/index/kklc.json',
     JSON.stringify(kklcIndex, null, 2),
 );
 
+// Write frequency index
+fs.writeFileSync(
+    './data/compiled/index/frequency.json',
+    JSON.stringify(frequencyIndex, null, 2),
+);
+
 console.log(
-    `✅ Built ${selected.length} vocab entries (KKLC-indexed)`,
+    `✅ Built ${selected.length} vocab entries`,
+);
+console.log(
+    `   - KKLC index: ${Object.keys(kklcIndex).length} steps`,
+);
+console.log(
+    `   - Frequency index: ${frequencyIndex.length} words (sorted by frequency)`,
 );

@@ -1,18 +1,17 @@
-import type {UserProgress} from "../models/user.model.ts";
+import type {UserProgress, UserSettings} from "../models/user.model.ts";
+import {CONSTANTS} from "../commons/constants.ts";
 
 export class StorageService {
-    private static readonly STORAGE_KEY = 'gokan-srs-progress';
-
     static saveProgress(progress: UserProgress): void {
         const serialized = {
             ...progress,
             learnedWords: Array.from(progress.learnedWords),
         };
-        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(serialized));
+        localStorage.setItem(CONSTANTS.storage.progressStorageKey, JSON.stringify(serialized));
     }
 
     static loadProgress(): UserProgress | null {
-        const stored = localStorage.getItem(this.STORAGE_KEY);
+        const stored = localStorage.getItem(CONSTANTS.storage.progressStorageKey);
         if (!stored) return null;
 
         const parsed = JSON.parse(stored);
@@ -27,6 +26,24 @@ export class StorageService {
     }
 
     static clearProgress(): void {
-        localStorage.removeItem(this.STORAGE_KEY);
+        localStorage.removeItem(CONSTANTS.storage.progressStorageKey);
+    }
+
+    static saveSettings(settings: UserSettings): void {
+        const serialized = {
+            ...settings,
+        };
+        localStorage.setItem(CONSTANTS.storage.settingsStorageKey, JSON.stringify(serialized));
+    }
+
+    static loadSettings(): UserSettings | null {
+        const stored = localStorage.getItem(CONSTANTS.storage.settingsStorageKey);
+        if (!stored) return null;
+
+        return JSON.parse(stored);
+    }
+
+    static clearSettings(): void {
+        localStorage.removeItem(CONSTANTS.storage.settingsStorageKey);
     }
 }

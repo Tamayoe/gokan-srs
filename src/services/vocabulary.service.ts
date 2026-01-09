@@ -1,17 +1,35 @@
 // src/services/VocabularyLoader.ts
 import type { Vocabulary } from '../models/vocabulary.model';
-import type { StepIndex } from '../models/index.model';
+import type {FrequencyIndex, KKLCIndex, KKLCKanjiIndex} from '../models/index.model';
 
 export class VocabularyService {
-    private static kklcIndex: StepIndex | null = null;
+    private static kklcIndex: KKLCIndex | null = null;
+    private static kklcKanjiIndex: KKLCKanjiIndex | null = null;
+    private static frequencyIndex: FrequencyIndex | null = null;
     private static vocabCache = new Map<string, Vocabulary>();
 
-    static async loadKKLCIndex(): Promise<StepIndex | null> {
+    static async loadKKLCKanjiIndex(): Promise<KKLCKanjiIndex | null> {
+        if (this.kklcKanjiIndex) return this.kklcKanjiIndex;
+
+        const mod = await import('../../data/compiled/index/kklc-kanji.json');
+        this.kklcKanjiIndex = mod.default;
+        return this.kklcKanjiIndex;
+    }
+
+    static async loadKKLCIndex(): Promise<KKLCIndex | null> {
         if (this.kklcIndex) return this.kklcIndex;
 
         const mod = await import('../../data/compiled/index/kklc.json');
         this.kklcIndex = mod.default;
         return this.kklcIndex;
+    }
+
+    static async loadFrequencyIndex(): Promise<FrequencyIndex | null> {
+        if (this.frequencyIndex) return this.frequencyIndex;
+
+        const mod = await import('../../data/compiled/index/frequency.json');
+        this.frequencyIndex = mod.default;
+        return this.frequencyIndex;
     }
 
     static async loadVocab(id: string): Promise<Vocabulary> {
@@ -22,9 +40,5 @@ export class VocabularyService {
         const mod = await import(`../../data/compiled/vocab/${id}.json`);
         this.vocabCache.set(id, mod.default);
         return mod.default;
-    }
-
-    static async loadMany(ids: string[]): Promise<Vocabulary[]> {
-        return Promise.all(ids.map(id => this.loadVocab(id)));
     }
 }

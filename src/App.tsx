@@ -1,145 +1,27 @@
-import React, {useEffect, useState} from 'react'
-import './App.css'
-import type {UserProgress} from "./models/user.model.ts";
-import {StorageService} from "./services/storage.service.ts";
-import {SRSService} from "./services/srs.service.ts";
-import {SAMPLE_VOCABULARY} from "./assets/mock.ts";
-import {SetupScreen} from "./pages/setup/SetupScreen.tsx";
-import {THEME} from "./commons/theme.ts";
-import {Logo} from "./components/Logo.tsx";
-import {ProgressBar} from "./components/ProgressBar.tsx";
-import {QuizCard} from "./pages/quiz/QuizCard.tsx";
-import {QuizService} from "./services/quiz.service.ts";
-import {CONSTANTS} from "./commons/constants.ts";
-import {FONT_IMPORTS} from "./main.tsx";
-import {VocabularyService} from "./services/vocabulary.service.ts";
-import type {Vocabulary} from "./models/vocabulary.model.ts";
+import React from 'react';
+import './App.css';
+import { SetupScreen } from './pages/setup/SetupScreen';
+import { THEME } from './commons/theme';
+import { Logo } from './components/Logo';
+import { ProgressBar } from './components/ProgressBar';
+import { QuizCard } from './pages/quiz/QuizCard';
+import { FONT_IMPORTS } from './main';
+import {useQuiz} from "./context/QuizContext.tsx";
 
-type PendingAnswer = {
-    isCorrect: boolean;
-};
+// ============================================================================
+// ULTRA-SIMPLE APP - Just routing between screens
+// ============================================================================
 
-export const App: React.FC<{
-    user: UserProgress | null
-}> = ({user}) => {
-    const [isSetup, setIsSetup] = useState(!!user);
-    const [progress, setProgress] = useState<UserProgress | null>(user);
-    const [feedback, setFeedback] = useState<{ show: boolean; correct: boolean; message: string } | null>(null);
-    const [pendingAnswer, setPendingAnswer] = useState<PendingAnswer | null>(null);
-    const [currentVocab, setCurrentVocab] = useState<Vocabulary | null>(null);
+export const App: React.FC = () => {
+    const { state, actions } = useQuiz();
 
-
-    useEffect(() => {
-        if (progress) {
-            StorageService.saveProgress(progress);
-        }
-    }, [progress]);
-
-    useEffect(() => {
-        if (!progress || progress.activeQueue.length === 0) {
-            setCurrentVocab(null);
-            return;
-        }
-
-        const id = progress.activeQueue[0].vocabId;
-
-        VocabularyService.loadVocab(id).then(setCurrentVocab);
-    }, [progress?.activeQueue]);
-
-    const handleSetupComplete = async (kanjiCount: number) => {
-        const newProgress: UserProgress = {
-            knownKanjiCount: kanjiCount,
-            activeQueue: [],
-            learnedWords: new Set(),
-            stats: {
-                totalLearned: 0,
-                totalReviews: 0,
-            },
-        };
-
-        newProgress.activeQueue = await SRSService.fillQueue(
-            newProgress.activeQueue,
-            newProgress.knownKanjiCount,
-            newProgress.learnedWords
-        );
-        setProgress(newProgress);
-        setIsSetup(false);
-    };
-
-    const handleAnswer = (answer: string) => {
-        if (!progress || !currentVocab || feedback) return;
-
-        const isCorrect = QuizService.validateAnswer(
-            answer,
-            currentVocab.reading
-        );
-
-        setPendingAnswer({ isCorrect });
-
-        setFeedback({
-            show: true,
-            correct: isCorrect,
-            message: isCorrect ? 'Correct.' : 'Incorrect.',
-        });
-
-        if (isCorrect) {
-            setTimeout(handleContinue, CONSTANTS.quiz.correctAnswerAutoAdvanceDelay);
-        }
-    };
-
-    const handleContinue = async () => {
-        if (!pendingAnswer || !progress) return;
-
-        const { isCorrect } = pendingAnswer;
-
-        const { queue, graduatedVocabId } = SRSService.applyAnswer(
-            progress.activeQueue,
-            0,
-            isCorrect
-        );
-
-        let learnedWords = progress.learnedWords;
-        let totalLearned = progress.stats.totalLearned;
-
-        if (graduatedVocabId) {
-            learnedWords = new Set(progress.learnedWords);
-            learnedWords.add(graduatedVocabId);
-            totalLearned += 1;
-        }
-
-        const filledQueue = await SRSService.cleanupAndRefill(
-            queue,
-            progress.knownKanjiCount,
-            learnedWords
-        );
-
-        setProgress({
-            ...progress,
-            activeQueue: filledQueue,
-            learnedWords,
-            stats: {
-                ...progress.stats,
-                totalReviews: progress.stats.totalReviews + 1,
-                totalLearned,
-            },
-        });
-
-        setPendingAnswer(null);
-        setFeedback(null);
-    };
-
-    const handleReset = () => {
-        StorageService.clearProgress();
-        setProgress(null);
-        setIsSetup(true);
-        setFeedback(null);
-    };
-
-    if (isSetup) {
-        return <SetupScreen onComplete={handleSetupComplete} />;
+    // Setup screen
+    if (!state.isSetupComplete) {
+        return <SetupScreen onComplete={actions.setupComplete} />;
     }
 
-    if (!progress || progress.activeQueue.length === 0) {
+    // No vocabulary available
+    if (!state.progress || state.progress.activeQueue.length === 0) {
         return (
             <div
                 className="min-h-screen flex items-center justify-center p-8"
@@ -150,7 +32,7 @@ export const App: React.FC<{
                     className="border rounded p-8 max-w-md w-full text-center"
                     style={{
                         backgroundColor: THEME.colors.surface,
-                        borderColor: THEME.colors.divider
+                        borderColor: THEME.colors.divider,
                     }}
                 >
                     <h2
@@ -172,15 +54,19 @@ export const App: React.FC<{
                         No more words available for your current kanji level.
                     </p>
                     <button
-                        onClick={handleReset}
+                        onClick={actions.reset}
                         className="font-medium py-2 px-6 rounded transition-colors"
                         style={{
                             backgroundColor: THEME.colors.accent,
                             color: THEME.colors.surface,
                             fontFamily: THEME.fonts.serif,
                         }}
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = THEME.colors.accentHover}
-                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = THEME.colors.accent}
+                        onMouseEnter={(e) =>
+                            (e.currentTarget.style.backgroundColor = THEME.colors.accentHover)
+                        }
+                        onMouseLeave={(e) =>
+                            (e.currentTarget.style.backgroundColor = THEME.colors.accent)
+                        }
                     >
                         Reset progress
                     </button>
@@ -189,44 +75,52 @@ export const App: React.FC<{
         );
     }
 
-    const currentProgress = progress.activeQueue[0]
+    // Loading vocabulary
+    if (state.isLoadingVocab || !state.currentVocab) {
+        return (
+            <div
+                className="min-h-screen flex items-center justify-center"
+                style={{ backgroundColor: THEME.colors.background }}
+            >
+                <style>{FONT_IMPORTS}</style>
+                <div style={{ color: THEME.colors.secondary }}>Loading vocabulary...</div>
+            </div>
+        );
+    }
 
-    if (!currentVocab) return null;
-
+    // Main quiz screen
     return (
         <div
             className="min-h-screen flex flex-col items-center justify-center p-8"
             style={{ backgroundColor: THEME.colors.background }}
         >
             <style>{FONT_IMPORTS}</style>
+
             <div className="absolute top-6 left-6">
                 <Logo />
             </div>
 
             <div className="absolute top-6 right-6">
                 <button
-                    onClick={handleReset}
+                    onClick={actions.reset}
                     className="text-xs transition-colors"
                     style={{
                         color: THEME.colors.secondary,
                         fontFamily: THEME.fonts.gothic,
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = THEME.colors.primary}
-                    onMouseLeave={(e) => e.currentTarget.style.color = THEME.colors.secondary}
+                    onMouseEnter={(e) =>
+                        (e.currentTarget.style.color = THEME.colors.primary)
+                    }
+                    onMouseLeave={(e) =>
+                        (e.currentTarget.style.color = THEME.colors.secondary)
+                    }
                 >
                     Reset
                 </button>
             </div>
 
-            <ProgressBar progress={progress} />
-
-            <QuizCard
-                vocabulary={currentVocab}
-                progress={currentProgress}
-                onSubmit={handleAnswer}
-                onContinue={handleContinue}
-                feedback={feedback}
-            />
+            <ProgressBar progress={state.progress} />
+            <QuizCard />
         </div>
     );
-}
+};
