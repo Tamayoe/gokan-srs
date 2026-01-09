@@ -24,10 +24,27 @@ for (const group of kklc) {
         }
     }
 }
-
-const kanji = Array.from(kanjiMap.values());
+const kanjis = Array.from(kanjiMap.values());
 
 fs.writeFileSync(
     './data/compiled/kanji.json',
-    JSON.stringify(kanji, null, 2),
+    JSON.stringify(kanjis, null, 2),
+);
+
+const kklcKanjiIndex: Record<number, string[]> = {};
+
+for (const kanji of kanjiMap.values()) {
+    const step = kanji.steps.kklc;
+    if (!step) continue;
+
+    if (!kklcKanjiIndex[step]) {
+        kklcKanjiIndex[step] = [];
+    }
+
+    kklcKanjiIndex[step].push(kanji.character);
+}
+
+fs.writeFileSync(
+    './data/compiled/index/kklc-kanji.json',
+    JSON.stringify(kklcKanjiIndex, null, 2),
 );

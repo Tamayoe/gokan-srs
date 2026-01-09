@@ -1,22 +1,68 @@
-import React, {useState} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import {THEME} from "../../commons/theme.ts";
 import {CONSTANTS} from "../../commons/constants.ts";
-import {Logo} from "../../components/Logo.tsx";
+import {VocabularyService} from "../../services/vocabulary.service.ts";
+import type {
+    KanjiKnowledge,
+    KanjiLearningMethod,
+    LearningOrder,
+    UserProgress,
+    UserSettings
+} from "../../models/user.model.ts";
+import {KanjiField} from "../../components/KanjiField.tsx";
+import {OptionGrid} from "../../components/OptionGrid.tsx";
+import {KanjiCountInput} from "../../components/KanjiCountInput.tsx";
+import {SetupHeader} from "../../components/SetupHeader.tsx";
 import {FONT_IMPORTS} from "../../main.tsx";
 
-export const SetupScreen: React.FC<{ onComplete: (kanjiCount: number) => void }> = ({ onComplete }) => {
-    const [kanjiCount, setKanjiCount] = useState<string>(CONSTANTS.setup.defaultKanjiCount);
+export function SetupScreen({ onComplete }) {
+    const [kanjiCount, setKanjiCount] = useState(
+        Number(CONSTANTS.setup.defaultKanjiCount)
+    );
+    const [allKanji, setAllKanji] = useState<string[]>([]);
+    const [kanjiMethod, setKanjiMethod] = useState<'kklc'>('kklc');
+    const [learningOrder, setLearningOrder] = useState<LearningOrder>('frequency');
+
+    useEffect(() => {
+        let cancelled = false;
+
+        VocabularyService.loadKKLCKanjiIndex().then(index => {
+            if (!index || cancelled) return;
+
+            const kanji: string[] = [];
+            for (let i = 1; i <= Object.keys(index).length; i++) {
+                kanji.push(...(index[i] ?? []));
+            }
+
+            setAllKanji(kanji);
+        });
+
+        return () => {
+            cancelled = true;
+        };
+    }, []);
+
+    const knownKanji = useMemo(
+        () => allKanji.slice(0, kanjiCount),
+        [allKanji, kanjiCount]
+    );
 
     const handleSubmit = () => {
-        const count = parseInt(kanjiCount, 10);
-        if (count > CONSTANTS.setup.minimumKanjiCount && count <= CONSTANTS.setup.maximumKanjiCount) {
-            onComplete(count);
-        }
-    };
-
-    const handleKeyPress = (e: React.KeyboardEvent) => {
-        if (e.key === 'Enter') {
-            handleSubmit();
+        if (
+            kanjiCount >= CONSTANTS.setup.minimumKanjiCount &&
+            kanjiCount <= CONSTANTS.setup.maximumKanjiCount
+        ) {
+            const values: SetupValues = {
+                kanjiKnowledge: {
+                    method: kanjiMethod,
+                    step: kanjiCount,
+                    kanjiSet: new Set(knownKanji),
+                },
+                settings: {
+                    preferredLearningOrder: learningOrder,
+                }
+            }
+            onComplete(values);
         }
     };
 
@@ -26,92 +72,64 @@ export const SetupScreen: React.FC<{ onComplete: (kanjiCount: number) => void }>
             style={{ backgroundColor: THEME.colors.background }}
         >
             <style>{FONT_IMPORTS}</style>
-            <div className="w-full max-w-lg">
-                <div className="text-center mb-16">
-                    <Logo className="justify-center mb-6" />
-                    <p
-                        className="text-sm"
-                        style={{
-                            color: THEME.colors.secondary,
-                            fontFamily: THEME.fonts.serif,
-                        }}
-                    >
-                        A focused vocabulary learning system
-                    </p>
-                </div>
+            <div className="max-w-3xl mx-auto p-8 space-y-12">
+                <SetupHeader />
 
-                <div
-                    className="border rounded p-8 space-y-6"
-                    style={{
-                        backgroundColor: THEME.colors.surface,
-                        borderColor: THEME.colors.divider
-                    }}
-                >
-                    <div>
-                        <label
-                            htmlFor="kanjiCount"
-                            className="block text-sm font-medium mb-3"
-                            style={{
-                                color: THEME.colors.primary,
-                                fontFamily: THEME.fonts.serif,
-                            }}
-                        >
-                            Known kanji count (KKLC order)
-                        </label>
-                        <input
-                            id="kanjiCount"
-                            type="number"
-                            min="1"
-                            max="2300"
-                            value={kanjiCount}
-                            onChange={(e) => setKanjiCount(e.target.value)}
-                            onKeyPress={handleKeyPress}
-                            className="w-full px-4 py-3 border-2 rounded text-lg focus:outline-none transition-colors"
-                            style={{
-                                borderColor: THEME.colors.divider,
-                                color: THEME.colors.primary,
-                                fontFamily: THEME.fonts.serif,
-                            }}
-                            onFocus={(e) => e.target.style.borderColor = THEME.colors.accent}
-                            onBlur={(e) => e.target.style.borderColor = THEME.colors.divider}
-                            placeholder="e.g., 100"
-                        />
-                        <p
-                            className="mt-2 text-xs"
-                            style={{
-                                color: THEME.colors.secondary,
-                                fontFamily: THEME.fonts.serif,
-                            }}
-                        >
-                            Enter the number of kanji you have learned (1–2300)
-                        </p>
-                    </div>
+                <OptionGrid
+                    title="Kanji learning method"
+                    value={kanjiMethod}
+                    onChange={setKanjiMethod}
+                    options={[
+                        {
+                            value: 'kklc',
+                            label: 'KKLC',
+                            description: 'Traditional school-based order',
+                        },
+                    ]}
+                />
 
+                <KanjiCountInput
+                    kanjiCount={kanjiCount}
+                    setKanjiCount={setKanjiCount}
+                />
+
+                <KanjiField
+                    allKanji={allKanji}
+                    knownKanjiSet={new Set(knownKanji)}
+                />
+
+                <OptionGrid
+                    title="Vocabulary order"
+                    value={learningOrder}
+                    onChange={setLearningOrder}
+                    options={[
+                        {
+                            value: 'frequency',
+                            label: 'Frequency',
+                            description: 'Most common words first',
+                        },
+                        {
+                            value: 'kklc',
+                            label: 'By Kanji',
+                            description: 'Follow kanji progression',
+                        },
+                    ]}
+                />
+
+                <footer className="pt-4">
                     <button
                         onClick={handleSubmit}
-                        className="w-full font-medium py-3 px-6 rounded transition-colors"
+                        className="w-full rounded-lg py-4 text-lg transition-colors"
                         style={{
                             backgroundColor: THEME.colors.accent,
                             color: THEME.colors.surface,
                             fontFamily: THEME.fonts.serif,
                         }}
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = THEME.colors.accentHover}
-                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = THEME.colors.accent}
                     >
-                        Begin
+                        Start learning
                     </button>
-                </div>
-
-                <div
-                    className="mt-6 text-center text-xs"
-                    style={{
-                        color: THEME.colors.secondary,
-                        fontFamily: THEME.fonts.serif,
-                    }}
-                >
-                    Vocabulary is selected based on kanji you already know
-                </div>
+                </footer>
             </div>
         </div>
     );
-};
+}

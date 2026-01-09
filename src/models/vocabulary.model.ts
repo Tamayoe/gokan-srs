@@ -1,7 +1,7 @@
 export interface Vocabulary {
     id: string;               // JMdict ID
     kanji: string;            // primary written form
-    reading: string;          // primary kana
+    readings: string[];          // primary kana
     meanings: string[];       // multiple glosses
     frequency?: number;       // JPDB rank (lower = more frequent)
     hiraganaFrequency?: number;

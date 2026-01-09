@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import {StorageService} from "./services/storage.service.ts";
 import {App} from "./App.tsx";
+import { QuizProvider } from "./context/QuizContext.tsx"
 
 
 // Import Google Fonts
@@ -13,7 +13,9 @@ export const FONT_IMPORTS = `
 `;
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App user={StorageService.loadProgress()}/>
-  </StrictMode>,
-)
+    <StrictMode>
+        <QuizProvider>
+            <App />
+        </QuizProvider>
+    </StrictMode>
+);

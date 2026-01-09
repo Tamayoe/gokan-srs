@@ -1,6 +1,8 @@
-import {SAMPLE_KANJI, SAMPLE_VOCABULARY} from "../assets/mock.ts";
-import type {VocabProgress, Vocabulary} from "../models/vocabulary.model.ts";
-import {CONSTANTS} from "../commons/constants.ts";
+// src/services/SRSService.ts
+import type { VocabProgress } from '../models/vocabulary.model';
+import { CONSTANTS } from '../commons/constants';
+import {VocabularyService} from "./vocabulary.service.ts";
+import type {KanjiKnowledge, UserSettings} from "../models/user.model.ts";
 
 export class SRSService {
     static applyAnswer(
@@ -10,10 +12,13 @@ export class SRSService {
     ): { queue: VocabProgress[]; graduatedVocabId?: string } {
         const [current, ...rest] = queue;
 
-        const updated = {
+        const updated: VocabProgress = {
             ...current,
             correctCount: isCorrect
-                ? Math.min(current.correctCount + 1, CONSTANTS.srs.maximumAnswerPoints)
+                ? Math.min(
+                    current.correctCount + 1,
+                    CONSTANTS.srs.maximumAnswerPoints,
+                )
                 : CONSTANTS.srs.minimumAnswerPoints,
             lastReviewed: new Date(),
         };
@@ -30,47 +35,110 @@ export class SRSService {
         };
     }
 
-    static cleanupAndRefill(
+    static async cleanupAndRefill(
         queue: VocabProgress[],
-        knownKanjiCount: number,
-        learnedWords: Set<string>
-    ): VocabProgress[] {
-        return this.fillQueue(queue, knownKanjiCount, learnedWords);
+        kanjiKnowledge: KanjiKnowledge,
+        learnedWords: Set<string>,
+        settings: UserSettings,
+    ): Promise<VocabProgress[]> {
+        return this.fillQueue(queue, kanjiKnowledge, learnedWords, settings);
     }
 
-    static fillQueue(
+    static async fillQueue(
         currentQueue: VocabProgress[],
-        knownKanjiCount: number,
+        kanjiKnowledge: KanjiKnowledge,
+        learnedWords: Set<string>,
+        settings: UserSettings,
+        maxQueueSize: number = CONSTANTS.srs.queueSize
+    ): Promise<VocabProgress[]> {
+        const queue = [...currentQueue];
+
+        switch (settings.preferredLearningOrder) {
+            case "kklc":
+                if (kanjiKnowledge.method !== 'kklc') {
+                    throw Error('Cannot use KKLC Vocabulary method without KKLC Kanji knowledge')
+                }
+                return this.fillQueueWithKKLC(
+                queue,
+                kanjiKnowledge.step,
+                learnedWords,
+                maxQueueSize,
+            );
+            case "frequency": return this.fillQueueWithFrequency(
+                queue,
+                kanjiKnowledge,
+                learnedWords,
+                maxQueueSize,
+            );
+        }
+    }
+
+    private static async fillQueueWithKKLC(
+        queue: VocabProgress[],
+        kklcKanjiStep: number,
         learnedWords: Set<string>,
         maxQueueSize: number = CONSTANTS.srs.queueSize
-    ): VocabProgress[] {
-        const queue = [...currentQueue];
-        const activeIds = new Set(queue.map(item => item.vocabId));
+    ) {
+        const activeIds = new Set(queue.map(q => q.vocabId));
+        const index = await VocabularyService.loadKKLCIndex();
 
-        const available = this.getAvailableVocabulary(knownKanjiCount, learnedWords)
-            .filter(vocab => !activeIds.has(vocab.id));
-        while (queue.length < maxQueueSize && available.length > 0) {
-            const vocab = available.shift()!;
-            queue.push({
-                vocabId: vocab.id,
-                correctCount: CONSTANTS.srs.minimumAnswerPoints,
-                lastReviewed: new Date(),
-            });
+        // Iterate steps progressively
+        for (let step = 1; step <= kklcKanjiStep; step++) {
+            const ids = index ? index[step] : null;
+            if (!ids) continue;
+
+            for (const id of ids) {
+                if (queue.length >= maxQueueSize) return queue;
+                if (activeIds.has(id)) continue;
+                if (learnedWords.has(id)) continue;
+
+                queue.push({
+                    vocabId: id,
+                    correctCount: CONSTANTS.srs.minimumAnswerPoints,
+                    lastReviewed: new Date(),
+                });
+
+                activeIds.add(id);
+            }
         }
 
         return queue;
     }
 
-    private static getAvailableVocabulary(knownKanjiCount: number, learnedWords: Set<string>): Vocabulary[] {
-        const knownKanji = SAMPLE_KANJI
-            .filter(k => k.kklcOrder <= knownKanjiCount)
-            .map(k => k.character);
+    private static async fillQueueWithFrequency(
+        queue: VocabProgress[],
+        kanjiKnowledge: KanjiKnowledge,
+        learnedWords: Set<string>,
+        maxQueueSize: number
+    ) {
+        const activeIds = new Set(queue.map(q => q.vocabId));
+        const index = await VocabularyService.loadFrequencyIndex();
 
-        return SAMPLE_VOCABULARY
-            .filter(vocab => {
-                if (learnedWords.has(vocab.id)) return false;
-                return vocab.containedKanji.some(kanji => knownKanji.includes(kanji));
-            })
-            .sort((a, b) => a.frequency - b.frequency);
+        if (!index) {
+            throw new Error('Missing frequency index');
+        }
+
+        for (const entry of index) {
+            if (queue.length >= maxQueueSize) break;
+            if (activeIds.has(entry.id)) continue;
+            if (learnedWords.has(entry.id)) continue;
+
+            // 🔑 THIS is now trivial
+            const allKanjiKnown = entry.containedKanji.every(k =>
+                kanjiKnowledge.kanjiSet.has(k)
+            );
+
+            if (!allKanjiKnown) continue;
+
+            queue.push({
+                vocabId: entry.id,
+                correctCount: CONSTANTS.srs.minimumAnswerPoints,
+                lastReviewed: new Date(),
+            });
+
+            activeIds.add(entry.id);
+        }
+
+        return queue;
     }
 }
