@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import type { Vocabulary } from '../src/models/vocabulary.model';
-import { parseJPDBEntry } from './common';
-import { BUILD_LIMITS } from './constants';
+import { parseJPDBEntry } from './build-common';
+import { BUILD_LIMITS } from './build-constants';
 import type { Kanji } from '../src/models/kanji.model';
 import { JMDict } from "../src/models/data.model";
 
@@ -72,8 +72,6 @@ for (const entry of jmdict.words) {
 const selected = allVocabulary
     .sort((a, b) => a.frequency - b.frequency)
     .slice(0, BUILD_LIMITS.MAX_VOCABULARY);
-
-console.debug('selected', selected.filter(s => s.kanji === '二'))
 
 // Ensure output dirs
 fs.mkdirSync('./data/compiled/vocab', { recursive: true });

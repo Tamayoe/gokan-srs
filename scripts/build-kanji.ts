@@ -1,6 +1,6 @@
 import fs from "fs";
 import {Kanji} from "../src/models/kanji.model";
-import {parseJPDBEntry} from "./common";
+import {parseJPDBEntry} from "./build-common";
 import {KKLCDatasetDTO} from "../src/models/data.model";
 
 const kklcPath = './data/raw/kklc.json';
