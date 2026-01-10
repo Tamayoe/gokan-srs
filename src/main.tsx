@@ -14,6 +14,7 @@ export const FONT_IMPORTS = `
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
+        <style>{FONT_IMPORTS}</style>
         <QuizProvider>
             <App />
         </QuizProvider>

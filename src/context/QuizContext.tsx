@@ -125,6 +125,7 @@ interface QuizContextValue {
         submitAnswer: () => void;
         continueToNext: () => Promise<void>;
         reset: () => void;
+        saveSettings: (UserSettings) => void
     };
 
     computed: {
@@ -290,6 +291,9 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             StorageService.clearProgress();
             dispatch({ type: 'RESET' });
         },
+        saveSettings(settings: UserSettings) {
+            dispatch({ type: 'SAVE_SETTINGS', payload: { settings }})
+        }
     };
 
     const computed: QuizContextValue['computed'] = {

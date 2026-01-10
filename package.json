@@ -13,10 +13,11 @@
     "build:vocab": "rimraf ./data/compiled/vocab && bun scripts/build-vocabulary.ts"
   },
   "dependencies": {
+    "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "terser": "^5.44.1",
-    "rimraf": "^6.1.2"
+    "rimraf": "^6.1.2",
+    "terser": "^5.44.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

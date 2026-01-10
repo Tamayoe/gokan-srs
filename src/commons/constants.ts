@@ -12,7 +12,7 @@ export const CONSTANTS = {
     srs: {
         queueSize: 5,
         minimumAnswerPoints: 0,
-        maximumAnswerPoints: 1,
+        maximumAnswerPoints: 3,
         correctAnswerPointModification: 1,
         incorrectAnswerPointModification: -1
     },

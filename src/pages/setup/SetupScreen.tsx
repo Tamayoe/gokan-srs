@@ -13,7 +13,6 @@ import {KanjiField} from "../../components/KanjiField.tsx";
 import {OptionGrid} from "../../components/OptionGrid.tsx";
 import {KanjiCountInput} from "../../components/KanjiCountInput.tsx";
 import {SetupHeader} from "../../components/SetupHeader.tsx";
-import {FONT_IMPORTS} from "../../main.tsx";
 
 export function SetupScreen({ onComplete }) {
     const [kanjiCount, setKanjiCount] = useState(
@@ -71,7 +70,6 @@ export function SetupScreen({ onComplete }) {
             className="min-h-screen flex items-center justify-center p-8"
             style={{ backgroundColor: THEME.colors.background }}
         >
-            <style>{FONT_IMPORTS}</style>
             <div className="max-w-3xl mx-auto p-8 space-y-12">
                 <SetupHeader />
 
@@ -119,6 +117,7 @@ export function SetupScreen({ onComplete }) {
                 <footer className="pt-4">
                     <button
                         onClick={handleSubmit}
+                        disabled={!knownKanji}
                         className="w-full rounded-lg py-4 text-lg transition-colors"
                         style={{
                             backgroundColor: THEME.colors.accent,

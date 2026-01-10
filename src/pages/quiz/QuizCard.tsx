@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { THEME } from '../../commons/theme';
 import { CONSTANTS } from '../../commons/constants';
-import { FONT_IMPORTS } from '../../main';
 import {useQuiz} from "../../context/QuizContext.tsx";
 
 export const QuizCard: React.FC = () => {
@@ -55,7 +54,6 @@ export const QuizCard: React.FC = () => {
                     borderColor: THEME.colors.divider,
                 }}
             >
-                <style>{FONT_IMPORTS}</style>
 
                 {/* Progress Indicator */}
                 <div className="mb-8">

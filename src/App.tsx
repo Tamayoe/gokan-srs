@@ -1,23 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import { SetupScreen } from './pages/setup/SetupScreen';
 import { THEME } from './commons/theme';
 import { Logo } from './components/Logo';
 import { ProgressBar } from './components/ProgressBar';
 import { QuizCard } from './pages/quiz/QuizCard';
-import { FONT_IMPORTS } from './main';
 import {useQuiz} from "./context/QuizContext.tsx";
+import {SettingsScreen} from "./pages/settings/Settings.tsx";
+import { Settings } from 'lucide-react';
 
-// ============================================================================
-// ULTRA-SIMPLE APP - Just routing between screens
-// ============================================================================
+type Screen = 'quiz' | 'settings';
 
 export const App: React.FC = () => {
     const { state, actions } = useQuiz();
+    const [screen, setScreen] = useState<Screen>('quiz');
 
     // Setup screen
     if (!state.isSetupComplete) {
         return <SetupScreen onComplete={actions.setupComplete} />;
+    }
+
+    if (screen === 'settings') {
+        return (
+            <SettingsScreen
+                settings={state.settings!}
+                onUpdateSettings={actions.saveSettings}
+                onReset={actions.reset}
+                onBack={() => setScreen('quiz')}
+            />
+        );
     }
 
     // No vocabulary available
@@ -27,7 +38,6 @@ export const App: React.FC = () => {
                 className="min-h-screen flex items-center justify-center p-8"
                 style={{ backgroundColor: THEME.colors.background }}
             >
-                <style>{FONT_IMPORTS}</style>
                 <div
                     className="border rounded p-8 max-w-md w-full text-center"
                     style={{
@@ -82,19 +92,16 @@ export const App: React.FC = () => {
                 className="min-h-screen flex items-center justify-center"
                 style={{ backgroundColor: THEME.colors.background }}
             >
-                <style>{FONT_IMPORTS}</style>
                 <div style={{ color: THEME.colors.secondary }}>Loading vocabulary...</div>
             </div>
         );
     }
 
-    // Main quiz screen
     return (
         <div
             className="min-h-screen flex flex-col items-center justify-center p-8"
             style={{ backgroundColor: THEME.colors.background }}
         >
-            <style>{FONT_IMPORTS}</style>
 
             <div className="absolute top-6 left-6">
                 <Logo />
@@ -102,20 +109,14 @@ export const App: React.FC = () => {
 
             <div className="absolute top-6 right-6">
                 <button
-                    onClick={actions.reset}
-                    className="text-xs transition-colors"
-                    style={{
-                        color: THEME.colors.secondary,
-                        fontFamily: THEME.fonts.gothic,
-                    }}
-                    onMouseEnter={(e) =>
-                        (e.currentTarget.style.color = THEME.colors.primary)
-                    }
-                    onMouseLeave={(e) =>
-                        (e.currentTarget.style.color = THEME.colors.secondary)
-                    }
+                    onClick={() => setScreen('settings')}
+                    aria-label="Settings"
+                    className="transition-colors"
+                    style={{ color: THEME.colors.secondary }}
+                    onMouseEnter={e => e.currentTarget.style.color = THEME.colors.primary}
+                    onMouseLeave={e => e.currentTarget.style.color = THEME.colors.secondary}
                 >
-                    Reset
+                    <Settings size={18} />
                 </button>
             </div>
 
