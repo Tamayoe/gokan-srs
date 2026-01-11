@@ -1,5 +1,5 @@
-import {THEME} from "../commons/theme.ts";
-import {Logo} from "./Logo.tsx";
+import {THEME} from "../commons/theme";
+import {Logo} from "./Logo";
 
 export function SetupHeader() {
     return (

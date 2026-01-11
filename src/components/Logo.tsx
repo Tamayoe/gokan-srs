@@ -1,5 +1,5 @@
 import React from "react";
-import {THEME} from "../commons/theme.ts";
+import {THEME} from "../commons/theme";
 
 export const LogoMark: React.FC<{ size?: number }> = ({ size = 48 }) => (
     <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">

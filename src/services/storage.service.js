@@ -1,25 +1,21 @@
-import type {UserProgress, UserSettings} from "../models/user.model";
-import {CONSTANTS} from "../commons/constants";
-import type {VocabProgress} from "../models/vocabulary.model";
-
+import { CONSTANTS } from "../commons/constants";
 export class StorageService {
-    static saveProgress(progress: UserProgress): void {
+    static saveProgress(progress) {
         const serialized = {
             ...progress,
         };
         localStorage.setItem(CONSTANTS.storage.progressStorageKey, JSON.stringify(serialized, (_, value) => value instanceof Set ? [...value] : value));
     }
-
-    static loadProgress(): UserProgress | null {
+    static loadProgress() {
         const stored = localStorage.getItem(CONSTANTS.storage.progressStorageKey);
-        if (!stored) return null;
-
-        const parsed: UserProgress = JSON.parse(stored);
-        const learningQueue: VocabProgress[]  = parsed.learningQueue.map(elem => ({
+        if (!stored)
+            return null;
+        const parsed = JSON.parse(stored);
+        const learningQueue = parsed.learningQueue.map(elem => ({
             ...elem,
             nextReviewAt: typeof elem.nextReviewAt === 'string' ? new Date(elem.nextReviewAt) : elem.nextReviewAt,
             lastReviewedAt: typeof elem.lastReviewedAt === 'string' ? new Date(elem.lastReviewedAt) : elem.lastReviewedAt
-        }))
+        }));
         return {
             ...parsed,
             kanjiKnowledge: {
@@ -29,26 +25,22 @@ export class StorageService {
             learningQueue: learningQueue
         };
     }
-
-    static clearProgress(): void {
+    static clearProgress() {
         localStorage.removeItem(CONSTANTS.storage.progressStorageKey);
     }
-
-    static saveSettings(settings: UserSettings): void {
+    static saveSettings(settings) {
         const serialized = {
             ...settings,
         };
         localStorage.setItem(CONSTANTS.storage.settingsStorageKey, JSON.stringify(serialized, (_, value) => value instanceof Set ? [...value] : value));
     }
-
-    static loadSettings(): UserSettings | null {
+    static loadSettings() {
         const stored = localStorage.getItem(CONSTANTS.storage.settingsStorageKey);
-        if (!stored) return null;
-
+        if (!stored)
+            return null;
         return JSON.parse(stored);
     }
-
-    static clearSettings(): void {
+    static clearSettings() {
         localStorage.removeItem(CONSTANTS.storage.settingsStorageKey);
     }
 }

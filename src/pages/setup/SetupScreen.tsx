@@ -1,20 +1,15 @@
-import React, {useEffect, useMemo, useState} from "react";
-import {THEME} from "../../commons/theme.ts";
-import {CONSTANTS} from "../../commons/constants.ts";
-import {VocabularyService} from "../../services/vocabulary.service.ts";
-import type {
-    KanjiKnowledge,
-    KanjiLearningMethod,
-    LearningOrder,
-    UserProgress,
-    UserSettings
-} from "../../models/user.model.ts";
-import {KanjiField} from "../../components/KanjiField.tsx";
-import {OptionGrid} from "../../components/OptionGrid.tsx";
-import {KanjiCountInput} from "../../components/KanjiCountInput.tsx";
-import {SetupHeader} from "../../components/SetupHeader.tsx";
+import {useEffect, useMemo, useState} from "react";
+import {THEME} from "../../commons/theme";
+import {CONSTANTS} from "../../commons/constants";
+import {VocabularyService} from "../../services/vocabulary.service";
+import type {LearningOrder} from "../../models/user.model";
+import {KanjiField} from "../../components/KanjiField";
+import {OptionGrid} from "../../components/OptionGrid";
+import {KanjiCountInput} from "../../components/KanjiCountInput";
+import {SetupHeader} from "../../components/SetupHeader";
+import type {SetupValues} from "../../models/state.model";
 
-export function SetupScreen({ onComplete }) {
+export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) => Promise<void> }) {
     const [kanjiCount, setKanjiCount] = useState(
         Number(CONSTANTS.setup.defaultKanjiCount)
     );
@@ -61,7 +56,7 @@ export function SetupScreen({ onComplete }) {
                     preferredLearningOrder: learningOrder,
                 }
             }
-            onComplete(values);
+            onComplete(values).then();
         }
     };
 

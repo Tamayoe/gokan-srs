@@ -1,62 +1,14 @@
-import React, {
-    createContext,
-    useContext,
-    useEffect,
-    useMemo,
-    useReducer,
-    useState,
-} from 'react';
-
-import type { ReactNode } from 'react'
-
-import type {
-    UserProgress,
-    UserSettings,
-} from '../models/user.model';
-import type {VocabProgress, Vocabulary} from '../models/vocabulary.model';
+import { jsx as _jsx } from "react/jsx-runtime";
+import React, { createContext, useContext, useEffect, useMemo, useReducer, useState, } from 'react';
 import { StorageService } from '../services/storage.service';
 import { VocabularyService } from '../services/vocabulary.service';
 import { SRSService } from '../services/srs.service';
 import { QuizService } from '../services/quiz.service';
-
 import { CONSTANTS } from '../commons/constants';
 import { DEFAULT_SETTINGS } from '../models/user.model';
 import { computeSessionView } from '../utils/quiz.utils';
-import type {SetupCompleteValues, SetupValues} from "../models/state.model";
-import {getNextVocabToStudy} from "../utils/srs.utils";
-
-/* =========================
-   STATE & TYPES
-   ========================= */
-
-interface QuizState {
-    progress: UserProgress | null;
-    settings: UserSettings | null;
-    currentVocab: Vocabulary | null;
-    userAnswer: string;
-    feedback: {
-        show: boolean;
-        correct: boolean;
-        message: string;
-    } | null;
-    isLoadingVocab: boolean;
-    isSetupComplete: boolean;
-}
-
-type QuizAction =
-    | { type: 'SETUP_COMPLETE'; payload: SetupCompleteValues }
-    | { type: 'LOAD_VOCAB_START' }
-    | { type: 'LOAD_VOCAB_SUCCESS'; payload: Vocabulary | null }
-    | { type: 'SET_ANSWER'; payload: string }
-    | { type: 'SUBMIT_ANSWER'; payload: { isCorrect: boolean; message: string } }
-    | { type: 'UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress } }
-    | { type: 'ADVANCE_QUEUE'; payload: { progress: UserProgress } }
-    | { type: 'CLEAR_FEEDBACK' }
-    | { type: 'SAVE_SETTINGS'; payload: UserSettings }
-    | { type: 'OVERRIDE_DAILY_LIMIT' }
-    | { type: 'RESET' };
-
-const initialState: QuizState = {
+import { getNextVocabToStudy } from "../utils/srs.utils";
+const initialState = {
     progress: null,
     settings: null,
     currentVocab: null,
@@ -65,8 +17,7 @@ const initialState: QuizState = {
     isLoadingVocab: false,
     isSetupComplete: false,
 };
-
-function quizReducer(state: QuizState, action: QuizAction): QuizState {
+function quizReducer(state, action) {
     switch (action.type) {
         case 'SETUP_COMPLETE':
             return {
@@ -75,7 +26,6 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 settings: action.payload.settings,
                 isSetupComplete: true,
             };
-
         case 'LOAD_VOCAB_START':
             return {
                 ...state,
@@ -83,17 +33,14 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 userAnswer: '',
                 feedback: null,
             };
-
         case 'LOAD_VOCAB_SUCCESS':
             return {
                 ...state,
                 currentVocab: action.payload,
                 isLoadingVocab: false,
             };
-
         case 'SET_ANSWER':
             return { ...state, userAnswer: action.payload };
-
         case 'SUBMIT_ANSWER':
             return {
                 ...state,
@@ -103,7 +50,6 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     message: action.payload.message,
                 },
             };
-
         case 'UPDATE_AFTER_ANSWER':
         case 'ADVANCE_QUEUE':
             return {
@@ -112,13 +58,10 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 feedback: null,
                 userAnswer: '',
             };
-
         case 'CLEAR_FEEDBACK':
             return { ...state, feedback: null };
-
         case 'SAVE_SETTINGS':
             return { ...state, settings: action.payload };
-
         case 'OVERRIDE_DAILY_LIMIT':
             return {
                 ...state,
@@ -126,144 +69,78 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     ? { ...state.progress, dailyOverride: true }
                     : null,
             };
-
         case 'RESET':
             return { ...initialState };
-
         default:
             return state;
     }
 }
-
-/* =========================
-   CONTEXT
-   ========================= */
-
-interface QuizContextValue {
-    state: QuizState;
-    sessionState: ReturnType<typeof computeSessionView>['sessionState'];
-    nextReviewAt: Date | null;
-    currentProgress: VocabProgress | null;
-
-    actions: {
-        setupComplete(values: SetupValues): Promise<void>;
-        setAnswer(answer: string): void;
-        submitAnswer(): void;
-        advanceQueue({now, overrideDailyLimit}: {now: Date, overrideDailyLimit?: boolean}): void;
-        continueToNext(): Promise<void>;
-        saveSettings(settings: UserSettings): void;
-        overrideDailyLimit(): Promise<void>;
-        reset(): void;
-    };
-
-    computed: {
-        canSubmit: boolean;
-        canContinue: boolean;
-        isReady: boolean;
-    };
-}
-
-const QuizContext = createContext<QuizContextValue | null>(null);
-
+const QuizContext = createContext(null);
 /* =========================
    PROVIDER
    ========================= */
-
-export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const QuizProvider = ({ children }) => {
     const [state, dispatch] = useReducer(quizReducer, {
         ...initialState,
         progress: StorageService.loadProgress(),
         settings: StorageService.loadSettings() ?? DEFAULT_SETTINGS,
         isSetupComplete: !!StorageService.loadProgress(),
     });
-
     /* ---------- Derived ---------- */
-
-    const nextDue = useMemo(
-        () => getNextVocabToStudy(state.progress?.learningQueue),
-        [state.progress?.learningQueue]
-    );
-
+    const nextDue = useMemo(() => getNextVocabToStudy(state.progress?.learningQueue), [state.progress?.learningQueue]);
     const currentProgress = useMemo(() => {
-        if (!state.currentVocab || !state.progress) return null;
-
-        return state.progress.learningQueue.find(
-            v => v.vocabId === state.currentVocab?.id
-        ) ?? null;
+        if (!state.currentVocab || !state.progress)
+            return null;
+        return state.progress.learningQueue.find(v => v.vocabId === state.currentVocab?.id) ?? null;
     }, [state.currentVocab, state.progress]);
-
     const [hasMoreLearnable, setHasMoreLearnable] = useState(false);
-
     useEffect(() => {
-        if (!state.progress || !state.settings) return;
-
-        SRSService.hasMoreLearnableVocabulary(
-            state.progress,
-            state.settings
-        ).then(setHasMoreLearnable);
+        if (!state.progress || !state.settings)
+            return;
+        SRSService.hasMoreLearnableVocabulary(state.progress, state.settings).then(setHasMoreLearnable);
     }, [state.progress, state.settings]);
-
-    const sessionView = useMemo(
-        () =>
-            computeSessionView(
-                state.progress,
-                state.settings,
-                hasMoreLearnable
-            ),
-        [state.progress, state.settings, hasMoreLearnable]
-    );
-
+    const sessionView = useMemo(() => computeSessionView(state.progress, state.settings, hasMoreLearnable), [state.progress, state.settings, hasMoreLearnable]);
     /* ---------- Persistence ---------- */
-
     useEffect(() => {
-        if (state.progress) StorageService.saveProgress(state.progress);
+        if (state.progress)
+            StorageService.saveProgress(state.progress);
     }, [state.progress]);
-
     useEffect(() => {
-        if (state.settings) StorageService.saveSettings(state.settings);
+        if (state.settings)
+            StorageService.saveSettings(state.settings);
     }, [state.settings]);
-
     /* ---------- Load vocab ---------- */
-
     useEffect(() => {
-        console.debug('next due', nextDue)
+        console.debug('next due', nextDue);
         if (!nextDue) {
             dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
             return;
         }
-
         dispatch({ type: 'LOAD_VOCAB_START' });
-
         let alive = true;
-
         VocabularyService.loadVocab(nextDue.vocabId).then(vocab => {
             if (alive) {
                 dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: vocab });
             }
         });
-
         return () => {
             alive = false;
         };
     }, [nextDue]);
-
     useEffect(() => {
         if (state.feedback?.correct) {
             const timer = setTimeout(() => {
                 actions.continueToNext().then();
             }, CONSTANTS.quiz.correctAnswerAutoAdvanceDelay);
-
             return () => clearTimeout(timer);
         }
     }, [state.feedback?.correct]);
-
     /* =========================
        ACTIONS
        ========================= */
-
-    const actions: QuizContextValue['actions'] = {
+    const actions = {
         async setupComplete({ kanjiKnowledge, settings }) {
-            const progress: UserProgress = {
+            const progress = {
                 kanjiKnowledge,
                 learningQueue: [],
                 stats: {
@@ -273,32 +150,19 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 },
                 dailyOverride: false,
             };
-
-            progress.learningQueue = await SRSService.refillQueue(
-                [],
-                kanjiKnowledge,
-                settings,
-                CONSTANTS.srs.newVocabBatchSize
-            );
-
+            progress.learningQueue = await SRSService.refillQueue([], kanjiKnowledge, settings, CONSTANTS.srs.newVocabBatchSize);
             dispatch({
                 type: 'SETUP_COMPLETE',
                 payload: { progress, settings },
             });
         },
-
         setAnswer(answer) {
             dispatch({ type: 'SET_ANSWER', payload: answer });
         },
-
         submitAnswer() {
-            if (!state.currentVocab || state.feedback?.show) return;
-
-            const isCorrect = QuizService.validateAnswer(
-                state.userAnswer,
-                state.currentVocab.readings
-            );
-
+            if (!state.currentVocab || state.feedback?.show)
+                return;
+            const isCorrect = QuizService.validateAnswer(state.userAnswer, state.currentVocab.readings);
             dispatch({
                 type: 'SUBMIT_ANSWER',
                 payload: {
@@ -307,74 +171,43 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 },
             });
         },
-
-        async advanceQueue({
-            now,
-            overrideDailyLimit = false,
-        }) {
-            const updatedQueue = state.progress!.learningQueue
-
-            const dailyLimitReached =
-                state.progress!.stats.newLearnedToday >=
+        async advanceQueue({ now, overrideDailyLimit = false, }) {
+            const updatedQueue = state.progress.learningQueue;
+            const dailyLimitReached = state.progress.stats.newLearnedToday >=
                 CONSTANTS.srs.dailyNewLimit &&
-                !(state.progress!.dailyOverride || overrideDailyLimit);
-
-            const nowDueCount = updatedQueue.filter(
-                v => v.nextReviewAt && v.nextReviewAt <= now
-            ).length;
-
-            const canAddNew =
-                nowDueCount === 0 &&
-                (!dailyLimitReached || state.progress!.dailyOverride) &&
+                !(state.progress.dailyOverride || overrideDailyLimit);
+            const nowDueCount = updatedQueue.filter(v => v.nextReviewAt && v.nextReviewAt <= now).length;
+            const canAddNew = nowDueCount === 0 &&
+                (!dailyLimitReached || state.progress.dailyOverride) &&
                 sessionView.sessionState === "learn";
-
             const maxToAdd = canAddNew
                 ? CONSTANTS.srs.newVocabBatchSize
                 : 0;
-
-            console.debug('advance, prepare to refill')
-            const finalQueue = await SRSService.refillQueue(
-                updatedQueue,
-                state.progress!.kanjiKnowledge,
-                state.settings!,
-                maxToAdd
-            );
-
+            console.debug('advance, prepare to refill');
+            const finalQueue = await SRSService.refillQueue(updatedQueue, state.progress.kanjiKnowledge, state.settings, maxToAdd);
             dispatch({
                 type: "ADVANCE_QUEUE",
                 payload: {
                     progress: {
-                        ...state.progress!,
+                        ...state.progress,
                         learningQueue: finalQueue,
                     },
                 },
             });
         },
-
         async continueToNext() {
-            if (!state.progress || !state.feedback || !state.currentVocab) return;
-
+            if (!state.progress || !state.feedback || !state.currentVocab)
+                return;
             const now = new Date();
             const id = state.currentVocab.id;
-
             const updatedQueue = state.progress.learningQueue.map(v => {
-                if (v.vocabId !== id) return v;
-
-                const { updated } = SRSService.applyAnswer(
-                    v,
-                    state.feedback!.correct,
-                    now
-                );
-
-                console.debug('updated vocab!', updated)
-
+                if (v.vocabId !== id)
+                    return v;
+                const { updated } = SRSService.applyAnswer(v, state.feedback.correct, now);
+                console.debug('updated vocab!', updated);
                 return updated;
             });
-
-            const graduated = updatedQueue.some(
-                v => v.vocabId === id && v.mastery === 100
-            );
-
+            const graduated = updatedQueue.some(v => v.vocabId === id && v.mastery === 100);
             dispatch({
                 type: "UPDATE_AFTER_ANSWER",
                 payload: {
@@ -392,59 +225,43 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 },
             });
         },
-
         saveSettings(settings) {
             dispatch({ type: 'SAVE_SETTINGS', payload: settings });
         },
-
         async overrideDailyLimit() {
             dispatch({ type: "OVERRIDE_DAILY_LIMIT" });
         },
-
         reset() {
             StorageService.clearProgress();
             dispatch({ type: 'RESET' });
         },
     };
-
     /* =========================
        COMPUTED FLAGS
        ========================= */
-
     const computed = {
-        canSubmit:
-            !!state.userAnswer.trim() &&
+        canSubmit: !!state.userAnswer.trim() &&
             !!state.currentVocab &&
             !state.feedback?.show &&
             !state.isLoadingVocab,
-
         canContinue: !!(state.feedback?.show && !state.feedback.correct),
-
         isReady: !!state.currentVocab && !state.isLoadingVocab,
     };
-
-    return (
-        <QuizContext.Provider
-            value={{
-                state,
-                sessionState: sessionView.sessionState,
-                nextReviewAt: sessionView.nextReviewAt,
-                currentProgress: currentProgress,
-                actions,
-                computed,
-            }}
-        >
-            {children}
-        </QuizContext.Provider>
-    );
+    return (_jsx(QuizContext.Provider, { value: {
+            state,
+            sessionState: sessionView.sessionState,
+            nextReviewAt: sessionView.nextReviewAt,
+            currentProgress: currentProgress,
+            actions,
+            computed,
+        }, children: children }));
 };
-
 /* =========================
    HOOK
    ========================= */
-
 export const useQuiz = () => {
     const ctx = useContext(QuizContext);
-    if (!ctx) throw new Error('useQuiz must be used within QuizProvider');
+    if (!ctx)
+        throw new Error('useQuiz must be used within QuizProvider');
     return ctx;
 };

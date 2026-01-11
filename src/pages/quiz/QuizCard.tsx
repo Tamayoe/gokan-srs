@@ -1,19 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { THEME } from '../../commons/theme';
 import { CONSTANTS } from '../../commons/constants';
-import {useQuiz} from "../../context/QuizContext.tsx";
+import {useQuiz} from "../../context/QuizContext";
+import {MasteryRing} from "../../components/MasteryRing";
 
 export const QuizCard: React.FC = () => {
-    const { state, actions, computed } = useQuiz();
+    const { state, currentProgress, actions, computed } = useQuiz();
     const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
     const inputRef = useRef<HTMLInputElement | null>(null);
     const continueRef = useRef<HTMLButtonElement | null>(null);
 
     // Get data from centralized state
     const { currentVocab, userAnswer, feedback, progress } = state;
-    const currentProgress = progress?.activeQueue[0];
 
-    if (!currentVocab || !currentProgress) return null;
+    if (!currentVocab || !progress) return null;
 
     // Clear and focus input when vocabulary changes
     useEffect(() => {
@@ -41,7 +41,7 @@ export const QuizCard: React.FC = () => {
         if (!feedback?.show) {
             actions.submitAnswer();
         } else if (computed.canContinue) {
-            actions.continueToNext();
+            actions.continueToNext().then();
         }
     };
 
@@ -55,37 +55,8 @@ export const QuizCard: React.FC = () => {
                 }}
             >
 
-                {/* Progress Indicator */}
-                <div className="mb-8">
-                    <div className="flex items-center justify-between">
-            <span
-                className="text-xs uppercase tracking-wide"
-                style={{
-                    color: THEME.colors.secondary,
-                    fontFamily: THEME.fonts.gothic,
-                }}
-            >
-              Progress
-            </span>
-                        <div className="flex gap-2">
-                            {[0, 1, 2].map((i) => (
-                                <div
-                                    key={i}
-                                    className="w-2 h-2 rounded-full border-2"
-                                    style={{
-                                        backgroundColor:
-                                            i < currentProgress.correctCount
-                                                ? THEME.colors.accent
-                                                : 'transparent',
-                                        borderColor:
-                                            i < currentProgress.correctCount
-                                                ? THEME.colors.accent
-                                                : THEME.colors.divider,
-                                    }}
-                                />
-                            ))}
-                        </div>
-                    </div>
+                <div className="flex justify-end mb-6">
+                    <MasteryRing mastery={currentProgress?.mastery ?? 0} />
                 </div>
 
                 {/* Kanji Display */}

@@ -11,7 +11,10 @@ export interface Vocabulary {
 
 export interface VocabProgress {
     vocabId: string;
-    correctCount: number;
-    lastReviewed: Date;
-    graduated?: boolean;
+    stage: 'learning' | 'graduated';
+    mastery: number; // 0 → 100
+    nextReviewAt: Date | null;
+    lastReviewedAt: Date | null;
+    totalReviews: number;
+    consecutiveFailures: number;
 }

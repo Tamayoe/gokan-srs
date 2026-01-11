@@ -1,7 +1,6 @@
-import {THEME} from "../../commons/theme.ts";
-import {OptionGrid} from "../../components/OptionGrid.tsx";
-import type {UserSettings} from "../../models/user.model.ts";
-import {FONT_IMPORTS} from "../../main.tsx";
+import {THEME} from "../../commons/theme";
+import {OptionGrid} from "../../components/OptionGrid";
+import type {UserSettings} from "../../models/user.model";
 
 interface SettingsScreenProps {
     settings: UserSettings;
