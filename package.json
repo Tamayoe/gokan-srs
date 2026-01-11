@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "typecheck": "tsc --build --pretty false",
+    "build": "tsc --build && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "build:data": "bun scripts/build-kanji.ts && bun scripts/build-vocabulary.ts",
@@ -35,7 +36,8 @@
     "tailwindcss": "^4.1.18",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "npm:rolldown-vite@7.2.5"
+    "vite": "npm:rolldown-vite@7.2.5",
+    "vite-plugin-checker": "^0.12.0"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.2.5"

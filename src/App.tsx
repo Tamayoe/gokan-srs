@@ -1,19 +1,40 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import { SetupScreen } from './pages/setup/SetupScreen';
 import { THEME } from './commons/theme';
 import { Logo } from './components/Logo';
 import { ProgressBar } from './components/ProgressBar';
 import { QuizCard } from './pages/quiz/QuizCard';
-import {useQuiz} from "./context/QuizContext.tsx";
-import {SettingsScreen} from "./pages/settings/Settings.tsx";
+import {useQuiz} from "./context/QuizContext";
+import {SettingsScreen} from "./pages/settings/Settings";
 import { Settings } from 'lucide-react';
+import {WaitingScreen} from "./components/WaitingScreen";
+import {ExhaustedScreen} from "./components/ExhaustedScreen";
+import {canIntroduceNew, hasDueVocab} from "./utils/srs.utils";
 
-type Screen = 'quiz' | 'settings';
+export type Screen = 'quiz' | 'settings';
 
 export const App: React.FC = () => {
-    const { state, actions } = useQuiz();
+    const { state, sessionState, nextReviewAt, actions } = useQuiz();
     const [screen, setScreen] = useState<Screen>('quiz');
+
+    useEffect(() => {
+        if (!state.progress || !state.settings) return;
+
+        const now = new Date();
+
+        if (
+            !hasDueVocab(state.progress.learningQueue, now) &&
+            canIntroduceNew(state.progress, now)
+        ) {
+            actions.advanceQueue({ now });
+        }
+    }, [
+        state.progress!.learningQueue,
+        state.progress!.stats.newLearnedToday,
+        state.progress!.dailyOverride,
+        state.settings,
+    ]);
 
     // Setup screen
     if (!state.isSetupComplete) {
@@ -32,7 +53,15 @@ export const App: React.FC = () => {
     }
 
     // No vocabulary available
-    if (!state.progress || state.progress.activeQueue.length === 0) {
+    if (sessionState === 'waiting') {
+        return <WaitingScreen nextReviewAt={nextReviewAt!} onLearnMore={actions.overrideDailyLimit} />;
+    }
+
+    if (sessionState === 'exhausted') {
+        return <ExhaustedScreen onReset={actions.reset} />;
+    }
+
+    if (!state.progress || state.progress.learningQueue.length === 0) {
         return (
             <div
                 className="min-h-screen flex items-center justify-center p-8"
@@ -86,6 +115,8 @@ export const App: React.FC = () => {
     }
 
     // Loading vocabulary
+    console.debug('isLoadingVocab', state.isLoadingVocab)
+    console.debug('currentVocab', state.currentVocab)
     if (state.isLoadingVocab || !state.currentVocab) {
         return (
             <div

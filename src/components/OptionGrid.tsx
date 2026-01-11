@@ -1,4 +1,4 @@
-import {THEME} from "../commons/theme.ts";
+import {THEME} from "../commons/theme";
 
 export const OptionGrid = <T extends string>(props: {
     title: string;

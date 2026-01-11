@@ -1,13 +1,30 @@
-import type {VocabProgress} from "./vocabulary.model.ts";
+import type {VocabProgress} from "./vocabulary.model";
 
 export interface UserProgress {
     kanjiKnowledge: KanjiKnowledge;
-    activeQueue: VocabProgress[];
-    learnedWords: Set<string>;
+
+    /**
+     * All vocab ever introduced to the user.
+     * Includes:
+     * - learning vocab
+     * - review vocab
+     * - mastered vocab (mastery === 100)
+     */
+    learningQueue: VocabProgress[];
+
     stats: {
+        /** Number of new vocab introduced today */
+        newLearnedToday: number;
+
+        /** Total vocab that reached mastery === 100 */
         totalLearned: number;
+
+        /** Total answers submitted (correct + incorrect) */
         totalReviews: number;
     };
+
+    /** Allow user to bypass daily new vocab limit */
+    dailyOverride: boolean;
 }
 
 export type KanjiLearningMethod = 'kklc' | 'rtk' | 'jlpt' | 'custom';

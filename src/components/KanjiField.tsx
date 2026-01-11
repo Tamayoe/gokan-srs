@@ -1,4 +1,4 @@
-import {THEME} from "../commons/theme.ts";
+import {THEME} from "../commons/theme";
 
 type KanjiReferencePanelProps = {
     allKanji: string[];
@@ -6,12 +6,9 @@ type KanjiReferencePanelProps = {
 };
 
 export function KanjiField({
-                        allKanji,
-                        knownKanjiSet,
-                    }: {
-    allKanji: string[];
-    knownKanjiSet: Set<string>;
-}) {
+    allKanji,
+    knownKanjiSet,
+}: KanjiReferencePanelProps) {
     return (
         <div className="w-full max-w-5xl mt-16">
             <div

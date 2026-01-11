@@ -1,59 +1,41 @@
 import React from "react";
-import type {UserProgress} from "../models/user.model.ts";
-import {THEME} from "../commons/theme.ts";
+import type {UserProgress} from "../models/user.model";
+import {THEME} from "../commons/theme";
+import {Stat} from "./Stat";
 
 export const ProgressBar: React.FC<{ progress: UserProgress }> = ({ progress }) => {
+    const now = new Date();
+
+    const dueNow = progress.learningQueue.filter(
+        v => v.stage === 'learning' &&
+            v.nextReviewAt &&
+            v.nextReviewAt <= now
+    ).length;
+
     return (
         <div
-            className="border rounded p-6 mb-8 w-full max-w-2xl"
+            className="border rounded p-5 mb-8 w-full max-w-2xl"
             style={{
                 backgroundColor: THEME.colors.surface,
-                borderColor: THEME.colors.divider
+                borderColor: THEME.colors.divider,
             }}
         >
-            <div className="grid grid-cols-3 gap-8 text-center">
-                <div>
-                    <p
-                        className="text-3xl font-serif mb-1"
-                        style={{ color: THEME.colors.accent }}
-                    >
-                        {progress.activeQueue.length}
-                    </p>
-                    <p
-                        className="text-xs font-sans uppercase tracking-wide"
-                        style={{ color: THEME.colors.secondary }}
-                    >
-                        Learning
-                    </p>
-                </div>
-                <div>
-                    <p
-                        className="text-3xl font-serif mb-1"
-                        style={{ color: THEME.colors.primary }}
-                    >
-                        {progress.stats.totalLearned}
-                    </p>
-                    <p
-                        className="text-xs font-sans uppercase tracking-wide"
-                        style={{ color: THEME.colors.secondary }}
-                    >
-                        Mastered
-                    </p>
-                </div>
-                <div>
-                    <p
-                        className="text-3xl font-serif mb-1"
-                        style={{ color: THEME.colors.secondary }}
-                    >
-                        {progress.stats.totalReviews}
-                    </p>
-                    <p
-                        className="text-xs font-sans uppercase tracking-wide"
-                        style={{ color: THEME.colors.secondary }}
-                    >
-                        Reviews
-                    </p>
-                </div>
+            <div className="grid grid-cols-3 text-center gap-6">
+                <Stat
+                    value={dueNow}
+                    label="Due now"
+                    color={THEME.colors.accent}
+                />
+                <Stat
+                    value={progress.learningQueue.length}
+                    label="Learning"
+                    color={THEME.colors.primary}
+                />
+                <Stat
+                    value={progress.stats.totalLearned}
+                    label="Mastered"
+                    color={THEME.colors.secondary}
+                />
             </div>
         </div>
     );

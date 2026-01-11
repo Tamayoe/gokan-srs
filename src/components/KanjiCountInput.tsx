@@ -1,11 +1,11 @@
-import {THEME} from "../commons/theme.ts";
+import {THEME} from "../commons/theme";
 
 export function KanjiCountInput({
                         kanjiCount,
                         setKanjiCount,
                     }: {
     kanjiCount: number;
-    setKanjiCount: (number) => void;
+    setKanjiCount: (value: number) => void;
 }) {
     return (
         <section className="space-y-3">
