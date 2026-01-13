@@ -1,14 +1,14 @@
 import {THEME} from "../commons/theme";
+import {useKanjiForm} from "../context/KanjiForm/useKanjiForm";
 
 type KanjiReferencePanelProps = {
     allKanji: string[];
-    knownKanjiSet: Set<string>;
 };
 
 export function KanjiField({
     allKanji,
-    knownKanjiSet,
 }: KanjiReferencePanelProps) {
+    const { state, toggleKanji } = useKanjiForm();
     return (
         <div className="w-full max-w-5xl mt-16">
             <div
@@ -31,7 +31,7 @@ export function KanjiField({
             >
                 <div className="grid grid-cols-8 sm:grid-cols-10 md:grid-cols-12 gap-x-4 gap-y-3">
                     {allKanji.map((kanji) => {
-                        const isKnown = knownKanjiSet.has(kanji);
+                        const isKnown = state.knownKanji.has(kanji);
 
                         return (
                             <div
@@ -49,6 +49,7 @@ export function KanjiField({
                                     borderRadius: THEME.sizes.borderRadius,
                                     padding: '4px 0',
                                 }}
+                                onClick={() => toggleKanji(kanji)}
                             >
                                 {kanji}
                             </div>
