@@ -4,7 +4,7 @@ export const OptionGrid = <T extends string>(props: {
     title: string;
     options: { value: T; label: string; description: string }[];
     value: T;
-    onChange: (v: T) => void;
+    onChange?: (v: T) => void;
 }) => {
     return (
         <div className="space-y-3">
@@ -21,7 +21,7 @@ export const OptionGrid = <T extends string>(props: {
                         <button
                             key={opt.value}
                             type="button"
-                            onClick={() => props.onChange(opt.value)}
+                            onClick={() => props.onChange?.(opt.value)}
                             className="border rounded-xl p-5 text-left transition-all"
                             style={{
                                 borderColor: selected ? THEME.colors.accent : THEME.colors.divider,

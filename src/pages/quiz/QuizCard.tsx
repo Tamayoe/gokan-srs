@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { THEME } from '../../commons/theme';
 import { CONSTANTS } from '../../commons/constants';
-import {useQuiz} from "../../context/QuizContext";
 import {MasteryRing} from "../../components/MasteryRing";
+import {useQuiz} from "../../context/useQuiz";
 
 export const QuizCard: React.FC = () => {
     const { state, currentProgress, actions, computed } = useQuiz();

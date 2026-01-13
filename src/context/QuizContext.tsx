@@ -1,6 +1,4 @@
 import React, {
-    createContext,
-    useContext,
     useEffect,
     useMemo,
     useReducer,
@@ -24,6 +22,7 @@ import { DEFAULT_SETTINGS } from '../models/user.model';
 import { computeSessionView } from '../utils/quiz.utils';
 import type {SetupCompleteValues, SetupValues} from "../models/state.model";
 import {getNextVocabToStudy} from "../utils/srs.utils";
+import { QuizContext } from "./useQuiz";
 
 /* =========================
    STATE & TYPES
@@ -139,7 +138,7 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
    CONTEXT
    ========================= */
 
-interface QuizContextValue {
+export interface QuizContextValue {
     state: QuizState;
     sessionState: ReturnType<typeof computeSessionView>['sessionState'];
     nextReviewAt: Date | null;
@@ -163,7 +162,6 @@ interface QuizContextValue {
     };
 }
 
-const QuizContext = createContext<QuizContextValue | null>(null);
 
 /* =========================
    PROVIDER
@@ -194,15 +192,6 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     const [hasMoreLearnable, setHasMoreLearnable] = useState(false);
 
-    useEffect(() => {
-        if (!state.progress || !state.settings) return;
-
-        SRSService.hasMoreLearnableVocabulary(
-            state.progress,
-            state.settings
-        ).then(setHasMoreLearnable);
-    }, [state.progress, state.settings]);
-
     const sessionView = useMemo(
         () =>
             computeSessionView(
@@ -212,50 +201,6 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             ),
         [state.progress, state.settings, hasMoreLearnable]
     );
-
-    /* ---------- Persistence ---------- */
-
-    useEffect(() => {
-        if (state.progress) StorageService.saveProgress(state.progress);
-    }, [state.progress]);
-
-    useEffect(() => {
-        if (state.settings) StorageService.saveSettings(state.settings);
-    }, [state.settings]);
-
-    /* ---------- Load vocab ---------- */
-
-    useEffect(() => {
-        console.debug('next due', nextDue)
-        if (!nextDue) {
-            dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
-            return;
-        }
-
-        dispatch({ type: 'LOAD_VOCAB_START' });
-
-        let alive = true;
-
-        VocabularyService.loadVocab(nextDue.vocabId).then(vocab => {
-            if (alive) {
-                dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: vocab });
-            }
-        });
-
-        return () => {
-            alive = false;
-        };
-    }, [nextDue]);
-
-    useEffect(() => {
-        if (state.feedback?.correct) {
-            const timer = setTimeout(() => {
-                actions.continueToNext().then();
-            }, CONSTANTS.quiz.correctAnswerAutoAdvanceDelay);
-
-            return () => clearTimeout(timer);
-        }
-    }, [state.feedback?.correct]);
 
     /* =========================
        ACTIONS
@@ -407,6 +352,59 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         },
     };
 
+    /* ---------- Persistence ---------- */
+
+    useEffect(() => {
+        if (!state.progress || !state.settings) return;
+
+        SRSService.hasMoreLearnableVocabulary(
+            state.progress,
+            state.settings
+        ).then(setHasMoreLearnable);
+    }, [state.progress, state.settings]);
+
+    useEffect(() => {
+        if (state.progress) StorageService.saveProgress(state.progress);
+    }, [state.progress]);
+
+    useEffect(() => {
+        if (state.settings) StorageService.saveSettings(state.settings);
+    }, [state.settings]);
+
+    /* ---------- Load vocab ---------- */
+
+    useEffect(() => {
+        console.debug('next due', nextDue)
+        if (!nextDue) {
+            dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
+            return;
+        }
+
+        dispatch({ type: 'LOAD_VOCAB_START' });
+
+        let alive = true;
+
+        VocabularyService.loadVocab(nextDue.vocabId).then(vocab => {
+            if (alive) {
+                dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: vocab });
+            }
+        });
+
+        return () => {
+            alive = false;
+        };
+    }, [nextDue]);
+
+    useEffect(() => {
+        if (state.feedback?.correct) {
+            const timer = setTimeout(() => {
+                actions.continueToNext().then();
+            }, CONSTANTS.quiz.correctAnswerAutoAdvanceDelay);
+
+            return () => clearTimeout(timer);
+        }
+    }, [state.feedback?.correct]);
+
     /* =========================
        COMPUTED FLAGS
        ========================= */
@@ -439,12 +437,3 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     );
 };
 
-/* =========================
-   HOOK
-   ========================= */
-
-export const useQuiz = () => {
-    const ctx = useContext(QuizContext);
-    if (!ctx) throw new Error('useQuiz must be used within QuizProvider');
-    return ctx;
-};

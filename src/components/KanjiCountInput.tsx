@@ -1,12 +1,9 @@
 import {THEME} from "../commons/theme";
+import {useKanjiForm} from "../context/KanjiForm/useKanjiForm";
 
-export function KanjiCountInput({
-                        kanjiCount,
-                        setKanjiCount,
-                    }: {
-    kanjiCount: number;
-    setKanjiCount: (value: number) => void;
-}) {
+export function KanjiCountInput() {
+    const { state, setKanjiCount } = useKanjiForm();
+
     return (
         <section className="space-y-3">
             <label
@@ -18,8 +15,8 @@ export function KanjiCountInput({
             <input
                 type="number"
                 min={1}
-                value={kanjiCount}
-                onChange={(e) => setKanjiCount(Number(e.target.value))}
+                value={state.kanjiCount}
+                onChange={e => setKanjiCount(+e.target.value)}
                 className="w-full border rounded px-4 py-3 text-lg"
                 style={{
                     borderColor: THEME.colors.divider,

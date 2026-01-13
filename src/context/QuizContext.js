@@ -1,5 +1,5 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import React, { createContext, useContext, useEffect, useMemo, useReducer, useState, } from 'react';
+import React, { useEffect, useMemo, useReducer, useState, } from 'react';
 import { StorageService } from '../services/storage.service';
 import { VocabularyService } from '../services/vocabulary.service';
 import { SRSService } from '../services/srs.service';
@@ -8,6 +8,7 @@ import { CONSTANTS } from '../commons/constants';
 import { DEFAULT_SETTINGS } from '../models/user.model';
 import { computeSessionView } from '../utils/quiz.utils';
 import { getNextVocabToStudy } from "../utils/srs.utils";
+import { QuizContext } from "./useQuiz";
 const initialState = {
     progress: null,
     settings: null,
@@ -75,7 +76,6 @@ function quizReducer(state, action) {
             return state;
     }
 }
-const QuizContext = createContext(null);
 /* =========================
    PROVIDER
    ========================= */
@@ -94,47 +94,7 @@ export const QuizProvider = ({ children }) => {
         return state.progress.learningQueue.find(v => v.vocabId === state.currentVocab?.id) ?? null;
     }, [state.currentVocab, state.progress]);
     const [hasMoreLearnable, setHasMoreLearnable] = useState(false);
-    useEffect(() => {
-        if (!state.progress || !state.settings)
-            return;
-        SRSService.hasMoreLearnableVocabulary(state.progress, state.settings).then(setHasMoreLearnable);
-    }, [state.progress, state.settings]);
     const sessionView = useMemo(() => computeSessionView(state.progress, state.settings, hasMoreLearnable), [state.progress, state.settings, hasMoreLearnable]);
-    /* ---------- Persistence ---------- */
-    useEffect(() => {
-        if (state.progress)
-            StorageService.saveProgress(state.progress);
-    }, [state.progress]);
-    useEffect(() => {
-        if (state.settings)
-            StorageService.saveSettings(state.settings);
-    }, [state.settings]);
-    /* ---------- Load vocab ---------- */
-    useEffect(() => {
-        console.debug('next due', nextDue);
-        if (!nextDue) {
-            dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
-            return;
-        }
-        dispatch({ type: 'LOAD_VOCAB_START' });
-        let alive = true;
-        VocabularyService.loadVocab(nextDue.vocabId).then(vocab => {
-            if (alive) {
-                dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: vocab });
-            }
-        });
-        return () => {
-            alive = false;
-        };
-    }, [nextDue]);
-    useEffect(() => {
-        if (state.feedback?.correct) {
-            const timer = setTimeout(() => {
-                actions.continueToNext().then();
-            }, CONSTANTS.quiz.correctAnswerAutoAdvanceDelay);
-            return () => clearTimeout(timer);
-        }
-    }, [state.feedback?.correct]);
     /* =========================
        ACTIONS
        ========================= */
@@ -236,6 +196,46 @@ export const QuizProvider = ({ children }) => {
             dispatch({ type: 'RESET' });
         },
     };
+    /* ---------- Persistence ---------- */
+    useEffect(() => {
+        if (!state.progress || !state.settings)
+            return;
+        SRSService.hasMoreLearnableVocabulary(state.progress, state.settings).then(setHasMoreLearnable);
+    }, [state.progress, state.settings]);
+    useEffect(() => {
+        if (state.progress)
+            StorageService.saveProgress(state.progress);
+    }, [state.progress]);
+    useEffect(() => {
+        if (state.settings)
+            StorageService.saveSettings(state.settings);
+    }, [state.settings]);
+    /* ---------- Load vocab ---------- */
+    useEffect(() => {
+        console.debug('next due', nextDue);
+        if (!nextDue) {
+            dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
+            return;
+        }
+        dispatch({ type: 'LOAD_VOCAB_START' });
+        let alive = true;
+        VocabularyService.loadVocab(nextDue.vocabId).then(vocab => {
+            if (alive) {
+                dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: vocab });
+            }
+        });
+        return () => {
+            alive = false;
+        };
+    }, [nextDue]);
+    useEffect(() => {
+        if (state.feedback?.correct) {
+            const timer = setTimeout(() => {
+                actions.continueToNext().then();
+            }, CONSTANTS.quiz.correctAnswerAutoAdvanceDelay);
+            return () => clearTimeout(timer);
+        }
+    }, [state.feedback?.correct]);
     /* =========================
        COMPUTED FLAGS
        ========================= */
@@ -255,13 +255,4 @@ export const QuizProvider = ({ children }) => {
             actions,
             computed,
         }, children: children }));
-};
-/* =========================
-   HOOK
-   ========================= */
-export const useQuiz = () => {
-    const ctx = useContext(QuizContext);
-    if (!ctx)
-        throw new Error('useQuiz must be used within QuizProvider');
-    return ctx;
 };

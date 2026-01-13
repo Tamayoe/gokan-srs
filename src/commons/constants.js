@@ -1,6 +1,7 @@
 export const CONSTANTS = {
     setup: {
         defaultKanjiCount: "10",
+        defaultKanjiLearningMethod: 'kklc',
         minimumKanjiCount: 0,
         maximumKanjiCount: 2300,
     },
