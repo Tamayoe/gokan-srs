@@ -14,7 +14,6 @@ export class SRSService {
         correct: boolean,
         now: Date
     ): { updated: VocabProgress } {
-        console.debug('mastery before apply', vocab.mastery)
         if (!correct) {
             return {
                 updated: {
@@ -56,12 +55,35 @@ export class SRSService {
     }
 
     private static computeNextInterval(mastery: number): number {
-        const base = CONSTANTS.srs.scheduling.baseIntervalMs;
-        const multiplier = CONSTANTS.srs.scheduling.intervalMultiplier;
+        const {
+            minIntervalMs,
+            firstSuccessIntervalMs,
+            maxIntervalMs,
+            growthExponent,
+        } = CONSTANTS.srs.scheduling;
 
-        // Exponential spacing based on mastery
-        const factor = Math.pow(multiplier, mastery / 100);
-        return Math.round(base * factor);
+        // Clamp mastery
+        const m = Math.max(0, Math.min(100, mastery));
+
+        // Normalize mastery to [0, 1]
+        const x = m / 100;
+
+        // Power curve (controls acceleration)
+        const curved = Math.pow(x, growthExponent);
+
+        // Interpolate between first success and max interval
+        const intervalAfterFirst =
+            firstSuccessIntervalMs *
+            Math.pow(maxIntervalMs / firstSuccessIntervalMs, curved);
+
+        // Blend early learning phase
+        const earlyFactor = Math.min(1, m / 15);
+
+        const interval =
+            minIntervalMs * (1 - earlyFactor) +
+            intervalAfterFirst * earlyFactor;
+
+        return Math.round(interval);
     }
 
     /* =======================
@@ -210,8 +232,6 @@ export class SRSService {
         const index = await VocabularyService.loadFrequencyIndex();
         if (!index) return queue;
 
-        console.debug('fillQueueWithFrequency')
-
         let added = 0;
 
         for (const entry of index) {
@@ -224,7 +244,6 @@ export class SRSService {
 
             if (!allKanjiKnown) continue;
 
-            console.debug('add vocab', entry.id)
             queue.push(this.createNewVocabProgress(entry.id));
             activeIds.add(entry.id);
             added++;

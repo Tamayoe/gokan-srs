@@ -1,10 +1,11 @@
 import {createContext} from "react";
+import type {KanjiLearningMethod} from "../../models/user.model";
 
 export type KanjiFormState = {
   allKanji: string[]
   kanjiCount: number;
   knownKanji: Set<string>;
-  kanjiMethod: 'kklc';
+  kanjiMethod: KanjiLearningMethod;
   loading: boolean;
 };
 

@@ -11,10 +11,6 @@ export function computeSessionView(
     sessionState: SessionState;
     nextReviewAt: Date | null;
 } {
-    console.debug('progress', progress)
-    console.debug('settings', settings)
-    console.debug('hasMoreLearnable', hasMoreLearnable)
-
     if (!progress || !settings || !hasMoreLearnable) {
         return { sessionState: 'exhausted', nextReviewAt: null };
     }

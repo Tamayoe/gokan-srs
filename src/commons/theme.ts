@@ -14,6 +14,8 @@ export const THEME = {
         inputPlaceholder: '#9AA0A6',
         meaningMuted: 'rgba(31, 35, 40, 0.6)', // primary with 60% opacity
         labelNeutral: '#8B8E93',
+        muted: '#9ca3af',        // ← ADD THIS
+        subtle: '#6b7280',      // optional, useful later
     },
     fonts: {
         serif: '"Source Serif 4", Georgia, serif',

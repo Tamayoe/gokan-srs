@@ -8,6 +8,7 @@ import React, {
 import type { ReactNode } from 'react'
 
 import type {
+    KanjiKnowledge,
     UserProgress,
     UserSettings,
 } from '../models/user.model';
@@ -51,6 +52,7 @@ type QuizAction =
     | { type: 'UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress } }
     | { type: 'ADVANCE_QUEUE'; payload: { progress: UserProgress } }
     | { type: 'CLEAR_FEEDBACK' }
+    | { type: 'UPDATE_KANJI_KNOWLEDGE'; payload: KanjiKnowledge }
     | { type: 'SAVE_SETTINGS'; payload: UserSettings }
     | { type: 'OVERRIDE_DAILY_LIMIT' }
     | { type: 'RESET' };
@@ -118,6 +120,15 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'SAVE_SETTINGS':
             return { ...state, settings: action.payload };
 
+        case 'UPDATE_KANJI_KNOWLEDGE':
+            return {
+                ...state,
+                progress: {
+                    ...state.progress!,
+                    kanjiKnowledge: action.payload,
+                },
+            };
+
         case 'OVERRIDE_DAILY_LIMIT':
             return {
                 ...state,
@@ -151,6 +162,7 @@ export interface QuizContextValue {
         advanceQueue({now, overrideDailyLimit}: {now: Date, overrideDailyLimit?: boolean}): void;
         continueToNext(): Promise<void>;
         saveSettings(settings: UserSettings): void;
+        updateKanjiKnowledge(knowledge: KanjiKnowledge): void;
         overrideDailyLimit(): Promise<void>;
         reset(): void;
     };
@@ -277,7 +289,6 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 ? CONSTANTS.srs.newVocabBatchSize
                 : 0;
 
-            console.debug('advance, prepare to refill')
             const finalQueue = await SRSService.refillQueue(
                 updatedQueue,
                 state.progress!.kanjiKnowledge,
@@ -311,8 +322,6 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     now
                 );
 
-                console.debug('updated vocab!', updated)
-
                 return updated;
             });
 
@@ -340,6 +349,10 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         saveSettings(settings) {
             dispatch({ type: 'SAVE_SETTINGS', payload: settings });
+        },
+
+        updateKanjiKnowledge(knowledge: KanjiKnowledge) {
+            dispatch({ type: 'UPDATE_KANJI_KNOWLEDGE', payload: knowledge })
         },
 
         async overrideDailyLimit() {
@@ -374,7 +387,6 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     /* ---------- Load vocab ---------- */
 
     useEffect(() => {
-        console.debug('next due', nextDue)
         if (!nextDue) {
             dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
             return;

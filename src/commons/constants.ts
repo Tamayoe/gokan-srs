@@ -31,16 +31,23 @@ export const CONSTANTS = {
 
         /** Scheduling (time between reviews) */
         scheduling: {
-            /** Base interval in milliseconds (e.g. 5 minutes) */
-            baseIntervalMs: 5 * 60 * 1000,
+            /** Minimum interval (initial learning) */
+            minIntervalMs: 5 * 60 * 1000, // 5 minutes
+
+            /** Interval after first successful recall (~15 mastery) */
+            firstSuccessIntervalMs: 24 * 60 * 60 * 1000, // 1 day
+
+            /** Maximum interval at full mastery */
+            maxIntervalMs: 90 * 24 * 60 * 60 * 1000, // 3 months
 
             /**
-             * Exponential growth factor applied as mastery increases.
-             * mastery = 100 → longest intervals
+             * Curve steepness.
+             * >1 = slower start, faster late growth
+             * Typical values: 1.5 – 2.5
              */
-            intervalMultiplier: 6,
+            growthExponent: 2.0,
 
-            /** Retry delay after a failure (e.g. 2 minutes) */
+            /** Retry delay after failure */
             failureRetryDelayMs: 2 * 60 * 1000,
         },
     },
