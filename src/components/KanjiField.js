@@ -3,7 +3,7 @@ import { THEME } from "../commons/theme";
 import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
 export function KanjiField({ allKanji, }) {
     const { state, toggleKanji } = useKanjiForm();
-    return (_jsxs("div", { className: "w-full max-w-5xl mt-16", children: [_jsx("div", { className: "mb-4 text-xs uppercase tracking-wide", style: {
+    return (_jsxs("div", { className: "w-full max-w-5xl mt-8", children: [_jsx("div", { className: "mb-4 text-xs uppercase tracking-wide", style: {
                     color: THEME.colors.secondary,
                     fontFamily: THEME.fonts.gothic,
                     fontSize: THEME.fontSizes.labelSmall,
@@ -26,5 +26,5 @@ export function KanjiField({ allKanji, }) {
                     }) }) }), _jsx("div", { className: "mt-3 text-xs", style: {
                     color: THEME.colors.secondary,
                     fontFamily: THEME.fonts.serif,
-                }, children: "Known kanji are softly highlighted. You\u2019ll be able to edit this list later." })] }));
+                }, children: "Known kanji are softly highlighted. They are editable after you started learning" })] }));
 }

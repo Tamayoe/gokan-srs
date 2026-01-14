@@ -4,11 +4,12 @@ import {CONSTANTS} from "../commons/constants";
 
 interface MasteryRingProps {
     mastery: number; // 0–100
+    size?: number;
 }
 
-export const MasteryRing: React.FC<MasteryRingProps> = ({ mastery }) => {
-    const radius = 18;
-    const stroke = 3;
+export const MasteryRing: React.FC<MasteryRingProps> = ({ mastery, size }) => {
+    const radius = size ?? 18;
+    const stroke = Math.round(radius / 6);
     const circumference = 2 * Math.PI * radius;
     const offset =
         circumference - (mastery / CONSTANTS.srs.mastery.max) * circumference;

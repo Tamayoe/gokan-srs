@@ -1,11 +1,24 @@
 import {OptionGrid} from "./OptionGrid";
 import {KanjiCountInput} from "./KanjiCountInput";
 import {KanjiField} from "./KanjiField";
-import type {KanjiLearningMethod} from "../models/user.model";
+import type {KanjiKnowledge, KanjiLearningMethod} from "../models/user.model";
 import {useKanjiForm} from "../context/KanjiForm/useKanjiForm";
+import {useEffect} from "react";
 
-export function KanjiKnowledgeEditor() {
+export function KanjiKnowledgeEditor({
+    onKanjiKnowledgeChange
+}: { onKanjiKnowledgeChange?: (knowledge: KanjiKnowledge) => void }) {
     const { state } = useKanjiForm();
+
+    if (onKanjiKnowledgeChange) {
+        useEffect(() => {
+            onKanjiKnowledgeChange({
+                step: state.kanjiCount,
+                method: state.kanjiMethod,
+                kanjiSet: state.knownKanji,
+            })
+        }, [state.kanjiMethod, state.kanjiCount, state.knownKanji]);
+    }
 
     return (
         <>

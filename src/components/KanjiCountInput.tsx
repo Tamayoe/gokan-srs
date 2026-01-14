@@ -5,7 +5,7 @@ export function KanjiCountInput() {
     const { state, setKanjiCount } = useKanjiForm();
 
     return (
-        <section className="space-y-3">
+        <section className="mt-8 space-y-3">
             <label
                 className="block text-sm uppercase tracking-wide"
                 style={{ fontFamily: THEME.fonts.gothic, color: THEME.colors.secondary }}

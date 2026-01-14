@@ -8,12 +8,8 @@ import { CONSTANTS } from "../commons/constants";
 export function getNextVocabToStudy(queue, now = new Date()) {
     if (!queue || queue.length === 0)
         return null;
-    const due = queue
-        .filter(v => v.mastery < 100 &&
-        v.nextReviewAt !== null &&
-        v.nextReviewAt <= now)
-        .sort((a, b) => a.nextReviewAt.getTime() - b.nextReviewAt.getTime());
-    return due[0] ?? null;
+    const reviewable = getReviewable(queue, now);
+    return pickRandom(reviewable);
 }
 export function hasDueVocab(queue, now) {
     return queue.some(v => v.nextReviewAt !== null && v.nextReviewAt <= now);
@@ -24,4 +20,15 @@ export function canIntroduceNew(progress, now) {
         !progress.dailyOverride;
     return (dueCount === 0 &&
         !dailyLimitReached);
+}
+function getReviewable(queue, now = new Date()) {
+    return queue.filter(v => v.mastery < 100 &&
+        v.nextReviewAt !== null &&
+        v.nextReviewAt <= now) ?? [];
+}
+function pickRandom(items) {
+    if (items.length === 0)
+        return null;
+    const index = Math.floor(Math.random() * items.length);
+    return items[index];
 }

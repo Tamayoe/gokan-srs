@@ -8,6 +8,7 @@ import {Settings, User} from 'lucide-react';
 import {QuizScreen} from "./pages/quiz/QuizScreen";
 import {useQuiz} from "./context/useQuiz";
 import {KanjiFormProvider} from "./context/KanjiForm/KanjiFormProvider";
+import {UserProfileScreen} from "./pages/profile/UserProfileScreen";
 
 export type Screen = "quiz" | "settings" | "profile";
 
@@ -52,9 +53,15 @@ export const App: React.FC = () => {
                         onBack={() => setScreen("quiz")}
                     />
                 )}
-                {/*{screen === "profile" && (*/}
-                {/*    <UserProfileScreen onBack={() => setScreen("quiz")} />*/}
-                {/*)}*/}
+                {screen === "profile" && (
+                    <KanjiFormProvider initialState={{
+                        kanjiCount: state.progress!.kanjiKnowledge.step,
+                        kanjiMethod: state.progress!.kanjiKnowledge.method,
+                        knownKanji: state.progress!.kanjiKnowledge.kanjiSet
+                    }}>
+                        <UserProfileScreen onBack={() => setScreen("quiz")} />
+                    </KanjiFormProvider>
+                )}
             </div>
         </div>
     );

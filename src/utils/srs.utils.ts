@@ -14,17 +14,8 @@ export function getNextVocabToStudy(
 ): VocabProgress | null {
     if (!queue || queue.length === 0) return null;
 
-    const due = queue
-        .filter(v =>
-            v.mastery < 100 &&
-            v.nextReviewAt !== null &&
-            v.nextReviewAt <= now
-        )
-        .sort(
-            (a, b) => a.nextReviewAt!.getTime() - b.nextReviewAt!.getTime()
-        );
-
-    return due[0] ?? null;
+    const reviewable = getReviewable(queue, now);
+    return pickRandom(reviewable);
 }
 
 export function hasDueVocab(queue: VocabProgress[], now: Date): boolean {
@@ -49,4 +40,18 @@ export function canIntroduceNew(
         dueCount === 0 &&
         !dailyLimitReached
     );
+}
+
+function getReviewable(queue: VocabProgress[], now: Date = new Date()): VocabProgress[] {
+    return queue.filter(v =>
+        v.mastery < 100 &&
+        v.nextReviewAt !== null &&
+        v.nextReviewAt <= now
+    ) ?? [];
+}
+
+function pickRandom<T>(items: T[]): T | null {
+    if (items.length === 0) return null;
+    const index = Math.floor(Math.random() * items.length);
+    return items[index];
 }

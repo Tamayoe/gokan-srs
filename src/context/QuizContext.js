@@ -63,6 +63,14 @@ function quizReducer(state, action) {
             return { ...state, feedback: null };
         case 'SAVE_SETTINGS':
             return { ...state, settings: action.payload };
+        case 'UPDATE_KANJI_KNOWLEDGE':
+            return {
+                ...state,
+                progress: {
+                    ...state.progress,
+                    kanjiKnowledge: action.payload,
+                },
+            };
         case 'OVERRIDE_DAILY_LIMIT':
             return {
                 ...state,
@@ -143,7 +151,6 @@ export const QuizProvider = ({ children }) => {
             const maxToAdd = canAddNew
                 ? CONSTANTS.srs.newVocabBatchSize
                 : 0;
-            console.debug('advance, prepare to refill');
             const finalQueue = await SRSService.refillQueue(updatedQueue, state.progress.kanjiKnowledge, state.settings, maxToAdd);
             dispatch({
                 type: "ADVANCE_QUEUE",
@@ -164,7 +171,6 @@ export const QuizProvider = ({ children }) => {
                 if (v.vocabId !== id)
                     return v;
                 const { updated } = SRSService.applyAnswer(v, state.feedback.correct, now);
-                console.debug('updated vocab!', updated);
                 return updated;
             });
             const graduated = updatedQueue.some(v => v.vocabId === id && v.mastery === 100);
@@ -187,6 +193,9 @@ export const QuizProvider = ({ children }) => {
         },
         saveSettings(settings) {
             dispatch({ type: 'SAVE_SETTINGS', payload: settings });
+        },
+        updateKanjiKnowledge(knowledge) {
+            dispatch({ type: 'UPDATE_KANJI_KNOWLEDGE', payload: knowledge });
         },
         async overrideDailyLimit() {
             dispatch({ type: "OVERRIDE_DAILY_LIMIT" });
@@ -212,7 +221,6 @@ export const QuizProvider = ({ children }) => {
     }, [state.settings]);
     /* ---------- Load vocab ---------- */
     useEffect(() => {
-        console.debug('next due', nextDue);
         if (!nextDue) {
             dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
             return;

@@ -10,7 +10,7 @@ export function KanjiField({
 }: KanjiReferencePanelProps) {
     const { state, toggleKanji } = useKanjiForm();
     return (
-        <div className="w-full max-w-5xl mt-16">
+        <div className="w-full max-w-5xl mt-8">
             <div
                 className="mb-4 text-xs uppercase tracking-wide"
                 style={{
@@ -65,7 +65,7 @@ export function KanjiField({
                     fontFamily: THEME.fonts.serif,
                 }}
             >
-                Known kanji are softly highlighted. You’ll be able to edit this list later.
+                Known kanji are softly highlighted. They are editable after you started learning
             </div>
         </div>
     );
