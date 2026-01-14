@@ -38,7 +38,7 @@ export const CONSTANTS = {
              */
             growthExponent: 2.0,
             /** Retry delay after failure */
-            failureRetryDelayMs: 2 * 60 * 1000,
+            failureRetryDelayMs: 10000,
         },
     },
     storage: {
