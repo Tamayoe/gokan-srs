@@ -28,7 +28,7 @@ export class VocabularyService {
         if (this.frequencyIndex) return this.frequencyIndex;
 
         const mod = await import('../../data/compiled/index/frequency.json');
-        this.frequencyIndex = mod.default;
+        this.frequencyIndex = mod.default as FrequencyIndex | null;
         return this.frequencyIndex;
     }
 

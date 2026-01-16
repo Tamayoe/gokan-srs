@@ -54,6 +54,23 @@ export class SRSService {
         };
     }
 
+    static applyVocabIntroChoice(
+        progress: VocabProgress,
+        choice: 'learn' | 'skip'
+    ): VocabProgress {
+        const updated: VocabProgress = {
+            ...progress,
+            introductionAt: new Date(),
+        };
+
+        if (choice === 'skip') {
+            updated.mastery = CONSTANTS.srs.mastery.max;
+            updated.nextReviewAt = null;
+        }
+
+        return updated;
+    }
+
     private static computeNextInterval(mastery: number): number {
         const {
             minIntervalMs,
@@ -261,6 +278,7 @@ export class SRSService {
             vocabId,
             stage: "learning",
             mastery: 0,
+            introductionAt: null,
             nextReviewAt: new Date(), // immediately due
             lastReviewedAt: null,
             totalReviews: 0,

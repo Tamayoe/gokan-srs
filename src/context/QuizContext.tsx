@@ -55,7 +55,8 @@ type QuizAction =
     | { type: 'UPDATE_KANJI_KNOWLEDGE'; payload: KanjiKnowledge }
     | { type: 'SAVE_SETTINGS'; payload: UserSettings }
     | { type: 'OVERRIDE_DAILY_LIMIT' }
-    | { type: 'RESET' };
+    | { type: 'RESET' }
+    | { type: 'VOCAB_INTRO_CHOICE'; vocabId: string; choice: 'learn' | 'skip'; };
 
 const initialState: QuizState = {
     progress: null,
@@ -140,6 +141,22 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'RESET':
             return { ...initialState };
 
+        case 'VOCAB_INTRO_CHOICE': {
+            if (!state.progress) return state;
+
+            return {
+                ...state,
+                progress: {
+                    ...state.progress,
+                    learningQueue: state.progress.learningQueue.map(progress =>
+                        progress.vocabId === action.vocabId
+                            ? SRSService.applyVocabIntroChoice(progress, action.choice)
+                            : progress
+                    ),
+                },
+            };
+        }
+
         default:
             return state;
     }
@@ -164,6 +181,7 @@ export interface QuizContextValue {
         saveSettings(settings: UserSettings): void;
         updateKanjiKnowledge(knowledge: KanjiKnowledge): void;
         overrideDailyLimit(): Promise<void>;
+        saveVocabIntroChoice(vocabulary: Vocabulary, choice: 'learn' | 'skip'): void
         reset(): void;
     };
 
@@ -253,7 +271,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
             const isCorrect = QuizService.validateAnswer(
                 state.userAnswer,
-                state.currentVocab.readings
+                state.currentVocab.reading
             );
 
             dispatch({
@@ -357,6 +375,14 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         async overrideDailyLimit() {
             dispatch({ type: "OVERRIDE_DAILY_LIMIT" });
+        },
+
+        saveVocabIntroChoice(vocabulary: Vocabulary, choice: "learn" | "skip") {
+            dispatch({
+                type: 'VOCAB_INTRO_CHOICE',
+                choice: choice,
+                vocabId: vocabulary.id
+            })
         },
 
         reset() {

@@ -6,15 +6,17 @@ import {LoadingScreen} from "../../components/LoadingScreen";
 import {canIntroduceNew, hasDueVocab} from "../../utils/srs.utils";
 import {useEffect} from "react";
 import {useQuiz} from "../../context/useQuiz";
+import VocabIntroCard from "../../components/VocabIntroCard";
 
 export function QuizScreen() {
-    const { state, sessionState, nextReviewAt, actions } = useQuiz();
+    const { state, currentProgress, sessionState, nextReviewAt, actions } = useQuiz();
 
     const advanceDeps = [state.progress!.learningQueue,
         state.progress!.stats.newLearnedToday,
         state.progress!.dailyOverride,
         state.settings,
     ]
+
 
     useEffect(() => {
         if (!state.progress || !state.settings) return;
@@ -44,6 +46,10 @@ export function QuizScreen() {
 
     if (state.isLoadingVocab || !state.currentVocab) {
         return <LoadingScreen />;
+    }
+
+    if (state.currentVocab && currentProgress && !currentProgress.introductionAt) {
+        return <VocabIntroCard vocab={state.currentVocab} onLearn={() => actions.saveVocabIntroChoice(state.currentVocab!, 'learn')} onSkip={() => actions.saveVocabIntroChoice(state.currentVocab!, 'skip')}></VocabIntroCard>
     }
 
     return (

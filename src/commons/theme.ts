@@ -3,6 +3,7 @@ export const THEME = {
         background: '#F6F4EF',
         feedbackBackground: '#F0EEE8',
         surface: '#FFFFFF',
+        surfaceHover: '#DDDDDD',
         primary: '#1F2328',
         secondary: '#5F6368',
         tertiary: '#8B8E93',

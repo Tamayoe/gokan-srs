@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import type { Vocabulary } from '../src/models/vocabulary.model';
-import { parseJPDBEntry } from './build-common';
+import type {Sense, Vocabulary} from '../src/models/vocabulary.model';
+import {buildMiscFlags, parseJPDBEntry} from './build-common';
 import { BUILD_LIMITS } from './build-constants';
 import type { Kanji } from '../src/models/kanji.model';
 import { JMDict } from "../src/models/data.model";
@@ -24,25 +24,20 @@ function extractKanji(word: string): string[] {
     return [...word].filter(c => /[\u4e00-\u9faf]/.test(c));
 }
 
-const allVocabulary: (Vocabulary & { kklcStep: number })[] = [];
+const allVocabulary: Vocabulary[] = [];
 
 for (const entry of jmdict.words) {
     if (!entry.kanji.length || !entry.kana.length) continue;
 
-    const kanji = entry.kanji.find((k) => k.common && k.text)
+    const primaryKanji = entry.kanji.find(k => k.common);
+    if (!primaryKanji) continue;
 
-    if (!kanji) {
-        continue;
-    }
-
-    const kanjiForm = kanji.text;
-    const readings = entry.kana.filter(k => k.common && k.appliesToKanji.includes("*")).map((k) => k.text);
-    const containedKanji = extractKanji(kanjiForm);
-
+    const kanjiText = primaryKanji.text;
+    const containedKanji = extractKanji(kanjiText);
     if (!containedKanji.length) continue;
 
-    const jpdbEntry = jpdb[kanjiForm]
-        ? parseJPDBEntry(jpdb[kanjiForm])
+    const jpdbEntry = jpdb[kanjiText]
+        ? parseJPDBEntry(jpdb[kanjiText])
         : null;
 
     if (!jpdbEntry?.kanjiRank) continue;
@@ -50,27 +45,61 @@ for (const entry of jmdict.words) {
     const kklcStep = Math.max(
         ...containedKanji.map(k => kklcMap.get(k) ?? 0),
     );
-
     if (!kklcStep) continue;
+
+    const primaryReading =
+        entry.kana.find(k => k.common && k.appliesToKanji.includes("*"))?.text
+        ?? entry.kana[0].text;
+
+    const alternativeReadings = entry.kana
+        .map(k => k.text)
+        .filter(r => r !== primaryReading);
+
+    const senses: Sense[] = entry.sense.map(s => ({
+        pos: s.partOfSpeech,
+        misc: buildMiscFlags(s.misc),
+        glosses: s.gloss.map(g => g.text),
+        related: {
+            compounds: s.related.map(r => r[0]),
+        },
+    }));
+
+    const requiresContext =
+        entry.kana.length > 1 || senses.some(s => s.misc.isSuffix);
 
     allVocabulary.push({
         id: entry.id,
-        kanji: kanjiForm,
-        readings,
-        meanings: entry.sense.flatMap((s: any) =>
-            s.gloss.map((g: any) => g.text),
-        ),
-        frequency: jpdbEntry.kanjiRank,
-        hiraganaFrequency: jpdbEntry.hiraganaRank,
-        containedKanji,
-        pos: entry.sense.flatMap((s: any) => s.partOfSpeech),
-        kklcStep,
+
+        writtenForm: {
+            kanji: kanjiText,
+            containedKanji,
+        },
+
+        reading: {
+            primary: primaryReading,
+            alternatives: alternativeReadings,
+        },
+
+        frequency: {
+            kanjiRank: jpdbEntry.kanjiRank,
+            kanaRank: jpdbEntry.hiraganaRank,
+        },
+
+        progression: {
+            kklcStep,
+        },
+
+        senses,
+
+        usageHints: {
+            requiresContext,
+        },
     });
 }
 
 // Sort by frequency and limit
 const selected = allVocabulary
-    .sort((a, b) => a.frequency - b.frequency)
+    .sort((a, b) => a.frequency.kanjiRank - b.frequency.kanjiRank)
     .slice(0, BUILD_LIMITS.MAX_VOCABULARY);
 
 // Ensure output dirs
@@ -105,7 +134,7 @@ for (const vocab of selected) {
     // Add to frequency index (already sorted by frequency)
     frequencyIndex.push({
         id: vocab.id,
-        containedKanji: vocab.containedKanji,
+        containedKanji: vocab.writtenForm.containedKanji,
     });
 }
 

@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { THEME } from '../../commons/theme';
-import { CONSTANTS } from '../../commons/constants';
-import {MasteryRing} from "../../components/MasteryRing";
+import React, {useEffect, useRef, useState} from 'react';
 import {useQuiz} from "../../context/useQuiz";
+import {CONSTANTS} from "../../commons/constants";
+import {THEME} from "../../commons/theme";
+import {MasteryRing} from "../../components/MasteryRing";
+
 
 export const QuizCard: React.FC = () => {
     const { state, currentProgress, actions, computed } = useQuiz();
@@ -69,7 +70,7 @@ export const QuizCard: React.FC = () => {
                             fontFamily: THEME.fonts.mincho,
                         }}
                     >
-                        {currentVocab.kanji}
+                        {currentVocab.writtenForm.kanji}
                     </div>
                     {feedback?.show && (
                         <p
@@ -79,7 +80,7 @@ export const QuizCard: React.FC = () => {
                                 fontFamily: THEME.fonts.serif,
                             }}
                         >
-                            {currentVocab.meanings[0]}
+                            {currentVocab.senses[0].glosses.join(', ')}
                         </p>
                     )}
                 </div>
@@ -168,7 +169,7 @@ export const QuizCard: React.FC = () => {
                                             fontFamily: THEME.fonts.gothic,
                                         }}
                                     >
-                                        {currentVocab.readings.join(', ')}
+                                        {[currentVocab.reading.primary, ...currentVocab.reading.alternatives].join(', ')}
                                     </p>
                                     <p
                                         className="text-center text-sm"
@@ -177,7 +178,7 @@ export const QuizCard: React.FC = () => {
                                             fontFamily: THEME.fonts.serif,
                                         }}
                                     >
-                                        {currentVocab.meanings.join(', ')}
+                                        {currentVocab.senses.map(sense => sense.glosses.join(', '))}
                                     </p>
                                 </div>
                             )}
