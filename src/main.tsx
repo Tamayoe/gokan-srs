@@ -1,8 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import {App} from "./App";
+import { App } from "./App";
 import { QuizProvider } from "./context/QuizContext"
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import { GoogleDriveProvider } from "./context/GoogleDriveContext";
 
 
 // Import Google Fonts
@@ -15,8 +17,12 @@ export const FONT_IMPORTS = `
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <style>{FONT_IMPORTS}</style>
-        <QuizProvider>
-            <App />
-        </QuizProvider>
+        <GoogleOAuthProvider clientId="1088130501377-pe580cj85dt179hltgba6v153m12esmh.apps.googleusercontent.com">
+            <GoogleDriveProvider>
+                <QuizProvider>
+                    <App />
+                </QuizProvider>
+            </GoogleDriveProvider>
+        </GoogleOAuthProvider>
     </StrictMode>
 );

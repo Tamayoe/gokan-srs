@@ -12,7 +12,7 @@ import type {
     UserProgress,
     UserSettings,
 } from '../models/user.model';
-import type {VocabProgress, Vocabulary} from '../models/vocabulary.model';
+import type { VocabProgress, Vocabulary } from '../models/vocabulary.model';
 import { StorageService } from '../services/storage.service';
 import { VocabularyService } from '../services/vocabulary.service';
 import { SRSService } from '../services/srs.service';
@@ -21,9 +21,10 @@ import { QuizService } from '../services/quiz.service';
 import { CONSTANTS } from '../commons/constants';
 import { DEFAULT_SETTINGS } from '../models/user.model';
 import { computeSessionView } from '../utils/quiz.utils';
-import type {SetupCompleteValues, SetupValues} from "../models/state.model";
-import {getNextVocabToStudy} from "../utils/srs.utils";
+import type { SetupCompleteValues, SetupValues } from "../models/state.model";
+import { getNextVocabToStudy } from "../utils/srs.utils";
 import { QuizContext } from "./useQuiz";
+import { useGoogleDrive } from "./GoogleDriveContext";
 
 /* =========================
    STATE & TYPES
@@ -40,7 +41,6 @@ interface QuizState {
         message: string;
     } | null;
     isLoadingVocab: boolean;
-    isSetupComplete: boolean;
 }
 
 type QuizAction =
@@ -65,7 +65,6 @@ const initialState: QuizState = {
     userAnswer: '',
     feedback: null,
     isLoadingVocab: false,
-    isSetupComplete: false,
 };
 
 function quizReducer(state: QuizState, action: QuizAction): QuizState {
@@ -75,7 +74,6 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 ...state,
                 progress: action.payload.progress,
                 settings: action.payload.settings,
-                isSetupComplete: true,
             };
 
         case 'LOAD_VOCAB_START':
@@ -171,12 +169,13 @@ export interface QuizContextValue {
     sessionState: ReturnType<typeof computeSessionView>['sessionState'];
     nextReviewAt: Date | null;
     currentProgress: VocabProgress | null;
+    isSetupComplete: boolean;
 
     actions: {
         setupComplete(values: SetupValues): Promise<void>;
         setAnswer(answer: string): void;
         submitAnswer(): void;
-        advanceQueue({now, overrideDailyLimit}: {now: Date, overrideDailyLimit?: boolean}): void;
+        advanceQueue({ now, overrideDailyLimit }: { now: Date, overrideDailyLimit?: boolean }): void;
         continueToNext(): Promise<void>;
         saveSettings(settings: UserSettings): void;
         updateKanjiKnowledge(knowledge: KanjiKnowledge): void;
@@ -202,7 +201,6 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         ...initialState,
         progress: StorageService.loadProgress(),
         settings: StorageService.loadSettings() ?? DEFAULT_SETTINGS,
-        isSetupComplete: !!StorageService.loadProgress(),
     });
 
     /* ---------- Derived ---------- */
@@ -410,6 +408,26 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         if (state.settings) StorageService.saveSettings(state.settings);
     }, [state.settings]);
 
+    /* ---------- Auto-Sync ---------- */
+    const { sync, isAuthenticated, isSyncing } = useGoogleDrive();
+
+    useEffect(() => {
+        if (state.progress && isAuthenticated && !isSyncing) {
+            // Debounce or just trigger?
+            // Since this runs on every progress update (every answer), we should ideally debounce.
+            // But for now, let's keep it simple. The user asked for "on every significant progress change".
+            // However, rapid-fire answers might cause race conditions if not careful.
+            // Let's rely on the fact that sync handles locking via `isKey` or the service is robust enough?
+            // Actually, triggering a network call on every answer is heavy.
+            // Better to debounce.
+            const timer = setTimeout(() => {
+                sync().catch(console.error);
+            }, 5000); // Sync 5 seconds after last change
+
+            return () => clearTimeout(timer);
+        }
+    }, [state.progress, isAuthenticated]);
+
     /* ---------- Load vocab ---------- */
 
     useEffect(() => {
@@ -466,6 +484,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 sessionState: sessionView.sessionState,
                 nextReviewAt: sessionView.nextReviewAt,
                 currentProgress: currentProgress,
+                isSetupComplete: !!state.progress,
                 actions,
                 computed,
             }}

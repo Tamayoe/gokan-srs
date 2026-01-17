@@ -1,23 +1,41 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import {SetupScreen} from './pages/setup/SetupScreen';
-import {THEME} from './commons/theme';
-import {Logo} from './components/Logo';
-import {SettingsScreen} from "./pages/settings/Settings";
-import {Settings, User} from 'lucide-react';
-import {QuizScreen} from "./pages/quiz/QuizScreen";
-import {useQuiz} from "./context/useQuiz";
-import {KanjiFormProvider} from "./context/KanjiForm/KanjiFormProvider";
-import {UserProfileScreen} from "./pages/profile/UserProfileScreen";
+import { SetupScreen } from './pages/setup/SetupScreen';
+import { THEME } from './commons/theme';
+import { Logo } from './components/Logo';
+import { SettingsScreen } from "./pages/settings/Settings";
+import { Settings, User } from 'lucide-react';
+import { QuizScreen } from "./pages/quiz/QuizScreen";
+import { useQuiz } from "./context/useQuiz";
+import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
+import { UserProfileScreen } from "./pages/profile/UserProfileScreen";
+import { useGoogleDrive } from "./context/GoogleDriveContext";
+import { Cloud, RefreshCw } from "lucide-react";
 
 export type Screen = "quiz" | "settings" | "profile";
 
+function SyncStatusIndicator() {
+    const { isSyncing, isAuthenticated } = useGoogleDrive();
+
+    if (!isAuthenticated) return null;
+
+    if (isSyncing) {
+        return <RefreshCw size={18} className="animate-spin text-gray-400" />;
+    }
+
+    return (
+        <div className="text-green-500" title="Synced with Google Drive">
+            <Cloud size={18} />
+        </div>
+    );
+}
+
 export const App: React.FC = () => {
-    const { state, actions } = useQuiz();
+    const { state, actions, isSetupComplete } = useQuiz();
     const [screen, setScreen] = useState<Screen>("quiz");
 
     // Setup gate
-    if (!state.isSetupComplete) {
+    if (!isSetupComplete) {
         return <KanjiFormProvider initialState={{}}>
             <SetupScreen onComplete={actions.setupComplete} />;
         </KanjiFormProvider>
@@ -33,7 +51,8 @@ export const App: React.FC = () => {
                 <Logo />
             </div>
 
-            <div className="absolute top-6 right-6 flex gap-4">
+            <div className="absolute top-6 right-6 flex gap-4 items-center">
+                <SyncStatusIndicator />
                 <button onClick={() => setScreen("profile")}>
                     <User size={18} />
                 </button>
