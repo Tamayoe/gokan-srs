@@ -1,11 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { App } from "./App";
 import { QuizProvider } from "./context/QuizContext"
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleDriveProvider } from "./context/GoogleDriveContext";
 import { ThemeProvider } from "./context/ThemeContext";
+import { App } from './App';
 
 
 // Import Google Fonts

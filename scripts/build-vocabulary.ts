@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import type {Sense, Vocabulary} from '../src/models/vocabulary.model';
-import {buildMiscFlags, parseJPDBEntry} from './build-common';
+import type { Sense, Vocabulary } from '../src/models/vocabulary.model';
+import { buildMiscFlags, parseJPDBEntry } from './build-common';
 import { BUILD_LIMITS } from './build-constants';
 import type { Kanji } from '../src/models/kanji.model';
 import { JMDict } from "../src/models/data.model";

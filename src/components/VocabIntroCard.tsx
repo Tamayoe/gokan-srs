@@ -32,7 +32,7 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
                     </div>
 
                     <div className="flex flex-row justify-center items-center gap-1 mt-4 text-base font-gothic text-secondary">
-                        {[vocab.reading.primary, ...vocab.reading.alternatives].map((v => (<span>{v}</span>)))}
+                        {[vocab.reading.primary, ...vocab.reading.alternatives].join(', ')}
                     </div>
                 </div>
             </CardSection>
@@ -46,7 +46,7 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
 
             <CardDivider />
 
-            <form onSubmit={onLearn} className="flex flex-col md:flex-row gap-4" ref={formRef}>
+            <form onSubmit={onLearn} className="flex gap-4" ref={formRef}>
                 <Button variant="secondary" className="flex-1" onClick={onSkip}>
                     I already know this
                 </Button>

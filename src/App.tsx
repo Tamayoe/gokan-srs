@@ -43,22 +43,22 @@ export const App: React.FC = () => {
     return (
         <div className="min-h-screen flex flex-col relative bg-background transition-colors duration-200">
             {/* Top bar */}
-            <div className={`absolute top-6 left-6 z-20 ${screen !== 'quiz' ? 'hidden md:block' : ''}`}>
+            <div className="absolute top-6 left-6">
                 <Logo />
             </div>
 
-            <div className="absolute top-6 right-6 flex gap-4 items-center z-20">
+            <div className="absolute top-6 right-6 flex gap-4 items-center">
                 <SyncStatusIndicator />
-                <button onClick={() => setScreen("profile")} className="p-2 hover:bg-black/5 rounded-full transition-colors">
-                    <User size={20} />
+                <button onClick={() => setScreen("profile")}>
+                    <User size={18} />
                 </button>
-                <button onClick={() => setScreen("settings")} className="p-2 hover:bg-black/5 rounded-full transition-colors">
-                    <Settings size={20} />
+                <button onClick={() => setScreen("settings")}>
+                    <Settings size={18} />
                 </button>
             </div>
 
             {/* Screen content */}
-            <div className="flex-1 flex items-center justify-center p-6 md:p-8 pt-24 md:pt-8 w-full max-w-full overflow-x-hidden">
+            <div className="flex-1 flex items-center justify-center p-8">
                 {screen === "quiz" && <QuizScreen />}
                 {screen === "settings" && (
                     <SettingsScreen
