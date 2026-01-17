@@ -50,8 +50,8 @@ jobs:
       - name: Sync build to S3
         run: |
           # Static assets (JS, CSS, images, vocab data)
+          # REMOVED --delete to prevent 404s for users with cached index.html requesting old assets
           aws s3 sync dist/ s3://${{ vars.S3_BUCKET_NAME }}/ \
-            --delete \
             --size-only \
             --cache-control "public, max-age=31536000, immutable" \
             --exclude "*.html"
@@ -67,7 +67,7 @@ jobs:
         run: |
           aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths "/index.html"
+            --paths "/index.html" "/"
 
       - name: Deployment summary
         run: |
