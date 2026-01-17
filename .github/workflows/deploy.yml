@@ -50,21 +50,25 @@ jobs:
       - name: Sync build to S3
         run: |
           # Static assets (JS, CSS, images, vocab data)
-          # REMOVED --delete to prevent 404s for users with cached index.html requesting old assets
+          # We use --delete to remove old hashed files (cleanup)
+          # We use --size-only to speed up checks for unchanged hashed assets
           aws s3 sync dist/ s3://${{ vars.S3_BUCKET_NAME }}/ \
+            --delete \
             --size-only \
             --cache-control "public, max-age=31536000, immutable" \
             --exclude "*.html"
 
           # HTML (SPA entry points)
+          # IMPORTANT: Removed --size-only because index.html size often doesn't change 
+          # (just hash string change), causing S3 sync to skip it!
           aws s3 sync dist/ s3://${{ vars.S3_BUCKET_NAME }}/ \
-            --size-only \
             --cache-control "public, max-age=0, must-revalidate" \
             --exclude "*" \
             --include "*.html"
 
       - name: Invalidate CloudFront cache
         run: |
+          # Invalidate only entry points. Setup and Main app.
           aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/index.html" "/"
