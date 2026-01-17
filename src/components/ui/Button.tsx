@@ -1,59 +1,35 @@
 // Button.tsx
 import type { ButtonHTMLAttributes } from "react";
-import {THEME} from "../../commons/theme";
 
-type ButtonVariant = "primary" | "secondary";
+
+type ButtonVariant = "primary" | "secondary" | "ghost";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonVariant;
 }
 
 export function Button({
-                           children,
-                           variant = "primary",
-                           className = "",
-                           ...props
-                       }: ButtonProps) {
+    children,
+    variant = "primary",
+    className = "",
+    ...props
+}: ButtonProps) {
     const isPrimary = variant === "primary";
-    const disabled = props.disabled ?? false;
 
     return (
         <button
             {...props}
-            className={`font-medium rounded transition-colors ${className}`}
-            style={{
-                height: THEME.sizes.buttonHeight,
-                fontFamily: THEME.fonts.serif,
-                fontSize: THEME.fontSizes.base,
-                borderRadius: THEME.sizes.borderRadius,
-                cursor: disabled ? "not-allowed" : "pointer",
-
-                backgroundColor: disabled
-                    ? THEME.colors.divider
-                    : isPrimary
-                        ? THEME.colors.accent
-                        : THEME.colors.feedbackBackground,
-
-                color: isPrimary
-                    ? THEME.colors.surface
-                    : THEME.colors.primary,
-
-                border: isPrimary
-                    ? "none"
-                    : `1px solid ${THEME.colors.divider}`,
-            }}
-            onMouseEnter={(e) => {
-                if (disabled) return;
-                e.currentTarget.style.backgroundColor = isPrimary
-                    ? THEME.colors.accentHover
-                    : THEME.colors.surface;
-            }}
-            onMouseLeave={(e) => {
-                if (disabled) return;
-                e.currentTarget.style.backgroundColor = isPrimary
-                    ? THEME.colors.accent
-                    : THEME.colors.feedbackBackground;
-            }}
+            className={`
+                h-11 px-4 rounded-md font-serif text-base transition-colors duration-200
+                flex items-center justify-center cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-divider
+                ${isPrimary
+                    ? "bg-accent text-surface hover:bg-accent-hover border-transparent"
+                    : variant === "ghost"
+                        ? "bg-transparent text-secondary hover:text-primary border-transparent shadow-none px-2 h-auto"
+                        : "bg-feedback-background text-primary border border-divider hover:bg-surface"
+                }
+                ${className}
+            `.trim().replace(/\s+/g, ' ')}
         >
             {children}
         </button>

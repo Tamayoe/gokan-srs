@@ -1,6 +1,6 @@
 import React from "react";
-import {THEME} from "../commons/theme";
-import {CONSTANTS} from "../commons/constants";
+
+import { CONSTANTS } from "../commons/constants";
 
 interface MasteryRingProps {
     mastery: number; // 0–100
@@ -21,7 +21,7 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ mastery, size }) => {
                 cy="22"
                 r={radius}
                 fill="none"
-                stroke={THEME.colors.divider}
+                className="stroke-divider"
                 strokeWidth={stroke}
             />
             <circle
@@ -29,7 +29,7 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ mastery, size }) => {
                 cy="22"
                 r={radius}
                 fill="none"
-                stroke={THEME.colors.accent}
+                className="stroke-accent"
                 strokeWidth={stroke}
                 strokeDasharray={circumference}
                 strokeDashoffset={offset}
@@ -41,11 +41,7 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ mastery, size }) => {
                 y="52%"
                 textAnchor="middle"
                 dominantBaseline="middle"
-                style={{
-                    fontSize: '10px',
-                    fill: THEME.colors.secondary,
-                    fontFamily: THEME.fonts.gothic,
-                }}
+                className="fill-secondary font-gothic text-[10px]"
             >
                 {Math.round(mastery)}%
             </text>

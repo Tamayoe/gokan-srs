@@ -1,1 +1,91 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-feedback-background: var(--feedback-background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-divider: var(--divider);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-error: var(--error);
+  --color-error-accent: var(--error-accent);
+  --color-input-placeholder: var(--input-placeholder);
+  --color-meaning-muted: var(--meaning-muted);
+  --color-label-neutral: var(--label-neutral);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-mincho: "Noto Serif JP", serif;
+  --font-gothic: "Sawarabi Gothic", "Noto Sans JP", sans-serif;
+}
+
+/*
+  Theme Definitions
+  Based on src/commons/theme.ts
+*/
+:root {
+  --background: #F6F4EF;
+  --feedback-background: #F0EEE8;
+  --surface: #FFFFFF;
+  --surface-hover: #DDDDDD;
+  --primary: #1F2328;
+  --secondary: #5F6368;
+  --tertiary: #8B8E93;
+  --divider: #D8D6D0;
+  --accent: #2E3A59;
+  --accent-hover: #3D4A6B;
+  --error: #8A3A2E;
+  --error-accent: rgba(138, 58, 46, 0.45);
+  --input-placeholder: #9AA0A6;
+  --meaning-muted: rgba(31, 35, 40, 0.6);
+  --label-neutral: #8B8E93;
+  --muted: #9ca3af;
+  --subtle: #6b7280;
+}
+
+.dark {
+  --background: #0d1117;
+  --feedback-background: #161b22;
+  --surface: #21262d;
+  --surface-hover: #30363d;
+  --primary: #e6edf3;
+  --secondary: #8b949e;
+  --tertiary: #6e7681;
+  --divider: #30363d;
+  --accent: #58a6ff;
+  --accent-hover: #79c0ff;
+  --error: #f85149;
+  --error-accent: rgba(248, 81, 73, 0.45);
+  --input-placeholder: #6e7681;
+  --meaning-muted: rgba(240, 246, 252, 0.6);
+  --label-neutral: #8b949e;
+  --muted: #6e7681;
+  --subtle: #484f58;
+}
+
+/* Global Styles based on Theme */
+body {
+  background-color: var(--background);
+  color: var(--primary);
+  font-family: var(--font-gothic);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Custom Utility Classes */
+.text-kanji {
+  font-size: 4rem;
+  /* Mobile */
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .text-kanji {
+    font-size: 8rem;
+    /* Desktop */
+  }
+}

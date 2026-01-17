@@ -1,12 +1,12 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {useQuiz} from "../../context/useQuiz";
-import {CONSTANTS} from "../../commons/constants";
-import {THEME} from "../../commons/theme";
-import {MasteryRing} from "../../components/MasteryRing";
-import {Card} from "../../components/ui/Card";
-import {CardSection} from "../../components/ui/CardSection";
-import {TagsLookup} from "../../models/data.model";
-import type {Tags} from "../../models/data.model";
+import React, { useEffect, useRef, useState } from 'react';
+import { useQuiz } from "../../context/useQuiz";
+import { CONSTANTS } from "../../commons/constants";
+
+import { MasteryRing } from "../../components/MasteryRing";
+import { Card } from "../../components/ui/Card";
+import { CardSection } from "../../components/ui/CardSection";
+import { TagsLookup } from "../../models/data.model";
+import type { Tags } from "../../models/data.model";
 
 
 export const QuizCard: React.FC = () => {
@@ -62,14 +62,7 @@ export const QuizCard: React.FC = () => {
 
                     {/* Kanji Display */}
                     <div className="text-center mb-8">
-                        <div
-                            className="leading-none mb-4"
-                            style={{
-                                color: THEME.colors.primary,
-                                fontSize: THEME.fontSizes.kanji,
-                                fontFamily: THEME.fonts.mincho,
-                            }}
-                        >
+                        <div className="leading-none mb-4 text-primary text-kanji font-mincho">
                             {currentVocab.writtenForm.kanji}
                         </div>
 
@@ -88,14 +81,9 @@ export const QuizCard: React.FC = () => {
                                     ).map(rawTag => (
                                         <span
                                             key={rawTag}
-                                            className="px-2 py-0.5 text-xs rounded"
-                                            style={{
-                                                backgroundColor: THEME.colors.feedbackBackground,
-                                                color: THEME.colors.secondary,
-                                                fontFamily: THEME.fonts.gothic,
-                                            }}
+                                            className="px-2 py-0.5 text-xs rounded bg-feedback-background text-secondary font-gothic"
                                         >
-                                          {TagsLookup[rawTag as Tags]}
+                                            {TagsLookup[rawTag as Tags]}
                                         </span>
                                     ))}
                                 </div>
@@ -109,34 +97,22 @@ export const QuizCard: React.FC = () => {
                                     )
                                 )
                             ).length > 0 && (
-                                <div
-                                    className="text-sm"
-                                    style={{
-                                        color: THEME.colors.meaningMuted,
-                                        fontFamily: THEME.fonts.serif,
-                                    }}
-                                >
-                                    {Array.from(
-                                        new Set(
-                                            currentVocab.senses.flatMap(
-                                                sense => sense.related?.compounds ?? []
+                                    <div className="text-sm text-meaning-muted font-serif">
+                                        {Array.from(
+                                            new Set(
+                                                currentVocab.senses.flatMap(
+                                                    sense => sense.related?.compounds ?? []
+                                                )
                                             )
-                                        )
-                                    ).slice(0, 4).join(' ・ ')}
-                                </div>
-                            )}
+                                        ).slice(0, 4).join(' ・ ')}
+                                    </div>
+                                )}
                         </div>
                     </div>
 
                     {/* Glosses — feedback only, all senses */}
                     {feedback?.show && (
-                        <div
-                            className="text-center text-sm space-y-1"
-                            style={{
-                                color: THEME.colors.meaningMuted,
-                                fontFamily: THEME.fonts.serif,
-                            }}
-                        >
+                        <div className="text-center text-sm space-y-1 text-meaning-muted font-serif">
                             {currentVocab.senses.map((sense, index) => (
                                 <p key={index}>
                                     {sense.glosses.join(', ')}
@@ -152,11 +128,7 @@ export const QuizCard: React.FC = () => {
                         <div>
                             <label
                                 htmlFor="answer"
-                                className="block text-sm mb-2"
-                                style={{
-                                    color: THEME.colors.secondary,
-                                    fontFamily: THEME.fonts.gothic,
-                                }}
+                                className="block text-sm mb-2 text-secondary font-gothic"
                             >
                                 Reading (hiragana)
                             </label>
@@ -166,71 +138,31 @@ export const QuizCard: React.FC = () => {
                                 type="text"
                                 value={userAnswer}
                                 onChange={(e) => actions.setAnswer(e.target.value)}
-                                className="w-full px-4 py-3 border rounded text-2xl text-center focus:outline-none transition-colors"
-                                style={{
-                                    borderColor: THEME.colors.divider,
-                                    color: THEME.colors.primary,
-                                    backgroundColor: THEME.colors.surface,
-                                    fontFamily: THEME.fonts.gothic,
-                                }}
-                                onFocus={(e) =>
-                                    (e.target.style.borderColor = THEME.colors.accent)
-                                }
-                                onBlur={(e) =>
-                                    (e.target.style.borderColor = THEME.colors.divider)
-                                }
+                                className="w-full px-4 py-3 border rounded text-2xl text-center focus:outline-none transition-colors border-divider text-primary bg-surface font-gothic focus:border-accent placeholder:text-input-placeholder"
                                 placeholder={CONSTANTS.quiz.hiraganaAnswerPlaceholder}
                                 autoFocus
                                 disabled={feedback?.show}
                             />
-                            <style>{`
-                  #answer::placeholder {
-                    color: ${THEME.colors.inputPlaceholder};
-                  }
-                `}</style>
                         </div>
 
                         {/* Incorrect Answer Feedback */}
                         {feedback?.show && !feedback.correct && (
-                            <div
-                                className="border rounded"
-                                style={{
-                                    backgroundColor: THEME.colors.feedbackBackground,
-                                    borderColor: THEME.colors.divider,
-                                    borderLeft: `${THEME.spacing.errorBorderWidth}px solid ${THEME.colors.errorAccent}`,
-                                    borderRadius: `${THEME.sizes.borderRadius}px`,
-                                    padding: `${THEME.spacing.feedbackPadding}px`,
-                                }}
-                            >
-                                <p
-                                    className="uppercase tracking-wide"
-                                    style={{
-                                        color: THEME.colors.labelNeutral,
-                                        fontSize: THEME.fontSizes.labelSmall,
-                                        marginBottom: `${THEME.spacing.labelMargin}px`,
-                                        fontFamily: THEME.fonts.gothic,
-                                    }}
-                                >
+                            <div className="border rounded bg-feedback-background border-divider border-l-4 border-l-error-accent p-4">
+                                <p className="uppercase tracking-wide text-label-neutral text-xs mb-2 font-gothic">
                                     Correct answer
                                 </p>
 
                                 {showCorrectAnswer && (
                                     <div
+                                        className="transition-all duration-200 ease-in-out"
                                         style={{
                                             opacity: showCorrectAnswer ? 1 : 0,
                                             transform: showCorrectAnswer
                                                 ? 'translateY(0)'
                                                 : 'translateY(-2px)',
-                                            transition: `opacity ${THEME.transitions.fast} ease-in-out, transform ${THEME.transitions.fast} ease-in-out`,
                                         }}
                                     >
-                                        <p
-                                            className="text-center text-2xl mb-1"
-                                            style={{
-                                                color: THEME.colors.primary,
-                                                fontFamily: THEME.fonts.gothic,
-                                            }}
-                                        >
+                                        <p className="text-center text-2xl mb-1 text-primary font-gothic">
                                             {[currentVocab.reading.primary, ...currentVocab.reading.alternatives].join(', ')}
                                         </p>
                                     </div>
@@ -240,39 +172,25 @@ export const QuizCard: React.FC = () => {
 
                         {/* Correct Answer Feedback */}
                         {feedback?.show && feedback.correct && (
-                            <div
-                                className="border"
-                                style={{
-                                    backgroundColor: THEME.colors.surface,
-                                    borderColor: THEME.colors.accent,
-                                    borderRadius: `${THEME.sizes.borderRadius}px`,
-                                    padding: `${THEME.spacing.feedbackPadding}px`,
-                                }}
-                            >
+                            <div className="border rounded bg-surface border-accent p-4">
                                 <div className="flex items-center justify-center gap-2">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                         <circle
                                             cx="10"
                                             cy="10"
                                             r="9"
-                                            stroke={THEME.colors.accent}
+                                            className="stroke-accent"
                                             strokeWidth="2"
                                         />
                                         <path
                                             d="M6 10L9 13L14 7"
-                                            stroke={THEME.colors.accent}
+                                            className="stroke-accent"
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <p
-                                        className="text-center text-sm font-medium"
-                                        style={{
-                                            color: THEME.colors.accent,
-                                            fontFamily: THEME.fonts.gothic,
-                                        }}
-                                    >
+                                    <p className="text-center text-sm font-medium text-accent font-gothic">
                                         {feedback.message}
                                     </p>
                                 </div>
@@ -284,28 +202,7 @@ export const QuizCard: React.FC = () => {
                             <button
                                 type="submit"
                                 disabled={!computed.canSubmit}
-                                className="w-full font-medium rounded transition-colors"
-                                style={{
-                                    backgroundColor: computed.canSubmit
-                                        ? THEME.colors.accent
-                                        : THEME.colors.divider,
-                                    color: THEME.colors.surface,
-                                    height: `${THEME.sizes.buttonHeight}px`,
-                                    marginTop: `${THEME.spacing.buttonMarginTop}px`,
-                                    borderRadius: `${THEME.sizes.borderRadius}px`,
-                                    fontFamily: THEME.fonts.serif,
-                                    cursor: computed.canSubmit ? 'pointer' : 'not-allowed',
-                                }}
-                                onMouseEnter={(e) => {
-                                    if (computed.canSubmit) {
-                                        e.currentTarget.style.backgroundColor = THEME.colors.accentHover;
-                                    }
-                                }}
-                                onMouseLeave={(e) => {
-                                    if (computed.canSubmit) {
-                                        e.currentTarget.style.backgroundColor = THEME.colors.accent;
-                                    }
-                                }}
+                                className={`w-full font-medium rounded transition-colors h-12 mt-6 font-serif ${computed.canSubmit ? 'bg-accent text-surface hover:bg-accent-hover cursor-pointer' : 'bg-divider text-surface cursor-not-allowed'}`}
                             >
                                 Submit
                             </button>
@@ -314,22 +211,7 @@ export const QuizCard: React.FC = () => {
                                 <button
                                     ref={continueRef}
                                     type="submit"
-                                    className="w-full font-medium rounded transition-colors"
-                                    style={{
-                                        backgroundColor: THEME.colors.accent,
-                                        color: THEME.colors.surface,
-                                        height: `${THEME.sizes.buttonHeight}px`,
-                                        marginTop: `${THEME.spacing.buttonMarginTop}px`,
-                                        borderRadius: `${THEME.sizes.borderRadius}px`,
-                                        fontFamily: THEME.fonts.serif,
-                                    }}
-                                    onMouseEnter={(e) =>
-                                        (e.currentTarget.style.backgroundColor =
-                                            THEME.colors.accentHover)
-                                    }
-                                    onMouseLeave={(e) =>
-                                        (e.currentTarget.style.backgroundColor = THEME.colors.accent)
-                                    }
+                                    className="w-full font-medium rounded transition-colors h-12 mt-6 font-serif bg-accent text-surface hover:bg-accent-hover"
                                 >
                                     Continue
                                 </button>

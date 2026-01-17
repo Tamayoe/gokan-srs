@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { THEME } from "../../commons/theme";
 import { CONSTANTS } from "../../commons/constants";
 import type { LearningOrder } from "../../models/user.model";
 import { OptionGrid } from "../../components/OptionGrid";
@@ -54,7 +53,8 @@ function GoogleLoginButton({ onSyncComplete }: { onSyncComplete: () => void }) {
         // If authenticated but we are still here (and auto-restore finished/failed),
         // show a Manual Retry button just in case.
         return (
-            <button
+            <Button
+                variant="ghost"
                 onClick={async () => {
                     const success = await sync();
                     if (success) {
@@ -63,27 +63,23 @@ function GoogleLoginButton({ onSyncComplete }: { onSyncComplete: () => void }) {
                         alert("We couldn't find any backup to restore.");
                     }
                 }}
-                className="flex items-center gap-2 px-4 py-2 rounded text-sm font-medium transition-colors hover:bg-black/5"
-                style={{ color: THEME.colors.primary }}
+                className="text-sm font-medium hover:bg-black/5 text-primary"
             >
-                <Cloud size={16} />
+                <Cloud size={16} className="mr-2" />
                 Retry Restore
-            </button>
+            </Button>
         )
     }
 
     return (
-        <button
+        <Button
+            variant="secondary"
             onClick={() => login()}
-            className="flex items-center gap-2 px-4 py-2 rounded text-sm font-medium border transition-colors hover:bg-black/5"
-            style={{
-                borderColor: THEME.colors.secondary,
-                color: THEME.colors.primary,
-            }}
+            className="text-sm font-medium"
         >
-            <LogIn size={16} />
+            <LogIn size={16} className="mr-2" />
             Already have an account? Log in to restore
-        </button>
+        </Button>
     );
 }
 
@@ -117,10 +113,7 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
     }
 
     return (
-        <div
-            className="min-h-screen flex items-center justify-center p-8"
-            style={{ backgroundColor: THEME.colors.background }}
-        >
+        <div className="min-h-screen flex items-center justify-center p-8 bg-background transition-colors duration-200">
             <div className="max-w-3xl mx-auto p-8 space-y-12">
                 <SetupHeader />
 
@@ -146,20 +139,20 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
 
                 <footer className="pt-4 space-y-4">
                     <Button
+                        variant="primary"
                         onClick={handleSubmit}
                         disabled={!state.knownKanji || isSyncing}
-                        className="w-full py-4 text-lg"
-                        style={{ fontFamily: THEME.fonts.serif }}
+                        className="w-full py-4 text-lg font-serif h-14"
                     >
                         Start learning
                     </Button>
 
                     <div className="relative py-2">
                         <div className="absolute inset-0 flex items-center">
-                            <span className="w-full border-t" style={{ borderColor: THEME.colors.secondary }}></span>
+                            <span className="w-full border-t border-secondary"></span>
                         </div>
                         <div className="relative flex justify-center text-xs uppercase">
-                            <span className="bg-white px-2" style={{ backgroundColor: THEME.colors.background, color: THEME.colors.secondary }}>
+                            <span className="px-2 bg-background text-secondary">
                                 OR
                             </span>
                         </div>

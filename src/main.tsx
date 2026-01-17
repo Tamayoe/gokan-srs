@@ -5,6 +5,7 @@ import { App } from "./App";
 import { QuizProvider } from "./context/QuizContext"
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleDriveProvider } from "./context/GoogleDriveContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 
 // Import Google Fonts
@@ -17,12 +18,14 @@ export const FONT_IMPORTS = `
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <style>{FONT_IMPORTS}</style>
-        <GoogleOAuthProvider clientId="1088130501377-pe580cj85dt179hltgba6v153m12esmh.apps.googleusercontent.com">
-            <GoogleDriveProvider>
-                <QuizProvider>
-                    <App />
-                </QuizProvider>
-            </GoogleDriveProvider>
-        </GoogleOAuthProvider>
+        <ThemeProvider defaultTheme="system" storageKey="gokan-theme">
+            <GoogleOAuthProvider clientId="1088130501377-pe580cj85dt179hltgba6v153m12esmh.apps.googleusercontent.com">
+                <GoogleDriveProvider>
+                    <QuizProvider>
+                        <App />
+                    </QuizProvider>
+                </GoogleDriveProvider>
+            </GoogleOAuthProvider>
+        </ThemeProvider>
     </StrictMode>
 );

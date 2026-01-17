@@ -1,8 +1,8 @@
-import type {VocabProgress, Vocabulary} from "../models/vocabulary.model";
-import {THEME} from "../commons/theme";
-import {MasteryRing} from "./MasteryRing";
-import {Card} from "./ui/Card";
-import {CardContent} from "./ui/CardContent";
+import type { VocabProgress, Vocabulary } from "../models/vocabulary.model";
+
+import { MasteryRing } from "./MasteryRing";
+import { Card } from "./ui/Card";
+import { CardContent } from "./ui/CardContent";
 
 export function VocabCard({
   vocab,
@@ -32,50 +32,35 @@ export function VocabCard({
   }
 
   return (
-      <Card>
-        <CardContent className="space-y-3">
-          <div className="flex justify-between items-start">
-            <div>
-              <div
-                  className="text-lg"
-                  style={{
-                    color: THEME.colors.primary,
-                    fontFamily: THEME.fonts.serif,
-                  }}
-              >
-                {vocab.writtenForm.kanji}
-              </div>
-
-              <div
-                  className="text-sm"
-                  style={{ color: THEME.colors.secondary }}
-              >
-                {[vocab.reading.primary, ...vocab.reading.alternatives].join(" ・ ")}
-              </div>
+    <Card>
+      <CardContent className="space-y-3">
+        <div className="flex justify-between items-start">
+          <div>
+            <div className="text-lg text-primary font-serif">
+              {vocab.writtenForm.kanji}
             </div>
 
-            <MasteryRing mastery={progress.mastery} size={20} />
+            <div className="text-sm text-secondary">
+              {[vocab.reading.primary, ...vocab.reading.alternatives].join(" ・ ")}
+            </div>
           </div>
 
-          <div
-              className="text-sm"
-              style={{ color: THEME.colors.secondary }}
-          >
-            {vocab.senses[0]?.glosses.map(g => g).slice(0, 3).join(", ")}
-          </div>
+          <MasteryRing mastery={progress.mastery} size={20} />
+        </div>
 
-          <div
-              className="flex justify-between text-xs"
-              style={{ color: THEME.colors.muted }}
-          >
-            <span>
-              {progress.stage === "graduated"
-                  ? "Mastered"
-                  : `Reviews: ${progress.totalReviews}`}
-            </span>
-            <span>{formatNextReview(progress.nextReviewAt)}</span>
-          </div>
-        </CardContent>
-      </Card>
+        <div className="text-sm text-secondary">
+          {vocab.senses[0]?.glosses.map(g => g).slice(0, 3).join(", ")}
+        </div>
+
+        <div className="flex justify-between text-xs text-muted">
+          <span>
+            {progress.stage === "graduated"
+              ? "Mastered"
+              : `Reviews: ${progress.totalReviews}`}
+          </span>
+          <span>{formatNextReview(progress.nextReviewAt)}</span>
+        </div>
+      </CardContent>
+    </Card>
   );
 }

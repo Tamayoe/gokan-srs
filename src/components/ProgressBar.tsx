@@ -1,7 +1,7 @@
 import React from "react";
-import type {UserProgress} from "../models/user.model";
-import {THEME} from "../commons/theme";
-import {Stat} from "./Stat";
+import type { UserProgress } from "../models/user.model";
+
+import { Stat } from "./Stat";
 
 export const ProgressBar: React.FC<{ progress: UserProgress }> = ({ progress }) => {
     const now = new Date();
@@ -13,28 +13,22 @@ export const ProgressBar: React.FC<{ progress: UserProgress }> = ({ progress }) 
     ).length;
 
     return (
-        <div
-            className="border rounded p-5 mb-8 w-full max-w-2xl"
-            style={{
-                backgroundColor: THEME.colors.surface,
-                borderColor: THEME.colors.divider,
-            }}
-        >
+        <div className="border rounded p-5 mb-8 w-full max-w-2xl bg-surface border-divider">
             <div className="grid grid-cols-3 text-center gap-6">
                 <Stat
                     value={dueNow}
                     label="Due now"
-                    color={THEME.colors.accent}
+                    color="var(--color-accent)"
                 />
                 <Stat
                     value={progress.learningQueue.length}
                     label="Learning"
-                    color={THEME.colors.primary}
+                    color="var(--color-primary)"
                 />
                 <Stat
                     value={progress.stats.totalLearned}
                     label="Mastered"
-                    color={THEME.colors.secondary}
+                    color="var(--color-secondary)"
                 />
             </div>
         </div>

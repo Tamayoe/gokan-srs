@@ -1,9 +1,8 @@
 import React from "react";
-import {THEME} from "../commons/theme";
 
 export const LogoMark: React.FC<{ size?: number }> = ({ size = 48 }) => (
     <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="2" width="96" height="96" stroke={THEME.colors.primary} strokeWidth="4" fill="none"/>
+        <rect x="2" y="2" width="96" height="96" className="stroke-primary" strokeWidth="4" fill="none" />
         <text
             x="50"
             y="50"
@@ -11,7 +10,7 @@ export const LogoMark: React.FC<{ size?: number }> = ({ size = 48 }) => (
             fontFamily="'Noto Serif JP', serif"
             textAnchor="middle"
             dominantBaseline="central"
-            fill={THEME.colors.primary}
+            className="fill-primary"
             fontWeight="400"
         >
             語感
@@ -22,14 +21,8 @@ export const LogoMark: React.FC<{ size?: number }> = ({ size = 48 }) => (
 export const Logo: React.FC<{ className?: string }> = ({ className = '' }) => (
     <div className={`flex items-center gap-3 ${className}`}>
         <LogoMark size={48} />
-        <span
-            className="text-2xl tracking-wide"
-            style={{
-                color: THEME.colors.primary,
-                fontFamily: THEME.fonts.serif,
-            }}
-        >
-      Gokan SRS
-    </span>
+        <span className="text-2xl tracking-wide font-serif text-primary">
+            Gokan SRS
+        </span>
     </div>
 );

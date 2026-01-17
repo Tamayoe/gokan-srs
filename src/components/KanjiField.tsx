@@ -1,5 +1,4 @@
-import {THEME} from "../commons/theme";
-import {useKanjiForm} from "../context/KanjiForm/useKanjiForm";
+import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
 
 type KanjiReferencePanelProps = {
     allKanji: string[];
@@ -11,14 +10,7 @@ export function KanjiField({
     const { state, toggleKanji } = useKanjiForm();
     return (
         <div className="w-full max-w-5xl mt-8">
-            <div
-                className="mb-4 text-xs uppercase tracking-wide"
-                style={{
-                    color: THEME.colors.secondary,
-                    fontFamily: THEME.fonts.gothic,
-                    fontSize: THEME.fontSizes.labelSmall,
-                }}
-            >
+            <div className="mb-4 text-xs uppercase tracking-wide text-secondary font-gothic text-[0.6875rem]">
                 Known kanji (KKLC order)
             </div>
 
@@ -36,19 +28,13 @@ export function KanjiField({
                         return (
                             <div
                                 key={kanji}
-                                className="text-center transition-all"
-                                style={{
-                                    fontFamily: THEME.fonts.mincho,
-                                    fontSize: THEME.fontSizes.lg,
-                                    color: isKnown
-                                        ? THEME.colors.primary
-                                        : THEME.colors.tertiary,
-                                    backgroundColor: isKnown
-                                        ? THEME.colors.feedbackBackground
-                                        : 'transparent',
-                                    borderRadius: THEME.sizes.borderRadius,
-                                    padding: '4px 0',
-                                }}
+                                className={`
+                                    text-center transition-all font-mincho text-lg py-1 rounded-md cursor-pointer
+                                    ${isKnown
+                                        ? "text-primary bg-feedback-background"
+                                        : "text-tertiary bg-transparent"
+                                    }
+                                `.trim().replace(/\s+/g, ' ')}
                                 onClick={() => toggleKanji(kanji)}
                             >
                                 {kanji}
@@ -58,13 +44,7 @@ export function KanjiField({
                 </div>
             </div>
 
-            <div
-                className="mt-3 text-xs"
-                style={{
-                    color: THEME.colors.secondary,
-                    fontFamily: THEME.fonts.serif,
-                }}
-            >
+            <div className="mt-3 text-xs text-secondary font-serif">
                 Known kanji are softly highlighted. They are editable after you started learning
             </div>
         </div>

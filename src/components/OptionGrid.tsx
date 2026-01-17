@@ -1,4 +1,4 @@
-import {THEME} from "../commons/theme";
+
 
 export const OptionGrid = <T extends string>(props: {
     title: string;
@@ -8,10 +8,7 @@ export const OptionGrid = <T extends string>(props: {
 }) => {
     return (
         <div className="space-y-3">
-            <h3
-                className="text-sm uppercase tracking-wide"
-                style={{ fontFamily: THEME.fonts.gothic, color: THEME.colors.secondary }}
-            >
+            <h3 className="text-sm uppercase tracking-wide font-gothic text-secondary">
                 {props.title}
             </h3>
             <div className="grid grid-cols-2 gap-4">
@@ -22,24 +19,18 @@ export const OptionGrid = <T extends string>(props: {
                             key={opt.value}
                             type="button"
                             onClick={() => props.onChange?.(opt.value)}
-                            className="border rounded-xl p-5 text-left transition-all"
-                            style={{
-                                borderColor: selected ? THEME.colors.accent : THEME.colors.divider,
-                                backgroundColor: selected
-                                    ? THEME.colors.accent + "22"
-                                    : THEME.colors.surface,
-                            }}
+                            className={`
+                                border rounded-xl p-5 text-left transition-all
+                                ${selected
+                                    ? "border-accent bg-accent/10 dark:bg-accent/20"
+                                    : "border-divider bg-surface hover:bg-surface-hover"
+                                }
+                            `}
                         >
-                            <div
-                                className="text-lg mb-1"
-                                style={{ fontFamily: THEME.fonts.serif, color: THEME.colors.primary }}
-                            >
+                            <div className="text-lg mb-1 font-serif text-primary">
                                 {opt.label}
                             </div>
-                            <p
-                                className="text-xs"
-                                style={{ fontFamily: THEME.fonts.serif, color: THEME.colors.secondary }}
-                            >
+                            <p className="text-xs font-serif text-secondary">
                                 {opt.description}
                             </p>
                         </button>

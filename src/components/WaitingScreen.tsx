@@ -1,6 +1,6 @@
-import {THEME} from "../commons/theme";
+
 import React from "react";
-import {CenteredCard} from "./CenteredCard";
+import { CenteredCard } from "./CenteredCard";
 
 interface WaitingScreenProps {
     nextReviewAt: Date;
@@ -18,23 +18,11 @@ export const WaitingScreen: React.FC<WaitingScreenProps> = ({
 
     return (
         <CenteredCard>
-            <h2
-                className="text-xl mb-4"
-                style={{
-                    color: THEME.colors.primary,
-                    fontFamily: THEME.fonts.serif,
-                }}
-            >
+            <h2 className="text-xl mb-4 text-primary font-serif">
                 You’re done for now ✨
             </h2>
 
-            <p
-                className="text-sm mb-6"
-                style={{
-                    color: THEME.colors.secondary,
-                    fontFamily: THEME.fonts.serif,
-                }}
-            >
+            <p className="text-sm mb-6 text-secondary font-serif">
                 Your next review will be available in{' '}
                 <strong>{minutes} minute{minutes > 1 ? 's' : ''}</strong>.
             </p>
@@ -42,20 +30,12 @@ export const WaitingScreen: React.FC<WaitingScreenProps> = ({
             <div className="flex flex-col gap-3">
                 <button
                     onClick={onLearnMore}
-                    className="py-2 px-6 rounded transition-colors"
-                    style={{
-                        backgroundColor: THEME.colors.accent,
-                        color: THEME.colors.surface,
-                        fontFamily: THEME.fonts.serif,
-                    }}
+                    className="py-2 px-6 rounded transition-colors bg-accent text-surface font-serif hover:bg-accent-hover"
                 >
                     Learn more words
                 </button>
 
-                <p
-                    className="text-xs text-center"
-                    style={{ color: THEME.colors.secondary }}
-                >
+                <p className="text-xs text-center text-secondary">
                     Recommended daily limit reached
                 </p>
             </div>
