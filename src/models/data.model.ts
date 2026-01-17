@@ -49,278 +49,11 @@ export interface JMDict {
     commonOnly: boolean
     dictDate: string
     dictRevisions: string[]
-    tags: Tags
+    tags: Record<Tags, string>
     words: Word[]
 }
 
-export interface Tags {
-    v5uru: string
-    "v2g-s": string
-    dei: string
-    ship: string
-    leg: string
-    bra: string
-    music: string
-    quote: string
-    pref: string
-    ktb: string
-    rK: string
-    derog: string
-    abbr: string
-    exp: string
-    astron: string
-    "v2g-k": string
-    "aux-v": string
-    ctr: string
-    surg: string
-    baseb: string
-    serv: string
-    genet: string
-    geogr: string
-    dent: string
-    "v5k-s": string
-    horse: string
-    ornith: string
-    "v2w-s": string
-    sK: string
-    rk: string
-    hob: string
-    male: string
-    motor: string
-    vidg: string
-    "n-pref": string
-    "n-suf": string
-    suf: string
-    hon: string
-    biol: string
-    pol: string
-    vulg: string
-    "v2n-s": string
-    mil: string
-    golf: string
-    min: string
-    X: string
-    sk: string
-    jpmyth: string
-    sl: string
-    fict: string
-    art: string
-    stat: string
-    cryst: string
-    pathol: string
-    photo: string
-    food: string
-    n: string
-    thb: string
-    fish: string
-    "v5r-i": string
-    arch: string
-    v1: string
-    bus: string
-    tv: string
-    euph: string
-    embryo: string
-    "v2y-k": string
-    uk: string
-    rare: string
-    "v2a-s": string
-    hanaf: string
-    figskt: string
-    agric: string
-    given: string
-    physiol: string
-    "v5u-s": string
-    chn: string
-    ev: string
-    adv: string
-    prt: string
-    vi: string
-    "v2y-s": string
-    kyb: string
-    vk: string
-    grmyth: string
-    vn: string
-    electr: string
-    gardn: string
-    "adj-kari": string
-    vr: string
-    vs: string
-    internet: string
-    vt: string
-    cards: string
-    stockm: string
-    vz: string
-    aux: string
-    "v2h-s": string
-    kyu: string
-    noh: string
-    econ: string
-    rommyth: string
-    ecol: string
-    "n-t": string
-    psy: string
-    proverb: string
-    company: string
-    poet: string
-    ateji: string
-    paleo: string
-    "v2h-k": string
-    civeng: string
-    go: string
-    "adv-to": string
-    ent: string
-    unc: string
-    unclass: string
-    "on-mim": string
-    yoji: string
-    "n-adv": string
-    print: string
-    form: string
-    obj: string
-    osb: string
-    "adj-shiku": string
-    Christn: string
-    hum: string
-    obs: string
-    relig: string
-    iK: string
-    "v2k-s": string
-    conj: string
-    "v2s-s": string
-    geol: string
-    geom: string
-    anat: string
-    nab: string
-    ski: string
-    hist: string
-    fam: string
-    myth: string
-    gramm: string
-    "v2k-k": string
-    id: string
-    v5aru: string
-    psyanal: string
-    comp: string
-    creat: string
-    ik: string
-    oth: string
-    "v-unspec": string
-    io: string
-    work: string
-    "adj-ix": string
-    phil: string
-    doc: string
-    math: string
-    pharm: string
-    "adj-nari": string
-    "v2r-k": string
-    "adj-f": string
-    "adj-i": string
-    audvid: string
-    rkb: string
-    "adj-t": string
-    "v2r-s": string
-    Buddh: string
-    biochem: string
-    "v2b-k": string
-    "vs-s": string
-    surname: string
-    physics: string
-    place: string
-    "v2b-s": string
-    kabuki: string
-    prowres: string
-    product: string
-    "vs-c": string
-    tsug: string
-    "adj-ku": string
-    telec: string
-    "vs-i": string
-    "v2z-s": string
-    organization: string
-    char: string
-    engr: string
-    logic: string
-    "v2m-s": string
-    col: string
-    archeol: string
-    cop: string
-    num: string
-    aviat: string
-    "aux-adj": string
-    "m-sl": string
-    fem: string
-    MA: string
-    finc: string
-    "v1-s": string
-    "v2m-k": string
-    manga: string
-    shogi: string
-    group: string
-    "adj-no": string
-    "adj-na": string
-    sens: string
-    law: string
-    vet: string
-    mahj: string
-    v4b: string
-    rail: string
-    v4g: string
-    elec: string
-    film: string
-    mining: string
-    v4h: string
-    v4k: string
-    v4m: string
-    v4n: string
-    sumo: string
-    v4s: string
-    v4r: string
-    person: string
-    v4t: string
-    boxing: string
-    oK: string
-    cloth: string
-    joc: string
-    politics: string
-    "v2t-k": string
-    tsb: string
-    v5b: string
-    ling: string
-    bot: string
-    "v2t-s": string
-    v5g: string
-    med: string
-    v5k: string
-    mech: string
-    v5n: string
-    v5m: string
-    "v2d-k": string
-    v5r: string
-    v5t: string
-    v5s: string
-    v5u: string
-    Shinto: string
-    station: string
-    chmyth: string
-    dated: string
-    "v2d-s": string
-    psych: string
-    "adj-pn": string
-    ok: string
-    met: string
-    chem: string
-    sports: string
-    zool: string
-    int: string
-    tradem: string
-    "net-sl": string
-    "n-pr": string
-    archit: string
-    ksb: string
-    pn: string
-    gikun: string
-}
+export type Tags = typeof TagsKey[number]
 
 export interface Word {
     id: string
@@ -368,4 +101,275 @@ export interface Gloss {
     gender: unknown
     type?: string
     text: string
+}
+
+export const TagsKey = ["v5uru", "v2g-s", "dei", "ship", "leg", "bra", "music", "quote", "pref", "ktb", "rK", "derog", "abbr", "exp", "astron", "v2g-k", "aux-v", "ctr", "surg", "baseb", "serv", "genet", "geogr", "dent", "v5k-s", "horse", "ornith", "v2w-s", "sK", "rk", "hob", "male", "motor", "vidg", "n-pref", "n-suf", "suf", "hon", "biol", "pol", "vulg", "v2n-s", "mil", "golf", "min", "X", "sk", "jpmyth", "sl", "fict", "art", "stat", "cryst", "pathol", "photo", "food", "n", "thb", "fish", "v5r-i", "arch", "v1", "bus", "tv", "euph", "embryo", "v2y-k", "uk", "rare", "v2a-s", "hanaf", "figskt", "agric", "given", "physiol", "v5u-s", "chn", "ev", "adv", "prt", "vi", "v2y-s", "kyb", "vk", "grmyth", "vn", "electr", "gardn", "adj-kari", "vr", "vs", "internet", "vt", "cards", "stockm", "vz", "aux", "v2h-s", "kyu", "noh", "econ", "rommyth", "ecol", "n-t", "psy", "proverb", "company", "poet", "ateji", "paleo", "v2h-k", "civeng", "go", "adv-to", "ent", "unc", "unclass", "on-mim", "yoji", "n-adv", "print", "form", "obj", "osb", "adj-shiku", "Christn", "hum", "obs", "relig", "iK", "v2k-s", "conj", "v2s-s", "geol", "geom", "anat", "nab", "ski", "hist", "fam", "myth", "gramm", "v2k-k", "id", "v5aru", "psyanal", "comp", "creat", "ik", "oth", "v-unspec", "io", "work", "adj-ix", "phil", "doc", "math", "pharm", "adj-nari", "v2r-k", "adj-f", "adj-i", "audvid", "rkb", "adj-t", "v2r-s", "Buddh", "biochem", "v2b-k", "vs-s", "surname", "physics", "place", "v2b-s", "kabuki", "prowres", "product", "vs-c", "tsug", "adj-ku", "telec", "vs-i", "v2z-s", "organization", "char", "engr", "logic", "v2m-s", "col", "archeol", "cop", "num", "aviat", "aux-adj", "m-sl", "fem", "MA", "finc", "v1-s", "v2m-k", "manga", "shogi", "group", "adj-no", "adj-na", "sens", "law", "vet", "mahj", "v4b", "rail", "v4g", "elec", "film", "mining", "v4h", "v4k", "v4m", "v4n", "sumo", "v4s", "v4r", "person", "v4t", "boxing", "oK", "cloth", "joc", "politics", "v2t-k", "tsb", "v5b", "ling", "bot", "v2t-s", "v5g", "med", "v5k", "mech", "v5n", "v5m", "v2d-k", "v5r", "v5t", "v5s", "v5u", "Shinto", "station", "chmyth", "dated", "v2d-s", "psych", "adj-pn", "ok", "met", "chem", "sports", "zool", "int", "tradem", "net-sl", "n-pr", "archit", "ksb", "pn", "gikun"] as const
+
+export const TagsLookup: Record<Tags, string> = {
+    "v5uru": "Godan verb - Uru old class verb (old form of Eru)",
+    "v2g-s": "Nidan verb (lower class) with 'gu' ending (archaic)",
+    "dei": "deity",
+    "ship": "ship name",
+    "leg": "legend",
+    "bra": "Brazilian",
+    "music": "music",
+    "quote": "quotation",
+    "pref": "prefix",
+    "ktb": "Kantou-ben",
+    "rK": "rarely used kanji form",
+    "derog": "derogatory",
+    "abbr": "abbreviation",
+    "exp": "expressions (phrases, clauses, etc.)",
+    "astron": "astronomy",
+    "v2g-k": "Nidan verb (upper class) with 'gu' ending (archaic)",
+    "aux-v": "auxiliary verb",
+    "ctr": "counter",
+    "surg": "surgery",
+    "baseb": "baseball",
+    "serv": "service",
+    "genet": "genetics",
+    "geogr": "geography",
+    "dent": "dentistry",
+    "v5k-s": "Godan verb - Iku/Yuku special class",
+    "horse": "horse racing",
+    "ornith": "ornithology",
+    "v2w-s": "Nidan verb (lower class) with 'u' ending and 'we' conjugation (archaic)",
+    "sK": "search-only kanji form",
+    "rk": "rarely used kana form",
+    "hob": "Hokkaido-ben",
+    "male": "male term or language",
+    "motor": "motorsport",
+    "vidg": "video games",
+    "n-pref": "noun, used as a prefix",
+    "n-suf": "noun, used as a suffix",
+    "suf": "suffix",
+    "hon": "honorific or respectful (sonkeigo) language",
+    "biol": "biology",
+    "pol": "polite (teineigo) language",
+    "vulg": "vulgar expression or word",
+    "v2n-s": "Nidan verb (lower class) with 'nu' ending (archaic)",
+    "mil": "military",
+    "golf": "golf",
+    "min": "mineralogy",
+    "X": "rude or X-rated term (not displayed in educational software)",
+    "sk": "search-only kana form",
+    "jpmyth": "Japanese mythology",
+    "sl": "slang",
+    "fict": "fiction",
+    "art": "art, aesthetics",
+    "stat": "statistics",
+    "cryst": "crystallography",
+    "pathol": "pathology",
+    "photo": "photography",
+    "food": "food, cooking",
+    "n": "noun (common) (futsuumeishi)",
+    "thb": "Touhoku-ben",
+    "fish": "fishing",
+    "v5r-i": "Godan verb with 'ru' ending (irregular verb)",
+    "arch": "archaic",
+    "v1": "Ichidan verb",
+    "bus": "business",
+    "tv": "television",
+    "euph": "euphemistic",
+    "embryo": "embryology",
+    "v2y-k": "Nidan verb (upper class) with 'yu' ending (archaic)",
+    "uk": "word usually written using kana alone",
+    "rare": "rare term",
+    "v2a-s": "Nidan verb with 'u' ending (archaic)",
+    "hanaf": "hanafuda",
+    "figskt": "figure skating",
+    "agric": "agriculture",
+    "given": "given name or forename, gender not specified",
+    "physiol": "physiology",
+    "v5u-s": "Godan verb with 'u' ending (special class)",
+    "chn": "children's language",
+    "ev": "event",
+    "adv": "adverb (fukushi)",
+    "prt": "particle",
+    "vi": "intransitive verb",
+    "v2y-s": "Nidan verb (lower class) with 'yu' ending (archaic)",
+    "kyb": "Kyoto-ben",
+    "vk": "Kuru verb - special class",
+    "grmyth": "Greek mythology",
+    "vn": "irregular nu verb",
+    "electr": "electronics",
+    "gardn": "gardening, horticulture",
+    "adj-kari": "'kari' adjective (archaic)",
+    "vr": "irregular ru verb, plain form ends with -ri",
+    "vs": "noun or participle which takes the aux. verb suru",
+    "internet": "Internet",
+    "vt": "transitive verb",
+    "cards": "card games",
+    "stockm": "stock market",
+    "vz": "Ichidan verb - zuru verb (alternative form of -jiru verbs)",
+    "aux": "auxiliary",
+    "v2h-s": "Nidan verb (lower class) with 'hu/fu' ending (archaic)",
+    "kyu": "Kyuushuu-ben",
+    "noh": "noh",
+    "econ": "economics",
+    "rommyth": "Roman mythology",
+    "ecol": "ecology",
+    "n-t": "noun (temporal) (jisoumeishi)",
+    "psy": "psychiatry",
+    "proverb": "proverb",
+    "company": "company name",
+    "poet": "poetical term",
+    "ateji": "ateji (phonetic) reading",
+    "paleo": "paleontology",
+    "v2h-k": "Nidan verb (upper class) with 'hu/fu' ending (archaic)",
+    "civeng": "civil engineering",
+    "go": "go (game)",
+    "adv-to": "adverb taking the 'to' particle",
+    "ent": "entomology",
+    "unc": "unclassified",
+    "unclass": "unclassified name",
+    "on-mim": "onomatopoeic or mimetic word",
+    "yoji": "yojijukugo",
+    "n-adv": "adverbial noun (fukushitekimeishi)",
+    "print": "printing",
+    "form": "formal or literary term",
+    "obj": "object",
+    "osb": "Osaka-ben",
+    "adj-shiku": "'shiku' adjective (archaic)",
+    "Christn": "Christianity",
+    "hum": "humble (kenjougo) language",
+    "obs": "obsolete term",
+    "relig": "religion",
+    "iK": "word containing irregular kanji usage",
+    "v2k-s": "Nidan verb (lower class) with 'ku' ending (archaic)",
+    "conj": "conjunction",
+    "v2s-s": "Nidan verb (lower class) with 'su' ending (archaic)",
+    "geol": "geology",
+    "geom": "geometry",
+    "anat": "anatomy",
+    "nab": "Nagano-ben",
+    "ski": "skiing",
+    "hist": "historical term",
+    "fam": "familiar language",
+    "myth": "mythology",
+    "gramm": "grammar",
+    "v2k-k": "Nidan verb (upper class) with 'ku' ending (archaic)",
+    "id": "idiomatic expression",
+    "v5aru": "Godan verb - -aru special class",
+    "psyanal": "psychoanalysis",
+    "comp": "computing",
+    "creat": "creature",
+    "ik": "word containing irregular kana usage",
+    "oth": "other",
+    "v-unspec": "verb unspecified",
+    "io": "irregular okurigana usage",
+    "work": "work of art, literature, music, etc. name",
+    "adj-ix": "adjective (keiyoushi) - yoi/ii class",
+    "phil": "philosophy",
+    "doc": "document",
+    "math": "mathematics",
+    "pharm": "pharmacology",
+    "adj-nari": "archaic/formal form of na-adjective",
+    "v2r-k": "Nidan verb (upper class) with 'ru' ending (archaic)",
+    "adj-f": "noun or verb acting prenominally",
+    "adj-i": "adjective (keiyoushi)",
+    "audvid": "audiovisual",
+    "rkb": "Ryuukyuu-ben",
+    "adj-t": "'taru' adjective",
+    "v2r-s": "Nidan verb (lower class) with 'ru' ending (archaic)",
+    "Buddh": "Buddhism",
+    "biochem": "biochemistry",
+    "v2b-k": "Nidan verb (upper class) with 'bu' ending (archaic)",
+    "vs-s": "suru verb - special class",
+    "surname": "family or surname",
+    "physics": "physics",
+    "place": "place name",
+    "v2b-s": "Nidan verb (lower class) with 'bu' ending (archaic)",
+    "kabuki": "kabuki",
+    "prowres": "professional wrestling",
+    "product": "product name",
+    "vs-c": "su verb - precursor to the modern suru",
+    "tsug": "Tsugaru-ben",
+    "adj-ku": "'ku' adjective (archaic)",
+    "telec": "telecommunications",
+    "vs-i": "suru verb - included",
+    "v2z-s": "Nidan verb (lower class) with 'zu' ending (archaic)",
+    "organization": "organization name",
+    "char": "character",
+    "engr": "engineering",
+    "logic": "logic",
+    "v2m-s": "Nidan verb (lower class) with 'mu' ending (archaic)",
+    "col": "colloquial",
+    "archeol": "archeology",
+    "cop": "copula",
+    "num": "numeric",
+    "aviat": "aviation",
+    "aux-adj": "auxiliary adjective",
+    "m-sl": "manga slang",
+    "fem": "female term or language",
+    "MA": "martial arts",
+    "finc": "finance",
+    "v1-s": "Ichidan verb - kureru special class",
+    "v2m-k": "Nidan verb (upper class) with 'mu' ending (archaic)",
+    "manga": "manga",
+    "shogi": "shogi",
+    "group": "group",
+    "adj-no": "nouns which may take the genitive case particle 'no'",
+    "adj-na": "adjectival nouns or quasi-adjectives (keiyodoshi)",
+    "sens": "sensitive",
+    "law": "law",
+    "vet": "veterinary terms",
+    "mahj": "mahjong",
+    "v4b": "Yodan verb with 'bu' ending (archaic)",
+    "rail": "railway",
+    "v4g": "Yodan verb with 'gu' ending (archaic)",
+    "elec": "electricity, elec. eng.",
+    "film": "film",
+    "mining": "mining",
+    "v4h": "Yodan verb with 'hu/fu' ending (archaic)",
+    "v4k": "Yodan verb with 'ku' ending (archaic)",
+    "v4m": "Yodan verb with 'mu' ending (archaic)",
+    "v4n": "Yodan verb with 'nu' ending (archaic)",
+    "sumo": "sumo",
+    "v4s": "Yodan verb with 'su' ending (archaic)",
+    "v4r": "Yodan verb with 'ru' ending (archaic)",
+    "person": "full name of a particular person",
+    "v4t": "Yodan verb with 'tsu' ending (archaic)",
+    "boxing": "boxing",
+    "oK": "word containing out-dated kanji or kanji usage",
+    "cloth": "clothing",
+    "joc": "jocular, humorous term",
+    "politics": "politics",
+    "v2t-k": "Nidan verb (upper class) with 'tsu' ending (archaic)",
+    "tsb": "Tosa-ben",
+    "v5b": "Godan verb with 'bu' ending",
+    "ling": "linguistics",
+    "bot": "botany",
+    "v2t-s": "Nidan verb (lower class) with 'tsu' ending (archaic)",
+    "v5g": "Godan verb with 'gu' ending",
+    "med": "medicine",
+    "v5k": "Godan verb with 'ku' ending",
+    "mech": "mechanical engineering",
+    "v5n": "Godan verb with 'nu' ending",
+    "v5m": "Godan verb with 'mu' ending",
+    "v2d-k": "Nidan verb (upper class) with 'dzu' ending (archaic)",
+    "v5r": "Godan verb with 'ru' ending",
+    "v5t": "Godan verb with 'tsu' ending",
+    "v5s": "Godan verb with 'su' ending",
+    "v5u": "Godan verb with 'u' ending",
+    "Shinto": "Shinto",
+    "station": "railway station",
+    "chmyth": "Chinese mythology",
+    "dated": "dated term",
+    "v2d-s": "Nidan verb (lower class) with 'dzu' ending (archaic)",
+    "psych": "psychology",
+    "adj-pn": "pre-noun adjectival (rentaishi)",
+    "ok": "out-dated or obsolete kana usage",
+    "met": "meteorology",
+    "chem": "chemistry",
+    "sports": "sports",
+    "zool": "zoology",
+    "int": "interjection (kandoushi)",
+    "tradem": "trademark",
+    "net-sl": "Internet slang",
+    "n-pr": "proper noun",
+    "archit": "architecture",
+    "ksb": "Kansai-ben",
+    "pn": "pronoun",
+    "gikun": "gikun (meaning as reading) or jukujikun (special kanji reading)"
 }

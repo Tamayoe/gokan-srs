@@ -74,3 +74,13 @@ export interface VocabProgress {
     totalReviews: number;
     consecutiveFailures: number;
 }
+
+export const DEFAULT_VOCABULARY_PROGRESS: Omit<VocabProgress, 'vocabId'> = {
+    stage: "learning",
+    mastery: 0,
+    introductionAt: null,
+    nextReviewAt: new Date(),
+    lastReviewedAt: null,
+    totalReviews: 0,
+    consecutiveFailures: 0,
+};

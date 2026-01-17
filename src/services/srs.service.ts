@@ -3,6 +3,7 @@ import type { VocabProgress } from '../models/vocabulary.model';
 import { CONSTANTS } from '../commons/constants';
 import { VocabularyService } from './vocabulary.service';
 import type {KanjiKnowledge, UserProgress, UserSettings} from '../models/user.model';
+import {DEFAULT_VOCABULARY_PROGRESS} from "../models/vocabulary.model";
 
 export class SRSService {
     /* =======================
@@ -275,14 +276,8 @@ export class SRSService {
 
     private static createNewVocabProgress(vocabId: string): VocabProgress {
         return {
-            vocabId,
-            stage: "learning",
-            mastery: 0,
-            introductionAt: null,
-            nextReviewAt: new Date(), // immediately due
-            lastReviewedAt: null,
-            totalReviews: 0,
-            consecutiveFailures: 0,
+            ...DEFAULT_VOCABULARY_PROGRESS,
+            vocabId
         };
     }
 }

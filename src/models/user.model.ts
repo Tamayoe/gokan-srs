@@ -46,3 +46,13 @@ export interface UserSettings {
 export const DEFAULT_SETTINGS: UserSettings = {
     preferredLearningOrder: 'frequency',
 };
+
+export const DEFAULT_PROGRESS: Omit<UserProgress, 'kanjiKnowledge'> = {
+    stats: {
+        newLearnedToday: 0,
+        totalLearned: 0,
+        totalReviews: 0,
+    },
+    learningQueue: [],
+    dailyOverride: false
+}

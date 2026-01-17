@@ -34,7 +34,7 @@ export const THEME = {
         kanji: '6.6rem',    // 105.6px (~10% increase from 96px)
     },
     spacing: {
-        base: 8,
+        base: 4,
         labelMargin: 8,
         feedbackPadding: 16,
         buttonMarginTop: 28,
@@ -47,6 +47,6 @@ export const THEME = {
     transitions: {
         fast: '150ms',
         normal: '200ms',
-        feedbackDelay: 400,
+        feedbackDelay: 1000,
     },
 } as const;

@@ -1,6 +1,8 @@
 import type {UserProgress, UserSettings} from "../models/user.model";
 import {CONSTANTS} from "../commons/constants";
 import type {VocabProgress} from "../models/vocabulary.model";
+import {DEFAULT_VOCABULARY_PROGRESS} from "../models/vocabulary.model";
+import {DEFAULT_PROGRESS, DEFAULT_SETTINGS} from "../models/user.model";
 
 export class StorageService {
     static saveProgress(progress: UserProgress): void {
@@ -16,11 +18,13 @@ export class StorageService {
 
         const parsed: UserProgress = JSON.parse(stored);
         const learningQueue: VocabProgress[]  = parsed.learningQueue.map(elem => ({
+            ...DEFAULT_VOCABULARY_PROGRESS,
             ...elem,
             nextReviewAt: typeof elem.nextReviewAt === 'string' ? new Date(elem.nextReviewAt) : elem.nextReviewAt,
             lastReviewedAt: typeof elem.lastReviewedAt === 'string' ? new Date(elem.lastReviewedAt) : elem.lastReviewedAt
         }))
         return {
+            ...DEFAULT_PROGRESS,
             ...parsed,
             kanjiKnowledge: {
                 ...parsed.kanjiKnowledge,
@@ -45,7 +49,10 @@ export class StorageService {
         const stored = localStorage.getItem(CONSTANTS.storage.settingsStorageKey);
         if (!stored) return null;
 
-        return JSON.parse(stored);
+        return {
+            ...DEFAULT_SETTINGS,
+            ...JSON.parse(stored)
+        };
     }
 
     static clearSettings(): void {
