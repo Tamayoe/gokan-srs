@@ -1,4 +1,5 @@
 import React from "react";
+import {useResponsive} from "../context/Responsive/useResponsive";
 
 export const LogoMark: React.FC<{ size?: number }> = ({ size = 48 }) => (
     <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,11 +19,15 @@ export const LogoMark: React.FC<{ size?: number }> = ({ size = 48 }) => (
     </svg>
 );
 
-export const Logo: React.FC<{ className?: string }> = ({ className = '' }) => (
-    <div className={`flex items-center gap-3 ${className}`}>
-        <LogoMark size={48} />
-        <span className="text-2xl tracking-wide font-serif text-primary">
+export const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
+    const { isMobile } = useResponsive()
+
+    return (
+        <div className={`flex items-center gap-3 ${className}`}>
+            <LogoMark size={isMobile ? 24 : 48}/>
+            <span className="md:text-2xl tracking-wide font-serif text-primary">
             Gokan SRS
         </span>
-    </div>
-);
+        </div>
+    )
+};

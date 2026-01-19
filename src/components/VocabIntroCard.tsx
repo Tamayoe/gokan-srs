@@ -4,6 +4,7 @@ import { Card } from "./ui/Card";
 import { CardDivider, CardSection } from "./ui/CardSection";
 import { Button } from "./ui/Button";
 import { useEffect, useRef } from "react";
+import {useResponsive} from "../context/Responsive/useResponsive";
 
 
 interface IntroVocabCardProps {
@@ -14,6 +15,7 @@ interface IntroVocabCardProps {
 
 export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCardProps) {
     const formRef = useRef<HTMLFormElement | null>(null);
+    const { isMobile } = useResponsive()
 
     useEffect(() => {
         if (formRef) {
@@ -48,11 +50,11 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
 
             <form onSubmit={onLearn} className="flex gap-4" ref={formRef}>
                 <Button variant="secondary" className="flex-1" onClick={onSkip}>
-                    I already know this
+                    { isMobile ? 'Skip' : 'I already know this' }
                 </Button>
 
                 <Button variant="primary" className="flex-1" type="submit">
-                    Learn this word
+                    { isMobile ? 'Learn' : 'Learn this word' }
                 </Button>
             </form>
         </Card>

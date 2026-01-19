@@ -6,6 +6,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleDriveProvider } from "./context/GoogleDriveContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import { App } from './App';
+import {ResponsiveProvider} from "./context/Responsive/ResponsiveProvider";
 
 
 // Import Google Fonts
@@ -21,9 +22,11 @@ createRoot(document.getElementById('root')!).render(
         <ThemeProvider defaultTheme="system" storageKey="gokan-theme">
             <GoogleOAuthProvider clientId="1088130501377-pe580cj85dt179hltgba6v153m12esmh.apps.googleusercontent.com">
                 <GoogleDriveProvider>
-                    <QuizProvider>
-                        <App />
-                    </QuizProvider>
+                    <ResponsiveProvider>
+                        <QuizProvider>
+                            <App />
+                        </QuizProvider>
+                    </ResponsiveProvider>
                 </GoogleDriveProvider>
             </GoogleOAuthProvider>
         </ThemeProvider>
