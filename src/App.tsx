@@ -10,6 +10,7 @@ import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { UserProfileScreen } from "./pages/profile/UserProfileScreen";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
 import { Cloud, RefreshCw } from "lucide-react";
+import { SyncLoader } from "./components/SyncLoader";
 
 export type Screen = "quiz" | "settings" | "profile";
 
@@ -31,7 +32,13 @@ function SyncStatusIndicator() {
 
 export const App: React.FC = () => {
     const { state, actions, isSetupComplete } = useQuiz();
+    const { isInitialSyncComplete } = useGoogleDrive();
     const [screen, setScreen] = useState<Screen>("quiz");
+
+    // Show sync loader if initial sync is in progress
+    if (!isInitialSyncComplete) {
+        return <SyncLoader />;
+    }
 
     // Setup gate
     if (!isSetupComplete) {

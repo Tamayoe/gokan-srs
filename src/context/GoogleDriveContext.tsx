@@ -7,6 +7,9 @@ import { CONSTANTS } from '../commons/constants';
 
 interface GoogleUser {
     access_token: string;
+    name?: string;
+    email?: string;
+    picture?: string;
 }
 
 interface GoogleDriveContextType {
@@ -16,6 +19,7 @@ interface GoogleDriveContextType {
     isSyncing: boolean;
     user: GoogleUser | null;
     isAuthenticated: boolean;
+    isInitialSyncComplete: boolean;
 }
 
 const GoogleDriveContext = createContext<GoogleDriveContextType | null>(null);
@@ -24,26 +28,64 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
     const [user, setUser] = useState<GoogleUser | null>(null);
     const [isSyncing, setIsSyncing] = useState(false);
     const [syncService, setSyncService] = useState<GoogleDriveSync | null>(null);
+    const [isInitialSyncComplete, setIsInitialSyncComplete] = useState(true); // Default true for no-sync case
+
+    // Fetch user profile from Google
+    const fetchUserProfile = async (accessToken: string): Promise<Partial<GoogleUser>> => {
+        try {
+            const response = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+                headers: { Authorization: `Bearer ${accessToken}` }
+            });
+            const data = await response.json();
+            return {
+                name: data.name,
+                email: data.email,
+                picture: data.picture
+            };
+        } catch (error) {
+            console.error('Failed to fetch user profile:', error);
+            return {};
+        }
+    };
 
     // Load persisted token on mount
     useEffect(() => {
         const storedToken = localStorage.getItem(CONSTANTS.storage.googleDriveTokenKey);
         if (storedToken) {
-            setUser({ access_token: storedToken });
+            setIsInitialSyncComplete(false); // Start as not complete
+
+            // Fetch user profile and set user state
+            fetchUserProfile(storedToken).then(profile => {
+                setUser({ access_token: storedToken, ...profile });
+            });
+
             const service = new GoogleDriveSync(storedToken);
             setSyncService(service);
-            // Optionally trigger a background sync on load?
-            // service.initialize().then(merged => { if(merged) console.log("Background sync init complete") });
+
+            // Trigger background sync on load to fetch latest progress from Drive
+            service.initialize().then(merged => {
+                if (merged) {
+                    console.log("Background sync init complete");
+                    StorageService.saveProgress(merged);
+                }
+                setIsInitialSyncComplete(true); // Mark as complete
+            }).catch(error => {
+                console.error("Background sync failed:", error);
+                setIsInitialSyncComplete(true); // Allow app to proceed even on error
+            });
         }
     }, []);
 
     const login = useGoogleLogin({
-        scope: 'https://www.googleapis.com/auth/drive.file',
+        scope: 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
         onSuccess: async (tokenResponse: TokenResponse) => {
             console.log("Google Login Success", tokenResponse);
             localStorage.setItem(CONSTANTS.storage.googleDriveTokenKey, tokenResponse.access_token);
 
-            setUser({ access_token: tokenResponse.access_token });
+            // Fetch user profile
+            const profile = await fetchUserProfile(tokenResponse.access_token);
+            setUser({ access_token: tokenResponse.access_token, ...profile });
+
             const service = new GoogleDriveSync(tokenResponse.access_token);
             setSyncService(service);
 
@@ -127,7 +169,8 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             sync,
             isSyncing,
             user,
-            isAuthenticated: !!user
+            isAuthenticated: !!user,
+            isInitialSyncComplete
         }}>
             {children}
         </GoogleDriveContext.Provider>

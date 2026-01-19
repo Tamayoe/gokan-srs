@@ -63,6 +63,49 @@ export class GoogleDriveSync {
         local: ProgressWithMetadata,
         remote: ProgressWithMetadata
     ): ProgressWithMetadata {
+        // Create a map to merge vocab items by vocabId
+        const vocabMap = new Map<string, any>();
+
+        // Add all local vocab items to the map
+        for (const item of local.learningQueue) {
+            vocabMap.set(item.vocabId, { source: 'local', item });
+        }
+
+        // Process remote vocab items
+        for (const remoteItem of remote.learningQueue) {
+            const existing = vocabMap.get(remoteItem.vocabId);
+
+            if (!existing) {
+                // New vocab item only in remote
+                vocabMap.set(remoteItem.vocabId, { source: 'remote', item: remoteItem });
+            } else {
+                // Vocab exists in both - determine which is more recent
+                const localItem = existing.item;
+
+                // Compare lastReviewedAt timestamps
+                const localReviewTime = localItem.lastReviewedAt ? new Date(localItem.lastReviewedAt).getTime() : 0;
+                const remoteReviewTime = remoteItem.lastReviewedAt ? new Date(remoteItem.lastReviewedAt).getTime() : 0;
+
+                if (remoteReviewTime > localReviewTime) {
+                    // Remote is more recent, use it
+                    vocabMap.set(remoteItem.vocabId, { source: 'remote', item: remoteItem });
+                } else if (localReviewTime === 0 && remoteReviewTime === 0) {
+                    // Both have never been reviewed, compare introductionAt
+                    const localIntroTime = localItem.introductionAt ? new Date(localItem.introductionAt).getTime() : 0;
+                    const remoteIntroTime = remoteItem.introductionAt ? new Date(remoteItem.introductionAt).getTime() : 0;
+
+                    if (remoteIntroTime > localIntroTime) {
+                        vocabMap.set(remoteItem.vocabId, { source: 'remote', item: remoteItem });
+                    }
+                    // Otherwise keep local (already in map)
+                }
+                // Otherwise keep local (already in map)
+            }
+        }
+
+        // Extract merged vocab items from the map
+        const mergedQueue = Array.from(vocabMap.values()).map(entry => entry.item);
+
         const result: ProgressWithMetadata = {
             ...local,
             stats: {
@@ -77,10 +120,7 @@ export class GoogleDriveSync {
                     ...(remote.kanjiKnowledge?.kanjiSet ?? [])
                 ])
             },
-            learningQueue: [
-                ...local.learningQueue,
-                ...remote.learningQueue.filter(r => !local.learningQueue.some(l => l.vocabId === r.vocabId))
-            ],
+            learningQueue: mergedQueue,
             // Combine overrides cautiously - if either has it true, user probably wants it
             dailyOverride: local.dailyOverride || remote.dailyOverride,
             _sync: {

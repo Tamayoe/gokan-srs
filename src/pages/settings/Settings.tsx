@@ -6,7 +6,7 @@ import { Button } from "../../components/ui/Button";
 import { useTheme } from "../../context/ThemeContext";
 
 function SyncControls() {
-    const { login, logout, sync, isSyncing, isAuthenticated } = useGoogleDrive();
+    const { login, logout, sync, isSyncing, isAuthenticated, user } = useGoogleDrive();
 
     if (!isAuthenticated) {
         return (
@@ -23,10 +23,28 @@ function SyncControls() {
 
     return (
         <div className="flex flex-col gap-3">
-            <div className="flex items-center justify-between p-3 rounded-lg bg-green-500/10 border border-green-500/20">
-                <div className="flex items-center gap-2">
-                    <Cloud size={18} className="text-green-600" />
-                    <span className="text-sm text-green-700 dark:text-green-400">Connected to Google Drive</span>
+            <div className="flex items-center justify-between p-4 rounded-lg bg-green-500/10 border border-green-500/20">
+                <div className="flex items-center gap-3">
+                    {user?.picture && (
+                        <img
+                            src={user.picture}
+                            alt="Profile"
+                            className="w-10 h-10 rounded-full"
+                        />
+                    )}
+                    <div className="flex flex-col">
+                        <div className="flex items-center gap-2">
+                            <Cloud size={16} className="text-green-600" />
+                            <span className="text-sm font-medium text-green-700 dark:text-green-400">
+                                {user?.name || 'Connected to Google Drive'}
+                            </span>
+                        </div>
+                        {user?.email && (
+                            <span className="text-xs text-green-600/70 dark:text-green-400/70">
+                                {user.email}
+                            </span>
+                        )}
+                    </div>
                 </div>
                 <button
                     onClick={() => logout()}
