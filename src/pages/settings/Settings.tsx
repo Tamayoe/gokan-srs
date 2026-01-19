@@ -92,10 +92,10 @@ export function SettingsScreen({
     const { theme, setTheme } = useTheme();
 
     return (
-        <div className="min-h-screen flex flex-col items-center p-8 bg-background transition-colors duration-200">
+        <div className="min-h-screen flex flex-col items-center bg-background transition-colors duration-200 max-w-2xl md:max-w-3xl">
 
             {/* Header */}
-            <div className="w-full max-w-2xl flex items-center mb-12 relative animate-fade-in">
+            <div className="w-full max-w-2xl md:w-3xl flex items-center mb-12 relative animate-fade-in">
                 <Button
                     variant="ghost"
                     onClick={onBack}
@@ -110,7 +110,7 @@ export function SettingsScreen({
             </div>
 
             {/* Appearance */}
-            <section className="w-full max-w-2xl mb-16 animate-slide-up" style={{ animationDelay: "100ms" }}>
+            <section className="w-full mb-16 animate-slide-up" style={{ animationDelay: "100ms" }}>
                 <h2 className="mb-4 uppercase tracking-wide text-xs font-gothic text-secondary">
                     Appearance
                 </h2>
@@ -144,7 +144,7 @@ export function SettingsScreen({
             </section>
 
             {/* Learning preferences */}
-            <section className="w-full max-w-2xl mb-16 animate-slide-up" style={{ animationDelay: "200ms" }}>
+            <section className="w-full mb-16 animate-slide-up" style={{ animationDelay: "200ms" }}>
                 <h2 className="mb-4 uppercase tracking-wide text-xs font-gothic text-secondary">
                     Learning preferences
                 </h2>
@@ -174,7 +174,7 @@ export function SettingsScreen({
             </section>
 
             {/* Cloud Sync */}
-            <section className="w-full max-w-2xl mb-16">
+            <section className="w-full mb-16">
                 <h2 className="mb-4 uppercase tracking-wide text-xs font-gothic text-secondary">
                     Cloud Sync (Google Drive)
                 </h2>
@@ -185,7 +185,7 @@ export function SettingsScreen({
             </section>
 
             {/* Danger zone */}
-            <section className="w-full max-w-2xl">
+            <section className="w-full">
                 <h2 className="mb-4 uppercase tracking-wide text-xs font-gothic text-error-accent">
                     Danger zone
                 </h2>

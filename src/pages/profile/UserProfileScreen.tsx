@@ -7,8 +7,8 @@ export function UserProfileScreen({ onBack }: { onBack: () => void }) {
     const { state, actions } = useQuiz();
 
     return (
-        <div className="w-full max-w-5xl flex flex-col gap-2 animate-fade-in">
-            <header className="mb-6 flex items-center justify-center relative h-12">
+        <div className="w-full max-w-2xl md:max-w-3xl flex flex-col gap-2 animate-fade-in">
+            <header className="w-full mb-6 flex items-center justify-center relative h-12">
                 <Button
                     variant="ghost"
                     onClick={onBack}
@@ -22,7 +22,7 @@ export function UserProfileScreen({ onBack }: { onBack: () => void }) {
                 </h1>
             </header>
 
-            <section className="mt-8">
+            <section className="w-full mt-8">
                 <h2 className="text-lg mb-4 text-primary font-serif">
                     Kanji
                 </h2>
@@ -31,7 +31,7 @@ export function UserProfileScreen({ onBack }: { onBack: () => void }) {
 
             </section>
 
-            <section className="mt-16">
+            <section className="w-full mt-16">
                 <h2 className="text-lg mb-4 text-primary font-serif">
                     Vocabulary
                 </h2>

@@ -94,7 +94,7 @@ export const App: React.FC = () => {
             </header>
 
             {/* Screen content */}
-            <div className="flex-1 flex items-center justify-center p-8">
+            <div className="flex-1 flex items-center justify-center p-4 md:p-0">
                 {screen === "quiz" && <QuizScreen />}
                 {screen === "about" && <AboutScreen onBack={() => navigateTo("quiz")} />}
                 {screen === "settings" && (
