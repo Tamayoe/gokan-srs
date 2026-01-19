@@ -1,8 +1,17 @@
 import React from "react";
-import {useResponsive} from "../context/Responsive/useResponsive";
+import { useResponsive } from "../context/Responsive/useResponsive";
 
 export const LogoMark: React.FC<{ size?: number }> = ({ size = 48 }) => (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+        width={size}
+        height={size}
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Gokan SRS Logo"
+    >
+        <title>Gokan SRS - Japanese Vocabulary Learning</title>
         <rect x="2" y="2" width="96" height="96" className="stroke-primary" strokeWidth="4" fill="none" />
         <text
             x="50"
@@ -24,10 +33,10 @@ export const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
 
     return (
         <div className={`flex items-center gap-3 ${className}`}>
-            <LogoMark size={isMobile ? 24 : 48}/>
+            <LogoMark size={isMobile ? 24 : 48} />
             <span className="md:text-2xl tracking-wide font-serif text-primary">
-            Gokan SRS
-        </span>
+                Gokan SRS
+            </span>
         </div>
     )
 };

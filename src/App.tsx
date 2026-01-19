@@ -11,8 +11,9 @@ import { UserProfileScreen } from "./pages/profile/UserProfileScreen";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
 import { Cloud, RefreshCw } from "lucide-react";
 import { SyncLoader } from "./components/SyncLoader";
+import { AboutScreen } from "./pages/about/AboutScreen";
 
-export type Screen = "quiz" | "settings" | "profile";
+export type Screen = "quiz" | "settings" | "profile" | "about";
 
 function SyncStatusIndicator() {
     const { isSyncing, isAuthenticated } = useGoogleDrive();
@@ -33,7 +34,32 @@ function SyncStatusIndicator() {
 export const App: React.FC = () => {
     const { state, actions, isSetupComplete } = useQuiz();
     const { isInitialSyncComplete } = useGoogleDrive();
-    const [screen, setScreen] = useState<Screen>("quiz");
+
+    // Simple routing based on URL hash
+    const getScreenFromHash = (): Screen => {
+        const hash = window.location.hash.slice(1); // Remove #
+        if (hash === 'about' || hash === 'settings' || hash === 'profile') {
+            return hash as Screen;
+        }
+        return 'quiz';
+    };
+
+    const [screen, setScreen] = useState<Screen>(getScreenFromHash());
+
+    // Update URL when screen changes
+    const navigateTo = (newScreen: Screen) => {
+        setScreen(newScreen);
+        window.location.hash = newScreen === 'quiz' ? '' : newScreen;
+    };
+
+    // Listen for browser back/forward
+    React.useEffect(() => {
+        const handleHashChange = () => {
+            setScreen(getScreenFromHash());
+        };
+        window.addEventListener('hashchange', handleHashChange);
+        return () => window.removeEventListener('hashchange', handleHashChange);
+    }, []);
 
     // Show sync loader if initial sync is in progress
     if (!isInitialSyncComplete) {
@@ -58,10 +84,10 @@ export const App: React.FC = () => {
 
                 <div className="flex gap-4 items-center">
                     <SyncStatusIndicator />
-                    <button onClick={() => setScreen("profile")}>
+                    <button onClick={() => navigateTo("profile")} title="User Profile">
                         <User size={18} />
                     </button>
-                    <button onClick={() => setScreen("settings")}>
+                    <button onClick={() => navigateTo("settings")} title="Settings">
                         <Settings size={18} />
                     </button>
                 </div>
@@ -70,12 +96,13 @@ export const App: React.FC = () => {
             {/* Screen content */}
             <div className="flex-1 flex items-center justify-center p-8">
                 {screen === "quiz" && <QuizScreen />}
+                {screen === "about" && <AboutScreen onBack={() => navigateTo("quiz")} />}
                 {screen === "settings" && (
                     <SettingsScreen
                         settings={state.settings!}
                         onUpdateSettings={actions.saveSettings}
                         onReset={actions.reset}
-                        onBack={() => setScreen("quiz")}
+                        onBack={() => navigateTo("quiz")}
                     />
                 )}
                 {screen === "profile" && (
@@ -84,10 +111,22 @@ export const App: React.FC = () => {
                         kanjiMethod: state.progress!.kanjiKnowledge.method,
                         knownKanji: state.progress!.kanjiKnowledge.kanjiSet
                     }}>
-                        <UserProfileScreen onBack={() => setScreen("quiz")} />
+                        <UserProfileScreen onBack={() => navigateTo("quiz")} />
                     </KanjiFormProvider>
                 )}
             </div>
+
+            {/* Footer with About link */}
+            {screen === "quiz" && (
+                <footer className="p-4 text-center">
+                    <button
+                        onClick={() => navigateTo("about")}
+                        className="text-xs text-secondary hover:text-primary transition-colors"
+                    >
+                        About Gokan SRS
+                    </button>
+                </footer>
+            )}
         </div>
     );
 };
