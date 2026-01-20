@@ -4,6 +4,19 @@ import { CONSTANTS } from "../commons/constants";
 const DRIVE_FILE_NAME = CONSTANTS.storage.googleDriveFileName;
 const DRIVE_FOLDER_NAME = CONSTANTS.storage.googleDriveFolderName;
 
+/**
+ * Custom error class for Google Drive authentication failures
+ */
+export class GoogleAuthError extends Error {
+    statusCode: number;
+
+    constructor(message: string, statusCode: number) {
+        super(message);
+        this.name = 'GoogleAuthError';
+        this.statusCode = statusCode;
+    }
+}
+
 interface DriveFile {
     id: string;
     name: string;
@@ -148,6 +161,13 @@ export class GoogleDriveSync {
             { headers: { Authorization: `Bearer ${this.accessToken}` } }
         );
 
+        if (!response.ok) {
+            if (response.status === 401 || response.status === 403) {
+                throw new GoogleAuthError('Authentication failed or token expired', response.status);
+            }
+            throw new Error(`Failed to list folders: ${response.status}`);
+        }
+
         const { files } = await response.json();
 
         if (files?.length > 0) {
@@ -173,6 +193,13 @@ export class GoogleDriveSync {
             }
         );
 
+        if (!response.ok) {
+            if (response.status === 401 || response.status === 403) {
+                throw new GoogleAuthError('Authentication failed or token expired', response.status);
+            }
+            throw new Error(`Failed to create folder: ${response.status}`);
+        }
+
         const { id } = await response.json();
         return id;
     }
@@ -185,6 +212,13 @@ export class GoogleDriveSync {
             { headers: { Authorization: `Bearer ${this.accessToken}` } }
         );
 
+        if (!response.ok) {
+            if (response.status === 401 || response.status === 403) {
+                throw new GoogleAuthError('Authentication failed or token expired', response.status);
+            }
+            throw new Error(`Failed to list files: ${response.status}`);
+        }
+
         const { files }: { files: DriveFile[] } = await response.json();
 
         if (!files?.length) return null;
@@ -195,6 +229,13 @@ export class GoogleDriveSync {
             `https://www.googleapis.com/drive/v3/files/${this.fileId}?alt=media`,
             { headers: { Authorization: `Bearer ${this.accessToken}` } }
         );
+
+        if (!contentResponse.ok) {
+            if (contentResponse.status === 401 || contentResponse.status === 403) {
+                throw new GoogleAuthError('Authentication failed or token expired', contentResponse.status);
+            }
+            throw new Error(`Failed to fetch file content: ${contentResponse.status}`);
+        }
 
         const data = await contentResponse.json();
         return this.deserialize(data);
@@ -227,6 +268,13 @@ export class GoogleDriveSync {
             headers: { Authorization: `Bearer ${this.accessToken}` },
             body: form
         });
+
+        if (!response.ok) {
+            if (response.status === 401 || response.status === 403) {
+                throw new GoogleAuthError('Authentication failed or token expired', response.status);
+            }
+            throw new Error(`Failed to upload progress: ${response.status}`);
+        }
 
         if (!this.fileId && response.ok) {
             const result = await response.json();

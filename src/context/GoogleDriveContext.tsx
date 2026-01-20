@@ -1,7 +1,8 @@
 
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useGoogleLogin, googleLogout, type TokenResponse } from '@react-oauth/google';
-import { GoogleDriveSync } from '../services/google.service';
+import { GoogleDriveSync, GoogleAuthError } from '../services/google.service';
 import { StorageService } from '../services/storage.service';
 import { CONSTANTS } from '../commons/constants';
 
@@ -71,6 +72,22 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
                 setIsInitialSyncComplete(true); // Mark as complete
             }).catch(error => {
                 console.error("Background sync failed:", error);
+
+                // If authentication failed, log out the user
+                if (error instanceof GoogleAuthError) {
+                    console.error('Authentication expired on initial sync, logging out...');
+                    // Clear the stored token and reset state, then trigger re-auth
+                    localStorage.removeItem(CONSTANTS.storage.googleDriveTokenKey);
+                    setUser(null);
+                    setSyncService(null);
+
+                    // Trigger re-authentication
+                    setTimeout(() => {
+                        console.log('Triggering re-authentication after initial sync failure...');
+                        login();
+                    }, 100);
+                }
+
                 setIsInitialSyncComplete(true); // Allow app to proceed even on error
             });
         }
@@ -92,14 +109,28 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             // Auto-sync on login
             await performSync(service);
         },
-        onError: error => console.error('Login Failed:', error)
+        onError: error => {
+            console.error('Login Failed:', error);
+            // If user cancels or login fails, ensure they're logged out
+            // This returns the app to the default state
+            logout();
+        }
     });
 
-    const logout = () => {
+    const logout = (triggerReauth: boolean = false) => {
         googleLogout();
         localStorage.removeItem(CONSTANTS.storage.googleDriveTokenKey);
         setUser(null);
         setSyncService(null);
+
+        // If requested, trigger re-authentication after logout
+        if (triggerReauth) {
+            // Use setTimeout to ensure logout completes first
+            setTimeout(() => {
+                console.log('Triggering re-authentication...');
+                login();
+            }, 100);
+        }
     };
 
     const performSync = async (service: GoogleDriveSync) => {
@@ -117,6 +148,12 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             }
         } catch (error) {
             console.error("Sync failed:", error);
+
+            // If authentication failed, log out the user and trigger re-auth
+            if (error instanceof GoogleAuthError) {
+                console.error('Authentication expired, logging out and prompting re-authentication...');
+                logout(true); // Pass true to trigger re-authentication
+            }
         } finally {
             // Ensure visual feedback persists long enough to be seen
             const elapsed = Date.now() - startTime;
@@ -152,6 +189,12 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
         } catch (e) {
             console.error(e);
             success = false;
+
+            // If authentication failed, log out the user and trigger re-auth
+            if (e instanceof GoogleAuthError) {
+                console.error('Authentication expired, logging out and prompting re-authentication...');
+                logout(true); // Pass true to trigger re-authentication
+            }
         } finally {
             const elapsed = Date.now() - startTime;
             if (elapsed < MIN_LOADING_TIME) {
