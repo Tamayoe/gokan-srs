@@ -1,0 +1,249 @@
+I’ve read the paper carefully (Kim, 2022 – A Meta-Analysis of Spaced Repetition Effects in Second Language Learning), and below is a developer-oriented, implementation-ready summary focused on how to optimize an SRS system for L2 vocabulary learning, with concrete design implications and tunable parameters. I’ll ground each claim in the findings of the meta-analysis and translate them into actionable system features rather than pedagogy theory.
+
+1. Core empirical findings (what actually improves retention)
+1.1 Spaced repetition strongly outperforms massed practice
+
+Medium-to-large effect size for spaced practice over massed practice on delayed posttests
+
+Effect is smaller but still positive for immediate posttests
+
+This confirms that SRS should be optimized for long-term retention, not short-term accuracy
+
+Implementation takeaway
+Your evaluation metric should not be “session accuracy,” but future recall probability after days/weeks.
+
+1.2 Longer spacing intervals are better for long-term retention
+
+Studies with longer inter-study intervals (ISI) show significantly higher delayed retention
+
+Short intervals help immediate performance but decay faster
+
+The benefit increases as the retention interval (RI) increases
+
+Rule of thumb derived from the data
+
+The longer the desired retention interval, the longer the spacing should be.
+
+Implementation
+Your SRS should:
+
+Explicitly model a target retention horizon (e.g. 30, 90, 180 days)
+
+Stretch intervals more aggressively for “mastered” items than typical beginner SRS systems do
+
+1.3 Expanding vs. equal spacing: no clear winner
+
+Meta-analysis finds no statistically reliable advantage for expanding schedules (e.g. 1–3–7–21) over equal spacing (e.g. 7–7–7)
+
+Variance between learners and task types is high
+
+Implementation
+
+Do not hard-code expanding schedules
+
+Allow adaptive spacing driven by recall success instead of fixed patterns
+
+1.4 Feedback is essential, especially delayed feedback
+
+Corrective feedback significantly enhances the spacing effect
+
+Delayed feedback performs as well or better than immediate feedback in many L2 tasks
+
+Implementation
+
+Always show:
+
+Correct reading
+
+Kana + kanji
+
+Audio (important for Japanese phonology)
+
+Feedback timing can be:
+
+Immediate after answer
+
+Or batched at end of session (both are acceptable)
+
+1.5 Production (typing) beats recognition
+
+Tasks requiring active recall (typing, speaking) show larger spacing benefits than recognition tasks (MCQ)
+
+Especially strong for form–meaning mappings, which includes Japanese readings
+
+Implementation
+Your current design (typing the reading) is optimal. Do not replace it with multiple choice except as a fallback.
+
+2. What an optimized SRS must include (feature checklist)
+2.1 Memory strength model (not just “ease factor”)
+
+The paper implies that binary correct/incorrect is insufficient.
+
+You should track per-item:
+
+Recall success history
+
+Response latency (faster = stronger memory)
+
+Error type
+
+Kana mistake
+
+Pitch accent (if tracked)
+
+Completely wrong reading
+
+Memory strength variable
+
+memory_strength ∈ ℝ
+
+
+Updated after each review.
+
+2.2 Adaptive spacing based on recall probability
+
+Instead of fixed intervals, estimate:
+
+P(recall | item, t)
+
+
+Schedule the next review when:
+
+P(recall) ≈ 0.7 – 0.8
+
+
+This aligns with the “desirable difficulty” principle implicitly supported by the meta-analysis.
+
+2.3 Interval scaling tuned for long-term retention
+
+Based on the paper’s findings, default SRS intervals are usually too conservative.
+
+Recommended baseline (in days):
+
+Review	Interval multiplier
+1 → 2	×2–3
+2 → 3	×3–4
+3 → 4	×4–6
+Mature	×6–10
+
+This produces longer ISIs, which the meta-analysis shows are critical for delayed retention.
+
+2.4 Error-sensitive rescheduling
+
+Not all errors are equal.
+
+Suggested policy:
+
+Minor kana error → small interval reduction (e.g. ×0.7)
+
+Wrong reading, same kanji → medium reduction (×0.4)
+
+No recall → reset to early stage
+
+This aligns with evidence that partial retrieval still strengthens memory.
+
+2.5 Separate schedules for form vs meaning
+
+The paper emphasizes task specificity.
+
+For Japanese:
+
+Kanji → reading
+
+Kanji → meaning
+
+Meaning → reading
+
+Each mapping should have:
+
+separate memory_strength
+separate schedule
+
+3. Optimal parameters (concrete starting values)
+3.1 Initial learning phase
+
+Immediate re-test after first exposure
+
+Then spacing jumps quickly
+
+Intervals: 0 → 1d → 4d → 14d → 60d
+
+3.2 Target recall probability
+
+Immediate learning: ~85%
+
+Long-term retention: ~70–75%
+
+Lower than most commercial SRS apps, but better for durability.
+
+3.3 Review load control
+
+The meta-analysis warns implicitly against over-compression.
+
+Rules:
+
+Cap daily reviews
+
+Prefer postponing strong items over rushing weak ones
+
+Never shorten intervals globally to “clear backlog”
+
+4. What NOT to optimize for (common SRS mistakes)
+
+Based on the evidence:
+
+❌ Optimizing for session accuracy
+❌ Very short early intervals
+❌ Recognition-heavy tasks
+❌ Fixed expanding schedules
+❌ Ignoring delayed retention outcomes
+
+5. Minimal “optimal” SRS architecture (developer blueprint)
+
+Per item
+
+{
+  "memory_strength": 0.0,
+  "last_review": "timestamp",
+  "interval": "days",
+  "error_profile": {...},
+  "recall_latency_avg": 1200
+}
+
+
+Update rule (simplified)
+
+memory_strength += f(correctness, latency)
+interval = interval × g(memory_strength)
+
+
+Scheduling rule
+
+next_review = now + interval
+
+
+Where g() grows aggressively once recall is stable.
+
+6. Final takeaway
+
+The meta-analysis strongly supports this principle:
+
+An optimal SRS is not one that keeps learners comfortable, but one that times reviews so recall is effortful but successful, with increasingly long intervals tuned to long-term retention goals.
+
+Your app is already well-positioned (typing readings). The biggest gains will come from:
+
+Longer spacing
+
+Adaptive scheduling
+
+Memory-strength modeling
+
+Error-aware rescheduling
+
+If you want, next I can:
+
+Design a concrete scheduling algorithm (SM-2 replacement)
+
+Help you simulate retention curves
+
+Or help translate this into production-ready code logic for your stack

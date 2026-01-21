@@ -1,108 +1,197 @@
-// src/services/SRSService.ts
-import type { VocabProgress } from '../models/vocabulary.model';
+// src/services/srs.service.ts
+import type { ReviewLog, SRSEntry, VocabProgress } from '../models/vocabulary.model';
 import { CONSTANTS } from '../commons/constants';
 import { VocabularyService } from './vocabulary.service';
-import type {KanjiKnowledge, UserProgress, UserSettings} from '../models/user.model';
-import {DEFAULT_VOCABULARY_PROGRESS} from "../models/vocabulary.model";
+import type { KanjiKnowledge, UserProgress, UserSettings } from '../models/user.model';
+import { DEFAULT_VOCABULARY_PROGRESS } from "../models/vocabulary.model";
+
+export type AnswerResult = 'correct' | 'minor_error' | 'wrong' | 'pass';
+
+const F = CONSTANTS.srs.formula;
 
 export class SRSService {
+
     /* =======================
        ANSWER APPLICATION
        ======================= */
 
     static applyAnswer(
         vocab: VocabProgress,
-        correct: boolean,
+        userAnswer: string,
+        correctAnswer: string,
+        latencyMs: number,
         now: Date
-    ): { updated: VocabProgress } {
-        if (!correct) {
-            return {
-                updated: {
-                    ...vocab,
-                    consecutiveFailures: vocab.consecutiveFailures + 1,
-                    mastery: Math.max(
-                        0,
-                        vocab.mastery - CONSTANTS.srs.mastery.failurePenalty
-                    ),
-                    nextReviewAt: new Date(
-                        now.getTime() + CONSTANTS.srs.scheduling.failureRetryDelayMs
-                    ),
-                    lastReviewedAt: now,
-                    totalReviews: vocab.totalReviews + 1,
-                },
-            };
-        }
+    ): { updated: VocabProgress; result: AnswerResult, interval: number } {
+        const result = this.analyzeError(userAnswer, correctAnswer);
 
-        const newMastery = Math.min(
-            100,
-            vocab.mastery + CONSTANTS.srs.mastery.successGain
-        );
+        // We focus on READING for now
+        const currentEntry = { ...vocab.reading };
 
-        const intervalMs = this.computeNextInterval(newMastery);
+        const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now);
 
         return {
             updated: {
                 ...vocab,
-                mastery: newMastery,
-                consecutiveFailures: 0,
-                nextReviewAt:
-                    newMastery === 100
-                        ? null // mastered vocab no longer scheduled
-                        : new Date(now.getTime() + intervalMs),
+                reading: newEntry,
+                // Sync top-level fields
+                nextReviewAt: newEntry.dueDate,
                 lastReviewedAt: now,
                 totalReviews: vocab.totalReviews + 1,
+                consecutiveFailures: result === 'correct' ? 0 : vocab.consecutiveFailures + 1,
             },
+            result,
+            interval
         };
     }
 
-    static applyVocabIntroChoice(
-        progress: VocabProgress,
-        choice: 'learn' | 'skip'
-    ): VocabProgress {
-        const updated: VocabProgress = {
-            ...progress,
-            introductionAt: new Date(),
-        };
+    /* =======================
+       CORE ALGORITHM (FORMULA)
+       ======================= */
 
-        if (choice === 'skip') {
-            updated.mastery = CONSTANTS.srs.mastery.max;
-            updated.nextReviewAt = null;
+    private static calculateNextState(
+        entry: SRSEntry,
+        result: AnswerResult,
+        latencyMs: number,
+        now: Date
+    ): { newEntry: SRSEntry; interval: number } {
+
+        // 1. Calculate Multipliers
+        // Latency Multiplier L = clamp(1500 / latency, 0.5, 1.5)
+        const latencyRatio = F.expectedLatency / latencyMs;
+        const L = Math.min(Math.max(latencyRatio, F.latency.min), F.latency.max);
+
+        // Difficulty Multiplier D = 0.6 + 0.8 * difficulty
+        const D = F.difficulty.base + F.difficulty.slope * entry.difficulty;
+
+        // Result Factor
+        const resultFactor = F.resultFactors[result];
+
+        // 2. Calculate Gain (Delta)
+        const delta = resultFactor * L * D;
+
+        // 3. Update Memory Strength
+        // S_new = max(S_min, S_old * (1 + Delta))
+        const rawNewStrength = entry.memoryStrength * (1 + delta);
+        const newStrength = Math.max(F.minMemoryStrength, rawNewStrength);
+
+        // 4. Calculate Interval
+        // t = S * 0.28768
+        let newInterval = newStrength * F.lnTarget;
+
+        // 5. Apply Post-processing Overrides
+        if (result === 'wrong') {
+            // Logic adjusted to match test dataset (Case 6 vs Case 4 consistency)
+            // The dataset implies straight multiplication by 0.3, then global clamping.
+            newInterval = newInterval * 0.3;
+        } else if (result === 'minor_error') {
+            newInterval = newInterval * 0.7;
         }
 
-        return updated;
+        // 6. Clamp Interval
+        newInterval = Math.min(Math.max(newInterval, F.minInterval), F.maxInterval);
+
+        // 7. Update Difficulty (Auto-adjustment)
+        // optional but recommended in spec
+        let newDifficulty = entry.difficulty;
+        if (result === 'wrong') {
+            newDifficulty -= 0.02;
+        } else if (result === 'correct' && latencyMs < F.expectedLatency) {
+            newDifficulty += 0.01;
+        }
+        newDifficulty = Math.min(Math.max(newDifficulty, 0), 1); // Clamp 0-1
+
+        // 8. Due Date
+        const dueDate = new Date(now.getTime() + newInterval * 24 * 60 * 60 * 1000);
+
+        // History Log
+        const historyLog: ReviewLog = {
+            date: now.getTime(),
+            result,
+            interval: newInterval,
+            latency: latencyMs
+        };
+
+        return {
+            newEntry: {
+                ...entry,
+                memoryStrength: newStrength,
+                interval: newInterval,
+                difficulty: newDifficulty,
+                lastReviewedAt: now,
+                dueDate: dueDate,
+                history: [...entry.history, historyLog].slice(-20)
+            },
+            interval: newInterval
+        };
     }
 
-    private static computeNextInterval(mastery: number): number {
-        const {
-            minIntervalMs,
-            firstSuccessIntervalMs,
-            maxIntervalMs,
-            growthExponent,
-        } = CONSTANTS.srs.scheduling;
+    private static analyzeError(user: string, expected: string): AnswerResult {
+        const u = user.trim().replace(/\s+/g, '');
+        const e = expected.trim().replace(/\s+/g, '');
 
-        // Clamp mastery
-        const m = Math.max(0, Math.min(100, mastery));
+        if (u === e) return 'correct';
+        if (u === 'pass') return 'pass';
 
-        // Normalize mastery to [0, 1]
-        const x = m / 100;
+        // Minor error check
+        // Rule: Levenshtein distance <= 1 AND length relative check
+        // User Examples: 
+        // こたへ (subs) -> minor
+        // こたぇ (subs) -> minor
+        // こたええ (insert) -> minor
+        // こーたえ (insert) -> minor
+        // こえ (delete) -> wrong
 
-        // Power curve (controls acceleration)
-        const curved = Math.pow(x, growthExponent);
+        // This implies we allow substitutions and insertions (user >= expected), but NOT deletions (user < expected).
+        // Or strictly: mora count check. For now, char length is a sufficient proxy for these examples.
 
-        // Interpolate between first success and max interval
-        const intervalAfterFirst =
-            firstSuccessIntervalMs *
-            Math.pow(maxIntervalMs / firstSuccessIntervalMs, curved);
+        const dist = this.levenshtein(u, e);
 
-        // Blend early learning phase
-        const earlyFactor = Math.min(1, m / 15);
+        // Allow distance 1 IF it's not a pure deletion that shortens the word effectively below target
+        // The user example 'こえ' (2 chars) vs 'こたえ' (3 chars) is WRONG.
+        // 'こーたえ' (4 chars) vs 'こたえ' (3 chars) is MINOR.
+        // So: dist <= 1 AND u.length >= e.length
 
-        const interval =
-            minIntervalMs * (1 - earlyFactor) +
-            intervalAfterFirst * earlyFactor;
+        if (dist <= 1 && u.length >= e.length) {
+            return 'minor_error';
+        }
 
-        return Math.round(interval);
+        return 'wrong';
     }
+
+    /**
+     * Standard Levenshtein Distance
+     */
+    private static levenshtein(a: string, b: string): number {
+        const matrix = [];
+
+        // 1. Initialize matrix
+        for (let i = 0; i <= b.length; i++) {
+            matrix[i] = [i];
+        }
+        for (let j = 0; j <= a.length; j++) {
+            matrix[0][j] = j;
+        }
+
+        // 2. Fill matrix
+        for (let i = 1; i <= b.length; i++) {
+            for (let j = 1; j <= a.length; j++) {
+                if (b.charAt(i - 1) == a.charAt(j - 1)) {
+                    matrix[i][j] = matrix[i - 1][j - 1];
+                } else {
+                    matrix[i][j] = Math.min(
+                        matrix[i - 1][j - 1] + 1, // substitution
+                        Math.min(
+                            matrix[i][j - 1] + 1, // insertion
+                            matrix[i - 1][j] + 1 // deletion
+                        )
+                    );
+                }
+            }
+        }
+
+        return matrix[b.length][a.length];
+    }
+
 
     /* =======================
        VOCAB AVAILABILITY
@@ -273,6 +362,29 @@ export class SRSService {
     /* =======================
        HELPERS
        ======================= */
+
+    static applyVocabIntroChoice(
+        progress: VocabProgress,
+        choice: 'learn' | 'skip'
+    ): VocabProgress {
+        const updated: VocabProgress = {
+            ...progress,
+            introductionAt: new Date(),
+        };
+
+        if (choice === 'skip') {
+            updated.nextReviewAt = null;
+            updated.stage = 'graduated';
+            // Set max interval/strength?
+            // For now, graduated means stopped scheduling.
+        } else {
+            // CHOICE LEARNING:
+            // Set initial due date to NOW
+            updated.nextReviewAt = new Date();
+        }
+
+        return updated;
+    }
 
     private static createNewVocabProgress(vocabId: string): VocabProgress {
         return {

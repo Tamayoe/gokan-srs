@@ -1,12 +1,13 @@
+// src/context/QuizContext.tsx
 import React, {
     useEffect,
     useMemo,
     useReducer,
     useState,
+    useRef,
 } from 'react';
 
 import type { ReactNode } from 'react'
-
 import type {
     KanjiKnowledge,
     UserProgress,
@@ -56,7 +57,8 @@ type QuizAction =
     | { type: 'SAVE_SETTINGS'; payload: UserSettings }
     | { type: 'OVERRIDE_DAILY_LIMIT' }
     | { type: 'RESET' }
-    | { type: 'VOCAB_INTRO_CHOICE'; vocabId: string; choice: 'learn' | 'skip'; };
+    | { type: 'VOCAB_INTRO_CHOICE'; vocabId: string; choice: 'learn' | 'skip'; }
+    | { type: 'RESET_DAILY_STATS' };
 
 const initialState: QuizState = {
     progress: null,
@@ -74,6 +76,20 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 ...state,
                 progress: action.payload.progress,
                 settings: action.payload.settings,
+            };
+
+        case 'RESET_DAILY_STATS':
+            if (!state.progress) return state;
+            return {
+                ...state,
+                progress: {
+                    ...state.progress,
+                    stats: {
+                        ...state.progress.stats,
+                        newLearnedToday: 0,
+                    },
+                    dailyOverride: false,
+                }
             };
 
         case 'LOAD_VOCAB_START':
@@ -203,7 +219,27 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         settings: StorageService.loadSettings() ?? DEFAULT_SETTINGS,
     });
 
+    const startTimeRef = useRef<number | null>(null);
+
     /* ---------- Derived ---------- */
+
+    // Check Day Boundary using LocalStorage
+    useEffect(() => {
+        // Only run if we have progress loaded
+        if (state.progress) {
+            const lastAccessKey = 'GOKAN_LAST_ACCESS_DATE';
+            const lastAccess = localStorage.getItem(lastAccessKey);
+            const now = new Date();
+            const today = now.toDateString();
+
+            if (lastAccess !== today) {
+                console.log(`[QuizContext] New day detected! Resetting daily stats. Last: ${lastAccess}, Today: ${today}`);
+                dispatch({ type: 'RESET_DAILY_STATS' });
+                localStorage.setItem(lastAccessKey, today);
+            }
+        }
+    }, [state.progress ? 'loaded' : 'loading']); // Run once when progress loads
+
 
     const nextDue = useMemo(
         () => getNextVocabToStudy(state.progress?.learningQueue),
@@ -328,22 +364,21 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
             const now = new Date();
             const id = state.currentVocab.id;
+            const latency = startTimeRef.current ? now.getTime() - startTimeRef.current : 5000;
 
             const updatedQueue = state.progress.learningQueue.map(v => {
                 if (v.vocabId !== id) return v;
 
                 const { updated } = SRSService.applyAnswer(
                     v,
-                    state.feedback!.correct,
-                    now
+                    state.userAnswer,
+                    state.currentVocab!.reading.primary,
+                    latency,
+                    now,
                 );
 
                 return updated;
             });
-
-            const graduated = updatedQueue.some(
-                v => v.vocabId === id && v.mastery === 100
-            );
 
             dispatch({
                 type: "UPDATE_AFTER_ANSWER",
@@ -354,9 +389,6 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                         stats: {
                             ...state.progress.stats,
                             totalReviews: state.progress.stats.totalReviews + 1,
-                            totalLearned: graduated
-                                ? state.progress.stats.totalLearned + 1
-                                : state.progress.stats.totalLearned,
                         },
                     },
                 },
@@ -413,16 +445,9 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     useEffect(() => {
         if (state.progress && isAuthenticated && !isSyncing) {
-            // Debounce or just trigger?
-            // Since this runs on every progress update (every answer), we should ideally debounce.
-            // But for now, let's keep it simple. The user asked for "on every significant progress change".
-            // However, rapid-fire answers might cause race conditions if not careful.
-            // Let's rely on the fact that sync handles locking via `isKey` or the service is robust enough?
-            // Actually, triggering a network call on every answer is heavy.
-            // Better to debounce.
             const timer = setTimeout(() => {
                 sync().catch(console.error);
-            }, 5000); // Sync 5 seconds after last change
+            }, 5000);
 
             return () => clearTimeout(timer);
         }
@@ -443,6 +468,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         VocabularyService.loadVocab(nextDue.vocabId).then(vocab => {
             if (alive) {
                 dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: vocab });
+                startTimeRef.current = Date.now();
             }
         });
 
@@ -493,4 +519,3 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         </QuizContext.Provider>
     );
 };
-

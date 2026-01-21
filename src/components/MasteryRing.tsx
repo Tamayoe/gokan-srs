@@ -1,50 +1,68 @@
 import React from "react";
 
-import { CONSTANTS } from "../commons/constants";
 
 interface MasteryRingProps {
-    mastery: number; // 0–100
+    interval: number; // Days
     size?: number;
 }
 
-export const MasteryRing: React.FC<MasteryRingProps> = ({ mastery, size }) => {
-    const radius = size ?? 18;
-    const stroke = Math.round(radius / 6);
+export const MasteryRing: React.FC<MasteryRingProps> = ({ interval, size = 30 }) => {
+    // Map interval to visually pleasing percentage
+    // 0 -> 0%
+    // < 1 -> 15%
+    // < 4 -> 35%
+    // < 14 -> 60%
+    // < 60 -> 85%
+    // >= 60 -> 100%
+    const getPercentage = (days: number) => {
+        if (days <= 0) return 0;
+        if (days < 1) return 15;
+        if (days < 4) return 35;
+        if (days < 14) return 60;
+        if (days < 60) return 85;
+        return 100;
+    };
+
+    const percentage = getPercentage(interval);
+
+    // ... rest of SVG code ...
+    const radius = size / 2 - 2;
     const circumference = 2 * Math.PI * radius;
-    const offset =
-        circumference - (mastery / CONSTANTS.srs.mastery.max) * circumference;
+    const offset = circumference - (percentage / 100) * circumference;
+
+    // Color based on stage
+    const getColor = (p: number) => {
+        if (p >= 100) return '#10b981'; // Emerald 500
+        if (p >= 60) return '#3b82f6'; // Blue 500
+        if (p >= 35) return '#f59e0b'; // Amber 500
+        return '#ef4444'; // Red 500
+    };
 
     return (
-        <svg width={44} height={44}>
-            <circle
-                cx="22"
-                cy="22"
-                r={radius}
-                fill="none"
-                className="stroke-divider"
-                strokeWidth={stroke}
-            />
-            <circle
-                cx="22"
-                cy="22"
-                r={radius}
-                fill="none"
-                className="stroke-accent"
-                strokeWidth={stroke}
-                strokeDasharray={circumference}
-                strokeDashoffset={offset}
-                strokeLinecap="round"
-                transform="rotate(-90 22 22)"
-            />
-            <text
-                x="50%"
-                y="52%"
-                textAnchor="middle"
-                dominantBaseline="middle"
-                className="fill-secondary font-gothic text-[10px]"
-            >
-                {Math.round(mastery)}%
-            </text>
-        </svg>
+        <div className="relative flex items-center justify-center shrink-0" style={{ width: size, height: size }}>
+            <svg className="transform -rotate-90 w-full h-full">
+                <circle
+                    className="text-slate-700"
+                    strokeWidth="3"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r={radius}
+                    cx={size / 2}
+                    cy={size / 2}
+                />
+                <circle
+                    className="transition-all duration-500 ease-out"
+                    strokeWidth="3"
+                    strokeDasharray={circumference}
+                    strokeDashoffset={offset}
+                    strokeLinecap="round"
+                    stroke={getColor(percentage)}
+                    fill="transparent"
+                    r={radius}
+                    cx={size / 2}
+                    cy={size / 2}
+                />
+            </svg>
+        </div>
     );
 };

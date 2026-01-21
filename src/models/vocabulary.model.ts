@@ -64,23 +64,53 @@ export interface UsageHints {
 }
 
 
+export interface ReviewLog {
+    date: number;
+    result: 'correct' | 'minor_error' | 'wrong' | 'pass';
+    interval: number;
+    latency: number; // ms
+}
+
+export interface SRSEntry {
+    memoryStrength: number;
+    interval: number; // days
+    difficulty: number; // 0.0 (hard) to 1.0 (easy) - default 0.3
+    lastReviewedAt: Date | null;
+    dueDate: Date | null;
+    history: ReviewLog[];
+}
+
 export interface VocabProgress {
     vocabId: string;
     stage: 'learning' | 'graduated';
-    mastery: number; // 0 → 100
     introductionAt: Date | null;
     nextReviewAt: Date | null;
     lastReviewedAt: Date | null;
     totalReviews: number;
     consecutiveFailures: number;
+
+    // Detailed SRS data
+    reading: SRSEntry;
+    meaning: SRSEntry;
 }
 
-export const DEFAULT_VOCABULARY_PROGRESS: Omit<VocabProgress, 'vocabId'> = {
-    stage: "learning",
-    mastery: 0,
+export const DEFAULT_SRS_ENTRY: SRSEntry = {
+    memoryStrength: 1.0, // Default start strength (days)
+    interval: 0,
+    difficulty: 0.3, // Default difficulty
+    lastReviewedAt: null,
+    dueDate: null,
+    history: []
+};
+
+export const DEFAULT_VOCABULARY_PROGRESS: VocabProgress = {
+    vocabId: '',
+    stage: 'learning',
     introductionAt: null,
-    nextReviewAt: new Date(),
+    nextReviewAt: null,
     lastReviewedAt: null,
     totalReviews: 0,
     consecutiveFailures: 0,
+    reading: { ...DEFAULT_SRS_ENTRY },
+    meaning: { ...DEFAULT_SRS_ENTRY }
 };

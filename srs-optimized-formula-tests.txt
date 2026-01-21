@@ -1,0 +1,274 @@
+Below is a deterministic test dataset you can use to validate that your SRS math is implemented correctly.
+
+Assumptions (fixed for all tests — must match your implementation):
+
+LN_TARGET = 0.28768
+EXPECTED_LATENCY = 1500
+
+difficultyMultiplier(d) = 0.6 + 0.8 * d
+latencyMultiplier(lat) = clamp(1500 / lat, 0.5, 1.5)
+
+RESULT_FACTOR = {
+  correct: 0.25,
+  minor_error: 0.10,
+  wrong: -0.40,
+  pass: -0.15
+}
+
+MIN_MEMORY_STRENGTH = 0.3
+MIN_INTERVAL = 0.2
+
+All results rounded to 5 decimals.
+✅ TEST CASE 1 — Correct, fast recall
+
+Input
+
+{
+  "memoryStrength": 10.0,
+  "difficulty": 0.6,
+  "result": "correct",
+  "latency": 900
+}
+
+Math
+
+    latencyMultiplier = clamp(1500 / 900) = 1.5
+
+    difficultyMultiplier = 0.6 + 0.8×0.6 = 1.08
+
+    Δ = 0.25 × 1.5 × 1.08 = 0.405
+
+    newS = 10 × 1.405 = 14.05
+
+    interval = 14.05 × 0.28768 = 4.04190
+
+Expected output
+
+{
+  "memoryStrength": 14.05000,
+  "interval": 4.04190
+}
+
+✅ TEST CASE 2 — Correct, slow recall
+
+Input
+
+{
+  "memoryStrength": 10.0,
+  "difficulty": 0.2,
+  "result": "correct",
+  "latency": 3000
+}
+
+Math
+
+    latencyMultiplier = 1500 / 3000 = 0.5
+
+    difficultyMultiplier = 0.76
+
+    Δ = 0.25 × 0.5 × 0.76 = 0.095
+
+    newS = 10.95
+
+    interval = 10.95 × 0.28768 = 3.15010
+
+Expected output
+
+{
+  "memoryStrength": 10.95000,
+  "interval": 3.15010
+}
+
+✅ TEST CASE 3 — Minor error
+
+Input
+
+{
+  "memoryStrength": 8.0,
+  "difficulty": 0.4,
+  "result": "minor_error",
+  "latency": 1500
+}
+
+Math
+
+    difficultyMultiplier = 0.92
+
+    Δ = 0.10 × 1.0 × 0.92 = 0.092
+
+    newS = 8 × 1.092 = 8.736
+
+    raw interval = 8.736 × 0.28768 = 2.51318
+
+    penalty ×0.7 → 1.75923
+
+Expected output
+
+{
+  "memoryStrength": 8.73600,
+  "interval": 1.75923
+}
+
+✅ TEST CASE 4 — Wrong answer
+
+Input
+
+{
+  "memoryStrength": 12.0,
+  "difficulty": 0.5,
+  "result": "wrong",
+  "latency": 2000
+}
+
+Math
+
+    latencyMultiplier = 0.75
+
+    difficultyMultiplier = 1.0
+
+    Δ = −0.40 × 0.75 = −0.30
+
+    newS = 12 × 0.7 = 8.4
+
+    raw interval = 8.4 × 0.28768 = 2.41651
+
+    penalty ×0.3 → 0.72495
+
+Expected output
+
+{
+  "memoryStrength": 8.40000,
+  "interval": 0.72495
+}
+
+✅ TEST CASE 5 — Pass
+
+Input
+
+{
+  "memoryStrength": 6.0,
+  "difficulty": 0.3,
+  "result": "pass",
+  "latency": 1500
+}
+
+Math
+
+    difficultyMultiplier = 0.84
+
+    Δ = −0.15 × 0.84 = −0.126
+
+    newS = 6 × 0.874 = 5.244
+
+    interval = 5.244 × 0.28768 = 1.50771
+
+Expected output
+
+{
+  "memoryStrength": 5.24400,
+  "interval": 1.50771
+}
+
+✅ TEST CASE 6 — Floor enforcement
+
+Input
+
+{
+  "memoryStrength": 0.4,
+  "difficulty": 0.1,
+  "result": "wrong",
+  "latency": 4000
+}
+
+Math
+
+    latencyMultiplier = clamp(1500 / 4000) = 0.5
+
+    difficultyMultiplier = 0.68
+
+    Δ = −0.40 × 0.5 × 0.68 = −0.136
+
+    raw S = 0.4 × 0.864 = 0.3456
+
+    floor → 0.3
+
+    raw interval = 0.3 × 0.28768 = 0.08630
+
+    clamp → 0.2
+
+Expected output
+
+{
+  "memoryStrength": 0.30000,
+  "interval": 0.20000
+}
+
+✅ TEST CASE 7 — Latency upper clamp
+
+Input
+
+{
+  "memoryStrength": 5.0,
+  "difficulty": 0.7,
+  "result": "correct",
+  "latency": 200
+}
+
+Math
+
+    latencyMultiplier = 1.5
+
+    difficultyMultiplier = 1.16
+
+    Δ = 0.25 × 1.5 × 1.16 = 0.435
+
+    newS = 5 × 1.435 = 7.175
+
+    interval = 7.175 × 0.28768 = 2.06341
+
+Expected output
+
+{
+  "memoryStrength": 7.17500,
+  "interval": 2.06341
+}
+
+✅ TEST CASE 8 — Latency lower clamp
+
+Input
+
+{
+  "memoryStrength": 5.0,
+  "difficulty": 0.7,
+  "result": "correct",
+  "latency": 10000
+}
+
+Math
+
+    latencyMultiplier = 0.5
+
+    Δ = 0.25 × 0.5 × 1.16 = 0.145
+
+    newS = 5.725
+
+    interval = 5.725 × 0.28768 = 1.64798
+
+Expected output
+
+{
+  "memoryStrength": 5.72500,
+  "interval": 1.64798
+}
+
+How to use this safely
+
+Use floating-point tolerance, not exact equality
+
+Assert:
+
+memoryStrength
+
+interval
+
+Ignore dates / history for math tests
