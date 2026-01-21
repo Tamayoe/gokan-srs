@@ -45,7 +45,7 @@ export function VocabCard({
             </div>
           </div>
 
-          <MasteryRing mastery={progress.mastery} size={20} />
+          <MasteryRing interval={progress.reading.interval} size={20} />
         </div>
 
         <div className="text-sm text-secondary">

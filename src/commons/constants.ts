@@ -17,39 +17,39 @@ export const CONSTANTS = {
         dailyNewLimit: 20,
         newVocabBatchSize: 1,
 
-        /** Mastery system */
-        mastery: {
-            min: 0,
-            max: 100,
+        /** Maximum number of reviews per day */
+        maxReviewsPerDay: 150,
 
-            /** Mastery gained on a correct answer */
-            successGain: 15,
+        /** Formula Constants */
+        formula: {
+            targetRecall: 0.75,
+            lnTarget: 0.28768,
+            expectedLatency: 1500, // ms
+            minInterval: 0.2, // ~5 hours
+            maxInterval: 3650, // 10 years
+            minMemoryStrength: 0.3, // days
 
-            /** Mastery lost on an incorrect answer */
-            failurePenalty: 20,
-        },
+            resultFactors: {
+                correct: 0.25,
+                minor_error: 0.10,
+                wrong: -0.40,
+                pass: -0.15
+            },
 
-        /** Scheduling (time between reviews) */
-        scheduling: {
-            /** Minimum interval (initial learning) */
-            minIntervalMs: 5 * 60 * 1000, // 5 minutes
+            // Difficulty = 0.6 + 0.8 * d (d is 0-1, where 1=easy)
+            difficulty: {
+                base: 0.6,
+                slope: 0.8
+            },
 
-            /** Interval after first successful recall (~15 mastery) */
-            firstSuccessIntervalMs: 24 * 60 * 60 * 1000, // 1 day
+            // Latency Clamp: [0.5, 1.5]
+            latency: {
+                min: 0.5,
+                max: 1.5
+            },
 
-            /** Maximum interval at full mastery */
-            maxIntervalMs: 90 * 24 * 60 * 60 * 1000, // 3 months
-
-            /**
-             * Curve steepness.
-             * >1 = slower start, faster late growth
-             * Typical values: 1.5 – 2.5
-             */
-            growthExponent: 2.0,
-
-            /** Retry delay after failure */
-            failureRetryDelayMs: 10000,
-        },
+            fuzzFactor: 0.05
+        }
     },
 
     storage: {

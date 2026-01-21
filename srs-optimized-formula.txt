@@ -1,0 +1,252 @@
+Below is a fully specified, mathematically explicit SRS model that fits exactly your SRSEntry / ReviewLog types and is aligned with what the meta-analysis supports (longer spacing, effortful recall, latency sensitivity, error-graded updates).
+
+This is not SM-2. It is a probability-of-recall driven model with tunable constants.
+
+You can implement this verbatim.
+
+1. Conceptual model (1 sentence)
+
+Each item has a latent memory strength S that decays exponentially over time; reviews update S based on recall quality and effort, and the next interval is chosen so recall probability will fall to a target level (≈0.75).
+
+2. Core memory model
+2.1 Recall probability model
+
+We model recall probability as exponential decay:
+
+P(recall at time t)=e−t/S
+P(recall at time t)=e
+−t/S
+
+Where:
+
+t = days since last review
+
+S = memoryStrength (in days)
+
+This form is:
+
+Standard in cognitive modeling
+
+Stable
+
+Easy to invert for scheduling
+
+2.2 Target recall probability
+
+Empirically optimal for long-term retention:
+
+const TARGET_RECALL = 0.75;
+
+
+This corresponds to desirable difficulty, supported by the paper.
+
+2.3 Interval computation (critical)
+
+Solve for t:
+
+t=−S⋅ln⁡(TARGET_RECALL)
+t=−S⋅ln(TARGET_RECALL)
+
+Since:
+
+−ln⁡(0.75)≈0.28768
+−ln(0.75)≈0.28768
+
+So:
+
+const LN_TARGET = 0.28768;
+
+nextInterval = memoryStrength * LN_TARGET;
+
+
+This is the core scheduling formula.
+
+3. Memory strength update rule
+
+Memory strength is updated after each review using:
+
+Snew=Sold⋅(1+Δ)
+S
+new
+	​
+
+=S
+old
+	​
+
+⋅(1+Δ)
+
+Where Δ depends on:
+
+Result quality
+
+Latency
+
+Item difficulty
+
+3.1 Base result multipliers
+const RESULT_FACTOR = {
+  correct:  +0.25,
+  minor_error: +0.10,
+  wrong:   -0.40,
+  pass:    -0.15
+};
+
+
+Rationale:
+
+Wrong answers must shrink memory strength significantly
+
+Minor errors still reinforce memory
+
+“Pass” is penalized but not catastrophic
+
+3.2 Latency normalization
+
+Define expected latency (ms):
+
+const EXPECTED_LATENCY = 1500;
+
+
+Normalize:
+
+L=clamp(EXPECTED_LATENCYlatency, 0.5, 1.5)
+L=clamp(
+latency
+EXPECTED_LATENCY
+	​
+
+, 0.5, 1.5)
+
+Fast recall boosts learning; slow recall weakens it.
+
+3.3 Difficulty scaling
+
+Difficulty is stored as:
+
+difficulty ∈ [0.0, 1.0]  // 0 = hard, 1 = easy
+
+
+Convert to multiplier:
+
+D=0.6+0.8⋅difficulty
+D=0.6+0.8⋅difficulty
+
+So:
+
+Hard items ≈ ×0.6
+
+Easy items ≈ ×1.4
+
+3.4 Final update formula
+Δ=RESULT_FACTOR[result]⋅L⋅D
+Δ=RESULT_FACTOR[result]⋅L⋅D
+Snew=max⁡(Smin, Sold⋅(1+Δ))
+S
+new
+	​
+
+=max(S
+min
+	​
+
+, S
+old
+	​
+
+⋅(1+Δ))
+
+With floor:
+
+const MIN_MEMORY_STRENGTH = 0.3; // days
+
+4. Initial conditions
+4.1 New item
+memoryStrength = 1.0; // days
+interval = 0.3;       // ~7 hours
+difficulty = 0.3;     // default
+
+
+This ensures:
+
+Immediate reinforcement
+
+Rapid early spacing
+
+5. Interval post-processing rules
+5.1 Hard caps (anti-pathology)
+const MIN_INTERVAL = 0.2;   // ~5 hours
+const MAX_INTERVAL = 3650; // 10 years
+
+
+Clamp after computing interval.
+
+5.2 Error-based overrides
+
+If result is "wrong":
+
+interval = Math.max(0.5, interval * 0.3);
+
+
+If result is "minor_error":
+
+interval *= 0.7;
+
+
+These reflect partial retrieval benefits found in L2 studies.
+
+6. Difficulty auto-adjustment (optional but recommended)
+
+Update difficulty slowly:
+
+if (result === 'wrong') difficulty -= 0.02;
+if (result === 'correct' && latency < EXPECTED_LATENCY) difficulty += 0.01;
+
+difficulty = clamp(difficulty, 0.0, 1.0);
+
+
+This allows the system to learn the learner.
+
+7. Full scheduling pipeline (pseudo-code)
+function review(entry: SRSEntry, log: ReviewLog): SRSEntry {
+  const S = entry.memoryStrength;
+
+  const L = clamp(EXPECTED_LATENCY / log.latency, 0.5, 1.5);
+  const D = 0.6 + 0.8 * entry.difficulty;
+  const base = RESULT_FACTOR[log.result];
+
+  const delta = base * L * D;
+  const newS = Math.max(MIN_MEMORY_STRENGTH, S * (1 + delta));
+
+  let interval = newS * LN_TARGET;
+
+  if (log.result === 'wrong') interval *= 0.3;
+  if (log.result === 'minor_error') interval *= 0.7;
+
+  interval = clamp(interval, MIN_INTERVAL, MAX_INTERVAL);
+
+  return {
+    ...entry,
+    memoryStrength: newS,
+    interval,
+    lastReviewedAt: new Date(log.date),
+    dueDate: new Date(log.date + interval * DAY),
+    history: [...entry.history, log]
+  };
+}
+
+8. Why this is “optimized” (per the paper)
+
+This system explicitly:
+
+Maximizes delayed retention, not short-term accuracy
+
+Uses longer spacing as memory stabilizes
+
+Rewards effortful, fast recall
+
+Penalizes guessing and forgetting
+
+Avoids fixed expanding schedules
+
+Is mathematically grounded and tunable

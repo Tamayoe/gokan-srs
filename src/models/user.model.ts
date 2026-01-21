@@ -1,4 +1,4 @@
-import type {VocabProgress} from "./vocabulary.model";
+import type { VocabProgress } from "./vocabulary.model";
 
 export interface UserProgress {
     kanjiKnowledge: KanjiKnowledge;
@@ -12,6 +12,11 @@ export interface UserProgress {
      */
     learningQueue: VocabProgress[];
 
+    /**
+     * Counters for progress
+     * - learned: queue items (not just intro'd)
+     * - graduated: longer interval items
+     */
     stats: {
         /** Number of new vocab introduced today */
         newLearnedToday: number;
@@ -19,7 +24,6 @@ export interface UserProgress {
         /** Total vocab that reached mastery === 100 */
         totalLearned: number;
 
-        /** Total answers submitted (correct + incorrect) */
         totalReviews: number;
     };
 

@@ -57,7 +57,7 @@ export const QuizCard: React.FC = () => {
                 <CardSection>
                     {/* Top-right mastery */}
                     <div className="flex justify-end mb-4">
-                        <MasteryRing mastery={currentProgress?.mastery ?? 0} />
+                        <MasteryRing interval={currentProgress?.reading.interval ?? 0} />
                     </div>
 
                     {/* Kanji Display */}
