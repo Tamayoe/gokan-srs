@@ -48,7 +48,19 @@ export const CONSTANTS = {
                 max: 1.5
             },
 
-            fuzzFactor: 0.05
+            fuzzFactor: 0.05,
+
+            postProcessIntervalMultipliers: {
+                wrong: 0.3,
+                minor_error: 0.7
+            },
+
+            mastery: {
+                // Target memory strength for ~1 year interval (100% mastery visually)
+                // t = S * 0.28768  => S = t / 0.28768
+                // For 365 days: 365 / 0.28768 ≈ 1269
+                maxMemoryStrength: 1270
+            }
         }
     },
 

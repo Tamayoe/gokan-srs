@@ -12,17 +12,50 @@ const F = CONSTANTS.srs.formula;
 export class SRSService {
 
     /* =======================
+       ANSWER EVALUATION
+       ======================= */
+
+    /**
+     * Checks user input against ALL acceptable readings.
+     * Returns the best result found (Correct > Minor Error > Wrong).
+     */
+    static evaluateAnswer(
+        userInput: string,
+        readings: { primary: string; alternatives: string[] }
+    ): { result: AnswerResult; matchedAnswer: string } {
+        const allReadings = [readings.primary, ...readings.alternatives];
+        let bestResult: AnswerResult = 'wrong';
+        let bestMatch = readings.primary;
+
+        for (const reading of allReadings) {
+            const res = this.analyzeError(userInput, reading);
+
+            if (res === 'correct') {
+                return { result: 'correct', matchedAnswer: reading };
+            }
+
+            if (res === 'minor_error') {
+                bestResult = 'minor_error';
+                bestMatch = reading;
+            }
+        }
+
+        return { result: bestResult, matchedAnswer: bestMatch };
+    }
+
+    /* =======================
        ANSWER APPLICATION
        ======================= */
 
     static applyAnswer(
         vocab: VocabProgress,
         userAnswer: string,
-        correctAnswer: string,
+        correctAnswer: string, // The specific reading matched (or primary if wrong)
         latencyMs: number,
-        now: Date
+        now: Date,
+        forcedResult?: AnswerResult // Optional override if already calculated
     ): { updated: VocabProgress; result: AnswerResult, interval: number } {
-        const result = this.analyzeError(userAnswer, correctAnswer);
+        const result = forcedResult ?? this.analyzeError(userAnswer, correctAnswer);
 
         // We focus on READING for now
         const currentEntry = { ...vocab.reading };
@@ -70,9 +103,14 @@ export class SRSService {
         const delta = resultFactor * L * D;
 
         // 3. Update Memory Strength
-        // S_new = max(S_min, S_old * (1 + Delta))
+        // S_new = max(S_min, S_old * (1 + Delta)) -- BUT only strictly enforce floor on failure recovery
         const rawNewStrength = entry.memoryStrength * (1 + delta);
-        const newStrength = Math.max(F.minMemoryStrength, rawNewStrength);
+        let newStrength = rawNewStrength;
+
+        if (result === 'wrong') {
+            // Recovery floor
+            newStrength = Math.max(F.minMemoryStrength, rawNewStrength);
+        }
 
         // 4. Calculate Interval
         // t = S * 0.28768
@@ -82,9 +120,9 @@ export class SRSService {
         if (result === 'wrong') {
             // Logic adjusted to match test dataset (Case 6 vs Case 4 consistency)
             // The dataset implies straight multiplication by 0.3, then global clamping.
-            newInterval = newInterval * 0.3;
+            newInterval = newInterval * F.postProcessIntervalMultipliers.wrong;
         } else if (result === 'minor_error') {
-            newInterval = newInterval * 0.7;
+            newInterval = newInterval * F.postProcessIntervalMultipliers.minor_error;
         }
 
         // 6. Clamp Interval
@@ -125,7 +163,7 @@ export class SRSService {
         };
     }
 
-    private static analyzeError(user: string, expected: string): AnswerResult {
+    static analyzeError(user: string, expected: string): AnswerResult {
         const u = user.trim().replace(/\s+/g, '');
         const e = expected.trim().replace(/\s+/g, '');
 

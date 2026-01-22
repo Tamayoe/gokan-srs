@@ -17,7 +17,8 @@ import type { VocabProgress, Vocabulary } from '../models/vocabulary.model';
 import { StorageService } from '../services/storage.service';
 import { VocabularyService } from '../services/vocabulary.service';
 import { SRSService } from '../services/srs.service';
-import { QuizService } from '../services/quiz.service';
+import type { AnswerResult } from '../services/srs.service';
+
 
 import { CONSTANTS } from '../commons/constants';
 import { DEFAULT_SETTINGS } from '../models/user.model';
@@ -38,8 +39,10 @@ interface QuizState {
     userAnswer: string;
     feedback: {
         show: boolean;
-        correct: boolean;
+        correct: boolean; // Keep for compatibility/easy checks (true if correct or minor_error?) -> No, strict correct.
+        type: AnswerResult;
         message: string;
+        matchedAnswer: string;
     } | null;
     isLoadingVocab: boolean;
 }
@@ -49,7 +52,7 @@ type QuizAction =
     | { type: 'LOAD_VOCAB_START' }
     | { type: 'LOAD_VOCAB_SUCCESS'; payload: Vocabulary | null }
     | { type: 'SET_ANSWER'; payload: string }
-    | { type: 'SUBMIT_ANSWER'; payload: { isCorrect: boolean; message: string } }
+    | { type: 'SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswer: string } }
     | { type: 'UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress } }
     | { type: 'ADVANCE_QUEUE'; payload: { progress: UserProgress } }
     | { type: 'CLEAR_FEEDBACK' }
@@ -115,8 +118,10 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 ...state,
                 feedback: {
                     show: true,
-                    correct: action.payload.isCorrect,
+                    correct: action.payload.type === 'correct',
+                    type: action.payload.type,
                     message: action.payload.message,
+                    matchedAnswer: action.payload.matchedAnswer
                 },
             };
 
@@ -303,16 +308,21 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         submitAnswer() {
             if (!state.currentVocab || state.feedback?.show) return;
 
-            const isCorrect = QuizService.validateAnswer(
+            const evaluation = SRSService.evaluateAnswer(
                 state.userAnswer,
                 state.currentVocab.reading
             );
 
+            let message = 'Incorrect.';
+            if (evaluation.result === 'correct') message = 'Correct.';
+            else if (evaluation.result === 'minor_error') message = 'Close.';
+
             dispatch({
                 type: 'SUBMIT_ANSWER',
                 payload: {
-                    isCorrect,
-                    message: isCorrect ? 'Correct.' : 'Incorrect.',
+                    type: evaluation.result,
+                    message,
+                    matchedAnswer: evaluation.matchedAnswer
                 },
             });
         },
@@ -372,9 +382,10 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 const { updated } = SRSService.applyAnswer(
                     v,
                     state.userAnswer,
-                    state.currentVocab!.reading.primary,
+                    state.feedback!.matchedAnswer, // Use the matched answer we found during submit
                     latency,
                     now,
+                    state.feedback!.type // Pass the already calculated result
                 );
 
                 return updated;
