@@ -57,7 +57,7 @@ export const QuizCard: React.FC = () => {
                 <CardSection>
                     {/* Top-right mastery */}
                     <div className="flex justify-end mb-4">
-                        <MasteryRing interval={currentProgress?.reading.interval ?? 0} />
+                        <MasteryRing memoryStrength={currentProgress?.reading.memoryStrength ?? 0} />
                     </div>
 
                     {/* Kanji Display */}
@@ -145,12 +145,18 @@ export const QuizCard: React.FC = () => {
                             />
                         </div>
 
-                        {/* Incorrect Answer Feedback */}
+                        {/* Incorrect / Minor Answer Feedback */}
                         {feedback?.show && !feedback.correct && (
-                            <div className="border rounded bg-feedback-background border-divider border-l-4 border-l-error-accent p-4">
+                            <div className={`border rounded bg-feedback-background border-divider border-l-4 p-4 ${feedback.type === 'minor_error' ? 'border-l-secondary' : 'border-l-error-accent'}`}>
                                 <p className="uppercase tracking-wide text-label-neutral text-xs mb-2 font-gothic">
                                     Correct answer
                                 </p>
+
+                                {feedback.type === 'minor_error' && (
+                                    <p className="text-secondary text-sm mb-2 font-gothic">
+                                        {feedback.message}
+                                    </p>
+                                )}
 
                                 {showCorrectAnswer && (
                                     <div
@@ -163,7 +169,10 @@ export const QuizCard: React.FC = () => {
                                         }}
                                     >
                                         <p className="text-center text-2xl mb-1 text-primary font-gothic">
-                                            {[currentVocab.reading.primary, ...currentVocab.reading.alternatives].join(', ')}
+                                            {/* Show matched answer if available (for minor error context), or all correct answers */}
+                                            {feedback.type === 'minor_error'
+                                                ? feedback.matchedAnswer
+                                                : [currentVocab.reading.primary, ...currentVocab.reading.alternatives].join(', ')}
                                         </p>
                                     </div>
                                 )}
