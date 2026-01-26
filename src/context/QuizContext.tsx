@@ -45,12 +45,14 @@ interface QuizState {
         matchedAnswer: string;
     } | null;
     isLoadingVocab: boolean;
+    fatalError: string | null;
 }
 
 type QuizAction =
     | { type: 'SETUP_COMPLETE'; payload: SetupCompleteValues }
     | { type: 'LOAD_VOCAB_START' }
     | { type: 'LOAD_VOCAB_SUCCESS'; payload: Vocabulary | null }
+    | { type: 'LOAD_VOCAB_ERROR'; payload: { vocabId: string, error: any } }
     | { type: 'SET_ANSWER'; payload: string }
     | { type: 'SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswer: string } }
     | { type: 'UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress } }
@@ -70,6 +72,7 @@ const initialState: QuizState = {
     userAnswer: '',
     feedback: null,
     isLoadingVocab: false,
+    fatalError: null,
 };
 
 function quizReducer(state: QuizState, action: QuizAction): QuizState {
@@ -108,6 +111,14 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 ...state,
                 currentVocab: action.payload,
                 isLoadingVocab: false,
+            };
+
+        case 'LOAD_VOCAB_ERROR':
+            console.error(`[QuizContext] CRITICAL: Failed to load vocab ${action.payload.vocabId}`, action.payload.error);
+            return {
+                ...state,
+                isLoadingVocab: false,
+                fatalError: `Failed to load vocabulary data for ID: ${action.payload.vocabId}. The application data may be corrupted. Please reload or contact support.`,
             };
 
         case 'SET_ANSWER':
@@ -468,7 +479,20 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     useEffect(() => {
         if (!nextDue) {
+            // Only try to refill if we are NOT already loading and we are genuinely empty
+            // But we must be careful not to loop.
+            // If nextDue is null, we need to advance if we have capacity?
+            // Actually, QuizScreen asks for advanceQueue if !currentVocab.
+            // But wait, if we just failed, nextDue became null (item removed).
+            // We need to trigger a refill if we are in 'learn' mode but have no items?
+
             dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
+
+            // AUTO-ADANCE TRIGGER: If we ran out of items because of errors, 
+            // and we rely on the UI to call advanceQueue, it might be stuck if the UI
+            // thinks "isLoading" (which we just set to false).
+            // The UI (QuizScreen) usually calls advanceQueue when !currentVocab.
+            // So setting payload: null and isLoading: false should trigger the UI to call advanceQueue.
             return;
         }
 
@@ -480,6 +504,10 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             if (alive) {
                 dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: vocab });
                 startTimeRef.current = Date.now();
+            }
+        }).catch(err => {
+            if (alive) {
+                dispatch({ type: 'LOAD_VOCAB_ERROR', payload: { vocabId: nextDue.vocabId, error: err } });
             }
         });
 

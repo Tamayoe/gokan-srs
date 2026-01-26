@@ -1,30 +1,36 @@
-import {WaitingScreen} from "../../components/WaitingScreen";
-import {ExhaustedScreen} from "../../components/ExhaustedScreen";
-import {ProgressBar} from "../../components/ProgressBar";
-import {QuizCard} from "./QuizCard";
-import {LoadingScreen} from "../../components/LoadingScreen";
-import {canIntroduceNew, hasDueVocab} from "../../utils/srs.utils";
-import {useEffect} from "react";
-import {useQuiz} from "../../context/useQuiz";
+import { WaitingScreen } from "../../components/WaitingScreen";
+import { ExhaustedScreen } from "../../components/ExhaustedScreen";
+import { ProgressBar } from "../../components/ProgressBar";
+import { QuizCard } from "./QuizCard";
+import { LoadingScreen } from "../../components/LoadingScreen";
+import { canIntroduceNew } from "../../utils/srs.utils";
+import { useEffect } from "react";
+import { useQuiz } from "../../context/useQuiz";
 import VocabIntroCard from "../../components/VocabIntroCard";
 
 export function QuizScreen() {
     const { state, currentProgress, sessionState, nextReviewAt, actions } = useQuiz();
 
     const advanceDeps = [state.progress!.learningQueue,
-        state.progress!.stats.newLearnedToday,
-        state.progress!.dailyOverride,
-        state.settings,
+    state.progress!.stats.newLearnedToday,
+    state.progress!.dailyOverride,
+    state.settings,
     ]
 
 
     useEffect(() => {
+        console.debug("advanceDeps", advanceDeps);
         if (!state.progress || !state.settings) return;
 
         const now = new Date();
 
+        const validItems = state.progress.learningQueue.filter(v =>
+            ((v.nextReviewAt !== null && v.nextReviewAt <= now) || (v.nextReviewAt === null)) &&
+            v.stage !== 'graduated'
+        );
+
         if (
-            !hasDueVocab(state.progress.learningQueue, now) &&
+            validItems.length === 0 &&
             canIntroduceNew(state.progress, now)
         ) {
             actions.advanceQueue({ now });

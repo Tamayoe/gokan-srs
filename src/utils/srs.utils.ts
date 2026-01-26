@@ -13,9 +13,28 @@ export function getNextVocabToStudy(
 ): VocabProgress | null {
     if (!queue || queue.length === 0) return null;
 
-    const reviewable = getReviewable(queue, now);
-    return pickRandom(reviewable);
+    // 1. Priority: Due Reviews
+    const due = queue.filter(v => v.nextReviewAt !== null && v.nextReviewAt <= now);
+    if (due.length > 0) {
+        return pickRandom(due);
+    }
+
+    // 2. Priority: New Items (Intro)
+    // Only if no due reviews exist
+    // Must exclude 'graduated' items (skipped/mastered) which also have nextReviewAt === null
+    const newItems = queue.filter(v =>
+        v.nextReviewAt === null &&
+        v.stage !== 'graduated'
+    );
+
+    if (newItems.length > 0) {
+        return pickRandom(newItems);
+    }
+
+    return null;
 }
+
+
 
 export function hasDueVocab(queue: VocabProgress[], now: Date): boolean {
     return queue.some(
@@ -39,13 +58,6 @@ export function canIntroduceNew(
         dueCount === 0 &&
         !dailyLimitReached
     );
-}
-
-function getReviewable(queue: VocabProgress[], now: Date = new Date()): VocabProgress[] {
-    return queue.filter(v =>
-        v.nextReviewAt !== null &&
-        v.nextReviewAt <= now
-    ) ?? [];
 }
 
 function pickRandom<T>(items: T[]): T | null {

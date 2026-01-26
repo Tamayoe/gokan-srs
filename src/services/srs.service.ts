@@ -3,13 +3,19 @@ import type { ReviewLog, SRSEntry, VocabProgress } from '../models/vocabulary.mo
 import { CONSTANTS } from '../commons/constants';
 import { VocabularyService } from './vocabulary.service';
 import type { KanjiKnowledge, UserProgress, UserSettings } from '../models/user.model';
-import { DEFAULT_VOCABULARY_PROGRESS } from "../models/vocabulary.model";
+
 
 export type AnswerResult = 'correct' | 'minor_error' | 'wrong' | 'pass';
 
 const F = CONSTANTS.srs.formula;
 
 export class SRSService {
+
+    /* =======================
+       CONSTANTS & THRESHOLDS
+       ======================= */
+
+    private static readonly MAX_MEMORY_STRENGTH = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
 
     /* =======================
        ANSWER EVALUATION
@@ -62,12 +68,24 @@ export class SRSService {
 
         const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now);
 
+        // Check for Graduation (Mastery)
+        const isMastered = newEntry.memoryStrength >= SRSService.MAX_MEMORY_STRENGTH;
+
+        let finalStage = vocab.stage;
+        let finalNextReviewAt = newEntry.dueDate;
+
+        if (isMastered) {
+            finalStage = 'graduated';
+            finalNextReviewAt = null; // No further reviews
+        }
+
         return {
             updated: {
                 ...vocab,
                 reading: newEntry,
                 // Sync top-level fields
-                nextReviewAt: newEntry.dueDate,
+                stage: finalStage,
+                nextReviewAt: finalNextReviewAt,
                 lastReviewedAt: now,
                 totalReviews: vocab.totalReviews + 1,
                 consecutiveFailures: result === 'correct' ? 0 : vocab.consecutiveFailures + 1,
@@ -305,7 +323,8 @@ export class SRSService {
         currentQueue: VocabProgress[],
         kanjiKnowledge: KanjiKnowledge,
         settings: UserSettings,
-        maxToAdd: number
+        maxToAdd: number,
+        ignoredIds: Set<string> = new Set()
     ): Promise<VocabProgress[]> {
         if (maxToAdd <= 0) return currentQueue;
 
@@ -324,7 +343,8 @@ export class SRSService {
                     queue,
                     activeIds,
                     kanjiKnowledge.step,
-                    maxToAdd
+                    maxToAdd,
+                    ignoredIds
                 );
 
             case "frequency":
@@ -332,7 +352,8 @@ export class SRSService {
                     queue,
                     activeIds,
                     kanjiKnowledge,
-                    maxToAdd
+                    maxToAdd,
+                    ignoredIds
                 );
         }
     }
@@ -345,7 +366,8 @@ export class SRSService {
         queue: VocabProgress[],
         activeIds: Set<string>,
         kklcKanjiStep: number,
-        maxToAdd: number
+        maxToAdd: number,
+        ignoredIds: Set<string>
     ): Promise<VocabProgress[]> {
         const index = await VocabularyService.loadKKLCIndex();
         if (!index) return queue;
@@ -358,6 +380,7 @@ export class SRSService {
             for (const id of ids) {
                 if (added >= maxToAdd) return queue;
                 if (activeIds.has(id)) continue;
+                if (ignoredIds.has(id)) continue;
 
                 queue.push(this.createNewVocabProgress(id));
                 activeIds.add(id);
@@ -372,7 +395,8 @@ export class SRSService {
         queue: VocabProgress[],
         activeIds: Set<string>,
         kanjiKnowledge: KanjiKnowledge,
-        maxToAdd: number
+        maxToAdd: number,
+        ignoredIds: Set<string>
     ): Promise<VocabProgress[]> {
         const index = await VocabularyService.loadFrequencyIndex();
         if (!index) return queue;
@@ -382,6 +406,7 @@ export class SRSService {
         for (const entry of index) {
             if (added >= maxToAdd) break;
             if (activeIds.has(entry.id)) continue;
+            if (ignoredIds.has(entry.id)) continue;
 
             const allKanjiKnown = entry.containedKanji.every(k =>
                 kanjiKnowledge.kanjiSet.has(k)
@@ -411,10 +436,20 @@ export class SRSService {
         };
 
         if (choice === 'skip') {
-            updated.nextReviewAt = null;
+            // User feedback: Skip means "Fully Mastered"
+            const maxS = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
+            const maxIntervalDays = CONSTANTS.srs.formula.maxInterval;
+
+            updated.reading.memoryStrength = maxS;
+            updated.reading.interval = maxIntervalDays;
+            updated.reading.dueDate = null; // No review scheduled (effectively)
+            updated.reading.lastReviewedAt = new Date();
+
+            updated.meaning.memoryStrength = maxS;
+            updated.meaning.interval = maxIntervalDays;
+
+            updated.nextReviewAt = null; // No review calculation needed
             updated.stage = 'graduated';
-            // Set max interval/strength?
-            // For now, graduated means stopped scheduling.
         } else {
             // CHOICE LEARNING:
             // Set initial due date to NOW
@@ -426,8 +461,29 @@ export class SRSService {
 
     private static createNewVocabProgress(vocabId: string): VocabProgress {
         return {
-            ...DEFAULT_VOCABULARY_PROGRESS,
-            vocabId
+            vocabId,
+            stage: 'learning',
+            introductionAt: null,
+            nextReviewAt: null,
+            lastReviewedAt: null,
+            totalReviews: 0,
+            consecutiveFailures: 0,
+            reading: {
+                memoryStrength: 1.0,
+                interval: 0,
+                difficulty: 0.3,
+                lastReviewedAt: null,
+                dueDate: null,
+                history: []
+            },
+            meaning: {
+                memoryStrength: 1.0,
+                interval: 0,
+                difficulty: 0.3,
+                lastReviewedAt: null,
+                dueDate: null,
+                history: []
+            }
         };
     }
 }
