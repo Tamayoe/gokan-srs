@@ -24,7 +24,12 @@ function extractKanji(word: string): string[] {
     return [...word].filter(c => /[\u4e00-\u9faf]/.test(c));
 }
 
-const allVocabulary: Vocabulary[] = [];
+// Extended interface for build process
+interface BuildVocabulary extends Vocabulary {
+    kklcStep: number;
+}
+
+const allVocabulary: BuildVocabulary[] = [];
 
 for (const entry of jmdict.words) {
     if (!entry.kanji.length || !entry.kana.length) continue;
@@ -57,7 +62,7 @@ for (const entry of jmdict.words) {
 
     const senses: Sense[] = entry.sense.map(s => ({
         pos: s.partOfSpeech,
-        misc: buildMiscFlags(s.misc),
+        misc: buildMiscFlags(s.misc as unknown as string[]),
         glosses: s.gloss.map(g => g.text),
         related: {
             compounds: s.related.map(r => r[0]),
@@ -94,6 +99,7 @@ for (const entry of jmdict.words) {
         usageHints: {
             requiresContext,
         },
+        kklcStep,
     });
 }
 
@@ -105,6 +111,18 @@ const selected = allVocabulary
 // Ensure output dirs
 fs.mkdirSync('./data/compiled/vocab', { recursive: true });
 fs.mkdirSync('./data/compiled/index', { recursive: true });
+
+// Clean up potential stale indices to ensure atomicity
+const indicesToClean = [
+    './data/compiled/index/kklc.json',
+    './data/compiled/index/frequency.json',
+];
+
+for (const indexFile of indicesToClean) {
+    if (fs.existsSync(indexFile)) {
+        fs.unlinkSync(indexFile);
+    }
+}
 
 // Build KKLC index (step-by-step mode)
 const kklcIndex: Record<number, string[]> = {};

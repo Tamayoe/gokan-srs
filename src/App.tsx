@@ -10,7 +10,7 @@ import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { UserProfileScreen } from "./pages/profile/UserProfileScreen";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
 import { Cloud, RefreshCw } from "lucide-react";
-import { SyncLoader } from "./components/SyncLoader";
+import { Loader } from "./components/Loader";
 import { AboutScreen } from "./pages/about/AboutScreen";
 
 export type Screen = "quiz" | "settings" | "profile" | "about";
@@ -63,7 +63,24 @@ export const App: React.FC = () => {
 
     // Show sync loader if initial sync is in progress
     if (!isInitialSyncComplete) {
-        return <SyncLoader />;
+        return <Loader title="Syncing your progress..." description="進捗を同期中..." />;
+    }
+
+    // Fatal Error Gate
+    if (state.fatalError) {
+        return (
+            <div className="h-screen w-full flex flex-col items-center justify-center bg-red-50 p-8 text-center text-red-900">
+                <div className="text-4xl mb-4">⚠️</div>
+                <h1 className="text-2xl font-bold mb-2">System Error</h1>
+                <p className="max-w-md mb-6">{state.fatalError}</p>
+                <button
+                    onClick={() => window.location.reload()}
+                    className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition"
+                >
+                    Reload Application
+                </button>
+            </div>
+        );
     }
 
     // Setup gate

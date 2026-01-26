@@ -10,6 +10,7 @@ import { useGoogleDrive } from "../../context/GoogleDriveContext";
 import { Button } from "../../components/ui/Button";
 import { StorageService } from "../../services/storage.service";
 import { Cloud, Loader2, LogIn } from "lucide-react";
+import { Loader } from "../../components/Loader";
 
 function GoogleLoginButton({ onSyncComplete }: { onSyncComplete: () => void }) {
     const { login, isSyncing, isAuthenticated, sync } = useGoogleDrive();
@@ -109,12 +110,12 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
     };
 
     if (state.loading) {
-        return (<p>Loading...</p>)
+        return (<Loader title="Loading..." />)
     }
 
     return (
         <div className="min-h-screen flex items-center justify-center p-8 bg-background transition-colors duration-200">
-            <div className="max-w-3xl mx-auto p-8 space-y-12">
+            <div className="w-full max-w-2xl md:max-w-3xl mx-auto p-8 space-y-12">
                 <SetupHeader />
 
                 <KanjiKnowledgeEditor />
