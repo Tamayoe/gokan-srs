@@ -12,7 +12,9 @@
     "build:data": "bun scripts/build-kanji.ts && bun scripts/build-vocabulary.ts",
     "build:kanji": "bun scripts/build-kanji.ts",
     "build:vocab": "rimraf ./data/compiled/vocab && bun scripts/build-vocabulary.ts",
-    "build:jpdb": "bun scripts/jpdb-v2.2-tsv-to-json.js"
+    "build:jpdb": "bun scripts/jpdb-v2.2-tsv-to-json.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@react-oauth/google": "^0.13.4",
