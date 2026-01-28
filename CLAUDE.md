@@ -1,11 +1,11 @@
-# GEMINI Project Context
+# CLAUDE Project Context
 
 > [!IMPORTANT]
 > **Keep this documentation updated.**
 > This file serves as the long-term memory for AI agents working on Gokan SRS. When making functional changes, update the relevant sections to reflect the current state of the codebase.
 >
-> **CRITICAL: Maintain both GEMINI.md and CLAUDE.md in sync.**
-> When updating this file, you MUST also update CLAUDE.md with identical changes to ensure both AI agents (Gemini and Claude) have equivalent knowledge. Both files should always contain the same information.
+> **CRITICAL: Maintain both CLAUDE.md and GEMINI.md in sync.**
+> When updating this file, you MUST also update GEMINI.md with identical changes to ensure both AI agents (Claude and Gemini) have equivalent knowledge. Both files should always contain the same information.
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -108,7 +108,7 @@ gokan-srs/
 │   ├── main.tsx              # Entry point
 │   └── index.css             # Global styles
 ├── DESIGN_SYSTEM.md          # Visual design guidelines
-├── GEMINI.md                 # This file
+├── CLAUDE.md                 # This file
 └── package.json
 ```
 
