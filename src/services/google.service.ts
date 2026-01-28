@@ -1,5 +1,6 @@
 import type { UserProgress } from "../models/user.model";
 import { CONSTANTS } from "../commons/constants";
+import { MigrationService } from "./migration.service";
 
 const DRIVE_FILE_NAME = CONSTANTS.storage.googleDriveFileName;
 const DRIVE_FOLDER_NAME = CONSTANTS.storage.googleDriveFolderName;
@@ -305,16 +306,31 @@ export class GoogleDriveSync {
 
     // Helper to handle JSON deserialization (restoring Sets and Dates)
     private deserialize(data: any): ProgressWithMetadata {
+        // 1. Apply migration first (handles raw JSON structure)
+        const migrated = MigrationService.migrateUserProgress(data);
+
+        // 2. Hydrate Dates and Sets
         return {
-            ...data,
+            ...migrated,
             kanjiKnowledge: {
-                ...data.kanjiKnowledge,
-                kanjiSet: new Set(data.kanjiKnowledge?.kanjiSet || [])
+                ...migrated.kanjiKnowledge,
+                kanjiSet: new Set(migrated.kanjiKnowledge?.kanjiSet || [])
             },
-            learningQueue: (data.learningQueue || []).map((item: any) => ({
+            learningQueue: (migrated.learningQueue || []).map((item: any) => ({
                 ...item,
                 nextReviewAt: item.nextReviewAt ? new Date(item.nextReviewAt) : item.nextReviewAt,
-                lastReviewedAt: item.lastReviewedAt ? new Date(item.lastReviewedAt) : item.lastReviewedAt
+                lastReviewedAt: item.lastReviewedAt ? new Date(item.lastReviewedAt) : item.lastReviewedAt,
+                introductionAt: item.introductionAt ? new Date(item.introductionAt) : item.introductionAt,
+                reading: {
+                    ...item.reading,
+                    lastReviewedAt: item.reading?.lastReviewedAt ? new Date(item.reading.lastReviewedAt) : null,
+                    dueDate: item.reading?.dueDate ? new Date(item.reading.dueDate) : null
+                },
+                meaning: {
+                    ...item.meaning,
+                    lastReviewedAt: item.meaning?.lastReviewedAt ? new Date(item.meaning.lastReviewedAt) : null,
+                    dueDate: item.meaning?.dueDate ? new Date(item.meaning.dueDate) : null
+                }
             }))
         };
     }

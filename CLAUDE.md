@@ -251,6 +251,22 @@ Google Drive integration for cloud sync.
 - Create/update progress file in Google Drive
 - Automatic sync on changes
 - Conflict resolution (server wins)
+- **Integrated Migration**: Applies migration and proper date hydration to remote files before merging
+
+### Migration Service (`migration.service.ts`)
+
+Handles data format upgrades to ensure backward compatibility.
+
+**Features:**
+- Converts old `mastery` (0-100) system to new `memoryStrength`/`interval` system
+- Format version tracking (`_formatVersion` field)
+- Idempotent migration (already-migrated data not re-migrated)
+- Automatic migration on data load (Storage & Google Drive)
+
+**Conversion Formula:**
+- `memoryStrength = (mastery / 100) * maxMemoryStrength`
+- mastery 0 → memoryStrength 0 (beginner)
+- mastery 100 → memoryStrength 1270 (≈1 year interval, mastered)
 
 ---
 
@@ -394,6 +410,11 @@ bun run build:jpdb   # Convert JPDB TSV to JSON
   - Minor error classification tests (Levenshtein distance validation)
   - Alternative reading matching tests
   - Retry flag behavior tests
+- `src/services/migration.service.test.ts` - Data migration tests
+  - Old format (mastery) to new format (memoryStrength/interval) conversion
+  - Edge cases (mastery 0, mastery 100)
+  - Idempotency (already-migrated data not re-migrated)
+  - Real production data samples
 - `scripts/build-vocabulary.test.ts` - Data integrity tests
   - Validates all vocab IDs in KKLC index have corresponding files
   - Validates all vocab IDs in frequency index have corresponding files
@@ -532,6 +553,14 @@ return 'exhausted'
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
+- **[2026-01-29]**:
+  - **Data Migration System**: Implemented comprehensive migration from old `mastery` (0-100) to new `memoryStrength`/`interval` system
+    - Created `migration.service.ts` with automatic format detection and conversion
+    - Added `_formatVersion` field to `UserProgress` for migration tracking
+    - Integrated migration into `storage.service.ts` loadProgress method
+    - Created 10 comprehensive tests covering edge cases and real production data
+    - Migration preserves all user progress, review schedules, and stats
+    - Conversion formula: `memoryStrength = (mastery / 100) * maxMemoryStrength`
 - **[2026-01-28]**: 
   - **Test Infrastructure**: Added comprehensive test suite with Vitest
     - Created `srs.service.test.ts` with 27 test cases covering SRS formula, error classification, and retry behavior
