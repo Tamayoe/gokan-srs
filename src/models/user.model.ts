@@ -29,6 +29,9 @@ export interface UserProgress {
 
     /** Allow user to bypass daily new vocab limit */
     dailyOverride: boolean;
+
+    /** Data format version for migration tracking */
+    _formatVersion?: number;
 }
 
 export type KanjiLearningMethod = 'kklc' | 'rtk' | 'jlpt' | 'custom';

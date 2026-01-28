@@ -1,8 +1,9 @@
-import type {UserProgress, UserSettings} from "../models/user.model";
-import {CONSTANTS} from "../commons/constants";
-import type {VocabProgress} from "../models/vocabulary.model";
-import {DEFAULT_VOCABULARY_PROGRESS} from "../models/vocabulary.model";
-import {DEFAULT_PROGRESS, DEFAULT_SETTINGS} from "../models/user.model";
+import type { UserProgress, UserSettings } from "../models/user.model";
+import { CONSTANTS } from "../commons/constants";
+import type { VocabProgress } from "../models/vocabulary.model";
+import { DEFAULT_VOCABULARY_PROGRESS } from "../models/vocabulary.model";
+import { DEFAULT_PROGRESS, DEFAULT_SETTINGS } from "../models/user.model";
+import { MigrationService } from "./migration.service";
 
 export class StorageService {
     static saveProgress(progress: UserProgress): void {
@@ -16,21 +17,46 @@ export class StorageService {
         const stored = localStorage.getItem(CONSTANTS.storage.progressStorageKey);
         if (!stored) return null;
 
-        const parsed: UserProgress = JSON.parse(stored);
-        const learningQueue: VocabProgress[]  = parsed.learningQueue.map(elem => ({
+        const parsed: any = JSON.parse(stored);
+
+        // Apply migration if needed
+        const migrated = MigrationService.migrateUserProgress(parsed);
+
+        // Convert date strings to Date objects
+        const learningQueue: VocabProgress[] = migrated.learningQueue.map((elem: any) => ({
             ...DEFAULT_VOCABULARY_PROGRESS,
             ...elem,
             nextReviewAt: typeof elem.nextReviewAt === 'string' ? new Date(elem.nextReviewAt) : elem.nextReviewAt,
-            lastReviewedAt: typeof elem.lastReviewedAt === 'string' ? new Date(elem.lastReviewedAt) : elem.lastReviewedAt
-        }))
+            lastReviewedAt: typeof elem.lastReviewedAt === 'string' ? new Date(elem.lastReviewedAt) : elem.lastReviewedAt,
+            introductionAt: typeof elem.introductionAt === 'string' ? new Date(elem.introductionAt) : elem.introductionAt,
+            reading: {
+                ...elem.reading,
+                lastReviewedAt: elem.reading?.lastReviewedAt && typeof elem.reading.lastReviewedAt === 'string'
+                    ? new Date(elem.reading.lastReviewedAt)
+                    : elem.reading?.lastReviewedAt,
+                dueDate: elem.reading?.dueDate && typeof elem.reading.dueDate === 'string'
+                    ? new Date(elem.reading.dueDate)
+                    : elem.reading?.dueDate
+            },
+            meaning: {
+                ...elem.meaning,
+                lastReviewedAt: elem.meaning?.lastReviewedAt && typeof elem.meaning.lastReviewedAt === 'string'
+                    ? new Date(elem.meaning.lastReviewedAt)
+                    : elem.meaning?.lastReviewedAt,
+                dueDate: elem.meaning?.dueDate && typeof elem.meaning.dueDate === 'string'
+                    ? new Date(elem.meaning.dueDate)
+                    : elem.meaning?.dueDate
+            }
+        }));
+
         return {
             ...DEFAULT_PROGRESS,
-            ...parsed,
+            ...migrated,
             kanjiKnowledge: {
-                ...parsed.kanjiKnowledge,
-                kanjiSet: new Set(parsed.kanjiKnowledge.kanjiSet)
+                ...migrated.kanjiKnowledge,
+                kanjiSet: new Set(migrated.kanjiKnowledge.kanjiSet)
             },
-            learningQueue: learningQueue
+            learningQueue
         };
     }
 
