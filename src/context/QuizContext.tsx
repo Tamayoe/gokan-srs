@@ -95,7 +95,7 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                         newLearnedToday: 0,
                     },
                     dailyOverride: false,
-                }
+                },
             };
 
         case 'LOAD_VOCAB_START':
@@ -479,20 +479,13 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     useEffect(() => {
         if (!nextDue) {
-            // Only try to refill if we are NOT already loading and we are genuinely empty
-            // But we must be careful not to loop.
-            // If nextDue is null, we need to advance if we have capacity?
-            // Actually, QuizScreen asks for advanceQueue if !currentVocab.
-            // But wait, if we just failed, nextDue became null (item removed).
-            // We need to trigger a refill if we are in 'learn' mode but have no items?
-
             dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
 
-            // AUTO-ADANCE TRIGGER: If we ran out of items because of errors, 
-            // and we rely on the UI to call advanceQueue, it might be stuck if the UI
-            // thinks "isLoading" (which we just set to false).
-            // The UI (QuizScreen) usually calls advanceQueue when !currentVocab.
-            // So setting payload: null and isLoading: false should trigger the UI to call advanceQueue.
+            // AUTO-ADVANCE TRIGGER: If queue is empty but we can introduce new vocab, refill
+            if (state.progress && state.settings && sessionView.sessionState === 'learn') {
+                const now = new Date();
+                actions.advanceQueue({ now });
+            }
             return;
         }
 

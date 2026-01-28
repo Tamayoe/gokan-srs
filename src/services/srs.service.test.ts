@@ -226,4 +226,39 @@ describe('SRSService Formula Tests', () => {
         });
     });
 
+    describe('Retry Flag Behavior', () => {
+        it('should set needsRetry on first wrong answer', () => {
+            const vocab = createVocab(5.0, 0.3);
+            const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 1500, mockNow);
+
+            expect(updated.needsRetry).toBe(true);
+        });
+
+        it('should clear needsRetry on retry attempt (correct)', () => {
+            const vocab = createVocab(5.0, 0.3);
+            vocab.needsRetry = true; // Simulate retry state
+
+            const { updated } = SRSService.applyAnswer(vocab, 'correct', 'kotae', 1500, mockNow);
+
+            expect(updated.needsRetry).toBe(false);
+        });
+
+        it('should clear needsRetry on retry attempt (wrong again)', () => {
+            const vocab = createVocab(5.0, 0.3);
+            vocab.needsRetry = true; // Simulate retry state
+
+            const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 1500, mockNow);
+
+            // Should be false to prevent infinite loops
+            expect(updated.needsRetry).toBe(false);
+        });
+
+        it('should not set needsRetry on minor_error', () => {
+            const vocab = createVocab(5.0, 0.3);
+            const { updated } = SRSService.applyAnswer(vocab, 'minor_error', 'kotae', 1500, mockNow);
+
+            expect(updated.needsRetry).toBe(false);
+        });
+    });
+
 });
