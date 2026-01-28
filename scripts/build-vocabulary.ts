@@ -6,8 +6,18 @@ import { BUILD_LIMITS } from './build-constants';
 import type { Kanji } from '../src/models/kanji.model';
 import { JMDict } from "../src/models/data.model";
 
+// Type definitions for new JPDB format
+interface JPDBEntry {
+    frequency: number;
+    kanaFrequency: number | null;
+}
+
+type JPDBData = Record<string, Record<string, JPDBEntry>>;
+
 const jmdict: JMDict = JSON.parse(fs.readFileSync('./data/raw/jmdict.json', 'utf-8'));
-const jpdb = JSON.parse(fs.readFileSync('./data/raw/jpdb_v2.json', 'utf-8'));
+const jpdb: JPDBData = JSON.parse(
+    fs.readFileSync('./data/raw/jpdb_v2.2_freq_list_2024-10-13.json', 'utf-8')
+);
 const kanjiData: Kanji[] = JSON.parse(
     fs.readFileSync('./data/compiled/kanji.json', 'utf-8'),
 );
@@ -41,9 +51,34 @@ for (const entry of jmdict.words) {
     const containedKanji = extractKanji(kanjiText);
     if (!containedKanji.length) continue;
 
-    const jpdbEntry = jpdb[kanjiText]
-        ? parseJPDBEntry(jpdb[kanjiText])
-        : null;
+    // Calculate primary reading first (needed for JPDB lookup)
+    const primaryReading =
+        entry.kana.find(k => k.common && k.appliesToKanji.includes("*"))?.text
+        ?? entry.kana[0].text;
+
+    // Match by kanji + primary reading for accurate frequency
+    const jpdbKanjiEntry = jpdb[kanjiText];
+    let jpdbEntry: { kanjiRank?: number; hiraganaRank?: number } | null = null;
+
+    if (jpdbKanjiEntry) {
+        // Try to find exact match with primary reading
+        const readingEntry = jpdbKanjiEntry[primaryReading];
+        if (readingEntry) {
+            jpdbEntry = {
+                kanjiRank: readingEntry.frequency,
+                hiraganaRank: readingEntry.kanaFrequency ?? undefined,
+            };
+        } else {
+            // Fallback: use first available reading if exact match not found
+            const firstReading = Object.values(jpdbKanjiEntry)[0];
+            if (firstReading) {
+                jpdbEntry = {
+                    kanjiRank: firstReading.frequency,
+                    hiraganaRank: firstReading.kanaFrequency ?? undefined,
+                };
+            }
+        }
+    }
 
     if (!jpdbEntry?.kanjiRank) continue;
 
@@ -51,10 +86,6 @@ for (const entry of jmdict.words) {
         ...containedKanji.map(k => kklcMap.get(k) ?? 0),
     );
     if (!kklcStep) continue;
-
-    const primaryReading =
-        entry.kana.find(k => k.common && k.appliesToKanji.includes("*"))?.text
-        ?? entry.kana[0].text;
 
     const alternativeReadings = entry.kana
         .map(k => k.text)

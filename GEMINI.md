@@ -340,23 +340,29 @@ Calls `actions.setupComplete()` when done.
 
 **Development:**
 ```bash
-npm run dev          # Start dev server (Vite)
-npm run typecheck    # TypeScript type checking
-npm run lint         # ESLint
+bun run dev          # Start dev server (Vite)
+bun run typecheck    # TypeScript type checking
+bun run lint         # ESLint
 ```
 
 **Build:**
 ```bash
-npm run build        # Production build
-npm run preview      # Preview production build
+bun run build        # Production build
+bun run preview      # Preview production build
+```
+
+**Testing:**
+```bash
+bun test             # Run all tests (Vitest)
+bun test:watch       # Run tests in watch mode
 ```
 
 **Data Compilation:**
 ```bash
-npm run build:data   # Compile all data (kanji + vocab)
-npm run build:kanji  # Compile KKLC kanji only
-npm run build:vocab  # Compile vocabulary only
-npm run build:jpdb   # Convert JPDB TSV to JSON
+bun run build:data   # Compile all data (kanji + vocab)
+bun run build:kanji  # Compile KKLC kanji only
+bun run build:vocab  # Compile vocabulary only
+bun run build:jpdb   # Convert JPDB TSV to JSON
 ```
 
 ### Data Build Scripts
@@ -377,6 +383,27 @@ npm run build:jpdb   # Convert JPDB TSV to JSON
 - KKLC: https://github.com/ppasupat/vocab-kanji
 - JMDict: Japanese-English dictionary
 - JPDB: https://jpdb.io frequency data
+
+### Test Infrastructure
+
+**Test Framework**: Vitest
+
+**Test Files:**
+- `src/services/srs.service.test.ts` - SRS algorithm unit tests
+  - Formula verification tests (8 test cases covering different scenarios)
+  - Minor error classification tests (Levenshtein distance validation)
+  - Alternative reading matching tests
+  - Retry flag behavior tests
+- `scripts/build-vocabulary.test.ts` - Data integrity tests
+  - Validates all vocab IDs in KKLC index have corresponding files
+  - Validates all vocab IDs in frequency index have corresponding files
+  - Validates all vocab files contain valid JSON
+
+**CI/CD Integration:**
+- GitHub Actions workflow (`.github/workflows/deploy.yml`) includes test stage
+- Tests run automatically on push to main branch
+- Deployment only proceeds if all tests pass
+- Uses Bun as the test runner for consistency with development environment
 
 ---
 
@@ -506,7 +533,12 @@ return 'exhausted'
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
 - **[2026-01-28]**: 
-  - Implemented **immediate retry mechanism** for wrong answers: Items with wrong answers get `needsRetry` flag and appear in current session
+  - **Test Infrastructure**: Added comprehensive test suite with Vitest
+    - Created `srs.service.test.ts` with 27 test cases covering SRS formula, error classification, and retry behavior
+    - Created `build-vocabulary.test.ts` for data integrity validation
+    - Integrated test stage into GitHub Actions CI/CD pipeline (tests must pass before deployment)
+    - Fixed test bug where minor_error test was incorrectly passing string literal instead of using forcedResult parameter
+  - **SRS Improvements**: Implemented **immediate retry mechanism** for wrong answers: Items with wrong answers get `needsRetry` flag and appear in current session
   - Retry items mixed with old reviews (Priority 1), one retry per wrong answer to prevent loops
   - SRS calculation unchanged - retry is a learning aid, not a review
   - Simplified buffered introduction to **stateless approach**: Changed batch size to 3, prioritize New Intros over First Reviews

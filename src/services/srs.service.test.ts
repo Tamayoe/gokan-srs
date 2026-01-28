@@ -255,7 +255,7 @@ describe('SRSService Formula Tests', () => {
 
         it('should not set needsRetry on minor_error', () => {
             const vocab = createVocab(5.0, 0.3);
-            const { updated } = SRSService.applyAnswer(vocab, 'minor_error', 'kotae', 1500, mockNow);
+            const { updated } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 1500, mockNow, 'minor_error');
 
             expect(updated.needsRetry).toBe(false);
         });
