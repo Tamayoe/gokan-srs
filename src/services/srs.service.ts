@@ -79,6 +79,9 @@ export class SRSService {
             finalNextReviewAt = null; // No further reviews
         }
 
+        // Set retry flag only on first wrong answer (prevents loops)
+        const needsRetry = result === 'wrong' && !vocab.needsRetry;
+
         return {
             updated: {
                 ...vocab,
@@ -89,6 +92,7 @@ export class SRSService {
                 lastReviewedAt: now,
                 totalReviews: vocab.totalReviews + 1,
                 consecutiveFailures: result === 'correct' ? 0 : vocab.consecutiveFailures + 1,
+                needsRetry, // Set on first wrong, cleared on retry
             },
             result,
             interval

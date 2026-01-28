@@ -26,6 +26,13 @@ export const QuizCard: React.FC = () => {
         setTimeout(() => inputRef.current?.focus(), 0);
     }, [currentVocab.id]);
 
+    // Refocus input when feedback is cleared (for retry case with same vocab)
+    useEffect(() => {
+        if (!feedback?.show) {
+            setTimeout(() => inputRef.current?.focus(), 0);
+        }
+    }, [feedback?.show]);
+
     // Handle incorrect answer reveal animation
     useEffect(() => {
         if (feedback?.show && !feedback.correct) {

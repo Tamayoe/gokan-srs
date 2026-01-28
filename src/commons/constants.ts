@@ -15,7 +15,7 @@ export const CONSTANTS = {
     srs: {
         /** Maximum number of new vocab introduced per day */
         dailyNewLimit: 20,
-        newVocabBatchSize: 1,
+        newVocabBatchSize: 3,
 
         /** Maximum number of reviews per day */
         maxReviewsPerDay: 150,

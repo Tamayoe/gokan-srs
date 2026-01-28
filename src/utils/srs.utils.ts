@@ -3,32 +3,48 @@ import type { UserProgress } from "../models/user.model";
 import { CONSTANTS } from "../commons/constants";
 
 /**
-* Return the next vocab element that is ready to be studied now.
-* - Only vocab already present in the learningQueue
-* - Excludes vocab whose nextReviewAt is in the future
-*/
+ * Return the next vocab element that is ready to be studied now.
+ * Implements simple prioritized flow:
+ * 1. Old Reviews + Retry items (mixed randomly)
+ * 2. New Intros (not introduced yet)
+ * 3. First Reviews (totalReviews === 0, introduced but not tested yet)
+ */
 export function getNextVocabToStudy(
     queue?: VocabProgress[],
     now: Date = new Date()
 ): VocabProgress | null {
     if (!queue || queue.length === 0) return null;
 
-    // 1. Priority: Due Reviews
-    const due = queue.filter(v => v.nextReviewAt !== null && v.nextReviewAt <= now);
-    if (due.length > 0) {
-        return pickRandom(due);
+    // 1. Priority: Old Reviews + Retry items (mixed together)
+    const reviewsAndRetries = queue.filter(v =>
+        // Old reviews (already reviewed at least once)
+        (v.totalReviews > 0 && v.nextReviewAt !== null && v.nextReviewAt <= now) ||
+        // Retry items (wrong answer in current session)
+        v.needsRetry === true
+    );
+    if (reviewsAndRetries.length > 0) {
+        return pickRandom(reviewsAndRetries);
     }
 
-    // 2. Priority: New Items (Intro)
-    // Only if no due reviews exist
-    // Must exclude 'graduated' items (skipped/mastered) which also have nextReviewAt === null
-    const newItems = queue.filter(v =>
-        v.nextReviewAt === null &&
+    // 2. Priority: New Intros (not introduced yet)
+    const newIntros = queue.filter(v =>
+        v.introductionAt === null &&
         v.stage !== 'graduated'
     );
+    if (newIntros.length > 0) {
+        return pickRandom(newIntros);
+    }
 
-    if (newItems.length > 0) {
-        return pickRandom(newItems);
+    // 3. Priority: First Reviews (just introduced, totalReviews === 0)
+    const firstReviews = queue.filter(v =>
+        v.totalReviews === 0 &&
+        v.introductionAt !== null &&
+        v.nextReviewAt !== null &&
+        v.nextReviewAt <= now &&
+        v.stage !== 'graduated'
+    );
+    if (firstReviews.length > 0) {
+        return pickRandom(firstReviews);
     }
 
     return null;

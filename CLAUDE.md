@@ -4,8 +4,12 @@
 > **Keep this documentation updated.**
 > This file serves as the long-term memory for AI agents working on Gokan SRS. When making functional changes, update the relevant sections to reflect the current state of the codebase.
 >
-> **CRITICAL: Maintain both CLAUDE.md and GEMINI.md in sync.**
-> When updating this file, you MUST also update GEMINI.md with identical changes to ensure both AI agents (Claude and Gemini) have equivalent knowledge. Both files should always contain the same information.
+> **⚠️ CRITICAL REQUIREMENT: ALWAYS UPDATE BOTH CLAUDE.md AND GEMINI.md ⚠️**
+> 
+> When you modify either CLAUDE.md or GEMINI.md, you MUST immediately update the other file with IDENTICAL changes.
+> Both files must always contain the same information to ensure all AI agents have equivalent knowledge.
+> 
+> **WORKFLOW**: After editing one file, IMMEDIATELY edit the other before proceeding with any other work.
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -380,23 +384,51 @@ npm run build:jpdb   # Convert JPDB TSV to JSON
 
 ### Learning Queue Logic
 
-The SRS study session follows a strict priority system:
+The SRS study session follows a **stateless** priority system with natural buffering:
 
-1. **Reviews First**:
-   - While the queue contains items with `nextReviewAt <= now`, these are presented to the user
-   - Order: Random selection from the pool of due items (to prevent interference effects)
+1. **Old Reviews + Retry Items (Priority 1)**:
+   - Items with `totalReviews > 0` and `nextReviewAt <= now`
+   - Items with `needsRetry === true` (wrong answer in current session)
+   - These are mixed randomly together
+   - Order: Random selection from the pool (to prevent interference effects)
 
-2. **New Vocabulary Introduction**:
-   - If (and only if) no reviews are due (`nextReviewAt` is future or empty), the system checks for **New Items**
-   - **New Items** are defined as items in the queue with `nextReviewAt: null` AND `stage !== 'graduated'`
-   - The queue is refilled from the main Index based on daily limits
-   - **User Action**:
-     - **Learn**: Item activates with base memory strength. `nextReviewAt` set to `now` (becomes immediately reviewable)
-     - **Skip**: Item is marked as **Fully Mastered** (`maxMemoryStrength`). Stage set to `graduated`. It will not appear in reviews
-     - **Mastery**: If `memoryStrength >= maxMemoryStrength` after a review, item graduates. `nextReviewAt` is cleared
+2. **New Intros (Priority 2)**:
+   - Items with `introductionAt === null` and `stage !== 'graduated'`
+   - When queue runs out of reviewable items, **3 new vocab are introduced at once**
+   - All get `nextReviewAt = now` when user chooses "Learn"
 
-3. **Completion**:
+3. **First Reviews (Priority 3)**:
+   - Items with `totalReviews === 0`, `introductionAt !== null`, and `nextReviewAt <= now`
+   - These are introduced vocab that haven't been tested yet
+   - Lower priority than new intros ensures buffering
+
+4. **User Actions on Introduction**:
+   - **Learn**: Item activates with base memory strength. `nextReviewAt` set to `now` (becomes immediately reviewable)
+   - **Skip**: Item is marked as **Fully Mastered** (`maxMemoryStrength`). Stage set to `graduated`. It will not appear in reviews
+   - **Mastery**: If `memoryStrength >= maxMemoryStrength` after a review, item graduates. `nextReviewAt` is cleared
+
+5. **Retry Mechanism (Wrong Answers)**:
+   - When user gives wrong answer: `needsRetry = true` is set
+   - Item appears in current session (mixed with old reviews)
+   - On retry attempt: `needsRetry = false` (prevents loops)
+   - Only one retry per wrong answer
+   - SRS calculation proceeds normally (retry doesn't affect intervals)
+
+6. **Queue Refill**:
+   - Triggered automatically in `QuizContext` when `nextDue` is null and session state is 'learn'
+   - Adds 3 new vocab at once (batch size = 3)
+   - Respects daily limits and kanji knowledge constraints
+
+7. **Completion**:
    - Session ends when: No Due Reviews AND (Daily Limit Reached OR No More Learnable Content)
+
+**Natural Flow Example**: 
+- Introduce 3 vocab → All 3 get `nextReviewAt = now`
+- Priority shows 3 more new intros (if available)
+- After 3 more intros, no more new intros available
+- System shows 6 pending first reviews
+- Pattern: Intro × 3 → Intro × 3 → Quiz × 6 → Intro × 3 → ...
+- If wrong answer: Item gets `needsRetry = true` → Appears again in current session
 
 ### Session State Computation
 
@@ -432,7 +464,7 @@ return 'exhausted'
 
 **SRS Limits:**
 - `dailyNewLimit`: 20 new vocab per day
-- `newVocabBatchSize`: 1 (introduce one at a time)
+- `newVocabBatchSize`: 3 (introduce three at a time for buffered learning)
 - `maxReviewsPerDay`: 150
 
 **Quiz Timing:**
@@ -473,6 +505,15 @@ return 'exhausted'
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
-- **[2026-01-28]**: Created comprehensive project documentation covering architecture, data models, services, state management, and workflows.
+- **[2026-01-28]**: 
+  - Implemented **immediate retry mechanism** for wrong answers: Items with wrong answers get `needsRetry` flag and appear in current session
+  - Retry items mixed with old reviews (Priority 1), one retry per wrong answer to prevent loops
+  - SRS calculation unchanged - retry is a learning aid, not a review
+  - Simplified buffered introduction to **stateless approach**: Changed batch size to 3, prioritize New Intros over First Reviews
+  - Removed `introBatchCount` state tracking - buffering now emerges naturally from priority system
+  - Flow: Introduce 3 vocab → Show 3 more intros (priority 2) → Show 6 first reviews (priority 3)
+  - Refactored `getNextVocabToStudy` in `srs.utils.ts`: (Old Reviews + Retries) > New Intros > First Reviews
+  - Moved auto-advance queue logic from `QuizScreen` to `QuizContext` for centralized queue management
+  - Created comprehensive project documentation covering architecture, data models, services, state management, and workflows.
 - **[2026-01-26]**: Documented SRS priority workflow and error handling policy.
 - **[2026-01-22]**: Acknowledged new Design System. Refactoring visual feedback to match "Sober & Serious" tone.

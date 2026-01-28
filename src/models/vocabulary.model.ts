@@ -92,6 +92,7 @@ export interface VocabProgress {
     // Detailed SRS data
     reading: SRSEntry;
     meaning: SRSEntry;
+    needsRetry?: boolean; // Flag for immediate retry after wrong answer
 }
 
 export const DEFAULT_SRS_ENTRY: SRSEntry = {
