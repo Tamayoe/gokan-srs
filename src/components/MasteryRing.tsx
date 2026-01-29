@@ -1,80 +1,135 @@
 import { CONSTANTS } from "../commons/constants";
+import { THEME } from "../commons/theme";
 
 interface MasteryRingProps {
     memoryStrength: number; // SRS Memory Strength
     size?: number;
+    showText?: boolean;
 }
 
-export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size = 30 }) => {
-    // Logarithmic progress
-    // P = 100 * log(S) / log(S_max)
-    // We treat S < 1 as effectively 0-ish for the log scale to avoid negatives, 
-    // or we clamp.
-    // Actually S ranges from ~0.3 upwards.
-    // log(0.3) is negative.
-    // Let's us clamp the input strength to >= 1 for the visual calculation so we start at 0%.
-    // Or maybe we want to show some progress even for low strength?
-    // If S=0.3 (min), log(0.3) = -1.2.
-    // If we want 0% at S_min=0.3?. 
-    // Let's shift it? 
-    // P = log(S / S_min) / log(S_max / S_min) ?
-    // If S=0.3, P=0. If S=S_max, P=100.
-    // Let's try that.
-
-    const getPercentage = (strength: number) => {
+export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size = 30, showText = true }) => {
+    const getPercentages = (strength: number) => {
         const sMin = CONSTANTS.srs.formula.minMemoryStrength;
+        const sSoft = CONSTANTS.srs.formula.mastery.visualSoftCap;
         const sMax = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
 
-        // Sanity check
-        if (strength <= sMin) return 5; // Minimal visibility
+        if (strength <= sMin) return { p1: 0, p2: 0 };
 
-        const numer = Math.log(strength / sMin);
-        const denom = Math.log(sMax / sMin);
+        // Loop 1: 0 -> Soft Cap (User Mastery)
+        let p1 = 0;
+        if (strength >= sSoft) {
+            p1 = 100;
+        } else {
+            const numer = Math.log(strength / sMin);
+            const denom = Math.log(sSoft / sMin);
+            p1 = (numer / denom) * 100;
+        }
 
-        const p = (numer / denom) * 100;
-        return Math.min(Math.max(p, 5), 100); // Clamp 5-100
+        // Loop 2: Soft Cap -> Max Cap (Diamond Mastery)
+        let p2 = 0;
+        if (strength > sSoft) {
+            const numer = Math.log(strength / sSoft);
+            const denom = Math.log(sMax / sSoft);
+            p2 = (numer / denom) * 100;
+        }
+
+        return {
+            p1: Math.min(Math.max(p1, 0), 100),
+            p2: Math.min(Math.max(p2, 0), 100)
+        };
     };
 
-    const percentage = getPercentage(memoryStrength);
+    const { p1, p2 } = getPercentages(memoryStrength);
 
-    // ... rest of SVG code ...
-    const radius = size / 2 - 2;
+    // Stroke width relative to size
+    const strokeWidth = Math.max(2, size / 12);
+    const radius = (size - strokeWidth) / 2;
     const circumference = 2 * Math.PI * radius;
-    const offset = circumference - (percentage / 100) * circumference;
 
-    // Color based on stage
-    const getColor = (p: number) => {
-        if (p >= 100) return '#10b981'; // Emerald 500
-        if (p >= 60) return '#3b82f6'; // Blue 500
-        if (p >= 35) return '#f59e0b'; // Amber 500
-        return '#ef4444'; // Red 500
-    };
+    // Offsets
+    const offset1 = circumference - (p1 / 100) * circumference;
+    const offset2 = circumference - (p2 / 100) * circumference;
+
+    // Fixed ID for gradient (we use one global style here effectively)
+    const gradientId = "shinyMasteryGradient";
+
+    // Text Visibility logic
+    const shouldShowText = showText && size >= 30;
+    const fontSize = size * 0.28;
+
+    // Percentage text to show
+    const displayPercentage = Math.round(p1);
 
     return (
         <div className="relative flex items-center justify-center shrink-0" style={{ width: size, height: size }}>
-            <svg className="transform -rotate-90 w-full h-full">
+            <svg
+                className="w-full h-full"
+                style={{ transform: 'rotate(-90deg) translateZ(0)' }}
+                viewBox={`0 0 ${size} ${size}`}
+            >
+                <defs>
+                    <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor={THEME.mastery.loop2.gradientStart} />
+                        <stop offset="100%" stopColor={THEME.mastery.loop2.gradientEnd} />
+                    </linearGradient>
+                </defs>
+
+                {/* Background Track */}
                 <circle
-                    className="text-slate-700"
-                    strokeWidth="3"
+                    className="text-slate-200 dark:text-slate-700"
                     stroke="currentColor"
+                    strokeWidth={strokeWidth}
                     fill="transparent"
                     r={radius}
                     cx={size / 2}
                     cy={size / 2}
+                    shapeRendering="geometricPrecision"
                 />
+
+                {/* Loop 1 (Learning Progress) */}
+                {/* When p2 > 0, this circle becomes the background for loop 2. Use muted Indigo. */}
                 <circle
-                    className="transition-all duration-500 ease-out"
-                    strokeWidth="3"
+                    className="transition-all duration-700 ease-out"
+                    strokeWidth={strokeWidth}
                     strokeDasharray={circumference}
-                    strokeDashoffset={offset}
+                    strokeDashoffset={offset1}
                     strokeLinecap="round"
-                    stroke={getColor(percentage)}
+                    stroke={p2 > 0 ? THEME.mastery.loop2.background : THEME.mastery.loop1}
                     fill="transparent"
                     r={radius}
                     cx={size / 2}
                     cy={size / 2}
+                    shapeRendering="geometricPrecision"
                 />
+
+                {/* Loop 2 (Refining / Diamond / Shiny) */}
+                {p2 > 0 && (
+                    <circle
+                        className="transition-all duration-700 ease-out"
+                        strokeWidth={strokeWidth}
+                        strokeDasharray={circumference}
+                        strokeDashoffset={offset2}
+                        strokeLinecap="round"
+                        stroke={`url(#${gradientId})`} // Apply Gradient
+                        fill="transparent"
+                        r={radius}
+                        cx={size / 2}
+                        cy={size / 2}
+                        shapeRendering="geometricPrecision"
+                    />
+                )}
             </svg>
+
+            {shouldShowText && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <span
+                        className="font-bold leading-none text-slate-600 select-none"
+                        style={{ fontSize: fontSize }}
+                    >
+                        {displayPercentage}
+                    </span>
+                </div>
+            )}
         </div>
     );
 };

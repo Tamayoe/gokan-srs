@@ -473,7 +473,7 @@ export class SRSService {
             totalReviews: 0,
             consecutiveFailures: 0,
             reading: {
-                memoryStrength: 1.0,
+                memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
                 interval: 0,
                 difficulty: 0.3,
                 lastReviewedAt: null,
@@ -481,7 +481,7 @@ export class SRSService {
                 history: []
             },
             meaning: {
-                memoryStrength: 1.0,
+                memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
                 interval: 0,
                 difficulty: 0.3,
                 lastReviewedAt: null,

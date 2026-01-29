@@ -59,7 +59,10 @@ export const CONSTANTS = {
                 // Target memory strength for ~1 year interval (100% mastery visually)
                 // t = S * 0.28768  => S = t / 0.28768
                 // For 365 days: 365 / 0.28768 ≈ 1269
-                maxMemoryStrength: 1270
+                maxMemoryStrength: 1270,
+                // Soft cap for visual mastery loop 1 (User Mastery)
+                // For ~60 days: 60 / 0.28768 ≈ 208
+                visualSoftCap: 208
             }
         }
     },

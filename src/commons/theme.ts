@@ -18,6 +18,15 @@ export const THEME = {
         muted: '#9ca3af',        // ← ADD THIS
         subtle: '#6b7280',      // optional, useful later
     },
+    mastery: {
+        track: '#e2e8f0', // Slate 200
+        loop1: '#4f46e5', // Indigo 600
+        loop2: {
+            background: '#818cf8', // Indigo 400
+            gradientStart: '#06b6d4', // Cyan 500 (Shiny)
+            gradientEnd: '#3b82f6',   // Blue 500 (Deep)
+        }
+    },
     fonts: {
         serif: '"Source Serif 4", Georgia, serif',
         mincho: '"Noto Serif JP", serif',

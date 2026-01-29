@@ -64,7 +64,7 @@ export const QuizCard: React.FC = () => {
                 <CardSection>
                     {/* Top-right mastery */}
                     <div className="flex justify-end mb-4">
-                        <MasteryRing memoryStrength={currentProgress?.reading.memoryStrength ?? 0} />
+                        <MasteryRing memoryStrength={currentProgress?.reading.memoryStrength ?? 0} size={50} />
                     </div>
 
                     {/* Kanji Display */}
