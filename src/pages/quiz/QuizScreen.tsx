@@ -32,9 +32,12 @@ export function QuizScreen() {
 
     return (
         <>
-            <div className={"flex flex-col"}>
+            <div className="flex flex-col flex-1 min-h-[calc(100vh-8rem)] items-center">
                 <ProgressBar progress={state.progress!} />
-                <QuizCard />
+
+                <div className="flex-1 flex items-center justify-center py-6 w-full">
+                    <QuizCard />
+                </div>
             </div>
         </>
     );
