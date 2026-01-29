@@ -7,7 +7,7 @@ import { DEFAULT_SRS_ENTRY, DEFAULT_VOCABULARY_PROGRESS } from '../models/vocabu
  * Current data format version
  * Increment this when making breaking changes to the data structure
  */
-const CURRENT_FORMAT_VERSION = 1;
+const CURRENT_FORMAT_VERSION = 2;
 
 /**
  * Migration service to handle data format upgrades
@@ -37,9 +37,12 @@ export class MigrationService {
         const mastery = item.mastery ?? 0;
         const maxMemoryStrength = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
 
-        // Convert mastery (0-100) to memoryStrength (0 to maxMemoryStrength)
-        // mastery 100 = maxMemoryStrength (1270 days ≈ 1 year)
-        const memoryStrength = (mastery / 100) * maxMemoryStrength;
+        // Convert mastery (0-100) to memoryStrength using CUBIC POWER FORMULA
+        // Formula: S = S_max * (mastery / 100)^3
+        // This maps 15% mastery -> ~4.3 days (instead of linear ~190 days)
+        // This maps 100% mastery -> 1270 days (full mastery)
+        const normalizedMastery = Math.max(0, Math.min(mastery, 100)) / 100;
+        const memoryStrength = maxMemoryStrength * Math.pow(normalizedMastery, 3);
 
         // Calculate interval based on memory strength
         // Using the same formula as in SRS service: interval = S * ln(targetRecall) / ln(0.5)
@@ -63,11 +66,12 @@ export class MigrationService {
         };
 
         // Build migrated vocab progress (without mastery field)
-        const { mastery: _, ...itemWithoutMastery } = item;
+        // IMPORTANT: We do NOT remove the 'mastery' field anymore.
+        // It is preserved for future reference if needed.
 
         return {
             ...DEFAULT_VOCABULARY_PROGRESS,
-            ...itemWithoutMastery,
+            ...item, // Keep all original fields including mastery
             reading: { ...migratedEntry },
             meaning: { ...DEFAULT_SRS_ENTRY } // Meaning starts fresh
         };

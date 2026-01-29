@@ -22,12 +22,17 @@ describe('MigrationService', () => {
             const migrated = MigrationService.migrateVocabProgress(oldFormat);
 
             // Should have reading SRSEntry with converted memoryStrength
-            expect(migrated.reading.memoryStrength).toBeCloseTo((75 / 100) * maxMemoryStrength, 1);
+            // NEW Cubic Formula: S = S_max * (mastery/100)^3
+            // 75% -> 0.75^3 = 0.421875
+            // 0.421875 * 1270 = ~535
+            const expectedStrength = maxMemoryStrength * Math.pow(0.75, 3);
+
+            expect(migrated.reading.memoryStrength).toBeCloseTo(expectedStrength, 1);
             expect(migrated.reading.interval).toBeGreaterThan(0);
             expect(migrated.reading.difficulty).toBe(0.3);
 
-            // Should not have mastery field
-            expect((migrated as any).mastery).toBeUndefined();
+            // Should PRESERVE mastery field
+            expect((migrated as any).mastery).toBe(75);
 
             // Should preserve other fields
             expect(migrated.vocabId).toBe('test-123');
@@ -145,11 +150,11 @@ describe('MigrationService', () => {
             const migrated = MigrationService.migrateVocabProgress(mixedFormat);
 
             // Should have converted mastery to memoryStrength
-            expect(migrated.reading.memoryStrength).toBeCloseTo((75 / 100) * maxMemoryStrength, 1);
+            expect(migrated.reading.memoryStrength).toBeCloseTo(maxMemoryStrength * Math.pow(0.75, 3), 1);
             expect(migrated.reading.interval).toBeGreaterThan(0);
 
-            // Should not have mastery field
-            expect((migrated as any).mastery).toBeUndefined();
+            // Should PRESERVE mastery field
+            expect((migrated as any).mastery).toBe(75);
 
             // Should preserve other fields
             expect(migrated.totalReviews).toBe(1);
@@ -190,12 +195,14 @@ describe('MigrationService', () => {
             const migrated = MigrationService.migrateUserProgress(oldProgress);
 
             // Should have format version
-            expect(migrated._formatVersion).toBe(1);
+            expect(migrated._formatVersion).toBe(2);
 
             // Should migrate all items
             expect(migrated.learningQueue).toHaveLength(2);
-            expect(migrated.learningQueue[0].reading.memoryStrength).toBeCloseTo((50 / 100) * maxMemoryStrength, 1);
-            expect(migrated.learningQueue[1].reading.memoryStrength).toBeCloseTo((75 / 100) * maxMemoryStrength, 1);
+            // 50% -> 0.5^3 = 0.125 * 1270 = ~158.75
+            expect(migrated.learningQueue[0].reading.memoryStrength).toBeCloseTo(maxMemoryStrength * Math.pow(0.5, 3), 1);
+            // 75% -> 0.75^3 = 0.421875 * 1270 = ~535.78
+            expect(migrated.learningQueue[1].reading.memoryStrength).toBeCloseTo(maxMemoryStrength * Math.pow(0.75, 3), 1);
 
             // Should preserve other fields
             expect(migrated.stats.totalReviews).toBe(100);
@@ -204,7 +211,7 @@ describe('MigrationService', () => {
 
         it('should not re-migrate if already at current version', () => {
             const alreadyMigrated = {
-                _formatVersion: 1,
+                _formatVersion: 2,
                 kanjiKnowledge: {
                     method: 'kklc',
                     step: 100,
@@ -244,7 +251,7 @@ describe('MigrationService', () => {
             const result = MigrationService.migrateUserProgress(alreadyMigrated);
 
             // Should return as-is
-            expect(result._formatVersion).toBe(1);
+            expect(result._formatVersion).toBe(2);
             expect(result.learningQueue[0].reading.memoryStrength).toBe(500);
         });
     });
@@ -260,7 +267,7 @@ describe('MigrationService', () => {
 
         it('should return false for current version', () => {
             const currentProgress = {
-                _formatVersion: 1,
+                _formatVersion: 2,
                 learningQueue: []
             };
 
@@ -293,8 +300,8 @@ describe('MigrationService', () => {
             expect(migrated.totalReviews).toBe(5);
             expect(migrated.lastReviewedAt).toBe('2026-01-27T23:47:24.343Z');
 
-            // Should not have mastery
-            expect((migrated as any).mastery).toBeUndefined();
+            // Should PRESERVE mastery
+            expect((migrated as any).mastery).toBe(75);
         });
     });
 });
