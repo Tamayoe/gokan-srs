@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import { useQuiz } from "../../context/useQuiz";
 import { CONSTANTS } from "../../commons/constants";
 
@@ -58,13 +59,34 @@ export const QuizCard: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <motion.form
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, scale: 0.98, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+        >
             <Card size="lg">
+                <AnimatePresence>
+                    {feedback?.show && !feedback.correct && (
+                        <motion.div
+                            initial={{ x: 0 }}
+                            animate={{ x: [-5, 5, -5, 5, 0] }}
+                            transition={{ duration: 0.4 }}
+                            className="absolute inset-0 pointer-events-none border-4 border-error/20 rounded-xl z-50"
+                        />
+                    )}
+                </AnimatePresence>
                 {/* Kanji */}
                 <CardSection>
                     {/* Top-right mastery */}
                     <div className="flex justify-end mb-4">
-                        <MasteryRing memoryStrength={currentProgress?.reading.memoryStrength ?? 0} size={50} />
+                        <div className="flex flex-col items-center gap-1">
+                            <MasteryRing memoryStrength={currentProgress?.reading.memoryStrength ?? 0} size={50} />
+                            <span className="text-[10px] text-tertiary uppercase tracking-widest font-gothic font-semibold">
+                                Mastery
+                            </span>
+                        </div>
                     </div>
 
                     {/* Kanji Display */}
@@ -119,23 +141,27 @@ export const QuizCard: React.FC = () => {
 
                     {/* Glosses — feedback only, all senses */}
                     {feedback?.show && (
-                        <div className="text-center text-sm space-y-1 text-meaning-muted font-serif">
+                        <motion.div
+                            initial={{ opacity: 0, y: 5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="text-center text-sm space-y-1 text-meaning-muted font-serif"
+                        >
                             {currentVocab.senses.map((sense, index) => (
                                 <p key={index}>
                                     {sense.glosses.join(', ')}
                                 </p>
                             ))}
-                        </div>
+                        </motion.div>
                     )}
                 </CardSection>
                 <CardSection>
 
                     {/* Input Section */}
                     <div className="space-y-4">
-                        <div>
+                        <div className="relative">
                             <label
                                 htmlFor="answer"
-                                className="block text-sm mb-2 text-secondary font-gothic"
+                                className="block text-sm mb-2 text-secondary font-gothic font-medium"
                             >
                                 Reading (hiragana)
                             </label>
@@ -145,7 +171,11 @@ export const QuizCard: React.FC = () => {
                                 type="text"
                                 value={userAnswer}
                                 onChange={(e) => actions.setAnswer(e.target.value)}
-                                className="w-full px-4 py-3 border rounded text-2xl text-center focus:outline-none transition-colors border-divider text-primary bg-surface font-gothic focus:border-accent placeholder:text-input-placeholder"
+                                className={`w-full px-4 py-3 border rounded-lg text-2xl text-center transition-all duration-200 
+                                    font-gothic bg-surface text-primary placeholder:text-input-placeholder caret-accent
+                                    focus:outline-none focus:border-accent focus:ring-4 focus:ring-accent/10
+                                    ${feedback?.show && !feedback.correct ? 'border-error' : 'border-divider'}
+                                `}
                                 placeholder={CONSTANTS.quiz.hiraganaAnswerPlaceholder}
                                 autoFocus
                                 disabled={feedback?.show}
@@ -154,7 +184,11 @@ export const QuizCard: React.FC = () => {
 
                         {/* Incorrect / Minor Answer Feedback */}
                         {feedback?.show && !feedback.correct && (
-                            <div className={`border rounded bg-feedback-background border-divider border-l-4 p-4 ${feedback.type === 'minor_error' ? 'border-l-secondary' : 'border-l-error-accent'}`}>
+                            <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                className={`border rounded bg-feedback-background border-divider border-l-4 p-4 ${feedback.type === 'minor_error' ? 'border-l-secondary' : 'border-l-error-accent'}`}
+                            >
                                 <p className="uppercase tracking-wide text-label-neutral text-xs mb-2 font-gothic">
                                     Correct answer
                                 </p>
@@ -183,12 +217,16 @@ export const QuizCard: React.FC = () => {
                                         </p>
                                     </div>
                                 )}
-                            </div>
+                            </motion.div>
                         )}
 
                         {/* Correct Answer Feedback */}
                         {feedback?.show && feedback.correct && (
-                            <div className="border rounded bg-surface border-accent p-4">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                className="border rounded bg-surface border-accent p-4"
+                            >
                                 <div className="flex items-center justify-center gap-2">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                         <circle
@@ -210,32 +248,44 @@ export const QuizCard: React.FC = () => {
                                         {feedback.message}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         )}
 
                         {/* Action Button */}
                         {!feedback?.show ? (
-                            <button
-                                type="submit"
-                                disabled={!computed.canSubmit}
-                                className={`w-full font-medium rounded transition-colors h-12 mt-6 font-serif ${computed.canSubmit ? 'bg-accent text-surface hover:bg-accent-hover cursor-pointer' : 'bg-divider text-surface cursor-not-allowed'}`}
-                            >
-                                Submit
-                            </button>
+                            <div className="group">
+                                <button
+                                    type="submit"
+                                    disabled={!computed.canSubmit}
+                                    className={`w-full font-medium rounded-lg transition-all duration-200 h-12 mt-6 font-serif flex items-center justify-center gap-2
+                                        ${computed.canSubmit
+                                            ? 'bg-accent text-surface hover:bg-accent-hover shadow-md hover:shadow-lg translate-y-0 active:translate-y-[1px]'
+                                            : 'bg-accent/50 text-surface/80 cursor-not-allowed'}`}
+                                >
+                                    <span>Submit</span>
+                                    {computed.canSubmit && <span className="text-xs opacity-70">⏎</span>}
+                                </button>
+                                {!computed.canSubmit && (
+                                    <p className="text-center text-xs text-tertiary mt-2 h-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        Type reading to continue
+                                    </p>
+                                )}
+                            </div>
                         ) : (
                             !feedback.correct && (
                                 <button
                                     ref={continueRef}
                                     type="submit"
-                                    className="w-full font-medium rounded transition-colors h-12 mt-6 font-serif bg-accent text-surface hover:bg-accent-hover"
+                                    className="w-full font-medium rounded-lg transition-colors h-12 mt-6 font-serif bg-accent text-surface hover:bg-accent-hover shadow-md flex items-center justify-center gap-2"
                                 >
-                                    Continue
+                                    <span>Continue</span>
+                                    <span className="text-xs opacity-70">⏎</span>
                                 </button>
                             )
                         )}
                     </div>
                 </CardSection>
             </Card>
-        </form>
+        </motion.form>
     );
 };
