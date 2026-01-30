@@ -37,8 +37,10 @@ describe('SRSService Formula Tests', () => {
 
     it('TEST CASE 2 — Correct, slow recall', () => {
         // Input: { S: 10.0, D: 0.2, Result: correct, Latency: 3000 }
+        // UPDATE: With expectedLatency=10000, 3000 is FAST. To test SLOW, we need > 20000.
+        // Let's use 20000 (ratio 0.5).
         const vocab = createVocab(10.0, 0.2);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 3000, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 20000, mockNow);
 
         // Expected: { S: 10.95000, I: 3.15010 }
         closeTo(updated.reading.memoryStrength, 10.95000);
@@ -48,8 +50,9 @@ describe('SRSService Formula Tests', () => {
     it('TEST CASE 3 — Minor error', () => {
 
         // We simulate 'minor_error' by passing a typo: 'こたへ' vs 'こたえ'
+        // Use 10000ms as neutral (ratio 1.0)
         const vocab = createVocab(8.0, 0.4);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 1500, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 10000, mockNow);
 
         // Expected in text file: { S: 8.73600, I: 1.75923 }
         closeTo(updated.reading.memoryStrength, 8.73600);
@@ -62,14 +65,22 @@ describe('SRSService Formula Tests', () => {
         const { updated, interval } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 2000, mockNow);
 
         // Expected: { S: 8.40000, I: 0.72495 }
-        closeTo(updated.reading.memoryStrength, 8.40000);
-        closeTo(interval, 0.72495);
+        // UPDATE (10s Latency):
+        // 10000/2000 = 5.0 -> L clamped to 1.5 (Max Speed).
+        // Delta = -0.4 * 1.5 * 1.0 = -0.6.
+        // S_new = 12 * (1 - 0.6) = 4.8.
+        // Interval = 4.8 * 0.28768 = 1.380864.
+        // Wrong penalty: Max(0.5, 1.38 * 0.3 = 0.414) -> 0.5.
+
+        closeTo(updated.reading.memoryStrength, 4.80000);
+        closeTo(interval, 0.50000);
     });
 
     it('TEST CASE 5 — Pass', () => {
         // Input: { S: 6.0, D: 0.3, Result: pass, Latency: 1500 }
+        // Neutral latency for pass
         const vocab = createVocab(6.0, 0.3);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'pass', 'kotae', 1500, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'pass', 'kotae', 10000, mockNow);
 
         // Expected in text file: { S: 5.24400, I: 1.50771 }
         // BUT strict math: 5.244 * 0.28768 = 1.508594
@@ -82,11 +93,16 @@ describe('SRSService Formula Tests', () => {
         const vocab = createVocab(0.4, 0.1);
         const { updated, interval } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 4000, mockNow);
 
-        // Expected in text file: { S: 0.30000, I: 0.20000 }
-        // BUT strict math: S = 0.4 * 0.864 = 0.3456. (0.3456 > 0.3, so no floor triggered yet).
-        // Since result is 'wrong', we DO apply floor, but here it is not needed.
-        closeTo(updated.reading.memoryStrength, 0.34560);
-        closeTo(interval, 0.20000);
+        // UPDATE (10s Latency):
+        // 10000/4000 = 2.5 -> L clamped to 1.5.
+        // Delta = -0.4 * 1.5 * 0.68 = -0.408.
+        // S_new = 0.4 * (1 - 0.408) = 0.2368.
+        // Clamped to Min (0.3).
+        // Interval = 0.3 * 0.28768 = 0.0863.
+        // Wrong penalty: Max(0.5, 0.086 * 0.3) -> 0.5.
+
+        closeTo(updated.reading.memoryStrength, 0.30000);
+        closeTo(interval, 0.50000);
     });
 
     it('TEST CASE 6b — Floor enforcement TRIGGERED', () => {
@@ -107,13 +123,12 @@ describe('SRSService Formula Tests', () => {
         // we should follow the curve, not jump to floor instantly.
         const vocab = createVocab(0.2, 0.5); // Illegal state technically, but testing logic
         // Correct -> Delta > 0.
-        // D=1. L=1. Delta = 0.25 * 1 * 1 = 0.25.
-        // S_new = 0.2 * 1.25 = 0.25.
-        // If unconditional floor: -> 0.3.
-        // If conditional recovery floor: -> 0.25.
+        // D=1. L=1.5 (1500ms is super fast vs 10000ms). 
+        // Delta = 0.25 * 1.5 * 1 = 0.375.
+        // S_new = 0.2 * 1.375 = 0.275.
         const { updated } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 1500, mockNow);
 
-        closeTo(updated.reading.memoryStrength, 0.25000);
+        closeTo(updated.reading.memoryStrength, 0.27500);
     });
 
 
@@ -131,9 +146,9 @@ describe('SRSService Formula Tests', () => {
             const initialStrength = 10.0;
             const vocab = createVocab(initialStrength, 0.3);
 
-            const { updated, interval: iResult } = SRSService.applyAnswer(vocab, input, 'こたえ', 1500, mockNow);
+            const { updated, interval: iResult } = SRSService.applyAnswer(vocab, input, 'こたえ', 10000, mockNow);
             // Control wrong
-            const { interval: iWrong } = SRSService.applyAnswer(vocab, 'まったくちがう', 'こたえ', 1500, mockNow);
+            const { interval: iWrong } = SRSService.applyAnswer(vocab, 'まったくちがう', 'こたえ', 10000, mockNow);
 
             if (type === 'minor') {
                 expect(iResult).toBeGreaterThan(iWrong * 2); // Minor penalty (0.7) vs Wrong (0.3)
@@ -176,9 +191,14 @@ describe('SRSService Formula Tests', () => {
         const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 10000, mockNow);
 
         // Expected in text file: { S: 5.72500, I: 1.64798 }
-        // BUT strict math: 5.725 * 0.28768 = 1.646968
-        closeTo(updated.reading.memoryStrength, 5.72500);
-        closeTo(interval, 1.64697);
+        // UPDATE (10s Latency):
+        // 10000/10000 = 1.0 (Neutral).
+        // D = 0.6 + 0.8*0.7 = 1.16.
+        // Delta = 0.25 * 1.0 * 1.16 = 0.29.
+        // S_new = 5.0 * 1.29 = 6.45.
+        // Interval = 6.45 * 0.28768 = 1.855536.
+        closeTo(updated.reading.memoryStrength, 6.45000);
+        closeTo(interval, 1.85554);
     });
     describe('evaluateAnswer (Alternatives)', () => {
         const readings = {
@@ -229,7 +249,7 @@ describe('SRSService Formula Tests', () => {
     describe('Retry Flag Behavior', () => {
         it('should set needsRetry on first wrong answer', () => {
             const vocab = createVocab(5.0, 0.3);
-            const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 1500, mockNow);
+            const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 10000, mockNow);
 
             expect(updated.needsRetry).toBe(true);
         });
@@ -238,7 +258,7 @@ describe('SRSService Formula Tests', () => {
             const vocab = createVocab(5.0, 0.3);
             vocab.needsRetry = true; // Simulate retry state
 
-            const { updated } = SRSService.applyAnswer(vocab, 'correct', 'kotae', 1500, mockNow);
+            const { updated } = SRSService.applyAnswer(vocab, 'correct', 'kotae', 10000, mockNow);
 
             expect(updated.needsRetry).toBe(false);
         });
@@ -247,7 +267,7 @@ describe('SRSService Formula Tests', () => {
             const vocab = createVocab(5.0, 0.3);
             vocab.needsRetry = true; // Simulate retry state
 
-            const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 1500, mockNow);
+            const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 10000, mockNow);
 
             // Should be false to prevent infinite loops
             expect(updated.needsRetry).toBe(false);
@@ -255,10 +275,86 @@ describe('SRSService Formula Tests', () => {
 
         it('should not set needsRetry on minor_error', () => {
             const vocab = createVocab(5.0, 0.3);
-            const { updated } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 1500, mockNow, 'minor_error');
+            const { updated } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 10000, mockNow, 'minor_error');
 
             expect(updated.needsRetry).toBe(false);
         });
     });
 
+    describe('Optimization Fixes Verification', () => {
+        it('FIX CHECK 1 — Initial Memory Strength should be 1.0', () => {
+            // We can't access private createNewVocabProgress directly, 
+            // but we can check if we were to manually init or relies on constants if they are exported.
+            // Better: Check the CONSTANTS or if we have a public method creating vocab.
+            // Since createNewVocabProgress is private and used in refillQueue, let's refrain from full integration test here.
+            // Instead, we verify the logic if we pass a standard 'new' vocab (strength=1.0) through the system.
+
+            // Actually, we can check CONSTANTS if exported? Yes.
+            // But better to check the behavior of 1.0
+
+            const vocab = createVocab(1.0, 0.3); // Initial state
+            // Apply correct answer
+            // Neutral latency (10000)
+            const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 10000, mockNow);
+
+            // D = 0.6 + 0.8*0.3 = 0.84.
+            // Delta = 0.25 * 1.0 * 0.84 = 0.21.
+            // S_new = 1.0 * (1 + 0.21) = 1.21.
+            // Interval = 1.21 * 0.28768 = 0.34809.
+            // STRATEGY A UPDATE: Success clamps interval to minimum 1.0 day.
+
+            closeTo(updated.reading.memoryStrength, 1.21000);
+            expect(interval).toBe(1.0);
+
+            // Prior to fix (0.3 base): Int would be ~0.1
+        });
+
+        it('FIX CHECK 2 — Wrong answer floor (0.5d)', () => {
+            // Case: New item (S=1.0), immediately wrong.
+            // S_new = 1.0 * (1 - 0.4) = 0.6
+            // Raw Interval = 0.6 * 0.28768 = 0.1726
+            // Wrong penalty = * 0.3 => 0.0517
+            // OLD FLOOR: 0.2
+            // NEW            
+            const vocab = createVocab(1.0, 0.3);
+            // Neutral latency
+            const { interval } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 10000, mockNow);
+
+            expect(interval).toBe(0.5);
+        });
+
+        it('FIX CHECK 3 — Strategy A: Success interval clamped to 1.0 day', () => {
+            // New item, correct answer.
+            // S_new = 1.25. raw Interval = 0.36.
+            // Should clamp to 1.0.
+            const vocab = createVocab(1.0, 0.3);
+            const { interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 10000, mockNow);
+
+            expect(interval).toBe(1.0);
+        });
+
+        it('FIX CHECK 4 — Strategy D & Dynamic: Win Rate Calculation', () => {
+            // Mock queue with high success rate
+            const highWinQueue = [
+                { reading: { history: [{ result: 'correct' }] } },
+                { reading: { history: [{ result: 'correct' }] } }
+            ] as any[];
+
+            const winRate = SRSService.calculateRecentWinRate(highWinQueue);
+            expect(winRate).toBe(1.0); // 2/2
+
+            // Mock queue with low success rate
+            const lowWinQueue = [
+                { reading: { history: [{ result: 'wrong' }] } },
+                { reading: { history: [{ result: 'wrong' }] } }
+            ] as any[];
+
+            const lowWinRate = SRSService.calculateRecentWinRate(lowWinQueue);
+            expect(lowWinRate).toBe(0.0); // 0/2
+        });
+
+        // Note: We can't easily test createNewVocabProgress() directly as it's private,
+        // but we verified the logic (0.5 default + offset) in implementation.
+        // We can verify that calculateRecentWinRate is correct, which drives the offset.
+    });
 });

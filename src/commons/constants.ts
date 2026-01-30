@@ -24,10 +24,22 @@ export const CONSTANTS = {
         formula: {
             targetRecall: 0.75,
             lnTarget: 0.28768,
-            expectedLatency: 1500, // ms
+            expectedLatency: 10000, // ms (10s for typing-based answers)
             minInterval: 0.2, // ~5 hours
             maxInterval: 3650, // 10 years
             minMemoryStrength: 0.3, // days
+            initialMemoryStrength: 1.0, // days (New item start)
+
+            // Strategy D: Start with higher confidence
+            initialDifficulty: 0.5,
+
+            // Post-processing overrides
+            minIntervalAfterWrong: 0.5, // 12 hours minimum penalty for wrong answers
+            // Strategy A: Prevent same-day reviews for known items
+            minIntervalAfterSuccess: 1.0, // 1 day minimum for correct/minor_error
+
+            // Dynamic Difficulty
+            winRateTarget: 0.75, // Target win rate for tuning default difficulty
 
             resultFactors: {
                 correct: 0.25,

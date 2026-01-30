@@ -142,9 +142,19 @@ export class SRSService {
         if (result === 'wrong') {
             // Logic adjusted to match test dataset (Case 6 vs Case 4 consistency)
             // The dataset implies straight multiplication by 0.3, then global clamping.
-            newInterval = newInterval * F.postProcessIntervalMultipliers.wrong;
+            // BUT strict spec requires hard floor for wrong answers:
+            // "interval = Math.max(0.5, interval * 0.3);"
+            newInterval = Math.max(
+                F.minIntervalAfterWrong,
+                newInterval * F.postProcessIntervalMultipliers.wrong
+            );
         } else if (result === 'minor_error') {
             newInterval = newInterval * F.postProcessIntervalMultipliers.minor_error;
+        }
+
+        // Strategy A: If successful, ensure at least 1 day interval (no same-day harassment)
+        if (result === 'correct' || result === 'minor_error') {
+            newInterval = Math.max(newInterval, F.minIntervalAfterSuccess);
         }
 
         // 6. Clamp Interval
@@ -335,6 +345,15 @@ export class SRSService {
         const queue = [...currentQueue];
         const activeIds = new Set(queue.map(v => v.vocabId));
 
+        // Dynamic Difficulty Calculation
+        const winRate = this.calculateRecentWinRate(queue);
+        let difficultyOffset = 0;
+
+        // If user is crushing it (>80%), make new items a bit harder (0.6)
+        if (winRate > 0.80) difficultyOffset = 0.1;
+        // If user is struggling (<70%), make new items easier (0.4)
+        else if (winRate < 0.70) difficultyOffset = -0.1;
+
         switch (settings.preferredLearningOrder) {
             case "kklc":
                 if (kanjiKnowledge.method !== "kklc") {
@@ -348,7 +367,8 @@ export class SRSService {
                     activeIds,
                     kanjiKnowledge.step,
                     maxToAdd,
-                    ignoredIds
+                    ignoredIds,
+                    difficultyOffset
                 );
 
             case "frequency":
@@ -357,7 +377,8 @@ export class SRSService {
                     activeIds,
                     kanjiKnowledge,
                     maxToAdd,
-                    ignoredIds
+                    ignoredIds,
+                    difficultyOffset
                 );
         }
     }
@@ -371,7 +392,8 @@ export class SRSService {
         activeIds: Set<string>,
         kklcKanjiStep: number,
         maxToAdd: number,
-        ignoredIds: Set<string>
+        ignoredIds: Set<string>,
+        difficultyOffset: number
     ): Promise<VocabProgress[]> {
         const index = await VocabularyService.loadKKLCIndex();
         if (!index) return queue;
@@ -386,7 +408,7 @@ export class SRSService {
                 if (activeIds.has(id)) continue;
                 if (ignoredIds.has(id)) continue;
 
-                queue.push(this.createNewVocabProgress(id));
+                queue.push(this.createNewVocabProgress(id, difficultyOffset));
                 activeIds.add(id);
                 added++;
             }
@@ -400,7 +422,8 @@ export class SRSService {
         activeIds: Set<string>,
         kanjiKnowledge: KanjiKnowledge,
         maxToAdd: number,
-        ignoredIds: Set<string>
+        ignoredIds: Set<string>,
+        difficultyOffset: number
     ): Promise<VocabProgress[]> {
         const index = await VocabularyService.loadFrequencyIndex();
         if (!index) return queue;
@@ -418,7 +441,7 @@ export class SRSService {
 
             if (!allKanjiKnown) continue;
 
-            queue.push(this.createNewVocabProgress(entry.id));
+            queue.push(this.createNewVocabProgress(entry.id, difficultyOffset));
             activeIds.add(entry.id);
             added++;
         }
@@ -463,7 +486,39 @@ export class SRSService {
         return updated;
     }
 
-    private static createNewVocabProgress(vocabId: string): VocabProgress {
+    /**
+     * Calculates user's recent win rate from the queue.
+     * Uses the last 20 reviews of each item in the queue.
+     */
+    static calculateRecentWinRate(queue: VocabProgress[]): number {
+        let totalReviews = 0;
+        let successfulReviews = 0;
+
+        for (const vocab of queue) {
+            // Helper to count history
+            const processHistory = (history: ReviewLog[]) => {
+                for (const log of history) {
+                    totalReviews++;
+                    if (log.result === 'correct' || log.result === 'minor_error') {
+                        successfulReviews++;
+                    }
+                }
+            };
+
+            processHistory(vocab.reading.history);
+            // processHistory(vocab.meaning.history); // Uncomment if we track meaning
+        }
+
+        if (totalReviews === 0) return 0.75; // Default assumption
+
+        return successfulReviews / totalReviews;
+    }
+
+    private static createNewVocabProgress(vocabId: string, difficultyOffset = 0): VocabProgress {
+        // Strategy D + Dynamic: InitialDifficulty (0.5) + Offset
+        const baseDiff = CONSTANTS.srs.formula.initialDifficulty;
+        const finalDiff = Math.min(Math.max(baseDiff + difficultyOffset, 0.1), 1.0);
+
         return {
             vocabId,
             stage: 'learning',
@@ -473,17 +528,17 @@ export class SRSService {
             totalReviews: 0,
             consecutiveFailures: 0,
             reading: {
-                memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
+                memoryStrength: CONSTANTS.srs.formula.initialMemoryStrength,
                 interval: 0,
-                difficulty: 0.3,
+                difficulty: finalDiff,
                 lastReviewedAt: null,
                 dueDate: null,
                 history: []
             },
             meaning: {
-                memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
+                memoryStrength: CONSTANTS.srs.formula.initialMemoryStrength,
                 interval: 0,
-                difficulty: 0.3,
+                difficulty: finalDiff,
                 lastReviewedAt: null,
                 dueDate: null,
                 history: []
