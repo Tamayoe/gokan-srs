@@ -1,12 +1,16 @@
 import { WaitingScreen } from "../../components/WaitingScreen";
 import { ExhaustedScreen } from "../../components/ExhaustedScreen";
-import { ProgressBar } from "../../components/ProgressBar";
+import { SessionProgress } from "../../components/SessionProgress";
 import { QuizCard } from "./QuizCard";
 import { LoadingScreen } from "../../components/LoadingScreen";
 import { useQuiz } from "../../context/useQuiz";
 import VocabIntroCard from "../../components/VocabIntroCard";
 
-export function QuizScreen() {
+interface QuizScreenProps {
+    onVocabClick: (vocabId: string) => void;
+}
+
+export function QuizScreen({ onVocabClick }: QuizScreenProps) {
     const { state, currentProgress, sessionState, nextReviewAt, actions } = useQuiz();
 
     if (sessionState === "waiting") {
@@ -32,11 +36,11 @@ export function QuizScreen() {
 
     return (
         <>
-            <div className="flex flex-col flex-1 min-h-[calc(100vh-8rem)] items-center">
-                <ProgressBar progress={state.progress!} />
+            <div className="flex flex-col flex-1 items-center">
+                <SessionProgress />
 
                 <div className="flex-1 flex items-center justify-center py-6 w-full">
-                    <QuizCard />
+                    <QuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
                 </div>
             </div>
         </>

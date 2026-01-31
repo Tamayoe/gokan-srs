@@ -333,6 +333,7 @@ export class SRSService {
        QUEUE REFILL
        ======================= */
 
+
     static async refillQueue(
         currentQueue: VocabProgress[],
         kanjiKnowledge: KanjiKnowledge,
@@ -345,14 +346,45 @@ export class SRSService {
         const queue = [...currentQueue];
         const activeIds = new Set(queue.map(v => v.vocabId));
 
-        // Dynamic Difficulty Calculation
+        // Get candidates using the new method
+        const candidates = await this.getNextCandidates(
+            currentQueue,
+            kanjiKnowledge,
+            settings,
+            maxToAdd,
+            ignoredIds
+        );
+
+        // Convert to VocabProgress and add to queue
         const winRate = this.calculateRecentWinRate(queue);
         let difficultyOffset = 0;
-
-        // If user is crushing it (>80%), make new items a bit harder (0.6)
         if (winRate > 0.80) difficultyOffset = 0.1;
-        // If user is struggling (<70%), make new items easier (0.4)
         else if (winRate < 0.70) difficultyOffset = -0.1;
+
+        for (const vocabId of candidates) {
+            queue.push(this.createVocabProgress(vocabId, difficultyOffset));
+            activeIds.add(vocabId);
+        }
+
+        return queue;
+    }
+
+    /**
+     * Finds the next batch of vocabulary IDs eligible for learning.
+     * Does NOT create VocabProgress objects or modify the queue.
+     */
+    static async getNextCandidates(
+        currentQueue: VocabProgress[],
+        kanjiKnowledge: KanjiKnowledge,
+        settings: UserSettings,
+        maxToFind: number,
+        ignoredIds: Set<string> = new Set()
+    ): Promise<string[]> {
+        if (maxToFind <= 0) return [];
+
+        const activeIds = new Set(currentQueue.map(v => v.vocabId));
+        // Also exclude ignoredIds
+        for (const id of ignoredIds) activeIds.add(id);
 
         switch (settings.preferredLearningOrder) {
             case "kklc":
@@ -361,92 +393,103 @@ export class SRSService {
                         "Cannot use KKLC vocabulary without KKLC kanji knowledge"
                     );
                 }
-
-                return this.fillQueueWithKKLC(
-                    queue,
-                    activeIds,
-                    kanjiKnowledge.step,
-                    maxToAdd,
-                    ignoredIds,
-                    difficultyOffset
-                );
+                return this.findCandidatesKKLC(activeIds, kanjiKnowledge.step, maxToFind);
 
             case "frequency":
-                return this.fillQueueWithFrequency(
-                    queue,
-                    activeIds,
-                    kanjiKnowledge,
-                    maxToAdd,
-                    ignoredIds,
-                    difficultyOffset
-                );
+                return this.findCandidatesFrequency(activeIds, kanjiKnowledge, maxToFind);
         }
+    }
+
+    /**
+     * Creates a new VocabProgress object for a given vocab ID.
+     * Use this when the user explicitly accepts a new vocabulary item.
+     * 
+     * @param vocabId ID of the vocabulary to learn
+     * @param difficultyOffset Optional difficulty adjustment based on user performance
+     */
+    static createVocabProgress(vocabId: string, difficultyOffset = 0): VocabProgress {
+        // Strategy D + Dynamic: InitialDifficulty (0.5) + Offset
+        const baseDiff = CONSTANTS.srs.formula.initialDifficulty;
+        const finalDiff = Math.min(Math.max(baseDiff + difficultyOffset, 0.1), 1.0);
+
+        return {
+            vocabId,
+            stage: 'learning',
+            introductionAt: null,
+            nextReviewAt: null,
+            lastReviewedAt: null,
+            totalReviews: 0,
+            consecutiveFailures: 0,
+            reading: {
+                memoryStrength: CONSTANTS.srs.formula.initialMemoryStrength,
+                interval: 0,
+                difficulty: finalDiff,
+                lastReviewedAt: null,
+                dueDate: null,
+                history: []
+            },
+            meaning: {
+                memoryStrength: CONSTANTS.srs.formula.initialMemoryStrength,
+                interval: 0,
+                difficulty: finalDiff,
+                lastReviewedAt: null,
+                dueDate: null,
+                history: []
+            }
+        };
     }
 
     /* =======================
        INTERNAL FILLERS
        ======================= */
 
-    private static async fillQueueWithKKLC(
-        queue: VocabProgress[],
+    private static async findCandidatesKKLC(
         activeIds: Set<string>,
         kklcKanjiStep: number,
-        maxToAdd: number,
-        ignoredIds: Set<string>,
-        difficultyOffset: number
-    ): Promise<VocabProgress[]> {
+        maxToFind: number
+    ): Promise<string[]> {
         const index = await VocabularyService.loadKKLCIndex();
-        if (!index) return queue;
+        if (!index) return [];
 
-        let added = 0;
+        const candidates: string[] = [];
 
         for (let step = 1; step <= kklcKanjiStep; step++) {
             const ids = index[step] ?? [];
 
             for (const id of ids) {
-                if (added >= maxToAdd) return queue;
-                if (activeIds.has(id)) continue;
-                if (ignoredIds.has(id)) continue;
-
-                queue.push(this.createNewVocabProgress(id, difficultyOffset));
-                activeIds.add(id);
-                added++;
+                if (candidates.length >= maxToFind) return candidates;
+                if (!activeIds.has(id)) {
+                    candidates.push(id);
+                }
             }
         }
-
-        return queue;
+        return candidates;
     }
 
-    private static async fillQueueWithFrequency(
-        queue: VocabProgress[],
+    private static async findCandidatesFrequency(
         activeIds: Set<string>,
         kanjiKnowledge: KanjiKnowledge,
-        maxToAdd: number,
-        ignoredIds: Set<string>,
-        difficultyOffset: number
-    ): Promise<VocabProgress[]> {
+        maxToFind: number
+    ): Promise<string[]> {
         const index = await VocabularyService.loadFrequencyIndex();
-        if (!index) return queue;
+        if (!index) return [];
 
-        let added = 0;
+        const candidates: string[] = [];
 
         for (const entry of index) {
-            if (added >= maxToAdd) break;
+            if (candidates.length >= maxToFind) break;
             if (activeIds.has(entry.id)) continue;
-            if (ignoredIds.has(entry.id)) continue;
 
             const allKanjiKnown = entry.containedKanji.every(k =>
                 kanjiKnowledge.kanjiSet.has(k)
             );
 
-            if (!allKanjiKnown) continue;
-
-            queue.push(this.createNewVocabProgress(entry.id, difficultyOffset));
-            activeIds.add(entry.id);
-            added++;
+            if (allKanjiKnown) {
+                candidates.push(entry.id);
+            }
         }
 
-        return queue;
+        return candidates;
     }
 
     /* =======================
@@ -514,35 +557,4 @@ export class SRSService {
         return successfulReviews / totalReviews;
     }
 
-    private static createNewVocabProgress(vocabId: string, difficultyOffset = 0): VocabProgress {
-        // Strategy D + Dynamic: InitialDifficulty (0.5) + Offset
-        const baseDiff = CONSTANTS.srs.formula.initialDifficulty;
-        const finalDiff = Math.min(Math.max(baseDiff + difficultyOffset, 0.1), 1.0);
-
-        return {
-            vocabId,
-            stage: 'learning',
-            introductionAt: null,
-            nextReviewAt: null,
-            lastReviewedAt: null,
-            totalReviews: 0,
-            consecutiveFailures: 0,
-            reading: {
-                memoryStrength: CONSTANTS.srs.formula.initialMemoryStrength,
-                interval: 0,
-                difficulty: finalDiff,
-                lastReviewedAt: null,
-                dueDate: null,
-                history: []
-            },
-            meaning: {
-                memoryStrength: CONSTANTS.srs.formula.initialMemoryStrength,
-                interval: 0,
-                difficulty: finalDiff,
-                lastReviewedAt: null,
-                dueDate: null,
-                history: []
-            }
-        };
-    }
 }

@@ -7,9 +7,11 @@ import { CardContent } from "./ui/CardContent";
 export function VocabCard({
   vocab,
   progress,
+  onClick,
 }: {
   vocab: Vocabulary;
   progress: VocabProgress;
+  onClick?: () => void;
 }) {
   function formatNextReview(date: Date | null): string {
     if (!date) return '—';
@@ -32,35 +34,40 @@ export function VocabCard({
   }
 
   return (
-    <Card>
-      <CardContent className="space-y-3">
-        <div className="flex justify-between items-start">
-          <div>
-            <div className="text-lg text-primary font-serif">
-              {vocab.writtenForm.kanji}
+    <div
+      onClick={onClick}
+      className={`h-full transition-transform hover:scale-[1.02] active:scale-[0.98] ${onClick ? 'cursor-pointer' : ''}`}
+    >
+      <Card className="h-full flex flex-col justify-between">
+        <CardContent className="space-y-3">
+          <div className="flex justify-between items-start">
+            <div>
+              <div className="text-lg text-primary font-serif">
+                {vocab.writtenForm.kanji}
+              </div>
+
+              <div className="text-sm text-secondary">
+                {[vocab.reading.primary, ...vocab.reading.alternatives].join(" ・ ")}
+              </div>
             </div>
 
-            <div className="text-sm text-secondary">
-              {[vocab.reading.primary, ...vocab.reading.alternatives].join(" ・ ")}
-            </div>
+            <MasteryRing memoryStrength={progress.reading.memoryStrength} size={24} />
           </div>
 
-          <MasteryRing memoryStrength={progress.reading.memoryStrength} size={24} />
-        </div>
+          <div className="text-sm text-secondary">
+            {vocab.senses[0]?.glosses.map(g => g).slice(0, 3).join(", ")}
+          </div>
 
-        <div className="text-sm text-secondary">
-          {vocab.senses[0]?.glosses.map(g => g).slice(0, 3).join(", ")}
-        </div>
-
-        <div className="flex justify-between text-xs text-muted">
-          <span>
-            {progress.stage === "graduated"
-              ? "Mastered"
-              : `Reviews: ${progress.totalReviews}`}
-          </span>
-          <span>{formatNextReview(progress.nextReviewAt)}</span>
-        </div>
-      </CardContent>
-    </Card>
+          <div className="flex justify-between text-xs text-muted">
+            <span>
+              {progress.stage === "graduated"
+                ? "Mastered"
+                : `Reviews: ${progress.totalReviews}`}
+            </span>
+            <span>{formatNextReview(progress.nextReviewAt)}</span>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

@@ -2,8 +2,8 @@
 import React from "react";
 
 
-export function CardSection({ children }: { children: React.ReactNode }) {
-    return <div className="mb-10 last:mb-0">{children}</div>;
+export function CardSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+    return <div className={`mb-10 last:mb-0 ${className}`}>{children}</div>;
 }
 
 export function CardDivider() {

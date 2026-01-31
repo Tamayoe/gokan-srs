@@ -26,9 +26,9 @@ export function Card({
             transition={{ duration: 0.25, ease: "easeOut" }}
             className={`
                 w-full mx-auto rounded-2xl bg-surface border border-divider
+                ${className}
                 ${SIZE_STYLES[size]} 
                 ${interactive ? "hover:bg-surface-hover cursor-pointer" : ""}
-                ${className}
             `}
         >
             {children}

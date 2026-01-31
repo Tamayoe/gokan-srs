@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, type ReactNode } from 'react';
-import {ResponsiveContext} from "./ResponsiveContext";
-import type {ResponsiveState} from "./ResponsiveContext";
+import { ResponsiveContext } from "./ResponsiveContext";
+import type { ResponsiveState } from "./ResponsiveContext";
 
 interface ResponsiveProviderProps {
     readonly children: ReactNode;

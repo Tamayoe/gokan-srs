@@ -12,8 +12,12 @@ import { useGoogleDrive } from "./context/GoogleDriveContext";
 import { Cloud, RefreshCw } from "lucide-react";
 import { Loader } from "./components/Loader";
 import { AboutScreen } from "./pages/about/AboutScreen";
+import { VocabDetailScreen } from "./pages/vocab/VocabDetailScreen";
+import { VocabularyService } from "./services/vocabulary.service";
+import type { Vocabulary } from "./models/vocabulary.model";
+import { ResponsiveProvider } from "./context/Responsive/ResponsiveProvider";
 
-export type Screen = "quiz" | "settings" | "profile" | "about";
+export type Screen = "quiz" | "settings" | "profile" | "about" | "vocab-detail";
 
 function SyncStatusIndicator() {
     const { isSyncing, isAuthenticated } = useGoogleDrive();
@@ -45,11 +49,20 @@ export const App: React.FC = () => {
     };
 
     const [screen, setScreen] = useState<Screen>(getScreenFromHash());
+    const [selectedVocabId, setSelectedVocabId] = useState<string | null>(null);
+    const [selectedVocab, setSelectedVocab] = useState<Vocabulary | null>(null);
 
     // Update URL when screen changes
     const navigateTo = (newScreen: Screen) => {
         setScreen(newScreen);
         window.location.hash = newScreen === 'quiz' ? '' : newScreen;
+    };
+
+    const navigateToVocab = async (vocabId: string) => {
+        const vocab = await VocabularyService.loadVocab(vocabId);
+        setSelectedVocabId(vocabId);
+        setSelectedVocab(vocab);
+        setScreen('vocab-detail');
     };
 
     // Listen for browser back/forward
@@ -111,9 +124,17 @@ export const App: React.FC = () => {
             </header>
 
             {/* Screen content */}
-            <div className="flex-1 flex items-center justify-center p-4 md:p-0">
-                {screen === "quiz" && <QuizScreen />}
-                {screen === "about" && <AboutScreen onBack={() => navigateTo("quiz")} />}
+            <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-0">
+                {screen === "quiz" && (
+                    <ResponsiveProvider>
+                        <QuizScreen onVocabClick={navigateToVocab} />
+                    </ResponsiveProvider>
+                )}
+                {screen === "about" && (
+                    <ResponsiveProvider>
+                        <AboutScreen onBack={() => navigateTo("quiz")} />
+                    </ResponsiveProvider>
+                )}
                 {screen === "settings" && (
                     <SettingsScreen
                         settings={state.settings!}
@@ -128,8 +149,17 @@ export const App: React.FC = () => {
                         kanjiMethod: state.progress!.kanjiKnowledge.method,
                         knownKanji: state.progress!.kanjiKnowledge.kanjiSet
                     }}>
-                        <UserProfileScreen onBack={() => navigateTo("quiz")} />
+                        <UserProfileScreen onBack={() => navigateTo("quiz")} onVocabClick={navigateToVocab} />
                     </KanjiFormProvider>
+                )}
+                {screen === "vocab-detail" && selectedVocab && (
+                    <ResponsiveProvider>
+                        <VocabDetailScreen
+                            vocab={selectedVocab}
+                            progress={state.progress?.learningQueue.find(p => p.vocabId === selectedVocabId!)}
+                            onBack={() => navigateTo('quiz')}
+                        />
+                    </ResponsiveProvider>
                 )}
             </div>
 

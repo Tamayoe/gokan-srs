@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { VocabCard } from "./VocabCard";
 
 
-export function VocabCardLoader({ progress }: { progress: VocabProgress }) {
+export function VocabCardLoader({ progress, onClick }: { progress: VocabProgress; onClick?: (vocabId: string) => void }) {
   const [vocab, setVocab] = useState<Vocabulary | null>(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export function VocabCardLoader({ progress }: { progress: VocabProgress }) {
     return <VocabCardSkeleton />;
   }
 
-  return <VocabCard vocab={vocab} progress={progress} />;
+  return <VocabCard vocab={vocab} progress={progress} onClick={() => onClick?.(progress.vocabId)} />;
 }
 
 function VocabCardSkeleton() {

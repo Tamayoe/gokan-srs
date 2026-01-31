@@ -45,6 +45,13 @@ interface QuizState {
         matchedAnswer: string;
     } | null;
     isLoadingVocab: boolean;
+    introCandidates: Vocabulary[]; // [NEW] Potential new items, not yet in learningQueue
+    sessionHistory: Array<{        // [NEW] History for the current session
+        vocabId: string;
+        writtenForm: string;
+        result: AnswerResult;
+        delta: number;
+    }>;
     fatalError: string | null;
 }
 
@@ -55,8 +62,9 @@ type QuizAction =
     | { type: 'LOAD_VOCAB_ERROR'; payload: { vocabId: string, error: any } }
     | { type: 'SET_ANSWER'; payload: string }
     | { type: 'SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswer: string } }
-    | { type: 'UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress } }
-    | { type: 'ADVANCE_QUEUE'; payload: { progress: UserProgress } }
+    | { type: 'SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswer: string } }
+    | { type: 'UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress; historyItem: { vocabId: string, writtenForm: string, result: AnswerResult, delta: number } } }
+    | { type: 'ADVANCE_QUEUE'; payload: { progress: UserProgress, candidates?: Vocabulary[] } }
     | { type: 'CLEAR_FEEDBACK' }
     | { type: 'UPDATE_KANJI_KNOWLEDGE'; payload: KanjiKnowledge }
     | { type: 'SAVE_SETTINGS'; payload: UserSettings }
@@ -72,6 +80,8 @@ const initialState: QuizState = {
     userAnswer: '',
     feedback: null,
     isLoadingVocab: false,
+    introCandidates: [],
+    sessionHistory: [],
     fatalError: null,
 };
 
@@ -137,10 +147,19 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
             };
 
         case 'UPDATE_AFTER_ANSWER':
+            return {
+                ...state,
+                progress: action.payload.progress,
+                feedback: null,
+                userAnswer: '',
+                sessionHistory: [action.payload.historyItem, ...state.sessionHistory].slice(0, 50),
+            };
+
         case 'ADVANCE_QUEUE':
             return {
                 ...state,
                 progress: action.payload.progress,
+                introCandidates: action.payload.candidates ?? state.introCandidates,
                 feedback: null,
                 userAnswer: '',
             };
@@ -174,16 +193,18 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'VOCAB_INTRO_CHOICE': {
             if (!state.progress) return state;
 
+            // Create new VocabProgress and APPEND to queue
+            const newProgressItem = SRSService.createVocabProgress(action.vocabId);
+            const processedItem = SRSService.applyVocabIntroChoice(newProgressItem, action.choice);
+
             return {
                 ...state,
                 progress: {
                     ...state.progress,
-                    learningQueue: state.progress.learningQueue.map(progress =>
-                        progress.vocabId === action.vocabId
-                            ? SRSService.applyVocabIntroChoice(progress, action.choice)
-                            : progress
-                    ),
+                    learningQueue: [...state.progress.learningQueue, processedItem]
                 },
+                // Remove from candidates
+                introCandidates: state.introCandidates.filter(c => c.id !== action.vocabId),
             };
         }
 
@@ -258,8 +279,22 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
 
     const nextDue = useMemo(
-        () => getNextVocabToStudy(state.progress?.learningQueue),
-        [state.progress?.learningQueue]
+        () => {
+            // Priority 1: Due Reviews & Retries from Queue
+            const reviewItem = getNextVocabToStudy(state.progress?.learningQueue);
+            if (reviewItem) return reviewItem;
+
+            // Priority 2: Intro Candidates
+            // We use the computed sessionView logic to know if we are in 'learn' mode.
+            const view = computeSessionView(state.progress, state.settings, false);
+
+            if (view.sessionState === 'learn' && state.introCandidates.length > 0) {
+                return { vocabId: state.introCandidates[0].id };
+            }
+
+            return null;
+        },
+        [state.progress?.learningQueue, state.settings, state.introCandidates]
     );
 
     const currentProgress = useMemo(() => {
@@ -270,7 +305,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         ) ?? null;
     }, [state.currentVocab, state.progress]);
 
-    const [hasMoreLearnable, setHasMoreLearnable] = useState(false);
+    const [hasMoreLearnable, setHasMoreLearnable] = useState(false); // Keep for "exhausted" check
 
     const sessionView = useMemo(
         () =>
@@ -358,16 +393,42 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 (!dailyLimitReached || state.progress!.dailyOverride) &&
                 sessionView.sessionState === "learn";
 
-            const maxToAdd = canAddNew
-                ? CONSTANTS.srs.newVocabBatchSize
-                : 0;
 
-            const finalQueue = await SRSService.refillQueue(
-                updatedQueue,
-                state.progress!.kanjiKnowledge,
-                state.settings!,
-                maxToAdd
-            );
+            // [MODIFIED] If we have NO due reviews, and we CAN add new items, fetch candidates
+            // but DO NOT add to learningQueue yet.
+            const needsCandidates = canAddNew && state.introCandidates.length === 0;
+
+            let newCandidates: Vocabulary[] = [];
+            let finalQueue = updatedQueue;
+
+            if (needsCandidates) {
+                const candidateIds = await SRSService.getNextCandidates(
+                    updatedQueue,
+                    state.progress!.kanjiKnowledge,
+                    state.settings!,
+                    CONSTANTS.srs.newVocabBatchSize
+                );
+
+                // Load the actual Vocabulary objects
+                for (const id of candidateIds) {
+                    try {
+                        const vocab = await VocabularyService.loadVocab(id);
+                        if (vocab) newCandidates.push(vocab);
+                    } catch (e) {
+                        console.error(`Failed to load candidate ${id}`, e);
+                    }
+                }
+            } else if (!canAddNew && state.introCandidates.length > 0) {
+                // If we shouldn't add new ones (limit reached?), maybe clear candidates?
+                // Or just keep them buffered. Keeping is fine.
+            }
+
+            // [MODIFIED] refillQueue is no longer used here to modify the queue directly for new items.
+            // However, we still might want to call it if we needed to refill *reviews*? 
+            // No, reviews are time-based. "Refill" was only for fresh content.
+            // So we skip SRSService.refillQueue entirely if we are using the new system.
+            // Wait - Setup might populate queue initially? 
+            // In setupComplete we used refillQueue. Here we are in the loop.
 
             dispatch({
                 type: "ADVANCE_QUEUE",
@@ -376,6 +437,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                         ...state.progress!,
                         learningQueue: finalQueue,
                     },
+                    candidates: newCandidates.length > 0 ? newCandidates : undefined
                 },
             });
         },
@@ -386,6 +448,30 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             const now = new Date();
             const id = state.currentVocab.id;
             const latency = startTimeRef.current ? now.getTime() - startTimeRef.current : 5000;
+
+            // We need to find the specific item again to calculate delta for dispatch
+            const target = state.progress.learningQueue.find(v => v.vocabId === id);
+            let historyItem = null;
+
+            if (target) {
+                const { updated } = SRSService.applyAnswer(
+                    target,
+                    state.userAnswer,
+                    state.feedback!.matchedAnswer,
+                    latency,
+                    now,
+                    state.feedback!.type
+                );
+
+                const delta = updated.reading.memoryStrength - target.reading.memoryStrength;
+
+                historyItem = {
+                    vocabId: id,
+                    writtenForm: state.currentVocab.writtenForm.kanji, // Use kanji string
+                    result: state.feedback!.type,
+                    delta: delta
+                };
+            }
 
             const updatedQueue = state.progress.learningQueue.map(v => {
                 if (v.vocabId !== id) return v;
@@ -413,6 +499,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                             totalReviews: state.progress.stats.totalReviews + 1,
                         },
                     },
+                    historyItem: historyItem!
                 },
             });
         },
@@ -429,12 +516,56 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             dispatch({ type: "OVERRIDE_DAILY_LIMIT" });
         },
 
-        saveVocabIntroChoice(vocabulary: Vocabulary, choice: "learn" | "skip") {
+        async saveVocabIntroChoice(vocabulary: Vocabulary, choice: "learn" | "skip") {
+            // [MODIFIED] Here we actually CREATE the VocabProgress and add it to the queue
+            if (!state.progress) return;
+
+            // We handle the creation in the reducer to keep action pure-ish (though creates date there)
+            // Just dispatch the choice.
+
+            // Add to end of queue
+            // We use functional update in reducer, but here we pass the ID.
+            // Wait, Reducer expects VOCAB_INTRO_CHOICE with vocabId. 
+            // In the reducer we were mapping over existing queue. 
+            // But now the item is NOT in the queue yet.
+            // We need to change the reducer logic for this too.
+            // Actually, simply dispatch(VOCAB_INTRO_CHOICE) is enough IF we handle the "Add to queue" in reducer.
+            // See reducer change above: it filters candidates. It needs to append to queue.
+
+            // Wait, previous reducer change:
+            // ...learningQueue: state.progress.learningQueue.map(...)
+            // This assumes it was in the queue. 
+            // We need to FIX the reducer to APPEND, not map.
+
+            // Reducer Fix logic is complex to inline in replacement. 
+            // Let's rely on the dispatch and fix reducer logic in a separate block or verify.
+            // The reducer block I replaced earlier was:
+            /*
+                progress: {
+                    ...state.progress,
+                    learningQueue: state.progress.learningQueue.map(...) // OLD
+                }
+            */
+            // I replaced it with just filter candidates. 
+            // I missed the "Add to queue" part in the reducer replacement! 
+            // I need to add that logic.
+
+            // Since this is `saveVocabIntroChoice` function modification, 
+            // I will correct the reducer in a subsequent replacement or try to fix it here if possible?
+            // No, separate tool call for safety if I messed up the reducer chunk.
+            // Actually I can fix the reducer in a separate chunk in this same call if I target the same lines?
+            // No, overlapping edits.
+
+            // I will implement the dispatch here.
+
             dispatch({
                 type: 'VOCAB_INTRO_CHOICE',
                 choice: choice,
                 vocabId: vocabulary.id
-            })
+            });
+
+            // Force Advance to ensure we move on? 
+            // The state change should trigger re-render and re-eval of nextDue.
         },
 
         reset() {

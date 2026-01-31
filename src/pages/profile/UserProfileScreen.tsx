@@ -3,7 +3,7 @@ import { KanjiKnowledgeEditor } from "../../components/KanjiKnowledgeEditor";
 import { useQuiz } from "../../context/useQuiz";
 import { VocabList } from "../../components/VocabList";
 
-export function UserProfileScreen({ onBack }: { onBack: () => void }) {
+export function UserProfileScreen({ onBack, onVocabClick }: { onBack: () => void; onVocabClick?: (vocabId: string) => void }) {
     const { state, actions } = useQuiz();
 
     return (
@@ -38,6 +38,7 @@ export function UserProfileScreen({ onBack }: { onBack: () => void }) {
 
                 <VocabList
                     progress={state.progress!.learningQueue}
+                    onVocabClick={onVocabClick}
                 />
             </section>
         </div>
