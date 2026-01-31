@@ -75,17 +75,12 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
                 // If authentication failed, log out the user
                 if (error instanceof GoogleAuthError) {
-                    console.error('Authentication expired on initial sync, logging out...');
-                    // Clear the stored token and reset state, then trigger re-auth
+                    console.error('Authentication expired on initial sync, logging out. User must re-authenticate manually.');
+
+                    // Clear the stored token and reset state
                     localStorage.removeItem(CONSTANTS.storage.googleDriveTokenKey);
                     setUser(null);
                     setSyncService(null);
-
-                    // Trigger re-authentication
-                    setTimeout(() => {
-                        console.log('Triggering re-authentication after initial sync failure...');
-                        login();
-                    }, 100);
                 }
 
                 setIsInitialSyncComplete(true); // Allow app to proceed even on error
@@ -117,20 +112,11 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
         }
     });
 
-    const logout = (triggerReauth: boolean = false) => {
+    const logout = () => {
         googleLogout();
         localStorage.removeItem(CONSTANTS.storage.googleDriveTokenKey);
         setUser(null);
         setSyncService(null);
-
-        // If requested, trigger re-authentication after logout
-        if (triggerReauth) {
-            // Use setTimeout to ensure logout completes first
-            setTimeout(() => {
-                console.log('Triggering re-authentication...');
-                login();
-            }, 100);
-        }
     };
 
     const performSync = async (service: GoogleDriveSync) => {
@@ -151,8 +137,8 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
             // If authentication failed, log out the user and trigger re-auth
             if (error instanceof GoogleAuthError) {
-                console.error('Authentication expired, logging out and prompting re-authentication...');
-                logout(true); // Pass true to trigger re-authentication
+                console.error('Authentication expired, logging out. User must re-authenticate manually.');
+                logout(); // Pass true to trigger re-authentication
             }
         } finally {
             // Ensure visual feedback persists long enough to be seen
@@ -192,8 +178,8 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
             // If authentication failed, log out the user and trigger re-auth
             if (e instanceof GoogleAuthError) {
-                console.error('Authentication expired, logging out and prompting re-authentication...');
-                logout(true); // Pass true to trigger re-authentication
+                console.error('Authentication expired, logging out. User must re-authenticate manually.');
+                logout(); // Pass true to trigger re-authentication
             }
         } finally {
             const elapsed = Date.now() - startTime;

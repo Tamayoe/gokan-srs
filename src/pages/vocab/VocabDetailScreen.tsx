@@ -1,25 +1,57 @@
-import type { Vocabulary, VocabProgress } from "../../models/vocabulary.model";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import type { Vocabulary } from "../../models/vocabulary.model";
 import { Card } from "../../components/ui/Card";
 import { MasteryRing } from "../../components/MasteryRing";
 import { TagsLookup, type Tags } from "../../models/data.model";
 import { useResponsive } from "../../context/Responsive/useResponsive";
-
+import { useQuiz } from "../../context/useQuiz";
+import { VocabularyService } from "../../services/vocabulary.service";
 import { Button } from "../../components/ui/Button";
+import { LoadingScreen } from "../../components/LoadingScreen";
 
-interface VocabDetailScreenProps {
-    vocab: Vocabulary;
-    progress?: VocabProgress;
-    onBack: () => void;
-}
-
-export function VocabDetailScreen({ vocab, progress, onBack }: VocabDetailScreenProps) {
+export default function VocabDetailScreen() {
+    const { vocabId } = useParams<{ vocabId: string }>();
+    const navigate = useNavigate();
     const { isMobile } = useResponsive();
+    const { state } = useQuiz();
+    const [vocab, setVocab] = useState<Vocabulary | null>(null);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (!vocabId) return;
+
+        VocabularyService.loadVocab(vocabId)
+            .then(setVocab)
+            .catch(err => {
+                console.error("Failed to load vocab", err);
+                setError("Could not load vocabulary details.");
+            });
+    }, [vocabId]);
+
+    const progress = state.progress?.learningQueue.find(p => p.vocabId === vocabId);
+
+    if (error) {
+        return (
+            <div className="min-h-screen flex items-center justify-center p-4 text-center">
+                <div>
+                    <h2 className="text-xl font-bold text-error mb-2">Error</h2>
+                    <p className="text-secondary mb-4">{error}</p>
+                    <Button onClick={() => navigate(-1)}>Go Back</Button>
+                </div>
+            </div>
+        );
+    }
+
+    if (!vocab) {
+        return <LoadingScreen />;
+    }
 
     return (
         <div className="min-h-screen flex flex-col md:max-w-5xl md:mx-auto w-full animate-fade-in">
             {/* Header */}
             <div className="w-full flex items-center p-4 md:p-8 relative">
-                <Button variant="ghost" onClick={onBack} className="absolute left-4 md:left-8">
+                <Button variant="ghost" onClick={() => navigate(-1)} className="absolute left-4 md:left-8">
                     ← Back
                 </Button>
                 <h1 className="flex-1 text-center text-xl font-serif text-primary">
@@ -160,12 +192,7 @@ export function VocabDetailScreen({ vocab, progress, onBack }: VocabDetailScreen
                                                     Related
                                                 </div>
                                                 <div className="flex flex-wrap gap-2">
-                                                    {sense.related.compounds.map((compound, i) => (
-                                                        <span key={i} className="text-lg font-mincho text-primary/80">
-                                                            {compound}
-                                                            {i < sense.related.compounds.length - 1 && <span className="text-divider mx-2">|</span>}
-                                                        </span>
-                                                    ))}
+                                                    {compoundList(sense.related.compounds)}
                                                 </div>
                                             </div>
                                         )}
@@ -178,4 +205,13 @@ export function VocabDetailScreen({ vocab, progress, onBack }: VocabDetailScreen
             </main>
         </div>
     );
+}
+
+function compoundList(compounds: string[]) {
+    return compounds.map((compound, i) => (
+        <span key={i} className="text-lg font-mincho text-primary/80">
+            {compound}
+            {i < compounds.length - 1 && <span className="text-divider mx-2">|</span>}
+        </span>
+    ));
 }

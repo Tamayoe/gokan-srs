@@ -13,6 +13,8 @@ interface QuizScreenProps {
 export function QuizScreen({ onVocabClick }: QuizScreenProps) {
     const { state, currentProgress, sessionState, nextReviewAt, actions } = useQuiz();
 
+
+
     if (sessionState === "waiting") {
         return (
             <WaitingScreen
@@ -30,7 +32,8 @@ export function QuizScreen({ onVocabClick }: QuizScreenProps) {
         return <LoadingScreen />;
     }
 
-    if (state.currentVocab && currentProgress && !currentProgress.introductionAt) {
+    // Show Intro Card for new candidates (no progress) or existing items in 'learn' stage (no introductionAt)
+    if (state.currentVocab && (!currentProgress || !currentProgress.introductionAt)) {
         return <VocabIntroCard vocab={state.currentVocab} onLearn={() => actions.saveVocabIntroChoice(state.currentVocab!, 'learn')} onSkip={() => actions.saveVocabIntroChoice(state.currentVocab!, 'skip')}></VocabIntroCard>
     }
 

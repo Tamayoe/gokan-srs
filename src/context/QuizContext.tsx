@@ -280,21 +280,24 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     const nextDue = useMemo(
         () => {
-            // Priority 1: Due Reviews & Retries from Queue
-            const reviewItem = getNextVocabToStudy(state.progress?.learningQueue);
-            if (reviewItem) return reviewItem;
+            // Priority 1: Intro Candidates (Finish the batch first!)
+            // We check if we are allowed to learn new items (daily limit)
+            const dailyLimitReached =
+                state.progress &&
+                state.progress.stats.newLearnedToday >= CONSTANTS.srs.dailyNewLimit &&
+                !state.progress.dailyOverride;
 
-            // Priority 2: Intro Candidates
-            // We use the computed sessionView logic to know if we are in 'learn' mode.
-            const view = computeSessionView(state.progress, state.settings, false);
-
-            if (view.sessionState === 'learn' && state.introCandidates.length > 0) {
+            if (!dailyLimitReached && state.introCandidates.length > 0) {
                 return { vocabId: state.introCandidates[0].id };
             }
 
+            // Priority 2: Due Reviews & Retries from Queue
+            const reviewItem = getNextVocabToStudy(state.progress?.learningQueue);
+            if (reviewItem) return reviewItem;
+
             return null;
         },
-        [state.progress?.learningQueue, state.settings, state.introCandidates]
+        [state.progress, state.settings, state.introCandidates]
     );
 
     const currentProgress = useMemo(() => {
@@ -325,7 +328,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         async setupComplete({ kanjiKnowledge, settings }) {
             const progress: UserProgress = {
                 kanjiKnowledge,
-                learningQueue: [],
+                learningQueue: [], // Start empty, let the intro system fill it
                 stats: {
                     newLearnedToday: 0,
                     totalLearned: 0,
@@ -333,13 +336,6 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 },
                 dailyOverride: false,
             };
-
-            progress.learningQueue = await SRSService.refillQueue(
-                [],
-                kanjiKnowledge,
-                settings,
-                CONSTANTS.srs.newVocabBatchSize
-            );
 
             dispatch({
                 type: 'SETUP_COMPLETE',
@@ -395,18 +391,24 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
 
             // [MODIFIED] If we have NO due reviews, and we CAN add new items, fetch candidates
-            // but DO NOT add to learningQueue yet.
+            // if we are running low on candidates.
+            // RESTORE BATCH BEHAVIOR: Only refill if completely empty, to enforce "Batch of 3" flow.
             const needsCandidates = canAddNew && state.introCandidates.length === 0;
 
             let newCandidates: Vocabulary[] = [];
             let finalQueue = updatedQueue;
 
             if (needsCandidates) {
+                // IMPORTANT: Exclude current introCandidates from search to avoid duplicates
+                const currentCandidateIds = new Set(state.introCandidates.map(c => c.id));
+                const maxToFind = CONSTANTS.srs.newVocabBatchSize - state.introCandidates.length;
+
                 const candidateIds = await SRSService.getNextCandidates(
                     updatedQueue,
                     state.progress!.kanjiKnowledge,
                     state.settings!,
-                    CONSTANTS.srs.newVocabBatchSize
+                    maxToFind,
+                    currentCandidateIds // Pass as ignoredIds
                 );
 
                 // Load the actual Vocabulary objects
@@ -418,17 +420,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                         console.error(`Failed to load candidate ${id}`, e);
                     }
                 }
-            } else if (!canAddNew && state.introCandidates.length > 0) {
-                // If we shouldn't add new ones (limit reached?), maybe clear candidates?
-                // Or just keep them buffered. Keeping is fine.
             }
-
-            // [MODIFIED] refillQueue is no longer used here to modify the queue directly for new items.
-            // However, we still might want to call it if we needed to refill *reviews*? 
-            // No, reviews are time-based. "Refill" was only for fresh content.
-            // So we skip SRSService.refillQueue entirely if we are using the new system.
-            // Wait - Setup might populate queue initially? 
-            // In setupComplete we used refillQueue. Here we are in the loop.
 
             dispatch({
                 type: "ADVANCE_QUEUE",
@@ -437,7 +429,9 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                         ...state.progress!,
                         learningQueue: finalQueue,
                     },
-                    candidates: newCandidates.length > 0 ? newCandidates : undefined
+                    candidates: newCandidates.length > 0
+                        ? [...state.introCandidates, ...newCandidates] // Append to existing
+                        : undefined
                 },
             });
         },
@@ -638,7 +632,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         return () => {
             alive = false;
         };
-    }, [nextDue]);
+    }, [nextDue, sessionView.sessionState]);
 
     useEffect(() => {
         if (state.feedback?.correct) {

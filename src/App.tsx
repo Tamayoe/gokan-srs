@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import './App.css';
 import { SetupScreen } from './pages/setup/SetupScreen';
 import { Logo } from './components/Logo';
-import { SettingsScreen } from "./pages/settings/Settings";
-import { Settings, User } from 'lucide-react';
-import { QuizScreen } from "./pages/quiz/QuizScreen";
+import { Settings, User, Cloud, RefreshCw } from 'lucide-react';
 import { useQuiz } from "./context/useQuiz";
 import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
-import { UserProfileScreen } from "./pages/profile/UserProfileScreen";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
-import { Cloud, RefreshCw } from "lucide-react";
 import { Loader } from "./components/Loader";
-import { AboutScreen } from "./pages/about/AboutScreen";
-import { VocabDetailScreen } from "./pages/vocab/VocabDetailScreen";
-import { VocabularyService } from "./services/vocabulary.service";
-import type { Vocabulary } from "./models/vocabulary.model";
 import { ResponsiveProvider } from "./context/Responsive/ResponsiveProvider";
+import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 
-export type Screen = "quiz" | "settings" | "profile" | "about" | "vocab-detail";
+// Lazy Load Pages
+// Note: Adapting named exports to default exports for lazy loading where necessary
+const QuizScreen = lazy(() => import('./pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));
+const SettingsScreen = lazy(() => import('./pages/settings/Settings').then(module => ({ default: module.SettingsScreen })));
+const UserProfileScreen = lazy(() => import('./pages/profile/UserProfileScreen').then(module => ({ default: module.UserProfileScreen })));
+const AboutScreen = lazy(() => import('./pages/about/AboutScreen').then(module => ({ default: module.AboutScreen })));
+const VocabDetailScreen = lazy(() => import('./pages/vocab/VocabDetailScreen'));
 
 function SyncStatusIndicator() {
     const { isSyncing, isAuthenticated } = useGoogleDrive();
@@ -38,41 +37,8 @@ function SyncStatusIndicator() {
 export const App: React.FC = () => {
     const { state, actions, isSetupComplete } = useQuiz();
     const { isInitialSyncComplete } = useGoogleDrive();
-
-    // Simple routing based on URL hash
-    const getScreenFromHash = (): Screen => {
-        const hash = window.location.hash.slice(1); // Remove #
-        if (hash === 'about' || hash === 'settings' || hash === 'profile') {
-            return hash as Screen;
-        }
-        return 'quiz';
-    };
-
-    const [screen, setScreen] = useState<Screen>(getScreenFromHash());
-    const [selectedVocabId, setSelectedVocabId] = useState<string | null>(null);
-    const [selectedVocab, setSelectedVocab] = useState<Vocabulary | null>(null);
-
-    // Update URL when screen changes
-    const navigateTo = (newScreen: Screen) => {
-        setScreen(newScreen);
-        window.location.hash = newScreen === 'quiz' ? '' : newScreen;
-    };
-
-    const navigateToVocab = async (vocabId: string) => {
-        const vocab = await VocabularyService.loadVocab(vocabId);
-        setSelectedVocabId(vocabId);
-        setSelectedVocab(vocab);
-        setScreen('vocab-detail');
-    };
-
-    // Listen for browser back/forward
-    React.useEffect(() => {
-        const handleHashChange = () => {
-            setScreen(getScreenFromHash());
-        };
-        window.addEventListener('hashchange', handleHashChange);
-        return () => window.removeEventListener('hashchange', handleHashChange);
-    }, []);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     // Show sync loader if initial sync is in progress
     if (!isInitialSyncComplete) {
@@ -103,21 +69,23 @@ export const App: React.FC = () => {
         </KanjiFormProvider>
     }
 
+    const isQuizScreen = location.pathname === '/';
+
     return (
         <div className="min-h-screen flex flex-col relative bg-background transition-colors duration-200">
             {/* Top bar */}
             <header className={'flex flex-row gap-3 p-4 md:p-8'}>
-                <div>
+                <div onClick={() => navigate('/')} className="cursor-pointer">
                     <Logo />
                 </div>
                 <div className={'grow'}></div>
 
                 <div className="flex gap-4 items-center">
                     <SyncStatusIndicator />
-                    <button onClick={() => navigateTo("profile")} title="User Profile">
+                    <button onClick={() => navigate("/profile")} title="User Profile">
                         <User size={18} />
                     </button>
-                    <button onClick={() => navigateTo("settings")} title="Settings">
+                    <button onClick={() => navigate("/settings")} title="Settings">
                         <Settings size={18} />
                     </button>
                 </div>
@@ -125,49 +93,53 @@ export const App: React.FC = () => {
 
             {/* Screen content */}
             <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-0">
-                {screen === "quiz" && (
-                    <ResponsiveProvider>
-                        <QuizScreen onVocabClick={navigateToVocab} />
-                    </ResponsiveProvider>
-                )}
-                {screen === "about" && (
-                    <ResponsiveProvider>
-                        <AboutScreen onBack={() => navigateTo("quiz")} />
-                    </ResponsiveProvider>
-                )}
-                {screen === "settings" && (
-                    <SettingsScreen
-                        settings={state.settings!}
-                        onUpdateSettings={actions.saveSettings}
-                        onReset={actions.reset}
-                        onBack={() => navigateTo("quiz")}
-                    />
-                )}
-                {screen === "profile" && (
-                    <KanjiFormProvider initialState={{
-                        kanjiCount: state.progress!.kanjiKnowledge.step,
-                        kanjiMethod: state.progress!.kanjiKnowledge.method,
-                        knownKanji: state.progress!.kanjiKnowledge.kanjiSet
-                    }}>
-                        <UserProfileScreen onBack={() => navigateTo("quiz")} onVocabClick={navigateToVocab} />
-                    </KanjiFormProvider>
-                )}
-                {screen === "vocab-detail" && selectedVocab && (
-                    <ResponsiveProvider>
-                        <VocabDetailScreen
-                            vocab={selectedVocab}
-                            progress={state.progress?.learningQueue.find(p => p.vocabId === selectedVocabId!)}
-                            onBack={() => navigateTo('quiz')}
-                        />
-                    </ResponsiveProvider>
-                )}
+                <Suspense fallback={<Loader title="Loading..." />}>
+                    <Routes>
+                        <Route path="/" element={
+                            <ResponsiveProvider>
+                                <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
+                            </ResponsiveProvider>
+                        } />
+                        <Route path="/about" element={
+                            <ResponsiveProvider>
+                                <AboutScreen onBack={() => navigate('/')} />
+                            </ResponsiveProvider>
+                        } />
+                        <Route path="/settings" element={
+                            <SettingsScreen
+                                settings={state.settings!}
+                                onUpdateSettings={actions.saveSettings}
+                                onReset={actions.reset}
+                                onBack={() => navigate('/')}
+                            />
+                        } />
+                        <Route path="/profile" element={
+                            <KanjiFormProvider initialState={{
+                                kanjiCount: state.progress!.kanjiKnowledge.step,
+                                kanjiMethod: state.progress!.kanjiKnowledge.method,
+                                knownKanji: state.progress!.kanjiKnowledge.kanjiSet
+                            }}>
+                                <UserProfileScreen
+                                    onBack={() => navigate('/')}
+                                    onVocabClick={(id) => navigate(`/vocab/${id}`)}
+                                />
+                            </KanjiFormProvider>
+                        } />
+                        <Route path="/vocab/:vocabId" element={
+                            <ResponsiveProvider>
+                                <VocabDetailScreen />
+                            </ResponsiveProvider>
+                        } />
+                        <Route path="*" element={<Navigate to="/" replace />} />
+                    </Routes>
+                </Suspense>
             </div>
 
-            {/* Footer with About link */}
-            {screen === "quiz" && (
+            {/* Footer with About link - only shown on Quiz Screen */}
+            {isQuizScreen && (
                 <footer className="p-4 text-center">
                     <button
-                        onClick={() => navigateTo("about")}
+                        onClick={() => navigate("/about")}
                         className="text-xs text-secondary hover:text-primary transition-colors"
                     >
                         About Gokan SRS

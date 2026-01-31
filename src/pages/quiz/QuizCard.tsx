@@ -319,6 +319,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                 <button
                                     type="submit"
                                     disabled={!computed.canSubmit}
+                                    onMouseDown={(e) => e.preventDefault()}
                                     className={`w-full font-medium rounded-lg transition-all duration-200 font-serif flex items-center justify-center gap-2
                                         ${isMobile ? 'h-10 mt-4' : 'h-12 mt-6'}
                                         ${computed.canSubmit
