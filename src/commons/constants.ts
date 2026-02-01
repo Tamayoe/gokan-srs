@@ -27,8 +27,7 @@ export const CONSTANTS = {
             expectedLatency: 10000, // ms (10s for typing-based answers)
             minInterval: 0.2, // ~5 hours
             maxInterval: 3650, // 10 years
-            minMemoryStrength: 0.3, // days
-            initialMemoryStrength: 1.0, // days (New item start)
+            minMemoryStrength: 1, // days
 
             // Strategy D: Start with higher confidence
             initialDifficulty: 0.5,

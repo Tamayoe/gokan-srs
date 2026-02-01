@@ -101,7 +101,7 @@ describe('SRSService Formula Tests', () => {
         // Interval = 0.3 * 0.28768 = 0.0863.
         // Wrong penalty: Max(0.5, 0.086 * 0.3) -> 0.5.
 
-        closeTo(updated.reading.memoryStrength, 0.30000);
+        closeTo(updated.reading.memoryStrength, 1.00000);
         closeTo(interval, 0.50000);
     });
 
@@ -115,7 +115,7 @@ describe('SRSService Formula Tests', () => {
         const vocab = createVocab(0.35, 0.5);
         const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 500, mockNow);
 
-        closeTo(updated.reading.memoryStrength, 0.30000);
+        closeTo(updated.reading.memoryStrength, 1.00000);
     });
 
     it('TEST CASE 6c — Floor NOT applied on Success (Recovery Floor Definition)', () => {
@@ -254,23 +254,35 @@ describe('SRSService Formula Tests', () => {
             expect(updated.needsRetry).toBe(true);
         });
 
-        it('should clear needsRetry on retry attempt (correct)', () => {
-            const vocab = createVocab(5.0, 0.3);
+        it('should clear needsRetry on retry attempt (correct) AND preserve SRS state', () => {
+            const initialStrength = 5.0;
+            const initialInterval = 0.0;
+            const vocab = createVocab(initialStrength, 0.3, initialInterval);
             vocab.needsRetry = true; // Simulate retry state
 
-            const { updated } = SRSService.applyAnswer(vocab, 'correct', 'kotae', 10000, mockNow);
+            const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 10000, mockNow);
 
+            // Should clear flag
             expect(updated.needsRetry).toBe(false);
+
+            // Should PRESREVE SRS state (no boost for retry)
+            expect(updated.reading.memoryStrength).toBe(initialStrength);
+            expect(updated.reading.interval).toBe(initialInterval);
+            expect(interval).toBe(initialInterval);
         });
 
-        it('should clear needsRetry on retry attempt (wrong again)', () => {
-            const vocab = createVocab(5.0, 0.3);
+        it('should keep needsRetry on retry attempt (wrong again) AND preserve SRS state', () => {
+            const initialStrength = 5.0;
+            const vocab = createVocab(initialStrength, 0.3);
             vocab.needsRetry = true; // Simulate retry state
 
             const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 10000, mockNow);
 
-            // Should be false to prevent infinite loops
-            expect(updated.needsRetry).toBe(false);
+            // Should REMAIN TRUE (keep in loop until correct)
+            expect(updated.needsRetry).toBe(true);
+
+            // Should PRESERVE SRS state (no double penalty)
+            expect(updated.reading.memoryStrength).toBe(initialStrength);
         });
 
         it('should not set needsRetry on minor_error', () => {
@@ -278,6 +290,17 @@ describe('SRSService Formula Tests', () => {
             const { updated } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 10000, mockNow, 'minor_error');
 
             expect(updated.needsRetry).toBe(false);
+        });
+
+        it('should clear needsRetry on minor_error during retry', () => {
+            const vocab = createVocab(5.0, 0.3);
+            vocab.needsRetry = true;
+
+            const { updated } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 10000, mockNow, 'minor_error');
+
+            expect(updated.needsRetry).toBe(false);
+            // And preserve state
+            expect(updated.reading.memoryStrength).toBe(5.0);
         });
     });
 

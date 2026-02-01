@@ -456,11 +456,12 @@ The SRS study session follows a **stateless** priority system with natural buffe
    - **Mastery**: If `memoryStrength >= maxMemoryStrength` after a review, item graduates. `nextReviewAt` is cleared
 
 5. **Retry Mechanism (Wrong Answers)**:
-   - When user gives wrong answer: `needsRetry = true` is set
+   - When user gives wrong answer: `needsRetry = true` is set. Item review schedule is updated based on the failure.
    - Item appears in current session (mixed with old reviews)
-   - On retry attempt: `needsRetry = false` (prevents loops)
-   - Only one retry per wrong answer
-   - SRS calculation proceeds normally (retry doesn't affect intervals)
+   - On retry attempt:
+     - If Correct: `needsRetry = false`. **SRS state is NOT updated** (training only). Original failure scheduling stands.
+     - If Wrong: `needsRetry = true` (loop until correct). SRS state is NOT updated (prevent double penalty).
+   - This ensures retries help user learn correct answer without artificially inflating memory strength after a failure.
 
 6. **Queue Refill**:
    - Triggered automatically in `QuizContext` when `nextDue` is null and session state is 'learn'

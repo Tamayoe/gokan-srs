@@ -456,11 +456,12 @@ The SRS study session follows a **stateless** priority system with natural buffe
    - **Mastery**: If `memoryStrength >= maxMemoryStrength` after a review, item graduates. `nextReviewAt` is cleared
 
 5. **Retry Mechanism (Wrong Answers)**:
-   - When user gives wrong answer: `needsRetry = true` is set
+   - When user gives wrong answer: `needsRetry = true` is set. Item review schedule is updated based on the failure.
    - Item appears in current session (mixed with old reviews)
-   - On retry attempt: `needsRetry = false` (prevents loops)
-   - Only one retry per wrong answer
-   - SRS calculation proceeds normally (retry doesn't affect intervals)
+   - On retry attempt:
+     - If Correct: `needsRetry = false`. **SRS state is NOT updated** (training only). Original failure scheduling stands.
+     - If Wrong: `needsRetry = true` (loop until correct). SRS state is NOT updated (prevent double penalty).
+   - This ensures retries help user learn correct answer without artificially inflating memory strength after a failure.
 
 6. **Queue Refill**:
    - Triggered automatically in `QuizContext` when `nextDue` is null and session state is 'learn'
@@ -577,4 +578,8 @@ return 'exhausted'
   - Moved auto-advance queue logic from `QuizScreen` to `QuizContext` for centralized queue management
   - Created comprehensive project documentation covering architecture, data models, services, state management, and workflows.
 - **[2026-01-26]**: Documented SRS priority workflow and error handling policy.
-- **[2026-01-22]**: Acknowledged new Design System. Refactoring visual feedback to match "Sober & Serious" tone.
+- **[2026-02-01]**:
+  - **Refined Retry Mechanism**: Modified `SRSService.applyAnswer` to treat retries as "training runs".
+    - Successful retries now clear the `needsRetry` flag but **do not** update SRS intervals or memory strength.
+    - This preserves the scheduling penalty from the initial wrong answer while allowing the user to practice the correct answer immediately.
+    - Updated tests to verify SRS state invariance during retries.

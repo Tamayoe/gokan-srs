@@ -62,7 +62,6 @@ type QuizAction =
     | { type: 'LOAD_VOCAB_ERROR'; payload: { vocabId: string, error: any } }
     | { type: 'SET_ANSWER'; payload: string }
     | { type: 'SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswer: string } }
-    | { type: 'SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswer: string } }
     | { type: 'UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress; historyItem: { vocabId: string, writtenForm: string, result: AnswerResult, delta: number } } }
     | { type: 'ADVANCE_QUEUE'; payload: { progress: UserProgress, candidates?: Vocabulary[] } }
     | { type: 'CLEAR_FEEDBACK' }
@@ -511,55 +510,13 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         },
 
         async saveVocabIntroChoice(vocabulary: Vocabulary, choice: "learn" | "skip") {
-            // [MODIFIED] Here we actually CREATE the VocabProgress and add it to the queue
             if (!state.progress) return;
-
-            // We handle the creation in the reducer to keep action pure-ish (though creates date there)
-            // Just dispatch the choice.
-
-            // Add to end of queue
-            // We use functional update in reducer, but here we pass the ID.
-            // Wait, Reducer expects VOCAB_INTRO_CHOICE with vocabId. 
-            // In the reducer we were mapping over existing queue. 
-            // But now the item is NOT in the queue yet.
-            // We need to change the reducer logic for this too.
-            // Actually, simply dispatch(VOCAB_INTRO_CHOICE) is enough IF we handle the "Add to queue" in reducer.
-            // See reducer change above: it filters candidates. It needs to append to queue.
-
-            // Wait, previous reducer change:
-            // ...learningQueue: state.progress.learningQueue.map(...)
-            // This assumes it was in the queue. 
-            // We need to FIX the reducer to APPEND, not map.
-
-            // Reducer Fix logic is complex to inline in replacement. 
-            // Let's rely on the dispatch and fix reducer logic in a separate block or verify.
-            // The reducer block I replaced earlier was:
-            /*
-                progress: {
-                    ...state.progress,
-                    learningQueue: state.progress.learningQueue.map(...) // OLD
-                }
-            */
-            // I replaced it with just filter candidates. 
-            // I missed the "Add to queue" part in the reducer replacement! 
-            // I need to add that logic.
-
-            // Since this is `saveVocabIntroChoice` function modification, 
-            // I will correct the reducer in a subsequent replacement or try to fix it here if possible?
-            // No, separate tool call for safety if I messed up the reducer chunk.
-            // Actually I can fix the reducer in a separate chunk in this same call if I target the same lines?
-            // No, overlapping edits.
-
-            // I will implement the dispatch here.
 
             dispatch({
                 type: 'VOCAB_INTRO_CHOICE',
                 choice: choice,
                 vocabId: vocabulary.id
             });
-
-            // Force Advance to ensure we move on? 
-            // The state change should trigger re-render and re-eval of nextDue.
         },
 
         reset() {

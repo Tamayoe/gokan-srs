@@ -63,6 +63,22 @@ export class SRSService {
     ): { updated: VocabProgress; result: AnswerResult, interval: number } {
         const result = forcedResult ?? this.analyzeError(userAnswer, correctAnswer);
 
+        // [NEW] Retry Logic: If this is a retry of a previously failed item,
+        // we treat it as a "training" run. 
+        // If they get it right: Clear the retry flag, but DO NOT update SRS metrics (preserve the penalty).
+        // If they get it wrong: Keep the retry flag, DO NOT update SRS metrics (don't penalize twice).
+        if (vocab.needsRetry) {
+            const isSuccess = result === 'correct' || result === 'minor_error';
+            return {
+                updated: {
+                    ...vocab,
+                    needsRetry: !isSuccess // Clear if success, otherwise keep true
+                },
+                result,
+                interval: vocab.reading.interval
+            };
+        }
+
         // We focus on READING for now
         const currentEntry = { ...vocab.reading };
 
@@ -421,7 +437,7 @@ export class SRSService {
             totalReviews: 0,
             consecutiveFailures: 0,
             reading: {
-                memoryStrength: CONSTANTS.srs.formula.initialMemoryStrength,
+                memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
                 interval: 0,
                 difficulty: finalDiff,
                 lastReviewedAt: null,
@@ -429,7 +445,7 @@ export class SRSService {
                 history: []
             },
             meaning: {
-                memoryStrength: CONSTANTS.srs.formula.initialMemoryStrength,
+                memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
                 interval: 0,
                 difficulty: finalDiff,
                 lastReviewedAt: null,
