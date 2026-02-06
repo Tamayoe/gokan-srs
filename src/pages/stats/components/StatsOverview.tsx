@@ -64,10 +64,10 @@ export function StatsOverview({ progress }: StatsOverviewProps) {
 
 function StatCard({ title, value, subtitle }: { title: string, value: string | number, subtitle?: string }) {
     return (
-        <div className="p-4 bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col items-center justify-center h-28 transform transition-transform hover:scale-105 duration-200">
-            <span className="text-sm text-gray-500 font-medium mb-1">{title}</span>
+        <div className="p-4 bg-surface rounded-xl shadow-sm border border-divider flex flex-col items-center justify-center h-28 transform transition-transform hover:scale-105 duration-200">
+            <span className="text-sm text-secondary font-medium mb-1">{title}</span>
             <span className="text-3xl font-bold text-primary">{value}</span>
-            {subtitle && <span className="text-xs text-gray-400 mt-1">{subtitle}</span>}
+            {subtitle && <span className="text-xs text-tertiary mt-1">{subtitle}</span>}
         </div>
     );
 }

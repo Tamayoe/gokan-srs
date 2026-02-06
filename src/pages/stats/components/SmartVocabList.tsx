@@ -152,12 +152,12 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
 
     if (isLoading) {
         return (
-            <div className="flex flex-col items-center justify-center p-12 bg-white rounded-lg border border-gray-100 shadow-sm">
+            <div className="flex flex-col items-center justify-center p-12 bg-surface rounded-lg border border-divider shadow-sm">
                 <Loader title="Loading Vocabulary..." />
-                <div className="w-64 h-2 bg-gray-100 rounded-full mt-4 overflow-hidden">
+                <div className="w-64 h-2 bg-gray-100 dark:bg-gray-800 rounded-full mt-4 overflow-hidden">
                     <div className="h-full bg-primary transition-all duration-300" style={{ width: `${loadingProgress}%` }} />
                 </div>
-                <span className="text-sm text-gray-500 mt-2">{loadingProgress}%</span>
+                <span className="text-sm text-tertiary mt-2">{loadingProgress}%</span>
             </div>
         );
     }
@@ -165,15 +165,15 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
     return (
         <div className="flex flex-col gap-4 animate-fade-in">
             {/* Controls */}
-            <div className="flex flex-col md:flex-row gap-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100 items-center justify-between">
+            <div className="flex flex-col md:flex-row gap-4 p-4 bg-surface rounded-lg shadow-sm border border-divider items-center justify-between">
                 <div className="relative w-full md:w-64">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-tertiary" size={16} />
                     <input
                         type="text"
                         placeholder="Search reading, meaning..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full pl-9 pr-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                        className="w-full pl-9 pr-3 py-2 border border-divider rounded-md text-sm bg-surface text-primary placeholder:text-input-placeholder focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent"
                     />
                 </div>
 
@@ -181,7 +181,7 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                     <select
                         value={sortField}
                         onChange={(e) => setSortField(e.target.value as SortField)}
-                        className="px-3 py-2 border rounded-md text-sm bg-white focus:outline-none focus:ring-1 focus:ring-primary grow md:grow-0"
+                        className="px-3 py-2 border border-divider rounded-md text-sm bg-surface text-primary focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent grow md:grow-0"
                     >
                         <option value="added_date">Date Added</option>
                         <option value="next_review">Next Review</option>
@@ -192,7 +192,7 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
 
                     <button
                         onClick={() => setSortDir(d => d === 'asc' ? 'desc' : 'asc')}
-                        className="p-2 border rounded-md hover:bg-gray-50"
+                        className="p-2 border border-divider rounded-md text-primary hover:bg-surface-hover"
                         title={sortDir === 'asc' ? "Ascending" : "Descending"}
                     >
                         {sortDir === 'asc' ? <ArrowUp size={16} /> : <ArrowDown size={16} />}
@@ -211,7 +211,7 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                     />
                 ))}
                 {displayedItems.length === 0 && (
-                    <div className="col-span-full py-12 text-center text-gray-400">
+                    <div className="col-span-full py-12 text-center text-tertiary">
                         No vocabulary found.
                     </div>
                 )}
@@ -227,7 +227,7 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                     >
                         Previous
                     </Button>
-                    <span className="flex items-center text-sm text-gray-600">
+                    <span className="flex items-center text-sm text-secondary">
                         Page {page} of {totalPages}
                     </span>
                     <Button
