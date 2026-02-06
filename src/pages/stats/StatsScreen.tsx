@@ -21,7 +21,7 @@ export function StatsScreen({ onBack, onVocabClick }: { onBack: () => void; onVo
 
             <StatsOverview progress={state.progress} />
 
-            <section className="w-full p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+            <section className="w-full p-6 bg-surface rounded-lg shadow-sm border border-divider">
                 <h2 className="text-lg mb-4 text-primary font-serif">Review Forecast</h2>
                 <ReviewForecast progress={state.progress} />
             </section>

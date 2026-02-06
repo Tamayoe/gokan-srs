@@ -83,20 +83,20 @@ export const App: React.FC = () => {
 
                 <div className="flex gap-4 items-center">
                     <SyncStatusIndicator />
-                    <button onClick={() => navigate("/stats")} title="Statistics">
+                    <button onClick={() => navigate("/stats")} title="Statistics" className="cursor-pointer text-secondary hover:text-primary transition-colors">
                         <BarChart2 size={18} />
                     </button>
-                    <button onClick={() => navigate("/profile")} title="User Profile">
+                    <button onClick={() => navigate("/profile")} title="User Profile" className="cursor-pointer text-secondary hover:text-primary transition-colors">
                         <User size={18} />
                     </button>
-                    <button onClick={() => navigate("/settings")} title="Settings">
+                    <button onClick={() => navigate("/settings")} title="Settings" className="cursor-pointer text-secondary hover:text-primary transition-colors">
                         <Settings size={18} />
                     </button>
                 </div>
             </header>
 
             {/* Screen content */}
-            <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-0">
+            <div className={`flex-1 flex flex-col items-center p-4 md:p-0 ${isQuizScreen ? 'justify-center' : 'justify-start'}`}>
                 <Suspense fallback={<Loader title="Loading..." />}>
                     <Routes>
                         <Route path="/" element={

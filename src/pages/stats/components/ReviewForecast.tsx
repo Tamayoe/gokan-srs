@@ -53,12 +53,12 @@ export function ReviewForecast({ progress }: ReviewForecastProps) {
     }, [progress]);
 
     return (
-        <div className="w-full flex justify-between items-end h-[200px] gap-2 px-4 py-8 bg-white rounded-lg shadow-sm border border-gray-100">
+        <div className="w-full flex justify-between items-end h-[200px] gap-2 px-4 py-8 bg-surface rounded-lg shadow-sm border border-divider">
             {forecast.buckets.map((bucket, i) => (
                 <div key={i} className="flex flex-col items-center flex-1 h-full justify-end group">
                     <div className="relative w-full flex justify-center items-end flex-1 mb-2">
                         <div
-                            className="w-full max-w-[40px] bg-indigo-100 group-hover:bg-indigo-200 text-indigo-700 rounded-t-sm transition-all duration-500 ease-out flex items-end justify-center pb-1 relative"
+                            className="w-full max-w-[40px] bg-accent/10 dark:bg-accent/20 group-hover:bg-accent/20 dark:group-hover:bg-accent/30 text-accent dark:text-accent-hover rounded-t-sm transition-all duration-500 ease-out flex items-end justify-center pb-1 relative"
                             style={{ height: `${(bucket.count / forecast.maxCount) * 100}%` }}
                         >
                             {/* Value label */}
@@ -68,10 +68,10 @@ export function ReviewForecast({ progress }: ReviewForecastProps) {
                         </div>
                     </div>
 
-                    <span className="text-xs text-gray-500 font-medium">
+                    <span className="text-xs text-secondary font-medium">
                         {bucket.label}
                     </span>
-                    <span className="text-[10px] text-gray-400 mt-1">
+                    <span className="text-[10px] text-tertiary mt-1">
                         {i === 0 && bucket.count > 0 ? '(Due)' : bucket.count > 0 ? bucket.count : '-'}
                     </span>
                 </div>
