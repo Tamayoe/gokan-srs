@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import './App.css';
 import { SetupScreen } from './pages/setup/SetupScreen';
 import { Logo } from './components/Logo';
-import { Settings, User, Cloud, RefreshCw } from 'lucide-react';
+import { Settings, User, Cloud, RefreshCw, BarChart2 } from 'lucide-react';
 import { useQuiz } from "./context/useQuiz";
 import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
@@ -15,6 +15,7 @@ import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-
 const QuizScreen = lazy(() => import('./pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));
 const SettingsScreen = lazy(() => import('./pages/settings/Settings').then(module => ({ default: module.SettingsScreen })));
 const UserProfileScreen = lazy(() => import('./pages/profile/UserProfileScreen').then(module => ({ default: module.UserProfileScreen })));
+const StatsScreen = lazy(() => import('./pages/stats/StatsScreen').then(module => ({ default: module.StatsScreen }))); // START_ADD (conceptually)
 const AboutScreen = lazy(() => import('./pages/about/AboutScreen').then(module => ({ default: module.AboutScreen })));
 const VocabDetailScreen = lazy(() => import('./pages/vocab/VocabDetailScreen'));
 
@@ -82,6 +83,9 @@ export const App: React.FC = () => {
 
                 <div className="flex gap-4 items-center">
                     <SyncStatusIndicator />
+                    <button onClick={() => navigate("/stats")} title="Statistics">
+                        <BarChart2 size={18} />
+                    </button>
                     <button onClick={() => navigate("/profile")} title="User Profile">
                         <User size={18} />
                     </button>
@@ -99,6 +103,12 @@ export const App: React.FC = () => {
                             <ResponsiveProvider>
                                 <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
                             </ResponsiveProvider>
+                        } />
+                        <Route path="/stats" element={
+                            <StatsScreen
+                                onBack={() => navigate('/')}
+                                onVocabClick={(id) => navigate(`/vocab/${id}`)}
+                            />
                         } />
                         <Route path="/about" element={
                             <ResponsiveProvider>
