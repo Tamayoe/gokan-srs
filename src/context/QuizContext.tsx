@@ -170,6 +170,7 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
             return { ...state, settings: action.payload };
 
         case 'UPDATE_KANJI_KNOWLEDGE':
+            console.debug('[QuizContext] Updating Kanji knowledge', action.payload);
             return {
                 ...state,
                 progress: {

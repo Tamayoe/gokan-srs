@@ -120,6 +120,28 @@ export class GoogleDriveSync {
         // Extract merged vocab items from the map
         const mergedQueue = Array.from(vocabMap.values()).map(entry => entry.item);
 
+        // Kanji Knowledge Merging Strategy: Last Version Wins
+        // This allows deletions (e.g. reducing step count) to propagate.
+        const localVersion = local._sync?.version ?? 0;
+        const remoteVersion = remote._sync?.version ?? 0;
+
+        let mergedKanjiKnowledge = local.kanjiKnowledge;
+
+        if (remoteVersion > localVersion) {
+            // Remote is newer, trust it entirely
+            mergedKanjiKnowledge = remote.kanjiKnowledge;
+        } else if (remoteVersion === localVersion) {
+            // Versions match (conflict/sync race): Fallback to Union for safety
+            mergedKanjiKnowledge = {
+                ...local.kanjiKnowledge,
+                kanjiSet: new Set([
+                    ...(local.kanjiKnowledge?.kanjiSet ?? []),
+                    ...(remote.kanjiKnowledge?.kanjiSet ?? [])
+                ])
+            };
+        }
+        // else localVersion > remoteVersion: Keep local (default)
+
         const result: ProgressWithMetadata = {
             ...local,
             stats: {
@@ -127,13 +149,7 @@ export class GoogleDriveSync {
                 totalLearned: Math.max(local.stats?.totalLearned ?? 0, remote.stats?.totalLearned ?? 0),
                 newLearnedToday: Math.max(local.stats?.newLearnedToday ?? 0, remote.stats?.newLearnedToday ?? 0),
             },
-            kanjiKnowledge: {
-                ...local.kanjiKnowledge,
-                kanjiSet: new Set([
-                    ...(local.kanjiKnowledge?.kanjiSet ?? []),
-                    ...(remote.kanjiKnowledge?.kanjiSet ?? [])
-                ])
-            },
+            kanjiKnowledge: mergedKanjiKnowledge,
             learningQueue: mergedQueue,
             // Combine overrides cautiously - if either has it true, user probably wants it
             dailyOverride: local.dailyOverride || remote.dailyOverride,

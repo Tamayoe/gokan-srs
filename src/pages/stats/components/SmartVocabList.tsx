@@ -1,0 +1,244 @@
+import { useState, useEffect, useMemo } from "react";
+import type { VocabProgress, Vocabulary } from "../../../models/vocabulary.model";
+import { VocabularyService } from "../../../services/vocabulary.service";
+import { Loader } from "../../../components/Loader";
+import { VocabCard } from "../../../components/VocabCard";
+import { Search, ArrowDown, ArrowUp } from "lucide-react";
+import { Button } from "../../../components/ui/Button";
+
+interface SmartVocabListProps {
+    progress: VocabProgress[];
+    onVocabClick?: (vocabId: string) => void;
+}
+
+type SortField = 'added_date' | 'srs_stage' | 'next_review' | 'failures' | 'kanji_rank';
+type SortDirection = 'asc' | 'desc';
+
+interface EnrichedVocab {
+    vocab: Vocabulary;
+    progress: VocabProgress;
+}
+
+export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) {
+    const [data, setData] = useState<EnrichedVocab[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [loadingProgress, setLoadingProgress] = useState(0);
+
+    const [searchQuery, setSearchQuery] = useState("");
+    const [sortField, setSortField] = useState<SortField>('added_date');
+    const [sortDir, setSortDir] = useState<SortDirection>('desc');
+
+    // Batch load vocabulary with concurrency limit
+    useEffect(() => {
+        let isCancelled = false;
+        const loadAll = async () => {
+            const results: EnrichedVocab[] = [];
+            const ids = progress.map(p => p.vocabId);
+            const total = ids.length;
+
+            if (total === 0) {
+                setIsLoading(false);
+                return;
+            }
+
+            // Simple batching to avoid clogging network/main thread
+            const BATCH_SIZE = 20;
+            for (let i = 0; i < total; i += BATCH_SIZE) {
+                if (isCancelled) return;
+
+                const batchIds = ids.slice(i, i + BATCH_SIZE);
+                const promises = batchIds.map(async (id) => {
+                    // Try to map progress to vocab
+                    const p = progress.find(px => px.vocabId === id)!;
+                    try {
+                        const v = await VocabularyService.loadVocab(id);
+                        if (v) return { vocab: v, progress: p };
+                    } catch (e) {
+                        console.error(`Failed to load vocab ${id}`, e);
+                    }
+                    return null;
+                });
+
+                const batchResults = await Promise.all(promises);
+                batchResults.forEach(r => {
+                    if (r) results.push(r);
+                });
+
+                setLoadingProgress(Math.round(((i + BATCH_SIZE) / total) * 100));
+
+                // Small yield to UI
+                await new Promise(r => setTimeout(r, 0));
+            }
+
+            if (!isCancelled) {
+                setData(results);
+                setIsLoading(false);
+            }
+        };
+
+        loadAll();
+
+        return () => { isCancelled = true; };
+    }, [progress]);
+
+    // Filtering & Sorting
+    const processedData = useMemo(() => {
+        let d = [...data];
+
+        // 1. Search
+        if (searchQuery) {
+            const q = searchQuery.toLowerCase();
+            d = d.filter(item => {
+                const v = item.vocab;
+                return (
+                    v.writtenForm.kanji.includes(q) ||
+                    v.reading.primary.includes(q) ||
+                    v.senses.some(s => s.glosses.some(g => g.toLowerCase().includes(q)))
+                );
+            });
+        }
+
+        // 2. Sort
+        d.sort((a, b) => {
+            let valA: any = 0;
+            let valB: any = 0;
+
+            switch (sortField) {
+                case 'added_date':
+                    valA = a.progress.introductionAt ? new Date(a.progress.introductionAt).getTime() : 0;
+                    valB = b.progress.introductionAt ? new Date(b.progress.introductionAt).getTime() : 0;
+                    break;
+                case 'next_review':
+                    // Null next review (mastered/new) should be pushed to end usually, or treat as far future?
+                    valA = a.progress.nextReviewAt ? new Date(a.progress.nextReviewAt).getTime() : 9999999999999;
+                    valB = b.progress.nextReviewAt ? new Date(b.progress.nextReviewAt).getTime() : 9999999999999;
+                    break;
+                case 'srs_stage':
+                    // graduated > learning
+                    valA = a.progress.stage === 'graduated' ? 1 : 0;
+                    valB = b.progress.stage === 'graduated' ? 1 : 0;
+                    break;
+                case 'failures':
+                    valA = (a.progress.reading?.history?.filter(h => h.result === 'wrong').length || 0) +
+                        (a.progress.meaning?.history?.filter(h => h.result === 'wrong').length || 0);
+                    valB = (b.progress.reading?.history?.filter(h => h.result === 'wrong').length || 0) +
+                        (b.progress.meaning?.history?.filter(h => h.result === 'wrong').length || 0);
+                    break;
+                case 'kanji_rank':
+                    valA = a.vocab.frequency?.kanjiRank || 99999;
+                    valB = b.vocab.frequency?.kanjiRank || 99999;
+                    break;
+            }
+
+            if (valA < valB) return sortDir === 'asc' ? -1 : 1;
+            if (valA > valB) return sortDir === 'asc' ? 1 : -1;
+            return 0;
+        });
+
+        return d;
+    }, [data, searchQuery, sortField, sortDir]);
+
+    // Pagination? Let's just limit render for now or use simple pagination if list is huge.
+    // For < 500 items, render all is fine. For 2000, maybe slow.
+    // Let's implement simple pagination.
+    const [page, setPage] = useState(1);
+    const ITEMS_PER_PAGE = 30;
+    const totalPages = Math.ceil(processedData.length / ITEMS_PER_PAGE);
+    const displayedItems = processedData.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+
+    // Reset page on filter change
+    useEffect(() => { setPage(1); }, [searchQuery, sortField, sortDir]);
+
+
+    if (isLoading) {
+        return (
+            <div className="flex flex-col items-center justify-center p-12 bg-white rounded-lg border border-gray-100 shadow-sm">
+                <Loader title="Loading Vocabulary..." />
+                <div className="w-64 h-2 bg-gray-100 rounded-full mt-4 overflow-hidden">
+                    <div className="h-full bg-primary transition-all duration-300" style={{ width: `${loadingProgress}%` }} />
+                </div>
+                <span className="text-sm text-gray-500 mt-2">{loadingProgress}%</span>
+            </div>
+        );
+    }
+
+    return (
+        <div className="flex flex-col gap-4 animate-fade-in">
+            {/* Controls */}
+            <div className="flex flex-col md:flex-row gap-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100 items-center justify-between">
+                <div className="relative w-full md:w-64">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
+                    <input
+                        type="text"
+                        placeholder="Search reading, meaning..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-full pl-9 pr-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                    />
+                </div>
+
+                <div className="flex gap-2 items-center w-full md:w-auto">
+                    <select
+                        value={sortField}
+                        onChange={(e) => setSortField(e.target.value as SortField)}
+                        className="px-3 py-2 border rounded-md text-sm bg-white focus:outline-none focus:ring-1 focus:ring-primary grow md:grow-0"
+                    >
+                        <option value="added_date">Date Added</option>
+                        <option value="next_review">Next Review</option>
+                        <option value="srs_stage">SRS Stage</option>
+                        <option value="failures">Failure Count</option>
+                        <option value="kanji_rank">Frequency</option>
+                    </select>
+
+                    <button
+                        onClick={() => setSortDir(d => d === 'asc' ? 'desc' : 'asc')}
+                        className="p-2 border rounded-md hover:bg-gray-50"
+                        title={sortDir === 'asc' ? "Ascending" : "Descending"}
+                    >
+                        {sortDir === 'asc' ? <ArrowUp size={16} /> : <ArrowDown size={16} />}
+                    </button>
+                </div>
+            </div>
+
+            {/* List */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {displayedItems.map(({ vocab, progress }) => (
+                    <VocabCard
+                        key={vocab.id}
+                        vocab={vocab}
+                        progress={progress}
+                        onClick={() => onVocabClick?.(vocab.id)}
+                    />
+                ))}
+                {displayedItems.length === 0 && (
+                    <div className="col-span-full py-12 text-center text-gray-400">
+                        No vocabulary found.
+                    </div>
+                )}
+            </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+                <div className="flex justify-center gap-2 mt-4">
+                    <Button
+                        variant="ghost"
+                        disabled={page === 1}
+                        onClick={() => setPage(p => Math.max(1, p - 1))}
+                    >
+                        Previous
+                    </Button>
+                    <span className="flex items-center text-sm text-gray-600">
+                        Page {page} of {totalPages}
+                    </span>
+                    <Button
+                        variant="ghost"
+                        disabled={page === totalPages}
+                        onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                    >
+                        Next
+                    </Button>
+                </div>
+            )}
+        </div>
+    );
+}
