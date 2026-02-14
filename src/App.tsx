@@ -20,11 +20,11 @@ const AboutScreen = lazy(() => import('./pages/about/AboutScreen').then(module =
 const VocabDetailScreen = lazy(() => import('./pages/vocab/VocabDetailScreen'));
 
 function SyncStatusIndicator() {
-    const { isSyncing, isAuthenticated } = useGoogleDrive();
+    const { isUploading, isDownloading, isAuthenticated } = useGoogleDrive();
 
     if (!isAuthenticated) return null;
 
-    if (isSyncing) {
+    if (isUploading || isDownloading) {
         return <RefreshCw size={18} className="animate-spin text-gray-400" />;
     }
 
@@ -37,12 +37,12 @@ function SyncStatusIndicator() {
 
 export const App: React.FC = () => {
     const { state, actions, isSetupComplete } = useQuiz();
-    const { isInitialSyncComplete } = useGoogleDrive();
+    const { isInitialLoadComplete, isDownloading } = useGoogleDrive();
     const navigate = useNavigate();
     const location = useLocation();
 
-    // Show sync loader if initial sync is in progress
-    if (!isInitialSyncComplete) {
+    // Show sync loader if initial sync is in progress or manual download is happening
+    if (!isInitialLoadComplete || isDownloading) {
         return <Loader title="Syncing your progress..." description="進捗を同期中..." />;
     }
 

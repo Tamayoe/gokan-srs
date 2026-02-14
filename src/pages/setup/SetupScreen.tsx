@@ -13,25 +13,25 @@ import { Cloud, Loader2, LogIn } from "lucide-react";
 import { Loader } from "../../components/Loader";
 
 function GoogleLoginButton({ onSyncComplete }: { onSyncComplete: () => void }) {
-    const { login, isSyncing, isAuthenticated, sync } = useGoogleDrive();
+    const { login, isDownloading, isAuthenticated, downloadProgress } = useGoogleDrive();
     const [hasAttemptedAutoRestore, setHasAttemptedAutoRestore] = useState(false);
 
     // Auto-restore effect:
     useEffect(() => {
         let mounted = true;
         const tryRestore = async () => {
-            if (isAuthenticated && !isSyncing) {
-                // 1. Check if we already have progress (e.g. from login auto-sync)
+            if (isAuthenticated && !isDownloading) {
+                // 1. Check if we already have progress (e.g. from login download)
                 if (StorageService.loadProgress()) {
                     onSyncComplete();
                     return;
                 }
 
-                // 2. If not, and we haven't tried yet (e.g. page reload), try explicit sync
+                // 2. If not, and we haven't tried yet (e.g. page reload), try explicit download
                 if (!hasAttemptedAutoRestore) {
                     setHasAttemptedAutoRestore(true);
-                    const success = await sync();
-                    if (success && mounted) {
+                    await downloadProgress();
+                    if (mounted) {
                         onSyncComplete();
                     }
                 }
@@ -39,9 +39,9 @@ function GoogleLoginButton({ onSyncComplete }: { onSyncComplete: () => void }) {
         };
         tryRestore();
         return () => { mounted = false; };
-    }, [isAuthenticated, isSyncing, hasAttemptedAutoRestore, sync, onSyncComplete]);
+    }, [isAuthenticated, isDownloading, hasAttemptedAutoRestore, downloadProgress, onSyncComplete]);
 
-    if (isSyncing) {
+    if (isDownloading) {
         return (
             <div className="flex items-center gap-2 px-4 py-2 text-sm text-green-600">
                 <Loader2 size={16} className="animate-spin" />
@@ -57,12 +57,8 @@ function GoogleLoginButton({ onSyncComplete }: { onSyncComplete: () => void }) {
             <Button
                 variant="ghost"
                 onClick={async () => {
-                    const success = await sync();
-                    if (success) {
-                        onSyncComplete();
-                    } else {
-                        alert("We couldn't find any backup to restore.");
-                    }
+                    await downloadProgress();
+                    onSyncComplete();
                 }}
                 className="text-sm font-medium hover:bg-black/5 text-primary"
             >
@@ -86,7 +82,7 @@ function GoogleLoginButton({ onSyncComplete }: { onSyncComplete: () => void }) {
 
 export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) => Promise<void> }) {
     const { state } = useKanjiForm();
-    const { isSyncing } = useGoogleDrive();
+    const { isDownloading } = useGoogleDrive();
 
     const [learningOrder, setLearningOrder] = useState<LearningOrder>('frequency');
 
@@ -142,7 +138,7 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
                     <Button
                         variant="primary"
                         onClick={handleSubmit}
-                        disabled={!state.knownKanji || isSyncing}
+                        disabled={!state.knownKanji || isDownloading}
                         className="w-full py-4 text-lg font-serif h-14"
                     >
                         Start learning

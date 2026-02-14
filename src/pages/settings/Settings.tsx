@@ -6,7 +6,7 @@ import { Button } from "../../components/ui/Button";
 import { useTheme } from "../../context/ThemeContext";
 
 function SyncControls() {
-    const { login, logout, sync, isSyncing, isAuthenticated, user } = useGoogleDrive();
+    const { login, logout, downloadProgress, isDownloading, isAuthenticated, user } = useGoogleDrive();
 
     if (!isAuthenticated) {
         return (
@@ -56,11 +56,11 @@ function SyncControls() {
 
             <Button
                 variant="primary"
-                onClick={() => sync()}
-                disabled={isSyncing}
+                onClick={() => downloadProgress()}
+                disabled={isDownloading}
                 className="w-full justify-center"
             >
-                {isSyncing ? (
+                {isDownloading ? (
                     <>
                         <Loader2 size={18} className="animate-spin mr-2" />
                         Syncing...

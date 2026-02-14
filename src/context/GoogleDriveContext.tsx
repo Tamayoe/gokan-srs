@@ -16,20 +16,25 @@ interface GoogleUser {
 interface GoogleDriveContextType {
     login: () => void;
     logout: () => void;
-    sync: () => Promise<boolean>;
-    isSyncing: boolean;
+    downloadProgress: () => Promise<void>;
+    uploadProgress: (progress: any) => Promise<void>;
+    isDownloading: boolean;
+    isUploading: boolean;
     user: GoogleUser | null;
     isAuthenticated: boolean;
-    isInitialSyncComplete: boolean;
+    isInitialLoadComplete: boolean; // Renamed from isInitialSyncComplete
+    lastDownloadTime: number | null; // Renamed from lastSyncTime
 }
 
 const GoogleDriveContext = createContext<GoogleDriveContextType | null>(null);
 
 export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const [lastDownloadTime, setLastDownloadTime] = useState<number | null>(null);
     const [user, setUser] = useState<GoogleUser | null>(null);
-    const [isSyncing, setIsSyncing] = useState(false);
+    const [isDownloading, setIsDownloading] = useState(false);
+    const [isUploading, setIsUploading] = useState(false);
     const [syncService, setSyncService] = useState<GoogleDriveSync | null>(null);
-    const [isInitialSyncComplete, setIsInitialSyncComplete] = useState(true); // Default true for no-sync case
+    const [isInitialLoadComplete, setIsInitialLoadComplete] = useState(false);
 
     // Fetch user profile from Google
     const fetchUserProfile = async (accessToken: string): Promise<Partial<GoogleUser>> => {
@@ -49,49 +54,88 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
         }
     };
 
-    // Load persisted token on mount
-    useEffect(() => {
-        const storedToken = localStorage.getItem(CONSTANTS.storage.googleDriveTokenKey);
-        if (storedToken) {
-            setIsInitialSyncComplete(false); // Start as not complete
+    const logout = (triggerReauth: boolean = false) => {
+        googleLogout();
+        localStorage.removeItem(CONSTANTS.storage.googleDriveTokenKey);
+        setUser(null);
+        setSyncService(null);
 
-            // Fetch user profile and set user state
-            fetchUserProfile(storedToken).then(profile => {
-                setUser({ access_token: storedToken, ...profile });
-            });
-
-            const service = new GoogleDriveSync(storedToken);
-            setSyncService(service);
-
-            // Trigger background sync on load to fetch latest progress from Drive
-            service.initialize().then(merged => {
-                if (merged) {
-                    console.log("Background sync init complete");
-                    StorageService.saveProgress(merged);
-                }
-                setIsInitialSyncComplete(true); // Mark as complete
-            }).catch(error => {
-                console.error("Background sync failed:", error);
-
-                // If authentication failed, log out the user
-                if (error instanceof GoogleAuthError) {
-                    console.error('Authentication expired on initial sync, logging out...');
-                    // Clear the stored token and reset state, then trigger re-auth
-                    localStorage.removeItem(CONSTANTS.storage.googleDriveTokenKey);
-                    setUser(null);
-                    setSyncService(null);
-
-                    // Trigger re-authentication
-                    setTimeout(() => {
-                        console.log('Triggering re-authentication after initial sync failure...');
-                        login();
-                    }, 100);
-                }
-
-                setIsInitialSyncComplete(true); // Allow app to proceed even on error
-            });
+        if (triggerReauth) {
+            setTimeout(() => {
+                console.log('Triggering re-authentication...');
+                login();
+            }, 100);
         }
-    }, []);
+    };
+
+    // BLOCKING DOWNLOAD: Fetches remote, merges, updates local storage, triggers app reload
+    const downloadProgress = async (service: GoogleDriveSync) => {
+        setIsDownloading(true);
+        const startTime = Date.now();
+        const MIN_LOADING_TIME = 1000; // slightly longer for "heavy" feel
+
+        try {
+            const currentLocal = StorageService.loadProgress();
+
+            // We use the sync method because it handles the logic of "Fetch Remote -> Merge"
+            // We want to ensure we have the latest from cloud before we start.
+            // If we have local data, we merge. If not, we initialize.
+            let merged;
+            if (currentLocal) {
+                // Even on download, we might have local changes (offline). 
+                // sync() will upload them. This is technically a "Sync", but treated as a Download event for the UI.
+                await service.sync(currentLocal as any);
+                // We reload from storage to see the result
+                merged = StorageService.loadProgress();
+            } else {
+                merged = await service.initialize();
+                if (merged) StorageService.saveProgress(merged);
+            }
+
+            console.log("Download/Sync completed");
+            setLastDownloadTime(Date.now()); // Triggers QuizContext reload
+        } catch (error) {
+            console.error("Download failed:", error);
+            if (error instanceof GoogleAuthError) {
+                logout(true);
+            }
+        } finally {
+            const elapsed = Date.now() - startTime;
+            if (elapsed < MIN_LOADING_TIME) {
+                await new Promise(resolve => setTimeout(resolve, MIN_LOADING_TIME - elapsed));
+            }
+            setIsDownloading(false);
+            setIsInitialLoadComplete(true);
+        }
+    };
+
+    // BACKGROUND UPLOAD: Pushes local changes to cloud. Does NOT trigger app reload.
+    const uploadProgress = async (progress: any) => {
+        if (!syncService || isDownloading) return;
+
+        setIsUploading(true);
+        try {
+            // sync() method does: Fetch Remote -> Merge -> Upload -> Save Local
+            // We trust it to update localStorage with the latest state.
+            await syncService.sync(progress);
+            console.log("Background upload completed");
+            // NOTE: We do NOT setLastDownloadTime here. 
+            // QuizContext keeps using its current state (which is ahead or equal to what we just uploaded).
+            // LocalStorage is updated in background for next reload.
+        } catch (error) {
+            console.error("Background upload failed:", error);
+            // Silent fail for background uploads, or maybe a small toast?
+            // If auth error, we might want to prompt, but sticky auth errors are annoying.
+            // For now, let's only logout on critical/download actions or repeated failures?
+            // Actually, if auth is dead, we should probably stop.
+            if (error instanceof GoogleAuthError) {
+                // Maybe set a flag "AuthFailed"? For now, aggressive re-auth is safer for data.
+                // logout(true); 
+            }
+        } finally {
+            setIsUploading(false);
+        }
+    };
 
     const login = useGoogleLogin({
         scope: 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
@@ -106,114 +150,46 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             const service = new GoogleDriveSync(tokenResponse.access_token);
             setSyncService(service);
 
-            // Auto-sync on login
-            await performSync(service);
+            // Auto-download on login
+            await downloadProgress(service);
         },
         onError: error => {
             console.error('Login Failed:', error);
-            // If user cancels or login fails, ensure they're logged out
-            // This returns the app to the default state
             logout();
         }
     });
 
-    const logout = (triggerReauth: boolean = false) => {
-        googleLogout();
-        localStorage.removeItem(CONSTANTS.storage.googleDriveTokenKey);
-        setUser(null);
-        setSyncService(null);
+    // Load persisted token on mount
+    useEffect(() => {
+        const storedToken = localStorage.getItem(CONSTANTS.storage.googleDriveTokenKey);
+        if (storedToken) {
+            // Fetch user profile and set user state
+            fetchUserProfile(storedToken).then(profile => {
+                setUser({ access_token: storedToken, ...profile });
+            });
 
-        // If requested, trigger re-authentication after logout
-        if (triggerReauth) {
-            // Use setTimeout to ensure logout completes first
-            setTimeout(() => {
-                console.log('Triggering re-authentication...');
-                login();
-            }, 100);
+            const service = new GoogleDriveSync(storedToken);
+            setSyncService(service);
+
+            // Trigger blocking download on mount
+            downloadProgress(service);
+        } else {
+            setIsInitialLoadComplete(true); // No user, load is "complete" (ready for guest/setup)
         }
-    };
-
-    const performSync = async (service: GoogleDriveSync) => {
-        setIsSyncing(true);
-        const startTime = Date.now();
-        const MIN_LOADING_TIME = 800; // ms
-
-        try {
-            // First initialize - gets remote, merges with local
-            const merged = await service.initialize();
-
-            if (merged) {
-                console.log("Sync completed", merged);
-                StorageService.saveProgress(merged);
-            }
-        } catch (error) {
-            console.error("Sync failed:", error);
-
-            // If authentication failed, log out the user and trigger re-auth
-            if (error instanceof GoogleAuthError) {
-                console.error('Authentication expired, logging out and prompting re-authentication...');
-                logout(true); // Pass true to trigger re-authentication
-            }
-        } finally {
-            // Ensure visual feedback persists long enough to be seen
-            const elapsed = Date.now() - startTime;
-            if (elapsed < MIN_LOADING_TIME) {
-                await new Promise(resolve => setTimeout(resolve, MIN_LOADING_TIME - elapsed));
-            }
-            setIsSyncing(false);
-        }
-    };
-
-    const sync = async (): Promise<boolean> => {
-        if (!syncService) return false;
-
-        setIsSyncing(true);
-        const startTime = Date.now();
-        const MIN_LOADING_TIME = 800; // ms
-        let success = false;
-
-        try {
-            const currentLocal = StorageService.loadProgress();
-
-            if (currentLocal) {
-                await syncService.sync(currentLocal as any);
-                success = true;
-            } else {
-                // For fresh install/restore, merge local (null) with remote
-                const merged = await syncService.initialize();
-                if (merged) {
-                    StorageService.saveProgress(merged);
-                    success = true;
-                }
-            }
-        } catch (e) {
-            console.error(e);
-            success = false;
-
-            // If authentication failed, log out the user and trigger re-auth
-            if (e instanceof GoogleAuthError) {
-                console.error('Authentication expired, logging out and prompting re-authentication...');
-                logout(true); // Pass true to trigger re-authentication
-            }
-        } finally {
-            const elapsed = Date.now() - startTime;
-            if (elapsed < MIN_LOADING_TIME) {
-                await new Promise(resolve => setTimeout(resolve, MIN_LOADING_TIME - elapsed));
-            }
-            setIsSyncing(false);
-        }
-        return success;
-    };
+    }, []);
 
     return (
         <GoogleDriveContext.Provider value={{
             login,
             logout,
-            sync,
-            isSyncing,
+            downloadProgress: () => syncService ? downloadProgress(syncService) : Promise.resolve(),
+            uploadProgress,
+            isDownloading,
+            isUploading,
             user,
             isAuthenticated: !!user,
-            isInitialSyncComplete
+            isInitialLoadComplete,
+            lastDownloadTime
         }}>
             {children}
         </GoogleDriveContext.Provider>

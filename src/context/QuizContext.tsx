@@ -545,18 +545,44 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         if (state.settings) StorageService.saveSettings(state.settings);
     }, [state.settings]);
 
-    /* ---------- Auto-Sync ---------- */
-    const { sync, isAuthenticated, isSyncing } = useGoogleDrive();
+    /* ---------- Auto-Sync & Reactivity ---------- */
+    const {
+        uploadProgress,
+        isDownloading,
+        lastDownloadTime
+    } = useGoogleDrive();
 
+    // AUTO-UPLOAD: Whenever progress changes, upload it to Drive in background
     useEffect(() => {
-        if (state.progress && isAuthenticated && !isSyncing) {
-            const timer = setTimeout(() => {
-                sync().catch(console.error);
-            }, 5000);
-
-            return () => clearTimeout(timer);
+        if (state.progress && !isDownloading) {
+            // Debounce could be added here if needed, but for now we trust the service
+            // The uploadProgress function is safe to call repeatedly (fire and forget)
+            uploadProgress(state.progress).catch(err => {
+                console.error("[QuizContext] Auto-upload failed", err);
+            });
         }
-    }, [state.progress, isAuthenticated]);
+    }, [state.progress]); // Triggers on every answer, queue advance, intro choice etc.
+
+    // REACT TO DOWNLOAD COMPLETION: Reload data when lastDownloadTime changes
+    useEffect(() => {
+        if (lastDownloadTime) {
+            console.log(`[QuizContext] Download completed at ${lastDownloadTime}, reloading data...`);
+            const refreshedProgress = StorageService.loadProgress();
+            const refreshedSettings = StorageService.loadSettings() ?? DEFAULT_SETTINGS;
+
+            if (refreshedProgress) {
+                setTimeout(() => { // Avoid render cycle conflict
+                    dispatch({
+                        type: 'SETUP_COMPLETE',
+                        payload: {
+                            progress: refreshedProgress,
+                            settings: refreshedSettings
+                        }
+                    });
+                }, 0);
+            }
+        }
+    }, [lastDownloadTime]);
 
     /* ---------- Load vocab ---------- */
 
