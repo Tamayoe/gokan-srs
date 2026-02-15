@@ -13,6 +13,7 @@
     "build:kanji": "bun scripts/build-kanji.ts",
     "build:vocab": "rimraf ./data/compiled/vocab && bun scripts/build-vocabulary.ts",
     "build:jpdb": "bun scripts/jpdb-v2.2-tsv-to-json.js",
+    "build:sentences": "bun scripts/build-sentences.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

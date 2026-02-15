@@ -9,6 +9,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { VocabularyService } from "../../services/vocabulary.service";
 import { Button } from "../../components/ui/Button";
 import { LoadingScreen } from "../../components/LoadingScreen";
+import { VocabSentencesCard } from "./VocabSentencesCard";
 
 export default function VocabDetailScreen() {
     const { vocabId } = useParams<{ vocabId: string }>();
@@ -200,6 +201,9 @@ export default function VocabDetailScreen() {
                                 ))}
                             </div>
                         </Card>
+
+                        {/* Sentences Card */}
+                        <VocabSentencesCard vocabId={vocab.id} currentKanji={vocab.writtenForm.kanji} />
                     </div>
                 </div>
             </main>

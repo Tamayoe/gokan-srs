@@ -49,24 +49,60 @@ export class SRSService {
         return { result: bestResult, matchedAnswer: bestMatch };
     }
 
+    /**
+     * Checks user input against ALL acceptable meanings (glosses).
+     * Returns the best result found.
+     */
+    static evaluateMeaning(
+        userInput: string,
+        meanings: string[]
+    ): { result: AnswerResult; matchedAnswer: string } {
+        let bestResult: AnswerResult = 'wrong';
+        let bestMatch = meanings[0] || '';
+
+        for (const meaning of meanings) {
+            const res = this.analyzeMeaningError(userInput, meaning);
+
+            if (res === 'correct') {
+                return { result: 'correct', matchedAnswer: meaning };
+            }
+
+            if (res === 'minor_error') {
+                bestResult = 'minor_error';
+                bestMatch = meaning;
+            }
+        }
+
+        return { result: bestResult, matchedAnswer: bestMatch };
+    }
+
     /* =======================
        ANSWER APPLICATION
        ======================= */
 
     static applyAnswer(
         vocab: VocabProgress,
+        quizType: 'reading' | 'meaning',
         userAnswer: string,
-        correctAnswer: string, // The specific reading matched (or primary if wrong)
+        correctAnswer: string, // The specific reading/meaning matched
         latencyMs: number,
         now: Date,
-        forcedResult?: AnswerResult // Optional override if already calculated
+        forcedResult?: AnswerResult // Optional override
     ): { updated: VocabProgress; result: AnswerResult, interval: number } {
         const result = forcedResult ?? this.analyzeError(userAnswer, correctAnswer);
 
-        // [NEW] Retry Logic: If this is a retry of a previously failed item,
-        // we treat it as a "training" run. 
-        // If they get it right: Clear the retry flag, but DO NOT update SRS metrics (preserve the penalty).
-        // If they get it wrong: Keep the retry flag, DO NOT update SRS metrics (don't penalize twice).
+        // [NEW] Retry Logic: 
+        // If this exact quiz type is in retry mode, separate handling?
+        // Actually, needsRetry is currently a boolean on the whole vocab.
+        // We should PROBABLY treat needsRetry as specific to the quiz type eventually,
+        // but for now, if 'needsRetry' is true, we assume it applies to the active question.
+        // *Correction*: The user wants successive batches. If I fail Reading, I retry Reading.
+        // If I fail Meaning, I retry Meaning.
+        // The current model has a single `needsRetry` flag. 
+        // Decision: Let's assume `needsRetry` applies to the CURRENT quiz type being presented.
+        // (A safer refactor later would be `needsRetry: { reading: boolean, meaning: boolean }`)
+        // For Phase 1, we keep single flag but check it.
+
         if (vocab.needsRetry) {
             const isSuccess = result === 'correct' || result === 'minor_error';
             return {
@@ -75,40 +111,66 @@ export class SRSService {
                     needsRetry: !isSuccess // Clear if success, otherwise keep true
                 },
                 result,
-                interval: vocab.reading.interval
+                interval: quizType === 'reading' ? vocab.reading.interval : vocab.meaning.interval
             };
         }
 
-        // We focus on READING for now
-        const currentEntry = { ...vocab.reading };
+        // Select the correct entry to update
+        const currentEntry = quizType === 'reading' ? { ...vocab.reading } : { ...vocab.meaning };
 
         const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now);
 
         // Check for Graduation (Mastery)
-        const isMastered = newEntry.memoryStrength >= SRSService.MAX_MEMORY_STRENGTH;
+        // A word is graduated if BOTH are mastered? Or if the specific one is mastered?
+        // The design says: "Remains 'learning' until BOTH...". 
+        // Actually, let's keep it simple: If memoryStrength >= MAX => 'graduated' logic per entry?
+        // No, 'stage' is top-level. 
+        // Let's use the aggregation logic decided:
+        // isMastered = reading.memory >= MAX && meaning.memory >= MAX
+
+        // We update the specific entry first
+        const updatedReading = quizType === 'reading' ? newEntry : vocab.reading;
+        const updatedMeaning = quizType === 'meaning' ? newEntry : vocab.meaning;
+
+        const isReadingMastered = updatedReading.memoryStrength >= SRSService.MAX_MEMORY_STRENGTH;
+        const isMeaningMastered = updatedMeaning.memoryStrength >= SRSService.MAX_MEMORY_STRENGTH;
 
         let finalStage = vocab.stage;
-        let finalNextReviewAt = newEntry.dueDate;
+        let finalNextReviewAt: Date | null = null;
 
-        if (isMastered) {
+        if (isReadingMastered && isMeaningMastered) {
             finalStage = 'graduated';
-            finalNextReviewAt = null; // No further reviews
+            finalNextReviewAt = null; // Done forever
+        } else {
+            // Aggregation: min(reading.due, meaning.due)
+            // Be careful: if one is mastered (due=null), use the other.
+            // If both null? (Shouldn't happen if not graduated, unless new)
+
+            const rDue = isReadingMastered ? null : updatedReading.dueDate;
+            const mDue = isMeaningMastered ? null : updatedMeaning.dueDate;
+
+            if (rDue && mDue) {
+                finalNextReviewAt = rDue < mDue ? rDue : mDue;
+            } else {
+                finalNextReviewAt = rDue ?? mDue;
+            }
         }
 
-        // Set retry flag only on first wrong answer (prevents loops)
+        // Set retry flag only on first wrong answer
         const needsRetry = result === 'wrong' && !vocab.needsRetry;
 
         return {
             updated: {
                 ...vocab,
-                reading: newEntry,
+                reading: updatedReading,
+                meaning: updatedMeaning,
                 // Sync top-level fields
                 stage: finalStage,
                 nextReviewAt: finalNextReviewAt,
                 lastReviewedAt: now,
                 totalReviews: vocab.totalReviews + 1,
-                consecutiveFailures: result === 'correct' ? 0 : vocab.consecutiveFailures + 1,
-                needsRetry, // Set on first wrong, cleared on retry
+                consecutiveFailures: result === 'correct' ? 0 : vocab.consecutiveFailures + 1, // Keep legacy or tracking?
+                needsRetry,
             },
             result,
             interval
@@ -240,6 +302,38 @@ export class SRSService {
         if (dist <= 1 && u.length >= e.length) {
             return 'minor_error';
         }
+
+        return 'wrong';
+    }
+
+    static analyzeMeaningError(user: string, expected: string): AnswerResult {
+        // Normalize: Lowercase, remove punctuation, reduce spaces
+        const norm = (s: string) => s.toLowerCase().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").replace(/\s+/g, " ").trim();
+
+        const u = norm(user);
+
+        // Split by synonyms if expected contains delimiters like "; " or ", " BEFORE normalization
+        // because normalization strips punctuation.
+        const parts = expected.split(/[;,]/).map(p => norm(p)).filter(p => p.length > 0);
+
+        if (u.length === 0) return 'wrong';
+        if (u === 'pass') return 'pass';
+
+        for (const part of parts) {
+            if (u === part) return 'correct';
+
+            // Fuzzy check on part
+            const dist = this.levenshtein(u, part);
+            // Allow distance 1 for short words (len>=3), distance 2 for long (len>=6)
+            const allowed = part.length >= 6 ? 2 : (part.length >= 3 ? 1 : 0);
+
+            if (dist <= allowed) return 'minor_error';
+        }
+
+        // Also check if user input is contained in expected? NO, too loose.
+        // "eat" in "to eat" -> "correct"?
+        // "to " often ignored? 
+        // Let's strip "to " from verbs?
 
         return 'wrong';
     }
