@@ -14,6 +14,7 @@ import type {
     UserSettings,
 } from '../models/user.model';
 import type { VocabProgress, Vocabulary } from '../models/vocabulary.model';
+import type { Sentence } from '../models/sentence.model';
 import { StorageService } from '../services/storage.service';
 import { VocabularyService } from '../services/vocabulary.service';
 import { SRSService } from '../services/srs.service';
@@ -25,6 +26,7 @@ import { DEFAULT_SETTINGS } from '../models/user.model';
 import { computeSessionView } from '../utils/quiz.utils';
 import type { SetupCompleteValues, SetupValues } from "../models/state.model";
 import { getNextVocabToStudy } from "../utils/srs.utils";
+import type { QuizItem, QuizType } from "../utils/srs.utils";
 import { QuizContext } from "./useQuiz";
 import { useGoogleDrive } from "./GoogleDriveContext";
 
@@ -32,10 +34,15 @@ import { useGoogleDrive } from "./GoogleDriveContext";
    STATE & TYPES
    ========================= */
 
+// Union type for items we are about to study (Queue Item OR Intro Candidate)
+type PendingQuizItem = QuizItem | { vocabId: string; quizType: QuizType; vocab?: undefined };
+
 interface QuizState {
     progress: UserProgress | null;
     settings: UserSettings | null;
     currentVocab: Vocabulary | null;
+    currentSentences: Sentence[] | null; // [NEW] Sentences for meaning quiz
+    currentQuizItem: PendingQuizItem | null; // [NEW] Track what we are testing
     userAnswer: string;
     feedback: {
         show: boolean;
@@ -57,8 +64,8 @@ interface QuizState {
 
 type QuizAction =
     | { type: 'SETUP_COMPLETE'; payload: SetupCompleteValues }
-    | { type: 'LOAD_VOCAB_START' }
-    | { type: 'LOAD_VOCAB_SUCCESS'; payload: Vocabulary | null }
+    | { type: 'LOAD_VOCAB_START'; payload: PendingQuizItem }
+    | { type: 'LOAD_VOCAB_SUCCESS'; payload: { vocab: Vocabulary | null; sentences: Sentence[] | null } }
     | { type: 'LOAD_VOCAB_ERROR'; payload: { vocabId: string, error: any } }
     | { type: 'SET_ANSWER'; payload: string }
     | { type: 'SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswer: string } }
@@ -76,6 +83,8 @@ const initialState: QuizState = {
     progress: null,
     settings: null,
     currentVocab: null,
+    currentSentences: null,
+    currentQuizItem: null,
     userAnswer: '',
     feedback: null,
     isLoadingVocab: false,
@@ -111,6 +120,8 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
             return {
                 ...state,
                 isLoadingVocab: true,
+                currentQuizItem: action.payload, // [NEW] Set the item
+                currentSentences: null, // Reset sentences
                 userAnswer: '',
                 feedback: null,
             };
@@ -118,7 +129,8 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'LOAD_VOCAB_SUCCESS':
             return {
                 ...state,
-                currentVocab: action.payload,
+                currentVocab: action.payload.vocab,
+                currentSentences: action.payload.sentences,
                 isLoadingVocab: false,
             };
 
@@ -279,7 +291,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
 
     const nextDue = useMemo(
-        () => {
+        (): PendingQuizItem | null => { // [UPDATED] Return PendingQuizItem
             // Priority 1: Intro Candidates (Finish the batch first!)
             // We check if we are allowed to learn new items (daily limit)
             const dailyLimitReached =
@@ -288,10 +300,12 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 !state.progress.dailyOverride;
 
             if (!dailyLimitReached && state.introCandidates.length > 0) {
-                return { vocabId: state.introCandidates[0].id };
+                // Intros default to Reading quiz, with explicit vocabId
+                return { vocabId: state.introCandidates[0].id, quizType: 'reading' };
             }
 
             // Priority 2: Due Reviews & Retries from Queue
+            // getNextVocabToStudy now returns QuizItem | null
             const reviewItem = getNextVocabToStudy(state.progress?.learningQueue);
             if (reviewItem) return reviewItem;
 
@@ -348,23 +362,40 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         },
 
         submitAnswer() {
-            if (!state.currentVocab || state.feedback?.show) return;
+            if (!state.currentVocab || state.feedback?.show || !state.currentQuizItem) return;
 
-            const evaluation = SRSService.evaluateAnswer(
-                state.userAnswer,
-                state.currentVocab.reading
-            );
-
+            const quizType = state.currentQuizItem.quizType;
+            let result: AnswerResult;
+            let matchedAnswer: string;
             let message = 'Incorrect.';
-            if (evaluation.result === 'correct') message = 'Correct.';
-            else if (evaluation.result === 'minor_error') message = 'Close.';
+
+            if (quizType === 'reading') {
+                const evaluation = SRSService.evaluateAnswer(
+                    state.userAnswer,
+                    state.currentVocab.reading
+                );
+                result = evaluation.result;
+                matchedAnswer = evaluation.matchedAnswer;
+            } else {
+                // MEANING EVALUATION
+                const meanings = state.currentVocab.senses.flatMap(s => s.glosses);
+                const evaluation = SRSService.evaluateMeaning(
+                    state.userAnswer,
+                    meanings
+                );
+                result = evaluation.result;
+                matchedAnswer = evaluation.matchedAnswer;
+            }
+
+            if (result === 'correct') message = 'Correct.';
+            else if (result === 'minor_error') message = 'Close.';
 
             dispatch({
                 type: 'SUBMIT_ANSWER',
                 payload: {
-                    type: evaluation.result,
+                    type: result,
                     message,
-                    matchedAnswer: evaluation.matchedAnswer
+                    matchedAnswer
                 },
             });
         },
@@ -390,9 +421,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 sessionView.sessionState === "learn";
 
 
-            // [MODIFIED] If we have NO due reviews, and we CAN add new items, fetch candidates
-            // if we are running low on candidates.
-            // RESTORE BATCH BEHAVIOR: Only refill if completely empty, to enforce "Batch of 3" flow.
+            // [MODIFIED] If we have NO due reviews, and we CAN add items...
             const needsCandidates = canAddNew && state.introCandidates.length === 0;
 
             let newCandidates: Vocabulary[] = [];
@@ -437,7 +466,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         },
 
         async continueToNext() {
-            if (!state.progress || !state.feedback || !state.currentVocab) return;
+            if (!state.progress || !state.feedback || !state.currentVocab || !state.currentQuizItem) return;
 
             const now = new Date();
             const id = state.currentVocab.id;
@@ -450,6 +479,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             if (target) {
                 const { updated } = SRSService.applyAnswer(
                     target,
+                    state.currentQuizItem.quizType, // [UPDATED] Use real type
                     state.userAnswer,
                     state.feedback!.matchedAnswer,
                     latency,
@@ -457,7 +487,16 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     state.feedback!.type
                 );
 
-                const delta = updated.reading.memoryStrength - target.reading.memoryStrength;
+                // Delta calculation depends on type
+                const oldStrength = state.currentQuizItem.quizType === 'reading'
+                    ? target.reading.memoryStrength
+                    : target.meaning.memoryStrength;
+
+                const newStrength = state.currentQuizItem.quizType === 'reading'
+                    ? updated.reading.memoryStrength
+                    : updated.meaning.memoryStrength;
+
+                const delta = newStrength - oldStrength;
 
                 historyItem = {
                     vocabId: id,
@@ -472,6 +511,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
                 const { updated } = SRSService.applyAnswer(
                     v,
+                    state.currentQuizItem!.quizType, // [UPDATED] Use real type
                     state.userAnswer,
                     state.feedback!.matchedAnswer, // Use the matched answer we found during submit
                     latency,
@@ -588,7 +628,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     useEffect(() => {
         if (!nextDue) {
-            dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: null });
+            dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: { vocab: null, sentences: null } });
 
             // AUTO-ADVANCE TRIGGER: If queue is empty but we can introduce new vocab, refill
             if (state.progress && state.settings && sessionView.sessionState === 'learn') {
@@ -598,25 +638,40 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             return;
         }
 
-        dispatch({ type: 'LOAD_VOCAB_START' });
+        // [UPDATED] Pass nextDue (QuizItem)
+        // We need to reconstruct the QuizItem properly if it came from the "hack" above
+        let itemToLoad = nextDue;
+        if (!itemToLoad.vocab && itemToLoad.vocabId) {
+            // It's the Intro Candidate hack, keep as is
+            // Or fix the hack? The hack is just to satisify TS in nextDue return type.
+        }
+
+        dispatch({ type: 'LOAD_VOCAB_START', payload: nextDue });
 
         let alive = true;
 
-        VocabularyService.loadVocab(nextDue.vocabId).then(vocab => {
+        // Use vocabId from the item safely
+        const vid = 'vocabId' in nextDue ? nextDue.vocabId : nextDue.vocab.vocabId;
+        const quizType = nextDue.quizType;
+
+        // Load vocab and sentences (if meaning quiz) in parallel
+        Promise.all([
+            VocabularyService.loadVocab(vid),
+            quizType === 'meaning' ? VocabularyService.loadSentences(vid) : Promise.resolve(null)
+        ]).then(([vocab, sentences]) => {
             if (alive) {
-                dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: vocab });
+                dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: { vocab, sentences } });
                 startTimeRef.current = Date.now();
             }
         }).catch(err => {
             if (alive) {
-                dispatch({ type: 'LOAD_VOCAB_ERROR', payload: { vocabId: nextDue.vocabId, error: err } });
+                console.error("Failed to load vocab/sentences", err);
+                dispatch({ type: 'LOAD_VOCAB_ERROR', payload: { vocabId: vid, error: err } });
             }
         });
 
-        return () => {
-            alive = false;
-        };
-    }, [nextDue, sessionView.sessionState]);
+        return () => { alive = false; };
+    }, [nextDue, state.progress, state.settings, sessionView.sessionState]);
 
     useEffect(() => {
         if (state.feedback?.correct) {

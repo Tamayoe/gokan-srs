@@ -2,6 +2,7 @@ import { WaitingScreen } from "../../components/WaitingScreen";
 import { ExhaustedScreen } from "../../components/ExhaustedScreen";
 import { SessionProgress } from "../../components/SessionProgress";
 import { QuizCard } from "./QuizCard";
+import { MeaningQuizCard } from "./MeaningQuizCard";
 import { LoadingScreen } from "../../components/LoadingScreen";
 import { useQuiz } from "../../context/useQuiz";
 import VocabIntroCard from "../../components/VocabIntroCard";
@@ -43,7 +44,11 @@ export function QuizScreen({ onVocabClick }: QuizScreenProps) {
                 <SessionProgress />
 
                 <div className="flex-1 flex items-center justify-center py-6 w-full">
-                    <QuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
+                    {state.currentQuizItem?.quizType === 'meaning' ? (
+                        <MeaningQuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
+                    ) : (
+                        <QuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
+                    )}
                 </div>
             </div>
         </>

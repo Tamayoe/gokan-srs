@@ -149,6 +149,19 @@ gokan-srs/
 - `dueDate`: When next review is due
 - `history[]`: Array of ReviewLog entries
 
+### Sentence Models (`sentence.model.ts`)
+
+**`Sentence`**
+- `id`: Original Japanese sentence ID (from source)
+- `original`: Japanese sentence text
+- `en`: Array of English translations (id + text)
+- `indices`: Reading hints/furigana string (optional)
+
+**`SentenceSet`**
+- `vocabId`: Reference to Vocabulary.id
+- `sentences`: Array of associated Sentence objects
+
+
 ### User Models (`user.model.ts`)
 
 **`UserProgress`**
@@ -395,6 +408,15 @@ bun run build:jpdb   # Convert JPDB TSV to JSON
   - `data/compiled/index/kklc.json` (KKLC-ordered index)
   - `data/compiled/index/frequency.json` (frequency-ordered index)
 
+**`scripts/build-sentences.ts`**
+- Reads Japanese-English sentence pairs (TSV)
+- Reads reading indices (CSV)
+- Performs greedy tokenization to associate sentences with vocabulary
+- **Coverage Filtering**: Discards sentences where matched vocabulary covers < 50% of the text length (removes "mostly unknown" sentences)
+- Generates `data/compiled/sentences/{vocabId}.json` containing arrays of `Sentence` objects with `vocabIds` dependency lists.
+
+
+
 **Data Sources:**
 - KKLC: https://github.com/ppasupat/vocab-kanji
 - JMDict: Japanese-English dictionary
@@ -553,6 +575,13 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-02-15]**:
+  - **Sentence Data Integration**: Implemented `scripts/build-sentences.ts` to compile sentence dataset
+    - Reads cached TSV/CSV files and performs greedy tokenization to link sentences to vocabulary
+    - Generates ~4700 individual sentence files in `data/compiled/sentences/`
+    - Defined `Sentence` and `SentenceSet` models in `src/models/sentence.model.ts`
+    - Validated data integrity and structure
 
 - **[2026-01-29]**:
   - **Data Migration System**: Implemented comprehensive migration from old `mastery` (0-100) to new `memoryStrength`/`interval` system

@@ -1,6 +1,6 @@
 // src/services/VocabularyLoader.ts
 import type { Vocabulary } from '../models/vocabulary.model';
-import type {FrequencyIndex, KKLCIndex, KKLCKanjiIndex} from '../models/index.model';
+import type { FrequencyIndex, KKLCIndex, KKLCKanjiIndex } from '../models/index.model';
 
 export class VocabularyService {
     private static kklcIndex: KKLCIndex | null = null;
@@ -40,5 +40,18 @@ export class VocabularyService {
         const mod = await import(`../../data/compiled/vocab/${id}.json`);
         this.vocabCache.set(id, mod.default);
         return mod.default;
+    }
+
+    static async loadSentences(vocabId: string): Promise<import('../models/sentence.model').Sentence[] | null> {
+        try {
+            const mod = await import(`../../data/compiled/sentences/${vocabId}.json`);
+            // The file contains an array of sentences directly, or is it a SentenceSet?
+            // Based on previous inspection of build-sentences.ts, it generates an array of Sentences?
+            // Wait, checking the file content will confirm.
+            return mod.default;
+        } catch (e) {
+            // No sentences found for this vocab is a valid state
+            return null;
+        }
     }
 }

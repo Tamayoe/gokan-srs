@@ -28,7 +28,7 @@ describe('SRSService Formula Tests', () => {
     it('TEST CASE 1 — Correct, fast recall', () => {
         // Input: { S: 10.0, D: 0.6, Result: correct, Latency: 900 }
         const vocab = createVocab(10.0, 0.6);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 900, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 900, mockNow);
 
         // Expected: { S: 14.05000, I: 4.04190 }
         closeTo(updated.reading.memoryStrength, 14.05000);
@@ -40,7 +40,7 @@ describe('SRSService Formula Tests', () => {
         // UPDATE: With expectedLatency=10000, 3000 is FAST. To test SLOW, we need > 20000.
         // Let's use 20000 (ratio 0.5).
         const vocab = createVocab(10.0, 0.2);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 20000, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 20000, mockNow);
 
         // Expected: { S: 10.95000, I: 3.15010 }
         closeTo(updated.reading.memoryStrength, 10.95000);
@@ -52,7 +52,7 @@ describe('SRSService Formula Tests', () => {
         // We simulate 'minor_error' by passing a typo: 'こたへ' vs 'こたえ'
         // Use 10000ms as neutral (ratio 1.0)
         const vocab = createVocab(8.0, 0.4);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 10000, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'こたへ', 'こたえ', 10000, mockNow);
 
         // Expected in text file: { S: 8.73600, I: 1.75923 }
         closeTo(updated.reading.memoryStrength, 8.73600);
@@ -62,7 +62,7 @@ describe('SRSService Formula Tests', () => {
     it('TEST CASE 4 — Wrong answer', () => {
         // Input: { S: 12.0, D: 0.5, Result: wrong, Latency: 2000 }
         const vocab = createVocab(12.0, 0.5);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 2000, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'wrong', 'kotae', 2000, mockNow);
 
         // Expected: { S: 8.40000, I: 0.72495 }
         // UPDATE (10s Latency):
@@ -80,7 +80,7 @@ describe('SRSService Formula Tests', () => {
         // Input: { S: 6.0, D: 0.3, Result: pass, Latency: 1500 }
         // Neutral latency for pass
         const vocab = createVocab(6.0, 0.3);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'pass', 'kotae', 10000, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'pass', 'kotae', 10000, mockNow);
 
         // Expected in text file: { S: 5.24400, I: 1.50771 }
         // BUT strict math: 5.244 * 0.28768 = 1.508594
@@ -91,7 +91,7 @@ describe('SRSService Formula Tests', () => {
     it('TEST CASE 6 — Floor enforcement', () => {
         // Input: { S: 0.4, D: 0.1, Result: wrong, Latency: 4000 }
         const vocab = createVocab(0.4, 0.1);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 4000, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'wrong', 'kotae', 4000, mockNow);
 
         // UPDATE (10s Latency):
         // 10000/4000 = 2.5 -> L clamped to 1.5.
@@ -113,7 +113,7 @@ describe('SRSService Formula Tests', () => {
         // S_new = 0.35 * (1 - 0.6) = 0.14.
         // Floor should clamp to 0.3 because result is WRONG.
         const vocab = createVocab(0.35, 0.5);
-        const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 500, mockNow);
+        const { updated } = SRSService.applyAnswer(vocab, 'reading', 'wrong', 'kotae', 500, mockNow);
 
         closeTo(updated.reading.memoryStrength, 1.00000);
     });
@@ -126,7 +126,7 @@ describe('SRSService Formula Tests', () => {
         // D=1. L=1.5 (1500ms is super fast vs 10000ms). 
         // Delta = 0.25 * 1.5 * 1 = 0.375.
         // S_new = 0.2 * 1.375 = 0.275.
-        const { updated } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 1500, mockNow);
+        const { updated } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 1500, mockNow);
 
         closeTo(updated.reading.memoryStrength, 0.27500);
     });
@@ -146,9 +146,9 @@ describe('SRSService Formula Tests', () => {
             const initialStrength = 10.0;
             const vocab = createVocab(initialStrength, 0.3);
 
-            const { updated, interval: iResult } = SRSService.applyAnswer(vocab, input, 'こたえ', 10000, mockNow);
+            const { updated, interval: iResult } = SRSService.applyAnswer(vocab, 'reading', input, 'こたえ', 10000, mockNow);
             // Control wrong
-            const { interval: iWrong } = SRSService.applyAnswer(vocab, 'まったくちがう', 'こたえ', 10000, mockNow);
+            const { interval: iWrong } = SRSService.applyAnswer(vocab, 'reading', 'まったくちがう', 'こたえ', 10000, mockNow);
 
             if (type === 'minor') {
                 expect(iResult).toBeGreaterThan(iWrong * 2); // Minor penalty (0.7) vs Wrong (0.3)
@@ -176,7 +176,7 @@ describe('SRSService Formula Tests', () => {
     it('TEST CASE 7 — Latency upper clamp', () => {
         // Input: { S: 5.0, D: 0.7, Result: correct, Latency: 200 }
         const vocab = createVocab(5.0, 0.7);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 200, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 200, mockNow);
 
         // Expected in text file: { S: 7.17500, I: 2.06341 }
         // BUT strict math: 7.175 * 0.28768 = 2.064104
@@ -188,7 +188,7 @@ describe('SRSService Formula Tests', () => {
     it('TEST CASE 8 — Latency lower clamp', () => {
         // Input: { S: 5.0, D: 0.7, Result: correct, Latency: 10000 }
         const vocab = createVocab(5.0, 0.7);
-        const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 10000, mockNow);
+        const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 10000, mockNow);
 
         // Expected in text file: { S: 5.72500, I: 1.64798 }
         // UPDATE (10s Latency):
@@ -249,7 +249,7 @@ describe('SRSService Formula Tests', () => {
     describe('Retry Flag Behavior', () => {
         it('should set needsRetry on first wrong answer', () => {
             const vocab = createVocab(5.0, 0.3);
-            const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 10000, mockNow);
+            const { updated } = SRSService.applyAnswer(vocab, 'reading', 'wrong', 'kotae', 10000, mockNow);
 
             expect(updated.needsRetry).toBe(true);
         });
@@ -260,7 +260,7 @@ describe('SRSService Formula Tests', () => {
             const vocab = createVocab(initialStrength, 0.3, initialInterval);
             vocab.needsRetry = true; // Simulate retry state
 
-            const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 10000, mockNow);
+            const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 10000, mockNow);
 
             // Should clear flag
             expect(updated.needsRetry).toBe(false);
@@ -276,7 +276,7 @@ describe('SRSService Formula Tests', () => {
             const vocab = createVocab(initialStrength, 0.3);
             vocab.needsRetry = true; // Simulate retry state
 
-            const { updated } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 10000, mockNow);
+            const { updated } = SRSService.applyAnswer(vocab, 'reading', 'wrong', 'kotae', 10000, mockNow);
 
             // Should REMAIN TRUE (keep in loop until correct)
             expect(updated.needsRetry).toBe(true);
@@ -287,7 +287,7 @@ describe('SRSService Formula Tests', () => {
 
         it('should not set needsRetry on minor_error', () => {
             const vocab = createVocab(5.0, 0.3);
-            const { updated } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 10000, mockNow, 'minor_error');
+            const { updated } = SRSService.applyAnswer(vocab, 'reading', 'こたへ', 'こたえ', 10000, mockNow, 'minor_error');
 
             expect(updated.needsRetry).toBe(false);
         });
@@ -296,7 +296,7 @@ describe('SRSService Formula Tests', () => {
             const vocab = createVocab(5.0, 0.3);
             vocab.needsRetry = true;
 
-            const { updated } = SRSService.applyAnswer(vocab, 'こたへ', 'こたえ', 10000, mockNow, 'minor_error');
+            const { updated } = SRSService.applyAnswer(vocab, 'reading', 'こたへ', 'こたえ', 10000, mockNow, 'minor_error');
 
             expect(updated.needsRetry).toBe(false);
             // And preserve state
@@ -318,7 +318,7 @@ describe('SRSService Formula Tests', () => {
             const vocab = createVocab(1.0, 0.3); // Initial state
             // Apply correct answer
             // Neutral latency (10000)
-            const { updated, interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 10000, mockNow);
+            const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 10000, mockNow);
 
             // D = 0.6 + 0.8*0.3 = 0.84.
             // Delta = 0.25 * 1.0 * 0.84 = 0.21.
@@ -341,7 +341,7 @@ describe('SRSService Formula Tests', () => {
             // NEW            
             const vocab = createVocab(1.0, 0.3);
             // Neutral latency
-            const { interval } = SRSService.applyAnswer(vocab, 'wrong', 'kotae', 10000, mockNow);
+            const { interval } = SRSService.applyAnswer(vocab, 'reading', 'wrong', 'kotae', 10000, mockNow);
 
             expect(interval).toBe(0.5);
         });
@@ -351,7 +351,7 @@ describe('SRSService Formula Tests', () => {
             // S_new = 1.25. raw Interval = 0.36.
             // Should clamp to 1.0.
             const vocab = createVocab(1.0, 0.3);
-            const { interval } = SRSService.applyAnswer(vocab, 'kotae', 'kotae', 10000, mockNow);
+            const { interval } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 10000, mockNow);
 
             expect(interval).toBe(1.0);
         });
@@ -379,5 +379,108 @@ describe('SRSService Formula Tests', () => {
         // Note: We can't easily test createNewVocabProgress() directly as it's private,
         // but we verified the logic (0.5 default + offset) in implementation.
         // We can verify that calculateRecentWinRate is correct, which drives the offset.
+    });
+    describe('Dual Quiz Integration', () => {
+        const createDualVocab = (rMem: number, mMem: number): VocabProgress => ({
+            ...DEFAULT_VOCABULARY_PROGRESS,
+            vocabId: 'test-vocab', // Fixed ID for consistency
+            stage: 'learning',
+            reading: { ...DEFAULT_VOCABULARY_PROGRESS.reading, memoryStrength: rMem, interval: 1.0, dueDate: new Date(mockNow.getTime() + 86400000) },
+            meaning: { ...DEFAULT_VOCABULARY_PROGRESS.meaning, memoryStrength: mMem, interval: 1.0, dueDate: new Date(mockNow.getTime() + 172800000) }
+        });
+
+        it('should update Meaning SRS without affecting Reading SRS', () => {
+            const vocab = createDualVocab(5.0, 1.0); // Reading strong, Meaning weak
+            const initialReading = { ...vocab.reading };
+
+            // Update MEANING
+            const { updated } = SRSService.applyAnswer(vocab, 'meaning', 'meaning', 'meaning', 1000, mockNow);
+
+            // Meaning should change
+            expect(updated.meaning.memoryStrength).toBeGreaterThan(1.0);
+
+            // Reading should be IDENTICAL
+            expect(updated.reading.memoryStrength).toBe(initialReading.memoryStrength);
+            expect(updated.reading.interval).toBe(initialReading.interval);
+        });
+
+        it('should aggregate nextReviewAt (Min Strategy)', () => {
+            const vocab = createDualVocab(5.0, 5.0);
+            // Manually set dates
+            vocab.reading.dueDate = new Date('2025-01-02T12:00:00Z'); // Due in 1 day
+            vocab.meaning.dueDate = new Date('2025-01-05T12:00:00Z'); // Due in 4 days
+
+            // We update meaning, pushing it further
+            // New meaning due date will be > Jan 5
+            // But Reading is still due Jan 2.
+            // So top-level nextReviewAt should remain Jan 2 (Reading).
+
+            const { updated } = SRSService.applyAnswer(vocab, 'meaning', 'correct', 'correct', 1000, mockNow);
+
+            // Check top level
+            expect(updated.nextReviewAt).toEqual(vocab.reading.dueDate);
+        });
+
+        it('should NOT graduate until BOTH are mastered', () => {
+            const MAX = 1270;
+            const vocab = createDualVocab(MAX + 10, 1.0); // Reading Mastered, Meaning Weak
+
+            // Update Meaning (still weak)
+            const { updated: u1 } = SRSService.applyAnswer(vocab, 'meaning', 'correct', 'correct', 1000, mockNow);
+            expect(u1.stage).toBe('learning');
+
+            // Now Master Meaning
+            const masteredVocab = { ...vocab };
+            masteredVocab.meaning.memoryStrength = MAX + 10;
+
+            // Trigger update (on meaning)
+            const { updated: u2 } = SRSService.applyAnswer(masteredVocab, 'meaning', 'correct', 'correct', 1000, mockNow);
+            expect(u2.stage).toBe('graduated');
+            expect(u2.nextReviewAt).toBeNull();
+        });
+    });
+
+    describe('evaluateMeaning', () => {
+        const meanings = ['to eat', 'to consume'];
+
+        it('should match exact meaning', () => {
+            const { result, matchedAnswer } = SRSService.evaluateMeaning('to eat', meanings);
+            expect(result).toBe('correct');
+            expect(matchedAnswer).toBe('to eat');
+        });
+
+        it('should match case-insensitive and ignore punctuation', () => {
+            const { result } = SRSService.evaluateMeaning('To Eat!', meanings);
+            expect(result).toBe('correct');
+        });
+
+        it('should match synonyms', () => {
+            const { result, matchedAnswer } = SRSService.evaluateMeaning('to consume', meanings);
+            expect(result).toBe('correct');
+            expect(matchedAnswer).toBe('to consume');
+        });
+
+        it('should allow minor typos', () => {
+            // "to eat" (6 chars) -> allowed 2.
+            // "to aet" (dist 1 swap) -> minor.
+            const { result, matchedAnswer } = SRSService.evaluateMeaning('to aet', meanings);
+            expect(result).toBe('minor_error');
+            expect(matchedAnswer).toBe('to eat');
+        });
+
+        it('should reject totally wrong answers', () => {
+            const { result } = SRSService.evaluateMeaning('drink', meanings);
+            expect(result).toBe('wrong');
+        });
+
+        it('should handle multi-part synonyms in one string', () => {
+            // Some dicts have "eat; consume" as one string
+            const multi = ['eat; consume'];
+            const { result: r1 } = SRSService.evaluateMeaning('eat', multi);
+            expect(r1).toBe('correct');
+
+            const { result: r2 } = SRSService.evaluateMeaning('consume', multi);
+            expect(r2).toBe('correct');
+        });
     });
 });
