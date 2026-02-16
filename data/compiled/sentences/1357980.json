@@ -1,5 +1,39 @@
 [
   {
+    "id": "82207",
+    "original": "僕の車を触らないでくれ。",
+    "en": [
+      {
+        "id": "321506",
+        "text": "Leave my car alone."
+      },
+      {
+        "id": "3659929",
+        "text": "Don't touch my car."
+      }
+    ],
+    "indices": "僕(ぼく)[01] の 車(くるま) を 触る{触らないで} 呉れる{くれ}",
+    "vocabIds": [
+      "1521400",
+      "1323080",
+      "1357980"
+    ],
+    "matches": {
+      "1323080": {
+        "start": 2,
+        "length": 1
+      },
+      "1357980": {
+        "start": 4,
+        "length": 4
+      },
+      "1521400": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
     "id": "145941",
     "original": "触るな！",
     "en": [
@@ -27,7 +61,166 @@
     "indices": "触る{触るな}",
     "vocabIds": [
       "1357980"
-    ]
+    ],
+    "matches": {
+      "1357980": {
+        "start": 0,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "147005",
+    "original": "小さな子供は何にでも触ってみるのが好きです。",
+    "en": [
+      {
+        "id": "267556",
+        "text": "Little children like to touch everything."
+      }
+    ],
+    "indices": "小さな 子供 は 何にでも 触る{触って} 見る[05]{みる} の が 好き(すき) です",
+    "vocabIds": [
+      "2136180",
+      "1307850",
+      "2846738",
+      "1357980",
+      "1277450"
+    ],
+    "matches": {
+      "1277450": {
+        "start": 17,
+        "length": 2
+      },
+      "1307850": {
+        "start": 3,
+        "length": 2
+      },
+      "1357980": {
+        "start": 10,
+        "length": 3
+      },
+      "2136180": {
+        "start": 0,
+        "length": 3
+      },
+      "2846738": {
+        "start": 6,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "157277",
+    "original": "私は肩に触られるのを感じた。",
+    "en": [
+      {
+        "id": "257256",
+        "text": "I felt myself touched on the shoulder."
+      }
+    ],
+    "indices": "私(わたし)[01] は 肩 に 触る{触られる} の を 感じる{感じた}",
+    "vocabIds": [
+      "1311110",
+      "1258950",
+      "1357980",
+      "1212260"
+    ],
+    "matches": {
+      "1212260": {
+        "start": 10,
+        "length": 3
+      },
+      "1258950": {
+        "start": 2,
+        "length": 1
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1
+      },
+      "1357980": {
+        "start": 4,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "163508",
+    "original": "私の持ち物には触らないで。",
+    "en": [
+      {
+        "id": "251004",
+        "text": "Let my things alone."
+      },
+      {
+        "id": "1261418",
+        "text": "Leave my stuff alone."
+      },
+      {
+        "id": "1261419",
+        "text": "Leave my things alone."
+      }
+    ],
+    "indices": "私(わたし)[01]{私の} 持ち物 には 触る{触らないで}",
+    "vocabIds": [
+      "1311110",
+      "1605240",
+      "1357980"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1
+      },
+      "1357980": {
+        "start": 7,
+        "length": 4
+      },
+      "1605240": {
+        "start": 2,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "188574",
+    "original": "汚い手で私の本に触らないで。",
+    "en": [
+      {
+        "id": "25718",
+        "text": "Don't handle my books with dirty hands."
+      }
+    ],
+    "indices": "汚い 手[01] で(#2028980) 私(わたし)[01]{私の} 本(ほん)[01] に 触る{触らないで}",
+    "vocabIds": [
+      "1178940",
+      "1327190",
+      "1311110",
+      "1522150",
+      "1357980"
+    ],
+    "matches": {
+      "1178940": {
+        "start": 0,
+        "length": 2
+      },
+      "1311110": {
+        "start": 4,
+        "length": 1
+      },
+      "1327190": {
+        "start": 2,
+        "length": 1
+      },
+      "1357980": {
+        "start": 8,
+        "length": 4
+      },
+      "1522150": {
+        "start": 6,
+        "length": 1
+      }
+    }
   },
   {
     "id": "205068",
@@ -40,9 +233,19 @@
     ],
     "indices": "其れ[01]{それ} は 触る と 柔らかい[01]",
     "vocabIds": [
-      "1605630",
-      "1357980"
-    ]
+      "1357980",
+      "1605630"
+    ],
+    "matches": {
+      "1357980": {
+        "start": 3,
+        "length": 2
+      },
+      "1605630": {
+        "start": 6,
+        "length": 4
+      }
+    }
   },
   {
     "id": "219892",
@@ -55,11 +258,331 @@
     ],
     "indices": "此の{この} 壁[01] は 触る と 冷たい[01] 感じがする",
     "vocabIds": [
-      "1556730",
-      "1212250",
+      "1509290",
       "1357980",
-      "1509290"
-    ]
+      "1556730",
+      "1212250"
+    ],
+    "matches": {
+      "1212250": {
+        "start": 10,
+        "length": 2
+      },
+      "1357980": {
+        "start": 4,
+        "length": 2
+      },
+      "1509290": {
+        "start": 2,
+        "length": 1
+      },
+      "1556730": {
+        "start": 7,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "1202351",
+    "original": "君は絶対トムの気に触らないように気を付けないと。",
+    "en": [
+      {
+        "id": "1092097",
+        "text": "You should make sure that you don't make Tom angry."
+      }
+    ],
+    "vocabIds": [
+      "1247260",
+      "1386840",
+      "1221520",
+      "1357980",
+      "1495770"
+    ],
+    "matches": {
+      "1221520": {
+        "start": 7,
+        "length": 1
+      },
+      "1247260": {
+        "start": 0,
+        "length": 1
+      },
+      "1357980": {
+        "start": 9,
+        "length": 4
+      },
+      "1386840": {
+        "start": 2,
+        "length": 2
+      },
+      "1495770": {
+        "start": 18,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "3558988",
+    "original": "胸触ってもいい？",
+    "en": [
+      {
+        "id": "3583311",
+        "text": "Can I touch your chest?"
+      },
+      {
+        "id": "3583312",
+        "text": "Can I touch your breasts?"
+      }
+    ],
+    "vocabIds": [
+      "1237820",
+      "1357980"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 0,
+        "length": 1
+      },
+      "1357980": {
+        "start": 1,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "3697547",
+    "original": "前にも言ったけど、もう一度言おう。私の物を触るな！",
+    "en": [
+      {
+        "id": "3696807",
+        "text": "I've said it before and I'm saying it again: don't touch my things!"
+      }
+    ],
+    "vocabIds": [
+      "1392580",
+      "1587040",
+      "2005860",
+      "1956230",
+      "1311110",
+      "1502390",
+      "1357980"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 17,
+        "length": 1
+      },
+      "1357980": {
+        "start": 21,
+        "length": 2
+      },
+      "1392580": {
+        "start": 0,
+        "length": 1
+      },
+      "1502390": {
+        "start": 19,
+        "length": 1
+      },
+      "1587040": {
+        "start": 3,
+        "length": 3
+      },
+      "1956230": {
+        "start": 13,
+        "length": 1
+      },
+      "2005860": {
+        "start": 9,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "3051193",
+    "original": "二度と私のものに触らないで。",
+    "en": [
+      {
+        "id": "4717615",
+        "text": "Don't ever touch my things again."
+      }
+    ],
+    "vocabIds": [
+      "2110850",
+      "1311110",
+      "1357980"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 3,
+        "length": 1
+      },
+      "1357980": {
+        "start": 8,
+        "length": 4
+      },
+      "2110850": {
+        "start": 0,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "4836753",
+    "original": "私に触らないで。",
+    "en": [
+      {
+        "id": "1849378",
+        "text": "Don't touch me."
+      },
+      {
+        "id": "10091785",
+        "text": "Get your dirty paws off me."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1357980"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1
+      },
+      "1357980": {
+        "start": 2,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "9819565",
+    "original": "前も言ったけど、もう一度言うわね。私の物に触らないで！",
+    "en": [
+      {
+        "id": "3696807",
+        "text": "I've said it before and I'm saying it again: don't touch my things!"
+      },
+      {
+        "id": "9819588",
+        "text": "I've said it before and I'll say it again: Don't touch my stuff!"
+      }
+    ],
+    "vocabIds": [
+      "1392580",
+      "1587040",
+      "2005860",
+      "1311110",
+      "1502390",
+      "1357980"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 17,
+        "length": 1
+      },
+      "1357980": {
+        "start": 21,
+        "length": 4
+      },
+      "1392580": {
+        "start": 0,
+        "length": 1
+      },
+      "1502390": {
+        "start": 19,
+        "length": 1
+      },
+      "1587040": {
+        "start": 2,
+        "length": 3
+      },
+      "2005860": {
+        "start": 8,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "9972308",
+    "original": "僕の自転車に触らないでよ。",
+    "en": [
+      {
+        "id": "757521",
+        "text": "Don't touch my bike."
+      },
+      {
+        "id": "251044",
+        "text": "Keep your hands off my bicycle."
+      }
+    ],
+    "vocabIds": [
+      "1521400",
+      "1318290",
+      "1357980"
+    ],
+    "matches": {
+      "1318290": {
+        "start": 2,
+        "length": 3
+      },
+      "1357980": {
+        "start": 6,
+        "length": 4
+      },
+      "1521400": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "10091818",
+    "original": "そんな汚い手で触らないで。",
+    "en": [
+      {
+        "id": "10091785",
+        "text": "Get your dirty paws off me."
+      }
+    ],
+    "vocabIds": [
+      "1178940",
+      "1327190",
+      "1357980"
+    ],
+    "matches": {
+      "1178940": {
+        "start": 3,
+        "length": 2
+      },
+      "1327190": {
+        "start": 5,
+        "length": 1
+      },
+      "1357980": {
+        "start": 7,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "10231739",
+    "original": "触らないで！",
+    "en": [
+      {
+        "id": "1173313",
+        "text": "Don't touch me!"
+      }
+    ],
+    "vocabIds": [
+      "1357980"
+    ],
+    "matches": {
+      "1357980": {
+        "start": 0,
+        "length": 4
+      }
+    }
   },
   {
     "id": "10914804",
@@ -73,7 +596,41 @@
     "vocabIds": [
       "1357980",
       "1432680"
-    ]
+    ],
+    "matches": {
+      "1357980": {
+        "start": 2,
+        "length": 2
+      },
+      "1432680": {
+        "start": 5,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "11310607",
+    "original": "花は触らないで。",
+    "en": [
+      {
+        "id": "23766",
+        "text": "Don't touch the flowers."
+      }
+    ],
+    "vocabIds": [
+      "1194500",
+      "1357980"
+    ],
+    "matches": {
+      "1194500": {
+        "start": 0,
+        "length": 1
+      },
+      "1357980": {
+        "start": 2,
+        "length": 4
+      }
+    }
   },
   {
     "id": "11317199",
@@ -87,6 +644,185 @@
     "vocabIds": [
       "1346190",
       "1357980"
-    ]
+    ],
+    "matches": {
+      "1346190": {
+        "start": 0,
+        "length": 2
+      },
+      "1357980": {
+        "start": 3,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "11317202",
+    "original": "無断で触るな。",
+    "en": [
+      {
+        "id": "3000631",
+        "text": "Don't touch anything without asking first."
+      }
+    ],
+    "vocabIds": [
+      "1956960",
+      "1918840",
+      "1357980"
+    ],
+    "matches": {
+      "1357980": {
+        "start": 3,
+        "length": 2
+      },
+      "1918840": {
+        "start": 1,
+        "length": 1
+      },
+      "1956960": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "11582523",
+    "original": "触らないでって言ったでしょ。",
+    "en": [
+      {
+        "id": "2544400",
+        "text": "I told you not to touch me."
+      }
+    ],
+    "vocabIds": [
+      "1357980",
+      "1587040"
+    ],
+    "matches": {
+      "1357980": {
+        "start": 0,
+        "length": 4
+      },
+      "1587040": {
+        "start": 7,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "11851915",
+    "original": "自分の頭、触ってみ。",
+    "en": [
+      {
+        "id": "11177705",
+        "text": "Touch your head."
+      }
+    ],
+    "vocabIds": [
+      "1318610",
+      "1582310",
+      "1357980"
+    ],
+    "matches": {
+      "1318610": {
+        "start": 0,
+        "length": 2
+      },
+      "1357980": {
+        "start": 5,
+        "length": 3
+      },
+      "1582310": {
+        "start": 3,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "11858089",
+    "original": "誰よ。私の本触ったの。",
+    "en": [
+      {
+        "id": "10112466",
+        "text": "Who touched my books?"
+      }
+    ],
+    "vocabIds": [
+      "1416830",
+      "1311110",
+      "1522150",
+      "1357980"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 3,
+        "length": 1
+      },
+      "1357980": {
+        "start": 6,
+        "length": 3
+      },
+      "1416830": {
+        "start": 0,
+        "length": 1
+      },
+      "1522150": {
+        "start": 5,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "11897858",
+    "original": "つま先に触ってください。",
+    "en": [
+      {
+        "id": "10727883",
+        "text": "Touch your toes."
+      }
+    ],
+    "vocabIds": [
+      "1433910",
+      "1357980"
+    ],
+    "matches": {
+      "1357980": {
+        "start": 4,
+        "length": 3
+      },
+      "1433910": {
+        "start": 0,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "12927681",
+    "original": "汚い手でこれに触らないで。",
+    "en": [
+      {
+        "id": "3783130",
+        "text": "Don't touch this with your dirty hands."
+      }
+    ],
+    "vocabIds": [
+      "1178940",
+      "1327190",
+      "1357980"
+    ],
+    "matches": {
+      "1178940": {
+        "start": 0,
+        "length": 2
+      },
+      "1327190": {
+        "start": 2,
+        "length": 1
+      },
+      "1357980": {
+        "start": 7,
+        "length": 4
+      }
+    }
   }
 ]

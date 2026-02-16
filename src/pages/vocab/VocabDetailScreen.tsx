@@ -203,7 +203,7 @@ export default function VocabDetailScreen() {
                         </Card>
 
                         {/* Sentences Card */}
-                        <VocabSentencesCard vocabId={vocab.id} currentKanji={vocab.writtenForm.kanji} />
+                        <VocabSentencesCard vocabId={vocab.id} />
                     </div>
                 </div>
             </main>

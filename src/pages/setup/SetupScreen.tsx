@@ -99,7 +99,8 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
                 },
                 settings: {
                     preferredLearningOrder: learningOrder,
-                }
+                    enableMeaningQuiz: true, // Default to true
+                },
             }
             onComplete(values).then();
         }

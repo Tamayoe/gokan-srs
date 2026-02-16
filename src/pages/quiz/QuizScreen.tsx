@@ -45,7 +45,10 @@ export function QuizScreen({ onVocabClick }: QuizScreenProps) {
 
                 <div className="flex-1 flex items-center justify-center py-6 w-full">
                     {state.currentQuizItem?.quizType === 'meaning' ? (
-                        <MeaningQuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
+                        <MeaningQuizCard
+                            onKanjiClick={() => onVocabClick(state.currentVocab!.id)}
+                            onVocabClick={onVocabClick}
+                        />
                     ) : (
                         <QuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
                     )}

@@ -461,11 +461,11 @@ describe('SRSService Formula Tests', () => {
         });
 
         it('should allow minor typos', () => {
-            // "to eat" (6 chars) -> allowed 2.
-            // "to aet" (dist 1 swap) -> minor.
-            const { result, matchedAnswer } = SRSService.evaluateMeaning('to aet', meanings);
+            // "to consume" (7 chars) -> allowed 2.
+            // "to consmue" (dist 2 swap) -> minor.
+            const { result, matchedAnswer } = SRSService.evaluateMeaning('to consmue', meanings);
             expect(result).toBe('minor_error');
-            expect(matchedAnswer).toBe('to eat');
+            expect(matchedAnswer).toBe('to consume');
         });
 
         it('should reject totally wrong answers', () => {
@@ -481,6 +481,25 @@ describe('SRSService Formula Tests', () => {
 
             const { result: r2 } = SRSService.evaluateMeaning('consume', multi);
             expect(r2).toBe('correct');
+        });
+    });
+    describe('applyVocabIntroChoice', () => {
+        it('should initialize due dates for Learn choice', () => {
+            const vocab = SRSService.createVocabProgress('test-vocab');
+            const updated = SRSService.applyVocabIntroChoice(vocab, 'learn');
+
+            expect(updated.nextReviewAt).not.toBeNull();
+            expect(updated.reading.dueDate).toEqual(updated.nextReviewAt);
+            expect(updated.meaning.dueDate).toEqual(updated.nextReviewAt);
+        });
+
+        it('should graduate immediately for Skip choice', () => {
+            const vocab = SRSService.createVocabProgress('test-vocab');
+            const updated = SRSService.applyVocabIntroChoice(vocab, 'skip');
+
+            expect(updated.stage).toBe('graduated');
+            expect(updated.nextReviewAt).toBeNull();
+            expect(updated.reading.memoryStrength).toBeGreaterThan(100);
         });
     });
 });

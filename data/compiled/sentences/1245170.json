@@ -1,5 +1,35 @@
 [
   {
+    "id": "94502",
+    "original": "彼女の愚痴は聞き飽きた。",
+    "en": [
+      {
+        "id": "309204",
+        "text": "I'm fed up with her grumbling."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 愚痴[01] は 聞き飽きる{聞き飽きた}",
+    "vocabIds": [
+      "1483150",
+      "1245170",
+      "1586250"
+    ],
+    "matches": {
+      "1245170": {
+        "start": 3,
+        "length": 2
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2
+      },
+      "1586250": {
+        "start": 8,
+        "length": 3
+      }
+    }
+  },
+  {
     "id": "99871",
     "original": "彼は本当に愚痴愚痴言う。",
     "en": [
@@ -10,10 +40,123 @@
     ],
     "indices": "彼(かれ)[01] は 本当に 愚痴[01] 愚痴[01] 言う",
     "vocabIds": [
+      "1483070",
       "1611580",
       "1245170",
-      "1587040",
-      "1483070"
-    ]
+      "1587040"
+    ],
+    "matches": {
+      "1245170": {
+        "start": 5,
+        "length": 2
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      },
+      "1587040": {
+        "start": 9,
+        "length": 2
+      },
+      "1611580": {
+        "start": 2,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "1234658",
+    "original": "見苦しいから愚痴は言わないことだ。",
+    "en": [
+      {
+        "id": "1301175",
+        "text": "You shouldn't complain because you'll look ugly."
+      }
+    ],
+    "vocabIds": [
+      "1259500",
+      "1245170",
+      "1587040"
+    ],
+    "matches": {
+      "1245170": {
+        "start": 6,
+        "length": 2
+      },
+      "1259500": {
+        "start": 0,
+        "length": 4
+      },
+      "1587040": {
+        "start": 9,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "9882613",
+    "original": "母はほとんど愚痴を言わない。",
+    "en": [
+      {
+        "id": "251861",
+        "text": "My mother almost never complains."
+      }
+    ],
+    "vocabIds": [
+      "1514990",
+      "1245170",
+      "1587040"
+    ],
+    "matches": {
+      "1245170": {
+        "start": 6,
+        "length": 2
+      },
+      "1514990": {
+        "start": 0,
+        "length": 1
+      },
+      "1587040": {
+        "start": 9,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "11563690",
+    "original": "お前の愚痴は、聞き飽きたよ。",
+    "en": [
+      {
+        "id": "321698",
+        "text": "I'm getting sick of hearing you complain."
+      },
+      {
+        "id": "12221370",
+        "text": "I'm tired of hearing your complaints."
+      },
+      {
+        "id": "12221372",
+        "text": "I'm tired of hearing you complaining."
+      }
+    ],
+    "vocabIds": [
+      "1002290",
+      "1245170",
+      "1586250"
+    ],
+    "matches": {
+      "1002290": {
+        "start": 0,
+        "length": 2
+      },
+      "1245170": {
+        "start": 3,
+        "length": 2
+      },
+      "1586250": {
+        "start": 9,
+        "length": 3
+      }
+    }
   }
 ]

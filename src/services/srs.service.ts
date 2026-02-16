@@ -60,21 +60,73 @@ export class SRSService {
         let bestResult: AnswerResult = 'wrong';
         let bestMatch = meanings[0] || '';
 
+        // Pre-normalize user input once for efficiency
+        const normalizedUser = this.normalizeMeaning(userInput);
+
+        if (normalizedUser === 'pass' || normalizedUser === '') {
+            return { result: normalizedUser === 'pass' ? 'pass' : 'wrong', matchedAnswer: '' };
+        }
+
         for (const meaning of meanings) {
-            const res = this.analyzeMeaningError(userInput, meaning);
+            // Split meaning by separators (comma, semicolon)
+            // e.g. "answer; reply; solution"
+            const parts = meaning.split(/[;,]/).map(p => p.trim()).filter(p => p.length > 0);
 
-            if (res === 'correct') {
-                return { result: 'correct', matchedAnswer: meaning };
-            }
+            for (const part of parts) {
+                const normalizedExpected = this.normalizeMeaning(part);
+                const res = this.compareMeaning(normalizedUser, normalizedExpected);
 
-            if (res === 'minor_error') {
-                bestResult = 'minor_error';
-                bestMatch = meaning;
+                if (res === 'correct') {
+                    return { result: 'correct', matchedAnswer: part };
+                }
+
+                if (res === 'minor_error' && bestResult !== 'minor_error') {
+                    bestResult = 'minor_error';
+                    bestMatch = part;
+                }
             }
         }
 
         return { result: bestResult, matchedAnswer: bestMatch };
     }
+
+    private static normalizeMeaning(text: string): string {
+        // 1. Lowercase
+        let s = text.toLowerCase().trim();
+
+        // 2. Remove punctuation
+        s = s.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "");
+
+        // 3. Remove stop words from START of string
+        // "to eat" -> "eat"
+        // "a cat" -> "cat"
+        // "to be seen" -> "seen"
+        s = s.replace(/^(to\s+be|to|be|a|an|the)\s+/g, "");
+
+        // 4. Collapse spaces
+        s = s.replace(/\s+/g, " ");
+
+        return s.trim();
+    }
+
+    private static compareMeaning(user: string, expected: string): AnswerResult {
+        if (user === expected) return 'correct';
+
+        // Fuzzy check
+        const dist = this.levenshtein(user, expected);
+
+        // Allow distance 1 for short words (len>=3), distance 2 for long (len>=6)
+        // But strict for very short words (len < 3)
+        let allowed = 0;
+        if (expected.length >= 6) allowed = 2;
+        else if (expected.length >= 3) allowed = 1;
+
+        if (dist <= allowed) return 'minor_error';
+
+        return 'wrong';
+    }
+
+
 
     /* =======================
        ANSWER APPLICATION
@@ -306,37 +358,7 @@ export class SRSService {
         return 'wrong';
     }
 
-    static analyzeMeaningError(user: string, expected: string): AnswerResult {
-        // Normalize: Lowercase, remove punctuation, reduce spaces
-        const norm = (s: string) => s.toLowerCase().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").replace(/\s+/g, " ").trim();
 
-        const u = norm(user);
-
-        // Split by synonyms if expected contains delimiters like "; " or ", " BEFORE normalization
-        // because normalization strips punctuation.
-        const parts = expected.split(/[;,]/).map(p => norm(p)).filter(p => p.length > 0);
-
-        if (u.length === 0) return 'wrong';
-        if (u === 'pass') return 'pass';
-
-        for (const part of parts) {
-            if (u === part) return 'correct';
-
-            // Fuzzy check on part
-            const dist = this.levenshtein(u, part);
-            // Allow distance 1 for short words (len>=3), distance 2 for long (len>=6)
-            const allowed = part.length >= 6 ? 2 : (part.length >= 3 ? 1 : 0);
-
-            if (dist <= allowed) return 'minor_error';
-        }
-
-        // Also check if user input is contained in expected? NO, too loose.
-        // "eat" in "to eat" -> "correct"?
-        // "to " often ignored? 
-        // Let's strip "to " from verbs?
-
-        return 'wrong';
-    }
 
     /**
      * Standard Levenshtein Distance
@@ -632,8 +654,13 @@ export class SRSService {
             updated.stage = 'graduated';
         } else {
             // CHOICE LEARNING:
-            // Set initial due date to NOW
-            updated.nextReviewAt = new Date();
+            // Set initial due date to NOW for both reading and meaning
+            // This ensures that after the first "Reading" review (Priority 5),
+            // the "Meaning" review will be immediately due (Priority 3).
+            const now = new Date();
+            updated.nextReviewAt = now;
+            updated.reading.dueDate = now;
+            updated.meaning.dueDate = now;
         }
 
         return updated;

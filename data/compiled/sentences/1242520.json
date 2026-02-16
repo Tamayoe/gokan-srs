@@ -1,5 +1,45 @@
 [
   {
+    "id": "75102",
+    "original": "電流が流れる電線にコイルを近づけると、コイルにも電気が流れます。",
+    "en": [
+      {
+        "id": "328617",
+        "text": "When a coil is moved near to a wire with current flowing in it current flows in the coil as well."
+      }
+    ],
+    "indices": "電流~ が 流れる 電線[01]~ に コイル~ を 近づける と コイル にも 電気 が 流れる[01]{流れます}",
+    "vocabIds": [
+      "1443790",
+      "1552140",
+      "1391780",
+      "1242520",
+      "1443000"
+    ],
+    "matches": {
+      "1242520": {
+        "start": 13,
+        "length": 4
+      },
+      "1391780": {
+        "start": 7,
+        "length": 1
+      },
+      "1443000": {
+        "start": 24,
+        "length": 2
+      },
+      "1443790": {
+        "start": 0,
+        "length": 2
+      },
+      "1552140": {
+        "start": 3,
+        "length": 3
+      }
+    }
+  },
+  {
     "id": "168474",
     "original": "子供を池に近づけるな。",
     "en": [
@@ -14,10 +54,59 @@
     ],
     "indices": "子供 を 池 に 近づける な[01]",
     "vocabIds": [
-      "1242520",
       "1307850",
-      "1421700"
-    ]
+      "1421700",
+      "1242520"
+    ],
+    "matches": {
+      "1242520": {
+        "start": 5,
+        "length": 4
+      },
+      "1307850": {
+        "start": 0,
+        "length": 2
+      },
+      "1421700": {
+        "start": 3,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "168475",
+    "original": "子供を池に近づけないで下さい。",
+    "en": [
+      {
+        "id": "246017",
+        "text": "Keep children away from the pond."
+      }
+    ],
+    "indices": "子供 を 池 に 近づける{近づけないで} 下さい",
+    "vocabIds": [
+      "1307850",
+      "1421700",
+      "1242520",
+      "2004390"
+    ],
+    "matches": {
+      "1242520": {
+        "start": 5,
+        "length": 5
+      },
+      "1307850": {
+        "start": 0,
+        "length": 2
+      },
+      "1421700": {
+        "start": 3,
+        "length": 1
+      },
+      "2004390": {
+        "start": 11,
+        "length": 1
+      }
+    }
   },
   {
     "id": "168699",
@@ -30,8 +119,90 @@
     ],
     "indices": "子供たち を ナイフ に 近づける な[01]",
     "vocabIds": [
-      "1242520",
-      "1307870"
-    ]
+      "1307870",
+      "1242520"
+    ],
+    "matches": {
+      "1242520": {
+        "start": 9,
+        "length": 4
+      },
+      "1307870": {
+        "start": 0,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "347267",
+    "original": "敵を近づけない。",
+    "en": [
+      {
+        "id": "354419",
+        "text": "He does not let the opponent come near him."
+      }
+    ],
+    "vocabIds": [
+      "1582000",
+      "1242520"
+    ],
+    "matches": {
+      "1242520": {
+        "start": 2,
+        "length": 5
+      },
+      "1582000": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "347269",
+    "original": "敵が近づけない。",
+    "en": [
+      {
+        "id": "426616",
+        "text": "The enemy can't get close."
+      }
+    ],
+    "vocabIds": [
+      "1582000",
+      "1242520"
+    ],
+    "matches": {
+      "1242520": {
+        "start": 2,
+        "length": 5
+      },
+      "1582000": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "347275",
+    "original": "敵に近づけない。",
+    "en": [
+      {
+        "id": "426607",
+        "text": "We can't get close to the enemy."
+      }
+    ],
+    "vocabIds": [
+      "1582000",
+      "1242520"
+    ],
+    "matches": {
+      "1242520": {
+        "start": 2,
+        "length": 5
+      },
+      "1582000": {
+        "start": 0,
+        "length": 1
+      }
+    }
   }
 ]

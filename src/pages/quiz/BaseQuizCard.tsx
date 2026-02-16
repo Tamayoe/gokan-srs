@@ -68,6 +68,16 @@ export function BaseQuizCard({
         }
     }, [feedback]);
 
+    // Focus continue button on successful Meaning Quiz (since no auto-advance)
+    useEffect(() => {
+        if (feedback?.show && feedback.correct && state.currentQuizItem?.quizType === 'meaning') {
+            // Small timeout to allow render
+            setTimeout(() => {
+                continueRef.current?.focus();
+            }, 50);
+        }
+    }, [feedback, state.currentQuizItem]);
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -241,7 +251,8 @@ export function BaseQuizCard({
                                 )}
                             </div>
                         ) : (
-                            !feedback.correct && (
+                            // Show Continue button if incorrect OR if it's a Meaning Quiz (which doesn't auto-advance)
+                            (!feedback.correct || state.currentQuizItem?.quizType === 'meaning') && (
                                 <button
                                     ref={continueRef}
                                     type="submit"

@@ -1,32 +1,137 @@
 [
   {
-    "id": "10682221",
-    "original": "問題です。標的を狙う正確性を競う種目で、オリンピック種目にもなっている競技はなんでしょう。",
+    "id": "104125",
+    "original": "彼は小鳥を狙った。",
     "en": [
       {
-        "id": "11297140",
-        "text": "Here's the question: Which sport is a target-based accuracy competition and is also an Olympic event?"
+        "id": "299567",
+        "text": "He aimed at the bird."
       }
-    ]
+    ],
+    "indices": "彼(かれ)[01] は 小鳥 を 狙う{狙った}",
+    "vocabIds": [
+      "1483070",
+      "1348530",
+      "1396590"
+    ],
+    "matches": {
+      "1348530": {
+        "start": 2,
+        "length": 2
+      },
+      "1396590": {
+        "start": 5,
+        "length": 3
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      }
+    }
   },
   {
-    "id": "10906725",
-    "original": "どうせ、狙うなら東大よ。",
+    "id": "157216",
+    "original": "私は虎を狙って発砲したが、撃ち損なった。",
     "en": [
       {
-        "id": "12597808",
-        "text": "If you’re going to aim for something, aim for the University of Tokyo."
+        "id": "257317",
+        "text": "I aimed at the tiger and fired, but missed him."
       }
-    ]
+    ],
+    "indices": "私(わたし)[01] は 虎[01] を 狙う{狙って} 発砲 為る(する){した} が 打ち損なう{撃ち損なった}~",
+    "vocabIds": [
+      "1311110",
+      "1267610",
+      "1396590",
+      "1477900",
+      "1596510"
+    ],
+    "matches": {
+      "1267610": {
+        "start": 2,
+        "length": 1
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1
+      },
+      "1396590": {
+        "start": 4,
+        "length": 3
+      },
+      "1477900": {
+        "start": 7,
+        "length": 2
+      },
+      "1596510": {
+        "start": 15,
+        "length": 4
+      }
+    }
   },
   {
-    "id": "10906726",
-    "original": "どうせ、狙うなら灯台よ。",
+    "id": "176346",
+    "original": "警官は拳銃でその男を狙った。",
     "en": [
       {
-        "id": "13721346",
-        "text": "Anyway, if aiming then aim at the lighthouse."
+        "id": "238118",
+        "text": "The policeman aimed his gun at the man."
       }
-    ]
+    ],
+    "indices": "警官 は 拳銃 で(#2028980) 其の[01]{その} 男 を 狙う{狙った}",
+    "vocabIds": [
+      "1252330",
+      "1257760",
+      "1419990",
+      "1396590"
+    ],
+    "matches": {
+      "1252330": {
+        "start": 0,
+        "length": 2
+      },
+      "1257760": {
+        "start": 3,
+        "length": 2
+      },
+      "1396590": {
+        "start": 10,
+        "length": 3
+      },
+      "1419990": {
+        "start": 8,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "197767",
+    "original": "ハンターは鹿を狙って撃った。",
+    "en": [
+      {
+        "id": "34955",
+        "text": "The hunter shot at a deer."
+      }
+    ],
+    "indices": "ハンター は 鹿(しか) を 狙う{狙って} 撃つ(#1253570)[01]{撃った}",
+    "vocabIds": [
+      "1319030",
+      "1396590",
+      "1253570"
+    ],
+    "matches": {
+      "1253570": {
+        "start": 10,
+        "length": 3
+      },
+      "1319030": {
+        "start": 5,
+        "length": 1
+      },
+      "1396590": {
+        "start": 7,
+        "length": 3
+      }
+    }
   }
 ]

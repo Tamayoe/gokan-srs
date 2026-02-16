@@ -1,14 +1,75 @@
 [
   {
-    "id": "189745",
-    "original": "雨が降りはじめると、彼女は息子に洗濯物を取り込むように言った。",
+    "id": "189735",
+    "original": "雨が降り出すと彼女は洗濯物を取り込んだ。",
     "en": [
       {
-        "id": "26899",
-        "text": "When it began to rain, she told her son to take in the washing."
+        "id": "26889",
+        "text": "She took in the washing when it started to rain."
       }
     ],
-    "indices": "雨 が 降り始める{降りはじめる} と 彼女[01] は 息子[01] に 洗濯物 を 取り込む 様に{ように} 言う{言った}"
+    "indices": "雨 が 降り出す と 彼女[01] は 洗濯物 を 取り込む{取り込んだ}",
+    "vocabIds": [
+      "1171900",
+      "1338180",
+      "1483150",
+      "1391020",
+      "1326720"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 0,
+        "length": 1
+      },
+      "1326720": {
+        "start": 14,
+        "length": 5
+      },
+      "1338180": {
+        "start": 4,
+        "length": 2
+      },
+      "1391020": {
+        "start": 10,
+        "length": 3
+      },
+      "1483150": {
+        "start": 7,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "8942815",
+    "original": "洗濯物を取り込んで。",
+    "en": [
+      {
+        "id": "8939293",
+        "text": "Bring in the laundry."
+      },
+      {
+        "id": "273371",
+        "text": "Bring the laundry in."
+      },
+      {
+        "id": "10736223",
+        "text": "Bring the washing in."
+      }
+    ],
+    "vocabIds": [
+      "1391020",
+      "1326720"
+    ],
+    "matches": {
+      "1326720": {
+        "start": 4,
+        "length": 5
+      },
+      "1391020": {
+        "start": 0,
+        "length": 3
+      }
+    }
   },
   {
     "id": "8928628",
@@ -18,6 +79,83 @@
         "id": "10072839",
         "text": "Oh, I forgot to bring in the futons."
       }
-    ]
+    ],
+    "vocabIds": [
+      "1496890",
+      "1326720",
+      "1519210"
+    ],
+    "matches": {
+      "1326720": {
+        "start": 5,
+        "length": 4
+      },
+      "1496890": {
+        "start": 3,
+        "length": 2
+      },
+      "1519210": {
+        "start": 10,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "10091761",
+    "original": "洗濯物乾いてたら取り込んで。",
+    "en": [
+      {
+        "id": "10166953",
+        "text": "If the laundry is dry, bring it in."
+      }
+    ],
+    "vocabIds": [
+      "1391020",
+      "1209650",
+      "1326720"
+    ],
+    "matches": {
+      "1209650": {
+        "start": 3,
+        "length": 3
+      },
+      "1326720": {
+        "start": 8,
+        "length": 5
+      },
+      "1391020": {
+        "start": 0,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "10166977",
+    "original": "洗濯物乾いたら取り込んで。",
+    "en": [
+      {
+        "id": "10091767",
+        "text": "Bring in the laundry when it's dry."
+      }
+    ],
+    "vocabIds": [
+      "1391020",
+      "1209650",
+      "1326720"
+    ],
+    "matches": {
+      "1209650": {
+        "start": 3,
+        "length": 3
+      },
+      "1326720": {
+        "start": 7,
+        "length": 5
+      },
+      "1391020": {
+        "start": 0,
+        "length": 3
+      }
+    }
   }
 ]

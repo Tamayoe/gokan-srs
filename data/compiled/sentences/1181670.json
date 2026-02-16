@@ -8,17 +8,30 @@
         "text": "In the palace live the king and the queen."
       }
     ],
-    "indices": "宮殿 には 国王 と 王妃 が 住む{住んでいる}"
-  },
-  {
-    "id": "188468",
-    "original": "王妃は王のかたわらに立っていた。",
-    "en": [
-      {
-        "id": "25611",
-        "text": "The queen stood beside the king."
-      }
+    "indices": "宮殿 には 国王 と 王妃 が 住む{住んでいる}",
+    "vocabIds": [
+      "1228470",
+      "1286160",
+      "1181670",
+      "1334040"
     ],
-    "indices": "王妃~ は 王[01] の 傍らに{かたわらに}~ 立つ{立っていた}"
+    "matches": {
+      "1181670": {
+        "start": 7,
+        "length": 2
+      },
+      "1228470": {
+        "start": 0,
+        "length": 2
+      },
+      "1286160": {
+        "start": 4,
+        "length": 2
+      },
+      "1334040": {
+        "start": 10,
+        "length": 3
+      }
+    }
   }
 ]

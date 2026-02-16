@@ -1,13 +1,113 @@
 [
   {
-    "id": "75948",
-    "original": "盛大な溜息をつきながら、テーブルの上にどさどさとパンを置き、椅子にどっかりと腰掛ける。",
+    "id": "90067",
+    "original": "彼女は腰掛けて足を組んだ。",
     "en": [
       {
-        "id": "327770",
-        "text": "Heaving a great sigh I plunk my bread on the table and flump onto the chair."
+        "id": "313647",
+        "text": "She sat down and crossed her legs."
       }
     ],
-    "indices": "盛大{盛大な}~ ため息をつく{溜息をつき} 乍ら[01]{ながら} テーブル の 上(うえ)[03] に どさどさ[01]{どさどさと}~ パン(#1103090)[01] を 置く{置き} 椅子(いす)[01] に どっかり{どっかりと}~ 腰掛ける"
+    "indices": "彼女[01] は 腰掛ける{腰掛けて}~ 足(あし) を 組む{組んだ}",
+    "vocabIds": [
+      "1483150",
+      "1288350",
+      "1404630",
+      "1397590"
+    ],
+    "matches": {
+      "1288350": {
+        "start": 3,
+        "length": 4
+      },
+      "1397590": {
+        "start": 9,
+        "length": 3
+      },
+      "1404630": {
+        "start": 7,
+        "length": 1
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "1418128",
+    "original": "私はベンチに腰掛けて待った。",
+    "en": [
+      {
+        "id": "255567",
+        "text": "I sat waiting on the bench."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1288350",
+      "1410590"
+    ],
+    "matches": {
+      "1288350": {
+        "start": 6,
+        "length": 4
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1
+      },
+      "1410590": {
+        "start": 10,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "2142192",
+    "original": "二人の子どもが塀の上に腰掛けている。",
+    "en": [
+      {
+        "id": "8716144",
+        "text": "Two children are perched on a fence."
+      },
+      {
+        "id": "869063",
+        "text": "Two children are sitting on the fence."
+      },
+      {
+        "id": "890368",
+        "text": "Two children are sitting on top of the fence."
+      }
+    ],
+    "vocabIds": [
+      "1582670",
+      "1307770",
+      "1506870",
+      "1352170",
+      "1288350"
+    ],
+    "matches": {
+      "1288350": {
+        "start": 11,
+        "length": 4
+      },
+      "1307770": {
+        "start": 3,
+        "length": 1
+      },
+      "1352170": {
+        "start": 9,
+        "length": 1
+      },
+      "1506870": {
+        "start": 7,
+        "length": 1
+      },
+      "1582670": {
+        "start": 0,
+        "length": 2
+      }
+    }
   }
 ]

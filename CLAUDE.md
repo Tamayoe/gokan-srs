@@ -196,6 +196,12 @@ Core SRS algorithm implementation. **This is the heart of the learning system.**
 
 #### Key Methods
 
+**`evaluateMeaning(userInput, meanings)`**
+- Checks user input against English meanings/glosses
+- Normalizes input (lowercase, strip punctuation, strip articles "to/a/an/the")
+- Uses fuzzy matching (Levenshtein) and handles synonyms
+
+
 **`evaluateAnswer(userInput, readings)`**
 - Checks user input against all acceptable readings
 - Returns best result: `'correct'` > `'minor_error'` > `'wrong'`
@@ -575,6 +581,24 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-02-16]**:
+  - **Meaning Quiz Implementation**: Implemented Sentence Meaning Cloze quiz logic
+    - Updated `SRSService.evaluateMeaning` with fuzzy matching (Levenshtein) and stop-word stripping
+    - Added `Deinflector` utility for conjugation-aware sentence matching
+    - Updated `Sentence` model with `matches` metadata for highlighting
+    - Updated `MeaningQuizCard` to display highlighted target vocabulary in context
+    - **Bug Fixes**:
+        - Fixed missing Meaning Quizzes by initializing `reading.dueDate` and `meaning.dueDate` in `applyVocabIntroChoice`.
+        - Fixed infinite Intro Loop by ensuring `newLearnedToday` stats are incremented in `VOCAB_INTRO_CHOICE` reducer.
+        - Fixed `VocabIntroCard` form submission bug that caused page reloads on Learn/Skip.
+        - Fixed logic error in `VOCAB_INTRO_CHOICE` reducer that created duplicate learning queue entries.
+    - **Quiz Grouping**: Updated `getNextVocabToStudy` priority to group all Reading Quizzes (including new items) before Meaning Quizzes. This ensures a smoother learning flow (Intro Batch -> Reading Batch -> Meaning Batch).
+    - **Fuzzy Matching**: Improved `evaluateMeaning` to strip "to be" prefixes and prioritize the first dictionary match on ties. This fixes issues where "to see" would match "to seem" instead of "to be seen".
+    - **Interactive Sentence**: Created `InteractiveSentence` component to render Japanese sentences with clickable vocabulary links. Integrated into `MeaningQuizCard` and `VocabDetailScreen`, replacing ad-hoc tokenization with pre-calculated matches from the build pipeline.
+    - **Meaning Quiz UX**: Disabled auto-advance on correct answers. Enabled navigation to vocab details from sentence links. Updated question text to be more precise ("What is the original meaning of..."). Fixed issue where "Continue" button was hidden on success.
+    - **Meaning Quiz Design**: Applied Design System typography (Source Serif 4) to Meaning Quiz questions. Implemented dynamic question text based on sentence availability.
+    - **Optional Meaning Quiz**: Added `enableMeaningQuiz` setting to allow users to disable meaning quizzes if desired.
 
 - **[2026-02-15]**:
   - **Sentence Data Integration**: Implemented `scripts/build-sentences.ts` to compile sentence dataset

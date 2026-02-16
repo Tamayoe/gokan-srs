@@ -1,5 +1,45 @@
 [
   {
+    "id": "88697",
+    "original": "彼女は小声で歌って子供を寝かしつけた。",
+    "en": [
+      {
+        "id": "315010",
+        "text": "She hummed her child to sleep."
+      }
+    ],
+    "indices": "彼女[01] は 小声 で(#2028980) 歌う[01]{歌って} 子供 を 寝かしつける{寝かしつけた}",
+    "vocabIds": [
+      "1483150",
+      "1639820",
+      "1588120",
+      "1307850",
+      "1642760"
+    ],
+    "matches": {
+      "1307850": {
+        "start": 9,
+        "length": 2
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2
+      },
+      "1588120": {
+        "start": 6,
+        "length": 3
+      },
+      "1639820": {
+        "start": 3,
+        "length": 2
+      },
+      "1642760": {
+        "start": 12,
+        "length": 1
+      }
+    }
+  },
+  {
     "id": "89488",
     "original": "彼女は私に小声で話した。",
     "en": [
@@ -11,10 +51,28 @@
     "indices": "彼女[01] は 私(わたし)[01] に 小声 で(#2028980) 話す{話した}",
     "vocabIds": [
       "1483150",
-      "1639820",
       "1311110",
-      "1600900"
-    ]
+      "1639820",
+      "1562350"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 3,
+        "length": 1
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2
+      },
+      "1562350": {
+        "start": 8,
+        "length": 3
+      },
+      "1639820": {
+        "start": 5,
+        "length": 2
+      }
+    }
   },
   {
     "id": "100987",
@@ -27,10 +85,157 @@
     ],
     "indices": "彼(かれ)[01] は 彼女 に 小声~ で(#2028980) 言う{言った}",
     "vocabIds": [
+      "1483070",
       "1483150",
       "1639820",
+      "1587040"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1
+      },
+      "1483150": {
+        "start": 2,
+        "length": 2
+      },
+      "1587040": {
+        "start": 8,
+        "length": 3
+      },
+      "1639820": {
+        "start": 5,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "100988",
+    "original": "彼は彼女に小声で「愛してるよ」と言った。",
+    "en": [
+      {
+        "id": "302709",
+        "text": "He said to her under his breath, \"I love you.\""
+      }
+    ],
+    "indices": "彼(かれ)[01] は 彼女 に 小声 で(#2028980) 愛する{愛してる} よ と 言う{言った}",
+    "vocabIds": [
       "1483070",
-      "1956230"
-    ]
+      "1483150",
+      "1639820",
+      "2408840",
+      "1922760"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1
+      },
+      "1483150": {
+        "start": 2,
+        "length": 2
+      },
+      "1639820": {
+        "start": 5,
+        "length": 2
+      },
+      "1922760": {
+        "start": 15,
+        "length": 4
+      },
+      "2408840": {
+        "start": 9,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "1568261",
+    "original": "赤ちゃんを起こさないように私たちは小声で話した。",
+    "en": [
+      {
+        "id": "1426536",
+        "text": "We talked in low voices so we wouldn't wake the baby."
+      },
+      {
+        "id": "1577307",
+        "text": "We spoke in a low voice to avoid waking up the baby."
+      }
+    ],
+    "vocabIds": [
+      "1383260",
+      "1223660",
+      "1311300",
+      "1639820",
+      "1562350"
+    ],
+    "matches": {
+      "1223660": {
+        "start": 5,
+        "length": 5
+      },
+      "1311300": {
+        "start": 13,
+        "length": 3
+      },
+      "1383260": {
+        "start": 0,
+        "length": 4
+      },
+      "1562350": {
+        "start": 20,
+        "length": 3
+      },
+      "1639820": {
+        "start": 17,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "12836788",
+    "original": "できるだけ小声で話して。子供たちが寝てるの。",
+    "en": [
+      {
+        "id": "11731803",
+        "text": "Talk as quietly as you can. The kids are sleeping."
+      },
+      {
+        "id": "11731805",
+        "text": "Talk as quietly as you can. The kids are asleep."
+      },
+      {
+        "id": "13474102",
+        "text": "Please speak as quietly as possible. The kids are asleep."
+      },
+      {
+        "id": "13474103",
+        "text": "Please speak as quietly as possible. The children are sleeping."
+      }
+    ],
+    "vocabIds": [
+      "1639820",
+      "1562350",
+      "1307870",
+      "1360010"
+    ],
+    "matches": {
+      "1307870": {
+        "start": 12,
+        "length": 4
+      },
+      "1360010": {
+        "start": 17,
+        "length": 2
+      },
+      "1562350": {
+        "start": 8,
+        "length": 3
+      },
+      "1639820": {
+        "start": 5,
+        "length": 2
+      }
+    }
   }
 ]

@@ -4,7 +4,7 @@ import { Card } from "./ui/Card";
 import { CardDivider, CardSection } from "./ui/CardSection";
 import { Button } from "./ui/Button";
 import { useEffect, useRef } from "react";
-import {useResponsive} from "../context/Responsive/useResponsive";
+import { useResponsive } from "../context/Responsive/useResponsive";
 
 
 interface IntroVocabCardProps {
@@ -48,13 +48,25 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
 
             <CardDivider />
 
-            <form onSubmit={onLearn} className="flex gap-4" ref={formRef}>
-                <Button variant="secondary" className="flex-1" onClick={onSkip}>
-                    { isMobile ? 'Skip' : 'I already know this' }
+            <form
+                onSubmit={(e) => {
+                    e.preventDefault();
+                    onLearn();
+                }}
+                className="flex gap-4"
+                ref={formRef}
+            >
+                <Button
+                    variant="secondary"
+                    className="flex-1"
+                    onClick={onSkip}
+                    type="button"
+                >
+                    {isMobile ? 'Skip' : 'I already know this'}
                 </Button>
 
                 <Button variant="primary" className="flex-1" type="submit">
-                    { isMobile ? 'Learn' : 'Learn this word' }
+                    {isMobile ? 'Learn' : 'Learn this word'}
                 </Button>
             </form>
         </Card>

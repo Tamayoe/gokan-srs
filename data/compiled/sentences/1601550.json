@@ -1,16 +1,5 @@
 [
   {
-    "id": "113894",
-    "original": "彼はケーキ１切れと引き換えにオレンジ１個を私にくれた。",
-    "en": [
-      {
-        "id": "289779",
-        "text": "He gave me an orange in exchange for a piece of cake."
-      }
-    ],
-    "indices": "彼(かれ)[01] は ケーキ 一切れ{１切れ} と 引き換え[01] に オレンジ 一個{１個} を 私(わたし)[01] に 呉れる{くれた}"
-  },
-  {
     "id": "124301",
     "original": "搭乗券と荷物の引き換え証です。",
     "en": [
@@ -19,7 +8,36 @@
         "text": "Here are your boarding pass and your baggage claim."
       }
     ],
-    "indices": "搭乗券 と 荷物[01] の 引き換え証~ です"
+    "indices": "搭乗券 と 荷物[01] の 引き換え証~ です",
+    "vocabIds": [
+      "1447400",
+      "1256730",
+      "1195430",
+      "1601550",
+      "1351580"
+    ],
+    "matches": {
+      "1195430": {
+        "start": 4,
+        "length": 2
+      },
+      "1256730": {
+        "start": 2,
+        "length": 1
+      },
+      "1351580": {
+        "start": 11,
+        "length": 1
+      },
+      "1447400": {
+        "start": 0,
+        "length": 2
+      },
+      "1601550": {
+        "start": 7,
+        "length": 4
+      }
+    }
   },
   {
     "id": "189997",
@@ -34,6 +52,30 @@
         "text": "Please present your claim tags."
       }
     ],
-    "indices": "引き換え券~ を 見せる{見せて} 下さい"
+    "indices": "引き換え券~ を 見せる{見せて} 下さい",
+    "vocabIds": [
+      "1601550",
+      "1256730",
+      "1259210",
+      "2004390"
+    ],
+    "matches": {
+      "1256730": {
+        "start": 4,
+        "length": 1
+      },
+      "1259210": {
+        "start": 6,
+        "length": 3
+      },
+      "1601550": {
+        "start": 0,
+        "length": 4
+      },
+      "2004390": {
+        "start": 9,
+        "length": 1
+      }
+    }
   }
 ]
