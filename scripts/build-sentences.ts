@@ -130,6 +130,7 @@ async function main() {
     // 4. Tokenize & Distribute
     console.log('🔍 Tokenizing and linking sentences to vocabulary...');
 
+    // We instantiate Deinflector (it's static so just class ref is fine)
     // Map: vocabId -> Sentence[]
     const vocabSentences = new Map<string, Sentence[]>();
 
@@ -138,114 +139,117 @@ async function main() {
     let sentenceCount = 0;
     const progressInterval = 5000;
 
+    // Importing Deinflector dynamically or we need to compile it?
+    // Since this script runs via bun, we can just import the .ts file if supported?
+    // Bun supports TS natively. But we need relative path from scripts/ to src/utils/
+    // Let's assume standard import works.
+    const { Deinflector } = await import('../src/utils/deinflector');
+
     for (const [_, sentence] of sentencesMap) {
         sentenceCount++;
         if (sentenceCount % progressInterval === 0) {
             process.stdout.write(`Processing sentence ${sentenceCount}/${sentencesMap.size}...\r`);
         }
 
-        let text = sentence.original;
+        const text = sentence.original;
+        const coveredIndices = new Array(text.length).fill(false);
 
-        // Greedy tokenization
-        // We look for known vocab in the sentence.
-        // Optimization: We check every substring or use regex?
-        // With 20k vocab and 150k sentences, simpler is better.
-        // We scan the sentence string. 
+        // Structure to holds matches: vocabId -> { start, length }
+        // We might have multiple matches for same vocab? 
+        // The Sentence interface says `Record<string, { start: number, length: number }>`
+        // implying one match per vocab. 
+        // If a word appears twice, we'll just store the FIRST one (or best one).
+        // For learning purposes, highlighting the first occurrence is sufficient.
+        const matches: Record<string, { start: number, length: number }> = {};
+        const matchedVocabIds: string[] = [];
 
-        // Naive greedy approach:
-        // Try to match longest words first at every position? 
-        // No, that's partial overlap.
-        // Simple "text contains word" check is fast but might find "ill" in "will".
-        // HOWEVER, Japanese doesn't use spaces. "受け入れる" contains "入れる".
-        // We specifically want to associate "受け入れる" with that vocab, and NOT "入れる".
+        // Greedy matching with Deinflection
+        // Iterate through every character position in sentence
+        for (let i = 0; i < text.length; i++) {
+            if (coveredIndices[i]) continue; // Skip if already claimed by a longer match? 
+            // Actually, we want longest match at this position.
 
-        // Algorithm:
-        // 1. Find all matches of all vocab words in the sentence.
-        //    (start, end, vocabId, length)
-        // 2. Resolve overlaps: if overlaps, keep longest.
+            // We need to find the longest vocab that matches starting at i
+            // But we don't know the length.
+            // We can iterate sortedVocab? Too slow (20k * len).
 
-        // Optimization: checking 20k vocab against 1 text is slow (20k * N).
-        // Better: iterate text positions, try to match vocab (Trie-like).
-        // Since we don't have a trie, we can filter `sortedVocab` (which is length desc).
+            // Better approach for build script (offline):
+            // Check substrings starting at i of varying lengths (e.g. 10 chars down to 1)
+            // Deinflect the substring.
+            // Check if deinflected term is in vocabMap.
 
-        // For build script, we can be a bit inefficient but 20k * 150k is 3 billion ops. Too slow.
-        // We need a faster check. A Trie would be best.
-        // But let's implementing a "remove matched" strategy.
-        // 1. For each vocab in sortedVocab (longest first):
-        // 2. If sentence contains vocab:
-        //    - valid match? 
-        //    - We mark those characters as "consumed" or just verify it's not part of a larger match?
-        //    - Actually, if we iterate longest first:
-        //      If we find "受け入れる", we associate.
-        //      Later we find "入れる". If it's at same position (part of larger), we shouldn't assoc?
-        //      Or is it okay to associate both? 
-        //      User requirement: "if we have 2 vocabs... correct is only the first one... prevent incorrect matches"
+            let bestMatch: { vocabId: string, length: number, term: string } | null = null;
 
-        // So we need to consume the string.
-        // Let's use a bitmask or array of booleans for the sentence characters.
+            // Try lengths from 15 down to 1 (Japanese words rarely exceed 15 chars)
+            const maxLen = Math.min(15, text.length - i);
 
-        const coveredIndices = new Array(sentence.original.length).fill(false);
-        const matches: string[] = []; // vocabIds linked (preserve order or set?)
+            for (let len = maxLen; len >= 1; len--) {
+                const substring = text.substring(i, i + len);
 
-        // Check sorted vocab (longest first)
-        for (const word of sortedVocab) {
-            // Quick check if word exists in sentence
-            let startIndex = text.indexOf(word);
-            while (startIndex !== -1) {
-                // Check if this range is already covered
-                const endIndex = startIndex + word.length;
-                let isFree = true;
-                for (let i = startIndex; i < endIndex; i++) {
-                    if (coveredIndices[i]) {
-                        isFree = false;
+                // 1. Direct Match?
+                if (vocabMap.has(substring)) {
+                    // Found a match!
+                    bestMatch = { vocabId: vocabMap.get(substring)!, length: len, term: substring };
+                    break; // Found longest at this position (since we go desc)
+                }
+
+                // 2. Deinflection Match?
+                // Only deinflect if not hiragana/katakana only? (Optional optimization)
+                // But verbs are often hiragana+kanji.
+
+                const candidates = Deinflector.deinflect(substring);
+                for (const candidate of candidates) {
+                    if (vocabMap.has(candidate.term)) {
+                        // Found a match via deinflection!
+                        // e.g. substring "食べました" (len 5) -> "食べる" (vocab)
+                        bestMatch = { vocabId: vocabMap.get(candidate.term)!, length: len, term: candidate.term };
                         break;
                     }
                 }
 
-                if (isFree) {
-                    // It's a valid match!
-                    // Mark indices
-                    for (let i = startIndex; i < endIndex; i++) {
-                        coveredIndices[i] = true;
-                    }
-                    // Add to matches
-                    matches.push(vocabMap.get(word)!);
+                if (bestMatch) break;
+            }
+
+            if (bestMatch) {
+                // We found a match starting at i
+                // Mark indices as covered
+                for (let k = 0; k < bestMatch.length; k++) {
+                    coveredIndices[i + k] = true;
                 }
 
-                startIndex = text.indexOf(word, startIndex + 1);
+                // Store match
+                const vId = bestMatch.vocabId;
+                if (!matches[vId]) {
+                    matches[vId] = { start: i, length: bestMatch.length };
+                    matchedVocabIds.push(vId);
+                }
+
+                // Advance i (minus 1 because loop increments)
+                i += bestMatch.length - 1;
             }
         }
 
         // --- FILTERING LOGIC ---
-        // 1. Calculate Coverage: How much of the sentence is "known" vocab?
+        // 1. Calculate Coverage
         let coveredCount = 0;
         for (let i = 0; i < coveredIndices.length; i++) {
             if (coveredIndices[i]) coveredCount++;
         }
 
-        // We ignore punctuation/symbols in the "total length" ideally, but for now raw ratio is okay.
-        // A minimal threshold of 60% might effectively filter out "I [unknown] [unknown] [unknown]" sentences.
-        // User requested: "sentences that don't contain only vocabs that are compiled are irrelevant"
-        // This implies a high standard. Let's start with 0.5 (50%) to be safe but filtering "junk".
-        // Actually, Japanese has many particles (ha, ga, no, ni, wo...) which are short. 
-        // If we don't have particles in vocab list, coverage will drop. 
-        // Let's settle on a reasonable heuristic: must have at least 2 words OR >50% coverage?
-        // Or simply: if matches.length == 0, discard (obviously).
-
-        const coverageRatio = coveredCount / sentence.original.length;
+        const coverageRatio = coveredCount / text.length;
 
         // Discard if coverage is too low (likely contains many unknown words)
+        // Using 0.5 as threshold
         if (coverageRatio < 0.5) {
             continue;
         }
 
-        // 2. Populate vocabIds
-        // Deduplicate matches for the Sentence object
-        const uniqueVocabIds = Array.from(new Set(matches));
-        sentence.vocabIds = uniqueVocabIds;
+        // 2. Populate Sentence Object
+        sentence.vocabIds = matchedVocabIds;
+        sentence.matches = matches;
 
         // Add sentence to all matched vocab bucket files
-        for (const vocabId of uniqueVocabIds) {
+        for (const vocabId of matchedVocabIds) {
             if (!vocabSentences.has(vocabId)) {
                 vocabSentences.set(vocabId, []);
             }

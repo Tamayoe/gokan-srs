@@ -7,6 +7,7 @@ export interface Sentence {
     }[];
     indices?: string; // Reading hint/furigana string from jpn_indices.csv
     vocabIds: string[]; // List of constituent vocab IDs (for containment checks)
+    matches?: Record<string, { start: number, length: number }>; // vocabId -> match location (for highlighting)
 }
 
 export interface SentenceSet {

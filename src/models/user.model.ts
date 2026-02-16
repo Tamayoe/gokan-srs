@@ -47,11 +47,13 @@ export type LearningOrder =
     | 'kklc';
 
 export interface UserSettings {
-    preferredLearningOrder: LearningOrder
+    preferredLearningOrder: LearningOrder;
+    enableMeaningQuiz: boolean;
 }
 
 export const DEFAULT_SETTINGS: UserSettings = {
     preferredLearningOrder: 'frequency',
+    enableMeaningQuiz: true,
 };
 
 export const DEFAULT_PROGRESS: Omit<UserProgress, 'kanjiKnowledge'> = {

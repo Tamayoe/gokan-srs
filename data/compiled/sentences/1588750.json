@@ -1,27 +1,5 @@
 [
   {
-    "id": "81532",
-    "original": "本当に悪いんだけど、君の襟巻き、どっかに置いてきてしまったらしいんだよ。",
-    "en": [
-      {
-        "id": "322183",
-        "text": "I'm really sorry, but I seem to have misplaced your scarf."
-      }
-    ],
-    "indices": "本当に 悪い(わるい) ん[04] だ けど 君(きみ)[01]{君の} 襟 巻く{巻き} 何処か[01]{どっか} に 置く[01]{置いて} 来る(くる){きて} 仕舞う{しまった} らしい ん[04] だ よ[01]"
-  },
-  {
-    "id": "92566",
-    "original": "彼女はそのメダルをピンで襟にとめた。",
-    "en": [
-      {
-        "id": "311144",
-        "text": "She fastened the medal on the lapel with a pin."
-      }
-    ],
-    "indices": "彼女[01] は 其の[01]{その} メダル を ピン(#1107060)[01] で(#2028980) 襟 に 止める(とめる)[06]{とめた}"
-  },
-  {
     "id": "105871",
     "original": "彼は私の襟首を引っ張った。",
     "en": [
@@ -30,7 +8,36 @@
         "text": "He dragged at my collar."
       }
     ],
-    "indices": "彼(かれ)[01] は 私(わたし)[01]{私の} 襟首 を 引っ張る[01]{引っ張った}"
+    "indices": "彼(かれ)[01] は 私(わたし)[01]{私の} 襟首 を 引っ張る[01]{引っ張った}",
+    "vocabIds": [
+      "1483070",
+      "1311110",
+      "1588750",
+      "1592270",
+      "1601900"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 2,
+        "length": 1
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      },
+      "1588750": {
+        "start": 4,
+        "length": 1
+      },
+      "1592270": {
+        "start": 5,
+        "length": 1
+      },
+      "1601900": {
+        "start": 7,
+        "length": 5
+      }
+    }
   },
   {
     "id": "113297",
@@ -41,7 +48,31 @@
         "text": "He seized the pickpocket by the collar."
       }
     ],
-    "indices": "彼(かれ)[01] は 掏摸{すり} の 襟首を掴む{襟首を掴んだ}~"
+    "indices": "彼(かれ)[01] は 掏摸{すり} の 襟首を掴む{襟首を掴んだ}~",
+    "vocabIds": [
+      "1483070",
+      "1588750",
+      "1592270",
+      "1433650"
+    ],
+    "matches": {
+      "1433650": {
+        "start": 8,
+        "length": 3
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      },
+      "1588750": {
+        "start": 5,
+        "length": 1
+      },
+      "1592270": {
+        "start": 6,
+        "length": 1
+      }
+    }
   },
   {
     "id": "148450",
@@ -52,51 +83,50 @@
         "text": "The drunken man grasped my collar and swore at me."
       }
     ],
-    "indices": "酒(さけ) に 酔う{酔った} 男 が 私(わたし)[01]{私の} 襟 を 掴む{つかんで} 汚い 言葉 を 吐く(つく)[02]{吐いた}"
-  },
-  {
-    "id": "175123",
-    "original": "見知らぬ男が私の襟をつかんだ。",
-    "en": [
-      {
-        "id": "239343",
-        "text": "A strange man caught me by the collar."
-      }
+    "indices": "酒(さけ) に 酔う{酔った} 男 が 私(わたし)[01]{私の} 襟 を 掴む{つかんで} 汚い 言葉 を 吐く(つく)[02]{吐いた}",
+    "vocabIds": [
+      "1329010",
+      "1372650",
+      "1419990",
+      "1311110",
+      "1588750",
+      "1178940",
+      "1264540",
+      "2646460"
     ],
-    "indices": "見知らぬ 男 が 私(わたし)[01]{私の} 襟 を 掴む{つかんだ}"
-  },
-  {
-    "id": "1125950",
-    "original": "襟に染みがついてますよ。",
-    "en": [
-      {
-        "id": "17397",
-        "text": "Your collar has a stain on it."
-      }
-    ]
-  },
-  {
-    "id": "10327313",
-    "original": "「着物の襟合わせって、右が上？左が上？」「左が上よ。相手から見てｙの字になればいいのよ」「ありがとう」",
-    "en": [
-      {
-        "id": "10630861",
-        "text": "\"When you join together the sleeves on a kimono, does the right side or the left side go on top?\" \"The left goes on top. So that when others see it it looks like a y.\" Thanks.\""
-      }
-    ]
-  },
-  {
-    "id": "2349886",
-    "original": "かっとなって友達の襟首をつかんだ。",
-    "en": [
-      {
-        "id": "10824144",
-        "text": "He flew into a rage and grabbed his friend by the collar."
+    "matches": {
+      "1178940": {
+        "start": 15,
+        "length": 2
       },
-      {
-        "id": "10824146",
-        "text": "She flew into a rage and grabbed her friend by the collar."
+      "1264540": {
+        "start": 17,
+        "length": 2
+      },
+      "1311110": {
+        "start": 7,
+        "length": 1
+      },
+      "1329010": {
+        "start": 0,
+        "length": 1
+      },
+      "1372650": {
+        "start": 2,
+        "length": 3
+      },
+      "1419990": {
+        "start": 5,
+        "length": 1
+      },
+      "1588750": {
+        "start": 9,
+        "length": 1
+      },
+      "2646460": {
+        "start": 20,
+        "length": 3
       }
-    ]
+    }
   }
 ]

@@ -7,12 +7,14 @@ import { TagsLookup } from "../../models/data.model";
 import type { Tags } from "../../models/data.model";
 import type { Sentence } from "../../models/sentence.model";
 import { BaseQuizCard } from "./BaseQuizCard";
+import { InteractiveSentence } from "../../components/InteractiveSentence";
 
 interface MeaningQuizCardProps {
     onKanjiClick?: () => void;
+    onVocabClick?: (vocabId: string) => void;
 }
 
-export function MeaningQuizCard({ onKanjiClick }: MeaningQuizCardProps) {
+export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardProps) {
     const { state, currentProgress } = useQuiz();
     const { isMobile } = useResponsive();
 
@@ -39,18 +41,29 @@ export function MeaningQuizCard({ onKanjiClick }: MeaningQuizCardProps) {
             inputPlaceholder="Type the meaning..."
         >
             {/* Header: Meaning Quiz Label + Mastery */}
-            <div className="flex justify-between items-start mb-4">
-                <span className="text-xs uppercase tracking-widest text-secondary font-gothic font-semibold">
-                    What does this mean?
-                </span>
-                {!isMobile && (
-                    <div className="flex flex-col items-center gap-1">
-                        <MasteryRing memoryStrength={currentProgress?.meaning.memoryStrength ?? 0} size={50} />
-                        <span className="text-[10px] text-tertiary uppercase tracking-widest font-gothic font-semibold">
-                            Mastery
-                        </span>
-                    </div>
-                )}
+            <div className="flex flex-col items-center mb-8">
+                <div className="flex justify-end w-full mb-4">
+                    {!isMobile && (
+                        <div className="flex flex-col items-center gap-1 mt-4 opacity-50 hover:opacity-100 transition-opacity">
+                            <MasteryRing memoryStrength={currentProgress?.meaning.memoryStrength ?? 0} size={50} />
+                            <span className="text-[10px] text-tertiary uppercase tracking-widest font-gothic font-semibold">
+                                Mastery
+                            </span>
+                        </div>
+                    )}
+                </div>
+
+                <h2 className="text-xl md:text-2xl font-serif text-secondary text-center leading-relaxed max-w-2xl mx-auto">
+                    {sentence ? (
+                        <>
+                            What is the original meaning of <span className="text-primary font-bold mx-1">{currentVocab.writtenForm.kanji}</span> in this sentence?
+                        </>
+                    ) : (
+                        <>
+                            What is the meaning of this word?
+                        </>
+                    )}
+                </h2>
             </div>
 
             {/* Content: Sentence OR Kanji */}
@@ -58,7 +71,11 @@ export function MeaningQuizCard({ onKanjiClick }: MeaningQuizCardProps) {
                 {sentence ? (
                     <div className="mb-4">
                         <div className="text-2xl font-serif text-primary mb-2 leading-relaxed">
-                            {sentence.original}
+                            <InteractiveSentence
+                                sentence={sentence}
+                                targetVocabId={currentVocab.id}
+                                onVocabClick={onVocabClick}
+                            />
                         </div>
                     </div>
                 ) : (
@@ -67,13 +84,6 @@ export function MeaningQuizCard({ onKanjiClick }: MeaningQuizCardProps) {
                         className={`text-5xl leading-none text-primary font-mincho mb-4 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
                         onClick={() => feedback?.show && onKanjiClick?.()}
                     >
-                        {currentVocab.writtenForm.kanji}
-                    </div>
-                )}
-
-                {/* Target Word Display (Context helper) */}
-                {sentence && (
-                    <div className="text-lg text-secondary font-mincho">
                         {currentVocab.writtenForm.kanji}
                     </div>
                 )}

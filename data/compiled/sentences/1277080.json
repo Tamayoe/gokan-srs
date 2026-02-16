@@ -1,14 +1,233 @@
 [
   {
-    "id": "82457",
-    "original": "北を向くと、東は右側になる。",
+    "id": "88244",
+    "original": "彼女は先生に向いていると思う。",
     "en": [
       {
-        "id": "321259",
-        "text": "If you face north, the east is on your right."
+        "id": "315463",
+        "text": "I think she will do for a teacher."
       }
     ],
-    "indices": "北 を 向く[01] と 東(ひがし) は 右側 になる[01]"
+    "indices": "彼女[01] は 先生(せんせい)[01] に 向く[04]{向いている} と 思う",
+    "vocabIds": [
+      "1483150",
+      "1387990",
+      "1277080",
+      "1589350"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 6,
+        "length": 3
+      },
+      "1387990": {
+        "start": 3,
+        "length": 2
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2
+      },
+      "1589350": {
+        "start": 12,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "90154",
+    "original": "彼女は向こうを向いている。",
+    "en": [
+      {
+        "id": "313560",
+        "text": "She's looking the other way."
+      }
+    ],
+    "indices": "彼女[01] は 向こう を 向く[01]{向いている}",
+    "vocabIds": [
+      "1483150",
+      "1277140",
+      "1277080"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 7,
+        "length": 3
+      },
+      "1277140": {
+        "start": 3,
+        "length": 3
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "103045",
+    "original": "彼は先生に向いてないように見える。",
+    "en": [
+      {
+        "id": "300648",
+        "text": "He seems not to be cut out for teaching."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 先生(せんせい)[01] に 向く[04]{向いてない} 様に{ように} 見える(みえる)",
+    "vocabIds": [
+      "1483070",
+      "1387990",
+      "1277080",
+      "1259140"
+    ],
+    "matches": {
+      "1259140": {
+        "start": 13,
+        "length": 3
+      },
+      "1277080": {
+        "start": 5,
+        "length": 3
+      },
+      "1387990": {
+        "start": 2,
+        "length": 2
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "103046",
+    "original": "彼は先生に向いてない。",
+    "en": [
+      {
+        "id": "300647",
+        "text": "He's not cut out for teaching."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 先生(せんせい)[01] に 向く[04]{向いてない}~",
+    "vocabIds": [
+      "1483070",
+      "1387990",
+      "1277080"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 5,
+        "length": 3
+      },
+      "1387990": {
+        "start": 2,
+        "length": 2
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "103250",
+    "original": "彼は生まれつき音楽に向いている。",
+    "en": [
+      {
+        "id": "300443",
+        "text": "He has a natural bent for music."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 生まれつき 音楽 に 向く[04]{向いている}",
+    "vocabIds": [
+      "1483070",
+      "1378770",
+      "1183720",
+      "1277080"
+    ],
+    "matches": {
+      "1183720": {
+        "start": 7,
+        "length": 2
+      },
+      "1277080": {
+        "start": 10,
+        "length": 3
+      },
+      "1378770": {
+        "start": 2,
+        "length": 5
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "104323",
+    "original": "彼は重労働に向いている。",
+    "en": [
+      {
+        "id": "299368",
+        "text": "He is cut out for hard work."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 重労働 に 向く[04]{向いている}",
+    "vocabIds": [
+      "1483070",
+      "1606450",
+      "1277080"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 6,
+        "length": 3
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      },
+      "1606450": {
+        "start": 3,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "109019",
+    "original": "彼は海の方を向いた。",
+    "en": [
+      {
+        "id": "294671",
+        "text": "He faced toward the sea."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 海 の 方(ほう) を 向く[01]{向いた}",
+    "vocabIds": [
+      "1483070",
+      "1201190",
+      "1516930",
+      "1277080"
+    ],
+    "matches": {
+      "1201190": {
+        "start": 2,
+        "length": 1
+      },
+      "1277080": {
+        "start": 6,
+        "length": 3
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      },
+      "1516930": {
+        "start": 4,
+        "length": 1
+      }
+    }
   },
   {
     "id": "139865",
@@ -19,6 +238,856 @@
         "text": "We let our legs do the leading."
       }
     ],
-    "indices": "足(あし) の 向く[05]~ 儘[03]{まま}~ に 歩く{歩いた}"
+    "indices": "足(あし) の 向く[05]~ 儘[03]{まま}~ に 歩く{歩いた}",
+    "vocabIds": [
+      "1404630",
+      "1277080",
+      "1514320"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 2,
+        "length": 2
+      },
+      "1404630": {
+        "start": 0,
+        "length": 1
+      },
+      "1514320": {
+        "start": 7,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "144885",
+    "original": "神経質な人はこの仕事には向かない。",
+    "en": [
+      {
+        "id": "269679",
+        "text": "A nervous person will not be fit for this job."
+      }
+    ],
+    "indices": "神経質{神経質な} 人(ひと) は 此の{この} 仕事[01] には 向く[04]{向かない}",
+    "vocabIds": [
+      "1364600",
+      "2149890",
+      "1304970",
+      "1277080"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 12,
+        "length": 4
+      },
+      "1304970": {
+        "start": 8,
+        "length": 2
+      },
+      "1364600": {
+        "start": 0,
+        "length": 3
+      },
+      "2149890": {
+        "start": 4,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "147645",
+    "original": "春と比べると秋は勉強に向いている。",
+    "en": [
+      {
+        "id": "266915",
+        "text": "Autumn is suitable for study, compared with spring."
+      }
+    ],
+    "indices": "春[01] と 比べる[01] と 秋(あき) は 勉強[01] に 向く[04]{向いている}",
+    "vocabIds": [
+      "1341000",
+      "1483540",
+      "1332650",
+      "1512670",
+      "1277080"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 11,
+        "length": 3
+      },
+      "1332650": {
+        "start": 6,
+        "length": 1
+      },
+      "1341000": {
+        "start": 0,
+        "length": 1
+      },
+      "1483540": {
+        "start": 2,
+        "length": 3
+      },
+      "1512670": {
+        "start": 8,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "154752",
+    "original": "私は肉体労働には向いていない。",
+    "en": [
+      {
+        "id": "259788",
+        "text": "I'm not fit for physical labor."
+      }
+    ],
+    "indices": "私(わたし)[01] は 肉体労働~ には 向く[04]{向いていない}",
+    "vocabIds": [
+      "1311110",
+      "1463650",
+      "1606450",
+      "1277080"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 8,
+        "length": 3
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1
+      },
+      "1463650": {
+        "start": 2,
+        "length": 2
+      },
+      "1606450": {
+        "start": 4,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "160155",
+    "original": "私はその仕事に向かないと思った。",
+    "en": [
+      {
+        "id": "254366",
+        "text": "I felt inadequate to the task."
+      }
+    ],
+    "indices": "私(わたし)[01] は 其の[01]{その} 仕事[01] に 向く[04]{向かない} と 思う{思った}",
+    "vocabIds": [
+      "1311110",
+      "1304970",
+      "1277080",
+      "1589350"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 7,
+        "length": 4
+      },
+      "1304970": {
+        "start": 4,
+        "length": 2
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1
+      },
+      "1589350": {
+        "start": 12,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "173297",
+    "original": "講師が後ろを向いたとき彼は教室からこっそり抜け出した。",
+    "en": [
+      {
+        "id": "241174",
+        "text": "When the lecturer turned round, he sneaked out of the classroom."
+      }
+    ],
+    "indices": "講師 が 後ろ を 向く[01]{向いた} 時(とき){とき} 彼(かれ)[01] は 教室 から こっそり 抜け出す[01]{抜け出した}",
+    "vocabIds": [
+      "1282280",
+      "1269410",
+      "1277080",
+      "1483070",
+      "1237150",
+      "1478220"
+    ],
+    "matches": {
+      "1237150": {
+        "start": 13,
+        "length": 2
+      },
+      "1269410": {
+        "start": 3,
+        "length": 2
+      },
+      "1277080": {
+        "start": 6,
+        "length": 3
+      },
+      "1282280": {
+        "start": 0,
+        "length": 2
+      },
+      "1478220": {
+        "start": 21,
+        "length": 5
+      },
+      "1483070": {
+        "start": 11,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "180540",
+    "original": "強い人以外はその職には向かない。",
+    "en": [
+      {
+        "id": "19233",
+        "text": "No one but a strong man is fit for the post."
+      }
+    ],
+    "indices": "強い(つよい) 人(ひと) 以外[01] は 其の[01]{その} 職(しょく) には 向く[04]{向かない}",
+    "vocabIds": [
+      "1236070",
+      "2149890",
+      "1155090",
+      "1357480",
+      "1277080"
+    ],
+    "matches": {
+      "1155090": {
+        "start": 3,
+        "length": 2
+      },
+      "1236070": {
+        "start": 0,
+        "length": 2
+      },
+      "1277080": {
+        "start": 11,
+        "length": 4
+      },
+      "1357480": {
+        "start": 8,
+        "length": 1
+      },
+      "2149890": {
+        "start": 2,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "182465",
+    "original": "急に運が向いてきた。",
+    "en": [
+      {
+        "id": "19626",
+        "text": "Suddenly I got lucky."
+      }
+    ],
+    "indices": "急に[02] 運が向く{運が向いて} 来る(くる){きた}",
+    "vocabIds": [
+      "2269050",
+      "1172610",
+      "1277080"
+    ],
+    "matches": {
+      "1172610": {
+        "start": 2,
+        "length": 1
+      },
+      "1277080": {
+        "start": 4,
+        "length": 3
+      },
+      "2269050": {
+        "start": 0,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "182864",
+    "original": "議論はみな同じ方向に向いた。",
+    "en": [
+      {
+        "id": "19985",
+        "text": "All the arguments pointed in the same direction."
+      }
+    ],
+    "indices": "議論 は 皆{みな} 同じ[01] 方向 に 向く[01]{向いた}",
+    "vocabIds": [
+      "1226160",
+      "1451750",
+      "1516990",
+      "1277080"
+    ],
+    "matches": {
+      "1226160": {
+        "start": 0,
+        "length": 2
+      },
+      "1277080": {
+        "start": 10,
+        "length": 3
+      },
+      "1451750": {
+        "start": 5,
+        "length": 2
+      },
+      "1516990": {
+        "start": 7,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "189479",
+    "original": "運が私に向いてきた。",
+    "en": [
+      {
+        "id": "26630",
+        "text": "Luck turned in my favor."
+      }
+    ],
+    "indices": "運 が 私(わたし)[01] に 向く[05]{向いて} 来る(くる){きた}",
+    "vocabIds": [
+      "1172610",
+      "1311110",
+      "1277080"
+    ],
+    "matches": {
+      "1172610": {
+        "start": 0,
+        "length": 1
+      },
+      "1277080": {
+        "start": 4,
+        "length": 3
+      },
+      "1311110": {
+        "start": 2,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "191788",
+    "original": "わたしは都会の生活には生まれつき向いていないと思う。",
+    "en": [
+      {
+        "id": "28950",
+        "text": "I don't think I'm cut out for city life."
+      },
+      {
+        "id": "7231073",
+        "text": "I don't think that I'm cut out for city life."
+      }
+    ],
+    "indices": "私(わたし)[01]{わたし} は 都会 の 生活 には 生まれつき 向く[04]{向いていない} と 思う",
+    "vocabIds": [
+      "1444970",
+      "1378860",
+      "1378770",
+      "1277080",
+      "1589350"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 16,
+        "length": 3
+      },
+      "1378770": {
+        "start": 11,
+        "length": 5
+      },
+      "1378860": {
+        "start": 7,
+        "length": 2
+      },
+      "1444970": {
+        "start": 4,
+        "length": 2
+      },
+      "1589350": {
+        "start": 23,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "200814",
+    "original": "どちらかと言えば、我が国の経済は上向いている。",
+    "en": [
+      {
+        "id": "38017",
+        "text": "If anything, the economy in our country is going up."
+      }
+    ],
+    "indices": "どちらかと言えば 我が国 の 経済 は 上向く[02]{上向いている}~",
+    "vocabIds": [
+      "1008850",
+      "1606630",
+      "1251320",
+      "1352170",
+      "1277080"
+    ],
+    "matches": {
+      "1008850": {
+        "start": 4,
+        "length": 4
+      },
+      "1251320": {
+        "start": 13,
+        "length": 2
+      },
+      "1277080": {
+        "start": 17,
+        "length": 3
+      },
+      "1352170": {
+        "start": 16,
+        "length": 1
+      },
+      "1606630": {
+        "start": 9,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "207327",
+    "original": "その日は野球に向かない天候だった。",
+    "en": [
+      {
+        "id": "44578",
+        "text": "It was a bad day to play baseball."
+      }
+    ],
+    "indices": "其の[01]{その} 日(ひ)[01] は 野球 に 向く[04]{向かない} 天候 だ{だった}",
+    "vocabIds": [
+      "2083100",
+      "1537300",
+      "1277080",
+      "1438970"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 7,
+        "length": 4
+      },
+      "1438970": {
+        "start": 11,
+        "length": 2
+      },
+      "1537300": {
+        "start": 4,
+        "length": 2
+      },
+      "2083100": {
+        "start": 2,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "207534",
+    "original": "その土地は野菜栽培に向いていますか。",
+    "en": [
+      {
+        "id": "44787",
+        "text": "Does the soil suit vegetables?"
+      }
+    ],
+    "indices": "其の[01]{その} 土地 は 野菜 栽培 に 向く[04]{向いています} か",
+    "vocabIds": [
+      "1445470",
+      "1537370",
+      "1294910",
+      "1277080"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 10,
+        "length": 3
+      },
+      "1294910": {
+        "start": 7,
+        "length": 2
+      },
+      "1445470": {
+        "start": 2,
+        "length": 2
+      },
+      "1537370": {
+        "start": 5,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "211334",
+    "original": "その靴は登山には向かないよ。",
+    "en": [
+      {
+        "id": "48608",
+        "text": "Those shoes won't do for climbing."
+      }
+    ],
+    "indices": "其の[01]{その} 靴 は 登山~ には 向く[04]{向かない} よ",
+    "vocabIds": [
+      "1246700",
+      "1444780",
+      "1277080"
+    ],
+    "matches": {
+      "1246700": {
+        "start": 2,
+        "length": 1
+      },
+      "1277080": {
+        "start": 8,
+        "length": 4
+      },
+      "1444780": {
+        "start": 4,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "219955",
+    "original": "この服は寒い冬の日には向かない。",
+    "en": [
+      {
+        "id": "57275",
+        "text": "These clothes are not appropriate for a cold winter day."
+      }
+    ],
+    "indices": "此の{この} 服(ふく)[01] は 寒い 冬 の 日(ひ)[01]~ には 向く[04]{向かない}",
+    "vocabIds": [
+      "1500940",
+      "1210360",
+      "1446070",
+      "2083100",
+      "1277080"
+    ],
+    "matches": {
+      "1210360": {
+        "start": 4,
+        "length": 2
+      },
+      "1277080": {
+        "start": 11,
+        "length": 4
+      },
+      "1446070": {
+        "start": 6,
+        "length": 1
+      },
+      "1500940": {
+        "start": 2,
+        "length": 1
+      },
+      "2083100": {
+        "start": 8,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "1167606",
+    "original": "私は都会での生活に向いていないと思う。",
+    "en": [
+      {
+        "id": "28950",
+        "text": "I don't think I'm cut out for city life."
+      },
+      {
+        "id": "7231073",
+        "text": "I don't think that I'm cut out for city life."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1444970",
+      "1378860",
+      "1277080",
+      "1589350"
+    ],
+    "matches": {
+      "1277080": {
+        "start": 9,
+        "length": 3
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1
+      },
+      "1378860": {
+        "start": 6,
+        "length": 2
+      },
+      "1444970": {
+        "start": 2,
+        "length": 2
+      },
+      "1589350": {
+        "start": 16,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "1212284",
+    "original": "また気が向いたら「人間失格」読んでみよう。",
+    "en": [
+      {
+        "id": "1229202",
+        "text": "If you feel like it, read \"Ningen Shikkaku\"."
+      },
+      {
+        "id": "1229204",
+        "text": "Or, if you feel like it, read \"No Longer Human\"."
+      }
+    ],
+    "vocabIds": [
+      "1221520",
+      "1277080",
+      "1366770",
+      "1319820",
+      "1456360"
+    ],
+    "matches": {
+      "1221520": {
+        "start": 2,
+        "length": 1
+      },
+      "1277080": {
+        "start": 4,
+        "length": 3
+      },
+      "1319820": {
+        "start": 11,
+        "length": 2
+      },
+      "1366770": {
+        "start": 9,
+        "length": 2
+      },
+      "1456360": {
+        "start": 14,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "1217544",
+    "original": "気が向いたら管理人に連絡してみよう。",
+    "en": [
+      {
+        "id": "1305666",
+        "text": "If I feel inclined to, then I will try to contact the manager."
+      }
+    ],
+    "vocabIds": [
+      "1221520",
+      "1277080",
+      "1214260",
+      "1559900"
+    ],
+    "matches": {
+      "1214260": {
+        "start": 6,
+        "length": 3
+      },
+      "1221520": {
+        "start": 0,
+        "length": 1
+      },
+      "1277080": {
+        "start": 2,
+        "length": 3
+      },
+      "1559900": {
+        "start": 10,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "2299507",
+    "original": "彼は教師に向いていない。",
+    "en": [
+      {
+        "id": "300647",
+        "text": "He's not cut out for teaching."
+      }
+    ],
+    "indices": "彼(かれ) は 教師 に 向いている{向いていない}",
+    "vocabIds": [
+      "1483070",
+      "1237130",
+      "1277080"
+    ],
+    "matches": {
+      "1237130": {
+        "start": 2,
+        "length": 2
+      },
+      "1277080": {
+        "start": 5,
+        "length": 3
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "2708933",
+    "original": "お前は文系の方が合ってるよ。理系は向いてないと思う。",
+    "en": [
+      {
+        "id": "10069848",
+        "text": "You would fit in well with those in humanities. But I don't think you are so well suited to the sciences."
+      }
+    ],
+    "vocabIds": [
+      "1002290",
+      "1505090",
+      "1251000",
+      "1516930",
+      "1284430",
+      "1957060",
+      "1277080",
+      "1589350"
+    ],
+    "matches": {
+      "1002290": {
+        "start": 0,
+        "length": 2
+      },
+      "1251000": {
+        "start": 4,
+        "length": 1
+      },
+      "1277080": {
+        "start": 17,
+        "length": 3
+      },
+      "1284430": {
+        "start": 8,
+        "length": 3
+      },
+      "1505090": {
+        "start": 3,
+        "length": 1
+      },
+      "1516930": {
+        "start": 6,
+        "length": 1
+      },
+      "1589350": {
+        "start": 23,
+        "length": 2
+      },
+      "1957060": {
+        "start": 14,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "10060688",
+    "original": "僕研究気質だから語学向いてないと思う。",
+    "en": [
+      {
+        "id": "11237830",
+        "text": "I've a researcher's turn of mind, so I don't think language study suits me."
+      }
+    ],
+    "vocabIds": [
+      "1521400",
+      "1258520",
+      "1222250",
+      "1270910",
+      "1955900",
+      "1277080",
+      "1589350"
+    ],
+    "matches": {
+      "1222250": {
+        "start": 3,
+        "length": 2
+      },
+      "1258520": {
+        "start": 1,
+        "length": 2
+      },
+      "1270910": {
+        "start": 8,
+        "length": 1
+      },
+      "1277080": {
+        "start": 10,
+        "length": 3
+      },
+      "1521400": {
+        "start": 0,
+        "length": 1
+      },
+      "1589350": {
+        "start": 16,
+        "length": 2
+      },
+      "1955900": {
+        "start": 9,
+        "length": 1
+      }
+    }
+  },
+  {
+    "id": "11027703",
+    "original": "気が向いたら読んでみる。",
+    "en": [
+      {
+        "id": "12018757",
+        "text": "I'll read it when I feel like it."
+      }
+    ],
+    "vocabIds": [
+      "1221520",
+      "1277080",
+      "1456360"
+    ],
+    "matches": {
+      "1221520": {
+        "start": 0,
+        "length": 1
+      },
+      "1277080": {
+        "start": 2,
+        "length": 3
+      },
+      "1456360": {
+        "start": 6,
+        "length": 3
+      }
+    }
   }
 ]

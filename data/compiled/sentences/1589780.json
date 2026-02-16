@@ -1,44 +1,233 @@
 [
   {
-    "id": "74227",
-    "original": "今回、まだ両替していなかったので、日本円を人民元に替える必要があった。",
+    "id": "78342",
+    "original": "裏側の部屋に替えてください。",
     "en": [
       {
-        "id": "329493",
-        "text": "This time I hadn't converted my money yet, so I needed to change Yen into Yuan."
+        "id": "325374",
+        "text": "I'd like a room in the back."
       }
     ],
-    "indices": "今回 未だ{まだ} 両替 為る(する){していなかった} ので 日本円~ を 人民元~ に 替える 必要 が 有る{あった}"
+    "indices": "裏側 の 部屋[01] に 替える{替えて} 下さい{ください}",
+    "vocabIds": [
+      "1550410",
+      "1499320",
+      "1589780"
+    ],
+    "matches": {
+      "1499320": {
+        "start": 3,
+        "length": 2
+      },
+      "1550410": {
+        "start": 0,
+        "length": 2
+      },
+      "1589780": {
+        "start": 6,
+        "length": 3
+      }
+    }
   },
   {
-    "id": "75093",
-    "original": "倒置法は言葉の前後を入れ替えることにより文章を強調する効果があります。",
+    "id": "85360",
+    "original": "表側の部屋に替えてください。",
     "en": [
       {
-        "id": "328626",
-        "text": "Anastrophe, by switching around words, has the effect of emphasizing text."
+        "id": "318353",
+        "text": "I'd like a room in the front."
       }
     ],
-    "indices": "倒置法~ は 言葉[02] 之(の)[01]{の} 前後(ぜんご)[04]~ を 入れ替える 事(こと){こと} に依り{により} 文章[01] を 強調[01] 為る(する){する} 効果 が[01] 有る{あります}"
+    "indices": "表側 の 部屋[01] に 替える{替えて} 下さい{ください}",
+    "vocabIds": [
+      "1489350",
+      "1581310",
+      "1499320",
+      "1589780"
+    ],
+    "matches": {
+      "1489350": {
+        "start": 0,
+        "length": 1
+      },
+      "1499320": {
+        "start": 3,
+        "length": 2
+      },
+      "1581310": {
+        "start": 1,
+        "length": 1
+      },
+      "1589780": {
+        "start": 6,
+        "length": 3
+      }
+    }
   },
   {
-    "id": "78260",
-    "original": "流れを渡っている間に馬を取り替えるな。",
+    "id": "121485",
+    "original": "買い替えた方がお得ですよ。",
     "en": [
       {
-        "id": "325457",
-        "text": "Never swap horses while crossing a stream."
-      },
-      {
-        "id": "1422381",
-        "text": "Don't change horses in midstream."
-      },
-      {
-        "id": "8215914",
-        "text": "Don't change horses midstream."
+        "id": "282520",
+        "text": "You will be better off buying a new one than trying to fix it."
       }
     ],
-    "indices": "流れ を[03] 渡る{渡っている} 間(あいだ)[02] に 馬[01] を 取り替える な[01]"
+    "indices": "買い換える{買い替えた} 方(ほう) が お得~ です よ[01]",
+    "vocabIds": [
+      "1636070",
+      "1589780",
+      "1516930",
+      "1454490"
+    ],
+    "matches": {
+      "1454490": {
+        "start": 8,
+        "length": 1
+      },
+      "1516930": {
+        "start": 5,
+        "length": 1
+      },
+      "1589780": {
+        "start": 2,
+        "length": 3
+      },
+      "1636070": {
+        "start": 0,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "124767",
+    "original": "電池を入れ替えないと。",
+    "en": [
+      {
+        "id": "279227",
+        "text": "It needs new batteries."
+      }
+    ],
+    "indices": "電池 を 入れ替える{入れ替え} 無いと[01]{ないと}",
+    "vocabIds": [
+      "1443620",
+      "1589780"
+    ],
+    "matches": {
+      "1443620": {
+        "start": 0,
+        "length": 2
+      },
+      "1589780": {
+        "start": 5,
+        "length": 4
+      }
+    }
+  },
+  {
+    "id": "148545",
+    "original": "手持ちの円をドルに替えた。",
+    "en": [
+      {
+        "id": "266014",
+        "text": "I converted my yen into dollars."
+      }
+    ],
+    "indices": "手持ち の 円(えん)[01] を 弗[01]{ドル} に 替える[02]{替えた}",
+    "vocabIds": [
+      "1327730",
+      "1175570",
+      "1589780"
+    ],
+    "matches": {
+      "1175570": {
+        "start": 4,
+        "length": 1
+      },
+      "1327730": {
+        "start": 0,
+        "length": 3
+      },
+      "1589780": {
+        "start": 9,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "162008",
+    "original": "私は１万円をドルに替えたい。",
+    "en": [
+      {
+        "id": "252507",
+        "text": "I want to change ten thousand yen to dollars."
+      }
+    ],
+    "indices": "私(わたし)[01] は 一万円{１万円} を 弗[01]{ドル} に 替える[02]{替え} たい",
+    "vocabIds": [
+      "1311110",
+      "2121800",
+      "1175570",
+      "1589780"
+    ],
+    "matches": {
+      "1175570": {
+        "start": 4,
+        "length": 1
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1
+      },
+      "1589780": {
+        "start": 9,
+        "length": 4
+      },
+      "2121800": {
+        "start": 2,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "185114",
+    "original": "海に面した部屋に替えて下さい。",
+    "en": [
+      {
+        "id": "22244",
+        "text": "I'd like a room facing the ocean instead."
+      }
+    ],
+    "indices": "海 に 面する{面した} 部屋[01] に 替える{替えて} 下さい",
+    "vocabIds": [
+      "1201190",
+      "1584695",
+      "1499320",
+      "1589780",
+      "2004390"
+    ],
+    "matches": {
+      "1201190": {
+        "start": 0,
+        "length": 1
+      },
+      "1499320": {
+        "start": 5,
+        "length": 2
+      },
+      "1584695": {
+        "start": 2,
+        "length": 1
+      },
+      "1589780": {
+        "start": 8,
+        "length": 3
+      },
+      "2004390": {
+        "start": 11,
+        "length": 1
+      }
+    }
   },
   {
     "id": "226475",
@@ -49,26 +238,98 @@
         "text": "The room looks different after I've changed the curtains."
       }
     ],
-    "indices": "カーテン を[01] 替える と 部屋[01] が 違う(ちがう)[01]{違った} 様に{ように} 見える(みえる)"
+    "indices": "カーテン を[01] 替える と 部屋[01] が 違う(ちがう)[01]{違った} 様に{ように} 見える(みえる)",
+    "vocabIds": [
+      "1589780",
+      "1499320",
+      "1158880",
+      "1259140"
+    ],
+    "matches": {
+      "1158880": {
+        "start": 12,
+        "length": 3
+      },
+      "1259140": {
+        "start": 18,
+        "length": 3
+      },
+      "1499320": {
+        "start": 9,
+        "length": 2
+      },
+      "1589780": {
+        "start": 5,
+        "length": 3
+      }
+    }
   },
   {
-    "id": "10206456",
-    "original": "私だったら、車のタイヤ、新しいのに買い替えるけどね。",
+    "id": "10919733",
+    "original": "本当に車を買い替えた方がいい。",
     "en": [
       {
-        "id": "9638077",
-        "text": "I'd buy new tires for your car if I were you."
+        "id": "3150441",
+        "text": "You really should buy a new car."
       }
-    ]
+    ],
+    "vocabIds": [
+      "1611580",
+      "1323080",
+      "1636070",
+      "1589780",
+      "2160680"
+    ],
+    "matches": {
+      "1323080": {
+        "start": 3,
+        "length": 1
+      },
+      "1589780": {
+        "start": 7,
+        "length": 3
+      },
+      "1611580": {
+        "start": 0,
+        "length": 3
+      },
+      "1636070": {
+        "start": 5,
+        "length": 2
+      },
+      "2160680": {
+        "start": 10,
+        "length": 4
+      }
+    }
   },
   {
-    "id": "10771194",
-    "original": "雨戸を取り替えることにしたんだ。",
+    "id": "13155612",
+    "original": "花の水を替えなきゃ。",
     "en": [
       {
-        "id": "10780316",
-        "text": "I've decided to replace the shutters."
+        "id": "13155611",
+        "text": "I have to change the water for the flowers."
       }
-    ]
+    ],
+    "vocabIds": [
+      "1194500",
+      "1371260",
+      "1589780"
+    ],
+    "matches": {
+      "1194500": {
+        "start": 0,
+        "length": 1
+      },
+      "1371260": {
+        "start": 2,
+        "length": 1
+      },
+      "1589780": {
+        "start": 4,
+        "length": 3
+      }
+    }
   }
 ]

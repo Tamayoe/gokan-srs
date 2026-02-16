@@ -209,15 +209,40 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
             const newProgressItem = SRSService.createVocabProgress(action.vocabId);
             const processedItem = SRSService.applyVocabIntroChoice(newProgressItem, action.choice);
 
-            return {
+            // Check if item already exists in queue to avoid duplicates
+            const existingIndex = state.progress.learningQueue.findIndex(v => v.vocabId === action.vocabId);
+            let updatedQueue;
+
+            if (existingIndex >= 0) {
+                // Update existing
+                updatedQueue = [...state.progress.learningQueue];
+                updatedQueue[existingIndex] = {
+                    ...updatedQueue[existingIndex],
+                    ...processedItem,
+                    // Preserve history if any (though new items shouldn't have history)
+                    reading: { ...processedItem.reading, history: updatedQueue[existingIndex].reading.history },
+                    meaning: { ...processedItem.meaning, history: updatedQueue[existingIndex].meaning.history },
+                };
+            } else {
+                // Append new
+                updatedQueue = [...state.progress.learningQueue, processedItem];
+            }
+
+            const newState = {
                 ...state,
                 progress: {
                     ...state.progress,
-                    learningQueue: [...state.progress.learningQueue, processedItem]
+                    learningQueue: updatedQueue,
+                    stats: {
+                        ...state.progress.stats,
+                        newLearnedToday: state.progress.stats.newLearnedToday + (action.choice === 'learn' ? 1 : 0),
+                        totalLearned: state.progress.stats.totalLearned + 1,
+                    }
                 },
                 // Remove from candidates
                 introCandidates: state.introCandidates.filter(c => c.id !== action.vocabId),
             };
+            return newState;
         }
 
         default:
@@ -299,16 +324,31 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 state.progress.stats.newLearnedToday >= CONSTANTS.srs.dailyNewLimit &&
                 !state.progress.dailyOverride;
 
+            console.log(`[QuizContext] nextDue calculation:
+                introCandidates: ${state.introCandidates.length},
+                newLearnedToday: ${state.progress?.stats.newLearnedToday},
+                dailyLimit: ${CONSTANTS.srs.dailyNewLimit},
+                dailyLimitReached: ${dailyLimitReached}
+            `);
+
             if (!dailyLimitReached && state.introCandidates.length > 0) {
                 // Intros default to Reading quiz, with explicit vocabId
+                console.log(`[QuizContext] nextDue -> Priority 1: Intro ${state.introCandidates[0].id}`);
                 return { vocabId: state.introCandidates[0].id, quizType: 'reading' };
             }
 
             // Priority 2: Due Reviews & Retries from Queue
             // getNextVocabToStudy now returns QuizItem | null
-            const reviewItem = getNextVocabToStudy(state.progress?.learningQueue);
-            if (reviewItem) return reviewItem;
+            const reviewItem = getNextVocabToStudy(
+                state.progress?.learningQueue,
+                state.settings ?? undefined // Pass settings (default handled in utils if undefined, but state.settings is UserSettings | null)
+            );
+            if (reviewItem) {
+                console.log(`[QuizContext] nextDue -> Priority 2: Review ${reviewItem.vocab.vocabId} (${reviewItem.quizType})`);
+                return reviewItem;
+            }
 
+            console.log(`[QuizContext] nextDue -> NULL`);
             return null;
         },
         [state.progress, state.settings, state.introCandidates]
@@ -449,6 +489,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                         console.error(`Failed to load candidate ${id}`, e);
                     }
                 }
+                console.log(`[QuizContext] advanceQueue found ${newCandidates.length} new candidates.`);
             }
 
             dispatch({
@@ -674,14 +715,16 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }, [nextDue, state.progress, state.settings, sessionView.sessionState]);
 
     useEffect(() => {
-        if (state.feedback?.correct) {
+        // [UPDATED] Only auto-advance if it's NOT a meaning quiz
+        // Meaning quizzes have rich context (sentences) that user might want to read
+        if (state.feedback?.correct && state.currentQuizItem?.quizType !== 'meaning') {
             const timer = setTimeout(() => {
                 actions.continueToNext().then();
             }, CONSTANTS.quiz.correctAnswerAutoAdvanceDelay);
 
             return () => clearTimeout(timer);
         }
-    }, [state.feedback?.correct]);
+    }, [state.feedback?.correct, state.currentQuizItem]);
 
     /* =========================
        COMPUTED FLAGS
@@ -694,7 +737,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             !state.feedback?.show &&
             !state.isLoadingVocab,
 
-        canContinue: !!(state.feedback?.show && !state.feedback.correct),
+        canContinue: !!(state.feedback?.show && (!state.feedback.correct || state.currentQuizItem?.quizType === 'meaning')),
 
         isReady: !!state.currentVocab && !state.isLoadingVocab,
     };

@@ -1,5 +1,5 @@
 import type { VocabProgress } from "../models/vocabulary.model";
-import type { UserProgress } from "../models/user.model";
+import type { UserProgress, UserSettings } from "../models/user.model";
 import { CONSTANTS } from "../commons/constants";
 
 export type QuizType = 'reading' | 'meaning';
@@ -20,6 +20,7 @@ export interface QuizItem {
  */
 export function getNextVocabToStudy(
     queue?: VocabProgress[],
+    settings?: UserSettings,
     now: Date = new Date()
 ): QuizItem | null {
     if (!queue || queue.length === 0) return null;
@@ -33,24 +34,40 @@ export function getNextVocabToStudy(
         return { vocab, quizType: 'reading' };
     }
 
-    // 2. Priority: Due Readings
-    const dueReadings = queue.filter(v =>
-        v.totalReviews > 0 &&
-        v.reading.dueDate !== null &&
-        v.reading.dueDate <= now
-    );
-    if (dueReadings.length > 0) {
-        return { vocab: pickRandom(dueReadings)!, quizType: 'reading' };
+    // 2. Priority: ALL Readings (First Reviews + Due Readings)
+    // We want to clear all reading quizzes before moving to meanings.
+    const allReadings = queue.filter(v => {
+        // Condition A: First Review (newly learned)
+        const isFirstReview =
+            v.totalReviews === 0 &&
+            v.introductionAt !== null &&
+            v.nextReviewAt !== null &&
+            v.nextReviewAt <= now &&
+            v.stage !== 'graduated';
+
+        // Condition B: Due Reading Review
+        const isDueReading =
+            v.totalReviews > 0 &&
+            v.reading.dueDate !== null &&
+            v.reading.dueDate <= now;
+
+        return isFirstReview || isDueReading;
+    });
+
+    if (allReadings.length > 0) {
+        return { vocab: pickRandom(allReadings)!, quizType: 'reading' };
     }
 
-    // 3. Priority: Due Meanings
-    const dueMeanings = queue.filter(v =>
-        v.totalReviews > 0 &&
-        v.meaning.dueDate !== null &&
-        v.meaning.dueDate <= now
-    );
-    if (dueMeanings.length > 0) {
-        return { vocab: pickRandom(dueMeanings)!, quizType: 'meaning' };
+    // 3. Priority: Due Meanings (IF ENABLED)
+    if (settings?.enableMeaningQuiz !== false) { // Default true
+        const dueMeanings = queue.filter(v =>
+            v.totalReviews > 0 &&
+            v.meaning.dueDate !== null &&
+            v.meaning.dueDate <= now
+        );
+        if (dueMeanings.length > 0) {
+            return { vocab: pickRandom(dueMeanings)!, quizType: 'meaning' };
+        }
     }
 
     // 4. Priority: New Intros (not introduced yet)
@@ -65,20 +82,6 @@ export function getNextVocabToStudy(
         // Intros are type-agnostic until "Learn" is clicked, but we need a type.
         // We default to 'reading' as the primary entry point.
         return { vocab: pickRandom(newIntros)!, quizType: 'reading' };
-    }
-
-    // 5. Priority: First Reviews (just introduced, totalReviews === 0)
-    // These are items user just clicked "Learn" on. They are due NOW.
-    // We prioritize Reading for the first encounter.
-    const firstReviews = queue.filter(v =>
-        v.totalReviews === 0 &&
-        v.introductionAt !== null &&
-        v.nextReviewAt !== null &&
-        v.nextReviewAt <= now &&
-        v.stage !== 'graduated'
-    );
-    if (firstReviews.length > 0) {
-        return { vocab: pickRandom(firstReviews)!, quizType: 'reading' };
     }
 
     return null;

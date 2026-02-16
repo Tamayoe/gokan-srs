@@ -1,5 +1,49 @@
 [
   {
+    "id": "437489",
+    "original": "彼はその店へ閉店間際に行った。",
+    "en": [
+      {
+        "id": "371398",
+        "text": "He went to the store at the last minute, just before it closed."
+      },
+      {
+        "id": "532961",
+        "text": "He went to the store just as it was going to close."
+      }
+    ],
+    "indices": "彼(かれ) は 其の{その} 店(みせ) へ 閉店 間際 に 行く{行った}",
+    "vocabIds": [
+      "1483070",
+      "1582125",
+      "1508720",
+      "1215450",
+      "1589060"
+    ],
+    "matches": {
+      "1215450": {
+        "start": 8,
+        "length": 2
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1
+      },
+      "1508720": {
+        "start": 6,
+        "length": 2
+      },
+      "1582125": {
+        "start": 4,
+        "length": 1
+      },
+      "1589060": {
+        "start": 11,
+        "length": 3
+      }
+    }
+  },
+  {
     "id": "1754661",
     "original": "飛行機は離陸間際だ。",
     "en": [
@@ -10,8 +54,22 @@
     ],
     "vocabIds": [
       "1485470",
-      "1215450",
-      "1550980"
-    ]
+      "1550980",
+      "1215450"
+    ],
+    "matches": {
+      "1215450": {
+        "start": 6,
+        "length": 2
+      },
+      "1485470": {
+        "start": 0,
+        "length": 3
+      },
+      "1550980": {
+        "start": 5,
+        "length": 1
+      }
+    }
   }
 ]
