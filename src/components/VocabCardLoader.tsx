@@ -26,7 +26,7 @@ export function VocabCardLoader({ progress, onClick }: { progress: VocabProgress
   return <VocabCard vocab={vocab} progress={progress} onClick={() => onClick?.(progress.vocabId)} />;
 }
 
-function VocabCardSkeleton() {
+export function VocabCardSkeleton() {
   return (
     <div className="rounded-lg p-4 animate-pulse bg-surface border border-divider">
       <div className="h-4 w-24 mb-2 bg-gray-300 rounded" />

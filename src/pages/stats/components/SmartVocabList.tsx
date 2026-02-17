@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from "react";
 import type { VocabProgress, Vocabulary } from "../../../models/vocabulary.model";
 import { VocabularyService } from "../../../services/vocabulary.service";
-import { Loader } from "../../../components/Loader";
 import { VocabCard } from "../../../components/VocabCard";
+import { VocabCardSkeleton } from "../../../components/VocabCardLoader";
 import { Search, ArrowDown, ArrowUp } from "lucide-react";
 import { Button } from "../../../components/ui/Button";
 
@@ -152,12 +152,28 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
 
     if (isLoading) {
         return (
-            <div className="flex flex-col items-center justify-center p-12 bg-surface rounded-lg border border-divider shadow-sm">
-                <Loader title="Loading Vocabulary..." />
-                <div className="w-64 h-2 bg-gray-100 dark:bg-gray-800 rounded-full mt-4 overflow-hidden">
-                    <div className="h-full bg-primary transition-all duration-300" style={{ width: `${loadingProgress}%` }} />
+            <div className="flex flex-col gap-4 animate-fade-in">
+                {/* Skeleton Controls */}
+                <div className="flex flex-col md:flex-row gap-4 p-4 bg-surface rounded-lg shadow-sm border border-divider items-center justify-between opacity-50 pointer-events-none">
+                    <div className="w-full md:w-64 h-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse" />
+                    <div className="flex gap-2 w-full md:w-auto">
+                        <div className="w-32 h-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse" />
+                        <div className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse" />
+                    </div>
                 </div>
-                <span className="text-sm text-tertiary mt-2">{loadingProgress}%</span>
+
+                {/* Skeleton Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {Array.from({ length: 12 }).map((_, i) => (
+                        <VocabCardSkeleton key={i} />
+                    ))}
+                </div>
+
+                {/* Loading Progress Bar - Optional but helpful if batching takes time */}
+                <div className="fixed bottom-4 right-4 bg-surface border border-divider shadow-md rounded-full px-4 py-2 flex items-center gap-3 z-50">
+                    <div className="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+                    <span className="text-xs text-primary font-medium">Loading... {loadingProgress}%</span>
+                </div>
             </div>
         );
     }

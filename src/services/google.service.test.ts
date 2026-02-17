@@ -70,16 +70,22 @@ describe('GoogleDriveSync', () => {
             expect(merged.kanjiKnowledge.kanjiSet.size).toBe(1);
         });
 
-        it('should use union if versions are equal (conflict fallback)', () => {
-            // If versions are same, we can't know which is newer, so safety fallback to Union
+        it('should prioritized LOCAL if versions are equal (Local Authority strategy)', () => {
+            // Updated Strategy (2026-02-17):
+            // Previously we used Union for safety. 
+            // However, this caused "Zombie Kanji" bugs where deleted items resurfaced.
+            // We now assume 'Local' is the authoritative source of truth for the active session.
+            // Trade-off: If user added 'A' on Dev1 and 'B' on Dev2 simultaneously (same version), 'B' is lost.
+            // Benefit: Deletions actually work.
+
             const local = createMockProgress(['A'], 1);
             const remote = createMockProgress(['B'], 1);
 
             const merged = (service as any).deepMerge(local, remote);
 
             expect(merged.kanjiKnowledge.kanjiSet.has('A')).toBe(true);
-            expect(merged.kanjiKnowledge.kanjiSet.has('B')).toBe(true);
-            expect(merged.kanjiKnowledge.kanjiSet.size).toBe(2);
+            expect(merged.kanjiKnowledge.kanjiSet.has('B')).toBe(false); // Local 'A' wins, Remote 'B' is ignored
+            expect(merged.kanjiKnowledge.kanjiSet.size).toBe(1);
         });
     });
 });
