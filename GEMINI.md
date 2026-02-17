@@ -587,6 +587,11 @@ return 'exhausted'
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
+- **[2026-02-17]**:
+  - **Sync Logic Fixes**:
+    - **Conflict Resolution**: Changed strategy for `KanjiKnowledge` merging. When local and remote versions match, **Local** state is now authoritative to preserve deletions.
+    - **Race Condition Fix (Optimistic Versioning)**: Implemented `latestLocalVersion` tracking in `GoogleDriveSync`. This detects when a background upload is triggered with stale React state metadata (but fresh content) and "patches" the version number to ensure it wins the sync conflict against the previous upload. This fixes the issue where rapid settings changes (e.g. Count then Set) were reverting each other.
+
 - **[2026-02-16]**:
   - **Meaning Quiz Implementation**: Implemented Sentence Meaning Cloze quiz logic
     - Updated `SRSService.evaluateMeaning` with fuzzy matching (Levenshtein) and stop-word stripping

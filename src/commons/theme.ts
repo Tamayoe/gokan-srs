@@ -25,6 +25,22 @@ export const THEME = {
             background: '#818cf8', // Indigo 400
             gradientStart: '#06b6d4', // Cyan 500 (Shiny)
             gradientEnd: '#3b82f6',   // Blue 500 (Deep)
+        },
+        reading: {
+            loop1: '#6366f1', // Indigo 500
+            loop2: {
+                background: '#e0e7ff', // Indigo 100
+                gradientStart: '#818cf8', // Indigo 400
+                gradientEnd: '#4338ca', // Indigo 700
+            }
+        },
+        meaning: {
+            loop1: '#14b8a6', // Teal 500
+            loop2: {
+                background: '#ccfbf1', // Teal 100
+                gradientStart: '#2dd4bf', // Teal 400
+                gradientEnd: '#0f766e', // Teal 700
+            }
         }
     },
     fonts: {

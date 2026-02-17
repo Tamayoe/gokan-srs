@@ -5,9 +5,10 @@ interface MasteryRingProps {
     memoryStrength: number; // SRS Memory Strength
     size?: number;
     showText?: boolean;
+    variant?: 'default' | 'reading' | 'meaning';
 }
 
-export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size = 30, showText = true }) => {
+export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size = 30, showText = true, variant = 'default' }) => {
     const getPercentages = (strength: number) => {
         const sMin = CONSTANTS.srs.formula.minMemoryStrength;
         const sSoft = CONSTANTS.srs.formula.mastery.visualSoftCap;
@@ -51,7 +52,7 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size =
     const offset2 = circumference - (p2 / 100) * circumference;
 
     // Fixed ID for gradient (we use one global style here effectively)
-    const gradientId = "shinyMasteryGradient";
+    const gradientId = `shinyMasteryGradient-${variant}`;
 
     // Text Visibility logic
     const shouldShowText = showText && size >= 30;
@@ -59,6 +60,24 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size =
 
     // Percentage text to show
     const displayPercentage = Math.round(p1);
+
+    // Color Logic
+    let loop1Color: string = THEME.mastery.loop1;
+    let loop2Start: string = THEME.mastery.loop2.gradientStart;
+    let loop2End: string = THEME.mastery.loop2.gradientEnd;
+    let loop2Bg: string = THEME.mastery.loop2.background;
+
+    if (variant === 'reading') {
+        loop1Color = THEME.mastery.reading.loop1;
+        loop2Start = THEME.mastery.reading.loop2.gradientStart;
+        loop2End = THEME.mastery.reading.loop2.gradientEnd;
+        loop2Bg = THEME.mastery.reading.loop2.background;
+    } else if (variant === 'meaning') {
+        loop1Color = THEME.mastery.meaning.loop1;
+        loop2Start = THEME.mastery.meaning.loop2.gradientStart;
+        loop2End = THEME.mastery.meaning.loop2.gradientEnd;
+        loop2Bg = THEME.mastery.meaning.loop2.background;
+    }
 
     return (
         <div className="relative flex items-center justify-center shrink-0" style={{ width: size, height: size }}>
@@ -69,8 +88,8 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size =
             >
                 <defs>
                     <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor={THEME.mastery.loop2.gradientStart} />
-                        <stop offset="100%" stopColor={THEME.mastery.loop2.gradientEnd} />
+                        <stop offset="0%" stopColor={loop2Start} />
+                        <stop offset="100%" stopColor={loop2End} />
                     </linearGradient>
                 </defs>
 
@@ -94,7 +113,7 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size =
                     strokeDasharray={circumference}
                     strokeDashoffset={offset1}
                     strokeLinecap="round"
-                    stroke={p2 > 0 ? THEME.mastery.loop2.background : THEME.mastery.loop1}
+                    stroke={p2 > 0 ? loop2Bg : loop1Color}
                     fill="transparent"
                     r={radius}
                     cx={size / 2}

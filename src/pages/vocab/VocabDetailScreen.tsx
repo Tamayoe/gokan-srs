@@ -85,11 +85,19 @@ export default function VocabDetailScreen() {
                                     </div>
                                 </div>
                                 {progress && (
-                                    <div className="flex flex-col items-center gap-2 border-t border-divider pt-6 w-full">
-                                        <MasteryRing memoryStrength={progress.reading.memoryStrength} size={60} />
-                                        <span className="text-xs text-tertiary uppercase tracking-wider font-gothic font-semibold">
-                                            Mastery
-                                        </span>
+                                    <div className="flex justify-center gap-8 border-t border-divider pt-6 w-full">
+                                        <div className="flex flex-col items-center gap-2">
+                                            <MasteryRing memoryStrength={progress.reading.memoryStrength} size={60} variant="reading" />
+                                            <span className="text-xs text-tertiary uppercase tracking-wider font-gothic font-semibold">
+                                                Reading
+                                            </span>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-2">
+                                            <MasteryRing memoryStrength={progress.meaning.memoryStrength} size={60} variant="meaning" />
+                                            <span className="text-xs text-tertiary uppercase tracking-wider font-gothic font-semibold">
+                                                Meaning
+                                            </span>
+                                        </div>
                                     </div>
                                 )}
                             </div>

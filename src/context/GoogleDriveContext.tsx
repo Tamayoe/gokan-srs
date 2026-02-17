@@ -1,6 +1,6 @@
 
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { useGoogleLogin, googleLogout, type TokenResponse } from '@react-oauth/google';
 import { GoogleDriveSync, GoogleAuthError } from '../services/google.service';
 import { StorageService } from '../services/storage.service';
@@ -109,32 +109,43 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
         }
     };
 
+    // Use generic type compatible with browser (number) and Node (object)
+    const uploadDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
     // BACKGROUND UPLOAD: Pushes local changes to cloud. Does NOT trigger app reload.
     const uploadProgress = async (progress: any) => {
-        if (!syncService || isDownloading) return;
-
-        setIsUploading(true);
-        try {
-            // sync() method does: Fetch Remote -> Merge -> Upload -> Save Local
-            // We trust it to update localStorage with the latest state.
-            await syncService.sync(progress);
-            console.log("Background upload completed");
-            // NOTE: We do NOT setLastDownloadTime here. 
-            // QuizContext keeps using its current state (which is ahead or equal to what we just uploaded).
-            // LocalStorage is updated in background for next reload.
-        } catch (error) {
-            console.error("Background upload failed:", error);
-            // Silent fail for background uploads, or maybe a small toast?
-            // If auth error, we might want to prompt, but sticky auth errors are annoying.
-            // For now, let's only logout on critical/download actions or repeated failures?
-            // Actually, if auth is dead, we should probably stop.
-            if (error instanceof GoogleAuthError) {
-                // Maybe set a flag "AuthFailed"? For now, aggressive re-auth is safer for data.
-                // logout(true); 
-            }
-        } finally {
-            setIsUploading(false);
+        if (uploadDebounceRef.current) {
+            clearTimeout(uploadDebounceRef.current);
         }
+
+        uploadDebounceRef.current = setTimeout(async () => {
+            console.log('[GoogleDriveContext] Executing debounced upload...');
+            if (!syncService || isDownloading) return;
+
+            setIsUploading(true);
+            try {
+                // sync() method does: Fetch Remote -> Merge -> Upload -> Save Local
+                // We trust it to update localStorage with the latest state.
+                const merged = await syncService.sync(progress);
+                console.log("Background upload completed. New version:", merged?._sync?.version);
+                // NOTE: We do NOT setLastDownloadTime here. 
+                // QuizContext keeps using its current state (which is ahead or equal to what we just uploaded).
+                // LocalStorage is updated in background for next reload.
+            } catch (error) {
+                console.error("Background upload failed:", error);
+                // Silent fail for background uploads, or maybe a small toast?
+                // If auth error, we might want to prompt, but sticky auth errors are annoying.
+                // For now, let's only logout on critical/download actions or repeated failures?
+                // Actually, if auth is dead, we should probably stop.
+                if (error instanceof GoogleAuthError) {
+                    // Maybe set a flag "AuthFailed"? For now, aggressive re-auth is safer for data.
+                    // logout(true); 
+                }
+            } finally {
+                setIsUploading(false);
+                uploadDebounceRef.current = null;
+            }
+        }, 2000); // 2 second debounce to gather rapid changes (e.g. typing or quick settings toggles)
     };
 
     const login = useGoogleLogin({

@@ -1,9 +1,9 @@
-import {OptionGrid} from "./OptionGrid";
-import {KanjiCountInput} from "./KanjiCountInput";
-import {KanjiField} from "./KanjiField";
-import type {KanjiKnowledge, KanjiLearningMethod} from "../models/user.model";
-import {useKanjiForm} from "../context/KanjiForm/useKanjiForm";
-import {useEffect} from "react";
+import { OptionGrid } from "./OptionGrid";
+import { KanjiCountInput } from "./KanjiCountInput";
+import { KanjiField } from "./KanjiField";
+import type { KanjiKnowledge, KanjiLearningMethod } from "../models/user.model";
+import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
+import { useEffect } from "react";
 
 export function KanjiKnowledgeEditor({
     onKanjiKnowledgeChange
@@ -36,7 +36,7 @@ export function KanjiKnowledgeEditor({
 
             <KanjiCountInput />
 
-            <KanjiField allKanji={state.allKanji}/>
+            <KanjiField allKanji={state.allKanji} />
         </>
     );
 }

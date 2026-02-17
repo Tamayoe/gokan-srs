@@ -37,6 +37,7 @@ export class GoogleDriveSync {
     private readonly accessToken: string;
     private fileId: string | null = null;
     private folderId: string | null = null;
+    private latestLocalVersion: number = 0; // [NEW] Track the highest version we've seen/saved
 
     constructor(accessToken: string) {
         this.accessToken = accessToken;
@@ -47,17 +48,49 @@ export class GoogleDriveSync {
         const remoteProgress = await this.fetchRemoteProgress();
         const localProgress = this.getLocalProgress();
 
-        return this.mergeProgress(localProgress, remoteProgress);
+        const merged = this.mergeProgress(localProgress, remoteProgress);
+
+        // [NEW] Update our internal tracker
+        if (merged?._sync?.version) {
+            this.latestLocalVersion = merged._sync.version;
+        }
+
+        return merged;
     }
 
-    async sync(localProgress: ProgressWithMetadata): Promise<void> {
+    async sync(localProgress: ProgressWithMetadata): Promise<ProgressWithMetadata | null> {
+        // [NEW] OPTIMISTIC VERSIONING
+        // If the incoming localProgress has a version LOWER than what we know we've saved,
+        // it means the React State is stale (metadata-wise) but the Content is fresh (user just typed).
+        // We must pretend this stale-metadata state is actually the LATEST version to win the merge war.
+        const incomingVersion = localProgress._sync?.version ?? 0;
+        let effectiveLocal = localProgress;
+
+        if (incomingVersion < this.latestLocalVersion) {
+            console.log(`[GoogleDriveSync] Stale metadata detected (Incoming: ${incomingVersion}, Known: ${this.latestLocalVersion}). Patching version...`);
+            effectiveLocal = {
+                ...localProgress,
+                _sync: {
+                    lastModified: Date.now(),
+                    version: this.latestLocalVersion // We intentionally catch up to the known version
+                }
+            };
+        }
+
         const remoteProgress = await this.fetchRemoteProgress();
-        const merged = this.mergeProgress(localProgress, remoteProgress);
+        const merged = this.mergeProgress(effectiveLocal, remoteProgress);
 
         if (merged) {
             await this.uploadProgress(merged);
             this.saveLocalProgress(merged);
+
+            // [NEW] Update tracker
+            if (merged._sync?.version) {
+                this.latestLocalVersion = merged._sync.version;
+            }
         }
+
+        return merged;
     }
 
     private mergeProgress(
@@ -130,16 +163,11 @@ export class GoogleDriveSync {
         if (remoteVersion > localVersion) {
             // Remote is newer, trust it entirely
             mergedKanjiKnowledge = remote.kanjiKnowledge;
-        } else if (remoteVersion === localVersion) {
-            // Versions match (conflict/sync race): Fallback to Union for safety
-            mergedKanjiKnowledge = {
-                ...local.kanjiKnowledge,
-                kanjiSet: new Set([
-                    ...(local.kanjiKnowledge?.kanjiSet ?? []),
-                    ...(remote.kanjiKnowledge?.kanjiSet ?? [])
-                ])
-            };
         }
+        // If versions match, we trust LOCAL.
+        // Reason: In this app's architecture, "local" contains the latest user edits 
+        // that haven't been pushed yet. If we Union here, we revert deletions.
+        // So we do nothing (keep initialized local.kanjiKnowledge).
         // else localVersion > remoteVersion: Keep local (default)
 
         const result: ProgressWithMetadata = {

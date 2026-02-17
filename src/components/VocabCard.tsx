@@ -51,7 +51,14 @@ export function VocabCard({
               </div>
             </div>
 
-            <MasteryRing memoryStrength={progress.reading.memoryStrength} size={24} />
+            <div className="flex gap-1">
+              <div className="flex flex-col items-center" title="Reading Mastery">
+                <MasteryRing memoryStrength={progress.reading.memoryStrength} size={20} variant="reading" />
+              </div>
+              <div className="flex flex-col items-center" title="Meaning Mastery">
+                <MasteryRing memoryStrength={progress.meaning.memoryStrength} size={20} variant="meaning" />
+              </div>
+            </div>
           </div>
 
           <div className="text-sm text-secondary">
