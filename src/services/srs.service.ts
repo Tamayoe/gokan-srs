@@ -139,7 +139,8 @@ export class SRSService {
         correctAnswer: string, // The specific reading/meaning matched
         latencyMs: number,
         now: Date,
-        forcedResult?: AnswerResult // Optional override
+        forcedResult?: AnswerResult, // Optional override
+        intervalModifier: number = 1.0 // Adaptive modifier
     ): { updated: VocabProgress; result: AnswerResult, interval: number } {
         const result = forcedResult ?? this.analyzeError(userAnswer, correctAnswer);
 
@@ -170,7 +171,7 @@ export class SRSService {
         // Select the correct entry to update
         const currentEntry = quizType === 'reading' ? { ...vocab.reading } : { ...vocab.meaning };
 
-        const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now);
+        const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now, intervalModifier);
 
         // Check for Graduation (Mastery)
         // A word is graduated if BOTH are mastered? Or if the specific one is mastered?
@@ -208,8 +209,9 @@ export class SRSService {
             }
         }
 
-        // Set retry flag only on first wrong answer
-        const needsRetry = result === 'wrong' && !vocab.needsRetry;
+        // Set retry flag only on first wrong answer AND only for Reading quizzes
+        // Meaning quizzes do not trigger retries for now
+        const needsRetry = result === 'wrong' && !vocab.needsRetry && quizType === 'reading';
 
         return {
             updated: {
@@ -237,7 +239,8 @@ export class SRSService {
         entry: SRSEntry,
         result: AnswerResult,
         latencyMs: number,
-        now: Date
+        now: Date,
+        intervalModifier: number = 1.0
     ): { newEntry: SRSEntry; interval: number } {
 
         // 1. Calculate Multipliers
@@ -265,8 +268,15 @@ export class SRSService {
         }
 
         // 4. Calculate Interval
-        // t = S * 0.28768
-        let newInterval = newStrength * F.lnTarget;
+        // t = S * 0.28768 * intervalModifier (Adaptive Scaling)
+        // We apply the modifier to the INTERVAL, not the memory strength.
+        // This effectively demands higher memory strength for the same interval if modifier > 1?
+        // No, modifier > 1 means LONGER interval for same strength?
+        // Wait, if user is too good, we want HARDER.
+        // Harder = Longer Interval? Yes, push them further.
+        // So modifier > 1.0 is correct for "Hard Mode".
+        // t = S * C * Mod
+        let newInterval = newStrength * F.lnTarget * intervalModifier;
 
         // 5. Apply Post-processing Overrides
         if (result === 'wrong') {
@@ -692,6 +702,51 @@ export class SRSService {
         if (totalReviews === 0) return 0.75; // Default assumption
 
         return successfulReviews / totalReviews;
+    }
+
+    /* =======================
+       ADAPTIVE SRS LOGIC
+       ======================= */
+
+    /**
+     * Updates the user's global difficulty level based on review performance.
+     * Should be called after every review.
+     */
+    static updateAdaptiveStats(
+        currentStats: { level: number; history: boolean[] },
+        result: AnswerResult
+    ): { level: number; history: boolean[] } {
+        const { historySize, increaseThreshold, decreaseThreshold, levelStep, minLevel, maxLevel } = CONSTANTS.srs.adaptive;
+
+        // 1. Update History
+        const isSuccess = result === 'correct' || result === 'minor_error';
+        const newHistory = [...currentStats.history, isSuccess].slice(-historySize);
+
+        // 2. Calculate Rolling Win Rate
+        // Only calculate if we have enough history to be statistically meaningful?
+        // Let's start adapting immediately but maybe damp it?
+        // For now, simple average of what we have.
+        const successCount = newHistory.filter(Boolean).length;
+        const winRate = successCount / newHistory.length;
+
+        // 3. Adjust Level
+        let newLevel = currentStats.level;
+
+        // Only adjust if history is at least 10 items to prevent wild swings at start
+        if (newHistory.length >= 10) {
+            if (winRate > increaseThreshold) {
+                // Too easy -> Increase difficulty (Multiplier UP)
+                newLevel = Math.min(newLevel + levelStep, maxLevel);
+            } else if (winRate < decreaseThreshold) {
+                // Too hard -> Decrease difficulty (Multiplier DOWN)
+                newLevel = Math.max(newLevel - levelStep, minLevel);
+            }
+        }
+
+        return {
+            level: Number(newLevel.toFixed(2)), // Clean float
+            history: newHistory
+        };
     }
 
 }

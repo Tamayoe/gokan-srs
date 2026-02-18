@@ -75,6 +75,18 @@ export const CONSTANTS = {
                 // For ~60 days: 60 / 0.28768 ≈ 208
                 visualSoftCap: 208
             }
+        },
+
+        adaptive: {
+            historySize: 50,
+            targetWinRate: 0.75,
+            // If win rate > 0.85, increase level (harder)
+            increaseThreshold: 0.85,
+            // If win rate < 0.70, decrease level (easier)
+            decreaseThreshold: 0.70,
+            levelStep: 0.05,
+            minLevel: 0.5,
+            maxLevel: 3.0
         }
     },
 

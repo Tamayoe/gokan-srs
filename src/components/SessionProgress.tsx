@@ -30,24 +30,35 @@ export const SessionProgress: React.FC = () => {
         if (!state.progress) return { done: 0, remaining: 0, total: 0 };
 
         const now = new Date();
-        const done = state.sessionHistory.length;
+
+        // "Done" should only count successful attempts or final failures?
+        // If we count every history item, "Total" grows when we fail (because remaining stays 1, but done +1).
+        // To stabilize "Total", we should only count "completed" items in Done.
+        // A failure -> item stays in "remaining". So failure shouldn't count as "done".
+        // But history has the failure. 
+        // Let's filter history for non-wrong answers? 
+        // Or better: `state.sessionHistory` contains all attempts.
+        // `Done` = Unique Vocab IDs in history that resulted in success? 
+        // Actually simpler: 
+        // Total = Items to Do + Items Done.
+        // If I fail an item, it's still "Items to Do". It shouldn't be "Items Done".
+        // So "Done" should be the count of *Successful* reviews in this session (or graduated/passed).
+        // Let's rely on `state.progress.stats.newLearnedToday` + count of review successes?
+
+        // Let's try: Done = History count where result != 'wrong'
+        const done = state.sessionHistory.filter(h => h.result !== 'wrong').length;
 
         const dueReviews = state.progress.learningQueue.filter(
             v => v.nextReviewAt && v.nextReviewAt <= now
         ).length;
 
         const dailyLeft = Math.max(0, CONSTANTS.srs.dailyNewLimit - state.progress.stats.newLearnedToday);
-        // If we are in review mode, we might not care about daily left unless we switch to learn.
-        // But for distinct progress bar, let's sum them for "Task remaining".
-
-        // However, user might just do reviews. 
-        // Let's count "Active Queue" = Due Reviews.
-        // If Due Reviews == 0, then we look at New Words capacity.
 
         let remaining = dueReviews;
-        if (sessionState === 'learn') {
-            // In learn mode, we add the batch size or the daily limit?
-            // Let's say remaining is what's practically available to do NOW.
+
+        // Only add daily limit if we are in learn mode OR if queue is empty (will trigger learn mode)
+        // But for consistency:
+        if (sessionState === 'learn' || dueReviews === 0) {
             remaining += dailyLeft;
         }
 
@@ -56,7 +67,7 @@ export const SessionProgress: React.FC = () => {
             remaining,
             total: done + remaining
         };
-    }, [state.progress, state.sessionHistory.length, sessionState]);
+    }, [state.progress, state.sessionHistory, sessionState]);
 
     const progressPercent = stats.total > 0 ? (stats.done / stats.total) * 100 : 0;
 
@@ -64,22 +75,26 @@ export const SessionProgress: React.FC = () => {
         <div className="w-full max-w-4xl mx-auto mb-6">
             {/* Desktop View */}
             {!isMobile && (
-                <div className="flex flex-col gap-2">
-                    <div className="flex justify-between items-end mb-1">
-                        <HistoryTicker />
-                        <div className="text-secondary-400 text-sm font-medium">
-                            {stats.done} / {stats.total}
+                <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-2">
+                        <div className="flex justify-between items-end mb-1">
+                            <div className="text-secondary-400 text-sm font-medium">Session Progress</div>
+                            <div className="text-secondary-400 text-sm font-medium">
+                                {stats.done} / {stats.total}
+                            </div>
+                        </div>
+
+                        <div className="h-2 bg-secondary-200/50 rounded-full overflow-hidden flex">
+                            {/* Progress Segment */}
+                            <div
+                                className="h-full bg-primary-600 transition-all duration-500 ease-out"
+                                style={{ width: `${progressPercent}%` }}
+                            />
                         </div>
                     </div>
 
-                    <div className="h-2 bg-secondary-200/50 rounded-full overflow-hidden flex">
-                        {/* Progress Segment */}
-                        <div
-                            className="h-full bg-primary-600 transition-all duration-500 ease-out"
-                            style={{ width: `${progressPercent}%` }}
-                        />
-                        {/* Remaining Segment (implicit by background, but could be explicit for "Due" vs "New") */}
-                    </div>
+                    {/* Moved History Ticker Below */}
+                    <HistoryTicker />
                 </div>
             )}
 

@@ -393,6 +393,10 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     totalReviews: 0,
                 },
                 dailyOverride: false,
+                adaptive: {
+                    level: 1.0,
+                    history: []
+                }
             };
 
             dispatch({
@@ -521,6 +525,11 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             const target = state.progress.learningQueue.find(v => v.vocabId === id);
             let historyItem = null;
 
+            // [NEW] Adaptive SRS Update
+            const currentAdaptive = state.progress.adaptive || { level: 1.0, history: [] };
+            const newAdaptive = SRSService.updateAdaptiveStats(currentAdaptive, state.feedback!.type);
+            const adaptiveLevel = newAdaptive.level;
+
             if (target) {
                 const { updated } = SRSService.applyAnswer(
                     target,
@@ -529,7 +538,8 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     state.feedback!.matchedAnswer,
                     latency,
                     now,
-                    state.feedback!.type
+                    state.feedback!.type,
+                    adaptiveLevel // [NEW] Pass adaptive level
                 );
 
                 // Delta calculation depends on type
@@ -561,7 +571,8 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     state.feedback!.matchedAnswer, // Use the matched answer we found during submit
                     latency,
                     now,
-                    state.feedback!.type // Pass the already calculated result
+                    state.feedback!.type, // Pass the already calculated result
+                    adaptiveLevel // [NEW] Pass adaptive level
                 );
 
                 return updated;
@@ -577,6 +588,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                             ...state.progress.stats,
                             totalReviews: state.progress.stats.totalReviews + 1,
                         },
+                        adaptive: newAdaptive, // [NEW] Persist adaptive stats
                     },
                     historyItem: historyItem!
                 },

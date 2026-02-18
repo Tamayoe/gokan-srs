@@ -7,7 +7,7 @@ import { DEFAULT_SRS_ENTRY, DEFAULT_VOCABULARY_PROGRESS } from '../models/vocabu
  * Current data format version
  * Increment this when making breaking changes to the data structure
  */
-const CURRENT_FORMAT_VERSION = 2;
+const CURRENT_FORMAT_VERSION = 3;
 
 /**
  * Migration service to handle data format upgrades
@@ -95,10 +95,28 @@ export class MigrationService {
             this.migrateVocabProgress(item)
         ) ?? [];
 
+        // [NEW] Version 3: Add adaptive stats if missing
+        // AND Initialize meaning quiz for existing "learning" items
+        const updatedQueue = migratedQueue.map((item: VocabProgress) => {
+            // If item is learning, but meaning has no due date (and is at initial state)
+            // We kickstart it.
+            if (item.stage === 'learning' && !item.meaning.dueDate && item.meaning.interval === 0) {
+                return {
+                    ...item,
+                    meaning: {
+                        ...item.meaning,
+                        dueDate: new Date().toISOString() // Use string for hydration later
+                    }
+                } as unknown as VocabProgress;
+            }
+            return item;
+        });
+
         // Return migrated progress with version metadata
         return {
             ...progress,
-            learningQueue: migratedQueue,
+            learningQueue: updatedQueue,
+            adaptive: progress.adaptive ?? { level: 1.0, history: [] },
             _formatVersion: CURRENT_FORMAT_VERSION
         };
     }

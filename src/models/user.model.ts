@@ -32,6 +32,25 @@ export interface UserProgress {
 
     /** Data format version for migration tracking */
     _formatVersion?: number;
+
+    /** Adaptive SRS Stats */
+    adaptive: AdaptiveStats;
+}
+
+export interface AdaptiveStats {
+    /** 
+     * Global interval modifier (default 1.0).
+     * < 1.0: Easymode (shorter intervals)
+     * > 1.0: Hardmode (longer intervals)
+     */
+    level: number;
+
+    /**
+     * Rolling history of recent review results.
+     * true = correct/minor_error (retention success)
+     * false = wrong/pass (retention failure)
+     */
+    history: boolean[];
 }
 
 export type KanjiLearningMethod = 'kklc' | 'rtk' | 'jlpt' | 'custom';
@@ -63,5 +82,9 @@ export const DEFAULT_PROGRESS: Omit<UserProgress, 'kanjiKnowledge'> = {
         totalReviews: 0,
     },
     learningQueue: [],
-    dailyOverride: false
+    dailyOverride: false,
+    adaptive: {
+        level: 1.0,
+        history: []
+    }
 }
