@@ -4,6 +4,7 @@ import { useGoogleDrive } from "../../context/GoogleDriveContext";
 import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor } from "lucide-react";
 import { Button } from "../../components/ui/Button";
 import { useTheme } from "../../context/ThemeContext";
+import { useState } from "react";
 
 function SyncControls() {
     const { login, logout, downloadProgress, isDownloading, isAuthenticated, user } = useGoogleDrive();
@@ -90,6 +91,9 @@ export function SettingsScreen({
     onBack,
 }: SettingsScreenProps) {
     const { theme, setTheme } = useTheme();
+    const [isConfirmingReset, setIsConfirmingReset] = useState(false);
+
+
 
     return (
         <div className="min-h-screen flex flex-col items-center bg-background transition-colors duration-200 max-w-2xl md:max-w-3xl">
@@ -213,12 +217,36 @@ export function SettingsScreen({
                     Danger zone
                 </h2>
 
-                <Button
-                    onClick={onReset}
-                    className="w-full bg-transparent border-error-accent text-error hover:bg-error/5"
-                >
-                    Reset all progress
-                </Button>
+                <div className="flex flex-col gap-4">
+                    {!isConfirmingReset ? (
+                        <Button
+                            onClick={() => setIsConfirmingReset(true)}
+                            className="w-full justify-center bg-transparent border border-error text-error hover:bg-error hover:text-white transition-colors"
+                        >
+                            Reset all progress
+                        </Button>
+                    ) : (
+                        <div className="p-4 rounded-lg bg-error/5 border border-error/20 animate-fade-in-up">
+                            <p className="text-sm text-center mb-4 font-medium text-error">
+                                Are you sure? This cannot be undone.
+                            </p>
+                            <div className="flex gap-3">
+                                <Button
+                                    onClick={() => setIsConfirmingReset(false)}
+                                    className="flex-1 justify-center bg-transparent border border-secondary text-secondary hover:text-primary hover:border-primary transition-colors"
+                                >
+                                    Cancel
+                                </Button>
+                                <Button
+                                    onClick={onReset}
+                                    className="flex-1 justify-center bg-error text-white border-transparent hover:brightness-110"
+                                >
+                                    Confirm Reset
+                                </Button>
+                            </div>
+                        </div>
+                    )}
+                </div>
             </section>
         </div>
     );

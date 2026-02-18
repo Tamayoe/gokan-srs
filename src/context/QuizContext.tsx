@@ -42,6 +42,7 @@ interface QuizState {
     settings: UserSettings | null;
     currentVocab: Vocabulary | null;
     currentSentences: Sentence[] | null; // [NEW] Sentences for meaning quiz
+    currentSentenceId: string | null; // [NEW] Selected sentence ID for persistence
     currentQuizItem: PendingQuizItem | null; // [NEW] Track what we are testing
     userAnswer: string;
     feedback: {
@@ -65,7 +66,7 @@ interface QuizState {
 type QuizAction =
     | { type: 'SETUP_COMPLETE'; payload: SetupCompleteValues }
     | { type: 'LOAD_VOCAB_START'; payload: PendingQuizItem }
-    | { type: 'LOAD_VOCAB_SUCCESS'; payload: { vocab: Vocabulary | null; sentences: Sentence[] | null } }
+    | { type: 'LOAD_VOCAB_SUCCESS'; payload: { vocab: Vocabulary | null; sentences: Sentence[] | null; selectedSentenceId: string | null } }
     | { type: 'LOAD_VOCAB_ERROR'; payload: { vocabId: string, error: any } }
     | { type: 'SET_ANSWER'; payload: string }
     | { type: 'SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswer: string } }
@@ -84,6 +85,7 @@ const initialState: QuizState = {
     settings: null,
     currentVocab: null,
     currentSentences: null,
+    currentSentenceId: null,
     currentQuizItem: null,
     userAnswer: '',
     feedback: null,
@@ -122,6 +124,7 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 isLoadingVocab: true,
                 currentQuizItem: action.payload, // [NEW] Set the item
                 currentSentences: null, // Reset sentences
+                currentSentenceId: null, // Reset selected sentence
                 userAnswer: '',
                 feedback: null,
             };
@@ -131,6 +134,7 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 ...state,
                 currentVocab: action.payload.vocab,
                 currentSentences: action.payload.sentences,
+                currentSentenceId: action.payload.selectedSentenceId,
                 isLoadingVocab: false,
             };
 
@@ -669,7 +673,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     useEffect(() => {
         if (!nextDue) {
-            dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: { vocab: null, sentences: null } });
+            dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: { vocab: null, sentences: null, selectedSentenceId: null } });
 
             // AUTO-ADVANCE TRIGGER: If queue is empty but we can introduce new vocab, refill
             if (state.progress && state.settings && sessionView.sessionState === 'learn') {
@@ -701,7 +705,14 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             quizType === 'meaning' ? VocabularyService.loadSentences(vid) : Promise.resolve(null)
         ]).then(([vocab, sentences]) => {
             if (alive) {
-                dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: { vocab, sentences } });
+                // Select a random sentence if we have sentences
+                let selectedSentenceId: string | null = null;
+                if (sentences && sentences.length > 0) {
+                    const idx = Math.floor(Math.random() * sentences.length);
+                    selectedSentenceId = sentences[idx].id;
+                }
+
+                dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: { vocab, sentences, selectedSentenceId } });
                 startTimeRef.current = Date.now();
             }
         }).catch(err => {

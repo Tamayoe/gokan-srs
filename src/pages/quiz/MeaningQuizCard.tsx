@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { MasteryRing } from "../../components/MasteryRing";
 import { TagsLookup } from "../../models/data.model";
 import type { Tags } from "../../models/data.model";
-import type { Sentence } from "../../models/sentence.model";
+
 import { BaseQuizCard } from "./BaseQuizCard";
 import { InteractiveSentence } from "../../components/InteractiveSentence";
 
@@ -21,17 +20,10 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
     // Get data from centralized state
     const { currentVocab, currentSentences, feedback, progress } = state;
 
-    // Pick a random sentence on mount (or when vocab changes)
-    const [sentence, setSentence] = useState<Sentence | null>(null);
-
-    useEffect(() => {
-        if (currentSentences && currentSentences.length > 0) {
-            const idx = Math.floor(Math.random() * currentSentences.length);
-            setSentence(currentSentences[idx]);
-        } else {
-            setSentence(null);
-        }
-    }, [currentVocab?.id, currentSentences]); // Re-roll when vocab changes
+    // Get persisted sentence from state
+    const sentence = currentSentences && state.currentSentenceId
+        ? currentSentences.find(s => s.id === state.currentSentenceId) || null
+        : null;
 
     if (!currentVocab || !progress) return null;
 
