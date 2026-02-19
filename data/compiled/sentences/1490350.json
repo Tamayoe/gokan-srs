@@ -1,5 +1,35 @@
 [
   {
+    "id": "84795",
+    "original": "父の病状は一喜一憂です。",
+    "en": [
+      {
+        "id": "318919",
+        "text": "My father's condition seems to improve one moment, but the next moment he sinks again."
+      }
+    ],
+    "indices": "父 の 病状 は 一喜一憂 です",
+    "vocabIds": [
+      "1497610",
+      "1490350",
+      "1161670"
+    ],
+    "matches": {
+      "1161670": {
+        "start": 5,
+        "length": 4
+      },
+      "1490350": {
+        "start": 2,
+        "length": 2
+      },
+      "1497610": {
+        "start": 0,
+        "length": 1
+      }
+    }
+  },
+  {
     "id": "116269",
     "original": "彼の病状は好転した。",
     "en": [
@@ -10,7 +40,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 病状 は 好転 為る(する){した}",
     "vocabIds": [
-      "1483070",
+      "2845746",
       "1490350",
       "1277750"
     ],
@@ -19,12 +49,122 @@
         "start": 5,
         "length": 2
       },
-      "1483070": {
+      "1490350": {
+        "start": 2,
+        "length": 2
+      },
+      "2845746": {
         "start": 0,
-        "length": 1
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "116272",
+    "original": "彼の病状が急変するとは誰も思っていなかった。",
+    "en": [
+      {
+        "id": "287398",
+        "text": "Nobody expected that his condition would take a sudden turn."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 病状 が 急変 為る(する){する} とは 誰も 思う{思っていなかった}",
+    "vocabIds": [
+      "2845746",
+      "1490350",
+      "1228960",
+      "1416860",
+      "1589350"
+    ],
+    "matches": {
+      "1228960": {
+        "start": 5,
+        "length": 2
+      },
+      "1416860": {
+        "start": 11,
+        "length": 2
       },
       "1490350": {
         "start": 2,
+        "length": 2
+      },
+      "1589350": {
+        "start": 13,
+        "length": 3
+      },
+      "2845746": {
+        "start": 0,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "183940",
+    "original": "患者の病状は日ごとに変化する。",
+    "en": [
+      {
+        "id": "21066",
+        "text": "The patient's condition changes from day to day."
+      }
+    ],
+    "indices": "患者 の 病状 は 日毎に{日ごとに} 変化(へんか)[01] 為る(する){する}",
+    "vocabIds": [
+      "1212210",
+      "1490350",
+      "1464860",
+      "1510900"
+    ],
+    "matches": {
+      "1212210": {
+        "start": 0,
+        "length": 2
+      },
+      "1464860": {
+        "start": 6,
+        "length": 4
+      },
+      "1490350": {
+        "start": 3,
+        "length": 2
+      },
+      "1510900": {
+        "start": 10,
+        "length": 2
+      }
+    }
+  },
+  {
+    "id": "211600",
+    "original": "その患者は日ごとに病状が悪化している。",
+    "en": [
+      {
+        "id": "48877",
+        "text": "The patient is getting worse and worse day by day."
+      }
+    ],
+    "indices": "其の[01]{その} 患者 は 日毎に{日ごとに} 病状~ が 悪化 為る(する){している}",
+    "vocabIds": [
+      "1212210",
+      "1464860",
+      "1490350",
+      "1151470"
+    ],
+    "matches": {
+      "1151470": {
+        "start": 12,
+        "length": 2
+      },
+      "1212210": {
+        "start": 2,
+        "length": 2
+      },
+      "1464860": {
+        "start": 5,
+        "length": 4
+      },
+      "1490350": {
+        "start": 9,
         "length": 2
       }
     }

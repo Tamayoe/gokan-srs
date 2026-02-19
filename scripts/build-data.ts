@@ -11,13 +11,13 @@ import { BUILD_LIMITS } from './build-constants';
 // --- Configuration ---
 const INPUT_JMDICT_FILE = './data/raw/jmdict.json';
 const INPUT_JPDB_FILE = './data/raw/jpdb_v2.2_freq_list_2024-10-13.json';
-const INPUT_KANJI_FILE = './public/data/compiled/kanji.json';
+const INPUT_KANJI_FILE = './data/compiled/kanji.json';
 const INPUT_SENTENCES_FILE = './data/raw/Sentence pairs in Japanese-English - 2026-02-15.tsv';
 const INPUT_INDICES_FILE = './data/raw/jpn_indices.csv';
 
-const OUTPUT_VOCAB_DIR = './public/data/compiled/vocab';
-const OUTPUT_SENTENCES_DIR = './public/data/compiled/sentences';
-const OUTPUT_INDEX_DIR = './public/data/compiled/index';
+const OUTPUT_VOCAB_DIR = './data/compiled/vocab';
+const OUTPUT_SENTENCES_DIR = './data/compiled/sentences';
+const OUTPUT_INDEX_DIR = './data/compiled/index';
 
 // --- Types ---
 interface JPDBEntry {

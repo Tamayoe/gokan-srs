@@ -1,5 +1,55 @@
 [
   {
+    "id": "74522",
+    "original": "１００円玉か５００円玉しか使えないので私は小銭を探したが見当たらない。",
+    "en": [
+      {
+        "id": "329197",
+        "text": "It would only take 100 or 500 yen coins, so I search for change but don't find any."
+      }
+    ],
+    "indices": "百円玉{１００円玉}~ か ５００円玉~ しか 使う{使えない} ので 私(わたし)[01] は 小銭 を 探す{探した} が 見当たる{見当たらない}",
+    "vocabIds": [
+      "2396790",
+      "2396800",
+      "2630380",
+      "2864027",
+      "1348470",
+      "1593670",
+      "1909960"
+    ],
+    "matches": {
+      "1348470": {
+        "start": 21,
+        "length": 2
+      },
+      "1593670": {
+        "start": 24,
+        "length": 3
+      },
+      "1909960": {
+        "start": 28,
+        "length": 6
+      },
+      "2396790": {
+        "start": 0,
+        "length": 5
+      },
+      "2396800": {
+        "start": 6,
+        "length": 5
+      },
+      "2630380": {
+        "start": 13,
+        "length": 1
+      },
+      "2864027": {
+        "start": 19,
+        "length": 1
+      }
+    }
+  },
+  {
     "id": "146924",
     "original": "小銭を多めに入れてください。",
     "en": [
@@ -26,6 +76,44 @@
       "1953410": {
         "start": 3,
         "length": 2
+      }
+    }
+  },
+  {
+    "id": "155891",
+    "original": "私は小銭の持ち合わせがない。",
+    "en": [
+      {
+        "id": "258646",
+        "text": "I have no small change on me."
+      },
+      {
+        "id": "389480",
+        "text": "I have no small change about me."
+      },
+      {
+        "id": "6162638",
+        "text": "I don't have any small change on me."
+      }
+    ],
+    "indices": "私(わたし)[01] は 小銭[01]~ の 持ち合わせ が 無い{ない}",
+    "vocabIds": [
+      "2864027",
+      "1348470",
+      "1769960"
+    ],
+    "matches": {
+      "1348470": {
+        "start": 2,
+        "length": 2
+      },
+      "1769960": {
+        "start": 5,
+        "length": 5
+      },
+      "2864027": {
+        "start": 0,
+        "length": 1
       }
     }
   },
