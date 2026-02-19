@@ -68,9 +68,12 @@ export class SRSService {
         }
 
         for (const meaning of meanings) {
+            // [FIX] pre-strip parentheses so that commas inside them (e.g. "go (to, from)") don't break splitting
+            const cleanMeaning = meaning.replace(/\s*\(.*?\)\s*/g, " ");
+
             // Split meaning by separators (comma, semicolon)
             // e.g. "answer; reply; solution"
-            const parts = meaning.split(/[;,]/).map(p => p.trim()).filter(p => p.length > 0);
+            const parts = cleanMeaning.split(/[;,]/).map(p => p.trim()).filter(p => p.length > 0);
 
             for (const part of parts) {
                 const normalizedExpected = this.normalizeMeaning(part);
@@ -94,10 +97,14 @@ export class SRSService {
         // 1. Lowercase
         let s = text.toLowerCase().trim();
 
-        // 2. Remove punctuation
+        // 2a. Remove content within parentheses (e.g. "to go (to a place)")
+        // This must be done BEFORE removing punctuation so we can identify the parentheses
+        s = s.replace(/\s*\(.*?\)\s*/g, " ");
+
+        // 3. Remove punctuation
         s = s.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "");
 
-        // 3. Remove stop words from START of string
+        // 4. Remove stop words from START of string
         // "to eat" -> "eat"
         // "a cat" -> "cat"
         // "to be seen" -> "seen"

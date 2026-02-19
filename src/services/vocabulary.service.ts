@@ -8,27 +8,32 @@ export class VocabularyService {
     private static frequencyIndex: FrequencyIndex | null = null;
     private static vocabCache = new Map<string, Vocabulary>();
 
+    private static async fetchJson<T>(path: string): Promise<T> {
+        const response = await fetch(path);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch ${path}: ${response.statusText}`);
+        }
+        return response.json();
+    }
+
     static async loadKKLCKanjiIndex(): Promise<KKLCKanjiIndex | null> {
         if (this.kklcKanjiIndex) return this.kklcKanjiIndex;
 
-        const mod = await import('../../data/compiled/index/kklc-kanji.json');
-        this.kklcKanjiIndex = mod.default;
+        this.kklcKanjiIndex = await this.fetchJson<KKLCKanjiIndex>('/data/compiled/index/kklc-kanji.json');
         return this.kklcKanjiIndex;
     }
 
     static async loadKKLCIndex(): Promise<KKLCIndex | null> {
         if (this.kklcIndex) return this.kklcIndex;
 
-        const mod = await import('../../data/compiled/index/kklc.json');
-        this.kklcIndex = mod.default;
+        this.kklcIndex = await this.fetchJson<KKLCIndex>('/data/compiled/index/kklc.json');
         return this.kklcIndex;
     }
 
     static async loadFrequencyIndex(): Promise<FrequencyIndex | null> {
         if (this.frequencyIndex) return this.frequencyIndex;
 
-        const mod = await import('../../data/compiled/index/frequency.json');
-        this.frequencyIndex = mod.default as FrequencyIndex | null;
+        this.frequencyIndex = await this.fetchJson<FrequencyIndex>('/data/compiled/index/frequency.json');
         return this.frequencyIndex;
     }
 
@@ -37,18 +42,17 @@ export class VocabularyService {
             return this.vocabCache.get(id)!;
         }
 
-        const mod = await import(`../../data/compiled/vocab/${id}.json`);
-        this.vocabCache.set(id, mod.default);
-        return mod.default;
+        const vocab = await this.fetchJson<Vocabulary>(`/data/compiled/vocab/${id}.json`);
+        this.vocabCache.set(id, vocab);
+        return vocab;
     }
 
     static async loadSentences(vocabId: string): Promise<import('../models/sentence.model').Sentence[] | null> {
         try {
-            const mod = await import(`../../data/compiled/sentences/${vocabId}.json`);
+            return await this.fetchJson<import('../models/sentence.model').Sentence[]>(`/data/compiled/sentences/${vocabId}.json`);
             // The file contains an array of sentences directly, or is it a SentenceSet?
             // Based on previous inspection of build-sentences.ts, it generates an array of Sentences?
             // Wait, checking the file content will confirm.
-            return mod.default;
         } catch (e) {
             // No sentences found for this vocab is a valid state
             return null;

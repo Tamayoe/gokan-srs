@@ -482,6 +482,15 @@ describe('SRSService Formula Tests', () => {
             const { result: r2 } = SRSService.evaluateMeaning('consume', multi);
             expect(r2).toBe('correct');
         });
+
+        it('should ignore parenthetical information', () => {
+            // "going through (for example, night)"
+            // User types "going through", should be correct
+            const meaningsWithInfo = ['going through (for example, night)'];
+            const { result, matchedAnswer } = SRSService.evaluateMeaning('going through', meaningsWithInfo);
+            expect(result).toBe('correct');
+            expect(matchedAnswer).toBe('going through');
+        });
     });
     describe('applyVocabIntroChoice', () => {
         it('should initialize due dates for Learn choice', () => {
