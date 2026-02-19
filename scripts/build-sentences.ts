@@ -7,8 +7,8 @@ import type { Sentence } from '../src/models/sentence.model';
 // --- Configuration ---
 const INPUT_SENTENCES_FILE = './data/raw/Sentence pairs in Japanese-English - 2026-02-15.tsv';
 const INPUT_INDICES_FILE = './data/raw/jpn_indices.csv'; // Format: JP_ID <tab> EN_ID <tab> INDICES
-const VOCAB_DIR = './data/compiled/vocab';
-const OUTPUT_DIR = './data/compiled/sentences';
+const VOCAB_DIR = './public/data/compiled/vocab';
+const OUTPUT_DIR = './public/data/compiled/sentences';
 
 // --- Helpers ---
 

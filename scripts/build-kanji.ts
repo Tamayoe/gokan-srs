@@ -1,7 +1,7 @@
 import fs from "fs";
-import {Kanji} from "../src/models/kanji.model";
-import {parseJPDBEntry} from "./build-common";
-import {KKLCDatasetDTO} from "../src/models/data.model";
+import { Kanji } from "../src/models/kanji.model";
+import { parseJPDBEntry } from "./build-common";
+import { KKLCDatasetDTO } from "../src/models/data.model";
 
 const kklcPath = './data/raw/kklc.json';
 const jpdbPath = './data/raw/jpdb_v2.json';
@@ -26,8 +26,10 @@ for (const group of kklc) {
 }
 const kanjis = Array.from(kanjiMap.values());
 
+fs.mkdirSync('./public/data/compiled/index', { recursive: true });
+
 fs.writeFileSync(
-    './data/compiled/kanji.json',
+    './public/data/compiled/kanji.json',
     JSON.stringify(kanjis, null, 2),
 );
 
@@ -45,6 +47,6 @@ for (const kanji of kanjiMap.values()) {
 }
 
 fs.writeFileSync(
-    './data/compiled/index/kklc-kanji.json',
+    './public/data/compiled/index/kklc-kanji.json',
     JSON.stringify(kklcKanjiIndex, null, 2),
 );

@@ -19,7 +19,7 @@ const jpdb: JPDBData = JSON.parse(
     fs.readFileSync('./data/raw/jpdb_v2.2_freq_list_2024-10-13.json', 'utf-8')
 );
 const kanjiData: Kanji[] = JSON.parse(
-    fs.readFileSync('./data/compiled/kanji.json', 'utf-8'),
+    fs.readFileSync('./public/data/compiled/kanji.json', 'utf-8'),
 );
 
 // Build kanji → KKLC step lookup
@@ -44,14 +44,16 @@ const allVocabulary: BuildVocabulary[] = [];
 for (const entry of jmdict.words) {
     if (!entry.kanji.length || !entry.kana.length) continue;
 
-    const primaryKanji = entry.kanji.find(k => k.common);
+    // Relaxed check: Use common kanji if available, otherwise use first
+    const primaryKanji = entry.kanji.find(k => k.common) ?? entry.kanji[0];
     if (!primaryKanji) continue;
 
     const kanjiText = primaryKanji.text;
     const containedKanji = extractKanji(kanjiText);
     if (!containedKanji.length) continue;
 
-    // Calculate primary reading first (needed for JPDB lookup)
+    // Calculate primary reading
+    // Try to find common reading that applies to all (*), otherwise first
     const primaryReading =
         entry.kana.find(k => k.common && k.appliesToKanji.includes("*"))?.text
         ?? entry.kana[0].text;
@@ -135,18 +137,21 @@ for (const entry of jmdict.words) {
 }
 
 // Sort by frequency and limit
-const selected = allVocabulary
+let selected = allVocabulary
     .sort((a, b) => a.frequency.kanjiRank - b.frequency.kanjiRank)
-    .slice(0, BUILD_LIMITS.MAX_VOCABULARY);
+
+if (BUILD_LIMITS.ENABLED_LIMIT) {
+    selected = selected.slice(0, BUILD_LIMITS.MAX_VOCABULARY);
+}
 
 // Ensure output dirs
-fs.mkdirSync('./data/compiled/vocab', { recursive: true });
-fs.mkdirSync('./data/compiled/index', { recursive: true });
+fs.mkdirSync('./public/data/compiled/vocab', { recursive: true });
+fs.mkdirSync('./public/data/compiled/index', { recursive: true });
 
 // Clean up potential stale indices to ensure atomicity
 const indicesToClean = [
-    './data/compiled/index/kklc.json',
-    './data/compiled/index/frequency.json',
+    './public/data/compiled/index/kklc.json',
+    './public/data/compiled/index/frequency.json',
 ];
 
 for (const indexFile of indicesToClean) {
@@ -170,7 +175,7 @@ for (const vocab of selected) {
 
     // Write individual vocab file
     fs.writeFileSync(
-        path.join('./data/compiled/vocab', `${vocab.id}.json`),
+        path.join('./public/data/compiled/vocab', `${vocab.id}.json`),
         JSON.stringify(clean, null, 2),
     );
 
@@ -189,13 +194,13 @@ for (const vocab of selected) {
 
 // Write KKLC step index
 fs.writeFileSync(
-    './data/compiled/index/kklc.json',
+    './public/data/compiled/index/kklc.json',
     JSON.stringify(kklcIndex, null, 2),
 );
 
 // Write frequency index
 fs.writeFileSync(
-    './data/compiled/index/frequency.json',
+    './public/data/compiled/index/frequency.json',
     JSON.stringify(frequencyIndex, null, 2),
 );
 
