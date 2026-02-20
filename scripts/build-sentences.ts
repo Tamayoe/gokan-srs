@@ -34,7 +34,7 @@ async function main() {
     // We need map: writtenForm -> vocabId
     // Since we want greedy matching, we'll sort vocab keys by length (desc)
     console.log('📚 Loading vocabulary...');
-    const vocabMap = new Map<string, string>(); // written -> id
+    const vocabMap = new Map<string, string[]>(); // written -> id array
 
     if (!fs.existsSync(VOCAB_DIR)) {
         console.error(`❌ Vocabulary directory not found: ${VOCAB_DIR}`);
@@ -51,7 +51,10 @@ async function main() {
         // We track the primary written form
         // Note: Some vocab have alternatives, but usually `writtenForm.kanji` is the main one.
         // If `writtenForm.kanji` is mixed (e.g. "受け入れる"), that's what we match.
-        vocabMap.set(vocab.writtenForm.kanji, vocab.id);
+        if (!vocabMap.has(vocab.writtenForm.kanji)) {
+            vocabMap.set(vocab.writtenForm.kanji, []);
+        }
+        vocabMap.get(vocab.writtenForm.kanji)!.push(vocab.id);
         loadedVocabCount++;
     }
     console.log(`✅ Loaded ${loadedVocabCount} vocabulary items.`);
@@ -178,7 +181,7 @@ async function main() {
             // Deinflect the substring.
             // Check if deinflected term is in vocabMap.
 
-            let bestMatch: { vocabId: string, length: number, term: string } | null = null;
+            let bestMatch: { vocabIds: string[], length: number, term: string } | null = null;
 
             // Try lengths from 15 down to 1 (Japanese words rarely exceed 15 chars)
             const maxLen = Math.min(15, text.length - i);
@@ -189,7 +192,7 @@ async function main() {
                 // 1. Direct Match?
                 if (vocabMap.has(substring)) {
                     // Found a match!
-                    bestMatch = { vocabId: vocabMap.get(substring)!, length: len, term: substring };
+                    bestMatch = { vocabIds: vocabMap.get(substring)!, length: len, term: substring };
                     break; // Found longest at this position (since we go desc)
                 }
 
@@ -202,7 +205,7 @@ async function main() {
                     if (vocabMap.has(candidate.term)) {
                         // Found a match via deinflection!
                         // e.g. substring "食べました" (len 5) -> "食べる" (vocab)
-                        bestMatch = { vocabId: vocabMap.get(candidate.term)!, length: len, term: candidate.term };
+                        bestMatch = { vocabIds: vocabMap.get(candidate.term)!, length: len, term: candidate.term };
                         break;
                     }
                 }
@@ -218,10 +221,11 @@ async function main() {
                 }
 
                 // Store match
-                const vId = bestMatch.vocabId;
-                if (!matches[vId]) {
-                    matches[vId] = { start: i, length: bestMatch.length };
-                    matchedVocabIds.push(vId);
+                for (const vId of bestMatch.vocabIds) {
+                    if (!matches[vId]) {
+                        matches[vId] = { start: i, length: bestMatch.length };
+                        matchedVocabIds.push(vId);
+                    }
                 }
 
                 // Advance i (minus 1 because loop increments)
@@ -230,17 +234,8 @@ async function main() {
         }
 
         // --- FILTERING LOGIC ---
-        // 1. Calculate Coverage
-        let coveredCount = 0;
-        for (let i = 0; i < coveredIndices.length; i++) {
-            if (coveredIndices[i]) coveredCount++;
-        }
-
-        const coverageRatio = coveredCount / text.length;
-
-        // Discard if coverage is too low (likely contains many unknown words)
-        // Using 0.5 as threshold
-        if (coverageRatio < 0.5) {
+        // Discard if no vocabulary was matched
+        if (matchedVocabIds.length === 0) {
             continue;
         }
 

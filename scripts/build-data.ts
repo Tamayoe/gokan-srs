@@ -11,13 +11,13 @@ import { BUILD_LIMITS } from './build-constants';
 // --- Configuration ---
 const INPUT_JMDICT_FILE = './data/raw/jmdict.json';
 const INPUT_JPDB_FILE = './data/raw/jpdb_v2.2_freq_list_2024-10-13.json';
-const INPUT_KANJI_FILE = './data/compiled/kanji.json';
+const INPUT_KANJI_FILE = './public/data/compiled/kanji.json';
 const INPUT_SENTENCES_FILE = './data/raw/Sentence pairs in Japanese-English - 2026-02-15.tsv';
 const INPUT_INDICES_FILE = './data/raw/jpn_indices.csv';
 
-const OUTPUT_VOCAB_DIR = './data/compiled/vocab';
-const OUTPUT_SENTENCES_DIR = './data/compiled/sentences';
-const OUTPUT_INDEX_DIR = './data/compiled/index';
+const OUTPUT_VOCAB_DIR = './public/data/compiled/vocab';
+const OUTPUT_SENTENCES_DIR = './public/data/compiled/sentences';
+const OUTPUT_INDEX_DIR = './public/data/compiled/index';
 
 // --- Types ---
 interface JPDBEntry {
@@ -80,7 +80,7 @@ async function main() {
     // Current build-sentences just used map.set overwriting.
     // To match correctly, we might need a list of IDs per written form, but for optimization 
     // let's stick to the primary one or just overwrite for now as per original script.
-    const writtenToVocabId = new Map<string, string>();
+    const writtenToVocabId = new Map<string, string[]>();
 
 
     for (const entry of jmdict.words) {
@@ -173,7 +173,10 @@ async function main() {
 
         // Populate lookup map for sentence tokenizer
         // Use primary kanji form
-        writtenToVocabId.set(kanjiText, entry.id);
+        if (!writtenToVocabId.has(kanjiText)) {
+            writtenToVocabId.set(kanjiText, []);
+        }
+        writtenToVocabId.get(kanjiText)!.push(entry.id);
     }
 
     console.log(`   - Found ${candidateVocab.size} candidate vocabulary items.`);
@@ -247,7 +250,7 @@ async function main() {
         for (let i = 0; i < text.length; i++) {
             if (coveredIndices[i]) continue;
 
-            let bestMatch: { vocabId: string, length: number } | null = null;
+            let bestMatch: { vocabIds: string[], length: number } | null = null;
             const maxLen = Math.min(15, text.length - i);
 
             // Optimization: Only check substrings that *could* be in our vocab list
@@ -260,7 +263,7 @@ async function main() {
 
                 // 1. Direct Match
                 if (writtenToVocabId.has(substring)) {
-                    bestMatch = { vocabId: writtenToVocabId.get(substring)!, length: len };
+                    bestMatch = { vocabIds: writtenToVocabId.get(substring)!, length: len };
                     break;
                 }
 
@@ -268,7 +271,7 @@ async function main() {
                 const candidates = Deinflector.deinflect(substring);
                 for (const candidate of candidates) {
                     if (writtenToVocabId.has(candidate.term)) {
-                        bestMatch = { vocabId: writtenToVocabId.get(candidate.term)!, length: len };
+                        bestMatch = { vocabIds: writtenToVocabId.get(candidate.term)!, length: len };
                         break;
                     }
                 }
@@ -279,18 +282,18 @@ async function main() {
                 // Register Match
                 for (let k = 0; k < bestMatch.length; k++) coveredIndices[i + k] = true;
 
-                const vId = bestMatch.vocabId;
-                if (!matches[vId]) {
-                    matches[vId] = { start: i, length: bestMatch.length };
-                    matchedVocabIds.push(vId);
+                for (const vId of bestMatch.vocabIds) {
+                    if (!matches[vId]) {
+                        matches[vId] = { start: i, length: bestMatch.length };
+                        matchedVocabIds.push(vId);
+                    }
                 }
                 i += bestMatch.length - 1;
             }
         }
 
-        // Filter low coverage (optional, keeping from original script)
-        const coveredCount = coveredIndices.filter(Boolean).length;
-        if ((coveredCount / text.length) < 0.5) continue;
+        // Filter out sentences that matched no vocabulary
+        if (matchedVocabIds.length === 0) continue;
 
         // Save results
         sentence.vocabIds = matchedVocabIds;

@@ -5,14 +5,14 @@ import path from 'path';
 describe('Vocabulary Data Integrity', () => {
     it('should have vocab files for all IDs in KKLC index', () => {
         const kklcIndex = JSON.parse(
-            fs.readFileSync('./data/compiled/index/kklc.json', 'utf-8')
+            fs.readFileSync('./public/data/compiled/index/kklc.json', 'utf-8')
         );
 
         const missingFiles: string[] = [];
 
         for (const [step, vocabIds] of Object.entries(kklcIndex)) {
             for (const id of vocabIds as string[]) {
-                const vocabPath = path.join('./data/compiled/vocab', `${id}.json`);
+                const vocabPath = path.join('./public/data/compiled/vocab', `${id}.json`);
                 if (!fs.existsSync(vocabPath)) {
                     missingFiles.push(`Step ${step}: ${id}`);
                 }
@@ -24,13 +24,13 @@ describe('Vocabulary Data Integrity', () => {
 
     it('should have vocab files for all IDs in frequency index', () => {
         const frequencyIndex = JSON.parse(
-            fs.readFileSync('./data/compiled/index/frequency.json', 'utf-8')
+            fs.readFileSync('./public/data/compiled/index/frequency.json', 'utf-8')
         );
 
         const missingFiles: string[] = [];
 
         for (const entry of frequencyIndex) {
-            const vocabPath = path.join('./data/compiled/vocab', `${entry.id}.json`);
+            const vocabPath = path.join('./public/data/compiled/vocab', `${entry.id}.json`);
             if (!fs.existsSync(vocabPath)) {
                 missingFiles.push(entry.id);
             }
@@ -40,7 +40,7 @@ describe('Vocabulary Data Integrity', () => {
     });
 
     it('should have valid JSON in all vocab files', () => {
-        const vocabDir = './data/compiled/vocab';
+        const vocabDir = './public/data/compiled/vocab';
         const files = fs.readdirSync(vocabDir);
 
         const invalidFiles: string[] = [];

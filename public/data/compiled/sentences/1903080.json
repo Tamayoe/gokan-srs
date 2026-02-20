@@ -1,0 +1,57 @@
+[
+  {
+    "id": "220553",
+    "original": "この駐車券に判を押して下さい。",
+    "en": [
+      {
+        "id": "57876",
+        "text": "Can you validate this parking ticket?"
+      }
+    ],
+    "indices": "此の{この} 駐車 券 に 判を押す{判を押して} 下さい",
+    "vocabIds": [
+      "2839227",
+      "1903080",
+      "1184270"
+    ],
+    "matches": {
+      "1184270": {
+        "start": 11,
+        "length": 3
+      },
+      "1903080": {
+        "start": 6,
+        "length": 5
+      },
+      "2839227": {
+        "start": 2,
+        "length": 3
+      }
+    }
+  },
+  {
+    "id": "220554",
+    "original": "この駐車券に判を押していただけますか。",
+    "en": [
+      {
+        "id": "57876",
+        "text": "Can you validate this parking ticket?"
+      }
+    ],
+    "indices": "此の{この} 駐車 券 に 判を押す{判を押して}~ 頂ける[01]{いただけます} か",
+    "vocabIds": [
+      "2839227",
+      "1903080"
+    ],
+    "matches": {
+      "1903080": {
+        "start": 6,
+        "length": 5
+      },
+      "2839227": {
+        "start": 2,
+        "length": 3
+      }
+    }
+  }
+]

@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:data": "rimraf ./data/compiled/vocab && rimraf ./data/compiled/sentences && bun run build:kanji && bun scripts/build-data.ts",
+    "build:data": "rimraf ./public/data/compiled/vocab && rimraf ./public/data/compiled/sentences && bun run build:kanji && bun scripts/build-data.ts",
     "build:kanji": "bun scripts/build-kanji.ts",
     "build:jpdb": "node scripts/jpdb-v2.2-tsv-to-json.js",
     "test": "vitest run",

@@ -588,8 +588,8 @@ return 'exhausted'
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
 - **[2026-02-20]**:
-  - **Dev Server Optimization**: Added `server.watch.ignored: ['**/data/compiled', '**/data/compiled/**']` to `vite.config.ts` to prevent Vite's file watcher (chokidar) from actively traversing the 50,000+ generated JSON files. Added `@source` directives in `index.css` to prevent Tailwind CSS v4 from scanning the dataset. These fixes resolve the massive 2-minute delay on the initial dev server request.
-  - **Production Build Fix**: Added an inline Vite plugin in `vite.config.ts` to automatically copy `data/compiled` into `dist/data/compiled` during `vite build`. This resolves an issue where vocabulary JSON files were missing in the production S3 deployment because Vite does not bundle folders outside of `src/` and `public/` by default, causing the app to serve `index.html` as a fallback from CloudFront.
+  - **Dev Server Optimization**: Added `server.watch.ignored: ['**/public/data/compiled', '**/public/data/compiled/**']` to `vite.config.ts` to prevent Vite's file watcher (chokidar) from actively traversing the 50,000+ generated JSON files. Added `@source` directives in `index.css` to prevent Tailwind CSS v4 from scanning the dataset. These fixes resolve the massive 2-minute delay on the initial dev server request.
+  - **Production Build Fix**: Migrated the compiled dataset (`vocab`, `sentences`, `index`) to the standard `public/data/compiled` directory. By doing this, Vite naturally copies the dataset exactly as-is to `dist/` during the production build. This allows the application to cleanly use `fetch('/data/compiled/...')` without tracking files in `import()`, retaining fast dev server startups and skipping the need for custom post-build copy scripts or buggy plugins. `package.json` build scripts were updated accordingly.
 
 - **[2026-02-17]**:
   - **Sync Logic Fixes**:
