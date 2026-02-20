@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@source "none";
+@source "./**/*.{js,ts,jsx,tsx}";
+@source "../index.html";
+
 @theme {
   --color-background: var(--background);
   --color-feedback-background: var(--feedback-background);

@@ -582,6 +582,10 @@ return 'exhausted'
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
+- **[2026-02-20]**:
+  - **Dev Server Optimization**: Added `server.watch.ignored: ['**/data/compiled', '**/data/compiled/**']` to `vite.config.ts` to prevent Vite's file watcher (chokidar) from actively traversing the 50,000+ generated JSON files. Added `@source` directives in `index.css` to prevent Tailwind CSS v4 from scanning the dataset. These fixes resolve the massive 2-minute delay on the initial dev server request.
+  - **Production Build Fix**: Added an inline Vite plugin in `vite.config.ts` to automatically copy `data/compiled` into `dist/data/compiled` during `vite build`. This resolves an issue where vocabulary JSON files were missing in the production S3 deployment because Vite does not bundle folders outside of `src/` and `public/` by default, causing the app to serve `index.html` as a fallback from CloudFront.
+
 - **[2026-02-17]**:
   - **Sync Logic Fixes**:
     - **Conflict Resolution**: Changed strategy for `KanjiKnowledge` merging. When local and remote versions match, **Local** state is now authoritative to preserve deletions.
