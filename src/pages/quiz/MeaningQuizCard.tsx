@@ -73,16 +73,20 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                     </div>
                 ) : (
                     // Fallback to minimal Kanji display if no sentence
-                    <div
-                        className={`text-5xl leading-none text-primary font-mincho mb-4 flex items-center justify-center gap-3 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
-                        onClick={() => feedback?.show && onKanjiClick?.()}
-                        title={currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
-                    >
-                        {currentVocab.writtenForm.kanji}
-                        {/* Merged Entry Icon */}
-                        {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
-                            <Combine size={40} className="text-tertiary opacity-50" />
-                        )}
+                    <div className="flex justify-center mb-4">
+                        <div
+                            className={`relative inline-flex items-start text-5xl leading-none text-primary font-mincho ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
+                            onClick={() => feedback?.show && onKanjiClick?.()}
+                            title={currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
+                        >
+                            <span>{currentVocab.writtenForm.kanji}</span>
+                            {/* Merged Entry Icon */}
+                            {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
+                                <span className="absolute -right-6 top-0">
+                                    <Combine size={18} className="text-tertiary opacity-40" />
+                                </span>
+                            )}
+                        </div>
                     </div>
                 )}
 

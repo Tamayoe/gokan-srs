@@ -38,13 +38,15 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                     {/* Kanji and info */}
                     <div className="flex-1">
                         <div
-                            className={`text-5xl leading-none text-primary font-mincho mb-2 flex items-center gap-2 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
+                            className={`relative inline-flex items-center justify-center text-5xl leading-none text-primary font-mincho mb-2 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
                             onClick={() => feedback?.show && onKanjiClick?.()}
                         >
-                            {currentVocab.writtenForm.kanji}
+                            <span>{currentVocab.writtenForm.kanji}</span>
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
-                                <Combine size={20} className="text-tertiary" />
+                                <span className="absolute -right-6 -top-1">
+                                    <Combine size={18} className="text-tertiary opacity-40" />
+                                </span>
                             )}
                         </div>
                         {/* POS tags */}
@@ -84,16 +86,20 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
 
                     {/* Kanji Display */}
                     <div className="text-center mb-8">
-                        <div
-                            className={`leading-none text-primary text-kanji font-mincho mb-4 flex items-center justify-center gap-3 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
-                            onClick={() => feedback?.show && onKanjiClick?.()}
-                            title={currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
-                        >
-                            {currentVocab.writtenForm.kanji}
-                            {/* Merged Entry Icon */}
-                            {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
-                                <Combine size={40} className="text-tertiary opacity-50" />
-                            )}
+                        <div className="flex justify-center mb-4">
+                            <div
+                                className={`relative inline-flex items-start leading-none text-primary text-kanji font-mincho ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
+                                onClick={() => feedback?.show && onKanjiClick?.()}
+                                title={currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
+                            >
+                                <span>{currentVocab.writtenForm.kanji}</span>
+                                {/* Merged Entry Icon */}
+                                {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
+                                    <span className="absolute -right-8 top-0">
+                                        <Combine size={24} className="text-tertiary opacity-30" />
+                                    </span>
+                                )}
+                            </div>
                         </div>
 
                         {/* Disambiguation helpers */}

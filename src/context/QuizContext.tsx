@@ -20,6 +20,7 @@ import { VocabularyService } from '../services/vocabulary.service';
 import { SRSService } from '../services/srs.service';
 import { MigrationService } from '../services/migration.service';
 import type { AnswerResult } from '../services/srs.service';
+import { LLMService } from '../services/llm.service';
 
 
 import { CONSTANTS } from '../commons/constants';
@@ -54,6 +55,7 @@ interface QuizState {
         matchedAnswer: string;
     } | null;
     isLoadingVocab: boolean;
+    isEvaluatingAi: boolean; // [NEW] Track AI evaluation state
     introCandidates: Vocabulary[]; // [NEW] Potential new items, not yet in learningQueue
     sessionHistory: Array<{        // [NEW] History for the current session
         vocabId: string;
@@ -69,6 +71,7 @@ type QuizAction =
     | { type: 'LOAD_VOCAB_START'; payload: PendingQuizItem }
     | { type: 'LOAD_VOCAB_SUCCESS'; payload: { vocab: Vocabulary | null; sentences: Sentence[] | null; selectedSentenceId: string | null } }
     | { type: 'LOAD_VOCAB_ERROR'; payload: { vocabId: string, error: any } }
+    | { type: 'EVALUATING_AI_START' }
     | { type: 'SET_ANSWER'; payload: string }
     | { type: 'SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswer: string } }
     | { type: 'UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress; historyItem: { vocabId: string, writtenForm: string, result: AnswerResult, delta: number } } }
@@ -91,6 +94,7 @@ const initialState: QuizState = {
     userAnswer: '',
     feedback: null,
     isLoadingVocab: false,
+    isEvaluatingAi: false,
     introCandidates: [],
     sessionHistory: [],
     fatalError: null,
@@ -147,12 +151,16 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 fatalError: `Failed to load vocabulary data for ID: ${action.payload.vocabId}. The application data may be corrupted. Please reload or contact support.`,
             };
 
+        case 'EVALUATING_AI_START':
+            return { ...state, isEvaluatingAi: true };
+
         case 'SET_ANSWER':
             return { ...state, userAnswer: action.payload };
 
         case 'SUBMIT_ANSWER':
             return {
                 ...state,
+                isEvaluatingAi: false,
                 feedback: {
                     show: true,
                     correct: action.payload.type === 'correct',
@@ -269,7 +277,7 @@ export interface QuizContextValue {
     actions: {
         setupComplete(values: SetupValues): Promise<void>;
         setAnswer(answer: string): void;
-        submitAnswer(): void;
+        submitAnswer(): Promise<void>; // [MODIFIED] Now async
         advanceQueue({ now, overrideDailyLimit }: { now: Date, overrideDailyLimit?: boolean }): void;
         continueToNext(): Promise<void>;
         saveSettings(settings: UserSettings): void;
@@ -432,8 +440,8 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             dispatch({ type: 'SET_ANSWER', payload: answer });
         },
 
-        submitAnswer() {
-            if (!state.currentVocab || state.feedback?.show || !state.currentQuizItem) return;
+        async submitAnswer() {
+            if (!state.currentVocab || state.feedback?.show || !state.currentQuizItem || state.isEvaluatingAi) return;
 
             const quizType = state.currentQuizItem.quizType;
             let result: AnswerResult;
@@ -456,9 +464,48 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 );
                 result = evaluation.result;
                 matchedAnswer = evaluation.matchedAnswer;
+
+                // [NEW] Gemini API Contextual Validation
+                // Only trigger if user got it wrong based on strict dictionary check, and has everything configured
+                if ((result === 'wrong' || result === 'minor_error') &&
+                    state.settings?.enableGeminiContext &&
+                    state.settings?.geminiApiKey &&
+                    state.currentSentenceId &&
+                    state.currentSentences &&
+                    state.userAnswer.trim().length > 0) {
+                    const sentence = state.currentSentences.find(s => s.id === state.currentSentenceId);
+
+                    if (sentence) {
+                        try {
+                            dispatch({ type: 'EVALUATING_AI_START' });
+
+                            const aiEvaluation = await LLMService.validateMeaningContext(
+                                state.settings.geminiApiKey,
+                                state.currentVocab,
+                                sentence,
+                                state.userAnswer
+                            );
+
+                            if (aiEvaluation.correct) {
+                                result = 'correct';
+                                // We overwrite the matched answer internally so SRSService stores the user's explicit accepted answer
+                                matchedAnswer = state.userAnswer;
+                                message = `Correct. (AI Validated: ${aiEvaluation.reason})`;
+                            } else {
+                                // If AI still says it's wrong, keep the original strict failure or append the AI reason
+                                if (aiEvaluation.reason) {
+                                    message = `Incorrect. (AI: ${aiEvaluation.reason})`;
+                                }
+                            }
+                        } catch (e) {
+                            console.error("[QuizContext] AI Evaluation failed, falling back to strict result.", e);
+                            // Fallback to strict evaluation already computed
+                        }
+                    }
+                }
             }
 
-            if (result === 'correct') message = 'Correct.';
+            if (result === 'correct' && !message.includes('AI Validated')) message = 'Correct.';
             else if (result === 'minor_error') message = 'Close.';
 
             dispatch({
@@ -781,11 +828,12 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             !!state.userAnswer.trim() &&
             !!state.currentVocab &&
             !state.feedback?.show &&
-            !state.isLoadingVocab,
+            !state.isLoadingVocab &&
+            !state.isEvaluatingAi, // Don't submit twice
 
         canContinue: !!(state.feedback?.show && (!state.feedback.correct || state.currentQuizItem?.quizType === 'meaning')),
 
-        isReady: !!state.currentVocab && !state.isLoadingVocab,
+        isReady: !!state.currentVocab && !state.isLoadingVocab && !state.isEvaluatingAi,
     };
 
     return (

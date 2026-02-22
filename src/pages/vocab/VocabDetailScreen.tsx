@@ -72,12 +72,14 @@ export default function VocabDetailScreen() {
                             <div className={`flex ${isMobile ? 'flex-col gap-4' : 'flex-col items-center text-center gap-6'}`}>
                                 <div className="flex-1 flex flex-col items-center">
                                     <div
-                                        className="text-7xl md:text-8xl font-mincho text-primary mb-4 flex items-center gap-4"
+                                        className="relative inline-flex items-start text-7xl md:text-8xl font-mincho text-primary mb-4"
                                         title={vocab.mergedVocabs && vocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
                                     >
-                                        {vocab.writtenForm.kanji}
+                                        <span>{vocab.writtenForm.kanji}</span>
                                         {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
-                                            <Combine size={48} className="text-tertiary" />
+                                            <span className="absolute -right-10 top-0">
+                                                <Combine size={24} className="text-tertiary opacity-40" />
+                                            </span>
                                         )}
                                     </div>
                                     <div className="space-y-2">

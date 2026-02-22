@@ -14,6 +14,11 @@ export default defineConfig({
             },
         }),
     ].filter(Boolean),
+    server: {
+        watch: {
+            ignored: ['**/public/data/compiled', '**/public/data/compiled/**'],
+        }
+    },
     build: {
         outDir: 'dist',
         assetsDir: 'assets',

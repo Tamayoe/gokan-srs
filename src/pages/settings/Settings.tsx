@@ -1,7 +1,7 @@
 import { OptionGrid } from "../../components/OptionGrid";
 import type { UserSettings } from "../../models/user.model";
 import { useGoogleDrive } from "../../context/GoogleDriveContext";
-import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor } from "lucide-react";
+import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor, Sparkles, KeyRound } from "lucide-react";
 import { Button } from "../../components/ui/Button";
 import { useTheme } from "../../context/ThemeContext";
 import { useState } from "react";
@@ -197,6 +197,76 @@ export function SettingsScreen({
                         />
                         <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent/20 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent"></div>
                     </label>
+                </div>
+            </section>
+
+            {/* AI Features */}
+            <section className="w-full mb-16 animate-slide-up" style={{ animationDelay: "300ms" }}>
+                <div className="flex items-center gap-2 mb-4">
+                    <Sparkles size={16} className="text-secondary" />
+                    <h2 className="uppercase tracking-wide text-xs font-gothic text-secondary m-0">
+                        AI Context Validation
+                    </h2>
+                </div>
+
+                <p className="text-sm text-secondary mb-6 font-gothic">
+                    Enhance your study sessions by allowing Gemini to validate meaning answers that aren't strictly in the dictionary, using the context of the example sentences.
+                </p>
+
+                <div className="space-y-4">
+                    {/* Enable Toggle */}
+                    <div className="flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider">
+                        <div className="flex flex-col gap-1 pr-4">
+                            <span className="font-medium text-primary">Enable Context-Aware Validation</span>
+                            <span className="text-secondary text-xs sm:text-sm">
+                                AI is only called if your answer is initially marked wrong on a meaning quiz that has a sentence context.
+                            </span>
+                        </div>
+                        <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
+                            <input
+                                type="checkbox"
+                                className="sr-only peer"
+                                checked={settings.enableGeminiContext === true}
+                                onChange={(e) =>
+                                    onUpdateSettings({
+                                        ...settings,
+                                        enableGeminiContext: e.target.checked,
+                                    })
+                                }
+                            />
+                            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent/20 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent"></div>
+                        </label>
+                    </div>
+
+                    {/* API Key Input */}
+                    {settings.enableGeminiContext && (
+                        <div className="p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider animate-fade-in-up">
+                            <label className="flex items-center gap-2 mb-2 font-medium text-primary text-sm font-gothic">
+                                <KeyRound size={16} className="text-tertiary" />
+                                Gemini API Key
+                            </label>
+
+                            <input
+                                type="password"
+                                value={settings.geminiApiKey || ''}
+                                onChange={(e) =>
+                                    onUpdateSettings({
+                                        ...settings,
+                                        geminiApiKey: e.target.value
+                                    })
+                                }
+                                placeholder="AIzaSy..."
+                                className="w-full px-3 py-2 bg-background border border-divider rounded-md text-sm font-mono text-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30"
+                            />
+
+                            <div className="mt-3 text-xs text-tertiary flex items-start gap-1">
+                                <span>Note:</span>
+                                <span>
+                                    Your key is stored locally in your browser and is never sent to our servers. Get a free key from <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Google AI Studio</a>.
+                                </span>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
 

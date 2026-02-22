@@ -68,11 +68,14 @@ export type LearningOrder =
 export interface UserSettings {
     preferredLearningOrder: LearningOrder;
     enableMeaningQuiz: boolean;
+    geminiApiKey?: string;
+    enableGeminiContext?: boolean;
 }
 
 export const DEFAULT_SETTINGS: UserSettings = {
     preferredLearningOrder: 'frequency',
     enableMeaningQuiz: true,
+    enableGeminiContext: false,
 };
 
 export const DEFAULT_PROGRESS: Omit<UserProgress, 'kanjiKnowledge'> = {

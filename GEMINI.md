@@ -525,12 +525,17 @@ return 'exhausted'
 
 ### Answer Evaluation Flow
 
-1. User types answer in hiragana
-2. `submitAnswer()` called
-3. `SRSService.evaluateAnswer()` checks against all readings
-4. `SRSService.applyAnswer()` updates memory strength
-5. Feedback shown (correct/incorrect + matched answer)
-6. `continueToNext()` loads next vocab
+1. User types answer (hiragana for reading, english for meaning)
+2. `submitAnswer()` called in `QuizContext`
+3. Base Evaluation:
+   - For Reading: `SRSService.evaluateAnswer()` checks against all readings
+   - For Meaning: `SRSService.evaluateMeaning()` checks against all dictionary glosses
+4. **AI Context Validation (Optional)**: If Meaning is evaluated as incorrect, but `enableGeminiContext` is ON, a Valid API Key is present, and there is a sentence context:
+   - Sets `isEvaluatingAi` to true (shows loading UI).
+   - Calls `LLMService.validateMeaningContext()` to query Gemini Flash asynchronously.
+   - If AI validates the answer in context, overrides result to `correct`.
+5. Feedback shown (correct/incorrect + matched answer + optional AI note)
+6. `continueToNext()` applies SRS update via `SRSService.applyAnswer()` and loads next vocab
 
 ### Daily Reset Logic
 
