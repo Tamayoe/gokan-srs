@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import './App.css';
-import { SetupScreen } from './pages/setup/SetupScreen';
+import { OnboardingFlow } from './pages/setup/OnboardingFlow';
 import { Logo } from './components/Logo';
 import { Settings, User, Cloud, RefreshCw, BarChart2 } from 'lucide-react';
 import { useQuiz } from "./context/useQuiz";
@@ -66,7 +66,7 @@ export const App: React.FC = () => {
     // Setup gate
     if (!isSetupComplete) {
         return <KanjiFormProvider initialState={{}}>
-            <SetupScreen onComplete={actions.setupComplete} />;
+            <OnboardingFlow onComplete={actions.setupComplete} />
         </KanjiFormProvider>
     }
 

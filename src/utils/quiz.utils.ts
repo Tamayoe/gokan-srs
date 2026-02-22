@@ -1,17 +1,18 @@
-import type {UserProgress, UserSettings} from "../models/user.model";
-import type {SessionState} from "../models/state.model";
-import {CONSTANTS} from "../commons/constants";
+import type { UserProgress, UserSettings } from "../models/user.model";
+import type { SessionState } from "../models/state.model";
 
 export function computeSessionView(
     progress: UserProgress | null,
     settings: UserSettings | null,
     hasMoreLearnable: boolean,
+    hasUnlockedKanjiPending: boolean,
+    hasIntroCandidates: boolean,
     now = new Date()
 ): {
     sessionState: SessionState;
     nextReviewAt: Date | null;
 } {
-    if (!progress || !settings || !hasMoreLearnable) {
+    if (!progress || !settings) {
         return { sessionState: 'exhausted', nextReviewAt: null };
     }
 
@@ -34,14 +35,16 @@ export function computeSessionView(
             .map((date) => typeof date === 'string' ? new Date(date) : date)
             .sort((a, b) => a.getTime() - b!.getTime())[0] ?? null;
 
-    const dailyLimitReached =
-        progress.stats.newLearnedToday >= CONSTANTS.srs.dailyNewLimit &&
-        !progress.dailyOverride;
+    // Limits removed per user request
+    const dailyLimitReached = false;
+
+    // We can learn if either the async check says so, or we literally have candidates ready
+    const canLearn = hasMoreLearnable || hasIntroCandidates;
 
     return {
         sessionState:
             !dailyLimitReached
-                ? 'learn'
+                ? (canLearn ? 'learn' : (hasUnlockedKanjiPending ? 'learn-kanji' : (learning.length > 0 ? 'waiting' : 'exhausted')))
                 : learning.length > 0
                     ? 'waiting'
                     : 'exhausted',

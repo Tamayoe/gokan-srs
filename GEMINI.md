@@ -349,13 +349,16 @@ Main study interface. Displays different components based on `sessionState`:
 
 **Auto-advance logic**: If queue has no valid items but can introduce new vocab, automatically calls `advanceQueue()`.
 
-### Setup Screen (`pages/setup/SetupScreen.tsx`)
+### Onboarding Flow (`pages/setup/OnboardingFlow.tsx`)
 
-Initial onboarding wizard. Collects:
-1. Kanji knowledge (method + step/count)
-2. Learning preferences (order)
+Wrapper for new users replacing the direct `SetupScreen` call. Manages a two-step process:
+1. **Welcome Screen**: Explains methodology and offers three paths:
+   - *Beginner*: Bypasses setup, initializes with KKLC step 0 and `kklc` learning order.
+   - *Kanji Learner*: Proceeds to `SetupScreen`.
+   - *Restore Progress*: Google Drive login to pull existing data.
+2. **Setup Screen**: The original wizard for "Kanji Learner" paths. Collects kanji knowledge method/step and learning order preferences.
 
-Calls `actions.setupComplete()` when done.
+Calls `actions.setupComplete()` when the flow produces a valid `SetupValues` object.
 
 ### Settings Screen (`pages/settings/Settings.tsx`)
 

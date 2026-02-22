@@ -57,6 +57,7 @@ interface QuizState {
     isLoadingVocab: boolean;
     isEvaluatingAi: boolean; // [NEW] Track AI evaluation state
     introCandidates: Vocabulary[]; // [NEW] Potential new items, not yet in learningQueue
+    nextKanjiToLearn: { step: number; kanjis: string[] } | null; // [NEW] Next kanji to unlock
     sessionHistory: Array<{        // [NEW] History for the current session
         vocabId: string;
         writtenForm: string;
@@ -82,6 +83,8 @@ type QuizAction =
     | { type: 'OVERRIDE_DAILY_LIMIT' }
     | { type: 'RESET' }
     | { type: 'VOCAB_INTRO_CHOICE'; vocabId: string; choice: 'learn' | 'skip'; }
+    | { type: 'SET_NEXT_KANJI'; payload: { step: number; kanjis: string[] } | null; }
+    | { type: 'LEARN_NEXT_KANJI'; payload: UserProgress }
     | { type: 'RESET_DAILY_STATS' };
 
 const initialState: QuizState = {
@@ -96,6 +99,7 @@ const initialState: QuizState = {
     isLoadingVocab: false,
     isEvaluatingAi: false,
     introCandidates: [],
+    nextKanjiToLearn: null,
     sessionHistory: [],
     fatalError: null,
 };
@@ -141,6 +145,19 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 currentSentences: action.payload.sentences,
                 currentSentenceId: action.payload.selectedSentenceId,
                 isLoadingVocab: false,
+            };
+
+        case 'SET_NEXT_KANJI':
+            return {
+                ...state,
+                nextKanjiToLearn: action.payload
+            };
+
+        case 'LEARN_NEXT_KANJI':
+            return {
+                ...state,
+                progress: action.payload,
+                nextKanjiToLearn: null
             };
 
         case 'LOAD_VOCAB_ERROR':
@@ -284,6 +301,7 @@ export interface QuizContextValue {
         updateKanjiKnowledge(knowledge: KanjiKnowledge): void;
         overrideDailyLimit(): Promise<void>;
         saveVocabIntroChoice(vocabulary: Vocabulary, choice: 'learn' | 'skip'): void
+        learnNextKanji(): Promise<void>;
         reset(): void;
     };
 
@@ -300,6 +318,13 @@ export interface QuizContextValue {
    ========================= */
 
 export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+    const {
+        logout,
+        uploadProgress,
+        isDownloading,
+        lastDownloadTime
+    } = useGoogleDrive();
+
     const [state, dispatch] = useReducer(quizReducer, {
         ...initialState,
         progress: StorageService.loadProgress(),
@@ -354,15 +379,10 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         (): PendingQuizItem | null => { // [UPDATED] Return PendingQuizItem
             // Priority 1: Intro Candidates (Finish the batch first!)
             // We check if we are allowed to learn new items (daily limit)
-            const dailyLimitReached =
-                state.progress &&
-                state.progress.stats.newLearnedToday >= CONSTANTS.srs.dailyNewLimit &&
-                !state.progress.dailyOverride;
+            const dailyLimitReached = false; // Limit removed
 
             console.log(`[QuizContext] nextDue calculation:
                 introCandidates: ${state.introCandidates.length},
-                newLearnedToday: ${state.progress?.stats.newLearnedToday},
-                dailyLimit: ${CONSTANTS.srs.dailyNewLimit},
                 dailyLimitReached: ${dailyLimitReached}
             `);
 
@@ -404,9 +424,11 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             computeSessionView(
                 state.progress,
                 state.settings,
-                hasMoreLearnable
+                hasMoreLearnable,
+                !!state.nextKanjiToLearn,
+                state.introCandidates.length > 0
             ),
-        [state.progress, state.settings, hasMoreLearnable]
+        [state.progress, state.settings, hasMoreLearnable, state.nextKanjiToLearn, state.introCandidates.length]
     );
 
     /* =========================
@@ -520,14 +542,10 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         async advanceQueue({
             now,
+            // @ts-ignore - Kept for API compatibility but no longer used since limits are removed
             overrideDailyLimit = false,
         }) {
             const updatedQueue = state.progress!.learningQueue
-
-            const dailyLimitReached =
-                state.progress!.stats.newLearnedToday >=
-                CONSTANTS.srs.dailyNewLimit &&
-                !(state.progress!.dailyOverride || overrideDailyLimit);
 
             const nowDueCount = updatedQueue.filter(
                 v => v.nextReviewAt && v.nextReviewAt <= now
@@ -535,8 +553,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
             const canAddNew =
                 nowDueCount === 0 &&
-                (!dailyLimitReached || state.progress!.dailyOverride) &&
-                sessionView.sessionState === "learn";
+                sessionView.sessionState !== "waiting";
 
 
             // [MODIFIED] If we have NO due reviews, and we CAN add items...
@@ -568,6 +585,27 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     }
                 }
                 console.log(`[QuizContext] advanceQueue found ${newCandidates.length} new candidates.`);
+            }
+
+            // [NEW] If no candidates found, and we are not exhausted/at limit, prepare next kanji natively
+            if (newCandidates.length === 0 && canAddNew && state.progress!.kanjiKnowledge.method === 'kklc') {
+                try {
+                    const kanjiIndex = await VocabularyService.loadKKLCKanjiIndex();
+                    if (kanjiIndex) {
+                        const nextStep = state.progress!.kanjiKnowledge.step + 1;
+                        if (kanjiIndex[nextStep]) {
+                            dispatch({
+                                type: 'SET_NEXT_KANJI',
+                                payload: { step: nextStep, kanjis: kanjiIndex[nextStep] }
+                            });
+                        }
+                    }
+                } catch (e) {
+                    console.error("[QuizContext] Failed to load kanji index for next step", e);
+                }
+            } else if (newCandidates.length > 0 && state.nextKanjiToLearn) {
+                // Clear next kanji if we actually found candidates
+                dispatch({ type: 'SET_NEXT_KANJI', payload: null });
             }
 
             dispatch({
@@ -687,8 +725,31 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             });
         },
 
+        async learnNextKanji() {
+            if (!state.progress || !state.nextKanjiToLearn) return;
+
+            const newKanjiSet = new Set(state.progress.kanjiKnowledge.kanjiSet);
+            state.nextKanjiToLearn.kanjis.forEach(k => newKanjiSet.add(k));
+
+            const updatedProgress: UserProgress = {
+                ...state.progress,
+                kanjiKnowledge: {
+                    ...state.progress.kanjiKnowledge,
+                    step: state.nextKanjiToLearn.step,
+                    kanjiSet: newKanjiSet
+                }
+            };
+
+            dispatch({ type: 'LEARN_NEXT_KANJI', payload: updatedProgress });
+        },
+
         reset() {
             StorageService.clearProgress();
+            try {
+                logout(); // Disconnect from drive so we don't auto-restore the wiped data
+            } catch (e) {
+                console.error("Failed to logout during reset", e);
+            }
             dispatch({ type: 'RESET' });
         },
     };
@@ -713,11 +774,6 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }, [state.settings]);
 
     /* ---------- Auto-Sync & Reactivity ---------- */
-    const {
-        uploadProgress,
-        isDownloading,
-        lastDownloadTime
-    } = useGoogleDrive();
 
     // AUTO-UPLOAD: Whenever progress changes, upload it to Drive in background
     useEffect(() => {
@@ -757,8 +813,8 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         if (!nextDue) {
             dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: { vocab: null, sentences: null, selectedSentenceId: null } });
 
-            // AUTO-ADVANCE TRIGGER: If queue is empty but we can introduce new vocab, refill
-            if (state.progress && state.settings && sessionView.sessionState === 'learn') {
+            // AUTO-ADVANCE TRIGGER: If queue is empty but we can introduce new vocab, or we are exhausted and potentially have kanji to unlock
+            if (state.progress && state.settings && (sessionView.sessionState === 'learn' || sessionView.sessionState === 'exhausted')) {
                 const now = new Date();
                 actions.advanceQueue({ now });
             }

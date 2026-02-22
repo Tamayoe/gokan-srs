@@ -6,6 +6,7 @@ import { MeaningQuizCard } from "./MeaningQuizCard";
 import { LoadingScreen } from "../../components/LoadingScreen";
 import { useQuiz } from "../../context/useQuiz";
 import VocabIntroCard from "../../components/VocabIntroCard";
+import { LearnKanjiCard } from "../../components/LearnKanjiCard";
 
 interface QuizScreenProps {
     onVocabClick: (vocabId: string) => void;
@@ -13,7 +14,6 @@ interface QuizScreenProps {
 
 export function QuizScreen({ onVocabClick }: QuizScreenProps) {
     const { state, currentProgress, sessionState, nextReviewAt, actions } = useQuiz();
-
 
 
     if (sessionState === "waiting") {
@@ -26,7 +26,18 @@ export function QuizScreen({ onVocabClick }: QuizScreenProps) {
     }
 
     if (sessionState === "exhausted") {
-        return <ExhaustedScreen onReset={actions.reset} />;
+        return <ExhaustedScreen />;
+    }
+
+    if (sessionState === "learn-kanji" && state.nextKanjiToLearn) {
+        return (
+            <div className="flex flex-col flex-1 items-center justify-center p-4">
+                <LearnKanjiCard
+                    nextKanji={state.nextKanjiToLearn}
+                    onUnlock={() => actions.learnNextKanji()}
+                />
+            </div>
+        );
     }
 
     if (state.isLoadingVocab || !state.currentVocab) {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { CONSTANTS } from "../../commons/constants";
 import type { LearningOrder } from "../../models/user.model";
 import { OptionGrid } from "../../components/OptionGrid";
@@ -6,83 +6,11 @@ import { SetupHeader } from "../../components/SetupHeader";
 import type { SetupValues } from "../../models/state.model";
 import { KanjiKnowledgeEditor } from "../../components/KanjiKnowledgeEditor";
 import { useKanjiForm } from "../../context/KanjiForm/useKanjiForm";
-import { useGoogleDrive } from "../../context/GoogleDriveContext";
 import { Button } from "../../components/ui/Button";
-import { StorageService } from "../../services/storage.service";
-import { Cloud, Loader2, LogIn } from "lucide-react";
 import { Loader } from "../../components/Loader";
-
-function GoogleLoginButton({ onSyncComplete }: { onSyncComplete: () => void }) {
-    const { login, isDownloading, isAuthenticated, downloadProgress } = useGoogleDrive();
-    const [hasAttemptedAutoRestore, setHasAttemptedAutoRestore] = useState(false);
-
-    // Auto-restore effect:
-    useEffect(() => {
-        let mounted = true;
-        const tryRestore = async () => {
-            if (isAuthenticated && !isDownloading) {
-                // 1. Check if we already have progress (e.g. from login download)
-                if (StorageService.loadProgress()) {
-                    onSyncComplete();
-                    return;
-                }
-
-                // 2. If not, and we haven't tried yet (e.g. page reload), try explicit download
-                if (!hasAttemptedAutoRestore) {
-                    setHasAttemptedAutoRestore(true);
-                    await downloadProgress();
-                    if (mounted) {
-                        onSyncComplete();
-                    }
-                }
-            }
-        };
-        tryRestore();
-        return () => { mounted = false; };
-    }, [isAuthenticated, isDownloading, hasAttemptedAutoRestore, downloadProgress, onSyncComplete]);
-
-    if (isDownloading) {
-        return (
-            <div className="flex items-center gap-2 px-4 py-2 text-sm text-green-600">
-                <Loader2 size={16} className="animate-spin" />
-                <span>Restoring your progress...</span>
-            </div>
-        );
-    }
-
-    if (isAuthenticated) {
-        // If authenticated but we are still here (and auto-restore finished/failed),
-        // show a Manual Retry button just in case.
-        return (
-            <Button
-                variant="ghost"
-                onClick={async () => {
-                    await downloadProgress();
-                    onSyncComplete();
-                }}
-                className="text-sm font-medium hover:bg-black/5 text-primary"
-            >
-                <Cloud size={16} className="mr-2" />
-                Retry Restore
-            </Button>
-        )
-    }
-
-    return (
-        <Button
-            variant="secondary"
-            onClick={() => login()}
-            className="text-sm font-medium"
-        >
-            <LogIn size={16} className="mr-2" />
-            Already have an account? Log in to restore
-        </Button>
-    );
-}
 
 export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) => Promise<void> }) {
     const { state } = useKanjiForm();
-    const { isDownloading } = useGoogleDrive();
 
     const [learningOrder, setLearningOrder] = useState<LearningOrder>('frequency');
 
@@ -139,26 +67,12 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
                     <Button
                         variant="primary"
                         onClick={handleSubmit}
-                        disabled={!state.knownKanji || isDownloading}
+                        disabled={!state.knownKanji}
                         className="w-full py-4 text-lg font-serif h-14"
                     >
                         Start learning
                     </Button>
 
-                    <div className="relative py-2">
-                        <div className="absolute inset-0 flex items-center">
-                            <span className="w-full border-t border-secondary"></span>
-                        </div>
-                        <div className="relative flex justify-center text-xs uppercase">
-                            <span className="px-2 bg-background text-secondary">
-                                OR
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className="flex justify-center">
-                        <GoogleLoginButton onSyncComplete={() => window.location.reload()} />
-                    </div>
                 </footer>
             </div>
         </div>

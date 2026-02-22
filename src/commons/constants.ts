@@ -13,12 +13,12 @@ export const CONSTANTS = {
     },
 
     srs: {
-        /** Maximum number of new vocab introduced per day */
-        dailyNewLimit: 20,
+        /** Maximum number of new vocab introduced per day (Limit removed) */
+        dailyNewLimit: 999999,
         newVocabBatchSize: 3,
 
-        /** Maximum number of reviews per day */
-        maxReviewsPerDay: 150,
+        /** Maximum number of reviews per day (Limit removed) */
+        maxReviewsPerDay: 999999,
 
         /** Formula Constants */
         formula: {
