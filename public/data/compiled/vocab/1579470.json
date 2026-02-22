@@ -10,7 +10,8 @@
     "primary": "し",
     "alternatives": [
       "よん",
-      "よ"
+      "よ",
+      "スー"
     ]
   },
   "frequency": {
@@ -40,10 +41,51 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "num"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "four"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "スー"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1579470",
+      "isBase": true,
+      "originalPrimaryReading": "し",
+      "originalGlosses": [
+        "four",
+        "4"
+      ]
+    },
+    {
+      "id": "2747960",
+      "isBase": false,
+      "originalPrimaryReading": "スー",
+      "originalGlosses": [
+        "four"
+      ]
+    }
+  ]
 }

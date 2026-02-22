@@ -10,7 +10,8 @@
   "reading": {
     "primary": "とくほん",
     "alternatives": [
-      "どくほん"
+      "どくほん",
+      "よみほん"
     ]
   },
   "frequency": {
@@ -62,10 +63,54 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hist"
+        ]
+      },
+      "glosses": [
+        "yomihon (type of popular literature from the late Edo period)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "よみほん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1582400",
+      "isBase": true,
+      "originalPrimaryReading": "とくほん",
+      "originalGlosses": [
+        "reading-book",
+        "reader",
+        "guidebook"
+      ]
+    },
+    {
+      "id": "2589520",
+      "isBase": false,
+      "originalPrimaryReading": "よみほん",
+      "originalGlosses": [
+        "yomihon (type of popular literature from the late Edo period)"
+      ]
+    }
+  ]
 }

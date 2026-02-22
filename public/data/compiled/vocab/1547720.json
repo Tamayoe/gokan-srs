@@ -9,7 +9,8 @@
   "reading": {
     "primary": "くる",
     "alternatives": [
-      "クる"
+      "クる",
+      "きたる"
     ]
   },
   "frequency": {
@@ -138,10 +139,81 @@
           "と来たら"
         ]
       }
+    },
+    {
+      "pos": [
+        "adj-pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "next (e.g. \"next April\")",
+        "forthcoming",
+        "coming"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きたる"
+      ]
+    },
+    {
+      "pos": [
+        "v5r",
+        "vi"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "to come",
+        "to arrive",
+        "to be due to"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きたる"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1547720",
+      "isBase": true,
+      "originalPrimaryReading": "くる",
+      "originalGlosses": [
+        "to come (spatially or temporally)",
+        "to approach",
+        "to arrive"
+      ]
+    },
+    {
+      "id": "1591270",
+      "isBase": false,
+      "originalPrimaryReading": "きたる",
+      "originalGlosses": [
+        "next (e.g. \"next April\")",
+        "forthcoming",
+        "coming"
+      ]
+    }
+  ]
 }

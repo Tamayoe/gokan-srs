@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "き",
-    "alternatives": []
+    "alternatives": [
+      "ぎ",
+      "げ",
+      "け"
+    ]
   },
   "frequency": {
     "kanjiRank": 289
@@ -260,10 +264,153 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "-like nature",
+        "-like disposition",
+        "-ish temperament"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ぎ"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "seeming",
+        "giving the appearance of",
+        "giving one the feeling of"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "げ"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "sign",
+        "indication",
+        "trace",
+        "touch",
+        "feeling"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "け"
+      ]
+    },
+    {
+      "pos": [
+        "n-pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "somehow",
+        "for some reason",
+        "seeming to be"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "け"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1221520",
+      "isBase": true,
+      "originalPrimaryReading": "き",
+      "originalGlosses": [
+        "spirit",
+        "mind",
+        "heart"
+      ]
+    },
+    {
+      "id": "2233680",
+      "isBase": false,
+      "originalPrimaryReading": "ぎ",
+      "originalGlosses": [
+        "-like nature",
+        "-like disposition",
+        "-ish temperament"
+      ]
+    },
+    {
+      "id": "2006580",
+      "isBase": false,
+      "originalPrimaryReading": "げ",
+      "originalGlosses": [
+        "seeming",
+        "giving the appearance of",
+        "giving one the feeling of"
+      ]
+    },
+    {
+      "id": "2233690",
+      "isBase": false,
+      "originalPrimaryReading": "け",
+      "originalGlosses": [
+        "sign",
+        "indication",
+        "trace"
+      ]
+    }
+  ]
 }

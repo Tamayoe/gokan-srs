@@ -9,7 +9,8 @@
   "reading": {
     "primary": "そと",
     "alternatives": [
-      "と"
+      "と",
+      "がい"
     ]
   },
   "frequency": {
@@ -79,10 +80,55 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "outside ...",
+        "beyond ...",
+        "not included in ..."
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "がい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1203250",
+      "isBase": true,
+      "originalPrimaryReading": "そと",
+      "originalGlosses": [
+        "outside",
+        "exterior"
+      ]
+    },
+    {
+      "id": "2227930",
+      "isBase": false,
+      "originalPrimaryReading": "がい",
+      "originalGlosses": [
+        "outside ...",
+        "beyond ...",
+        "not included in ..."
+      ]
+    }
+  ]
 }

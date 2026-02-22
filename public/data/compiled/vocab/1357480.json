@@ -9,7 +9,8 @@
   "reading": {
     "primary": "しょく",
     "alternatives": [
-      "そく"
+      "そく",
+      "しき"
     ]
   },
   "frequency": {
@@ -84,10 +85,56 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hist"
+        ]
+      },
+      "glosses": [
+        "agency (government department between a ministry and a bureau under the ritsuryō system)"
+      ],
+      "related": {
+        "compounds": [
+          "律令制"
+        ]
+      },
+      "appliesToReadings": [
+        "しき"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1357480",
+      "isBase": true,
+      "originalPrimaryReading": "しょく",
+      "originalGlosses": [
+        "job",
+        "work",
+        "employment"
+      ]
+    },
+    {
+      "id": "2251120",
+      "isBase": false,
+      "originalPrimaryReading": "しき",
+      "originalGlosses": [
+        "agency (government department between a ministry and a bureau under the ritsuryō system)"
+      ]
+    }
+  ]
 }

@@ -9,7 +9,8 @@
   "reading": {
     "primary": "わけ",
     "alternatives": [
-      "ワケ"
+      "ワケ",
+      "やく"
     ]
   },
   "frequency": {
@@ -120,10 +121,55 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "translation",
+        "version (e.g. \"English version\")"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "やく"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1538330",
+      "isBase": true,
+      "originalPrimaryReading": "わけ",
+      "originalGlosses": [
+        "reason",
+        "cause",
+        "grounds"
+      ]
+    },
+    {
+      "id": "2057030",
+      "isBase": false,
+      "originalPrimaryReading": "やく",
+      "originalGlosses": [
+        "translation",
+        "version (e.g. \"English version\")"
+      ]
+    }
+  ]
 }

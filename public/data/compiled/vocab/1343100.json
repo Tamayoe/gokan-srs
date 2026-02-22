@@ -9,7 +9,8 @@
   "reading": {
     "primary": "ところ",
     "alternatives": [
-      "とこ"
+      "とこ",
+      "しょ"
     ]
   },
   "frequency": {
@@ -298,10 +299,53 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf",
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for places"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しょ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1343100",
+      "isBase": true,
+      "originalPrimaryReading": "ところ",
+      "originalGlosses": [
+        "place",
+        "spot",
+        "scene"
+      ]
+    },
+    {
+      "id": "2273780",
+      "isBase": false,
+      "originalPrimaryReading": "しょ",
+      "originalGlosses": [
+        "counter for places"
+      ]
+    }
+  ]
 }

@@ -10,7 +10,10 @@
   "reading": {
     "primary": "なこうど",
     "alternatives": [
-      "ちゅうにん"
+      "ちゅうにん",
+      "なかびと",
+      "なかひと",
+      "なかうど"
     ]
   },
   "frequency": {
@@ -62,10 +65,56 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "go-between",
+        "matchmaker"
+      ],
+      "related": {
+        "compounds": [
+          "仲人"
+        ]
+      },
+      "appliesToReadings": [
+        "なかびと"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1425960",
+      "isBase": true,
+      "originalPrimaryReading": "なこうど",
+      "originalGlosses": [
+        "matchmaker"
+      ]
+    },
+    {
+      "id": "2772160",
+      "isBase": false,
+      "originalPrimaryReading": "なかびと",
+      "originalGlosses": [
+        "go-between",
+        "matchmaker"
+      ]
+    }
+  ]
 }

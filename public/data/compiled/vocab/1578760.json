@@ -10,7 +10,8 @@
     "primary": "くれない",
     "alternatives": [
       "べに",
-      "こう"
+      "こう",
+      "もみ"
     ]
   },
   "frequency": {
@@ -60,10 +61,51 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "red silk lining"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "もみ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1578760",
+      "isBase": true,
+      "originalPrimaryReading": "くれない",
+      "originalGlosses": [
+        "deep red",
+        "crimson"
+      ]
+    },
+    {
+      "id": "2414440",
+      "isBase": false,
+      "originalPrimaryReading": "もみ",
+      "originalGlosses": [
+        "red silk lining"
+      ]
+    }
+  ]
 }

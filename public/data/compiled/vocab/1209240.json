@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "かむ",
-    "alternatives": []
+    "alternatives": [
+      "しがむ"
+    ]
   },
   "frequency": {
     "kanjiRank": 3366,
@@ -170,10 +172,54 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "v5m",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "uk",
+          "rare"
+        ]
+      },
+      "glosses": [
+        "to chew (strongly)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しがむ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1209240",
+      "isBase": true,
+      "originalPrimaryReading": "かむ",
+      "originalGlosses": [
+        "to bite"
+      ]
+    },
+    {
+      "id": "2826405",
+      "isBase": false,
+      "originalPrimaryReading": "しがむ",
+      "originalGlosses": [
+        "to chew (strongly)"
+      ]
+    }
+  ]
 }

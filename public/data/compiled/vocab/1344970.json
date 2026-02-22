@@ -9,7 +9,9 @@
   },
   "reading": {
     "primary": "おんなのこ",
-    "alternatives": []
+    "alternatives": [
+      "めのこ"
+    ]
   },
   "frequency": {
     "kanjiRank": 586,
@@ -64,10 +66,58 @@
           "男の子"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "woman",
+        "girl"
+      ],
+      "related": {
+        "compounds": [
+          "男"
+        ]
+      },
+      "appliesToReadings": [
+        "めのこ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1344970",
+      "isBase": true,
+      "originalPrimaryReading": "おんなのこ",
+      "originalGlosses": [
+        "girl",
+        "daughter",
+        "baby girl"
+      ]
+    },
+    {
+      "id": "2742860",
+      "isBase": false,
+      "originalPrimaryReading": "めのこ",
+      "originalGlosses": [
+        "woman",
+        "girl"
+      ]
+    }
+  ]
 }

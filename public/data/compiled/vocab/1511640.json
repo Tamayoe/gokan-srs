@@ -10,7 +10,8 @@
   "reading": {
     "primary": "かたこと",
     "alternatives": [
-      "カタコト"
+      "カタコト",
+      "へんげん"
     ]
   },
   "frequency": {
@@ -45,10 +46,77 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "brief remark",
+        "few words"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "へんげん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "one side (e.g. of an argument)",
+        "ex-parte statement"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "へんげん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1511640",
+      "isBase": true,
+      "originalPrimaryReading": "かたこと",
+      "originalGlosses": [
+        "prattle",
+        "broken language",
+        "halting language"
+      ]
+    },
+    {
+      "id": "1626540",
+      "isBase": false,
+      "originalPrimaryReading": "へんげん",
+      "originalGlosses": [
+        "brief remark",
+        "few words"
+      ]
+    }
+  ]
 }

@@ -9,7 +9,12 @@
   },
   "reading": {
     "primary": "なんにん",
-    "alternatives": []
+    "alternatives": [
+      "なにじん",
+      "なにびと",
+      "なんびと",
+      "なんぴと"
+    ]
   },
   "frequency": {
     "kanjiRank": 2464,
@@ -38,10 +43,85 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "what nationality"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "なにじん"
+      ]
+    },
+    {
+      "pos": [
+        "pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "anyone",
+        "any person",
+        "whoever"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "なにびと"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1189100",
+      "isBase": true,
+      "originalPrimaryReading": "なんにん",
+      "originalGlosses": [
+        "how many people",
+        "a number of people"
+      ]
+    },
+    {
+      "id": "2207370",
+      "isBase": false,
+      "originalPrimaryReading": "なにじん",
+      "originalGlosses": [
+        "what nationality"
+      ]
+    },
+    {
+      "id": "2006130",
+      "isBase": false,
+      "originalPrimaryReading": "なにびと",
+      "originalGlosses": [
+        "anyone",
+        "any person",
+        "whoever"
+      ]
+    }
+  ]
 }

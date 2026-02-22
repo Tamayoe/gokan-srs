@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "とも",
-    "alternatives": []
+    "alternatives": [
+      "ごと",
+      "ぐち",
+      "ども"
+    ]
   },
   "frequency": {
     "kanjiRank": 5236,
@@ -102,10 +106,115 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "including ...",
+        "with ...",
+        "inclusive of",
+        "... and all"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ごと"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hum",
+          "uk"
+        ]
+      },
+      "glosses": [
+        "first-person plural (or singular)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ども"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "derog",
+          "uk"
+        ]
+      },
+      "glosses": [
+        "second or third person plural (implies speaker is of higher status than those referred to)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ども"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1578040",
+      "isBase": true,
+      "originalPrimaryReading": "とも",
+      "originalGlosses": [
+        "together with"
+      ]
+    },
+    {
+      "id": "2552950",
+      "isBase": false,
+      "originalPrimaryReading": "ごと",
+      "originalGlosses": [
+        "including ...",
+        "with ...",
+        "inclusive of"
+      ]
+    },
+    {
+      "id": "1234250",
+      "isBase": false,
+      "originalPrimaryReading": "ども",
+      "originalGlosses": [
+        "first-person plural (or singular)"
+      ]
+    }
+  ]
 }

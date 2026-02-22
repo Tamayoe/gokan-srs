@@ -170,16 +170,133 @@ async function main() {
         };
 
         candidateVocab.set(entry.id, vocabObj);
+    }
 
-        // Populate lookup map for sentence tokenizer
-        // Use primary kanji form
+    console.log(`   - Found ${candidateVocab.size} initial vocabulary entries from JMDict.`);
+
+    // --- MERGE EXACT KANJI HOMOGRAPHS ---
+    console.log('   - Merging homographs with identical kanji forms...');
+    const vocabGroups = new Map<string, BuildVocabulary[]>();
+    for (const vocab of candidateVocab.values()) {
+        const kanji = vocab.writtenForm.kanji;
+        if (!vocabGroups.has(kanji)) {
+            vocabGroups.set(kanji, []);
+        }
+        vocabGroups.get(kanji)!.push(vocab);
+    }
+
+    const mergedCandidateVocab = new Map<string, BuildVocabulary>();
+    const mergedLogs: string[] = [];
+    let mergedCount = 0;
+
+    for (const [kanji, group] of vocabGroups.entries()) {
+        if (group.length === 1) {
+            mergedCandidateVocab.set(group[0].id, group[0]);
+            continue;
+        }
+
+        // Sort by frequency (kanjiRank). Lower rank is better (more frequent)
+        group.sort((a, b) => a.frequency.kanjiRank - b.frequency.kanjiRank);
+
+        const base = group[0];
+
+        // Initialize merge tracking on base
+        base.mergedVocabs = [{
+            id: base.id,
+            isBase: true,
+            originalPrimaryReading: base.reading.primary,
+            originalGlosses: base.senses[0]?.glosses.slice(0, 3) || []
+        }];
+
+        // Keep track of all readings to avoid exact duplicates
+        const allReadings = new Set<string>();
+        allReadings.add(base.reading.primary);
+        base.reading.alternatives.forEach(r => allReadings.add(r));
+
+        const logEntry = [`Merged "${kanji}": Base=${base.id} (${base.reading.primary})`];
+
+        // Merge others into base
+        for (let i = 1; i < group.length; i++) {
+            const other = group[i];
+
+            logEntry.push(`  <- ${other.id} (${other.reading.primary})`);
+
+            // Track original ID
+            base.mergedVocabs.push({
+                id: other.id,
+                isBase: false,
+                originalPrimaryReading: other.reading.primary,
+                originalGlosses: other.senses[0]?.glosses.slice(0, 3) || []
+            });
+
+            // Merge readings if new
+            if (!allReadings.has(other.reading.primary)) {
+                base.reading.alternatives.push(other.reading.primary);
+                allReadings.add(other.reading.primary);
+            }
+            for (const alt of other.reading.alternatives) {
+                if (!allReadings.has(alt)) {
+                    base.reading.alternatives.push(alt);
+                    allReadings.add(alt);
+                }
+            }
+
+            // Merge Senses, tagging them with the reading they apply to
+            for (const sense of other.senses) {
+                sense.appliesToReadings = [other.reading.primary];
+                base.senses.push(sense);
+            }
+
+            // Take the MIN KKLC step (earliest intro) if different
+            if (other.kklcStep > 0 && other.kklcStep < base.kklcStep) {
+                base.kklcStep = other.kklcStep;
+                base.progression.kklcStep = other.kklcStep;
+            }
+            // If any was common, base is common
+            if (other.isCommon) {
+                base.isCommon = true;
+            }
+
+            mergedCount++;
+        }
+
+        mergedLogs.push(logEntry.join('\n'));
+        mergedCandidateVocab.set(base.id, base);
+    }
+
+    // Write the merge log to a text file for review
+    const mergedLogPath = './public/data/compiled/merged_vocabs.log';
+    fs.mkdirSync(path.dirname(mergedLogPath), { recursive: true });
+    fs.writeFileSync(mergedLogPath, mergedLogs.join('\n\n'), 'utf-8');
+
+    console.log(`   - Merged ${mergedCount} duplicate kanji forms out of the dataset.`);
+
+    // Generate merged ID map for migration
+    const mergedMap: Record<string, string> = {};
+
+    // Populate lookup map for sentence tokenizer using MERGED vocab
+    for (const vocab of mergedCandidateVocab.values()) {
+        const kanjiText = vocab.writtenForm.kanji;
         if (!writtenToVocabId.has(kanjiText)) {
             writtenToVocabId.set(kanjiText, []);
         }
-        writtenToVocabId.get(kanjiText)!.push(entry.id);
+        writtenToVocabId.get(kanjiText)!.push(vocab.id);
+
+        if (vocab.mergedVocabs && vocab.mergedVocabs.length > 1) {
+            for (const mv of vocab.mergedVocabs) {
+                if (!mv.isBase) {
+                    mergedMap[mv.id] = vocab.id;
+                }
+            }
+        }
     }
 
-    console.log(`   - Found ${candidateVocab.size} candidate vocabulary items.`);
+    fs.writeFileSync(
+        path.join(OUTPUT_INDEX_DIR, 'merged-map.json'),
+        JSON.stringify(mergedMap, null, 2)
+    );
+
+    console.log(`   - Proceeding with ${mergedCandidateVocab.size} unique candidate vocabulary items.`);
 
 
     // 3. Process Sentences & Calculate Usage
@@ -316,8 +433,7 @@ async function main() {
     console.log('✂️  Filtering vocabulary...');
 
     // Sort all candidates by frequency (default sort)
-    // Note: candidateVocab values are unsorted. Convert to array.
-    const sortedCandidates = Array.from(candidateVocab.values())
+    const sortedCandidates = Array.from(mergedCandidateVocab.values())
         .sort((a, b) => a.frequency.kanjiRank - b.frequency.kanjiRank);
 
     const FINAL_VOCAB: BuildVocabulary[] = [];

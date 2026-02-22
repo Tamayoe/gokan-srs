@@ -10,7 +10,8 @@
     "primary": "ね",
     "alternatives": [
       "しん",
-      "い"
+      "い",
+      "ぬ"
     ]
   },
   "frequency": {
@@ -38,10 +39,59 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "v2n-s",
+        "vi"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "to lie down",
+        "to go to bed",
+        "to go to sleep"
+      ],
+      "related": {
+        "compounds": [
+          "寝る"
+        ]
+      },
+      "appliesToReadings": [
+        "ぬ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1642760",
+      "isBase": true,
+      "originalPrimaryReading": "ね",
+      "originalGlosses": [
+        "sleep"
+      ]
+    },
+    {
+      "id": "2783700",
+      "isBase": false,
+      "originalPrimaryReading": "ぬ",
+      "originalGlosses": [
+        "to lie down",
+        "to go to bed",
+        "to go to sleep"
+      ]
+    }
+  ]
 }

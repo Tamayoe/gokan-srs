@@ -9,7 +9,8 @@
   "reading": {
     "primary": "かぶる",
     "alternatives": [
-      "かむる"
+      "かむる",
+      "こうむる"
     ]
   },
   "frequency": {
@@ -246,10 +247,57 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "to suffer",
+        "to receive (kindness, rebuke, support)",
+        "to sustain (damage)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こうむる"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1484330",
+      "isBase": true,
+      "originalPrimaryReading": "かぶる",
+      "originalGlosses": [
+        "to put on (one's head)",
+        "to wear",
+        "to have on"
+      ]
+    },
+    {
+      "id": "1484340",
+      "isBase": false,
+      "originalPrimaryReading": "こうむる",
+      "originalGlosses": [
+        "to suffer",
+        "to receive (kindness, rebuke, support)",
+        "to sustain (damage)"
+      ]
+    }
+  ]
 }

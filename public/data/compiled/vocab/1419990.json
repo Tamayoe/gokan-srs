@@ -9,7 +9,10 @@
   "reading": {
     "primary": "おとこ",
     "alternatives": [
-      "おっこ"
+      "おっこ",
+      "おのこ",
+      "だん",
+      "なん"
     ]
   },
   "frequency": {
@@ -107,10 +110,201 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "man",
+        "boy"
+      ],
+      "related": {
+        "compounds": [
+          "女の子"
+        ]
+      },
+      "appliesToReadings": [
+        "おのこ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "masculine noun"
+      ],
+      "related": {
+        "compounds": [
+          "男性名詞"
+        ]
+      },
+      "appliesToReadings": [
+        "だん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "rare"
+        ]
+      },
+      "glosses": [
+        "son"
+      ],
+      "related": {
+        "compounds": [
+          "女"
+        ]
+      },
+      "appliesToReadings": [
+        "だん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "rare",
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "baron"
+      ],
+      "related": {
+        "compounds": [
+          "男爵"
+        ]
+      },
+      "appliesToReadings": [
+        "だん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "rare"
+        ]
+      },
+      "glosses": [
+        "man",
+        "male"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "だん"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf",
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "son"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "なん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1419990",
+      "isBase": true,
+      "originalPrimaryReading": "おとこ",
+      "originalGlosses": [
+        "man",
+        "male"
+      ]
+    },
+    {
+      "id": "2742850",
+      "isBase": false,
+      "originalPrimaryReading": "おのこ",
+      "originalGlosses": [
+        "man",
+        "boy"
+      ]
+    },
+    {
+      "id": "2843485",
+      "isBase": false,
+      "originalPrimaryReading": "だん",
+      "originalGlosses": [
+        "masculine noun"
+      ]
+    },
+    {
+      "id": "2742890",
+      "isBase": false,
+      "originalPrimaryReading": "なん",
+      "originalGlosses": [
+        "son"
+      ]
+    }
+  ]
 }

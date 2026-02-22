@@ -18,6 +18,7 @@ import type { Sentence } from '../models/sentence.model';
 import { StorageService } from '../services/storage.service';
 import { VocabularyService } from '../services/vocabulary.service';
 import { SRSService } from '../services/srs.service';
+import { MigrationService } from '../services/migration.service';
 import type { AnswerResult } from '../services/srs.service';
 
 
@@ -315,6 +316,28 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 dispatch({ type: 'RESET_DAILY_STATS' });
                 localStorage.setItem(lastAccessKey, today);
             }
+        }
+    }, [state.progress ? 'loaded' : 'loading']); // Run once when progress loads
+
+    // Run V4/V5 Async Migration
+    useEffect(() => {
+        if (state.progress && MigrationService.needsMigration(state.progress)) {
+            console.log('[QuizContext] Migration needed. Fetching merged-map and applying...');
+            MigrationService.migrateMergedVocabsAsync(state.progress).then(updatedProgress => {
+                if (updatedProgress !== state.progress) {
+                    dispatch({
+                        type: 'SETUP_COMPLETE',
+                        payload: {
+                            progress: updatedProgress,
+                            settings: state.settings!
+                        }
+                    });
+                    // IMPORTANT: We must persist to localStorage immediately to avoid 
+                    // dropping the version bump if the user closes/refreshes before any learning action.
+                    StorageService.saveProgress(updatedProgress);
+                    console.log('[QuizContext] Migration to unified vocabs complete and saved to storage.');
+                }
+            });
         }
     }, [state.progress ? 'loaded' : 'loading']); // Run once when progress loads
 

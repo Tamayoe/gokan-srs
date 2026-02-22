@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "つゆ",
-    "alternatives": []
+    "alternatives": [
+      "あらわ",
+      "ろ",
+      "ロ"
+    ]
   },
   "frequency": {
     "kanjiRank": 12205
@@ -76,10 +80,113 @@
           "露聊かも"
         ]
       }
+    },
+    {
+      "pos": [
+        "adj-na"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "exposed",
+        "scanty",
+        "bare",
+        "unconcealed",
+        "naked"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "あらわ"
+      ]
+    },
+    {
+      "pos": [
+        "adj-na"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "public",
+        "open"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "あらわ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "Russia"
+      ],
+      "related": {
+        "compounds": [
+          "露西亜"
+        ]
+      },
+      "appliesToReadings": [
+        "ろ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1560070",
+      "isBase": true,
+      "originalPrimaryReading": "つゆ",
+      "originalGlosses": [
+        "dew"
+      ]
+    },
+    {
+      "id": "1560080",
+      "isBase": false,
+      "originalPrimaryReading": "あらわ",
+      "originalGlosses": [
+        "exposed",
+        "scanty",
+        "bare"
+      ]
+    },
+    {
+      "id": "1147330",
+      "isBase": false,
+      "originalPrimaryReading": "ろ",
+      "originalGlosses": [
+        "Russia"
+      ]
+    }
+  ]
 }

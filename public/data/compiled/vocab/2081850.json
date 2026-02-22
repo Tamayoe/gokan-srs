@@ -9,7 +9,10 @@
   },
   "reading": {
     "primary": "かくがた",
-    "alternatives": []
+    "alternatives": [
+      "かくけい",
+      "かっけい"
+    ]
   },
   "frequency": {
     "kanjiRank": 102891
@@ -38,10 +41,54 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "-gon (as in pentagon, hexagon, etc.)"
+      ],
+      "related": {
+        "compounds": [
+          "五角形"
+        ]
+      },
+      "appliesToReadings": [
+        "かくけい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "2081850",
+      "isBase": true,
+      "originalPrimaryReading": "かくがた",
+      "originalGlosses": [
+        "square shape",
+        "oblong",
+        "rectangle"
+      ]
+    },
+    {
+      "id": "2183490",
+      "isBase": false,
+      "originalPrimaryReading": "かくけい",
+      "originalGlosses": [
+        "-gon (as in pentagon, hexagon, etc.)"
+      ]
+    }
+  ]
 }

@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "だい",
-    "alternatives": []
+    "alternatives": [
+      "たい",
+      "うてな"
+    ]
   },
   "frequency": {
     "kanjiRank": 2159,
@@ -167,10 +170,135 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n",
+        "n-pref",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "Taiwan"
+      ],
+      "related": {
+        "compounds": [
+          "台湾"
+        ]
+      },
+      "appliesToReadings": [
+        "たい"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "tower"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "うてな"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "stand",
+        "pedestal"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "うてな"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "calyx"
+      ],
+      "related": {
+        "compounds": [
+          "萼"
+        ]
+      },
+      "appliesToReadings": [
+        "うてな"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1412560",
+      "isBase": true,
+      "originalPrimaryReading": "だい",
+      "originalGlosses": [
+        "stand",
+        "rest",
+        "base"
+      ]
+    },
+    {
+      "id": "2747760",
+      "isBase": false,
+      "originalPrimaryReading": "たい",
+      "originalGlosses": [
+        "Taiwan"
+      ]
+    },
+    {
+      "id": "2036120",
+      "isBase": false,
+      "originalPrimaryReading": "うてな",
+      "originalGlosses": [
+        "tower"
+      ]
+    }
+  ]
 }

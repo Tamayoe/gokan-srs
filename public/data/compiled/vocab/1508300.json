@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "がら",
-    "alternatives": []
+    "alternatives": [
+      "つか",
+      "え"
+    ]
   },
   "frequency": {
     "kanjiRank": 3529,
@@ -102,10 +105,110 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "hilt (of a sword)",
+        "haft (of a dagger)",
+        "handle",
+        "handgrip"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "つか"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "handle",
+        "grip"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "え"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "stalk (of a mushroom, leaf, etc.)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "え"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1508300",
+      "isBase": true,
+      "originalPrimaryReading": "がら",
+      "originalGlosses": [
+        "pattern",
+        "design"
+      ]
+    },
+    {
+      "id": "1508310",
+      "isBase": false,
+      "originalPrimaryReading": "つか",
+      "originalGlosses": [
+        "hilt (of a sword)",
+        "haft (of a dagger)",
+        "handle"
+      ]
+    },
+    {
+      "id": "1508290",
+      "isBase": false,
+      "originalPrimaryReading": "え",
+      "originalGlosses": [
+        "handle",
+        "grip"
+      ]
+    }
+  ]
 }

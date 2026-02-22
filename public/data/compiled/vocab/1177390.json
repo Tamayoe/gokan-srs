@@ -9,7 +9,8 @@
   "reading": {
     "primary": "さる",
     "alternatives": [
-      "サル"
+      "サル",
+      "ましら"
     ]
   },
   "frequency": {
@@ -150,10 +151,54 @@
           "湯女"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "poet"
+        ]
+      },
+      "glosses": [
+        "monkey"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ましら"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1177390",
+      "isBase": true,
+      "originalPrimaryReading": "さる",
+      "originalGlosses": [
+        "monkey (esp. the Japanese macaque, Macaca fuscata)",
+        "ape",
+        "non-human primate"
+      ]
+    },
+    {
+      "id": "2743210",
+      "isBase": false,
+      "originalPrimaryReading": "ましら",
+      "originalGlosses": [
+        "monkey"
+      ]
+    }
+  ]
 }

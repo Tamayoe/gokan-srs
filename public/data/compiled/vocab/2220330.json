@@ -8,7 +8,12 @@
   },
   "reading": {
     "primary": "つ",
-    "alternatives": []
+    "alternatives": [
+      "か",
+      "カ",
+      "ケ",
+      "ヶ"
+    ]
   },
   "frequency": {
     "kanjiRank": 39851
@@ -58,10 +63,52 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "counter used with Sino-Japanese words"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "か"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "2220330",
+      "isBase": true,
+      "originalPrimaryReading": "つ",
+      "originalGlosses": [
+        "general-purpose counter"
+      ]
+    },
+    {
+      "id": "2220320",
+      "isBase": false,
+      "originalPrimaryReading": "か",
+      "originalGlosses": [
+        "counter used with Sino-Japanese words"
+      ]
+    }
+  ]
 }

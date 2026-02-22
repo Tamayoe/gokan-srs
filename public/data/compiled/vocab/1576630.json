@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "しお",
-    "alternatives": []
+    "alternatives": [
+      "えん"
+    ]
   },
   "frequency": {
     "kanjiRank": 4244
@@ -101,10 +103,78 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "salt (e.g. sodium chloride, calcium sulfate, etc.)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "えん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "chloride"
+      ],
+      "related": {
+        "compounds": [
+          "塩化"
+        ]
+      },
+      "appliesToReadings": [
+        "えん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1576630",
+      "isBase": true,
+      "originalPrimaryReading": "しお",
+      "originalGlosses": [
+        "salt",
+        "common salt",
+        "table salt"
+      ]
+    },
+    {
+      "id": "2847901",
+      "isBase": false,
+      "originalPrimaryReading": "えん",
+      "originalGlosses": [
+        "salt (e.g. sodium chloride, calcium sulfate, etc.)"
+      ]
+    }
+  ]
 }

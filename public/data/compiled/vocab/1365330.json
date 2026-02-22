@@ -10,7 +10,9 @@
   "reading": {
     "primary": "おやじ",
     "alternatives": [
-      "オヤジ"
+      "オヤジ",
+      "しんぷ",
+      "しんぶ"
     ]
   },
   "frequency": {
@@ -134,10 +136,54 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "form"
+        ]
+      },
+      "glosses": [
+        "father"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しんぷ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1365330",
+      "isBase": true,
+      "originalPrimaryReading": "おやじ",
+      "originalGlosses": [
+        "one's father",
+        "one's old man",
+        "dad"
+      ]
+    },
+    {
+      "id": "2849214",
+      "isBase": false,
+      "originalPrimaryReading": "しんぷ",
+      "originalGlosses": [
+        "father"
+      ]
+    }
+  ]
 }

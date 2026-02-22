@@ -10,7 +10,8 @@
   "reading": {
     "primary": "しょうが",
     "alternatives": [
-      "ショウガ"
+      "ショウガ",
+      "しょうきょう"
     ]
   },
   "frequency": {
@@ -41,10 +42,52 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "dried ginger root (trad. medicine)"
+      ],
+      "related": {
+        "compounds": [
+          "生姜"
+        ]
+      },
+      "appliesToReadings": [
+        "しょうきょう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1379620",
+      "isBase": true,
+      "originalPrimaryReading": "しょうが",
+      "originalGlosses": [
+        "ginger (Zingiber officinale)"
+      ]
+    },
+    {
+      "id": "2825929",
+      "isBase": false,
+      "originalPrimaryReading": "しょうきょう",
+      "originalGlosses": [
+        "dried ginger root (trad. medicine)"
+      ]
+    }
+  ]
 }

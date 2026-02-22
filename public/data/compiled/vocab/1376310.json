@@ -9,7 +9,8 @@
   "reading": {
     "primary": "ほし",
     "alternatives": [
-      "ホシ"
+      "ホシ",
+      "せい"
     ]
   },
   "frequency": {
@@ -225,10 +226,82 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "Chinese \"star\" constellation (one of the 28 mansions)"
+      ],
+      "related": {
+        "compounds": [
+          "星宿",
+          "二十八宿",
+          "朱雀"
+        ]
+      },
+      "appliesToReadings": [
+        "せい"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "Singapore"
+      ],
+      "related": {
+        "compounds": [
+          "シンガポール"
+        ]
+      },
+      "appliesToReadings": [
+        "せい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1376310",
+      "isBase": true,
+      "originalPrimaryReading": "ほし",
+      "originalGlosses": [
+        "star (usu. excluding the Sun)",
+        "planet (usu. excluding Earth)",
+        "heavenly body"
+      ]
+    },
+    {
+      "id": "2100980",
+      "isBase": false,
+      "originalPrimaryReading": "せい",
+      "originalGlosses": [
+        "Chinese \"star\" constellation (one of the 28 mansions)"
+      ]
+    }
+  ]
 }

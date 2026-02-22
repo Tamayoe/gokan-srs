@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "てん",
-    "alternatives": []
+    "alternatives": [
+      "あめ",
+      "あま"
+    ]
   },
   "frequency": {
     "kanjiRank": 1616,
@@ -217,10 +220,54 @@
           "天竺"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "sky"
+      ],
+      "related": {
+        "compounds": [
+          "天"
+        ]
+      },
+      "appliesToReadings": [
+        "あめ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1438210",
+      "isBase": true,
+      "originalPrimaryReading": "てん",
+      "originalGlosses": [
+        "sky"
+      ]
+    },
+    {
+      "id": "2848784",
+      "isBase": false,
+      "originalPrimaryReading": "あめ",
+      "originalGlosses": [
+        "sky"
+      ]
+    }
+  ]
 }

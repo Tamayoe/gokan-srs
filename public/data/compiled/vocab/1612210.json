@@ -9,7 +9,8 @@
   "reading": {
     "primary": "よる",
     "alternatives": [
-      "える"
+      "える",
+      "すぐる"
     ]
   },
   "frequency": {
@@ -40,10 +41,59 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "to select (the best)",
+        "to choose",
+        "to pick out"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "すぐる"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1612210",
+      "isBase": true,
+      "originalPrimaryReading": "よる",
+      "originalGlosses": [
+        "to choose",
+        "to select",
+        "to pick out"
+      ]
+    },
+    {
+      "id": "2860748",
+      "isBase": false,
+      "originalPrimaryReading": "すぐる",
+      "originalGlosses": [
+        "to select (the best)",
+        "to choose",
+        "to pick out"
+      ]
+    }
+  ]
 }

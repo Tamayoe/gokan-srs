@@ -9,7 +9,8 @@
   "reading": {
     "primary": "さん",
     "alternatives": [
-      "み"
+      "み",
+      "サン"
     ]
   },
   "frequency": {
@@ -39,10 +40,51 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "num"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "three"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "サン"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1579350",
+      "isBase": true,
+      "originalPrimaryReading": "さん",
+      "originalGlosses": [
+        "three",
+        "3"
+      ]
+    },
+    {
+      "id": "2747950",
+      "isBase": false,
+      "originalPrimaryReading": "サン",
+      "originalGlosses": [
+        "three"
+      ]
+    }
+  ]
 }

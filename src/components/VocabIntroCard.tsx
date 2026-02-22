@@ -5,6 +5,7 @@ import { CardDivider, CardSection } from "./ui/CardSection";
 import { Button } from "./ui/Button";
 import { useEffect, useRef } from "react";
 import { useResponsive } from "../context/Responsive/useResponsive";
+import { Combine } from "lucide-react";
 
 
 interface IntroVocabCardProps {
@@ -29,8 +30,14 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
             {/* Kanji */}
             <CardSection>
                 <div className="text-center">
-                    <div className="text-primary font-mincho leading-none text-kanji">
+                    <div
+                        className="text-primary font-mincho leading-none text-kanji flex items-center justify-center gap-3"
+                        title={vocab.mergedVocabs && vocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
+                    >
                         {vocab.writtenForm.kanji}
+                        {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
+                            <Combine size={40} className="text-tertiary" />
+                        )}
                     </div>
 
                     <div className="flex flex-row justify-center items-center gap-1 mt-4 text-base font-gothic text-secondary">
@@ -41,9 +48,17 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
 
             {/* Meanings */}
             <CardSection>
-                <p className="text-center font-serif text-base text-meaning-muted leading-relaxed">
-                    {vocab.senses.map((sense, i) => (<span>{sense.glosses.join(', ')}{i !== vocab.senses.length - 1 ? ', ' : ''}</span>))}
-                </p>
+                <div className="text-center font-serif text-base text-meaning-muted leading-relaxed">
+                    {vocab.senses.map((sense, i) => (
+                        <span key={i}>
+                            {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
+                                <span className="text-xs text-tertiary mr-1 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
+                            )}
+                            {sense.glosses.join(', ')}
+                            {i !== vocab.senses.length - 1 ? ', ' : ''}
+                        </span>
+                    ))}
+                </div>
             </CardSection>
 
             <CardDivider />

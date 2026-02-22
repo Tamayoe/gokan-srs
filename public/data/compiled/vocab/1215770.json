@@ -9,7 +9,9 @@
   "reading": {
     "primary": "せき",
     "alternatives": [
-      "セキ"
+      "セキ",
+      "かん",
+      "ぜき"
     ]
   },
   "frequency": {
@@ -59,10 +61,90 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "barrier",
+        "gate"
+      ],
+      "related": {
+        "compounds": [
+          "関所"
+        ]
+      },
+      "appliesToReadings": [
+        "かん"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hon",
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "honorific added to names of makuuchi and juryo division wrestlers"
+      ],
+      "related": {
+        "compounds": [
+          "関取"
+        ]
+      },
+      "appliesToReadings": [
+        "ぜき"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1215770",
+      "isBase": true,
+      "originalPrimaryReading": "せき",
+      "originalGlosses": [
+        "barrier",
+        "gate"
+      ]
+    },
+    {
+      "id": "2842928",
+      "isBase": false,
+      "originalPrimaryReading": "かん",
+      "originalGlosses": [
+        "barrier",
+        "gate"
+      ]
+    },
+    {
+      "id": "2021880",
+      "isBase": false,
+      "originalPrimaryReading": "ぜき",
+      "originalGlosses": [
+        "honorific added to names of makuuchi and juryo division wrestlers"
+      ]
+    }
+  ]
 }

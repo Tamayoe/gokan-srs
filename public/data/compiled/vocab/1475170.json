@@ -10,7 +10,8 @@
   "reading": {
     "primary": "はくさい",
     "alternatives": [
-      "ハクサイ"
+      "ハクサイ",
+      "パクチョイ"
     ]
   },
   "frequency": {
@@ -41,10 +42,58 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "bok choy (esp. cultivars with white stalks)",
+        "pak choi"
+      ],
+      "related": {
+        "compounds": [
+          "チンゲンサイ"
+        ]
+      },
+      "appliesToReadings": [
+        "パクチョイ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1475170",
+      "isBase": true,
+      "originalPrimaryReading": "はくさい",
+      "originalGlosses": [
+        "napa cabbage (Brassica rapa subsp. pekinensis)",
+        "nappa cabbage",
+        "Chinese cabbage"
+      ]
+    },
+    {
+      "id": "2834152",
+      "isBase": false,
+      "originalPrimaryReading": "パクチョイ",
+      "originalGlosses": [
+        "bok choy (esp. cultivars with white stalks)",
+        "pak choi"
+      ]
+    }
+  ]
 }

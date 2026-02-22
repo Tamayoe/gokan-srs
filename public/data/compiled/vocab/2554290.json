@@ -10,7 +10,10 @@
   "reading": {
     "primary": "ぎんなん",
     "alternatives": [
-      "ギンナン"
+      "ギンナン",
+      "いちょう",
+      "こうそんじゅ",
+      "イチョウ"
     ]
   },
   "frequency": {
@@ -42,10 +45,57 @@
           "銀杏"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "ginkgo (Ginkgo biloba)",
+        "gingko",
+        "maidenhair tree"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "いちょう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "2554290",
+      "isBase": true,
+      "originalPrimaryReading": "ぎんなん",
+      "originalGlosses": [
+        "ginkgo nut",
+        "gingko nut"
+      ]
+    },
+    {
+      "id": "1243420",
+      "isBase": false,
+      "originalPrimaryReading": "いちょう",
+      "originalGlosses": [
+        "ginkgo (Ginkgo biloba)",
+        "gingko",
+        "maidenhair tree"
+      ]
+    }
+  ]
 }

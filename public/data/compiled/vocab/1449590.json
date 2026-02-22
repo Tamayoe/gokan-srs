@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "つつ",
-    "alternatives": []
+    "alternatives": [
+      "とう",
+      "ピン"
+    ]
   },
   "frequency": {
     "kanjiRank": 9620,
@@ -97,10 +100,108 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "pipe",
+        "tube"
+      ],
+      "related": {
+        "compounds": [
+          "筒"
+        ]
+      },
+      "appliesToReadings": [
+        "とう"
+      ]
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for injection ampoules"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "とう"
+      ]
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for dot tiles"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ピン"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1449590",
+      "isBase": true,
+      "originalPrimaryReading": "つつ",
+      "originalGlosses": [
+        "pipe",
+        "tube",
+        "cylinder"
+      ]
+    },
+    {
+      "id": "2863257",
+      "isBase": false,
+      "originalPrimaryReading": "とう",
+      "originalGlosses": [
+        "pipe",
+        "tube"
+      ]
+    },
+    {
+      "id": "2833467",
+      "isBase": false,
+      "originalPrimaryReading": "ピン",
+      "originalGlosses": [
+        "counter for dot tiles"
+      ]
+    }
+  ]
 }

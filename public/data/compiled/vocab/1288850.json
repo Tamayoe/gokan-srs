@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "いま",
-    "alternatives": []
+    "alternatives": [
+      "こん"
+    ]
   },
   "frequency": {
     "kanjiRank": 67,
@@ -62,10 +64,76 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "the current ...",
+        "this"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こん"
+      ]
+    },
+    {
+      "pos": [
+        "pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "today's ..."
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1288850",
+      "isBase": true,
+      "originalPrimaryReading": "いま",
+      "originalGlosses": [
+        "now",
+        "the present time",
+        "just now"
+      ]
+    },
+    {
+      "id": "1288860",
+      "isBase": false,
+      "originalPrimaryReading": "こん",
+      "originalGlosses": [
+        "the current ...",
+        "this"
+      ]
+    }
+  ]
 }

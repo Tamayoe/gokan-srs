@@ -10,7 +10,8 @@
   "reading": {
     "primary": "しょにち",
     "alternatives": [
-      "しょじつ"
+      "しょじつ",
+      "はつひ"
     ]
   },
   "frequency": {
@@ -41,10 +42,51 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "New Year's Day sunrise"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "はつひ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1342980",
+      "isBase": true,
+      "originalPrimaryReading": "しょにち",
+      "originalGlosses": [
+        "first day",
+        "opening day"
+      ]
+    },
+    {
+      "id": "1342990",
+      "isBase": false,
+      "originalPrimaryReading": "はつひ",
+      "originalGlosses": [
+        "New Year's Day sunrise"
+      ]
+    }
+  ]
 }

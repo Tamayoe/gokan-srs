@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "しゅく",
-    "alternatives": []
+    "alternatives": [
+      "はふり",
+      "ほうり"
+    ]
   },
   "frequency": {
     "kanjiRank": 26413
@@ -58,10 +61,80 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "junior Shinto priest"
+      ],
+      "related": {
+        "compounds": [
+          "宮司",
+          "禰宜",
+          "神主"
+        ]
+      },
+      "appliesToReadings": [
+        "はふり"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "pol",
+          "rare"
+        ]
+      },
+      "glosses": [
+        "Shinto priest",
+        "generic title for a member of the Shinto priesthood"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "はふり"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "2798960",
+      "isBase": true,
+      "originalPrimaryReading": "しゅく",
+      "originalGlosses": [
+        "public holiday"
+      ]
+    },
+    {
+      "id": "2528470",
+      "isBase": false,
+      "originalPrimaryReading": "はふり",
+      "originalGlosses": [
+        "junior Shinto priest"
+      ]
+    }
+  ]
 }

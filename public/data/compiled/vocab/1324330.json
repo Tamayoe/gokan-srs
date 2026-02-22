@@ -9,7 +9,11 @@
   },
   "reading": {
     "primary": "じゃっかん",
-    "alternatives": []
+    "alternatives": [
+      "そこばく",
+      "そくばく",
+      "そこば"
+    ]
   },
   "frequency": {
     "kanjiRank": 3536,
@@ -61,10 +65,113 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "adj-no",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "form"
+        ]
+      },
+      "glosses": [
+        "some",
+        "few",
+        "a number of",
+        "a little (bit)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "そこばく"
+      ]
+    },
+    {
+      "pos": [
+        "adv"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "form"
+        ]
+      },
+      "glosses": [
+        "somewhat",
+        "to a certain extent",
+        "a bit"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "そこばく"
+      ]
+    },
+    {
+      "pos": [
+        "adj-no",
+        "adv",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "many",
+        "a lot"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "そこばく"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1324330",
+      "isBase": true,
+      "originalPrimaryReading": "じゃっかん",
+      "originalGlosses": [
+        "some",
+        "few",
+        "a number of"
+      ]
+    },
+    {
+      "id": "2867570",
+      "isBase": false,
+      "originalPrimaryReading": "そこばく",
+      "originalGlosses": [
+        "some",
+        "few",
+        "a number of"
+      ]
+    }
+  ]
 }

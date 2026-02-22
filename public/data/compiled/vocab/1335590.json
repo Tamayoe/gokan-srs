@@ -12,7 +12,8 @@
       "けだもの",
       "じゅう",
       "ケモノ",
-      "ケダモノ"
+      "ケダモノ",
+      "しし"
     ]
   },
   "frequency": {
@@ -64,10 +65,80 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "beast (esp. one used for its meat, such as a boar or a deer)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しし"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "hunting (of animals such as boar, deer, etc.)"
+      ],
+      "related": {
+        "compounds": [
+          "獣狩り"
+        ]
+      },
+      "appliesToReadings": [
+        "しし"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1335590",
+      "isBase": true,
+      "originalPrimaryReading": "けもの",
+      "originalGlosses": [
+        "beast",
+        "brute",
+        "animal"
+      ]
+    },
+    {
+      "id": "2203180",
+      "isBase": false,
+      "originalPrimaryReading": "しし",
+      "originalGlosses": [
+        "beast (esp. one used for its meat, such as a boar or a deer)"
+      ]
+    }
+  ]
 }

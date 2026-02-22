@@ -10,7 +10,8 @@
   "reading": {
     "primary": "めがね",
     "alternatives": [
-      "メガネ"
+      "メガネ",
+      "がんきょう"
     ]
   },
   "frequency": {
@@ -90,10 +91,58 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "glasses",
+        "eyeglasses",
+        "spectacles"
+      ],
+      "related": {
+        "compounds": [
+          "眼鏡"
+        ]
+      },
+      "appliesToReadings": [
+        "がんきょう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1577670",
+      "isBase": true,
+      "originalPrimaryReading": "めがね",
+      "originalGlosses": [
+        "glasses",
+        "eyeglasses",
+        "spectacles"
+      ]
+    },
+    {
+      "id": "2862467",
+      "isBase": false,
+      "originalPrimaryReading": "がんきょう",
+      "originalGlosses": [
+        "glasses",
+        "eyeglasses",
+        "spectacles"
+      ]
+    }
+  ]
 }

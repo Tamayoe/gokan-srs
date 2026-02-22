@@ -8,7 +8,13 @@
   },
   "reading": {
     "primary": "かみ",
-    "alternatives": []
+    "alternatives": [
+      "み",
+      "かむ",
+      "かん",
+      "しん",
+      "じん"
+    ]
   },
   "frequency": {
     "kanjiRank": 682,
@@ -110,10 +116,151 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "soul",
+        "spirit",
+        "divine spirit"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "み"
+      ]
+    },
+    {
+      "pos": [
+        "n-pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "divine",
+        "godly"
+      ],
+      "related": {
+        "compounds": [
+          "神主"
+        ]
+      },
+      "appliesToReadings": [
+        "かむ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "spirit",
+        "psyche"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "god",
+        "deity",
+        "divinity",
+        "kami"
+      ],
+      "related": {
+        "compounds": [
+          "神"
+        ]
+      },
+      "appliesToReadings": [
+        "しん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1364440",
+      "isBase": true,
+      "originalPrimaryReading": "かみ",
+      "originalGlosses": [
+        "god",
+        "deity",
+        "divinity"
+      ]
+    },
+    {
+      "id": "2736430",
+      "isBase": false,
+      "originalPrimaryReading": "み",
+      "originalGlosses": [
+        "soul",
+        "spirit",
+        "divine spirit"
+      ]
+    },
+    {
+      "id": "2836999",
+      "isBase": false,
+      "originalPrimaryReading": "かむ",
+      "originalGlosses": [
+        "divine",
+        "godly"
+      ]
+    },
+    {
+      "id": "2433050",
+      "isBase": false,
+      "originalPrimaryReading": "しん",
+      "originalGlosses": [
+        "spirit",
+        "psyche"
+      ]
+    }
+  ]
 }

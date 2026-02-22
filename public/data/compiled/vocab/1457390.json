@@ -9,7 +9,8 @@
   "reading": {
     "primary": "ぶた",
     "alternatives": [
-      "ブタ"
+      "ブタ",
+      "とん"
     ]
   },
   "frequency": {
@@ -81,10 +82,53 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n-pref",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "pig",
+        "pork"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "とん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1457390",
+      "isBase": true,
+      "originalPrimaryReading": "ぶた",
+      "originalGlosses": [
+        "pig (Sus scrofa domesticus)"
+      ]
+    },
+    {
+      "id": "2763370",
+      "isBase": false,
+      "originalPrimaryReading": "とん",
+      "originalGlosses": [
+        "pig",
+        "pork"
+      ]
+    }
+  ]
 }

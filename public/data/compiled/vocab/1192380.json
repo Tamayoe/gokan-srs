@@ -9,7 +9,11 @@
   },
   "reading": {
     "primary": "かでん",
-    "alternatives": []
+    "alternatives": [
+      "いえでん",
+      "いえデン",
+      "イエデン"
+    ]
   },
   "frequency": {
     "kanjiRank": 28602
@@ -38,10 +42,56 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "sl"
+        ]
+      },
+      "glosses": [
+        "home telephone",
+        "home phone number"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "いえでん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1192380",
+      "isBase": true,
+      "originalPrimaryReading": "かでん",
+      "originalGlosses": [
+        "household (electrical) appliances",
+        "home appliances",
+        "consumer electronics"
+      ]
+    },
+    {
+      "id": "2120530",
+      "isBase": false,
+      "originalPrimaryReading": "いえでん",
+      "originalGlosses": [
+        "home telephone",
+        "home phone number"
+      ]
+    }
+  ]
 }

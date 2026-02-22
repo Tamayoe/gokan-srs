@@ -9,7 +9,8 @@
   "reading": {
     "primary": "べつ",
     "alternatives": [
-      "べち"
+      "べち",
+      "わけ"
     ]
   },
   "frequency": {
@@ -109,10 +110,56 @@
           "男女別"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hist"
+        ]
+      },
+      "glosses": [
+        "lord (hereditary title for imperial descendants in outlying regions)"
+      ],
+      "related": {
+        "compounds": [
+          "姓"
+        ]
+      },
+      "appliesToReadings": [
+        "わけ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1509430",
+      "isBase": true,
+      "originalPrimaryReading": "べつ",
+      "originalGlosses": [
+        "distinction",
+        "difference",
+        "discrimination"
+      ]
+    },
+    {
+      "id": "2259830",
+      "isBase": false,
+      "originalPrimaryReading": "わけ",
+      "originalGlosses": [
+        "lord (hereditary title for imperial descendants in outlying regions)"
+      ]
+    }
+  ]
 }

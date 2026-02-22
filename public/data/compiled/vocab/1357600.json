@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "いろ",
-    "alternatives": []
+    "alternatives": [
+      "しき",
+      "しょく"
+    ]
   },
   "frequency": {
     "kanjiRank": 622,
@@ -231,10 +234,106 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "rupa (form)"
+      ],
+      "related": {
+        "compounds": [
+          "五蘊"
+        ]
+      },
+      "appliesToReadings": [
+        "しき"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "visible objects (i.e. color and form)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しき"
+      ]
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for colours"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しょく"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1357600",
+      "isBase": true,
+      "originalPrimaryReading": "いろ",
+      "originalGlosses": [
+        "colour",
+        "color",
+        "hue"
+      ]
+    },
+    {
+      "id": "2270420",
+      "isBase": false,
+      "originalPrimaryReading": "しき",
+      "originalGlosses": [
+        "rupa (form)"
+      ]
+    },
+    {
+      "id": "2097830",
+      "isBase": false,
+      "originalPrimaryReading": "しょく",
+      "originalGlosses": [
+        "counter for colours"
+      ]
+    }
+  ]
 }

@@ -8,7 +8,12 @@
   },
   "reading": {
     "primary": "と",
-    "alternatives": []
+    "alternatives": [
+      "ず",
+      "いたずら",
+      "かち",
+      "あだ"
+    ]
   },
   "frequency": {
     "kanjiRank": 10243
@@ -39,10 +44,188 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hist"
+        ]
+      },
+      "glosses": [
+        "imprisonment (for 1-3 years; third most severe of the five ritsuryō punishments)"
+      ],
+      "related": {
+        "compounds": [
+          "五刑"
+        ]
+      },
+      "appliesToReadings": [
+        "ず"
+      ]
+    },
+    {
+      "pos": [
+        "adj-na"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "useless",
+        "vain",
+        "aimless",
+        "idle"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "いたずら"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "foot soldier (Edo period)",
+        "samurai on foot"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かち"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "going on foot",
+        "walking"
+      ],
+      "related": {
+        "compounds": [
+          "徒歩"
+        ]
+      },
+      "appliesToReadings": [
+        "かち"
+      ]
+    },
+    {
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "vain",
+        "futile",
+        "transient",
+        "frivolous"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "あだ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1444420",
+      "isBase": true,
+      "originalPrimaryReading": "と",
+      "originalGlosses": [
+        "party",
+        "set",
+        "gang"
+      ]
+    },
+    {
+      "id": "2249010",
+      "isBase": false,
+      "originalPrimaryReading": "ず",
+      "originalGlosses": [
+        "imprisonment (for 1-3 years; third most severe of the five ritsuryō punishments)"
+      ]
+    },
+    {
+      "id": "2681740",
+      "isBase": false,
+      "originalPrimaryReading": "いたずら",
+      "originalGlosses": [
+        "useless",
+        "vain",
+        "aimless"
+      ]
+    },
+    {
+      "id": "2611940",
+      "isBase": false,
+      "originalPrimaryReading": "かち",
+      "originalGlosses": [
+        "foot soldier (Edo period)",
+        "samurai on foot"
+      ]
+    },
+    {
+      "id": "1615140",
+      "isBase": false,
+      "originalPrimaryReading": "あだ",
+      "originalGlosses": [
+        "vain",
+        "futile",
+        "transient"
+      ]
+    }
+  ]
 }

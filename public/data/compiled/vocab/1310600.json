@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "よす",
-    "alternatives": []
+    "alternatives": [
+      "さす"
+    ]
   },
   "frequency": {
     "kanjiRank": 23373,
@@ -45,10 +47,57 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf",
+        "v5s"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "to stop in the midst of",
+        "to leave undone"
+      ],
+      "related": {
+        "compounds": [
+          "差す"
+        ]
+      },
+      "appliesToReadings": [
+        "さす"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1310600",
+      "isBase": true,
+      "originalPrimaryReading": "よす",
+      "originalGlosses": [
+        "to stop (doing)",
+        "to cease",
+        "to desist"
+      ]
+    },
+    {
+      "id": "2231100",
+      "isBase": false,
+      "originalPrimaryReading": "さす",
+      "originalGlosses": [
+        "to stop in the midst of",
+        "to leave undone"
+      ]
+    }
+  ]
 }

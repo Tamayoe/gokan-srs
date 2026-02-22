@@ -10,7 +10,8 @@
   "reading": {
     "primary": "でか",
     "alternatives": [
-      "デカ"
+      "デカ",
+      "けいじ"
     ]
   },
   "frequency": {
@@ -43,10 +44,73 @@
           "刑事"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "(police) detective"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "けいじ"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "adj-f"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "criminal matter"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "けいじ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1008360",
+      "isBase": true,
+      "originalPrimaryReading": "でか",
+      "originalGlosses": [
+        "(police) detective"
+      ]
+    },
+    {
+      "id": "1249660",
+      "isBase": false,
+      "originalPrimaryReading": "けいじ",
+      "originalGlosses": [
+        "(police) detective"
+      ]
+    }
+  ]
 }

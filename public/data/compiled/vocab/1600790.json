@@ -12,7 +12,8 @@
     "primary": "はたち",
     "alternatives": [
       "にじゅっさい",
-      "にじっさい"
+      "にじっさい",
+      "はたとせ"
     ]
   },
   "frequency": {
@@ -62,10 +63,52 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "twenty years"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "はたとせ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1600790",
+      "isBase": true,
+      "originalPrimaryReading": "はたち",
+      "originalGlosses": [
+        "20 years old"
+      ]
+    },
+    {
+      "id": "2220380",
+      "isBase": false,
+      "originalPrimaryReading": "はたとせ",
+      "originalGlosses": [
+        "twenty years"
+      ]
+    }
+  ]
 }

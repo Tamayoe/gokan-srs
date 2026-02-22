@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "くち",
-    "alternatives": []
+    "alternatives": [
+      "く",
+      "こう"
+    ]
   },
   "frequency": {
     "kanjiRank": 238,
@@ -292,10 +295,75 @@
           "振り"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "mouth",
+        "speech"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "く"
+      ]
+    },
+    {
+      "pos": [
+        "suf",
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for people or implements"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "く"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1275640",
+      "isBase": true,
+      "originalPrimaryReading": "くち",
+      "originalGlosses": [
+        "mouth"
+      ]
+    },
+    {
+      "id": "2271620",
+      "isBase": false,
+      "originalPrimaryReading": "く",
+      "originalGlosses": [
+        "mouth",
+        "speech"
+      ]
+    }
+  ]
 }

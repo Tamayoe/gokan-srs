@@ -12,7 +12,8 @@
     "alternatives": [
       "りょじん",
       "たびと",
-      "たひと"
+      "たひと",
+      "たびにん"
     ]
   },
   "frequency": {
@@ -44,10 +45,57 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "itinerant (esp. itinerant gambler)",
+        "drifter",
+        "nomad",
+        "rover"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "たびにん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1553210",
+      "isBase": true,
+      "originalPrimaryReading": "たびびと",
+      "originalGlosses": [
+        "traveller",
+        "traveler",
+        "wayfarer"
+      ]
+    },
+    {
+      "id": "2527580",
+      "isBase": false,
+      "originalPrimaryReading": "たびにん",
+      "originalGlosses": [
+        "itinerant (esp. itinerant gambler)",
+        "drifter",
+        "nomad"
+      ]
+    }
+  ]
 }

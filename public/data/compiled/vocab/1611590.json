@@ -9,7 +9,8 @@
   "reading": {
     "primary": "まぐれ",
     "alternatives": [
-      "マグレ"
+      "マグレ",
+      "まぎれ"
     ]
   },
   "frequency": {
@@ -42,10 +43,80 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "confusion",
+        "complications"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "まぎれ"
+      ]
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "being gripped by strong feelings",
+        "fit (e.g. of anger)",
+        "moment (e.g. of frustration)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "まぎれ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1611590",
+      "isBase": true,
+      "originalPrimaryReading": "まぐれ",
+      "originalGlosses": [
+        "fluke",
+        "chance",
+        "pure luck"
+      ]
+    },
+    {
+      "id": "1640840",
+      "isBase": false,
+      "originalPrimaryReading": "まぎれ",
+      "originalGlosses": [
+        "confusion",
+        "complications"
+      ]
+    }
+  ]
 }

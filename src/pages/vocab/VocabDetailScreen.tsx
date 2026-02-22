@@ -9,6 +9,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { VocabularyService } from "../../services/vocabulary.service";
 import { Button } from "../../components/ui/Button";
 import { LoadingScreen } from "../../components/LoadingScreen";
+import { Combine } from "lucide-react";
 import { VocabSentencesCard } from "./VocabSentencesCard";
 
 export default function VocabDetailScreen() {
@@ -69,9 +70,15 @@ export default function VocabDetailScreen() {
                         {/* Kanji & Reading Card */}
                         <Card size={isMobile ? "sm" : "md"}>
                             <div className={`flex ${isMobile ? 'flex-col gap-4' : 'flex-col items-center text-center gap-6'}`}>
-                                <div className="flex-1">
-                                    <div className="text-7xl md:text-8xl font-mincho text-primary mb-4">
+                                <div className="flex-1 flex flex-col items-center">
+                                    <div
+                                        className="text-7xl md:text-8xl font-mincho text-primary mb-4 flex items-center gap-4"
+                                        title={vocab.mergedVocabs && vocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
+                                    >
                                         {vocab.writtenForm.kanji}
+                                        {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
+                                            <Combine size={48} className="text-tertiary" />
+                                        )}
                                     </div>
                                     <div className="space-y-2">
                                         <div className="text-3xl font-gothic text-secondary">
@@ -136,6 +143,33 @@ export default function VocabDetailScreen() {
                             </div>
                         </Card>
 
+                        {/* Merged Vocabs Details */}
+                        {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
+                            <Card size={isMobile ? "sm" : "md"}>
+                                <h2 className="text-lg font-gothic font-semibold text-primary mb-4 flex items-center gap-2">
+                                    <Combine size={18} />
+                                    Original Entries
+                                </h2>
+                                <p className="text-sm text-secondary mb-4 font-serif">
+                                    This is a merged entry combining multiple JMDict words that share the exact same kanji.
+                                </p>
+                                <div className="space-y-4">
+                                    {vocab.mergedVocabs.map((mv, idx) => (
+                                        <div key={idx} className="border-l-2 border-divider pl-3">
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <span className="font-gothic font-bold text-primary">{mv.originalPrimaryReading}</span>
+                                                <span className="text-xs text-tertiary font-mono">ID: {mv.id}</span>
+                                                {mv.isBase && <span className="text-[10px] bg-accent/10 text-accent px-1.5 py-0.5 rounded font-gothic">BASE</span>}
+                                            </div>
+                                            <div className="text-sm text-meaning-muted font-serif">
+                                                {mv.originalGlosses.join(', ')}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Card>
+                        )}
+
                         {/* Progress Details */}
                         {progress && progress.introductionAt && (
                             <Card size={isMobile ? "sm" : "md"}>
@@ -191,6 +225,9 @@ export default function VocabDetailScreen() {
                                         </div>
                                         {/* Glosses */}
                                         <p className="text-lg text-meaning-muted font-serif leading-relaxed">
+                                            {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
+                                                <span className="text-sm text-tertiary mr-2 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
+                                            )}
                                             {sense.glosses.join(', ')}
                                         </p>
 

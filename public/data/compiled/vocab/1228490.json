@@ -9,7 +9,9 @@
   "reading": {
     "primary": "ゆみ",
     "alternatives": [
-      "ゆ"
+      "ゆ",
+      "たらし",
+      "きゅう"
     ]
   },
   "frequency": {
@@ -76,10 +78,126 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "bow (and arrow; esp. of a noble)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "たらし"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "bow (and arrow)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きゅう"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "unit of distance to an archery target (approx. six feet)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きゅう"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "unit of distance for land surveying (approx. eight feet)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きゅう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1228490",
+      "isBase": true,
+      "originalPrimaryReading": "ゆみ",
+      "originalGlosses": [
+        "bow (weapon)"
+      ]
+    },
+    {
+      "id": "2655790",
+      "isBase": false,
+      "originalPrimaryReading": "たらし",
+      "originalGlosses": [
+        "bow (and arrow; esp. of a noble)"
+      ]
+    },
+    {
+      "id": "2655780",
+      "isBase": false,
+      "originalPrimaryReading": "きゅう",
+      "originalGlosses": [
+        "bow (and arrow)"
+      ]
+    }
+  ]
 }

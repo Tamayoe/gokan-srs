@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "じ",
-    "alternatives": []
+    "alternatives": [
+      "ち",
+      "ぢ"
+    ]
   },
   "frequency": {
     "kanjiRank": 9278
@@ -76,10 +79,82 @@
           "七十路"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "way",
+        "road"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ち"
+      ]
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "way to ...",
+        "road to ..."
+      ],
+      "related": {
+        "compounds": [
+          "路"
+        ]
+      },
+      "appliesToReadings": [
+        "ち"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "2220470",
+      "isBase": true,
+      "originalPrimaryReading": "じ",
+      "originalGlosses": [
+        "route",
+        "road"
+      ]
+    },
+    {
+      "id": "2268290",
+      "isBase": false,
+      "originalPrimaryReading": "ち",
+      "originalGlosses": [
+        "way",
+        "road"
+      ]
+    }
+  ]
 }

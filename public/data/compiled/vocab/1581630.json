@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "あたい",
-    "alternatives": []
+    "alternatives": [
+      "ち",
+      "ね"
+    ]
   },
   "frequency": {
     "kanjiRank": 4238,
@@ -81,10 +84,109 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "level",
+        "value"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ち"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "price",
+        "cost"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ね"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "value",
+        "worth",
+        "merit"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ね"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1581630",
+      "isBase": true,
+      "originalPrimaryReading": "あたい",
+      "originalGlosses": [
+        "price",
+        "cost"
+      ]
+    },
+    {
+      "id": "2188520",
+      "isBase": false,
+      "originalPrimaryReading": "ち",
+      "originalGlosses": [
+        "level",
+        "value"
+      ]
+    },
+    {
+      "id": "2836242",
+      "isBase": false,
+      "originalPrimaryReading": "ね",
+      "originalGlosses": [
+        "price",
+        "cost"
+      ]
+    }
+  ]
 }

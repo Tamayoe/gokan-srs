@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "めし",
-    "alternatives": []
+    "alternatives": [
+      "いい",
+      "まんま",
+      "まま"
+    ]
   },
   "frequency": {
     "kanjiRank": 2634,
@@ -82,10 +86,109 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "cooked rice"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "いい"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "chn",
+          "uk"
+        ]
+      },
+      "glosses": [
+        "food"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "まんま"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "dated"
+        ]
+      },
+      "glosses": [
+        "cooked rice"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "まんま"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1482010",
+      "isBase": true,
+      "originalPrimaryReading": "めし",
+      "originalGlosses": [
+        "cooked rice"
+      ]
+    },
+    {
+      "id": "2672310",
+      "isBase": false,
+      "originalPrimaryReading": "いい",
+      "originalGlosses": [
+        "cooked rice"
+      ]
+    },
+    {
+      "id": "2024490",
+      "isBase": false,
+      "originalPrimaryReading": "まんま",
+      "originalGlosses": [
+        "food"
+      ]
+    }
+  ]
 }

@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "りょう",
-    "alternatives": []
+    "alternatives": [
+      "りゃん",
+      "テール"
+    ]
   },
   "frequency": {
     "kanjiRank": 2452,
@@ -172,10 +175,112 @@
           "領"
         ]
       }
+    },
+    {
+      "pos": [
+        "num"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "two"
+      ],
+      "related": {
+        "compounds": [
+          "拳"
+        ]
+      },
+      "appliesToReadings": [
+        "りゃん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch",
+          "derog",
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "samurai"
+      ],
+      "related": {
+        "compounds": [
+          "両個"
+        ]
+      },
+      "appliesToReadings": [
+        "りゃん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "tael (Chinese unit of weight and currency)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "テール"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "2080720",
+      "isBase": true,
+      "originalPrimaryReading": "りょう",
+      "originalGlosses": [
+        "both (hands, parents, sides, etc.)"
+      ]
+    },
+    {
+      "id": "2832843",
+      "isBase": false,
+      "originalPrimaryReading": "りゃん",
+      "originalGlosses": [
+        "two"
+      ]
+    },
+    {
+      "id": "2859856",
+      "isBase": false,
+      "originalPrimaryReading": "テール",
+      "originalGlosses": [
+        "tael (Chinese unit of weight and currency)"
+      ]
+    }
+  ]
 }

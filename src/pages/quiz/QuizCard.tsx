@@ -3,6 +3,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { CONSTANTS } from "../../commons/constants";
 import { MasteryRing } from "../../components/MasteryRing";
+import { Combine } from "lucide-react";
 import { TagsLookup } from "../../models/data.model";
 import type { Tags } from "../../models/data.model";
 import { BaseQuizCard } from "./BaseQuizCard";
@@ -37,10 +38,14 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                     {/* Kanji and info */}
                     <div className="flex-1">
                         <div
-                            className={`text-5xl leading-none text-primary font-mincho mb-2 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
+                            className={`text-5xl leading-none text-primary font-mincho mb-2 flex items-center gap-2 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
                             onClick={() => feedback?.show && onKanjiClick?.()}
                         >
                             {currentVocab.writtenForm.kanji}
+                            {/* Merged Entry Icon */}
+                            {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
+                                <Combine size={20} className="text-tertiary" />
+                            )}
                         </div>
                         {/* POS tags */}
                         {currentVocab.senses.length > 0 && (
@@ -80,10 +85,15 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                     {/* Kanji Display */}
                     <div className="text-center mb-8">
                         <div
-                            className={`leading-none text-primary text-kanji font-mincho mb-4 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
+                            className={`leading-none text-primary text-kanji font-mincho mb-4 flex items-center justify-center gap-3 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
                             onClick={() => feedback?.show && onKanjiClick?.()}
+                            title={currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
                         >
                             {currentVocab.writtenForm.kanji}
+                            {/* Merged Entry Icon */}
+                            {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
+                                <Combine size={40} className="text-tertiary opacity-50" />
+                            )}
                         </div>
 
                         {/* Disambiguation helpers */}
@@ -137,17 +147,23 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                 <motion.div
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-center text-sm space-y-1 text-meaning-muted font-serif"
+                    className="text-center text-sm space-y-2 text-meaning-muted font-serif"
                 >
                     {isMobile ? (
                         currentVocab.senses.slice(0, 3).map((sense, index) => (
                             <p key={index}>
+                                {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
+                                    <span className="text-xs text-tertiary mr-1 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
+                                )}
                                 {sense.glosses.join(', ')}
                             </p>
                         ))
                     ) : (
                         currentVocab.senses.map((sense, index) => (
                             <p key={index}>
+                                {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
+                                    <span className="text-xs text-tertiary mr-2 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
+                                )}
                                 {sense.glosses.join(', ')}
                             </p>
                         ))

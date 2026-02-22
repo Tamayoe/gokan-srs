@@ -9,7 +9,8 @@
   "reading": {
     "primary": "ころ",
     "alternatives": [
-      "ごろ"
+      "ごろ",
+      "けい"
     ]
   },
   "frequency": {
@@ -90,10 +91,56 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "rare"
+        ]
+      },
+      "glosses": [
+        "qing (Chinese unit of land area equal to 100 mu)"
+      ],
+      "related": {
+        "compounds": [
+          "畝"
+        ]
+      },
+      "appliesToReadings": [
+        "けい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1579080",
+      "isBase": true,
+      "originalPrimaryReading": "ころ",
+      "originalGlosses": [
+        "(approximate) time",
+        "around",
+        "about"
+      ]
+    },
+    {
+      "id": "2210780",
+      "isBase": false,
+      "originalPrimaryReading": "けい",
+      "originalGlosses": [
+        "qing (Chinese unit of land area equal to 100 mu)"
+      ]
+    }
+  ]
 }

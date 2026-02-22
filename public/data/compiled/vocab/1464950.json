@@ -9,7 +9,9 @@
   },
   "reading": {
     "primary": "ひより",
-    "alternatives": []
+    "alternatives": [
+      "びより"
+    ]
   },
   "frequency": {
     "kanjiRank": 15032,
@@ -98,10 +100,56 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "ideal weather (for some action, event, etc.)",
+        "perfect day"
+      ],
+      "related": {
+        "compounds": [
+          "日和",
+          "行楽日和"
+        ]
+      },
+      "appliesToReadings": [
+        "びより"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1464950",
+      "isBase": true,
+      "originalPrimaryReading": "ひより",
+      "originalGlosses": [
+        "weather",
+        "climatic conditions"
+      ]
+    },
+    {
+      "id": "2701610",
+      "isBase": false,
+      "originalPrimaryReading": "びより",
+      "originalGlosses": [
+        "ideal weather (for some action, event, etc.)",
+        "perfect day"
+      ]
+    }
+  ]
 }

@@ -9,7 +9,10 @@
   },
   "reading": {
     "primary": "みやげ",
-    "alternatives": []
+    "alternatives": [
+      "どさん",
+      "とさん"
+    ]
   },
   "frequency": {
     "kanjiRank": 10221,
@@ -79,10 +82,75 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "product of the land"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "どさん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "present",
+        "souvenir"
+      ],
+      "related": {
+        "compounds": [
+          "土産"
+        ]
+      },
+      "appliesToReadings": [
+        "どさん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1445360",
+      "isBase": true,
+      "originalPrimaryReading": "みやげ",
+      "originalGlosses": [
+        "local specialty or souvenir bought as a gift while travelling"
+      ]
+    },
+    {
+      "id": "1702340",
+      "isBase": false,
+      "originalPrimaryReading": "どさん",
+      "originalGlosses": [
+        "product of the land"
+      ]
+    }
+  ]
 }

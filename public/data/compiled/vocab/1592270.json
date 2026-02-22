@@ -9,7 +9,11 @@
   "reading": {
     "primary": "くび",
     "alternatives": [
-      "クビ"
+      "クビ",
+      "しゅ",
+      "おびと",
+      "おうと",
+      "かしら"
     ]
   },
   "frequency": {
@@ -80,10 +84,116 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for songs and poems"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しゅ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hist"
+        ]
+      },
+      "glosses": [
+        "Obito (hereditary title, often given to powerful regional families)"
+      ],
+      "related": {
+        "compounds": [
+          "姓"
+        ]
+      },
+      "appliesToReadings": [
+        "おびと"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "head (of a doll)"
+      ],
+      "related": {
+        "compounds": [
+          "頭"
+        ]
+      },
+      "appliesToReadings": [
+        "かしら"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1592270",
+      "isBase": true,
+      "originalPrimaryReading": "くび",
+      "originalGlosses": [
+        "neck"
+      ]
+    },
+    {
+      "id": "1994890",
+      "isBase": false,
+      "originalPrimaryReading": "しゅ",
+      "originalGlosses": [
+        "counter for songs and poems"
+      ]
+    },
+    {
+      "id": "2265230",
+      "isBase": false,
+      "originalPrimaryReading": "おびと",
+      "originalGlosses": [
+        "Obito (hereditary title, often given to powerful regional families)"
+      ]
+    },
+    {
+      "id": "2791500",
+      "isBase": false,
+      "originalPrimaryReading": "かしら",
+      "originalGlosses": [
+        "head (of a doll)"
+      ]
+    }
+  ]
 }

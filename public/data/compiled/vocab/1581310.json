@@ -9,7 +9,9 @@
   "reading": {
     "primary": "がわ",
     "alternatives": [
-      "かわ"
+      "かわ",
+      "そく",
+      "そば"
     ]
   },
   "frequency": {
@@ -60,10 +62,123 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "first principle of the Eight Principles of Yong",
+        "tiny dash or speck"
+      ],
+      "related": {
+        "compounds": [
+          "永字八法"
+        ]
+      },
+      "appliesToReadings": [
+        "そく"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "(place) near by",
+        "(place) close by",
+        "(place) right next to",
+        "the side (of something)",
+        "beside",
+        "vicinity",
+        "proximity",
+        "neighbourhood (neighborhood)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "そば"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "as soon as",
+        "right after"
+      ],
+      "related": {
+        "compounds": [
+          "そばから"
+        ]
+      },
+      "appliesToReadings": [
+        "そば"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1581310",
+      "isBase": true,
+      "originalPrimaryReading": "がわ",
+      "originalGlosses": [
+        "side (of something, or taking someone's side)",
+        "part"
+      ]
+    },
+    {
+      "id": "2837821",
+      "isBase": false,
+      "originalPrimaryReading": "そく",
+      "originalGlosses": [
+        "first principle of the Eight Principles of Yong",
+        "tiny dash or speck"
+      ]
+    },
+    {
+      "id": "1403830",
+      "isBase": false,
+      "originalPrimaryReading": "そば",
+      "originalGlosses": [
+        "(place) near by",
+        "(place) close by",
+        "(place) right next to"
+      ]
+    }
+  ]
 }

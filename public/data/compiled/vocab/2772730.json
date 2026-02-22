@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "にくい",
-    "alternatives": []
+    "alternatives": [
+      "がたい",
+      "かたい"
+    ]
   },
   "frequency": {
     "kanjiRank": 6580,
@@ -40,10 +43,93 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf",
+        "adj-i"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "very difficult to ...",
+        "nearly impossible to ..."
+      ],
+      "related": {
+        "compounds": [
+          "難い",
+          "難い"
+        ]
+      },
+      "appliesToReadings": [
+        "がたい"
+      ]
+    },
+    {
+      "pos": [
+        "adj-i"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "form"
+        ]
+      },
+      "glosses": [
+        "difficult",
+        "hard"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かたい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "2772730",
+      "isBase": true,
+      "originalPrimaryReading": "にくい",
+      "originalGlosses": [
+        "difficult to ...",
+        "hard to ..."
+      ]
+    },
+    {
+      "id": "2867504",
+      "isBase": false,
+      "originalPrimaryReading": "がたい",
+      "originalGlosses": [
+        "very difficult to ...",
+        "nearly impossible to ..."
+      ]
+    },
+    {
+      "id": "1582640",
+      "isBase": false,
+      "originalPrimaryReading": "かたい",
+      "originalGlosses": [
+        "difficult",
+        "hard"
+      ]
+    }
+  ]
 }

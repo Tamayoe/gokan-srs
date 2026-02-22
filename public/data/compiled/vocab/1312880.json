@@ -10,7 +10,8 @@
     "primary": "めす",
     "alternatives": [
       "メス",
-      "めん"
+      "めん",
+      "め"
     ]
   },
   "frequency": {
@@ -43,10 +44,126 @@
           "雄"
         ]
       }
+    },
+    {
+      "pos": [
+        "n-pref",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "female"
+      ],
+      "related": {
+        "compounds": [
+          "雄"
+        ]
+      },
+      "appliesToReadings": [
+        "め"
+      ]
+    },
+    {
+      "pos": [
+        "n-pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "smaller (of the two)",
+        "weaker"
+      ],
+      "related": {
+        "compounds": [
+          "雌滝"
+        ]
+      },
+      "appliesToReadings": [
+        "め"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "woman"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "め"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "wife"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "め"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1312880",
+      "isBase": true,
+      "originalPrimaryReading": "めす",
+      "originalGlosses": [
+        "female (animal, plant)"
+      ]
+    },
+    {
+      "id": "2742880",
+      "isBase": false,
+      "originalPrimaryReading": "め",
+      "originalGlosses": [
+        "female"
+      ]
+    }
+  ]
 }

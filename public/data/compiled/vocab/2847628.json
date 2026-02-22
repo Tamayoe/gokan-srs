@@ -9,7 +9,10 @@
   "reading": {
     "primary": "ひな",
     "alternatives": [
-      "ヒナ"
+      "ヒナ",
+      "ひよこ",
+      "ひよっこ",
+      "ヒヨコ"
     ]
   },
   "frequency": {
@@ -64,10 +67,88 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "young bird",
+        "chick",
+        "fledgling"
+      ],
+      "related": {
+        "compounds": [
+          "雛"
+        ]
+      },
+      "appliesToReadings": [
+        "ひよこ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "greenhorn",
+        "fledgeling",
+        "novice",
+        "rookie",
+        "juvenile"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ひよこ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "2847628",
+      "isBase": true,
+      "originalPrimaryReading": "ひな",
+      "originalGlosses": [
+        "young bird",
+        "chick",
+        "fledgling"
+      ]
+    },
+    {
+      "id": "1373400",
+      "isBase": false,
+      "originalPrimaryReading": "ひよこ",
+      "originalGlosses": [
+        "young bird",
+        "chick",
+        "fledgling"
+      ]
+    }
+  ]
 }

@@ -10,7 +10,9 @@
     "primary": "もの",
     "alternatives": [
       "もん",
-      "モノ"
+      "モノ",
+      "ぶつ",
+      "ブツ"
     ]
   },
   "frequency": {
@@ -239,10 +241,83 @@
           "物珍しい"
         ]
       }
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "stock",
+        "products"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ぶつ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk",
+          "sl"
+        ]
+      },
+      "glosses": [
+        "goods (esp. stolen)",
+        "loot",
+        "spoils",
+        "stuff"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ぶつ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1502390",
+      "isBase": true,
+      "originalPrimaryReading": "もの",
+      "originalGlosses": [
+        "thing",
+        "object",
+        "article"
+      ]
+    },
+    {
+      "id": "2095920",
+      "isBase": false,
+      "originalPrimaryReading": "ぶつ",
+      "originalGlosses": [
+        "stock",
+        "products"
+      ]
+    }
+  ]
 }

@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "こと",
-    "alternatives": []
+    "alternatives": [
+      "ごと",
+      "じ"
+    ]
   },
   "frequency": {
     "kanjiRank": 497,
@@ -248,10 +251,110 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "nominalizing suffix"
+      ],
+      "related": {
+        "compounds": [
+          "事"
+        ]
+      },
+      "appliesToReadings": [
+        "ごと"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "pretending to ...",
+        "playing make-believe ..."
+      ],
+      "related": {
+        "compounds": [
+          "事"
+        ]
+      },
+      "appliesToReadings": [
+        "ごと"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "individual concrete phenomenon (as opposed to a general principle)"
+      ],
+      "related": {
+        "compounds": [
+          "理"
+        ]
+      },
+      "appliesToReadings": [
+        "じ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1313580",
+      "isBase": true,
+      "originalPrimaryReading": "こと",
+      "originalGlosses": [
+        "thing",
+        "matter"
+      ]
+    },
+    {
+      "id": "2613010",
+      "isBase": false,
+      "originalPrimaryReading": "ごと",
+      "originalGlosses": [
+        "nominalizing suffix"
+      ]
+    },
+    {
+      "id": "2187200",
+      "isBase": false,
+      "originalPrimaryReading": "じ",
+      "originalGlosses": [
+        "individual concrete phenomenon (as opposed to a general principle)"
+      ]
+    }
+  ]
 }

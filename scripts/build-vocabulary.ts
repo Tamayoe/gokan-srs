@@ -136,8 +136,96 @@ for (const entry of jmdict.words) {
     });
 }
 
+// Group by written kanji form to merge homographs
+const vocabGroups = new Map<string, BuildVocabulary[]>();
+for (const vocab of allVocabulary) {
+    const kanji = vocab.writtenForm.kanji;
+    if (!vocabGroups.has(kanji)) {
+        vocabGroups.set(kanji, []);
+    }
+    vocabGroups.get(kanji)!.push(vocab);
+}
+
+const mergedVocabulary: BuildVocabulary[] = [];
+const mergedLogs: string[] = [];
+
+for (const [kanji, group] of vocabGroups.entries()) {
+    if (group.length === 1) {
+        mergedVocabulary.push(group[0]);
+        continue;
+    }
+
+    // Sort by frequency (kanjiRank). Lower rank is better (more frequent)
+    group.sort((a, b) => a.frequency.kanjiRank - b.frequency.kanjiRank);
+
+    const base = group[0];
+
+    // Initialize merge tracking on base
+    base.mergedVocabs = [{
+        id: base.id,
+        isBase: true,
+        originalPrimaryReading: base.reading.primary,
+        originalGlosses: base.senses[0]?.glosses.slice(0, 3) || []
+    }];
+
+    // Keep track of all readings to avoid exact duplicates
+    const allReadings = new Set<string>();
+    allReadings.add(base.reading.primary);
+    base.reading.alternatives.forEach(r => allReadings.add(r));
+
+    const logEntry = [`Merged "${kanji}": Base=${base.id} (${base.reading.primary})`];
+
+    // Merge others into base
+    for (let i = 1; i < group.length; i++) {
+        const other = group[i];
+
+        logEntry.push(`  <- ${other.id} (${other.reading.primary})`);
+
+        // Track original ID
+        base.mergedVocabs.push({
+            id: other.id,
+            isBase: false,
+            originalPrimaryReading: other.reading.primary,
+            originalGlosses: other.senses[0]?.glosses.slice(0, 3) || []
+        });
+
+        // Merge readings if new
+        if (!allReadings.has(other.reading.primary)) {
+            base.reading.alternatives.push(other.reading.primary);
+            allReadings.add(other.reading.primary);
+        }
+        for (const alt of other.reading.alternatives) {
+            if (!allReadings.has(alt)) {
+                base.reading.alternatives.push(alt);
+                allReadings.add(alt);
+            }
+        }
+
+        // Merge Senses, tagging them with the reading they apply to
+        for (const sense of other.senses) {
+            sense.appliesToReadings = [other.reading.primary];
+            base.senses.push(sense);
+        }
+
+        // We could theoretically merge KKLC steps, but using the base (most frequent) is usually fine.
+        // Or take the MIN step (earliest intro) if different. Let's take MIN just in case.
+        if (other.kklcStep > 0 && other.kklcStep < base.kklcStep) {
+            base.kklcStep = other.kklcStep;
+            base.progression.kklcStep = other.kklcStep;
+        }
+    }
+
+    mergedLogs.push(logEntry.join('\n'));
+    mergedVocabulary.push(base);
+}
+
+// Write the merge log to a text file for review
+const mergedLogPath = './public/data/compiled/merged_vocabs.log';
+fs.mkdirSync(path.dirname(mergedLogPath), { recursive: true });
+fs.writeFileSync(mergedLogPath, mergedLogs.join('\n\n'), 'utf-8');
+
 // Sort by frequency and limit
-let selected = allVocabulary
+let selected = mergedVocabulary
     .sort((a, b) => a.frequency.kanjiRank - b.frequency.kanjiRank)
 
 if (BUILD_LIMITS.ENABLED_LIMIT) {

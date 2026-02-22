@@ -11,7 +11,9 @@
   "reading": {
     "primary": "まじめ",
     "alternatives": [
-      "マジメ"
+      "マジメ",
+      "しんめんもく",
+      "しんめんぼく"
     ]
   },
   "frequency": {
@@ -65,10 +67,84 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "one's true character",
+        "one's true self",
+        "one's true worth"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しんめんもく"
+      ]
+    },
+    {
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "obs"
+        ]
+      },
+      "glosses": [
+        "serious",
+        "earnest"
+      ],
+      "related": {
+        "compounds": [
+          "まじめ"
+        ]
+      },
+      "appliesToReadings": [
+        "しんめんもく"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1364360",
+      "isBase": true,
+      "originalPrimaryReading": "まじめ",
+      "originalGlosses": [
+        "serious",
+        "earnest",
+        "sober"
+      ]
+    },
+    {
+      "id": "1364350",
+      "isBase": false,
+      "originalPrimaryReading": "しんめんもく",
+      "originalGlosses": [
+        "one's true character",
+        "one's true self",
+        "one's true worth"
+      ]
+    }
+  ]
 }

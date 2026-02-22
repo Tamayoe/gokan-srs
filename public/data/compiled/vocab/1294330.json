@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "つま",
-    "alternatives": []
+    "alternatives": [
+      "さい"
+    ]
   },
   "frequency": {
     "kanjiRank": 1130,
@@ -80,10 +82,88 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "my dear",
+        "dear",
+        "honey"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "つま"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "one's wife"
+      ],
+      "related": {
+        "compounds": [
+          "妻"
+        ]
+      },
+      "appliesToReadings": [
+        "さい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1294330",
+      "isBase": true,
+      "originalPrimaryReading": "つま",
+      "originalGlosses": [
+        "wife"
+      ]
+    },
+    {
+      "id": "2852371",
+      "isBase": false,
+      "originalPrimaryReading": "つま",
+      "originalGlosses": [
+        "my dear",
+        "dear",
+        "honey"
+      ]
+    },
+    {
+      "id": "2746040",
+      "isBase": false,
+      "originalPrimaryReading": "さい",
+      "originalGlosses": [
+        "one's wife"
+      ]
+    }
+  ]
 }

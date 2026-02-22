@@ -10,7 +10,9 @@
   "reading": {
     "primary": "いきかた",
     "alternatives": [
-      "ゆきかた"
+      "ゆきかた",
+      "ゆきがた",
+      "いきがた"
     ]
   },
   "frequency": {
@@ -60,10 +62,55 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "dated"
+        ]
+      },
+      "glosses": [
+        "(one's) whereabouts"
+      ],
+      "related": {
+        "compounds": [
+          "行方"
+        ]
+      },
+      "appliesToReadings": [
+        "ゆきがた"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1578830",
+      "isBase": true,
+      "originalPrimaryReading": "いきかた",
+      "originalGlosses": [
+        "way (of going)",
+        "route"
+      ]
+    },
+    {
+      "id": "2150240",
+      "isBase": false,
+      "originalPrimaryReading": "ゆきがた",
+      "originalGlosses": [
+        "(one's) whereabouts"
+      ]
+    }
+  ]
 }

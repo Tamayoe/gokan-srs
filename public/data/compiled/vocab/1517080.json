@@ -9,7 +9,12 @@
   },
   "reading": {
     "primary": "ほうべん",
-    "alternatives": []
+    "alternatives": [
+      "たずき",
+      "たづき",
+      "たつき",
+      "たどき"
+    ]
   },
   "frequency": {
     "kanjiRank": 18671
@@ -57,10 +62,54 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "living",
+        "livelihood"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "たずき"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1517080",
+      "isBase": true,
+      "originalPrimaryReading": "ほうべん",
+      "originalGlosses": [
+        "means",
+        "expedient",
+        "instrument"
+      ]
+    },
+    {
+      "id": "2577570",
+      "isBase": false,
+      "originalPrimaryReading": "たずき",
+      "originalGlosses": [
+        "living",
+        "livelihood"
+      ]
+    }
+  ]
 }

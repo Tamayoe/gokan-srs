@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "たち",
-    "alternatives": []
+    "alternatives": [
+      "だち",
+      "ダチ"
+    ]
   },
   "frequency": {
     "kanjiRank": 1319,
@@ -38,10 +41,56 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "col",
+          "abbr",
+          "uk"
+        ]
+      },
+      "glosses": [
+        "friend"
+      ],
+      "related": {
+        "compounds": [
+          "友達"
+        ]
+      },
+      "appliesToReadings": [
+        "だち"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1416220",
+      "isBase": true,
+      "originalPrimaryReading": "たち",
+      "originalGlosses": [
+        "pluralizing suffix (esp. for people and animals; formerly honorific)"
+      ]
+    },
+    {
+      "id": "2463630",
+      "isBase": false,
+      "originalPrimaryReading": "だち",
+      "originalGlosses": [
+        "friend"
+      ]
+    }
+  ]
 }

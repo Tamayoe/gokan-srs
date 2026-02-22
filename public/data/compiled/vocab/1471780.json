@@ -10,7 +10,8 @@
   "reading": {
     "primary": "ばしゃ",
     "alternatives": [
-      "うまぐるま"
+      "うまぐるま",
+      "マーチョ"
     ]
   },
   "frequency": {
@@ -42,10 +43,61 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "rare"
+        ]
+      },
+      "glosses": [
+        "coach (horse-drawn)",
+        "carriage",
+        "wagon",
+        "cart"
+      ],
+      "related": {
+        "compounds": [
+          "馬車"
+        ]
+      },
+      "appliesToReadings": [
+        "マーチョ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1471780",
+      "isBase": true,
+      "originalPrimaryReading": "ばしゃ",
+      "originalGlosses": [
+        "coach (horse-drawn)",
+        "carriage",
+        "wagon"
+      ]
+    },
+    {
+      "id": "2843693",
+      "isBase": false,
+      "originalPrimaryReading": "マーチョ",
+      "originalGlosses": [
+        "coach (horse-drawn)",
+        "carriage",
+        "wagon"
+      ]
+    }
+  ]
 }

@@ -8,7 +8,12 @@
   },
   "reading": {
     "primary": "こう",
-    "alternatives": []
+    "alternatives": [
+      "そろ",
+      "そう",
+      "さう",
+      "す"
+    ]
   },
   "frequency": {
     "kanjiRank": 12208
@@ -36,10 +41,81 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "aux"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch",
+          "pol"
+        ]
+      },
+      "glosses": [
+        "to be"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "そろ"
+      ]
+    },
+    {
+      "pos": [
+        "aux"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch",
+          "pol"
+        ]
+      },
+      "glosses": [
+        "to do"
+      ],
+      "related": {
+        "compounds": [
+          "候ふ"
+        ]
+      },
+      "appliesToReadings": [
+        "そろ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1272680",
+      "isBase": true,
+      "originalPrimaryReading": "こう",
+      "originalGlosses": [
+        "season",
+        "weather"
+      ]
+    },
+    {
+      "id": "1272690",
+      "isBase": false,
+      "originalPrimaryReading": "そろ",
+      "originalGlosses": [
+        "to be"
+      ]
+    }
+  ]
 }

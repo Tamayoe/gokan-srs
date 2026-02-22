@@ -9,7 +9,8 @@
   "reading": {
     "primary": "こな",
     "alternatives": [
-      "こ"
+      "こ",
+      "デシメートル"
     ]
   },
   "frequency": {
@@ -62,10 +63,56 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "decimetre",
+        "decimeter"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "デシメートル"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1504770",
+      "isBase": true,
+      "originalPrimaryReading": "こな",
+      "originalGlosses": [
+        "flour",
+        "meal",
+        "powder"
+      ]
+    },
+    {
+      "id": "2072450",
+      "isBase": false,
+      "originalPrimaryReading": "デシメートル",
+      "originalGlosses": [
+        "decimetre",
+        "decimeter"
+      ]
+    }
+  ]
 }

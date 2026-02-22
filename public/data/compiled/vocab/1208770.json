@@ -10,7 +10,9 @@
     "primary": "くず",
     "alternatives": [
       "つづら",
-      "クズ"
+      "クズ",
+      "かずら",
+      "カズラ"
     ]
   },
   "frequency": {
@@ -60,10 +62,57 @@
           "葛藤"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "creeping plant",
+        "creeper",
+        "vine",
+        "liana",
+        "liane"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かずら"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1208770",
+      "isBase": true,
+      "originalPrimaryReading": "くず",
+      "originalGlosses": [
+        "kudzu (Pueraria montana)",
+        "Japanese arrowroot"
+      ]
+    },
+    {
+      "id": "2573430",
+      "isBase": false,
+      "originalPrimaryReading": "かずら",
+      "originalGlosses": [
+        "creeping plant",
+        "creeper",
+        "vine"
+      ]
+    }
+  ]
 }

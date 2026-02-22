@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "みぞ",
-    "alternatives": []
+    "alternatives": [
+      "どぶ",
+      "ドブ",
+      "こう"
+    ]
   },
   "frequency": {
     "kanjiRank": 7573,
@@ -81,10 +85,117 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "ditch",
+        "drain",
+        "gutter",
+        "trench"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "どぶ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "gap (between cutting guides)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "どぶ"
+      ]
+    },
+    {
+      "pos": [
+        "num"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "rare"
+        ]
+      },
+      "glosses": [
+        "10^32",
+        "hundred nonillion"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1578720",
+      "isBase": true,
+      "originalPrimaryReading": "みぞ",
+      "originalGlosses": [
+        "ditch",
+        "drain",
+        "gutter"
+      ]
+    },
+    {
+      "id": "2853262",
+      "isBase": false,
+      "originalPrimaryReading": "どぶ",
+      "originalGlosses": [
+        "ditch",
+        "drain",
+        "gutter"
+      ]
+    },
+    {
+      "id": "1280050",
+      "isBase": false,
+      "originalPrimaryReading": "こう",
+      "originalGlosses": [
+        "10^32",
+        "hundred nonillion"
+      ]
+    }
+  ]
 }

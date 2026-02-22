@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "やく",
-    "alternatives": []
+    "alternatives": [
+      "えき",
+      "えだち"
+    ]
   },
   "frequency": {
     "kanjiRank": 1165,
@@ -106,10 +109,81 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "war",
+        "campaign",
+        "battle"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "えき"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "unpaid work (ritsuryō system)",
+        "forced labor"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "えき"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1537970",
+      "isBase": true,
+      "originalPrimaryReading": "やく",
+      "originalGlosses": [
+        "role",
+        "assignment",
+        "responsibility"
+      ]
+    },
+    {
+      "id": "1537960",
+      "isBase": false,
+      "originalPrimaryReading": "えき",
+      "originalGlosses": [
+        "war",
+        "campaign",
+        "battle"
+      ]
+    }
+  ]
 }

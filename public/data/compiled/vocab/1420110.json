@@ -10,7 +10,8 @@
   "reading": {
     "primary": "だんじょ",
     "alternatives": [
-      "なんにょ"
+      "なんにょ",
+      "おとこおんな"
     ]
   },
   "frequency": {
@@ -42,10 +43,102 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "masculine woman",
+        "mannish woman"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "おとこおんな"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "feminine man",
+        "effeminate man"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "おとこおんな"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "intersexual",
+        "hermaphrodite"
+      ],
+      "related": {
+        "compounds": [
+          "半陰陽"
+        ]
+      },
+      "appliesToReadings": [
+        "おとこおんな"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1420110",
+      "isBase": true,
+      "originalPrimaryReading": "だんじょ",
+      "originalGlosses": [
+        "men and women",
+        "man and woman",
+        "both sexes"
+      ]
+    },
+    {
+      "id": "2120840",
+      "isBase": false,
+      "originalPrimaryReading": "おとこおんな",
+      "originalGlosses": [
+        "masculine woman",
+        "mannish woman"
+      ]
+    }
+  ]
 }

@@ -9,7 +9,9 @@
   "reading": {
     "primary": "くすり",
     "alternatives": [
-      "クスリ"
+      "クスリ",
+      "やく",
+      "ヤク"
     ]
   },
   "frequency": {
@@ -124,10 +126,60 @@
           "鼻薬"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "sl"
+        ]
+      },
+      "glosses": [
+        "dope",
+        "narcotic",
+        "drug"
+      ],
+      "related": {
+        "compounds": [
+          "麻薬"
+        ]
+      },
+      "appliesToReadings": [
+        "やく"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1538160",
+      "isBase": true,
+      "originalPrimaryReading": "くすり",
+      "originalGlosses": [
+        "medicine",
+        "pharmaceuticals",
+        "(legal) drugs"
+      ]
+    },
+    {
+      "id": "2220820",
+      "isBase": false,
+      "originalPrimaryReading": "やく",
+      "originalGlosses": [
+        "dope",
+        "narcotic",
+        "drug"
+      ]
+    }
+  ]
 }

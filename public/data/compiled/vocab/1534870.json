@@ -10,7 +10,8 @@
   "reading": {
     "primary": "もめん",
     "alternatives": [
-      "きわた"
+      "きわた",
+      "ゆう"
     ]
   },
   "frequency": {
@@ -62,10 +63,54 @@
           "パンヤの木"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "string made of cut steamed, soaked mulberry bark fibers"
+      ],
+      "related": {
+        "compounds": [
+          "楮"
+        ]
+      },
+      "appliesToReadings": [
+        "ゆう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1534870",
+      "isBase": true,
+      "originalPrimaryReading": "もめん",
+      "originalGlosses": [
+        "cotton (material)"
+      ]
+    },
+    {
+      "id": "2261050",
+      "isBase": false,
+      "originalPrimaryReading": "ゆう",
+      "originalGlosses": [
+        "string made of cut steamed, soaked mulberry bark fibers"
+      ]
+    }
+  ]
 }

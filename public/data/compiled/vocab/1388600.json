@@ -10,7 +10,8 @@
   "reading": {
     "primary": "せんぽう",
     "alternatives": [
-      "さきかた"
+      "さきかた",
+      "さきがた"
     ]
   },
   "frequency": {
@@ -80,10 +81,54 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n",
+        "adv"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "rare"
+        ]
+      },
+      "glosses": [
+        "a short while ago"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "さきがた"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1388600",
+      "isBase": true,
+      "originalPrimaryReading": "せんぽう",
+      "originalGlosses": [
+        "other party",
+        "other side"
+      ]
+    },
+    {
+      "id": "2464030",
+      "isBase": false,
+      "originalPrimaryReading": "さきがた",
+      "originalGlosses": [
+        "a short while ago"
+      ]
+    }
+  ]
 }

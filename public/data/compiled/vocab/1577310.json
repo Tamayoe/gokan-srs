@@ -10,7 +10,8 @@
   "reading": {
     "primary": "やけど",
     "alternatives": [
-      "ヤケド"
+      "ヤケド",
+      "かしょう"
     ]
   },
   "frequency": {
@@ -67,10 +68,57 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n",
+        "vs",
+        "vi"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "burn",
+        "scald"
+      ],
+      "related": {
+        "compounds": [
+          "やけど"
+        ]
+      },
+      "appliesToReadings": [
+        "かしょう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1577310",
+      "isBase": true,
+      "originalPrimaryReading": "やけど",
+      "originalGlosses": [
+        "burn",
+        "scald"
+      ]
+    },
+    {
+      "id": "2859761",
+      "isBase": false,
+      "originalPrimaryReading": "かしょう",
+      "originalGlosses": [
+        "burn",
+        "scald"
+      ]
+    }
+  ]
 }

@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "はば",
-    "alternatives": []
+    "alternatives": [
+      "ふく",
+      "の"
+    ]
   },
   "frequency": {
     "kanjiRank": 3003,
@@ -78,10 +81,106 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "scroll"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ふく"
+      ]
+    },
+    {
+      "pos": [
+        "suf",
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for scrolls"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ふく"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf",
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "unit of measurement for cloth breadth (30-38 cm)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "の"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1500880",
+      "isBase": true,
+      "originalPrimaryReading": "はば",
+      "originalGlosses": [
+        "width",
+        "breadth"
+      ]
+    },
+    {
+      "id": "2671700",
+      "isBase": false,
+      "originalPrimaryReading": "ふく",
+      "originalGlosses": [
+        "scroll"
+      ]
+    },
+    {
+      "id": "2671670",
+      "isBase": false,
+      "originalPrimaryReading": "の",
+      "originalGlosses": [
+        "unit of measurement for cloth breadth (30-38 cm)"
+      ]
+    }
+  ]
 }

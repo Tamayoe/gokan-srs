@@ -9,7 +9,11 @@
   "reading": {
     "primary": "はね",
     "alternatives": [
-      "は"
+      "は",
+      "わ",
+      "ば",
+      "ぱ",
+      "う"
     ]
   },
   "frequency": {
@@ -141,10 +145,84 @@
           "矢羽"
         ]
       }
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for birds or rabbits"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "わ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "fifth degree (of the Japanese and Chinese pentatonic scale)"
+      ],
+      "related": {
+        "compounds": [
+          "五音"
+        ]
+      },
+      "appliesToReadings": [
+        "う"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1171680",
+      "isBase": true,
+      "originalPrimaryReading": "はね",
+      "originalGlosses": [
+        "feather",
+        "plume",
+        "down"
+      ]
+    },
+    {
+      "id": "1607310",
+      "isBase": false,
+      "originalPrimaryReading": "わ",
+      "originalGlosses": [
+        "counter for birds or rabbits"
+      ]
+    },
+    {
+      "id": "2253440",
+      "isBase": false,
+      "originalPrimaryReading": "う",
+      "originalGlosses": [
+        "fifth degree (of the Japanese and Chinese pentatonic scale)"
+      ]
+    }
+  ]
 }

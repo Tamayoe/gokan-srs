@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "あね",
-    "alternatives": []
+    "alternatives": [
+      "ねえ",
+      "し"
+    ]
   },
   "frequency": {
     "kanjiRank": 1486,
@@ -37,10 +40,85 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "fam"
+        ]
+      },
+      "glosses": [
+        "older sister"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ねえ"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hon"
+        ]
+      },
+      "glosses": [
+        "honorific suffix used after the name of a woman of equal or higher status"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "し"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1307630",
+      "isBase": true,
+      "originalPrimaryReading": "あね",
+      "originalGlosses": [
+        "older sister",
+        "elder sister"
+      ]
+    },
+    {
+      "id": "2266990",
+      "isBase": false,
+      "originalPrimaryReading": "ねえ",
+      "originalGlosses": [
+        "older sister"
+      ]
+    },
+    {
+      "id": "2252800",
+      "isBase": false,
+      "originalPrimaryReading": "し",
+      "originalGlosses": [
+        "honorific suffix used after the name of a woman of equal or higher status"
+      ]
+    }
+  ]
 }

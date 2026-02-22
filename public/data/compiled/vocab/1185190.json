@@ -10,7 +10,10 @@
   "reading": {
     "primary": "したて",
     "alternatives": [
-      "したで"
+      "したで",
+      "へた",
+      "ヘタ",
+      "しもて"
     ]
   },
   "frequency": {
@@ -59,10 +62,137 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "unskillful",
+        "poor",
+        "awkward"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "へた"
+      ]
+    },
+    {
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "imprudent",
+        "untactful"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "へた"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "lower part",
+        "foot",
+        "lower direction"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しもて"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "left part of the stage (audience's or camera's POV)",
+        "stage right (actor's POV)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しもて"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1185190",
+      "isBase": true,
+      "originalPrimaryReading": "したて",
+      "originalGlosses": [
+        "humble position",
+        "inferior"
+      ]
+    },
+    {
+      "id": "1185200",
+      "isBase": false,
+      "originalPrimaryReading": "へた",
+      "originalGlosses": [
+        "unskillful",
+        "poor",
+        "awkward"
+      ]
+    },
+    {
+      "id": "1185195",
+      "isBase": false,
+      "originalPrimaryReading": "しもて",
+      "originalGlosses": [
+        "lower part",
+        "foot",
+        "lower direction"
+      ]
+    }
+  ]
 }

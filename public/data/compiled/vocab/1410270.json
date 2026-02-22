@@ -10,7 +10,8 @@
   "reading": {
     "primary": "たいめん",
     "alternatives": [
-      "たいめ"
+      "たいめ",
+      "トイメン"
     ]
   },
   "frequency": {
@@ -66,10 +67,76 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "opposite player"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "トイメン"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "col"
+        ]
+      },
+      "glosses": [
+        "opposite side",
+        "(person) directly opposite"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "トイメン"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1410270",
+      "isBase": true,
+      "originalPrimaryReading": "たいめん",
+      "originalGlosses": [
+        "meeting face-to-face",
+        "seeing in person"
+      ]
+    },
+    {
+      "id": "2752960",
+      "isBase": false,
+      "originalPrimaryReading": "トイメン",
+      "originalGlosses": [
+        "opposite player"
+      ]
+    }
+  ]
 }

@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "そうそう",
-    "alternatives": []
+    "alternatives": [
+      "はやはや",
+      "はやばや"
+    ]
   },
   "frequency": {
     "kanjiRank": 3883,
@@ -63,10 +66,89 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "adv"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "quickly"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "はやはや"
+      ]
+    },
+    {
+      "pos": [
+        "adv",
+        "adv-to"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "early",
+        "quickly",
+        "promptly"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "はやばや"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1596420",
+      "isBase": true,
+      "originalPrimaryReading": "そうそう",
+      "originalGlosses": [
+        "as soon as ...",
+        "just after ...",
+        "immediately after ..."
+      ]
+    },
+    {
+      "id": "2659700",
+      "isBase": false,
+      "originalPrimaryReading": "はやはや",
+      "originalGlosses": [
+        "quickly"
+      ]
+    },
+    {
+      "id": "2659710",
+      "isBase": false,
+      "originalPrimaryReading": "はやばや",
+      "originalGlosses": [
+        "early",
+        "quickly",
+        "promptly"
+      ]
+    }
+  ]
 }

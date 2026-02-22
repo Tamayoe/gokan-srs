@@ -9,7 +9,10 @@
   },
   "reading": {
     "primary": "めがみ",
-    "alternatives": []
+    "alternatives": [
+      "おみながみ",
+      "じょしん"
+    ]
   },
   "frequency": {
     "kanjiRank": 3358,
@@ -39,10 +42,84 @@
           "男神"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "paper doll to which children pray for good weather"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "おみながみ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "goddess",
+        "female deity"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "じょしん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1345210",
+      "isBase": true,
+      "originalPrimaryReading": "めがみ",
+      "originalGlosses": [
+        "goddess"
+      ]
+    },
+    {
+      "id": "2736610",
+      "isBase": false,
+      "originalPrimaryReading": "おみながみ",
+      "originalGlosses": [
+        "paper doll to which children pray for good weather"
+      ]
+    },
+    {
+      "id": "2863690",
+      "isBase": false,
+      "originalPrimaryReading": "じょしん",
+      "originalGlosses": [
+        "goddess",
+        "female deity"
+      ]
+    }
+  ]
 }

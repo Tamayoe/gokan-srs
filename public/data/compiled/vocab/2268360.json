@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "さい",
-    "alternatives": []
+    "alternatives": [
+      "ほそ",
+      "ささ",
+      "さざ"
+    ]
   },
   "frequency": {
     "kanjiRank": 32296
@@ -38,10 +42,138 @@
           "微に入り細を穿つ"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "fine thread",
+        "hempen cord"
+      ],
+      "related": {
+        "compounds": [
+          "細引き",
+          "細糸"
+        ]
+      },
+      "appliesToReadings": [
+        "ほそ"
+      ]
+    },
+    {
+      "pos": [
+        "n-pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "slender",
+        "narrow",
+        "weak"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ほそ"
+      ]
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "narrowness"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ほそ"
+      ]
+    },
+    {
+      "pos": [
+        "pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "small",
+        "little"
+      ],
+      "related": {
+        "compounds": [
+          "さざ波"
+        ]
+      },
+      "appliesToReadings": [
+        "ささ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "2268360",
+      "isBase": true,
+      "originalPrimaryReading": "さい",
+      "originalGlosses": [
+        "detail",
+        "details"
+      ]
+    },
+    {
+      "id": "2268940",
+      "isBase": false,
+      "originalPrimaryReading": "ほそ",
+      "originalGlosses": [
+        "fine thread",
+        "hempen cord"
+      ]
+    },
+    {
+      "id": "2268910",
+      "isBase": false,
+      "originalPrimaryReading": "ささ",
+      "originalGlosses": [
+        "small",
+        "little"
+      ]
+    }
+  ]
 }

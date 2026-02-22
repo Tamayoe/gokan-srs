@@ -11,7 +11,8 @@
     "primary": "しこう",
     "alternatives": [
       "せこう",
-      "しぎょう"
+      "しぎょう",
+      "せぎょう"
     ]
   },
   "frequency": {
@@ -66,10 +67,56 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n",
+        "vs",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "giving alms (to monks or the poor)",
+        "almsgiving"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "せぎょう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1579510",
+      "isBase": true,
+      "originalPrimaryReading": "しこう",
+      "originalGlosses": [
+        "putting in force (a law)",
+        "putting into operation",
+        "putting into effect"
+      ]
+    },
+    {
+      "id": "2852867",
+      "isBase": false,
+      "originalPrimaryReading": "せぎょう",
+      "originalGlosses": [
+        "giving alms (to monks or the poor)",
+        "almsgiving"
+      ]
+    }
+  ]
 }

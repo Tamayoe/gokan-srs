@@ -3,6 +3,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { MasteryRing } from "../../components/MasteryRing";
 import { TagsLookup } from "../../models/data.model";
+import { Combine } from "lucide-react";
 import type { Tags } from "../../models/data.model";
 
 import { BaseQuizCard } from "./BaseQuizCard";
@@ -73,10 +74,15 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                 ) : (
                     // Fallback to minimal Kanji display if no sentence
                     <div
-                        className={`text-5xl leading-none text-primary font-mincho mb-4 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
+                        className={`text-5xl leading-none text-primary font-mincho mb-4 flex items-center justify-center gap-3 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
                         onClick={() => feedback?.show && onKanjiClick?.()}
+                        title={currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
                     >
                         {currentVocab.writtenForm.kanji}
+                        {/* Merged Entry Icon */}
+                        {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
+                            <Combine size={40} className="text-tertiary opacity-50" />
+                        )}
                     </div>
                 )}
 
@@ -107,11 +113,14 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                 <motion.div
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-center text-sm space-y-1 text-meaning-muted font-serif"
+                    className="text-center text-sm space-y-2 text-meaning-muted font-serif"
                 >
                     <p className="font-bold text-primary mb-1">Meanings:</p>
                     {currentVocab.senses.map((sense, index) => (
                         <p key={index}>
+                            {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
+                                <span className="text-xs text-tertiary mr-2 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
+                            )}
                             {sense.glosses.join(', ')}
                         </p>
                     ))}

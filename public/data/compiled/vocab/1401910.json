@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "くさ",
-    "alternatives": []
+    "alternatives": [
+      "そう"
+    ]
   },
   "frequency": {
     "kanjiRank": 2171,
@@ -126,10 +128,81 @@
           "ｗ"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "draft",
+        "rough copy"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "そう"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "highly cursive style (of writing Chinese characters)",
+        "grass style"
+      ],
+      "related": {
+        "compounds": [
+          "草書"
+        ]
+      },
+      "appliesToReadings": [
+        "そう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1401910",
+      "isBase": true,
+      "originalPrimaryReading": "くさ",
+      "originalGlosses": [
+        "grass",
+        "weed",
+        "herb"
+      ]
+    },
+    {
+      "id": "2414580",
+      "isBase": false,
+      "originalPrimaryReading": "そう",
+      "originalGlosses": [
+        "draft",
+        "rough copy"
+      ]
+    }
+  ]
 }

@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "なみ",
-    "alternatives": []
+    "alternatives": [
+      "は",
+      "ぽ"
+    ]
   },
   "frequency": {
     "kanjiRank": 2273,
@@ -102,10 +105,86 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for waves (of a repeated occurrence)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "は"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "Poland"
+      ],
+      "related": {
+        "compounds": [
+          "波蘭"
+        ]
+      },
+      "appliesToReadings": [
+        "ぽ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1470970",
+      "isBase": true,
+      "originalPrimaryReading": "なみ",
+      "originalGlosses": [
+        "wave",
+        "billow",
+        "ripple"
+      ]
+    },
+    {
+      "id": "2844141",
+      "isBase": false,
+      "originalPrimaryReading": "は",
+      "originalGlosses": [
+        "counter for waves (of a repeated occurrence)"
+      ]
+    },
+    {
+      "id": "2826950",
+      "isBase": false,
+      "originalPrimaryReading": "ぽ",
+      "originalGlosses": [
+        "Poland"
+      ]
+    }
+  ]
 }

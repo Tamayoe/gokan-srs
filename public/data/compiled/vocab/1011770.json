@@ -10,7 +10,8 @@
     "primary": "ぼけ",
     "alternatives": [
       "ボケ",
-      "ヴォケ"
+      "ヴォケ",
+      "とぼけ"
     ]
   },
   "frequency": {
@@ -115,10 +116,55 @@
           "漫才"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "feigned ignorance",
+        "assumed innocence"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "とぼけ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1011770",
+      "isBase": true,
+      "originalPrimaryReading": "ぼけ",
+      "originalGlosses": [
+        "fool",
+        "idiot"
+      ]
+    },
+    {
+      "id": "1955470",
+      "isBase": false,
+      "originalPrimaryReading": "とぼけ",
+      "originalGlosses": [
+        "feigned ignorance",
+        "assumed innocence"
+      ]
+    }
+  ]
 }

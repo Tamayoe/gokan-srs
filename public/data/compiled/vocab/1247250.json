@@ -9,7 +9,10 @@
   "reading": {
     "primary": "きみ",
     "alternatives": [
-      "キミ"
+      "キミ",
+      "きんじ",
+      "くん",
+      "ぎみ"
     ]
   },
   "frequency": {
@@ -87,10 +90,169 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch",
+          "col"
+        ]
+      },
+      "glosses": [
+        "you"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きんじ"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "Mr",
+        "master",
+        "boy"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "くん"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "Ms",
+        "miss"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "くん"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "sir",
+        "madam"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "くん"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hon"
+        ]
+      },
+      "glosses": [
+        "suffix appended to someone else's family members"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ぎみ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1247250",
+      "isBase": true,
+      "originalPrimaryReading": "きみ",
+      "originalGlosses": [
+        "you",
+        "buddy",
+        "pal"
+      ]
+    },
+    {
+      "id": "2697540",
+      "isBase": false,
+      "originalPrimaryReading": "きんじ",
+      "originalGlosses": [
+        "you"
+      ]
+    },
+    {
+      "id": "1247260",
+      "isBase": false,
+      "originalPrimaryReading": "くん",
+      "originalGlosses": [
+        "Mr",
+        "master",
+        "boy"
+      ]
+    },
+    {
+      "id": "2697530",
+      "isBase": false,
+      "originalPrimaryReading": "ぎみ",
+      "originalGlosses": [
+        "suffix appended to someone else's family members"
+      ]
+    }
+  ]
 }

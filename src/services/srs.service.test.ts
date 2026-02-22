@@ -499,7 +499,7 @@ describe('SRSService Formula Tests', () => {
 
             expect(updated.nextReviewAt).not.toBeNull();
             expect(updated.reading.dueDate).toEqual(updated.nextReviewAt);
-            expect(updated.meaning.dueDate).toEqual(updated.nextReviewAt);
+            expect(updated.meaning.dueDate?.getTime()).toEqual(updated.nextReviewAt!.getTime() + 12 * 60 * 60 * 1000);
         });
 
         it('should graduate immediately for Skip choice', () => {

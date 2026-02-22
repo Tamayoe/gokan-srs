@@ -9,7 +9,8 @@
   "reading": {
     "primary": "たわむれる",
     "alternatives": [
-      "ざれる"
+      "ざれる",
+      "じゃれる"
     ]
   },
   "frequency": {
@@ -88,10 +89,60 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "v1",
+        "vi"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "to play around (of a cat, dog, etc.)",
+        "to frisk",
+        "to gambol",
+        "to frolic"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "じゃれる"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1224970",
+      "isBase": true,
+      "originalPrimaryReading": "たわむれる",
+      "originalGlosses": [
+        "to be playful",
+        "to gambol",
+        "to be amused (with something)"
+      ]
+    },
+    {
+      "id": "2859078",
+      "isBase": false,
+      "originalPrimaryReading": "じゃれる",
+      "originalGlosses": [
+        "to play around (of a cat, dog, etc.)",
+        "to frisk",
+        "to gambol"
+      ]
+    }
+  ]
 }

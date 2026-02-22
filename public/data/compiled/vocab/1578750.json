@@ -10,7 +10,8 @@
   "reading": {
     "primary": "かんぱん",
     "alternatives": [
-      "こうはん"
+      "こうはん",
+      "こういた"
     ]
   },
   "frequency": {
@@ -39,10 +40,52 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "top board (of a table, counter, etc.)",
+        "surface"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こういた"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1578750",
+      "isBase": true,
+      "originalPrimaryReading": "かんぱん",
+      "originalGlosses": [
+        "deck (of a ship)"
+      ]
+    },
+    {
+      "id": "2835045",
+      "isBase": false,
+      "originalPrimaryReading": "こういた",
+      "originalGlosses": [
+        "top board (of a table, counter, etc.)",
+        "surface"
+      ]
+    }
+  ]
 }

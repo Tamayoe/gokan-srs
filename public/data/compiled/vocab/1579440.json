@@ -10,7 +10,8 @@
   "reading": {
     "primary": "さんぼう",
     "alternatives": [
-      "さんぽう"
+      "さんぽう",
+      "さんかた"
     ]
   },
   "frequency": {
@@ -57,10 +58,54 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "rare"
+        ]
+      },
+      "glosses": [
+        "day laborer (in construction, etc.)",
+        "day labourer"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "さんかた"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1579440",
+      "isBase": true,
+      "originalPrimaryReading": "さんぼう",
+      "originalGlosses": [
+        "three sides"
+      ]
+    },
+    {
+      "id": "2682870",
+      "isBase": false,
+      "originalPrimaryReading": "さんかた",
+      "originalGlosses": [
+        "day laborer (in construction, etc.)",
+        "day labourer"
+      ]
+    }
+  ]
 }

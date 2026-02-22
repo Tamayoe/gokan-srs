@@ -9,7 +9,8 @@
   "reading": {
     "primary": "あの",
     "alternatives": [
-      "あん"
+      "あん",
+      "かの"
     ]
   },
   "frequency": {
@@ -46,10 +47,85 @@
           "その"
         ]
       }
+    },
+    {
+      "pos": [
+        "adj-pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "that well-known ...",
+        "the one and only ..."
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かの"
+      ]
+    },
+    {
+      "pos": [
+        "adj-pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "form",
+          "uk"
+        ]
+      },
+      "glosses": [
+        "that",
+        "those",
+        "the"
+      ],
+      "related": {
+        "compounds": [
+          "あの"
+        ]
+      },
+      "appliesToReadings": [
+        "かの"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1000420",
+      "isBase": true,
+      "originalPrimaryReading": "あの",
+      "originalGlosses": [
+        "that",
+        "those",
+        "the"
+      ]
+    },
+    {
+      "id": "2845746",
+      "isBase": false,
+      "originalPrimaryReading": "かの",
+      "originalGlosses": [
+        "that well-known ...",
+        "the one and only ..."
+      ]
+    }
+  ]
 }

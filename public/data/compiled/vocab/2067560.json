@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "へい",
-    "alternatives": []
+    "alternatives": [
+      "ひょう",
+      "つわもの",
+      "ツワモノ"
+    ]
   },
   "frequency": {
     "kanjiRank": 3124,
@@ -77,10 +81,112 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "pawn"
+      ],
+      "related": {
+        "compounds": [
+          "歩兵"
+        ]
+      },
+      "appliesToReadings": [
+        "ひょう"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "soldier",
+        "warrior"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "つわもの"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "person of courage",
+        "strong person",
+        "very capable person",
+        "master (in a field)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "つわもの"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "2067560",
+      "isBase": true,
+      "originalPrimaryReading": "へい",
+      "originalGlosses": [
+        "(common) soldier",
+        "rank and file"
+      ]
+    },
+    {
+      "id": "2843717",
+      "isBase": false,
+      "originalPrimaryReading": "ひょう",
+      "originalGlosses": [
+        "pawn"
+      ]
+    },
+    {
+      "id": "2822790",
+      "isBase": false,
+      "originalPrimaryReading": "つわもの",
+      "originalGlosses": [
+        "soldier",
+        "warrior"
+      ]
+    }
+  ]
 }

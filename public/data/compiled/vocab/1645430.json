@@ -10,7 +10,8 @@
   "reading": {
     "primary": "なりわい",
     "alternatives": [
-      "せいぎょう"
+      "せいぎょう",
+      "すぎわい"
     ]
   },
   "frequency": {
@@ -59,10 +60,55 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "dated"
+        ]
+      },
+      "glosses": [
+        "occupation",
+        "livelihood"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "すぎわい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1645430",
+      "isBase": true,
+      "originalPrimaryReading": "なりわい",
+      "originalGlosses": [
+        "occupation",
+        "calling"
+      ]
+    },
+    {
+      "id": "2863046",
+      "isBase": false,
+      "originalPrimaryReading": "すぎわい",
+      "originalGlosses": [
+        "occupation",
+        "livelihood"
+      ]
+    }
+  ]
 }

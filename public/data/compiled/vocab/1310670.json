@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "とめる",
-    "alternatives": []
+    "alternatives": [
+      "やめる"
+    ]
   },
   "frequency": {
     "kanjiRank": 298,
@@ -180,10 +182,90 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "to stop (an activity)",
+        "to cease",
+        "to discontinue",
+        "to end",
+        "to quit"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "やめる"
+      ]
+    },
+    {
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "to cancel",
+        "to abandon",
+        "to give up",
+        "to abolish",
+        "to abstain",
+        "to refrain"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "やめる"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1310670",
+      "isBase": true,
+      "originalPrimaryReading": "とめる",
+      "originalGlosses": [
+        "to stop",
+        "to turn off"
+      ]
+    },
+    {
+      "id": "1310680",
+      "isBase": false,
+      "originalPrimaryReading": "やめる",
+      "originalGlosses": [
+        "to stop (an activity)",
+        "to cease",
+        "to discontinue"
+      ]
+    }
+  ]
 }

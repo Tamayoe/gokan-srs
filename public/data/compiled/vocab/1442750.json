@@ -9,7 +9,10 @@
   },
   "reading": {
     "primary": "いなか",
-    "alternatives": []
+    "alternatives": [
+      "でんしゃ",
+      "でんじゃ"
+    ]
   },
   "frequency": {
     "kanjiRank": 3638,
@@ -58,10 +61,56 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "country",
+        "country home"
+      ],
+      "related": {
+        "compounds": [
+          "田舎"
+        ]
+      },
+      "appliesToReadings": [
+        "でんしゃ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1442750",
+      "isBase": true,
+      "originalPrimaryReading": "いなか",
+      "originalGlosses": [
+        "rural area",
+        "countryside",
+        "the sticks"
+      ]
+    },
+    {
+      "id": "2771530",
+      "isBase": false,
+      "originalPrimaryReading": "でんしゃ",
+      "originalGlosses": [
+        "country",
+        "country home"
+      ]
+    }
+  ]
 }

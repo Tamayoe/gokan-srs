@@ -9,7 +9,10 @@
   "reading": {
     "primary": "ほぐす",
     "alternatives": [
-      "ほごす"
+      "ほごす",
+      "かいす",
+      "ほつす",
+      "げす"
     ]
   },
   "frequency": {
@@ -92,10 +95,154 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "v5s",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "to understand",
+        "to appreciate"
+      ],
+      "related": {
+        "compounds": [
+          "解する"
+        ]
+      },
+      "appliesToReadings": [
+        "かいす"
+      ]
+    },
+    {
+      "pos": [
+        "v5s",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "to interpret"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かいす"
+      ]
+    },
+    {
+      "pos": [
+        "v5s",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "dated",
+          "uk"
+        ]
+      },
+      "glosses": [
+        "to disentangle",
+        "to untangle",
+        "to unravel",
+        "to loosen"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ほつす"
+      ]
+    },
+    {
+      "pos": [
+        "v5s",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "to understand",
+        "to comprehend"
+      ],
+      "related": {
+        "compounds": [
+          "解せる"
+        ]
+      },
+      "appliesToReadings": [
+        "げす"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1632920",
+      "isBase": true,
+      "originalPrimaryReading": "ほぐす",
+      "originalGlosses": [
+        "to disentangle",
+        "to untangle",
+        "to unravel"
+      ]
+    },
+    {
+      "id": "2410340",
+      "isBase": false,
+      "originalPrimaryReading": "かいす",
+      "originalGlosses": [
+        "to understand",
+        "to appreciate"
+      ]
+    },
+    {
+      "id": "2863138",
+      "isBase": false,
+      "originalPrimaryReading": "ほつす",
+      "originalGlosses": [
+        "to disentangle",
+        "to untangle",
+        "to unravel"
+      ]
+    },
+    {
+      "id": "2410330",
+      "isBase": false,
+      "originalPrimaryReading": "げす",
+      "originalGlosses": [
+        "to understand",
+        "to comprehend"
+      ]
+    }
+  ]
 }

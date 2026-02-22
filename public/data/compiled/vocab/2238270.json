@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "じゅう",
-    "alternatives": []
+    "alternatives": [
+      "じゅ",
+      "ひろい",
+      "ひろき"
+    ]
   },
   "frequency": {
     "kanjiRank": 11736
@@ -39,10 +43,99 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n",
+        "n-pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "lesser (of equal court ranks)",
+        "lower",
+        "junior"
+      ],
+      "related": {
+        "compounds": [
+          "正"
+        ]
+      },
+      "appliesToReadings": [
+        "じゅ"
+      ]
+    },
+    {
+      "pos": [
+        "pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "lesser (of equal court ranks)",
+        "lower",
+        "junior"
+      ],
+      "related": {
+        "compounds": [
+          "大い"
+        ]
+      },
+      "appliesToReadings": [
+        "ひろい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "2238270",
+      "isBase": true,
+      "originalPrimaryReading": "じゅう",
+      "originalGlosses": [
+        "subordinate",
+        "secondary",
+        "junior"
+      ]
+    },
+    {
+      "id": "2427720",
+      "isBase": false,
+      "originalPrimaryReading": "じゅ",
+      "originalGlosses": [
+        "lesser (of equal court ranks)",
+        "lower",
+        "junior"
+      ]
+    },
+    {
+      "id": "2427730",
+      "isBase": false,
+      "originalPrimaryReading": "ひろい",
+      "originalGlosses": [
+        "lesser (of equal court ranks)",
+        "lower",
+        "junior"
+      ]
+    }
+  ]
 }

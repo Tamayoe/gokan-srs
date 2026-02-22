@@ -587,6 +587,23 @@ return 'exhausted'
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
+- **[2026-02-22]**:
+  - **Homograph Vocabulary Merge**: Unified JMDict duplicate entries sharing identical kanji into single Robust entries.
+    - Updated `Vocabulary` models to support `mergedVocabs` containing original source info.
+    - Updated `build-data.ts` to identify and collapse duplicates at build-time, preserving their respective readings and tagging them accurately using `appliesToReadings`.
+    - Eliminated duplicate quiz sessions natively at the data level.
+  - **V5 Progress Migration**: Handled user progress migration to the new schema.
+    - Output `merged-map.json` linking removed duplicated ids to the unified base ID.
+    - Upgraded `MigrationService.migrateMergedVocabsAsync` to Version 5.
+    - Safely merges `history`, max `memoryStrength`, and reassigns IDs dynamically for active users without data loss.
+
+- **[2026-02-21]**:
+  - **Duplicate Quizzes Fix**: Resolved an issue where users received reading and meaning quizzes for the same vocabulary in the exact same session, causing a frustrating duplicate test experience.
+    - Updated `applyVocabIntroChoice` to stagger the initial `meaning.dueDate` by +12 hours instead of scheduling both for `now`.
+    - Updated `applyAnswer` to push `meaning.dueDate` forward by +12 hours if a user successfully answers a reading quiz and the meaning quiz is also due or about to be due.
+    - This creates a natural Space Staggering between Reading and Meaning tests.
+    - Updated `srs.service.test.ts` to reflect the 12-hour offset logic.
+
 - **[2026-02-20]**:
   - **Dev Server Optimization**: Added `server.watch.ignored: ['**/public/data/compiled', '**/public/data/compiled/**']` to `vite.config.ts` to prevent Vite's file watcher (chokidar) from actively traversing the 50,000+ generated JSON files. Added `@source` directives in `index.css` to prevent Tailwind CSS v4 from scanning the dataset. These fixes resolve the massive 2-minute delay on the initial dev server request.
   - **Production Build Fix**: Migrated the compiled dataset (`vocab`, `sentences`, `index`) to the standard `public/data/compiled` directory. By doing this, Vite naturally copies the dataset exactly as-is to `dist/` during the production build. This allows the application to cleanly use `fetch('/data/compiled/...')` without tracking files in `import()`, retaining fast dev server startups and skipping the need for custom post-build copy scripts or buggy plugins. `package.json` build scripts were updated accordingly.

@@ -9,7 +9,8 @@
   "reading": {
     "primary": "こと",
     "alternatives": [
-      "そう"
+      "そう",
+      "きん"
     ]
   },
   "frequency": {
@@ -78,10 +79,52 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "qin (7-stringed Chinese zither)",
+        "guqin"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1241450",
+      "isBase": true,
+      "originalPrimaryReading": "こと",
+      "originalGlosses": [
+        "koto (13-stringed Japanese zither)"
+      ]
+    },
+    {
+      "id": "2229960",
+      "isBase": false,
+      "originalPrimaryReading": "きん",
+      "originalGlosses": [
+        "qin (7-stringed Chinese zither)",
+        "guqin"
+      ]
+    }
+  ]
 }

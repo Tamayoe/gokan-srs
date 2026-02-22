@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "はしら",
-    "alternatives": []
+    "alternatives": [
+      "じゅう",
+      "ちゅう",
+      "じ"
+    ]
   },
   "frequency": {
     "kanjiRank": 2553,
@@ -78,10 +82,106 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "fret (of a biwa)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "じゅう"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "bridge (of a koto, etc.)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ちゅう"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "cylinder",
+        "prism"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ちゅう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1426480",
+      "isBase": true,
+      "originalPrimaryReading": "はしら",
+      "originalGlosses": [
+        "pillar",
+        "post"
+      ]
+    },
+    {
+      "id": "2424150",
+      "isBase": false,
+      "originalPrimaryReading": "じゅう",
+      "originalGlosses": [
+        "fret (of a biwa)"
+      ]
+    },
+    {
+      "id": "2424140",
+      "isBase": false,
+      "originalPrimaryReading": "ちゅう",
+      "originalGlosses": [
+        "bridge (of a koto, etc.)"
+      ]
+    }
+  ]
 }

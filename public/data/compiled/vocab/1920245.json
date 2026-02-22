@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "なんの",
-    "alternatives": []
+    "alternatives": [
+      "どの"
+    ]
   },
   "frequency": {
     "kanjiRank": 36787,
@@ -102,10 +104,60 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "adj-pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "which",
+        "what (way)"
+      ],
+      "related": {
+        "compounds": [
+          "この",
+          "その",
+          "あの"
+        ]
+      },
+      "appliesToReadings": [
+        "どの"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1920245",
+      "isBase": true,
+      "originalPrimaryReading": "なんの",
+      "originalGlosses": [
+        "what",
+        "what kind of",
+        "what sort of"
+      ]
+    },
+    {
+      "id": "1920240",
+      "isBase": false,
+      "originalPrimaryReading": "どの",
+      "originalGlosses": [
+        "which",
+        "what (way)"
+      ]
+    }
+  ]
 }

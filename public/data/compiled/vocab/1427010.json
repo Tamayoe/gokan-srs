@@ -9,7 +9,8 @@
   "reading": {
     "primary": "いのしし",
     "alternatives": [
-      "イノシシ"
+      "イノシシ",
+      "い"
     ]
   },
   "frequency": {
@@ -41,10 +42,53 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "hog (esp. a wild boar, but also including the domesticated pig)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "い"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1427010",
+      "isBase": true,
+      "originalPrimaryReading": "いのしし",
+      "originalGlosses": [
+        "wild boar",
+        "wild pig"
+      ]
+    },
+    {
+      "id": "2203230",
+      "isBase": false,
+      "originalPrimaryReading": "い",
+      "originalGlosses": [
+        "hog (esp. a wild boar, but also including the domesticated pig)"
+      ]
+    }
+  ]
 }

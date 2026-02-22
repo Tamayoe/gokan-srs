@@ -9,7 +9,9 @@
   },
   "reading": {
     "primary": "さくぶん",
-    "alternatives": []
+    "alternatives": [
+      "さくもん"
+    ]
   },
   "frequency": {
     "kanjiRank": 24107
@@ -62,10 +64,57 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "writing (poetry)",
+        "composing"
+      ],
+      "related": {
+        "compounds": [
+          "作文"
+        ]
+      },
+      "appliesToReadings": [
+        "さくもん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1297960",
+      "isBase": true,
+      "originalPrimaryReading": "さくぶん",
+      "originalGlosses": [
+        "writing (an essay, prose, etc.)",
+        "composition"
+      ]
+    },
+    {
+      "id": "2525510",
+      "isBase": false,
+      "originalPrimaryReading": "さくもん",
+      "originalGlosses": [
+        "writing (poetry)",
+        "composing"
+      ]
+    }
+  ]
 }

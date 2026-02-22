@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "かい",
-    "alternatives": []
+    "alternatives": [
+      "きざはし",
+      "きだはし",
+      "はし"
+    ]
   },
   "frequency": {
     "kanjiRank": 3728
@@ -98,10 +102,76 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "stairs"
+      ],
+      "related": {
+        "compounds": [
+          "階段"
+        ]
+      },
+      "appliesToReadings": [
+        "きざはし"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "stairs at the front of a noh stage"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きざはし"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1203020",
+      "isBase": true,
+      "originalPrimaryReading": "かい",
+      "originalGlosses": [
+        "storey",
+        "story",
+        "floor"
+      ]
+    },
+    {
+      "id": "2543170",
+      "isBase": false,
+      "originalPrimaryReading": "きざはし",
+      "originalGlosses": [
+        "stairs"
+      ]
+    }
+  ]
 }

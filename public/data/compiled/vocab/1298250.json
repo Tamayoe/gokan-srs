@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "さく",
-    "alternatives": []
+    "alternatives": [
+      "しがらみ",
+      "き"
+    ]
   },
   "frequency": {
     "kanjiRank": 6144,
@@ -59,10 +62,112 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "weir"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しがらみ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "bonds",
+        "fetters",
+        "ties of obligation"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しがらみ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "fortress (surrounded by a wall, moat, etc.)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "き"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1298250",
+      "isBase": true,
+      "originalPrimaryReading": "さく",
+      "originalGlosses": [
+        "fence",
+        "paling",
+        "railing"
+      ]
+    },
+    {
+      "id": "2137050",
+      "isBase": false,
+      "originalPrimaryReading": "しがらみ",
+      "originalGlosses": [
+        "weir"
+      ]
+    },
+    {
+      "id": "2219650",
+      "isBase": false,
+      "originalPrimaryReading": "き",
+      "originalGlosses": [
+        "fortress (surrounded by a wall, moat, etc.)"
+      ]
+    }
+  ]
 }

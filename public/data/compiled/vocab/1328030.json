@@ -9,7 +9,11 @@
   },
   "reading": {
     "primary": "てまえ",
-    "alternatives": []
+    "alternatives": [
+      "てめえ",
+      "テメー",
+      "てめぇ"
+    ]
   },
   "frequency": {
     "kanjiRank": 2536,
@@ -167,10 +171,89 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk",
+          "derog",
+          "male"
+        ]
+      },
+      "glosses": [
+        "you"
+      ],
+      "related": {
+        "compounds": [
+          "手前"
+        ]
+      },
+      "appliesToReadings": [
+        "てめえ"
+      ]
+    },
+    {
+      "pos": [
+        "pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk",
+          "male"
+        ]
+      },
+      "glosses": [
+        "I",
+        "me",
+        "oneself",
+        "myself",
+        "yourself",
+        "himself",
+        "herself"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "てめえ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1328030",
+      "isBase": true,
+      "originalPrimaryReading": "てまえ",
+      "originalGlosses": [
+        "before oneself",
+        "in front of one",
+        "nearby"
+      ]
+    },
+    {
+      "id": "2076920",
+      "isBase": false,
+      "originalPrimaryReading": "てめえ",
+      "originalGlosses": [
+        "you"
+      ]
+    }
+  ]
 }

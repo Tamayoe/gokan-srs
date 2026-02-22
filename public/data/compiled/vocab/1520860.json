@@ -10,7 +10,8 @@
   "reading": {
     "primary": "ペキン",
     "alternatives": [
-      "ペイチン"
+      "ペイチン",
+      "ほっきょう"
     ]
   },
   "frequency": {
@@ -40,10 +41,55 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "Kyoto"
+      ],
+      "related": {
+        "compounds": [
+          "南京"
+        ]
+      },
+      "appliesToReadings": [
+        "ほっきょう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1520860",
+      "isBase": true,
+      "originalPrimaryReading": "ペキン",
+      "originalGlosses": [
+        "Beijing (China)",
+        "Peking"
+      ]
+    },
+    {
+      "id": "2851513",
+      "isBase": false,
+      "originalPrimaryReading": "ほっきょう",
+      "originalGlosses": [
+        "Kyoto"
+      ]
+    }
+  ]
 }

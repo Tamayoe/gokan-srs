@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "その",
-    "alternatives": []
+    "alternatives": [
+      "えん"
+    ]
   },
   "frequency": {
     "kanjiRank": 8626,
@@ -61,10 +63,86 @@
           "学びの園"
         ]
       }
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "garden",
+        "orchard",
+        "park",
+        "plantation"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "えん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "kindergarten",
+        "nursery school",
+        "preschool"
+      ],
+      "related": {
+        "compounds": [
+          "幼稚園",
+          "保育園"
+        ]
+      },
+      "appliesToReadings": [
+        "えん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1176240",
+      "isBase": true,
+      "originalPrimaryReading": "その",
+      "originalGlosses": [
+        "garden",
+        "orchard",
+        "park"
+      ]
+    },
+    {
+      "id": "2854424",
+      "isBase": false,
+      "originalPrimaryReading": "えん",
+      "originalGlosses": [
+        "garden",
+        "orchard",
+        "park"
+      ]
+    }
+  ]
 }

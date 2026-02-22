@@ -8,7 +8,11 @@
   },
   "reading": {
     "primary": "たまご",
-    "alternatives": []
+    "alternatives": [
+      "かい",
+      "かいご",
+      "らん"
+    ]
   },
   "frequency": {
     "kanjiRank": 3321,
@@ -100,10 +104,90 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "egg",
+        "eggshell"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かい"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "ovum",
+        "ovule",
+        "egg cell"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "らん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1549140",
+      "isBase": true,
+      "originalPrimaryReading": "たまご",
+      "originalGlosses": [
+        "eggs",
+        "egg",
+        "spawn"
+      ]
+    },
+    {
+      "id": "2647520",
+      "isBase": false,
+      "originalPrimaryReading": "かい",
+      "originalGlosses": [
+        "egg",
+        "eggshell"
+      ]
+    },
+    {
+      "id": "2647530",
+      "isBase": false,
+      "originalPrimaryReading": "らん",
+      "originalGlosses": [
+        "ovum",
+        "ovule",
+        "egg cell"
+      ]
+    }
+  ]
 }

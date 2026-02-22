@@ -9,7 +9,8 @@
   "reading": {
     "primary": "あご",
     "alternatives": [
-      "アゴ"
+      "アゴ",
+      "がく"
     ]
   },
   "frequency": {
@@ -58,10 +59,51 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "jaw"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "がく"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1207560",
+      "isBase": true,
+      "originalPrimaryReading": "あご",
+      "originalGlosses": [
+        "jaw",
+        "chin"
+      ]
+    },
+    {
+      "id": "2864765",
+      "isBase": false,
+      "originalPrimaryReading": "がく",
+      "originalGlosses": [
+        "jaw"
+      ]
+    }
+  ]
 }

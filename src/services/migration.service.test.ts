@@ -209,7 +209,7 @@ describe('MigrationService', () => {
             expect(migrated.kanjiKnowledge.step).toBe(100);
         });
 
-        it('should not re-migrate if already at current version', () => {
+        it('should not re-migrate if already at current version or V3 sync cap', () => {
             const alreadyMigrated = {
                 _formatVersion: 3,
                 kanjiKnowledge: {
@@ -226,12 +226,8 @@ describe('MigrationService', () => {
             // Cast to solve type issues in test
             const result = MigrationService.migrateUserProgress(alreadyMigrated as any);
 
-            // Should return as-is
-            expect(result._formatVersion).toBe(3); // Wait, if I increment version, this test expects 2?
-            // If already at 2, but current is 3, it SHOULD migrate again!
-            // So this test case "should not re-migrate if already at current version" logic needs semantic update.
-            // If I pass version 2, it should migrate to 3.
-            // If I pass version 3, it should stay 3.
+            // Should return as-is (sync cap is 3)
+            expect(result._formatVersion).toBe(3);
         });
 
         it('should migrate version 2 to version 3 (add adaptive stats AND init meaning)', () => {
@@ -273,13 +269,22 @@ describe('MigrationService', () => {
             expect(MigrationService.needsMigration(oldProgress)).toBe(true);
         });
 
-        it('should return false for current version', () => {
+        it('should return false for current version (5)', () => {
+            const currentProgress = {
+                _formatVersion: 5,
+                learningQueue: []
+            };
+
+            expect(MigrationService.needsMigration(currentProgress)).toBe(false);
+        });
+
+        it('should return true for V3 version needing V5', () => {
             const currentProgress = {
                 _formatVersion: 3,
                 learningQueue: []
             };
 
-            expect(MigrationService.needsMigration(currentProgress)).toBe(false);
+            expect(MigrationService.needsMigration(currentProgress)).toBe(true);
         });
     });
 

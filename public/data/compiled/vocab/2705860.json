@@ -9,7 +9,8 @@
   "reading": {
     "primary": "しょ",
     "alternatives": [
-      "ちょ"
+      "ちょ",
+      "お"
     ]
   },
   "frequency": {
@@ -38,10 +39,77 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "cord",
+        "strap",
+        "thong"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "お"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "string (of a musical instrument, bow, etc.)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "お"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "2705860",
+      "isBase": true,
+      "originalPrimaryReading": "しょ",
+      "originalGlosses": [
+        "beginning",
+        "inception"
+      ]
+    },
+    {
+      "id": "1343610",
+      "isBase": false,
+      "originalPrimaryReading": "お",
+      "originalGlosses": [
+        "cord",
+        "strap",
+        "thong"
+      ]
+    }
+  ]
 }

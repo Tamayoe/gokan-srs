@@ -8,7 +8,12 @@
   },
   "reading": {
     "primary": "ど",
-    "alternatives": []
+    "alternatives": [
+      "ド",
+      "どう",
+      "たび",
+      "たんび"
+    ]
   },
   "frequency": {
     "kanjiRank": 1277
@@ -142,10 +147,120 @@
           "度を失う"
         ]
       }
+    },
+    {
+      "pos": [
+        "pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "extreme",
+        "ultra",
+        "mega",
+        "totally",
+        "very much",
+        "precisely",
+        "exactly"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ど"
+      ]
+    },
+    {
+      "pos": [
+        "pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "damn",
+        "stupid",
+        "cursed"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ど"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf",
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "time (three times, each time, etc.)",
+        "times"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "たび"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1445160",
+      "isBase": true,
+      "originalPrimaryReading": "ど",
+      "originalGlosses": [
+        "degree (angle, temperature, scale, etc.)"
+      ]
+    },
+    {
+      "id": "2252690",
+      "isBase": false,
+      "originalPrimaryReading": "ど",
+      "originalGlosses": [
+        "extreme",
+        "ultra",
+        "mega"
+      ]
+    },
+    {
+      "id": "1445150",
+      "isBase": false,
+      "originalPrimaryReading": "たび",
+      "originalGlosses": [
+        "time (three times, each time, etc.)",
+        "times"
+      ]
+    }
+  ]
 }

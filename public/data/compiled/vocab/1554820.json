@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "ちから",
-    "alternatives": []
+    "alternatives": [
+      "りょく",
+      "りき"
+    ]
   },
   "frequency": {
     "kanjiRank": 193,
@@ -193,10 +196,115 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "strength",
+        "power",
+        "proficiency",
+        "ability"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "りょく"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "strength",
+        "power",
+        "proficiency",
+        "ability"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "りき"
+      ]
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "the strength of ... people",
+        "the strength of ... men"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "りき"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1554820",
+      "isBase": true,
+      "originalPrimaryReading": "ちから",
+      "originalGlosses": [
+        "force",
+        "strength",
+        "might"
+      ]
+    },
+    {
+      "id": "1554840",
+      "isBase": false,
+      "originalPrimaryReading": "りょく",
+      "originalGlosses": [
+        "strength",
+        "power",
+        "proficiency"
+      ]
+    },
+    {
+      "id": "1554830",
+      "isBase": false,
+      "originalPrimaryReading": "りき",
+      "originalGlosses": [
+        "strength",
+        "power",
+        "proficiency"
+      ]
+    }
+  ]
 }

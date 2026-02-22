@@ -9,7 +9,8 @@
   "reading": {
     "primary": "ひゃく",
     "alternatives": [
-      "はく"
+      "はく",
+      "もも"
     ]
   },
   "frequency": {
@@ -39,10 +40,79 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "num"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "poet"
+        ]
+      },
+      "glosses": [
+        "hundred",
+        "100"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "もも"
+      ]
+    },
+    {
+      "pos": [
+        "n-pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "poet"
+        ]
+      },
+      "glosses": [
+        "(a great) many"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "もも"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1488000",
+      "isBase": true,
+      "originalPrimaryReading": "ひゃく",
+      "originalGlosses": [
+        "hundred",
+        "100"
+      ]
+    },
+    {
+      "id": "2850990",
+      "isBase": false,
+      "originalPrimaryReading": "もも",
+      "originalGlosses": [
+        "hundred",
+        "100"
+      ]
+    }
+  ]
 }

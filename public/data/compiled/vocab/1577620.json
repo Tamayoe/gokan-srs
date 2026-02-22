@@ -11,7 +11,11 @@
     "alternatives": [
       "かん",
       "かむり",
-      "かんぶり"
+      "かんぶり",
+      "かぶり",
+      "こうぶり",
+      "かうぶり",
+      "かがふり"
     ]
   },
   "frequency": {
@@ -166,10 +170,54 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "order",
+        "rank"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かぶり"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1577620",
+      "isBase": true,
+      "originalPrimaryReading": "かんむり",
+      "originalGlosses": [
+        "traditional cap worn by Shinto clergy and courtiers"
+      ]
+    },
+    {
+      "id": "2238280",
+      "isBase": false,
+      "originalPrimaryReading": "かぶり",
+      "originalGlosses": [
+        "order",
+        "rank"
+      ]
+    }
+  ]
 }

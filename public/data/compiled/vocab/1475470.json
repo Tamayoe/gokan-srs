@@ -9,7 +9,8 @@
   "reading": {
     "primary": "ススキ",
     "alternatives": [
-      "すすき"
+      "すすき",
+      "うす"
     ]
   },
   "frequency": {
@@ -41,10 +42,52 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "pref"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "light (e.g. colour, color)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "うす"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1475470",
+      "isBase": true,
+      "originalPrimaryReading": "ススキ",
+      "originalGlosses": [
+        "Chinese silvergrass (Miscanthus sinensis)",
+        "maiden grass",
+        "susuki grass"
+      ]
+    },
+    {
+      "id": "1999850",
+      "isBase": false,
+      "originalPrimaryReading": "うす",
+      "originalGlosses": [
+        "light (e.g. colour, color)"
+      ]
+    }
+  ]
 }

@@ -10,7 +10,8 @@
   "reading": {
     "primary": "ごさい",
     "alternatives": [
-      "こうさい"
+      "こうさい",
+      "うわなり"
     ]
   },
   "frequency": {
@@ -39,10 +40,82 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "second wife",
+        "later wife",
+        "concubine"
+      ],
+      "related": {
+        "compounds": [
+          "後妻"
+        ]
+      },
+      "appliesToReadings": [
+        "うわなり"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "jealousy"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "うわなり"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1269650",
+      "isBase": true,
+      "originalPrimaryReading": "ごさい",
+      "originalGlosses": [
+        "second wife"
+      ]
+    },
+    {
+      "id": "2842248",
+      "isBase": false,
+      "originalPrimaryReading": "うわなり",
+      "originalGlosses": [
+        "second wife",
+        "later wife",
+        "concubine"
+      ]
+    }
+  ]
 }

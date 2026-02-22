@@ -10,7 +10,9 @@
     "primary": "ふだ",
     "alternatives": [
       "ふみた",
-      "ふんだ"
+      "ふんだ",
+      "さね",
+      "さつ"
     ]
   },
   "frequency": {
@@ -143,10 +145,88 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "armor platelet"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "さね"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "banknote",
+        "bill",
+        "note",
+        "paper money"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "さつ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1298970",
+      "isBase": true,
+      "originalPrimaryReading": "ふだ",
+      "originalGlosses": [
+        "ticket",
+        "token",
+        "check"
+      ]
+    },
+    {
+      "id": "2793810",
+      "isBase": false,
+      "originalPrimaryReading": "さね",
+      "originalGlosses": [
+        "armor platelet"
+      ]
+    },
+    {
+      "id": "1298960",
+      "isBase": false,
+      "originalPrimaryReading": "さつ",
+      "originalGlosses": [
+        "banknote",
+        "bill",
+        "note"
+      ]
+    }
+  ]
 }

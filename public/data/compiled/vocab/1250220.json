@@ -9,7 +9,11 @@
   "reading": {
     "primary": "かたち",
     "alternatives": [
-      "よう"
+      "よう",
+      "けい",
+      "かた",
+      "がた",
+      "なり"
     ]
   },
   "frequency": {
@@ -59,10 +63,203 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "form"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "けい"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "adjective",
+        "i-adjective (in Japanese)"
+      ],
+      "related": {
+        "compounds": [
+          "形容詞"
+        ]
+      },
+      "appliesToReadings": [
+        "けい"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "shape",
+        "form",
+        "style"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かた"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "security",
+        "collateral"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かた"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "obverse of an old zeni coin"
+      ],
+      "related": {
+        "compounds": [
+          "銭"
+        ]
+      },
+      "appliesToReadings": [
+        "かた"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "adj-no"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "style",
+        "way",
+        "shape",
+        "form",
+        "appearance",
+        "state"
+      ],
+      "related": {
+        "compounds": [
+          "なりに"
+        ]
+      },
+      "appliesToReadings": [
+        "なり"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1250220",
+      "isBase": true,
+      "originalPrimaryReading": "かたち",
+      "originalGlosses": [
+        "form",
+        "shape",
+        "figure"
+      ]
+    },
+    {
+      "id": "2254010",
+      "isBase": false,
+      "originalPrimaryReading": "けい",
+      "originalGlosses": [
+        "form"
+      ]
+    },
+    {
+      "id": "2068070",
+      "isBase": false,
+      "originalPrimaryReading": "かた",
+      "originalGlosses": [
+        "shape",
+        "form",
+        "style"
+      ]
+    },
+    {
+      "id": "2138450",
+      "isBase": false,
+      "originalPrimaryReading": "なり",
+      "originalGlosses": [
+        "style",
+        "way",
+        "shape"
+      ]
+    }
+  ]
 }

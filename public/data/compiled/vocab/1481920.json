@@ -9,7 +9,8 @@
   "reading": {
     "primary": "うるさい",
     "alternatives": [
-      "ウルサイ"
+      "ウルサイ",
+      "わずらい"
     ]
   },
   "frequency": {
@@ -115,10 +116,78 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "worry",
+        "trouble",
+        "anxiety"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "わずらい"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "illness",
+        "sickness"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "わずらい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1481920",
+      "isBase": true,
+      "originalPrimaryReading": "うるさい",
+      "originalGlosses": [
+        "noisy",
+        "loud"
+      ]
+    },
+    {
+      "id": "1855030",
+      "isBase": false,
+      "originalPrimaryReading": "わずらい",
+      "originalGlosses": [
+        "worry",
+        "trouble",
+        "anxiety"
+      ]
+    }
+  ]
 }

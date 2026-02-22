@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "へん",
-    "alternatives": []
+    "alternatives": [
+      "へ",
+      "ほとり"
+    ]
   },
   "frequency": {
     "kanjiRank": 5032,
@@ -77,10 +80,145 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch",
+          "poet"
+        ]
+      },
+      "glosses": [
+        "surrounding area",
+        "vicinity"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "へ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch",
+          "poet"
+        ]
+      },
+      "glosses": [
+        "seashore",
+        "seaside",
+        "coast"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "へ"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "suffix used as a rough indicator of location, direction, time, etc."
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "へ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "side (esp. of a waterbody)",
+        "edge",
+        "bank",
+        "shore"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ほとり"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1512070",
+      "isBase": true,
+      "originalPrimaryReading": "へん",
+      "originalGlosses": [
+        "area",
+        "vicinity",
+        "region"
+      ]
+    },
+    {
+      "id": "2254960",
+      "isBase": false,
+      "originalPrimaryReading": "へ",
+      "originalGlosses": [
+        "surrounding area",
+        "vicinity"
+      ]
+    },
+    {
+      "id": "2842190",
+      "isBase": false,
+      "originalPrimaryReading": "ほとり",
+      "originalGlosses": [
+        "side (esp. of a waterbody)",
+        "edge",
+        "bank"
+      ]
+    }
+  ]
 }

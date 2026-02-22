@@ -9,7 +9,9 @@
   },
   "reading": {
     "primary": "ほんや",
-    "alternatives": []
+    "alternatives": [
+      "ほんおく"
+    ]
   },
   "frequency": {
     "kanjiRank": 10064,
@@ -76,10 +78,51 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "principal residence"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ほんおく"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1522240",
+      "isBase": true,
+      "originalPrimaryReading": "ほんや",
+      "originalGlosses": [
+        "bookstore",
+        "bookshop"
+      ]
+    },
+    {
+      "id": "1522230",
+      "isBase": false,
+      "originalPrimaryReading": "ほんおく",
+      "originalGlosses": [
+        "principal residence"
+      ]
+    }
+  ]
 }

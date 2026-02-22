@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "かみ",
-    "alternatives": []
+    "alternatives": [
+      "し"
+    ]
   },
   "frequency": {
     "kanjiRank": 1673,
@@ -36,10 +38,98 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "newspaper"
+      ],
+      "related": {
+        "compounds": [
+          "新聞紙"
+        ]
+      },
+      "appliesToReadings": [
+        "し"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "paper"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "し"
+      ]
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for newspapers"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "し"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1311530",
+      "isBase": true,
+      "originalPrimaryReading": "かみ",
+      "originalGlosses": [
+        "paper"
+      ]
+    },
+    {
+      "id": "2787310",
+      "isBase": false,
+      "originalPrimaryReading": "し",
+      "originalGlosses": [
+        "newspaper"
+      ]
+    }
+  ]
 }

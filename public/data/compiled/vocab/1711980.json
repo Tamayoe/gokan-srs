@@ -10,7 +10,10 @@
   },
   "reading": {
     "primary": "やし",
-    "alternatives": []
+    "alternatives": [
+      "こうぐし",
+      "やつ"
+    ]
   },
   "frequency": {
     "kanjiRank": 65641
@@ -74,10 +77,126 @@
           "奴"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "incense maker",
+        "perfumer"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こうぐし"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "stallkeeper (at a festival, fair, etc.)",
+        "street vendor",
+        "street performer",
+        "peddler",
+        "hawker",
+        "huckster",
+        "faker"
+      ],
+      "related": {
+        "compounds": [
+          "香具師"
+        ]
+      },
+      "appliesToReadings": [
+        "こうぐし"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "net-sl"
+        ]
+      },
+      "glosses": [
+        "fellow",
+        "guy",
+        "chap",
+        "he",
+        "she",
+        "him",
+        "her"
+      ],
+      "related": {
+        "compounds": [
+          "奴"
+        ]
+      },
+      "appliesToReadings": [
+        "やつ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1711980",
+      "isBase": true,
+      "originalPrimaryReading": "やし",
+      "originalGlosses": [
+        "stallkeeper (at a festival, fair, etc.)",
+        "street vendor",
+        "street performer"
+      ]
+    },
+    {
+      "id": "1922800",
+      "isBase": false,
+      "originalPrimaryReading": "こうぐし",
+      "originalGlosses": [
+        "incense maker",
+        "perfumer"
+      ]
+    },
+    {
+      "id": "2852740",
+      "isBase": false,
+      "originalPrimaryReading": "やつ",
+      "originalGlosses": [
+        "fellow",
+        "guy",
+        "chap"
+      ]
+    }
+  ]
 }

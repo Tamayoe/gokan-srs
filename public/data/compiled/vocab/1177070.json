@@ -9,7 +9,8 @@
   "reading": {
     "primary": "ほのお",
     "alternatives": [
-      "ほむら"
+      "ほむら",
+      "えん"
     ]
   },
   "frequency": {
@@ -59,10 +60,53 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "-itis (indicating an inflammatory disease)"
+      ],
+      "related": {
+        "compounds": [
+          "扁桃腺炎"
+        ]
+      },
+      "appliesToReadings": [
+        "えん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1177070",
+      "isBase": true,
+      "originalPrimaryReading": "ほのお",
+      "originalGlosses": [
+        "flame",
+        "blaze"
+      ]
+    },
+    {
+      "id": "2258340",
+      "isBase": false,
+      "originalPrimaryReading": "えん",
+      "originalGlosses": [
+        "-itis (indicating an inflammatory disease)"
+      ]
+    }
+  ]
 }

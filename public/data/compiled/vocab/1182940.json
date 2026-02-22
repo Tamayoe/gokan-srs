@@ -9,7 +9,8 @@
   "reading": {
     "primary": "おつ",
     "alternatives": [
-      "オツ"
+      "オツ",
+      "きのと"
     ]
   },
   "frequency": {
@@ -137,10 +138,55 @@
           "お疲れ様"
         ]
       }
+    },
+    {
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "second in rank",
+        "second sign of the Chinese calendar"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きのと"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1182940",
+      "isBase": true,
+      "originalPrimaryReading": "おつ",
+      "originalGlosses": [
+        "(the) second (party, rank, etc.)",
+        "B (grade)",
+        "the latter"
+      ]
+    },
+    {
+      "id": "1182945",
+      "isBase": false,
+      "originalPrimaryReading": "きのと",
+      "originalGlosses": [
+        "second in rank",
+        "second sign of the Chinese calendar"
+      ]
+    }
+  ]
 }

@@ -10,7 +10,9 @@
   "reading": {
     "primary": "きみ",
     "alternatives": [
-      "きび"
+      "きび",
+      "きあじ",
+      "ぎみ"
     ]
   },
   "frequency": {
@@ -64,10 +66,90 @@
           "気味"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "market sentiment (stock market)",
+        "market tone"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きあじ"
+      ]
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "-like",
+        "-looking",
+        "-looked",
+        "tending to ..."
+      ],
+      "related": {
+        "compounds": [
+          "気味"
+        ]
+      },
+      "appliesToReadings": [
+        "ぎみ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1222640",
+      "isBase": true,
+      "originalPrimaryReading": "きみ",
+      "originalGlosses": [
+        "sensation",
+        "feeling"
+      ]
+    },
+    {
+      "id": "2623150",
+      "isBase": false,
+      "originalPrimaryReading": "きあじ",
+      "originalGlosses": [
+        "market sentiment (stock market)",
+        "market tone"
+      ]
+    },
+    {
+      "id": "1790980",
+      "isBase": false,
+      "originalPrimaryReading": "ぎみ",
+      "originalGlosses": [
+        "-like",
+        "-looking",
+        "-looked"
+      ]
+    }
+  ]
 }

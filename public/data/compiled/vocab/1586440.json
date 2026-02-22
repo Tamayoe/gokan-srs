@@ -9,7 +9,9 @@
   "reading": {
     "primary": "あたためる",
     "alternatives": [
-      "あっためる"
+      "あっためる",
+      "ぬくめる",
+      "ぬるめる"
     ]
   },
   "frequency": {
@@ -105,10 +107,91 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "to warm (up)",
+        "to heat (up)"
+      ],
+      "related": {
+        "compounds": [
+          "温める"
+        ]
+      },
+      "appliesToReadings": [
+        "ぬくめる"
+      ]
+    },
+    {
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "to cool (water) down",
+        "to make less hot (e.g. by adding cold water)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ぬるめる"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1586440",
+      "isBase": true,
+      "originalPrimaryReading": "あたためる",
+      "originalGlosses": [
+        "to warm (up)",
+        "to heat (up)"
+      ]
+    },
+    {
+      "id": "2853516",
+      "isBase": false,
+      "originalPrimaryReading": "ぬくめる",
+      "originalGlosses": [
+        "to warm (up)",
+        "to heat (up)"
+      ]
+    },
+    {
+      "id": "2037020",
+      "isBase": false,
+      "originalPrimaryReading": "ぬるめる",
+      "originalGlosses": [
+        "to cool (water) down",
+        "to make less hot (e.g. by adding cold water)"
+      ]
+    }
+  ]
 }

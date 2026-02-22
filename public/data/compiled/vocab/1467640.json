@@ -9,7 +9,8 @@
   "reading": {
     "primary": "ねこ",
     "alternatives": [
-      "ネコ"
+      "ネコ",
+      "ねこま"
     ]
   },
   "frequency": {
@@ -144,10 +145,54 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "cat"
+      ],
+      "related": {
+        "compounds": [
+          "猫"
+        ]
+      },
+      "appliesToReadings": [
+        "ねこま"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1467640",
+      "isBase": true,
+      "originalPrimaryReading": "ねこ",
+      "originalGlosses": [
+        "cat (esp. the domestic cat, Felis catus)"
+      ]
+    },
+    {
+      "id": "2698030",
+      "isBase": false,
+      "originalPrimaryReading": "ねこま",
+      "originalGlosses": [
+        "cat"
+      ]
+    }
+  ]
 }

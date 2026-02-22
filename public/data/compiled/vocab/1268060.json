@@ -10,7 +10,8 @@
     "primary": "ご",
     "alternatives": [
       "いつ",
-      "い"
+      "い",
+      "ウー"
     ]
   },
   "frequency": {
@@ -39,10 +40,51 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "num"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "five"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ウー"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1268060",
+      "isBase": true,
+      "originalPrimaryReading": "ご",
+      "originalGlosses": [
+        "five",
+        "5"
+      ]
+    },
+    {
+      "id": "2747970",
+      "isBase": false,
+      "originalPrimaryReading": "ウー",
+      "originalGlosses": [
+        "five"
+      ]
+    }
+  ]
 }

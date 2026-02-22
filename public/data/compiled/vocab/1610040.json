@@ -10,7 +10,9 @@
   "reading": {
     "primary": "せい",
     "alternatives": [
-      "せえ"
+      "せえ",
+      "しょい",
+      "そい"
     ]
   },
   "frequency": {
@@ -45,10 +47,81 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "act",
+        "deed",
+        "one's doing"
+      ],
+      "related": {
+        "compounds": [
+          "仕業"
+        ]
+      },
+      "appliesToReadings": [
+        "しょい"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "cause",
+        "reason"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しょい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1610040",
+      "isBase": true,
+      "originalPrimaryReading": "せい",
+      "originalGlosses": [
+        "consequence",
+        "outcome",
+        "result"
+      ]
+    },
+    {
+      "id": "1343140",
+      "isBase": false,
+      "originalPrimaryReading": "しょい",
+      "originalGlosses": [
+        "act",
+        "deed",
+        "one's doing"
+      ]
+    }
+  ]
 }

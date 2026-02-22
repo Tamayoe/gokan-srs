@@ -9,7 +9,9 @@
   "reading": {
     "primary": "たけ",
     "alternatives": [
-      "たき"
+      "たき",
+      "だけ",
+      "じょう"
     ]
   },
   "frequency": {
@@ -100,10 +102,167 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "prt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "only",
+        "just",
+        "merely",
+        "simply",
+        "no more than",
+        "nothing but",
+        "alone"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "だけ"
+      ]
+    },
+    {
+      "pos": [
+        "prt"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "as much as",
+        "to the extent of",
+        "enough to"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "だけ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "3.03 meters (ten shaku)"
+      ],
+      "related": {
+        "compounds": [
+          "尺"
+        ]
+      },
+      "appliesToReadings": [
+        "じょう"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "length",
+        "measure"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "じょう"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "hon"
+        ]
+      },
+      "glosses": [
+        "Mr.",
+        "Mrs."
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "じょう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1354600",
+      "isBase": true,
+      "originalPrimaryReading": "たけ",
+      "originalGlosses": [
+        "height",
+        "stature"
+      ]
+    },
+    {
+      "id": "1007340",
+      "isBase": false,
+      "originalPrimaryReading": "だけ",
+      "originalGlosses": [
+        "only",
+        "just",
+        "merely"
+      ]
+    },
+    {
+      "id": "2145400",
+      "isBase": false,
+      "originalPrimaryReading": "じょう",
+      "originalGlosses": [
+        "3.03 meters (ten shaku)"
+      ]
+    }
+  ]
 }

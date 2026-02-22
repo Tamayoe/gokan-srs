@@ -11,7 +11,8 @@
     "primary": "ごぜん",
     "alternatives": [
       "ごぜ",
-      "みまえ"
+      "みまえ",
+      "おんまえ"
     ]
   },
   "frequency": {
@@ -84,10 +85,55 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "fem",
+          "pol"
+        ]
+      },
+      "glosses": [
+        "Dear"
+      ],
+      "related": {
+        "compounds": [
+          "脇付"
+        ]
+      },
+      "appliesToReadings": [
+        "おんまえ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1625330",
+      "isBase": true,
+      "originalPrimaryReading": "ごぜん",
+      "originalGlosses": [
+        "presence (of a nobleman, the emperor, etc.)"
+      ]
+    },
+    {
+      "id": "2230470",
+      "isBase": false,
+      "originalPrimaryReading": "おんまえ",
+      "originalGlosses": [
+        "Dear"
+      ]
+    }
+  ]
 }

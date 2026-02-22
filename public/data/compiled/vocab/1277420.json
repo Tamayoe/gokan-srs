@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "あか",
-    "alternatives": []
+    "alternatives": [
+      "アカ",
+      "く"
+    ]
   },
   "frequency": {
     "kanjiRank": 20339
@@ -37,10 +40,89 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "net-sl",
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "account (e.g. for an online service)"
+      ],
+      "related": {
+        "compounds": [
+          "アカウント"
+        ]
+      },
+      "appliesToReadings": [
+        "アカ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "klesha (polluting thoughts such as greed, hatred and delusion, which result in suffering)"
+      ],
+      "related": {
+        "compounds": [
+          "煩悩"
+        ]
+      },
+      "appliesToReadings": [
+        "く"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1277420",
+      "isBase": true,
+      "originalPrimaryReading": "あか",
+      "originalGlosses": [
+        "dirt",
+        "filth",
+        "grime"
+      ]
+    },
+    {
+      "id": "2795290",
+      "isBase": false,
+      "originalPrimaryReading": "アカ",
+      "originalGlosses": [
+        "account (e.g. for an online service)"
+      ]
+    },
+    {
+      "id": "2270490",
+      "isBase": false,
+      "originalPrimaryReading": "く",
+      "originalGlosses": [
+        "klesha (polluting thoughts such as greed, hatred and delusion, which result in suffering)"
+      ]
+    }
+  ]
 }

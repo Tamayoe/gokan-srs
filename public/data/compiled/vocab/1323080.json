@@ -9,7 +9,8 @@
   "reading": {
     "primary": "くるま",
     "alternatives": [
-      "クルマ"
+      "クルマ",
+      "しゃ"
     ]
   },
   "frequency": {
@@ -61,10 +62,83 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "car",
+        "vehicle",
+        "van",
+        "truck",
+        "wagon",
+        "lorry"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しゃ"
+      ]
+    },
+    {
+      "pos": [
+        "suf",
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "(train) car",
+        "carriage"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しゃ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1323080",
+      "isBase": true,
+      "originalPrimaryReading": "くるま",
+      "originalGlosses": [
+        "car",
+        "automobile",
+        "vehicle"
+      ]
+    },
+    {
+      "id": "2773260",
+      "isBase": false,
+      "originalPrimaryReading": "しゃ",
+      "originalGlosses": [
+        "car",
+        "vehicle",
+        "van"
+      ]
+    }
+  ]
 }

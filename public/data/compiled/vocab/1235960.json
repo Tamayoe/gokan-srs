@@ -9,7 +9,9 @@
   },
   "reading": {
     "primary": "きょうかい",
-    "alternatives": []
+    "alternatives": [
+      "けいかい"
+    ]
   },
   "frequency": {
     "kanjiRank": 10574
@@ -40,10 +42,58 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "dated"
+        ]
+      },
+      "glosses": [
+        "land boundary",
+        "border (between properties)"
+      ],
+      "related": {
+        "compounds": [
+          "境界"
+        ]
+      },
+      "appliesToReadings": [
+        "けいかい"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1235960",
+      "isBase": true,
+      "originalPrimaryReading": "きょうかい",
+      "originalGlosses": [
+        "boundary",
+        "border",
+        "limit"
+      ]
+    },
+    {
+      "id": "2846291",
+      "isBase": false,
+      "originalPrimaryReading": "けいかい",
+      "originalGlosses": [
+        "land boundary",
+        "border (between properties)"
+      ]
+    }
+  ]
 }

@@ -10,7 +10,8 @@
   "reading": {
     "primary": "びょうき",
     "alternatives": [
-      "ビョーキ"
+      "ビョーキ",
+      "やまいけ"
     ]
   },
   "frequency": {
@@ -87,10 +88,58 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "feeling ill",
+        "sensation of illness",
+        "signs of illness"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "やまいけ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1490230",
+      "isBase": true,
+      "originalPrimaryReading": "びょうき",
+      "originalGlosses": [
+        "illness (usu. excluding minor ailments, e.g. common cold)",
+        "disease",
+        "sickness"
+      ]
+    },
+    {
+      "id": "2839802",
+      "isBase": false,
+      "originalPrimaryReading": "やまいけ",
+      "originalGlosses": [
+        "feeling ill",
+        "sensation of illness",
+        "signs of illness"
+      ]
+    }
+  ]
 }

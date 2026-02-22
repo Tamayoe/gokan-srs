@@ -9,7 +9,8 @@
   "reading": {
     "primary": "しま",
     "alternatives": [
-      "シマ"
+      "シマ",
+      "とう"
     ]
   },
   "frequency": {
@@ -60,10 +61,75 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "Island"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "とう"
+      ]
+    },
+    {
+      "pos": [
+        "n-suf",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "insula",
+        "island",
+        "islet"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "とう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1446760",
+      "isBase": true,
+      "originalPrimaryReading": "しま",
+      "originalGlosses": [
+        "island"
+      ]
+    },
+    {
+      "id": "2085760",
+      "isBase": false,
+      "originalPrimaryReading": "とう",
+      "originalGlosses": [
+        "Island"
+      ]
+    }
+  ]
 }

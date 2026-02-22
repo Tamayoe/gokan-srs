@@ -9,7 +9,12 @@
   },
   "reading": {
     "primary": "せんせい",
-    "alternatives": []
+    "alternatives": [
+      "シーサン",
+      "せんじょう",
+      "せんしょう",
+      "ぜんじょう"
+    ]
   },
   "frequency": {
     "kanjiRank": 485,
@@ -105,10 +110,121 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": true,
+        "rawTags": [
+          "hon",
+          "rare"
+        ]
+      },
+      "glosses": [
+        "man",
+        "boy"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "シーサン"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "teacher",
+        "instructor",
+        "master"
+      ],
+      "related": {
+        "compounds": [
+          "先生"
+        ]
+      },
+      "appliesToReadings": [
+        "せんじょう"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "previous existence"
+      ],
+      "related": {
+        "compounds": [
+          "前生"
+        ]
+      },
+      "appliesToReadings": [
+        "せんじょう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1387990",
+      "isBase": true,
+      "originalPrimaryReading": "せんせい",
+      "originalGlosses": [
+        "teacher",
+        "instructor",
+        "master"
+      ]
+    },
+    {
+      "id": "2727400",
+      "isBase": false,
+      "originalPrimaryReading": "シーサン",
+      "originalGlosses": [
+        "man",
+        "boy"
+      ]
+    },
+    {
+      "id": "2841735",
+      "isBase": false,
+      "originalPrimaryReading": "せんじょう",
+      "originalGlosses": [
+        "teacher",
+        "instructor",
+        "master"
+      ]
+    }
+  ]
 }

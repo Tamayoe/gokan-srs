@@ -9,7 +9,8 @@
   "reading": {
     "primary": "ちょぼちょぼ",
     "alternatives": [
-      "チョボチョボ"
+      "チョボチョボ",
+      "てんてん"
     ]
   },
   "frequency": {
@@ -87,10 +88,80 @@
           "〻"
         ]
       }
+    },
+    {
+      "pos": [
+        "adv",
+        "adv-to"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "here and there",
+        "little by little",
+        "sporadically",
+        "scattered in drops"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "てんてん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "dots",
+        "spots"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "てんてん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1007870",
+      "isBase": true,
+      "originalPrimaryReading": "ちょぼちょぼ",
+      "originalGlosses": [
+        "sparsely",
+        "drop-by-drop"
+      ]
+    },
+    {
+      "id": "1598460",
+      "isBase": false,
+      "originalPrimaryReading": "てんてん",
+      "originalGlosses": [
+        "here and there",
+        "little by little",
+        "sporadically"
+      ]
+    }
+  ]
 }

@@ -12,7 +12,9 @@
       "のんど",
       "のみと",
       "のみど",
-      "ノド"
+      "ノド",
+      "こん",
+      "こう"
     ]
   },
   "frequency": {
@@ -81,10 +83,76 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch",
+          "fem"
+        ]
+      },
+      "glosses": [
+        "fish"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こん"
+      ]
+    },
+    {
+      "pos": [
+        "suf",
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for fish"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1600280",
+      "isBase": true,
+      "originalPrimaryReading": "のど",
+      "originalGlosses": [
+        "throat"
+      ]
+    },
+    {
+      "id": "2248340",
+      "isBase": false,
+      "originalPrimaryReading": "こん",
+      "originalGlosses": [
+        "fish"
+      ]
+    }
+  ]
 }

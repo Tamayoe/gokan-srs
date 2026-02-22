@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "とも",
-    "alternatives": []
+    "alternatives": [
+      "ゆう"
+    ]
   },
   "frequency": {
     "kanjiRank": 3856
@@ -60,10 +62,81 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "friend"
+      ],
+      "related": {
+        "compounds": [
+          "友"
+        ]
+      },
+      "appliesToReadings": [
+        "ゆう"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "adj-na"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "affection (for siblings)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ゆう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1539980",
+      "isBase": true,
+      "originalPrimaryReading": "とも",
+      "originalGlosses": [
+        "friend",
+        "companion",
+        "comrade"
+      ]
+    },
+    {
+      "id": "2844332",
+      "isBase": false,
+      "originalPrimaryReading": "ゆう",
+      "originalGlosses": [
+        "friend"
+      ]
+    }
+  ]
 }

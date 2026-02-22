@@ -9,7 +9,11 @@
   },
   "reading": {
     "primary": "ちょうかん",
-    "alternatives": []
+    "alternatives": [
+      "かみ",
+      "かん",
+      "こう"
+    ]
   },
   "frequency": {
     "kanjiRank": 13153
@@ -38,10 +42,60 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n",
+        "adj-no"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch",
+          "hist"
+        ]
+      },
+      "glosses": [
+        "director (highest of the four administrative positions of the ritsuryō system)",
+        "chief"
+      ],
+      "related": {
+        "compounds": [
+          "四等官"
+        ]
+      },
+      "appliesToReadings": [
+        "かみ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1429820",
+      "isBase": true,
+      "originalPrimaryReading": "ちょうかん",
+      "originalGlosses": [
+        "secretary (government)",
+        "director",
+        "chief"
+      ]
+    },
+    {
+      "id": "2249700",
+      "isBase": false,
+      "originalPrimaryReading": "かみ",
+      "originalGlosses": [
+        "director (highest of the four administrative positions of the ritsuryō system)",
+        "chief"
+      ]
+    }
+  ]
 }

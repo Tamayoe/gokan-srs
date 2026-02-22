@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "こる",
-    "alternatives": []
+    "alternatives": [
+      "こごる",
+      "しこる"
+    ]
   },
   "frequency": {
     "kanjiRank": 7249,
@@ -85,10 +88,93 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "v5r",
+        "vi"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "to congeal",
+        "to gelatinize",
+        "to jellify",
+        "to jell",
+        "to gell",
+        "to freeze"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こごる"
+      ]
+    },
+    {
+      "pos": [
+        "v5r",
+        "vi"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "to stiffen",
+        "to harden"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "しこる"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1239070",
+      "isBase": true,
+      "originalPrimaryReading": "こる",
+      "originalGlosses": [
+        "to become stiff (of muscles)"
+      ]
+    },
+    {
+      "id": "1239060",
+      "isBase": false,
+      "originalPrimaryReading": "こごる",
+      "originalGlosses": [
+        "to congeal",
+        "to gelatinize",
+        "to jellify"
+      ]
+    },
+    {
+      "id": "1594250",
+      "isBase": false,
+      "originalPrimaryReading": "しこる",
+      "originalGlosses": [
+        "to stiffen",
+        "to harden"
+      ]
+    }
+  ]
 }

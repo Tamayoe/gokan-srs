@@ -9,7 +9,10 @@
   },
   "reading": {
     "primary": "いんしゅ",
-    "alternatives": []
+    "alternatives": [
+      "おんじゅ",
+      "おんしゅ"
+    ]
   },
   "frequency": {
     "kanjiRank": 23742,
@@ -39,10 +42,78 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "consumption of alcohol (as prohibited by one of the Buddhist precepts)"
+      ],
+      "related": {
+        "compounds": [
+          "飲酒"
+        ]
+      },
+      "appliesToReadings": [
+        "おんじゅ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": true,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "abbr"
+        ]
+      },
+      "glosses": [
+        "Buddhist precept prohibiting the consumption of alcohol"
+      ],
+      "related": {
+        "compounds": [
+          "飲酒戒"
+        ]
+      },
+      "appliesToReadings": [
+        "おんじゅ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1169900",
+      "isBase": true,
+      "originalPrimaryReading": "いんしゅ",
+      "originalGlosses": [
+        "drinking alcohol"
+      ]
+    },
+    {
+      "id": "2843615",
+      "isBase": false,
+      "originalPrimaryReading": "おんじゅ",
+      "originalGlosses": [
+        "consumption of alcohol (as prohibited by one of the Buddhist precepts)"
+      ]
+    }
+  ]
 }

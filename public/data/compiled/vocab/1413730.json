@@ -11,7 +11,8 @@
     "primary": "だいこん",
     "alternatives": [
       "だいこ",
-      "ダイコン"
+      "ダイコン",
+      "おおね"
     ]
   },
   "frequency": {
@@ -65,10 +66,55 @@
           "大根役者"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "root",
+        "source",
+        "origin",
+        "basis"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "おおね"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1413730",
+      "isBase": true,
+      "originalPrimaryReading": "だいこん",
+      "originalGlosses": [
+        "daikon (variety of large white Oriental radish, Raphanus sativus var. longipinnatus)"
+      ]
+    },
+    {
+      "id": "2663490",
+      "isBase": false,
+      "originalPrimaryReading": "おおね",
+      "originalGlosses": [
+        "root",
+        "source",
+        "origin"
+      ]
+    }
+  ]
 }

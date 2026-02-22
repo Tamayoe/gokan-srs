@@ -9,7 +9,9 @@
   "reading": {
     "primary": "こし",
     "alternatives": [
-      "コシ"
+      "コシ",
+      "よう",
+      "ごし"
     ]
   },
   "frequency": {
@@ -64,10 +66,113 @@
           "コシのある"
         ]
       }
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "counter for swords, hakama, obi, etc. worn around the waist"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こし"
+      ]
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "counter for quivers of arrows"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "こし"
+      ]
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "posture",
+        "position",
+        "pose",
+        "attitude"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ごし"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1288340",
+      "isBase": true,
+      "originalPrimaryReading": "こし",
+      "originalGlosses": [
+        "lower back",
+        "waist",
+        "hips"
+      ]
+    },
+    {
+      "id": "2844070",
+      "isBase": false,
+      "originalPrimaryReading": "こし",
+      "originalGlosses": [
+        "counter for swords, hakama, obi, etc. worn around the waist"
+      ]
+    },
+    {
+      "id": "2819280",
+      "isBase": false,
+      "originalPrimaryReading": "ごし",
+      "originalGlosses": [
+        "posture",
+        "position",
+        "pose"
+      ]
+    }
+  ]
 }

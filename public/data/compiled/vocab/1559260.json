@@ -9,7 +9,8 @@
   "reading": {
     "primary": "つれ",
     "alternatives": [
-      "ツレ"
+      "ツレ",
+      "づれ"
     ]
   },
   "frequency": {
@@ -59,10 +60,79 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "in the company of",
+        "accompanied by ...",
+        "as a group comprising ..."
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "づれ"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "derog"
+        ]
+      },
+      "glosses": [
+        "likes of ..."
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "づれ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1559260",
+      "isBase": true,
+      "originalPrimaryReading": "つれ",
+      "originalGlosses": [
+        "companion",
+        "company"
+      ]
+    },
+    {
+      "id": "2842257",
+      "isBase": false,
+      "originalPrimaryReading": "づれ",
+      "originalGlosses": [
+        "in the company of",
+        "accompanied by ...",
+        "as a group comprising ..."
+      ]
+    }
+  ]
 }

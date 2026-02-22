@@ -9,7 +9,8 @@
   "reading": {
     "primary": "すじ",
     "alternatives": [
-      "スジ"
+      "スジ",
+      "きん"
     ]
   },
   "frequency": {
@@ -429,10 +430,52 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "muscle"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "きん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1241750",
+      "isBase": true,
+      "originalPrimaryReading": "すじ",
+      "originalGlosses": [
+        "muscle",
+        "tendon",
+        "sinew"
+      ]
+    },
+    {
+      "id": "2657060",
+      "isBase": false,
+      "originalPrimaryReading": "きん",
+      "originalGlosses": [
+        "muscle"
+      ]
+    }
+  ]
 }

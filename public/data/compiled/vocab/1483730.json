@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "つかれ",
-    "alternatives": []
+    "alternatives": [
+      "づかれ"
+    ]
   },
   "frequency": {
     "kanjiRank": 2716,
@@ -37,10 +39,58 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "weariness (from)",
+        "fatigue",
+        "tiredness",
+        "exhaustion"
+      ],
+      "related": {
+        "compounds": [
+          "湯疲れ"
+        ]
+      },
+      "appliesToReadings": [
+        "づかれ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1483730",
+      "isBase": true,
+      "originalPrimaryReading": "つかれ",
+      "originalGlosses": [
+        "tiredness",
+        "fatigue"
+      ]
+    },
+    {
+      "id": "2845234",
+      "isBase": false,
+      "originalPrimaryReading": "づかれ",
+      "originalGlosses": [
+        "weariness (from)",
+        "fatigue",
+        "tiredness"
+      ]
+    }
+  ]
 }

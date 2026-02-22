@@ -9,7 +9,9 @@
   },
   "reading": {
     "primary": "ちゅうにち",
-    "alternatives": []
+    "alternatives": [
+      "なかび"
+    ]
   },
   "frequency": {
     "kanjiRank": 54308,
@@ -79,10 +81,84 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "middle day (of a sumo tournament, theatrical run, etc.)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "なかび"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "organization"
+        ]
+      },
+      "glosses": [
+        "Chunichi Dragons (Japanese baseball team) (abbr)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "ちゅうにち"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1425210",
+      "isBase": true,
+      "originalPrimaryReading": "ちゅうにち",
+      "originalGlosses": [
+        "China and Japan",
+        "Chinese-Japanese",
+        "Sino-Japanese"
+      ]
+    },
+    {
+      "id": "1425220",
+      "isBase": false,
+      "originalPrimaryReading": "なかび",
+      "originalGlosses": [
+        "middle day (of a sumo tournament, theatrical run, etc.)"
+      ]
+    },
+    {
+      "id": "5519352",
+      "isBase": false,
+      "originalPrimaryReading": "ちゅうにち",
+      "originalGlosses": [
+        "Chunichi Dragons (Japanese baseball team) (abbr)"
+      ]
+    }
+  ]
 }

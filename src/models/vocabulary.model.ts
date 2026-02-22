@@ -30,6 +30,20 @@ export interface Vocabulary {
 
     /** Derived helpers for card generation (optional but useful) */
     usageHints?: UsageHints;
+
+    /** If this entry is a unified merged entry from multiple homographs sharing the exact kanji form */
+    mergedVocabs?: MergedVocabInfo[];
+}
+
+export interface MergedVocabInfo {
+    /** The original JMDict ID of the merged word */
+    id: string;
+    /** True if this was the highest frequency word that absorbed the others */
+    isBase: boolean;
+    /** The original primary reading for this specific word */
+    originalPrimaryReading: string;
+    /** A quick summary of what this specific reading meant (e.g. its main glosses) */
+    originalGlosses: string[];
 }
 
 export interface Sense {
@@ -53,6 +67,9 @@ export interface Sense {
     related: {
         compounds: string[]; // e.g. 中学校, 中国
     };
+
+    /** If this sense only applies to specific readings (used for disambiguating merged vocabs) */
+    appliesToReadings?: string[];
 }
 
 export interface UsageHints {
@@ -62,6 +79,7 @@ export interface UsageHints {
     /** True if reading depends on context (homograph warning) */
     requiresContext: boolean;
 }
+
 
 
 export interface ReviewLog {

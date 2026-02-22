@@ -10,7 +10,9 @@
   "reading": {
     "primary": "あばた",
     "alternatives": [
-      "アバタ"
+      "アバタ",
+      "いも",
+      "とうこん"
     ]
   },
   "frequency": {
@@ -41,10 +43,108 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "smallpox"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "いも"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "pockmark"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "いも"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "pockmark"
+      ],
+      "related": {
+        "compounds": [
+          "あばた"
+        ]
+      },
+      "appliesToReadings": [
+        "とうこん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1649560",
+      "isBase": true,
+      "originalPrimaryReading": "あばた",
+      "originalGlosses": [
+        "pockmark"
+      ]
+    },
+    {
+      "id": "2212940",
+      "isBase": false,
+      "originalPrimaryReading": "いも",
+      "originalGlosses": [
+        "smallpox"
+      ]
+    },
+    {
+      "id": "2857864",
+      "isBase": false,
+      "originalPrimaryReading": "とうこん",
+      "originalGlosses": [
+        "pockmark"
+      ]
+    }
+  ]
 }

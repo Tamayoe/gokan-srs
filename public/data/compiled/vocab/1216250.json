@@ -9,7 +9,8 @@
   "reading": {
     "primary": "まる",
     "alternatives": [
-      "マル"
+      "マル",
+      "がん"
     ]
   },
   "frequency": {
@@ -150,10 +151,78 @@
           "麻呂"
         ]
       }
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "fishball",
+        "meatball"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "がん"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "n-suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "pill"
+      ],
+      "related": {
+        "compounds": [
+          "丸薬"
+        ]
+      },
+      "appliesToReadings": [
+        "がん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1216250",
+      "isBase": true,
+      "originalPrimaryReading": "まる",
+      "originalGlosses": [
+        "circle"
+      ]
+    },
+    {
+      "id": "2252570",
+      "isBase": false,
+      "originalPrimaryReading": "がん",
+      "originalGlosses": [
+        "fishball",
+        "meatball"
+      ]
+    }
+  ]
 }

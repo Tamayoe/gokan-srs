@@ -10,7 +10,10 @@
     "primary": "ろく",
     "alternatives": [
       "む",
-      "むう"
+      "むう",
+      "リュー",
+      "リィウ",
+      "リウ"
     ]
   },
   "frequency": {
@@ -39,10 +42,51 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "num"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "six"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "リュー"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1585310",
+      "isBase": true,
+      "originalPrimaryReading": "ろく",
+      "originalGlosses": [
+        "six",
+        "6"
+      ]
+    },
+    {
+      "id": "2747980",
+      "isBase": false,
+      "originalPrimaryReading": "リュー",
+      "originalGlosses": [
+        "six"
+      ]
+    }
+  ]
 }

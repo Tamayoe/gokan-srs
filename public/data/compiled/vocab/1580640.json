@@ -9,7 +9,10 @@
   "reading": {
     "primary": "ひと",
     "alternatives": [
-      "ヒト"
+      "ヒト",
+      "にん",
+      "じん",
+      "と"
     ]
   },
   "frequency": {
@@ -188,10 +191,161 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "ctr"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "counter for people"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "にん"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "-ian (e.g. Italian)",
+        "-ite (e.g. Tokyoite)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "じん"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "-er (e.g. performer, etc.)",
+        "person working with ..."
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "じん"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "man",
+        "person",
+        "people"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "じん"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "person"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "と"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1580640",
+      "isBase": true,
+      "originalPrimaryReading": "ひと",
+      "originalGlosses": [
+        "person",
+        "someone",
+        "somebody"
+      ]
+    },
+    {
+      "id": "2149890",
+      "isBase": false,
+      "originalPrimaryReading": "にん",
+      "originalGlosses": [
+        "counter for people"
+      ]
+    },
+    {
+      "id": "1366410",
+      "isBase": false,
+      "originalPrimaryReading": "じん",
+      "originalGlosses": [
+        "-ian (e.g. Italian)",
+        "-ite (e.g. Tokyoite)"
+      ]
+    },
+    {
+      "id": "1366420",
+      "isBase": false,
+      "originalPrimaryReading": "と",
+      "originalGlosses": [
+        "person"
+      ]
+    }
+  ]
 }

@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "かん",
-    "alternatives": []
+    "alternatives": [
+      "さむ",
+      "さぶ"
+    ]
   },
   "frequency": {
     "kanjiRank": 16969
@@ -37,10 +40,53 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n",
+        "int"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "cold"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "さむ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1955940",
+      "isBase": true,
+      "originalPrimaryReading": "かん",
+      "originalGlosses": [
+        "midwinter",
+        "cold season",
+        "coldest days of the year"
+      ]
+    },
+    {
+      "id": "2453760",
+      "isBase": false,
+      "originalPrimaryReading": "さむ",
+      "originalGlosses": [
+        "cold"
+      ]
+    }
+  ]
 }

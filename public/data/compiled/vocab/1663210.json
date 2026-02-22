@@ -8,7 +8,9 @@
   },
   "reading": {
     "primary": "このかた",
-    "alternatives": []
+    "alternatives": [
+      "このほう"
+    ]
   },
   "frequency": {
     "kanjiRank": 5751,
@@ -80,10 +82,82 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "this",
+        "this one",
+        "this way"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "このほう"
+      ]
+    },
+    {
+      "pos": [
+        "pn"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch",
+          "male"
+        ]
+      },
+      "glosses": [
+        "I",
+        "we"
+      ],
+      "related": {
+        "compounds": [
+          "その方"
+        ]
+      },
+      "appliesToReadings": [
+        "このほう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1663210",
+      "isBase": true,
+      "originalPrimaryReading": "このかた",
+      "originalGlosses": [
+        "since"
+      ]
+    },
+    {
+      "id": "1663215",
+      "isBase": false,
+      "originalPrimaryReading": "このほう",
+      "originalGlosses": [
+        "this",
+        "this one",
+        "this way"
+      ]
+    }
+  ]
 }

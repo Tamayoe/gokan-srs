@@ -10,7 +10,8 @@
     "primary": "やなぎ",
     "alternatives": [
       "ようりゅう",
-      "ヤナギ"
+      "ヤナギ",
+      "りゅう"
     ]
   },
   "frequency": {
@@ -60,10 +61,53 @@
           "枝垂れ柳"
         ]
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "Chinese \"Willow\" constellation (one of the 28 mansions)"
+      ],
+      "related": {
+        "compounds": [
+          "二十八宿",
+          "朱雀"
+        ]
+      },
+      "appliesToReadings": [
+        "りゅう"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1538490",
+      "isBase": true,
+      "originalPrimaryReading": "やなぎ",
+      "originalGlosses": [
+        "willow (any tree of genus Salix)"
+      ]
+    },
+    {
+      "id": "2247940",
+      "isBase": false,
+      "originalPrimaryReading": "りゅう",
+      "originalGlosses": [
+        "Chinese \"Willow\" constellation (one of the 28 mansions)"
+      ]
+    }
+  ]
 }

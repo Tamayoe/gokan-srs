@@ -9,7 +9,10 @@
   "reading": {
     "primary": "やま",
     "alternatives": [
-      "ヤマ"
+      "ヤマ",
+      "むれ",
+      "さん",
+      "ざん"
     ]
   },
   "frequency": {
@@ -293,10 +296,111 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": true,
+        "isRare": false,
+        "rawTags": [
+          "arch"
+        ]
+      },
+      "glosses": [
+        "mountain",
+        "hill"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "むれ"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "Mt.",
+        "Mount"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "さん"
+      ]
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "temple"
+      ],
+      "related": {
+        "compounds": [
+          "山号"
+        ]
+      },
+      "appliesToReadings": [
+        "さん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1302680",
+      "isBase": true,
+      "originalPrimaryReading": "やま",
+      "originalGlosses": [
+        "mountain",
+        "hill"
+      ]
+    },
+    {
+      "id": "2647220",
+      "isBase": false,
+      "originalPrimaryReading": "むれ",
+      "originalGlosses": [
+        "mountain",
+        "hill"
+      ]
+    },
+    {
+      "id": "2085690",
+      "isBase": false,
+      "originalPrimaryReading": "さん",
+      "originalGlosses": [
+        "Mt.",
+        "Mount"
+      ]
+    }
+  ]
 }

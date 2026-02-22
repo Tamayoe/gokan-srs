@@ -10,7 +10,9 @@
   "reading": {
     "primary": "だし",
     "alternatives": [
-      "さんしゃ"
+      "さんしゃ",
+      "やまぐるま",
+      "ヤマグルマ"
     ]
   },
   "frequency": {
@@ -39,10 +41,53 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "wheel tree (Trochodendron aralioides)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "やまぐるま"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": false
+  "isCommon": false,
+  "mergedVocabs": [
+    {
+      "id": "1302910",
+      "isBase": true,
+      "originalPrimaryReading": "だし",
+      "originalGlosses": [
+        "parade float",
+        "festival float"
+      ]
+    },
+    {
+      "id": "2440510",
+      "isBase": false,
+      "originalPrimaryReading": "やまぐるま",
+      "originalGlosses": [
+        "wheel tree (Trochodendron aralioides)"
+      ]
+    }
+  ]
 }

@@ -9,7 +9,9 @@
   "reading": {
     "primary": "かお",
     "alternatives": [
-      "がん"
+      "がん",
+      "がお",
+      "かんばせ"
     ]
   },
   "frequency": {
@@ -101,10 +103,123 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "col"
+        ]
+      },
+      "glosses": [
+        "resembling ...",
+        "having the traits or characteristics of ...",
+        "-looking",
+        "with a ...-like expression",
+        "with an air of ..."
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "がお"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "dated"
+        ]
+      },
+      "glosses": [
+        "countenance",
+        "visage",
+        "(facial) features",
+        "face",
+        "looks"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かんばせ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "dated"
+        ]
+      },
+      "glosses": [
+        "honor (honour)",
+        "face",
+        "dignity"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "かんばせ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1217730",
+      "isBase": true,
+      "originalPrimaryReading": "かお",
+      "originalGlosses": [
+        "face",
+        "visage"
+      ]
+    },
+    {
+      "id": "2868628",
+      "isBase": false,
+      "originalPrimaryReading": "がお",
+      "originalGlosses": [
+        "resembling ...",
+        "having the traits or characteristics of ...",
+        "-looking"
+      ]
+    },
+    {
+      "id": "2221310",
+      "isBase": false,
+      "originalPrimaryReading": "かんばせ",
+      "originalGlosses": [
+        "countenance",
+        "visage",
+        "(facial) features"
+      ]
+    }
+  ]
 }

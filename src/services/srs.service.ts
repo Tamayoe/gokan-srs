@@ -192,6 +192,15 @@ export class SRSService {
         const updatedReading = quizType === 'reading' ? newEntry : vocab.reading;
         const updatedMeaning = quizType === 'meaning' ? newEntry : vocab.meaning;
 
+        // [BUGFIX] Stagger Meaning quizzes: if we just successfully answered a Reading quiz,
+        // and Meaning is currently due (or about to be due), push Meaning forward by 12 hours
+        // so that the user doesn't get tested on both in the exact same session.
+        if (quizType === 'reading' && (result === 'correct' || result === 'minor_error')) {
+            if (updatedMeaning.dueDate !== null && updatedMeaning.dueDate <= now) {
+                updatedMeaning.dueDate = new Date(now.getTime() + 12 * 60 * 60 * 1000); // +12 hours
+            }
+        }
+
         const isReadingMastered = updatedReading.memoryStrength >= SRSService.MAX_MEMORY_STRENGTH;
         const isMeaningMastered = updatedMeaning.memoryStrength >= SRSService.MAX_MEMORY_STRENGTH;
 
@@ -671,13 +680,12 @@ export class SRSService {
             updated.stage = 'graduated';
         } else {
             // CHOICE LEARNING:
-            // Set initial due date to NOW for both reading and meaning
-            // This ensures that after the first "Reading" review (Priority 5),
-            // the "Meaning" review will be immediately due (Priority 3).
+            // Set initial due date to NOW for reading.
+            // Stagger meaning by 12 hours so it isn't asked immediately after reading in the same session.
             const now = new Date();
             updated.nextReviewAt = now;
             updated.reading.dueDate = now;
-            updated.meaning.dueDate = now;
+            updated.meaning.dueDate = new Date(now.getTime() + 12 * 60 * 60 * 1000);
         }
 
         return updated;

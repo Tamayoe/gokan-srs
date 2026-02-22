@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "さき",
-    "alternatives": []
+    "alternatives": [
+      "せん",
+      "さっき"
+    ]
   },
   "frequency": {
     "kanjiRank": 328,
@@ -206,10 +209,118 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "adj-no",
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "former",
+        "previous",
+        "old"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "せん"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "first move (in go, shogi, etc.)",
+        "opening move"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "せん"
+      ]
+    },
+    {
+      "pos": [
+        "n",
+        "adv"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "uk"
+        ]
+      },
+      "glosses": [
+        "a short while ago",
+        "a moment ago",
+        "just now",
+        "some time ago"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "さっき"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1387210",
+      "isBase": true,
+      "originalPrimaryReading": "さき",
+      "originalGlosses": [
+        "point",
+        "tip",
+        "end"
+      ]
+    },
+    {
+      "id": "1387220",
+      "isBase": false,
+      "originalPrimaryReading": "せん",
+      "originalGlosses": [
+        "former",
+        "previous",
+        "old"
+      ]
+    },
+    {
+      "id": "1005180",
+      "isBase": false,
+      "originalPrimaryReading": "さっき",
+      "originalGlosses": [
+        "a short while ago",
+        "a moment ago",
+        "just now"
+      ]
+    }
+  ]
 }

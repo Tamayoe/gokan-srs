@@ -8,7 +8,10 @@
   },
   "reading": {
     "primary": "ちょう",
-    "alternatives": []
+    "alternatives": [
+      "なが",
+      "おさ"
+    ]
   },
   "frequency": {
     "kanjiRank": 1683
@@ -100,10 +103,113 @@
           "短"
         ]
       }
+    },
+    {
+      "pos": [
+        "pref",
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "long"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "なが"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "dated"
+        ]
+      },
+      "glosses": [
+        "head",
+        "chief",
+        "leader"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "おさ"
+      ]
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": [
+          "dated"
+        ]
+      },
+      "glosses": [
+        "the greatest (of all the ...)"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "おさ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": false
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1429740",
+      "isBase": true,
+      "originalPrimaryReading": "ちょう",
+      "originalGlosses": [
+        "head",
+        "chief",
+        "leader"
+      ]
+    },
+    {
+      "id": "2647210",
+      "isBase": false,
+      "originalPrimaryReading": "なが",
+      "originalGlosses": [
+        "long"
+      ]
+    },
+    {
+      "id": "2647190",
+      "isBase": false,
+      "originalPrimaryReading": "おさ",
+      "originalGlosses": [
+        "head",
+        "chief",
+        "leader"
+      ]
+    }
+  ]
 }

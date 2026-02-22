@@ -9,7 +9,8 @@
   "reading": {
     "primary": "わた",
     "alternatives": [
-      "ワタ"
+      "ワタ",
+      "めん"
     ]
   },
   "frequency": {
@@ -61,10 +62,50 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "cotton"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "めん"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1533340",
+      "isBase": true,
+      "originalPrimaryReading": "わた",
+      "originalGlosses": [
+        "cotton plant (Gossypium spp.)"
+      ]
+    },
+    {
+      "id": "1533330",
+      "isBase": false,
+      "originalPrimaryReading": "めん",
+      "originalGlosses": [
+        "cotton"
+      ]
+    }
+  ]
 }

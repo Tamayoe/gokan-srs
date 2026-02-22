@@ -9,7 +9,8 @@
   "reading": {
     "primary": "つけ",
     "alternatives": [
-      "ツケ"
+      "ツケ",
+      "づけ"
     ]
   },
   "frequency": {
@@ -169,10 +170,59 @@
       "related": {
         "compounds": []
       }
+    },
+    {
+      "pos": [
+        "n-suf",
+        "pref",
+        "suf"
+      ],
+      "misc": {
+        "isAbbreviation": false,
+        "isSuffix": false,
+        "isPrefix": false,
+        "isArchaic": false,
+        "isRare": false,
+        "rawTags": []
+      },
+      "glosses": [
+        "dated",
+        "date",
+        "fixed",
+        "external"
+      ],
+      "related": {
+        "compounds": []
+      },
+      "appliesToReadings": [
+        "づけ"
+      ]
     }
   ],
   "usageHints": {
     "requiresContext": true
   },
-  "isCommon": true
+  "isCommon": true,
+  "mergedVocabs": [
+    {
+      "id": "1495750",
+      "isBase": true,
+      "originalPrimaryReading": "つけ",
+      "originalGlosses": [
+        "bill",
+        "bill of sale",
+        "payment invoice"
+      ]
+    },
+    {
+      "id": "1495760",
+      "isBase": false,
+      "originalPrimaryReading": "づけ",
+      "originalGlosses": [
+        "dated",
+        "date",
+        "fixed"
+      ]
+    }
+  ]
 }
