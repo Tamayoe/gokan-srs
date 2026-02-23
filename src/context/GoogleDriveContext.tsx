@@ -4,6 +4,7 @@ import React, { createContext, useContext, useState, useEffect, useRef } from 'r
 import { useGoogleLogin, googleLogout, type TokenResponse } from '@react-oauth/google';
 import { GoogleDriveSync, GoogleAuthError } from '../services/google.service';
 import { StorageService } from '../services/storage.service';
+import { MigrationService } from '../services/migration.service';
 import { CONSTANTS } from '../commons/constants';
 
 interface GoogleUser {
@@ -75,13 +76,18 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
         const MIN_LOADING_TIME = 1000; // slightly longer for "heavy" feel
 
         try {
-            const currentLocal = StorageService.loadProgress();
+            let currentLocal = StorageService.loadProgress();
 
             // We use the sync method because it handles the logic of "Fetch Remote -> Merge"
             // We want to ensure we have the latest from cloud before we start.
             // If we have local data, we merge. If not, we initialize.
             let merged;
             if (currentLocal) {
+                // Async migration before syncing to prevent local old IDs from duplicating with remote new IDs
+                if (MigrationService.needsMigration(currentLocal)) {
+                    currentLocal = await MigrationService.migrateMergedVocabsAsync(currentLocal as any);
+                    StorageService.saveProgress(currentLocal);
+                }
                 // Even on download, we might have local changes (offline). 
                 // sync() will upload them. This is technically a "Sync", but treated as a Download event for the UI.
                 await service.sync(currentLocal as any);

@@ -118,17 +118,18 @@ describe('SRSService Formula Tests', () => {
         closeTo(updated.reading.memoryStrength, 1.00000);
     });
 
-    it('TEST CASE 6c — Floor NOT applied on Success (Recovery Floor Definition)', () => {
+    it('TEST CASE 6c — Floor applied on Success to escape 0-trap (Recovery Floor Definition)', () => {
         // If S is somehow below min (e.g. 0.2), and we get it right, 
-        // we should follow the curve, not jump to floor instantly.
+        // we should jump to the floor instantly to escape the 0-multiplier trap.
         const vocab = createVocab(0.2, 0.5); // Illegal state technically, but testing logic
         // Correct -> Delta > 0.
         // D=1. L=1.5 (1500ms is super fast vs 10000ms). 
         // Delta = 0.25 * 1.5 * 1 = 0.375.
         // S_new = 0.2 * 1.375 = 0.275.
+        // Floor should clamp it to 1.0.
         const { updated } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 1500, mockNow);
 
-        closeTo(updated.reading.memoryStrength, 0.27500);
+        closeTo(updated.reading.memoryStrength, 1.00000);
     });
 
 

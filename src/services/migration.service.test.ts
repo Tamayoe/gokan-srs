@@ -50,7 +50,7 @@ describe('MigrationService', () => {
 
             const migrated = MigrationService.migrateVocabProgress(oldFormat);
 
-            expect(migrated.reading.memoryStrength).toBe(0);
+            expect(migrated.reading.memoryStrength).toBe(CONSTANTS.srs.formula.minMemoryStrength);
             expect(migrated.reading.interval).toBeGreaterThanOrEqual(CONSTANTS.srs.formula.minInterval);
         });
 
@@ -269,9 +269,9 @@ describe('MigrationService', () => {
             expect(MigrationService.needsMigration(oldProgress)).toBe(true);
         });
 
-        it('should return false for current version (5)', () => {
+        it('should return false for current version (6)', () => {
             const currentProgress = {
-                _formatVersion: 5,
+                _formatVersion: 6,
                 learningQueue: []
             };
 
@@ -315,6 +315,86 @@ describe('MigrationService', () => {
 
             // Should PRESERVE mastery
             expect((migrated as any).mastery).toBe(75);
+        });
+    });
+
+    describe('migrateMergedVocabsAsync V6 Deduplication', () => {
+        it('should correctly deduplicate histories and use max totalReviews', async () => {
+            // Mock fetch to return a simple map
+            globalThis.fetch = async () => ({
+                ok: true,
+                json: async () => ({
+                    'old-id-1': 'new-base-id',
+                    'old-id-2': 'new-base-id'
+                })
+            }) as any;
+
+            const duplicateProgress: any = {
+                _formatVersion: 5,
+                learningQueue: [
+                    {
+                        vocabId: 'old-id-1',
+                        stage: 'learning',
+                        totalReviews: 10,
+                        consecutiveFailures: 0,
+                        reading: {
+                            memoryStrength: 100,
+                            interval: 5,
+                            dueDate: '2026-03-01T00:00:00Z',
+                            history: [
+                                { date: 1000, result: 'correct' },
+                                { date: 2000, result: 'correct' }
+                            ]
+                        },
+                        meaning: {
+                            memoryStrength: 0, // This should be rescued
+                            interval: 0,
+                            dueDate: null,
+                            history: []
+                        }
+                    },
+                    {
+                        vocabId: 'old-id-2', // This simulates a duplicated sync clone
+                        stage: 'learning',
+                        totalReviews: 10, // Same reviews
+                        consecutiveFailures: 0,
+                        reading: {
+                            memoryStrength: 100,
+                            interval: 5,
+                            dueDate: '2026-03-01T00:00:00Z', // Same due date
+                            history: [
+                                { date: 1000, result: 'correct' }, // Duplicated history
+                                { date: 2000, result: 'correct' },
+                                { date: 3000, result: 'correct' }  // One extra review
+                            ]
+                        },
+                        meaning: {
+                            memoryStrength: 0, // This should be rescued
+                            interval: 0,
+                            dueDate: null,
+                            history: []
+                        }
+                    }
+                ]
+            };
+
+            const migrated = await MigrationService.migrateMergedVocabsAsync(duplicateProgress);
+
+            expect(migrated._formatVersion).toBe(6);
+            expect(migrated.learningQueue).toHaveLength(1); // Properly merged
+
+            const mergedItem = migrated.learningQueue[0];
+            expect(mergedItem.vocabId).toBe('new-base-id');
+            expect(mergedItem.totalReviews).toBe(10); // NOT 20
+
+            // History should be deduplicated (only 3 items, not 5)
+            expect(mergedItem.reading.history).toHaveLength(3);
+            expect(mergedItem.reading.history[0].date).toBe(1000);
+            expect(mergedItem.reading.history[1].date).toBe(2000);
+            expect(mergedItem.reading.history[2].date).toBe(3000);
+
+            // 0 memory strength rescue check
+            expect(mergedItem.meaning.memoryStrength).toBe(CONSTANTS.srs.formula.minMemoryStrength);
         });
     });
 });

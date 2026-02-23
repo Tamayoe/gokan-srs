@@ -7,7 +7,7 @@ import { DEFAULT_SRS_ENTRY, DEFAULT_VOCABULARY_PROGRESS } from '../models/vocabu
  * Current data format version
  * Increment this when making breaking changes to the data structure
  */
-const CURRENT_FORMAT_VERSION = 5;
+const CURRENT_FORMAT_VERSION = 6;
 
 /**
  * Migration service to handle data format upgrades
@@ -42,7 +42,7 @@ export class MigrationService {
         // This maps 15% mastery -> ~4.3 days (instead of linear ~190 days)
         // This maps 100% mastery -> 1270 days (full mastery)
         const normalizedMastery = Math.max(0, Math.min(mastery, 100)) / 100;
-        const memoryStrength = maxMemoryStrength * Math.pow(normalizedMastery, 3);
+        const memoryStrength = Math.max(CONSTANTS.srs.formula.minMemoryStrength, maxMemoryStrength * Math.pow(normalizedMastery, 3));
 
         // Calculate interval based on memory strength
         // Using the same formula as in SRS service: interval = S * ln(targetRecall) / ln(0.5)
@@ -156,13 +156,13 @@ export class MigrationService {
                     let maxReadingInterval = 0;
                     let maxMeaningStrength = 0;
                     let maxMeaningInterval = 0;
-                    let allReadingHistory: any[] = [];
-                    let allMeaningHistory: any[] = [];
+                    const uniqueReadingHistory = new Map<number, any>();
+                    const uniqueMeaningHistory = new Map<number, any>();
 
                     let earliestIntro = items[0].introductionAt;
 
                     for (const item of items) {
-                        totalReviews += item.totalReviews;
+                        totalReviews = Math.max(totalReviews, item.totalReviews);
                         consecutiveFailures = Math.max(consecutiveFailures, item.consecutiveFailures);
 
                         maxReadingStrength = Math.max(maxReadingStrength, item.reading.memoryStrength);
@@ -171,8 +171,8 @@ export class MigrationService {
                         maxMeaningStrength = Math.max(maxMeaningStrength, item.meaning.memoryStrength);
                         maxMeaningInterval = Math.max(maxMeaningInterval, item.meaning.interval);
 
-                        allReadingHistory.push(...item.reading.history);
-                        allMeaningHistory.push(...item.meaning.history);
+                        item.reading.history.forEach(log => uniqueReadingHistory.set(log.date, log));
+                        item.meaning.history.forEach(log => uniqueMeaningHistory.set(log.date, log));
 
                         if (item.introductionAt && (!earliestIntro || new Date(item.introductionAt) < new Date(earliestIntro))) {
                             earliestIntro = item.introductionAt;
@@ -180,8 +180,8 @@ export class MigrationService {
                     }
 
                     // Sort histories
-                    allReadingHistory.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-                    allMeaningHistory.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+                    const allReadingHistory = Array.from(uniqueReadingHistory.values()).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+                    const allMeaningHistory = Array.from(uniqueMeaningHistory.values()).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
                     // Determine stage (if any graduated, it's graduated)
                     const isGraduated = items.some(i => i.stage === 'graduated');
@@ -214,6 +214,16 @@ export class MigrationService {
                     updatedQueue.push(baseItem);
                 }
             }
+
+            // [FIX] Rescue existing 0-memory strength items from infinite loop
+            updatedQueue.forEach(item => {
+                if (item.reading.memoryStrength === 0) {
+                    item.reading.memoryStrength = CONSTANTS.srs.formula.minMemoryStrength;
+                }
+                if (item.meaning.memoryStrength === 0) {
+                    item.meaning.memoryStrength = CONSTANTS.srs.formula.minMemoryStrength;
+                }
+            });
 
             return {
                 ...progress,
