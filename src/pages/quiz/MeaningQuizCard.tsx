@@ -32,6 +32,11 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
         <BaseQuizCard
             inputLabel="Meaning (English)"
             inputPlaceholder="Type the meaning..."
+            renderCorrectAnswer={() => (
+                <div className="text-center text-xl mb-1 text-primary font-gothic">
+                    {feedback?.matchedAnswer || currentVocab.senses.flatMap(s => s.glosses)[0] || "No meaning found"}
+                </div>
+            )}
         >
             {/* Header: Meaning Quiz Label + Mastery */}
             <div className="flex flex-col items-center mb-8">
@@ -68,6 +73,8 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                                 sentence={sentence}
                                 targetVocabId={currentVocab.id}
                                 onVocabClick={onVocabClick}
+                                showFurigana={feedback?.show}
+                                allowTargetClickable={feedback?.show}
                             />
                         </div>
                     </div>

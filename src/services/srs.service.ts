@@ -36,6 +36,10 @@ export class SRSService {
         for (const reading of allReadings) {
             const res = this.analyzeError(userInput, reading);
 
+            if (res === 'pass') {
+                return { result: 'pass', matchedAnswer: bestMatch };
+            }
+
             if (res === 'correct') {
                 return { result: 'correct', matchedAnswer: reading };
             }
@@ -64,7 +68,7 @@ export class SRSService {
         const normalizedUser = this.normalizeMeaning(userInput);
 
         if (normalizedUser === 'pass' || normalizedUser === '') {
-            return { result: normalizedUser === 'pass' ? 'pass' : 'wrong', matchedAnswer: '' };
+            return { result: normalizedUser === 'pass' ? 'pass' : 'wrong', matchedAnswer: bestMatch };
         }
 
         for (const meaning of meanings) {
