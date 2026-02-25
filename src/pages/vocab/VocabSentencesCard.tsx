@@ -49,6 +49,7 @@ export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
                                 sentence={sentence}
                                 targetVocabId={vocabId}
                                 onVocabClick={(vid) => navigate(`/vocab/${vid}`)}
+                                showFurigana={true}
                             />
                         </div>
                         {sentence.en && sentence.en.length > 0 && (

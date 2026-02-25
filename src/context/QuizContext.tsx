@@ -775,16 +775,16 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     /* ---------- Auto-Sync & Reactivity ---------- */
 
-    // AUTO-UPLOAD: Whenever progress changes, upload it to Drive in background
+    // AUTO-UPLOAD: Whenever progress or settings change, upload to Drive in background
     useEffect(() => {
-        if (state.progress && !isDownloading) {
+        if (state.progress && state.settings && !isDownloading) {
             // Debounce could be added here if needed, but for now we trust the service
             // The uploadProgress function is safe to call repeatedly (fire and forget)
-            uploadProgress(state.progress).catch(err => {
+            uploadProgress({ progress: state.progress, settings: state.settings }).catch(err => {
                 console.error("[QuizContext] Auto-upload failed", err);
             });
         }
-    }, [state.progress]); // Triggers on every answer, queue advance, intro choice etc.
+    }, [state.progress, state.settings]); // Triggers on every answer, queue advance, intro choice, settings change etc.
 
     // REACT TO DOWNLOAD COMPLETION: Reload data when lastDownloadTime changes
     useEffect(() => {

@@ -6,6 +6,7 @@ import { GoogleDriveSync, GoogleAuthError } from '../services/google.service';
 import { StorageService } from '../services/storage.service';
 import { MigrationService } from '../services/migration.service';
 import { CONSTANTS } from '../commons/constants';
+import { DEFAULT_SETTINGS } from '../models/user.model';
 
 interface GoogleUser {
     access_token: string;
@@ -18,7 +19,7 @@ interface GoogleDriveContextType {
     login: () => void;
     logout: () => void;
     downloadProgress: () => Promise<void>;
-    uploadProgress: (progress: any) => Promise<void>;
+    uploadProgress: (envelope: { progress: any; settings: any }) => Promise<void>;
     isDownloading: boolean;
     isUploading: boolean;
     user: GoogleUser | null;
@@ -77,6 +78,7 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
         try {
             let currentLocal = StorageService.loadProgress();
+            let currentSettings = StorageService.loadSettings();
 
             // We use the sync method because it handles the logic of "Fetch Remote -> Merge"
             // We want to ensure we have the latest from cloud before we start.
@@ -88,14 +90,24 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
                     currentLocal = await MigrationService.migrateMergedVocabsAsync(currentLocal as any);
                     StorageService.saveProgress(currentLocal);
                 }
+
+                // Ensure we pass a proper fallback if settings are missing
+                const envelopeToSync = {
+                    progress: currentLocal,
+                    settings: currentSettings ?? DEFAULT_SETTINGS
+                };
+
                 // Even on download, we might have local changes (offline). 
                 // sync() will upload them. This is technically a "Sync", but treated as a Download event for the UI.
-                await service.sync(currentLocal as any);
+                await service.sync(envelopeToSync as any);
                 // We reload from storage to see the result
-                merged = StorageService.loadProgress();
+                merged = { progress: StorageService.loadProgress(), settings: StorageService.loadSettings() };
             } else {
                 merged = await service.initialize();
-                if (merged) StorageService.saveProgress(merged);
+                if (merged) {
+                    StorageService.saveProgress(merged.progress);
+                    StorageService.saveSettings(merged.settings);
+                }
             }
 
             console.log("Download/Sync completed");
@@ -119,7 +131,7 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
     const uploadDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     // BACKGROUND UPLOAD: Pushes local changes to cloud. Does NOT trigger app reload.
-    const uploadProgress = async (progress: any) => {
+    const uploadProgress = async (envelope: { progress: any; settings: any }) => {
         if (uploadDebounceRef.current) {
             clearTimeout(uploadDebounceRef.current);
         }
@@ -132,8 +144,8 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             try {
                 // sync() method does: Fetch Remote -> Merge -> Upload -> Save Local
                 // We trust it to update localStorage with the latest state.
-                const merged = await syncService.sync(progress);
-                console.log("Background upload completed. New version:", merged?._sync?.version);
+                const merged = await syncService.sync(envelope as any);
+                console.log("Background upload completed. New version:", merged?.progress?._sync?.version);
                 // NOTE: We do NOT setLastDownloadTime here. 
                 // QuizContext keeps using its current state (which is ahead or equal to what we just uploaded).
                 // LocalStorage is updated in background for next reload.

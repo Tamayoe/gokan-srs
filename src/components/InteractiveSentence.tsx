@@ -1,18 +1,23 @@
+import { useState, useEffect } from "react";
 import type { Sentence } from "../models/sentence.model";
-
+import { VocabularyService } from "../services/vocabulary.service";
 
 interface InteractiveSentenceProps {
     sentence: Sentence;
     targetVocabId?: string; // The specific vocab we are currently studying/viewing
     onVocabClick?: (vocabId: string) => void;
     className?: string;
+    showFurigana?: boolean;
+    allowTargetClickable?: boolean;
 }
 
 export function InteractiveSentence({
     sentence,
     targetVocabId,
     onVocabClick,
-    className = ""
+    className = "",
+    showFurigana = false,
+    allowTargetClickable = false
 }: InteractiveSentenceProps) {
     const text = sentence.original;
     const matches = sentence.matches || {};
@@ -78,6 +83,39 @@ export function InteractiveSentence({
         });
     }
 
+    // Load readings for all matched vocabs
+    const [readings, setReadings] = useState<Record<string, string>>({});
+
+    useEffect(() => {
+        if (!showFurigana) return;
+
+        let mounted = true;
+        const loadReadings = async () => {
+            const newReadings: Record<string, string> = {};
+            // Gather unique vocabIds from matches
+            const vocabIds = Object.keys(matches);
+
+            for (const id of vocabIds) {
+                try {
+                    const vocab = await VocabularyService.loadVocab(id);
+                    if (vocab && mounted) {
+                        newReadings[id] = vocab.reading.primary;
+                    }
+                } catch (e) {
+                    // Ignore errors for individual vocabs
+                }
+            }
+            if (mounted) {
+                setReadings(newReadings);
+            }
+        };
+        loadReadings();
+
+        return () => {
+            mounted = false;
+        };
+    }, [showFurigana, sentence.id]);
+
     // 2. Render
     return (
         <span className={`font-mincho leading-relaxed break-words ${className}`}>
@@ -87,15 +125,33 @@ export function InteractiveSentence({
                 }
 
                 const isTarget = segment.vocabId === targetVocabId;
-                const isClickable = !isTarget && onVocabClick;
+                const isClickable = onVocabClick && (!isTarget || allowTargetClickable);
+                const reading = showFurigana && segment.vocabId ? readings[segment.vocabId] : null;
+
+                const renderContent = () => {
+                    if (reading) {
+                        return (
+                            <ruby>
+                                {segment.content}
+                                <rt className="text-[0.6em] select-none opacity-80" style={{ transform: "translateY(-10%)" }}>{reading}</rt>
+                            </ruby>
+                        );
+                    }
+                    return segment.content;
+                };
 
                 if (isTarget) {
                     return (
                         <span
                             key={i}
-                            className="text-accent font-bold border-b-2 border-accent/30 mx-0.5 px-0.5"
+                            onClick={isClickable ? (e) => {
+                                e.stopPropagation();
+                                onVocabClick?.(segment.vocabId!);
+                            } : undefined}
+                            className={`text-accent font-bold border-b-2 border-accent/30 mx-0.5 px-0.5 ${isClickable ? 'cursor-pointer hover:border-accent transition-colors' : ''}`}
+                            title={isClickable ? "Click to view details" : undefined}
                         >
-                            {segment.content}
+                            {renderContent()}
                         </span>
                     );
                 }
@@ -111,12 +167,12 @@ export function InteractiveSentence({
                             className="cursor-pointer text-primary border-b border-dashed border-tertiary/50 hover:text-accent hover:border-accent transition-colors mx-0.5"
                             title="Click to view details"
                         >
-                            {segment.content}
+                            {renderContent()}
                         </span>
                     );
                 }
 
-                return <span key={i}>{segment.content}</span>;
+                return <span key={i}>{renderContent()}</span>;
             })}
         </span>
     );

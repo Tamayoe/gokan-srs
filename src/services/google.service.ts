@@ -1,4 +1,5 @@
-import type { UserProgress } from "../models/user.model";
+import type { UserProgress, UserSettings } from "../models/user.model";
+import { DEFAULT_SETTINGS } from "../models/user.model";
 import { CONSTANTS } from "../commons/constants";
 import { MigrationService } from "./migration.service";
 
@@ -33,6 +34,11 @@ interface ProgressWithMetadata extends UserProgress {
     _sync?: SyncMetadata;
 }
 
+export interface SyncEnvelope {
+    progress: ProgressWithMetadata;
+    settings: UserSettings;
+}
+
 export class GoogleDriveSync {
     private readonly accessToken: string;
     private fileId: string | null = null;
@@ -43,60 +49,103 @@ export class GoogleDriveSync {
         this.accessToken = accessToken;
     }
 
-    async initialize(): Promise<ProgressWithMetadata | null> {
+    async initialize(localEnvelope?: SyncEnvelope): Promise<SyncEnvelope | null> {
         await this.ensureFolder();
-        let remoteProgress = await this.fetchRemoteProgress();
+        let remoteEnvelope = await this.fetchRemoteEnvelope();
+        let remoteProgress = remoteEnvelope?.progress || null;
+        let remoteSettings = remoteEnvelope?.settings || null;
+
         if (remoteProgress && MigrationService.needsMigration(remoteProgress)) {
             remoteProgress = await MigrationService.migrateMergedVocabsAsync(remoteProgress as any) as ProgressWithMetadata;
         }
-        const localProgress = this.getLocalProgress();
 
-        const merged = this.mergeProgress(localProgress, remoteProgress);
-
-        // [NEW] Update our internal tracker
-        if (merged?._sync?.version) {
-            this.latestLocalVersion = merged._sync.version;
+        if (!localEnvelope) {
+            const localProgress = this.getLocalProgress();
+            const localSettings = this.getLocalSettings();
+            if (localProgress && localSettings) {
+                localEnvelope = { progress: localProgress, settings: localSettings };
+            }
         }
 
-        return merged;
+        const mergedProgress = this.mergeProgress(localEnvelope?.progress || null, remoteProgress);
+
+        let mergedSettings = remoteSettings;
+        if (localEnvelope) {
+            mergedSettings = this.mergeSettings(
+                localEnvelope.settings,
+                remoteSettings,
+                localEnvelope.progress._sync?.version ?? 0,
+                remoteProgress?._sync?.version ?? 0
+            );
+        } else if (!mergedSettings) {
+            mergedSettings = this.getLocalSettings() ?? DEFAULT_SETTINGS;
+        }
+
+        if (mergedProgress?._sync?.version) {
+            this.latestLocalVersion = mergedProgress._sync.version;
+        }
+
+        if (!mergedProgress) return null;
+        return { progress: mergedProgress, settings: mergedSettings! };
     }
 
-    async sync(localProgress: ProgressWithMetadata): Promise<ProgressWithMetadata | null> {
-        // [NEW] OPTIMISTIC VERSIONING
-        // If the incoming localProgress has a version LOWER than what we know we've saved,
-        // it means the React State is stale (metadata-wise) but the Content is fresh (user just typed).
-        // We must pretend this stale-metadata state is actually the LATEST version to win the merge war.
+    async sync(localEnvelope: SyncEnvelope): Promise<SyncEnvelope | null> {
+        const localProgress = localEnvelope.progress;
         const incomingVersion = localProgress._sync?.version ?? 0;
-        let effectiveLocal = localProgress;
+        let effectiveLocalProgress = localProgress;
 
         if (incomingVersion < this.latestLocalVersion) {
             console.log(`[GoogleDriveSync] Stale metadata detected (Incoming: ${incomingVersion}, Known: ${this.latestLocalVersion}). Patching version...`);
-            effectiveLocal = {
+            effectiveLocalProgress = {
                 ...localProgress,
                 _sync: {
                     lastModified: Date.now(),
-                    version: this.latestLocalVersion // We intentionally catch up to the known version
+                    version: this.latestLocalVersion
                 }
             };
         }
 
-        let remoteProgress = await this.fetchRemoteProgress();
+        let remoteEnvelope = await this.fetchRemoteEnvelope();
+        let remoteProgress = remoteEnvelope?.progress || null;
+        let remoteSettings = remoteEnvelope?.settings || null;
+
         if (remoteProgress && MigrationService.needsMigration(remoteProgress)) {
             remoteProgress = await MigrationService.migrateMergedVocabsAsync(remoteProgress as any) as ProgressWithMetadata;
         }
-        const merged = this.mergeProgress(effectiveLocal, remoteProgress);
 
-        if (merged) {
-            await this.uploadProgress(merged);
-            this.saveLocalProgress(merged);
+        const mergedProgress = this.mergeProgress(effectiveLocalProgress, remoteProgress);
+        const mergedSettings = this.mergeSettings(
+            localEnvelope.settings,
+            remoteSettings,
+            effectiveLocalProgress._sync?.version ?? 0,
+            remoteProgress?._sync?.version ?? 0
+        );
 
-            // [NEW] Update tracker
-            if (merged._sync?.version) {
-                this.latestLocalVersion = merged._sync.version;
+        if (mergedProgress) {
+            const mergedEnvelope = { progress: mergedProgress, settings: mergedSettings! };
+            await this.uploadEnvelope(mergedEnvelope);
+            this.saveLocalEnvelope(mergedEnvelope);
+
+            if (mergedProgress._sync?.version) {
+                this.latestLocalVersion = mergedProgress._sync.version;
             }
+            return mergedEnvelope;
         }
 
-        return merged;
+        return null;
+    }
+
+    private mergeSettings(
+        local: UserSettings,
+        remote: UserSettings | null,
+        localVersion: number,
+        remoteVersion: number
+    ): UserSettings {
+        if (!remote) return local;
+        if (remoteVersion > localVersion) {
+            return remote;
+        }
+        return local;
     }
 
     private mergeProgress(
@@ -255,7 +304,7 @@ export class GoogleDriveSync {
         return id;
     }
 
-    private async fetchRemoteProgress(): Promise<ProgressWithMetadata | null> {
+    private async fetchRemoteEnvelope(): Promise<SyncEnvelope | null> {
         if (!this.folderId) await this.ensureFolder();
 
         const response = await fetch(
@@ -289,13 +338,28 @@ export class GoogleDriveSync {
         }
 
         const data = await contentResponse.json();
-        return this.deserialize(data);
+
+        // BACKWARD COMPATIBILITY: If the JSON is raw UserProgress (no .progress / .settings wrapper)
+        if (data && !data.settings && data.learningQueue) {
+            return {
+                progress: this.deserializeProgress(data),
+                settings: this.getLocalSettings() ?? DEFAULT_SETTINGS
+            };
+        }
+
+        return {
+            progress: this.deserializeProgress(data.progress),
+            settings: data.settings
+        };
     }
 
-    private async uploadProgress(progress: ProgressWithMetadata): Promise<void> {
+    private async uploadEnvelope(envelope: SyncEnvelope): Promise<void> {
         if (!this.folderId) await this.ensureFolder();
 
-        const serialized = this.serialize(progress);
+        const serialized = {
+            progress: this.serializeProgress(envelope.progress),
+            settings: envelope.settings
+        };
 
         const metadata: any = {
             name: DRIVE_FILE_NAME,
@@ -336,16 +400,23 @@ export class GoogleDriveSync {
     private getLocalProgress(): ProgressWithMetadata | null {
         const stored = localStorage.getItem(CONSTANTS.storage.progressStorageKey);
         if (!stored) return null;
-        return this.deserialize(JSON.parse(stored));
+        return this.deserializeProgress(JSON.parse(stored));
     }
 
-    private saveLocalProgress(progress: ProgressWithMetadata): void {
-        const serialized = this.serialize(progress);
-        localStorage.setItem(CONSTANTS.storage.progressStorageKey, JSON.stringify(serialized));
+    private getLocalSettings(): UserSettings | null {
+        const stored = localStorage.getItem(CONSTANTS.storage.settingsStorageKey);
+        if (!stored) return null;
+        return JSON.parse(stored) as UserSettings;
+    }
+
+    private saveLocalEnvelope(envelope: SyncEnvelope): void {
+        const serializedProgress = this.serializeProgress(envelope.progress);
+        localStorage.setItem(CONSTANTS.storage.progressStorageKey, JSON.stringify(serializedProgress));
+        localStorage.setItem(CONSTANTS.storage.settingsStorageKey, JSON.stringify(envelope.settings));
     }
 
     // Helper to request JSON serialization
-    private serialize(progress: ProgressWithMetadata): any {
+    private serializeProgress(progress: ProgressWithMetadata): any {
         return JSON.parse(JSON.stringify(progress, (_key, value) => {
             if (value instanceof Set) {
                 return Array.from(value);
@@ -355,7 +426,7 @@ export class GoogleDriveSync {
     }
 
     // Helper to handle JSON deserialization (restoring Sets and Dates)
-    private deserialize(data: any): ProgressWithMetadata {
+    private deserializeProgress(data: any): ProgressWithMetadata {
         // 1. Apply migration first (handles raw JSON structure)
         const migrated = MigrationService.migrateUserProgress(data);
 
