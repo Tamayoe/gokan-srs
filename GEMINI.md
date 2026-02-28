@@ -595,6 +595,13 @@ return 'exhausted'
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
+- **[2026-02-25]**:
+  - **Infinite Fetch Loop Fix**: Resolved an issue where `advanceQueue` entered an infinite loop masking a loading error.
+    - If the user's browser cached an old `frequency.json` containing deprecated IDs (removed previously by the Homograph Vocabulary Merge), the SPA fallback returned `index.html` (200 OK) for the missing `.json` files.
+    - This caused a silent `SyntaxError` catch during `advanceQueue`, which resulted in an empty candidate list dispatch. The component continuously retried, fetching hundreds of times.
+    - **Fix 1**: Added a cache-buster `?v=${Date.now()}` to `loadFrequencyIndex` and `loadKKLCIndex` in `vocabulary.service.ts` to ensure users always receive the unified data.
+    - **Fix 2**: Added a generic safeguard in `QuizContext.tsx` `advanceQueue`: if candidate IDs exist but 100% of them fail to load, immediately abort and fire `LOAD_VOCAB_ERROR` to cleanly break out to the System Error screen rather than silently retrying.
+
 - **[2026-02-22]**:
   - **Homograph Vocabulary Merge**: Unified JMDict duplicate entries sharing identical kanji into single Robust entries.
     - Updated `Vocabulary` models to support `mergedVocabs` containing original source info.

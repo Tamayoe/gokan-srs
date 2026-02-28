@@ -19,21 +19,21 @@ export class VocabularyService {
     static async loadKKLCKanjiIndex(): Promise<KKLCKanjiIndex | null> {
         if (this.kklcKanjiIndex) return this.kklcKanjiIndex;
 
-        this.kklcKanjiIndex = await this.fetchJson<KKLCKanjiIndex>('/data/compiled/index/kklc-kanji.json');
+        this.kklcKanjiIndex = await this.fetchJson<KKLCKanjiIndex>(`/data/compiled/index/kklc-kanji.json?v=${Date.now()}`);
         return this.kklcKanjiIndex;
     }
 
     static async loadKKLCIndex(): Promise<KKLCIndex | null> {
         if (this.kklcIndex) return this.kklcIndex;
 
-        this.kklcIndex = await this.fetchJson<KKLCIndex>('/data/compiled/index/kklc.json');
+        this.kklcIndex = await this.fetchJson<KKLCIndex>(`/data/compiled/index/kklc.json?v=${Date.now()}`);
         return this.kklcIndex;
     }
 
     static async loadFrequencyIndex(): Promise<FrequencyIndex | null> {
         if (this.frequencyIndex) return this.frequencyIndex;
 
-        this.frequencyIndex = await this.fetchJson<FrequencyIndex>('/data/compiled/index/frequency.json');
+        this.frequencyIndex = await this.fetchJson<FrequencyIndex>(`/data/compiled/index/frequency.json?v=${Date.now()}`);
         return this.frequencyIndex;
     }
 
