@@ -12,6 +12,7 @@ import { LoadingScreen } from "../../components/LoadingScreen";
 import { Combine } from "lucide-react";
 import { VocabSentencesCard } from "./VocabSentencesCard";
 import { VocabHistoryGraph } from "../../components/VocabHistoryGraph";
+import { ReviewTimeline } from "../../components/ReviewTimeline";
 
 export default function VocabDetailScreen() {
     const { vocabId } = useParams<{ vocabId: string }>();
@@ -66,8 +67,8 @@ export default function VocabDetailScreen() {
             <main className="flex-1 p-4 md:p-8 pt-0">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
 
-                    {/* Left Column (Sticky on desktop) */}
-                    <div className="md:col-span-5 md:sticky md:top-8 space-y-6">
+                    {/* Left Column */}
+                    <div className="md:col-span-5 space-y-6">
                         {/* Kanji & Reading Card */}
                         <Card size={isMobile ? "sm" : "md"}>
                             <div className={`flex ${isMobile ? 'flex-col gap-4' : 'flex-col items-center text-center gap-6'}`}>
@@ -175,43 +176,63 @@ export default function VocabDetailScreen() {
 
                         {/* Progress Details */}
                         {progress && progress.introductionAt && (
-                            <Card size={isMobile ? "sm" : "md"}>
-                                <h2 className="text-lg font-gothic font-semibold text-primary mb-4">Stats</h2>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div>
-                                        <div className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-1">
-                                            Reviews
+                            <>
+                                <Card size={isMobile ? "sm" : "md"}>
+                                    <h2 className="text-lg font-gothic font-semibold text-primary mb-4">Stats</h2>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <div className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-1">
+                                                Reviews
+                                            </div>
+                                            <div className="text-xl text-primary font-gothic">
+                                                {progress.totalReviews}
+                                            </div>
                                         </div>
-                                        <div className="text-xl text-primary font-gothic">
-                                            {progress.totalReviews}
+                                        <div>
+                                            <div className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-1">
+                                                Interval
+                                            </div>
+                                            <div className="text-xl text-primary font-gothic">
+                                                {progress.reading.interval.toFixed(1)}d
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <div className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-1">
-                                            Interval
+                                        <div className="col-span-2 pt-2 border-t border-divider grid grid-cols-2 gap-4">
+                                            <div>
+                                                <div className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-1">
+                                                    Introduced
+                                                </div>
+                                                <div className="text-base text-primary font-gothic">
+                                                    {new Date(progress.introductionAt).toLocaleDateString()}
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-1">
+                                                    Next Review
+                                                </div>
+                                                <div className="space-y-1">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-sm text-secondary font-gothic w-16">Reading:</span>
+                                                        <span className="text-base text-primary font-gothic">{progress.reading.dueDate ? new Date(progress.reading.dueDate).toLocaleDateString() : 'Ready'}</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-sm text-secondary font-gothic w-16">Meaning:</span>
+                                                        <span className="text-base text-primary font-gothic">{progress.meaning.dueDate ? new Date(progress.meaning.dueDate).toLocaleDateString() : 'Ready'}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="text-xl text-primary font-gothic">
-                                            {progress.reading.interval.toFixed(1)}d
-                                        </div>
-                                    </div>
-                                    <div className="col-span-2 pt-2 border-t border-divider">
-                                        <div className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-1">
-                                            Introduced
-                                        </div>
-                                        <div className="text-base text-primary font-gothic">
-                                            {new Date(progress.introductionAt).toLocaleDateString()}
-                                        </div>
-                                    </div>
 
-                                    <div className="col-span-2">
-                                        <VocabHistoryGraph
-                                            readingEntry={progress.reading}
-                                            meaningEntry={progress.meaning}
-                                            introDate={progress.introductionAt ? new Date(progress.introductionAt) : null}
-                                        />
+                                        <div className="col-span-2">
+                                            <VocabHistoryGraph
+                                                readingEntry={progress.reading}
+                                                meaningEntry={progress.meaning}
+                                                introDate={progress.introductionAt ? new Date(progress.introductionAt) : null}
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                            </Card>
+                                </Card>
+                                <ReviewTimeline readingEntry={progress.reading} meaningEntry={progress.meaning} />
+                            </>
                         )}
                     </div>
 
@@ -262,8 +283,8 @@ export default function VocabDetailScreen() {
                         <VocabSentencesCard vocabId={vocab.id} />
                     </div>
                 </div>
-            </main>
-        </div>
+            </main >
+        </div >
     );
 }
 

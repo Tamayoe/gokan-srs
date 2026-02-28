@@ -46,8 +46,8 @@ export function VocabHistoryGraph({ readingEntry, meaningEntry, introDate }: Voc
     const timeSpan = maxDate - minDate || 1; // Prevent div zero
 
     const maxStrength = 365; // ~1 year interval indicates mastery
-    const actualMaxStrength = Math.max(...data.map(d => d.strength), 30); // scale slightly if items are very new
-    const yMax = Math.min(Math.max(actualMaxStrength * 1.1, 30), maxStrength * 1.1);
+    const actualMaxStrength = Math.max(...data.map(d => d.strength), 3); // scale down floor if items are very new
+    const yMax = Math.min(Math.max(actualMaxStrength * 1.2, 3), maxStrength * 1.1);
 
     const generatePath = (type: 'reading' | 'meaning') => {
         const typePoints = data.filter(d => d.type === type);
