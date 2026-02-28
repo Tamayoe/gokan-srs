@@ -17,7 +17,7 @@ export class LLMService {
         vocab: Vocabulary,
         sentence: Sentence,
         userAnswer: string
-    ): Promise<{ correct: boolean, reason?: string }> {
+    ): Promise<{ result: 'correct' | 'minor_error' | 'wrong', reason?: string }> {
         if (!apiKey) {
             throw new Error("No API key provided for Gemini validation");
         }
@@ -41,15 +41,15 @@ Context:
 
 The user has submitted this meaning for the vocabulary word: "${userAnswer}"
 
-Is the user's answer a correct, commonly accepted, or valid contextual translation for the vocabulary word *as it is used in the given sentence*?
-- Allow synonyms or slight phrasing differences if they capture the precise meaning *in this context*.
-- Do NOT be overly generous. If the answer is completely grammatically wrong or means something fundamentally different, reject it.
-- If the word has multiple dictionary meanings, it only needs to match the one intended by the sentence context.
+Evaluate the user's answer against the vocabulary word *as it is used in the given sentence*.
+- Return "correct" if it is a perfectly valid contextual translation (allow synonyms).
+- Return "minor_error" if the user clearly understands the general concept or root meaning, but the phrasing is imprecise, grammatically slightly off for the context, or they missed a nuance (e.g. answering "to see" instead of "to be seen", or "decide" instead of "decision").
+- Return "wrong" if the answer means something fundamentally different, is completely unrelated, or misses the core concept.
 
 Respond ONLY with valid JSON in the following schema:
 {
-  "correct": boolean,
-  "reason": "A brief 1-2 sentence explanation of why it was accepted or rejected"
+  "result": "correct" | "minor_error" | "wrong",
+  "reason": "A brief 1-2 sentence explanation of why it was graded this way"
 }`;
 
         try {
@@ -69,10 +69,13 @@ Respond ONLY with valid JSON in the following schema:
                         responseSchema: {
                             type: "object",
                             properties: {
-                                correct: { type: "boolean" },
+                                result: {
+                                    type: "string",
+                                    enum: ["correct", "minor_error", "wrong"]
+                                },
                                 reason: { type: "string" }
                             },
-                            required: ["correct", "reason"]
+                            required: ["result", "reason"]
                         }
                     }
                 })
@@ -91,23 +94,23 @@ Respond ONLY with valid JSON in the following schema:
 
                 // We requested JSON, so it should parse safely
                 try {
-                    const result = JSON.parse(textResult);
+                    const parsedInfo = JSON.parse(textResult);
                     return {
-                        correct: result.correct === true,
-                        reason: result.reason
+                        result: parsedInfo.result as 'correct' | 'minor_error' | 'wrong',
+                        reason: parsedInfo.reason
                     };
                 } catch (parseError) {
                     console.error("[LLMService] Failed to parse Gemini response", parseError);
-                    return { correct: false, reason: "Failed to parse AI response format." };
+                    return { result: 'wrong', reason: "Failed to parse AI response format." };
                 }
             }
 
-            return { correct: false, reason: "Empty response from AI." };
+            return { result: 'wrong', reason: "Empty response from AI." };
 
         } catch (error) {
             console.error("[LLMService] API Call Failed:", error);
             // On catastrophic failure, fail safe (mark wrong, user can read standard feedback)
-            return { correct: false, reason: `API Error: ${error instanceof Error ? error.message : 'Unknown'}` };
+            return { result: 'wrong', reason: `API Error: ${error instanceof Error ? error.message : 'Unknown'}` };
         }
     }
 }

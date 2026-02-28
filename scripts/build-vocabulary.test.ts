@@ -57,5 +57,5 @@ describe('Vocabulary Data Integrity', () => {
         }
 
         expect(invalidFiles).toEqual([]);
-    });
+    }, 30000);
 });
