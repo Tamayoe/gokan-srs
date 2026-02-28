@@ -585,6 +585,16 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     }
                 }
                 console.log(`[QuizContext] advanceQueue found ${newCandidates.length} new candidates.`);
+
+                // [BUGFIX] Prevent infinite loading loop if files are missing but listed in the index
+                if (candidateIds.length > 0 && newCandidates.length === 0) {
+                    console.error("[QuizContext] CRITICAL ERROR: Found candidates in index, but ALL failed to load. Aborting queue advance.", { candidateIds });
+                    dispatch({
+                        type: 'LOAD_VOCAB_ERROR',
+                        payload: { vocabId: candidateIds[0], error: new Error('Candidate vocabulary files could not be loaded. Data might be corrupted or out-of-sync.') }
+                    });
+                    return;
+                }
             }
 
             // [NEW] If no candidates found, and we are not exhausted/at limit, prepare next kanji natively
