@@ -13,46 +13,51 @@ export function ReviewForecast({ progress }: ReviewForecastProps) {
         const now = new Date();
         const buckets: { label: string, readingCount: number, meaningCount: number, date: Date }[] = [];
 
-        // Initialize buckets
-        for (let i = 0; i < daysToShow; i++) {
+        // Initialize buckets: 0 = Due Now, 1 = Later Today, 2 = Tomorrow, ... 7 = Day 6
+        buckets.push({ label: 'Now', readingCount: 0, meaningCount: 0, date: now });
+        buckets.push({ label: 'Later', readingCount: 0, meaningCount: 0, date: now });
+
+        for (let i = 1; i < daysToShow; i++) {
             const d = new Date(now);
             d.setDate(now.getDate() + i);
             d.setHours(0, 0, 0, 0); // Normalize to midnight
 
-            const label = i === 0 ? 'Today' :
-                i === 1 ? 'Tomorrow' :
-                    d.toLocaleDateString('en-US', { weekday: 'short' });
-
+            const label = i === 1 ? 'Tomorrow' : d.toLocaleDateString('en-US', { weekday: 'short' });
             buckets.push({ label, readingCount: 0, meaningCount: 0, date: d });
         }
 
         // Aggregate
         queue.forEach(v => {
-            // Count Reading Reviews
-            if (v.reading.dueDate) {
-                const due = new Date(v.reading.dueDate);
-                if (due < now) {
-                    buckets[0].readingCount++;
+            // Helper to place item in bucket
+            const placeInBucket = (dueDate: Date, isReading: boolean) => {
+                if (dueDate <= now) {
+                    // Due Now -> Bucket 0
+                    if (isReading) buckets[0].readingCount++;
+                    else buckets[0].meaningCount++;
                 } else {
-                    const dueDay = new Date(due);
+                    const dueDay = new Date(dueDate);
                     dueDay.setHours(0, 0, 0, 0);
-                    const bucket = buckets.find(b => b.date.getTime() === dueDay.getTime());
-                    if (bucket) bucket.readingCount++;
-                }
-            }
 
-            // Count Meaning Reviews
-            if (v.meaning.dueDate) {
-                const due = new Date(v.meaning.dueDate);
-                if (due < now) {
-                    buckets[0].meaningCount++;
-                } else {
-                    const dueDay = new Date(due);
-                    dueDay.setHours(0, 0, 0, 0);
-                    const bucket = buckets.find(b => b.date.getTime() === dueDay.getTime());
-                    if (bucket) bucket.meaningCount++;
+                    const nowDay = new Date(now);
+                    nowDay.setHours(0, 0, 0, 0);
+
+                    if (dueDay.getTime() === nowDay.getTime()) {
+                        // Later Today -> Bucket 1
+                        if (isReading) buckets[1].readingCount++;
+                        else buckets[1].meaningCount++;
+                    } else {
+                        // Future Day -> Find matching bucket
+                        const bucket = buckets.find(b => b.date.getTime() === dueDay.getTime() && b.label !== 'Now' && b.label !== 'Later');
+                        if (bucket) {
+                            if (isReading) bucket.readingCount++;
+                            else bucket.meaningCount++;
+                        }
+                    }
                 }
-            }
+            };
+
+            if (v.reading.dueDate) placeInBucket(new Date(v.reading.dueDate), true);
+            if (v.meaning.dueDate) placeInBucket(new Date(v.meaning.dueDate), false);
         });
 
         // Calculate max for scaling (min 10)

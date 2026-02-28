@@ -99,10 +99,10 @@ jobs:
 
       - name: Invalidate CloudFront cache
         run: |
-          # Invalidate only entry points. Setup and Main app.
+          # Invalidate entry points and raw compiled datasets to guarantee sync.
           aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths "/index.html" "/"
+            --paths "/index.html" "/" "/data/compiled/*"
 
       - name: Deployment summary
         run: |

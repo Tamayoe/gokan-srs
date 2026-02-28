@@ -11,6 +11,7 @@ import { Button } from "../../components/ui/Button";
 import { LoadingScreen } from "../../components/LoadingScreen";
 import { Combine } from "lucide-react";
 import { VocabSentencesCard } from "./VocabSentencesCard";
+import { VocabHistoryGraph } from "../../components/VocabHistoryGraph";
 
 export default function VocabDetailScreen() {
     const { vocabId } = useParams<{ vocabId: string }>();
@@ -200,6 +201,14 @@ export default function VocabDetailScreen() {
                                         <div className="text-base text-primary font-gothic">
                                             {new Date(progress.introductionAt).toLocaleDateString()}
                                         </div>
+                                    </div>
+
+                                    <div className="col-span-2">
+                                        <VocabHistoryGraph
+                                            readingEntry={progress.reading}
+                                            meaningEntry={progress.meaning}
+                                            introDate={progress.introductionAt ? new Date(progress.introductionAt) : null}
+                                        />
                                     </div>
                                 </div>
                             </Card>

@@ -55,8 +55,10 @@ interface QuizState {
         matchedAnswer: string;
     } | null;
     isLoadingVocab: boolean;
-    isEvaluatingAi: boolean; // [NEW] Track AI evaluation state
-    introCandidates: Vocabulary[]; // [NEW] Potential new items, not yet in learningQueue
+    isEvaluatingAi: boolean; // [RESTORED] Track AI evaluation state
+    introCandidates: Vocabulary[]; // [RESTORED] Potential new items, not yet in learningQueue
+    sessionQueue: PendingQuizItem[]; // [NEW] Locked queue for the active session
+    sessionBuiltAt: number | null; // [NEW] timestamp of session start
     nextKanjiToLearn: { step: number; kanjis: string[] } | null; // [NEW] Next kanji to unlock
     sessionHistory: Array<{        // [NEW] History for the current session
         vocabId: string;
@@ -85,6 +87,9 @@ type QuizAction =
     | { type: 'VOCAB_INTRO_CHOICE'; vocabId: string; choice: 'learn' | 'skip'; }
     | { type: 'SET_NEXT_KANJI'; payload: { step: number; kanjis: string[] } | null; }
     | { type: 'LEARN_NEXT_KANJI'; payload: UserProgress }
+    | { type: 'BUILD_SESSION_QUEUE'; payload: { queue: PendingQuizItem[]; builtAt: number } }
+    | { type: 'SHIFT_SESSION_QUEUE' }
+    | { type: 'APPEND_TO_SESSION_QUEUE'; payload: PendingQuizItem }
     | { type: 'RESET_DAILY_STATS' };
 
 const initialState: QuizState = {
@@ -99,6 +104,8 @@ const initialState: QuizState = {
     isLoadingVocab: false,
     isEvaluatingAi: false,
     introCandidates: [],
+    sessionQueue: [],
+    sessionBuiltAt: null,
     nextKanjiToLearn: null,
     sessionHistory: [],
     fatalError: null,
@@ -153,6 +160,34 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 nextKanjiToLearn: action.payload
             };
 
+        case 'BUILD_SESSION_QUEUE':
+            return {
+                ...state,
+                sessionQueue: action.payload.queue,
+                sessionBuiltAt: action.payload.builtAt
+            };
+
+        case 'SHIFT_SESSION_QUEUE':
+            return {
+                ...state,
+                sessionQueue: state.sessionQueue.slice(1)
+            };
+
+        case 'APPEND_TO_SESSION_QUEUE':
+            // Insert randomly into the remaining queue so retries aren't back-to-back
+            const remaining = [...state.sessionQueue];
+            let insertPos = 0;
+            if (remaining.length > 0) {
+                // If only 1 item left, it will just append. Otherwise random insert anywhere after the immediate next item.
+                insertPos = remaining.length <= 1 ? remaining.length : Math.floor(Math.random() * (remaining.length - 1)) + 1;
+            }
+            remaining.splice(insertPos, 0, action.payload);
+
+            return {
+                ...state,
+                sessionQueue: remaining
+            };
+
         case 'LEARN_NEXT_KANJI':
             return {
                 ...state,
@@ -193,6 +228,7 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 progress: action.payload.progress,
                 feedback: null,
                 userAnswer: '',
+                sessionQueue: state.sessionQueue.slice(1), // Remove the answered item
                 sessionHistory: [action.payload.historyItem, ...state.sessionHistory].slice(0, 50),
             };
 
@@ -294,7 +330,7 @@ export interface QuizContextValue {
     actions: {
         setupComplete(values: SetupValues): Promise<void>;
         setAnswer(answer: string): void;
-        submitAnswer(): Promise<void>; // [MODIFIED] Now async
+        submitAnswer(): Promise<void>;
         advanceQueue({ now, overrideDailyLimit }: { now: Date, overrideDailyLimit?: boolean }): void;
         continueToNext(): Promise<void>;
         saveSettings(settings: UserSettings): void;
@@ -302,6 +338,7 @@ export interface QuizContextValue {
         overrideDailyLimit(): Promise<void>;
         saveVocabIntroChoice(vocabulary: Vocabulary, choice: 'learn' | 'skip'): void
         learnNextKanji(): Promise<void>;
+        buildSessionQueue(now: Date): void;
         reset(): void;
     };
 
@@ -508,11 +545,13 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                                 state.userAnswer
                             );
 
-                            if (aiEvaluation.correct) {
-                                result = 'correct';
+                            if (aiEvaluation.result === 'correct' || aiEvaluation.result === 'minor_error') {
+                                result = aiEvaluation.result;
                                 // We overwrite the matched answer internally so SRSService stores the user's explicit accepted answer
                                 matchedAnswer = state.userAnswer;
-                                message = `Correct. (AI Validated: ${aiEvaluation.reason})`;
+                                message = result === 'correct'
+                                    ? `Correct. (AI Validated: ${aiEvaluation.reason})`
+                                    : `Close. (AI Validated: ${aiEvaluation.reason})`;
                             } else {
                                 // If AI still says it's wrong, keep the original strict failure or append the AI reason
                                 if (aiEvaluation.reason) {
@@ -696,6 +735,15 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 return updated;
             });
 
+            // If they got it wrong, explicitly re-insert into the sessionQueue via APPEND
+            // The actual removal from queue is handled by the UPDATE_AFTER_ANSWER slice
+            if (!state.feedback.correct) {
+                dispatch({
+                    type: "APPEND_TO_SESSION_QUEUE",
+                    payload: state.currentQuizItem
+                });
+            }
+
             dispatch({
                 type: "UPDATE_AFTER_ANSWER",
                 payload: {
@@ -751,6 +799,11 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             };
 
             dispatch({ type: 'LEARN_NEXT_KANJI', payload: updatedProgress });
+        },
+
+        async buildSessionQueue(now) {
+            // Keep action stub for manual invocation if needed by external, though useEffect mostly handles it
+            dispatch({ type: 'BUILD_SESSION_QUEUE', payload: { queue: [], builtAt: now.getTime() } });
         },
 
         reset() {
