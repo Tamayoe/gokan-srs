@@ -121,12 +121,27 @@ async function main() {
             }
         }
 
-        if (!jpdbEntry?.kanjiRank) continue;
+        // If JPDB doesn't have an entry, we still keep the word!
+        // We just give it a bottom-tier frequency so it can still be learned or searched via KKLC
+        if (!jpdbEntry?.kanjiRank) {
+            jpdbEntry = {
+                kanjiRank: 999999,
+                hiraganaRank: 999999
+            };
+        }
 
-        const kklcStep = Math.max(
-            ...containedKanji.map(k => kklcMap.get(k) ?? 0),
-        );
-        if (!kklcStep) continue;
+        let hasNonKKLC = false;
+        let kklcStep = 0;
+        for (const k of containedKanji) {
+            const step = kklcMap.get(k);
+            if (!step) {
+                hasNonKKLC = true;
+            } else {
+                kklcStep = Math.max(kklcStep, step);
+            }
+        }
+        if (hasNonKKLC) kklcStep = 99999;
+        if (!kklcStep) continue; // Only skip if no kanji mapped at all
 
         const alternativeReadings = entry.kana
             .map(k => k.text)
@@ -155,7 +170,7 @@ async function main() {
                 alternatives: alternativeReadings,
             },
             frequency: {
-                kanjiRank: jpdbEntry.kanjiRank,
+                kanjiRank: jpdbEntry.kanjiRank!,
                 kanaRank: jpdbEntry.hiraganaRank,
             },
             progression: {

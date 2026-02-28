@@ -603,6 +603,7 @@
     "vocabIds": [
       "1483070",
       "2827561",
+      "1609500",
       "1483150",
       "1000420",
       "1409140",
@@ -633,6 +634,10 @@
       "1592500": {
         "start": 21,
         "length": 2
+      },
+      "1609500": {
+        "start": 8,
+        "length": 3
       },
       "2827561": {
         "start": 2,
@@ -1237,26 +1242,21 @@
     ],
     "indices": "血 を 見る と 具合 が 悪い(わるい){悪く} 成る[01]{なる}",
     "vocabIds": [
-      "1255060",
-      "1259290",
+      "2866455",
       "1592500",
       "2691760"
     ],
     "matches": {
-      "1255060": {
-        "start": 0,
-        "length": 1
-      },
-      "1259290": {
-        "start": 2,
-        "length": 2
-      },
       "1592500": {
         "start": 5,
         "length": 2
       },
       "2691760": {
         "start": 8,
+        "length": 4
+      },
+      "2866455": {
+        "start": 0,
         "length": 4
       }
     }
@@ -1571,26 +1571,6 @@
     }
   },
   {
-    "id": "201010",
-    "original": "どこか具合がよくないのですか。",
-    "en": [
-      {
-        "id": "3658435",
-        "text": "Are you not feeling well?"
-      }
-    ],
-    "indices": "何処か[02]{どこか} 具合 が 良い{よくない} のです か",
-    "vocabIds": [
-      "1592500"
-    ],
-    "matches": {
-      "1592500": {
-        "start": 3,
-        "length": 2
-      }
-    }
-  },
-  {
     "id": "201198",
     "original": "どうもおなかの具合がよくない。",
     "en": [
@@ -1671,60 +1651,6 @@
       },
       "1592500": {
         "start": 4,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "212942",
-    "original": "そのテレビになにか具合の悪いところがありますか。",
-    "en": [
-      {
-        "id": "50227",
-        "text": "Is there anything wrong with that television?"
-      }
-    ],
-    "indices": "其の[01]{その} テレビ に 何か{なにか} 具合 の 悪い(わるい) 所(ところ){ところ} が[01] 有る{あります} か",
-    "vocabIds": [
-      "1592500",
-      "1151260"
-    ],
-    "matches": {
-      "1151260": {
-        "start": 12,
-        "length": 2
-      },
-      "1592500": {
-        "start": 9,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "214624",
-    "original": "ステーキの焼き具合は、いかがいたしましょうか。",
-    "en": [
-      {
-        "id": "51917",
-        "text": "How would you like your steak done?"
-      },
-      {
-        "id": "6976535",
-        "text": "How do you want your steak?"
-      }
-    ],
-    "indices": "ステーキ の 焼く[01]{焼き} 具合 は 如何(いかが){いかが} 致す{いたし} ましょうか",
-    "vocabIds": [
-      "2265630",
-      "1592500"
-    ],
-    "matches": {
-      "1592500": {
-        "start": 7,
-        "length": 2
-      },
-      "2265630": {
-        "start": 5,
         "length": 2
       }
     }
@@ -1974,42 +1900,6 @@
       },
       "1592500": {
         "start": 6,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "1099174",
-    "original": "ステーキの焼き具合はどうなさいますか。",
-    "en": [
-      {
-        "id": "51914",
-        "text": "How would you like your steak?"
-      },
-      {
-        "id": "51917",
-        "text": "How would you like your steak done?"
-      },
-      {
-        "id": "328805",
-        "text": "How would you like your steak cooked?"
-      },
-      {
-        "id": "6976535",
-        "text": "How do you want your steak?"
-      }
-    ],
-    "vocabIds": [
-      "2265630",
-      "1592500"
-    ],
-    "matches": {
-      "1592500": {
-        "start": 7,
-        "length": 2
-      },
-      "2265630": {
-        "start": 5,
         "length": 2
       }
     }

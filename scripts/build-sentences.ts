@@ -3,6 +3,7 @@ import path from 'path';
 import readline from 'readline';
 import type { Vocabulary } from '../src/models/vocabulary.model';
 import type { Sentence } from '../src/models/sentence.model';
+import kuromoji from 'kuromoji';
 
 // --- Configuration ---
 const INPUT_SENTENCES_FILE = './data/raw/Sentence pairs in Japanese-English - 2026-02-15.tsv';
@@ -142,11 +143,22 @@ async function main() {
     let sentenceCount = 0;
     const progressInterval = 5000;
 
-    // Importing Deinflector dynamically or we need to compile it?
-    // Since this script runs via bun, we can just import the .ts file if supported?
-    // Bun supports TS natively. But we need relative path from scripts/ to src/utils/
-    // Let's assume standard import works.
-    const { Deinflector } = await import('../src/utils/deinflector');
+    // Initialize Kuromoji Tokenizer
+    console.log('⏳ Initializing Kuromoji tokenizer...');
+    const { SentenceTokenizer } = await import('../src/utils/tokenizer');
+    const kuromoji = await import('kuromoji');
+
+    // Create a promise to build the tokenizer
+    const tokenizer = await new Promise<kuromoji.Tokenizer<kuromoji.IpadicFeatures>>((resolve, reject) => {
+        kuromoji.default.builder({ dicPath: 'node_modules/kuromoji/dict' }).build((err, t) => {
+            if (err) reject(err);
+            else resolve(t);
+        });
+    });
+
+    console.log('✅ Kuromoji ready!');
+
+    const sentenceTokenizer = new SentenceTokenizer(tokenizer as any);
 
     for (const [_, sentence] of sentencesMap) {
         sentenceCount++;
@@ -163,73 +175,22 @@ async function main() {
         // implying one match per vocab. 
         // If a word appears twice, we'll just store the FIRST one (or best one).
         // For learning purposes, highlighting the first occurrence is sufficient.
+        // Extract matches using our tested SentenceTokenizer logic against known vocab keys
+        const vocabKeys = Array.from(vocabMap.keys());
+        const extractedMatches = sentenceTokenizer.extractMatches(text, vocabKeys);
+
         const matches: Record<string, { start: number, length: number }> = {};
         const matchedVocabIds: string[] = [];
 
-        // Greedy matching with Deinflection
-        // Iterate through every character position in sentence
-        for (let i = 0; i < text.length; i++) {
-            if (coveredIndices[i]) continue; // Skip if already claimed by a longer match? 
-            // Actually, we want longest match at this position.
+        for (const [matchedTerm, matchInfo] of Object.entries(extractedMatches)) {
+            const vocabIds = vocabMap.get(matchedTerm);
+            if (!vocabIds) continue;
 
-            // We need to find the longest vocab that matches starting at i
-            // But we don't know the length.
-            // We can iterate sortedVocab? Too slow (20k * len).
-
-            // Better approach for build script (offline):
-            // Check substrings starting at i of varying lengths (e.g. 10 chars down to 1)
-            // Deinflect the substring.
-            // Check if deinflected term is in vocabMap.
-
-            let bestMatch: { vocabIds: string[], length: number, term: string } | null = null;
-
-            // Try lengths from 15 down to 1 (Japanese words rarely exceed 15 chars)
-            const maxLen = Math.min(15, text.length - i);
-
-            for (let len = maxLen; len >= 1; len--) {
-                const substring = text.substring(i, i + len);
-
-                // 1. Direct Match?
-                if (vocabMap.has(substring)) {
-                    // Found a match!
-                    bestMatch = { vocabIds: vocabMap.get(substring)!, length: len, term: substring };
-                    break; // Found longest at this position (since we go desc)
+            for (const vId of vocabIds) {
+                if (!matches[vId]) {
+                    matches[vId] = matchInfo;
+                    matchedVocabIds.push(vId);
                 }
-
-                // 2. Deinflection Match?
-                // Only deinflect if not hiragana/katakana only? (Optional optimization)
-                // But verbs are often hiragana+kanji.
-
-                const candidates = Deinflector.deinflect(substring);
-                for (const candidate of candidates) {
-                    if (vocabMap.has(candidate.term)) {
-                        // Found a match via deinflection!
-                        // e.g. substring "食べました" (len 5) -> "食べる" (vocab)
-                        bestMatch = { vocabIds: vocabMap.get(candidate.term)!, length: len, term: candidate.term };
-                        break;
-                    }
-                }
-
-                if (bestMatch) break;
-            }
-
-            if (bestMatch) {
-                // We found a match starting at i
-                // Mark indices as covered
-                for (let k = 0; k < bestMatch.length; k++) {
-                    coveredIndices[i + k] = true;
-                }
-
-                // Store match
-                for (const vId of bestMatch.vocabIds) {
-                    if (!matches[vId]) {
-                        matches[vId] = { start: i, length: bestMatch.length };
-                        matchedVocabIds.push(vId);
-                    }
-                }
-
-                // Advance i (minus 1 because loop increments)
-                i += bestMatch.length - 1;
             }
         }
 

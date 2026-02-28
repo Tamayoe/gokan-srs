@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# 語感 — Gokan SRS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Japanese vocabulary learning app built around a custom Spaced Repetition System. The name 語感 (*gokan*) means "sense of language," the intuitive feel for a language that comes from repeated, deliberate exposure.
 
-Currently, two official plugins are available:
+The app was built to scratch a very specific itch: every existing SRS tool treats vocabulary as a flat list. This one doesn't. Words are unlocked based on which kanji you actually know, so you're never tested on a word you couldn't possibly read.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What it does
 
-## React Compiler
+**Kanji-aware progression.** The app maps your KKLC study progress to the vocabulary it unlocks. If you haven't studied a kanji yet, words containing it stay hidden.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Two-phase SRS.** Each word is tested separately for reading (type the hiragana) and meaning (recall the English gloss from a real sentence). Reviews are staggered so the two phases don't bleed into each other.
 
-## Expanding the ESLint configuration
+**Adaptive scheduling.** The SRS algorithm is custom, grounded in research on spaced repetition effects in second-language acquisition (Kim, 2022). It tracks per-word difficulty and response latency: a slow correct answer schedules a shorter interval than a fast one. The algorithm converges on a 75% recall target, which the literature identifies as the optimal point for long-term retention without over-reviewing.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Sentence context.** A batch data pipeline links each word to real Japanese sentences. Meaning quizzes present the word in context, not in isolation. When your answer doesn't match any dictionary gloss, a Gemini Flash call determines whether it's semantically correct in context, handling paraphrases gracefully.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**No backend.** Progress syncs to a private Google Drive file via OAuth. The SRS engine runs entirely in the browser.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Mobile-first, accessible.** The app is designed to be used on a phone during a commute as naturally as at a desk. Layouts are fully responsive, touch targets are deliberately sized, and keyboard navigation is a first-class concern throughout the quiz flow.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Stack
+
+| Layer | Technology |
+|---|---|
+| UI | React 19 + TypeScript |
+| Styling | Tailwind CSS v4 |
+| Animations | Framer Motion |
+| Build | Vite (rolldown-vite) + Bun |
+| Testing | Vitest |
+| Auth | Google OAuth |
+| Hosting | AWS S3 + CloudFront |
+| CI/CD | GitHub Actions |
+
+## Data pipeline
+
+The vocabulary dataset is pre-compiled from raw sources at build time, not fetched at runtime. The pipeline processes JMDict (the standard Japanese dictionary), cross-references JPDB frequency data, merges homograph entries, and uses a morphological analyzer (Kuromoji, a port of MeCab) to tokenize 230,000 real sentences and link each to the relevant vocabulary. The resulting ~37,000 word files and ~32,000 sentence files are served as static JSON from S3.
+
+This keeps the client lean, latency-free on reviews, and the hosting bill near zero.
+
+## Infrastructure
+
+GitHub Actions runs tests before deploying. On success, Vite builds the SPA, the artifact is synced to S3 with split cache-control policies (hashed assets get `immutable`, HTML gets `must-revalidate`), and a CloudFront invalidation ensures users on mobile don't hold stale data.
+
+## Running locally
+
+```bash
+bun install
+bun run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To rebuild the vocabulary dataset from raw sources:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+bun run build:data
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Tests:
+
+```bash
+bun test
 ```
