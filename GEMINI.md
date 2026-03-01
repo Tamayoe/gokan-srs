@@ -667,6 +667,15 @@ return 'exhausted'
   - **Build Data Fixes**:
     - Removed `build-vocabulary.ts` and `build-sentences.ts` from being run natively, recognizing that `build-data.ts` builds the final output unified schema. Ported all feature additions into `build-data.ts`.
 
+- **[2026-03-01]**:
+  - **Monorepo Foundation (Phase 0)**:
+    - **Turborepo Monorepo**: Restructured the project root into a Turborepo workspace. `package.json` at root is now the workspace root. Apps live in `apps/*`, shared code in `packages/*`.
+    - **`packages/core/`**: All shared TypeScript business logic extracted here: models, services (SRS, migration, storage, vocabulary, google, LLM, quiz), utils, and constants. Key adaptations: `StorageService` now uses an injected `StorageAdapter` interface (web: `localStorage`, mobile: MMKV); `VocabularyService` uses an injected `FetchAdapter` interface (web: browser fetch, mobile: Expo FileSystem); `MigrationService` uses `VocabularyService.fetchMergedMap()` instead of a hardcoded browser `fetch()`.
+    - **`apps/web/`**: Current web app moved here. All relative cross-domain imports (`../models/...`, `../../services/...`, etc.) replaced with `@gokan-srs/core/...` subpath imports. Web-only files kept in `apps/web/src/`: `commons/theme.ts`, `models/state.model.ts`, `models/data.model.ts`. `tsconfig.app.json` extended with `paths` aliases pointing to `packages/core/src/*`.
+    - **Build**: Dev server runs from `apps/web/` with `bun run dev`. TypeScript reports 0 errors (Vite bundler mode). Web app fully functional and visually identical post-migration.
+    - **Constants**: Added `CONSTANTS.notifications.minItemsForNotification` (default: 5) to shared constants for mobile notification threshold.
+
+
 - **[2026-02-28]**:
   - **Data Build Pipeline Fix**:
     - **Vocabulary Dropping Bug**: Words with kanji outside the KKLC index (e.g. `顰蹙`) were silently dropped by two back-to-back filters in `build-data.ts`: the JPDB frequency requirement (`if (!jpdbEntry?.kanjiRank) continue`) and the KKLC step check (using `Math.max(...map(k => kklcMap.get(k) ?? 0))` which defaulted to 0 for unknown kanji). **Fix**: vocabulary without JPDB entry now receive a fallback `kanjiRank: 999999` (low priority, still included). Words whose kanji are outside the KKLC index now receive `kklcStep = 99999` (reachable via frequency sort, never via KKLC path). Applied to both `build-data.ts` and `build-vocabulary.ts`.

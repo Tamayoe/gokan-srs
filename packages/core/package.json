@@ -1,0 +1,21 @@
+{
+    "name": "@gokan-srs/core",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts",
+        "./models/*": "./src/models/*",
+        "./services/*": "./src/services/*",
+        "./utils/*": "./src/utils/*",
+        "./commons/*": "./src/commons/*"
+    },
+    "scripts": {
+        "typecheck": "tsc --noEmit",
+        "test": "vitest run"
+    },
+    "devDependencies": {
+        "typescript": "~5.9.3",
+        "vitest": "^4.0.17"
+    }
+}

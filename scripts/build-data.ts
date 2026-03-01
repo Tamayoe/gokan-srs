@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import readline from 'readline';
-import type { Sense, Vocabulary } from '../src/models/vocabulary.model';
-import type { Sentence } from '../src/models/sentence.model';
-import type { Kanji } from '../src/models/kanji.model';
+import type { Sense, Vocabulary } from '../packages/core/src/models/vocabulary.model';
+import type { Sentence } from '../packages/core/src/models/sentence.model';
+import type { Kanji } from '../packages/core/src/models/kanji.model';
 import type kuromoji from 'kuromoji';
-import { JMDict } from "../src/models/data.model";
+import { JMDict } from "../packages/core/src/models/data.model";
 import { buildMiscFlags } from './build-common';
 import { BUILD_LIMITS } from './build-constants';
 
@@ -43,7 +43,7 @@ async function main() {
     console.log('🏗️  Starting Unified Data Build...');
 
     // 0. Tokenizer Import (Dynamic)
-    const { SentenceTokenizer } = await import('../src/utils/tokenizer');
+    const { SentenceTokenizer } = await import('../packages/core/src/utils/tokenizer');
     const kuromoji = await import('kuromoji');
 
     console.log('⏳ Initializing Kuromoji tokenizer...');

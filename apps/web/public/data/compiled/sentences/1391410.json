@@ -1,0 +1,74 @@
+[
+  {
+    "id": "222024",
+    "original": "この御茶は１０分間煎じてください。",
+    "en": [
+      {
+        "id": "59348",
+        "text": "Let the tea draw for ten minutes."
+      }
+    ],
+    "indices": "此の{この} お茶{御茶} は 分間 煎じる{煎じて} 下さい{ください}",
+    "vocabIds": [
+      "1270190",
+      "1422570",
+      "2386360",
+      "1391410"
+    ],
+    "matches": {
+      "1270190": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1391410": {
+        "start": 9,
+        "length": 2,
+        "reading": "せんじ"
+      },
+      "1422570": {
+        "start": 3,
+        "length": 1,
+        "reading": "ちゃ"
+      },
+      "2386360": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふんかん"
+      }
+    }
+  },
+  {
+    "id": "223934",
+    "original": "このお茶は、１０分間煎じなさい。",
+    "en": [
+      {
+        "id": "59348",
+        "text": "Let the tea draw for ten minutes."
+      }
+    ],
+    "indices": "此の{この} お茶[01] は 分間 煎じる{煎じ}~ 為さい{なさい}",
+    "vocabIds": [
+      "1002430",
+      "2386360",
+      "1391410"
+    ],
+    "matches": {
+      "1002430": {
+        "start": 2,
+        "length": 2,
+        "reading": "おちゃ"
+      },
+      "1391410": {
+        "start": 10,
+        "length": 2,
+        "reading": "せんじ"
+      },
+      "2386360": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふんかん"
+      }
+    }
+  }
+]

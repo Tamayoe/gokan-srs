@@ -1,0 +1,134 @@
+import { THEME } from "../../../commons/theme";
+import type { UserProgress } from "@gokan-srs/core/models/user.model";
+import { useMemo } from "react";
+
+interface ReviewForecastProps {
+    progress: UserProgress;
+}
+
+export function ReviewForecast({ progress }: ReviewForecastProps) {
+    const forecast = useMemo(() => {
+        const queue = progress.learningQueue || [];
+        const daysToShow = 7;
+        const now = new Date();
+        const buckets: { label: string, readingCount: number, meaningCount: number, date: Date }[] = [];
+
+        // Initialize buckets: 0 = Due Now, 1 = Later Today, 2 = Tomorrow, ... 7 = Day 6
+        buckets.push({ label: 'Now', readingCount: 0, meaningCount: 0, date: now });
+        buckets.push({ label: 'Later', readingCount: 0, meaningCount: 0, date: now });
+
+        for (let i = 1; i < daysToShow; i++) {
+            const d = new Date(now);
+            d.setDate(now.getDate() + i);
+            d.setHours(0, 0, 0, 0); // Normalize to midnight
+
+            const label = i === 1 ? 'Tomorrow' : d.toLocaleDateString('en-US', { weekday: 'short' });
+            buckets.push({ label, readingCount: 0, meaningCount: 0, date: d });
+        }
+
+        // Aggregate
+        queue.forEach(v => {
+            // Helper to place item in bucket
+            const placeInBucket = (dueDate: Date, isReading: boolean) => {
+                if (dueDate <= now) {
+                    // Due Now -> Bucket 0
+                    if (isReading) buckets[0].readingCount++;
+                    else buckets[0].meaningCount++;
+                } else {
+                    const dueDay = new Date(dueDate);
+                    dueDay.setHours(0, 0, 0, 0);
+
+                    const nowDay = new Date(now);
+                    nowDay.setHours(0, 0, 0, 0);
+
+                    if (dueDay.getTime() === nowDay.getTime()) {
+                        // Later Today -> Bucket 1
+                        if (isReading) buckets[1].readingCount++;
+                        else buckets[1].meaningCount++;
+                    } else {
+                        // Future Day -> Find matching bucket
+                        const bucket = buckets.find(b => b.date.getTime() === dueDay.getTime() && b.label !== 'Now' && b.label !== 'Later');
+                        if (bucket) {
+                            if (isReading) bucket.readingCount++;
+                            else bucket.meaningCount++;
+                        }
+                    }
+                }
+            };
+
+            // [BUGFIX] Ignore items that are already graduated, in case they have a legacy buggy dueDate
+            if (v.stage !== 'graduated') {
+                if (v.reading.dueDate) placeInBucket(new Date(v.reading.dueDate), true);
+                if (v.meaning.dueDate) placeInBucket(new Date(v.meaning.dueDate), false);
+            }
+        });
+
+        // Calculate max for scaling (min 10)
+        // Sum of reading + meaning for total height
+        const maxCount = Math.max(10, ...buckets.map(b => b.readingCount + b.meaningCount));
+
+        return { buckets, maxCount };
+    }, [progress]);
+
+    return (
+        <div className="w-full flex justify-between items-end h-[200px] gap-2 py-4 relative">
+            {/* Background Grid */}
+            <div className="absolute inset-0 w-full h-full pointer-events-none z-0 flex flex-col justify-between py-4 pl-4">
+                <div className="w-full h-px border-t border-dashed border-divider/50"></div>
+                <div className="w-full h-px border-t border-dashed border-divider/50"></div>
+                <div className="w-full h-px border-t border-dashed border-divider/50"></div>
+            </div>
+
+            {forecast.buckets.map((bucket, i) => {
+                const total = bucket.readingCount + bucket.meaningCount;
+                const readingHeight = (bucket.readingCount / forecast.maxCount) * 100;
+                const meaningHeight = (bucket.meaningCount / forecast.maxCount) * 100;
+
+                return (
+                    <div key={i} className="flex flex-col items-center flex-1 min-w-0 h-full justify-end group z-10">
+                        <div className="relative w-full flex flex-col justify-end items-center flex-1 mb-2 max-w-[28px]">
+                            {/* Stacked Bars Container */}
+                            <div className="w-full flex flex-col-reverse items-center justify-end h-full">
+
+                                {/* Reading Bar (Bottom) */}
+                                <div
+                                    className={`w-full transition-all duration-300 relative rounded-b-sm ${bucket.meaningCount === 0 ? 'rounded-t-sm' : ''}`}
+                                    style={{
+                                        height: `${readingHeight}%`,
+                                        backgroundColor: THEME.mastery.reading.loop1
+                                    }}
+                                >
+                                </div>
+
+                                {/* Meaning Bar (Top) */}
+                                <div
+                                    className={`w-full transition-all duration-300 relative rounded-t-sm ${bucket.readingCount === 0 ? 'rounded-b-sm' : ''}`}
+                                    style={{
+                                        height: `${meaningHeight}%`,
+                                        backgroundColor: THEME.mastery.meaning.loop1
+                                    }}
+                                >
+                                </div>
+                            </div>
+
+                            {/* Total Label (Top) */}
+                            <span className="text-xs font-bold mb-1 opacity-0 group-hover:opacity-100 transition-opacity absolute -top-6 text-gray-600 dark:text-gray-400">
+                                {total}
+                            </span>
+                        </div>
+
+                        <span className="text-[10px] sm:text-xs text-secondary font-medium mt-2 w-full text-center truncate px-0.5">
+                            <span className="sm:hidden">{bucket.label.charAt(0)}</span>
+                            <span className="hidden sm:inline">{bucket.label}</span>
+                        </span>
+
+                        {/* Legend/Total Text at bottom */}
+                        <div className="flex flex-col items-center w-full text-[10px] text-tertiary mt-1 leading-none truncate overflow-hidden">
+                            <span>{i === 0 && total > 0 ? '(Due)' : total > 0 ? total : '-'}</span>
+                        </div>
+                    </div>
+                );
+            })}
+        </div>
+    );
+}

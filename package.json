@@ -1,30 +1,21 @@
 {
-  "name": "gokan-srs",
+  "name": "gokan-srs-monorepo",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "packageManager": "bun@1.2.18",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "typecheck": "tsc --build --pretty false",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "build:data": "rimraf ./public/data/compiled/vocab && rimraf ./public/data/compiled/sentences && bun run build:kanji && bun scripts/build-data.ts",
+    "dev": "turbo dev --filter=@gokan-srs/web",
+    "build": "turbo build",
+    "test": "bun test",
+    "typecheck": "turbo typecheck",
+    "lint": "turbo lint",
+    "build:data": "bun run build:kanji && bun scripts/build-data.ts",
     "build:kanji": "bun scripts/build-kanji.ts",
-    "build:jpdb": "node scripts/jpdb-v2.2-tsv-to-json.js",
-    "test": "vitest run",
-    "test:watch": "vitest"
-  },
-  "dependencies": {
-    "@react-oauth/google": "^0.13.4",
-    "framer-motion": "^12.26.2",
-    "lucide-react": "^0.562.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-router-dom": "^7.13.0",
-    "react-virtuoso": "^4.18.1",
-    "rimraf": "^6.1.2",
-    "terser": "^5.44.1"
+    "build:jpdb": "node scripts/jpdb-v2.2-tsv-to-json.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -43,13 +34,8 @@
     "postcss": "^8.5.6",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
+    "turbo": "^2.5.4",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "npm:rolldown-vite@7.2.5",
-    "vite-plugin-checker": "^0.12.0",
     "vitest": "^4.0.17"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@7.2.5"
   }
 }
