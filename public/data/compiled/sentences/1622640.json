@@ -11,21 +11,30 @@
     "indices": "彼(かれ)[01] は 誓う{誓って} 無事 だ と 言う{いった}",
     "vocabIds": [
       "1483070",
+      "1381210",
       "1622640",
       "1530030"
     ],
     "matches": {
+      "1381210": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちかっ"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1530030": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぶじ"
       },
       "1622640": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ちかって"
       }
     }
   },
@@ -41,21 +50,30 @@
     "indices": "天地神明~ に 誓う{誓って} 嘘[01] です{ではありません}",
     "vocabIds": [
       "1439840",
+      "1381210",
       "1622640",
       "1172400"
     ],
     "matches": {
       "1172400": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "うそ"
+      },
+      "1381210": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちかっ"
       },
       "1439840": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "てんちしんめい"
       },
       "1622640": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ちかって"
       }
     }
   },
@@ -70,17 +88,25 @@
     ],
     "indices": "誓う{誓って} 私(わたし)[01] は 其れ[01]{それ} を 為る(する){します}",
     "vocabIds": [
+      "1381210",
       "1622640",
       "1311110"
     ],
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1381210": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちかっ"
       },
       "1622640": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ちかって"
       }
     }
   },
@@ -95,17 +121,76 @@
     ],
     "indices": "誓う{誓って} 言う{いいます} が 其の[01]{その} 事(こと){こと} は 口外 為る(する){していません}",
     "vocabIds": [
+      "1381210",
       "1622640",
       "1275910"
     ],
     "matches": {
       "1275910": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こうがい"
+      },
+      "1381210": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちかっ"
       },
       "1622640": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ちかって"
+      }
+    }
+  },
+  {
+    "id": "144932",
+    "original": "神に誓って私はそれを知らなかった。",
+    "en": [
+      {
+        "id": "269631",
+        "text": "By God, I never knew that."
+      }
+    ],
+    "indices": "神に誓って~ 私(わたし)[01] は 其れ[01]{それ} を 知る{知らなかった}",
+    "vocabIds": [
+      "1364440",
+      "2850305",
+      "1381210",
+      "1622640",
+      "1311110",
+      "1420470"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 5,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1364440": {
+        "start": 0,
+        "length": 1,
+        "reading": "かみ"
+      },
+      "1381210": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちかっ"
+      },
+      "1420470": {
+        "start": 10,
+        "length": 2,
+        "reading": "しら"
+      },
+      "1622640": {
+        "start": 2,
+        "length": 3,
+        "reading": "ちかって"
+      },
+      "2850305": {
+        "start": 0,
+        "length": 5,
+        "reading": "かみにちかって"
       }
     }
   },
@@ -121,21 +206,30 @@
     "indices": "私(わたし)[01] は 誓う{誓って} 嘘[01] は 言う{いいません}",
     "vocabIds": [
       "1311110",
+      "1381210",
       "1622640",
       "1172400"
     ],
     "matches": {
       "1172400": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "うそ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1381210": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちかっ"
       },
       "1622640": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ちかって"
       }
     }
   },
@@ -152,6 +246,7 @@
     "vocabIds": [
       "1311110",
       "1523060",
+      "1381210",
       "1622640",
       "1483090",
       "1359040"
@@ -159,23 +254,33 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1359040": {
         "start": 19,
-        "length": 4
+        "length": 2,
+        "reading": "しんじ"
+      },
+      "1381210": {
+        "start": 9,
+        "length": 2,
+        "reading": "ちかっ"
       },
       "1483090": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1523060": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ほんとう"
       },
       "1622640": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ちかって"
       }
     }
   },
@@ -192,6 +297,7 @@
     "vocabIds": [
       "1311110",
       "1313960",
+      "1381210",
       "1622640",
       "1483090",
       "1359040"
@@ -199,23 +305,78 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1313960": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じじつ"
       },
       "1359040": {
         "start": 18,
-        "length": 4
+        "length": 2,
+        "reading": "しんじ"
+      },
+      "1381210": {
+        "start": 9,
+        "length": 2,
+        "reading": "ちかっ"
       },
       "1483090": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1622640": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ちかって"
+      }
+    }
+  },
+  {
+    "id": "205055",
+    "original": "それは神に誓って真実である。",
+    "en": [
+      {
+        "id": "42298",
+        "text": "God knows that it is true."
+      }
+    ],
+    "indices": "其れ[01]{それ} は 神に誓って 真実 である",
+    "vocabIds": [
+      "1364440",
+      "2850305",
+      "1381210",
+      "1622640",
+      "1363780"
+    ],
+    "matches": {
+      "1363780": {
+        "start": 8,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1364440": {
+        "start": 3,
+        "length": 1,
+        "reading": "かみ"
+      },
+      "1381210": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちかっ"
+      },
+      "1622640": {
+        "start": 5,
+        "length": 3,
+        "reading": "ちかって"
+      },
+      "2850305": {
+        "start": 3,
+        "length": 5,
+        "reading": "かみにちかって"
       }
     }
   },
@@ -232,6 +393,7 @@
     "vocabIds": [
       "1363780",
       "1311110",
+      "1381210",
       "1622640",
       "2397090",
       "1587040",
@@ -240,27 +402,38 @@
     "matches": {
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1359040": {
         "start": 24,
-        "length": 4
+        "length": 2,
+        "reading": "しんじ"
       },
       "1363780": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1381210": {
+        "start": 9,
+        "length": 2,
+        "reading": "ちかっ"
       },
       "1587040": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "いう"
       },
       "1622640": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ちかって"
       },
       "2397090": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   }

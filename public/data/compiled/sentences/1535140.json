@@ -1,30 +1,5 @@
 [
   {
-    "id": "78588",
-    "original": "来年はお目にかかれるでしょう。",
-    "en": [
-      {
-        "id": "325127",
-        "text": "I'll be able to see you next year."
-      }
-    ],
-    "indices": "来年 は お目に掛かる[01]{お目にかかれる} でしょう[01]",
-    "vocabIds": [
-      "1548220",
-      "1535140"
-    ],
-    "matches": {
-      "1535140": {
-        "start": 3,
-        "length": 7
-      },
-      "1548220": {
-        "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
     "id": "80565",
     "original": "明日の午後にお目にかかりたいのですが。",
     "en": [
@@ -42,15 +17,57 @@
     "matches": {
       "1268990": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1535140": {
         "start": 6,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
+      }
+    }
+  },
+  {
+    "id": "80608",
+    "original": "明日このことについてお目にかからなくてはと思います。",
+    "en": [
+      {
+        "id": "323109",
+        "text": "I'd better see you about this tomorrow."
+      }
+    ],
+    "indices": "明日 此の{この} 事(こと){こと} に就いて{について} お目に掛かる[01]{お目にかからなくて} は と 思う{思います}",
+    "vocabIds": [
+      "1584660",
+      "1535140",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1535140": {
+        "start": 10,
+        "length": 6,
+        "reading": "おめにかから"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      },
+      "1589320": {
+        "start": 21,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 21,
+        "length": 2,
+        "reading": "おもい"
       }
     }
   },
@@ -71,11 +88,46 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1535140": {
         "start": 3,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
+      }
+    }
+  },
+  {
+    "id": "106856",
+    "original": "彼は在宅していますが、どなたにもお目にかかりません。",
+    "en": [
+      {
+        "id": "296830",
+        "text": "He is at home, but no one can see him."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 在宅 為る(する){しています} が 何方(どなた){どなた} にも お目に掛かる[01]{お目にかかりません}",
+    "vocabIds": [
+      "1483070",
+      "1296540",
+      "1535140"
+    ],
+    "matches": {
+      "1296540": {
+        "start": 2,
+        "length": 2,
+        "reading": "ざいたく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1535140": {
+        "start": 16,
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -96,41 +148,40 @@
     "matches": {
       "1535140": {
         "start": 5,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       },
       "2209730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こすぎ"
       }
     }
   },
   {
-    "id": "150288",
-    "original": "次の月曜日にお目にかかれるでしょうか。",
+    "id": "147563",
+    "original": "初めてお目にかかります。",
     "en": [
       {
-        "id": "264269",
-        "text": "Will I be able to see you next Monday?"
+        "id": "266997",
+        "text": "I am glad to make your acquaintance."
       }
     ],
-    "indices": "次(つぎ)[01]{次の} 月曜日 に お目に掛かる[01]{お目にかかれる} でしょうか",
+    "indices": "初めて お目に掛かる[01]{お目にかかります}",
     "vocabIds": [
-      "1316380",
-      "1255890",
+      "1342550",
       "1535140"
     ],
     "matches": {
-      "1255890": {
-        "start": 2,
-        "length": 3
-      },
-      "1316380": {
+      "1342550": {
         "start": 0,
-        "length": 1
+        "length": 3,
+        "reading": "はじめて"
       },
       "1535140": {
-        "start": 6,
-        "length": 7
+        "start": 3,
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -158,58 +209,28 @@
     "matches": {
       "1268990": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1387990": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1486440": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "びじゅつ"
       },
       "1535140": {
         "start": 12,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       },
       "1579110": {
         "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "161781",
-    "original": "私はあなたにここでお目にかかれるとは夢にも思いませんでした。",
-    "en": [
-      {
-        "id": "252735",
-        "text": "I never dreamed of seeing you here."
-      }
-    ],
-    "indices": "私(わたし)[01] は 貴方(あなた)[01]{あなた} に 此処[01]{ここ} で(#2028980) お目に掛かる[01]{お目にかかれる} とは 夢にも 思う{思いませんでした}",
-    "vocabIds": [
-      "1311110",
-      "1535140",
-      "1529420",
-      "1589320"
-    ],
-    "matches": {
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1529420": {
-        "start": 18,
-        "length": 3
-      },
-      "1535140": {
-        "start": 9,
-        "length": 7
-      },
-      "1589320": {
-        "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -224,17 +245,25 @@
     ],
     "indices": "私たち は 軈て[01]{やがて}~ 又{また} 貴方(あなた)[01]{あなた} に お目に掛かる[01]{お目にかかる} でしょう[01]",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1535140"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1535140": {
         "start": 13,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
       }
     }
   },
@@ -249,22 +278,37 @@
     ],
     "indices": "私たち は 貴方(あなた)[01]{あなた} に お目に掛かる[01]{お目にかかる} 為に[01]{ために} 伺う[01]{伺いました}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1535140",
+      "1305700",
       "1859890"
     ],
     "matches": {
+      "1305700": {
+        "start": 17,
+        "length": 2,
+        "reading": "うかがい"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1535140": {
         "start": 8,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
       },
       "1859890": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "うかがい"
       }
     }
   },
@@ -286,15 +330,18 @@
     "matches": {
       "1002590": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "おとうさん"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1535140": {
         "start": 7,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -309,6 +356,7 @@
     ],
     "indices": "近いうちに もう一度 お目に掛かる[01]{お目にかかる} の を 楽しみにする{楽しみにしています}",
     "vocabIds": [
+      "1242130",
       "1242140",
       "2005860",
       "1535140",
@@ -317,19 +365,28 @@
     "matches": {
       "1207250": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
+      },
+      "1242130": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちかい"
       },
       "1242140": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ちかいうちに"
       },
       "1535140": {
         "start": 9,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
       },
       "2005860": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "もういちど"
       }
     }
   },
@@ -344,22 +401,37 @@
     ],
     "indices": "近いうちに 又{また} お目に掛かる[01]{お目にかかる} の を 楽しみに待つ{楽しみに待っています}",
     "vocabIds": [
+      "1242130",
       "1242140",
       "1535140",
-      "2105830"
+      "1207250",
+      "1410590"
     ],
     "matches": {
+      "1207250": {
+        "start": 15,
+        "length": 3,
+        "reading": "たのしみ"
+      },
+      "1242130": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちかい"
+      },
       "1242140": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ちかいうちに"
+      },
+      "1410590": {
+        "start": 19,
+        "length": 2,
+        "reading": "まっ"
       },
       "1535140": {
         "start": 7,
-        "length": 6
-      },
-      "2105830": {
-        "start": 15,
-        "length": 7
+        "length": 6,
+        "reading": "おめにかかる"
       }
     }
   },
@@ -381,15 +453,18 @@
     "matches": {
       "1223610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あなた"
       },
       "1535140": {
         "start": 3,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       },
       "1589350": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -411,15 +486,57 @@
     "matches": {
       "1192420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かない"
       },
       "1207250": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1535140": {
         "start": 3,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
+      }
+    }
+  },
+  {
+    "id": "187775",
+    "original": "何とか都合つけて来週お目にかかりましょう。",
+    "en": [
+      {
+        "id": "24915",
+        "text": "I'll manage to fit you in next week."
+      }
+    ],
+    "indices": "何とか 都合 付ける{つけて} 来週 お目に掛かる[01]{お目にかかりましょう}",
+    "vocabIds": [
+      "1188420",
+      "1444980",
+      "1548010",
+      "1535140"
+    ],
+    "matches": {
+      "1188420": {
+        "start": 0,
+        "length": 3,
+        "reading": "なんとか"
+      },
+      "1444980": {
+        "start": 3,
+        "length": 2,
+        "reading": "つごう"
+      },
+      "1535140": {
+        "start": 10,
+        "length": 6,
+        "reading": "おめにかかり"
+      },
+      "1548010": {
+        "start": 8,
+        "length": 2,
+        "reading": "らいしゅう"
       }
     }
   },
@@ -442,27 +559,19 @@
     ],
     "indices": "さん と言う{という} 人(ひと) が お目に掛かる[01]{お目にかかり} たい[01] そうだ[02]{そうです}",
     "vocabIds": [
-      "2252790",
-      "1449910",
       "1580640",
       "1535140"
     ],
     "matches": {
-      "1449910": {
-        "start": 1,
-        "length": 1
-      },
       "1535140": {
         "start": 9,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       },
       "1580640": {
         "start": 7,
-        "length": 1
-      },
-      "2252790": {
-        "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -488,15 +597,18 @@
     "matches": {
       "1155150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いぜん"
       },
       "1535140": {
         "start": 4,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       },
       "1589350": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -517,98 +629,46 @@
     "matches": {
       "1535140": {
         "start": 4,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       },
       "2005860": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "もういちど"
       }
     }
   },
   {
-    "id": "195300",
-    "original": "まもなくまたお目にかかれるのを楽しみにしています。",
+    "id": "195452",
+    "original": "また近いうちにお目にかかりましょう。",
     "en": [
       {
-        "id": "18712",
-        "text": "I'm looking forward to seeing you again before long."
+        "id": "435196",
+        "text": "Let's meet again soon."
       }
     ],
-    "indices": "間もなく[01]{まもなく} 又{また} お目に掛かる[01]{お目にかかれる} の を 楽しみにする{楽しみにしています}",
+    "indices": "又{また} 近いうちに お目に掛かる[01]{お目にかかりましょう}",
     "vocabIds": [
-      "1535140",
-      "1207250"
+      "1242130",
+      "1242140",
+      "1535140"
     ],
     "matches": {
-      "1207250": {
-        "start": 15,
-        "length": 3
-      },
-      "1535140": {
-        "start": 6,
-        "length": 7
-      }
-    }
-  },
-  {
-    "id": "2871629",
-    "original": "またお目にかかれるのを楽しみにしております。",
-    "en": [
-      {
-        "id": "32676",
-        "text": "I am looking forward to seeing you again."
-      },
-      {
-        "id": "32704",
-        "text": "I look forward to seeing you again."
-      },
-      {
-        "id": "257051",
-        "text": "I'm looking forward to seeing you again."
-      },
-      {
-        "id": "248298",
-        "text": "We look forward to seeing you again."
-      }
-    ],
-    "indices": "又{また} お目に掛かる[01]{お目にかかれる} の を 楽しみにする{楽しみに} 為る(する){して} 居る(おる)[02]{おります}",
-    "vocabIds": [
-      "1535140",
-      "1207250"
-    ],
-    "matches": {
-      "1207250": {
-        "start": 11,
-        "length": 3
-      },
-      "1535140": {
+      "1242130": {
         "start": 2,
-        "length": 7
-      }
-    }
-  },
-  {
-    "id": "195503",
-    "original": "またお目にかかれることを期待しています。",
-    "en": [
-      {
-        "id": "32677",
-        "text": "I hope to see you again."
-      }
-    ],
-    "indices": "又{また} お目に掛かる[01]{お目にかかれる} 事(こと){こと} を 期待 為る(する){しています}",
-    "vocabIds": [
-      "1535140",
-      "1220570"
-    ],
-    "matches": {
-      "1220570": {
-        "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちかい"
+      },
+      "1242140": {
+        "start": 2,
+        "length": 5,
+        "reading": "ちかいうちに"
       },
       "1535140": {
-        "start": 2,
-        "length": 7
+        "start": 7,
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -627,17 +687,79 @@
     ],
     "indices": "又{また} お目に掛かる[01]{お目にかかる} の を 楽しみにする{楽しみにしています}",
     "vocabIds": [
+      "2267210",
       "1535140",
+      "1604890",
+      "2217310",
       "1207250"
     ],
     "matches": {
       "1207250": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1535140": {
         "start": 2,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
+      },
+      "1604890": {
+        "start": 3,
+        "length": 1,
+        "reading": "め"
+      },
+      "2217310": {
+        "start": 3,
+        "length": 5,
+        "reading": "めにかかる"
+      },
+      "2267210": {
+        "start": 2,
+        "length": 2,
+        "reading": "おめ"
+      }
+    }
+  },
+  {
+    "id": "195507",
+    "original": "またお目にかかりましょう。",
+    "en": [
+      {
+        "id": "32635",
+        "text": "See you again."
+      }
+    ],
+    "indices": "又{また} お目に掛かる[01]{お目にかかりましょう}",
+    "vocabIds": [
+      "1535140"
+    ],
+    "matches": {
+      "1535140": {
+        "start": 2,
+        "length": 6,
+        "reading": "おめにかかり"
+      }
+    }
+  },
+  {
+    "id": "195524",
+    "original": "またいつかお目にかかりましょう。",
+    "en": [
+      {
+        "id": "32698",
+        "text": "I hope to see you sometime."
+      }
+    ],
+    "indices": "又{また} 何時か{いつか} お目に掛かる[01]{お目にかかりましょう}",
+    "vocabIds": [
+      "1535140"
+    ],
+    "matches": {
+      "1535140": {
+        "start": 5,
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -662,11 +784,13 @@
     "matches": {
       "1516930": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       },
       "1535140": {
         "start": 15,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -686,32 +810,47 @@
     "matches": {
       "1535140": {
         "start": 10,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
   {
-    "id": "224667",
-    "original": "ここでお目にかかれるとは思ってもいませんでした。",
+    "id": "215132",
+    "original": "ずいぶん長い間お目にかかりませんでした。",
     "en": [
       {
-        "id": "961590",
-        "text": "I didn't think I'd meet you here."
+        "id": "417019",
+        "text": "I haven't seen you for ages."
       }
     ],
-    "indices": "此処[01]{ここ} で(#2028980) お目に掛かる[01]{お目にかかれる} とは 思い{思って} も 居る(いる)[03]{いませんでした}",
+    "indices": "随分{ずいぶん} 長い間 お目に掛かる[01]{お目にかかりませんでした}",
     "vocabIds": [
-      "1535140",
-      "1589350"
+      "1429750",
+      "1429760",
+      "1215230",
+      "1535140"
     ],
     "matches": {
-      "1535140": {
-        "start": 3,
-        "length": 7
+      "1215230": {
+        "start": 6,
+        "length": 1,
+        "reading": "ま"
       },
-      "1589350": {
-        "start": 12,
-        "length": 3
+      "1429750": {
+        "start": 4,
+        "length": 2,
+        "reading": "ながい"
+      },
+      "1429760": {
+        "start": 4,
+        "length": 3,
+        "reading": "ながいま"
+      },
+      "1535140": {
+        "start": 7,
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -732,70 +871,13 @@
     "matches": {
       "1516930": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       },
       "1535140": {
         "start": 9,
-        "length": 8
-      }
-    }
-  },
-  {
-    "id": "226546",
-    "original": "お目にかかれるのを楽しみにお待ちしております。",
-    "en": [
-      {
-        "id": "63892",
-        "text": "I'm looking forward to seeing you."
-      },
-      {
-        "id": "17481",
-        "text": "I am looking forward to seeing you."
-      }
-    ],
-    "indices": "お目に掛かる[01]{お目にかかれる} の を 楽しみ{楽しみに} 待つ{お待ち} 為る(する)[12]{して} 居る(おる)[02]{おります}",
-    "vocabIds": [
-      "1535140",
-      "1207250",
-      "1640770"
-    ],
-    "matches": {
-      "1207250": {
-        "start": 9,
-        "length": 3
-      },
-      "1535140": {
-        "start": 0,
-        "length": 7
-      },
-      "1640770": {
-        "start": 14,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "226547",
-    "original": "お目にかかれることを望みます。",
-    "en": [
-      {
-        "id": "63893",
-        "text": "I hope to see you."
-      }
-    ],
-    "indices": "お目に掛かる[01]{お目にかかれる} 事(こと){こと} を 望む[01]{望みます}",
-    "vocabIds": [
-      "1535140",
-      "1519620"
-    ],
-    "matches": {
-      "1519620": {
-        "start": 10,
-        "length": 2
-      },
-      "1535140": {
-        "start": 0,
-        "length": 7
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -810,17 +892,37 @@
     ],
     "indices": "お目に掛かる[01]{お目にかかる} の を 楽しみにする{楽しみにしていました}",
     "vocabIds": [
+      "2267210",
       "1535140",
+      "1604890",
+      "2217310",
       "1207250"
     ],
     "matches": {
       "1207250": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1535140": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
+      },
+      "1604890": {
+        "start": 1,
+        "length": 1,
+        "reading": "め"
+      },
+      "2217310": {
+        "start": 1,
+        "length": 5,
+        "reading": "めにかかる"
+      },
+      "2267210": {
+        "start": 0,
+        "length": 2,
+        "reading": "おめ"
       }
     }
   },
@@ -835,17 +937,43 @@
     ],
     "indices": "お目に掛かる[01]{お目にかかる} の は 年ぶり です ね(#2029080)[01]",
     "vocabIds": [
+      "2267210",
       "1535140",
+      "1604890",
+      "2217310",
+      "2084840",
       "1468160"
     ],
     "matches": {
       "1468160": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ねんぶり"
       },
       "1535140": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
+      },
+      "1604890": {
+        "start": 1,
+        "length": 1,
+        "reading": "め"
+      },
+      "2084840": {
+        "start": 9,
+        "length": 1,
+        "reading": "ねん"
+      },
+      "2217310": {
+        "start": 1,
+        "length": 5,
+        "reading": "めにかかる"
+      },
+      "2267210": {
+        "start": 0,
+        "length": 2,
+        "reading": "おめ"
       }
     }
   },
@@ -860,17 +988,37 @@
     ],
     "indices": "お目に掛かる[01]{お目にかかる} のに 時間 は 有る{ありません}",
     "vocabIds": [
+      "2267210",
       "1535140",
+      "1604890",
+      "2217310",
       "1315920"
     ],
     "matches": {
       "1315920": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1535140": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
+      },
+      "1604890": {
+        "start": 1,
+        "length": 1,
+        "reading": "め"
+      },
+      "2217310": {
+        "start": 1,
+        "length": 5,
+        "reading": "めにかかる"
+      },
+      "2267210": {
+        "start": 0,
+        "length": 2,
+        "reading": "おめ"
       }
     }
   },
@@ -887,25 +1035,23 @@
     "vocabIds": [
       "1603990",
       "1535140",
-      "1853490",
-      "1640770"
+      "1853490"
     ],
     "matches": {
       "1535140": {
         "start": 8,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
       },
       "1603990": {
         "start": 6,
-        "length": 1
-      },
-      "1640770": {
-        "start": 21,
-        "length": 2
+        "length": 1,
+        "reading": "まち"
       },
       "1853490": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "こころから"
       }
     }
   },
@@ -923,24 +1069,34 @@
       "1535140",
       "1483070",
       "1218760",
+      "1589350",
       "1589320"
     ],
     "matches": {
       "1218760": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "よろこぶ"
       },
       "1483070": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1535140": {
         "start": 4,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
       },
       "1589320": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 19,
+        "length": 2,
+        "reading": "おもい"
       }
     }
   },
@@ -962,15 +1118,68 @@
     "matches": {
       "1406140": {
         "start": 17,
-        "length": 4
+        "length": 2,
+        "reading": "ぞんじ"
       },
       "1415000": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1535140": {
         "start": 4,
-        "length": 7
+        "length": 6,
+        "reading": "おめにかかっ"
+      }
+    }
+  },
+  {
+    "id": "467297",
+    "original": "お元気ですか？もう長い間、お目にかかりませんでしたね。",
+    "en": [
+      {
+        "id": "474091",
+        "text": "How are you doing? It's been a long time since we last met, hasn't it?"
+      }
+    ],
+    "vocabIds": [
+      "2272760",
+      "1260720",
+      "1429750",
+      "1429760",
+      "1215230",
+      "1535140"
+    ],
+    "matches": {
+      "1215230": {
+        "start": 11,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1260720": {
+        "start": 1,
+        "length": 2,
+        "reading": "げんき"
+      },
+      "1429750": {
+        "start": 9,
+        "length": 2,
+        "reading": "ながい"
+      },
+      "1429760": {
+        "start": 9,
+        "length": 3,
+        "reading": "ながいま"
+      },
+      "1535140": {
+        "start": 13,
+        "length": 6,
+        "reading": "おめにかかり"
+      },
+      "2272760": {
+        "start": 0,
+        "length": 6,
+        "reading": "おげんきですか"
       }
     }
   },
@@ -994,11 +1203,13 @@
     "matches": {
       "1207250": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1535140": {
         "start": 4,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
       }
     }
   },
@@ -1019,15 +1230,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1314400": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "じむしょ"
       },
       "1535140": {
         "start": 6,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -1046,16 +1260,56 @@
     ],
     "vocabIds": [
       "1535140",
+      "1589350",
       "1589320"
     ],
     "matches": {
       "1535140": {
         "start": 7,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
       },
       "1589320": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 15,
+        "length": 2,
+        "reading": "おもい"
+      }
+    }
+  },
+  {
+    "id": "4260428",
+    "original": "またぜひ近いうちにお目にかかりましょう。",
+    "en": [
+      {
+        "id": "4275764",
+        "text": "We should definitely meet again soon."
+      }
+    ],
+    "vocabIds": [
+      "1242130",
+      "1242140",
+      "1535140"
+    ],
+    "matches": {
+      "1242130": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちかい"
+      },
+      "1242140": {
+        "start": 4,
+        "length": 5,
+        "reading": "ちかいうちに"
+      },
+      "1535140": {
+        "start": 9,
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -1069,27 +1323,25 @@
       }
     ],
     "vocabIds": [
-      "1302680",
-      "1442730",
       "1270390",
+      "1579780",
       "1535140"
     ],
     "matches": {
       "1270390": {
         "start": 13,
-        "length": 3
-      },
-      "1302680": {
-        "start": 8,
-        "length": 1
-      },
-      "1442730": {
-        "start": 9,
-        "length": 1
+        "length": 3,
+        "reading": "ごしゅじん"
       },
       "1535140": {
         "start": 17,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
+      },
+      "1579780": {
+        "start": 14,
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1109,11 +1361,13 @@
     "matches": {
       "1311110": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1535140": {
         "start": 17,
-        "length": 6
+        "length": 6,
+        "reading": "おめにかかる"
       }
     }
   },
@@ -1134,15 +1388,42 @@
     "matches": {
       "1444980": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "つごう"
       },
       "1535140": {
         "start": 7,
-        "length": 8
+        "length": 6,
+        "reading": "おめにかかり"
       },
       "1548010": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "らいしゅう"
+      }
+    }
+  },
+  {
+    "id": "11563426",
+    "original": "お目にかかりたかっただけです。",
+    "en": [
+      {
+        "id": "3909964",
+        "text": "I just wanted to see her."
+      },
+      {
+        "id": "3909963",
+        "text": "I just wanted to see him."
+      }
+    ],
+    "vocabIds": [
+      "1535140"
+    ],
+    "matches": {
+      "1535140": {
+        "start": 0,
+        "length": 6,
+        "reading": "おめにかかり"
       }
     }
   },
@@ -1156,22 +1437,31 @@
       }
     ],
     "vocabIds": [
+      "1288850",
       "1587590",
       "1535140",
       "1589350"
     ],
     "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
       "1535140": {
         "start": 3,
-        "length": 7
+        "length": 6,
+        "reading": "おめにかかっ"
       },
       "1587590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       },
       "1589350": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -1189,28 +1479,33 @@
       "1535140",
       "1315840",
       "1372800",
-      "1510640"
+      "1510790"
     ],
     "matches": {
       "1315840": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1342550": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "はじめて"
       },
       "1372800": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ずいぶん"
       },
-      "1510640": {
+      "1510790": {
         "start": 16,
-        "length": 1
+        "length": 3,
+        "reading": "かわら"
       },
       "1535140": {
         "start": 3,
-        "length": 7
+        "length": 6,
+        "reading": "おめにかかっ"
       }
     }
   }

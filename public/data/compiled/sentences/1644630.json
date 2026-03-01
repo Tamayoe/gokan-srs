@@ -1,5 +1,119 @@
 [
   {
+    "id": "77393",
+    "original": "路面電車は電気で動く。",
+    "en": [
+      {
+        "id": "326326",
+        "text": "Streetcars run on electricity."
+      }
+    ],
+    "indices": "路面電車 は 電気[01] で(#2028980) 動く",
+    "vocabIds": [
+      "1644630",
+      "1810370",
+      "1443530",
+      "1443000",
+      "1896450",
+      "1451210"
+    ],
+    "matches": {
+      "1443000": {
+        "start": 5,
+        "length": 2,
+        "reading": "でんき"
+      },
+      "1443530": {
+        "start": 2,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1644630": {
+        "start": 0,
+        "length": 2,
+        "reading": "ろめん"
+      },
+      "1810370": {
+        "start": 0,
+        "length": 4,
+        "reading": "ろめんでんしゃ"
+      },
+      "1896450": {
+        "start": 5,
+        "length": 5,
+        "reading": "でんきでうごく"
+      }
+    }
+  },
+  {
+    "id": "77394",
+    "original": "路面電車は今では確かに時代遅れかもしれない。",
+    "en": [
+      {
+        "id": "246175",
+        "text": "The streetcar is now certainly out of date."
+      }
+    ],
+    "indices": "路面電車~ は 今では 確かに 時代遅れ かも知れない{かもしれない}",
+    "vocabIds": [
+      "1644630",
+      "1810370",
+      "1443530",
+      "1288850",
+      "1288910",
+      "1596930",
+      "1205770",
+      "1816420"
+    ],
+    "matches": {
+      "1205770": {
+        "start": 8,
+        "length": 3,
+        "reading": "たしかに"
+      },
+      "1288850": {
+        "start": 5,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1288910": {
+        "start": 5,
+        "length": 3,
+        "reading": "いまでは"
+      },
+      "1443530": {
+        "start": 2,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1596930": {
+        "start": 8,
+        "length": 2,
+        "reading": "たしか"
+      },
+      "1644630": {
+        "start": 0,
+        "length": 2,
+        "reading": "ろめん"
+      },
+      "1810370": {
+        "start": 0,
+        "length": 4,
+        "reading": "ろめんでんしゃ"
+      },
+      "1816420": {
+        "start": 11,
+        "length": 4,
+        "reading": "じだいおくれ"
+      }
+    }
+  },
+  {
     "id": "149112",
     "original": "車が凍てついた路面を滑った時は「ひやっ」とした。",
     "en": [
@@ -19,23 +133,28 @@
     "matches": {
       "1208640": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "すべっ"
       },
       "1315840": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1446220": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "いてつい"
       },
       "1644630": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ろめん"
       }
     }
   },
@@ -51,21 +170,68 @@
     "indices": "タイヤ は 護謨[01]{ゴム}~ と 路面~ の 摩擦[01]~ に因って{によって} 磨り減る{すり減る}",
     "vocabIds": [
       "1644630",
-      "1523830",
-      "1263120"
+      "1523830"
     ],
     "matches": {
-      "1263120": {
-        "start": 18,
-        "length": 2
-      },
       "1523830": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "まさつ"
       },
       "1644630": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ろめん"
+      }
+    }
+  },
+  {
+    "id": "992806",
+    "original": "路面電車を待っていたとき事故を目撃した。",
+    "en": [
+      {
+        "id": "2157319",
+        "text": "While I was waiting for the streetcar, I witnessed a traffic accident."
+      }
+    ],
+    "vocabIds": [
+      "1644630",
+      "1810370",
+      "1443530",
+      "1410590",
+      "1313850",
+      "1535390"
+    ],
+    "matches": {
+      "1313850": {
+        "start": 12,
+        "length": 2,
+        "reading": "じこ"
+      },
+      "1410590": {
+        "start": 5,
+        "length": 2,
+        "reading": "まっ"
+      },
+      "1443530": {
+        "start": 2,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1535390": {
+        "start": 15,
+        "length": 2,
+        "reading": "もくげき"
+      },
+      "1644630": {
+        "start": 0,
+        "length": 2,
+        "reading": "ろめん"
+      },
+      "1810370": {
+        "start": 0,
+        "length": 4,
+        "reading": "ろめんでんしゃ"
       }
     }
   },
@@ -81,20 +247,367 @@
     "vocabIds": [
       "1644630",
       "1446300",
+      "1208640",
       "1614060"
     ],
     "matches": {
+      "1208640": {
+        "start": 7,
+        "length": 2,
+        "reading": "すべり"
+      },
       "1446300": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "とうけつ"
       },
       "1614060": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "すべり"
       },
       "1644630": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ろめん"
+      }
+    }
+  },
+  {
+    "id": "10333281",
+    "original": "あの路面電車は最新型です。",
+    "en": [
+      {
+        "id": "10333279",
+        "text": "That streetcar is the most recent model."
+      }
+    ],
+    "vocabIds": [
+      "1644630",
+      "1810370",
+      "1443530",
+      "1294090",
+      "1250090"
+    ],
+    "matches": {
+      "1250090": {
+        "start": 9,
+        "length": 1,
+        "reading": "がた"
+      },
+      "1294090": {
+        "start": 7,
+        "length": 2,
+        "reading": "さいしん"
+      },
+      "1443530": {
+        "start": 4,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1644630": {
+        "start": 2,
+        "length": 2,
+        "reading": "ろめん"
+      },
+      "1810370": {
+        "start": 2,
+        "length": 4,
+        "reading": "ろめんでんしゃ"
+      }
+    }
+  },
+  {
+    "id": "10333282",
+    "original": "あの路面電車は最新モデルなんだよ。",
+    "en": [
+      {
+        "id": "10333279",
+        "text": "That streetcar is the most recent model."
+      }
+    ],
+    "vocabIds": [
+      "1644630",
+      "1810370",
+      "1443530",
+      "1294090"
+    ],
+    "matches": {
+      "1294090": {
+        "start": 7,
+        "length": 2,
+        "reading": "さいしん"
+      },
+      "1443530": {
+        "start": 4,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1644630": {
+        "start": 2,
+        "length": 2,
+        "reading": "ろめん"
+      },
+      "1810370": {
+        "start": 2,
+        "length": 4,
+        "reading": "ろめんでんしゃ"
+      }
+    }
+  },
+  {
+    "id": "8502921",
+    "original": "私の住む街には、「チンチン電車」の愛称で親しまれている「路面電車」が走っています。私たちはそれを「市電」または「電車」と呼びます。",
+    "en": [
+      {
+        "id": "10783743",
+        "text": "There are trams, popularly known as \"ding ding trains\", that run in the town where I live. We refer to them as \"city trams\" or \"trains\"."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1334040",
+      "1204570",
+      "2206190",
+      "1443530",
+      "1150840",
+      "1365070",
+      "1644630",
+      "1810370",
+      "1402540",
+      "1311300",
+      "1308630",
+      "1266440",
+      "2453540"
+    ],
+    "matches": {
+      "1150840": {
+        "start": 17,
+        "length": 2,
+        "reading": "あいしょう"
+      },
+      "1204570": {
+        "start": 4,
+        "length": 1,
+        "reading": "まち"
+      },
+      "1266440": {
+        "start": 60,
+        "length": 2,
+        "reading": "よび"
+      },
+      "1308630": {
+        "start": 49,
+        "length": 2,
+        "reading": "しでん"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 41,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1334040": {
+        "start": 2,
+        "length": 2,
+        "reading": "すむ"
+      },
+      "1365070": {
+        "start": 20,
+        "length": 3,
+        "reading": "したしま"
+      },
+      "1402540": {
+        "start": 34,
+        "length": 2,
+        "reading": "はしっ"
+      },
+      "1443530": {
+        "start": 13,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1644630": {
+        "start": 28,
+        "length": 2,
+        "reading": "ろめん"
+      },
+      "1810370": {
+        "start": 28,
+        "length": 4,
+        "reading": "ろめんでんしゃ"
+      },
+      "2206190": {
+        "start": 9,
+        "length": 6,
+        "reading": "ちんちんでんしゃ"
+      },
+      "2453540": {
+        "start": 60,
+        "length": 2,
+        "reading": "よび"
+      }
+    }
+  },
+  {
+    "id": "8502922",
+    "original": "我が街の路面電車は、１日平均15万人以上が利用しているそうです（2019年3月末現在）。私たちの生活に欠かせない交通手段です。",
+    "en": [
+      {
+        "id": "10785371",
+        "text": "On average, over 150,000 people use our city's trams each day (as of the end of March 2019). It's an indispensable mode of transport in our everyday lives."
+      }
+    ],
+    "vocabIds": [
+      "1606620",
+      "1204570",
+      "1644630",
+      "1810370",
+      "1443530",
+      "2225040",
+      "1463770",
+      "1583870",
+      "1584460",
+      "1584500",
+      "1580640",
+      "1155120",
+      "1549660",
+      "2084840",
+      "1255840",
+      "1263650",
+      "1311110",
+      "1311300",
+      "1378860",
+      "1253900",
+      "2666380",
+      "1272280",
+      "2698140",
+      "1328110"
+    ],
+    "matches": {
+      "1155120": {
+        "start": 18,
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1204570": {
+        "start": 2,
+        "length": 1,
+        "reading": "まち"
+      },
+      "1253900": {
+        "start": 51,
+        "length": 2,
+        "reading": "かか"
+      },
+      "1255840": {
+        "start": 38,
+        "length": 2,
+        "reading": "げつまつ"
+      },
+      "1263650": {
+        "start": 40,
+        "length": 2,
+        "reading": "げんざい"
+      },
+      "1272280": {
+        "start": 56,
+        "length": 2,
+        "reading": "こうつう"
+      },
+      "1311110": {
+        "start": 44,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 44,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1328110": {
+        "start": 58,
+        "length": 2,
+        "reading": "しゅだん"
+      },
+      "1378860": {
+        "start": 48,
+        "length": 2,
+        "reading": "せいかつ"
+      },
+      "1443530": {
+        "start": 6,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1463770": {
+        "start": 11,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1549660": {
+        "start": 21,
+        "length": 2,
+        "reading": "りよう"
+      },
+      "1580640": {
+        "start": 17,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1583870": {
+        "start": 12,
+        "length": 2,
+        "reading": "へいきん"
+      },
+      "1584460": {
+        "start": 16,
+        "length": 1,
+        "reading": "まん"
+      },
+      "1584500": {
+        "start": 16,
+        "length": 2,
+        "reading": "まんにん"
+      },
+      "1606620": {
+        "start": 0,
+        "length": 2,
+        "reading": "わが"
+      },
+      "1644630": {
+        "start": 4,
+        "length": 2,
+        "reading": "ろめん"
+      },
+      "1810370": {
+        "start": 4,
+        "length": 4,
+        "reading": "ろめんでんしゃ"
+      },
+      "2084840": {
+        "start": 36,
+        "length": 1,
+        "reading": "ねん"
+      },
+      "2225040": {
+        "start": 10,
+        "length": 2,
+        "reading": "いちにち"
+      },
+      "2666380": {
+        "start": 51,
+        "length": 5,
+        "reading": "かかせない"
+      },
+      "2698140": {
+        "start": 56,
+        "length": 4,
+        "reading": "こうつうしゅだん"
       }
     }
   }

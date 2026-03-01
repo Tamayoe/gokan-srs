@@ -1,5 +1,95 @@
 [
   {
+    "id": "74707",
+    "original": "実際はそんなことあるわけないが、釘を刺すにはちょうどよさそうだ。",
+    "en": [
+      {
+        "id": "329012",
+        "text": "There's no way something like that would really happen, but it seemed just right to drive the point home."
+      }
+    ],
+    "indices": "実際 は そんな 事(こと){こと} 有る{ある} 訳無い[01]{わけない} が 釘を刺す~ には 丁度{ちょうど} 良さそう{よさそう} だ",
+    "vocabIds": [
+      "1321110",
+      "2830216",
+      "1436840",
+      "1871830",
+      "1306470"
+    ],
+    "matches": {
+      "1306470": {
+        "start": 18,
+        "length": 2,
+        "reading": "さす"
+      },
+      "1321110": {
+        "start": 0,
+        "length": 2,
+        "reading": "じっさい"
+      },
+      "1436840": {
+        "start": 16,
+        "length": 1,
+        "reading": "くぎ"
+      },
+      "1871830": {
+        "start": 16,
+        "length": 4,
+        "reading": "くぎをさす"
+      },
+      "2830216": {
+        "start": 0,
+        "length": 3,
+        "reading": "じっさいは"
+      }
+    }
+  },
+  {
+    "id": "82594",
+    "original": "帽子を掛け釘に掛けた。",
+    "en": [
+      {
+        "id": "321122",
+        "text": "I hung my hat on the peg."
+      }
+    ],
+    "indices": "帽子 を 掛け釘~ に 掛ける[01]{掛けた}",
+    "vocabIds": [
+      "1519170",
+      "1207610",
+      "2148680",
+      "2121830",
+      "1436840"
+    ],
+    "matches": {
+      "1207610": {
+        "start": 3,
+        "length": 2,
+        "reading": "かけ"
+      },
+      "1436840": {
+        "start": 5,
+        "length": 1,
+        "reading": "くぎ"
+      },
+      "1519170": {
+        "start": 0,
+        "length": 2,
+        "reading": "ぼうし"
+      },
+      "2121830": {
+        "start": 3,
+        "length": 3,
+        "reading": "かけくぎ"
+      },
+      "2148680": {
+        "start": 3,
+        "length": 2,
+        "reading": "かけ"
+      }
+    }
+  },
+  {
     "id": "87799",
     "original": "彼女は釘で指をひっかいた。",
     "en": [
@@ -17,15 +107,18 @@
     "matches": {
       "1309650": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ゆび"
       },
       "1436840": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -41,6 +134,7 @@
     "indices": "釘 で(#2028980) 彼(かれ)[01]{彼の} 上着 が 裂ける{裂けた}",
     "vocabIds": [
       "1436840",
+      "1483070",
       "1000420",
       "1580340",
       "1558610"
@@ -48,19 +142,76 @@
     "matches": {
       "1000420": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1436840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
       },
       "1558610": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "さけ"
       },
       "1580340": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "うわぎ"
+      }
+    }
+  },
+  {
+    "id": "147764",
+    "original": "出る釘は打たれる。",
+    "en": [
+      {
+        "id": "266796",
+        "text": "The nail that sticks up gets hammered down."
+      },
+      {
+        "id": "785367",
+        "text": "The nail that sticks out gets hammered down."
+      }
+    ],
+    "vocabIds": [
+      "1338240",
+      "1338260",
+      "1436840",
+      "1408810",
+      "1982070"
+    ],
+    "matches": {
+      "1338240": {
+        "start": 0,
+        "length": 2,
+        "reading": "でる"
+      },
+      "1338260": {
+        "start": 0,
+        "length": 8,
+        "reading": "でるくぎはうたれる"
+      },
+      "1408810": {
+        "start": 4,
+        "length": 2,
+        "reading": "うた"
+      },
+      "1436840": {
+        "start": 2,
+        "length": 1,
+        "reading": "くぎ"
+      },
+      "1982070": {
+        "start": 4,
+        "length": 4,
+        "reading": "うたれる"
       }
     }
   },
@@ -77,35 +228,29 @@
     "vocabIds": [
       "1311110",
       "1436840",
-      "2564800",
-      "1207590",
       "1580340",
       "1471200"
     ],
     "matches": {
-      "1207590": {
-        "start": 6,
-        "length": 4
-      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1436840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       },
       "1471200": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やぶっ"
       },
       "1580340": {
         "start": 10,
-        "length": 2
-      },
-      "2564800": {
-        "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "うわぎ"
       }
     }
   },
@@ -126,11 +271,13 @@
     "matches": {
       "1306390": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1436840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       }
     }
   },
@@ -147,20 +294,29 @@
     "vocabIds": [
       "1481350",
       "1436840",
-      "1408810"
+      "1408810",
+      "2698210"
     ],
     "matches": {
       "1408810": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "うっ"
       },
       "1436840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       },
       "1481350": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いた"
+      },
+      "2698210": {
+        "start": 6,
+        "length": 2,
+        "reading": "うっ"
       }
     }
   },
@@ -175,17 +331,19 @@
     ],
     "indices": "其処(そこ){そこ} に 行く[01]{行って} は 行けない[02]{いけない} と 釘 を 刺す{さされている}",
     "vocabIds": [
-      "1589060",
+      "1578850",
       "1436840"
     ],
     "matches": {
       "1436840": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       },
-      "1589060": {
+      "1578850": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -205,7 +363,113 @@
     "matches": {
       "1436840": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
+      }
+    }
+  },
+  {
+    "id": "215482",
+    "original": "ジョンとキャシーは興味も性格も違う。その二人を一緒にさせようとするのは丸穴に角釘を打つようなものだ。",
+    "en": [
+      {
+        "id": "52784",
+        "text": "John and Cathy have different tastes and different characters. Trying to get them together is like putting a square peg in a round hole."
+      }
+    ],
+    "indices": "と は 興味 も 性格 も 違う(ちがう)[01] 其の[01]{その} 二人 を 一緒に[01] 為せる{させよう} とする[01] の は 丸(まる)[01]~ 穴(あな)[01] に 角釘~ を 打つ(うつ) 様な{ような} 物(もの){もの} だ",
+    "vocabIds": [
+      "1238410",
+      "1375290",
+      "1158880",
+      "1461140",
+      "1582670",
+      "1580640",
+      "1163400",
+      "1163420",
+      "1216250",
+      "2152100",
+      "1254480",
+      "1206110",
+      "2178010",
+      "1436840",
+      "1408810"
+    ],
+    "matches": {
+      "1158880": {
+        "start": 15,
+        "length": 2,
+        "reading": "ちがう"
+      },
+      "1163400": {
+        "start": 23,
+        "length": 2,
+        "reading": "いっしょ"
+      },
+      "1163420": {
+        "start": 23,
+        "length": 3,
+        "reading": "いっしょに"
+      },
+      "1206110": {
+        "start": 38,
+        "length": 1,
+        "reading": "かく"
+      },
+      "1216250": {
+        "start": 35,
+        "length": 1,
+        "reading": "まる"
+      },
+      "1238410": {
+        "start": 9,
+        "length": 2,
+        "reading": "きょうみ"
+      },
+      "1254480": {
+        "start": 36,
+        "length": 1,
+        "reading": "あな"
+      },
+      "1375290": {
+        "start": 12,
+        "length": 2,
+        "reading": "せいかく"
+      },
+      "1408810": {
+        "start": 41,
+        "length": 2,
+        "reading": "うつ"
+      },
+      "1436840": {
+        "start": 39,
+        "length": 1,
+        "reading": "くぎ"
+      },
+      "1461140": {
+        "start": 20,
+        "length": 1,
+        "reading": "に"
+      },
+      "1580640": {
+        "start": 21,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1582670": {
+        "start": 20,
+        "length": 2,
+        "reading": "ににん"
+      },
+      "2152100": {
+        "start": 35,
+        "length": 2,
+        "reading": "まるあな"
+      },
+      "2178010": {
+        "start": 38,
+        "length": 2,
+        "reading": "かくくぎ"
       }
     }
   },
@@ -231,15 +495,18 @@
     "matches": {
       "1306390": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1436840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       }
     }
   },
@@ -253,7 +520,9 @@
       }
     ],
     "vocabIds": [
+      "1454180",
       "1770750",
+      "1585650",
       "1779760",
       "1465590",
       "1322990",
@@ -264,31 +533,48 @@
     "matches": {
       "1259140": {
         "start": 33,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
       },
       "1322990": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
       },
       "1436840": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
+      },
+      "1454180": {
+        "start": 0,
+        "length": 2,
+        "reading": "どうぐ"
       },
       "1465590": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1536010": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
+      },
+      "1585650": {
+        "start": 2,
+        "length": 1,
+        "reading": "ばこ"
       },
       "1770750": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "どうぐばこ"
       },
       "1779760": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かなづち"
       }
     }
   },
@@ -309,15 +595,18 @@
     "matches": {
       "1306390": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1436840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       },
       "1604570": {
         "start": 14,
-        "length": 4
+        "length": 3,
+        "reading": "みつけ"
       }
     }
   },
@@ -340,23 +629,28 @@
     "matches": {
       "1315720": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1327190": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "て"
       },
       "1436840": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1604800": {
         "start": 27,
-        "length": 4
+        "length": 3,
+        "reading": "むかっ"
       }
     }
   },
@@ -370,7 +664,9 @@
       }
     ],
     "vocabIds": [
+      "1160790",
       "1166600",
+      "1522150",
       "2081580",
       "1240380",
       "1263120",
@@ -378,29 +674,45 @@
       "1306390"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1166600": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちほん"
       },
       "1240380": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きょくたん"
       },
       "1263120": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "へっ"
       },
       "1306390": {
         "start": 25,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1436840": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
+      },
+      "1522150": {
+        "start": 1,
+        "length": 1,
+        "reading": "ほん"
       },
       "2081580": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "くうきあつ"
       }
     }
   },
@@ -420,11 +732,13 @@
     "matches": {
       "1306390": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1436840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       }
     }
   },
@@ -440,30 +754,59 @@
     "vocabIds": [
       "1353260",
       "1436840",
-      "1956230",
+      "1587040",
       "1317910",
-      "1006510"
+      "1006510",
+      "2060970",
+      "1588760",
+      "1454490",
+      "2135510"
     ],
     "matches": {
       "1006510": {
         "start": 19,
-        "length": 7
+        "length": 7,
+        "reading": "せざるをえない"
       },
       "1317910": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じちょう"
       },
       "1353260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じょうし"
       },
       "1436840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
       },
-      "1956230": {
+      "1454490": {
+        "start": 23,
+        "length": 1,
+        "reading": "え"
+      },
+      "1587040": {
         "start": 14,
-        "length": 1
+        "length": 2,
+        "reading": "いわ"
+      },
+      "1588760": {
+        "start": 23,
+        "length": 1,
+        "reading": "え"
+      },
+      "2060970": {
+        "start": 20,
+        "length": 6,
+        "reading": "ざるをえない"
+      },
+      "2135510": {
+        "start": 23,
+        "length": 3,
+        "reading": "えない"
       }
     }
   },
@@ -477,12 +820,19 @@
       }
     ],
     "vocabIds": [
-      "1436840"
+      "1436840",
+      "1450270"
     ],
     "matches": {
       "1436840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くぎ"
+      },
+      "1450270": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふん"
       }
     }
   }

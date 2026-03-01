@@ -12,20 +12,23 @@
     "vocabIds": [
       "1483070",
       "1270990",
-      "1547320"
+      "1547330"
     ],
     "matches": {
       "1270990": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
-      "1547320": {
+      "1547330": {
         "start": 21,
-        "length": 1
+        "length": 3,
+        "reading": "ほしく"
       }
     }
   },
@@ -40,47 +43,55 @@
     ],
     "indices": "首相 が 憲法違反~ だ から 靖国神社 参拝 為る(する){し} ちゃいかん と[04] 言う{いう} 人(ひと) が 居る(いる)[01]{います} と[04] 語る{語った}",
     "vocabIds": [
-      "2083540",
-      "1390780",
       "1329300",
+      "1257590",
       "1757630",
+      "1158950",
       "2098400",
       "1302570",
       "1580640",
       "1270990"
     ],
     "matches": {
+      "1158950": {
+        "start": 8,
+        "length": 2,
+        "reading": "いはん"
+      },
+      "1257590": {
+        "start": 6,
+        "length": 2,
+        "reading": "けんぽう"
+      },
       "1270990": {
         "start": 35,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1302570": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱい"
       },
       "1329300": {
         "start": 2,
-        "length": 2
-      },
-      "1390780": {
-        "start": 1,
-        "length": 1
+        "length": 2,
+        "reading": "しゅしょう"
       },
       "1580640": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1757630": {
         "start": 6,
-        "length": 4
-      },
-      "2083540": {
-        "start": 0,
-        "length": 1
+        "length": 4,
+        "reading": "けんぽういはん"
       },
       "2098400": {
         "start": 13,
-        "length": 4
+        "length": 4,
+        "reading": "やすくにじんじゃ"
       }
     }
   },
@@ -103,19 +114,23 @@
     "matches": {
       "1263120": {
         "start": 8,
-        "length": 4
+        "length": 2,
+        "reading": "へら"
       },
       "1270990": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1395620": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぜん"
       },
       "1600900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -132,25 +147,41 @@
     "vocabIds": [
       "1497610",
       "1390360",
+      "1409420",
       "1409430",
+      "2728370",
       "1270990"
     ],
     "matches": {
       "1270990": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1390360": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せんそう"
+      },
+      "1409420": {
+        "start": 5,
+        "length": 2,
+        "reading": "たいけん"
       },
       "1409430": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "たいけんだん"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
+      },
+      "2728370": {
+        "start": 7,
+        "length": 1,
+        "reading": "だん"
       }
     }
   },
@@ -167,35 +198,98 @@
     "vocabIds": [
       "1483150",
       "1604890",
-      "2835689",
-      "2665570",
-      "1267130",
+      "1555930",
+      "1497360",
+      "1313850",
       "1270990"
     ],
     "matches": {
-      "1267130": {
-        "start": 14,
-        "length": 2
-      },
       "1270990": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1313850": {
+        "start": 13,
+        "length": 2,
+        "reading": "じこ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1497360": {
+        "start": 7,
+        "length": 3,
+        "reading": "うかべ"
+      },
+      "1555930": {
+        "start": 5,
+        "length": 1,
+        "reading": "なみだ"
       },
       "1604890": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "め"
+      }
+    }
+  },
+  {
+    "id": "88537",
+    "original": "彼女は深呼吸してから、身の上を語り始めた。",
+    "en": [
+      {
+        "id": "315170",
+        "text": "She took a deep breath and then started to talk about herself."
+      }
+    ],
+    "indices": "彼女[01] は 深呼吸 為る(する){して} から[06] 身の上~ を 語る{語り} 始める[03]{始めた}",
+    "vocabIds": [
+      "1483150",
+      "1362720",
+      "1365600",
+      "1270990",
+      "1270930",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1270930": {
+        "start": 15,
+        "length": 2,
+        "reading": "かたり"
       },
-      "2665570": {
+      "1270990": {
+        "start": 15,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1307550": {
+        "start": 17,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 17,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1362720": {
+        "start": 3,
+        "length": 3,
+        "reading": "しんこきゅう"
+      },
+      "1365600": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "みのうえ"
       },
-      "2835689": {
-        "start": 5,
-        "length": 6
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -219,23 +313,28 @@
     "matches": {
       "1219490": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きみょう"
       },
       "1251270": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けいけん"
       },
       "1270990": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1318610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -251,21 +350,36 @@
     "indices": "彼女[01] は 学校生活 に就いて{について} 語る{語った}",
     "vocabIds": [
       "1483150",
+      "1206730",
       "1932030",
+      "1378860",
       "1270990"
     ],
     "matches": {
+      "1206730": {
+        "start": 3,
+        "length": 2,
+        "reading": "がっこう"
+      },
       "1270990": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1378860": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1932030": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "がっこうせいかつ"
       }
     }
   },
@@ -281,26 +395,93 @@
     "indices": "彼女[01]{彼女の} 微笑む{微笑み} は 愛 を 語る{語っていた}",
     "vocabIds": [
       "1483150",
+      "2248450",
       "1486010",
+      "1351370",
       "1150410",
       "1270990"
     ],
     "matches": {
       "1150410": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "あい"
       },
       "1270990": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1351370": {
+        "start": 4,
+        "length": 2,
+        "reading": "えみ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1486010": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "びえみ"
+      },
+      "2248450": {
+        "start": 3,
+        "length": 1,
+        "reading": "び"
+      }
+    }
+  },
+  {
+    "id": "96780",
+    "original": "彼らは真夜中を過ぎるまで語り続けた。",
+    "en": [
+      {
+        "id": "306924",
+        "text": "They talked and talked until after midnight."
+      }
+    ],
+    "indices": "彼ら(かれら) は 真夜中 を[05] 過ぎる(すぎる) 迄{まで} 語る{語り} 続ける{続けた}",
+    "vocabIds": [
+      "1483090",
+      "1364380",
+      "1195970",
+      "1270990",
+      "1270930",
+      "1405800"
+    ],
+    "matches": {
+      "1195970": {
+        "start": 7,
+        "length": 3,
+        "reading": "すぎる"
+      },
+      "1270930": {
+        "start": 12,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1270990": {
+        "start": 12,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1364380": {
+        "start": 3,
+        "length": 3,
+        "reading": "まよなか"
+      },
+      "1405800": {
+        "start": 14,
+        "length": 2,
+        "reading": "つづけ"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -320,26 +501,132 @@
     "indices": "彼(かれ)[01] は 遅かれ早かれ 私(わたし)[01] に 全て{すべて} を 語る{語って} 呉れる{くれる} だろう",
     "vocabIds": [
       "1483070",
+      "1421970",
       "1705660",
+      "1404975",
       "1311110",
       "1270990"
     ],
     "matches": {
       "1270990": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1404975": {
+        "start": 5,
+        "length": 3,
+        "reading": "はやかれ"
+      },
+      "1421970": {
+        "start": 2,
+        "length": 3,
+        "reading": "おそかれ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1705660": {
         "start": 2,
-        "length": 6
+        "length": 6,
+        "reading": "おそかれはやかれ"
+      }
+    }
+  },
+  {
+    "id": "107417",
+    "original": "彼は口を謹んで何も語らなかった。",
+    "en": [
+      {
+        "id": "296269",
+        "text": "He kept his tongue under a bridle."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 口(くち)[05] を 謹んで~ 何も 語る{語らなかった}",
+    "vocabIds": [
+      "1483070",
+      "1275640",
+      "1242050",
+      "1577100",
+      "1188490",
+      "1270990"
+    ],
+    "matches": {
+      "1188490": {
+        "start": 7,
+        "length": 2,
+        "reading": "なにも"
+      },
+      "1242050": {
+        "start": 4,
+        "length": 3,
+        "reading": "つつしんで"
+      },
+      "1270990": {
+        "start": 9,
+        "length": 2,
+        "reading": "かたら"
+      },
+      "1275640": {
+        "start": 2,
+        "length": 1,
+        "reading": "くち"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 7,
+        "length": 1,
+        "reading": "なに"
+      }
+    }
+  },
+  {
+    "id": "111991",
+    "original": "彼はためらうことなく妻に真実を語った。",
+    "en": [
+      {
+        "id": "291687",
+        "text": "He didn't hesitate to tell his wife the truth."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 躊躇う{ためらう} 事無く[02]{ことなく} 妻(#1294330)[01] に 真実 を 語る{語った}",
+    "vocabIds": [
+      "1483070",
+      "1294330",
+      "1363780",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 15,
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1294330": {
+        "start": 10,
+        "length": 1,
+        "reading": "つま"
+      },
+      "1363780": {
+        "start": 12,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -368,27 +655,33 @@
     "matches": {
       "1237020": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "きょうかしょ"
       },
       "1270990": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1311110": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1392580": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1428280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -411,19 +704,23 @@
     "matches": {
       "1270990": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1276610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "くちょう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1600720": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "はげしい"
       }
     }
   },
@@ -446,19 +743,125 @@
     "matches": {
       "1175300": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こす"
       },
       "1270990": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1446070": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ふゆ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "114329",
+    "original": "彼はうそをついたわけではなかった。実際はすべて真実を語ったのだ。",
+    "en": [
+      {
+        "id": "289343",
+        "text": "He didn't tell a lie. As a matter of fact, he told the whole truth."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 嘘をつく{うそをついた} 訳ではない{わけではなかった} 実際 は 全て{すべて} 真実 を 語る{語った} のだ",
+    "vocabIds": [
+      "1483070",
+      "1321110",
+      "2830216",
+      "1363780",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 26,
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1321110": {
+        "start": 17,
+        "length": 2,
+        "reading": "じっさい"
+      },
+      "1363780": {
+        "start": 23,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2830216": {
+        "start": 17,
+        "length": 3,
+        "reading": "じっさいは"
+      }
+    }
+  },
+  {
+    "id": "114608",
+    "original": "彼はいつものように自分の理想のことを語り始めた。",
+    "en": [
+      {
+        "id": "289063",
+        "text": "He started talking about his ideals as usual."
+      }
+    ],
+    "indices": "彼(かれ)[01] は いつもの様に{いつものように} 自分[01] の 理想 の 事(こと){こと} を 語る{語り} 始める[03]{始めた}",
+    "vocabIds": [
+      "1483070",
+      "1318610",
+      "1550020",
+      "1270990",
+      "1270930",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1270930": {
+        "start": 18,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1270990": {
+        "start": 18,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1307550": {
+        "start": 20,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1318610": {
+        "start": 9,
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1342540": {
+        "start": 20,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1550020": {
+        "start": 12,
+        "length": 2,
+        "reading": "りそう"
       }
     }
   },
@@ -475,6 +878,7 @@
     "vocabIds": [
       "1483070",
       "1965500",
+      "1294940",
       "1260720",
       "1319750",
       "1270990"
@@ -482,23 +886,105 @@
     "matches": {
       "1260720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "げんき"
       },
       "1270990": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1294940": {
+        "start": 4,
+        "length": 1,
+        "reading": "さい"
       },
       "1319750": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "うしなっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1965500": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぜろさい"
+      }
+    }
+  },
+  {
+    "id": "119050",
+    "original": "彼についてはずいぶん多くの話が語られている。",
+    "en": [
+      {
+        "id": "284613",
+        "text": "Many a story has been told about him."
+      }
+    ],
+    "indices": "彼(かれ) に就いて{について} は 随分[01]{ずいぶん} 多く の 話(はなし)[01] が 語る{語られている}",
+    "vocabIds": [
+      "1483070",
+      "1861770",
+      "1600900",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 15,
+        "length": 2,
+        "reading": "かたら"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1600900": {
+        "start": 13,
+        "length": 1,
+        "reading": "はなし"
+      },
+      "1861770": {
+        "start": 10,
+        "length": 2,
+        "reading": "おおく"
+      }
+    }
+  },
+  {
+    "id": "121571",
+    "original": "敗軍の将兵を語らず。",
+    "en": [
+      {
+        "id": "282434",
+        "text": "It is not for the vanquished to talk of war."
+      }
+    ],
+    "indices": "敗軍~ の 将兵 を 語る{語らず}",
+    "vocabIds": [
+      "1625590",
+      "1660180",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 6,
+        "length": 2,
+        "reading": "かたら"
+      },
+      "1625590": {
+        "start": 0,
+        "length": 2,
+        "reading": "はいぐん"
+      },
+      "1660180": {
+        "start": 3,
+        "length": 2,
+        "reading": "しょうへい"
       }
     }
   },
@@ -522,23 +1008,28 @@
     "matches": {
       "1270990": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1355810": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "ばあい"
       },
       "1359040": {
         "start": 24,
-        "length": 4
+        "length": 2,
+        "reading": "しんじ"
       },
       "1421180": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちじょう"
       },
       "1439400": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "てんじょう"
       }
     }
   },
@@ -561,19 +1052,56 @@
     "matches": {
       "1270990": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1396860": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そぼ"
       },
       "1502480": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ものがたり"
+      }
+    }
+  },
+  {
+    "id": "143206",
+    "original": "政治については語りたくない。",
+    "en": [
+      {
+        "id": "271362",
+        "text": "I'd rather not say anything about politics."
+      }
+    ],
+    "indices": "政治 に就いて{について} は 語る{語り} たい{たくない}",
+    "vocabIds": [
+      "1375970",
+      "1270990",
+      "1270930"
+    ],
+    "matches": {
+      "1270930": {
+        "start": 7,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1270990": {
+        "start": 7,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1375970": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいじ"
       }
     }
   },
@@ -593,6 +1121,7 @@
       "1199040",
       "1286170",
       "1257420",
+      "1483070",
       "1000420",
       "1376070",
       "1535560",
@@ -601,39 +1130,206 @@
     "matches": {
       "1000420": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1199040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かいしょう"
       },
       "1257420": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "けんせつ"
       },
       "1270990": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1286170": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こっか"
       },
       "1368020": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じんしゅ"
       },
       "1376070": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "せいふ"
       },
       "1410290": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "たいりつ"
+      },
+      "1483070": {
+        "start": 13,
+        "length": 1,
+        "reading": "かれ"
       },
       "1535560": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "もくてき"
+      }
+    }
+  },
+  {
+    "id": "144935",
+    "original": "神にかけて真実を語る事を誓う。",
+    "en": [
+      {
+        "id": "269628",
+        "text": "I swear by God that I will speak the truth."
+      }
+    ],
+    "indices": "神(かみ) にかけて[03]~ 真実 を 語る 事(こと) を 誓う",
+    "vocabIds": [
+      "1364440",
+      "1363780",
+      "1883970",
+      "1270990",
+      "1313580",
+      "1381210"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 8,
+        "length": 2,
+        "reading": "かたる"
+      },
+      "1313580": {
+        "start": 10,
+        "length": 1,
+        "reading": "こと"
+      },
+      "1363780": {
+        "start": 5,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1364440": {
+        "start": 0,
+        "length": 1,
+        "reading": "かみ"
+      },
+      "1381210": {
+        "start": 12,
+        "length": 2,
+        "reading": "ちかう"
+      },
+      "1883970": {
+        "start": 5,
+        "length": 5,
+        "reading": "しんじつをかたる"
+      }
+    }
+  },
+  {
+    "id": "144975",
+    "original": "真実を知ることは本当に難しいが真実を語ることはなおさら難しい。",
+    "en": [
+      {
+        "id": "269588",
+        "text": "It is truly difficult to know the truth, and still more difficult to speak it."
+      }
+    ],
+    "indices": "真実 を 知る 事(こと){こと} は 本当に 難しい が 真実 を 語る 事(こと){こと} は 尚更{なおさら} 難しい",
+    "vocabIds": [
+      "1363780",
+      "1420470",
+      "1611580",
+      "1460850",
+      "1883970",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 18,
+        "length": 2,
+        "reading": "かたる"
+      },
+      "1363780": {
+        "start": 0,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1420470": {
+        "start": 3,
+        "length": 2,
+        "reading": "しる"
+      },
+      "1460850": {
+        "start": 11,
+        "length": 3,
+        "reading": "むずかしい"
+      },
+      "1611580": {
+        "start": 8,
+        "length": 3,
+        "reading": "ほんとうに"
+      },
+      "1883970": {
+        "start": 15,
+        "length": 5,
+        "reading": "しんじつをかたる"
+      }
+    }
+  },
+  {
+    "id": "144979",
+    "original": "真実を語ることに私は何のためらいもない。",
+    "en": [
+      {
+        "id": "269584",
+        "text": "I have no hesitation in telling the truth."
+      }
+    ],
+    "indices": "真実 を 語る 事(こと){こと} に 私(わたし)[01] は 何の(なんの) 躊躇い{ためらい} も 無い{ない}",
+    "vocabIds": [
+      "1363780",
+      "1883970",
+      "1270990",
+      "1311110",
+      "1577100",
+      "1920245"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 3,
+        "length": 2,
+        "reading": "かたる"
+      },
+      "1311110": {
+        "start": 8,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1363780": {
+        "start": 0,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1577100": {
+        "start": 10,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1883970": {
+        "start": 0,
+        "length": 5,
+        "reading": "しんじつをかたる"
+      },
+      "1920245": {
+        "start": 10,
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -658,27 +1354,33 @@
     "matches": {
       "1270990": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1318020": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じせい"
       },
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1322990": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
       },
       "1387010": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "した"
       },
       "1437430": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "てきせつ"
       }
     }
   },
@@ -696,24 +1398,91 @@
       "1318610",
       "1592500",
       "1270990",
-      "1893500"
+      "1426530",
+      "1893500",
+      "1501620"
     ],
     "matches": {
       "1270990": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1426530": {
+        "start": 17,
+        "length": 2,
+        "reading": "ちゅうい"
+      },
+      "1501620": {
+        "start": 20,
+        "length": 2,
+        "reading": "はらう"
       },
       "1592500": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぐあい"
       },
       "1893500": {
         "start": 17,
-        "length": 5
+        "length": 5,
+        "reading": "ちゅういをはらう"
+      }
+    }
+  },
+  {
+    "id": "155693",
+    "original": "私は真実を語るのが正しいと信じている。",
+    "en": [
+      {
+        "id": "258844",
+        "text": "I believe it right to tell the truth."
+      }
+    ],
+    "indices": "私(わたし)[01] は 真実 を 語る の が 正しい と 信じる{信じている}",
+    "vocabIds": [
+      "1311110",
+      "1363780",
+      "1883970",
+      "1270990",
+      "1376600",
+      "1359040"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 5,
+        "length": 2,
+        "reading": "かたる"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1359040": {
+        "start": 13,
+        "length": 2,
+        "reading": "しんじ"
+      },
+      "1363780": {
+        "start": 2,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1376600": {
+        "start": 9,
+        "length": 3,
+        "reading": "ただしい"
+      },
+      "1883970": {
+        "start": 2,
+        "length": 5,
+        "reading": "しんじつをかたる"
       }
     }
   },
@@ -728,32 +1497,49 @@
     ],
     "indices": "私たち は 不思議{不思議な} 経験 に就いて{について} 次々 に 語る{語った}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1492570",
       "1251270",
+      "1597850",
       "1597860",
       "1270990"
     ],
     "matches": {
       "1251270": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "けいけん"
       },
       "1270990": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1492570": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ふしぎ"
+      },
+      "1597850": {
+        "start": 14,
+        "length": 2,
+        "reading": "つぎつぎ"
       },
       "1597860": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "つぎつぎに"
       }
     }
   },
@@ -768,27 +1554,124 @@
     ],
     "indices": "私たち は 語る{語り} に 語る{語って} 到頭{とうとう} 夜が明ける{夜が明けた}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1270930",
       "1270990",
-      "2033710"
+      "1536350",
+      "1621640"
     ],
     "matches": {
       "1270930": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かたり"
       },
       "1270990": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
-      "2033710": {
+      "1536350": {
         "start": 15,
-        "length": 5
+        "length": 1,
+        "reading": "よる"
+      },
+      "1621640": {
+        "start": 17,
+        "length": 2,
+        "reading": "あけ"
+      }
+    }
+  },
+  {
+    "id": "170821",
+    "original": "再び、リー夫人は昔のことを懐かしそうに語り出す。もう彼女を止めることは不可能だ。",
+    "en": [
+      {
+        "id": "243659",
+        "text": "Once again, Mrs. Lee speaks fondly of the past, and it is impossible to stop her."
+      }
+    ],
+    "indices": "再び 夫人[01] は 昔 之(の)[01]{の} 事(こと){こと} を 懐かしい{懐かし} そう{そうに} 語る{語り} 出す もう 彼女 を 止める(とめる) 事(こと){こと} は 不可能 だ",
+    "vocabIds": [
+      "1292300",
+      "1496540",
+      "1382370",
+      "1200490",
+      "2133230",
+      "1270990",
+      "1270930",
+      "1338180",
+      "1483150",
+      "1310670",
+      "1491520"
+    ],
+    "matches": {
+      "1200490": {
+        "start": 13,
+        "length": 3,
+        "reading": "なつかし"
+      },
+      "1270930": {
+        "start": 19,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1270990": {
+        "start": 19,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1292300": {
+        "start": 0,
+        "length": 2,
+        "reading": "ふたたび"
+      },
+      "1310670": {
+        "start": 29,
+        "length": 3,
+        "reading": "とめる"
+      },
+      "1338180": {
+        "start": 21,
+        "length": 2,
+        "reading": "だす"
+      },
+      "1382370": {
+        "start": 8,
+        "length": 1,
+        "reading": "むかし"
+      },
+      "1483150": {
+        "start": 26,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1491520": {
+        "start": 35,
+        "length": 3,
+        "reading": "ふかのう"
+      },
+      "1496540": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふじん"
+      },
+      "2133230": {
+        "start": 13,
+        "length": 3,
+        "reading": "なつかし"
       }
     }
   },
@@ -811,19 +1694,23 @@
     "matches": {
       "1264540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1270990": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1282100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうどう"
       },
       "1542560": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうべん"
       }
     }
   },
@@ -840,25 +1727,35 @@
     "vocabIds": [
       "1282100",
       "1264540",
-      "1380490",
+      "1380440",
+      "1283190",
       "1270990"
     ],
     "matches": {
       "1264540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1270990": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1282100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうどう"
       },
-      "1380490": {
+      "1283190": {
+        "start": 9,
+        "length": 2,
+        "reading": "たかく"
+      },
+      "1380440": {
         "start": 8,
-        "length": 2
+        "length": 1,
+        "reading": "こえ"
       }
     }
   },
@@ -879,11 +1776,13 @@
     "matches": {
       "1189600": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かち"
       },
       "1270990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       }
     }
   },
@@ -905,15 +1804,18 @@
     "matches": {
       "1270990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1315840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1431810": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちんもく"
       }
     }
   },
@@ -932,33 +1834,45 @@
       "1416220",
       "1492570",
       "1251270",
+      "1597850",
       "1597860",
       "1270990"
     ],
     "matches": {
       "1198230": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいいん"
       },
       "1251270": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "けいけん"
       },
       "1270990": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1416220": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1492570": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ふしぎ"
+      },
+      "1597850": {
+        "start": 14,
+        "length": 2,
+        "reading": "つぎつぎ"
       },
       "1597860": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "つぎつぎに"
       }
     }
   },
@@ -975,7 +1889,6 @@
     "vocabIds": [
       "1198230",
       "1416220",
-      "1982860",
       "1219490",
       "1409420",
       "1311110",
@@ -984,31 +1897,33 @@
     "matches": {
       "1198230": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいいん"
       },
       "1219490": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きみょう"
       },
       "1270990": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1311110": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1409420": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "たいけん"
       },
       "1416220": {
         "start": 2,
-        "length": 1
-      },
-      "1982860": {
-        "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       }
     }
   },
@@ -1025,6 +1940,7 @@
     "vocabIds": [
       "1191420",
       "1215230",
+      "1483070",
       "1000420",
       "1519830",
       "1600900",
@@ -1034,31 +1950,88 @@
     "matches": {
       "1000420": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1191420": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "なつやすみ"
       },
       "1215230": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1270990": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1483070": {
+        "start": 10,
+        "length": 1,
+        "reading": "かれ"
       },
       "1519830": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうけん"
       },
       "1540150": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       },
       "1600900": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
+      }
+    }
+  },
+  {
+    "id": "206061",
+    "original": "その話の最も悲しい部分はまだ語られていない。",
+    "en": [
+      {
+        "id": "43307",
+        "text": "The saddest part of the story remains to be told."
+      }
+    ],
+    "indices": "其の[01]{その} 話(はなし)[01] の 最も 悲しい 部分 は 未だ[02]{まだ} 語る{語られていない}",
+    "vocabIds": [
+      "1600900",
+      "1293700",
+      "1483190",
+      "1499490",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 14,
+        "length": 2,
+        "reading": "かたら"
+      },
+      "1293700": {
+        "start": 4,
+        "length": 2,
+        "reading": "もっとも"
+      },
+      "1483190": {
+        "start": 6,
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "1499490": {
+        "start": 9,
+        "length": 2,
+        "reading": "ぶぶん"
+      },
+      "1600900": {
+        "start": 2,
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -1082,23 +2055,61 @@
     "matches": {
       "1270990": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1281830": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1364440": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かみ"
       },
       "1502480": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ものがたり"
       },
       "1929950": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "し"
+      }
+    }
+  },
+  {
+    "id": "214270",
+    "original": "スミスは真実を語るべきだったのに。",
+    "en": [
+      {
+        "id": "51562",
+        "text": "Mr. Smith should have told the truth."
+      }
+    ],
+    "indices": "は 真実 を 語る 可き{べき} だ{だった} のに",
+    "vocabIds": [
+      "1363780",
+      "1883970",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 7,
+        "length": 2,
+        "reading": "かたる"
+      },
+      "1363780": {
+        "start": 4,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1883970": {
+        "start": 4,
+        "length": 5,
+        "reading": "しんじつをかたる"
       }
     }
   },
@@ -1115,40 +2126,65 @@
     "vocabIds": [
       "1371260",
       "1467620",
+      "2847182",
       "1236940",
+      "1453550",
       "1453560",
       "1587040",
+      "1577100",
       "1188490",
       "1270990"
     ],
     "matches": {
       "1188490": {
         "start": 50,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
       },
       "1236940": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "おそわっ"
       },
       "1270990": {
         "start": 52,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1371260": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
+      },
+      "1453550": {
+        "start": 36,
+        "length": 2,
+        "reading": "どうよう"
       },
       "1453560": {
         "start": 36,
-        "length": 3
+        "length": 3,
+        "reading": "どうように"
       },
       "1467620": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "ぬれ"
+      },
+      "1577100": {
+        "start": 50,
+        "length": 1,
+        "reading": "なに"
       },
       "1587040": {
         "start": 46,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
+      },
+      "2847182": {
+        "start": 6,
+        "length": 2,
+        "reading": "ぬれ"
       }
     }
   },
@@ -1172,23 +2208,28 @@
     "matches": {
       "1264540": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1270990": {
         "start": 16,
-        "length": 4
+        "length": 2,
+        "reading": "かたら"
       },
       "1464180": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "にちじょう"
       },
       "1600900": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       },
       "1678400": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "こうごたい"
       }
     }
   },
@@ -1209,11 +2250,13 @@
     "matches": {
       "1202270": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "え"
       },
       "1270990": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       }
     }
   },
@@ -1230,20 +2273,29 @@
     "vocabIds": [
       "1363780",
       "1270990",
-      "2070730"
+      "2070730",
+      "1264640"
     ],
     "matches": {
+      "1264640": {
+        "start": 17,
+        "length": 2,
+        "reading": "かぎら"
+      },
       "1270990": {
         "start": 11,
-        "length": 4
+        "length": 2,
+        "reading": "かたら"
       },
       "1363780": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しんじつ"
       },
       "2070730": {
         "start": 15,
-        "length": 6
+        "length": 6,
+        "reading": "とはかぎらない"
       }
     }
   },
@@ -1258,7 +2310,7 @@
     ],
     "indices": "亜米利加{アメリカ} の ニュース で(#2028980) は 誰{だれ} が 話題 になる[01]{になっている} 時(とき){とき} でも[02] 何時も[01]{いつも} 日本人 全体 として 語る{語られる}",
     "vocabIds": [
-      "2151370",
+      "1562400",
       "1464700",
       "1395660",
       "1270990"
@@ -1266,19 +2318,23 @@
     "matches": {
       "1270990": {
         "start": 41,
-        "length": 4
+        "length": 2,
+        "reading": "かたら"
       },
       "1395660": {
         "start": 35,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんたい"
       },
       "1464700": {
         "start": 32,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんじん"
       },
-      "2151370": {
+      "1562400": {
         "start": 15,
-        "length": 6
+        "length": 2,
+        "reading": "わだい"
       }
     }
   },
@@ -1294,6 +2350,7 @@
     "indices": "彼の(あの){あの} イギリス人 は 語る 事(こと){こと} より[01] も 実行 為る(する){する} 事(こと){こと} が 好き(すき) だ",
     "vocabIds": [
       "1959460",
+      "1580640",
       "1270990",
       "1321040",
       "1277450"
@@ -1301,19 +2358,61 @@
     "matches": {
       "1270990": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1277450": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1321040": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じっこう"
+      },
+      "1580640": {
+        "start": 6,
+        "length": 1,
+        "reading": "じん"
       },
       "1959460": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "いぎりすじん"
+      }
+    }
+  },
+  {
+    "id": "232825",
+    "original": "あなたはいつも真実を語るべきだ。",
+    "en": [
+      {
+        "id": "70195",
+        "text": "You should always tell the truth."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は 何時も[01]{いつも} 真実 を 語る 可き{べき} だ",
+    "vocabIds": [
+      "1363780",
+      "1883970",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 10,
+        "length": 2,
+        "reading": "かたる"
+      },
+      "1363780": {
+        "start": 7,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1883970": {
+        "start": 7,
+        "length": 5,
+        "reading": "しんじつをかたる"
       }
     }
   },
@@ -1334,10 +2433,14 @@
       "1483070",
       "1360480",
       "1370090",
+      "2276360",
+      "1596960",
       "1596950",
       "1204570",
+      "1163400",
       "1163420",
       "1160540",
+      "1580640",
       "1368740",
       "1270990",
       "1318260",
@@ -1345,95 +2448,142 @@
       "1221270",
       "1296300",
       "1354900",
-      "1596960",
       "1316490",
+      "1500330",
       "1500600",
+      "1414650",
       "1311110"
     ],
     "matches": {
       "1160540": {
         "start": 52,
-        "length": 3
+        "length": 2,
+        "reading": "そだっ"
+      },
+      "1163400": {
+        "start": 49,
+        "length": 2,
+        "reading": "いっしょ"
       },
       "1163420": {
         "start": 49,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1204570": {
         "start": 47,
-        "length": 1
+        "length": 1,
+        "reading": "まち"
       },
       "1212380": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "かんしゃ"
       },
       "1221270": {
         "start": 80,
-        "length": 2
+        "length": 2,
+        "reading": "かえる"
       },
       "1234260": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ともに"
       },
       "1270990": {
         "start": 62,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1296300": {
         "start": 82,
-        "length": 1
+        "length": 1,
+        "reading": "さい"
       },
       "1311110": {
         "start": 127,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1316490": {
         "start": 111,
-        "length": 2
+        "length": 2,
+        "reading": "じき"
       },
       "1318260": {
         "start": 74,
-        "length": 2
+        "length": 2,
+        "reading": "じたく"
       },
       "1354900": {
         "start": 87,
-        "length": 6
+        "length": 6,
+        "reading": "のりあわせる"
       },
       "1360480": {
         "start": 31,
-        "length": 1
+        "length": 1,
+        "reading": "こころ"
       },
       "1368740": {
         "start": 55,
-        "length": 3
+        "length": 3,
+        "reading": "ひとたち"
       },
       "1370090": {
         "start": 33,
-        "length": 4
+        "length": 3,
+        "reading": "つくし"
+      },
+      "1414650": {
+        "start": 114,
+        "length": 3,
+        "reading": "だいとうりょう"
       },
       "1443530": {
         "start": 77,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1483070": {
         "start": 29,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1500330": {
+        "start": 113,
+        "length": 1,
+        "reading": "ふく"
       },
       "1500600": {
         "start": 113,
-        "length": 4
+        "length": 4,
+        "reading": "ふくだいとうりょう"
       },
       "1553280": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たびじ"
+      },
+      "1580640": {
+        "start": 55,
+        "length": 1,
+        "reading": "ひと"
       },
       "1596950": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "たたかい"
       },
       "1596960": {
-        "start": 100,
-        "length": 3
+        "start": 37,
+        "length": 2,
+        "reading": "たたかい"
+      },
+      "2276360": {
+        "start": 33,
+        "length": 3,
+        "reading": "つくし"
       }
     }
   },
@@ -1451,6 +2601,7 @@
       "1954610",
       "1287070",
       "1270990",
+      "1311110",
       "1311300",
       "1582000",
       "1540150",
@@ -1465,59 +2616,78 @@
     "matches": {
       "1212410": {
         "start": 51,
-        "length": 2
+        "length": 2,
+        "reading": "かんじょう"
       },
       "1270990": {
         "start": 28,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1287070": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "こくみん"
       },
       "1288850": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
+      },
+      "1311110": {
+        "start": 35,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 35,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1365390": {
         "start": 82,
-        "length": 2
+        "length": 2,
+        "reading": "しんみつ"
       },
       "1413940": {
         "start": 77,
-        "length": 2
+        "length": 2,
+        "reading": "だいじ"
       },
       "1419550": {
         "start": 87,
-        "length": 5
+        "length": 4,
+        "reading": "たちきっ"
       },
       "1540150": {
         "start": 44,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       },
       "1570420": {
         "start": 85,
-        "length": 1
+        "length": 1,
+        "reading": "きずな"
       },
       "1582000": {
         "start": 39,
-        "length": 1
+        "length": 1,
+        "reading": "てき"
       },
       "1589350": {
         "start": 80,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "1954610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ぶんだん"
       },
       "1979930": {
         "start": 73,
-        "length": 3
+        "length": 3,
+        "reading": "おたがい"
       }
     }
   },
@@ -1532,12 +2702,17 @@
     ],
     "indices": "",
     "vocabIds": [
+      "1368020",
+      "2011630",
       "2849920",
-      "1643580",
+      "1206440",
+      "1375950",
+      "1589060",
       "1331840",
       "1287830",
       "1291410",
-      "2081550",
+      "1420470",
+      "1451730",
       "2854157",
       "1252330",
       "1350160",
@@ -1545,99 +2720,157 @@
       "1547270",
       "1552290",
       "1966080",
+      "1281980",
       "1237410",
       "1521770",
       "1316300",
       "1235240",
       "1580650",
+      "1311110",
       "1311300",
       "1285790",
       "1270990"
     ],
     "matches": {
+      "1206440": {
+        "start": 10,
+        "length": 2,
+        "reading": "かくり"
+      },
       "1235240": {
         "start": 132,
-        "length": 2
+        "length": 2,
+        "reading": "きょうゆう"
       },
       "1237410": {
         "start": 106,
-        "length": 1
+        "length": 1,
+        "reading": "はし"
       },
       "1252330": {
         "start": 60,
-        "length": 2
+        "length": 2,
+        "reading": "けいかん"
       },
       "1270990": {
         "start": 189,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1281980": {
+        "start": 92,
+        "length": 2,
+        "reading": "こうしん"
       },
       "1285790": {
         "start": 182,
-        "length": 2
+        "length": 2,
+        "reading": "こくふく"
       },
       "1287830": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "こくじん"
       },
       "1291410": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "さべつ"
+      },
+      "1311110": {
+        "start": 178,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 178,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1316300": {
         "start": 129,
-        "length": 2
+        "length": 2,
+        "reading": "じだい"
       },
       "1331840": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "しゅう"
       },
       "1350160": {
         "start": 63,
-        "length": 2
+        "length": 2,
+        "reading": "しょうか"
+      },
+      "1368020": {
+        "start": 8,
+        "length": 2,
+        "reading": "じんしゅ"
       },
       "1371260": {
         "start": 69,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
+      },
+      "1375950": {
+        "start": 12,
+        "length": 2,
+        "reading": "せいさく"
+      },
+      "1420470": {
+        "start": 45,
+        "length": 2,
+        "reading": "しり"
+      },
+      "1451730": {
+        "start": 49,
+        "length": 1,
+        "reading": "どう"
       },
       "1521770": {
         "start": 126,
-        "length": 2
+        "length": 2,
+        "reading": "ぼくし"
       },
       "1547270": {
         "start": 77,
-        "length": 2
+        "length": 2,
+        "reading": "よくあつ"
       },
       "1552290": {
         "start": 87,
-        "length": 2
+        "length": 2,
+        "reading": "りゅうけつ"
       },
       "1580650": {
         "start": 156,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
       },
-      "1643580": {
+      "1589060": {
         "start": 15,
-        "length": 4
+        "length": 2,
+        "reading": "おこなわ"
       },
       "1966080": {
         "start": 90,
-        "length": 4
+        "length": 4,
+        "reading": "でもこうしん"
       },
-      "2081550": {
-        "start": 45,
-        "length": 1
+      "2011630": {
+        "start": 8,
+        "length": 4,
+        "reading": "じんしゅかくり"
       },
       "2849920": {
         "start": 8,
-        "length": 6
+        "length": 6,
+        "reading": "じんしゅかくりせいさく"
       },
       "2854157": {
         "start": 49,
-        "length": 2
+        "length": 2,
+        "reading": "どうしゅう"
       }
     }
   },
@@ -1653,20 +2886,61 @@
     "vocabIds": [
       "1311110",
       "1150410",
-      "1270990"
+      "1270990",
+      "1270930"
     ],
     "matches": {
       "1150410": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あい"
+      },
+      "1270930": {
+        "start": 7,
+        "length": 2,
+        "reading": "かたり"
       },
       "1270990": {
         "start": 7,
-        "length": 4
+        "length": 2,
+        "reading": "かたり"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      }
+    }
+  },
+  {
+    "id": "390031",
+    "original": "語りえないことについては、沈黙するほかない。",
+    "en": [
+      {
+        "id": "390029",
+        "text": "Whereof one cannot speak, thereof one must be silent."
+      }
+    ],
+    "vocabIds": [
+      "1270990",
+      "1270930",
+      "1431810"
+    ],
+    "matches": {
+      "1270930": {
+        "start": 0,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1270990": {
+        "start": 0,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1431810": {
+        "start": 13,
+        "length": 2,
+        "reading": "ちんもく"
       }
     }
   },
@@ -1689,23 +2963,192 @@
     "matches": {
       "1270990": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1497610": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1545190": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ようじ"
       },
       "2831801": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きんかく"
+      }
+    }
+  },
+  {
+    "id": "774009",
+    "original": "信じる人々には次のような印が伴います。すなわち、私の名によって悪霊を追い出し、新しい言葉を語り、蛇をもつかみ、たとい毒を飲んでも決して害を受けず、また、病人に手を置けば病人は癒やされます。",
+    "en": [
+      {
+        "id": "413012",
+        "text": "And these signs shall follow them that believe; In my name shall they cast out devils; they shall speak with new tongues; they shall take up serpents; and if they drink any deadly thing it shall not hurt them; they shall lay hands on the sick, and they shall recover!"
+      }
+    ],
+    "vocabIds": [
+      "1359040",
+      "1580650",
+      "1316380",
+      "1168060",
+      "1478370",
+      "2137010",
+      "1311110",
+      "1531330",
+      "1575820",
+      "1432350",
+      "2643660",
+      "1361490",
+      "1264540",
+      "1270990",
+      "1270930",
+      "1323350",
+      "1455500",
+      "1169870",
+      "1254130",
+      "1204330",
+      "1329590",
+      "1659120",
+      "1490360",
+      "1327190",
+      "1421850"
+    ],
+    "matches": {
+      "1168060": {
+        "start": 12,
+        "length": 1,
+        "reading": "しるし"
+      },
+      "1169870": {
+        "start": 60,
+        "length": 2,
+        "reading": "のん"
+      },
+      "1204330": {
+        "start": 67,
+        "length": 1,
+        "reading": "がい"
+      },
+      "1254130": {
+        "start": 64,
+        "length": 3,
+        "reading": "けっして"
+      },
+      "1264540": {
+        "start": 42,
+        "length": 2,
+        "reading": "ことば"
+      },
+      "1270930": {
+        "start": 45,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1270990": {
+        "start": 45,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1311110": {
+        "start": 24,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1316380": {
+        "start": 7,
+        "length": 1,
+        "reading": "つぎ"
+      },
+      "1323350": {
+        "start": 48,
+        "length": 1,
+        "reading": "へび"
+      },
+      "1327190": {
+        "start": 79,
+        "length": 1,
+        "reading": "て"
+      },
+      "1329590": {
+        "start": 69,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "1359040": {
+        "start": 0,
+        "length": 3,
+        "reading": "しんじる"
+      },
+      "1361490": {
+        "start": 39,
+        "length": 3,
+        "reading": "あたらしい"
+      },
+      "1421850": {
+        "start": 81,
+        "length": 2,
+        "reading": "おけ"
+      },
+      "1432350": {
+        "start": 34,
+        "length": 4,
+        "reading": "おいだし"
+      },
+      "1455500": {
+        "start": 58,
+        "length": 1,
+        "reading": "どく"
+      },
+      "1478370": {
+        "start": 14,
+        "length": 2,
+        "reading": "ともない"
+      },
+      "1490360": {
+        "start": 76,
+        "length": 2,
+        "reading": "びょうにん"
+      },
+      "1531330": {
+        "start": 26,
+        "length": 1,
+        "reading": "な"
+      },
+      "1575820": {
+        "start": 31,
+        "length": 2,
+        "reading": "あくりょう"
+      },
+      "1580650": {
+        "start": 3,
+        "length": 2,
+        "reading": "ひとびと"
+      },
+      "1659120": {
+        "start": 69,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "2137010": {
+        "start": 14,
+        "length": 2,
+        "reading": "ともない"
+      },
+      "2643660": {
+        "start": 34,
+        "length": 4,
+        "reading": "おいだし"
       }
     }
   },
@@ -1728,6 +3171,7 @@
       "1311110",
       "1531330",
       "1575820",
+      "1432350",
       "2643660",
       "1361490",
       "1264540",
@@ -1738,98 +3182,137 @@
       "1169870",
       "1254130",
       "1204330",
+      "1329590",
       "1659120",
       "1490360",
+      "1421850",
       "1599400"
     ],
     "matches": {
       "1168060": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "しるし"
       },
       "1169870": {
         "start": 56,
-        "length": 3
+        "length": 2,
+        "reading": "のん"
       },
       "1204330": {
         "start": 63,
-        "length": 1
+        "length": 1,
+        "reading": "がい"
       },
       "1254130": {
         "start": 60,
-        "length": 3
+        "length": 3,
+        "reading": "けっして"
       },
       "1264540": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1270990": {
         "start": 40,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1311110": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1316380": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1322990": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
       },
       "1323350": {
         "start": 45,
-        "length": 1
+        "length": 1,
+        "reading": "へび"
       },
       "1327190": {
         "start": 43,
-        "length": 1
+        "length": 1,
+        "reading": "て"
+      },
+      "1329590": {
+        "start": 65,
+        "length": 2,
+        "reading": "うけ"
       },
       "1359040": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しんじる"
       },
       "1361490": {
         "start": 34,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
+      },
+      "1421850": {
+        "start": 74,
+        "length": 2,
+        "reading": "おけ"
+      },
+      "1432350": {
+        "start": 29,
+        "length": 4,
+        "reading": "おいだし"
       },
       "1455500": {
         "start": 54,
-        "length": 1
+        "length": 1,
+        "reading": "どく"
       },
       "1478370": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ともなう"
       },
       "1483090": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1490360": {
         "start": 69,
-        "length": 2
+        "length": 2,
+        "reading": "びょうにん"
       },
       "1531330": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "な"
       },
       "1575820": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "あくりょう"
       },
       "1599400": {
         "start": 77,
-        "length": 2
+        "length": 2,
+        "reading": "なおる"
       },
       "1659120": {
         "start": 65,
-        "length": 2
+        "length": 2,
+        "reading": "うけ"
       },
       "2643660": {
         "start": 29,
-        "length": 4
+        "length": 4,
+        "reading": "おいだし"
       }
     }
   },
@@ -1850,15 +3333,18 @@
     "matches": {
       "1183720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おんがく"
       },
       "1270990": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1872,52 +3358,67 @@
       }
     ],
     "vocabIds": [
+      "1318720",
       "1318740",
       "1420470",
-      "1318720",
       "1270990",
       "1554590",
       "2630570",
       "1226160",
       "1311110",
+      "1544730",
       "1544720"
     ],
     "matches": {
       "1226160": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "ぎろん"
       },
       "1270990": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1311110": {
         "start": 37,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1318720": {
-        "start": 14,
-        "length": 2
+        "start": 4,
+        "length": 2,
+        "reading": "じゆう"
       },
       "1318740": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "じゆうに"
       },
       "1420470": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しる"
       },
       "1544720": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "あたえ"
+      },
+      "1544730": {
+        "start": 39,
+        "length": 2,
+        "reading": "あたえ"
       },
       "1554590": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "りょうしん"
       },
       "2630570": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "にしたがい"
       }
     }
   },
@@ -1933,45 +3434,65 @@
     "vocabIds": [
       "1260280",
       "1309560",
-      "1270930",
-      "1800340",
-      "1313960",
       "1270990",
+      "1270930",
+      "1420590",
+      "1800340",
+      "1580640",
+      "1313960",
       "1584290",
       "1358340"
     ],
     "matches": {
       "1260280": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けんじゃ"
       },
       "1270930": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かたり"
       },
       "1270990": {
-        "start": 15,
-        "length": 2
+        "start": 6,
+        "length": 2,
+        "reading": "かたり"
       },
       "1309560": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しそう"
       },
       "1313960": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じじつ"
       },
       "1358340": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "たべもの"
+      },
+      "1420590": {
+        "start": 8,
+        "length": 2,
+        "reading": "ちしき"
+      },
+      "1580640": {
+        "start": 10,
+        "length": 1,
+        "reading": "じん"
       },
       "1584290": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ぼんじん"
       },
       "1800340": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ちしきじん"
       }
     }
   },
@@ -1992,15 +3513,50 @@
     "matches": {
       "1270990": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1604800": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "むかっ"
+      }
+    }
+  },
+  {
+    "id": "1487104",
+    "original": "トムさんは語るに落ちてしまいました。",
+    "en": [
+      {
+        "id": "1093301",
+        "text": "Tom let the cat out of the bag."
+      }
+    ],
+    "vocabIds": [
+      "1270990",
+      "1548550",
+      "1548530"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 5,
+        "length": 2,
+        "reading": "かたる"
+      },
+      "1548530": {
+        "start": 8,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1548550": {
+        "start": 8,
+        "length": 2,
+        "reading": "おち"
       }
     }
   },
@@ -2015,26 +3571,36 @@
     ],
     "vocabIds": [
       "1212260",
+      "1212250",
       "1313580",
       "1270990",
       "1539740"
     ],
     "matches": {
+      "1212250": {
+        "start": 0,
+        "length": 2,
+        "reading": "かんじ"
+      },
       "1212260": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1270990": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1313580": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1539740": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうき"
       }
     }
   },
@@ -2055,15 +3621,56 @@
     "matches": {
       "1150410": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あい"
       },
       "1270990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1590750": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "かわす"
+      }
+    }
+  },
+  {
+    "id": "2233220",
+    "original": "夢は真実を語る。",
+    "en": [
+      {
+        "id": "2595702",
+        "text": "Dreams speak the truth."
+      }
+    ],
+    "vocabIds": [
+      "1529410",
+      "1363780",
+      "1883970",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 5,
+        "length": 2,
+        "reading": "かたる"
+      },
+      "1363780": {
+        "start": 2,
+        "length": 2,
+        "reading": "しんじつ"
+      },
+      "1529410": {
+        "start": 0,
+        "length": 1,
+        "reading": "ゆめ"
+      },
+      "1883970": {
+        "start": 2,
+        "length": 5,
+        "reading": "しんじつをかたる"
       }
     }
   },
@@ -2083,11 +3690,13 @@
     "matches": {
       "1270990": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2101,6 +3710,7 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1304970",
       "1270990",
@@ -2109,19 +3719,28 @@
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1270990": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1277450": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1304970": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2138,81 +3757,120 @@
       "1477350",
       "1318610",
       "1586510",
+      "1783970",
       "1309230",
-      "2236490",
+      "1221520",
+      "1490210",
       "1320830",
+      "1318920",
       "2850231",
+      "1437260",
       "1318620",
+      "1318000",
       "1270990"
     ],
     "matches": {
+      "1221520": {
+        "start": 28,
+        "length": 1,
+        "reading": "き"
+      },
       "1270990": {
         "start": 56,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1309230": {
         "start": 23,
-        "length": 5
+        "length": 4,
+        "reading": "おもいこん"
+      },
+      "1318000": {
+        "start": 50,
+        "length": 2,
+        "reading": "じしん"
       },
       "1318610": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1318620": {
         "start": 48,
-        "length": 4
+        "length": 4,
+        "reading": "じぶんじしん"
+      },
+      "1318920": {
+        "start": 44,
+        "length": 2,
+        "reading": "じちょう"
       },
       "1320830": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "じつは"
+      },
+      "1437260": {
+        "start": 46,
+        "length": 1,
+        "reading": "てき"
       },
       "1477350": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はつげん"
+      },
+      "1490210": {
+        "start": 30,
+        "length": 2,
+        "reading": "やん"
       },
       "1586510": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "あてつけ"
       },
-      "2236490": {
-        "start": 28,
-        "length": 5
+      "1783970": {
+        "start": 15,
+        "length": 4,
+        "reading": "あてつけ"
       },
       "2850231": {
         "start": 44,
-        "length": 3
+        "length": 3,
+        "reading": "じちょうてき"
       }
     }
   },
   {
-    "id": "2752691",
-    "original": "トムにはなぜか本音を語れるんだ。",
+    "id": "3312284",
+    "original": "語りえぬものについては沈黙しなければならない。",
     "en": [
       {
-        "id": "2844320",
-        "text": "For some reason I can be honest with Tom."
-      },
-      {
-        "id": "2844322",
-        "text": "For some reason I can be honest with you, Tom."
-      },
-      {
-        "id": "2844323",
-        "text": "For some reason I can speak my true feelings with you, Tom."
+        "id": "390029",
+        "text": "Whereof one cannot speak, thereof one must be silent."
       }
     ],
     "vocabIds": [
-      "1522250",
-      "1270990"
+      "1270990",
+      "1270930",
+      "1431810"
     ],
     "matches": {
-      "1270990": {
-        "start": 10,
-        "length": 3
+      "1270930": {
+        "start": 0,
+        "length": 2,
+        "reading": "かたり"
       },
-      "1522250": {
-        "start": 7,
-        "length": 2
+      "1270990": {
+        "start": 0,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1431810": {
+        "start": 11,
+        "length": 2,
+        "reading": "ちんもく"
       }
     }
   },
@@ -2227,21 +3885,18 @@
     ],
     "vocabIds": [
       "1255940",
-      "1588770",
       "1270990"
     ],
     "matches": {
       "1255940": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "けん"
       },
       "1270990": {
         "start": 10,
-        "length": 3
-      },
-      "1588770": {
-        "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かたっ"
       }
     }
   },
@@ -2262,15 +3917,18 @@
     "matches": {
       "1270990": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1318610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1497680": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちちおや"
       }
     }
   },
@@ -2293,23 +3951,60 @@
     "matches": {
       "1270990": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1313580": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1313850": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "6832783",
+    "original": "トムは私に全ては語らなかった。",
+    "en": [
+      {
+        "id": "2821352",
+        "text": "Tom didn't tell me everything."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1595730",
+      "1270990"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 8,
+        "length": 2,
+        "reading": "かたら"
+      },
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1595730": {
+        "start": 5,
+        "length": 2,
+        "reading": "すべて"
       }
     }
   },
@@ -2327,33 +4022,45 @@
       "1318610",
       "1604890",
       "1259290",
+      "2256270",
       "1313850",
       "1270990"
     ],
     "matches": {
       "1259290": {
         "start": 7,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1270990": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1313850": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       },
       "1318610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1604890": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "め"
+      },
+      "2256270": {
+        "start": 7,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -2368,31 +4075,92 @@
     ],
     "vocabIds": [
       "2832864",
+      "1580640",
       "1311110",
       "1270990",
+      "1577100",
       "1188490",
       "1549910"
     ],
     "matches": {
       "1188490": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
       },
       "1270990": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1549910": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "りかい"
+      },
+      "1577100": {
+        "start": 20,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1580640": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひと"
       },
       "2832864": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "そのひと"
+      }
+    }
+  },
+  {
+    "id": "9099544",
+    "original": "外国語って言えばさ、フランス語は話せる？",
+    "en": [
+      {
+        "id": "460298",
+        "text": "Speaking of foreign languages, do you speak French?"
+      }
+    ],
+    "vocabIds": [
+      "1203620",
+      "1270990",
+      "1587040",
+      "1111590",
+      "1562360"
+    ],
+    "matches": {
+      "1111590": {
+        "start": 10,
+        "length": 5,
+        "reading": "ふらんすご"
+      },
+      "1203620": {
+        "start": 0,
+        "length": 2,
+        "reading": "がいこく"
+      },
+      "1270990": {
+        "start": 2,
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1562360": {
+        "start": 16,
+        "length": 3,
+        "reading": "はなせる"
+      },
+      "1587040": {
+        "start": 5,
+        "length": 2,
+        "reading": "いえ"
       }
     }
   },
@@ -2415,23 +4183,28 @@
     "matches": {
       "1238420": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "きょうみぶかい"
       },
       "1270990": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1353320": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "じょうず"
       },
       "1483070": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1600900": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -2453,19 +4226,87 @@
     "matches": {
       "1209210": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "かみしめる"
       },
       "1270990": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "かたっ"
       },
       "1575990": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひとこと"
       },
       "1792260": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "とつとつ"
+      }
+    }
+  },
+  {
+    "id": "10014621",
+    "original": "ペルーの公用語って、何なの？",
+    "en": [
+      {
+        "id": "33890",
+        "text": "What is the common language in Peru?"
+      }
+    ],
+    "vocabIds": [
+      "1274940",
+      "1270990",
+      "1577100",
+      "2863720"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 6,
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1274940": {
+        "start": 4,
+        "length": 2,
+        "reading": "こうよう"
+      },
+      "1577100": {
+        "start": 10,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2863720": {
+        "start": 10,
+        "length": 3,
+        "reading": "なになの"
+      }
+    }
+  },
+  {
+    "id": "10049581",
+    "original": "アイヌ語って話せる？",
+    "en": [
+      {
+        "id": "10049572",
+        "text": "Can you speak Ainu?"
+      }
+    ],
+    "vocabIds": [
+      "1270990",
+      "1562360"
+    ],
+    "matches": {
+      "1270990": {
+        "start": 3,
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1562360": {
+        "start": 6,
+        "length": 3,
+        "reading": "はなせる"
       }
     }
   },
@@ -2487,19 +4328,23 @@
     "matches": {
       "1270990": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1449710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とうけい"
       },
       "1487410": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "かならずしも"
       },
       "1595730": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "すべて"
       }
     }
   },
@@ -2513,7 +4358,9 @@
       }
     ],
     "vocabIds": [
+      "1421970",
       "1705660",
+      "1404975",
       "1311110",
       "1595730",
       "1270990"
@@ -2521,19 +4368,183 @@
     "matches": {
       "1270990": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1311110": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1404975": {
+        "start": 3,
+        "length": 3,
+        "reading": "はやかれ"
+      },
+      "1421970": {
+        "start": 0,
+        "length": 3,
+        "reading": "おそかれ"
       },
       "1595730": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "すべて"
       },
       "1705660": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "おそかれはやかれ"
+      }
+    }
+  },
+  {
+    "id": "10262122",
+    "original": "外国語って、すごく面白いと思うんだ。",
+    "en": [
+      {
+        "id": "1801",
+        "text": "I find foreign languages very interesting."
+      }
+    ],
+    "vocabIds": [
+      "1203620",
+      "1270990",
+      "1533580",
+      "1589350"
+    ],
+    "matches": {
+      "1203620": {
+        "start": 0,
+        "length": 2,
+        "reading": "がいこく"
+      },
+      "1270990": {
+        "start": 2,
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1533580": {
+        "start": 9,
+        "length": 3,
+        "reading": "おもしろい"
+      },
+      "1589350": {
+        "start": 13,
+        "length": 2,
+        "reading": "おもう"
+      }
+    }
+  },
+  {
+    "id": "10558806",
+    "original": "私の言語の限界とは、私の世界の限界のことである。私が知り得ることは私が語り得ることだけである。",
+    "en": [
+      {
+        "id": "10558129",
+        "text": "The limits of my language are the limits of my mind. All I know is what I have words for."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1264420",
+      "1264650",
+      "1373860",
+      "1420470",
+      "2431350",
+      "1588760",
+      "1270990",
+      "1270930"
+    ],
+    "matches": {
+      "1264420": {
+        "start": 2,
+        "length": 2,
+        "reading": "げんご"
+      },
+      "1264650": {
+        "start": 5,
+        "length": 2,
+        "reading": "げんかい"
+      },
+      "1270930": {
+        "start": 35,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1270990": {
+        "start": 35,
+        "length": 2,
+        "reading": "かたり"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1373860": {
+        "start": 12,
+        "length": 2,
+        "reading": "せかい"
+      },
+      "1420470": {
+        "start": 26,
+        "length": 2,
+        "reading": "しり"
+      },
+      "1588760": {
+        "start": 28,
+        "length": 2,
+        "reading": "える"
+      },
+      "2431350": {
+        "start": 26,
+        "length": 4,
+        "reading": "しりえる"
+      }
+    }
+  },
+  {
+    "id": "10140661",
+    "original": "スパングリッシュについて語らせたら、あいつの右に出る者はいない。",
+    "en": [
+      {
+        "id": "10808615",
+        "text": "When it comes to speaking about Spanglish, there is nobody that could contend with him."
+      }
+    ],
+    "vocabIds": [
+      "1270990",
+      "1171010",
+      "1910030",
+      "1338240",
+      "1322990"
+    ],
+    "matches": {
+      "1171010": {
+        "start": 22,
+        "length": 1,
+        "reading": "みぎ"
+      },
+      "1270990": {
+        "start": 12,
+        "length": 2,
+        "reading": "かたら"
+      },
+      "1322990": {
+        "start": 26,
+        "length": 1,
+        "reading": "もの"
+      },
+      "1338240": {
+        "start": 24,
+        "length": 2,
+        "reading": "でる"
+      },
+      "1910030": {
+        "start": 22,
+        "length": 4,
+        "reading": "みぎにでる"
       }
     }
   },
@@ -2550,44 +4561,108 @@
       "1861770",
       "1206900",
       "1206540",
+      "1330360",
       "1937650",
+      "1319060",
       "1424410",
       "1304680",
+      "1594110",
       "1305420",
       "1270990"
     ],
     "matches": {
       "1206540": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "がくい"
       },
       "1206900": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1270990": {
         "start": 38,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1304680": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ざんねん"
       },
       "1305420": {
         "start": 28,
-        "length": 5
+        "length": 5,
+        "reading": "しかたがない"
+      },
+      "1319060": {
+        "start": 13,
+        "length": 1,
+        "reading": "しき"
+      },
+      "1330360": {
+        "start": 11,
+        "length": 2,
+        "reading": "じゅよ"
       },
       "1424410": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうし"
+      },
+      "1594110": {
+        "start": 28,
+        "length": 2,
+        "reading": "しかた"
       },
       "1861770": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       },
       "1937650": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "じゅよしき"
+      }
+    }
+  },
+  {
+    "id": "11029711",
+    "original": "「エスペラント語って話せる？」「ほとんど話せはしないけど、理解は結構できるよ」",
+    "en": [
+      {
+        "id": "10044207",
+        "text": "\"Do you speak Esperanto?\" \"I barely speak it, but I can understand it quite well.\""
+      }
+    ],
+    "vocabIds": [
+      "1270990",
+      "1562360",
+      "1549910",
+      "1254760"
+    ],
+    "matches": {
+      "1254760": {
+        "start": 32,
+        "length": 2,
+        "reading": "けっこう"
+      },
+      "1270990": {
+        "start": 7,
+        "length": 2,
+        "reading": "かたっ"
+      },
+      "1549910": {
+        "start": 29,
+        "length": 2,
+        "reading": "りかい"
+      },
+      "1562360": {
+        "start": 10,
+        "length": 3,
+        "reading": "はなせる"
       }
     }
   },
@@ -2608,15 +4683,62 @@
     "matches": {
       "1244470": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "にがて"
       },
       "1270990": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かたる"
       },
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
+      }
+    }
+  },
+  {
+    "id": "1247148",
+    "original": "ふ～ん、君は俺には自分のことほとんど語らんから初耳だな。",
+    "en": [
+      {
+        "id": "12481068",
+        "text": "Hmm, you tell me very little about yourself, so this is new to me."
+      }
+    ],
+    "vocabIds": [
+      "1247250",
+      "1576870",
+      "1318610",
+      "1270990",
+      "1342770"
+    ],
+    "matches": {
+      "1247250": {
+        "start": 4,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1270990": {
+        "start": 18,
+        "length": 2,
+        "reading": "かたら"
+      },
+      "1318610": {
+        "start": 9,
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1342770": {
+        "start": 23,
+        "length": 2,
+        "reading": "はつみみ"
+      },
+      "1576870": {
+        "start": 6,
+        "length": 1,
+        "reading": "おれ"
       }
     }
   }

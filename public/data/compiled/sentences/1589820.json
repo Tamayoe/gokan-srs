@@ -22,35 +22,43 @@
     "matches": {
       "1174970": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1220160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きはつ"
       },
       "1304510": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "のこる"
       },
       "1357300": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "しょくぶつ"
       },
       "1375860": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "せいぶん"
       },
       "1546140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ようざい"
       },
       "1589820": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1590410": {
         "start": 31,
-        "length": 1
+        "length": 1,
+        "reading": "かたまり"
       }
     }
   },
@@ -73,19 +81,86 @@
     "matches": {
       "1423310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1499320": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1589820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1605820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
+      }
+    }
+  },
+  {
+    "id": "85569",
+    "original": "美しい花が必ず良い香りがするとは限らない。",
+    "en": [
+      {
+        "id": "318144",
+        "text": "Pretty flowers do not necessarily smell sweet."
+      }
+    ],
+    "indices": "美しい 花[01] が 必ず 良い 香りがする{香りがする} とは限らない",
+    "vocabIds": [
+      "1486360",
+      "1194500",
+      "1487400",
+      "1605820",
+      "1589820",
+      "2826754",
+      "2070730",
+      "1264640"
+    ],
+    "matches": {
+      "1194500": {
+        "start": 3,
+        "length": 1,
+        "reading": "はな"
+      },
+      "1264640": {
+        "start": 16,
+        "length": 2,
+        "reading": "かぎら"
+      },
+      "1486360": {
+        "start": 0,
+        "length": 3,
+        "reading": "うつくしい"
+      },
+      "1487400": {
+        "start": 5,
+        "length": 2,
+        "reading": "かならず"
+      },
+      "1589820": {
+        "start": 9,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "1605820": {
+        "start": 7,
+        "length": 2,
+        "reading": "よい"
+      },
+      "2070730": {
+        "start": 14,
+        "length": 6,
+        "reading": "とはかぎらない"
+      },
+      "2826754": {
+        "start": 9,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -107,15 +182,18 @@
     "matches": {
       "1283060": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうすい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -138,19 +216,23 @@
     "matches": {
       "1213400": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あまい"
       },
       "1283060": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こうすい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -172,15 +254,75 @@
     "matches": {
       "1238380": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "こうふん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      }
+    }
+  },
+  {
+    "id": "94588",
+    "original": "彼女の外国製の香水はほのかな香りがする。",
+    "en": [
+      {
+        "id": "309118",
+        "text": "Her exotic perfume has a subtle scent."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 外国製~ の 香水 は 仄か{ほのかな} 香りがする{香りがする}",
+    "vocabIds": [
+      "1483150",
+      "1203620",
+      "1203680",
+      "1380580",
+      "1283060",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1203620": {
+        "start": 3,
+        "length": 2,
+        "reading": "がいこく"
+      },
+      "1203680": {
+        "start": 3,
+        "length": 3,
+        "reading": "がいこくせい"
+      },
+      "1283060": {
+        "start": 7,
+        "length": 2,
+        "reading": "こうすい"
+      },
+      "1380580": {
+        "start": 5,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1589820": {
+        "start": 14,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 14,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -200,32 +342,218 @@
       "1202440",
       "1401400",
       "1465590",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1202440": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "ひらい"
       },
       "1401400": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "まど"
       },
       "1401940": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くさばな"
       },
       "1465590": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1547710": {
+        "start": 18,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 18,
-        "length": 4
+        "length": 1,
+        "reading": "き"
       },
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      }
+    }
+  },
+  {
+    "id": "147622",
+    "original": "春の花の香りが漂っていた。",
+    "en": [
+      {
+        "id": "266938",
+        "text": "The air was scented with spring flowers."
+      }
+    ],
+    "indices": "春[01] の 花[01] の 香り が 漂う{漂っていた}",
+    "vocabIds": [
+      "1341000",
+      "1194500",
+      "1589820",
+      "1489240"
+    ],
+    "matches": {
+      "1194500": {
+        "start": 2,
+        "length": 1,
+        "reading": "はな"
+      },
+      "1341000": {
+        "start": 0,
+        "length": 1,
+        "reading": "はる"
+      },
+      "1489240": {
+        "start": 7,
+        "length": 2,
+        "reading": "ただよっ"
+      },
+      "1589820": {
+        "start": 4,
+        "length": 2,
+        "reading": "かおり"
+      }
+    }
+  },
+  {
+    "id": "154970",
+    "original": "私は庭の花の香りを胸一杯に吸い込んだ。",
+    "en": [
+      {
+        "id": "259569",
+        "text": "I breathed the smell of the flowers in the garden."
+      }
+    ],
+    "indices": "私(わたし)[01] は 庭 の 花[01] の 香り を 胸一杯[02]{胸一杯に}~ 吸い込む{吸い込んだ}",
+    "vocabIds": [
+      "1311110",
+      "1436130",
+      "1194500",
+      "1589820",
+      "1237820",
+      "1160790",
+      "1165670",
+      "2019640",
+      "1228230"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 10,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1165670": {
+        "start": 10,
+        "length": 2,
+        "reading": "いちはい"
+      },
+      "1194500": {
+        "start": 4,
+        "length": 1,
+        "reading": "はな"
+      },
+      "1228230": {
+        "start": 13,
+        "length": 4,
+        "reading": "すいこん"
+      },
+      "1237820": {
+        "start": 9,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1436130": {
+        "start": 2,
+        "length": 1,
+        "reading": "にわ"
+      },
+      "1589820": {
+        "start": 6,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2019640": {
+        "start": 11,
+        "length": 1,
+        "reading": "はい"
+      }
+    }
+  },
+  {
+    "id": "182858",
+    "original": "菊はよい香りがする。",
+    "en": [
+      {
+        "id": "19979",
+        "text": "Chrysanthemums smell sweet."
+      }
+    ],
+    "indices": "菊~ は 良い{よい} 香りがする{香りがする}",
+    "vocabIds": [
+      "1226210",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1226210": {
+        "start": 0,
+        "length": 1,
+        "reading": "きく"
+      },
+      "1589820": {
+        "start": 4,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 4,
+        "length": 5,
+        "reading": "かおりがする"
+      }
+    }
+  },
+  {
+    "id": "183577",
+    "original": "危険な香りがする。",
+    "en": [
+      {
+        "id": "20700",
+        "text": "There's a scent of danger."
+      }
+    ],
+    "indices": "危険[02]{危険な} 香りがする{香りがする}",
+    "vocabIds": [
+      "1218560",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1218560": {
+        "start": 0,
+        "length": 2,
+        "reading": "きけん"
+      },
+      "1589820": {
+        "start": 3,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 3,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -248,19 +576,23 @@
     "matches": {
       "1006960": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "そよかぜ"
       },
       "1213400": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あまい"
       },
       "1355120": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "のっ"
       },
       "1589820": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -285,27 +617,33 @@
     "matches": {
       "1194500": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1213400": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "あまい"
       },
       "1436130": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       },
       "1589820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1604540": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "みち"
       },
       "1606650": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わがや"
       }
     }
   },
@@ -328,19 +666,62 @@
     "matches": {
       "1194500": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1589820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1590460": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かだん"
       },
       "1605820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
+      }
+    }
+  },
+  {
+    "id": "186573",
+    "original": "花壇のバラは良い香りがする。",
+    "en": [
+      {
+        "id": "23708",
+        "text": "The roses in the garden smell sweet."
+      }
+    ],
+    "indices": "花壇 の 薔薇{バラ} は 良い 香りがする{香りがする}",
+    "vocabIds": [
+      "1590460",
+      "1605820",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1589820": {
+        "start": 8,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "1590460": {
+        "start": 0,
+        "length": 2,
+        "reading": "かだん"
+      },
+      "1605820": {
+        "start": 6,
+        "length": 2,
+        "reading": "よい"
+      },
+      "2826754": {
+        "start": 8,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -365,27 +746,66 @@
     "matches": {
       "1194500": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1360820": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ごこち"
       },
       "1415000": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1477130": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "はっする"
       },
       "1589820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1605820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
+      }
+    }
+  },
+  {
+    "id": "192930",
+    "original": "ゆりは甘い香りがする。",
+    "en": [
+      {
+        "id": "30096",
+        "text": "Lilies smell sweet."
+      }
+    ],
+    "indices": "百合(ゆり){ゆり} は 甘い(あまい)[02]~ 香りがする{香りがする}",
+    "vocabIds": [
+      "1213400",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1213400": {
+        "start": 3,
+        "length": 2,
+        "reading": "あまい"
+      },
+      "1589820": {
+        "start": 5,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 5,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -407,15 +827,18 @@
     "matches": {
       "1499320": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1604540": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "みち"
       }
     }
   },
@@ -433,24 +856,75 @@
       "1486360",
       "1194500",
       "1589820",
-      "2070730"
+      "2070730",
+      "1264640"
     ],
     "matches": {
       "1194500": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
+      },
+      "1264640": {
+        "start": 20,
+        "length": 2,
+        "reading": "かぎら"
       },
       "1486360": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "うつくしい"
       },
       "1589820": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "2070730": {
         "start": 18,
-        "length": 6
+        "length": 6,
+        "reading": "とはかぎらない"
+      }
+    }
+  },
+  {
+    "id": "197877",
+    "original": "バラは良い香りがする。",
+    "en": [
+      {
+        "id": "35066",
+        "text": "Roses smell sweet."
+      },
+      {
+        "id": "2949276",
+        "text": "The roses smell good."
+      },
+      {
+        "id": "2949275",
+        "text": "The roses smell nice."
+      }
+    ],
+    "indices": "薔薇{バラ} は 良い 香りがする{香りがする}",
+    "vocabIds": [
+      "1605820",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1589820": {
+        "start": 5,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "1605820": {
+        "start": 3,
+        "length": 2,
+        "reading": "よい"
+      },
+      "2826754": {
+        "start": 5,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -477,19 +951,23 @@
     "matches": {
       "1277450": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1502390": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
       },
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -511,15 +989,84 @@
     "matches": {
       "1489240": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "ただよっ"
       },
       "1499320": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      }
+    }
+  },
+  {
+    "id": "205357",
+    "original": "それはよい香りがする。",
+    "en": [
+      {
+        "id": "42601",
+        "text": "It smells delicious."
+      }
+    ],
+    "indices": "其れ[01]{それ} は 良い{よい} 香りがする{香りがする}",
+    "vocabIds": [
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1589820": {
+        "start": 5,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 5,
+        "length": 5,
+        "reading": "かおりがする"
+      }
+    }
+  },
+  {
+    "id": "209202",
+    "original": "その少女は花の香りをかいでいる。",
+    "en": [
+      {
+        "id": "46463",
+        "text": "The girl is smelling the flowers."
+      }
+    ],
+    "indices": "其の[01]{その} 少女 は 花[01] の 香り を 嗅ぐ{かいでいる}",
+    "vocabIds": [
+      "1580290",
+      "1194500",
+      "1589820",
+      "1473740"
+    ],
+    "matches": {
+      "1194500": {
+        "start": 5,
+        "length": 1,
+        "reading": "はな"
+      },
+      "1473740": {
+        "start": 10,
+        "length": 2,
+        "reading": "かい"
+      },
+      "1580290": {
+        "start": 2,
+        "length": 2,
+        "reading": "しょうじょ"
+      },
+      "1589820": {
+        "start": 7,
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -542,19 +1089,23 @@
     "matches": {
       "1194500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1516490": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "はなっ"
       },
       "1589820": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1591430": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "きもち"
       }
     }
   },
@@ -577,19 +1128,23 @@
     "matches": {
       "1213400": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "あまい"
       },
       "1526960": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "あじ"
       },
       "1589820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1605820": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -610,11 +1165,13 @@
     "matches": {
       "1477480": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "はっさん"
       },
       "1589820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -640,31 +1197,38 @@
     "matches": {
       "1194500": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1213400": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "あまい"
       },
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1388300": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せんじつ"
       },
       "1473740": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "かっ"
       },
       "1571760": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ばら"
       },
       "1589820": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -687,19 +1251,23 @@
     "matches": {
       "1213400": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "あまい"
       },
       "1516490": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はなつ"
       },
       "1537250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "の"
       },
       "1589820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -720,11 +1288,13 @@
     "matches": {
       "1002430": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おちゃ"
       },
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -750,15 +1320,61 @@
     "matches": {
       "1194500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1486360": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "うつくしい"
       },
       "1589820": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      }
+    }
+  },
+  {
+    "id": "222722",
+    "original": "この花は独特の香りがする。",
+    "en": [
+      {
+        "id": "60052",
+        "text": "This flower has a scent all its own."
+      },
+      {
+        "id": "388322",
+        "text": "These flowers have a unique smell."
+      }
+    ],
+    "indices": "此の{この} 花[01] は 独特{独特の} 香りがする{香りがする}",
+    "vocabIds": [
+      "1194500",
+      "1456010",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1194500": {
+        "start": 2,
+        "length": 1,
+        "reading": "はな"
+      },
+      "1456010": {
+        "start": 4,
+        "length": 2,
+        "reading": "どくとく"
+      },
+      "1589820": {
+        "start": 7,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 7,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -781,19 +1397,152 @@
     "matches": {
       "1194500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1236070": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "つよい"
       },
       "1516490": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はなつ"
       },
       "1589820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      }
+    }
+  },
+  {
+    "id": "222730",
+    "original": "この花は甘い香りがする。",
+    "en": [
+      {
+        "id": "60059",
+        "text": "This flower smells sweet."
+      }
+    ],
+    "indices": "此の{この} 花[01] は 甘い(あまい)[02] 香りがする{香りがする}",
+    "vocabIds": [
+      "1194500",
+      "1213400",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1194500": {
+        "start": 2,
+        "length": 1,
+        "reading": "はな"
+      },
+      "1213400": {
+        "start": 4,
+        "length": 2,
+        "reading": "あまい"
+      },
+      "1589820": {
+        "start": 6,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 6,
+        "length": 5,
+        "reading": "かおりがする"
+      }
+    }
+  },
+  {
+    "id": "222748",
+    "original": "この花の香りは私の子供時代を思い出させます。",
+    "en": [
+      {
+        "id": "60078",
+        "text": "The smell of this flower calls up my childhood."
+      }
+    ],
+    "indices": "此の{この} 花[01] の 香り は 私(わたし)[01]{私の} 子供時代 を 思い出す{思い出させます}",
+    "vocabIds": [
+      "1194500",
+      "1589820",
+      "1311110",
+      "1307850",
+      "2761990",
+      "1316300",
+      "1309260"
+    ],
+    "matches": {
+      "1194500": {
+        "start": 2,
+        "length": 1,
+        "reading": "はな"
+      },
+      "1307850": {
+        "start": 9,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1309260": {
+        "start": 14,
+        "length": 4,
+        "reading": "おもいださ"
+      },
+      "1311110": {
+        "start": 7,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1316300": {
+        "start": 11,
+        "length": 2,
+        "reading": "じだい"
+      },
+      "1589820": {
+        "start": 4,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2761990": {
+        "start": 9,
+        "length": 4,
+        "reading": "こどもじだい"
+      }
+    }
+  },
+  {
+    "id": "222977",
+    "original": "このワインは良い香りがする。",
+    "en": [
+      {
+        "id": "60308",
+        "text": "This wine has a good bouquet."
+      }
+    ],
+    "indices": "此の{この} ワイン は 良い 香りがする{香りがする}",
+    "vocabIds": [
+      "1605820",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1589820": {
+        "start": 8,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "1605820": {
+        "start": 6,
+        "length": 2,
+        "reading": "よい"
+      },
+      "2826754": {
+        "start": 8,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -813,7 +1562,8 @@
     "matches": {
       "1589820": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -834,11 +1584,139 @@
     "matches": {
       "1558400": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "おとる"
       },
       "1589820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      }
+    }
+  },
+  {
+    "id": "223310",
+    "original": "このバラは実に甘い香りがする。",
+    "en": [
+      {
+        "id": "60643",
+        "text": "This rose smells so sweet."
+      }
+    ],
+    "indices": "此の{この} 薔薇{バラ} は 実に(じつに) 甘い(あまい)[02] 香りがする{香りがする}",
+    "vocabIds": [
+      "2820720",
+      "1213400",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1213400": {
+        "start": 7,
+        "length": 2,
+        "reading": "あまい"
+      },
+      "1589820": {
+        "start": 9,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2820720": {
+        "start": 5,
+        "length": 2,
+        "reading": "じつに"
+      },
+      "2826754": {
+        "start": 9,
+        "length": 5,
+        "reading": "かおりがする"
+      }
+    }
+  },
+  {
+    "id": "223311",
+    "original": "このバラは甘い香りがする。",
+    "en": [
+      {
+        "id": "60642",
+        "text": "This rose smells sweet."
+      }
+    ],
+    "indices": "此の{この} 薔薇{バラ} は 甘い(あまい)[02] 香りがする{香りがする}",
+    "vocabIds": [
+      "1213400",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1213400": {
+        "start": 5,
+        "length": 2,
+        "reading": "あまい"
+      },
+      "1589820": {
+        "start": 7,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 7,
+        "length": 5,
+        "reading": "かおりがする"
+      }
+    }
+  },
+  {
+    "id": "223316",
+    "original": "このはなはよい香りがする。",
+    "en": [
+      {
+        "id": "60059",
+        "text": "This flower smells sweet."
+      }
+    ],
+    "indices": "此の{この} 花[01]{はな} は 良い{よい} 香りがする{香りがする}",
+    "vocabIds": [
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1589820": {
+        "start": 7,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 7,
+        "length": 5,
+        "reading": "かおりがする"
+      }
+    }
+  },
+  {
+    "id": "223419",
+    "original": "このナシはいい香りがするんです。",
+    "en": [
+      {
+        "id": "60753",
+        "text": "This pear smells nice."
+      }
+    ],
+    "indices": "此の{この} 梨{ナシ} は いい(#2820690)[01] 香りがする{香りがする} のです{んです}",
+    "vocabIds": [
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1589820": {
+        "start": 7,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 7,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -860,15 +1738,18 @@
     "matches": {
       "1483090": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1541900": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "さそっ"
       },
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -889,11 +1770,13 @@
     "matches": {
       "1194500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1589820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -919,15 +1802,18 @@
     "matches": {
       "1213400": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "あまい"
       },
       "1283060": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こうすい"
       },
       "1589820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -948,11 +1834,13 @@
     "matches": {
       "1194500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1589820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -975,23 +1863,28 @@
     "matches": {
       "1160820": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ひとつ"
       },
       "1293700": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1575210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じゃこう"
       },
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1605820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -1013,19 +1906,61 @@
     "matches": {
       "1160820": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ひとつ"
       },
       "1293700": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1589820": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1605820": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
+      }
+    }
+  },
+  {
+    "id": "894616",
+    "original": "海に近付いてきたんだね。潮の香りがする。",
+    "en": [
+      {
+        "id": "896057",
+        "text": "We've come nearer to the sea. I can smell it."
+      }
+    ],
+    "vocabIds": [
+      "1201190",
+      "1428620",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1201190": {
+        "start": 0,
+        "length": 1,
+        "reading": "うみ"
+      },
+      "1428620": {
+        "start": 12,
+        "length": 1,
+        "reading": "しお"
+      },
+      "1589820": {
+        "start": 14,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 14,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -1046,15 +1981,18 @@
     "matches": {
       "1277450": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1069,26 +2007,24 @@
     ],
     "vocabIds": [
       "1521400",
-      "2035700",
       "1589820",
       "1277450"
     ],
     "matches": {
       "1277450": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1589820": {
         "start": 12,
-        "length": 2
-      },
-      "2035700": {
-        "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1102,17 +2038,95 @@
       }
     ],
     "vocabIds": [
+      "1486650",
       "2832632",
       "1589820"
     ],
     "matches": {
+      "1486650": {
+        "start": 5,
+        "length": 3,
+        "reading": "おいし"
+      },
       "1589820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "2832632": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "おいしそう"
+      }
+    }
+  },
+  {
+    "id": "2070277",
+    "original": "このお茶はいい香りがする。",
+    "en": [
+      {
+        "id": "57890",
+        "text": "This tea smells good."
+      }
+    ],
+    "vocabIds": [
+      "1002430",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1002430": {
+        "start": 2,
+        "length": 2,
+        "reading": "おちゃ"
+      },
+      "1589820": {
+        "start": 7,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 7,
+        "length": 5,
+        "reading": "かおりがする"
+      }
+    }
+  },
+  {
+    "id": "2347878",
+    "original": "この花はとても良い香りがする。",
+    "en": [
+      {
+        "id": "2347862",
+        "text": "These flowers have a really nice fragrance."
+      }
+    ],
+    "vocabIds": [
+      "1194500",
+      "1605820",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1194500": {
+        "start": 2,
+        "length": 1,
+        "reading": "はな"
+      },
+      "1589820": {
+        "start": 9,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "1605820": {
+        "start": 7,
+        "length": 2,
+        "reading": "よい"
+      },
+      "2826754": {
+        "start": 9,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -1136,27 +2150,33 @@
     "matches": {
       "1399520": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "さわやか"
       },
       "1432920": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "とおり"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1580640": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1589820": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1595920": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "すれちがっ"
       }
     }
   },
@@ -1176,11 +2196,13 @@
     "matches": {
       "1413660": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "だいすき"
       },
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1200,11 +2222,13 @@
     "matches": {
       "1277450": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1225,15 +2249,18 @@
     "matches": {
       "1413660": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "だいすき"
       },
       "1428280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1589820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1254,15 +2281,18 @@
     "matches": {
       "1413660": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "だいすき"
       },
       "1428280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1589820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1297,7 +2327,104 @@
     "matches": {
       "1589820": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      }
+    }
+  },
+  {
+    "id": "9431909",
+    "original": "いい香りがするでしょう？",
+    "en": [
+      {
+        "id": "9338031",
+        "text": "It smells good, doesn't it?"
+      }
+    ],
+    "vocabIds": [
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1589820": {
+        "start": 2,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 2,
+        "length": 5,
+        "reading": "かおりがする"
+      }
+    }
+  },
+  {
+    "id": "9529643",
+    "original": "薔薇はいい香りがする。",
+    "en": [
+      {
+        "id": "2949266",
+        "text": "Roses smell good."
+      }
+    ],
+    "vocabIds": [
+      "1571760",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1571760": {
+        "start": 0,
+        "length": 2,
+        "reading": "ばら"
+      },
+      "1589820": {
+        "start": 5,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 5,
+        "length": 5,
+        "reading": "かおりがする"
+      }
+    }
+  },
+  {
+    "id": "9529645",
+    "original": "薔薇は素敵な香りがするね。",
+    "en": [
+      {
+        "id": "2949268",
+        "text": "Roses smell nice."
+      }
+    ],
+    "vocabIds": [
+      "1571760",
+      "1397350",
+      "1589820",
+      "2826754"
+    ],
+    "matches": {
+      "1397350": {
+        "start": 3,
+        "length": 2,
+        "reading": "すてき"
+      },
+      "1571760": {
+        "start": 0,
+        "length": 2,
+        "reading": "ばら"
+      },
+      "1589820": {
+        "start": 6,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 6,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -1316,7 +2443,8 @@
     "matches": {
       "1589820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1336,11 +2464,13 @@
     "matches": {
       "1518130": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ゆたか"
       },
       "1589820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1354,37 +2484,55 @@
       }
     ],
     "vocabIds": [
-      "1865430",
+      "1499720",
+      "1355120",
       "1243250",
       "1589820",
       "1332650",
       "1212260",
+      "1212250",
       "1341210"
     ],
     "matches": {
+      "1212250": {
+        "start": 25,
+        "length": 2,
+        "reading": "かんじ"
+      },
       "1212260": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1243250": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "きんもくせい"
       },
       "1332650": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "あき"
       },
       "1341210": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "しゅんかん"
+      },
+      "1355120": {
+        "start": 2,
+        "length": 2,
+        "reading": "のっ"
+      },
+      "1499720": {
+        "start": 0,
+        "length": 1,
+        "reading": "かぜ"
       },
       "1589820": {
         "start": 17,
-        "length": 2
-      },
-      "1865430": {
-        "start": 0,
-        "length": 5
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1398,6 +2546,7 @@
       }
     ],
     "vocabIds": [
+      "2265630",
       "1350590",
       "1578880",
       "1589820",
@@ -1406,19 +2555,28 @@
     "matches": {
       "1277450": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1350590": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "やきたて"
       },
       "1578880": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "こうばしい"
       },
       "1589820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2265630": {
+        "start": 0,
+        "length": 2,
+        "reading": "やき"
       }
     }
   },
@@ -1437,7 +2595,8 @@
     "matches": {
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1457,11 +2616,13 @@
     "matches": {
       "1404320": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "いき"
       },
       "1589820": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1482,24 +2643,34 @@
       "1589820",
       "1277450",
       "2757880",
+      "1587040",
       "1580640"
     ],
     "matches": {
       "1277450": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1580640": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1587040": {
+        "start": 12,
+        "length": 2,
+        "reading": "いう"
       },
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "2757880": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "っていう"
       }
     }
   },
@@ -1513,12 +2684,57 @@
       }
     ],
     "vocabIds": [
+      "1213400",
       "1589820"
     ],
     "matches": {
+      "1213400": {
+        "start": 5,
+        "length": 2,
+        "reading": "あまく"
+      },
       "1589820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      }
+    }
+  },
+  {
+    "id": "10640296",
+    "original": "フランスでピニャコラーダの香りがする石鹸を買ったんだ。",
+    "en": [
+      {
+        "id": "9725799",
+        "text": "I bought a soap in France that smells like piña colada."
+      }
+    ],
+    "vocabIds": [
+      "1589820",
+      "2826754",
+      "1382590",
+      "1473740"
+    ],
+    "matches": {
+      "1382590": {
+        "start": 18,
+        "length": 2,
+        "reading": "せっけん"
+      },
+      "1473740": {
+        "start": 21,
+        "length": 2,
+        "reading": "かっ"
+      },
+      "1589820": {
+        "start": 13,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2826754": {
+        "start": 13,
+        "length": 5,
+        "reading": "かおりがする"
       }
     }
   },
@@ -1541,7 +2757,8 @@
     "matches": {
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1561,11 +2778,13 @@
     "matches": {
       "1213400": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あまい"
       },
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1584,7 +2803,8 @@
     "matches": {
       "1589820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1604,11 +2824,13 @@
     "matches": {
       "1283060": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうすい"
       },
       "1589820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1630,19 +2852,23 @@
     "matches": {
       "1423310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1499320": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       },
       "1602360": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "ひろがっ"
       }
     }
   },
@@ -1668,17 +2894,31 @@
       }
     ],
     "vocabIds": [
+      "1488000",
       "1488160",
+      "1956260",
       "1589820"
     ],
     "matches": {
+      "1488000": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひゃく"
+      },
       "1488160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひゃくごう"
       },
       "1589820": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
+      },
+      "1956260": {
+        "start": 3,
+        "length": 1,
+        "reading": "ごう"
       }
     }
   },
@@ -1697,7 +2937,8 @@
     "matches": {
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1716,7 +2957,8 @@
     "matches": {
       "1589820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1737,11 +2979,13 @@
     "matches": {
       "1489240": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "ただよっ"
       },
       "1589820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1755,22 +2999,13 @@
       }
     ],
     "vocabIds": [
-      "2265630",
-      "2081610",
       "1589820"
     ],
     "matches": {
       "1589820": {
         "start": 13,
-        "length": 2
-      },
-      "2081610": {
-        "start": 8,
-        "length": 2
-      },
-      "2265630": {
-        "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1795,24 +3030,28 @@
       "1499320",
       "1571760",
       "1589820",
-      "2508600"
+      "1584060"
     ],
     "matches": {
       "1499320": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1571760": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ばら"
+      },
+      "1584060": {
+        "start": 9,
+        "length": 2,
+        "reading": "つつま"
       },
       "1589820": {
         "start": 6,
-        "length": 2
-      },
-      "2508600": {
-        "start": 9,
-        "length": 1
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1831,7 +3070,8 @@
     "matches": {
       "1589820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   },
@@ -1850,7 +3090,8 @@
     "matches": {
       "1589820": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かおり"
       }
     }
   }

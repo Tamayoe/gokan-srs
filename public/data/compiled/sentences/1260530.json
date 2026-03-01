@@ -17,15 +17,18 @@
     "matches": {
       "1260530": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "けわしい"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1521340": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ほくめん"
       }
     }
   },
@@ -43,24 +46,79 @@
       "1483070",
       "1260530",
       "1322470",
-      "1005880"
+      "1259290",
+      "2256270"
     ],
     "matches": {
-      "1005880": {
-        "start": 8,
-        "length": 5
+      "1259290": {
+        "start": 11,
+        "length": 1,
+        "reading": "み"
       },
       "1260530": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "けわしい"
       },
       "1322470": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しゃめん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2256270": {
+        "start": 11,
+        "length": 1,
+        "reading": "み"
+      }
+    }
+  },
+  {
+    "id": "165873",
+    "original": "私たちは険しい山を登った。",
+    "en": [
+      {
+        "id": "248631",
+        "text": "We climbed up the steep mountain."
+      }
+    ],
+    "indices": "私たち は 険しい山~ を 登る{登った}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1260530",
+      "1873810",
+      "1302680"
+    ],
+    "matches": {
+      "1260530": {
+        "start": 4,
+        "length": 3,
+        "reading": "けわしい"
+      },
+      "1302680": {
+        "start": 7,
+        "length": 1,
+        "reading": "やま"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1873810": {
+        "start": 4,
+        "length": 4,
+        "reading": "けわしいやま"
       }
     }
   },
@@ -75,6 +133,7 @@
     ],
     "indices": "私たち は 険しい 坂 を 登る{登った}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1260530",
       "1297110"
@@ -82,15 +141,87 @@
     "matches": {
       "1260530": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "けわしい"
       },
       "1297110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "さか"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      }
+    }
+  },
+  {
+    "id": "173234",
+    "original": "高く登れば登るほど、山は険しくなった。",
+    "en": [
+      {
+        "id": "241237",
+        "text": "The higher we climbed, the steeper became the mountain."
+      },
+      {
+        "id": "11052611",
+        "text": "The higher we climbed, the steeper the mountain became."
+      }
+    ],
+    "indices": "高い{高く} 登る{登れば} 登る 程{ほど} 山(やま)[01] は 険しい{険しく} 成る[01]{なった}",
+    "vocabIds": [
+      "1283190",
+      "1302680",
+      "1260530"
+    ],
+    "matches": {
+      "1260530": {
+        "start": 12,
+        "length": 3,
+        "reading": "けわしく"
+      },
+      "1283190": {
+        "start": 0,
+        "length": 2,
+        "reading": "たかく"
+      },
+      "1302680": {
+        "start": 10,
+        "length": 1,
+        "reading": "やま"
+      }
+    }
+  },
+  {
+    "id": "175053",
+    "original": "険しい山道を登るには、はじめはゆっくり登らなくてはいけない。",
+    "en": [
+      {
+        "id": "239414",
+        "text": "To climb steep hills requires a slow pace at first."
+      }
+    ],
+    "indices": "険しい 山道 を 登る には 初め(はじめ){はじめ} は ゆっくり 登る{登ら} 無くてはいけない{なくてはいけない}",
+    "vocabIds": [
+      "1260530",
+      "1303090"
+    ],
+    "matches": {
+      "1260530": {
+        "start": 0,
+        "length": 3,
+        "reading": "けわしい"
+      },
+      "1303090": {
+        "start": 3,
+        "length": 2,
+        "reading": "さんどう"
       }
     }
   },
@@ -110,37 +241,50 @@
       "1578850",
       "1155090",
       "1286320",
+      "1416690",
       "1422970",
       "1517090"
     ],
     "matches": {
       "1155090": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "いがい"
       },
       "1260530": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けわしい"
       },
       "1286320": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "こっきょう"
+      },
+      "1416690": {
+        "start": 16,
+        "length": 2,
+        "reading": "たどり"
       },
       "1422970": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "つく"
       },
       "1517090": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       },
       "1578850": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "2002310": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "そのみち"
       }
     }
   },
@@ -165,27 +309,72 @@
     "matches": {
       "1260530": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けわしい"
       },
       "1286320": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こっきょう"
       },
       "1517090": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       },
       "1538920": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ゆいいつ"
       },
       "1578850": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "2002310": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "そのみち"
+      }
+    }
+  },
+  {
+    "id": "220584",
+    "original": "この地点から登りが急に険しくなった。",
+    "en": [
+      {
+        "id": "57906",
+        "text": "From this point the climb suddenly became steep."
+      }
+    ],
+    "indices": "此の{この} 地点 から 上り[01]{登り} が 急に[02] 険しい{険しく} 成る[01]{なった}",
+    "vocabIds": [
+      "1421380",
+      "1228560",
+      "2269050",
+      "1260530"
+    ],
+    "matches": {
+      "1228560": {
+        "start": 9,
+        "length": 1,
+        "reading": "きゅう"
+      },
+      "1260530": {
+        "start": 11,
+        "length": 3,
+        "reading": "けわしく"
+      },
+      "1421380": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちてん"
+      },
+      "2269050": {
+        "start": 9,
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   }

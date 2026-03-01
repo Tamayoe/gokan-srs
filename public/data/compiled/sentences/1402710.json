@@ -11,26 +11,36 @@
     "indices": "彼(かれ)[01] は 私たち を 車(くるま) で(#2028980) 送り返す{送り返して} 呉れる{くれた}",
     "vocabIds": [
       "1483070",
+      "1311110",
       "1311300",
       "1323080",
       "1402710"
     ],
     "matches": {
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1323080": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1402710": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "おくりかえし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -46,31 +56,30 @@
     "indices": "彼(かれ)[01] は 其の[01]{その} 手紙 を 開封~ 為る(する){しないで} 送り返す{送り返した}~",
     "vocabIds": [
       "1483070",
-      "2829760",
-      "1311530",
+      "1327720",
       "1202920",
       "1402710"
     ],
     "matches": {
       "1202920": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かいふう"
       },
-      "1311530": {
-        "start": 5,
-        "length": 1
+      "1327720": {
+        "start": 4,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1402710": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "おくりかえし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
-      },
-      "2829760": {
-        "start": 2,
-        "length": 3
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -92,15 +101,51 @@
     "matches": {
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1402710": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "おくりかえし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "183721",
+    "original": "間違った商品を送り返しましょうか。",
+    "en": [
+      {
+        "id": "20844",
+        "text": "Should we send back the wrong merchandise?"
+      }
+    ],
+    "indices": "間違う[01]{間違った} 商品 を 送り返す{送り返し} ましょうか",
+    "vocabIds": [
+      "1611610",
+      "1347310",
+      "1402710"
+    ],
+    "matches": {
+      "1347310": {
+        "start": 4,
+        "length": 2,
+        "reading": "しょうひん"
+      },
+      "1402710": {
+        "start": 7,
+        "length": 4,
+        "reading": "おくりかえし"
+      },
+      "1611610": {
+        "start": 0,
+        "length": 3,
+        "reading": "まちがっ"
       }
     }
   },
@@ -117,29 +162,40 @@
       "1483070",
       "1327720",
       "1499580",
+      "1202450",
       "2810010",
       "1402710"
     ],
     "matches": {
+      "1202450": {
+        "start": 7,
+        "length": 2,
+        "reading": "あけ"
+      },
       "1327720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1402710": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "おくりかえし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1499580": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ふう"
       },
       "2810010": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "あけ"
       }
     }
   },
@@ -154,21 +210,30 @@
     ],
     "vocabIds": [
       "1499580",
+      "1202450",
       "2810010",
       "1402710"
     ],
     "matches": {
+      "1202450": {
+        "start": 2,
+        "length": 2,
+        "reading": "あけ"
+      },
       "1402710": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "おくりかえし"
       },
       "1499580": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ふう"
       },
       "2810010": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あけ"
       }
     }
   }

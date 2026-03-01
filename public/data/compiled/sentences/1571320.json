@@ -12,25 +12,35 @@
     "vocabIds": [
       "1155090",
       "1329015",
+      "1329010",
       "1571320",
       "1605820"
     ],
     "matches": {
       "1155090": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いがい"
+      },
+      "1329010": {
+        "start": 11,
+        "length": 1,
+        "reading": "さけ"
       },
       "1329015": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おさけ"
       },
       "1571320": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "なめる"
       },
       "1605820": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -51,11 +61,127 @@
     "matches": {
       "1178620": {
         "start": 17,
-        "length": 4
+        "length": 4,
+        "reading": "しょっぱい"
       },
       "1571320": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "なめ"
+      }
+    }
+  },
+  {
+    "id": "74793",
+    "original": "脱水症状には、塩をひと舐め。",
+    "en": [
+      {
+        "id": "328926",
+        "text": "For dehydration, take a lick of salt."
+      }
+    ],
+    "indices": "脱水症状~ には 塩 を 一舐め{ひと舐め}~",
+    "vocabIds": [
+      "1416540",
+      "1998040",
+      "1351030",
+      "1576630",
+      "2267420",
+      "1571320"
+    ],
+    "matches": {
+      "1351030": {
+        "start": 2,
+        "length": 2,
+        "reading": "しょうじょう"
+      },
+      "1416540": {
+        "start": 0,
+        "length": 2,
+        "reading": "だっすい"
+      },
+      "1571320": {
+        "start": 11,
+        "length": 2,
+        "reading": "なめ"
+      },
+      "1576630": {
+        "start": 7,
+        "length": 1,
+        "reading": "しお"
+      },
+      "1998040": {
+        "start": 0,
+        "length": 4,
+        "reading": "だっすいしょうじょう"
+      },
+      "2267420": {
+        "start": 9,
+        "length": 4,
+        "reading": "ひとなめ"
+      }
+    }
+  },
+  {
+    "id": "74823",
+    "original": "「そんなに舐められた相手じゃないけどなぁ・・・」「そうだよ、窮鼠猫を噛むって言うじゃないか」",
+    "en": [
+      {
+        "id": "328896",
+        "text": "\"I don't think she's an opponent you can ignore like that ...\" \"That's right, they say a cornered rat bites back, don't they?\""
+      }
+    ],
+    "indices": "そんな{そんなに} 舐める[04]{舐められた} 相手 だ{じゃない} けど なあ{なぁ} そうだ よ 窮鼠猫を噛む~ って 言う だ{じゃない} か",
+    "vocabIds": [
+      "1571320",
+      "1401000",
+      "1742050",
+      "2103200",
+      "1467640",
+      "1209240",
+      "2757880",
+      "1587040"
+    ],
+    "matches": {
+      "1209240": {
+        "start": 34,
+        "length": 2,
+        "reading": "かむ"
+      },
+      "1401000": {
+        "start": 10,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1467640": {
+        "start": 32,
+        "length": 1,
+        "reading": "ねこ"
+      },
+      "1571320": {
+        "start": 5,
+        "length": 2,
+        "reading": "なめ"
+      },
+      "1587040": {
+        "start": 38,
+        "length": 2,
+        "reading": "いう"
+      },
+      "1742050": {
+        "start": 30,
+        "length": 2,
+        "reading": "きゅうそ"
+      },
+      "2103200": {
+        "start": 30,
+        "length": 6,
+        "reading": "きゅうそねこをかむ"
+      },
+      "2757880": {
+        "start": 36,
+        "length": 4,
+        "reading": "っていう"
       }
     }
   },
@@ -72,20 +198,23 @@
     "vocabIds": [
       "1217730",
       "1571320",
-      "1310660"
+      "1310670"
     ],
     "matches": {
       "1217730": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
       },
-      "1310660": {
+      "1310670": {
         "start": 15,
-        "length": 2
+        "length": 3,
+        "reading": "とめろ"
       },
       "1571320": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "なめる"
       }
     }
   },
@@ -108,19 +237,23 @@
     "matches": {
       "1483150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1571320": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "なめ"
       },
       "1584160": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ほお"
       },
       "1592900": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こいぬ"
       }
     }
   },
@@ -147,23 +280,28 @@
     "matches": {
       "1201940": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "はいざら"
       },
       "1228260": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "すう"
       },
       "1571320": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "なめる"
       },
       "1580640": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たばこ"
       }
     }
   },
@@ -183,11 +321,13 @@
     "matches": {
       "1467640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ねこ"
       },
       "1571320": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "なめ"
       }
     }
   }

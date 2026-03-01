@@ -1,5 +1,150 @@
 [
   {
+    "id": "74691",
+    "original": "土日月の午前１０時半から午後４時まで開館。",
+    "en": [
+      {
+        "id": "329028",
+        "text": "Open from 10:30am to 4pm on Sat, Sun, and Mon."
+      }
+    ],
+    "indices": "土(ど)[01]~ 日(にち)[01]~ 月(げつ) の 午前 時(じ)[01] 半 から 午後 時(じ)[01] 迄{まで} 開館",
+    "vocabIds": [
+      "1445270",
+      "2542800",
+      "1635330",
+      "1269060",
+      "1658480",
+      "1268990",
+      "1307230",
+      "1315840",
+      "1202580"
+    ],
+    "matches": {
+      "1202580": {
+        "start": 18,
+        "length": 2,
+        "reading": "かいかん"
+      },
+      "1268990": {
+        "start": 12,
+        "length": 2,
+        "reading": "ごご"
+      },
+      "1269060": {
+        "start": 4,
+        "length": 2,
+        "reading": "ごぜん"
+      },
+      "1307230": {
+        "start": 14,
+        "length": 2,
+        "reading": "よんじ"
+      },
+      "1315840": {
+        "start": 15,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1445270": {
+        "start": 0,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1635330": {
+        "start": 1,
+        "length": 2,
+        "reading": "じつげつ"
+      },
+      "1658480": {
+        "start": 8,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2542800": {
+        "start": 0,
+        "length": 3,
+        "reading": "どじつげつ"
+      }
+    }
+  },
+  {
+    "id": "77233",
+    "original": "六時半に予約しています。",
+    "en": [
+      {
+        "id": "326486",
+        "text": "I have a reservation for six-thirty."
+      },
+      {
+        "id": "1369387",
+        "text": "We have a reservation for six-thirty."
+      }
+    ],
+    "indices": "六 時半(じはん) に 予約[01] 為る(する){しています}",
+    "vocabIds": [
+      "1585310",
+      "1658480",
+      "1543750"
+    ],
+    "matches": {
+      "1543750": {
+        "start": 4,
+        "length": 2,
+        "reading": "よやく"
+      },
+      "1585310": {
+        "start": 0,
+        "length": 1,
+        "reading": "ろく"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "77234",
+    "original": "六時半に起こしてください。",
+    "en": [
+      {
+        "id": "2429736",
+        "text": "Please wake me up at 6:30."
+      }
+    ],
+    "indices": "六 時半(じはん) に 起こす{起こして} 下さい{ください}",
+    "vocabIds": [
+      "1585310",
+      "1658480",
+      "1223660",
+      "2087400"
+    ],
+    "matches": {
+      "1223660": {
+        "start": 4,
+        "length": 3,
+        "reading": "おこし"
+      },
+      "1585310": {
+        "start": 0,
+        "length": 1,
+        "reading": "ろく"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2087400": {
+        "start": 4,
+        "length": 3,
+        "reading": "おこし"
+      }
+    }
+  },
+  {
     "id": "77493",
     "original": "列車は今日の午後１時半に発車します。",
     "en": [
@@ -19,23 +164,322 @@
     "matches": {
       "1268990": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1477500": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "はっしゃ"
       },
       "1558370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "1579110": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1658480": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "77497",
+    "original": "列車は午後２時半に出る。",
+    "en": [
+      {
+        "id": "326222",
+        "text": "The train leaves at 2:30 p.m."
+      }
+    ],
+    "indices": "列車 は 午後 時半(じはん) に 出る[02]",
+    "vocabIds": [
+      "1558370",
+      "1268990",
+      "1658480",
+      "1338240"
+    ],
+    "matches": {
+      "1268990": {
+        "start": 3,
+        "length": 2,
+        "reading": "ごご"
+      },
+      "1338240": {
+        "start": 9,
+        "length": 2,
+        "reading": "でる"
+      },
+      "1558370": {
+        "start": 0,
+        "length": 2,
+        "reading": "れっしゃ"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "77556",
+    "original": "列車は１０時半に出発するから、１０時にあなたを誘いに行きます。",
+    "en": [
+      {
+        "id": "326163",
+        "text": "The train leaves at half past ten, so I'll call for you at ten."
+      }
+    ],
+    "indices": "列車{列車} は 時半(じはん) に 出発{出発する} から 時(じ)[01] に 貴方(あなた)[01]{あなた} を 誘う[01]{誘い} に 行く[01]{行きます}",
+    "vocabIds": [
+      "1558370",
+      "1658480",
+      "1340000",
+      "2845369",
+      "1315840",
+      "2021540",
+      "1541840",
+      "1578850",
+      "1578790"
+    ],
+    "matches": {
+      "1315840": {
+        "start": 17,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1340000": {
+        "start": 8,
+        "length": 2,
+        "reading": "しゅっぱつ"
+      },
+      "1541840": {
+        "start": 23,
+        "length": 2,
+        "reading": "さそい"
+      },
+      "1558370": {
+        "start": 0,
+        "length": 2,
+        "reading": "れっしゃ"
+      },
+      "1578790": {
+        "start": 26,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 26,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1658480": {
+        "start": 5,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2021540": {
+        "start": 17,
+        "length": 2,
+        "reading": "じに"
+      },
+      "2845369": {
+        "start": 15,
+        "length": 3,
+        "reading": "いちぜろじ"
+      }
+    }
+  },
+  {
+    "id": "85613",
+    "original": "飛行機は二時半に離陸した。",
+    "en": [
+      {
+        "id": "318100",
+        "text": "The plane took off at 2:30."
+      }
+    ],
+    "indices": "飛行機 は 二 時半(じはん) に 離陸 為る(する){した}",
+    "vocabIds": [
+      "1485470",
+      "1461140",
+      "1658480",
+      "1550970"
+    ],
+    "matches": {
+      "1461140": {
+        "start": 4,
+        "length": 1,
+        "reading": "に"
+      },
+      "1485470": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひこうき"
+      },
+      "1550970": {
+        "start": 8,
+        "length": 2,
+        "reading": "りりく"
+      },
+      "1658480": {
+        "start": 5,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "85681",
+    "original": "飛行機は１２時半にヒースロー空港を出発する。",
+    "en": [
+      {
+        "id": "318032",
+        "text": "The plane departs from Heathrow at 12:30."
+      }
+    ],
+    "indices": "飛行機 は 時半(じはん) に 空港 を 出発{出発する}",
+    "vocabIds": [
+      "1485470",
+      "1658480",
+      "1245570",
+      "1340000"
+    ],
+    "matches": {
+      "1245570": {
+        "start": 14,
+        "length": 2,
+        "reading": "くうこう"
+      },
+      "1340000": {
+        "start": 17,
+        "length": 2,
+        "reading": "しゅっぱつ"
+      },
+      "1485470": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひこうき"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "97811",
+    "original": "彼らはたいてい７時半に朝食をとり、１２時に朝食をとる。",
+    "en": [
+      {
+        "id": "305893",
+        "text": "They usually have breakfast at half past seven o'clock and eat their lunch at twelve."
+      }
+    ],
+    "indices": "彼ら(かれら) は 大抵[01]{たいてい} 時半(じはん) に 朝食 を 摂る{とり} 時(じ)[01] に 朝食 を 摂る{とる}",
+    "vocabIds": [
+      "1483090",
+      "1658480",
+      "1428390",
+      "1334960",
+      "2612170",
+      "1315840",
+      "2021540"
+    ],
+    "matches": {
+      "1315840": {
+        "start": 19,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1334960": {
+        "start": 17,
+        "length": 3,
+        "reading": "いちにじ"
+      },
+      "1428390": {
+        "start": 11,
+        "length": 2,
+        "reading": "ちょうしょく"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1658480": {
+        "start": 8,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2021540": {
+        "start": 19,
+        "length": 2,
+        "reading": "じに"
+      },
+      "2612170": {
+        "start": 18,
+        "length": 2,
+        "reading": "にじ"
+      }
+    }
+  },
+  {
+    "id": "108929",
+    "original": "彼は概して８時半頃会社に着く。",
+    "en": [
+      {
+        "id": "294762",
+        "text": "As a rule, he arrives at the office about eight-thirty in morning."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 概して 時半(じはん) 頃(ころ) 会社[01] に 着く(つく)[01]",
+    "vocabIds": [
+      "1483070",
+      "1204400",
+      "1658480",
+      "1579080",
+      "1198550",
+      "1422970"
+    ],
+    "matches": {
+      "1198550": {
+        "start": 9,
+        "length": 2,
+        "reading": "かいしゃ"
+      },
+      "1204400": {
+        "start": 2,
+        "length": 3,
+        "reading": "がいして"
+      },
+      "1422970": {
+        "start": 12,
+        "length": 2,
+        "reading": "つく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1579080": {
+        "start": 8,
+        "length": 1,
+        "reading": "ごろ"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -60,27 +504,33 @@
     "matches": {
       "1268060": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1315840": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "じ"
       },
       "1451150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はたらく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1578150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きゅう"
       },
       "1658480": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -103,19 +553,23 @@
     "matches": {
       "1340000": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1558370": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "1658480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -137,15 +591,108 @@
     "matches": {
       "1444760": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "とうこう"
       },
       "1583090": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はち"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "125463",
+    "original": "弟と妹は毎朝７時半ごろ起きます。",
+    "en": [
+      {
+        "id": "278530",
+        "text": "My brother and sister get up about seven-thirty every morning."
+      }
+    ],
+    "indices": "弟[01] と 妹(いもうと) は 毎朝 時半(じはん) 頃(ころ)[01]{ごろ} 起きる[01]{起きます}",
+    "vocabIds": [
+      "1581930",
+      "1524590",
+      "1524700",
+      "1658480",
+      "1223640"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 11,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1524590": {
+        "start": 2,
+        "length": 1,
+        "reading": "いもうと"
+      },
+      "1524700": {
+        "start": 4,
+        "length": 2,
+        "reading": "まいあさ"
+      },
+      "1581930": {
+        "start": 0,
+        "length": 1,
+        "reading": "おとうと"
+      },
+      "1658480": {
+        "start": 7,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "126194",
+    "original": "朝食は午前７時半から１１時までです。",
+    "en": [
+      {
+        "id": "277798",
+        "text": "Breakfast is served from 7:30 a.m. to 11:00 a.m."
+      }
+    ],
+    "indices": "朝食 は 午前 時半(じはん) から 時(じ)[01] 迄{まで} です",
+    "vocabIds": [
+      "1428390",
+      "1269060",
+      "1658480",
+      "2845370",
+      "1315840"
+    ],
+    "matches": {
+      "1269060": {
+        "start": 3,
+        "length": 2,
+        "reading": "ごぜん"
+      },
+      "1315840": {
+        "start": 12,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1428390": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちょうしょく"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2845370": {
+        "start": 10,
+        "length": 3,
+        "reading": "いちいちじ"
       }
     }
   },
@@ -163,24 +710,159 @@
       "1428280",
       "1658480",
       "1604890",
-      "2205970"
+      "1206060"
     ],
     "matches": {
+      "1206060": {
+        "start": 7,
+        "length": 3,
+        "reading": "さまし"
+      },
       "1428280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1604890": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "め"
       },
       "1658480": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "143622",
+    "original": "水曜と土曜のほか、授業は８時半に始まります。",
+    "en": [
+      {
+        "id": "270945",
+        "text": "School begins at half past eight except on Wednesdays and Saturdays."
+      }
+    ],
+    "indices": "水曜 と 土曜 の 他(ほか){ほか} 授業 は 時半(じはん) に 始まる{始まります}",
+    "vocabIds": [
+      "1372180",
+      "1445580",
+      "1330290",
+      "1658480",
+      "1307500",
+      "1611200"
+    ],
+    "matches": {
+      "1307500": {
+        "start": 16,
+        "length": 3,
+        "reading": "はじまり"
       },
-      "2205970": {
+      "1330290": {
+        "start": 9,
+        "length": 2,
+        "reading": "じゅぎょう"
+      },
+      "1372180": {
+        "start": 0,
+        "length": 2,
+        "reading": "すいよう"
+      },
+      "1445580": {
+        "start": 3,
+        "length": 2,
+        "reading": "どよう"
+      },
+      "1611200": {
+        "start": 16,
+        "length": 3,
+        "reading": "はじまり"
+      },
+      "1658480": {
+        "start": 13,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "148330",
+    "original": "授業は午前８時半に始まる。",
+    "en": [
+      {
+        "id": "266229",
+        "text": "School begins at half past eight in the morning."
+      }
+    ],
+    "indices": "授業 は 午前 時半(じはん) に 始まる",
+    "vocabIds": [
+      "1330290",
+      "1269060",
+      "1658480",
+      "1307500"
+    ],
+    "matches": {
+      "1269060": {
+        "start": 3,
+        "length": 2,
+        "reading": "ごぜん"
+      },
+      "1307500": {
+        "start": 9,
+        "length": 3,
+        "reading": "はじまる"
+      },
+      "1330290": {
+        "start": 0,
+        "length": 2,
+        "reading": "じゅぎょう"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "148335",
+    "original": "授業は８時半に始まる。",
+    "en": [
+      {
+        "id": "21549",
+        "text": "School begins at eight-thirty."
+      },
+      {
+        "id": "266224",
+        "text": "School begins at half past eight."
+      },
+      {
+        "id": "266228",
+        "text": "School begins at 8:30 a.m."
+      }
+    ],
+    "indices": "授業 は 時半(じはん) に 始まる",
+    "vocabIds": [
+      "1330290",
+      "1658480",
+      "1307500"
+    ],
+    "matches": {
+      "1307500": {
         "start": 7,
-        "length": 1
+        "length": 3,
+        "reading": "はじまる"
+      },
+      "1330290": {
+        "start": 0,
+        "length": 2,
+        "reading": "じゅぎょう"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -197,20 +879,270 @@
     "vocabIds": [
       "1319210",
       "1658480",
-      "1311300"
+      "1311110",
+      "1311300",
+      "1508540"
     ],
     "matches": {
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1319210": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なな"
+      },
+      "1508540": {
+        "start": 11,
+        "length": 3,
+        "reading": "とざし"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "152248",
+    "original": "私は六時半に起きる。",
+    "en": [
+      {
+        "id": "262302",
+        "text": "I get up at 6:30."
+      },
+      {
+        "id": "11867041",
+        "text": "I get up at 6.30."
+      }
+    ],
+    "indices": "私(わたし)[01] は 六 時半(じはん) に 起きる[01]",
+    "vocabIds": [
+      "1311110",
+      "1585310",
+      "1658480",
+      "1223640"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 6,
+        "length": 3,
+        "reading": "おきる"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1585310": {
+        "start": 2,
+        "length": 1,
+        "reading": "ろく"
+      },
+      "1658480": {
+        "start": 3,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "152250",
+    "original": "私は六時半に帰ります。",
+    "en": [
+      {
+        "id": "262301",
+        "text": "I will be back at half past six."
+      },
+      {
+        "id": "419251",
+        "text": "I'll return at 6:30."
+      },
+      {
+        "id": "1370965",
+        "text": "I'll be back at half past six."
+      }
+    ],
+    "indices": "私(わたし)[01] は 六 時半(じはん) に 帰る{帰ります}",
+    "vocabIds": [
+      "1311110",
+      "1585310",
+      "1658480",
+      "1221270",
+      "1221250"
+    ],
+    "matches": {
+      "1221250": {
+        "start": 6,
+        "length": 2,
+        "reading": "かえり"
+      },
+      "1221270": {
+        "start": 6,
+        "length": 2,
+        "reading": "かえり"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1585310": {
+        "start": 2,
+        "length": 1,
+        "reading": "ろく"
+      },
+      "1658480": {
+        "start": 3,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "153030",
+    "original": "私は普通六時半頃おきます。",
+    "en": [
+      {
+        "id": "261515",
+        "text": "I usually get up at about six-thirty."
+      }
+    ],
+    "indices": "私(わたし)[01] は 普通 六 時半(じはん) 頃(ころ) 起きる[01]{おきます}",
+    "vocabIds": [
+      "1311110",
+      "1497190",
+      "1585310",
+      "1658480",
+      "1579080"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1497190": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふつう"
+      },
+      "1579080": {
+        "start": 7,
+        "length": 1,
+        "reading": "ごろ"
+      },
+      "1585310": {
+        "start": 4,
+        "length": 1,
+        "reading": "ろく"
+      },
+      "1658480": {
+        "start": 5,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "155064",
+    "original": "私は朝の４時半ごろにそわそわし出したが、６時まで起きなかった。",
+    "en": [
+      {
+        "id": "259475",
+        "text": "I began to stir about 4:30 in the morning, but I didn't get up until 6:00."
+      }
+    ],
+    "indices": "私(わたし)[01] は 朝(あさ) の 時半(じはん) 頃(ころ){ごろ} に そわそわ 為る(する){し} 出す{出した} が 時(じ)[01] 迄{まで} 起きる[01]{起きなかった}",
+    "vocabIds": [
+      "1311110",
+      "1428280",
+      "1658480",
+      "1338180",
+      "1339160",
+      "1315840",
+      "1223640"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 24,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1315840": {
+        "start": 21,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1338180": {
+        "start": 15,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 15,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1428280": {
+        "start": 2,
+        "length": 1,
+        "reading": "あさ"
+      },
+      "1658480": {
+        "start": 5,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "161891",
+    "original": "７時半に朝食を食べた。",
+    "en": [
+      {
+        "id": "252625",
+        "text": "I had breakfast at 7:30."
+      },
+      {
+        "id": "8453574",
+        "text": "I had breakfast at seven-thirty."
+      }
+    ],
+    "indices": "時半(じはん) に 朝食 を 食べる{食べた}",
+    "vocabIds": [
+      "1658480",
+      "1428390",
+      "1358280"
+    ],
+    "matches": {
+      "1358280": {
+        "start": 7,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1428390": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちょうしょく"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -233,19 +1165,68 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1338240": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "でる"
       },
       "1370420": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "としょかん"
       },
       "1658480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "161986",
+    "original": "私は２時半頃神戸に着いた。",
+    "en": [
+      {
+        "id": "252529",
+        "text": "I arrived in Kobe around two-thirty."
+      }
+    ],
+    "indices": "私(わたし)[01] は 時半(じはん) 頃(ころ) 神戸 に 着く(つく)[01]{着いた}",
+    "vocabIds": [
+      "1311110",
+      "1658480",
+      "1579080",
+      "2164600",
+      "1422970"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1422970": {
+        "start": 9,
+        "length": 2,
+        "reading": "つい"
+      },
+      "1579080": {
+        "start": 5,
+        "length": 1,
+        "reading": "ごろ"
+      },
+      "1658480": {
+        "start": 3,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2164600": {
+        "start": 6,
+        "length": 2,
+        "reading": "こうべ"
       }
     }
   },
@@ -260,6 +1241,7 @@
     ],
     "indices": "私たち は 七(しち) 時(じ) と 七(しち) 時半(じはん) の 間(あいだ) に 夕食 を 為る(する){します}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1319210",
       "1315840",
@@ -270,27 +1252,173 @@
     "matches": {
       "1215230": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1315840": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "じ"
       },
       "1319210": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "なな"
       },
       "1542730": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうしょく"
       },
       "1658480": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "166222",
+    "original": "私たちはふつう７時半に朝食を食べます。",
+    "en": [
+      {
+        "id": "248282",
+        "text": "We usually have breakfast at 7:30."
+      }
+    ],
+    "indices": "私たち は 普通{ふつう} 時半(じはん) に 朝食 を 食べる{食べます}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1658480",
+      "1428390",
+      "1358280"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1358280": {
+        "start": 14,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1428390": {
+        "start": 11,
+        "length": 2,
+        "reading": "ちょうしょく"
+      },
+      "1658480": {
+        "start": 8,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "166657",
+    "original": "私たちは８時半に学校に着きました。",
+    "en": [
+      {
+        "id": "247845",
+        "text": "We reached school at eight-thirty."
+      }
+    ],
+    "indices": "私たち は 時半(じはん) に 学校 に 着く(つく)[01]{着きました}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1658480",
+      "1206730",
+      "1422970"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 8,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1422970": {
+        "start": 11,
+        "length": 2,
+        "reading": "つき"
+      },
+      "1658480": {
+        "start": 5,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "166799",
+    "original": "私たちの列車は８時半に出発する。",
+    "en": [
+      {
+        "id": "247703",
+        "text": "Our train leaves at eight-thirty."
+      }
+    ],
+    "indices": "私たち の 列車 は 時半(じはん) に 出発{出発する}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1558370",
+      "1658480",
+      "1340000"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1340000": {
+        "start": 11,
+        "length": 2,
+        "reading": "しゅっぱつ"
+      },
+      "1558370": {
+        "start": 4,
+        "length": 2,
+        "reading": "れっしゃ"
+      },
+      "1658480": {
+        "start": 8,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -305,42 +1433,455 @@
     ],
     "indices": "私たち の 飛行機 は 正午 に 出発{出発し} 時半(じはん) に 沖縄 に 着く(つく)[01]{着きます}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1485470",
       "1377080",
       "1340000",
       "1658480",
       "1182580",
-      "1597470"
+      "1422970"
     ],
     "matches": {
       "1182580": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "おきなわ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1340000": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
       },
       "1377080": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
+      },
+      "1422970": {
+        "start": 22,
+        "length": 2,
+        "reading": "つき"
       },
       "1485470": {
         "start": 4,
-        "length": 3
-      },
-      "1597470": {
-        "start": 22,
-        "length": 1
+        "length": 3,
+        "reading": "ひこうき"
       },
       "1658480": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "167029",
+    "original": "私たちの学校は８時半に始まります。",
+    "en": [
+      {
+        "id": "247473",
+        "text": "Our school begins at eight-thirty."
+      }
+    ],
+    "indices": "私たち の 学校 は 時半(じはん) に 始まる{始まります}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1206730",
+      "1658480",
+      "1307500",
+      "1611200"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 4,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1307500": {
+        "start": 11,
+        "length": 3,
+        "reading": "はじまり"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1611200": {
+        "start": 11,
+        "length": 3,
+        "reading": "はじまり"
+      },
+      "1658480": {
+        "start": 8,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "172126",
+    "original": "今度の日曜日の１０時半にここを出ます。",
+    "en": [
+      {
+        "id": "242336",
+        "text": "I leave here at ten-thirty next Sunday."
+      }
+    ],
+    "indices": "今度 の 日曜日 に 時半(じはん) に 此処[01]{ここ} を[05] 出る[02]{出ます}",
+    "vocabIds": [
+      "1289370",
+      "1464900",
+      "1658480",
+      "1338240",
+      "1896380"
+    ],
+    "matches": {
+      "1289370": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんど"
+      },
+      "1338240": {
+        "start": 15,
+        "length": 1,
+        "reading": "で"
+      },
+      "1464900": {
+        "start": 3,
+        "length": 3,
+        "reading": "にちようび"
+      },
+      "1658480": {
+        "start": 9,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "1896380": {
+        "start": 15,
+        "length": 1,
+        "reading": "で"
+      }
+    }
+  },
+  {
+    "id": "184393",
+    "original": "学校は三時半に終わる。",
+    "en": [
+      {
+        "id": "2937733",
+        "text": "School is over at 3:30."
+      }
+    ],
+    "indices": "学校 は 三 時半(じはん) に 終わる",
+    "vocabIds": [
+      "1206730",
+      "1579350",
+      "1658480",
+      "1589600"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 0,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1579350": {
+        "start": 3,
+        "length": 1,
+        "reading": "さん"
+      },
+      "1589600": {
+        "start": 7,
+        "length": 3,
+        "reading": "おわる"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "184419",
+    "original": "学校は８時半に始まりますか。",
+    "en": [
+      {
+        "id": "21546",
+        "text": "Does school start at eight-thirty?"
+      }
+    ],
+    "indices": "学校 は 時半(じはん) に 始まる{始まります} か",
+    "vocabIds": [
+      "1206730",
+      "1658480",
+      "1307500",
+      "1611200"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 0,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1307500": {
+        "start": 7,
+        "length": 3,
+        "reading": "はじまり"
+      },
+      "1611200": {
+        "start": 7,
+        "length": 3,
+        "reading": "はじまり"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "184420",
+    "original": "学校は８時半から始まる。",
+    "en": [
+      {
+        "id": "21549",
+        "text": "School begins at eight-thirty."
+      },
+      {
+        "id": "266224",
+        "text": "School begins at half past eight."
+      },
+      {
+        "id": "266228",
+        "text": "School begins at 8:30 a.m."
+      }
+    ],
+    "indices": "学校 は 時半(じはん) から 始まる",
+    "vocabIds": [
+      "1206730",
+      "1658480",
+      "1307500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 0,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1307500": {
+        "start": 8,
+        "length": 3,
+        "reading": "はじまる"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "186135",
+    "original": "我々はいつもより早く昼食を食べて１２時半に出た。",
+    "en": [
+      {
+        "id": "23269",
+        "text": "We had an early lunch and set out at 12:30."
+      }
+    ],
+    "indices": "我々 は 何時もより{いつもより} 早く[01] 昼食(ちゅうしょく) を 食べる{食べて} 時半(じはん) に 出る{出た}",
+    "vocabIds": [
+      "1607050",
+      "1404975",
+      "1400150",
+      "1602330",
+      "1358280",
+      "1658480",
+      "1338240",
+      "1896380"
+    ],
+    "matches": {
+      "1338240": {
+        "start": 21,
+        "length": 1,
+        "reading": "で"
+      },
+      "1358280": {
+        "start": 13,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1400150": {
+        "start": 8,
+        "length": 2,
+        "reading": "はやく"
+      },
+      "1404975": {
+        "start": 8,
+        "length": 2,
+        "reading": "はやく"
+      },
+      "1602330": {
+        "start": 10,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1607050": {
+        "start": 0,
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "1658480": {
+        "start": 18,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "1896380": {
+        "start": 21,
+        "length": 1,
+        "reading": "で"
+      }
+    }
+  },
+  {
+    "id": "194446",
+    "original": "もうすぐ５時半です。",
+    "en": [
+      {
+        "id": "31619",
+        "text": "It will be 5:30 presently."
+      }
+    ],
+    "indices": "もう直ぐ{もうすぐ} 時半(じはん) です",
+    "vocabIds": [
+      "1658480"
+    ],
+    "matches": {
+      "1658480": {
+        "start": 5,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "195920",
+    "original": "ホワイト氏は１０時半に東京に到着します。",
+    "en": [
+      {
+        "id": "33095",
+        "text": "Mr White arrives in Tokyo at 10:30."
+      },
+      {
+        "id": "1448410",
+        "text": "Mr. White will arrive in Tokyo at 10:30."
+      }
+    ],
+    "indices": "氏(し)[01] は 時半(じはん) に 東京 に 到着 為る(する){します}",
+    "vocabIds": [
+      "2101130",
+      "1658480",
+      "1447690",
+      "1449870"
+    ],
+    "matches": {
+      "1447690": {
+        "start": 11,
+        "length": 2,
+        "reading": "とうきょう"
+      },
+      "1449870": {
+        "start": 14,
+        "length": 2,
+        "reading": "とうちゃく"
+      },
+      "1658480": {
+        "start": 8,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2101130": {
+        "start": 4,
+        "length": 1,
+        "reading": "し"
+      }
+    }
+  },
+  {
+    "id": "199012",
+    "original": "ナンシーとジェーンは５時半に帰宅しなければならなかった。",
+    "en": [
+      {
+        "id": "36209",
+        "text": "Nancy and Jane had to go home at five-thirty."
+      },
+      {
+        "id": "2523833",
+        "text": "Nancy and Jane had to go home at five thirty."
+      }
+    ],
+    "indices": "と は 時半(じはん) に 帰宅 為る(する){し} ねばならない{なければならなかった}",
+    "vocabIds": [
+      "1658480",
+      "1221430"
+    ],
+    "matches": {
+      "1221430": {
+        "start": 14,
+        "length": 2,
+        "reading": "きたく"
+      },
+      "1658480": {
+        "start": 11,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "202103",
+    "original": "でも１１時半近くですよ。",
+    "en": [
+      {
+        "id": "39315",
+        "text": "But it's almost half past eleven."
+      }
+    ],
+    "indices": "でも[01] 時半(じはん) 近く[02] です よ[01]",
+    "vocabIds": [
+      "1658480",
+      "1242160"
+    ],
+    "matches": {
+      "1242160": {
+        "start": 6,
+        "length": 2,
+        "reading": "ちかく"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -356,16 +1897,24 @@
     "indices": "出来れば{できれば} 時半(じはん) で(#2028980) お願いします",
     "vocabIds": [
       "1658480",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 9,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1658480": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2036870": {
+        "start": 9,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -386,11 +1935,13 @@
     "matches": {
       "1319210": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "なな"
       },
       "1658480": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -406,16 +1957,102 @@
     "indices": "其れ[01]{それ} は 時半(じはん) に 始まる{始まります}",
     "vocabIds": [
       "1658480",
+      "1307500",
       "1611200"
     ],
     "matches": {
+      "1307500": {
+        "start": 7,
+        "length": 3,
+        "reading": "はじまり"
+      },
       "1611200": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "はじまり"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "211900",
+    "original": "その会は土曜日の午前１０時半に開かれます。",
+    "en": [
+      {
+        "id": "49178",
+        "text": "The meeting will be held at 10:30 a.m. on Saturday."
+      }
+    ],
+    "indices": "其の[01]{その} 会(かい) は 土曜日 の 午前 時半(じはん) に 開く(ひらく)[01]{開かれます}",
+    "vocabIds": [
+      "1198160",
+      "1445590",
+      "1269060",
+      "1658480",
+      "1202440"
+    ],
+    "matches": {
+      "1198160": {
+        "start": 2,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1202440": {
+        "start": 15,
+        "length": 2,
+        "reading": "ひらか"
+      },
+      "1269060": {
+        "start": 8,
+        "length": 2,
+        "reading": "ごぜん"
+      },
+      "1445590": {
+        "start": 4,
+        "length": 3,
+        "reading": "どようび"
+      },
+      "1658480": {
+        "start": 12,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "223749",
+    "original": "このごろは５時半頃に暗くなる。",
+    "en": [
+      {
+        "id": "61085",
+        "text": "It gets dark about half past five these days."
+      }
+    ],
+    "indices": "此の頃(このごろ){このごろ} は 時半(じはん) 頃(ころ) に 暗い[01]{暗く} 成る[01]{なる}",
+    "vocabIds": [
+      "1658480",
+      "1579080",
+      "1154330"
+    ],
+    "matches": {
+      "1154330": {
+        "start": 10,
+        "length": 2,
+        "reading": "くらく"
+      },
+      "1579080": {
+        "start": 8,
+        "length": 1,
+        "reading": "ごろ"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -436,11 +2073,159 @@
     "matches": {
       "1223640": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "234898",
+    "original": "９時半をすぎるとバスが無くなる。",
+    "en": [
+      {
+        "id": "72275",
+        "text": "There is no bus service after nine-thirty."
+      }
+    ],
+    "indices": "時半(じはん) を 過ぎる(すぎる){すぎる} と バス(#1098390) が 無くなる",
+    "vocabIds": [
+      "1658480",
+      "1529550"
+    ],
+    "matches": {
+      "1529550": {
+        "start": 11,
+        "length": 4,
+        "reading": "なくなる"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "234900",
+    "original": "９時半の電車に乗れば、何時に秋田につきますか。",
+    "en": [
+      {
+        "id": "72276",
+        "text": "What time will we reach Akita if we take the 9:30 train?"
+      }
+    ],
+    "indices": "時半(じはん) の 電車 に 乗る[01]{乗れば} 何時(なんじ) に に 着く(つく)[01]{つきます} か",
+    "vocabIds": [
+      "1658480",
+      "1443530",
+      "1355120",
+      "1577100",
+      "1188770",
+      "1315840",
+      "2021540",
+      "2845120"
+    ],
+    "matches": {
+      "1188770": {
+        "start": 11,
+        "length": 2,
+        "reading": "なんじ"
+      },
+      "1315840": {
+        "start": 12,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のれ"
+      },
+      "1443530": {
+        "start": 4,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1577100": {
+        "start": 11,
+        "length": 1,
+        "reading": "なん"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2021540": {
+        "start": 12,
+        "length": 2,
+        "reading": "じに"
+      },
+      "2845120": {
+        "start": 14,
+        "length": 2,
+        "reading": "あきた"
+      }
+    }
+  },
+  {
+    "id": "234929",
+    "original": "８時半ちょうどですか。",
+    "en": [
+      {
+        "id": "72306",
+        "text": "Is it just eight-thirty?"
+      },
+      {
+        "id": "12540483",
+        "text": "Is it exactly 8:30?"
+      }
+    ],
+    "indices": "時半(じはん) 丁度{ちょうど} ですか",
+    "vocabIds": [
+      "1658480"
+    ],
+    "matches": {
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "234962",
+    "original": "７時半には起きなければいけなかったんじゃないの。",
+    "en": [
+      {
+        "id": "72339",
+        "text": "I thought you had to get up by 7:30."
+      },
+      {
+        "id": "7173663",
+        "text": "I thought that you had to get up by 7:30."
+      }
+    ],
+    "indices": "時半(じはん) には 起きる[01]{起き} 無ければ{なければ} 行く{いけなかった} ん[03] だ{じゃない} の",
+    "vocabIds": [
+      "1658480",
+      "1223640"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 5,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -461,11 +2246,13 @@
     "matches": {
       "1221270": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "かえっ"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -487,15 +2274,18 @@
     "matches": {
       "1542730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうしょく"
       },
       "1546220": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -511,16 +2301,149 @@
     "indices": "時半(じはん) に シカゴ に 着く(つく)[01]{着きます}",
     "vocabIds": [
       "1658480",
-      "1597470"
+      "1422970"
     ],
     "matches": {
-      "1597470": {
+      "1422970": {
         "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "つき"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "235125",
+    "original": "５時半に彼と会う約束がある。",
+    "en": [
+      {
+        "id": "72502",
+        "text": "I have an appointment with him for five-thirty."
+      },
+      {
+        "id": "13539225",
+        "text": "I have an appointment to meet him at 5:30."
+      }
+    ],
+    "indices": "時半(じはん) に 彼(かれ)[01] と 会う約束 が[01] 有る{ある}",
+    "vocabIds": [
+      "1658480",
+      "1483070",
+      "1198180",
+      "1198190",
+      "1538130"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 6,
+        "length": 2,
+        "reading": "あう"
+      },
+      "1198190": {
+        "start": 6,
+        "length": 4,
+        "reading": "あうやくそく"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1538130": {
+        "start": 8,
+        "length": 2,
+        "reading": "やくそく"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "235768",
+    "original": "１時間目は８時半に始まります。",
+    "en": [
+      {
+        "id": "73148",
+        "text": "The first class begins at 8:30."
+      }
+    ],
+    "indices": "一時間{１時間} 目(め)[07] は 時半(じはん) に 始まる{始まります}",
+    "vocabIds": [
+      "1315920",
+      "2274590",
+      "1604890",
+      "1658480",
+      "1307500",
+      "1611200"
+    ],
+    "matches": {
+      "1307500": {
+        "start": 9,
+        "length": 3,
+        "reading": "はじまり"
+      },
+      "1315920": {
+        "start": 1,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1604890": {
+        "start": 3,
+        "length": 1,
+        "reading": "め"
+      },
+      "1611200": {
+        "start": 9,
+        "length": 3,
+        "reading": "はじまり"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2274590": {
+        "start": 1,
+        "length": 3,
+        "reading": "じかんめ"
+      }
+    }
+  },
+  {
+    "id": "235965",
+    "original": "１１時半近くですよ。",
+    "en": [
+      {
+        "id": "73346",
+        "text": "It's almost half past eleven."
+      },
+      {
+        "id": "2481340",
+        "text": "It's almost 11:30."
+      }
+    ],
+    "indices": "時半(じはん) 近く[02] です よ[01]",
+    "vocabIds": [
+      "1658480",
+      "1242160"
+    ],
+    "matches": {
+      "1242160": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちかく"
+      },
+      "1658480": {
+        "start": 2,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -538,24 +2461,127 @@
       "1579840",
       "1658480",
       "1443530",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "1443530": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1579840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "じゅう"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "236381",
+    "original": "「何時ですか」「１０時半です」",
+    "en": [
+      {
+        "id": "73747",
+        "text": "\"What time is it?\" \"It is ten-thirty.\""
+      }
+    ],
+    "indices": "何時(なんじ) ですか 時半(じはん) です",
+    "vocabIds": [
+      "1577100",
+      "1188770",
+      "1315840",
+      "1658480"
+    ],
+    "matches": {
+      "1188770": {
+        "start": 1,
+        "length": 2,
+        "reading": "なんじ"
+      },
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1577100": {
+        "start": 1,
+        "length": 1,
+        "reading": "なん"
+      },
+      "1658480": {
+        "start": 10,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "413427",
+    "original": "授業が始まるのは８時半からだ。",
+    "en": [
+      {
+        "id": "1525",
+        "text": "Class doesn't begin until eight-thirty."
+      }
+    ],
+    "indices": "授業 が 始まる の は 時(じ) 半 から だ",
+    "vocabIds": [
+      "1330290",
+      "1307500",
+      "1658480"
+    ],
+    "matches": {
+      "1307500": {
+        "start": 3,
+        "length": 3,
+        "reading": "はじまる"
+      },
+      "1330290": {
+        "start": 0,
+        "length": 2,
+        "reading": "じゅぎょう"
+      },
+      "1658480": {
+        "start": 9,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "504217",
+    "original": "８時半ちょうどです。",
+    "en": [
+      {
+        "id": "504223",
+        "text": "It's exactly half-past eight."
+      }
+    ],
+    "indices": "時半(じはん) 丁度{ちょうど} です",
+    "vocabIds": [
+      "1658480"
+    ],
+    "matches": {
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -583,20 +2609,29 @@
     "vocabIds": [
       "1311110",
       "1658480",
+      "1535880",
       "1535860"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1535860": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "もどり"
+      },
+      "1535880": {
+        "start": 6,
+        "length": 2,
+        "reading": "もどり"
       },
       "1658480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -617,15 +2652,48 @@
     "matches": {
       "1223640": {
         "start": 6,
-        "length": 4
+        "length": 2,
+        "reading": "おき"
       },
       "1428280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1658480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "1076057",
+    "original": "７時半には起きなければいけないんじゃなかったの？",
+    "en": [
+      {
+        "id": "72339",
+        "text": "I thought you had to get up by 7:30."
+      },
+      {
+        "id": "7173663",
+        "text": "I thought that you had to get up by 7:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1223640"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 5,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -668,16 +2736,24 @@
     ],
     "vocabIds": [
       "1658480",
+      "1535880",
       "1535860"
     ],
     "matches": {
       "1535860": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "もどり"
+      },
+      "1535880": {
+        "start": 4,
+        "length": 2,
+        "reading": "もどり"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -700,16 +2776,138 @@
     ],
     "vocabIds": [
       "1658480",
+      "1221270",
       "1864140"
     ],
     "matches": {
+      "1221270": {
+        "start": 4,
+        "length": 2,
+        "reading": "かえっ"
+      },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       },
       "1864140": {
         "start": 4,
-        "length": 5
+        "length": 5,
+        "reading": "かえってくる"
+      }
+    }
+  },
+  {
+    "id": "1113278",
+    "original": "今は昼の４時半だよ。",
+    "en": [
+      {
+        "id": "1113241",
+        "text": "It's 4:30 in the afternoon."
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "1426250",
+      "1658480"
+    ],
+    "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1426250": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひる"
+      },
+      "1658480": {
+        "start": 5,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "1241107",
+    "original": "時計が零時半を打った。",
+    "en": [
+      {
+        "id": "1299347",
+        "text": "The clock struck half past 12."
+      }
+    ],
+    "vocabIds": [
+      "1316140",
+      "1557630",
+      "1658480",
+      "1408810",
+      "2698210"
+    ],
+    "matches": {
+      "1316140": {
+        "start": 0,
+        "length": 2,
+        "reading": "とけい"
+      },
+      "1408810": {
+        "start": 7,
+        "length": 2,
+        "reading": "うっ"
+      },
+      "1557630": {
+        "start": 3,
+        "length": 1,
+        "reading": "れい"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2698210": {
+        "start": 7,
+        "length": 2,
+        "reading": "うっ"
+      }
+    }
+  },
+  {
+    "id": "1483515",
+    "original": "トムさんは六時半に帰りました。",
+    "en": [
+      {
+        "id": "1025655",
+        "text": "Tom got home at 6:30."
+      }
+    ],
+    "vocabIds": [
+      "1585310",
+      "1658480",
+      "1221270",
+      "1221250"
+    ],
+    "matches": {
+      "1221250": {
+        "start": 9,
+        "length": 2,
+        "reading": "かえり"
+      },
+      "1221270": {
+        "start": 9,
+        "length": 2,
+        "reading": "かえり"
+      },
+      "1585310": {
+        "start": 5,
+        "length": 1,
+        "reading": "ろく"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -736,7 +2934,66 @@
     "matches": {
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "2043871",
+    "original": "二時半に迎えに行くよ。",
+    "en": [
+      {
+        "id": "1890928",
+        "text": "I'll pick you up at 2:30."
+      },
+      {
+        "id": "11926837",
+        "text": "I'll pick you up at two thirty."
+      },
+      {
+        "id": "11926835",
+        "text": "I'll pick you up at half past two."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1658480",
+      "1253190",
+      "1253180",
+      "2037250",
+      "1578850"
+    ],
+    "matches": {
+      "1253180": {
+        "start": 4,
+        "length": 2,
+        "reading": "むかえ"
+      },
+      "1253190": {
+        "start": 4,
+        "length": 2,
+        "reading": "むかえ"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1578850": {
+        "start": 7,
+        "length": 2,
+        "reading": "いく"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2037250": {
+        "start": 4,
+        "length": 5,
+        "reading": "むかえにいく"
       }
     }
   },
@@ -759,16 +3016,18 @@
     ],
     "vocabIds": [
       "1658480",
-      "1198160"
+      "1198180"
     ],
     "matches": {
-      "1198160": {
+      "1198180": {
         "start": 4,
-        "length": 1
+        "length": 2,
+        "reading": "あお"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -787,16 +3046,18 @@
     ],
     "vocabIds": [
       "1658480",
-      "1198160"
+      "1198180"
     ],
     "matches": {
-      "1198160": {
+      "1198180": {
         "start": 4,
-        "length": 1
+        "length": 2,
+        "reading": "あい"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -816,11 +3077,13 @@
     "matches": {
       "1221430": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きたく"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -834,22 +3097,37 @@
       }
     ],
     "vocabIds": [
+      "1548370",
       "1432920",
       "1658480",
-      "1223660"
+      "1223660",
+      "2087400"
     ],
     "matches": {
       "1223660": {
         "start": 20,
-        "length": 4
+        "length": 3,
+        "reading": "おこし"
       },
       "1432920": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1548370": {
+        "start": 3,
+        "length": 2,
+        "reading": "たのま"
       },
       "1658480": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2087400": {
+        "start": 20,
+        "length": 3,
+        "reading": "おこし"
       }
     }
   },
@@ -868,16 +3146,24 @@
     ],
     "vocabIds": [
       "1658480",
-      "2701830"
+      "2701830",
+      "1443840"
     ],
     "matches": {
+      "1443840": {
+        "start": 5,
+        "length": 2,
+        "reading": "でんわ"
+      },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       },
       "2701830": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おでんわ"
       }
     }
   },
@@ -901,11 +3187,13 @@
     "matches": {
       "1443840": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -920,16 +3208,66 @@
     ],
     "vocabIds": [
       "1658480",
-      "1886740"
+      "1307710"
     ],
     "matches": {
+      "1307710": {
+        "start": 9,
+        "length": 1,
+        "reading": "すがた"
+      },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "2974420",
+    "original": "学校は三時半に終わります。",
+    "en": [
+      {
+        "id": "2937733",
+        "text": "School is over at 3:30."
       },
-      "1886740": {
-        "start": 9,
-        "length": 5
+      {
+        "id": "10278169",
+        "text": "School finishes at half past three."
+      }
+    ],
+    "vocabIds": [
+      "1206730",
+      "1579350",
+      "1658480",
+      "1589600",
+      "1589590"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 0,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1579350": {
+        "start": 3,
+        "length": 1,
+        "reading": "さん"
+      },
+      "1589590": {
+        "start": 7,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 7,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -949,11 +3287,13 @@
     "matches": {
       "1535340": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "めざまし"
       },
       "1658480": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -970,24 +3310,28 @@
       "1658480",
       "1378100",
       "1392580",
-      "1198160"
+      "1198180"
     ],
     "matches": {
-      "1198160": {
+      "1198180": {
         "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "あお"
       },
       "1378100": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せいもん"
       },
       "1392580": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1002,41 +3346,92 @@
     ],
     "vocabIds": [
       "1658480",
-      "2670930",
+      "1441000",
       "1338240",
       "1404630",
+      "1578850",
       "1578790",
+      "1461140",
       "1954200",
+      "1524610",
       "1456940"
     ],
     "matches": {
       "1338240": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "でる"
       },
       "1404630": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "あし"
+      },
+      "1441000": {
+        "start": 12,
+        "length": 3,
+        "reading": "ころがり"
       },
       "1456940": {
         "start": 44,
-        "length": 5
+        "length": 4,
+        "reading": "つっこん"
+      },
+      "1461140": {
+        "start": 39,
+        "length": 1,
+        "reading": "に"
+      },
+      "1524610": {
+        "start": 40,
+        "length": 1,
+        "reading": "まい"
       },
       "1578790": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 30,
+        "length": 2,
+        "reading": "いき"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       },
       "1954200": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "にまい"
+      }
+    }
+  },
+  {
+    "id": "3496751",
+    "original": "いま二時半。",
+    "en": [
+      {
+        "id": "2396254",
+        "text": "It's 2:30 now."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1658480"
+    ],
+    "matches": {
+      "1461140": {
+        "start": 2,
+        "length": 1,
+        "reading": "に"
       },
-      "2670930": {
-        "start": 12,
-        "length": 1
+      "1658480": {
+        "start": 3,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1055,26 +3450,48 @@
     ],
     "vocabIds": [
       "1579260",
+      "1577100",
+      "1188770",
       "1188870",
+      "1315840",
       "1223640",
       "1658480"
     ],
     "matches": {
+      "1188770": {
+        "start": 3,
+        "length": 2,
+        "reading": "なんじ"
+      },
       "1188870": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "なんじまで"
       },
       "1223640": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
+      },
+      "1315840": {
+        "start": 4,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なん"
       },
       "1579260": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       },
       "1658480": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1088,22 +3505,37 @@
       }
     ],
     "vocabIds": [
+      "1416830",
       "1416840",
       "1658480",
-      "1223660"
+      "1223660",
+      "2087400"
     ],
     "matches": {
       "1223660": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "おこし"
+      },
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416840": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
       },
       "1658480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2087400": {
+        "start": 6,
+        "length": 3,
+        "reading": "おこし"
       }
     }
   },
@@ -1123,20 +3555,35 @@
     "vocabIds": [
       "1584660",
       "1658480",
-      "2542300"
+      "2542300",
+      "1547720",
+      "1547710"
     ],
     "matches": {
+      "1547710": {
+        "start": 12,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 12,
+        "length": 1,
+        "reading": "き"
+      },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       },
       "2542300": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "ここにきて"
       }
     }
   },
@@ -1160,11 +3607,13 @@
     "matches": {
       "1443840": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1183,37 +3632,55 @@
       "1658480",
       "1412890",
       "1545700",
+      "1497190",
       "2847506",
+      "2004170",
       "2004530"
     ],
     "matches": {
       "1223640": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
       },
       "1412890": {
         "start": 39,
-        "length": 3
+        "length": 3,
+        "reading": "おおきな"
       },
       "1421210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じしん"
+      },
+      "1497190": {
+        "start": 54,
+        "length": 2,
+        "reading": "ふつう"
       },
       "1545700": {
         "start": 42,
-        "length": 2
+        "length": 2,
+        "reading": "ゆれ"
       },
       "1658480": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2004170": {
+        "start": 57,
+        "length": 1
       },
       "2004530": {
         "start": 57,
-        "length": 2
+        "length": 2,
+        "reading": "ねむ"
       },
       "2847506": {
         "start": 54,
-        "length": 3
+        "length": 3,
+        "reading": "ふつうに"
       }
     }
   },
@@ -1227,22 +3694,31 @@
       }
     ],
     "vocabIds": [
+      "1311110",
       "1311300",
       "1658480",
       "1428390"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1428390": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうしょく"
       },
       "1658480": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1263,15 +3739,18 @@
     "matches": {
       "1547720": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       },
       "1584660": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       },
       "1658480": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1293,19 +3772,23 @@
     "matches": {
       "1269060": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ごぜん"
       },
       "1547720": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       },
       "1584660": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       },
       "1658480": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1326,15 +3809,18 @@
     "matches": {
       "1547720": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       },
       "1584660": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       },
       "1658480": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1354,11 +3840,13 @@
     "matches": {
       "1422970": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "つい"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1378,11 +3866,13 @@
     "matches": {
       "1422970": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "つい"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1398,20 +3888,29 @@
     "vocabIds": [
       "1658480",
       "1579080",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1338240": {
         "start": 4,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1579080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ごろ"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      },
+      "1896380": {
+        "start": 4,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -1432,15 +3931,18 @@
     "matches": {
       "1340000": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
       },
       "1579080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ごろ"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1455,16 +3957,24 @@
     ],
     "vocabIds": [
       "1658480",
+      "1410590",
       "2021970"
     ],
     "matches": {
+      "1410590": {
+        "start": 8,
+        "length": 2,
+        "reading": "まっ"
+      },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       },
       "2021970": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "まった"
       }
     }
   },
@@ -1483,16 +3993,18 @@
     ],
     "vocabIds": [
       "1658480",
-      "1198160"
+      "1198180"
     ],
     "matches": {
-      "1198160": {
+      "1198180": {
         "start": 4,
-        "length": 1
+        "length": 2,
+        "reading": "あお"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1511,16 +4023,18 @@
     ],
     "vocabIds": [
       "1658480",
-      "1198160"
+      "1198180"
     ],
     "matches": {
-      "1198160": {
+      "1198180": {
         "start": 4,
-        "length": 1
+        "length": 2,
+        "reading": "あい"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1540,20 +4054,35 @@
     "vocabIds": [
       "1658480",
       "1547720",
+      "1547710",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 8,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1547710": {
+        "start": 6,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 6,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1569,20 +4098,35 @@
     "vocabIds": [
       "1658480",
       "1547720",
+      "1547710",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 6,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1547710": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 4,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1602,11 +4146,13 @@
     "matches": {
       "1436560": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "しまる"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1622,20 +4168,29 @@
     "vocabIds": [
       "1658480",
       "1579080",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
+      "1547710": {
+        "start": 7,
+        "length": 1,
+        "reading": "き"
+      },
       "1547720": {
         "start": 7,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1579080": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ごろ"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1662,7 +4217,8 @@
     "matches": {
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1683,15 +4239,88 @@
     "matches": {
       "1579110": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1594590": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "しめきり"
       },
       "1658480": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8002482",
+    "original": "僕らは２時半に会う。",
+    "en": [
+      {
+        "id": "7995619",
+        "text": "We'll meet at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1521410",
+      "1658480",
+      "1198180"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 7,
+        "length": 2,
+        "reading": "あう"
+      },
+      "1521410": {
+        "start": 0,
+        "length": 2,
+        "reading": "ぼくら"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8002484",
+    "original": "僕らは２時半に駅で会う。",
+    "en": [
+      {
+        "id": "7995610",
+        "text": "We'll meet at the station at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1521410",
+      "1658480",
+      "1175140",
+      "1198180"
+    ],
+    "matches": {
+      "1175140": {
+        "start": 7,
+        "length": 1,
+        "reading": "えき"
+      },
+      "1198180": {
+        "start": 9,
+        "length": 2,
+        "reading": "あう"
+      },
+      "1521410": {
+        "start": 0,
+        "length": 2,
+        "reading": "ぼくら"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1712,15 +4341,228 @@
     "matches": {
       "1198180": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "あう"
       },
       "1521410": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぼくら"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8218495",
+    "original": "十月二十日の二時半に会えますか？",
+    "en": [
+      {
+        "id": "8215904",
+        "text": "Can we meet on October 20th at 2:30?"
+      },
+      {
+        "id": "12567340",
+        "text": "Can we meet at 2:30 on October 20th?"
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1579840",
+      "1463770",
+      "1658480"
+    ],
+    "matches": {
+      "1461140": {
+        "start": 2,
+        "length": 1,
+        "reading": "に"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1579840": {
+        "start": 3,
+        "length": 1,
+        "reading": "じゅう"
+      },
+      "1658480": {
+        "start": 7,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8305429",
+    "original": "トムが助けてくれれば、二時半までに出来る。",
+    "en": [
+      {
+        "id": "2529439",
+        "text": "I'm sure we'd be able to get this done by 2:30 if Tom helped us."
+      }
+    ],
+    "vocabIds": [
+      "1344410",
+      "1344390",
+      "1344400",
+      "1461140",
+      "1658480",
+      "1340450"
+    ],
+    "matches": {
+      "1340450": {
+        "start": 17,
+        "length": 3,
+        "reading": "できる"
+      },
+      "1344390": {
+        "start": 3,
+        "length": 2,
+        "reading": "たすけ"
+      },
+      "1344400": {
+        "start": 3,
+        "length": 3,
+        "reading": "たすけて"
+      },
+      "1344410": {
+        "start": 3,
+        "length": 2,
+        "reading": "たすけ"
+      },
+      "1461140": {
+        "start": 11,
+        "length": 1,
+        "reading": "に"
+      },
+      "1658480": {
+        "start": 12,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8305436",
+    "original": "トムは今日二時半に病院の予約があります。",
+    "en": [
+      {
+        "id": "6656311",
+        "text": "Tom has a doctor's appointment today at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1579110",
+      "1461140",
+      "1658480",
+      "1490220",
+      "1543750"
+    ],
+    "matches": {
+      "1461140": {
+        "start": 5,
+        "length": 1,
+        "reading": "に"
+      },
+      "1490220": {
+        "start": 9,
+        "length": 2,
+        "reading": "びょういん"
+      },
+      "1543750": {
+        "start": 12,
+        "length": 2,
+        "reading": "よやく"
+      },
+      "1579110": {
+        "start": 3,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8568936",
+    "original": "二時半まで家に帰りたくない。",
+    "en": [
+      {
+        "id": "6341777",
+        "text": "I'd prefer not to get home until after 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1658480",
+      "1191730",
+      "1221270",
+      "1221250"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 5,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1221250": {
+        "start": 7,
+        "length": 2,
+        "reading": "かえり"
+      },
+      "1221270": {
+        "start": 7,
+        "length": 2,
+        "reading": "かえり"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8568947",
+    "original": "二時半までそれをしたくない。",
+    "en": [
+      {
+        "id": "6342164",
+        "text": "I'd prefer not to do that until after 2:30."
+      },
+      {
+        "id": "12540511",
+        "text": "I don't want to do that until after 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1658480"
+    ],
+    "matches": {
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1736,25 +4578,53 @@
     "vocabIds": [
       "1658480",
       "1378100",
+      "1392580",
       "1392590",
-      "2037260"
+      "1253190",
+      "1253180",
+      "1547720",
+      "1547710"
     ],
     "matches": {
+      "1253180": {
+        "start": 9,
+        "length": 2,
+        "reading": "むかえ"
+      },
+      "1253190": {
+        "start": 9,
+        "length": 2,
+        "reading": "むかえ"
+      },
       "1378100": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せいもん"
+      },
+      "1392580": {
+        "start": 7,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1547710": {
+        "start": 12,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 12,
+        "length": 1,
+        "reading": "き"
       },
       "1658480": {
         "start": 1,
-        "length": 2
-      },
-      "2037260": {
-        "start": 9,
-        "length": 5
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1770,20 +4640,29 @@
     "vocabIds": [
       "1198360",
       "1658480",
+      "1307500",
       "1611200"
     ],
     "matches": {
       "1198360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいぎ"
+      },
+      "1307500": {
+        "start": 7,
+        "length": 3,
+        "reading": "はじまり"
       },
       "1611200": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "はじまり"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1798,16 +4677,18 @@
     ],
     "vocabIds": [
       "1658480",
-      "1228560"
+      "1228650"
     ],
     "matches": {
-      "1228560": {
+      "1228650": {
         "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "いそが"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1831,11 +4712,93 @@
     "matches": {
       "1428390": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうしょく"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8770113",
+    "original": "昨日の夜の２時半って、起きてた？",
+    "en": [
+      {
+        "id": "3822032",
+        "text": "Were you awake at 2:30 last night?"
+      }
+    ],
+    "vocabIds": [
+      "1579260",
+      "1536350",
+      "1658480",
+      "1223640"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 11,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1536350": {
+        "start": 3,
+        "length": 1,
+        "reading": "よる"
+      },
+      "1579260": {
+        "start": 0,
+        "length": 2,
+        "reading": "きのう"
+      },
+      "1658480": {
+        "start": 6,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8871828",
+    "original": "２時半までには家に帰るって、トムが言ってたよ。",
+    "en": [
+      {
+        "id": "6350412",
+        "text": "Tom said he'd get home by 2:30."
+      },
+      {
+        "id": "6650831",
+        "text": "Tom said that he'd get home by 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1191730",
+      "1221270",
+      "1587040"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 7,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1221270": {
+        "start": 9,
+        "length": 2,
+        "reading": "かえる"
+      },
+      "1587040": {
+        "start": 17,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1856,15 +4819,150 @@
     "matches": {
       "1223640": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "おきる"
       },
       "1524700": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まいあさ"
       },
       "1658480": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8921697",
+    "original": "きっかり２時半に家に着いたんだ。",
+    "en": [
+      {
+        "id": "6665873",
+        "text": "I got home at exactly 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1191730",
+      "1422970"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 8,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1422970": {
+        "start": 10,
+        "length": 2,
+        "reading": "つい"
+      },
+      "1658480": {
+        "start": 5,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "9041258",
+    "original": "８時半までに登校するようにしてください。",
+    "en": [
+      {
+        "id": "282676",
+        "text": "You should arrive at school before 8:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1444760"
+    ],
+    "matches": {
+      "1444760": {
+        "start": 6,
+        "length": 2,
+        "reading": "とうこう"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "9041908",
+    "original": "10月20日の昼の２時半はどうかしら？",
+    "en": [
+      {
+        "id": "9033035",
+        "text": "How about October 20th at 2:30 p.m.?"
+      }
+    ],
+    "vocabIds": [
+      "1255430",
+      "1463770",
+      "1426250",
+      "1658480"
+    ],
+    "matches": {
+      "1255430": {
+        "start": 2,
+        "length": 1,
+        "reading": "つき"
+      },
+      "1426250": {
+        "start": 7,
+        "length": 1,
+        "reading": "ひる"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1658480": {
+        "start": 10,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "9229993",
+    "original": "８時半に学校は始まる。",
+    "en": [
+      {
+        "id": "9229990",
+        "text": "School starts at 8:30."
+      },
+      {
+        "id": "9193453",
+        "text": "School starts at eight-thirty."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1206730",
+      "1307500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 4,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1307500": {
+        "start": 7,
+        "length": 3,
+        "reading": "はじまる"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1884,11 +4982,55 @@
     "matches": {
       "1532910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "なる"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "9846168",
+    "original": "トムは二時半に来ます。",
+    "en": [
+      {
+        "id": "5471379",
+        "text": "Tom will come at 2:30."
+      },
+      {
+        "id": "12540481",
+        "text": "Tom will be here at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1658480",
+      "1547720",
+      "1547710"
+    ],
+    "matches": {
+      "1461140": {
+        "start": 3,
+        "length": 1,
+        "reading": "に"
+      },
+      "1547710": {
+        "start": 7,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 7,
+        "length": 1,
+        "reading": "き"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1909,29 +5051,122 @@
       "1658480",
       "1443530",
       "1355120",
+      "1577100",
       "1188770",
-      "1597470"
+      "1315840",
+      "2021540",
+      "1422970"
     ],
     "matches": {
       "1188770": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "なんじ"
+      },
+      "1315840": {
+        "start": 12,
+        "length": 1,
+        "reading": "じ"
       },
       "1355120": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "のっ"
+      },
+      "1422970": {
+        "start": 19,
+        "length": 2,
+        "reading": "つき"
       },
       "1443530": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
-      "1597470": {
-        "start": 19,
-        "length": 1
+      "1577100": {
+        "start": 11,
+        "length": 1,
+        "reading": "なん"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2021540": {
+        "start": 12,
+        "length": 2,
+        "reading": "じに"
+      }
+    }
+  },
+  {
+    "id": "10070776",
+    "original": "２時半までに来てなかったら、おいてくよ。",
+    "en": [
+      {
+        "id": "10070775",
+        "text": "If you're not there by 2:30, we'll leave without you."
+      },
+      {
+        "id": "10073694",
+        "text": "If you're not there by 2:30, I'll leave without you."
+      },
+      {
+        "id": "12540522",
+        "text": "If you aren't here by 2:30, I'll leave without you."
+      },
+      {
+        "id": "12540524",
+        "text": "If you aren't here by 2:30, we'll leave without you."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1547720",
+      "1547710"
+    ],
+    "matches": {
+      "1547710": {
+        "start": 6,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 6,
+        "length": 1,
+        "reading": "き"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "10096022",
+    "original": "トムと２時半に会うことになってるんだ。",
+    "en": [
+      {
+        "id": "10095959",
+        "text": "I'm to meet Tom at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1198180"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 7,
+        "length": 2,
+        "reading": "あう"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -1946,31 +5181,60 @@
     ],
     "vocabIds": [
       "1658480",
+      "1604890",
       "1535200",
+      "1206060",
       "1414580",
       "2845363",
+      "1315840",
+      "2021540",
       "1223640"
     ],
     "matches": {
+      "1206060": {
+        "start": 15,
+        "length": 3,
+        "reading": "さます"
+      },
       "1223640": {
         "start": 32,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
+      },
+      "1315840": {
+        "start": 26,
+        "length": 1,
+        "reading": "じ"
       },
       "1414580": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "たいてい"
       },
       "1535200": {
         "start": 13,
-        "length": 5
+        "length": 5,
+        "reading": "めをさます"
+      },
+      "1604890": {
+        "start": 13,
+        "length": 1,
+        "reading": "め"
       },
       "1658480": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2021540": {
+        "start": 26,
+        "length": 2,
+        "reading": "じに"
       },
       "2845363": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "ななじ"
       }
     }
   },
@@ -1988,28 +5252,103 @@
       "1223640",
       "1414580",
       "2845363",
-      "1338240"
+      "1315840",
+      "2021540",
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1223640": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "おきる"
+      },
+      "1315840": {
+        "start": 24,
+        "length": 1,
+        "reading": "じ"
       },
       "1338240": {
         "start": 35,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1414580": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "たいてい"
       },
       "1658480": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      },
+      "1896380": {
+        "start": 35,
+        "length": 1,
+        "reading": "で"
+      },
+      "2021540": {
+        "start": 24,
+        "length": 2,
+        "reading": "じに"
       },
       "2845363": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ななじ"
+      }
+    }
+  },
+  {
+    "id": "10201392",
+    "original": "夜の２時半まで起きてたよ。",
+    "en": [
+      {
+        "id": "8908864",
+        "text": "I stayed up until 2:30 a.m."
+      }
+    ],
+    "vocabIds": [
+      "1536350",
+      "1658480",
+      "1223640"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 7,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1536350": {
+        "start": 0,
+        "length": 1,
+        "reading": "よる"
+      },
+      "1658480": {
+        "start": 3,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "10201393",
+    "original": "２時半までそこにいるよ。",
+    "en": [
+      {
+        "id": "8924750",
+        "text": "I'll be there until 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480"
+    ],
+    "matches": {
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2029,11 +5368,243 @@
     "matches": {
       "1535880": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "もどっ"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "10522550",
+    "original": "会議は２時半に終わりました。",
+    "en": [
+      {
+        "id": "6918948",
+        "text": "The meeting ended at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1198360",
+      "1658480",
+      "1589600",
+      "1589590"
+    ],
+    "matches": {
+      "1198360": {
+        "start": 0,
+        "length": 2,
+        "reading": "かいぎ"
+      },
+      "1589590": {
+        "start": 7,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 7,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "10573542",
+    "original": "二時半まで待っといて。",
+    "en": [
+      {
+        "id": "10573539",
+        "text": "Wait until 2:30."
+      },
+      {
+        "id": "10573540",
+        "text": "Wait till 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1658480",
+      "1410590"
+    ],
+    "matches": {
+      "1410590": {
+        "start": 5,
+        "length": 2,
+        "reading": "まっ"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "10573543",
+    "original": "２時半まで待って。",
+    "en": [
+      {
+        "id": "10573539",
+        "text": "Wait until 2:30."
+      },
+      {
+        "id": "10573540",
+        "text": "Wait till 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1410590"
+    ],
+    "matches": {
+      "1410590": {
+        "start": 5,
+        "length": 2,
+        "reading": "まっ"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "10630737",
+    "original": "夏の日の出は、５時１０分から５時半ごろです。",
+    "en": [
+      {
+        "id": "10630736",
+        "text": "In the summer, the sun tends to rise around 5:10 to 5:30."
+      }
+    ],
+    "vocabIds": [
+      "1191320",
+      "1463790",
+      "2845367",
+      "1315840",
+      "1335070",
+      "1502860",
+      "1658480"
+    ],
+    "matches": {
+      "1191320": {
+        "start": 0,
+        "length": 1,
+        "reading": "なつ"
+      },
+      "1315840": {
+        "start": 8,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1335070": {
+        "start": 9,
+        "length": 3,
+        "reading": "いちぜろふん"
+      },
+      "1463790": {
+        "start": 2,
+        "length": 3,
+        "reading": "ひので"
+      },
+      "1502860": {
+        "start": 11,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1658480": {
+        "start": 15,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2845367": {
+        "start": 7,
+        "length": 2,
+        "reading": "ごじ"
+      }
+    }
+  },
+  {
+    "id": "10693928",
+    "original": "トムは２時半まで待ってたのよ。",
+    "en": [
+      {
+        "id": "2546941",
+        "text": "Tom waited until 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1410590"
+    ],
+    "matches": {
+      "1410590": {
+        "start": 8,
+        "length": 2,
+        "reading": "まっ"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "10791871",
+    "original": "普段は７時半に朝ご飯を食べてるんだ。",
+    "en": [
+      {
+        "id": "248282",
+        "text": "We usually have breakfast at 7:30."
+      }
+    ],
+    "vocabIds": [
+      "1497180",
+      "1658480",
+      "1428280",
+      "1270590",
+      "1358280"
+    ],
+    "matches": {
+      "1270590": {
+        "start": 8,
+        "length": 2,
+        "reading": "ごはん"
+      },
+      "1358280": {
+        "start": 11,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1428280": {
+        "start": 7,
+        "length": 1,
+        "reading": "あさ"
+      },
+      "1497180": {
+        "start": 0,
+        "length": 2,
+        "reading": "ふだん"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2055,19 +5626,23 @@
     "matches": {
       "1223640": {
         "start": 6,
-        "length": 4
+        "length": 2,
+        "reading": "おき"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1319210": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "なな"
       },
       "1658480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2100,15 +5675,300 @@
     "matches": {
       "1223640": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "おき"
       },
       "1428280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1658480": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "10967392",
+    "original": "二時半まで待ちます。",
+    "en": [
+      {
+        "id": "7972243",
+        "text": "I'll wait until 2:30."
+      },
+      {
+        "id": "7972255",
+        "text": "I'll wait till 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1658480",
+      "1410590",
+      "1640770"
+    ],
+    "matches": {
+      "1410590": {
+        "start": 5,
+        "length": 2,
+        "reading": "まち"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1640770": {
+        "start": 5,
+        "length": 2,
+        "reading": "まち"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "10973334",
+    "original": "２時半までいたんだけどね。",
+    "en": [
+      {
+        "id": "10973330",
+        "text": "I stayed there until 2:30."
+      },
+      {
+        "id": "12540490",
+        "text": "I was there until 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480"
+    ],
+    "matches": {
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11031372",
+    "original": "俺の時計では、２時半だよ。",
+    "en": [
+      {
+        "id": "9939434",
+        "text": "My watch says it's half two."
+      }
+    ],
+    "vocabIds": [
+      "1576870",
+      "1316140",
+      "1658480"
+    ],
+    "matches": {
+      "1316140": {
+        "start": 2,
+        "length": 2,
+        "reading": "とけい"
+      },
+      "1576870": {
+        "start": 0,
+        "length": 1,
+        "reading": "おれ"
+      },
+      "1658480": {
+        "start": 8,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11031385",
+    "original": "六時半からです。",
+    "en": [
+      {
+        "id": "10657379",
+        "text": "It starts at 6.30."
+      }
+    ],
+    "vocabIds": [
+      "1585310",
+      "1658480"
+    ],
+    "matches": {
+      "1585310": {
+        "start": 0,
+        "length": 1,
+        "reading": "ろく"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11056002",
+    "original": "遅くとも２時半には来てください。",
+    "en": [
+      {
+        "id": "4979519",
+        "text": "You need to be here by 2:30 at the latest."
+      },
+      {
+        "id": "6532073",
+        "text": "Please be here by 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1421990",
+      "1658480",
+      "1547720",
+      "1547710"
+    ],
+    "matches": {
+      "1421990": {
+        "start": 0,
+        "length": 4,
+        "reading": "おそくとも"
+      },
+      "1547710": {
+        "start": 9,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 9,
+        "length": 1,
+        "reading": "き"
+      },
+      "1658480": {
+        "start": 5,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11086833",
+    "original": "２時半にトムに会わなければいけません。",
+    "en": [
+      {
+        "id": "2360569",
+        "text": "I have to see Tom at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1198180"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 7,
+        "length": 2,
+        "reading": "あわ"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11349964",
+    "original": "２時半までにそこに行かなきゃいけないんだ。",
+    "en": [
+      {
+        "id": "6873494",
+        "text": "I have to be there by 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1578850"
+    ],
+    "matches": {
+      "1578850": {
+        "start": 9,
+        "length": 2,
+        "reading": "いか"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11383700",
+    "original": "２時半までには行く準備できるよ。",
+    "en": [
+      {
+        "id": "5436778",
+        "text": "I'll be ready to go by 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1578850",
+      "1341670"
+    ],
+    "matches": {
+      "1341670": {
+        "start": 9,
+        "length": 2,
+        "reading": "じゅんび"
+      },
+      "1578850": {
+        "start": 7,
+        "length": 2,
+        "reading": "いく"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11394927",
+    "original": "受付は二時半からです。",
+    "en": [
+      {
+        "id": "4501675",
+        "text": "Registration starts at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1588060",
+      "1461140",
+      "1658480"
+    ],
+    "matches": {
+      "1461140": {
+        "start": 3,
+        "length": 1,
+        "reading": "に"
+      },
+      "1588060": {
+        "start": 0,
+        "length": 2,
+        "reading": "うけつけ"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2128,11 +5988,43 @@
     "matches": {
       "1588060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "うけつけ"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11497715",
+    "original": "２時半って言ったはずなんですけど。",
+    "en": [
+      {
+        "id": "2546824",
+        "text": "I thought we said 2:30."
+      },
+      {
+        "id": "7173449",
+        "text": "I thought that we said 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1587040"
+    ],
+    "matches": {
+      "1587040": {
+        "start": 5,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2153,15 +6045,94 @@
     "matches": {
       "1338240": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "でる"
       },
       "1370420": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "としょかん"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11546127",
+    "original": "２時半の電車に乗るよ。",
+    "en": [
+      {
+        "id": "3819112",
+        "text": "I'll catch the 2:30 train."
+      },
+      {
+        "id": "12457505",
+        "text": "I'll take the 2:30 train."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1443530",
+      "1355120"
+    ],
+    "matches": {
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のる"
+      },
+      "1443530": {
+        "start": 4,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11574640",
+    "original": "そこに２時半までには行けるように頑張るよ。",
+    "en": [
+      {
+        "id": "3817966",
+        "text": "I'll do my best to be there by 2:30."
+      },
+      {
+        "id": "12419577",
+        "text": "I'll do my best to get there by 2:30."
+      },
+      {
+        "id": "12419578",
+        "text": "I'll try my best to be there by 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1631370",
+      "1217700"
+    ],
+    "matches": {
+      "1217700": {
+        "start": 16,
+        "length": 3,
+        "reading": "がんばる"
+      },
+      "1631370": {
+        "start": 10,
+        "length": 3,
+        "reading": "いける"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2190,15 +6161,18 @@
     "matches": {
       "1340000": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
       },
       "1443530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1658480": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2214,20 +6188,29 @@
     "vocabIds": [
       "1658480",
       "1341670",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 9,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1341670": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じゅんび"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2036870": {
+        "start": 9,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -2248,15 +6231,18 @@
     "matches": {
       "1338600": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっきん"
       },
       "1497180": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ふだん"
       },
       "1658480": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2277,15 +6263,18 @@
     "matches": {
       "1198360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいぎ"
       },
       "1268990": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1658480": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2300,16 +6289,76 @@
     ],
     "vocabIds": [
       "1658480",
-      "1140420"
+      "1589060",
+      "1589050"
     ],
     "matches": {
-      "1140420": {
-        "start": 13,
-        "length": 2
+      "1589050": {
+        "start": 14,
+        "length": 2,
+        "reading": "おこない"
+      },
+      "1589060": {
+        "start": 14,
+        "length": 2,
+        "reading": "おこない"
       },
       "1658480": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11733686",
+    "original": "２時半ぐらいに、トムから電話があったよ。",
+    "en": [
+      {
+        "id": "4496269",
+        "text": "Tom called around 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1443840"
+    ],
+    "matches": {
+      "1443840": {
+        "start": 12,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11737506",
+    "original": "トムのシフトは２時半に終わるよ。",
+    "en": [
+      {
+        "id": "6531698",
+        "text": "Tom's shift ends at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1589600"
+    ],
+    "matches": {
+      "1589600": {
+        "start": 11,
+        "length": 3,
+        "reading": "おわる"
+      },
+      "1658480": {
+        "start": 8,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2331,19 +6380,23 @@
     "matches": {
       "1382250": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "せき"
       },
       "1543750": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
       },
       "1580640": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2362,7 +6415,40 @@
     "matches": {
       "1658480": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11935738",
+    "original": "トムは２時半の電車に乗るよ。",
+    "en": [
+      {
+        "id": "2643138",
+        "text": "Tom will take the 2:30 train."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1443530",
+      "1355120"
+    ],
+    "matches": {
+      "1355120": {
+        "start": 10,
+        "length": 2,
+        "reading": "のる"
+      },
+      "1443530": {
+        "start": 7,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2390,11 +6476,13 @@
     "matches": {
       "1508670": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "へいさ"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2413,7 +6501,136 @@
     "matches": {
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "11994059",
+    "original": "二時半に迎えに来て。",
+    "en": [
+      {
+        "id": "11879222",
+        "text": "Pick me up at 2.30."
+      },
+      {
+        "id": "3402240",
+        "text": "Pick me up at 2:30."
+      },
+      {
+        "id": "11879223",
+        "text": "Pick me up at half two."
+      },
+      {
+        "id": "11879224",
+        "text": "Pick me up at half past two."
+      },
+      {
+        "id": "12263799",
+        "text": "Come pick me up at 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1658480",
+      "1253190",
+      "1253180",
+      "1547720",
+      "1547710"
+    ],
+    "matches": {
+      "1253180": {
+        "start": 4,
+        "length": 2,
+        "reading": "むかえ"
+      },
+      "1253190": {
+        "start": 4,
+        "length": 2,
+        "reading": "むかえ"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1547710": {
+        "start": 7,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 7,
+        "length": 1,
+        "reading": "き"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "8924561",
+    "original": "燃えるごみは、毎週水曜日と土曜日の朝８時半までに出してください。",
+    "en": [
+      {
+        "id": "12017830",
+        "text": "Burnable trash should be put out by 8:30 a.m. every Wednesday and Saturday morning."
+      }
+    ],
+    "vocabIds": [
+      "1469570",
+      "1524690",
+      "1372190",
+      "1445590",
+      "1428280",
+      "1658480",
+      "1338180",
+      "1339160"
+    ],
+    "matches": {
+      "1338180": {
+        "start": 24,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 24,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1372190": {
+        "start": 9,
+        "length": 3,
+        "reading": "すいようび"
+      },
+      "1428280": {
+        "start": 17,
+        "length": 1,
+        "reading": "あさ"
+      },
+      "1445590": {
+        "start": 13,
+        "length": 3,
+        "reading": "どようび"
+      },
+      "1469570": {
+        "start": 0,
+        "length": 3,
+        "reading": "もえる"
+      },
+      "1524690": {
+        "start": 7,
+        "length": 2,
+        "reading": "まいしゅう"
+      },
+      "1658480": {
+        "start": 19,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2428,16 +6645,24 @@
     ],
     "vocabIds": [
       "1658480",
+      "1535880",
       "1535860"
     ],
     "matches": {
       "1535860": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "もどり"
+      },
+      "1535880": {
+        "start": 4,
+        "length": 2,
+        "reading": "もどり"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2463,19 +6688,73 @@
     "matches": {
       "1268990": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1340000": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
       },
       "1443530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1658480": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "12213557",
+    "original": "２時半頃に迎えに行くよ。",
+    "en": [
+      {
+        "id": "6665215",
+        "text": "I'll pick you up around 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1579080",
+      "1253190",
+      "1253180",
+      "2037250",
+      "1578850"
+    ],
+    "matches": {
+      "1253180": {
+        "start": 5,
+        "length": 2,
+        "reading": "むかえ"
+      },
+      "1253190": {
+        "start": 5,
+        "length": 2,
+        "reading": "むかえ"
+      },
+      "1578850": {
+        "start": 8,
+        "length": 2,
+        "reading": "いく"
+      },
+      "1579080": {
+        "start": 3,
+        "length": 1,
+        "reading": "ごろ"
+      },
+      "1658480": {
+        "start": 1,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "2037250": {
+        "start": 5,
+        "length": 5,
+        "reading": "むかえにいく"
       }
     }
   },
@@ -2490,16 +6769,24 @@
     ],
     "vocabIds": [
       "1658480",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
+      "1547710": {
+        "start": 6,
+        "length": 1,
+        "reading": "き"
+      },
       "1547720": {
         "start": 6,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2514,21 +6801,36 @@
     ],
     "vocabIds": [
       "1658480",
+      "1392580",
       "1392590",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
+      "1392580": {
+        "start": 3,
+        "length": 1,
+        "reading": "まえ"
+      },
       "1392590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1547710": {
+        "start": 5,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 5,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2544,20 +6846,29 @@
     "vocabIds": [
       "1658480",
       "1155110",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1155110": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いこう"
+      },
+      "1547710": {
+        "start": 6,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 6,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2577,11 +6888,13 @@
     "matches": {
       "1443840": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2601,11 +6914,13 @@
     "matches": {
       "1451150": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2626,15 +6941,52 @@
     "matches": {
       "1428280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1451150": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1658480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "12485601",
+    "original": "今は２時半だよ。",
+    "en": [
+      {
+        "id": "10868993",
+        "text": "Right now, it's 2:30."
+      },
+      {
+        "id": "2396254",
+        "text": "It's 2:30 now."
+      },
+      {
+        "id": "5102482",
+        "text": "It's now 2:30."
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "1658480"
+    ],
+    "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1658480": {
+        "start": 3,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2659,15 +7011,18 @@
     "matches": {
       "1268990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1449870": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "とうちゃく"
       },
       "1658480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2688,15 +7043,44 @@
     "matches": {
       "1422970": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "つく"
       },
       "1426250": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひる"
       },
       "1658480": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
+      }
+    }
+  },
+  {
+    "id": "13662181",
+    "original": "もう一時半だ。",
+    "en": [
+      {
+        "id": "13410203",
+        "text": "It's already half past one."
+      }
+    ],
+    "vocabIds": [
+      "1160790",
+      "1658480"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1658480": {
+        "start": 3,
+        "length": 2,
+        "reading": "じはん"
       }
     }
   }

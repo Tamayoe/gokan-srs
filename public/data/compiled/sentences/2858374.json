@@ -1,39 +1,5 @@
 [
   {
-    "id": "93406",
-    "original": "彼女はあまり泣いたので涙が枯れてしまった。",
-    "en": [
-      {
-        "id": "310302",
-        "text": "She cried till her eyes dried."
-      },
-      {
-        "id": "542800",
-        "text": "She cried until she ran out of tears."
-      }
-    ],
-    "indices": "彼女[01] は 余り{あまり} 泣く{泣いた} ので 涙が枯れる{涙が枯れて}~ 仕舞う{しまった}",
-    "vocabIds": [
-      "1483150",
-      "1229840",
-      "2858374"
-    ],
-    "matches": {
-      "1229840": {
-        "start": 6,
-        "length": 3
-      },
-      "1483150": {
-        "start": 0,
-        "length": 2
-      },
-      "2858374": {
-        "start": 11,
-        "length": 5
-      }
-    }
-  },
-  {
     "id": "1181654",
     "original": "彼女は涙が枯れるまで泣いた。",
     "en": [
@@ -44,21 +10,36 @@
     ],
     "vocabIds": [
       "1483150",
+      "1555930",
       "2858374",
+      "1267220",
       "1229840"
     ],
     "matches": {
       "1229840": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "ない"
+      },
+      "1267220": {
+        "start": 5,
+        "length": 3,
+        "reading": "かれる"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1555930": {
+        "start": 3,
+        "length": 1,
+        "reading": "なみだ"
       },
       "2858374": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "なみだがかれる"
       }
     }
   }

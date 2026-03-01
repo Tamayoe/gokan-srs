@@ -1,5 +1,101 @@
 [
   {
+    "id": "125567",
+    "original": "通路側をお願いします。",
+    "en": [
+      {
+        "id": "278425",
+        "text": "I'd like one on the aisle, please."
+      }
+    ],
+    "indices": "通路側 を お願いします",
+    "vocabIds": [
+      "1433600",
+      "2020690",
+      "1581310",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 4,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1433600": {
+        "start": 0,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2020690": {
+        "start": 0,
+        "length": 3,
+        "reading": "つうろがわ"
+      },
+      "2036870": {
+        "start": 4,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
+    "id": "125568",
+    "original": "通路側の席をお願いします。",
+    "en": [
+      {
+        "id": "278424",
+        "text": "I'd like an aisle seat, please."
+      }
+    ],
+    "indices": "通路側{通路側の}~ 席(せき) を お願いします",
+    "vocabIds": [
+      "1433600",
+      "2020690",
+      "1581310",
+      "1382250",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 6,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1382250": {
+        "start": 4,
+        "length": 1,
+        "reading": "せき"
+      },
+      "1433600": {
+        "start": 0,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2020690": {
+        "start": 0,
+        "length": 3,
+        "reading": "つうろがわ"
+      },
+      "2036870": {
+        "start": 6,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
     "id": "125570",
     "original": "通路に物を置くな。",
     "en": [
@@ -17,15 +113,61 @@
     "matches": {
       "1421850": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "おく"
       },
       "1433600": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "つうろ"
       },
       "1502390": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
+      }
+    }
+  },
+  {
+    "id": "140325",
+    "original": "窓側か通路側どちらになさいますか。",
+    "en": [
+      {
+        "id": "448965",
+        "text": "Would you like a window seat or a seat on the aisle?"
+      },
+      {
+        "id": "516633",
+        "text": "Window or aisle?"
+      }
+    ],
+    "indices": "窓側 か 通路側 何方(どちら){どちら} に 為さる{なさいます} か",
+    "vocabIds": [
+      "2011970",
+      "1433600",
+      "2020690",
+      "1581310"
+    ],
+    "matches": {
+      "1433600": {
+        "start": 3,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 5,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2011970": {
+        "start": 0,
+        "length": 2,
+        "reading": "まどがわ"
+      },
+      "2020690": {
+        "start": 3,
+        "length": 3,
+        "reading": "つうろがわ"
       }
     }
   },
@@ -47,15 +189,75 @@
     "matches": {
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1433600": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "つうろ"
       },
       "1520190": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "ふせい"
+      }
+    }
+  },
+  {
+    "id": "183340",
+    "original": "機内での彼の席は通路側だった。",
+    "en": [
+      {
+        "id": "20463",
+        "text": "His seat in the plane was on the aisle."
+      }
+    ],
+    "indices": "機内 で(#2028980) の 彼(かれ)[01] の 席(せき) は 通路側 だ{だった}",
+    "vocabIds": [
+      "1221120",
+      "1483070",
+      "1000420",
+      "1382250",
+      "1433600",
+      "2020690",
+      "1581310"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 4,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1221120": {
+        "start": 0,
+        "length": 2,
+        "reading": "きない"
+      },
+      "1382250": {
+        "start": 6,
+        "length": 1,
+        "reading": "せき"
+      },
+      "1433600": {
+        "start": 8,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1581310": {
+        "start": 10,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2020690": {
+        "start": 8,
+        "length": 3,
+        "reading": "つうろがわ"
       }
     }
   },
@@ -79,23 +281,28 @@
     "matches": {
       "1257540": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たてもの"
       },
       "1433600": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "つうろ"
       },
       "1477310": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "はっけん"
       },
       "1484150": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひみつ"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -116,11 +323,13 @@
     "matches": {
       "1201190": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "うみ"
       },
       "1433600": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "つうろ"
       }
     }
   },
@@ -141,11 +350,13 @@
     "matches": {
       "1433600": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "つうろ"
       },
       "2022640": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "ばん"
       }
     }
   },
@@ -170,15 +381,100 @@
     "matches": {
       "1433600": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "つうろ"
       },
       "1484150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひみつ"
       },
       "1579180": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひだりがわ"
+      }
+    }
+  },
+  {
+    "id": "774439",
+    "original": "席は窓側、通路側のどちらがよろしいですか？",
+    "en": [
+      {
+        "id": "1008012",
+        "text": "Would you prefer a window or an aisle seat?"
+      }
+    ],
+    "vocabIds": [
+      "1382250",
+      "2011970",
+      "1433600",
+      "2020690",
+      "1581310"
+    ],
+    "matches": {
+      "1382250": {
+        "start": 0,
+        "length": 1,
+        "reading": "せき"
+      },
+      "1433600": {
+        "start": 5,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 7,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2011970": {
+        "start": 2,
+        "length": 2,
+        "reading": "まどがわ"
+      },
+      "2020690": {
+        "start": 5,
+        "length": 3,
+        "reading": "つうろがわ"
+      }
+    }
+  },
+  {
+    "id": "1266398",
+    "original": "通路側に座ってもいいですか。",
+    "en": [
+      {
+        "id": "278423",
+        "text": "Could I sit on the aisle?"
+      }
+    ],
+    "vocabIds": [
+      "1433600",
+      "2020690",
+      "1581310",
+      "1291800"
+    ],
+    "matches": {
+      "1291800": {
+        "start": 4,
+        "length": 2,
+        "reading": "すわっ"
+      },
+      "1433600": {
+        "start": 0,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2020690": {
+        "start": 0,
+        "length": 3,
+        "reading": "つうろがわ"
       }
     }
   },
@@ -202,27 +498,33 @@
     "matches": {
       "1257540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たてもの"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1433600": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "つうろ"
       },
       "1604570": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "みつけ"
       },
       "2077780": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かくし"
       }
     }
   }

@@ -11,26 +11,18 @@
     "indices": "賄賂 を 受け取る[01]{受け取った} のです か 其れとも{それとも} 受け取る[01]{受け取らなかった} のです か",
     "vocabIds": [
       "1562520",
-      "1329650",
-      "1659120",
-      "2762490"
+      "1329650"
     ],
     "matches": {
       "1329650": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1562520": {
         "start": 0,
-        "length": 2
-      },
-      "1659120": {
-        "start": 17,
-        "length": 2
-      },
-      "2762490": {
-        "start": 19,
-        "length": 1
+        "length": 2,
+        "reading": "わいろ"
       }
     }
   },
@@ -47,45 +39,59 @@
     "vocabIds": [
       "1548010",
       "1311110",
-      "1198160",
+      "1198180",
       "1547720",
       "2825868",
+      "1343950",
       "1540150",
       "1327720",
       "1329650"
     ],
     "matches": {
-      "1198160": {
+      "1198180": {
         "start": 4,
-        "length": 1
+        "length": 2,
+        "reading": "あい"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 28,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1343950": {
+        "start": 10,
+        "length": 2,
+        "reading": "かい"
       },
       "1540150": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       },
       "1547720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       },
       "1548010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "らいしゅう"
       },
       "2825868": {
         "start": 9,
-        "length": 6
+        "length": 6,
+        "reading": "とかいてある"
       }
     }
   },
@@ -102,45 +108,59 @@
     "vocabIds": [
       "1521400",
       "1497610",
+      "1404975",
       "1400150",
       "1411420",
       "1661130",
-      "2423450",
-      "1896380",
+      "1242590",
+      "1291230",
       "1329650"
     ],
     "matches": {
+      "1242590": {
+        "start": 14,
+        "length": 1,
+        "reading": "きん"
+      },
+      "1291230": {
+        "start": 16,
+        "length": 4,
+        "reading": "さしださ"
+      },
       "1329650": {
         "start": 22,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1400150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "はやく"
+      },
+      "1404975": {
+        "start": 4,
+        "length": 2,
+        "reading": "はやく"
       },
       "1411420": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たいしょく"
       },
       "1497610": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1661130": {
         "start": 12,
-        "length": 3
-      },
-      "1896380": {
-        "start": 18,
-        "length": 1
-      },
-      "2423450": {
-        "start": 16,
-        "length": 2
+        "length": 3,
+        "reading": "たいしょくきん"
       }
     }
   },
@@ -157,20 +177,95 @@
     "vocabIds": [
       "1515700",
       "1329650",
-      "1000420"
+      "1483070",
+      "1000420",
+      "1232870"
     ],
     "matches": {
       "1000420": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1232870": {
+        "start": 16,
+        "length": 2,
+        "reading": "ゆるさ"
       },
       "1329650": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
+      },
+      "1483070": {
+        "start": 9,
+        "length": 1,
+        "reading": "かれ"
       },
       "1515700": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ほうしゅう"
+      }
+    }
+  },
+  {
+    "id": "83756",
+    "original": "物事をあるがままに受け取れ。",
+    "en": [
+      {
+        "id": "319960",
+        "text": "Take things as they are."
+      }
+    ],
+    "indices": "物事 を 在るが儘{あるがまま} に 受け取る{受け取れ}",
+    "vocabIds": [
+      "1502550",
+      "1329650"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 9,
+        "length": 4,
+        "reading": "うけとれ"
+      },
+      "1502550": {
+        "start": 0,
+        "length": 2,
+        "reading": "ものごと"
+      }
+    }
+  },
+  {
+    "id": "85180",
+    "original": "貧しくはあったがその金は受け取ろうとしなかった。",
+    "en": [
+      {
+        "id": "318533",
+        "text": "Poor as he was, he would not receive the money."
+      }
+    ],
+    "indices": "貧しい{貧しく} は 有る{あった} が 其の[01]{その} 金(かね)[01] は 受け取る{受け取ろう} とする{としなかった}",
+    "vocabIds": [
+      "1490740",
+      "1242590",
+      "1329650"
+    ],
+    "matches": {
+      "1242590": {
+        "start": 10,
+        "length": 1,
+        "reading": "きん"
+      },
+      "1329650": {
+        "start": 12,
+        "length": 4,
+        "reading": "うけとろ"
+      },
+      "1490740": {
+        "start": 0,
+        "length": 3,
+        "reading": "まずしく"
       }
     }
   },
@@ -186,6 +281,7 @@
     "indices": "彼女[01] は 彼(かれ)[01]{彼の} 贈り物 を 受け取る[01]{受け取った}",
     "vocabIds": [
       "1483150",
+      "1483070",
       "1000420",
       "1589030",
       "1329650"
@@ -193,19 +289,28 @@
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1329650": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589030": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
       }
     }
   },
@@ -221,6 +326,7 @@
     "indices": "彼女[01] は 彼(かれ) の 言葉 を 同意 を 意味 為る(する){している} と 受け取る[02]{受け取った}",
     "vocabIds": [
       "1483150",
+      "1483070",
       "1000420",
       "1264540",
       "1451850",
@@ -230,27 +336,38 @@
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1156800": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いみ"
       },
       "1264540": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1329650": {
         "start": 18,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1451850": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "どうい"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -275,27 +392,33 @@
     "matches": {
       "1221270": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かえる"
       },
       "1327720": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1328990": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しゅし"
       },
       "1329650": {
         "start": 19,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -311,31 +434,60 @@
     "indices": "彼女[01] は 電気料金~ の 請求書 を 今日 受け取る{受け取った}",
     "vocabIds": [
       "1483150",
+      "1443000",
       "1943480",
+      "1554280",
+      "1381320",
       "1381330",
+      "2037940",
       "1579110",
       "1329650"
     ],
     "matches": {
       "1329650": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1381320": {
+        "start": 8,
+        "length": 2,
+        "reading": "せいきゅう"
       },
       "1381330": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "せいきゅうしょ"
+      },
+      "1443000": {
+        "start": 3,
+        "length": 2,
+        "reading": "でんき"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1554280": {
+        "start": 5,
+        "length": 2,
+        "reading": "りょうきん"
       },
       "1579110": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1943480": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "でんきりょうきん"
+      },
+      "2037940": {
+        "start": 10,
+        "length": 1,
+        "reading": "しょ"
       }
     }
   },
@@ -357,15 +509,69 @@
     "matches": {
       "1329650": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1381180": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せいじつ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "88487",
+    "original": "彼女は親切の代償として何も受け取らなかった。",
+    "en": [
+      {
+        "id": "315220",
+        "text": "She got nothing in reward for her kindness."
+      }
+    ],
+    "indices": "彼女[01] は 親切 の 代償[01]~ として 何も[01] 受け取る{受け取らなかった}",
+    "vocabIds": [
+      "1483150",
+      "1365250",
+      "1411960",
+      "1577100",
+      "1188490",
+      "1329650"
+    ],
+    "matches": {
+      "1188490": {
+        "start": 11,
+        "length": 2,
+        "reading": "なにも"
+      },
+      "1329650": {
+        "start": 13,
+        "length": 4,
+        "reading": "うけとら"
+      },
+      "1365250": {
+        "start": 3,
+        "length": 2,
+        "reading": "しんせつ"
+      },
+      "1411960": {
+        "start": 6,
+        "length": 2,
+        "reading": "だいしょう"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1577100": {
+        "start": 11,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -388,19 +594,23 @@
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -424,23 +634,28 @@
     "matches": {
       "1264540": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1498260": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ぶじょく"
       }
     }
   },
@@ -463,19 +678,23 @@
     "matches": {
       "1264540": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -499,23 +718,28 @@
     "matches": {
       "1001820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1220310": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "すでに"
       },
       "1329650": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1545820": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ようす"
       }
     }
   },
@@ -537,15 +761,18 @@
     "matches": {
       "1329650": {
         "start": 21,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1521400": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       }
     }
   },
@@ -568,19 +795,23 @@
     "matches": {
       "1232410": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きょひ"
       },
       "1242590": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1329650": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -603,19 +834,107 @@
     "matches": {
       "1310720": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "し"
       },
       "1329650": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1420400": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "95053",
+    "original": "彼女にお金をいくらか渡そうとしたが、どうしても受け取ろうとしなかった。",
+    "en": [
+      {
+        "id": "308653",
+        "text": "I tried to give her some money, but she wouldn't take any."
+      }
+    ],
+    "indices": "彼女 に お金 を 幾ら{いくら} か 渡す[03]{渡そう} とする{とした} が 如何しても{どうしても} 受け取る{受け取ろう} とする{としなかった}",
+    "vocabIds": [
+      "1483150",
+      "1001820",
+      "1444610",
+      "1329650"
+    ],
+    "matches": {
+      "1001820": {
+        "start": 3,
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1329650": {
+        "start": 23,
+        "length": 4,
+        "reading": "うけとろ"
+      },
+      "1444610": {
+        "start": 10,
+        "length": 2,
+        "reading": "わたそ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "98839",
+    "original": "彼は賄賂を受け取らなかったと言った。",
+    "en": [
+      {
+        "id": "304861",
+        "text": "He denied that he had accepted the bribe."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 賄賂 を 受け取る[01]{受け取らなかった} と[04] 言う{言った}",
+    "vocabIds": [
+      "1483070",
+      "1562520",
+      "1329650",
+      "2540200",
+      "1587040"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 5,
+        "length": 4,
+        "reading": "うけとら"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1562520": {
+        "start": 2,
+        "length": 2,
+        "reading": "わいろ"
+      },
+      "1587040": {
+        "start": 14,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "2540200": {
+        "start": 13,
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -633,24 +952,34 @@
       "1483070",
       "1562520",
       "1329650",
-      "1467530"
+      "1467530",
+      "1611790"
     ],
     "matches": {
       "1329650": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1467530": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "みとめ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1562520": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
+      },
+      "1611790": {
+        "start": 13,
+        "length": 2,
+        "reading": "みとめ"
       }
     }
   },
@@ -674,23 +1003,28 @@
     "matches": {
       "1310950": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しぼう"
       },
       "1329650": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1443760": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "でんぽう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1515120": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
       }
     }
   },
@@ -706,26 +1040,42 @@
     "indices": "彼(かれ)[01] は 保険金 として 大金 を 受け取る{受け取った}",
     "vocabIds": [
       "1483070",
+      "1513440",
       "1513470",
+      "1242590",
       "1413500",
       "1329650"
     ],
     "matches": {
+      "1242590": {
+        "start": 4,
+        "length": 1,
+        "reading": "きん"
+      },
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1413500": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たいきん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1513440": {
+        "start": 2,
+        "length": 2,
+        "reading": "ほけん"
       },
       "1513470": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ほけんきん"
       }
     }
   },
@@ -748,19 +1098,23 @@
     "matches": {
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589030": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
       }
     }
   },
@@ -783,19 +1137,23 @@
     "matches": {
       "1329650": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589030": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
       }
     }
   },
@@ -813,24 +1171,28 @@
       "1483070",
       "1327720",
       "1329650",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1327720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
-      "1589060": {
+      "1578850": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -846,26 +1208,75 @@
     "indices": "彼(かれ)[01] は 手に入る 丈(だけ){だけ} の 金(かね)[01] は 受け取る だろう",
     "vocabIds": [
       "1483070",
+      "1327190",
       "1327220",
+      "1465590",
       "1242590",
       "1329650"
     ],
     "matches": {
       "1242590": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
+      },
+      "1327190": {
+        "start": 2,
+        "length": 1,
+        "reading": "て"
       },
       "1327220": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "てにはいる"
       },
       "1329650": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
+      },
+      "1465590": {
+        "start": 4,
+        "length": 2,
+        "reading": "はいる"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "105609",
+    "original": "彼は私をだましてそれを受け取らせた。",
+    "en": [
+      {
+        "id": "298079",
+        "text": "He beguiled me into accepting it."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 私(わたし)[01] を 騙す{だまして} 其れ[01]{それ} を 受け取る[01]{受け取らせた}",
+    "vocabIds": [
+      "1483070",
+      "1311110",
+      "1329650"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1329650": {
+        "start": 11,
+        "length": 4,
+        "reading": "うけとら"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -887,15 +1298,18 @@
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -922,19 +1336,23 @@
     "matches": {
       "1327720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579100": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けさ"
       }
     }
   },
@@ -957,19 +1375,23 @@
     "matches": {
       "1254130": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "けっして"
       },
       "1329650": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580640": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -998,27 +1420,33 @@
     "matches": {
       "1242590": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1319750": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "うしなっ"
       },
       "1329650": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1406400": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そんけい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
       }
     }
   },
@@ -1043,27 +1471,123 @@
     "matches": {
       "1200220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けが"
       },
       "1242590": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1329650": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1407520": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たがく"
       },
       "1474110": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ばいしょう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "110680",
+    "original": "彼はみんな私にくれたが代わりに何も受け取らなかった。",
+    "en": [
+      {
+        "id": "293006",
+        "text": "He gave me everything but took nothing in return."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 皆{みんな} 私(わたし)[01] に 呉れる{くれた} が 代わり に 何も[01] 受け取る{受け取らなかった}",
+    "vocabIds": [
+      "1483070",
+      "1311110",
+      "1590770",
+      "1590790",
+      "1577100",
+      "1188490",
+      "1329650"
+    ],
+    "matches": {
+      "1188490": {
+        "start": 15,
+        "length": 2,
+        "reading": "なにも"
+      },
+      "1311110": {
+        "start": 5,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1329650": {
+        "start": 17,
+        "length": 4,
+        "reading": "うけとら"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 15,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1590770": {
+        "start": 11,
+        "length": 3,
+        "reading": "かわり"
+      },
+      "1590790": {
+        "start": 11,
+        "length": 4,
+        "reading": "かわりに"
+      }
+    }
+  },
+  {
+    "id": "111733",
+    "original": "彼はどうしてもその金を受け取ろうとしなかった。",
+    "en": [
+      {
+        "id": "291946",
+        "text": "He would not take the money."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 如何しても{どうしても} 其の[01]{その} 金(かね)[01] を 受け取る{受け取ろう} とする{としなかった}",
+    "vocabIds": [
+      "1483070",
+      "1242590",
+      "1329650"
+    ],
+    "matches": {
+      "1242590": {
+        "start": 9,
+        "length": 1,
+        "reading": "きん"
+      },
+      "1329650": {
+        "start": 11,
+        "length": 4,
+        "reading": "うけとろ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1085,15 +1609,18 @@
     "matches": {
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1420400": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1109,41 +1636,48 @@
     "indices": "彼(かれ)[01] は 其の[01]{その} 手紙 を 受け取る と 直ぐに{すぐに} 両親 の 基(もと)[05]{元} へ 急ぐ{急いだ}",
     "vocabIds": [
       "1483070",
-      "2829760",
-      "1311530",
+      "1327720",
       "1329650",
       "1602710",
+      "1260670",
       "2219570",
       "1228650"
     ],
     "matches": {
       "1228650": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "いそい"
       },
-      "1311530": {
-        "start": 5,
-        "length": 1
+      "1260670": {
+        "start": 19,
+        "length": 1,
+        "reading": "もと"
+      },
+      "1327720": {
+        "start": 4,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1602710": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "りょうしん"
       },
       "2219570": {
         "start": 19,
-        "length": 2
-      },
-      "2829760": {
-        "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "もとへ"
       }
     }
   },
@@ -1159,36 +1693,36 @@
     "indices": "彼(かれ)[01] は 其の[01]{その} 手紙 を 受け取る と 読み も 為る(する){しないで} 其れ[01]{それ} を 燃やす{燃やした}",
     "vocabIds": [
       "1483070",
-      "2829760",
-      "1311530",
+      "1327720",
       "1329650",
       "1456130",
       "1582900"
     ],
     "matches": {
-      "1311530": {
-        "start": 5,
-        "length": 1
+      "1327720": {
+        "start": 4,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1456130": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "よみ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1582900": {
         "start": 23,
-        "length": 4
-      },
-      "2829760": {
-        "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "もやし"
       }
     }
   },
@@ -1211,19 +1745,23 @@
     "matches": {
       "1001820": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1385170": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きっぷ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1238,6 +1776,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 言葉 を 余り{あまり} 額面~ 通り(とおり) に 受け取る{受け取って} は 行けない[02]{いけない}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1264540",
       "1207540",
@@ -1247,23 +1786,33 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1207540": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "がくめん"
       },
       "1264540": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1329650": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1432920": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "どおり"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1281,24 +1830,34 @@
       "1483070",
       "1327720",
       "1329650",
-      "1420410"
+      "1420410",
+      "1420400"
     ],
     "matches": {
       "1327720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1420400": {
+        "start": 13,
+        "length": 3,
+        "reading": "しらせ"
       },
       "1420410": {
         "start": 13,
-        "length": 6
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1322,23 +1881,28 @@
     "matches": {
       "1202150": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "みな"
       },
       "1329650": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1562520": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
       },
       "1589350": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -1361,19 +1925,23 @@
     "matches": {
       "1329650": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1330990": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうわい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1589030": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
       }
     }
   },
@@ -1398,27 +1966,33 @@
     "matches": {
       "1155660": {
         "start": 17,
-        "length": 5
+        "length": 5,
+        "reading": "いぜんとして"
       },
       "1242590": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1304510": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "のこる"
       },
       "1313960": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じじつ"
       },
       "1329650": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1442,23 +2016,28 @@
     "matches": {
       "1264610": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "かぎり"
       },
       "1329650": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1376760": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "せいかく"
       },
       "1473140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はいたつ"
       },
       "1490670": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しなもの"
       }
     }
   },
@@ -1473,37 +2052,79 @@
     ],
     "indices": "二人 の 政府高官 が 不動産 会社[01] から 賄賂 を 受け取る[01]{受け取った} 容疑 を 掛ける{かけられている}",
     "vocabIds": [
+      "1461140",
       "1582670",
+      "1580640",
+      "1376070",
       "1376080",
+      "1283330",
+      "1494220",
       "2640820",
+      "1198550",
       "1562520",
       "1329650",
       "1545380"
     ],
     "matches": {
+      "1198550": {
+        "start": 11,
+        "length": 2,
+        "reading": "かいしゃ"
+      },
+      "1283330": {
+        "start": 5,
+        "length": 2,
+        "reading": "こうかん"
+      },
       "1329650": {
         "start": 18,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1376070": {
+        "start": 3,
+        "length": 2,
+        "reading": "せいふ"
       },
       "1376080": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "せいふこうかん"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1494220": {
+        "start": 8,
+        "length": 3,
+        "reading": "ふどうさん"
       },
       "1545380": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ようぎ"
       },
       "1562520": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
       },
       "1582670": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ににん"
       },
       "2640820": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "ふどうさんかいしゃ"
       }
     }
   },
@@ -1519,6 +2140,7 @@
     "indices": "突然 彼(かれ)[01]{彼の} 手紙 を 受け取る{受け取った}",
     "vocabIds": [
       "1457040",
+      "1483070",
       "1000420",
       "1327720",
       "1329650"
@@ -1526,19 +2148,28 @@
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1327720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1457040": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とつぜん"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1555,30 +2186,90 @@
     "vocabIds": [
       "1431990",
       "1230360",
+      "1435490",
       "1777250",
+      "1437260",
       "1329650",
       "1230350"
     ],
     "matches": {
       "1230350": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうよ"
       },
       "1230360": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうりょう"
       },
       "1329650": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1431990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちんぎん"
+      },
+      "1435490": {
+        "start": 6,
+        "length": 2,
+        "reading": "ていき"
+      },
+      "1437260": {
+        "start": 8,
+        "length": 1,
+        "reading": "てき"
       },
       "1777250": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ていきてき"
+      }
+    }
+  },
+  {
+    "id": "126331",
+    "original": "注文していない品物を受け取りました。",
+    "en": [
+      {
+        "id": "277660",
+        "text": "I received an item that I did not order."
+      },
+      {
+        "id": "10533412",
+        "text": "I received an item that I didn't order."
+      }
+    ],
+    "indices": "注文(ちゅうもん)[01] 為る(する){していない} 品物 を 受け取る{受け取りました}",
+    "vocabIds": [
+      "1426650",
+      "1490670",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1426650": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1490670": {
+        "start": 7,
+        "length": 2,
+        "reading": "しなもの"
       }
     }
   },
@@ -1593,22 +2284,160 @@
     ],
     "indices": "男子生徒 は 銘々{めいめい} 卒業証書~ を 受け取る{受け取った}",
     "vocabIds": [
+      "1420070",
       "2730360",
+      "1379380",
+      "1405890",
       "1405930",
+      "1351650",
       "1329650"
     ],
     "matches": {
       "1329650": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1351650": {
+        "start": 11,
+        "length": 2,
+        "reading": "しょうしょ"
+      },
+      "1379380": {
+        "start": 2,
+        "length": 2,
+        "reading": "せいと"
+      },
+      "1405890": {
+        "start": 9,
+        "length": 2,
+        "reading": "そつぎょう"
       },
       "1405930": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "そつぎょうしょうしょ"
+      },
+      "1420070": {
+        "start": 0,
+        "length": 2,
+        "reading": "だんし"
       },
       "2730360": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "だんしせいと"
+      }
+    }
+  },
+  {
+    "id": "137866",
+    "original": "退職を選択する人々は、６２歳という若さで退職を選べるのである。もっとも、その年齢で社会保障年金を受け取り始めると、支払金額が２０％削減されてしまうことになるだろうが。",
+    "en": [
+      {
+        "id": "275370",
+        "text": "Those who choose to retire can do so as early as sixty-two, although starting to draw their Social Security distributions at that age would mean that the payments would be reduced by twenty percent."
+      }
+    ],
+    "indices": "退職 を 選択 為る(する){する} 人々(ひとびと) は 歳(さい)[01] と言う{という} 若い{若} さ[01] で(#2028980) 退職 を 選ぶ{選べる} の である 最も{もっとも} 其の[01]{その} 年齢 で(#2028980) 社会保障 年金 を 受け取る{受け取り} 始める[03] と 支払い{支払} 金額 が 削減 為れる{されて} 仕舞う{しまう} 事(こと){こと} になる だろう が",
+    "vocabIds": [
+      "1411420",
+      "1392290",
+      "1580650",
+      "1294940",
+      "1324300",
+      "2193250",
+      "1324310",
+      "1600240",
+      "1322700",
+      "1658860",
+      "1468540",
+      "1329650",
+      "1329770",
+      "1307550",
+      "1242700",
+      "1298110"
+    ],
+    "matches": {
+      "1242700": {
+        "start": 59,
+        "length": 2,
+        "reading": "きんがく"
+      },
+      "1294940": {
+        "start": 13,
+        "length": 1,
+        "reading": "さい"
+      },
+      "1298110": {
+        "start": 65,
+        "length": 2,
+        "reading": "さくげん"
+      },
+      "1307550": {
+        "start": 52,
+        "length": 3,
+        "reading": "はじめる"
+      },
+      "1322700": {
+        "start": 41,
+        "length": 2,
+        "reading": "しゃかい"
+      },
+      "1324300": {
+        "start": 17,
+        "length": 1,
+        "reading": "わか"
+      },
+      "1324310": {
+        "start": 17,
+        "length": 2,
+        "reading": "わかさ"
+      },
+      "1329650": {
+        "start": 48,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 48,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1392290": {
+        "start": 3,
+        "length": 2,
+        "reading": "せんたく"
+      },
+      "1411420": {
+        "start": 0,
+        "length": 2,
+        "reading": "たいしょく"
+      },
+      "1468540": {
+        "start": 45,
+        "length": 2,
+        "reading": "ねんきん"
+      },
+      "1580650": {
+        "start": 7,
+        "length": 2,
+        "reading": "ひとびと"
+      },
+      "1600240": {
+        "start": 38,
+        "length": 2,
+        "reading": "ねんれい"
+      },
+      "1658860": {
+        "start": 41,
+        "length": 4,
+        "reading": "しゃかいほしょう"
+      },
+      "2193250": {
+        "start": 17,
+        "length": 1,
+        "reading": "わか"
       }
     }
   },
@@ -1631,19 +2460,23 @@
     "matches": {
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1387870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんしゅう"
       },
       "1512220": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "へんじ"
       }
     }
   },
@@ -1658,32 +2491,49 @@
     ],
     "indices": "政治家 は 自分[01] が 受け取る 金(かね)[01] に就いて{について} 何時でも{いつでも} はっきり 説明 出来る{でき} ねばならない{なければならない}",
     "vocabIds": [
+      "1375970",
       "1375980",
+      "1191730",
       "1318610",
       "1329650",
       "1242590",
       "1386460"
     ],
     "matches": {
+      "1191730": {
+        "start": 2,
+        "length": 1,
+        "reading": "か"
+      },
       "1242590": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1318610": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1329650": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
+      },
+      "1375970": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいじ"
       },
       "1375980": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せいじか"
       },
       "1386460": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "せつめい"
       }
     }
   },
@@ -1698,7 +2548,9 @@
     ],
     "indices": "政治家 として お金 を 受け取る の は 時として 白黒[02] 付ける{つけ} 難い(にくい){にくい} 事(こと){こと} も 有る{ある}",
     "vocabIds": [
+      "1375970",
       "1375980",
+      "1191730",
       "1001820",
       "1329650",
       "1658470",
@@ -1707,23 +2559,38 @@
     "matches": {
       "1001820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1191730": {
+        "start": 2,
+        "length": 1,
+        "reading": "か"
       },
       "1329650": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
+      },
+      "1375970": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいじ"
       },
       "1375980": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せいじか"
       },
       "1475160": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "しろくろ"
       },
       "1658470": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "ときとして"
       }
     }
   },
@@ -1740,20 +2607,29 @@
     "vocabIds": [
       "1593290",
       "1329650",
-      "1420410"
+      "1420410",
+      "1420400"
     ],
     "matches": {
       "1329650": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1420400": {
+        "start": 10,
+        "length": 3,
+        "reading": "しらせ"
       },
       "1420410": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "しらせ"
       },
       "1593290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こづつみ"
       }
     }
   },
@@ -1774,11 +2650,13 @@
     "matches": {
       "1329650": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1348410": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こぎって"
       }
     }
   },
@@ -1804,31 +2682,38 @@
     "matches": {
       "1166180": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "いちぶ"
       },
       "1329650": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1335080": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1356370": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じょうほう"
       },
       "1490140": {
         "start": 38,
-        "length": 2
+        "length": 2,
+        "reading": "びょうしゃ"
       },
       "1491710": {
         "start": 41,
-        "length": 3
+        "length": 3,
+        "reading": "ふかんぜん"
       },
       "1550140": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
       }
     }
   },
@@ -1845,20 +2730,35 @@
     "vocabIds": [
       "1329650",
       "1270820",
+      "1559900",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 9,
+        "length": 3,
+        "reading": "ください"
       },
       "1270820": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ごれんらく"
       },
       "1329650": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1559900": {
+        "start": 7,
+        "length": 2,
+        "reading": "れんらく"
       }
     }
   },
@@ -1874,16 +2774,24 @@
     "indices": "受け取る{受け取った} コーヒーミル~ が 動く{動きません}",
     "vocabIds": [
       "1329650",
+      "1451210",
       "1451180"
     ],
     "matches": {
       "1329650": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1451180": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごき"
       }
     }
   },
@@ -1901,24 +2809,67 @@
       "1327360",
       "1329650",
       "2600340",
-      "2270390"
+      "1578850"
     ],
     "matches": {
       "1327360": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "てにもつ"
       },
       "1329650": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
-      "2270390": {
+      "1578850": {
         "start": 16,
-        "length": 1
+        "length": 2,
+        "reading": "いけ"
       },
       "2600340": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "つぎに"
+      }
+    }
+  },
+  {
+    "id": "150086",
+    "original": "自尊心があるから彼はそのお金を受け取らなかった。",
+    "en": [
+      {
+        "id": "264471",
+        "text": "His pride did not allow him to take the money."
+      }
+    ],
+    "indices": "自尊心 が[01] 有る{ある} から 彼(かれ)[01] は 其の[01]{その} お金 を 受け取る{受け取らなかった}",
+    "vocabIds": [
+      "1318220",
+      "1483070",
+      "1001820",
+      "1329650"
+    ],
+    "matches": {
+      "1001820": {
+        "start": 12,
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1318220": {
+        "start": 0,
+        "length": 3,
+        "reading": "じそんしん"
+      },
+      "1329650": {
+        "start": 15,
+        "length": 4,
+        "reading": "うけとら"
+      },
+      "1483070": {
+        "start": 8,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1941,19 +2892,23 @@
     "matches": {
       "1255890": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "げつようび"
       },
       "1316380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1327720": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       }
     }
   },
@@ -1968,37 +2923,61 @@
     ],
     "indices": "事務局~ は 私(わたし)[01]{私の} 願書 を 受け取る{受け取っていない} と 電報 で(#2028980) 知らせる{知らせて} 来る(くる){きた}",
     "vocabIds": [
+      "1314270",
       "1314350",
+      "1239560",
       "1311110",
       "1218050",
       "1329650",
       "1443760",
-      "1420410"
+      "1420410",
+      "1420400"
     ],
     "matches": {
       "1218050": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "がんしょ"
+      },
+      "1239560": {
+        "start": 2,
+        "length": 1,
+        "reading": "きょく"
       },
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1314270": {
+        "start": 0,
+        "length": 2,
+        "reading": "じむ"
       },
       "1314350": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じむきょく"
       },
       "1329650": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1420400": {
+        "start": 21,
+        "length": 3,
+        "reading": "しらせ"
       },
       "1420410": {
         "start": 21,
-        "length": 4
+        "length": 3,
+        "reading": "しらせ"
       },
       "1443760": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "でんぽう"
       }
     }
   },
@@ -2016,29 +2995,28 @@
       "1311110",
       "1483150",
       "1587040",
-      "1505390",
       "1329650"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
-      },
-      "1505390": {
-        "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1587040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いう"
       }
     }
   },
@@ -2062,23 +3040,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1343950": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "かい"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -2104,15 +3087,79 @@
     "matches": {
       "1327720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "153524",
+    "original": "私は彼女から１通も手紙を受け取らなかった。",
+    "en": [
+      {
+        "id": "261020",
+        "text": "Not a letter did I receive from her."
+      },
+      {
+        "id": "394824",
+        "text": "I didn't receive even one letter from her."
+      },
+      {
+        "id": "1409500",
+        "text": "I didn't even receive one letter from her."
+      },
+      {
+        "id": "1409501",
+        "text": "I didn't even get one letter from her."
+      },
+      {
+        "id": "1409503",
+        "text": "I didn't get even one letter from her."
+      }
+    ],
+    "indices": "私(わたし)[01] は 彼女 から 通[02] も 手紙 を 受け取る{受け取らなかった}",
+    "vocabIds": [
+      "1311110",
+      "1483150",
+      "1432840",
+      "1327720",
+      "1329650"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1327720": {
+        "start": 9,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1329650": {
+        "start": 12,
+        "length": 4,
+        "reading": "うけとら"
+      },
+      "1432840": {
+        "start": 7,
+        "length": 1,
+        "reading": "つう"
+      },
+      "1483150": {
+        "start": 2,
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -2128,26 +3175,42 @@
     "indices": "私(わたし)[01] は 彼(かれ)[01]{彼の} 妹さん から プレゼント を 受け取る[01]{受け取った}",
     "vocabIds": [
       "1311110",
+      "1483070",
       "1000420",
+      "1524590",
       "1524600",
       "1329650"
     ],
     "matches": {
       "1000420": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1524590": {
+        "start": 4,
+        "length": 1,
+        "reading": "いもうと"
       },
       "1524600": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "いもうとさん"
       }
     }
   },
@@ -2163,6 +3226,7 @@
     "indices": "私(わたし)[01] は 彼(かれ)[01]{彼の} 到着 を 知らせる 手紙 を 受け取る{受け取った}",
     "vocabIds": [
       "1311110",
+      "1483070",
       "1000420",
       "1449870",
       "1420410",
@@ -2172,27 +3236,140 @@
     "matches": {
       "1000420": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1420410": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "しらせる"
       },
       "1449870": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "とうちゃく"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "154119",
+    "original": "私は彼に手紙を受け取りましたか、と尋ねた。",
+    "en": [
+      {
+        "id": "260251",
+        "text": "I asked him if he had got my letter."
+      }
+    ],
+    "indices": "私(わたし)[01] は 彼(かれ) に 私(わたし)[01]{私の} 手紙 を 受け取る{受けとりました} か と 尋ねる[01]{尋ねた}",
+    "vocabIds": [
+      "1311110",
+      "1483070",
+      "1327720",
+      "1329650",
+      "1329770",
+      "1369940",
+      "2835838"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1327720": {
+        "start": 4,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1329650": {
+        "start": 7,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 7,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1369940": {
+        "start": 17,
+        "length": 2,
+        "reading": "たずね"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2835838": {
+        "start": 17,
+        "length": 2,
+        "reading": "たずね"
+      }
+    }
+  },
+  {
+    "id": "154274",
+    "original": "私は彼にお金を差し出したが、彼はどうしてもそれを受け取ろうとはしなかった。",
+    "en": [
+      {
+        "id": "260269",
+        "text": "I offered him some money, but he would not take it."
+      }
+    ],
+    "indices": "私(わたし)[01] は 彼(かれ) に お金 を 差し出す[02]{差し出した} が 彼(かれ)[01] は 如何しても{どうしても} 其れ[01]{それ} を 受け取る{受け取ろう} とは 為る(する){しなかった}",
+    "vocabIds": [
+      "1311110",
+      "1483070",
+      "1001820",
+      "1291230",
+      "1329650"
+    ],
+    "matches": {
+      "1001820": {
+        "start": 4,
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1291230": {
+        "start": 7,
+        "length": 4,
+        "reading": "さしだし"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1329650": {
+        "start": 24,
+        "length": 4,
+        "reading": "うけとろ"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2217,27 +3394,72 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1449190": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とうぜん"
       },
       "1483150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589350": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
+      }
+    }
+  },
+  {
+    "id": "155147",
+    "original": "私は誕生プレゼントを受け取りました。",
+    "en": [
+      {
+        "id": "259392",
+        "text": "I received my birthday present."
+      }
+    ],
+    "indices": "私(わたし)[01] は 誕生 プレゼント を 受け取る{受け取りました}",
+    "vocabIds": [
+      "1311110",
+      "1419080",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1329650": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1419080": {
+        "start": 2,
+        "length": 2,
+        "reading": "たんじょう"
       }
     }
   },
@@ -2253,21 +3475,36 @@
     "indices": "私(わたし)[01] は 招待状 を 受け取る{受け取った}",
     "vocabIds": [
       "1311110",
+      "1349610",
       "1349630",
+      "1356690",
       "1329650"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1349610": {
+        "start": 2,
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1349630": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "しょうたいじょう"
+      },
+      "1356690": {
+        "start": 4,
+        "length": 1,
+        "reading": "じょう"
       }
     }
   },
@@ -2291,23 +3528,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1579260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -2331,23 +3573,28 @@
     "matches": {
       "1174420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1579260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -2365,34 +3612,40 @@
       "1311110",
       "1579260",
       "1174420",
-      "2037940",
+      "1343950",
       "1327720",
       "1329650"
     ],
     "matches": {
       "1174420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1343950": {
+        "start": 8,
+        "length": 2,
+        "reading": "かか"
       },
       "1579260": {
         "start": 2,
-        "length": 2
-      },
-      "2037940": {
-        "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -2416,23 +3669,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1579110": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -2448,26 +3706,36 @@
     "indices": "私(わたし)[01] は 鉛筆書き~ の 手紙 を 受け取る{受け取った}",
     "vocabIds": [
       "1311110",
+      "1178590",
       "2081320",
       "1327720",
       "1329650"
     ],
     "matches": {
+      "1178590": {
+        "start": 2,
+        "length": 2,
+        "reading": "えんぴつ"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "2081320": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "えんぴつがき"
       }
     }
   },
@@ -2490,19 +3758,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 20,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1471540": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ばとう"
       }
     }
   },
@@ -2518,36 +3790,48 @@
     "indices": "私(わたし)[01] は 其の[01]{その} 手紙 を 三日[02]{３日} 前(まえ) に 受け取る{受け取っていた}",
     "vocabIds": [
       "1311110",
-      "2829760",
-      "1311530",
+      "1327720",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1329650"
     ],
     "matches": {
       "1301330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1311530": {
-        "start": 5,
-        "length": 1
+      "1327720": {
+        "start": 4,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1392580": {
+        "start": 9,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
-      "2829760": {
-        "start": 2,
-        "length": 3
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2569,15 +3853,57 @@
     "matches": {
       "1249900": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "あに"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 21,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      }
+    }
+  },
+  {
+    "id": "161668",
+    "original": "手紙を昨日受け取りました。",
+    "en": [
+      {
+        "id": "17073",
+        "text": "I received your letter yesterday."
+      }
+    ],
+    "indices": "手紙 を 昨日 受け取る{受け取りました}",
+    "vocabIds": [
+      "1327720",
+      "1579260",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1327720": {
+        "start": 0,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1329650": {
+        "start": 5,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 5,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1579260": {
+        "start": 3,
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -2600,19 +3926,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1443760": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "でんぽう"
       },
       "1483150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -2628,36 +3958,60 @@
     "indices": "私(わたし)[01] は 一週間 前(まえ)[02] に 書く{書かれた} 手紙 を 受け取る{受け取った}",
     "vocabIds": [
       "1311110",
+      "1160790",
       "1163270",
+      "1333500",
+      "1392580",
       "1392590",
-      "2037940",
+      "1343950",
       "1327720",
       "1329650"
     ],
     "matches": {
+      "1160790": {
+        "start": 3,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163270": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "いちしゅうかん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1333500": {
+        "start": 4,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1343950": {
+        "start": 8,
+        "length": 2,
+        "reading": "かか"
+      },
+      "1392580": {
+        "start": 6,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 6,
-        "length": 2
-      },
-      "2037940": {
-        "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "まえに"
       }
     }
   },
@@ -2674,40 +4028,47 @@
     "vocabIds": [
       "1311110",
       "1362920",
-      "2603430",
+      "1179830",
       "1328990",
       "1327720",
       "1483070",
       "1329650"
     ],
     "matches": {
+      "1179830": {
+        "start": 6,
+        "length": 2,
+        "reading": "おうじ"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1328990": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しゅし"
       },
       "1329650": {
         "start": 24,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1362920": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "もうしで"
       },
       "1483070": {
         "start": 21,
-        "length": 1
-      },
-      "2603430": {
-        "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2733,31 +4094,38 @@
     "matches": {
       "1269320": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512220": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "へんじ"
       },
       "1548370": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "たのん"
       }
     }
   },
@@ -2780,19 +4148,23 @@
     "matches": {
       "1291230": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "さしだす"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 21,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2811,28 +4183,39 @@
       "1329650",
       "1444980",
       "1605820",
-      "1270820"
+      "1270820",
+      "1559900"
     ],
     "matches": {
       "1270820": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "ごれんらく"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1444980": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "つごう"
+      },
+      "1559900": {
+        "start": 25,
+        "length": 2,
+        "reading": "れんらく"
       },
       "1605820": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -2855,19 +4238,23 @@
     "matches": {
       "1308610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しちょう"
       },
       "1329650": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1482990": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ひてい"
       },
       "1562520": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
       }
     }
   },
@@ -2893,15 +4280,18 @@
     "matches": {
       "1308610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しちょう"
       },
       "1329650": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1562520": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
       }
     }
   },
@@ -2916,32 +4306,55 @@
     ],
     "indices": "残念ながら 私ども は 貴社 から の 御(お){お} 返事 を 受け取る{受け取っていません}",
     "vocabIds": [
+      "1304680",
       "1304700",
+      "1311110",
       "1854980",
       "1223510",
       "2845573",
+      "1512220",
       "1329650"
     ],
     "matches": {
       "1223510": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "きしゃ"
+      },
+      "1304680": {
+        "start": 0,
+        "length": 2,
+        "reading": "ざんねん"
       },
       "1304700": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ざんねんながら"
+      },
+      "1311110": {
+        "start": 6,
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 19,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1512220": {
+        "start": 16,
+        "length": 2,
+        "reading": "へんじ"
       },
       "1854980": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "わたしども"
       },
       "2845573": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "おへんじ"
       }
     }
   },
@@ -2967,15 +4380,57 @@
     "matches": {
       "1327720": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 18,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
+      }
+    }
+  },
+  {
+    "id": "170159",
+    "original": "昨日、あなたからの手紙を受け取りました。",
+    "en": [
+      {
+        "id": "17073",
+        "text": "I received your letter yesterday."
+      }
+    ],
+    "indices": "昨日 貴方(あなた)[01]{あなた} から の 手紙 を 受け取る{受け取りました}",
+    "vocabIds": [
+      "1579260",
+      "1327720",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1327720": {
+        "start": 9,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1329650": {
+        "start": 12,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 12,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1579260": {
+        "start": 0,
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -3000,27 +4455,33 @@
     "matches": {
       "1311110": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1313850": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       },
       "1329650": {
         "start": 20,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1336500": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうだい"
       },
       "1363650": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "しんけん"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -3039,38 +4500,45 @@
       "1311110",
       "1746690",
       "1497610",
-      "1905320",
+      "1490230",
       "1443760",
       "1329650"
     ],
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 22,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1443760": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "でんぽう"
+      },
+      "1490230": {
+        "start": 10,
+        "length": 2,
+        "reading": "びょうき"
       },
       "1497610": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1579100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けさ"
       },
       "1746690": {
         "start": 4,
-        "length": 2
-      },
-      "1905320": {
-        "start": 10,
-        "length": 6
+        "length": 2,
+        "reading": "くにもと"
       }
     }
   },
@@ -3085,6 +4553,7 @@
     ],
     "indices": "今まで の 所(ところ){ところ} 我々 は 彼(かれ) から 手紙 を 受け取る{受け取っていない}",
     "vocabIds": [
+      "1288850",
       "1587590",
       "1607050",
       "1483070",
@@ -3092,25 +4561,107 @@
       "1329650"
     ],
     "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
       "1327720": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1483070": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1587590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       },
       "1607050": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      }
+    }
+  },
+  {
+    "id": "172901",
+    "original": "今、切符を受け取らなくてはいけないのですか。",
+    "en": [
+      {
+        "id": "241572",
+        "text": "Should I pick up my ticket now?"
+      }
+    ],
+    "indices": "今(いま) 切符 を 受け取る{受け取ら} 無くてはいけない{なくてはいけない} のです か",
+    "vocabIds": [
+      "1288850",
+      "1385170",
+      "1329650"
+    ],
+    "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1329650": {
+        "start": 5,
+        "length": 4,
+        "reading": "うけとら"
+      },
+      "1385170": {
+        "start": 2,
+        "length": 2,
+        "reading": "きっぷ"
+      }
+    }
+  },
+  {
+    "id": "173437",
+    "original": "航空券はどこで受け取ればいいですか？",
+    "en": [
+      {
+        "id": "241033",
+        "text": "Where can I pick up my ticket?"
+      }
+    ],
+    "indices": "航空券~ は 何処{どこ} で(#2028980) 受け取る{受け取れば} いい(#2820690)[01] ですか",
+    "vocabIds": [
+      "1281270",
+      "1281330",
+      "1256730",
+      "1329650"
+    ],
+    "matches": {
+      "1256730": {
+        "start": 2,
+        "length": 1,
+        "reading": "けん"
+      },
+      "1281270": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうくう"
+      },
+      "1281330": {
+        "start": 0,
+        "length": 3,
+        "reading": "こうくうけん"
+      },
+      "1329650": {
+        "start": 7,
+        "length": 4,
+        "reading": "うけとれ"
       }
     }
   },
@@ -3131,11 +4682,13 @@
     "matches": {
       "1277530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1329650": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -3156,7 +4709,9 @@
       "1311110",
       "1416220",
       "1441870",
+      "1441860",
       "1365040",
+      "1329590",
       "1659120",
       "1159500",
       "2100520",
@@ -3166,51 +4721,73 @@
     "matches": {
       "1159460": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "いでん"
       },
       "1159500": {
         "start": 35,
-        "length": 3
+        "length": 3,
+        "reading": "いでんし"
       },
       "1269720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしゃ"
       },
       "1311110": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 42,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1329590": {
+        "start": 31,
+        "length": 2,
+        "reading": "うけ"
       },
       "1329650": {
         "start": 53,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1365040": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "おや"
       },
       "1416220": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
+      },
+      "1441860": {
+        "start": 18,
+        "length": 2,
+        "reading": "つたえ"
       },
       "1441870": {
         "start": 18,
-        "length": 5
+        "length": 2,
+        "reading": "つたえ"
       },
       "1470370": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のうりょく"
       },
       "1659120": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "うけ"
       },
       "2100520": {
         "start": 38,
-        "length": 4
+        "length": 4,
+        "reading": "をとおして"
       }
     }
   },
@@ -3225,22 +4802,37 @@
     ],
     "indices": "個人的{個人的な} 話(はなし) に 受け取る{受け取らないで}",
     "vocabIds": [
+      "1264770",
       "1264890",
+      "1437260",
       "1600900",
       "1329650"
     ],
     "matches": {
+      "1264770": {
+        "start": 0,
+        "length": 2,
+        "reading": "こじん"
+      },
       "1264890": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こじんてき"
       },
       "1329650": {
         "start": 6,
-        "length": 6
+        "length": 4,
+        "reading": "うけとら"
+      },
+      "1437260": {
+        "start": 2,
+        "length": 1,
+        "reading": "てき"
       },
       "1600900": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -3261,11 +4853,13 @@
     "matches": {
       "1252390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさつ"
       },
       "1329650": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -3291,15 +4885,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1329650": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1589030": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
       }
     }
   },
@@ -3316,25 +4913,41 @@
     "vocabIds": [
       "1327720",
       "1329650",
+      "1392580",
       "1392590",
+      "1223680",
       "1862270"
     ],
     "matches": {
+      "1223680": {
+        "start": 13,
+        "length": 3,
+        "reading": "おこり"
+      },
       "1327720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
+      },
+      "1392580": {
+        "start": 11,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1862270": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "おこり"
       }
     }
   },
@@ -3354,11 +4967,13 @@
     "matches": {
       "1264540": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -3375,6 +4990,7 @@
     "vocabIds": [
       "1232750",
       "1362950",
+      "1288850",
       "2663180",
       "1587040",
       "1264540",
@@ -3383,27 +4999,38 @@
     "matches": {
       "1232750": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "きょしんたんかい"
       },
       "1264540": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
+      },
+      "1288850": {
+        "start": 11,
+        "length": 1,
+        "reading": "いま"
       },
       "1329650": {
         "start": 26,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1362950": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "もうしあげる"
       },
       "1587040": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いう"
       },
       "2663180": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "いまから"
       }
     }
   },
@@ -3420,30 +5047,53 @@
     "vocabIds": [
       "1206900",
       "2826190",
+      "1342390",
       "2704010",
+      "1405890",
       "1405930",
+      "1351650",
       "1329650"
     ],
     "matches": {
       "1206900": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1329650": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1342390": {
+        "start": 5,
+        "length": 2,
+        "reading": "じゅんばん"
+      },
+      "1351650": {
+        "start": 10,
+        "length": 2,
+        "reading": "しょうしょ"
+      },
+      "1405890": {
+        "start": 8,
+        "length": 2,
+        "reading": "そつぎょう"
       },
       "1405930": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "そつぎょうしょうしょ"
       },
       "2704010": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "じゅんばんに"
       },
       "2826190": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "おのおの"
       }
     }
   },
@@ -3466,19 +5116,23 @@
     "matches": {
       "1327720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1512220": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "へんじ"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -3504,15 +5158,18 @@
     "matches": {
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1515340": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "つつみ"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -3531,7 +5188,9 @@
       "1310730",
       "1315840",
       "1483070",
+      "1577100",
       "1611010",
+      "1579840",
       "1432840",
       "1452720",
       "1327720",
@@ -3540,39 +5199,97 @@
     "matches": {
       "1179330": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おくさん"
       },
       "1310730": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "しん"
       },
       "1315840": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1327720": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 22,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1432840": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "つう"
       },
       "1452720": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "どうじょう"
       },
       "1483070": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 11,
+        "length": 1,
+        "reading": "なん"
+      },
+      "1579840": {
+        "start": 12,
+        "length": 1,
+        "reading": "じゅう"
       },
       "1611010": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "なんじゅう"
+      }
+    }
+  },
+  {
+    "id": "190605",
+    "original": "一昨日あなたの手紙を受け取りました。",
+    "en": [
+      {
+        "id": "27765",
+        "text": "I received your letter the day before yesterday."
+      }
+    ],
+    "indices": "一昨日 貴方(あなた)[01]{あなた} の 手紙 を 受け取る{受け取りました}",
+    "vocabIds": [
+      "1576050",
+      "1327720",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1327720": {
+        "start": 7,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1329650": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1576050": {
+        "start": 0,
+        "length": 3,
+        "reading": "おととい"
       }
     }
   },
@@ -3591,28 +5308,39 @@
       "1483070",
       "1396130",
       "2121800",
+      "1584460",
       "1329650"
     ],
     "matches": {
       "1175570": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1329650": {
         "start": 19,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1396130": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       },
       "1483070": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1584460": {
+        "start": 17,
+        "length": 1,
+        "reading": "まん"
       },
       "2121800": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "いちまん"
       }
     }
   },
@@ -3632,7 +5360,8 @@
     "matches": {
       "1329650": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       }
     }
   },
@@ -3648,41 +5377,93 @@
     "indices": "殆ど[03]{ほとんど} の アメリカ人 は 高価{高価な} 贈り物 を 受け取る 様に{ように} 要求 為れる{されれば} 不快{不快な} 気がする だろう",
     "vocabIds": [
       "1018890",
+      "1580640",
       "1283300",
       "1589030",
       "1329650",
       "1546680",
       "1491570",
+      "1221520",
       "1221540"
     ],
     "matches": {
       "1018890": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "あめりかじん"
+      },
+      "1221520": {
+        "start": 36,
+        "length": 1,
+        "reading": "き"
       },
       "1221540": {
         "start": 36,
-        "length": 4
+        "length": 4,
+        "reading": "きがする"
       },
       "1283300": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こうか"
       },
       "1329650": {
         "start": 19,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1491570": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "ふかい"
       },
       "1546680": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
+      },
+      "1580640": {
+        "start": 9,
+        "length": 1,
+        "reading": "じん"
       },
       "1589030": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
+      }
+    }
+  },
+  {
+    "id": "197259",
+    "original": "ピンクを注文したのに、ブルーを受け取りました。",
+    "en": [
+      {
+        "id": "34441",
+        "text": "We ordered pink, but we received blue."
+      }
+    ],
+    "indices": "ピンク を 注文(ちゅうもん)[01] 為る(する){した} のに ブルー[01] を 受け取る{受け取りました}",
+    "vocabIds": [
+      "1426650",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 15,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 15,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1426650": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -3702,7 +5483,35 @@
     "matches": {
       "1329650": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      }
+    }
+  },
+  {
+    "id": "200956",
+    "original": "どこで切符を受け取ればいいのですか。",
+    "en": [
+      {
+        "id": "38160",
+        "text": "Where should I pick the tickets up?"
+      }
+    ],
+    "indices": "何処{どこ} で(#2028980) 切符 を 受け取る{受け取れば} いい(#2820690)[01] のです か",
+    "vocabIds": [
+      "1385170",
+      "1329650"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 6,
+        "length": 4,
+        "reading": "うけとれ"
+      },
+      "1385170": {
+        "start": 3,
+        "length": 2,
+        "reading": "きっぷ"
       }
     }
   },
@@ -3723,11 +5532,13 @@
     "matches": {
       "1195430": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にもつ"
       },
       "1329650": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       }
     }
   },
@@ -3742,6 +5553,7 @@
     ],
     "indices": "ですから 私たち は 社員[01] が 現金 だ{ではなく} エレクトロニクス に依る{による} 振替~ で(#2028980) お金 を 受け取る 様(よう){よう} 説得 に 努める{努めている} のです",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1322670",
       "1263550",
@@ -3749,40 +5561,59 @@
       "1001820",
       "1329650",
       "1386440",
+      "1240820",
       "1445110"
     ],
     "matches": {
       "1001820": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1240820": {
+        "start": 46,
+        "length": 2,
+        "reading": "つとめ"
       },
       "1263550": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "げんきん"
+      },
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1322670": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゃいん"
       },
       "1329650": {
         "start": 36,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1386440": {
         "start": 43,
-        "length": 2
+        "length": 2,
+        "reading": "せっとく"
       },
       "1445110": {
         "start": 46,
-        "length": 3
+        "length": 3,
+        "reading": "つとめて"
       },
       "1602920": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "ふりかえ"
       }
     }
   },
@@ -3797,42 +5628,73 @@
     ],
     "indices": "タクシー の 運転手 に チップ(#1077740)[01] を 受け取る{受け取って} 欲しい{欲しければ} お金 を 沢山 渡す[03]{渡して} お釣り{おつり} は 要る{いりません} と 言う{言い} 為さい{なさい}",
     "vocabIds": [
+      "1172830",
       "1172870",
+      "1327190",
       "1329650",
-      "1547320",
+      "1547330",
       "1001820",
       "1415870",
       "1444610",
-      "2844736"
+      "1855000",
+      "2844736",
+      "1587040"
     ],
     "matches": {
       "1001820": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1172830": {
+        "start": 5,
+        "length": 2,
+        "reading": "うんてん"
       },
       "1172870": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "うんてんしゅ"
+      },
+      "1327190": {
+        "start": 7,
+        "length": 1,
+        "reading": "しゅ"
       },
       "1329650": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1415870": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "たくさん"
       },
       "1444610": {
         "start": 29,
-        "length": 3
+        "length": 2,
+        "reading": "わたし"
       },
-      "1547320": {
+      "1547330": {
         "start": 18,
-        "length": 1
+        "length": 4,
+        "reading": "ほしけれ"
+      },
+      "1587040": {
+        "start": 44,
+        "length": 2,
+        "reading": "いい"
+      },
+      "1855000": {
+        "start": 29,
+        "length": 2,
+        "reading": "わたし"
       },
       "2844736": {
         "start": 43,
-        "length": 3
+        "length": 3,
+        "reading": "といい"
       }
     }
   },
@@ -3847,17 +5709,13 @@
     ],
     "indices": "其れ[01]{それ} を 余り[02]{あまり} 文字通り{文字どおり} に 受け取る な[01]",
     "vocabIds": [
-      "1505390",
       "1329650"
     ],
     "matches": {
       "1329650": {
         "start": 12,
-        "length": 4
-      },
-      "1505390": {
-        "start": 6,
-        "length": 2
+        "length": 4,
+        "reading": "うけとる"
       }
     }
   },
@@ -3873,31 +5731,48 @@
     "indices": "其の[01]{その} 役人 は 建設会社~ から 賄賂 を 受け取る[01]{受け取った} 容疑~ を 掛ける[12]{かけられた}",
     "vocabIds": [
       "1538050",
+      "1257420",
       "1257430",
+      "1198550",
       "1562520",
       "1329650",
       "1545380"
     ],
     "matches": {
+      "1198550": {
+        "start": 7,
+        "length": 2,
+        "reading": "かいしゃ"
+      },
+      "1257420": {
+        "start": 5,
+        "length": 2,
+        "reading": "けんせつ"
+      },
       "1257430": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "けんせつかいしゃ"
       },
       "1329650": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1538050": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やくにん"
       },
       "1545380": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ようぎ"
       },
       "1562520": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
       }
     }
   },
@@ -3917,32 +5792,77 @@
       "1468540",
       "1329650",
       "1258200",
-      "1544730"
+      "1544730",
+      "1544720"
     ],
     "matches": {
       "1258200": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "けんり"
       },
       "1329650": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1468540": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねんきん"
       },
       "1517480": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ほうりつ"
+      },
+      "1544720": {
+        "start": 18,
+        "length": 2,
+        "reading": "あたえ"
       },
       "1544730": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "あたえ"
       },
       "1607050": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      }
+    }
+  },
+  {
+    "id": "207722",
+    "original": "その通り受け取っちゃいけませんよ。",
+    "en": [
+      {
+        "id": "44977",
+        "text": "She clearly does not mean it."
+      }
+    ],
+    "indices": "その通り[01] 受け取る{受け取っちゃいけません} よ[01]",
+    "vocabIds": [
+      "2057830",
+      "1432920",
+      "1329650"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 4,
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1432920": {
+        "start": 2,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "2057830": {
+        "start": 0,
+        "length": 4,
+        "reading": "そのとおり"
       }
     }
   },
@@ -3957,27 +5877,166 @@
     ],
     "indices": "其の[01]{その} 政治家 は 賄賂 を 受け取る{受け取った} 事(こと){こと} を 恥じる{恥じていなかった}",
     "vocabIds": [
+      "1375970",
       "1375980",
+      "1191730",
       "1562520",
       "1329650",
       "1421610"
     ],
     "matches": {
+      "1191730": {
+        "start": 4,
+        "length": 1,
+        "reading": "か"
+      },
       "1329650": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1375970": {
+        "start": 2,
+        "length": 2,
+        "reading": "せいじ"
       },
       "1375980": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "せいじか"
       },
       "1421610": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "はじ"
       },
       "1562520": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
+      }
+    }
+  },
+  {
+    "id": "208679",
+    "original": "その政治家は平然と賄賂を受け取り、全ての契約の５％が濡れ手に粟で彼の懐に入った。",
+    "en": [
+      {
+        "id": "45938",
+        "text": "The politician had sticky fingers, and 5% of every contract ended in his pocket."
+      }
+    ],
+    "indices": "其の[01]{その} 政治家 は 平然{平然と}~ 賄賂 を 受け取る{受け取り} 全て{全ての} 契約 の が 濡れ手に粟~ で(#2028980) 彼(かれ)[01] の 懐[01] に 入る(はいる){入った}",
+    "vocabIds": [
+      "1375970",
+      "1375980",
+      "1191730",
+      "1562520",
+      "1329650",
+      "1329770",
+      "1595730",
+      "1250190",
+      "1467620",
+      "2847182",
+      "1819790",
+      "2087280",
+      "1327190",
+      "1153640",
+      "1483070",
+      "1000420",
+      "1200480",
+      "1465590"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 32,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1153640": {
+        "start": 30,
+        "length": 1,
+        "reading": "あわ"
+      },
+      "1191730": {
+        "start": 4,
+        "length": 1,
+        "reading": "か"
+      },
+      "1200480": {
+        "start": 34,
+        "length": 1,
+        "reading": "ふところ"
+      },
+      "1250190": {
+        "start": 20,
+        "length": 2,
+        "reading": "けいやく"
+      },
+      "1327190": {
+        "start": 28,
+        "length": 1,
+        "reading": "しゅ"
+      },
+      "1329650": {
+        "start": 12,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 12,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1375970": {
+        "start": 2,
+        "length": 2,
+        "reading": "せいじ"
+      },
+      "1375980": {
+        "start": 2,
+        "length": 3,
+        "reading": "せいじか"
+      },
+      "1465590": {
+        "start": 36,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1467620": {
+        "start": 26,
+        "length": 2,
+        "reading": "ぬれ"
+      },
+      "1483070": {
+        "start": 32,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1562520": {
+        "start": 9,
+        "length": 2,
+        "reading": "わいろ"
+      },
+      "1595730": {
+        "start": 17,
+        "length": 2,
+        "reading": "すべて"
+      },
+      "1819790": {
+        "start": 26,
+        "length": 3,
+        "reading": "ぬれしゅ"
+      },
+      "2087280": {
+        "start": 26,
+        "length": 5,
+        "reading": "ぬれしゅにあわ"
+      },
+      "2847182": {
+        "start": 26,
+        "length": 2,
+        "reading": "ぬれ"
       }
     }
   },
@@ -3996,28 +6055,70 @@
       "1420400",
       "1499720",
       "1329650",
-      "2081550"
+      "1420470"
     ],
     "matches": {
       "1329650": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1344930": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "おんな"
       },
       "1420400": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
+      },
+      "1420470": {
+        "start": 20,
+        "length": 2,
+        "reading": "しり"
       },
       "1499720": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "かぜ"
+      }
+    }
+  },
+  {
+    "id": "209486",
+    "original": "その手紙を受け取りましたか。",
+    "en": [
+      {
+        "id": "46747",
+        "text": "Did you receive the letter?"
       },
-      "2081550": {
-        "start": 20,
-        "length": 1
+      {
+        "id": "1570054",
+        "text": "Have you received the letter?"
+      }
+    ],
+    "indices": "其の[01]{その} 手紙 を 受け取る{受け取りました} か",
+    "vocabIds": [
+      "1327720",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1327720": {
+        "start": 2,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1329650": {
+        "start": 5,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 5,
+        "length": 4,
+        "reading": "うけとり"
       }
     }
   },
@@ -4040,19 +6141,72 @@
     "matches": {
       "1206040": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おぼえ"
       },
       "1242590": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1304970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1329650": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      }
+    }
+  },
+  {
+    "id": "212340",
+    "original": "その医者は貧しい人からはどんな贈り物も受け取らなかった。",
+    "en": [
+      {
+        "id": "49622",
+        "text": "The doctor would not take any gifts from the poor."
+      },
+      {
+        "id": "2797751",
+        "text": "The doctor wouldn't accept any gifts from the poor."
+      }
+    ],
+    "indices": "其の[01]{その} 医者 は 貧しい 人(ひと) から は どんな 贈り物 も 受け取る{受け取らなかった}",
+    "vocabIds": [
+      "1159980",
+      "1490740",
+      "1580640",
+      "1589030",
+      "1329650"
+    ],
+    "matches": {
+      "1159980": {
+        "start": 2,
+        "length": 2,
+        "reading": "いしゃ"
+      },
+      "1329650": {
+        "start": 19,
+        "length": 4,
+        "reading": "うけとら"
+      },
+      "1490740": {
+        "start": 5,
+        "length": 3,
+        "reading": "まずしい"
+      },
+      "1580640": {
+        "start": 8,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1589030": {
+        "start": 15,
+        "length": 3,
+        "reading": "おくりもの"
       }
     }
   },
@@ -4073,11 +6227,70 @@
     "matches": {
       "1249900": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "あに"
       },
       "1329650": {
         "start": 24,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      }
+    }
+  },
+  {
+    "id": "217058",
+    "original": "ご注文を受け取り次第、製品を貴社にお送りします。",
+    "en": [
+      {
+        "id": "54365",
+        "text": "We will ship the product immediately after receiving your order."
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] を 受け取る{受け取り} 次第[02] 製品 を 貴社 に 送る{お送り} 為る(する)[12]{します}",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "1329650",
+      "1329770",
+      "1316680",
+      "1380760",
+      "1223510"
+    ],
+    "matches": {
+      "1223510": {
+        "start": 14,
+        "length": 2,
+        "reading": "きしゃ"
+      },
+      "1316680": {
+        "start": 8,
+        "length": 2,
+        "reading": "しだい"
+      },
+      "1329650": {
+        "start": 4,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 4,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1380760": {
+        "start": 11,
+        "length": 2,
+        "reading": "せいひん"
+      },
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -4098,11 +6311,13 @@
     "matches": {
       "1329650": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1512240": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "へんしん"
       }
     }
   },
@@ -4118,31 +6333,42 @@
     "indices": "此れ[01]{これ} は 私(わたし)[01] が 今まで に 受け取る{受け取った} プレゼント の 中(なか) で(#2028980) 最も 素晴らしい{すばらしい} 物(もの){もの} です",
     "vocabIds": [
       "1311110",
+      "1288850",
       "1587590",
       "1329650",
       "1423310",
       "1293700"
     ],
     "matches": {
+      "1288850": {
+        "start": 5,
+        "length": 1,
+        "reading": "いま"
+      },
       "1293700": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329650": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1423310": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1587590": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       }
     }
   },
@@ -4157,27 +6383,25 @@
     ],
     "indices": "此の{この} 手紙 を 受け取る{受け取って}  驚く[01]{驚いた} かも知れない{かもしれません}",
     "vocabIds": [
-      "2407970",
-      "1311530",
+      "1327720",
       "1329650",
       "1238680"
     ],
     "matches": {
       "1238680": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "おどろい"
       },
-      "1311530": {
-        "start": 3,
-        "length": 1
+      "1327720": {
+        "start": 2,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 5,
-        "length": 5
-      },
-      "2407970": {
-        "start": 0,
-        "length": 3
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -4192,32 +6416,37 @@
     ],
     "indices": "此の{この} 手紙 を 受け取る{受け取ったら} 直ぐに{すぐに} 返事 を 下さい[01]",
     "vocabIds": [
-      "2407970",
-      "1311530",
+      "1327720",
       "1329650",
       "1512220",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
       },
-      "1311530": {
-        "start": 3,
-        "length": 1
+      "1184280": {
+        "start": 17,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1327720": {
+        "start": 2,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1512220": {
         "start": 14,
-        "length": 2
-      },
-      "2407970": {
-        "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "へんじ"
       }
     }
   },
@@ -4232,37 +6461,43 @@
     ],
     "indices": "此の{この} 手紙 を 受け取る{受け取ったら} 直ぐに{すぐに} 私(わたし)[01] に 電話 を 下さい[01]",
     "vocabIds": [
-      "2407970",
-      "1311530",
+      "1327720",
       "1329650",
       "1311110",
       "1443840",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 19,
+        "length": 3,
+        "reading": "ください"
       },
       "1311110": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1311530": {
-        "start": 3,
-        "length": 1
+      "1327720": {
+        "start": 2,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1443840": {
         "start": 16,
-        "length": 2
-      },
-      "2407970": {
-        "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "でんわ"
       }
     }
   },
@@ -4284,15 +6519,18 @@
     "matches": {
       "1242590": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1247250": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1329650": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       }
     }
   },
@@ -4310,24 +6548,34 @@
       "1327720",
       "1329650",
       "1433470",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1327720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1433470": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "つうち"
+      },
+      "1547710": {
+        "start": 18,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 18,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -4350,19 +6598,23 @@
     "matches": {
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1314010": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じじょう"
       },
       "1329650": {
         "start": 18,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1362920": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "もうしで"
       }
     }
   },
@@ -4390,23 +6642,28 @@
     "matches": {
       "1254130": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "けっして"
       },
       "1329650": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1562520": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
       },
       "1580640": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "2101130": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "し"
       }
     }
   },
@@ -4422,21 +6679,116 @@
     "indices": "御(お){お} 返事 を 待つ[01]{待っている} のです が[03] 未だ[02]{まだ} 受け取る{受け取っていません}",
     "vocabIds": [
       "2845573",
+      "1512220",
       "1410590",
       "1329650"
     ],
     "matches": {
       "1329650": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1410590": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "まっ"
+      },
+      "1512220": {
+        "start": 1,
+        "length": 2,
+        "reading": "へんじ"
       },
       "2845573": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おへんじ"
+      }
+    }
+  },
+  {
+    "id": "226913",
+    "original": "お送りした小包、受け取りましたか。",
+    "en": [
+      {
+        "id": "64261",
+        "text": "Did you get the package I sent you?"
+      },
+      {
+        "id": "7515519",
+        "text": "Did you get the package that I sent you?"
+      }
+    ],
+    "indices": "送る{お送り} 為る(する)[12]{した} 小包 受け取る{受け取りました} か",
+    "vocabIds": [
+      "1593290",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 8,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 8,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1593290": {
+        "start": 5,
+        "length": 2,
+        "reading": "こづつみ"
+      }
+    }
+  },
+  {
+    "id": "227075",
+    "original": "お手紙を受け取りました。",
+    "en": [
+      {
+        "id": "64424",
+        "text": "I received your letter."
+      },
+      {
+        "id": "10044370",
+        "text": "I received a letter."
+      },
+      {
+        "id": "10044369",
+        "text": "I got a letter."
+      },
+      {
+        "id": "2329666",
+        "text": "I got your letter."
+      },
+      {
+        "id": "2980097",
+        "text": "I have received your letter."
+      }
+    ],
+    "indices": "御(お){お} 手紙 を 受け取る{受け取りました}",
+    "vocabIds": [
+      "1327720",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1327720": {
+        "start": 1,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1329650": {
+        "start": 4,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 4,
+        "length": 4,
+        "reading": "うけとり"
       }
     }
   },
@@ -4457,11 +6809,46 @@
     "matches": {
       "1329650": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1589030": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
+      }
+    }
+  },
+  {
+    "id": "232578",
+    "original": "あなたはその電報をいつ受け取りましたか。",
+    "en": [
+      {
+        "id": "69947",
+        "text": "When did you receive the telegram?"
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は 其の[01]{その} 電報 を 何時(いつ){いつ} 受け取る{受け取りました} か",
+    "vocabIds": [
+      "1443760",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 11,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 11,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1443760": {
+        "start": 6,
+        "length": 2,
+        "reading": "でんぽう"
       }
     }
   },
@@ -4486,51 +6873,226 @@
     "matches": {
       "1329650": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1589030": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
       }
     }
   },
   {
-    "id": "234835",
-    "original": "ＪＬ１２３便の荷物は、どこへ行けば受け取れるか教えてください。",
+    "id": "233209",
+    "original": "あなたの手紙を受け取りました。",
     "en": [
       {
-        "id": "72212",
-        "text": "Could you tell me where I can find the baggage for flight JL 123?"
+        "id": "64424",
+        "text": "I received your letter."
+      },
+      {
+        "id": "6841602",
+        "text": "I've received your letter."
+      },
+      {
+        "id": "2329666",
+        "text": "I got your letter."
+      },
+      {
+        "id": "2980097",
+        "text": "I have received your letter."
       }
     ],
-    "indices": "便(びん)[01] の 荷物[01] は 何処{どこ} へ 行く[01]{行けば} 受け取る{受け取れる} か 教える{教えて} 下さい[02]{ください}",
+    "indices": "貴方(あなた)[01]{あなた} の 手紙 を 受け取る{受け取りました}",
     "vocabIds": [
-      "1512360",
-      "1195430",
-      "2270390",
+      "1327720",
       "1329650",
-      "1236900"
+      "1329770"
     ],
     "matches": {
-      "1195430": {
-        "start": 7,
-        "length": 2
-      },
-      "1236900": {
-        "start": 23,
-        "length": 3
+      "1327720": {
+        "start": 4,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
-        "start": 17,
-        "length": 5
+        "start": 7,
+        "length": 4,
+        "reading": "うけとり"
       },
-      "1512360": {
+      "1329770": {
+        "start": 7,
+        "length": 4,
+        "reading": "うけとり"
+      }
+    }
+  },
+  {
+    "id": "234141",
+    "original": "あなたからの手紙を受け取りました。",
+    "en": [
+      {
+        "id": "71514",
+        "text": "I have got a letter from you."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} から の 手紙 を 受け取る{受け取りました}",
+    "vocabIds": [
+      "1327720",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1327720": {
+        "start": 6,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1329650": {
+        "start": 9,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 9,
+        "length": 4,
+        "reading": "うけとり"
+      }
+    }
+  },
+  {
+    "id": "234473",
+    "original": "アシスタントはお金を受け取りました。",
+    "en": [
+      {
+        "id": "71849",
+        "text": "The assistant took the money."
+      }
+    ],
+    "indices": "アシスタント は お金 を 受け取る{受け取りました}",
+    "vocabIds": [
+      "1001820",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1001820": {
+        "start": 7,
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1329650": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      }
+    }
+  },
+  {
+    "id": "234897",
+    "original": "９日付のお手紙をただいま受け取りました。",
+    "en": [
+      {
+        "id": "72274",
+        "text": "I have just received your letter of the ninth."
+      }
+    ],
+    "indices": "日付 の 御(お){お} 手紙 を ただ今[03]{ただいま} 受け取る{受け取りました}",
+    "vocabIds": [
+      "1243850",
+      "1463770",
+      "1464340",
+      "2157770",
+      "1327720",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1243850": {
+        "start": 0,
+        "length": 2,
+        "reading": "きゅうにち"
+      },
+      "1327720": {
         "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "てがみ"
       },
-      "2270390": {
-        "start": 14,
-        "length": 1
+      "1329650": {
+        "start": 12,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 12,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464340": {
+        "start": 1,
+        "length": 2,
+        "reading": "にちづけ"
+      },
+      "2157770": {
+        "start": 2,
+        "length": 1,
+        "reading": "づけ"
+      }
+    }
+  },
+  {
+    "id": "235356",
+    "original": "３４５型は良い状態で受け取りました。",
+    "en": [
+      {
+        "id": "72735",
+        "text": "I received your Model 345 in good condition."
+      }
+    ],
+    "indices": "型[01] は 良い 状態 で(#2028980) 受け取る{受け取りました}",
+    "vocabIds": [
+      "1250090",
+      "1605820",
+      "1356730",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1250090": {
+        "start": 3,
+        "length": 1,
+        "reading": "がた"
+      },
+      "1329650": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1356730": {
+        "start": 7,
+        "length": 2,
+        "reading": "じょうたい"
+      },
+      "1605820": {
+        "start": 5,
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -4547,25 +7109,110 @@
     "vocabIds": [
       "1461560",
       "2275300",
+      "1268570",
+      "1463770",
       "1329650",
       "1347310"
     ],
     "matches": {
+      "1268570": {
+        "start": 3,
+        "length": 2,
+        "reading": "ごにち"
+      },
       "1329650": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1347310": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しょうひん"
       },
       "1461560": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にがつ"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       },
       "2275300": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いちごにち"
+      }
+    }
+  },
+  {
+    "id": "235810",
+    "original": "１月１０日付の電子メールを受け取りましたか。",
+    "en": [
+      {
+        "id": "73191",
+        "text": "Did you receive my e-mail of January 10?"
+      }
+    ],
+    "indices": "一月(いちがつ){１月} 日付 の 電子メール を 受け取る{受け取りました} か",
+    "vocabIds": [
+      "1162120",
+      "1335000",
+      "1463770",
+      "1464340",
+      "2157770",
+      "1443320",
+      "1443350",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1162120": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちがつ"
+      },
+      "1329650": {
+        "start": 13,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 13,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1335000": {
+        "start": 2,
+        "length": 3,
+        "reading": "いちぜろにち"
+      },
+      "1443320": {
+        "start": 7,
+        "length": 2,
+        "reading": "でんし"
+      },
+      "1443350": {
+        "start": 7,
+        "length": 5,
+        "reading": "でんしめーる"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464340": {
+        "start": 4,
+        "length": 2,
+        "reading": "にちづけ"
+      },
+      "2157770": {
+        "start": 5,
+        "length": 1,
+        "reading": "づけ"
       }
     }
   },
@@ -4586,11 +7233,13 @@
     "matches": {
       "1195430": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にもつ"
       },
       "1329650": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       }
     }
   },
@@ -4608,11 +7257,19 @@
       "1600020",
       "1205830",
       "2015400",
+      "2242840",
+      "2825935",
       "2849712",
+      "1273370",
+      "2668220",
+      "1208920",
       "1562520",
       "1329650",
+      "1375970",
       "1375980",
+      "1191730",
       "1211860",
+      "1597850",
       "1597860",
       "1411470",
       "1582710",
@@ -4621,55 +7278,108 @@
     "matches": {
       "1179010": {
         "start": 68,
-        "length": 2
+        "length": 2,
+        "reading": "おしょく"
+      },
+      "1191730": {
+        "start": 51,
+        "length": 1,
+        "reading": "か"
       },
       "1205830": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かくじつ"
+      },
+      "1208920": {
+        "start": 33,
+        "length": 1,
+        "reading": "かぶ"
       },
       "1211860": {
         "start": 53,
-        "length": 2
+        "length": 2,
+        "reading": "かんりょう"
+      },
+      "1273370": {
+        "start": 31,
+        "length": 2,
+        "reading": "こうかい"
       },
       "1313830": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じけん"
       },
       "1329650": {
         "start": 40,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1375970": {
+        "start": 49,
+        "length": 2,
+        "reading": "せいじ"
       },
       "1375980": {
         "start": 49,
-        "length": 3
+        "length": 3,
+        "reading": "せいじか"
       },
       "1411470": {
         "start": 60,
-        "length": 2
+        "length": 2,
+        "reading": "たいほ"
       },
       "1562520": {
         "start": 35,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
       },
       "1582710": {
         "start": 65,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "1597850": {
+        "start": 57,
+        "length": 2,
+        "reading": "つぎつぎ"
       },
       "1597860": {
         "start": 57,
-        "length": 3
+        "length": 3,
+        "reading": "つぎつぎに"
       },
       "1600020": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "ねあがり"
       },
       "2015400": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "2242840": {
+        "start": 30,
+        "length": 1,
+        "reading": "み"
+      },
+      "2668220": {
+        "start": 31,
+        "length": 3,
+        "reading": "こうかいかぶ"
+      },
+      "2825935": {
+        "start": 30,
+        "length": 3,
+        "reading": "みこうかい"
       },
       "2849712": {
         "start": 30,
-        "length": 4
+        "length": 4,
+        "reading": "みこうかいかぶ"
       }
     }
   },
@@ -4683,7 +7393,9 @@
       }
     ],
     "vocabIds": [
+      "1419080",
       "1419110",
+      "1463770",
       "1415870",
       "1589030",
       "1329650"
@@ -4691,19 +7403,65 @@
     "matches": {
       "1329650": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1415870": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たくさん"
+      },
+      "1419080": {
+        "start": 5,
+        "length": 2,
+        "reading": "たんじょう"
       },
       "1419110": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "たんじょうび"
+      },
+      "1463770": {
+        "start": 7,
+        "length": 1,
+        "reading": "び"
       },
       "1589030": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
+      }
+    }
+  },
+  {
+    "id": "1003942",
+    "original": "みなさんスーツケースは全部受け取りましたか？",
+    "en": [
+      {
+        "id": "1528597",
+        "text": "Has everyone got all of their suitcases back?"
+      }
+    ],
+    "vocabIds": [
+      "1396130",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 13,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 13,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1396130": {
+        "start": 11,
+        "length": 2,
+        "reading": "ぜんぶ"
       }
     }
   },
@@ -4726,23 +7484,28 @@
     "matches": {
       "1329650": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1562520": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "わいろ"
       },
       "1589350": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -4756,12 +7519,14 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1179330",
       "1518540",
       "1315840",
-      "1483070",
+      "1577100",
       "1611010",
+      "1579840",
       "1432840",
       "1356690",
       "1329650"
@@ -4769,39 +7534,58 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1179330": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "おくさん"
       },
       "1315840": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1329650": {
         "start": 25,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1356690": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "じょう"
       },
       "1432840": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "つう"
       },
       "1483070": {
-        "start": 13,
-        "length": 1
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1518540": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "なくなっ"
+      },
+      "1577100": {
+        "start": 15,
+        "length": 1,
+        "reading": "なん"
+      },
+      "1579840": {
+        "start": 16,
+        "length": 1,
+        "reading": "じゅう"
       },
       "1611010": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "なんじゅう"
       }
     }
   },
@@ -4817,6 +7601,7 @@
     "vocabIds": [
       "1447690",
       "1547720",
+      "1547710",
       "1579350",
       "2827650",
       "1497610",
@@ -4827,35 +7612,48 @@
     "matches": {
       "1329650": {
         "start": 40,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1420400": {
         "start": 36,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1447690": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とうきょう"
       },
       "1497610": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1518540": {
         "start": 28,
-        "length": 5
+        "length": 4,
+        "reading": "なくなっ"
+      },
+      "1547710": {
+        "start": 3,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 3,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1579350": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "さん"
       },
       "2827650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "にちかん"
       }
     }
   },
@@ -4870,21 +7668,36 @@
     ],
     "vocabIds": [
       "1579100",
+      "1605680",
       "1542490",
+      "1502390",
       "1329650"
     ],
     "matches": {
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1502390": {
+        "start": 9,
+        "length": 1,
+        "reading": "ぶつ"
       },
       "1542490": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ゆうびんぶつ"
       },
       "1579100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けさ"
+      },
+      "1605680": {
+        "start": 7,
+        "length": 2,
+        "reading": "ゆうびん"
       }
     }
   },
@@ -4907,23 +7720,28 @@
     "matches": {
       "1164170": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "いっさい"
       },
       "1329650": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1420400": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1547720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       }
     }
   },
@@ -4940,29 +7758,40 @@
       "1483150",
       "1547720",
       "1420400",
+      "1577100",
       "1188490",
       "1329650"
     ],
     "matches": {
       "1188490": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
       },
       "1329650": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1420400": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1547720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
+      },
+      "1577100": {
+        "start": 12,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -4983,11 +7812,13 @@
     "matches": {
       "1327360": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "てにもつ"
       },
       "1329650": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       }
     }
   },
@@ -5007,11 +7838,13 @@
     "matches": {
       "1329650": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1519210": {
         "start": 0,
-        "length": 4
+        "length": 2,
+        "reading": "わすれ"
       }
     }
   },
@@ -5026,21 +7859,36 @@
     ],
     "vocabIds": [
       "1329650",
+      "1515670",
       "1515690",
+      "2037940",
       "1259290"
     ],
     "matches": {
       "1259290": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "みる"
       },
       "1329650": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1515670": {
+        "start": 14,
+        "length": 2,
+        "reading": "ほうこく"
       },
       "1515690": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "ほうこくしょ"
+      },
+      "2037940": {
+        "start": 16,
+        "length": 1,
+        "reading": "しょ"
       }
     }
   },
@@ -5060,11 +7908,13 @@
     "matches": {
       "1327720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -5078,27 +7928,69 @@
       }
     ],
     "vocabIds": [
+      "1311110",
       "1311300",
       "1361490",
       "1356370",
       "1329650"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1329650": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1356370": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じょうほう"
       },
       "1361490": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
+      }
+    }
+  },
+  {
+    "id": "3447509",
+    "original": "彼は金を受け取ろうとはしなかった。",
+    "en": [
+      {
+        "id": "291946",
+        "text": "He would not take the money."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1242590",
+      "1329650"
+    ],
+    "matches": {
+      "1242590": {
+        "start": 2,
+        "length": 1,
+        "reading": "きん"
+      },
+      "1329650": {
+        "start": 4,
+        "length": 4,
+        "reading": "うけとろ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -5118,11 +8010,13 @@
     "matches": {
       "1329650": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1547330": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ほしい"
       }
     }
   },
@@ -5144,19 +8038,23 @@
     "matches": {
       "1111590": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "ふらんすご"
       },
       "1327720": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1387870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんしゅう"
       }
     }
   },
@@ -5175,7 +8073,8 @@
     "matches": {
       "1329650": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -5189,22 +8088,125 @@
       }
     ],
     "vocabIds": [
+      "1419080",
       "1419110",
+      "1463770",
       "1247250",
       "1329650"
     ],
     "matches": {
       "1247250": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1329650": {
         "start": 19,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
+      },
+      "1419080": {
+        "start": 0,
+        "length": 2,
+        "reading": "たんじょう"
       },
       "1419110": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "たんじょうび"
+      },
+      "1463770": {
+        "start": 2,
+        "length": 1,
+        "reading": "び"
+      }
+    }
+  },
+  {
+    "id": "5018392",
+    "original": "あなたが私に会いたいとの伝言を受け取りました。",
+    "en": [
+      {
+        "id": "3330318",
+        "text": "I got a message that you wanted to see me."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1198180",
+      "1582180",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 6,
+        "length": 2,
+        "reading": "あい"
+      },
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1329650": {
+        "start": 15,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 15,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1582180": {
+        "start": 12,
+        "length": 2,
+        "reading": "でんごん"
+      }
+    }
+  },
+  {
+    "id": "4203332",
+    "original": "私は招待書を受け取りました。",
+    "en": [
+      {
+        "id": "258705",
+        "text": "I received an invitation."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1349610",
+      "2037940",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1329650": {
+        "start": 6,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 6,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1349610": {
+        "start": 2,
+        "length": 2,
+        "reading": "しょうたい"
+      },
+      "2037940": {
+        "start": 4,
+        "length": 1,
+        "reading": "しょ"
       }
     }
   },
@@ -5222,37 +8224,55 @@
       }
     ],
     "vocabIds": [
+      "1375970",
       "1375980",
+      "1191730",
       "1218190",
       "1001820",
       "1329650",
       "1179010",
-      "2160670"
+      "1577100"
     ],
     "matches": {
       "1001820": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1179010": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "おしょく"
+      },
+      "1191730": {
+        "start": 2,
+        "length": 1,
+        "reading": "か"
       },
       "1218190": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きぎょう"
       },
       "1329650": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
+      },
+      "1375970": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいじ"
       },
       "1375980": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せいじか"
       },
-      "2160670": {
-        "start": 21,
-        "length": 8
+      "1577100": {
+        "start": 25,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -5277,15 +8297,18 @@
     "matches": {
       "1111590": {
         "start": 16,
-        "length": 5
+        "length": 5,
+        "reading": "ふらんすご"
       },
       "1327720": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -5302,30 +8325,59 @@
     "vocabIds": [
       "1470370",
       "1009700",
+      "1179830",
+      "1179820",
+      "1451150",
       "1451040",
+      "1487660",
       "1487690",
       "1329650"
     ],
     "matches": {
       "1009700": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "におうじて"
+      },
+      "1179820": {
+        "start": 3,
+        "length": 3,
+        "reading": "おうじて"
+      },
+      "1179830": {
+        "start": 3,
+        "length": 2,
+        "reading": "おうじ"
       },
       "1329650": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "うけとる"
       },
       "1451040": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はたらき"
+      },
+      "1451150": {
+        "start": 6,
+        "length": 2,
+        "reading": "はたらき"
       },
       "1470370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "のうりょく"
+      },
+      "1487660": {
+        "start": 9,
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1487690": {
         "start": 9,
-        "length": 6
+        "length": 6,
+        "reading": "ひつようにおうじて"
       }
     }
   },
@@ -5340,8 +8392,6 @@
     ],
     "indices": "さん の ミス(#1130650)[01] を 僕(ぼく) が フォロー[04]~ 為る(する){する} ん[03] だ から 労働 に 見合う{見合った} 報酬 を 受け取る の は 当然 だ",
     "vocabIds": [
-      "1442730",
-      "1423310",
       "1521400",
       "1606450",
       "1259560",
@@ -5352,35 +8402,59 @@
     "matches": {
       "1259560": {
         "start": 24,
-        "length": 4
+        "length": 3,
+        "reading": "みあっ"
       },
       "1329650": {
         "start": 31,
-        "length": 4
-      },
-      "1423310": {
-        "start": 1,
-        "length": 1
-      },
-      "1442730": {
-        "start": 0,
-        "length": 1
+        "length": 4,
+        "reading": "うけとる"
       },
       "1449190": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "とうぜん"
       },
       "1515700": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "ほうしゅう"
       },
       "1521400": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1606450": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "ろうどう"
+      }
+    }
+  },
+  {
+    "id": "8831458",
+    "original": "はい、受け取りました！",
+    "en": [
+      {
+        "id": "6884633",
+        "text": "Yes, I received it!"
+      }
+    ],
+    "vocabIds": [
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 3,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 3,
+        "length": 4,
+        "reading": "うけとり"
       }
     }
   },
@@ -5400,11 +8474,13 @@
     "matches": {
       "1329650": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1344200": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しょるい"
       }
     }
   },
@@ -5423,7 +8499,8 @@
     "matches": {
       "1329650": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -5447,11 +8524,13 @@
     "matches": {
       "1327720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -5471,11 +8550,13 @@
     "matches": {
       "1329650": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1512240": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "へんしん"
       }
     }
   },
@@ -5494,7 +8575,158 @@
     "matches": {
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      }
+    }
+  },
+  {
+    "id": "9682017",
+    "original": "お前は何でもかんでも文字通りに受け取り過ぎなんだよ。",
+    "en": [
+      {
+        "id": "740589",
+        "text": "You take everything too literally."
+      }
+    ],
+    "vocabIds": [
+      "1002290",
+      "1188380",
+      "1505420",
+      "1329650",
+      "1329770",
+      "1195970",
+      "1195960"
+    ],
+    "matches": {
+      "1002290": {
+        "start": 0,
+        "length": 2,
+        "reading": "おまえ"
+      },
+      "1188380": {
+        "start": 3,
+        "length": 7,
+        "reading": "なんでもかんでも"
+      },
+      "1195960": {
+        "start": 19,
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1195970": {
+        "start": 19,
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1329650": {
+        "start": 15,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 15,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1505420": {
+        "start": 10,
+        "length": 4,
+        "reading": "もじどおり"
+      }
+    }
+  },
+  {
+    "id": "10465278",
+    "original": "昨日、メッセージは受け取りました。",
+    "en": [
+      {
+        "id": "2391514",
+        "text": "I received your message yesterday."
+      }
+    ],
+    "vocabIds": [
+      "1579260",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 9,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 9,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1579260": {
+        "start": 0,
+        "length": 2,
+        "reading": "きのう"
+      }
+    }
+  },
+  {
+    "id": "10574414",
+    "original": "私も受け取りました。",
+    "en": [
+      {
+        "id": "8212924",
+        "text": "I've received it, too."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1329650": {
+        "start": 2,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 2,
+        "length": 4,
+        "reading": "うけとり"
+      }
+    }
+  },
+  {
+    "id": "11016578",
+    "original": "メッセージを２つ受け取りました。",
+    "en": [
+      {
+        "id": "9564951",
+        "text": "I received two of your messages."
+      },
+      {
+        "id": "9628611",
+        "text": "I received a couple of your messages."
+      }
+    ],
+    "vocabIds": [
+      "1329650",
+      "1329770"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 8,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 8,
+        "length": 4,
+        "reading": "うけとり"
       }
     }
   },
@@ -5514,11 +8746,13 @@
     "matches": {
       "1329650": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1396130": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       }
     }
   },
@@ -5538,11 +8772,33 @@
     "matches": {
       "1329650": {
         "start": 7,
-        "length": 6
+        "length": 4,
+        "reading": "うけとら"
       },
       "1364360": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "まじめ"
+      }
+    }
+  },
+  {
+    "id": "11354870",
+    "original": "なぜメアリーはトムのプレゼントを受け取らなかったのか？",
+    "en": [
+      {
+        "id": "11354705",
+        "text": "Why didn't Mary accept Tom's gift?"
+      }
+    ],
+    "vocabIds": [
+      "1329650"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 16,
+        "length": 4,
+        "reading": "うけとら"
       }
     }
   },
@@ -5565,23 +8821,28 @@
     "matches": {
       "1002420": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "おしらせ"
       },
       "1239560": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "きょく"
       },
       "1329650": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
       "1350340": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しょうぼう"
       },
       "1421060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じもと"
       }
     }
   },
@@ -5600,7 +8861,8 @@
     "matches": {
       "1329650": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -5615,46 +8877,66 @@
     ],
     "vocabIds": [
       "1596780",
-      "1484360",
+      "1484350",
+      "1329590",
+      "1659120",
       "1592250",
       "1753790",
       "1329650",
       "1580640",
       "1310100",
-      "1597030"
+      "1419570"
     ],
     "matches": {
       "1310100": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "しえん"
+      },
+      "1329590": {
+        "start": 9,
+        "length": 2,
+        "reading": "うけ"
       },
       "1329650": {
         "start": 25,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       },
-      "1484360": {
+      "1419570": {
+        "start": 37,
+        "length": 2,
+        "reading": "ことわっ"
+      },
+      "1484350": {
         "start": 6,
-        "length": 6
+        "length": 2,
+        "reading": "ひがい"
       },
       "1580640": {
         "start": 32,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1592250": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       },
       "1596780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいふう"
       },
-      "1597030": {
-        "start": 37,
-        "length": 3
+      "1659120": {
+        "start": 9,
+        "length": 2,
+        "reading": "うけ"
       },
       "1753790": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "せかいじゅう"
       }
     }
   }

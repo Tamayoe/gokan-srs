@@ -1,5 +1,50 @@
 [
   {
+    "id": "81088",
+    "original": "万雷の拍手のうちに幕が下りた。",
+    "en": [
+      {
+        "id": "322627",
+        "text": "The curtain fell amid the wild applause of the audience."
+      }
+    ],
+    "indices": "万雷の拍手~ の 内(うち){うち} に 幕[01]~ が 降りる{下りた}",
+    "vocabIds": [
+      "1526570",
+      "2855893",
+      "1474820",
+      "1524750",
+      "1184370"
+    ],
+    "matches": {
+      "1184370": {
+        "start": 11,
+        "length": 2,
+        "reading": "おり"
+      },
+      "1474820": {
+        "start": 3,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1524750": {
+        "start": 9,
+        "length": 1,
+        "reading": "まく"
+      },
+      "1526570": {
+        "start": 0,
+        "length": 2,
+        "reading": "ばんらい"
+      },
+      "2855893": {
+        "start": 0,
+        "length": 5,
+        "reading": "ばんらいのはくしゅ"
+      }
+    }
+  },
+  {
     "id": "97564",
     "original": "彼らはわたしたちに拍手をしませんでした。",
     "en": [
@@ -16,11 +61,13 @@
     "matches": {
       "1474820": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -41,20 +88,29 @@
     "vocabIds": [
       "1483070",
       "1474820",
-      "1329590"
+      "1329590",
+      "1659120"
     ],
     "matches": {
       "1329590": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "うけ"
       },
       "1474820": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1659120": {
+        "start": 9,
+        "length": 2,
+        "reading": "うけ"
       }
     }
   },
@@ -69,6 +125,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 公演[01] が 終わる と 僅か[01]{わずか} の 人々(ひとびと) が 拍手(はくしゅ) を 為る(する){した}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1273280",
       "1589600",
@@ -78,23 +135,33 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1273280": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうえん"
       },
       "1474820": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1580650": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
       },
       "1589600": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おわる"
       }
     }
   },
@@ -109,6 +176,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 演説 は 絶大 成る{なる} 拍手(はくしゅ) 喝采{かっさい} を 博す{博した}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1176960",
       "1386920",
@@ -118,23 +186,351 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1176960": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "えんぜつ"
       },
       "1386920": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぜつだい"
       },
       "1474820": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "2012890": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "はくし"
+      }
+    }
+  },
+  {
+    "id": "118215",
+    "original": "彼のユーモアにつられて拍手喝采が起こった。",
+    "en": [
+      {
+        "id": "285449",
+        "text": "His infectious humor stimulated applause."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} ユーモア に 釣る{つられて} 拍手喝采 が 起こる{起こった}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1474820",
+      "1690670",
+      "1208170",
+      "1223680"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1208170": {
+        "start": 13,
+        "length": 2,
+        "reading": "かっさい"
+      },
+      "1223680": {
+        "start": 16,
+        "length": 3,
+        "reading": "おこっ"
+      },
+      "1474820": {
+        "start": 11,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1690670": {
+        "start": 11,
+        "length": 4,
+        "reading": "はくしゅかっさい"
+      }
+    }
+  },
+  {
+    "id": "126044",
+    "original": "聴衆は彼の演説が終わると大きな拍手を送った。",
+    "en": [
+      {
+        "id": "277948",
+        "text": "The audience clapped loudly after his speech."
+      }
+    ],
+    "indices": "聴衆 は 彼(かれ)[01]{彼の} 演説 が 終わる と 大きな 拍手(はくしゅ) を 送る{送った}",
+    "vocabIds": [
+      "1428910",
+      "1483070",
+      "1000420",
+      "1176960",
+      "1589600",
+      "1412890",
+      "1474820",
+      "1402730"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 3,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1176960": {
+        "start": 5,
+        "length": 2,
+        "reading": "えんぜつ"
+      },
+      "1402730": {
+        "start": 18,
+        "length": 2,
+        "reading": "おくっ"
+      },
+      "1412890": {
+        "start": 12,
+        "length": 3,
+        "reading": "おおきな"
+      },
+      "1428910": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちょうしゅう"
+      },
+      "1474820": {
+        "start": 15,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1589600": {
+        "start": 8,
+        "length": 3,
+        "reading": "おわる"
+      }
+    }
+  },
+  {
+    "id": "126047",
+    "original": "聴衆は彼に拍手を送った、それは彼の演奏が成功したことの証拠だ。",
+    "en": [
+      {
+        "id": "277945",
+        "text": "The audience applauded him, which means his performance was a success."
+      }
+    ],
+    "indices": "聴衆 は 彼(かれ) に 拍手(はくしゅ) を 送る{送った} 其れ[01]{それ} は 彼(かれ)[01]{彼の} 演奏 が 成功 為る(する){した} 事(こと){こと} の 証拠 だ",
+    "vocabIds": [
+      "1428910",
+      "1483070",
+      "1474820",
+      "1402730",
+      "1000420",
+      "1607520",
+      "1375690",
+      "1351600"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 15,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1351600": {
+        "start": 27,
+        "length": 2,
+        "reading": "しょうこ"
+      },
+      "1375690": {
+        "start": 20,
+        "length": 2,
+        "reading": "せいこう"
+      },
+      "1402730": {
+        "start": 8,
+        "length": 2,
+        "reading": "おくっ"
+      },
+      "1428910": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちょうしゅう"
+      },
+      "1474820": {
+        "start": 5,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1607520": {
+        "start": 17,
+        "length": 2,
+        "reading": "えんそう"
+      }
+    }
+  },
+  {
+    "id": "126058",
+    "original": "聴衆は演奏者に拍手を送った。",
+    "en": [
+      {
+        "id": "277934",
+        "text": "The audience applauded the performer."
+      }
+    ],
+    "indices": "聴衆 は 演奏者 に 拍手(はくしゅ) を 送る{送った}",
+    "vocabIds": [
+      "1428910",
+      "1607520",
+      "1930750",
+      "1322990",
+      "1474820",
+      "1402730"
+    ],
+    "matches": {
+      "1322990": {
+        "start": 5,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1402730": {
+        "start": 10,
+        "length": 2,
+        "reading": "おくっ"
+      },
+      "1428910": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちょうしゅう"
+      },
+      "1474820": {
+        "start": 7,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1607520": {
+        "start": 3,
+        "length": 2,
+        "reading": "えんそう"
+      },
+      "1930750": {
+        "start": 3,
+        "length": 3,
+        "reading": "えんそうしゃ"
+      }
+    }
+  },
+  {
+    "id": "126069",
+    "original": "聴衆はいっせいに立ち上がって拍手喝采した。",
+    "en": [
+      {
+        "id": "277923",
+        "text": "With one accord the audience stood up and applauded."
+      }
+    ],
+    "indices": "聴衆 は 一斉に{いっせいに} 立ち上がる[01]{立ち上がって} 拍手喝采 為る(する){した}",
+    "vocabIds": [
+      "1428910",
+      "1551370",
+      "1474820",
+      "1690670",
+      "1208170"
+    ],
+    "matches": {
+      "1208170": {
+        "start": 16,
+        "length": 2,
+        "reading": "かっさい"
+      },
+      "1428910": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちょうしゅう"
+      },
+      "1474820": {
+        "start": 14,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1551370": {
+        "start": 8,
+        "length": 5,
+        "reading": "たちあがっ"
+      },
+      "1690670": {
+        "start": 14,
+        "length": 4,
+        "reading": "はくしゅかっさい"
+      }
+    }
+  },
+  {
+    "id": "126072",
+    "original": "聴衆は、その歌手に盛大な拍手を送った。",
+    "en": [
+      {
+        "id": "277912",
+        "text": "The audience gave the singer a big applause."
+      }
+    ],
+    "indices": "聴取[02]~ は 其の[01]{その} 歌手 に 盛大{盛大な} 拍手(はくしゅ) を 送る{おくった}",
+    "vocabIds": [
+      "1428910",
+      "1193290",
+      "1379820",
+      "1474820",
+      "1402730"
+    ],
+    "matches": {
+      "1193290": {
+        "start": 6,
+        "length": 2,
+        "reading": "かしゅ"
+      },
+      "1379820": {
+        "start": 9,
+        "length": 2,
+        "reading": "せいだい"
+      },
+      "1402730": {
+        "start": 15,
+        "length": 2,
+        "reading": "おくっ"
+      },
+      "1428910": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちょうしゅう"
+      },
+      "1474820": {
+        "start": 12,
+        "length": 2,
+        "reading": "はくしゅ"
       }
     }
   },
@@ -162,23 +558,109 @@
     "matches": {
       "1193180": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "うた"
       },
       "1226630": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "きゃく"
       },
       "1414220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいせい"
       },
       "1474820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
       "1589600": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "おわる"
+      }
+    }
+  },
+  {
+    "id": "140531",
+    "original": "早稲田大学における彼の最後の講義は、万雷の拍手喝采を浴びた。",
+    "en": [
+      {
+        "id": "274042",
+        "text": "His last lecture at Waseda brought down the house."
+      }
+    ],
+    "indices": "大学 に於ける{における} 彼(かれ)[01]{彼の} 最後[01] の 講義 は 万雷 の 拍手喝采 を[01] 浴びる{浴びた}",
+    "vocabIds": [
+      "5475145",
+      "1483070",
+      "1000420",
+      "1293810",
+      "1282260",
+      "1526570",
+      "2855893",
+      "1474820",
+      "1690670",
+      "1208170",
+      "1547450"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 9,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1208170": {
+        "start": 23,
+        "length": 2,
+        "reading": "かっさい"
+      },
+      "1282260": {
+        "start": 14,
+        "length": 2,
+        "reading": "こうぎ"
+      },
+      "1293810": {
+        "start": 11,
+        "length": 2,
+        "reading": "さいご"
+      },
+      "1474820": {
+        "start": 21,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1483070": {
+        "start": 9,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1526570": {
+        "start": 18,
+        "length": 2,
+        "reading": "ばんらい"
+      },
+      "1547450": {
+        "start": 26,
+        "length": 2,
+        "reading": "あび"
+      },
+      "1690670": {
+        "start": 21,
+        "length": 4,
+        "reading": "はくしゅかっさい"
+      },
+      "2855893": {
+        "start": 18,
+        "length": 5,
+        "reading": "ばんらいのはくしゅ"
+      },
+      "5475145": {
+        "start": 0,
+        "length": 5,
+        "reading": "わせだだいがく"
       }
     }
   },
@@ -196,24 +678,34 @@
       "1397300",
       "1239460",
       "1474820",
+      "1402730",
       "1402630"
     ],
     "matches": {
       "1239460": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぎょうせき"
       },
       "1397300": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "すばらしい"
       },
       "1402630": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おくり"
+      },
+      "1402730": {
+        "start": 11,
+        "length": 2,
+        "reading": "おくり"
       },
       "1474820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       }
     }
   },
@@ -232,28 +724,39 @@
       "1214810",
       "1551370",
       "1474820",
-      "1304960"
+      "1307550",
+      "1342540"
     ],
     "matches": {
       "1214810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かんきゃく"
       },
-      "1304960": {
-        "start": 13,
-        "length": 4
+      "1307550": {
+        "start": 14,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 14,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1396130": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       },
       "1474820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
       "1551370": {
         "start": 5,
-        "length": 6
+        "length": 5,
+        "reading": "たちあがっ"
       }
     }
   },
@@ -274,36 +777,49 @@
       "1237150",
       "1465590",
       "1474820",
-      "1304960"
+      "1307550",
+      "1342540"
     ],
     "matches": {
       "1237150": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きょうしつ"
       },
-      "1304960": {
-        "start": 23,
-        "length": 4
+      "1307550": {
+        "start": 24,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 24,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1361490": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1379380": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1387990": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1465590": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "はいる"
       },
       "1474820": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       }
     }
   },
@@ -318,17 +834,139 @@
     ],
     "indices": "私たち は 拍手(はくしゅ) 為る(する){した}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1474820"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1474820": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
+      }
+    }
+  },
+  {
+    "id": "166436",
+    "original": "私たちはその演奏者に拍手を送った。",
+    "en": [
+      {
+        "id": "248067",
+        "text": "We applauded the performer."
+      }
+    ],
+    "indices": "私たち は 其の[01]{その} 演奏者 に 拍手(はくしゅ) を 送る{送った}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1607520",
+      "1930750",
+      "1322990",
+      "1474820",
+      "1402730"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1322990": {
+        "start": 8,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1402730": {
+        "start": 13,
+        "length": 2,
+        "reading": "おくっ"
+      },
+      "1474820": {
+        "start": 10,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1607520": {
+        "start": 6,
+        "length": 2,
+        "reading": "えんそう"
+      },
+      "1930750": {
+        "start": 6,
+        "length": 3,
+        "reading": "えんそうしゃ"
+      }
+    }
+  },
+  {
+    "id": "167428",
+    "original": "私が部屋へ入ったとき、彼らは拍手喝采をしてくれた。",
+    "en": [
+      {
+        "id": "247067",
+        "text": "As I entered the room, they applauded."
+      }
+    ],
+    "indices": "私(わたし)[01] が 部屋[01] へ 入る(はいる){入った} 時(とき){とき} 彼ら(かれら) は 拍手喝采 を 為る(する){して} 呉れる{くれた}",
+    "vocabIds": [
+      "1311110",
+      "1499320",
+      "1465590",
+      "1483090",
+      "1474820",
+      "1690670",
+      "1208170"
+    ],
+    "matches": {
+      "1208170": {
+        "start": 16,
+        "length": 2,
+        "reading": "かっさい"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1465590": {
+        "start": 5,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1474820": {
+        "start": 14,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1483090": {
+        "start": 11,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1499320": {
+        "start": 2,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1690670": {
+        "start": 14,
+        "length": 4,
+        "reading": "はくしゅかっさい"
       }
     }
   },
@@ -352,23 +990,79 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1465590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はいる"
       },
       "1474820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
       "1483090": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
+      }
+    }
+  },
+  {
+    "id": "176689",
+    "original": "群集は勝者に拍手喝采を送った。",
+    "en": [
+      {
+        "id": "237773",
+        "text": "The crowd gave the winner a big hand."
+      }
+    ],
+    "indices": "群集 は 勝者~ に 拍手喝采~ を 送る{送った}",
+    "vocabIds": [
+      "1592515",
+      "1346180",
+      "1474820",
+      "1690670",
+      "1208170",
+      "1402730"
+    ],
+    "matches": {
+      "1208170": {
+        "start": 8,
+        "length": 2,
+        "reading": "かっさい"
+      },
+      "1346180": {
+        "start": 3,
+        "length": 2,
+        "reading": "しょうしゃ"
+      },
+      "1402730": {
+        "start": 11,
+        "length": 2,
+        "reading": "おくっ"
+      },
+      "1474820": {
+        "start": 6,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1592515": {
+        "start": 0,
+        "length": 2,
+        "reading": "ぐんしゅう"
+      },
+      "1690670": {
+        "start": 6,
+        "length": 4,
+        "reading": "はくしゅかっさい"
       }
     }
   },
@@ -384,26 +1078,63 @@
     "indices": "観客 は たっぷり[03]{たっぷりと}~ 分間 拍手(はくしゅ) 為る(する){した}",
     "vocabIds": [
       "1214810",
-      "2039350",
-      "1215230",
+      "2386360",
       "1474820"
     ],
     "matches": {
       "1214810": {
         "start": 0,
-        "length": 2
-      },
-      "1215230": {
-        "start": 10,
-        "length": 1
+        "length": 2,
+        "reading": "かんきゃく"
       },
       "1474820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
-      "2039350": {
+      "2386360": {
+        "start": 9,
+        "length": 2,
+        "reading": "ふんかん"
+      }
+    }
+  },
+  {
+    "id": "183818",
+    "original": "観客はその女優に拍手を送った。",
+    "en": [
+      {
+        "id": "20942",
+        "text": "The audience applauded the actress."
+      }
+    ],
+    "indices": "観客 は 其の[01]{その} 女優 に 拍手(はくしゅ) を 送る{送った}",
+    "vocabIds": [
+      "1214810",
+      "1345430",
+      "1474820",
+      "1402730"
+    ],
+    "matches": {
+      "1214810": {
+        "start": 0,
+        "length": 2,
+        "reading": "かんきゃく"
+      },
+      "1345430": {
+        "start": 5,
+        "length": 2,
+        "reading": "じょゆう"
+      },
+      "1402730": {
+        "start": 11,
+        "length": 2,
+        "reading": "おくっ"
+      },
+      "1474820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       }
     }
   },
@@ -419,21 +1150,36 @@
     "indices": "我々 は 其の[01]{その} 演奏者 に 拍手(はくしゅ) を 送る{おくった}",
     "vocabIds": [
       "1607050",
+      "1607520",
       "1930750",
+      "1322990",
       "1474820"
     ],
     "matches": {
+      "1322990": {
+        "start": 7,
+        "length": 1,
+        "reading": "しゃ"
+      },
       "1474820": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "1607520": {
+        "start": 5,
+        "length": 2,
+        "reading": "えんそう"
       },
       "1930750": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "えんそうしゃ"
       }
     }
   },
@@ -448,22 +1194,37 @@
     ],
     "indices": "演奏会 が 済む{すんだ} 時(とき){とき} に 聴衆 は 拍手(はくしゅ) 為る(する){した}",
     "vocabIds": [
+      "1607520",
       "1176970",
+      "1198160",
       "1428910",
       "1474820"
     ],
     "matches": {
       "1176970": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "えんそうかい"
+      },
+      "1198160": {
+        "start": 2,
+        "length": 1,
+        "reading": "かい"
       },
       "1428910": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうしゅう"
       },
       "1474820": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1607520": {
+        "start": 0,
+        "length": 2,
+        "reading": "えんそう"
       }
     }
   },
@@ -478,42 +1239,205 @@
     ],
     "indices": "宇宙飛行士 達 は 自然[02]{自然と} 湧き起こる{湧き起こった}~ 拍手(はくしゅ) で(#2028980) 迎える[01]{迎えられた}",
     "vocabIds": [
+      "1171300",
+      "1815930",
       "1171400",
+      "1485450",
+      "1485500",
+      "2815550",
       "1416220",
       "1318090",
+      "1606685",
       "2649290",
       "1223680",
       "1474820",
+      "1253190",
       "1253180"
     ],
     "matches": {
+      "1171300": {
+        "start": 0,
+        "length": 2,
+        "reading": "うちゅう"
+      },
       "1171400": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "うちゅうひこうし"
       },
       "1223680": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "おこっ"
       },
       "1253180": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "むかえ"
+      },
+      "1253190": {
+        "start": 19,
+        "length": 2,
+        "reading": "むかえ"
       },
       "1318090": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しぜん"
       },
       "1416220": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1474820": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1485450": {
+        "start": 2,
+        "length": 2,
+        "reading": "ひこう"
+      },
+      "1485500": {
+        "start": 2,
+        "length": 3,
+        "reading": "ひこうし"
+      },
+      "1606685": {
+        "start": 10,
+        "length": 2,
+        "reading": "わき"
+      },
+      "1815930": {
+        "start": 0,
+        "length": 4,
+        "reading": "うちゅうひこう"
       },
       "2649290": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "わき"
+      },
+      "2815550": {
+        "start": 4,
+        "length": 1,
+        "reading": "し"
+      }
+    }
+  },
+  {
+    "id": "190955",
+    "original": "医学を勉強しようという君の決心に私は拍手を送る。",
+    "en": [
+      {
+        "id": "28115",
+        "text": "I applaud your decision to study medicine."
+      }
+    ],
+    "indices": "医学 を 勉強[01]{勉強しよう} と言う{という} 君(きみ)[01]{君の} 決心 に 私(わたし)[01] は 拍手(はくしゅ) を 送る",
+    "vocabIds": [
+      "1159810",
+      "1512670",
+      "1247250",
+      "1254340",
+      "1311110",
+      "1474820",
+      "2782880",
+      "1402730"
+    ],
+    "matches": {
+      "1159810": {
+        "start": 0,
+        "length": 2,
+        "reading": "いがく"
+      },
+      "1247250": {
+        "start": 11,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1254340": {
+        "start": 13,
+        "length": 2,
+        "reading": "けっしん"
+      },
+      "1311110": {
+        "start": 16,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1402730": {
+        "start": 21,
+        "length": 2,
+        "reading": "おくる"
+      },
+      "1474820": {
+        "start": 18,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1512670": {
+        "start": 3,
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "2782880": {
+        "start": 18,
+        "length": 5,
+        "reading": "はくしゅをおくる"
+      }
+    }
+  },
+  {
+    "id": "210747",
+    "original": "その公演は万雷の拍手を受けた。",
+    "en": [
+      {
+        "id": "48017",
+        "text": "The performance was received with applause."
+      }
+    ],
+    "indices": "其の[01]{その} 公演[01] は 万雷~ の 拍手(はくしゅ)~ を[01] 受ける{受けた}",
+    "vocabIds": [
+      "1273280",
+      "1526570",
+      "2855893",
+      "1474820",
+      "1329590",
+      "1659120"
+    ],
+    "matches": {
+      "1273280": {
+        "start": 2,
+        "length": 2,
+        "reading": "こうえん"
+      },
+      "1329590": {
+        "start": 11,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "1474820": {
+        "start": 8,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1526570": {
+        "start": 5,
+        "length": 2,
+        "reading": "ばんらい"
+      },
+      "1659120": {
+        "start": 11,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "2855893": {
+        "start": 5,
+        "length": 5,
+        "reading": "ばんらいのはくしゅ"
       }
     }
   },
@@ -531,24 +1455,34 @@
       "1607520",
       "1428910",
       "1474820",
-      "1588760"
+      "1588760",
+      "1454490"
     ],
     "matches": {
       "1428910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうしゅう"
+      },
+      "1454490": {
+        "start": 17,
+        "length": 1,
+        "reading": "え"
       },
       "1474820": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
       "1588760": {
         "start": 17,
-        "length": 2
+        "length": 1,
+        "reading": "え"
       },
       "1607520": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "えんそう"
       }
     }
   },
@@ -573,27 +1507,33 @@
     "matches": {
       "1193290": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かしゅ"
       },
       "1263510": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "あらわれる"
       },
       "1412890": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "おおきな"
       },
       "1428910": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうしゅう"
       },
       "1474820": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
       "1576900": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "おと"
       }
     }
   },
@@ -607,32 +1547,67 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1282240",
+      "1333040",
       "1659210",
+      "1269320",
+      "1580820",
       "1373090",
+      "1580640",
       "1474820"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1269320": {
+        "start": 6,
+        "length": 1,
+        "reading": "ご"
       },
       "1282240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうえん"
+      },
+      "1333040": {
+        "start": 4,
+        "length": 2,
+        "reading": "しゅうりょう"
       },
       "1373090": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "すうにん"
       },
       "1474820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1580640": {
+        "start": 9,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1580820": {
+        "start": 8,
+        "length": 1,
+        "reading": "すう"
       },
       "1659210": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "しゅうりょうご"
       }
     }
   },
@@ -646,9 +1621,12 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1282240",
       "1589600",
+      "1577100",
+      "1189100",
       "2066670",
       "1580640",
       "1474820"
@@ -656,27 +1634,86 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1189100": {
+        "start": 9,
+        "length": 2,
+        "reading": "なんにん"
       },
       "1282240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうえん"
       },
       "1474820": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なん"
       },
       "1580640": {
-        "start": 13,
-        "length": 1
+        "start": 10,
+        "length": 1,
+        "reading": "にん"
       },
       "1589600": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おわる"
       },
       "2066670": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "なんにんか"
+      }
+    }
+  },
+  {
+    "id": "1121575",
+    "original": "コンサートが終わると、聴衆は拍手を送った。",
+    "en": [
+      {
+        "id": "25915",
+        "text": "The audience clapped when the concert was over."
+      }
+    ],
+    "vocabIds": [
+      "1589600",
+      "1428910",
+      "1474820",
+      "1402730"
+    ],
+    "matches": {
+      "1402730": {
+        "start": 17,
+        "length": 2,
+        "reading": "おくっ"
+      },
+      "1428910": {
+        "start": 11,
+        "length": 2,
+        "reading": "ちょうしゅう"
+      },
+      "1474820": {
+        "start": 14,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1589600": {
+        "start": 6,
+        "length": 3,
+        "reading": "おわる"
       }
     }
   },
@@ -704,11 +1741,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1474820": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       }
     }
   },
@@ -729,15 +1768,18 @@
     "matches": {
       "1202150": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1379380": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1474820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       }
     }
   },
@@ -752,16 +1794,30 @@
     ],
     "vocabIds": [
       "1474820",
-      "1501680"
+      "1606685",
+      "2649290",
+      "1352290"
     ],
     "matches": {
+      "1352290": {
+        "start": 5,
+        "length": 3,
+        "reading": "あがっ"
+      },
       "1474820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       },
-      "1501680": {
+      "1606685": {
         "start": 3,
-        "length": 6
+        "length": 2,
+        "reading": "わき"
+      },
+      "2649290": {
+        "start": 3,
+        "length": 2,
+        "reading": "わき"
       }
     }
   },
@@ -784,7 +1840,8 @@
     "matches": {
       "1474820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
       }
     }
   },
@@ -807,7 +1864,70 @@
     "matches": {
       "1474820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
+      }
+    }
+  },
+  {
+    "id": "926851",
+    "original": "ふたりの息の合った演奏に、観客は惜しみない拍手を送った。",
+    "en": [
+      {
+        "id": "10020950",
+        "text": "The crowd gave the pair's coordinated performance lavish applause."
+      }
+    ],
+    "vocabIds": [
+      "1404320",
+      "1857980",
+      "1284430",
+      "1607520",
+      "1214810",
+      "2842337",
+      "1474820",
+      "1402730"
+    ],
+    "matches": {
+      "1214810": {
+        "start": 13,
+        "length": 2,
+        "reading": "かんきゃく"
+      },
+      "1284430": {
+        "start": 6,
+        "length": 2,
+        "reading": "あっ"
+      },
+      "1402730": {
+        "start": 24,
+        "length": 2,
+        "reading": "おくっ"
+      },
+      "1404320": {
+        "start": 4,
+        "length": 1,
+        "reading": "いき"
+      },
+      "1474820": {
+        "start": 21,
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "1607520": {
+        "start": 9,
+        "length": 2,
+        "reading": "えんそう"
+      },
+      "1857980": {
+        "start": 4,
+        "length": 5,
+        "reading": "いきのあった"
+      },
+      "2842337": {
+        "start": 16,
+        "length": 5,
+        "reading": "おしみない"
       }
     }
   },
@@ -822,16 +1942,24 @@
     ],
     "vocabIds": [
       "1474820",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 3,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1474820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はくしゅ"
+      },
+      "2036870": {
+        "start": 3,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   }

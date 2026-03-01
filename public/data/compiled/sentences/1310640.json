@@ -14,10 +14,14 @@
       "1419380",
       "1576900",
       "1310640",
+      "1228560",
       "2269050",
       "1512080",
+      "1381820",
       "2119870",
+      "1269320",
       "2640160",
+      "1304510",
       "1643270",
       "1194260",
       "1599760",
@@ -27,55 +31,88 @@
     "matches": {
       "1194260": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "かやく"
       },
       "1194580": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はなび"
       },
       "1222590": {
         "start": 49,
-        "length": 2
+        "length": 2,
+        "reading": "きぶん"
+      },
+      "1228560": {
+        "start": 12,
+        "length": 1,
+        "reading": "きゅう"
+      },
+      "1269320": {
+        "start": 23,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1304510": {
+        "start": 25,
+        "length": 2,
+        "reading": "のこっ"
       },
       "1310640": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
+      },
+      "1381820": {
+        "start": 17,
+        "length": 2,
+        "reading": "しずか"
       },
       "1419380": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "はじける"
       },
       "1512080": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "あたり"
       },
       "1576870": {
         "start": 39,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       },
       "1576900": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "おと"
       },
       "1599760": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "におい"
       },
       "1643270": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "のこった"
       },
       "2119870": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "しずかに"
       },
       "2269050": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       },
       "2640160": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -91,21 +128,232 @@
     "indices": "夜通し 雨 が 降る(ふる){降ったり} 止む{止んだり} 為る(する){していた}",
     "vocabIds": [
       "1536970",
-      "2851949",
+      "1171900",
+      "1282790",
+      "2863079",
+      "1310640"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 3,
+        "length": 1,
+        "reading": "う"
+      },
+      "1282790": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふっ"
+      },
+      "1310640": {
+        "start": 9,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1536970": {
+        "start": 0,
+        "length": 3,
+        "reading": "よどおし"
+      },
+      "2863079": {
+        "start": 5,
+        "length": 8,
+        "reading": "ふったりやんだり"
+      }
+    }
+  },
+  {
+    "id": "80376",
+    "original": "明日までに雨が止めばいいと思います。",
+    "en": [
+      {
+        "id": "323341",
+        "text": "I wish it would stop raining before tomorrow."
+      },
+      {
+        "id": "10538200",
+        "text": "I hope the rain will stop by tomorrow."
+      }
+    ],
+    "indices": "明日 迄{まで} に 雨 が 止む{止めば} いい(#2820690)[01] と 思う{思います}",
+    "vocabIds": [
+      "1584660",
+      "1171900",
+      "1310640",
+      "1310660",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 5,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1310640": {
+        "start": 7,
+        "length": 2,
+        "reading": "やめ"
+      },
+      "1310660": {
+        "start": 7,
+        "length": 2,
+        "reading": "やめ"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      },
+      "1589320": {
+        "start": 13,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 13,
+        "length": 2,
+        "reading": "おもい"
+      }
+    }
+  },
+  {
+    "id": "84043",
+    "original": "風が吹き止んだ。",
+    "en": [
+      {
+        "id": "319675",
+        "text": "The wind blew itself out."
+      }
+    ],
+    "indices": "風(かぜ) が 吹く[01]{吹き} 止む{止んだ}",
+    "vocabIds": [
+      "1499720",
+      "1370760",
+      "2759690",
       "1310640"
     ],
     "matches": {
       "1310640": {
-        "start": 9,
-        "length": 3
+        "start": 4,
+        "length": 2,
+        "reading": "やん"
       },
-      "1536970": {
+      "1370760": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふき"
+      },
+      "1499720": {
         "start": 0,
-        "length": 3
+        "length": 1,
+        "reading": "かぜ"
       },
-      "2851949": {
+      "2759690": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふき"
+      }
+    }
+  },
+  {
+    "id": "89779",
+    "original": "彼女は子供が泣き止むまで部屋に閉じ込めた。",
+    "en": [
+      {
+        "id": "313936",
+        "text": "She shut the child in his room until he stopped crying."
+      }
+    ],
+    "indices": "彼女[01] は 子供 が 泣き止む 迄{まで} 部屋[01] に 閉じ込める{閉じ込めた}",
+    "vocabIds": [
+      "1483150",
+      "1307850",
+      "1229840",
+      "1229650",
+      "1652260",
+      "1310640",
+      "1499320",
+      "1508560"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 6,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 6,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1307850": {
         "start": 3,
-        "length": 5
+        "length": 2,
+        "reading": "こども"
+      },
+      "1310640": {
+        "start": 8,
+        "length": 2,
+        "reading": "やむ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1499320": {
+        "start": 12,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1508560": {
+        "start": 15,
+        "length": 4,
+        "reading": "とじこめ"
+      },
+      "1652260": {
+        "start": 6,
+        "length": 4,
+        "reading": "なきやむ"
+      }
+    }
+  },
+  {
+    "id": "92713",
+    "original": "彼女はすっかり泣き止んだ。",
+    "en": [
+      {
+        "id": "310996",
+        "text": "She stopped crying altogether."
+      }
+    ],
+    "indices": "彼女[01] は すっかり 泣き 止む{止んだ}",
+    "vocabIds": [
+      "1483150",
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 7,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 7,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 9,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -123,24 +371,34 @@
       "1483090",
       "1171900",
       "1310640",
+      "1410590",
       "2021970"
     ],
     "matches": {
       "1171900": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
+      },
+      "1410590": {
+        "start": 13,
+        "length": 2,
+        "reading": "まっ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "2021970": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "まった"
       }
     }
   },
@@ -165,27 +423,33 @@
     "matches": {
       "1171900": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1221270": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "かえっ"
       },
       "1310640": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1547720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       },
       "1579080": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ころ"
       }
     }
   },
@@ -201,6 +465,7 @@
     "indices": "彼(かれ) が 帰る{帰って} 来る(くる)[01]{くる} 頃(ころ) には 雨 も 止む{止んでいる} でしょう[01]",
     "vocabIds": [
       "1483070",
+      "1221270",
       "1864140",
       "1579080",
       "1171900",
@@ -209,23 +474,33 @@
     "matches": {
       "1171900": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1221270": {
+        "start": 2,
+        "length": 2,
+        "reading": "かえっ"
       },
       "1310640": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579080": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ころ"
       },
       "1864140": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "かえってくる"
       }
     }
   },
@@ -252,19 +527,23 @@
     "matches": {
       "1279170": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうげき"
       },
       "1310640": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1537150": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "よあけ"
       },
       "1582000": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "てき"
       }
     }
   },
@@ -285,11 +564,13 @@
     "matches": {
       "1310640": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
       },
       "1432960": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "とおりあめ"
       }
     }
   },
@@ -308,48 +589,185 @@
       "1250660",
       "1506420",
       "1310640",
+      "1277520",
       "1951460",
+      "1507070",
       "1507080",
+      "1530030",
       "1316300",
-      "1399590",
       "1512130"
     ],
     "matches": {
       "1250660": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "たずさわる"
+      },
+      "1277520": {
+        "start": 22,
+        "length": 2,
+        "reading": "このん"
       },
       "1310640": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1316300": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "じだい"
       },
       "1390420": {
         "start": 0,
-        "length": 2
-      },
-      "1399590": {
-        "start": 34,
-        "length": 1
+        "length": 2,
+        "reading": "せんとう"
       },
       "1506420": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "へいし"
+      },
+      "1507070": {
+        "start": 26,
+        "length": 2,
+        "reading": "へいおん"
       },
       "1507080": {
         "start": 26,
-        "length": 4
+        "length": 4,
+        "reading": "へいおんぶじ"
       },
       "1512130": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "かえす"
+      },
+      "1530030": {
+        "start": 28,
+        "length": 2,
+        "reading": "ぶじ"
       },
       "1951460": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "このんで"
+      }
+    }
+  },
+  {
+    "id": "145885",
+    "original": "食べ物を与えられてその子はやっと泣き止んだ。",
+    "en": [
+      {
+        "id": "268677",
+        "text": "It was not until the child was fed that he stopped crying."
+      }
+    ],
+    "indices": "食べ物 を 与える[01]{与えられて} 其の[01]{その} 子(こ)[01] は 漸と[01]{やっと} 泣き 止む{止んだ}",
+    "vocabIds": [
+      "1358340",
+      "1544730",
+      "1544720",
+      "1307770",
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 16,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 16,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1307770": {
+        "start": 11,
+        "length": 1,
+        "reading": "こ"
+      },
+      "1310640": {
+        "start": 18,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1358340": {
+        "start": 0,
+        "length": 3,
+        "reading": "たべもの"
+      },
+      "1544720": {
+        "start": 4,
+        "length": 2,
+        "reading": "あたえ"
+      },
+      "1544730": {
+        "start": 4,
+        "length": 2,
+        "reading": "あたえ"
+      }
+    }
+  },
+  {
+    "id": "166065",
+    "original": "私たちは雨が止み次第出発します。",
+    "en": [
+      {
+        "id": "248439",
+        "text": "We'll start as soon as it stops raining."
+      },
+      {
+        "id": "4793238",
+        "text": "We'll leave as soon as it quits raining."
+      },
+      {
+        "id": "4793240",
+        "text": "We'll leave as soon as it stops raining."
+      }
+    ],
+    "indices": "私たち は 雨 が 止む{止み} 次(つぎ)[01] 第 出発{出発します}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1171900",
+      "1310640",
+      "1316680",
+      "1340000"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 4,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1310640": {
+        "start": 6,
+        "length": 2,
+        "reading": "やみ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1316680": {
+        "start": 8,
+        "length": 2,
+        "reading": "しだい"
+      },
+      "1340000": {
+        "start": 10,
+        "length": 2,
+        "reading": "しゅっぱつ"
       }
     }
   },
@@ -365,21 +783,75 @@
     "indices": "やむを得ず 訪問 為る(する){する} の は 嫌[01]{いや} だ{だった} が 矢張り{やはり} 為る(する){しない} 訳にはいかない{わけには行かなかった}",
     "vocabIds": [
       "1310640",
+      "1588760",
       "1454490",
       "1518120"
     ],
     "matches": {
       "1310640": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
       },
       "1454490": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "え"
       },
       "1518120": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ほうもん"
+      },
+      "1588760": {
+        "start": 3,
+        "length": 1,
+        "reading": "え"
+      }
+    }
+  },
+  {
+    "id": "169689",
+    "original": "昨夜から雪が降ったり止んだりしてる。",
+    "en": [
+      {
+        "id": "244797",
+        "text": "It has been snowing off and on since last night."
+      }
+    ],
+    "indices": "昨夜(ゆうべ)[02] から 雪 が 降る(ふる){降ったり} 止む{止んだり} 為る(する){してる}",
+    "vocabIds": [
+      "1542640",
+      "1386500",
+      "1282790",
+      "2863079",
+      "1310640"
+    ],
+    "matches": {
+      "1282790": {
+        "start": 6,
+        "length": 2,
+        "reading": "ふっ"
+      },
+      "1310640": {
+        "start": 10,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1386500": {
+        "start": 4,
+        "length": 1,
+        "reading": "ゆき"
+      },
+      "1542640": {
+        "start": 0,
+        "length": 2,
+        "reading": "さくや"
+      },
+      "2863079": {
+        "start": 6,
+        "length": 8,
+        "reading": "ふったりやんだり"
       }
     }
   },
@@ -404,11 +876,13 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       }
     }
   },
@@ -438,15 +912,18 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1215290": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "まもなく"
       },
       "1310640": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
       }
     }
   },
@@ -469,19 +946,50 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
       },
       "1529520": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
       },
       "1591160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きざし"
+      }
+    }
+  },
+  {
+    "id": "189554",
+    "original": "雨はもう止みましたか。",
+    "en": [
+      {
+        "id": "26708",
+        "text": "Has it stopped raining yet?"
+      }
+    ],
+    "indices": "雨 は もう 止む{止みました} か",
+    "vocabIds": [
+      "1171900",
+      "1310640"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 0,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1310640": {
+        "start": 4,
+        "length": 2,
+        "reading": "やみ"
       }
     }
   },
@@ -510,11 +1018,13 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       }
     }
   },
@@ -531,20 +1041,23 @@
     "vocabIds": [
       "1171900",
       "1310640",
-      "1896380"
+      "1598550"
     ],
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
-      "1896380": {
+      "1598550": {
         "start": 9,
-        "length": 1
+        "length": 3,
+        "reading": "でかけ"
       }
     }
   },
@@ -566,15 +1079,18 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1292400": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "さいかい"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       }
     }
   },
@@ -592,24 +1108,34 @@
       "1171900",
       "1310640",
       "1421510",
-      "1307550"
+      "1307550",
+      "1342540"
     ],
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1307550": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "はじめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
+      },
+      "1342540": {
+        "start": 15,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1421510": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じめん"
       }
     }
   },
@@ -634,11 +1160,13 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       }
     }
   },
@@ -660,24 +1188,34 @@
       "1171900",
       "1310640",
       "1463740",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1338240": {
         "start": 15,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1463740": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "にじ"
+      },
+      "1896380": {
+        "start": 15,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -694,20 +1232,107 @@
     "vocabIds": [
       "1171900",
       "1310640",
+      "1410590",
       "1640770"
     ],
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
+      },
+      "1410590": {
+        "start": 6,
+        "length": 2,
+        "reading": "まち"
       },
       "1640770": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まち"
+      }
+    }
+  },
+  {
+    "id": "189685",
+    "original": "雨が止まなければ、外出しないつもりです。",
+    "en": [
+      {
+        "id": "26839",
+        "text": "We won't go out unless it stops raining."
+      }
+    ],
+    "indices": "雨 が 止む{止ま} 無ければ{なければ} 外出 為る(する){しない} 積もり{つもり} です",
+    "vocabIds": [
+      "1171900",
+      "1310640",
+      "1203800",
+      "2062710"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 0,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1203800": {
+        "start": 9,
+        "length": 2,
+        "reading": "がいしゅつ"
+      },
+      "1310640": {
+        "start": 2,
+        "length": 2,
+        "reading": "やま"
+      },
+      "2062710": {
+        "start": 9,
+        "length": 3,
+        "reading": "がいしゅつし"
+      }
+    }
+  },
+  {
+    "id": "189743",
+    "original": "雨が降り止んだ。",
+    "en": [
+      {
+        "id": "26896",
+        "text": "It has ceased raining."
+      }
+    ],
+    "indices": "雨 が 降り止む{降り止んだ}",
+    "vocabIds": [
+      "1171900",
+      "1589500",
+      "1631470",
+      "1310640"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 0,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1310640": {
+        "start": 4,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1589500": {
+        "start": 2,
+        "length": 2,
+        "reading": "おり"
+      },
+      "1631470": {
+        "start": 2,
+        "length": 2,
+        "reading": "おり"
       }
     }
   },
@@ -722,22 +1347,25 @@
     ],
     "indices": "雨 が 丁度{ちょうど} 止む{止んだ} 出発{出発しよう}",
     "vocabIds": [
-      "2621790",
+      "1171900",
       "1310640",
       "1340000"
     ],
     "matches": {
+      "1171900": {
+        "start": 0,
+        "length": 1,
+        "reading": "あめ"
+      },
       "1310640": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1340000": {
         "start": 10,
-        "length": 2
-      },
-      "2621790": {
-        "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "しゅっぱつ"
       }
     }
   },
@@ -756,27 +1384,358 @@
     ],
     "indices": "一日中 雨 は 止む 事無く[02]{ことなく} 降り続く{降り続いた}",
     "vocabIds": [
+      "1160790",
+      "1576260",
       "1165500",
+      "1463770",
+      "1464250",
+      "1423310",
       "1171900",
       "1310640",
       "1852520"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1165500": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いちにちちゅう"
       },
       "1171900": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
+      },
+      "1423310": {
+        "start": 2,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464250": {
+        "start": 1,
+        "length": 2,
+        "reading": "にちちゅう"
+      },
+      "1576260": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちにち"
       },
       "1852520": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "ふりつづい"
+      }
+    }
+  },
+  {
+    "id": "190587",
+    "original": "一時間前に雪が降り止みました。",
+    "en": [
+      {
+        "id": "27747",
+        "text": "It stopped snowing an hour ago."
+      }
+    ],
+    "indices": "一時間 前(まえ)[02] に 雪 が 降り止む{降り止みました}~",
+    "vocabIds": [
+      "1160790",
+      "1162940",
+      "1315920",
+      "1392580",
+      "1392590",
+      "1386500",
+      "1589500",
+      "1631470",
+      "1310640"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1162940": {
+        "start": 0,
+        "length": 3,
+        "reading": "いちじかん"
+      },
+      "1310640": {
+        "start": 9,
+        "length": 2,
+        "reading": "やみ"
+      },
+      "1315920": {
+        "start": 1,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1386500": {
+        "start": 5,
+        "length": 1,
+        "reading": "ゆき"
+      },
+      "1392580": {
+        "start": 3,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1392590": {
+        "start": 3,
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1589500": {
+        "start": 7,
+        "length": 2,
+        "reading": "おり"
+      },
+      "1631470": {
+        "start": 7,
+        "length": 2,
+        "reading": "おり"
+      }
+    }
+  },
+  {
+    "id": "200457",
+    "original": "とにかく雨さえ止めば、出かけられるだろう。",
+    "en": [
+      {
+        "id": "37658",
+        "text": "Anyway, if it just stops raining, then we might be able to go out."
+      }
+    ],
+    "indices": "兎に角{とにかく} 雨 さえ 止む{止めば} 出かける{出かけられる} だろう",
+    "vocabIds": [
+      "1171900",
+      "1310640",
+      "1310660",
+      "1598550"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 4,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1310640": {
+        "start": 7,
+        "length": 2,
+        "reading": "やめ"
+      },
+      "1310660": {
+        "start": 7,
+        "length": 2,
+        "reading": "やめ"
+      },
+      "1598550": {
+        "start": 11,
+        "length": 3,
+        "reading": "でかけ"
+      }
+    }
+  },
+  {
+    "id": "204786",
+    "original": "それまでに雨が止めば、私たちは２時に出発する。",
+    "en": [
+      {
+        "id": "42028",
+        "text": "We will start at two o'clock if it has stopped raining by that time."
+      }
+    ],
+    "indices": "其れ[01]{それ} 迄{まで} に 雨 が 止む{止めば} 私たち は 時(じ)[01] に 出発{出発する}",
+    "vocabIds": [
+      "1171900",
+      "1310640",
+      "1310660",
+      "1311110",
+      "1311300",
+      "2612170",
+      "1315840",
+      "2021540",
+      "1340000"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 5,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1310640": {
+        "start": 7,
+        "length": 2,
+        "reading": "やめ"
+      },
+      "1310660": {
+        "start": 7,
+        "length": 2,
+        "reading": "やめ"
+      },
+      "1311110": {
+        "start": 11,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 11,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1315840": {
+        "start": 16,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1340000": {
+        "start": 18,
+        "length": 2,
+        "reading": "しゅっぱつ"
+      },
+      "2021540": {
+        "start": 16,
+        "length": 2,
+        "reading": "じに"
+      },
+      "2612170": {
+        "start": 15,
+        "length": 2,
+        "reading": "にじ"
+      }
+    }
+  },
+  {
+    "id": "208571",
+    "original": "その赤ん坊は乳を飲まされてはじめて泣き止んだ。",
+    "en": [
+      {
+        "id": "45830",
+        "text": "It was not until the baby was fed that he stopped crying."
+      }
+    ],
+    "indices": "其の[01]{その} 赤ん坊 は 乳[01] を 飲ます{飲まされて} 初めて{はじめて} 泣き 止む{止んだ}",
+    "vocabIds": [
+      "1383310",
+      "1464980",
+      "1985180",
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 17,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 17,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 19,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1383310": {
+        "start": 2,
+        "length": 3,
+        "reading": "あかんぼう"
+      },
+      "1464980": {
+        "start": 6,
+        "length": 1,
+        "reading": "ちち"
+      },
+      "1985180": {
+        "start": 8,
+        "length": 3,
+        "reading": "のまさ"
+      }
+    }
+  },
+  {
+    "id": "208581",
+    "original": "その赤ん坊は一晩中泣いたり泣き止んだりした。",
+    "en": [
+      {
+        "id": "45840",
+        "text": "The baby cried on and off all night."
+      }
+    ],
+    "indices": "其の[01]{その} 赤ん坊 は 一晩中 泣く{泣いたり} 泣き 止む{止んだり} 為る(する){した}",
+    "vocabIds": [
+      "1383310",
+      "1160790",
+      "1165960",
+      "1611360",
+      "1482110",
+      "1423310",
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 6,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1165960": {
+        "start": 6,
+        "length": 2,
+        "reading": "いちばん"
+      },
+      "1229650": {
+        "start": 13,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 9,
+        "length": 2,
+        "reading": "ない"
+      },
+      "1310640": {
+        "start": 15,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1383310": {
+        "start": 2,
+        "length": 3,
+        "reading": "あかんぼう"
+      },
+      "1423310": {
+        "start": 8,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1482110": {
+        "start": 7,
+        "length": 1,
+        "reading": "ばん"
+      },
+      "1611360": {
+        "start": 6,
+        "length": 3,
+        "reading": "いちばんちゅう"
       }
     }
   },
@@ -794,24 +1753,28 @@
       "1171900",
       "1310640",
       "1311110",
-      "1896380"
+      "1598550"
     ],
     "matches": {
       "1171900": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1311110": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1896380": {
+      "1598550": {
         "start": 15,
-        "length": 1
+        "length": 4,
+        "reading": "でかけよ"
       }
     }
   },
@@ -834,19 +1797,23 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1598550": {
         "start": 12,
-        "length": 6
+        "length": 3,
+        "reading": "でかけ"
       }
     }
   },
@@ -870,27 +1837,207 @@
     "matches": {
       "1171900": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1312420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しあい"
       },
       "1360500": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "こころがけ"
       },
       "1428280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1463770": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
+      }
+    }
+  },
+  {
+    "id": "988074",
+    "original": "今日は一日中、雨が降っては止み、降っては止みする、はっきりしない天気だ。",
+    "en": [
+      {
+        "id": "1166653",
+        "text": "Today the weather was really changeable. The rain kept on stopping and starting all day long."
+      }
+    ],
+    "vocabIds": [
+      "1579110",
+      "1289400",
+      "1160790",
+      "1576260",
+      "1165500",
+      "1463770",
+      "1464250",
+      "1423310",
+      "1171900",
+      "1282790",
+      "1310640",
+      "1438690"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 3,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1165500": {
+        "start": 3,
+        "length": 3,
+        "reading": "いちにちちゅう"
+      },
+      "1171900": {
+        "start": 7,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 9,
+        "length": 2,
+        "reading": "ふっ"
+      },
+      "1289400": {
+        "start": 0,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1310640": {
+        "start": 13,
+        "length": 2,
+        "reading": "やみ"
+      },
+      "1423310": {
+        "start": 5,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1438690": {
+        "start": 32,
+        "length": 2,
+        "reading": "てんき"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464250": {
+        "start": 4,
+        "length": 2,
+        "reading": "にちちゅう"
+      },
+      "1576260": {
+        "start": 3,
+        "length": 2,
+        "reading": "いちにち"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      }
+    }
+  },
+  {
+    "id": "991761",
+    "original": "赤ちゃんは泣き止んだ。",
+    "en": [
+      {
+        "id": "272384",
+        "text": "The baby stopped crying."
+      }
+    ],
+    "vocabIds": [
+      "1383260",
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 5,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 5,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 7,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1383260": {
+        "start": 0,
+        "length": 4,
+        "reading": "あかちゃん"
+      }
+    }
+  },
+  {
+    "id": "5748770",
+    "original": "泣き止まないと犬の餌にするよ。",
+    "en": [
+      {
+        "id": "5748479",
+        "text": "Stop crying or I'll throw you to the dogs."
+      }
+    ],
+    "vocabIds": [
+      "1229840",
+      "1229650",
+      "1310640",
+      "2149250",
+      "1258330",
+      "1173340"
+    ],
+    "matches": {
+      "1173340": {
+        "start": 9,
+        "length": 1,
+        "reading": "えさ"
+      },
+      "1229650": {
+        "start": 0,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 0,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1258330": {
+        "start": 7,
+        "length": 1,
+        "reading": "いぬ"
+      },
+      "1310640": {
+        "start": 2,
+        "length": 2,
+        "reading": "やま"
+      },
+      "2149250": {
+        "start": 2,
+        "length": 4,
+        "reading": "やまない"
       }
     }
   },
@@ -907,24 +2054,34 @@
       "1171900",
       "1310640",
       "1577980",
+      "2258160",
       "1414150"
     ],
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
       },
       "1414150": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "だいじょうぶ"
       },
       "1577980": {
         "start": 9,
-        "length": 2
+        "length": 1,
+        "reading": "い"
+      },
+      "2258160": {
+        "start": 9,
+        "length": 1,
+        "reading": "い"
       }
     }
   },
@@ -944,11 +2101,52 @@
     "matches": {
       "1310640": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1386500": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ゆき"
+      }
+    }
+  },
+  {
+    "id": "9037408",
+    "original": "赤ん坊は泣き止んだ。",
+    "en": [
+      {
+        "id": "272384",
+        "text": "The baby stopped crying."
+      }
+    ],
+    "indices": "赤ん坊 は 泣き 止む{止んだ}",
+    "vocabIds": [
+      "1383310",
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 4,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 4,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 6,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1383310": {
+        "start": 0,
+        "length": 3,
+        "reading": "あかんぼう"
       }
     }
   },
@@ -968,11 +2166,147 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
+      }
+    }
+  },
+  {
+    "id": "9504385",
+    "original": "トムなら泣き止んだよ。",
+    "en": [
+      {
+        "id": "2238764",
+        "text": "Tom stopped crying."
+      }
+    ],
+    "vocabIds": [
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 4,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 4,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 6,
+        "length": 2,
+        "reading": "やん"
+      }
+    }
+  },
+  {
+    "id": "9504388",
+    "original": "トムがやっと泣き止んだよ。",
+    "en": [
+      {
+        "id": "6350655",
+        "text": "Tom has finally stopped crying."
+      }
+    ],
+    "vocabIds": [
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 6,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 6,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 8,
+        "length": 2,
+        "reading": "やん"
+      }
+    }
+  },
+  {
+    "id": "9504391",
+    "original": "トムならもう泣き止んでるよ。",
+    "en": [
+      {
+        "id": "6350667",
+        "text": "Tom has already stopped crying."
+      }
+    ],
+    "vocabIds": [
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 6,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 6,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 8,
+        "length": 2,
+        "reading": "やん"
+      }
+    }
+  },
+  {
+    "id": "9550136",
+    "original": "雪は降り止まなかった。",
+    "en": [
+      {
+        "id": "9550135",
+        "text": "It didn't stop snowing."
+      }
+    ],
+    "vocabIds": [
+      "1386500",
+      "1282790",
+      "1631470",
+      "1310640"
+    ],
+    "matches": {
+      "1282790": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふり"
+      },
+      "1310640": {
+        "start": 4,
+        "length": 2,
+        "reading": "やま"
+      },
+      "1386500": {
+        "start": 0,
+        "length": 1,
+        "reading": "ゆき"
+      },
+      "1631470": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふり"
       }
     }
   },
@@ -996,11 +2330,13 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       }
     }
   },
@@ -1028,23 +2364,28 @@
     "matches": {
       "1171900": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1340000": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       }
     }
   },
@@ -1060,25 +2401,35 @@
     "vocabIds": [
       "1386500",
       "1310640",
+      "1516930",
       "2160680",
       "1589350"
     ],
     "matches": {
       "1310640": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
       },
       "1386500": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ゆき"
+      },
+      "1516930": {
+        "start": 11,
+        "length": 1,
+        "reading": "ほう"
       },
       "1589350": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "2160680": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -1099,24 +2450,118 @@
       "1171900",
       "1310640",
       "1303620",
-      "2270390"
+      "1578850"
     ],
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1303620": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんぽ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
-      "2270390": {
+      "1578850": {
         "start": 10,
-        "length": 1
+        "length": 2,
+        "reading": "いこ"
+      }
+    }
+  },
+  {
+    "id": "10498866",
+    "original": "トムは泣き止まなかった。",
+    "en": [
+      {
+        "id": "10498859",
+        "text": "Tom didn't stop crying."
+      }
+    ],
+    "vocabIds": [
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 3,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 3,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 5,
+        "length": 2,
+        "reading": "やま"
+      }
+    }
+  },
+  {
+    "id": "10498867",
+    "original": "トムは泣き止みませんでした。",
+    "en": [
+      {
+        "id": "10498859",
+        "text": "Tom didn't stop crying."
+      }
+    ],
+    "vocabIds": [
+      "1229840",
+      "1229650",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 3,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 3,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 5,
+        "length": 2,
+        "reading": "やみ"
+      }
+    }
+  },
+  {
+    "id": "10746469",
+    "original": "雨は止みそうにないよ。",
+    "en": [
+      {
+        "id": "1214899",
+        "text": "It won't stop raining."
+      }
+    ],
+    "vocabIds": [
+      "1171900",
+      "1310640"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 0,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1310640": {
+        "start": 2,
+        "length": 2,
+        "reading": "やみ"
       }
     }
   },
@@ -1137,24 +2582,128 @@
       "1171900",
       "1310640",
       "1303620",
+      "1578850",
       "1578790"
     ],
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1303620": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんぽ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1578790": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 10,
+        "length": 2,
+        "reading": "いき"
+      }
+    }
+  },
+  {
+    "id": "10905796",
+    "original": "子供は泣き止んで落ち着いた。",
+    "en": [
+      {
+        "id": "2931691",
+        "text": "The child stopped crying and calmed down."
+      }
+    ],
+    "vocabIds": [
+      "1307850",
+      "1229840",
+      "1229650",
+      "1310640",
+      "1589220",
+      "1548580"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 3,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 3,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1307850": {
+        "start": 0,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1310640": {
+        "start": 5,
+        "length": 2,
+        "reading": "やん"
+      },
+      "1548580": {
+        "start": 8,
+        "length": 5,
+        "reading": "おちついた"
+      },
+      "1589220": {
+        "start": 8,
+        "length": 4,
+        "reading": "おちつい"
+      }
+    }
+  },
+  {
+    "id": "10973278",
+    "original": "早く雨が止まないかなぁ。",
+    "en": [
+      {
+        "id": "5593897",
+        "text": "I hope the rain stops soon."
+      }
+    ],
+    "vocabIds": [
+      "1404975",
+      "1400150",
+      "1171900",
+      "1310640",
+      "2149250"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 2,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1310640": {
+        "start": 4,
+        "length": 2,
+        "reading": "やま"
+      },
+      "1400150": {
+        "start": 0,
+        "length": 2,
+        "reading": "はやく"
+      },
+      "1404975": {
+        "start": 0,
+        "length": 2,
+        "reading": "はやく"
+      },
+      "2149250": {
+        "start": 4,
+        "length": 4,
+        "reading": "やまない"
       }
     }
   },
@@ -1170,25 +2719,41 @@
     "vocabIds": [
       "1463770",
       "1165500",
-      "2851949",
+      "1171900",
+      "1282790",
+      "2863079",
       "1310640"
     ],
     "matches": {
       "1165500": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いちにちじゅう"
+      },
+      "1171900": {
+        "start": 8,
+        "length": 1,
+        "reading": "う"
+      },
+      "1282790": {
+        "start": 10,
+        "length": 2,
+        "reading": "ふっ"
       },
       "1310640": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1463770": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
-      "2851949": {
-        "start": 8,
-        "length": 5
+      "2863079": {
+        "start": 10,
+        "length": 8,
+        "reading": "ふったりやんだり"
       }
     }
   },
@@ -1208,11 +2773,13 @@
     "matches": {
       "1171900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
       }
     }
   },
@@ -1227,16 +2794,56 @@
     ],
     "vocabIds": [
       "1171900",
-      "1310640"
+      "1310640",
+      "1410590"
     ],
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
+      },
+      "1410590": {
+        "start": 6,
+        "length": 2,
+        "reading": "まと"
+      }
+    }
+  },
+  {
+    "id": "11358030",
+    "original": "トムはもうすぐ泣き止むよ。",
+    "en": [
+      {
+        "id": "7127534",
+        "text": "Tom is going to stop crying soon."
+      }
+    ],
+    "vocabIds": [
+      "1229650",
+      "1652260",
+      "1310640"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 7,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1310640": {
+        "start": 9,
+        "length": 2,
+        "reading": "やむ"
+      },
+      "1652260": {
+        "start": 7,
+        "length": 4,
+        "reading": "なきやむ"
       }
     }
   },
@@ -1265,15 +2872,18 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やむ"
       },
       "1323080": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       }
     }
   },
@@ -1294,15 +2904,18 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1303620": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんぽ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       }
     }
   },
@@ -1322,11 +2935,13 @@
     "matches": {
       "1171900": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       }
     }
   },
@@ -1350,11 +2965,13 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       }
     }
   },
@@ -1378,11 +2995,13 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       }
     }
   },
@@ -1403,15 +3022,18 @@
     "matches": {
       "1171900": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
       },
       "1631370": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "いける"
       }
     }
   },
@@ -1427,20 +3049,29 @@
     "vocabIds": [
       "1171900",
       "1310640",
-      "1140420"
+      "1578850",
+      "1578790"
     ],
     "matches": {
-      "1140420": {
-        "start": 5,
-        "length": 2
-      },
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1310640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やん"
+      },
+      "1578790": {
+        "start": 6,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 6,
+        "length": 2,
+        "reading": "いき"
       }
     }
   }

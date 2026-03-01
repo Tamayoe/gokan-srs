@@ -16,40 +16,57 @@
     "matches": {
       "1382440": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
       },
       "1411030": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こけ"
       },
       "1441000": {
         "start": 1,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
       }
     }
   },
   {
-    "id": "124950",
-    "original": "転石苔むさず。",
+    "id": "124949",
+    "original": "転石苔を生ぜず。",
     "en": [
       {
         "id": "279026",
         "text": "A rolling stone gathers no moss."
       }
     ],
-    "indices": "転石~ 苔むす{苔むさず}~",
+    "indices": "転石苔を生ぜず",
     "vocabIds": [
       "2082000",
-      "1411030"
+      "1637640",
+      "1411030",
+      "1378660"
     ],
     "matches": {
+      "1378660": {
+        "start": 4,
+        "length": 2,
+        "reading": "しょうぜ"
+      },
       "1411030": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "こけ"
+      },
+      "1637640": {
+        "start": 0,
+        "length": 7,
+        "reading": "てんせきこけをしょうぜず"
       },
       "2082000": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "てんせき"
       }
     }
   },
@@ -67,24 +84,28 @@
       "1441000",
       "1382440",
       "1411030",
-      "1378440"
+      "1378490"
     ],
     "matches": {
-      "1378440": {
+      "1378490": {
         "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "はえ"
       },
       "1382440": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
       },
       "1411030": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こけ"
       },
       "1441000": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
       }
     }
   },
@@ -106,15 +127,18 @@
     "matches": {
       "1382440": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
       },
       "1411030": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こけ"
       },
       "1441000": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
       }
     }
   },
@@ -131,89 +155,128 @@
     "vocabIds": [
       "1411030",
       "1445790",
+      "1445780",
       "1216560",
-      "1217270",
-      "1352130",
       "1391930",
       "1555300",
+      "2039460",
       "1885460",
+      "1533820",
       "1311110",
+      "1360480",
       "2847477",
+      "1423310",
       "1589350"
     ],
     "matches": {
       "1216560": {
         "start": 6,
-        "length": 2
-      },
-      "1217270": {
-        "start": 9,
-        "length": 1
+        "length": 2,
+        "reading": "まるた"
       },
       "1311110": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1352130": {
-        "start": 11,
-        "length": 1
+      "1360480": {
+        "start": 24,
+        "length": 1,
+        "reading": "こころ"
       },
       "1391930": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "せんさい"
       },
       "1411030": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "こけ"
+      },
+      "1423310": {
+        "start": 26,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1445780": {
+        "start": 3,
+        "length": 2,
+        "reading": "たおれ"
       },
       "1445790": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "たおれ"
+      },
+      "1533820": {
+        "start": 19,
+        "length": 1,
+        "reading": "け"
       },
       "1555300": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "みどり"
       },
       "1589350": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "1885460": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "やわらけ"
+      },
+      "2039460": {
+        "start": 18,
+        "length": 1,
+        "reading": "やわら"
       },
       "2847477": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "こころのなか"
       }
     }
   },
   {
-    "id": "2294453",
-    "original": "転がる石に苔むさず。",
+    "id": "236222",
+    "original": "「転石苔を生ぜず」はことわざである。",
     "en": [
       {
-        "id": "279026",
-        "text": "A rolling stone gathers no moss."
+        "id": "73598",
+        "text": "\"A rolling stone gathers no moss\" is a saying."
       }
     ],
+    "indices": "転石苔を生ぜず~ は 諺{ことわざ} である",
     "vocabIds": [
-      "1441000",
-      "1382440",
-      "1411030"
+      "2082000",
+      "1637640",
+      "1411030",
+      "1378660"
     ],
     "matches": {
-      "1382440": {
-        "start": 3,
-        "length": 1
+      "1378660": {
+        "start": 5,
+        "length": 2,
+        "reading": "しょうぜ"
       },
       "1411030": {
-        "start": 5,
-        "length": 1
+        "start": 3,
+        "length": 1,
+        "reading": "こけ"
       },
-      "1441000": {
-        "start": 0,
-        "length": 3
+      "1637640": {
+        "start": 1,
+        "length": 7,
+        "reading": "てんせきこけをしょうぜず"
+      },
+      "2082000": {
+        "start": 1,
+        "length": 2,
+        "reading": "てんせき"
       }
     }
   }

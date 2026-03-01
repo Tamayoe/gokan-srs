@@ -1,5 +1,56 @@
 [
   {
+    "id": "189356",
+    "original": "きょうは雲行きが怪しいので波乗りを遠慮したほうがいいと思う。",
+    "en": [
+      {
+        "id": "26504",
+        "text": "Since it's cloudy with a chance of rain today, we shouldn't go surfing."
+      }
+    ],
+    "indices": "雲行き が 怪しい[01]",
+    "vocabIds": [
+      "1173160",
+      "2122910",
+      "1586700",
+      "1471010",
+      "1178450",
+      "1589350"
+    ],
+    "matches": {
+      "1173160": {
+        "start": 4,
+        "length": 3,
+        "reading": "くもゆき"
+      },
+      "1178450": {
+        "start": 17,
+        "length": 2,
+        "reading": "えんりょ"
+      },
+      "1471010": {
+        "start": 13,
+        "length": 3,
+        "reading": "なみのり"
+      },
+      "1586700": {
+        "start": 8,
+        "length": 3,
+        "reading": "あやしい"
+      },
+      "1589350": {
+        "start": 27,
+        "length": 2,
+        "reading": "おもう"
+      },
+      "2122910": {
+        "start": 4,
+        "length": 7,
+        "reading": "くもゆきがあやしい"
+      }
+    }
+  },
+  {
     "id": "189357",
     "original": "雲行きが悪くなる。",
     "en": [
@@ -11,16 +62,91 @@
     "indices": "雲行き~ が 悪い(わるい){悪く} 成る[01]{なる}",
     "vocabIds": [
       "1173160",
+      "1151260",
       "2691760"
     ],
     "matches": {
+      "1151260": {
+        "start": 4,
+        "length": 2,
+        "reading": "わるく"
+      },
       "1173160": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "くもゆき"
       },
       "2691760": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "わるくなる"
+      }
+    }
+  },
+  {
+    "id": "422020",
+    "original": "今日は雲行きが怪しいです。お花見が中止にならないか心配です。",
+    "en": [
+      {
+        "id": "422024",
+        "text": "I don't like the look of the weather today. I'm worried the hanami party might be cancelled."
+      },
+      {
+        "id": "646961",
+        "text": "It looks like it may rain today. I'm worried that our cherry-blossom-viewing party might be canceled."
+      }
+    ],
+    "indices": "今日 は 雲行きが怪しい[01]~ です 御(お){お} 花見 が 中止[02] に 成る{ならない} か 心配 です",
+    "vocabIds": [
+      "1579110",
+      "1289400",
+      "1173160",
+      "2122910",
+      "1586700",
+      "1194660",
+      "1424410",
+      "1360930"
+    ],
+    "matches": {
+      "1173160": {
+        "start": 3,
+        "length": 3,
+        "reading": "くもゆき"
+      },
+      "1194660": {
+        "start": 14,
+        "length": 2,
+        "reading": "はなみ"
+      },
+      "1289400": {
+        "start": 0,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1360930": {
+        "start": 25,
+        "length": 2,
+        "reading": "しんぱい"
+      },
+      "1424410": {
+        "start": 17,
+        "length": 2,
+        "reading": "ちゅうし"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1586700": {
+        "start": 7,
+        "length": 3,
+        "reading": "あやしい"
+      },
+      "2122910": {
+        "start": 3,
+        "length": 7,
+        "reading": "くもゆきがあやしい"
       }
     }
   },
@@ -35,36 +161,48 @@
     ],
     "vocabIds": [
       "1173160",
-      "1955890",
+      "1586700",
       "1301940",
       "1315720",
       "1598550",
+      "1516930",
       "2160680"
     ],
     "matches": {
       "1173160": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "くもゆき"
       },
       "1301940": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "かさ"
       },
       "1315720": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
+      },
+      "1516930": {
+        "start": 27,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1586700": {
+        "start": 8,
+        "length": 3,
+        "reading": "あやしく"
       },
       "1598550": {
         "start": 23,
-        "length": 4
-      },
-      "1955890": {
-        "start": 8,
-        "length": 1
+        "length": 3,
+        "reading": "でかけ"
       },
       "2160680": {
         "start": 27,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -103,16 +241,18 @@
     ],
     "vocabIds": [
       "1173160",
-      "1955890"
+      "1586700"
     ],
     "matches": {
       "1173160": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "くもゆき"
       },
-      "1955890": {
+      "1586700": {
         "start": 4,
-        "length": 1
+        "length": 3,
+        "reading": "あやしく"
       }
     }
   },
@@ -140,11 +280,13 @@
     "matches": {
       "1171900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1173160": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "くもゆき"
       }
     }
   }

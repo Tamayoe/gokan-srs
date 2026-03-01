@@ -16,11 +16,13 @@
     "matches": {
       "1227170": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぎゃくてん"
       },
       "1250350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいせい"
       }
     }
   },
@@ -38,29 +40,46 @@
       "1250350",
       "1409800",
       "1495220",
+      "1609560",
       "1346140",
+      "1604890",
       "1479890"
     ],
     "matches": {
       "1250350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいせい"
       },
       "1346140": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "かちめ"
       },
       "1409800": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "たい"
       },
       "1479890": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "はんぶん"
       },
       "1495220": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ふり"
+      },
+      "1604890": {
+        "start": 12,
+        "length": 1,
+        "reading": "め"
+      },
+      "1609560": {
+        "start": 10,
+        "length": 2,
+        "reading": "かち"
       }
     }
   },
@@ -75,32 +94,49 @@
     ],
     "indices": "気楽に行こう~ ぜ 大丈夫(だいじょうぶ) 形勢 は 君(きみ)[01] に 有利 なのだ から",
     "vocabIds": [
+      "1222010",
       "2016960",
+      "1578850",
       "1414150",
       "1250350",
       "1247250",
       "1605720"
     ],
     "matches": {
+      "1222010": {
+        "start": 0,
+        "length": 2,
+        "reading": "きらく"
+      },
       "1247250": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1250350": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "けいせい"
       },
       "1414150": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "だいじょうぶ"
+      },
+      "1578850": {
+        "start": 3,
+        "length": 2,
+        "reading": "いこ"
       },
       "1605720": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうり"
       },
       "2016960": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "きらくにいこう"
       }
     }
   },
@@ -116,16 +152,24 @@
     "indices": "其れで{それで} 形勢 が 変わる{変わった}",
     "vocabIds": [
       "1250350",
+      "1510790",
       "1510690"
     ],
     "matches": {
       "1250350": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいせい"
       },
       "1510690": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "かわった"
+      },
+      "1510790": {
+        "start": 6,
+        "length": 3,
+        "reading": "かわっ"
       }
     }
   },
@@ -147,15 +191,81 @@
     "matches": {
       "1247250": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1250350": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "けいせい"
       },
       "1605720": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうり"
+      }
+    }
+  },
+  {
+    "id": "235433",
+    "original": "２人を比較すると彼の方が形勢不利だった。",
+    "en": [
+      {
+        "id": "72811",
+        "text": "The comparison between the two was to his disadvantage."
+      }
+    ],
+    "indices": "二人{２人} を 比較 為る(する){する} と 彼(かれ)[01] の 方(ほう) が 形勢 不利 だ{だった}",
+    "vocabIds": [
+      "1580640",
+      "1483560",
+      "1483070",
+      "1000420",
+      "1516930",
+      "1250350",
+      "2044460",
+      "1495220"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 8,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1250350": {
+        "start": 12,
+        "length": 2,
+        "reading": "けいせい"
+      },
+      "1483070": {
+        "start": 8,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483560": {
+        "start": 3,
+        "length": 2,
+        "reading": "ひかく"
+      },
+      "1495220": {
+        "start": 14,
+        "length": 2,
+        "reading": "ふり"
+      },
+      "1516930": {
+        "start": 10,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
+      },
+      "2044460": {
+        "start": 12,
+        "length": 4,
+        "reading": "けいせいふり"
       }
     }
   },
@@ -177,19 +287,23 @@
     "matches": {
       "1247250": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1250350": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "けいせい"
       },
       "1414150": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "だいじょうぶ"
       },
       "1605720": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうり"
       }
     }
   }

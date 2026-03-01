@@ -18,19 +18,23 @@
     "matches": {
       "1326600": {
         "start": 17,
-        "length": 6
+        "length": 5,
+        "reading": "とりかかっ"
       },
       "1351600": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しょうこ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2082280": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "あつめ"
       }
     }
   },
@@ -47,25 +51,35 @@
     "vocabIds": [
       "1483070",
       "1361490",
+      "1522150",
       "2849135",
       "1326600"
     ],
     "matches": {
       "1326600": {
         "start": 7,
-        "length": 6
+        "length": 5,
+        "reading": "とりかかっ"
       },
       "1361490": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1522150": {
+        "start": 5,
+        "length": 1,
+        "reading": "ほん"
       },
       "2849135": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ほんに"
       }
     }
   },
@@ -81,26 +95,36 @@
     "indices": "彼(かれ)[01] は 腰を据える{腰を据えて} 仕事[01] に 取り掛かる{取り掛かった}",
     "vocabIds": [
       "1483070",
-      "1876650",
+      "1288340",
+      "1373480",
       "1304970",
       "1326600"
     ],
     "matches": {
+      "1288340": {
+        "start": 2,
+        "length": 1,
+        "reading": "こし"
+      },
       "1304970": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1326600": {
         "start": 10,
-        "length": 6
+        "length": 5,
+        "reading": "とりかかっ"
+      },
+      "1373480": {
+        "start": 4,
+        "length": 2,
+        "reading": "すえ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
-      },
-      "1876650": {
-        "start": 2,
-        "length": 5
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -120,32 +144,44 @@
       "1364360",
       "1304970",
       "1326600",
+      "1288850",
       "1587590"
     ],
     "matches": {
+      "1288850": {
+        "start": 18,
+        "length": 1,
+        "reading": "いま"
+      },
       "1304970": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1326600": {
         "start": 11,
-        "length": 5
+        "length": 5,
+        "reading": "とりかかる"
       },
       "1364360": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "まじめ"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1587590": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       }
     }
   },
@@ -167,15 +203,18 @@
     "matches": {
       "1304970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1326600": {
         "start": 5,
-        "length": 6
+        "length": 5,
+        "reading": "とりかかっ"
       },
       "1483150": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -198,19 +237,77 @@
     "matches": {
       "1304970": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1326600": {
         "start": 13,
-        "length": 6
+        "length": 5,
+        "reading": "とりかかっ"
       },
       "1396390": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんりょく"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      }
+    }
+  },
+  {
+    "id": "216876",
+    "original": "さあ仕事に取り掛かろう。",
+    "en": [
+      {
+        "id": "54182",
+        "text": "Let's get down to work."
+      }
+    ],
+    "indices": "さあ 仕事[01] に 取り掛かる{取り掛かろう}",
+    "vocabIds": [
+      "1304970",
+      "1326600"
+    ],
+    "matches": {
+      "1304970": {
+        "start": 2,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1326600": {
+        "start": 5,
+        "length": 5,
+        "reading": "とりかかろ"
+      }
+    }
+  },
+  {
+    "id": "216934",
+    "original": "さあ、仕事に取り掛からなきゃ。",
+    "en": [
+      {
+        "id": "31368",
+        "text": "Now I must go about my work."
+      }
+    ],
+    "indices": "さあ 仕事[01] に 取り掛かる{取り掛から} 無きゃ[03]{なきゃ}",
+    "vocabIds": [
+      "1304970",
+      "1326600"
+    ],
+    "matches": {
+      "1304970": {
+        "start": 3,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1326600": {
+        "start": 6,
+        "length": 5,
+        "reading": "とりかから"
       }
     }
   },
@@ -224,6 +321,7 @@
       }
     ],
     "vocabIds": [
+      "1522370",
       "2827682",
       "1326600",
       "1341670"
@@ -231,15 +329,23 @@
     "matches": {
       "1326600": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "とりかかる"
       },
       "1341670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じゅんび"
+      },
+      "1522370": {
+        "start": 0,
+        "length": 2,
+        "reading": "ほんき"
       },
       "2827682": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ほんきで"
       }
     }
   }

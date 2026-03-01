@@ -1,5 +1,56 @@
 [
   {
+    "id": "74061",
+    "original": "たまには偏差値の高い人とレベルの高い会話してみたい。",
+    "en": [
+      {
+        "id": "329659",
+        "text": "I like to have a deep conversation with a more academic person from time to time."
+      }
+    ],
+    "indices": "偶に{たまに} は 偏差値~ の 高い 人(ひと) と レベル(#1145910)[01] の 高い 会話 為る(する){して} 見る{み} たい",
+    "vocabIds": [
+      "1510450",
+      "1611480",
+      "1581630",
+      "1283190",
+      "1580640",
+      "1198880"
+    ],
+    "matches": {
+      "1198880": {
+        "start": 18,
+        "length": 2,
+        "reading": "かいわ"
+      },
+      "1283190": {
+        "start": 8,
+        "length": 2,
+        "reading": "たかい"
+      },
+      "1510450": {
+        "start": 4,
+        "length": 2,
+        "reading": "へんさ"
+      },
+      "1580640": {
+        "start": 10,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1581630": {
+        "start": 6,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1611480": {
+        "start": 4,
+        "length": 3,
+        "reading": "へんさち"
+      }
+    }
+  },
+  {
     "id": "74326",
     "original": "カウンターの値が指定の「キリ番」になったら記念メッセージを表示させます。",
     "en": [
@@ -13,29 +64,115 @@
       "1581630",
       "1309910",
       "2206350",
+      "2022640",
       "1223340",
       "1489610"
     ],
     "matches": {
       "1223340": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "きねん"
       },
       "1309910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "してい"
       },
       "1489610": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "ひょうじ"
       },
       "1581630": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
+      },
+      "2022640": {
+        "start": 14,
+        "length": 1,
+        "reading": "ばん"
       },
       "2206350": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "きりばん"
+      }
+    }
+  },
+  {
+    "id": "75302",
+    "original": "魔力(Ｍａｇｉｃ)：魔法を使うために必要な能力値。 魔法を使うと減少するが、時間で回復する。",
+    "en": [
+      {
+        "id": "328417",
+        "text": "MP (magic): Ability score needed to use magic. As you use magic it drops, but with time it recovers."
+      }
+    ],
+    "indices": "魔力 魔法 を 使う 為に{ために} 必要[01]{必要な} 能力(のうりょく) 値(あたい)[03]~ 魔法 を[01] 使う と 減少 為る(する){する} が 時間 で(#2028980) 回復[02] 為る(する){する}",
+    "vocabIds": [
+      "1524280",
+      "1524230",
+      "1305990",
+      "1487660",
+      "1470370",
+      "2242670",
+      "1581630",
+      "1263210",
+      "1315920",
+      "1199720"
+    ],
+    "matches": {
+      "1199720": {
+        "start": 41,
+        "length": 2,
+        "reading": "かいふく"
+      },
+      "1263210": {
+        "start": 32,
+        "length": 2,
+        "reading": "げんしょう"
+      },
+      "1305990": {
+        "start": 13,
+        "length": 2,
+        "reading": "つかう"
+      },
+      "1315920": {
+        "start": 38,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1470370": {
+        "start": 21,
+        "length": 2,
+        "reading": "のうりょく"
+      },
+      "1487660": {
+        "start": 18,
+        "length": 2,
+        "reading": "ひつよう"
+      },
+      "1524230": {
+        "start": 10,
+        "length": 2,
+        "reading": "まほう"
+      },
+      "1524280": {
+        "start": 0,
+        "length": 2,
+        "reading": "まりょく"
+      },
+      "1581630": {
+        "start": 23,
+        "length": 1,
+        "reading": "ち"
+      },
+      "2242670": {
+        "start": 21,
+        "length": 3,
+        "reading": "のうりょくち"
       }
     }
   },
@@ -55,8 +192,10 @@
       "1451750",
       "1581630",
       "1207880",
+      "1606820",
       "1538390",
       "1157510",
+      "1279680",
       "1866610",
       "1512500",
       "1313580"
@@ -64,43 +203,120 @@
     "matches": {
       "1157510": {
         "start": 31,
-        "length": 4
+        "length": 3,
+        "reading": "ことなっ"
       },
       "1207880": {
         "start": 20,
-        "length": 6
+        "length": 4,
+        "reading": "わりあて"
+      },
+      "1279680": {
+        "start": 38,
+        "length": 2,
+        "reading": "かまわ"
       },
       "1313580": {
         "start": 58,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1405720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぞくせい"
       },
       "1451750": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
       "1497190": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ふつう"
       },
       "1512500": {
         "start": 43,
-        "length": 3
+        "length": 3,
+        "reading": "べんぎじょう"
       },
       "1538390": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "やくちゅう"
       },
       "1581630": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
+      },
+      "1606820": {
+        "start": 20,
+        "length": 4,
+        "reading": "わりあて"
       },
       "1866610": {
         "start": 38,
-        "length": 4
+        "length": 4,
+        "reading": "かまわない"
+      }
+    }
+  },
+  {
+    "id": "76035",
+    "original": "周波数の平均値は振幅の増大にしたがって減じる。",
+    "en": [
+      {
+        "id": "327683",
+        "text": "The mean value of the frequency decreases with increasing amplitude."
+      }
+    ],
+    "indices": "周波数~ の 平均値~ は 振幅~ の 増大 に 従って{したがって} 減じる",
+    "vocabIds": [
+      "1331260",
+      "1583870",
+      "1507210",
+      "1581630",
+      "1361440",
+      "1403310",
+      "2008020"
+    ],
+    "matches": {
+      "1331260": {
+        "start": 0,
+        "length": 3,
+        "reading": "しゅうはすう"
+      },
+      "1361440": {
+        "start": 8,
+        "length": 2,
+        "reading": "しんぷく"
+      },
+      "1403310": {
+        "start": 11,
+        "length": 2,
+        "reading": "ぞうだい"
+      },
+      "1507210": {
+        "start": 4,
+        "length": 3,
+        "reading": "へいきんち"
+      },
+      "1581630": {
+        "start": 6,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1583870": {
+        "start": 4,
+        "length": 2,
+        "reading": "へいきん"
+      },
+      "2008020": {
+        "start": 19,
+        "length": 3,
+        "reading": "げんじる"
       }
     }
   },
@@ -118,164 +334,94 @@
       "1198660",
       "1422970",
       "1400300",
+      "1418160",
       "1418180",
+      "1322990",
       "1202270",
       "1347710",
       "1487400",
       "1581630",
       "1352290",
-      "1956230",
-      "1250210"
+      "1587040",
+      "1250190",
+      "1250210",
+      "2037940"
     ],
     "matches": {
       "1198660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいじょう"
       },
       "1202270": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "え"
+      },
+      "1250190": {
+        "start": 38,
+        "length": 2,
+        "reading": "けいやく"
       },
       "1250210": {
         "start": 38,
-        "length": 3
+        "length": 3,
+        "reading": "けいやくしょ"
+      },
+      "1322990": {
+        "start": 10,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1347710": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "しょうらい"
       },
       "1352290": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "あがる"
       },
       "1400300": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さっそく"
+      },
+      "1418160": {
+        "start": 8,
+        "length": 2,
+        "reading": "たんとう"
       },
       "1418180": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "たんとうしゃ"
       },
       "1422970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "つく"
       },
       "1487400": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "かならず"
       },
       "1581630": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       },
-      "1956230": {
+      "1587040": {
         "start": 34,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "94426",
-    "original": "彼女の行いは軽蔑するにも値しない。",
-    "en": [
-      {
-        "id": "309280",
-        "text": "Her behavior is beneath contempt."
-      }
-    ],
-    "indices": "彼女[01]{彼女の} 行い は 軽蔑{軽蔑する} にも 値する{値しない}",
-    "vocabIds": [
-      "1483150",
-      "1589050",
-      "1252860",
-      "1581630"
-    ],
-    "matches": {
-      "1252860": {
-        "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いわ"
       },
-      "1483150": {
-        "start": 0,
-        "length": 2
-      },
-      "1581630": {
-        "start": 12,
-        "length": 1
-      },
-      "1589050": {
-        "start": 3,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "94672",
-    "original": "彼女のばかげた考えは注目にも値しない。",
-    "en": [
-      {
-        "id": "309034",
-        "text": "Her foolish idea is beneath notice."
-      }
-    ],
-    "indices": "彼女[01]{彼女の} 馬鹿げる{ばかげた} 考え は 注目 にも 値する{値しない}",
-    "vocabIds": [
-      "1483150",
-      "1281000",
-      "1426670",
-      "1581630"
-    ],
-    "matches": {
-      "1281000": {
-        "start": 7,
-        "length": 2
-      },
-      "1426670": {
-        "start": 10,
-        "length": 2
-      },
-      "1483150": {
-        "start": 0,
-        "length": 2
-      },
-      "1581630": {
-        "start": 14,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "96067",
-    "original": "彼らは与えられた賞賛に値しない。",
-    "en": [
-      {
-        "id": "307638",
-        "text": "They are unworthy of the praise given them."
-      }
-    ],
-    "indices": "彼ら(かれら) は 与える[01]{与えられた} 賞賛 に 値する{値しない}",
-    "vocabIds": [
-      "1483090",
-      "1544720",
-      "1594920",
-      "1581630"
-    ],
-    "matches": {
-      "1483090": {
-        "start": 0,
-        "length": 2
-      },
-      "1544720": {
-        "start": 3,
-        "length": 2
-      },
-      "1581630": {
-        "start": 11,
-        "length": 1
-      },
-      "1594920": {
-        "start": 8,
-        "length": 2
+      "2037940": {
+        "start": 40,
+        "length": 1,
+        "reading": "しょ"
       }
     }
   },
@@ -298,19 +444,23 @@
     "matches": {
       "1184170": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "さげる"
       },
       "1451850": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "どうい"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1581630": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -333,139 +483,23 @@
     "matches": {
       "1202270": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "え"
       },
       "1283190": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たかい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1581630": {
         "start": 12,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "116853",
-    "original": "彼の振る舞いは批判にも値しない。",
-    "en": [
-      {
-        "id": "286815",
-        "text": "His behavior is beneath criticism."
-      }
-    ],
-    "indices": "彼(かれ)[01]{彼の} 振る舞い は 批判 にも 値する{値しない}",
-    "vocabIds": [
-      "1000420",
-      "1952740",
-      "1483420",
-      "1581630"
-    ],
-    "matches": {
-      "1000420": {
-        "start": 0,
-        "length": 2
-      },
-      "1483420": {
-        "start": 7,
-        "length": 2
-      },
-      "1581630": {
-        "start": 11,
-        "length": 1
-      },
-      "1952740": {
-        "start": 2,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "117624",
-    "original": "彼の言うことは一言も聞くに値しない。",
-    "en": [
-      {
-        "id": "286040",
-        "text": "Not a word he says is worthy to be heard."
-      }
-    ],
-    "indices": "彼(かれ) の 言う 事(こと){こと} は 一言 も 聞く に 値する{値しない}",
-    "vocabIds": [
-      "1000420",
-      "1587040",
-      "1575990",
-      "1591110",
-      "1581630"
-    ],
-    "matches": {
-      "1000420": {
-        "start": 0,
-        "length": 2
-      },
-      "1575990": {
-        "start": 7,
-        "length": 2
-      },
-      "1581630": {
-        "start": 13,
-        "length": 1
-      },
-      "1587040": {
-        "start": 2,
-        "length": 2
-      },
-      "1591110": {
-        "start": 10,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "124164",
-    "original": "東京証券取引所は後場の終わり値になって持ち直しました。",
-    "en": [
-      {
-        "id": "279830",
-        "text": "The Tokyo Stock Exchange rallied at the end of the day."
-      }
-    ],
-    "indices": "東京 証券 取引 所(ところ) は 後場~ の 終値{終わり値} になる{になって} 持ち直す[01]{持ち直しました}~",
-    "vocabIds": [
-      "1999080",
-      "1269780",
-      "1589590",
-      "1581630",
-      "1612060",
-      "1430650"
-    ],
-    "matches": {
-      "1269780": {
-        "start": 8,
-        "length": 2
-      },
-      "1430650": {
-        "start": 21,
-        "length": 2
-      },
-      "1581630": {
-        "start": 14,
-        "length": 1
-      },
-      "1589590": {
-        "start": 11,
-        "length": 3
-      },
-      "1612060": {
-        "start": 19,
-        "length": 2
-      },
-      "1999080": {
-        "start": 0,
-        "length": 7
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -486,11 +520,112 @@
     "matches": {
       "1184160": {
         "start": 2,
-        "length": 5
+        "length": 3,
+        "reading": "さがら"
       },
       "1581630": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
+      }
+    }
+  },
+  {
+    "id": "143894",
+    "original": "図１中のグラフは各学年の白人と黒人の総計点の平均値の相違を示している。",
+    "en": [
+      {
+        "id": "270672",
+        "text": "The graph in Figure 1 illustrates the differences in the means of total scores for white and black subject in each grade."
+      }
+    ],
+    "indices": "図 中(ちゅう) の グラフ は 各(かく) 学年 の 白人(はくじん)[01] と 黒人 の 総計 点(てん) の 平均値 の 相違 を 示す{示している}",
+    "vocabIds": [
+      "1370320",
+      "1423310",
+      "1204860",
+      "1207030",
+      "1475250",
+      "1287830",
+      "1401540",
+      "1007860",
+      "1583870",
+      "1507210",
+      "1581630",
+      "1400820",
+      "1317110",
+      "1853460"
+    ],
+    "matches": {
+      "1007860": {
+        "start": 20,
+        "length": 1,
+        "reading": "てん"
+      },
+      "1204860": {
+        "start": 8,
+        "length": 1,
+        "reading": "かく"
+      },
+      "1207030": {
+        "start": 9,
+        "length": 2,
+        "reading": "がくねん"
+      },
+      "1287830": {
+        "start": 15,
+        "length": 2,
+        "reading": "こくじん"
+      },
+      "1317110": {
+        "start": 29,
+        "length": 2,
+        "reading": "しめし"
+      },
+      "1370320": {
+        "start": 0,
+        "length": 1,
+        "reading": "ず"
+      },
+      "1400820": {
+        "start": 26,
+        "length": 2,
+        "reading": "そうい"
+      },
+      "1401540": {
+        "start": 18,
+        "length": 2,
+        "reading": "そうけい"
+      },
+      "1423310": {
+        "start": 2,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1475250": {
+        "start": 12,
+        "length": 2,
+        "reading": "はくじん"
+      },
+      "1507210": {
+        "start": 22,
+        "length": 3,
+        "reading": "へいきんち"
+      },
+      "1581630": {
+        "start": 24,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1583870": {
+        "start": 22,
+        "length": 2,
+        "reading": "へいきん"
+      },
+      "1853460": {
+        "start": 29,
+        "length": 2,
+        "reading": "しめし"
       }
     }
   },
@@ -513,64 +648,23 @@
     "matches": {
       "1219910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きぼう"
       },
       "1473950": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "うっ"
       },
       "1581630": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       },
       "1605230": {
         "start": 0,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "154627",
-    "original": "私は売り値が赤インクで書かれているのに気づいた。",
-    "en": [
-      {
-        "id": "259913",
-        "text": "I noticed the sale prices were written in red ink."
-      }
-    ],
-    "indices": "私(わたし)[01] は 売り値~ が 赤[01] インク で(#2028980) 書く{書かれている} のに 気付く{気づいた}",
-    "vocabIds": [
-      "1311110",
-      "1854880",
-      "1581630",
-      "2013900",
-      "2037940",
-      "1591330"
-    ],
-    "matches": {
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1581630": {
-        "start": 4,
-        "length": 1
-      },
-      "1591330": {
-        "start": 19,
-        "length": 4
-      },
-      "1854880": {
-        "start": 2,
-        "length": 2
-      },
-      "2013900": {
-        "start": 6,
-        "length": 1
-      },
-      "2037940": {
-        "start": 11,
-        "length": 1
+        "length": 3,
+        "reading": "もちぬし"
       }
     }
   },
@@ -592,15 +686,18 @@
     "matches": {
       "1265070": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ふるい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1581630": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -615,6 +712,7 @@
     ],
     "indices": "今日 で(#2028980) は 手作り{手作りの} 商品 の 値(あたい)[01] が 高い[02]",
     "vocabIds": [
+      "1579110",
       "2553140",
       "1598360",
       "1347310",
@@ -624,23 +722,33 @@
     "matches": {
       "1283190": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "たかい"
       },
       "1347310": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しょうひん"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       },
       "1581630": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       },
       "1598360": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "てづくり"
       },
       "2553140": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "きょうでは"
       }
     }
   },
@@ -663,28 +771,39 @@
       "1323080",
       "1283190",
       "1581630",
+      "1495770",
       "1495750"
     ],
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1283190": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たかい"
       },
       "1323080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1495750": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "つけ"
+      },
+      "1495770": {
+        "start": 9,
+        "length": 2,
+        "reading": "つけ"
       },
       "1581630": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -700,56 +819,90 @@
     "indices": "企業 の 好業績~ 発表 を 受ける{受けて} 株価 は 活発{活発な} 取引 の 中(なか) で(#2028980) 値(あたい)[01] を 上げる[03]{上げた}",
     "vocabIds": [
       "1218190",
+      "2414420",
       "2081000",
+      "1239460",
       "1477840",
       "1329590",
+      "1659120",
       "1208950",
       "1208410",
       "1599120",
       "1423310",
       "1581630",
-      "1352320"
+      "1352320",
+      "1352300"
     ],
     "matches": {
       "1208410": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "かっぱつ"
       },
       "1208950": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かぶか"
       },
       "1218190": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きぎょう"
+      },
+      "1239460": {
+        "start": 4,
+        "length": 2,
+        "reading": "ぎょうせき"
       },
       "1329590": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "うけ"
+      },
+      "1352300": {
+        "start": 25,
+        "length": 2,
+        "reading": "あげ"
       },
       "1352320": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "あげ"
       },
       "1423310": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1477840": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はっぴょう"
       },
       "1581630": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       },
       "1599120": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "とりひき"
+      },
+      "1659120": {
+        "start": 9,
+        "length": 2,
+        "reading": "うけ"
       },
       "2081000": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "こうぎょうせき"
+      },
+      "2414420": {
+        "start": 3,
+        "length": 1,
+        "reading": "こう"
       }
     }
   },
@@ -773,53 +926,28 @@
     "matches": {
       "1009800": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "にたいして"
       },
       "1175570": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1184170": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "さげる"
       },
       "1581630": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       },
       "1604480": {
         "start": 13,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "194831",
-    "original": "メアリーはあなたの信頼を受けるに値しなかった。",
-    "en": [
-      {
-        "id": "32005",
-        "text": "Mary was not worthy of your trust."
-      }
-    ],
-    "indices": "は 貴方(あなた)[01]{あなた} の 信頼 を 受ける に 値する{値しなかった}",
-    "vocabIds": [
-      "1359730",
-      "1329590",
-      "1581630"
-    ],
-    "matches": {
-      "1329590": {
-        "start": 12,
-        "length": 3
-      },
-      "1359730": {
-        "start": 9,
-        "length": 2
-      },
-      "1581630": {
-        "start": 16,
-        "length": 1
+        "length": 3,
+        "reading": "みこみ"
       }
     }
   },
@@ -840,11 +968,13 @@
     "matches": {
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1581630": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -861,54 +991,95 @@
     "vocabIds": [
       "1264330",
       "1581630",
+      "1184160",
       "1609810"
     ],
     "matches": {
+      "1184160": {
+        "start": 16,
+        "length": 3,
+        "reading": "さがり"
+      },
       "1264330": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "いいかた"
       },
       "1581630": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       },
       "1609810": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "さがり"
       }
     }
   },
   {
-    "id": "206429",
-    "original": "その問題は考慮に値しない。",
+    "id": "218792",
+    "original": "コレステロール値が上がってきています。",
     "en": [
       {
-        "id": "43677",
-        "text": "The problem is not worth consideration."
-      },
-      {
-        "id": "7492907",
-        "text": "The problem isn't worth consideration."
+        "id": "56107",
+        "text": "My cholesterol levels are high."
       }
     ],
-    "indices": "其の[01]{その} 問題 は 考慮 に 値する{値しない}",
+    "indices": "コレステロール値~ が 上がる{上がって} 来る(くる){きています}",
     "vocabIds": [
-      "1536010",
-      "1281170",
-      "1581630"
+      "2188510",
+      "1581630",
+      "1352290"
     ],
     "matches": {
-      "1281170": {
-        "start": 5,
-        "length": 2
-      },
-      "1536010": {
-        "start": 2,
-        "length": 2
+      "1352290": {
+        "start": 9,
+        "length": 3,
+        "reading": "あがっ"
       },
       "1581630": {
-        "start": 8,
-        "length": 1
+        "start": 7,
+        "length": 1,
+        "reading": "ち"
+      },
+      "2188510": {
+        "start": 0,
+        "length": 8,
+        "reading": "これすてろーるち"
+      }
+    }
+  },
+  {
+    "id": "218793",
+    "original": "コレステロール値が高いのです。",
+    "en": [
+      {
+        "id": "56108",
+        "text": "My cholesterol is high."
+      }
+    ],
+    "indices": "コレステロール値 が 高い のです",
+    "vocabIds": [
+      "2188510",
+      "1581630",
+      "1283190"
+    ],
+    "matches": {
+      "1283190": {
+        "start": 9,
+        "length": 2,
+        "reading": "たかい"
+      },
+      "1581630": {
+        "start": 7,
+        "length": 1,
+        "reading": "ち"
+      },
+      "2188510": {
+        "start": 0,
+        "length": 8,
+        "reading": "これすてろーるち"
       }
     }
   },
@@ -931,19 +1102,23 @@
     "matches": {
       "1153670": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "やすい"
       },
       "1473740": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "かっ"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1581630": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -958,17 +1133,31 @@
     ],
     "indices": "キャベツ は 生産過剰~ で(#2028980) 値(あたい)[01] を 崩す[07]{くずした}~",
     "vocabIds": [
+      "1378990",
       "1830450",
+      "1196170",
       "1581630"
     ],
     "matches": {
+      "1196170": {
+        "start": 7,
+        "length": 2,
+        "reading": "かじょう"
+      },
+      "1378990": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいさん"
+      },
       "1581630": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       },
       "1830450": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "せいさんかじょう"
       }
     }
   },
@@ -984,110 +1173,152 @@
     "indices": "印度{インド} の バイヤー~ と 日本 の ビジネスマン は 新製品 の 値(あたい)[01] を巡って{をめぐって} 激しい やり取り{やりとり} を 為る(する){した}",
     "vocabIds": [
       "1582710",
+      "1361480",
       "1362030",
+      "1380760",
       "1581630",
       "1600720"
     ],
     "matches": {
+      "1361480": {
+        "start": 19,
+        "length": 1,
+        "reading": "しん"
+      },
       "1362030": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "しんせいひん"
+      },
+      "1380760": {
+        "start": 20,
+        "length": 2,
+        "reading": "せいひん"
       },
       "1581630": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       },
       "1582710": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
       },
       "1600720": {
         "start": 29,
-        "length": 3
+        "length": 3,
+        "reading": "はげしい"
       }
     }
   },
   {
-    "id": "231334",
-    "original": "あのコートは高かったかもしれませんが、それだけの値うちはある。",
+    "id": "831118",
+    "original": "福島県で取った小女子から、基準値を超える量の放射性セシウムが検出されました。",
     "en": [
       {
-        "id": "68700",
-        "text": "That coat may have cost a lot of money, but it's worth it."
-      }
-    ],
-    "indices": "彼の(あの){あの} コート(#1049000)[01] は 高い{高かった} かも知れない{かもしれません} が 其れ[01]{それ} 丈(だけ){だけ} の 値打ち{値うち} は 有る{ある}",
-    "vocabIds": [
-      "2183260",
-      "1581630"
-    ],
-    "matches": {
-      "1581630": {
-        "start": 24,
-        "length": 1
-      },
-      "2183260": {
-        "start": 6,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "758384",
-    "original": "今日、その努力が報われ彼らが決定的な証拠を掴んだ事は賞賛に値します。",
-    "en": [
-      {
-        "id": "794759",
-        "text": "Today, their efforts have paid off and they are in possession of conclusive evidence, an achievement which is indeed commendable."
+        "id": "831121",
+        "text": "Radioactive cesium in amounts exceeding limits has been measured on young lancefish caught in Fukushima prefecture."
       }
     ],
     "vocabIds": [
-      "1579110",
-      "1445130",
-      "1515620",
-      "1483090",
-      "1254400",
-      "2132840",
-      "1313580",
-      "1594920",
-      "1581630"
+      "2845115",
+      "1501090",
+      "1258810",
+      "1326980",
+      "2809750",
+      "2083540",
+      "1984260",
+      "1345140",
+      "1591210",
+      "2348490",
+      "1581630",
+      "1554640",
+      "1516600",
+      "1516610",
+      "1375260",
+      "1257940"
     ],
     "matches": {
-      "1254400": {
-        "start": 14,
-        "length": 3
+      "1257940": {
+        "start": 30,
+        "length": 2,
+        "reading": "けんしゅつ"
       },
-      "1313580": {
-        "start": 24,
-        "length": 1
+      "1258810": {
+        "start": 2,
+        "length": 1,
+        "reading": "けん"
       },
-      "1445130": {
-        "start": 5,
-        "length": 2
+      "1326980": {
+        "start": 4,
+        "length": 2,
+        "reading": "とっ"
       },
-      "1483090": {
-        "start": 11,
-        "length": 2
-      },
-      "1515620": {
+      "1345140": {
         "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "じょし"
       },
-      "1579110": {
+      "1375260": {
+        "start": 24,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1501090": {
         "start": 0,
-        "length": 2
+        "length": 3,
+        "reading": "ふくしまけん"
+      },
+      "1516600": {
+        "start": 22,
+        "length": 2,
+        "reading": "ほうしゃ"
+      },
+      "1516610": {
+        "start": 22,
+        "length": 3,
+        "reading": "ほうしゃせい"
+      },
+      "1554640": {
+        "start": 20,
+        "length": 1,
+        "reading": "りょう"
       },
       "1581630": {
-        "start": 29,
-        "length": 1
+        "start": 15,
+        "length": 1,
+        "reading": "ち"
       },
-      "1594920": {
-        "start": 26,
-        "length": 2
+      "1591210": {
+        "start": 13,
+        "length": 2,
+        "reading": "きじゅん"
       },
-      "2132840": {
-        "start": 18,
-        "length": 6
+      "1984260": {
+        "start": 7,
+        "length": 3,
+        "reading": "しょうじょし"
+      },
+      "2083540": {
+        "start": 7,
+        "length": 1,
+        "reading": "しょう"
+      },
+      "2348490": {
+        "start": 13,
+        "length": 3,
+        "reading": "きじゅんち"
+      },
+      "2809750": {
+        "start": 4,
+        "length": 2,
+        "reading": "とっ"
+      },
+      "2845115": {
+        "start": 0,
+        "length": 2,
+        "reading": "ふくしま"
       }
     }
   },
@@ -1101,6 +1332,7 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1202270",
       "1160820",
@@ -1113,35 +1345,134 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1155120": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
       "1160820": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ひとつ"
       },
       "1202270": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "え"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1488000": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ひゃく"
       },
       "1495740": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "つい"
       },
       "1581630": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       },
       "1584460": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
+      }
+    }
+  },
+  {
+    "id": "875408",
+    "original": "一人の人間の死は悲劇であるが、百万人の死は統計値である。",
+    "en": [
+      {
+        "id": "778907",
+        "text": "The death of one man is a tragedy. The death of millions is a statistic."
+      }
+    ],
+    "vocabIds": [
+      "1160790",
+      "1576150",
+      "1580640",
+      "1366770",
+      "1310720",
+      "1483280",
+      "1488000",
+      "1584460",
+      "1584500",
+      "1449710",
+      "2716100",
+      "1581630"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1310720": {
+        "start": 6,
+        "length": 1,
+        "reading": "し"
+      },
+      "1366770": {
+        "start": 3,
+        "length": 2,
+        "reading": "にんげん"
+      },
+      "1449710": {
+        "start": 21,
+        "length": 2,
+        "reading": "とうけい"
+      },
+      "1483280": {
+        "start": 8,
+        "length": 2,
+        "reading": "ひげき"
+      },
+      "1488000": {
+        "start": 15,
+        "length": 1,
+        "reading": "ひゃく"
+      },
+      "1576150": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1581630": {
+        "start": 23,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1584460": {
+        "start": 16,
+        "length": 1,
+        "reading": "まん"
+      },
+      "1584500": {
+        "start": 16,
+        "length": 2,
+        "reading": "まんにん"
+      },
+      "2716100": {
+        "start": 21,
+        "length": 3,
+        "reading": "とうけいち"
       }
     }
   },
@@ -1164,142 +1495,272 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1368370": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じんせい"
       },
       "1378520": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "いきる"
       },
       "1521400": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1581630": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
   {
-    "id": "1752886",
-    "original": "トムは自分の人生が生きるに値しないという感じを持ち始めた。",
+    "id": "2296143",
+    "original": "ランチにしては少し値が張るが、値段に見合った味だ。",
     "en": [
       {
-        "id": "1092876",
-        "text": "Tom started to feel like his life wasn't worth living."
+        "id": "2595657",
+        "text": "It's a little expensive for lunch, but the taste matches the price."
       }
     ],
     "vocabIds": [
-      "1318610",
-      "1368370",
-      "1378520",
+      "1348870",
       "1581630",
-      "1212250",
-      "1612060",
-      "1307550"
+      "1642820",
+      "1427900",
+      "1600160",
+      "1259560",
+      "1526960"
     ],
     "matches": {
-      "1212250": {
-        "start": 20,
-        "length": 2
+      "1259560": {
+        "start": 18,
+        "length": 3,
+        "reading": "みあっ"
       },
-      "1307550": {
-        "start": 25,
-        "length": 3
+      "1348870": {
+        "start": 7,
+        "length": 2,
+        "reading": "すこし"
       },
-      "1318610": {
-        "start": 3,
-        "length": 2
+      "1427900": {
+        "start": 11,
+        "length": 2,
+        "reading": "はる"
       },
-      "1368370": {
-        "start": 6,
-        "length": 2
+      "1526960": {
+        "start": 22,
+        "length": 1,
+        "reading": "あじ"
       },
-      "1378520": {
+      "1581630": {
         "start": 9,
-        "length": 3
+        "length": 1,
+        "reading": "ね"
       },
-      "1581630": {
-        "start": 13,
-        "length": 1
+      "1600160": {
+        "start": 15,
+        "length": 2,
+        "reading": "ねだん"
       },
-      "1612060": {
-        "start": 23,
-        "length": 2
+      "1642820": {
+        "start": 9,
+        "length": 4,
+        "reading": "ねがはる"
       }
     }
   },
   {
-    "id": "2296113",
-    "original": "私は生きるに値しない人間だ。",
+    "id": "2665743",
+    "original": "次の関数の最大値と最小値を求めよ。",
     "en": [
       {
-        "id": "2275976",
-        "text": "I don't deserve to live."
+        "id": "2673920",
+        "text": "Find this function's global maximum and global minimum."
       }
     ],
-    "indices": "私(わたし) は 生きる に 値する{値しない} 人間(にんげん) だ",
     "vocabIds": [
-      "1311110",
-      "1378520",
+      "1316380",
+      "1590880",
+      "1294180",
+      "1294200",
       "1581630",
-      "1366770"
+      "1294000",
+      "1294050",
+      "1229350",
+      "1229340"
     ],
     "matches": {
-      "1311110": {
+      "1229340": {
+        "start": 13,
+        "length": 2,
+        "reading": "もとめ"
+      },
+      "1229350": {
+        "start": 13,
+        "length": 2,
+        "reading": "もとめ"
+      },
+      "1294000": {
+        "start": 9,
+        "length": 2,
+        "reading": "さいしょう"
+      },
+      "1294050": {
+        "start": 9,
+        "length": 3,
+        "reading": "さいしょうち"
+      },
+      "1294180": {
+        "start": 5,
+        "length": 2,
+        "reading": "さいだい"
+      },
+      "1294200": {
+        "start": 5,
+        "length": 3,
+        "reading": "さいだいち"
+      },
+      "1316380": {
         "start": 0,
-        "length": 1
-      },
-      "1366770": {
-        "start": 10,
-        "length": 2
-      },
-      "1378520": {
-        "start": 2,
-        "length": 3
+        "length": 1,
+        "reading": "つぎ"
       },
       "1581630": {
-        "start": 6,
-        "length": 1
+        "start": 7,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1590880": {
+        "start": 2,
+        "length": 2,
+        "reading": "かんすう"
       }
     }
   },
   {
-    "id": "2296126",
-    "original": "彼の意見は聞くに値しない。",
+    "id": "8974467",
+    "original": "ラズベリーって、すごく値が張るんだよ。",
     "en": [
       {
-        "id": "435986",
-        "text": "His opinions aren't worth listening to."
+        "id": "2793114",
+        "text": "Raspberries are very expensive."
       }
     ],
-    "indices": "彼(かれ){彼の} 意見 は 聞く に 値する{値しない}",
     "vocabIds": [
-      "1000420",
-      "1156530",
-      "1591110",
-      "1581630"
+      "1581630",
+      "1642820",
+      "1427900"
     ],
     "matches": {
-      "1000420": {
-        "start": 0,
-        "length": 2
-      },
-      "1156530": {
-        "start": 2,
-        "length": 2
+      "1427900": {
+        "start": 13,
+        "length": 2,
+        "reading": "はる"
       },
       "1581630": {
-        "start": 8,
-        "length": 1
+        "start": 11,
+        "length": 1,
+        "reading": "ね"
       },
-      "1591110": {
-        "start": 5,
-        "length": 2
+      "1642820": {
+        "start": 11,
+        "length": 4,
+        "reading": "ねがはる"
+      }
+    }
+  },
+  {
+    "id": "9684253",
+    "original": "コレステロール値が高いんだよ。",
+    "en": [
+      {
+        "id": "56107",
+        "text": "My cholesterol levels are high."
+      }
+    ],
+    "vocabIds": [
+      "2188510",
+      "1581630",
+      "1283190"
+    ],
+    "matches": {
+      "1283190": {
+        "start": 9,
+        "length": 2,
+        "reading": "たかい"
+      },
+      "1581630": {
+        "start": 7,
+        "length": 1,
+        "reading": "ち"
+      },
+      "2188510": {
+        "start": 0,
+        "length": 8,
+        "reading": "これすてろーるち"
+      }
+    }
+  },
+  {
+    "id": "10163010",
+    "original": "その通りさ。ここの麺の出汁はちょっと値が張るんだ。",
+    "en": [
+      {
+        "id": "430853",
+        "text": "You're right. The noodle broth here is a bit expensive."
+      }
+    ],
+    "vocabIds": [
+      "2057830",
+      "1433030",
+      "1432920",
+      "1533610",
+      "1581630",
+      "1642820",
+      "1427900"
+    ],
+    "matches": {
+      "1427900": {
+        "start": 20,
+        "length": 2,
+        "reading": "はる"
+      },
+      "1432920": {
+        "start": 2,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1433030": {
+        "start": 2,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1533610": {
+        "start": 9,
+        "length": 1,
+        "reading": "めん"
+      },
+      "1581630": {
+        "start": 18,
+        "length": 1,
+        "reading": "ね"
+      },
+      "1642820": {
+        "start": 18,
+        "length": 4,
+        "reading": "ねがはる"
+      },
+      "2057830": {
+        "start": 0,
+        "length": 4,
+        "reading": "そのとおり"
       }
     }
   }

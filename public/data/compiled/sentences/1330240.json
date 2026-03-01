@@ -12,6 +12,7 @@
     "vocabIds": [
       "1629200",
       "1588760",
+      "1454490",
       "1575200",
       "1330240",
       "1315720",
@@ -23,39 +24,53 @@
     "matches": {
       "1315720": {
         "start": 12,
-        "length": 4
+        "length": 2,
+        "reading": "もた"
       },
       "1316880": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "ちゆ"
       },
       "1330240": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1378590": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "いきもの"
+      },
+      "1454490": {
+        "start": 2,
+        "length": 1,
+        "reading": "え"
       },
       "1490160": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "やまい"
       },
       "1517090": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       },
       "1575200": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きりん"
       },
       "1588760": {
         "start": 2,
-        "length": 2
+        "length": 1,
+        "reading": "え"
       },
       "1629200": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "おう"
       }
     }
   },
@@ -70,6 +85,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 政治 寿命[01] は もう 無い{ない}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1375970",
       "1330240"
@@ -77,15 +93,23 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1330240": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1375970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せいじ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -100,22 +124,127 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 寿命[01] は 終わる{終わろう} とする{としている}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1330240",
-      "2720360"
+      "1589600"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1330240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
-      "2720360": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1589600": {
         "start": 5,
-        "length": 1
+        "length": 3,
+        "reading": "おわろ"
+      }
+    }
+  },
+  {
+    "id": "122279",
+    "original": "日本人の平均寿命は大いに伸びた。",
+    "en": [
+      {
+        "id": "281724",
+        "text": "The average life span of the Japanese has lengthened to a great extent."
+      }
+    ],
+    "indices": "日本人 の 平均寿命[01] は 大いに 伸びる{伸びた}",
+    "vocabIds": [
+      "1464700",
+      "1583870",
+      "1507200",
+      "1330240",
+      "1412880",
+      "1358870",
+      "1600300"
+    ],
+    "matches": {
+      "1330240": {
+        "start": 6,
+        "length": 2,
+        "reading": "じゅみょう"
+      },
+      "1358870": {
+        "start": 12,
+        "length": 2,
+        "reading": "のび"
+      },
+      "1412880": {
+        "start": 9,
+        "length": 3,
+        "reading": "おおいに"
+      },
+      "1464700": {
+        "start": 0,
+        "length": 3,
+        "reading": "にっぽんじん"
+      },
+      "1507200": {
+        "start": 4,
+        "length": 4,
+        "reading": "へいきんじゅみょう"
+      },
+      "1583870": {
+        "start": 4,
+        "length": 2,
+        "reading": "へいきん"
+      },
+      "1600300": {
+        "start": 12,
+        "length": 2,
+        "reading": "のび"
+      }
+    }
+  },
+  {
+    "id": "122820",
+    "original": "日本での平均寿命はどれだけですか。",
+    "en": [
+      {
+        "id": "281182",
+        "text": "What is the average life span in Japan?"
+      }
+    ],
+    "indices": "日本 で(#2028980) の 平均寿命[01] は 何れ丈{どれだけ} ですか",
+    "vocabIds": [
+      "1582710",
+      "1583870",
+      "1507200",
+      "1330240"
+    ],
+    "matches": {
+      "1330240": {
+        "start": 6,
+        "length": 2,
+        "reading": "じゅみょう"
+      },
+      "1507200": {
+        "start": 4,
+        "length": 4,
+        "reading": "へいきんじゅみょう"
+      },
+      "1582710": {
+        "start": 0,
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "1583870": {
+        "start": 4,
+        "length": 2,
+        "reading": "へいきん"
       }
     }
   },
@@ -133,34 +262,115 @@
       "1297890",
       "1183510",
       "1283190",
+      "1635800",
       "1731190",
+      "1296370",
       "1330240",
-      "2647180"
+      "1418620"
     ],
     "matches": {
       "1183510": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おんど"
       },
       "1283190": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たかい"
+      },
+      "1296370": {
+        "start": 11,
+        "length": 1,
+        "reading": "ざい"
       },
       "1297890": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さどう"
       },
       "1330240": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
+      },
+      "1418620": {
+        "start": 16,
+        "length": 2,
+        "reading": "みじかく"
+      },
+      "1635800": {
+        "start": 9,
+        "length": 2,
+        "reading": "じゅんかつ"
       },
       "1731190": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "じゅんかつざい"
+      }
+    }
+  },
+  {
+    "id": "170694",
+    "original": "最近の研究によれば、日本人の平均寿命はまだ伸びているそうだ。",
+    "en": [
+      {
+        "id": "243787",
+        "text": "According to a recent study, the average life span of the Japanese is still increasing."
+      }
+    ],
+    "indices": "最近{最近の} 研究 に依れば{によれば} 日本人 の 平均寿命[01]~ は 未だ[01]{まだ} 伸びる{伸びている} そうだ[02]",
+    "vocabIds": [
+      "1293780",
+      "1258520",
+      "1464700",
+      "1583870",
+      "1507200",
+      "1330240",
+      "1358870",
+      "1600300"
+    ],
+    "matches": {
+      "1258520": {
+        "start": 3,
+        "length": 2,
+        "reading": "けんきゅう"
       },
-      "2647180": {
+      "1293780": {
+        "start": 0,
+        "length": 2,
+        "reading": "さいきん"
+      },
+      "1330240": {
         "start": 16,
-        "length": 1
+        "length": 2,
+        "reading": "じゅみょう"
+      },
+      "1358870": {
+        "start": 21,
+        "length": 2,
+        "reading": "のび"
+      },
+      "1464700": {
+        "start": 10,
+        "length": 3,
+        "reading": "にっぽんじん"
+      },
+      "1507200": {
+        "start": 14,
+        "length": 4,
+        "reading": "へいきんじゅみょう"
+      },
+      "1583870": {
+        "start": 14,
+        "length": 2,
+        "reading": "へいきん"
+      },
+      "1600300": {
+        "start": 21,
+        "length": 2,
+        "reading": "のび"
       }
     }
   },
@@ -186,35 +396,43 @@
     "matches": {
       "1261190": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "げんいん"
       },
       "1293700": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1310950": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しぼう"
       },
       "1317770": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じさつ"
       },
       "1326320": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅよう"
       },
       "1330240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1429750": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ながい"
       },
       "1592250": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       }
     }
   },
@@ -234,7 +452,8 @@
     "matches": {
       "1330240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       }
     }
   },
@@ -258,23 +477,28 @@
     "matches": {
       "1155150": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "いぜん"
       },
       "1330240": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1366770": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1473230": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "ばい"
       },
       "1477310": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "はっけん"
       }
     }
   },
@@ -298,23 +522,28 @@
     "matches": {
       "1220550": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "きかん"
       },
       "1330240": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1366770": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1497190": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ふつう"
       },
       "2084840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -340,19 +569,23 @@
     "matches": {
       "1330240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1429010": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちょう"
       },
       "1463770": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "にち"
       },
       "1579350": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "さん"
       }
     }
   },
@@ -366,22 +599,31 @@
       }
     ],
     "vocabIds": [
+      "1201190",
       "1201310",
       "1330240",
       "1429750"
     ],
     "matches": {
+      "1201190": {
+        "start": 0,
+        "length": 1,
+        "reading": "うみ"
+      },
       "1201310": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "うみがめ"
       },
       "1330240": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1429750": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ながい"
       }
     }
   },
@@ -404,23 +646,28 @@
     "matches": {
       "1330240": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1345250": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
       },
       "1420160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "だんせい"
       },
       "1429750": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ながい"
       },
       "2084840": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -438,28 +685,33 @@
       "1580640",
       "1372800",
       "1330240",
-      "2647180"
+      "1418620"
     ],
     "matches": {
       "1330240": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1372800": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ずいぶん"
       },
       "1382370": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むかし"
+      },
+      "1418620": {
+        "start": 9,
+        "length": 3,
+        "reading": "みじかかっ"
       },
       "1580640": {
         "start": 2,
-        "length": 1
-      },
-      "2647180": {
-        "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -480,15 +732,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1330240": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       }
     }
   },
@@ -509,15 +764,66 @@
     "matches": {
       "1330240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じゅみょう"
       },
       "1337560": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "ちぢん"
       },
       "1589350": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
+      }
+    }
+  },
+  {
+    "id": "11683475",
+    "original": "犬の平均寿命は10年です。",
+    "en": [
+      {
+        "id": "2761554",
+        "text": "The average life of a dog is ten years."
+      },
+      {
+        "id": "12375614",
+        "text": "The average life span of a dog is 10 years."
+      }
+    ],
+    "vocabIds": [
+      "1258330",
+      "1583870",
+      "1507200",
+      "1330240",
+      "2084840"
+    ],
+    "matches": {
+      "1258330": {
+        "start": 0,
+        "length": 1,
+        "reading": "いぬ"
+      },
+      "1330240": {
+        "start": 4,
+        "length": 2,
+        "reading": "じゅみょう"
+      },
+      "1507200": {
+        "start": 2,
+        "length": 4,
+        "reading": "へいきんじゅみょう"
+      },
+      "1583870": {
+        "start": 2,
+        "length": 2,
+        "reading": "へいきん"
+      },
+      "2084840": {
+        "start": 9,
+        "length": 1,
+        "reading": "ねん"
       }
     }
   }

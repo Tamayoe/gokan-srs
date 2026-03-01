@@ -78,7 +78,7 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
         try {
             let currentLocal = StorageService.loadProgress();
-            let currentSettings = StorageService.loadSettings();
+            const currentSettings = StorageService.loadSettings();
 
             // We use the sync method because it handles the logic of "Fetch Remote -> Merge"
             // We want to ensure we have the latest from cloud before we start.

@@ -1,43 +1,5 @@
 [
   {
-    "id": "75540",
-    "original": "「おはようございます。今日は遅かったですね」「うん。ちょっと手間取っちゃって」",
-    "en": [
-      {
-        "id": "328178",
-        "text": "\"Good morning. You're a bit late today, aren't you?\" \"Yes, I ran into a bit of trouble.\""
-      },
-      {
-        "id": "1643209",
-        "text": "\"Good morning. You're late today, aren't you?\" \"Yeah, I got a bit caught up.\""
-      },
-      {
-        "id": "1665448",
-        "text": "\"Good morning. You were a bit late today.\" \"Mhm, I got a tad delayed.\""
-      }
-    ],
-    "indices": "お早うございます{おはようございます} 今日 は 遅い{遅かった} です ね(#2029080)[01] うん 一寸(ちょっと){ちょっと} 手間取る{手間取っ}~ じゃう{ちゃって}",
-    "vocabIds": [
-      "1289400",
-      "1327410",
-      "2809750"
-    ],
-    "matches": {
-      "1289400": {
-        "start": 11,
-        "length": 3
-      },
-      "1327410": {
-        "start": 30,
-        "length": 2
-      },
-      "2809750": {
-        "start": 32,
-        "length": 2
-      }
-    }
-  },
-  {
     "id": "94146",
     "original": "彼女の台所は手間を省ける装置が装備されている。",
     "en": [
@@ -51,34 +13,130 @@
       "1483150",
       "1412640",
       "1327410",
-      "2081540",
       "1402360",
       "1402400"
     ],
     "matches": {
       "1327410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1402360": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうち"
       },
       "1402400": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "そうび"
       },
       "1412640": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "だいどころ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "95353",
+    "original": "彼女が手紙をくれたので、彼女の家を訪ねる手間が省けた。",
+    "en": [
+      {
+        "id": "308353",
+        "text": "Her letter saved me the trouble of visiting her house."
+      }
+    ],
+    "indices": "彼女 が 手紙 を 呉れる{くれた} ので 彼女[01]{彼女の} 家(いえ)[01] を 訪ねる 手間が省ける{手間が省けた}",
+    "vocabIds": [
+      "1483150",
+      "1327720",
+      "1191730",
+      "1518070",
+      "1327410"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 15,
+        "length": 1,
+        "reading": "いえ"
       },
-      "2081540": {
-        "start": 9,
-        "length": 1
+      "1327410": {
+        "start": 20,
+        "length": 2,
+        "reading": "てま"
+      },
+      "1327720": {
+        "start": 3,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1518070": {
+        "start": 17,
+        "length": 3,
+        "reading": "たずねる"
+      }
+    }
+  },
+  {
+    "id": "141213",
+    "original": "洗濯機のおかげで主婦はずいぶん手間が省ける。",
+    "en": [
+      {
+        "id": "273359",
+        "text": "Washing machines spare housewives a lot of trouble."
+      }
+    ],
+    "indices": "洗濯機 の お陰で{おかげで} 主婦 は 随分[01]{ずいぶん} 手間が省ける{手間が省ける}",
+    "vocabIds": [
+      "1390980",
+      "1390990",
+      "2037700",
+      "1326160",
+      "1327410",
+      "2685970"
+    ],
+    "matches": {
+      "1326160": {
+        "start": 8,
+        "length": 2,
+        "reading": "しゅふ"
+      },
+      "1327410": {
+        "start": 15,
+        "length": 2,
+        "reading": "てま"
+      },
+      "1390980": {
+        "start": 0,
+        "length": 2,
+        "reading": "せんたく"
+      },
+      "1390990": {
+        "start": 0,
+        "length": 3,
+        "reading": "せんたくき"
+      },
+      "2037700": {
+        "start": 2,
+        "length": 1,
+        "reading": "き"
+      },
+      "2685970": {
+        "start": 15,
+        "length": 6,
+        "reading": "てまがはぶける"
       }
     }
   },
@@ -99,11 +157,13 @@
     "matches": {
       "1327410": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1358280": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       }
     }
   },
@@ -118,7 +178,10 @@
     ],
     "indices": "時を得た 一(いち) 針[07] は 九 針[07] 之(の)[01]{の} 手間 を 省く",
     "vocabIds": [
+      "1315840",
       "2402940",
+      "1588760",
+      "1454490",
       "1160790",
       "1366210",
       "1578150",
@@ -128,27 +191,144 @@
     "matches": {
       "1160790": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いち"
+      },
+      "1315840": {
+        "start": 0,
+        "length": 1,
+        "reading": "とき"
       },
       "1327410": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1351040": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "はぶく"
       },
       "1366210": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はり"
+      },
+      "1454490": {
+        "start": 2,
+        "length": 1,
+        "reading": "え"
       },
       "1578150": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "きゅう"
+      },
+      "1588760": {
+        "start": 2,
+        "length": 1,
+        "reading": "え"
       },
       "2402940": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "ときをえた"
+      }
+    }
+  },
+  {
+    "id": "177161",
+    "original": "君は手間をかける必要はなかった。",
+    "en": [
+      {
+        "id": "16011",
+        "text": "You needn't have gone to the trouble."
+      }
+    ],
+    "indices": "君(きみ)[01] は 手間を掛ける{手間をかける} 必要[02] は 無い{なかった}",
+    "vocabIds": [
+      "1247250",
+      "1327410",
+      "2104130",
+      "1487660"
+    ],
+    "matches": {
+      "1247250": {
+        "start": 0,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1327410": {
+        "start": 2,
+        "length": 2,
+        "reading": "てま"
+      },
+      "1487660": {
+        "start": 8,
+        "length": 2,
+        "reading": "ひつよう"
+      },
+      "2104130": {
+        "start": 2,
+        "length": 6,
+        "reading": "てまをかける"
+      }
+    }
+  },
+  {
+    "id": "183367",
+    "original": "この機会のおかげで私たちは大いに手間暇が省けた。",
+    "en": [
+      {
+        "id": "20490",
+        "text": "Thanks to the opportunity, we were able to avoid substantial effort."
+      }
+    ],
+    "indices": "此の(この){この} 機会 の お陰で{おかげで} 私たち は 大いに 手間暇~ が 省く{省けた}",
+    "vocabIds": [
+      "1220800",
+      "1311110",
+      "1311300",
+      "1412880",
+      "1327410",
+      "1664250",
+      "1577280"
+    ],
+    "matches": {
+      "1220800": {
+        "start": 2,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1311110": {
+        "start": 9,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 9,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1327410": {
+        "start": 16,
+        "length": 2,
+        "reading": "てま"
+      },
+      "1412880": {
+        "start": 13,
+        "length": 3,
+        "reading": "おおいに"
+      },
+      "1577280": {
+        "start": 18,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1664250": {
+        "start": 16,
+        "length": 3,
+        "reading": "てまひま"
       }
     }
   },
@@ -163,17 +343,40 @@
     ],
     "indices": "ワープロ を 使う{使えば} 随分[01]{ずいぶん} 手間 が 省く{はぶけます} よ[01]",
     "vocabIds": [
-      "2630380",
+      "1305990",
+      "1327410"
+    ],
+    "matches": {
+      "1305990": {
+        "start": 5,
+        "length": 2,
+        "reading": "つかえ"
+      },
+      "1327410": {
+        "start": 13,
+        "length": 2,
+        "reading": "てま"
+      }
+    }
+  },
+  {
+    "id": "215135",
+    "original": "ずいぶんお手間をかけさせまして、すみませんでした。",
+    "en": [
+      {
+        "id": "52432",
+        "text": "It was nice of you to go to so much trouble."
+      }
+    ],
+    "indices": "随分{ずいぶん} 御(お){お} 手間を掛ける{手間をかけさせまして}~ 済みません{すみませんでした}",
+    "vocabIds": [
       "1327410"
     ],
     "matches": {
       "1327410": {
-        "start": 13,
-        "length": 2
-      },
-      "2630380": {
         "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "てま"
       }
     }
   },
@@ -197,23 +400,28 @@
     "matches": {
       "1315920": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1327410": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1351040": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "はぶい"
       },
       "1366770": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1861770": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -237,23 +445,67 @@
     "matches": {
       "1315920": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1327410": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1351040": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "はぶい"
       },
       "1607050": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       },
       "1861770": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
+      }
+    }
+  },
+  {
+    "id": "217267",
+    "original": "コンピューターのおかげで多くの時間と手間が省ける。",
+    "en": [
+      {
+        "id": "54575",
+        "text": "Computers save us a lot of time and trouble."
+      }
+    ],
+    "indices": "コンピュータ{コンピューター} の お陰で{おかげで} 多く の 時間[01] と 手間が省ける{手間が省ける}",
+    "vocabIds": [
+      "1861770",
+      "1315920",
+      "1327410",
+      "2685970"
+    ],
+    "matches": {
+      "1315920": {
+        "start": 15,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1327410": {
+        "start": 18,
+        "length": 2,
+        "reading": "てま"
+      },
+      "1861770": {
+        "start": 12,
+        "length": 2,
+        "reading": "おおく"
+      },
+      "2685970": {
+        "start": 18,
+        "length": 6,
+        "reading": "てまがはぶける"
       }
     }
   },
@@ -277,23 +529,28 @@
     "matches": {
       "1218920": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きぐ"
       },
       "1326160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅふ"
       },
       "1327410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1351040": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はぶく"
       },
       "1512610": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "べんり"
       }
     }
   },
@@ -308,17 +565,13 @@
     ],
     "indices": "此れ[01]{これ} で(#2028980) 手間 が 大分{だいぶ} 省く{省ける} だろう",
     "vocabIds": [
-      "1327410",
-      "2081540"
+      "1327410"
     ],
     "matches": {
       "1327410": {
         "start": 3,
-        "length": 2
-      },
-      "2081540": {
-        "start": 9,
-        "length": 1
+        "length": 2,
+        "reading": "てま"
       }
     }
   },
@@ -333,27 +586,139 @@
     ],
     "indices": "此の{この} パソコン を 使う{使えば} 手間 が 大いに 省く{省けます} よ[01]",
     "vocabIds": [
-      "2630380",
+      "1305990",
       "1327410",
-      "1412880",
-      "2081540"
+      "1412880"
     ],
     "matches": {
+      "1305990": {
+        "start": 7,
+        "length": 2,
+        "reading": "つかえ"
+      },
       "1327410": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1412880": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "おおいに"
+      }
+    }
+  },
+  {
+    "id": "227081",
+    "original": "お手間をおかけしました。",
+    "en": [
+      {
+        "id": "54481",
+        "text": "Thank you for your trouble."
+      }
+    ],
+    "indices": "御(お){お} 手間 を 掛ける[08]{おかけ} 為る(する)[12]{しました}",
+    "vocabIds": [
+      "1327410"
+    ],
+    "matches": {
+      "1327410": {
+        "start": 1,
+        "length": 2,
+        "reading": "てま"
+      }
+    }
+  },
+  {
+    "id": "232641",
+    "original": "あなたはそうすることでずっと手間が省けるだろう。",
+    "en": [
+      {
+        "id": "70011",
+        "text": "You would be saved a great deal of trouble."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は 然う[01]{そう} 為る(する){する} 事(こと){こと} で(#2028980) ずっと[02] 手間が省ける だろう[01]",
+    "vocabIds": [
+      "1327410",
+      "2685970"
+    ],
+    "matches": {
+      "1327410": {
+        "start": 14,
+        "length": 2,
+        "reading": "てま"
       },
-      "2081540": {
-        "start": 17,
-        "length": 1
+      "2685970": {
+        "start": 14,
+        "length": 6,
+        "reading": "てまがはぶける"
+      }
+    }
+  },
+  {
+    "id": "234015",
+    "original": "あなたが手伝ってくれれば、大いに手間が省ける。",
+    "en": [
+      {
+        "id": "71386",
+        "text": "Your help will save us a lot of work."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} が 手伝う{手伝って} 呉れる{くれれば} 大いに 手間 が 省く{省ける}",
+    "vocabIds": [
+      "1328190",
+      "1412880",
+      "1327410",
+      "2685970"
+    ],
+    "matches": {
+      "1327410": {
+        "start": 16,
+        "length": 2,
+        "reading": "てま"
       },
-      "2630380": {
-        "start": 7,
-        "length": 1
+      "1328190": {
+        "start": 4,
+        "length": 3,
+        "reading": "てつだっ"
+      },
+      "1412880": {
+        "start": 13,
+        "length": 3,
+        "reading": "おおいに"
+      },
+      "2685970": {
+        "start": 16,
+        "length": 6,
+        "reading": "てまがはぶける"
+      }
+    }
+  },
+  {
+    "id": "236740",
+    "original": "それでだいぶ手間が省ける。",
+    "en": [
+      {
+        "id": "43018",
+        "text": "That will save me a lot of trouble."
+      }
+    ],
+    "indices": "其れで{それで} 大分{だいぶ} 手間が省ける",
+    "vocabIds": [
+      "1327410",
+      "2685970"
+    ],
+    "matches": {
+      "1327410": {
+        "start": 6,
+        "length": 2,
+        "reading": "てま"
+      },
+      "2685970": {
+        "start": 6,
+        "length": 6,
+        "reading": "てまがはぶける"
       }
     }
   },
@@ -369,20 +734,23 @@
     "vocabIds": [
       "1554310",
       "1327410",
-      "1486640"
+      "1486650"
     ],
     "matches": {
       "1327410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
-      "1486640": {
+      "1486650": {
         "start": 14,
-        "length": 2
+        "length": 4,
+        "reading": "おいしく"
       },
       "1554310": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "りょうり"
       }
     }
   },
@@ -402,11 +770,13 @@
     "matches": {
       "1297540": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さぎょう"
       },
       "1327410": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       }
     }
   }

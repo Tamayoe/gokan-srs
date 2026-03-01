@@ -1,41 +1,119 @@
 [
   {
-    "id": "158477",
-    "original": "私は一週間前彼女に出会った。",
+    "id": "168030",
+    "original": "私がこの前彼に遭ってから５年以上になる。",
     "en": [
       {
-        "id": "252471",
-        "text": "I saw her a week ago."
+        "id": "246466",
+        "text": "It is more than five years since I last saw him."
+      },
+      {
+        "id": "2715418",
+        "text": "It's been more than five years since I last saw him."
       }
     ],
-    "indices": "私(わたし)[01] は 一週間 前(まえ)[02] 彼女 に 出会う{出会った}",
+    "indices": "私(わたし)[01] が この前[02] 彼(かれ) に 会う[02]{遭って} から[06] 年(ねん) 以上 になる[01]",
     "vocabIds": [
       "1311110",
-      "1163270",
+      "2216900",
+      "1392580",
       "2795350",
-      "1344930",
-      "1598530"
+      "1483070",
+      "2084840",
+      "1155120"
     ],
     "matches": {
-      "1163270": {
-        "start": 2,
-        "length": 3
+      "1155120": {
+        "start": 14,
+        "length": 2,
+        "reading": "いじょう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1344930": {
-        "start": 7,
-        "length": 1
+      "1392580": {
+        "start": 4,
+        "length": 1,
+        "reading": "まえ"
       },
-      "1598530": {
-        "start": 9,
-        "length": 4
+      "1483070": {
+        "start": 5,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2084840": {
+        "start": 13,
+        "length": 1,
+        "reading": "ねん"
+      },
+      "2216900": {
+        "start": 2,
+        "length": 3,
+        "reading": "このまえ"
       },
       "2795350": {
+        "start": 4,
+        "length": 2,
+        "reading": "まえかれ"
+      }
+    }
+  },
+  {
+    "id": "220730",
+    "original": "この前彼に会ってから２年経つ。",
+    "en": [
+      {
+        "id": "58052",
+        "text": "It's been two years since I saw him last."
+      }
+    ],
+    "indices": "この前[02] 彼(かれ)[01] に 会う[01]{会って} から[06] 年(ねん) 経つ",
+    "vocabIds": [
+      "2216900",
+      "1392580",
+      "2795350",
+      "1483070",
+      "1198180",
+      "2084840",
+      "1251100"
+    ],
+    "matches": {
+      "1198180": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "あっ"
+      },
+      "1251100": {
+        "start": 12,
+        "length": 2,
+        "reading": "たつ"
+      },
+      "1392580": {
+        "start": 2,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2084840": {
+        "start": 11,
+        "length": 1,
+        "reading": "ねん"
+      },
+      "2216900": {
+        "start": 0,
+        "length": 3,
+        "reading": "このまえ"
+      },
+      "2795350": {
+        "start": 2,
+        "length": 2,
+        "reading": "まえかれ"
       }
     }
   },
@@ -50,26 +128,104 @@
     ],
     "vocabIds": [
       "1483150",
+      "1579350",
       "1814070",
+      "2084840",
+      "1392580",
       "2795350",
+      "1483070",
       "1198180"
     ],
     "matches": {
       "1198180": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
+      },
+      "1392580": {
+        "start": 5,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1483070": {
+        "start": 6,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1579350": {
+        "start": 3,
+        "length": 1,
+        "reading": "さん"
       },
       "1814070": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんねん"
+      },
+      "2084840": {
+        "start": 4,
+        "length": 1,
+        "reading": "ねん"
       },
       "2795350": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "まえかれ"
+      }
+    }
+  },
+  {
+    "id": "1169654",
+    "original": "この前彼に会ったときは、とても元気だった。",
+    "en": [
+      {
+        "id": "297245",
+        "text": "The last time when I saw him, he was quite well."
+      }
+    ],
+    "vocabIds": [
+      "2216900",
+      "1392580",
+      "2795350",
+      "1483070",
+      "1198180",
+      "1260720"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 5,
+        "length": 2,
+        "reading": "あっ"
+      },
+      "1260720": {
+        "start": 15,
+        "length": 2,
+        "reading": "げんき"
+      },
+      "1392580": {
+        "start": 2,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2216900": {
+        "start": 0,
+        "length": 3,
+        "reading": "このまえ"
+      },
+      "2795350": {
+        "start": 2,
+        "length": 2,
+        "reading": "まえかれ"
       }
     }
   }

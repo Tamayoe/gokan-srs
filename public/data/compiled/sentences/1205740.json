@@ -1,26 +1,40 @@
 [
   {
-    "id": "75380",
-    "original": "もう・・・タバコの吸殻まで散らばってるし。",
+    "id": "78500",
+    "original": "卵の殻は壊れやすい。",
     "en": [
       {
-        "id": "328339",
-        "text": "Sheesh, you've even got cigarette butts scattered around."
+        "id": "325215",
+        "text": "The shell of an egg is easily broken."
       }
     ],
-    "indices": "もう 煙草{タバコ} 之(の)[01]{の} 吸殻~ 迄{まで} 散らばる{散らばってる} し",
+    "indices": "卵(たまご)[01] の 殻(から) は 壊れる[01]{壊れ} 易い{やすい}",
     "vocabIds": [
+      "1549140",
+      "1549150",
       "1205740",
-      "1303480"
+      "1199900"
     ],
     "matches": {
-      "1205740": {
-        "start": 10,
-        "length": 1
+      "1199900": {
+        "start": 4,
+        "length": 2,
+        "reading": "こわれ"
       },
-      "1303480": {
-        "start": 13,
-        "length": 5
+      "1205740": {
+        "start": 2,
+        "length": 1,
+        "reading": "から"
+      },
+      "1549140": {
+        "start": 0,
+        "length": 1,
+        "reading": "たまご"
+      },
+      "1549150": {
+        "start": 0,
+        "length": 3,
+        "reading": "たまごのから"
       }
     }
   },
@@ -37,25 +51,47 @@
     "vocabIds": [
       "1600430",
       "2420240",
+      "1320800",
+      "2272450",
       "1205740",
-      "1465610"
+      "1465610",
+      "1465600"
     ],
     "matches": {
       "1205740": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "から"
+      },
+      "1320800": {
+        "start": 7,
+        "length": 1,
+        "reading": "み"
+      },
+      "1465600": {
+        "start": 11,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
       },
       "1600430": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "のみもの"
+      },
+      "2272450": {
+        "start": 7,
+        "length": 2,
+        "reading": "みの"
       },
       "2420240": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "やしのみ"
       }
     }
   },
@@ -70,21 +106,42 @@
     ],
     "vocabIds": [
       "1762410",
+      "1549140",
+      "1549150",
       "1205740",
+      "1577100",
       "1188270"
     ],
     "matches": {
       "1188270": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1205740": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "から"
+      },
+      "1549140": {
+        "start": 2,
+        "length": 1,
+        "reading": "たまご"
+      },
+      "1549150": {
+        "start": 2,
+        "length": 3,
+        "reading": "たまごのから"
+      },
+      "1577100": {
+        "start": 27,
+        "length": 1,
+        "reading": "なに"
       },
       "1762410": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ゆでたまご"
       }
     }
   },
@@ -102,33 +159,71 @@
       "1315840",
       "1318610",
       "1205740",
-      "2841555",
-      "1339160"
+      "1478220"
     ],
     "matches": {
       "1205740": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "から"
       },
       "1315840": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1318610": {
         "start": 5,
-        "length": 2
-      },
-      "1339160": {
-        "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1413240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
-      "2841555": {
+      "1478220": {
         "start": 11,
-        "length": 2
+        "length": 4,
+        "reading": "ぬけだし"
+      }
+    }
+  },
+  {
+    "id": "11199044",
+    "original": "この卵の殻、どこに捨てればいい？",
+    "en": [
+      {
+        "id": "10919103",
+        "text": "Where can I throw this eggshell?"
+      }
+    ],
+    "vocabIds": [
+      "1549140",
+      "1549150",
+      "1205740",
+      "1322320"
+    ],
+    "matches": {
+      "1205740": {
+        "start": 4,
+        "length": 1,
+        "reading": "から"
+      },
+      "1322320": {
+        "start": 9,
+        "length": 3,
+        "reading": "すてれ"
+      },
+      "1549140": {
+        "start": 2,
+        "length": 1,
+        "reading": "たまご"
+      },
+      "1549150": {
+        "start": 2,
+        "length": 3,
+        "reading": "たまごのから"
       }
     }
   },
@@ -149,15 +244,18 @@
     "matches": {
       "1205740": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "から"
       },
       "1365520": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "み"
       },
       "1391250": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "ひそめ"
       }
     }
   },
@@ -173,20 +271,29 @@
     "vocabIds": [
       "1596910",
       "1205740",
-      "1170660"
+      "1170660",
+      "1613470"
     ],
     "matches": {
       "1170660": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かくれ"
       },
       "1205740": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "から"
       },
       "1596910": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
+      },
+      "1613470": {
+        "start": 10,
+        "length": 2,
+        "reading": "かくれ"
       }
     }
   },
@@ -206,8 +313,8 @@
       "1549140",
       "1205740",
       "1182060",
-      "2248520",
-      "2857112",
+      "1485330",
+      "1259290",
       "2848391",
       "1530010",
       "1307710"
@@ -215,47 +322,58 @@
     "matches": {
       "1182060": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "きみ"
       },
       "1205740": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "から"
       },
       "1208630": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "すべりおち"
+      },
+      "1259290": {
+        "start": 22,
+        "length": 2,
+        "reading": "みる"
       },
       "1307710": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "すがた"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327190": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "て"
+      },
+      "1485330": {
+        "start": 18,
+        "length": 4,
+        "reading": "とびちり"
       },
       "1530010": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "むざん"
       },
       "1549140": {
         "start": 10,
-        "length": 1
-      },
-      "2248520": {
-        "start": 18,
-        "length": 2
+        "length": 1,
+        "reading": "たまご"
       },
       "2848391": {
         "start": 22,
-        "length": 3
-      },
-      "2857112": {
-        "start": 20,
-        "length": 2
+        "length": 3,
+        "reading": "みるも"
       }
     }
   }

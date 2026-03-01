@@ -1,5 +1,98 @@
 [
   {
+    "id": "74258",
+    "original": "一戸建より共同住宅に住む世帯の増加率の方が高い。",
+    "en": [
+      {
+        "id": "329462",
+        "text": "The rate of increase in households is higher for apartment houses than for individual houses."
+      }
+    ],
+    "indices": "一戸建て{一戸建}~ より 共同住宅~ に 住む 世帯 の 増加率~ の 方(ほう) が 高い",
+    "vocabIds": [
+      "1160790",
+      "1162310",
+      "1266970",
+      "1591660",
+      "1234890",
+      "1334150",
+      "1334040",
+      "1374170",
+      "1403160",
+      "1941470",
+      "1551200",
+      "1516930",
+      "1283190"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1162310": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちこ"
+      },
+      "1234890": {
+        "start": 5,
+        "length": 4,
+        "reading": "きょうどうじゅうたく"
+      },
+      "1266970": {
+        "start": 1,
+        "length": 1,
+        "reading": "こ"
+      },
+      "1283190": {
+        "start": 21,
+        "length": 2,
+        "reading": "たかい"
+      },
+      "1334040": {
+        "start": 10,
+        "length": 2,
+        "reading": "すむ"
+      },
+      "1334150": {
+        "start": 7,
+        "length": 2,
+        "reading": "じゅうたく"
+      },
+      "1374170": {
+        "start": 12,
+        "length": 2,
+        "reading": "せたい"
+      },
+      "1403160": {
+        "start": 15,
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1516930": {
+        "start": 19,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1551200": {
+        "start": 17,
+        "length": 1,
+        "reading": "りつ"
+      },
+      "1591660": {
+        "start": 5,
+        "length": 2,
+        "reading": "きょうどう"
+      },
+      "1941470": {
+        "start": 15,
+        "length": 3,
+        "reading": "ぞうかりつ"
+      }
+    }
+  },
+  {
     "id": "77355",
     "original": "労働需要の爆発的増加がみられてきた。",
     "en": [
@@ -12,25 +105,41 @@
     "vocabIds": [
       "1606450",
       "1330450",
+      "1475910",
       "1475940",
+      "1437260",
       "1403160"
     ],
     "matches": {
       "1330450": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じゅよう"
       },
       "1403160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1437260": {
+        "start": 7,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1475910": {
+        "start": 5,
+        "length": 2,
+        "reading": "ばくはつ"
       },
       "1475940": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ばくはつてき"
       },
       "1606450": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ろうどう"
       }
     }
   },
@@ -45,32 +154,55 @@
     ],
     "indices": "旅行者 の 数(かず) が 近年 大きく 増加 為る(する){した}",
     "vocabIds": [
+      "1553170",
       "1553180",
+      "1322990",
       "1580820",
       "1242510",
+      "1588880",
       "2039990",
       "1403160"
     ],
     "matches": {
       "1242510": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きんねん"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1403160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1553170": {
+        "start": 0,
+        "length": 2,
+        "reading": "りょこう"
       },
       "1553180": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "りょこうしゃ"
       },
       "1580820": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
+      },
+      "1588880": {
+        "start": 8,
+        "length": 3,
+        "reading": "おおきく"
       },
       "2039990": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "おおきく"
       }
     }
   },
@@ -85,7 +217,9 @@
     ],
     "indices": "輸入量~ の 急激{急激な} 増加 に 我々 は  驚く[01]{驚いた}",
     "vocabIds": [
+      "1538870",
       "2029310",
+      "1554640",
       "1228680",
       "1403160",
       "1607050",
@@ -94,23 +228,38 @@
     "matches": {
       "1228680": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうげき"
       },
       "1238680": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "おどろい"
       },
       "1403160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1538870": {
+        "start": 0,
+        "length": 2,
+        "reading": "ゆにゅう"
+      },
+      "1554640": {
+        "start": 2,
+        "length": 1,
+        "reading": "りょう"
       },
       "1607050": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       },
       "2029310": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ゆにゅうりょう"
       }
     }
   },
@@ -133,19 +282,23 @@
     "matches": {
       "1184160": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "さがっ"
       },
       "1330450": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じゅよう"
       },
       "1403160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1538870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ゆにゅう"
       }
     }
   },
@@ -167,15 +320,18 @@
     "matches": {
       "1182620": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "おく"
       },
       "1403160": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1538820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ゆしゅつ"
       }
     }
   },
@@ -202,35 +358,43 @@
     "matches": {
       "1294910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さいばい"
       },
       "1358690": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "しょくりょう"
       },
       "1361940": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しんしゅ"
       },
       "1378990": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "せいさん"
       },
       "1403160": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1508750": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こめ"
       },
       "1519630": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "のぞん"
       }
     }
   },
@@ -249,38 +413,51 @@
       "1367300",
       "1403160",
       "1406080",
+      "1267120",
       "1861770",
       "1358670",
       "1487660"
     ],
     "matches": {
+      "1267120": {
+        "start": 16,
+        "length": 1,
+        "reading": "こ"
+      },
       "1358670": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "しょくりょう"
       },
       "1367300": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1406080": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "それこ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1487660": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1861770": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -305,27 +482,33 @@
     "matches": {
       "1367300": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1429120": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうさ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483090": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1531950": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "めいじ"
       }
     }
   },
@@ -340,22 +523,37 @@
     ],
     "indices": "犯罪率~ は 着実{着実に} 増加~ 為る(する){している}",
     "vocabIds": [
+      "1481590",
       "2000000",
+      "1551200",
       "1423050",
       "1403160"
     ],
     "matches": {
       "1403160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1423050": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゃくじつ"
+      },
+      "1481590": {
+        "start": 0,
+        "length": 2,
+        "reading": "はんざい"
+      },
+      "1551200": {
+        "start": 2,
+        "length": 1,
+        "reading": "りつ"
       },
       "2000000": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "はんざいりつ"
       }
     }
   },
@@ -372,25 +570,35 @@
     "vocabIds": [
       "1481590",
       "1403160",
+      "1611590",
       "2088270",
       "1313960"
     ],
     "matches": {
       "1313960": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じじつ"
       },
       "1403160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1481590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はんざい"
+      },
+      "1611590": {
+        "start": 12,
+        "length": 2,
+        "reading": "まぎれ"
       },
       "2088270": {
         "start": 12,
-        "length": 5
+        "length": 5,
+        "reading": "まぎれもない"
       }
     }
   },
@@ -411,11 +619,193 @@
     "matches": {
       "1403160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1481590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はんざい"
+      }
+    }
+  },
+  {
+    "id": "121311",
+    "original": "発展途上国の人口増加は急速だ。",
+    "en": [
+      {
+        "id": "282695",
+        "text": "The growth in population is very rapid in developing countries."
+      }
+    ],
+    "indices": "発展途上国 の 人口増加 は 急速 だ",
+    "vocabIds": [
+      "1477720",
+      "2620490",
+      "1477740",
+      "1444870",
+      "1444880",
+      "1592250",
+      "1367300",
+      "1939410",
+      "1403160",
+      "1228890"
+    ],
+    "matches": {
+      "1228890": {
+        "start": 11,
+        "length": 2,
+        "reading": "きゅうそく"
+      },
+      "1367300": {
+        "start": 6,
+        "length": 2,
+        "reading": "じんこう"
+      },
+      "1403160": {
+        "start": 8,
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1444870": {
+        "start": 2,
+        "length": 2,
+        "reading": "とじょう"
+      },
+      "1444880": {
+        "start": 2,
+        "length": 3,
+        "reading": "とじょうこく"
+      },
+      "1477720": {
+        "start": 0,
+        "length": 2,
+        "reading": "はってん"
+      },
+      "1477740": {
+        "start": 0,
+        "length": 5,
+        "reading": "はってんとじょうこく"
+      },
+      "1592250": {
+        "start": 4,
+        "length": 1,
+        "reading": "こく"
+      },
+      "1939410": {
+        "start": 6,
+        "length": 4,
+        "reading": "じんこうぞうか"
+      },
+      "2620490": {
+        "start": 0,
+        "length": 4,
+        "reading": "はってんとじょう"
+      }
+    }
+  },
+  {
+    "id": "121701",
+    "original": "農業科学の発達のおかげで、世界の食料生産はなんとか人口増加に遅れずに済んだ。ただし未来を犠牲にしてである。",
+    "en": [
+      {
+        "id": "282304",
+        "text": "Thanks to the development of agricultural science, world food production has managed to keep up with population growth - but only at the expense of the future."
+      }
+    ],
+    "indices": "農業 科学 の 発達 の お陰で{おかげで} 世界 の 食料 生産(せいさん) は 何とか{なんとか} 人口増加 に 遅れる{遅れず} に 済む{済んだ} 但し{ただし} 未来[01] を 犠牲(ぎせい)[02] に 為る(する){して} である",
+    "vocabIds": [
+      "1470660",
+      "2868100",
+      "1192700",
+      "1477680",
+      "1373860",
+      "1358670",
+      "1378990",
+      "1367300",
+      "1939410",
+      "1403160",
+      "1589040",
+      "1422020",
+      "1295070",
+      "1528060",
+      "1225450"
+    ],
+    "matches": {
+      "1192700": {
+        "start": 2,
+        "length": 2,
+        "reading": "かがく"
+      },
+      "1225450": {
+        "start": 44,
+        "length": 2,
+        "reading": "ぎせい"
+      },
+      "1295070": {
+        "start": 34,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1358670": {
+        "start": 16,
+        "length": 2,
+        "reading": "しょくりょう"
+      },
+      "1367300": {
+        "start": 25,
+        "length": 2,
+        "reading": "じんこう"
+      },
+      "1373860": {
+        "start": 13,
+        "length": 2,
+        "reading": "せかい"
+      },
+      "1378990": {
+        "start": 18,
+        "length": 2,
+        "reading": "せいさん"
+      },
+      "1403160": {
+        "start": 27,
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1422020": {
+        "start": 30,
+        "length": 2,
+        "reading": "おくれ"
+      },
+      "1470660": {
+        "start": 0,
+        "length": 2,
+        "reading": "のうぎょう"
+      },
+      "1477680": {
+        "start": 5,
+        "length": 2,
+        "reading": "はったつ"
+      },
+      "1528060": {
+        "start": 41,
+        "length": 2,
+        "reading": "みらい"
+      },
+      "1589040": {
+        "start": 30,
+        "length": 2,
+        "reading": "おくれ"
+      },
+      "1939410": {
+        "start": 25,
+        "length": 4,
+        "reading": "じんこうぞうか"
+      },
+      "2868100": {
+        "start": 0,
+        "length": 4,
+        "reading": "のうぎょうかがく"
       }
     }
   },
@@ -439,23 +829,28 @@
     "matches": {
       "1212820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんさん"
       },
       "1307330": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "しはんき"
       },
       "1375790": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "せいちょう"
       },
       "1403160": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1731140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ねんりつ"
       }
     }
   },
@@ -477,15 +872,18 @@
     "matches": {
       "1403160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1461820": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "にさんかたんそ"
       },
       "1554640": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "りょう"
       }
     }
   },
@@ -500,27 +898,49 @@
     ],
     "indices": "二国間{二国間の} 貿易 は 着実{着実に} 増加 為る(する){している}",
     "vocabIds": [
+      "1461140",
       "1461770",
+      "1592250",
+      "1215230",
       "1520120",
       "1423050",
       "1403160"
     ],
     "matches": {
+      "1215230": {
+        "start": 2,
+        "length": 1,
+        "reading": "かん"
+      },
       "1403160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1423050": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゃくじつ"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
       },
       "1461770": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にこくかん"
       },
       "1520120": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうえき"
+      },
+      "1592250": {
+        "start": 1,
+        "length": 1,
+        "reading": "こく"
       }
     }
   },
@@ -542,15 +962,18 @@
     "matches": {
       "1403160": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1460530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なんぶ"
       },
       "1588500": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "うりあげ"
       }
     }
   },
@@ -577,19 +1000,23 @@
     "matches": {
       "1367300": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1373860": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1403160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1449710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とうけい"
       }
     }
   },
@@ -604,7 +1031,7 @@
     ],
     "indices": "暖かい{暖かくて} 湿気 の 多い 天気 は 犯罪 数(すう)[02] を 増加 為せる{させて} 仕舞う{しまう}",
     "vocabIds": [
-      "2081300",
+      "1586420",
       "1320410",
       "1407460",
       "1438690",
@@ -615,31 +1042,38 @@
     "matches": {
       "1320410": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しっけ"
       },
       "1403160": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1407460": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おおい"
       },
       "1438690": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "てんき"
       },
       "1481590": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "はんざい"
       },
       "1580820": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "すう"
       },
-      "2081300": {
+      "1586420": {
         "start": 0,
-        "length": 2
+        "length": 3,
+        "reading": "あたたかく"
       }
     }
   },
@@ -664,27 +1098,33 @@
     "matches": {
       "1179040": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "おせん"
       },
       "1334210": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうみん"
       },
       "1403160": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1413330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいき"
       },
       "1536010": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1737870": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "すいしつ"
       }
     }
   },
@@ -706,15 +1146,18 @@
     "matches": {
       "1403160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1413260": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "だいがくせい"
       },
       "1580820": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
       }
     }
   },
@@ -739,27 +1182,33 @@
     "matches": {
       "1179830": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "おうじる"
       },
       "1231580": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ぎゅうにく"
       },
       "1252090": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1330450": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じゅよう"
       },
       "1403160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1432460": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ついか"
       }
     }
   },
@@ -775,21 +1224,18 @@
     "indices": "騒音 の 増加 に 気付く{気付かなかった}",
     "vocabIds": [
       "1403060",
-      "1403160",
-      "1222560"
+      "1403160"
     ],
     "matches": {
-      "1222560": {
-        "start": 6,
-        "length": 2
-      },
       "1403060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうおん"
       },
       "1403160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       }
     }
   },
@@ -812,19 +1258,23 @@
     "matches": {
       "1228890": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうそく"
       },
       "1381570": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せいしょうねん"
       },
       "1403160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1484870": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ひこう"
       }
     }
   },
@@ -839,22 +1289,49 @@
     ],
     "indices": "生産(せいさん) 高(だか) が 著しい{著しく} 増加 為る(する){した}",
     "vocabIds": [
+      "1378990",
       "1379010",
+      "2183260",
+      "1007180",
+      "1427070",
       "1858570",
       "1403160"
     ],
     "matches": {
+      "1007180": {
+        "start": 2,
+        "length": 2,
+        "reading": "だかが"
+      },
+      "1378990": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいさん"
+      },
       "1379010": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せいさんだか"
       },
       "1403160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1427070": {
+        "start": 4,
+        "length": 3,
+        "reading": "いちじるしく"
       },
       "1858570": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "いちじるしく"
+      },
+      "2183260": {
+        "start": 2,
+        "length": 1,
+        "reading": "だか"
       }
     }
   },
@@ -877,19 +1354,23 @@
     "matches": {
       "1249470": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "けいこう"
       },
       "1367300": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1373860": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1403160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       }
     }
   },
@@ -912,19 +1393,23 @@
     "matches": {
       "1228680": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうげき"
       },
       "1367300": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1373860": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1403160": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       }
     }
   },
@@ -945,11 +1430,13 @@
     "matches": {
       "1367300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       }
     }
   },
@@ -970,11 +1457,13 @@
     "matches": {
       "1367300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       }
     }
   },
@@ -992,29 +1481,46 @@
       "1367300",
       "1403160",
       "1362730",
+      "1322700",
       "1658870",
+      "1536010",
       "1588410"
     ],
     "matches": {
+      "1322700": {
+        "start": 9,
+        "length": 2,
+        "reading": "しゃかい"
+      },
       "1362730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しんこく"
       },
       "1367300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1536010": {
+        "start": 11,
+        "length": 2,
+        "reading": "もんだい"
       },
       "1588410": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "うん"
       },
       "1658870": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "しゃかいもんだい"
       }
     }
   },
@@ -1037,19 +1543,23 @@
     "matches": {
       "1349590": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "まねい"
       },
       "1367300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1490830": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ひんこん"
       }
     }
   },
@@ -1072,19 +1582,74 @@
     "matches": {
       "1362730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しんこく"
       },
       "1367300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1536010": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
+      }
+    }
+  },
+  {
+    "id": "145378",
+    "original": "新しい出生政策は人口増加ゼロをめざしています。",
+    "en": [
+      {
+        "id": "269185",
+        "text": "The new birth policy is aimed at achieving zero population growth."
+      }
+    ],
+    "indices": "新しい 出生~ 政策 は 人口増加~ 零(ゼロ){ゼロ} を 目指す{めざしています}",
+    "vocabIds": [
+      "1361490",
+      "1580050",
+      "1375950",
+      "1367300",
+      "1939410",
+      "1403160"
+    ],
+    "matches": {
+      "1361490": {
+        "start": 0,
+        "length": 3,
+        "reading": "あたらしい"
+      },
+      "1367300": {
+        "start": 8,
+        "length": 2,
+        "reading": "じんこう"
+      },
+      "1375950": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいさく"
+      },
+      "1403160": {
+        "start": 10,
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1580050": {
+        "start": 3,
+        "length": 2,
+        "reading": "しゅっしょう"
+      },
+      "1939410": {
+        "start": 8,
+        "length": 4,
+        "reading": "じんこうぞうか"
       }
     }
   },
@@ -1099,27 +1664,43 @@
     ],
     "indices": "少年犯罪~ の 増加 は 深刻{深刻な} 問題 だ",
     "vocabIds": [
+      "1349170",
       "1349240",
+      "1481590",
       "1403160",
       "1362730",
       "1536010"
     ],
     "matches": {
+      "1349170": {
+        "start": 0,
+        "length": 2,
+        "reading": "しょうねん"
+      },
       "1349240": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "しょうねんはんざい"
       },
       "1362730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しんこく"
       },
       "1403160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1481590": {
+        "start": 2,
+        "length": 2,
+        "reading": "はんざい"
       },
       "1536010": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -1137,7 +1718,6 @@
       "1347400",
       "1515670",
       "1387500",
-      "1593050",
       "1481800",
       "1403160",
       "1277730",
@@ -1146,35 +1726,38 @@
     "matches": {
       "1277730": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "こうちょう"
       },
       "1318400": {
         "start": 42,
-        "length": 3
+        "length": 3,
+        "reading": "じどうしゃ"
       },
       "1347400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しょうむしょう"
       },
       "1387500": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "せんげつ"
       },
       "1403160": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1481800": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "はんばい"
       },
       "1515670": {
         "start": 4,
-        "length": 2
-      },
-      "1593050": {
-        "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ほうこく"
       }
     }
   },
@@ -1189,27 +1772,43 @@
     ],
     "indices": "失業者 数(すう)[02] は 徐々に 増加 為る(する){する} だろう",
     "vocabIds": [
+      "1319860",
       "1319870",
+      "1322990",
       "1580820",
       "1595480",
       "1403160"
     ],
     "matches": {
+      "1319860": {
+        "start": 0,
+        "length": 2,
+        "reading": "しつぎょう"
+      },
       "1319870": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しつぎょうしゃ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1403160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1580820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "すう"
       },
       "1595480": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "じょじょに"
       }
     }
   },
@@ -1224,7 +1823,9 @@
     ],
     "indices": "失業者 の 数(かず) が 最近 増加 為る(する){している} そうだ[02]",
     "vocabIds": [
+      "1319860",
       "1319870",
+      "1322990",
       "1580820",
       "1293780",
       "1403160"
@@ -1232,19 +1833,33 @@
     "matches": {
       "1293780": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
+      },
+      "1319860": {
+        "start": 0,
+        "length": 2,
+        "reading": "しつぎょう"
       },
       "1319870": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しつぎょうしゃ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1403160": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1580820": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
       }
     }
   },
@@ -1259,17 +1874,31 @@
     ],
     "indices": "殺人事件 が 増加 為る(する){して} 来る(くる){きている}",
     "vocabIds": [
+      "1299100",
       "1936100",
+      "1313830",
       "1403160"
     ],
     "matches": {
+      "1299100": {
+        "start": 0,
+        "length": 2,
+        "reading": "さつじん"
+      },
+      "1313830": {
+        "start": 2,
+        "length": 2,
+        "reading": "じけん"
+      },
       "1403160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1936100": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "さつじんじけん"
       }
     }
   },
@@ -1293,23 +1922,28 @@
     "matches": {
       "1251640": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けいひ"
       },
       "1294970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいにゅう"
       },
       "1403160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1588810": {
         "start": 16,
-        "length": 6
+        "length": 4,
+        "reading": "おいつか"
       },
       "1602440": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "ふえ"
       }
     }
   },
@@ -1332,19 +1966,23 @@
     "matches": {
       "1289330": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こんせいき"
       },
       "1403160": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1420590": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちしき"
       },
       "1426670": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもく"
       }
     }
   },
@@ -1360,7 +1998,9 @@
     "indices": "今後 生物学 を 専攻 為る(する){する} 学生(がくせい) の 数(かず) は 増加 為る(する){する} である{であろう}",
     "vocabIds": [
       "1289140",
+      "1379430",
       "1379450",
+      "1955900",
       "1389780",
       "1206900",
       "1580820",
@@ -1369,27 +2009,43 @@
     "matches": {
       "1206900": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1289140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんご"
+      },
+      "1379430": {
+        "start": 3,
+        "length": 2,
+        "reading": "せいぶつ"
       },
       "1379450": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "せいぶつがく"
       },
       "1389780": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せんこう"
       },
       "1403160": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1580820": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
+      },
+      "1955900": {
+        "start": 5,
+        "length": 1,
+        "reading": "がく"
       }
     }
   },
@@ -1413,23 +2069,28 @@
     "matches": {
       "1287710": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "くろじ"
       },
       "1289080": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんき"
       },
       "1403160": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1606620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わが"
       },
       "2015400": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "しゃ"
       }
     }
   },
@@ -1444,32 +2105,43 @@
     ],
     "indices": "国債発行~ が 高水準 なので 其れ等{それら} の 元利~ 支払い{支払} コスト が 増加 為る(する){する} だろう",
     "vocabIds": [
+      "1286390",
       "1993010",
+      "1477390",
       "1283640",
       "1578390",
-      "2827275",
       "1403160"
     ],
     "matches": {
       "1283640": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "こうすいじゅん"
+      },
+      "1286390": {
+        "start": 0,
+        "length": 2,
+        "reading": "こくさい"
       },
       "1403160": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1477390": {
+        "start": 2,
+        "length": 2,
+        "reading": "はっこう"
       },
       "1578390": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "がんり"
       },
       "1993010": {
         "start": 0,
-        "length": 4
-      },
-      "2827275": {
-        "start": 18,
-        "length": 1
+        "length": 4,
+        "reading": "こくさいはっこう"
       }
     }
   },
@@ -1487,29 +2159,76 @@
       "1282710",
       "1493700",
       "1612900",
+      "1589880",
+      "1589860",
+      "1278040",
+      "2621250",
       "2274920",
+      "1378990",
+      "1379010",
+      "2183260",
       "1403160"
     ],
     "matches": {
+      "1278040": {
+        "start": 11,
+        "length": 2,
+        "reading": "こうぎょう"
+      },
       "1282710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうざい"
+      },
+      "1378990": {
+        "start": 13,
+        "length": 2,
+        "reading": "せいさん"
+      },
+      "1379010": {
+        "start": 13,
+        "length": 3,
+        "reading": "せいさんだか"
       },
       "1403160": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1493700": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ふそく"
+      },
+      "1589860": {
+        "start": 6,
+        "length": 4,
+        "reading": "かかわらず"
+      },
+      "1589880": {
+        "start": 6,
+        "length": 3,
+        "reading": "かかわら"
       },
       "1612900": {
         "start": 4,
-        "length": 6
+        "length": 6,
+        "reading": "にもかかわらず"
+      },
+      "2183260": {
+        "start": 15,
+        "length": 1,
+        "reading": "だか"
       },
       "2274920": {
         "start": 11,
-        "length": 5
+        "length": 5,
+        "reading": "こうぎょうせいさんだか"
+      },
+      "2621250": {
+        "start": 11,
+        "length": 4,
+        "reading": "こうぎょうせいさん"
       }
     }
   },
@@ -1524,22 +2243,37 @@
     ],
     "indices": "交通事故 の 数(かず) は 増加 為る(する){し} つつある 様だ{ようだ}",
     "vocabIds": [
+      "1272280",
       "1272350",
+      "1313850",
       "1580820",
       "1403160"
     ],
     "matches": {
+      "1272280": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうつう"
+      },
       "1272350": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "こうつうじこ"
+      },
+      "1313850": {
+        "start": 2,
+        "length": 2,
+        "reading": "じこ"
       },
       "1403160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1580820": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
       }
     }
   },
@@ -1554,22 +2288,37 @@
     ],
     "indices": "交通事故 の 件数~ が 増加 為る(する){している}",
     "vocabIds": [
+      "1272280",
       "1272350",
+      "1313850",
       "1255950",
       "1403160"
     ],
     "matches": {
       "1255950": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けんすう"
+      },
+      "1272280": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうつう"
       },
       "1272350": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "こうつうじこ"
+      },
+      "1313850": {
+        "start": 2,
+        "length": 2,
+        "reading": "じこ"
       },
       "1403160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       }
     }
   },
@@ -1587,34 +2336,28 @@
       "1243330",
       "1434250",
       "1243490",
-      "1411110",
-      "1339160",
       "1403160"
     ],
     "matches": {
       "1243330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きんり"
       },
       "1243490": {
         "start": 9,
-        "length": 2
-      },
-      "1339160": {
-        "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ぎんこう"
       },
       "1403160": {
         "start": 16,
-        "length": 2
-      },
-      "1411110": {
-        "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1434250": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ていか"
       }
     }
   },
@@ -1632,44 +2375,70 @@
       "1242300",
       "1318400",
       "1580820",
+      "1228560",
       "2269050",
       "1403160",
       "1524720",
+      "1272280",
       "1272350",
+      "1313850",
       "1223680"
     ],
     "matches": {
       "1223680": {
         "start": 29,
-        "length": 4
+        "length": 3,
+        "reading": "おこっ"
+      },
+      "1228560": {
+        "start": 8,
+        "length": 1,
+        "reading": "きゅう"
       },
       "1242300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちかごろ"
+      },
+      "1272280": {
+        "start": 24,
+        "length": 2,
+        "reading": "こうつう"
       },
       "1272350": {
         "start": 24,
-        "length": 4
+        "length": 4,
+        "reading": "こうつうじこ"
+      },
+      "1313850": {
+        "start": 26,
+        "length": 2,
+        "reading": "じこ"
       },
       "1318400": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "じどうしゃ"
       },
       "1403160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1524720": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       },
       "1580820": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
       },
       "2269050": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -1684,32 +2453,49 @@
     ],
     "indices": "観光客 の 数(かず) は 近年 大いに 増加 為る(する){した}",
     "vocabIds": [
+      "1214840",
       "1214870",
+      "1226630",
       "1580820",
       "1242510",
       "1412880",
       "1403160"
     ],
     "matches": {
+      "1214840": {
+        "start": 0,
+        "length": 2,
+        "reading": "かんこう"
+      },
       "1214870": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かんこうきゃく"
+      },
+      "1226630": {
+        "start": 2,
+        "length": 1,
+        "reading": "きゃく"
       },
       "1242510": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きんねん"
       },
       "1403160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1412880": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "おおいに"
       },
       "1580820": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
       }
     }
   },
@@ -1735,31 +2521,38 @@
     "matches": {
       "1201260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいがい"
       },
       "1206900": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1403160": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1552740": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "りゅうがく"
       },
       "1580820": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
       },
       "1584360": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "まいとし"
       },
       "1598550": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "でかける"
       }
     }
   },
@@ -1780,36 +2573,49 @@
       "1448230",
       "1531710",
       "1373860",
+      "1278450",
       "1905020"
     ],
     "matches": {
       "1201260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいがい"
+      },
+      "1278450": {
+        "start": 30,
+        "length": 3,
+        "reading": "ひろまり"
       },
       "1373860": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1403160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1448230": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "とうよう"
       },
       "1531710": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "なまえ"
       },
       "1599120": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "とりひき"
       },
       "1905020": {
         "start": 30,
-        "length": 3
+        "length": 3,
+        "reading": "ひろまり"
       }
     }
   },
@@ -1826,25 +2632,41 @@
     "vocabIds": [
       "1198550",
       "1549470",
+      "1485560",
       "1485570",
+      "1437260",
       "1403160"
     ],
     "matches": {
       "1198550": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1403160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1437260": {
+        "start": 8,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1485560": {
+        "start": 6,
+        "length": 2,
+        "reading": "ひやく"
       },
       "1485570": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ひやくてき"
       },
       "1549470": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "りえき"
       }
     }
   },
@@ -1861,25 +2683,41 @@
     "vocabIds": [
       "1198550",
       "1330500",
+      "1485560",
       "1485570",
+      "1437260",
       "1403160"
     ],
     "matches": {
       "1198550": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1330500": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうえき"
       },
       "1403160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1437260": {
+        "start": 8,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1485560": {
+        "start": 6,
+        "length": 2,
+        "reading": "ひやく"
       },
       "1485570": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ひやくてき"
       }
     }
   },
@@ -1894,7 +2732,9 @@
     ],
     "indices": "科学的 知識 の 増加 と共に{とともに} 人間(にんげん)[01] の 悪(あく) を 行う 力(ちから) は 善 を 行う 力(ちから) に 比例 為る(する){して} 増える{増えて} 来る(くる){きた}",
     "vocabIds": [
+      "1192700",
       "1192760",
+      "1437260",
       "1420590",
       "1403160",
       "1366770",
@@ -1908,43 +2748,63 @@
     "matches": {
       "1151230": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "あく"
+      },
+      "1192700": {
+        "start": 0,
+        "length": 2,
+        "reading": "かがく"
       },
       "1192760": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かがくてき"
       },
       "1366770": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1394250": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "ぜん"
       },
       "1403160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1420590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちしき"
+      },
+      "1437260": {
+        "start": 2,
+        "length": 1,
+        "reading": "てき"
       },
       "1483700": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "ひれい"
       },
       "1554820": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "ちから"
       },
       "1589060": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "おこなう"
       },
       "1602440": {
         "start": 33,
-        "length": 3
+        "length": 2,
+        "reading": "ふえ"
       }
     }
   },
@@ -1959,7 +2819,9 @@
     ],
     "indices": "科学者 達{たち} は 世界 の 食料 供給 を 増加 為る(する){する} 新しい 方法 を 提示 為る(する){する} だろう",
     "vocabIds": [
+      "1192700",
       "1192750",
+      "1322990",
       "1373860",
       "1358670",
       "1233630",
@@ -1969,37 +2831,55 @@
       "1436400"
     ],
     "matches": {
+      "1192700": {
+        "start": 0,
+        "length": 2,
+        "reading": "かがく"
+      },
       "1192750": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かがくしゃ"
       },
       "1233630": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きょうきゅう"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1358670": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しょくりょう"
       },
       "1361490": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1373860": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1403160": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1436400": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ていじ"
       },
       "1517090": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       }
     }
   },
@@ -2014,27 +2894,43 @@
     ],
     "indices": "一般的{一般的に} 言う{言って} 預金 は 増加 為る(する){している}",
     "vocabIds": [
+      "1165790",
       "1165880",
+      "1437260",
       "1587040",
       "1545020",
       "1403160"
     ],
     "matches": {
+      "1165790": {
+        "start": 0,
+        "length": 2,
+        "reading": "いっぱん"
+      },
       "1165880": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いっぱんてき"
       },
       "1403160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1437260": {
+        "start": 2,
+        "length": 1,
+        "reading": "てき"
       },
       "1545020": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "よきん"
       },
       "1587040": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -2049,7 +2945,6 @@
     ],
     "indices": "我が国{わが国} の 大都市 の 多く で(#2028980) は 犯罪 は 確かに{たしかに} 増加 為る(する){している}",
     "vocabIds": [
-      "1592250",
       "1414610",
       "1861770",
       "1481590",
@@ -2058,23 +2953,23 @@
     "matches": {
       "1403160": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1414610": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "だいとし"
       },
       "1481590": {
         "start": 12,
-        "length": 2
-      },
-      "1592250": {
-        "start": 2,
-        "length": 1
+        "length": 2,
+        "reading": "はんざい"
       },
       "1861770": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -2089,9 +2984,15 @@
     ],
     "indices": "殆ど[03]{ほとんど} の 発展途上国 の 都会 の 人口[01] は 非常に 急激{急激に} 増加 為る(する){している}",
     "vocabIds": [
+      "1477720",
+      "2620490",
       "1477740",
+      "1444870",
+      "1444880",
+      "1592250",
       "1444970",
       "1367300",
+      "1484920",
       "1484930",
       "1228680",
       "1403160"
@@ -2099,27 +3000,63 @@
     "matches": {
       "1228680": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうげき"
       },
       "1367300": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1444870": {
+        "start": 7,
+        "length": 2,
+        "reading": "とじょう"
+      },
+      "1444880": {
+        "start": 7,
+        "length": 3,
+        "reading": "とじょうこく"
       },
       "1444970": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "とかい"
+      },
+      "1477720": {
+        "start": 5,
+        "length": 2,
+        "reading": "はってん"
       },
       "1477740": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "はってんとじょうこく"
+      },
+      "1484920": {
+        "start": 17,
+        "length": 2,
+        "reading": "ひじょう"
       },
       "1484930": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "ひじょうに"
+      },
+      "1592250": {
+        "start": 9,
+        "length": 1,
+        "reading": "こく"
+      },
+      "2620490": {
+        "start": 5,
+        "length": 4,
+        "reading": "はってんとじょう"
       }
     }
   },
@@ -2143,23 +3080,28 @@
     "matches": {
       "1362730": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しんこく"
       },
       "1367300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1536010": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1592250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       }
     }
   },
@@ -2181,15 +3123,18 @@
     "matches": {
       "1367300": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1423310": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       }
     }
   },
@@ -2213,23 +3158,28 @@
     "matches": {
       "1403160": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1518080": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "おとずれる"
       },
       "1580640": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1580820": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
       },
       "1582860": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ねんねん"
       }
     }
   },
@@ -2251,15 +3201,18 @@
     "matches": {
       "1228890": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうそく"
       },
       "1306200": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しよう"
       },
       "1403160": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       }
     }
   },
@@ -2278,63 +3231,99 @@
       "1009810",
       "1580650",
       "1260070",
+      "1510790",
       "1510690",
       "2225040",
+      "1463770",
       "2623050",
+      "1315920",
       "1228890",
       "1403160",
       "1324300",
+      "1580640",
       "1368740",
       "1222010"
     ],
     "matches": {
       "1009810": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "にたいする"
       },
       "1222010": {
         "start": 77,
-        "length": 2
+        "length": 2,
+        "reading": "きらく"
       },
       "1228890": {
         "start": 60,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうそく"
       },
       "1254790": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "けっこん"
       },
       "1260070": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "みかた"
+      },
+      "1315920": {
+        "start": 28,
+        "length": 2,
+        "reading": "じかん"
       },
       "1324300": {
         "start": 68,
-        "length": 2
+        "length": 2,
+        "reading": "わかい"
       },
       "1368740": {
         "start": 70,
-        "length": 3
+        "length": 3,
+        "reading": "ひとたち"
       },
       "1403160": {
         "start": 63,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1463770": {
+        "start": 25,
+        "length": 1,
+        "reading": "にち"
       },
       "1510690": {
         "start": 16,
-        "length": 4
+        "length": 4,
+        "reading": "かわった"
+      },
+      "1510790": {
+        "start": 16,
+        "length": 3,
+        "reading": "かわっ"
+      },
+      "1580640": {
+        "start": 70,
+        "length": 1,
+        "reading": "ひと"
       },
       "1580650": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
       },
       "2225040": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "2623050": {
         "start": 26,
-        "length": 4
+        "length": 4,
+        "reading": "によんじかん"
       }
     }
   },
@@ -2353,38 +3342,57 @@
       "1407750",
       "1403160",
       "1166510",
+      "1366770",
       "1366850",
+      "1215810",
       "1591380",
       "1603640"
     ],
     "matches": {
       "1166510": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "いっぽう"
+      },
+      "1215810": {
+        "start": 29,
+        "length": 2,
+        "reading": "かんけい"
+      },
+      "1366770": {
+        "start": 27,
+        "length": 2,
+        "reading": "にんげん"
       },
       "1366850": {
         "start": 27,
-        "length": 4
+        "length": 4,
+        "reading": "にんげんかんけい"
       },
       "1403160": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1407750": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "たしゅ"
       },
       "1517090": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       },
       "1591380": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "きはく"
       },
       "1603640": {
         "start": 48,
-        "length": 4
+        "length": 4,
+        "reading": "ほんまつてんとう"
       }
     }
   },
@@ -2407,19 +3415,23 @@
     "matches": {
       "1367300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1423310": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1444990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とし"
       }
     }
   },
@@ -2441,15 +3453,18 @@
     "matches": {
       "1367300": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1603990": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "まち"
       }
     }
   },
@@ -2465,36 +3480,60 @@
     "indices": "此の{この} 増加 に加えて 世界 の 経済 構造~ の 変化(へんか)[01] が[01] 有る{あった}",
     "vocabIds": [
       "1403160",
+      "1009710",
       "1009720",
+      "1189960",
+      "2527270",
       "1373860",
       "1251320",
       "1279790",
       "1510890"
     ],
     "matches": {
+      "1009710": {
+        "start": 4,
+        "length": 3,
+        "reading": "にくわえ"
+      },
       "1009720": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "にくわえて"
+      },
+      "1189960": {
+        "start": 5,
+        "length": 2,
+        "reading": "くわえ"
       },
       "1251320": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "けいざい"
       },
       "1279790": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こうぞう"
       },
       "1373860": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1403160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1510890": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "へんか"
+      },
+      "2527270": {
+        "start": 5,
+        "length": 3,
+        "reading": "くわえて"
       }
     }
   },
@@ -2513,7 +3552,9 @@
     ],
     "indices": "此の{この} 失業者~ の 増加 は 不景気 の 当然{当然な} 結果 である",
     "vocabIds": [
+      "1319860",
       "1319870",
+      "1322990",
       "1403160",
       "1492120",
       "1449190",
@@ -2522,23 +3563,38 @@
     "matches": {
       "1254690": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "けっか"
+      },
+      "1319860": {
+        "start": 2,
+        "length": 2,
+        "reading": "しつぎょう"
       },
       "1319870": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "しつぎょうしゃ"
+      },
+      "1322990": {
+        "start": 4,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1403160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1449190": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "とうぜん"
       },
       "1492120": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ふけいき"
       }
     }
   },
@@ -2561,19 +3617,23 @@
     "matches": {
       "1308090": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "し"
       },
       "1367300": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1582860": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ねんねん"
       }
     }
   },
@@ -2589,21 +3649,36 @@
     "indices": "此の{この} 工場 の 生産(せいさん) 高(だか) は 増加 為る(する){している}",
     "vocabIds": [
       "1578700",
+      "1378990",
       "1379010",
+      "2183260",
       "1403160"
     ],
     "matches": {
+      "1378990": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいさん"
+      },
       "1379010": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "せいさんだか"
       },
       "1403160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1578700": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうじょう"
+      },
+      "2183260": {
+        "start": 7,
+        "length": 1,
+        "reading": "だか"
       }
     }
   },
@@ -2618,6 +3693,7 @@
     ],
     "indices": "此の{この} 驚くほど の 増加 は 同じ[01] 期間 の 間(あいだ) に 起こる{起こった} 急速{急速な} 経済面[02] で(#2028980) の 統合[01]~ に因って{によって} 可能 となる{となった}",
     "vocabIds": [
+      "1238680",
       "2827571",
       "1403160",
       "1451750",
@@ -2625,50 +3701,77 @@
       "1215230",
       "1223680",
       "1228890",
+      "1251320",
       "1933910",
+      "1584695",
       "1449760",
       "1191060"
     ],
     "matches": {
       "1191060": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "かのう"
       },
       "1215230": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1220550": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "きかん"
       },
       "1223680": {
         "start": 18,
-        "length": 4
+        "length": 3,
+        "reading": "おこっ"
       },
       "1228890": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうそく"
+      },
+      "1238680": {
+        "start": 2,
+        "length": 2,
+        "reading": "おどろく"
+      },
+      "1251320": {
+        "start": 25,
+        "length": 2,
+        "reading": "けいざい"
       },
       "1403160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1449760": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "とうごう"
       },
       "1451750": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
+      },
+      "1584695": {
+        "start": 27,
+        "length": 1,
+        "reading": "めん"
       },
       "1933910": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "けいざいめん"
       },
       "2827571": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "おどろくほど"
       }
     }
   },
@@ -2690,15 +3793,18 @@
     "matches": {
       "1367300": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じんこう"
       },
       "1403160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1444990": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "とし"
       }
     }
   },
@@ -2718,32 +3824,50 @@
       "1298230",
       "1452240",
       "1009840",
+      "1483540",
+      "1003950",
       "1403160"
     ],
     "matches": {
+      "1003950": {
+        "start": 12,
+        "length": 2,
+        "reading": "くらべ"
+      },
       "1009840": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "にくらべ"
       },
       "1162120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちがつ"
       },
       "1298230": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さくねん"
       },
       "1403160": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1452240": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "どうげつ"
+      },
+      "1483540": {
+        "start": 12,
+        "length": 2,
+        "reading": "くらべ"
       },
       "1538820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆしゅつ"
       }
     }
   },
@@ -2760,29 +3884,84 @@
       "1483150",
       "1409540",
       "1403160",
-      "2259840",
+      "1593480",
       "1423310"
     ],
     "matches": {
       "1403160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1409540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たいじゅう"
       },
       "1423310": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
-      "2259840": {
+      "1593480": {
         "start": 9,
-        "length": 1
+        "length": 2,
+        "reading": "こわく"
+      }
+    }
+  },
+  {
+    "id": "1268804",
+    "original": "我々は急速な人口増加を防がなければならない。",
+    "en": [
+      {
+        "id": "812470",
+        "text": "We must prevent rapid population growth."
+      }
+    ],
+    "vocabIds": [
+      "1607050",
+      "1228890",
+      "1367300",
+      "1939410",
+      "1403160",
+      "1520190"
+    ],
+    "matches": {
+      "1228890": {
+        "start": 3,
+        "length": 2,
+        "reading": "きゅうそく"
+      },
+      "1367300": {
+        "start": 6,
+        "length": 2,
+        "reading": "じんこう"
+      },
+      "1403160": {
+        "start": 8,
+        "length": 2,
+        "reading": "ぞうか"
+      },
+      "1520190": {
+        "start": 11,
+        "length": 2,
+        "reading": "ふせが"
+      },
+      "1607050": {
+        "start": 0,
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "1939410": {
+        "start": 6,
+        "length": 4,
+        "reading": "じんこうぞうか"
       }
     }
   },
@@ -2796,7 +3975,7 @@
       }
     ],
     "vocabIds": [
-      "2081300",
+      "1586420",
       "1320490",
       "1283190",
       "1438970",
@@ -2807,31 +3986,38 @@
     "matches": {
       "1283190": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たかい"
       },
       "1320490": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しつど"
       },
       "1403160": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1438970": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "てんこう"
       },
       "1481590": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "はんざい"
       },
       "1580820": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "すう"
       },
-      "2081300": {
+      "1586420": {
         "start": 0,
-        "length": 2
+        "length": 3,
+        "reading": "あたたかく"
       }
     }
   },
@@ -2845,7 +4031,9 @@
       }
     ],
     "vocabIds": [
+      "1330510",
       "1330540",
+      "2183260",
       "1403160",
       "1547720",
       "1287280",
@@ -2858,39 +4046,58 @@
     "matches": {
       "1173660": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "えいきょう"
       },
       "1186510": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "げらく"
       },
       "1189500": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かかく"
       },
       "1214530": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "かんわ"
       },
       "1287280": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こくもつ"
+      },
+      "1330510": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅうかく"
       },
       "1330540": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しゅうかくだか"
       },
       "1403160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1538090": {
         "start": 29,
-        "length": 3
+        "length": 3,
+        "reading": "やくだつ"
       },
       "1547720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きたる"
+      },
+      "2183260": {
+        "start": 2,
+        "length": 1,
+        "reading": "だか"
       }
     }
   },
@@ -2914,27 +4121,33 @@
     "matches": {
       "1379950": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "せいしん"
       },
       "1403160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぞうか"
       },
       "1409540": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいじゅう"
       },
       "1455210": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "とくてい"
       },
       "1500400": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "ふくさよう"
       },
       "1538160": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "やく"
       }
     }
   }

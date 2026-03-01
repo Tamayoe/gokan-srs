@@ -10,37 +10,61 @@
     ],
     "indices": "尚[03]{なお}~ 会社説明会~ 後(ご) でも 会社[01] 見学 は 随時[01]~ 受け付ける{受け付けて} 居る(おる){おります}",
     "vocabIds": [
-      "2189490",
-      "1269350",
       "1198550",
+      "2189490",
+      "1386460",
+      "2652800",
+      "1198160",
+      "1269320",
       "1259440",
       "1372760",
       "1329690"
     ],
     "matches": {
+      "1198160": {
+        "start": 7,
+        "length": 1,
+        "reading": "かい"
+      },
       "1198550": {
-        "start": 12,
-        "length": 2
+        "start": 3,
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1259440": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "けんがく"
       },
-      "1269350": {
+      "1269320": {
         "start": 8,
-        "length": 2
+        "length": 1,
+        "reading": "ご"
       },
       "1329690": {
         "start": 19,
-        "length": 5
+        "length": 4,
+        "reading": "うけつけ"
       },
       "1372760": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ずいじ"
+      },
+      "1386460": {
+        "start": 5,
+        "length": 2,
+        "reading": "せつめい"
       },
       "2189490": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "かいしゃせつめいかい"
+      },
+      "2652800": {
+        "start": 5,
+        "length": 3,
+        "reading": "せつめいかい"
       }
     }
   },
@@ -66,31 +90,71 @@
     "matches": {
       "1316890": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ちりょう"
       },
       "1329690": {
         "start": 25,
-        "length": 6
+        "length": 4,
+        "reading": "うけつけ"
       },
       "1490160": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "やまい"
       },
       "1538160": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "くすり"
       },
       "1558670": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "こい"
       },
       "1590550": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしみ"
       },
       "1604540": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "みち"
+      }
+    }
+  },
+  {
+    "id": "112690",
+    "original": "彼はその手紙を受け付けとるやいなや２つにさいてしまった。",
+    "en": [
+      {
+        "id": "290986",
+        "text": "He had no sooner got the letter than tore it in two."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 其の[01]{その} 手紙 を 受け付ける{受け付け} 取る{とる} や否や[01]{やいなや} 二つ{２つ} に 裂く[01]{さいて} 仕舞う{しまった}",
+    "vocabIds": [
+      "1483070",
+      "1327720",
+      "1329690"
+    ],
+    "matches": {
+      "1327720": {
+        "start": 4,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1329690": {
+        "start": 7,
+        "length": 4,
+        "reading": "うけつけ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -111,11 +175,13 @@
     "matches": {
       "1329690": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "うけつけ"
       },
       "1443840": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       }
     }
   },
@@ -130,17 +196,31 @@
     ],
     "indices": "人工乳~ を 受け付ける{受け付けません}",
     "vocabIds": [
+      "1367380",
       "2397600",
+      "1464980",
       "1329690"
     ],
     "matches": {
       "1329690": {
         "start": 4,
-        "length": 7
+        "length": 4,
+        "reading": "うけつけ"
+      },
+      "1367380": {
+        "start": 0,
+        "length": 2,
+        "reading": "じんこう"
+      },
+      "1464980": {
+        "start": 2,
+        "length": 1,
+        "reading": "ちち"
       },
       "2397600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じんこうちち"
       }
     }
   },
@@ -162,15 +242,102 @@
     "matches": {
       "1329690": {
         "start": 9,
-        "length": 6
+        "length": 4,
+        "reading": "うけつけ"
       },
       "1584660": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       },
       "1605140": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "もうしこみ"
+      }
+    }
+  },
+  {
+    "id": "169228",
+    "original": "残念ながら、申し込みは受け付けられませんでした。",
+    "en": [
+      {
+        "id": "245258",
+        "text": "We regret that your application has not been accepted."
+      }
+    ],
+    "indices": "残念ながら 申し込み は 受け付ける{受け付けられませんでした}",
+    "vocabIds": [
+      "1304680",
+      "1304700",
+      "1605140",
+      "1329690"
+    ],
+    "matches": {
+      "1304680": {
+        "start": 0,
+        "length": 2,
+        "reading": "ざんねん"
+      },
+      "1304700": {
+        "start": 0,
+        "length": 5,
+        "reading": "ざんねんながら"
+      },
+      "1329690": {
+        "start": 11,
+        "length": 4,
+        "reading": "うけつけ"
+      },
+      "1605140": {
+        "start": 6,
+        "length": 4,
+        "reading": "もうしこみ"
+      }
+    }
+  },
+  {
+    "id": "174323",
+    "original": "後になってテストを提出しても、受け付けられません。",
+    "en": [
+      {
+        "id": "240146",
+        "text": "If you turn in a test late, it will not be accepted."
+      }
+    ],
+    "indices": "後になって テスト[01] を 提出[01] 為る(する){して} も 受け付ける{受け付けられません}~",
+    "vocabIds": [
+      "1269320",
+      "2640160",
+      "2839813",
+      "1436410",
+      "1329690"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 0,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1329690": {
+        "start": 15,
+        "length": 4,
+        "reading": "うけつけ"
+      },
+      "1436410": {
+        "start": 9,
+        "length": 2,
+        "reading": "ていしゅつ"
+      },
+      "2640160": {
+        "start": 0,
+        "length": 2,
+        "reading": "ごに"
+      },
+      "2839813": {
+        "start": 0,
+        "length": 5,
+        "reading": "ごになって"
       }
     }
   },
@@ -192,15 +359,18 @@
     "matches": {
       "1329690": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "うけつけ"
       },
       "1443840": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1543750": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
       }
     }
   },
@@ -214,27 +384,55 @@
       }
     ],
     "vocabIds": [
+      "1402730",
+      "1605680",
       "1542430",
+      "1239560",
       "1329690",
+      "1590770",
       "1590790",
       "1402630"
     ],
     "matches": {
+      "1239560": {
+        "start": 20,
+        "length": 1,
+        "reading": "きょく"
+      },
       "1329690": {
         "start": 22,
-        "length": 5
+        "length": 4,
+        "reading": "うけつけ"
       },
       "1402630": {
         "start": 45,
-        "length": 2
+        "length": 2,
+        "reading": "おくり"
+      },
+      "1402730": {
+        "start": 9,
+        "length": 2,
+        "reading": "おくろ"
       },
       "1542430": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "ゆうびんきょく"
+      },
+      "1590770": {
+        "start": 37,
+        "length": 3,
+        "reading": "かわり"
       },
       "1590790": {
         "start": 37,
-        "length": 4
+        "length": 4,
+        "reading": "かわりに"
+      },
+      "1605680": {
+        "start": 18,
+        "length": 2,
+        "reading": "ゆうびん"
       }
     }
   }

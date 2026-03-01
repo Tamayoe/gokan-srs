@@ -18,19 +18,23 @@
     "matches": {
       "1307850": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1457040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "とつぜん"
       },
       "1485280": {
         "start": 8,
-        "length": 6
+        "length": 5,
+        "reading": "とびかかっ"
       },
       "1537350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "やけん"
       }
     }
   },
@@ -55,27 +59,33 @@
     "matches": {
       "1206730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1344970": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1485280": {
         "start": 14,
-        "length": 6
+        "length": 5,
+        "reading": "とびかかっ"
       },
       "1578850": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "1582200": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "とちゅう"
       }
     }
   },
@@ -97,15 +107,57 @@
     "matches": {
       "1236500": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごうとう"
       },
       "1252330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいかん"
       },
       "1485280": {
         "start": 6,
-        "length": 6
+        "length": 5,
+        "reading": "とびかかっ"
+      }
+    }
+  },
+  {
+    "id": "188725",
+    "original": "猿に飛びかかられて彼は怖がった。",
+    "en": [
+      {
+        "id": "25870",
+        "text": "He was scared when the monkey jumped at him."
+      }
+    ],
+    "indices": "猿[01] に 飛び掛かる{飛びかかられて} 彼(かれ)[01] は 怖がる{怖がった}",
+    "vocabIds": [
+      "1177390",
+      "1485280",
+      "1483070",
+      "1496930"
+    ],
+    "matches": {
+      "1177390": {
+        "start": 0,
+        "length": 1,
+        "reading": "さる"
+      },
+      "1483070": {
+        "start": 9,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1485280": {
+        "start": 2,
+        "length": 5,
+        "reading": "とびかから"
+      },
+      "1496930": {
+        "start": 11,
+        "length": 3,
+        "reading": "こわがっ"
       }
     }
   },
@@ -120,7 +172,6 @@
     ],
     "indices": "獰猛{どう猛な}~ 犬[01] が 女の子(おんなのこ) に 飛び掛かる{飛びかかった}~",
     "vocabIds": [
-      "2013380",
       "1258330",
       "1344970",
       "1485280"
@@ -128,19 +179,63 @@
     "matches": {
       "1258330": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1344970": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1485280": {
         "start": 10,
-        "length": 6
+        "length": 5,
+        "reading": "とびかかっ"
+      }
+    }
+  },
+  {
+    "id": "207302",
+    "original": "その猫は飛びかかろうとして低く身構えた。",
+    "en": [
+      {
+        "id": "44553",
+        "text": "The cat crouched down ready to jump."
+      }
+    ],
+    "indices": "其の[01]{その} 猫(ねこ)[01] は 飛び掛かる{飛びかかろう} として[04] 低い{低く} 身構える{身構えた}~",
+    "vocabIds": [
+      "1467640",
+      "1485280",
+      "1434180",
+      "2011600",
+      "1365690"
+    ],
+    "matches": {
+      "1365690": {
+        "start": 15,
+        "length": 3,
+        "reading": "みがまえ"
       },
-      "2013380": {
+      "1434180": {
+        "start": 13,
+        "length": 2,
+        "reading": "ひくく"
+      },
+      "1467640": {
         "start": 2,
-        "length": 2
+        "length": 1,
+        "reading": "ねこ"
+      },
+      "1485280": {
+        "start": 4,
+        "length": 5,
+        "reading": "とびかかろ"
+      },
+      "2011600": {
+        "start": 15,
+        "length": 3,
+        "reading": "みがまえ"
       }
     }
   },
@@ -156,21 +251,54 @@
     "indices": "其の[01]{その} 犬[01] は 郵便配達人~ に 飛び掛かる{飛びかかった}",
     "vocabIds": [
       "1258330",
+      "1605680",
+      "1542470",
       "2147430",
+      "1473140",
+      "1689680",
+      "1580640",
       "1485280"
     ],
     "matches": {
       "1258330": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
+      },
+      "1473140": {
+        "start": 6,
+        "length": 2,
+        "reading": "はいたつ"
       },
       "1485280": {
         "start": 10,
-        "length": 6
+        "length": 5,
+        "reading": "とびかかっ"
+      },
+      "1542470": {
+        "start": 4,
+        "length": 4,
+        "reading": "ゆうびんはいたつ"
+      },
+      "1580640": {
+        "start": 8,
+        "length": 1,
+        "reading": "じん"
+      },
+      "1605680": {
+        "start": 4,
+        "length": 2,
+        "reading": "ゆうびん"
+      },
+      "1689680": {
+        "start": 6,
+        "length": 3,
+        "reading": "はいたつじん"
       },
       "2147430": {
         "start": 4,
-        "length": 5
+        "length": 5,
+        "reading": "ゆうびんはいたつじん"
       }
     }
   }

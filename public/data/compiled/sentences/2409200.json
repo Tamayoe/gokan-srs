@@ -10,22 +10,200 @@
     ],
     "indices": "何名 様(さま)[01] ですか 名(めい)[01] です",
     "vocabIds": [
+      "1577100",
       "2262180",
-      "2409200",
-      "1531330"
+      "1531330",
+      "2710970",
+      "1545790",
+      "2409200"
     ],
     "matches": {
       "1531330": {
-        "start": 10,
-        "length": 1
+        "start": 2,
+        "length": 1,
+        "reading": "めい"
+      },
+      "1545790": {
+        "start": 3,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1577100": {
+        "start": 1,
+        "length": 1,
+        "reading": "なん"
       },
       "2262180": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "なんめい"
       },
       "2409200": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "さまです"
+      },
+      "2710970": {
+        "start": 2,
+        "length": 2,
+        "reading": "めいさま"
+      }
+    }
+  },
+  {
+    "id": "76698",
+    "original": "さすがは、王子様ですわね。きっとただならない傑物の素質をお持ちなのですわ。",
+    "en": [
+      {
+        "id": "327022",
+        "text": "Isn't that just what you'd expect from the prince? He certainly has the character of a truly great man."
+      }
+    ],
+    "indices": "流石は{さすがは}~ 王子 様(さま)[01] です わね 屹度[01]{きっと} 只ならない[02]{ただならない}~ 傑物~ の 素質 を 持つ{お持ち} なのだ{なのです} わ",
+    "vocabIds": [
+      "1181500",
+      "2858295",
+      "1545790",
+      "2409200",
+      "1253880",
+      "1397240",
+      "1315720",
+      "1612060"
+    ],
+    "matches": {
+      "1181500": {
+        "start": 5,
+        "length": 2,
+        "reading": "おうじ"
+      },
+      "1253880": {
+        "start": 22,
+        "length": 2,
+        "reading": "けつぶつ"
+      },
+      "1315720": {
+        "start": 29,
+        "length": 2,
+        "reading": "もち"
+      },
+      "1397240": {
+        "start": 25,
+        "length": 2,
+        "reading": "そしつ"
+      },
+      "1545790": {
+        "start": 7,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1612060": {
+        "start": 29,
+        "length": 2,
+        "reading": "もち"
+      },
+      "2409200": {
+        "start": 7,
+        "length": 3,
+        "reading": "さまです"
+      },
+      "2858295": {
+        "start": 5,
+        "length": 3,
+        "reading": "おうじさま"
+      }
+    }
+  },
+  {
+    "id": "187367",
+    "original": "何人様ですか。",
+    "en": [
+      {
+        "id": "24505",
+        "text": "How many people in your party?"
+      },
+      {
+        "id": "270512",
+        "text": "How many people are in your party?"
+      }
+    ],
+    "indices": "何人様~ ですか",
+    "vocabIds": [
+      "1577100",
+      "1189100",
+      "2006140",
+      "1580640",
+      "1953400",
+      "1545790",
+      "2409200"
+    ],
+    "matches": {
+      "1189100": {
+        "start": 0,
+        "length": 2,
+        "reading": "なんにん"
+      },
+      "1545790": {
+        "start": 2,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なん"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1953400": {
+        "start": 1,
+        "length": 2,
+        "reading": "にんさま"
+      },
+      "2006140": {
+        "start": 0,
+        "length": 3,
+        "reading": "なんにんさま"
+      },
+      "2409200": {
+        "start": 2,
+        "length": 3,
+        "reading": "さまです"
+      }
+    }
+  },
+  {
+    "id": "200700",
+    "original": "どちら様ですか。",
+    "en": [
+      {
+        "id": "37901",
+        "text": "Who is this, please?"
+      }
+    ],
+    "indices": "どちら様[01]~ ですか",
+    "vocabIds": [
+      "1009170",
+      "1545790",
+      "2409200"
+    ],
+    "matches": {
+      "1009170": {
+        "start": 0,
+        "length": 4,
+        "reading": "どちらさま"
+      },
+      "1545790": {
+        "start": 3,
+        "length": 1,
+        "reading": "さま"
+      },
+      "2409200": {
+        "start": 3,
+        "length": 3,
+        "reading": "さまです"
       }
     }
   },
@@ -40,32 +218,43 @@
     ],
     "indices": "そう 言う{言って} 下さる とは 大変[01] 御(ご){ご} 親切 様(さま)[01] です",
     "vocabIds": [
-      "1394680",
+      "1587040",
       "1184280",
       "1415000",
       "1365250",
+      "1545790",
       "2409200"
     ],
     "matches": {
       "1184280": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "くださる"
       },
       "1365250": {
         "start": 13,
-        "length": 2
-      },
-      "1394680": {
-        "start": 0,
-        "length": 5
+        "length": 2,
+        "reading": "しんせつ"
       },
       "1415000": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
+      },
+      "1545790": {
+        "start": 15,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1587040": {
+        "start": 2,
+        "length": 2,
+        "reading": "いっ"
       },
       "2409200": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "さまです"
       }
     }
   },
@@ -80,17 +269,43 @@
     ],
     "indices": "いらっしゃいませ~ 何名~ 様(さま)[01] ですか",
     "vocabIds": [
+      "1577100",
       "2262180",
+      "1531330",
+      "2710970",
+      "1545790",
       "2409200"
     ],
     "matches": {
+      "1531330": {
+        "start": 10,
+        "length": 1,
+        "reading": "めい"
+      },
+      "1545790": {
+        "start": 11,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
+      },
       "2262180": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "なにめい"
       },
       "2409200": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "さまです"
+      },
+      "2710970": {
+        "start": 10,
+        "length": 2,
+        "reading": "めいさま"
       }
     }
   },
@@ -112,17 +327,187 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2262180",
+      "1531330",
+      "2710970",
+      "1545790",
       "2409200"
     ],
     "matches": {
+      "1531330": {
+        "start": 1,
+        "length": 1,
+        "reading": "めい"
+      },
+      "1545790": {
+        "start": 2,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
+      },
       "2262180": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにめい"
       },
       "2409200": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "さまです"
+      },
+      "2710970": {
+        "start": 1,
+        "length": 2,
+        "reading": "めいさま"
+      }
+    }
+  },
+  {
+    "id": "1142864",
+    "original": "困った時はお互い様ですよ。",
+    "en": [
+      {
+        "id": "6680426",
+        "text": "We should help each other in times of need."
+      }
+    ],
+    "vocabIds": [
+      "1289590",
+      "2823060",
+      "1315840",
+      "1979930",
+      "1270320",
+      "1545790",
+      "2409200"
+    ],
+    "matches": {
+      "1270320": {
+        "start": 5,
+        "length": 4,
+        "reading": "おたがいさま"
+      },
+      "1289590": {
+        "start": 0,
+        "length": 2,
+        "reading": "こまっ"
+      },
+      "1315840": {
+        "start": 3,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1545790": {
+        "start": 8,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1979930": {
+        "start": 5,
+        "length": 3,
+        "reading": "おたがい"
+      },
+      "2409200": {
+        "start": 8,
+        "length": 3,
+        "reading": "さまです"
+      },
+      "2823060": {
+        "start": 0,
+        "length": 3,
+        "reading": "こまった"
+      }
+    }
+  },
+  {
+    "id": "9594385",
+    "original": "もしもし、どちら様ですか？",
+    "en": [
+      {
+        "id": "9015749",
+        "text": "Hello! Who am I speaking with?"
+      }
+    ],
+    "vocabIds": [
+      "1009170",
+      "1545790",
+      "2409200"
+    ],
+    "matches": {
+      "1009170": {
+        "start": 5,
+        "length": 4,
+        "reading": "どちらさま"
+      },
+      "1545790": {
+        "start": 8,
+        "length": 1,
+        "reading": "さま"
+      },
+      "2409200": {
+        "start": 8,
+        "length": 3,
+        "reading": "さまです"
+      }
+    }
+  },
+  {
+    "id": "11924179",
+    "original": "どちら様ですか？申し訳ありませんが、心当たりがないんですが。",
+    "en": [
+      {
+        "id": "10151167",
+        "text": "Who are you? Sorry, I don't remember you."
+      }
+    ],
+    "vocabIds": [
+      "1009170",
+      "1545790",
+      "2409200",
+      "1363050",
+      "1612030",
+      "1360890",
+      "2099690"
+    ],
+    "matches": {
+      "1009170": {
+        "start": 0,
+        "length": 4,
+        "reading": "どちらさま"
+      },
+      "1360890": {
+        "start": 18,
+        "length": 4,
+        "reading": "こころあたり"
+      },
+      "1363050": {
+        "start": 8,
+        "length": 3,
+        "reading": "もうしわけ"
+      },
+      "1545790": {
+        "start": 3,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1612030": {
+        "start": 8,
+        "length": 8,
+        "reading": "もうしわけありません"
+      },
+      "2099690": {
+        "start": 18,
+        "length": 7,
+        "reading": "こころあたりがない"
+      },
+      "2409200": {
+        "start": 3,
+        "length": 3,
+        "reading": "さまです"
       }
     }
   }

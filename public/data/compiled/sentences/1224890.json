@@ -11,21 +11,30 @@
     "indices": "じゃあ チェック[02] 為る(する){し} 仕舞う{ちゃいます} ね(#2029080)[01] 審査 宜しく[02] 頑張る{頑張った} 積もり[02]{つもり} だ ぜ",
     "vocabIds": [
       "1360380",
+      "1224880",
       "1224890",
       "1217700"
     ],
     "matches": {
       "1217700": {
         "start": 24,
-        "length": 4
+        "length": 3,
+        "reading": "がんばっ"
+      },
+      "1224880": {
+        "start": 20,
+        "length": 3,
+        "reading": "よろしく"
       },
       "1224890": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "よろしく"
       },
       "1360380": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "しんさ"
       }
     }
   },
@@ -41,16 +50,68 @@
     "indices": "お父さん に 宜しく[02]",
     "vocabIds": [
       "1002590",
+      "1224880",
       "1224890"
     ],
     "matches": {
       "1002590": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "おとうさん"
+      },
+      "1224880": {
+        "start": 5,
+        "length": 3,
+        "reading": "よろしく"
       },
       "1224890": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "よろしく"
+      }
+    }
+  },
+  {
+    "id": "443122",
+    "original": "どうぞ宜しくお願い申し上げます。",
+    "en": [
+      {
+        "id": "502721",
+        "text": "Thank you very much for the consideration you will give to our request."
+      }
+    ],
+    "vocabIds": [
+      "1008960",
+      "1224880",
+      "1224890",
+      "2036870",
+      "1362950"
+    ],
+    "matches": {
+      "1008960": {
+        "start": 0,
+        "length": 6,
+        "reading": "どうぞよろしく"
+      },
+      "1224880": {
+        "start": 3,
+        "length": 3,
+        "reading": "よろしく"
+      },
+      "1224890": {
+        "start": 3,
+        "length": 3,
+        "reading": "よろしく"
+      },
+      "1362950": {
+        "start": 9,
+        "length": 4,
+        "reading": "もうしあげ"
+      },
+      "2036870": {
+        "start": 6,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -67,24 +128,34 @@
       "1311110",
       "2862858",
       "1224890",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 16,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1224890": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "よろしく"
       },
       "1311110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "2036870": {
+        "start": 16,
+        "length": 3,
+        "reading": "おねがい"
       },
       "2862858": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たろう"
       }
     }
   },
@@ -99,16 +170,24 @@
     ],
     "vocabIds": [
       "1224890",
-      "2036870"
+      "2036870",
+      "1421900"
     ],
     "matches": {
       "1224890": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "よろしく"
+      },
+      "1421900": {
+        "start": 6,
+        "length": 2,
+        "reading": "いたし"
       },
       "2036870": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -134,33 +213,51 @@
       "1269320",
       "1315840",
       "1436410",
+      "1224880",
       "1224890",
-      "2036870"
+      "2036870",
+      "1421900"
     ],
     "matches": {
+      "1224880": {
+        "start": 23,
+        "length": 3,
+        "reading": "よろしく"
+      },
       "1224890": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "よろしく"
       },
       "1269320": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1315840": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "じ"
+      },
+      "1421900": {
+        "start": 29,
+        "length": 2,
+        "reading": "いたし"
       },
       "1436410": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ていしゅつ"
       },
       "1463770": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "にち"
       },
       "2036870": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -183,16 +280,24 @@
     ],
     "vocabIds": [
       "1224890",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 3,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1224890": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "よろしく"
+      },
+      "2036870": {
+        "start": 3,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   }

@@ -1,5 +1,113 @@
 [
   {
+    "id": "75024",
+    "original": "まさに蛙の面に水とはこのことだろう。",
+    "en": [
+      {
+        "id": "328695",
+        "text": "That's a clear case of \"water off a duck's back\"."
+      }
+    ],
+    "indices": "正に{まさに} 蛙の面に水~ とは 此の{この} 事(こと){こと} だろう",
+    "vocabIds": [
+      "1577460",
+      "1978010",
+      "1584695",
+      "1371260"
+    ],
+    "matches": {
+      "1371260": {
+        "start": 7,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1577460": {
+        "start": 3,
+        "length": 1,
+        "reading": "かえる"
+      },
+      "1584695": {
+        "start": 5,
+        "length": 1,
+        "reading": "めん"
+      },
+      "1978010": {
+        "start": 3,
+        "length": 5,
+        "reading": "かえるのめんにみず"
+      }
+    }
+  },
+  {
+    "id": "143350",
+    "original": "世間知らずにもほどがある。井の中の蛙大海を知らず、ということかね。",
+    "en": [
+      {
+        "id": "271217",
+        "text": "I can't believe you're so clueless. You're like a babe in the woods."
+      }
+    ],
+    "indices": "世間知らず にも 程がある{ほどがある}~ 井の中の蛙大海を知らず~ と 言う{いう} 事(こと){こと} か ね(#2029080)[01]",
+    "vocabIds": [
+      "1373970",
+      "1848140",
+      "2019080",
+      "1955800",
+      "2248170",
+      "1423310",
+      "1577460",
+      "1413200",
+      "1420470"
+    ],
+    "matches": {
+      "1373970": {
+        "start": 0,
+        "length": 2,
+        "reading": "せけん"
+      },
+      "1413200": {
+        "start": 18,
+        "length": 2,
+        "reading": "たいかい"
+      },
+      "1420470": {
+        "start": 21,
+        "length": 2,
+        "reading": "しら"
+      },
+      "1423310": {
+        "start": 15,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1577460": {
+        "start": 17,
+        "length": 1,
+        "reading": "かえる"
+      },
+      "1848140": {
+        "start": 0,
+        "length": 5,
+        "reading": "せけんしらず"
+      },
+      "1955800": {
+        "start": 13,
+        "length": 1,
+        "reading": "い"
+      },
+      "2019080": {
+        "start": 2,
+        "length": 3,
+        "reading": "しらず"
+      },
+      "2248170": {
+        "start": 13,
+        "length": 5,
+        "reading": "いのなかのかえる"
+      }
+    }
+  },
+  {
     "id": "148909",
     "original": "蛇が蛙を飲み込んだ。",
     "en": [
@@ -17,15 +125,18 @@
     "matches": {
       "1323350": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "へび"
       },
       "1577460": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かえる"
       },
       "1600400": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "のみこん"
       }
     }
   },
@@ -48,19 +159,131 @@
     "matches": {
       "1202450": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "あける"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577460": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "かえる"
       },
       "1585650": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はこ"
+      }
+    }
+  },
+  {
+    "id": "184634",
+    "original": "蛙の面に水。",
+    "en": [
+      {
+        "id": "21763",
+        "text": "Like water off a duck's back."
+      }
+    ],
+    "indices": "蛙 の 面(つら)[01]~ に 水(みず)",
+    "vocabIds": [
+      "1577460",
+      "1978010",
+      "1584695",
+      "1371260"
+    ],
+    "matches": {
+      "1371260": {
+        "start": 4,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1577460": {
+        "start": 0,
+        "length": 1,
+        "reading": "かえる"
+      },
+      "1584695": {
+        "start": 2,
+        "length": 1,
+        "reading": "めん"
+      },
+      "1978010": {
+        "start": 0,
+        "length": 5,
+        "reading": "かえるのめんにみず"
+      }
+    }
+  },
+  {
+    "id": "190729",
+    "original": "井の中の蛙、大海を知らず。",
+    "en": [
+      {
+        "id": "27889",
+        "text": "He who stays in the valley shall never get over the hill."
+      },
+      {
+        "id": "1074744",
+        "text": "A frog in a well doesn't know the ocean."
+      },
+      {
+        "id": "10800045",
+        "text": "The frog in the well knows nothing of the ocean."
+      },
+      {
+        "id": "10800046",
+        "text": "Small-minded people are unaware of their own ignorance."
+      }
+    ],
+    "indices": "井(い)~ の 中(なか) の 蛙[01] 大海[01] を 知る{知らず}",
+    "vocabIds": [
+      "1955800",
+      "2248170",
+      "1423310",
+      "1577460",
+      "1413200",
+      "1420470",
+      "2019080"
+    ],
+    "matches": {
+      "1413200": {
+        "start": 6,
+        "length": 2,
+        "reading": "たいかい"
+      },
+      "1420470": {
+        "start": 9,
+        "length": 2,
+        "reading": "しら"
+      },
+      "1423310": {
+        "start": 2,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1577460": {
+        "start": 4,
+        "length": 1,
+        "reading": "かえる"
+      },
+      "1955800": {
+        "start": 0,
+        "length": 1,
+        "reading": "い"
+      },
+      "2019080": {
+        "start": 9,
+        "length": 3,
+        "reading": "しらず"
+      },
+      "2248170": {
+        "start": 0,
+        "length": 5,
+        "reading": "いのなかのかえる"
       }
     }
   },
@@ -82,15 +305,18 @@
     "matches": {
       "1155150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いぜん"
       },
       "1421700": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いけ"
       },
       "1577460": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かえる"
       }
     }
   },
@@ -111,11 +337,92 @@
     "matches": {
       "1577460": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かえる"
       },
       "1633620": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "くさち"
+      }
+    }
+  },
+  {
+    "id": "329760",
+    "original": "蛙の子は蛙。",
+    "en": [
+      {
+        "id": "2345",
+        "text": "Like father, like son."
+      },
+      {
+        "id": "1285500",
+        "text": "The apple doesn't fall far from the tree."
+      }
+    ],
+    "indices": "",
+    "vocabIds": [
+      "1577460",
+      "1204760",
+      "1307770"
+    ],
+    "matches": {
+      "1204760": {
+        "start": 0,
+        "length": 5,
+        "reading": "かえるのこはかえる"
+      },
+      "1307770": {
+        "start": 2,
+        "length": 1,
+        "reading": "こ"
+      },
+      "1577460": {
+        "start": 0,
+        "length": 1,
+        "reading": "かえる"
+      }
+    }
+  },
+  {
+    "id": "540078",
+    "original": "井の中の蛙。",
+    "en": [
+      {
+        "id": "540347",
+        "text": "Person ignorant of the real world."
+      },
+      {
+        "id": "540789",
+        "text": "The frog in the well."
+      }
+    ],
+    "vocabIds": [
+      "1955800",
+      "2248170",
+      "1423310",
+      "1577460"
+    ],
+    "matches": {
+      "1423310": {
+        "start": 2,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1577460": {
+        "start": 4,
+        "length": 1,
+        "reading": "かえる"
+      },
+      "1955800": {
+        "start": 0,
+        "length": 1,
+        "reading": "い"
+      },
+      "2248170": {
+        "start": 0,
+        "length": 5,
+        "reading": "いのなかのかえる"
       }
     }
   },
@@ -134,7 +441,8 @@
     "matches": {
       "1577460": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かえる"
       }
     }
   }

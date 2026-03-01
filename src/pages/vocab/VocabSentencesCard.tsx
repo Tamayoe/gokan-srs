@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Virtuoso } from 'react-virtuoso';
 import { Card } from '../../components/ui/Card';
 import { VocabularyService } from '../../services/vocabulary.service';
 import type { Sentence } from '../../models/sentence.model';
@@ -40,25 +41,31 @@ export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
 
     return (
         <Card>
-            <h2 className="text-lg font-gothic font-semibold text-primary mb-4">Example Sentences</h2>
-            <div className="space-y-4">
-                {sentences.map((sentence) => (
-                    <div key={sentence.id} className="pb-4 last:pb-0 border-b last:border-b-0 border-divider">
-                        <div className="text-xl leading-relaxed text-primary mb-1">
-                            <InteractiveSentence
-                                sentence={sentence}
-                                targetVocabId={vocabId}
-                                onVocabClick={(vid) => navigate(`/vocab/${vid}`)}
-                                showFurigana={true}
-                            />
-                        </div>
-                        {sentence.en && sentence.en.length > 0 && (
-                            <div className="text-sm text-secondary font-serif">
-                                {sentence.en[0].text}
+            <h2 className="text-lg font-gothic font-semibold text-primary mb-4 flex-none">
+                Example Sentences <span className="text-sm font-normal text-tertiary ml-2">({sentences.length})</span>
+            </h2>
+            <div className="w-full">
+                <Virtuoso
+                    useWindowScroll
+                    data={sentences}
+                    itemContent={(index, sentence) => (
+                        <div key={sentence.id} className={`pb-4 ${index === sentences.length - 1 ? '' : 'border-b border-divider mb-4'}`}>
+                            <div className="text-xl leading-relaxed text-primary mb-1">
+                                <InteractiveSentence
+                                    sentence={sentence}
+                                    targetVocabId={vocabId}
+                                    onVocabClick={(vid) => navigate(`/vocab/${vid}`)}
+                                    showFurigana={true}
+                                />
                             </div>
-                        )}
-                    </div>
-                ))}
+                            {sentence.en && sentence.en.length > 0 && (
+                                <div className="text-sm text-secondary font-serif">
+                                    {sentence.en[0].text}
+                                </div>
+                            )}
+                        </div>
+                    )}
+                />
             </div>
         </Card>
     );

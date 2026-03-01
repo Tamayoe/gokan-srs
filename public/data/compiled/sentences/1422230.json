@@ -1,40 +1,5 @@
 [
   {
-    "id": "74903",
-    "original": "竹内だけは招待に応じなかった。",
-    "en": [
-      {
-        "id": "328816",
-        "text": "Only Takeuchi didn't accept the invitation."
-      }
-    ],
-    "indices": "丈(だけ){だけ} は 招待 に 応じる{応じなかった}",
-    "vocabIds": [
-      "1422230",
-      "2098290",
-      "1349610",
-      "1179830"
-    ],
-    "matches": {
-      "1179830": {
-        "start": 8,
-        "length": 3
-      },
-      "1349610": {
-        "start": 5,
-        "length": 2
-      },
-      "1422230": {
-        "start": 0,
-        "length": 1
-      },
-      "2098290": {
-        "start": 1,
-        "length": 1
-      }
-    }
-  },
-  {
     "id": "75660",
     "original": "林に竹が目立つ。",
     "en": [
@@ -52,15 +17,18 @@
     "matches": {
       "1422230": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
       },
       "1535700": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "めだつ"
       },
       "1555440": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はやし"
       }
     }
   },
@@ -81,11 +49,13 @@
     "matches": {
       "1422230": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
       },
       "1499720": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かぜ"
       }
     }
   },
@@ -106,11 +76,64 @@
     "matches": {
       "1386500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ゆき"
       },
       "1422230": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
+      }
+    }
+  },
+  {
+    "id": "165437",
+    "original": "私たちは竹かごの作り方を教わった。",
+    "en": [
+      {
+        "id": "249068",
+        "text": "We received instructions on how to make a bamboo basket."
+      }
+    ],
+    "indices": "私たち は 竹籠{竹かご}~ の 作り方 を[01] 教わる{教わった}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1422230",
+      "2079490",
+      "1297430",
+      "1236940"
+    ],
+    "matches": {
+      "1236940": {
+        "start": 12,
+        "length": 3,
+        "reading": "おそわっ"
+      },
+      "1297430": {
+        "start": 8,
+        "length": 3,
+        "reading": "つくりかた"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1422230": {
+        "start": 4,
+        "length": 1,
+        "reading": "たけ"
+      },
+      "2079490": {
+        "start": 4,
+        "length": 3,
+        "reading": "たけかご"
       }
     }
   },
@@ -125,27 +148,55 @@
     ],
     "indices": "厳密に言えば 竹 は 草(くさ) の 一種[01] である",
     "vocabIds": [
+      "1262830",
       "1262840",
+      "1587040",
       "1422230",
       "1401910",
-      "1163170"
+      "1160790",
+      "1163170",
+      "2735690"
     ],
     "matches": {
+      "1160790": {
+        "start": 11,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163170": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いちしゅ"
+      },
+      "1262830": {
+        "start": 0,
+        "length": 2,
+        "reading": "げんみつ"
       },
       "1262840": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "げんみつにいえば"
       },
       "1401910": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "くさ"
       },
       "1422230": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
+      },
+      "1587040": {
+        "start": 3,
+        "length": 2,
+        "reading": "いえ"
+      },
+      "2735690": {
+        "start": 12,
+        "length": 1,
+        "reading": "しゅ"
       }
     }
   },
@@ -161,16 +212,98 @@
     "indices": "其の[01]{その} 竹 は 撓う{しなった}~ が 折れる{折れなかった}",
     "vocabIds": [
       "1422230",
-      "1385920"
+      "1385920",
+      "2835604"
     ],
     "matches": {
       "1385920": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "おれ"
       },
       "1422230": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
+      },
+      "2835604": {
+        "start": 9,
+        "length": 2,
+        "reading": "おれ"
+      }
+    }
+  },
+  {
+    "id": "403976",
+    "original": "尺八と言えばほとんどが竹製ですが、最近木でできている尺八が出てきました。",
+    "en": [
+      {
+        "id": "403979",
+        "text": "Most Shakuhachi are made from bamboo, but recently some wooden ones have appeared."
+      }
+    ],
+    "vocabIds": [
+      "1324140",
+      "1008850",
+      "1587040",
+      "1422230",
+      "1422310",
+      "1380580",
+      "1293780",
+      "1534520",
+      "1338240",
+      "1896380"
+    ],
+    "matches": {
+      "1008850": {
+        "start": 2,
+        "length": 4,
+        "reading": "といえば"
+      },
+      "1293780": {
+        "start": 17,
+        "length": 2,
+        "reading": "さいきん"
+      },
+      "1324140": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゃくはち"
+      },
+      "1338240": {
+        "start": 29,
+        "length": 1,
+        "reading": "で"
+      },
+      "1380580": {
+        "start": 12,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1422230": {
+        "start": 11,
+        "length": 1,
+        "reading": "たけ"
+      },
+      "1422310": {
+        "start": 11,
+        "length": 2,
+        "reading": "たけせい"
+      },
+      "1534520": {
+        "start": 19,
+        "length": 1,
+        "reading": "き"
+      },
+      "1587040": {
+        "start": 3,
+        "length": 2,
+        "reading": "いえ"
+      },
+      "1896380": {
+        "start": 29,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -192,15 +325,18 @@
     "matches": {
       "1378490": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1422230": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
       },
       "1436130": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       }
     }
   },
@@ -219,96 +355,118 @@
       "1446420",
       "1519750",
       "1365520",
-      "1597470",
       "1580640",
       "1312420"
     ],
     "matches": {
       "1256910": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けんどう"
       },
       "1312420": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "しあい"
       },
       "1365520": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "み"
       },
       "1422230": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
       },
       "1446420": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かたな"
       },
       "1519750": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "ぼう"
       },
       "1580640": {
         "start": 27,
-        "length": 1
-      },
-      "1597470": {
-        "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
   {
-    "id": "1018558",
-    "original": "竹島の日を制定することで、より多くの日本人が竹島について知るようになると期待されている。",
+    "id": "9162341",
+    "original": "「何、この真っ黒けのパン」「それ、竹炭が入ってるんだって。珍しいから買ってみたんだ」",
     "en": [
       {
-        "id": "1018561",
-        "text": "By establishing Takeshima Day, it is hoped that more Japanese people will learn about the Takeshima islands."
+        "id": "10067955",
+        "text": "\"Why on earth is this bread pitch black?\" \"Because it has bamboo charcoal in it. I bought it because I thought it was unusual.\""
       }
     ],
     "vocabIds": [
+      "1577100",
+      "2011580",
+      "1604050",
+      "2794020",
       "1422230",
-      "1446760",
-      "1463770",
-      "1374870",
-      "1861770",
-      "1464700",
-      "1420470",
-      "1220570"
+      "2825851",
+      "1418480",
+      "1465590",
+      "1431850",
+      "1473740"
     ],
     "matches": {
-      "1220570": {
-        "start": 36,
-        "length": 2
-      },
-      "1374870": {
-        "start": 5,
-        "length": 2
-      },
-      "1420470": {
-        "start": 28,
-        "length": 2
+      "1418480": {
+        "start": 18,
+        "length": 1,
+        "reading": "すみ"
       },
       "1422230": {
-        "start": 0,
-        "length": 1
+        "start": 17,
+        "length": 1,
+        "reading": "たけ"
       },
-      "1446760": {
+      "1431850": {
+        "start": 29,
+        "length": 3,
+        "reading": "めずらしい"
+      },
+      "1465590": {
+        "start": 20,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1473740": {
+        "start": 34,
+        "length": 2,
+        "reading": "かっ"
+      },
+      "1577100": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
-      "1463770": {
-        "start": 3,
-        "length": 1
+      "1604050": {
+        "start": 5,
+        "length": 3,
+        "reading": "まっくろ"
       },
-      "1464700": {
-        "start": 18,
-        "length": 3
+      "2011580": {
+        "start": 5,
+        "length": 3,
+        "reading": "まっくろ"
       },
-      "1861770": {
-        "start": 15,
-        "length": 2
+      "2794020": {
+        "start": 5,
+        "length": 4,
+        "reading": "まっくろけ"
+      },
+      "2825851": {
+        "start": 17,
+        "length": 2,
+        "reading": "たけすみ"
       }
     }
   },
@@ -323,16 +481,24 @@
     ],
     "vocabIds": [
       "1422230",
+      "1597890",
       "1297250"
     ],
     "matches": {
       "1297250": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "つくり"
       },
       "1422230": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
+      },
+      "1597890": {
+        "start": 7,
+        "length": 2,
+        "reading": "つくり"
       }
     }
   },
@@ -347,50 +513,24 @@
     ],
     "vocabIds": [
       "1422230",
+      "1385920",
       "2835604"
     ],
     "matches": {
+      "1385920": {
+        "start": 7,
+        "length": 2,
+        "reading": "おれ"
+      },
       "1422230": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
       },
       "2835604": {
         "start": 7,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "11483577",
-    "original": "竹内まりやが歌ってる曲です。",
-    "en": [
-      {
-        "id": "10749304",
-        "text": "Mariya Takeuchi sings this song."
-      }
-    ],
-    "vocabIds": [
-      "1422230",
-      "2098290",
-      "1588120",
-      "1239700"
-    ],
-    "matches": {
-      "1239700": {
-        "start": 10,
-        "length": 1
-      },
-      "1422230": {
-        "start": 0,
-        "length": 1
-      },
-      "1588120": {
-        "start": 6,
-        "length": 3
-      },
-      "2098290": {
-        "start": 1,
-        "length": 1
+        "length": 2,
+        "reading": "おれ"
       }
     }
   },
@@ -410,11 +550,13 @@
     "matches": {
       "1413660": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "だいすき"
       },
       "1422230": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
       }
     }
   }

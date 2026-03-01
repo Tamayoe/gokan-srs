@@ -1,5 +1,56 @@
 [
   {
+    "id": "74140",
+    "original": "パックマンが、ある条件を満たすと追ってくるモンスターを逆襲して食べることができる。",
+    "en": [
+      {
+        "id": "329580",
+        "text": "Pac-Man, when a certain condition is reached, can counter attack and eat the monsters chasing him."
+      }
+    ],
+    "indices": "が 或る{ある} 条件 を 満たす[01] と 追う{追って} 来る(くる){くる} モンスター を 逆襲~ 為る(する){して} 食べる 事(こと){こと} が 出来る{できる}",
+    "vocabIds": [
+      "1356510",
+      "1855580",
+      "1526670",
+      "1852860",
+      "1227090",
+      "1358280"
+    ],
+    "matches": {
+      "1227090": {
+        "start": 27,
+        "length": 2,
+        "reading": "ぎゃくしゅう"
+      },
+      "1356510": {
+        "start": 9,
+        "length": 2,
+        "reading": "じょうけん"
+      },
+      "1358280": {
+        "start": 31,
+        "length": 3,
+        "reading": "たべる"
+      },
+      "1526670": {
+        "start": 12,
+        "length": 3,
+        "reading": "みたす"
+      },
+      "1852860": {
+        "start": 16,
+        "length": 3,
+        "reading": "おって"
+      },
+      "1855580": {
+        "start": 9,
+        "length": 6,
+        "reading": "じょうけんをみたす"
+      }
+    }
+  },
+  {
     "id": "84612",
     "original": "父は寛大だったので、私の気まぐれもすべて満たしてくれた。",
     "en": [
@@ -19,23 +70,28 @@
     "matches": {
       "1211960": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かんだい"
       },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1526670": {
         "start": 20,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       },
       "1591410": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "きまぐれ"
       }
     }
   },
@@ -51,6 +107,7 @@
     "indices": "悲しみ が 彼(かれ)[01]{彼の} 心(こころ) を 満たす[02]{満たした}",
     "vocabIds": [
       "1590550",
+      "1483070",
       "1000420",
       "1360480",
       "1526670"
@@ -58,19 +115,85 @@
     "matches": {
       "1000420": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1360480": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こころ"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
       },
       "1526670": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       },
       "1590550": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしみ"
+      }
+    }
+  },
+  {
+    "id": "86909",
+    "original": "彼女は父の急死を聞いて深い悲しみに満たされた。",
+    "en": [
+      {
+        "id": "316801",
+        "text": "She was filled with deep grief to hear of her father's sudden death."
+      }
+    ],
+    "indices": "彼女[01] は 父 の 急死 を 聞く{聞いて} 深い 悲しみ に 満たす[02]{満たされた}",
+    "vocabIds": [
+      "1483150",
+      "1497610",
+      "1228730",
+      "1591110",
+      "1362640",
+      "1590550",
+      "1526670"
+    ],
+    "matches": {
+      "1228730": {
+        "start": 5,
+        "length": 2,
+        "reading": "きゅうし"
+      },
+      "1362640": {
+        "start": 11,
+        "length": 2,
+        "reading": "ふかい"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1497610": {
+        "start": 3,
+        "length": 1,
+        "reading": "ちち"
+      },
+      "1526670": {
+        "start": 17,
+        "length": 3,
+        "reading": "みたさ"
+      },
+      "1590550": {
+        "start": 13,
+        "length": 3,
+        "reading": "かなしみ"
+      },
+      "1591110": {
+        "start": 8,
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -92,15 +215,18 @@
     "matches": {
       "1318610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1526670": {
         "start": 14,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       }
     }
   },
@@ -121,11 +247,115 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1526670": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
+      }
+    }
+  },
+  {
+    "id": "97898",
+    "original": "彼らはその条件を満たすことが出来なかった。",
+    "en": [
+      {
+        "id": "305806",
+        "text": "They failed to fulfill the conditions."
+      }
+    ],
+    "indices": "彼ら(かれら) は 其の[01]{その} 条件 を 満たす[01] 事が出来る{ことが出来なかった}",
+    "vocabIds": [
+      "1483090",
+      "1356510",
+      "1855580",
+      "1526670",
+      "1340450",
+      "1340430"
+    ],
+    "matches": {
+      "1340430": {
+        "start": 14,
+        "length": 2,
+        "reading": "でき"
+      },
+      "1340450": {
+        "start": 14,
+        "length": 2,
+        "reading": "でき"
+      },
+      "1356510": {
+        "start": 5,
+        "length": 2,
+        "reading": "じょうけん"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1526670": {
+        "start": 8,
+        "length": 3,
+        "reading": "みたす"
+      },
+      "1855580": {
+        "start": 5,
+        "length": 6,
+        "reading": "じょうけんをみたす"
+      }
+    }
+  },
+  {
+    "id": "98513",
+    "original": "彼らの結婚生活は幸福で満たされていた。",
+    "en": [
+      {
+        "id": "305188",
+        "text": "Their married life was full bliss."
+      }
+    ],
+    "indices": "彼ら(かれら){彼らの} 結婚 生活 は 幸福 で(#2028980) 満たす[01]{満たされていた}",
+    "vocabIds": [
+      "1483090",
+      "1254790",
+      "2133260",
+      "1378860",
+      "1278400",
+      "1526670"
+    ],
+    "matches": {
+      "1254790": {
+        "start": 3,
+        "length": 2,
+        "reading": "けっこん"
+      },
+      "1278400": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうふく"
+      },
+      "1378860": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいかつ"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1526670": {
+        "start": 11,
+        "length": 3,
+        "reading": "みたさ"
+      },
+      "2133260": {
+        "start": 3,
+        "length": 4,
+        "reading": "けっこんせいかつ"
       }
     }
   },
@@ -147,15 +377,51 @@
     "matches": {
       "1371610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すいじゅん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1526670": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
+      }
+    }
+  },
+  {
+    "id": "111111",
+    "original": "彼はビンに水を満たした。",
+    "en": [
+      {
+        "id": "292573",
+        "text": "He filled the bottle with water."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 瓶(びん){ビン} に 水を満たす{水を満たした}",
+    "vocabIds": [
+      "1483070",
+      "1371260",
+      "1526670"
+    ],
+    "matches": {
+      "1371260": {
+        "start": 5,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1526670": {
+        "start": 7,
+        "length": 3,
+        "reading": "みたし"
       }
     }
   },
@@ -178,19 +444,23 @@
     "matches": {
       "1231590": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ぎゅうにゅう"
       },
       "1246000": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "くうふく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1526670": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       }
     }
   },
@@ -211,11 +481,199 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1526670": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
+      }
+    }
+  },
+  {
+    "id": "116782",
+    "original": "彼の人生は完全に満たされた。",
+    "en": [
+      {
+        "id": "286887",
+        "text": "His life is perfectly fulfilled."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 人生 は 完全{完全に} 満たす[01]{満たされた}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1368370",
+      "1211510",
+      "1526670"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1211510": {
+        "start": 5,
+        "length": 2,
+        "reading": "かんぜん"
+      },
+      "1368370": {
+        "start": 2,
+        "length": 2,
+        "reading": "じんせい"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1526670": {
+        "start": 8,
+        "length": 3,
+        "reading": "みたさ"
+      }
+    }
+  },
+  {
+    "id": "116871",
+    "original": "彼の心は幸福感に満たされた。",
+    "en": [
+      {
+        "id": "286797",
+        "text": "His mind was filled with happy thoughts."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 心(こころ) は 幸福感~ に 満たす[02]{満たされた}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1360480",
+      "1278400",
+      "1935050",
+      "1955970",
+      "1526670"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1278400": {
+        "start": 4,
+        "length": 2,
+        "reading": "こうふく"
+      },
+      "1360480": {
+        "start": 2,
+        "length": 1,
+        "reading": "こころ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1526670": {
+        "start": 8,
+        "length": 3,
+        "reading": "みたさ"
+      },
+      "1935050": {
+        "start": 4,
+        "length": 3,
+        "reading": "こうふくかん"
+      },
+      "1955970": {
+        "start": 6,
+        "length": 1,
+        "reading": "かん"
+      }
+    }
+  },
+  {
+    "id": "125269",
+    "original": "適当な語で空所を満たせ。",
+    "en": [
+      {
+        "id": "278724",
+        "text": "Fill the blanks with suitable words."
+      }
+    ],
+    "indices": "適当[01]{適当な} 語(ご)[01] で(#2028980) 空所(くうしょ) を 満たす[01]{満たせ}",
+    "vocabIds": [
+      "1437450",
+      "1270910",
+      "1245290",
+      "1245670",
+      "1343100",
+      "1526670"
+    ],
+    "matches": {
+      "1245290": {
+        "start": 5,
+        "length": 1,
+        "reading": "そら"
+      },
+      "1245670": {
+        "start": 5,
+        "length": 2,
+        "reading": "そらしょ"
+      },
+      "1270910": {
+        "start": 3,
+        "length": 1,
+        "reading": "かたり"
+      },
+      "1343100": {
+        "start": 6,
+        "length": 1,
+        "reading": "しょ"
+      },
+      "1437450": {
+        "start": 0,
+        "length": 2,
+        "reading": "てきとう"
+      },
+      "1526670": {
+        "start": 8,
+        "length": 3,
+        "reading": "みたせ"
+      }
+    }
+  },
+  {
+    "id": "143644",
+    "original": "水瓶に水を満たしなさい。",
+    "en": [
+      {
+        "id": "270923",
+        "text": "Fill the jars with water."
+      }
+    ],
+    "indices": "水瓶(みずがめ)~ に 水を満たす{水を満たし} 為さい{なさい}",
+    "vocabIds": [
+      "1371980",
+      "1371260",
+      "1526670"
+    ],
+    "matches": {
+      "1371260": {
+        "start": 3,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1371980": {
+        "start": 0,
+        "length": 2,
+        "reading": "みずがめ"
+      },
+      "1526670": {
+        "start": 5,
+        "length": 3,
+        "reading": "みたし"
       }
     }
   },
@@ -234,33 +692,156 @@
       "1330450",
       "1526670",
       "1281020",
+      "1281000",
       "1412890",
       "1536010"
     ],
     "matches": {
+      "1281000": {
+        "start": 18,
+        "length": 2,
+        "reading": "かんがえ"
+      },
       "1281020": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1330450": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じゅよう"
       },
       "1347710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうらい"
       },
       "1412890": {
         "start": 28,
-        "length": 3
+        "length": 3,
+        "reading": "おおきな"
       },
       "1526670": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "みたす"
       },
       "1536010": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
+      }
+    }
+  },
+  {
+    "id": "160328",
+    "original": "私はそのバケツに水を満たした。",
+    "en": [
+      {
+        "id": "254193",
+        "text": "I filled the bucket with water."
+      }
+    ],
+    "indices": "私(わたし)[01] は 其の[01]{その} バケツ に 水を満たす{水を満たした}~",
+    "vocabIds": [
+      "1311110",
+      "1371260",
+      "1526670"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1371260": {
+        "start": 8,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1526670": {
+        "start": 10,
+        "length": 3,
+        "reading": "みたし"
+      }
+    }
+  },
+  {
+    "id": "163242",
+    "original": "私の人生は完全に満たされた。",
+    "en": [
+      {
+        "id": "251270",
+        "text": "My life is perfectly fulfilled."
+      }
+    ],
+    "indices": "私(わたし)[01]{私の} 人生 は 完全{完全に} 満たす[01]{満たされた}",
+    "vocabIds": [
+      "1311110",
+      "1368370",
+      "1211510",
+      "1526670"
+    ],
+    "matches": {
+      "1211510": {
+        "start": 5,
+        "length": 2,
+        "reading": "かんぜん"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1368370": {
+        "start": 2,
+        "length": 2,
+        "reading": "じんせい"
+      },
+      "1526670": {
+        "start": 8,
+        "length": 3,
+        "reading": "みたさ"
+      }
+    }
+  },
+  {
+    "id": "165657",
+    "original": "私たちは需要を満たさなければならない。",
+    "en": [
+      {
+        "id": "248848",
+        "text": "We have to meet the demand."
+      }
+    ],
+    "indices": "私たち は 需要 を 満たす[01]{満たさ} ねばならない{なければならない}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1330450",
+      "1526670"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1330450": {
+        "start": 4,
+        "length": 2,
+        "reading": "じゅよう"
+      },
+      "1526670": {
+        "start": 7,
+        "length": 3,
+        "reading": "みたさ"
       }
     }
   },
@@ -275,7 +856,11 @@
     ],
     "indices": "工場 労働者 の 家族 には 学校 病院 店(みせ) 等(など){など} が 必要[01] なので 斯うした{こうした} 必要 を 満たす[01] 為に[01]{ために} 更に{さらに} 多く の 人々(ひとびと) が やって来る{やってくる} 斯くして{かくして} 都市 が[01] 出来る{出来て} 来る(くる)[01]{くる} の である",
     "vocabIds": [
+      "1578700",
       "2094720",
+      "1606450",
+      "1560470",
+      "1322990",
       "1192150",
       "1206730",
       "1490220",
@@ -285,52 +870,89 @@
       "1861770",
       "1580650",
       "1444990",
-      "1340450"
+      "1340450",
+      "1340430"
     ],
     "matches": {
       "1192150": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かぞく"
       },
       "1206730": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1322990": {
+        "start": 4,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1340430": {
+        "start": 62,
+        "length": 2,
+        "reading": "でき"
       },
       "1340450": {
         "start": 62,
-        "length": 3
+        "length": 2,
+        "reading": "でき"
       },
       "1444990": {
         "start": 59,
-        "length": 2
+        "length": 2,
+        "reading": "とし"
       },
       "1487660": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1490220": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "びょういん"
       },
       "1526670": {
         "start": 33,
-        "length": 3
+        "length": 3,
+        "reading": "みたす"
+      },
+      "1560470": {
+        "start": 2,
+        "length": 3,
+        "reading": "ろうどうしゃ"
+      },
+      "1578700": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうじょう"
       },
       "1580650": {
         "start": 45,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
       },
       "1582120": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "みせ"
+      },
+      "1606450": {
+        "start": 2,
+        "length": 2,
+        "reading": "ろうどう"
       },
       "1861770": {
         "start": 42,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       },
       "2094720": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "こうじょうろうどうしゃ"
       }
     }
   },
@@ -352,15 +974,18 @@
     "matches": {
       "1194870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かびん"
       },
       "1371260": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1526670": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       }
     }
   },
@@ -386,29 +1011,52 @@
       "1546680",
       "1526670",
       "1358690",
+      "1343100",
       "1008570",
-      "2124780"
+      "1373860",
+      "2124780",
+      "1205100"
     ],
     "matches": {
       "1008570": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ところが"
+      },
+      "1205100": {
+        "start": 23,
+        "length": 2,
+        "reading": "かくち"
+      },
+      "1343100": {
+        "start": 18,
+        "length": 1,
+        "reading": "ところ"
       },
       "1358690": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しょくりょう"
+      },
+      "1373860": {
+        "start": 21,
+        "length": 2,
+        "reading": "せかい"
       },
       "1526670": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "みたす"
       },
       "1546680": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       },
       "2124780": {
         "start": 21,
-        "length": 4
+        "length": 4,
+        "reading": "せかいかくち"
       }
     }
   },
@@ -423,6 +1071,7 @@
     ],
     "indices": "一欠片{ひとかけら}~ の パン(#1103090)[01] で(#2028980) は 彼(かれ)[01] の 飢え を 満たす[01] には 足りる[01]{足りなかった}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1224070",
       "1526670",
@@ -431,19 +1080,55 @@
     "matches": {
       "1000420": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1224070": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "うえ"
       },
       "1404740": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "たり"
+      },
+      "1483070": {
+        "start": 10,
+        "length": 1,
+        "reading": "かれ"
       },
       "1526670": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "みたす"
+      }
+    }
+  },
+  {
+    "id": "198279",
+    "original": "バケツを水で満たしなさい。",
+    "en": [
+      {
+        "id": "35471",
+        "text": "Fill the bucket with water."
+      }
+    ],
+    "indices": "バケツ を 水(みず) で(#2028980) 満たす[02]{満たし} 為さい{なさい}",
+    "vocabIds": [
+      "1371260",
+      "1526670"
+    ],
+    "matches": {
+      "1371260": {
+        "start": 4,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1526670": {
+        "start": 6,
+        "length": 3,
+        "reading": "みたし"
       }
     }
   },
@@ -465,15 +1150,65 @@
     "matches": {
       "1246000": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "くうふく"
       },
       "1358280": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1526670": {
         "start": 16,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
+      }
+    }
+  },
+  {
+    "id": "202468",
+    "original": "ディナーをたっぷり食べて空腹が十分満たされた。",
+    "en": [
+      {
+        "id": "39679",
+        "text": "A hearty dinner well appeased my hunger."
+      },
+      {
+        "id": "1222719",
+        "text": "I ate a large dinner and felt satisfied."
+      },
+      {
+        "id": "1222722",
+        "text": "I ate a large dinner and my hunger was satisfied."
+      }
+    ],
+    "indices": "ディナー を たっぷり[01] 食べる{食べて} 空腹 が 十分(じゅうぶん)[03] 満たす[01]{満たされた}",
+    "vocabIds": [
+      "1358280",
+      "1246000",
+      "1335080",
+      "1526670"
+    ],
+    "matches": {
+      "1246000": {
+        "start": 12,
+        "length": 2,
+        "reading": "くうふく"
+      },
+      "1335080": {
+        "start": 15,
+        "length": 2,
+        "reading": "じゅうぶん"
+      },
+      "1358280": {
+        "start": 9,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1526670": {
+        "start": 17,
+        "length": 3,
+        "reading": "みたさ"
       }
     }
   },
@@ -498,27 +1233,33 @@
     "matches": {
       "1191730": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1211510": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "かんぜん"
       },
       "1311110": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1526670": {
         "start": 24,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       },
       "1546680": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       },
       "2136180": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさな"
       }
     }
   },
@@ -534,6 +1275,7 @@
     "indices": "其の[01]{その} 村人 達{たち} は 交代で バス(#1098390) を 運転[02] 為る(する){する} 事(こと){こと} で(#2028980) 自分[01] 達{たち} の 必要 を 満たす[01]{満たしている}",
     "vocabIds": [
       "1406830",
+      "1592990",
       "1272220",
       "1172830",
       "1318610",
@@ -543,27 +1285,38 @@
     "matches": {
       "1172830": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "うんてん"
       },
       "1272220": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "こうたいで"
       },
       "1318610": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1406830": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "むらびと"
       },
       "1487660": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1526670": {
         "start": 28,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
+      },
+      "1592990": {
+        "start": 7,
+        "length": 2,
+        "reading": "こうたい"
       }
     }
   },
@@ -586,19 +1339,23 @@
     "matches": {
       "1246000": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "くうふく"
       },
       "1358490": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょくじ"
       },
       "1483070": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1526670": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       }
     }
   },
@@ -621,19 +1378,23 @@
     "matches": {
       "1191730": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1526670": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       },
       "1546680": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       }
     }
   },
@@ -648,7 +1409,9 @@
     ],
     "indices": "其の[01]{その} 林檎(りんご){リンゴ} は 一時的{一時的に} 私(わたし)[01]{私の} 空腹 を 満たす[01]{満たして} 呉れる{くれた}",
     "vocabIds": [
+      "1576100",
       "1162980",
+      "1437260",
       "1311110",
       "1246000",
       "1526670"
@@ -656,19 +1419,33 @@
     "matches": {
       "1162980": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "いちじてき"
       },
       "1246000": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "くうふく"
       },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1437260": {
+        "start": 8,
+        "length": 1,
+        "reading": "てき"
       },
       "1526670": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
+      },
+      "1576100": {
+        "start": 6,
+        "length": 2,
+        "reading": "いちじ"
       }
     }
   },
@@ -694,31 +1471,38 @@
     "matches": {
       "1001770": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "おきゃくさま"
       },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1330450": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じゅよう"
       },
       "1347310": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しょうひん"
       },
       "1416220": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1512610": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "べんり"
       },
       "1526670": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "みたす"
       }
     }
   },
@@ -734,6 +1518,7 @@
     "indices": "此の{この} 農園 は 私たち の 必要 を 満たす[01] に 足る 丈(だけ){だけ} の 野菜 を 産出 為る(する){する}",
     "vocabIds": [
       "1470610",
+      "1311110",
       "1311300",
       "1487660",
       "1526670",
@@ -744,31 +1529,43 @@
     "matches": {
       "1303810": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "さんしゅつ"
+      },
+      "1311110": {
+        "start": 5,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1404750": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "たる"
       },
       "1470610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "のうえん"
       },
       "1487660": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1526670": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "みたす"
       },
       "1537370": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "やさい"
       }
     }
   },
@@ -793,27 +1590,33 @@
     "matches": {
       "1192940": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "かじつ"
       },
       "1303810": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "さんしゅつ"
       },
       "1470610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "のうえん"
       },
       "1487660": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1526670": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "みたす"
       },
       "1607050": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -835,15 +1638,18 @@
     "matches": {
       "1362920": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "もうしで"
       },
       "1526670": {
         "start": 15,
-        "length": 5
+        "length": 3,
+        "reading": "みたさ"
       },
       "1546680": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       }
     }
   },
@@ -859,21 +1665,36 @@
     "indices": "此の{この} 仕事[01] は 我々{われわれ} の 必要条件~ を[01] 満たす[01]{満たしていない}~",
     "vocabIds": [
       "1304970",
+      "1487660",
       "1487720",
+      "1356510",
       "1526670"
     ],
     "matches": {
       "1304970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1356510": {
+        "start": 12,
+        "length": 2,
+        "reading": "じょうけん"
+      },
+      "1487660": {
+        "start": 10,
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1487720": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "ひつようじょうけん"
       },
       "1526670": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       }
     }
   },
@@ -893,7 +1714,8 @@
     "matches": {
       "1526670": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       }
     }
   },
@@ -909,12 +1731,15 @@
     "indices": "",
     "vocabIds": [
       "1592250",
+      "1311110",
       "1311300",
       "1287070",
       "1234260",
+      "1173860",
       "1600610",
       "1244350",
       "1375970",
+      "1429750",
       "2038050",
       "1455500",
       "1526670",
@@ -925,85 +1750,131 @@
       "1527560",
       "1292300",
       "1548550",
+      "1548530",
       "1542040",
+      "1596960",
       "1596950"
     ],
     "matches": {
+      "1173860": {
+        "start": 30,
+        "length": 2,
+        "reading": "さかえ"
+      },
       "1234260": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "ともに"
       },
       "1244350": {
         "start": 35,
-        "length": 3
+        "length": 3,
+        "reading": "くるしむ"
       },
       "1287070": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "こくみん"
       },
       "1292300": {
         "start": 90,
-        "length": 2
+        "length": 2,
+        "reading": "ふたたび"
+      },
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1375970": {
         "start": 46,
-        "length": 2
+        "length": 2,
+        "reading": "せいじ"
       },
       "1401310": {
         "start": 67,
-        "length": 5
+        "length": 5,
+        "reading": "あいかわらず"
       },
       "1410290": {
         "start": 75,
-        "length": 2
+        "length": 2,
+        "reading": "たいりつ"
+      },
+      "1429750": {
+        "start": 54,
+        "length": 2,
+        "reading": "ながい"
       },
       "1446030": {
         "start": 73,
-        "length": 2
+        "length": 2,
+        "reading": "とうは"
       },
       "1455500": {
         "start": 58,
-        "length": 1
+        "length": 1,
+        "reading": "どく"
       },
       "1526670": {
         "start": 60,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       },
       "1527560": {
         "start": 86,
-        "length": 2
+        "length": 2,
+        "reading": "みじゅく"
       },
       "1542040": {
         "start": 105,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      },
+      "1548530": {
+        "start": 92,
+        "length": 2,
+        "reading": "おち"
       },
       "1548550": {
         "start": 92,
-        "length": 3
+        "length": 2,
+        "reading": "おち"
       },
       "1572770": {
         "start": 83,
-        "length": 2
+        "length": 2,
+        "reading": "いさかい"
       },
       "1592250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       },
       "1596950": {
         "start": 108,
-        "length": 2
+        "length": 2,
+        "reading": "たたかい"
+      },
+      "1596960": {
+        "start": 108,
+        "length": 2,
+        "reading": "たたかい"
       },
       "1600610": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "さかえ"
       },
       "2038050": {
         "start": 54,
-        "length": 4
+        "length": 4,
+        "reading": "ながいこと"
       }
     }
   },
@@ -1020,7 +1891,7 @@
       "1371260",
       "1443000",
       "1177820",
-      "1172610",
+      "1172660",
       "1607050",
       "1546680",
       "1526670",
@@ -1033,61 +1904,75 @@
       "1436360"
     ],
     "matches": {
-      "1172610": {
+      "1172660": {
         "start": 12,
-        "length": 1
+        "length": 2,
+        "reading": "はこば"
       },
       "1177820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "とおく"
       },
       "1183720": {
         "start": 49,
-        "length": 2
+        "length": 2,
+        "reading": "おんがく"
       },
       "1197390": {
         "start": 46,
-        "length": 2
+        "length": 2,
+        "reading": "がぞう"
       },
       "1233630": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "きょうきゅう"
       },
       "1284930": {
         "start": 58,
-        "length": 2
+        "length": 2,
+        "reading": "あいず"
       },
       "1305210": {
         "start": 71,
-        "length": 2
+        "length": 2,
+        "reading": "しぐさ"
       },
       "1327190": {
         "start": 69,
-        "length": 1
+        "length": 1,
+        "reading": "て"
       },
       "1371260": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1436360": {
         "start": 77,
-        "length": 2
+        "length": 2,
+        "reading": "ていきょう"
       },
       "1443000": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "でんき"
       },
       "1526670": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "みたす"
       },
       "1546680": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       },
       "1607050": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -1101,7 +1986,11 @@
       }
     ],
     "vocabIds": [
+      "1315810",
+      "2129870",
       "2549300",
+      "1191060",
+      "1202880",
       "1263810",
       "1374190",
       "1347710",
@@ -1110,68 +1999,114 @@
       "1334360",
       "1470370",
       "1596510",
+      "1481890",
       "2382640",
+      "2098290",
       "1213280",
       "1549660",
       "1526670",
       "1550060"
     ],
     "matches": {
+      "1191060": {
+        "start": 2,
+        "length": 2,
+        "reading": "かのう"
+      },
+      "1202880": {
+        "start": 5,
+        "length": 2,
+        "reading": "かいはつ"
+      },
       "1213280": {
         "start": 44,
-        "length": 2
+        "length": 2,
+        "reading": "かんきょう"
       },
       "1263810": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "げんだい"
+      },
+      "1315810": {
+        "start": 0,
+        "length": 2,
+        "reading": "じぞく"
       },
       "1334360": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうそく"
       },
       "1347710": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "しょうらい"
       },
       "1374190": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "せだい"
       },
       "1470370": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "のうりょく"
+      },
+      "1481890": {
+        "start": 40,
+        "length": 2,
+        "reading": "はんい"
       },
       "1526670": {
         "start": 54,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       },
       "1546680": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       },
       "1549470": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "りえき"
       },
       "1549660": {
         "start": 47,
-        "length": 2
+        "length": 2,
+        "reading": "りよう"
       },
       "1550060": {
         "start": 64,
-        "length": 2
+        "length": 2,
+        "reading": "りねん"
       },
       "1596510": {
         "start": 35,
-        "length": 5
+        "length": 3,
+        "reading": "そこなわ"
+      },
+      "2098290": {
+        "start": 42,
+        "length": 1,
+        "reading": "ない"
+      },
+      "2129870": {
+        "start": 0,
+        "length": 4,
+        "reading": "じぞくかのう"
       },
       "2382640": {
         "start": 40,
-        "length": 3
+        "length": 3,
+        "reading": "はんいない"
       },
       "2549300": {
         "start": 0,
-        "length": 7
+        "length": 7,
+        "reading": "じぞくかのうなかいはつ"
       }
     }
   },
@@ -1192,15 +2127,150 @@
     "matches": {
       "1312690": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しかく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1526670": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
+      }
+    }
+  },
+  {
+    "id": "995150",
+    "original": "私は満たされた感覚で飢えも渇きも覚えなかった。",
+    "en": [
+      {
+        "id": "619912",
+        "text": "I experienced a sense of well-being and was neither hungry nor thirsty."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1526670",
+      "1212330",
+      "1224070",
+      "1208510",
+      "1206050",
+      "1206040"
+    ],
+    "matches": {
+      "1206040": {
+        "start": 16,
+        "length": 2,
+        "reading": "おぼえ"
+      },
+      "1206050": {
+        "start": 16,
+        "length": 2,
+        "reading": "おぼえ"
+      },
+      "1208510": {
+        "start": 13,
+        "length": 2,
+        "reading": "かわき"
+      },
+      "1212330": {
+        "start": 7,
+        "length": 2,
+        "reading": "かんかく"
+      },
+      "1224070": {
+        "start": 10,
+        "length": 2,
+        "reading": "うえ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1526670": {
+        "start": 2,
+        "length": 3,
+        "reading": "みたさ"
+      }
+    }
+  },
+  {
+    "id": "10868220",
+    "original": "グラスは水で満たされている。",
+    "en": [
+      {
+        "id": "61441",
+        "text": "The glass is full of water."
+      }
+    ],
+    "vocabIds": [
+      "1371260",
+      "1526670"
+    ],
+    "matches": {
+      "1371260": {
+        "start": 4,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1526670": {
+        "start": 6,
+        "length": 3,
+        "reading": "みたさ"
+      }
+    }
+  },
+  {
+    "id": "11212024",
+    "original": "パックマンがある条件を満たすと、追ってくるモンスターを逆襲して食べることができる。",
+    "en": [
+      {
+        "id": "329580",
+        "text": "Pac-Man, when a certain condition is reached, can counter attack and eat the monsters chasing him."
+      }
+    ],
+    "vocabIds": [
+      "1356510",
+      "1855580",
+      "1526670",
+      "1852860",
+      "1227090",
+      "1358280"
+    ],
+    "matches": {
+      "1227090": {
+        "start": 27,
+        "length": 2,
+        "reading": "ぎゃくしゅう"
+      },
+      "1356510": {
+        "start": 8,
+        "length": 2,
+        "reading": "じょうけん"
+      },
+      "1358280": {
+        "start": 31,
+        "length": 3,
+        "reading": "たべる"
+      },
+      "1526670": {
+        "start": 11,
+        "length": 3,
+        "reading": "みたす"
+      },
+      "1852860": {
+        "start": 16,
+        "length": 3,
+        "reading": "おって"
+      },
+      "1855580": {
+        "start": 8,
+        "length": 6,
+        "reading": "じょうけんをみたす"
       }
     }
   }

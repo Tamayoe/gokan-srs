@@ -4,6 +4,7 @@ import readline from 'readline';
 import type { Sense, Vocabulary } from '../src/models/vocabulary.model';
 import type { Sentence } from '../src/models/sentence.model';
 import type { Kanji } from '../src/models/kanji.model';
+import type kuromoji from 'kuromoji';
 import { JMDict } from "../src/models/data.model";
 import { buildMiscFlags } from './build-common';
 import { BUILD_LIMITS } from './build-constants';
@@ -41,8 +42,19 @@ interface FrequencyIndexEntry {
 async function main() {
     console.log('🏗️  Starting Unified Data Build...');
 
-    // 0. Deinflector Import (Dynamic)
-    const { Deinflector } = await import('../src/utils/deinflector');
+    // 0. Tokenizer Import (Dynamic)
+    const { SentenceTokenizer } = await import('../src/utils/tokenizer');
+    const kuromoji = await import('kuromoji');
+
+    console.log('⏳ Initializing Kuromoji tokenizer...');
+    const tokenizer = await new Promise<kuromoji.Tokenizer<kuromoji.IpadicFeatures>>((resolve, reject) => {
+        kuromoji.default.builder({ dicPath: 'node_modules/kuromoji/dict' }).build((err, t) => {
+            if (err) reject(err);
+            else resolve(t);
+        });
+    });
+    console.log('✅ Kuromoji ready!');
+    const sentenceTokenizer = new SentenceTokenizer(tokenizer as any);
 
     // 1. Load Reference Data
     console.log('📚 Loading reference data...');
@@ -367,6 +379,7 @@ async function main() {
     // Tokenize
     let processedSentences = 0;
     const reportInterval = 5000;
+    const vocabSet = new Set(writtenToVocabId.keys());
 
     for (const [_, sentence] of sentencesMap) {
         processedSentences++;
@@ -376,51 +389,20 @@ async function main() {
 
         const text = sentence.original;
         const coveredIndices = new Array(text.length).fill(false);
-        const matches: Record<string, { start: number, length: number }> = {};
+        const matches: Record<string, { start: number, length: number, reading?: string }> = {};
         const matchedVocabIds: string[] = [];
 
-        for (let i = 0; i < text.length; i++) {
-            if (coveredIndices[i]) continue;
+        const extractedMatches = sentenceTokenizer.extractMatches(text, vocabSet);
 
-            let bestMatch: { vocabIds: string[], length: number } | null = null;
-            const maxLen = Math.min(15, text.length - i);
+        for (const [matchedTerm, matchInfo] of Object.entries(extractedMatches)) {
+            const vocabIds = writtenToVocabId.get(matchedTerm);
+            if (!vocabIds) continue;
 
-            // Optimization: Only check substrings that *could* be in our vocab list
-            // But we have sortedVocabKeys which is just a list of strings throughout the whole dictionary.
-            // Iterating that is O(N_vocab). Too slow inside sentence loop.
-            // Better: substring checks against Map O(1).
-
-            for (let len = maxLen; len >= 1; len--) {
-                const substring = text.substring(i, i + len);
-
-                // 1. Direct Match
-                if (writtenToVocabId.has(substring)) {
-                    bestMatch = { vocabIds: writtenToVocabId.get(substring)!, length: len };
-                    break;
+            for (const vId of vocabIds) {
+                if (!matches[vId]) {
+                    matches[vId] = matchInfo;
+                    matchedVocabIds.push(vId);
                 }
-
-                // 2. Deinflection
-                const candidates = Deinflector.deinflect(substring);
-                for (const candidate of candidates) {
-                    if (writtenToVocabId.has(candidate.term)) {
-                        bestMatch = { vocabIds: writtenToVocabId.get(candidate.term)!, length: len };
-                        break;
-                    }
-                }
-                if (bestMatch) break;
-            }
-
-            if (bestMatch) {
-                // Register Match
-                for (let k = 0; k < bestMatch.length; k++) coveredIndices[i + k] = true;
-
-                for (const vId of bestMatch.vocabIds) {
-                    if (!matches[vId]) {
-                        matches[vId] = { start: i, length: bestMatch.length };
-                        matchedVocabIds.push(vId);
-                    }
-                }
-                i += bestMatch.length - 1;
             }
         }
 

@@ -1,5 +1,138 @@
 [
   {
+    "id": "227600",
+    "original": "おなかが痛いんです。胃腸薬をください。",
+    "en": [
+      {
+        "id": "64953",
+        "text": "My stomach hurts. Can I have some stomach medicine?"
+      }
+    ],
+    "indices": "お腹{おなか} が 痛い[01] のです{んです} 胃腸薬~ を 下さい[01]{ください}",
+    "vocabIds": [
+      "1432680",
+      "1158610",
+      "1651470",
+      "1538160"
+    ],
+    "matches": {
+      "1158610": {
+        "start": 10,
+        "length": 2,
+        "reading": "いちょう"
+      },
+      "1432680": {
+        "start": 4,
+        "length": 2,
+        "reading": "いたい"
+      },
+      "1538160": {
+        "start": 12,
+        "length": 1,
+        "reading": "やく"
+      },
+      "1651470": {
+        "start": 10,
+        "length": 3,
+        "reading": "いちょうやく"
+      }
+    }
+  },
+  {
+    "id": "2261263",
+    "original": "胃腸炎になったので、病院へ行きました。",
+    "en": [
+      {
+        "id": "2261257",
+        "text": "I got gastroenteritis the other day, so I went to the hospital."
+      }
+    ],
+    "vocabIds": [
+      "1158610",
+      "1668750",
+      "1177070",
+      "1490220",
+      "1578850",
+      "1578790"
+    ],
+    "matches": {
+      "1158610": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちょう"
+      },
+      "1177070": {
+        "start": 2,
+        "length": 1,
+        "reading": "えん"
+      },
+      "1490220": {
+        "start": 10,
+        "length": 2,
+        "reading": "びょういん"
+      },
+      "1578790": {
+        "start": 13,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 13,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1668750": {
+        "start": 0,
+        "length": 3,
+        "reading": "いちょうえん"
+      }
+    }
+  },
+  {
+    "id": "2261265",
+    "original": "胃腸炎は、ノロウイルスが原因であることが多いです。",
+    "en": [
+      {
+        "id": "2261264",
+        "text": "Gastroenteritis is often caused by the norovirus."
+      }
+    ],
+    "vocabIds": [
+      "1158610",
+      "1668750",
+      "1177070",
+      "1261190",
+      "1407460"
+    ],
+    "matches": {
+      "1158610": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちょう"
+      },
+      "1177070": {
+        "start": 2,
+        "length": 1,
+        "reading": "えん"
+      },
+      "1261190": {
+        "start": 12,
+        "length": 2,
+        "reading": "げんいん"
+      },
+      "1407460": {
+        "start": 20,
+        "length": 2,
+        "reading": "おおい"
+      },
+      "1668750": {
+        "start": 0,
+        "length": 3,
+        "reading": "いちょうえん"
+      }
+    }
+  },
+  {
     "id": "2275612",
     "original": "トムは胃腸が弱い。",
     "en": [
@@ -15,11 +148,13 @@
     "matches": {
       "1158610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いちょう"
       },
       "1324520": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "よわい"
       }
     }
   }

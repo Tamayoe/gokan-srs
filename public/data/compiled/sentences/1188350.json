@@ -18,19 +18,23 @@
     "matches": {
       "1188350": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1200740": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あらためて"
       },
       "1421630": {
         "start": 13,
-        "length": 5
+        "length": 5,
+        "reading": "はずかしい"
       },
       "1481160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はんすう"
       }
     }
   },
@@ -47,8 +51,10 @@
     "vocabIds": [
       "1483150",
       "1547720",
+      "1547710",
       "1327720",
       "1259290",
+      "2256270",
       "1483070",
       "1188350",
       "1237930"
@@ -56,31 +62,48 @@
     "matches": {
       "1188350": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1237930": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "むなさわぎ"
       },
       "1259290": {
         "start": 9,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1327720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1483070": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1547710": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 4,
-        "length": 2
+        "length": 1,
+        "reading": "き"
+      },
+      "2256270": {
+        "start": 9,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -95,17 +118,25 @@
     ],
     "indices": "彼(かれ) の 狙い{ねらい} が 何だか 分かる{わかって} 来る(くる){きた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1188350"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1188350": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -121,16 +152,69 @@
     "indices": "何だか 疲れる[01]{疲れました}",
     "vocabIds": [
       "1188350",
-      "1483740"
+      "1483740",
+      "1483730"
     ],
     "matches": {
       "1188350": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
+      },
+      "1483730": {
+        "start": 3,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 3,
-        "length": 5
+        "length": 2,
+        "reading": "つかれ"
+      }
+    }
+  },
+  {
+    "id": "221818",
+    "original": "この仕事は何が何だかさっぱり分からないわ。",
+    "en": [
+      {
+        "id": "59144",
+        "text": "I can't make heads or tails of this assignment."
+      }
+    ],
+    "indices": "此の{この} 仕事[01] は 何が何だか~ さっぱり[05] 分かる{分からない} わ",
+    "vocabIds": [
+      "1304970",
+      "1577100",
+      "1188310",
+      "1188350",
+      "1606560"
+    ],
+    "matches": {
+      "1188310": {
+        "start": 5,
+        "length": 5,
+        "reading": "なにがなんだか"
+      },
+      "1188350": {
+        "start": 7,
+        "length": 3,
+        "reading": "なんだか"
+      },
+      "1304970": {
+        "start": 2,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1577100": {
+        "start": 5,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1606560": {
+        "start": 14,
+        "length": 3,
+        "reading": "わから"
       }
     }
   },
@@ -151,11 +235,13 @@
     "matches": {
       "1002290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
       },
       "1188350": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       }
     }
   },
@@ -179,21 +265,30 @@
     "indices": "バグ だ か 何 だ か 分かんない~ けど 此の{この} ソフト は ちゃんと 動く{動かない}",
     "vocabIds": [
       "1188350",
+      "1606560",
       "2158960",
       "1451210"
     ],
     "matches": {
       "1188350": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1451210": {
         "start": 25,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1606560": {
+        "start": 7,
+        "length": 3,
+        "reading": "わかん"
       },
       "2158960": {
         "start": 7,
-        "length": 5
+        "length": 5,
+        "reading": "わかんない"
       }
     }
   },
@@ -214,15 +309,18 @@
     "matches": {
       "1188350": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1451210": {
         "start": 25,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1606560": {
         "start": 7,
-        "length": 5
+        "length": 3,
+        "reading": "わから"
       }
     }
   },
@@ -242,20 +340,35 @@
     "vocabIds": [
       "1579100",
       "1188350",
-      "2235700"
+      "1220930",
+      "2235700",
+      "1151260"
     ],
     "matches": {
+      "1151260": {
+        "start": 9,
+        "length": 2,
+        "reading": "わるい"
+      },
       "1188350": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
+      },
+      "1220930": {
+        "start": 6,
+        "length": 2,
+        "reading": "きげん"
       },
       "1579100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けさ"
       },
       "2235700": {
         "start": 6,
-        "length": 5
+        "length": 5,
+        "reading": "きげんがわるい"
       }
     }
   },
@@ -276,15 +389,18 @@
     "matches": {
       "1188350": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1191730": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1555830": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "となり"
       }
     }
   },
@@ -298,17 +414,31 @@
       }
     ],
     "vocabIds": [
+      "1252140",
       "1592560",
+      "2037700",
       "1188350"
     ],
     "matches": {
       "1188350": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
+      },
+      "1252140": {
+        "start": 2,
+        "length": 2,
+        "reading": "けいさん"
       },
       "1592560": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2037700": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -329,29 +459,28 @@
       "1394800",
       "1536350",
       "1188350",
-      "1222640",
-      "1151230"
+      "2662160"
     ],
     "matches": {
-      "1151230": {
-        "start": 22,
-        "length": 1
-      },
       "1188350": {
         "start": 16,
-        "length": 3
-      },
-      "1222640": {
-        "start": 19,
-        "length": 2
+        "length": 3,
+        "reading": "なんだか"
       },
       "1394800": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まったく"
       },
       "1536350": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "よる"
+      },
+      "2662160": {
+        "start": 19,
+        "length": 6,
+        "reading": "きみがわるくっ"
       }
     }
   },
@@ -382,23 +511,28 @@
     "matches": {
       "1188350": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1207240": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "たのしい"
       },
       "1212250": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
       },
       "1309440": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "おもえ"
       },
       "1523400": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ほんやく"
       }
     }
   },
@@ -412,37 +546,49 @@
       }
     ],
     "vocabIds": [
+      "1288850",
       "1288920",
       "1664550",
       "1321630",
       "1188350",
       "1382370",
-      "1309470"
+      "1589350"
     ],
     "matches": {
       "1188350": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
       },
       "1288920": {
         "start": 0,
-        "length": 3
-      },
-      "1309470": {
-        "start": 27,
-        "length": 5
+        "length": 3,
+        "reading": "いまでも"
       },
       "1321630": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しばい"
       },
       "1382370": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "むかし"
+      },
+      "1589350": {
+        "start": 27,
+        "length": 2,
+        "reading": "おもわ"
       },
       "1664550": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "てらこや"
       }
     }
   },
@@ -460,38 +606,51 @@
       "1562350",
       "1582200",
       "1188350",
-      "2858343",
+      "1577200",
       "1309440",
+      "1547720",
       "1547710"
     ],
     "matches": {
       "1164010": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "いっしょうけんめい"
       },
       "1188350": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1309440": {
         "start": 30,
-        "length": 3
+        "length": 2,
+        "reading": "おもえ"
       },
       "1547710": {
         "start": 33,
-        "length": 1
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 33,
+        "length": 1,
+        "reading": "き"
       },
       "1562350": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "はなす"
+      },
+      "1577200": {
+        "start": 27,
+        "length": 3,
+        "reading": "かわいく"
       },
       "1582200": {
         "start": 20,
-        "length": 2
-      },
-      "2858343": {
-        "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "とちゅう"
       }
     }
   },
@@ -505,27 +664,87 @@
       }
     ],
     "vocabIds": [
+      "1579110",
       "1289400",
       "1188350",
       "1323080",
-      "2788310"
+      "1429170",
+      "2788310",
+      "1151260"
     ],
     "matches": {
+      "1151260": {
+        "start": 11,
+        "length": 2,
+        "reading": "わるい"
+      },
       "1188350": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1323080": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1429170": {
+        "start": 8,
+        "length": 2,
+        "reading": "ちょうし"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       },
       "2788310": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "ちょうしがわるい"
+      }
+    }
+  },
+  {
+    "id": "9013396",
+    "original": "何が何だか分からないよ。",
+    "en": [
+      {
+        "id": "322190",
+        "text": "I'm really confused."
+      }
+    ],
+    "vocabIds": [
+      "1577100",
+      "1188310",
+      "1188350",
+      "1606560"
+    ],
+    "matches": {
+      "1188310": {
+        "start": 0,
+        "length": 5,
+        "reading": "なにがなんだか"
+      },
+      "1188350": {
+        "start": 2,
+        "length": 3,
+        "reading": "なんだか"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1606560": {
+        "start": 5,
+        "length": 3,
+        "reading": "わから"
       }
     }
   },
@@ -544,7 +763,8 @@
     "matches": {
       "1188350": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       }
     }
   }

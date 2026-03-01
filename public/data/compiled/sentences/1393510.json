@@ -1,5 +1,50 @@
 [
   {
+    "id": "80614",
+    "original": "明日から梅雨前線が活発になります。",
+    "en": [
+      {
+        "id": "323103",
+        "text": "The seasonal rain front is moving in tomorrow."
+      }
+    ],
+    "indices": "明日 から[01] 梅雨前線~ が 活発 になる[01]{になります}",
+    "vocabIds": [
+      "1584660",
+      "1582960",
+      "1783200",
+      "1393510",
+      "1208410"
+    ],
+    "matches": {
+      "1208410": {
+        "start": 9,
+        "length": 2,
+        "reading": "かっぱつ"
+      },
+      "1393510": {
+        "start": 6,
+        "length": 2,
+        "reading": "ぜんせん"
+      },
+      "1582960": {
+        "start": 4,
+        "length": 2,
+        "reading": "つゆ"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      },
+      "1783200": {
+        "start": 4,
+        "length": 4,
+        "reading": "つゆぜんせん"
+      }
+    }
+  },
+  {
     "id": "96198",
     "original": "彼らは兵士として前線に行った。",
     "en": [
@@ -13,24 +58,28 @@
       "1483090",
       "1506420",
       "1393510",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1393510": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんせん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1506420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "へいし"
       },
-      "1589060": {
+      "1578850": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -45,21 +94,18 @@
     ],
     "vocabIds": [
       "1483070",
-      "1393510",
-      "1402630"
+      "1393510"
     ],
     "matches": {
       "1393510": {
         "start": 2,
-        "length": 2
-      },
-      "1402630": {
-        "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんせん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -80,11 +126,13 @@
     "matches": {
       "1393510": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんせん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   }

@@ -1,71 +1,46 @@
 [
   {
-    "id": "121870",
-    "original": "熱帯の太陽は容赦なくぎらぎら照り付けた。",
+    "id": "138131",
+    "original": "太陽の照り返しが強い。",
     "en": [
       {
-        "id": "282134",
-        "text": "The tropical sun glared down relentlessly."
+        "id": "275104",
+        "text": "There's a lot of glare."
       }
     ],
-    "indices": "熱帯 の 太陽 は 容赦なく~ ぎらぎら 照りつける{照り付けた}",
+    "indices": "太陽 の 照り返す{照り返し}~ が 強い(つよい)",
     "vocabIds": [
-      "1467930",
       "1408370",
-      "2260250",
       "1854530",
-      "1495770"
+      "1742260",
+      "2202100",
+      "1236070"
     ],
     "matches": {
+      "1236070": {
+        "start": 8,
+        "length": 2,
+        "reading": "つよい"
+      },
       "1408370": {
+        "start": 0,
+        "length": 2,
+        "reading": "たいよう"
+      },
+      "1742260": {
         "start": 3,
-        "length": 2
-      },
-      "1467930": {
-        "start": 0,
-        "length": 2
-      },
-      "1495770": {
-        "start": 16,
-        "length": 3
+        "length": 4,
+        "reading": "てりがえし"
       },
       "1854530": {
-        "start": 14,
-        "length": 2
+        "start": 3,
+        "length": 2,
+        "reading": "てり"
       },
-      "2260250": {
-        "start": 6,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "138190",
-    "original": "太陽がまともに照り付けている。",
-    "en": [
-      {
-        "id": "275045",
-        "text": "The sun is shining in my face."
-      }
-    ],
-    "indices": "太陽 が 正面に[01]{まともに}~ 照りつける{照り付けている}~",
-    "vocabIds": [
-      "1408370",
-      "1854530",
-      "1495770"
-    ],
-    "matches": {
-      "1408370": {
-        "start": 0,
-        "length": 2
-      },
-      "1495770": {
-        "start": 9,
-        "length": 3
-      },
-      "1854530": {
-        "start": 7,
-        "length": 2
+      "2202100": {
+        "start": 5,
+        "length": 2,
+        "reading": "がえし"
       }
     }
   }

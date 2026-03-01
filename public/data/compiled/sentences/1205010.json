@@ -1,30 +1,5 @@
 [
   {
-    "id": "184624",
-    "original": "各自席につきなさい。",
-    "en": [
-      {
-        "id": "21752",
-        "text": "Go to your respective seats."
-      }
-    ],
-    "indices": "各(かく) 自席~ に 着く(つく)[02]{つき}~ 為さい{なさい}",
-    "vocabIds": [
-      "1205010",
-      "1382250"
-    ],
-    "matches": {
-      "1205010": {
-        "start": 0,
-        "length": 2
-      },
-      "1382250": {
-        "start": 2,
-        "length": 1
-      }
-    }
-  },
-  {
     "id": "184625",
     "original": "各自運転するときは気をつけなければいけない。",
     "en": [
@@ -37,20 +12,29 @@
     "vocabIds": [
       "1205010",
       "1172830",
-      "1591990"
+      "1221520",
+      "1221860"
     ],
     "matches": {
       "1172830": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "うんてん"
       },
       "1205010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かくじ"
       },
-      "1591990": {
+      "1221520": {
         "start": 9,
-        "length": 5
+        "length": 1,
+        "reading": "き"
+      },
+      "1221860": {
+        "start": 9,
+        "length": 4,
+        "reading": "きをつけ"
       }
     }
   },
@@ -66,16 +50,24 @@
     "indices": "各自 の 部署 に 就く{就け}",
     "vocabIds": [
       "1205010",
-      "1603140"
+      "1603140",
+      "1331530"
     ],
     "matches": {
       "1205010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かくじ"
+      },
+      "1331530": {
+        "start": 6,
+        "length": 2,
+        "reading": "つけ"
       },
       "1603140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぶしょ"
       }
     }
   },
@@ -97,15 +89,18 @@
     "matches": {
       "1205010": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かくじ"
       },
       "1315720": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1392250": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せんしゅ"
       }
     }
   }

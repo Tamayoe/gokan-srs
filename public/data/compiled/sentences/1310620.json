@@ -12,6 +12,7 @@
     "vocabIds": [
       "1323080",
       "1633620",
+      "1598890",
       "1598880",
       "1402540",
       "1310620"
@@ -19,23 +20,33 @@
     "matches": {
       "1310620": {
         "start": 24,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1402540": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "はしっ"
       },
       "1598880": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "とびこみ"
+      },
+      "1598890": {
+        "start": 5,
+        "length": 4,
+        "reading": "とびこみ"
       },
       "1633620": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "くさち"
       }
     }
   },
@@ -51,21 +62,81 @@
     "indices": "自転車 は キー(#2831102)~ と 音を立てる{音を立てて} 止まる(とまる)[01]{止まった}",
     "vocabIds": [
       "1318290",
-      "1183650",
+      "1576900",
+      "1551530",
+      "2081610",
+      "2016360",
       "1310620"
     ],
     "matches": {
-      "1183650": {
-        "start": 7,
-        "length": 5
-      },
       "1310620": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1318290": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
+      },
+      "1551530": {
+        "start": 9,
+        "length": 2,
+        "reading": "たて"
+      },
+      "1576900": {
+        "start": 7,
+        "length": 1,
+        "reading": "おと"
+      },
+      "2016360": {
+        "start": 9,
+        "length": 3,
+        "reading": "たてて"
+      },
+      "2081610": {
+        "start": 9,
+        "length": 2,
+        "reading": "たて"
+      }
+    }
+  },
+  {
+    "id": "77520",
+    "original": "列車はその駅では止まりません。",
+    "en": [
+      {
+        "id": "326199",
+        "text": "The train doesn't stop at that station."
+      }
+    ],
+    "indices": "列車 は 其の[01]{その} 駅 で(#2028980) は 止まる(とまる)[01]{止まりません}",
+    "vocabIds": [
+      "1558370",
+      "1175140",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1175140": {
+        "start": 5,
+        "length": 1,
+        "reading": "えき"
+      },
+      "1310620": {
+        "start": 8,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1558370": {
+        "start": 0,
+        "length": 2,
+        "reading": "れっしゃ"
+      },
+      "1658240": {
+        "start": 8,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -82,20 +153,29 @@
     "vocabIds": [
       "1558370",
       "1310620",
-      "1202450"
+      "1202450",
+      "2810010"
     ],
     "matches": {
       "1202450": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "あけ"
       },
       "1310620": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1558370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
+      },
+      "2810010": {
+        "start": 11,
+        "length": 2,
+        "reading": "あけ"
       }
     }
   },
@@ -112,20 +192,29 @@
     "vocabIds": [
       "1558370",
       "1310620",
-      "1589500"
+      "1589500",
+      "1631470"
     ],
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
       },
       "1558370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "1589500": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "おり"
+      },
+      "1631470": {
+        "start": 11,
+        "length": 2,
+        "reading": "おり"
       }
     }
   },
@@ -147,15 +236,18 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1549340": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "あらし"
       },
       "1558370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -181,15 +273,18 @@
     "matches": {
       "1310620": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1549340": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あらし"
       },
       "1558370": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -204,52 +299,88 @@
     ],
     "indices": "と 私(わたし)[01] は サイレン~ が 近く[01] で(#2028980) 止まる(とまる)[01] の を 聞く{聞いて} 何(なに)[01] が 起きる{起きた} の か と 直ぐに{すぐに} 飛び出す[01]{飛び出して} 行く{いこう} とする{とした}",
     "vocabIds": [
-      "1546550",
-      "1307770",
       "1311110",
       "1242160",
       "1310620",
       "1591110",
       "1577100",
       "1223640",
-      "1485350"
+      "1485350",
+      "2005420"
     ],
     "matches": {
       "1223640": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
       },
       "1242160": {
         "start": 10,
-        "length": 2
-      },
-      "1307770": {
-        "start": 1,
-        "length": 1
+        "length": 2,
+        "reading": "ちかく"
       },
       "1310620": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1485350": {
         "start": 33,
-        "length": 5
-      },
-      "1546550": {
-        "start": 0,
-        "length": 1
+        "length": 4,
+        "reading": "とびだし"
       },
       "1577100": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
       "1591110": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
+      },
+      "2005420": {
+        "start": 33,
+        "length": 4,
+        "reading": "とびだし"
+      }
+    }
+  },
+  {
+    "id": "85512",
+    "original": "鼻血が止まりません。",
+    "en": [
+      {
+        "id": "318201",
+        "text": "I can't stop my nosebleed."
+      }
+    ],
+    "indices": "鼻血~ が 止まる(とまる)[01]{止まりません}",
+    "vocabIds": [
+      "1583300",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1583300": {
+        "start": 0,
+        "length": 2,
+        "reading": "はなぢ"
+      },
+      "1658240": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -271,15 +402,81 @@
     "matches": {
       "1160820": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひとつ"
       },
       "1310620": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1485470": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
+      }
+    }
+  },
+  {
+    "id": "85737",
+    "original": "飛行機が完全に止まりますまで、お座席をお立ちになりませんようお願いいたします。",
+    "en": [
+      {
+        "id": "317976",
+        "text": "Please stay seated until the plane comes to a complete stop."
+      }
+    ],
+    "indices": "飛行機 が 完全 に 止まる(とまる)[01]{止まります} 迄{まで} 御(お){お} 座席 を 立つ[04]{お立ち} になる[02]{になりません} 様(よう){よう} お願いいたします",
+    "vocabIds": [
+      "1485470",
+      "1211510",
+      "1310620",
+      "1658240",
+      "1291880",
+      "1985070",
+      "2036870",
+      "1001730"
+    ],
+    "matches": {
+      "1001730": {
+        "start": 30,
+        "length": 8,
+        "reading": "おねがいいたします"
+      },
+      "1211510": {
+        "start": 4,
+        "length": 2,
+        "reading": "かんぜん"
+      },
+      "1291880": {
+        "start": 16,
+        "length": 2,
+        "reading": "ざせき"
+      },
+      "1310620": {
+        "start": 7,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1485470": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひこうき"
+      },
+      "1658240": {
+        "start": 7,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1985070": {
+        "start": 19,
+        "length": 3,
+        "reading": "おたち"
+      },
+      "2036870": {
+        "start": 30,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -301,15 +498,18 @@
     "matches": {
       "1310620": {
         "start": 17,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1323080": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -327,24 +527,34 @@
       "1483150",
       "1310620",
       "1327190",
-      "1352320"
+      "1352320",
+      "1352300"
     ],
     "matches": {
       "1310620": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1327190": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "て"
+      },
+      "1352300": {
+        "start": 14,
+        "length": 2,
+        "reading": "あげ"
       },
       "1352320": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "あげ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -367,49 +577,110 @@
       "1226160",
       "1307550",
       "1310620",
+      "1420470",
       "1420420",
+      "1375040",
       "1375070"
     ],
     "matches": {
       "1226160": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ぎろん"
       },
       "1259140": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
       },
       "1307550": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "はじめる"
       },
       "1310620": {
         "start": 30,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
+      },
+      "1375040": {
+        "start": 44,
+        "length": 2,
+        "reading": "いきおい"
       },
       "1375070": {
         "start": 44,
-        "length": 4
+        "length": 4,
+        "reading": "いきおいよく"
       },
       "1420420": {
         "start": 37,
-        "length": 4
+        "length": 4,
+        "reading": "しらない"
+      },
+      "1420470": {
+        "start": 37,
+        "length": 2,
+        "reading": "しら"
       },
       "1479890": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はんぶん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1529390": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "ねむっ"
       },
       "1576250": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
+      }
+    }
+  },
+  {
+    "id": "106476",
+    "original": "彼は止まれと合図した。",
+    "en": [
+      {
+        "id": "297210",
+        "text": "He signaled them to stop."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 止まる(とまる)[01]{止まれ} と 合図 為る(する){した}",
+    "vocabIds": [
+      "1483070",
+      "1310620",
+      "1918560",
+      "1284930"
+    ],
+    "matches": {
+      "1284930": {
+        "start": 6,
+        "length": 2,
+        "reading": "あいず"
+      },
+      "1310620": {
+        "start": 2,
+        "length": 3,
+        "reading": "とまれ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1918560": {
+        "start": 2,
+        "length": 3,
+        "reading": "とまれ"
       }
     }
   },
@@ -424,6 +695,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} ワゴン~ が マーケット の 入り口 で(#2028980) 止まる(とまる)[01]{止まった}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1582820",
       "1310620"
@@ -431,15 +703,23 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1310620": {
         "start": 16,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1582820": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "いりくち"
       }
     }
   },
@@ -455,31 +735,48 @@
     "indices": "彼(かれ) が 驚いたことに 列車 は 急に 止まる(とまる)[01]{止まった}",
     "vocabIds": [
       "1483070",
+      "1238680",
       "2768060",
       "1558370",
+      "1228560",
       "2269050",
       "1310620"
     ],
     "matches": {
+      "1228560": {
+        "start": 12,
+        "length": 1,
+        "reading": "きゅう"
+      },
+      "1238680": {
+        "start": 2,
+        "length": 2,
+        "reading": "おどろい"
+      },
       "1310620": {
         "start": 14,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1558370": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "2269050": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       },
       "2768060": {
         "start": 2,
-        "length": 6
+        "length": 6,
+        "reading": "おどろいたことに"
       }
     }
   },
@@ -505,31 +802,38 @@
     "matches": {
       "1191730": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1310620": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1457560": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "くもっ"
       },
       "1463770": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1483090": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1535880": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "もどる"
       },
       "1582200": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "とちゅう"
       }
     }
   },
@@ -546,20 +850,29 @@
     "vocabIds": [
       "1443530",
       "1310620",
-      "1589500"
+      "1589500",
+      "1631470"
     ],
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1443530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1589500": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おり"
+      },
+      "1631470": {
+        "start": 8,
+        "length": 2,
+        "reading": "おり"
       }
     }
   },
@@ -580,11 +893,13 @@
     "matches": {
       "1310620": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1438340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "てんじょう"
       }
     }
   },
@@ -606,15 +921,18 @@
     "matches": {
       "1310530": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "えだ"
       },
       "1310620": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1430250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "とり"
       }
     }
   },
@@ -631,30 +949,29 @@
     "vocabIds": [
       "1421210",
       "1222700",
-      "2845367",
-      "1215230",
+      "1315920",
       "1310620"
     ],
     "matches": {
-      "1215230": {
-        "start": 11,
-        "length": 1
-      },
       "1222700": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きしゃ"
       },
       "1310620": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1315920": {
+        "start": 10,
+        "length": 2,
+        "reading": "じかん"
       },
       "1421210": {
         "start": 0,
-        "length": 2
-      },
-      "2845367": {
-        "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じしん"
       }
     }
   },
@@ -676,15 +993,18 @@
     "matches": {
       "1310620": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1318270": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じてん"
       },
       "1420970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちきゅう"
       }
     }
   },
@@ -705,11 +1025,13 @@
     "matches": {
       "1310620": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1419990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       }
     }
   },
@@ -731,15 +1053,18 @@
     "matches": {
       "1310620": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1413070": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おおあめ"
       },
       "1558370": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -757,24 +1082,28 @@
       "1413070",
       "1443530",
       "1310620",
-      "2080750"
+      "1355120"
     ],
     "matches": {
       "1310620": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1355120": {
+        "start": 22,
+        "length": 2,
+        "reading": "のら"
       },
       "1413070": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おおあめ"
       },
       "1443530": {
         "start": 9,
-        "length": 2
-      },
-      "2080750": {
-        "start": 22,
-        "length": 1
+        "length": 2,
+        "reading": "でんしゃ"
       }
     }
   },
@@ -796,15 +1125,93 @@
     "matches": {
       "1310620": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1413070": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おおあめ"
       },
       "1558370": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
+      }
+    }
+  },
+  {
+    "id": "137721",
+    "original": "大きな乗用車が止まり、背の高い女性が降りた。",
+    "en": [
+      {
+        "id": "275515",
+        "text": "A big car drew up and a tall lady got out."
+      }
+    ],
+    "indices": "大きな 乗用車~ が 止まる(とまる)[01]{止まり} 背の高い 女性[01] が 降りる[02]{降りた}",
+    "vocabIds": [
+      "1412890",
+      "1355460",
+      "1310620",
+      "1658240",
+      "2147990",
+      "2152580",
+      "1283190",
+      "1345250",
+      "1589500",
+      "1631470"
+    ],
+    "matches": {
+      "1283190": {
+        "start": 13,
+        "length": 2,
+        "reading": "たかい"
+      },
+      "1310620": {
+        "start": 7,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1345250": {
+        "start": 15,
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1355460": {
+        "start": 3,
+        "length": 3,
+        "reading": "じょうようしゃ"
+      },
+      "1412890": {
+        "start": 0,
+        "length": 3,
+        "reading": "おおきな"
+      },
+      "1589500": {
+        "start": 18,
+        "length": 2,
+        "reading": "おり"
+      },
+      "1631470": {
+        "start": 18,
+        "length": 2,
+        "reading": "おり"
+      },
+      "1658240": {
+        "start": 7,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "2147990": {
+        "start": 11,
+        "length": 1,
+        "reading": "せ"
+      },
+      "2152580": {
+        "start": 11,
+        "length": 4,
+        "reading": "せのたかい"
       }
     }
   },
@@ -827,19 +1234,23 @@
     "matches": {
       "1310620": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1323080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1412890": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おおきな"
       },
       "1457040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "とつぜん"
       }
     }
   },
@@ -862,19 +1273,95 @@
     "matches": {
       "1215230": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1310620": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1443000": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "でんき"
       },
       "1596780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいふう"
+      }
+    }
+  },
+  {
+    "id": "142123",
+    "original": "赤信号は、「止まれ」を示す。",
+    "en": [
+      {
+        "id": "272447",
+        "text": "The red traffic light indicates \"stop\"."
+      }
+    ],
+    "indices": "赤信号 は 止まる(とまる)[01]{止まれ} を 示す",
+    "vocabIds": [
+      "1634690",
+      "1310620",
+      "1918560",
+      "1317110"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 6,
+        "length": 3,
+        "reading": "とまれ"
+      },
+      "1317110": {
+        "start": 11,
+        "length": 2,
+        "reading": "しめす"
+      },
+      "1634690": {
+        "start": 0,
+        "length": 3,
+        "reading": "あかしんごう"
+      },
+      "1918560": {
+        "start": 6,
+        "length": 3,
+        "reading": "とまれ"
+      }
+    }
+  },
+  {
+    "id": "142126",
+    "original": "赤信号で止まりましたか。",
+    "en": [
+      {
+        "id": "272444",
+        "text": "Did you stop at the red light?"
+      }
+    ],
+    "indices": "赤信号 で(#2028980) 止まる(とまる)[01]{止まりました} か",
+    "vocabIds": [
+      "1634690",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 4,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1634690": {
+        "start": 0,
+        "length": 3,
+        "reading": "あかしんごう"
+      },
+      "1658240": {
+        "start": 4,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -890,21 +1377,42 @@
     "indices": "青い[01] スポーツカー は キー(#2831102) と 音を立てる{音を立てて} 止まる(とまる)[01]{止まった}",
     "vocabIds": [
       "1381390",
-      "1183650",
+      "1576900",
+      "1551530",
+      "2081610",
+      "2016360",
       "1310620"
     ],
     "matches": {
-      "1183650": {
-        "start": 12,
-        "length": 5
-      },
       "1310620": {
         "start": 17,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1381390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あおい"
+      },
+      "1551530": {
+        "start": 14,
+        "length": 2,
+        "reading": "たて"
+      },
+      "1576900": {
+        "start": 12,
+        "length": 1,
+        "reading": "おと"
+      },
+      "2016360": {
+        "start": 14,
+        "length": 3,
+        "reading": "たてて"
+      },
+      "2081610": {
+        "start": 14,
+        "length": 2,
+        "reading": "たて"
       }
     }
   },
@@ -928,23 +1436,100 @@
     "matches": {
       "1243490": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぎんこう"
       },
       "1310620": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1318400": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "じどうしゃ"
       },
       "1361490": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1392580": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
+      }
+    }
+  },
+  {
+    "id": "145724",
+    "original": "信号が黄色のとき、わたしたちは止まります。",
+    "en": [
+      {
+        "id": "268838",
+        "text": "When the traffic light is yellow, we stop."
+      }
+    ],
+    "indices": "信号 が 黄色 の 時(とき){とき} 私たち{わたしたち} は 止まる(とまる)[01]{止まります}",
+    "vocabIds": [
+      "1359240",
+      "1576760",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 15,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1359240": {
+        "start": 0,
+        "length": 2,
+        "reading": "しんごう"
+      },
+      "1576760": {
+        "start": 3,
+        "length": 2,
+        "reading": "きいろ"
+      },
+      "1658240": {
+        "start": 15,
+        "length": 3,
+        "reading": "とまり"
+      }
+    }
+  },
+  {
+    "id": "147753",
+    "original": "出血が止まりません。",
+    "en": [
+      {
+        "id": "266808",
+        "text": "It won't stop bleeding."
+      }
+    ],
+    "indices": "出血 が 止まる(とまる)[01]{止まりません}",
+    "vocabIds": [
+      "1338750",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1338750": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅっけつ"
+      },
+      "1658240": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -959,11 +1544,17 @@
     ],
     "indices": "州(しゅう)[01] 警察 の 広報官~ に依れば{によれば} 其の[01]{その} トラック(#1085760) は 州間高速道路~ 号[01] 線 沿い の 橋(はし) の 欄干[01]~ に 激突[01] 為る(する){して} 止まる(とまる)[01]{止まった} との事{とのこと} です",
     "vocabIds": [
+      "1331840",
       "2136310",
+      "1252390",
+      "1593040",
       "1278680",
+      "1983700",
       "2399170",
-      "1284220",
-      "1391780",
+      "1215230",
+      "1283700",
+      "1283720",
+      "1454290",
       "1610080",
       "1237410",
       "1549370",
@@ -971,45 +1562,85 @@
       "1310620"
     ],
     "matches": {
+      "1215230": {
+        "start": 30,
+        "length": 1,
+        "reading": "かん"
+      },
       "1237410": {
         "start": 42,
-        "length": 1
+        "length": 1,
+        "reading": "はし"
+      },
+      "1252390": {
+        "start": 1,
+        "length": 2,
+        "reading": "けいさつ"
       },
       "1253730": {
         "start": 47,
-        "length": 2
+        "length": 2,
+        "reading": "げきとつ"
       },
       "1278680": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "こうほうかん"
       },
-      "1284220": {
-        "start": 37,
-        "length": 1
+      "1283700": {
+        "start": 31,
+        "length": 2,
+        "reading": "こうそく"
+      },
+      "1283720": {
+        "start": 31,
+        "length": 4,
+        "reading": "こうそくどうろ"
       },
       "1310620": {
         "start": 51,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
-      "1391780": {
-        "start": 38,
-        "length": 1
+      "1331840": {
+        "start": 0,
+        "length": 1,
+        "reading": "しゅう"
+      },
+      "1454290": {
+        "start": 33,
+        "length": 2,
+        "reading": "どうろ"
       },
       "1549370": {
         "start": 44,
-        "length": 2
+        "length": 2,
+        "reading": "らんかん"
+      },
+      "1593040": {
+        "start": 14,
+        "length": 2,
+        "reading": "こうほう"
       },
       "1610080": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "ぞい"
+      },
+      "1983700": {
+        "start": 16,
+        "length": 1,
+        "reading": "かん"
       },
       "2136310": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しゅうけいさつ"
       },
       "2399170": {
         "start": 29,
-        "length": 6
+        "length": 6,
+        "reading": "しゅうかんこうそくどうろ"
       }
     }
   },
@@ -1032,19 +1663,23 @@
     "matches": {
       "1310620": {
         "start": 11,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
       },
       "1330090": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じゅわき"
       },
       "1510640": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "へん"
       },
       "1576900": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "おと"
       }
     }
   },
@@ -1066,15 +1701,18 @@
     "matches": {
       "1208560": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "なめらか"
       },
       "1310620": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       }
     }
   },
@@ -1096,15 +1734,18 @@
     "matches": {
       "1310620": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1378100": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せいもん"
       }
     }
   },
@@ -1121,35 +1762,53 @@
     "vocabIds": [
       "1323080",
       "1191730",
+      "1392580",
       "1392590",
       "1310620",
       "1576900",
-      "1591150"
+      "1591150",
+      "1954660"
     ],
     "matches": {
       "1191730": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1310620": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1392580": {
+        "start": 4,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1576900": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "おと"
       },
       "1591150": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "きこえ"
+      },
+      "1954660": {
+        "start": 11,
+        "length": 3,
+        "reading": "きこえ"
       }
     }
   },
@@ -1169,32 +1828,44 @@
       "1310620",
       "1347750",
       "1451210",
+      "1259830",
       "1259820"
     ],
     "matches": {
       "1259820": {
         "start": 31,
-        "length": 3
+        "length": 3,
+        "reading": "みおくり"
+      },
+      "1259830": {
+        "start": 31,
+        "length": 3,
+        "reading": "みおくり"
       },
       "1310620": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1318400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じどうしゃ"
       },
       "1347750": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさい"
       },
       "1433210": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "つうこうにん"
       },
       "1451210": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -1217,19 +1888,23 @@
     "matches": {
       "1211200": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まく"
       },
       "1310620": {
         "start": 16,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1316140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1519210": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "わすれ"
       }
     }
   },
@@ -1250,11 +1925,13 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1316140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       }
     }
   },
@@ -1280,15 +1957,18 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1315920": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1316140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       }
     }
   },
@@ -1316,23 +1996,28 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1316140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1361490": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1443620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "でんち"
       },
       "1487660": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       }
     }
   },
@@ -1361,11 +2046,13 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1316140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       }
     }
   },
@@ -1387,15 +2074,18 @@
     "matches": {
       "1272280": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こうつう"
       },
       "1310620": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1313850": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       }
     }
   },
@@ -1422,19 +2112,23 @@
     "matches": {
       "1310620": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1591330": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "きづい"
       }
     }
   },
@@ -1457,19 +2151,23 @@
     "matches": {
       "1252400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けいさつかん"
       },
       "1284930": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "あいず"
       },
       "1310620": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1495,31 +2193,95 @@
     "matches": {
       "1223640": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
       },
       "1242160": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "1252390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさつ"
       },
       "1263760": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "げんば"
       },
       "1310620": {
         "start": 17,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1313850": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       },
       "1323080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      }
+    }
+  },
+  {
+    "id": "176299",
+    "original": "警官達は彼らに止まりなさいと言った。",
+    "en": [
+      {
+        "id": "238165",
+        "text": "The policemen said to them, \"Stop.\""
+      }
+    ],
+    "indices": "警官 達 は 彼ら(かれら) に 止まる(とまる)[01]{止まり} 為さい{なさい} と 言う{言った}",
+    "vocabIds": [
+      "1252330",
+      "1416220",
+      "1483090",
+      "1310620",
+      "1658240",
+      "2540200",
+      "1587040"
+    ],
+    "matches": {
+      "1252330": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいかん"
+      },
+      "1310620": {
+        "start": 7,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1416220": {
+        "start": 2,
+        "length": 1,
+        "reading": "たち"
+      },
+      "1483090": {
+        "start": 4,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1587040": {
+        "start": 14,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1658240": {
+        "start": 7,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "2540200": {
+        "start": 13,
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -1542,19 +2304,23 @@
     "matches": {
       "1252330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいかん"
       },
       "1310620": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1483090": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1531950": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "めいじ"
       }
     }
   },
@@ -1581,19 +2347,68 @@
     "matches": {
       "1252330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいかん"
       },
       "1284930": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "あいず"
       },
       "1310620": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      }
+    }
+  },
+  {
+    "id": "176343",
+    "original": "警官は止まれと言った。",
+    "en": [
+      {
+        "id": "238121",
+        "text": "The policeman said to them, \"Stop.\""
+      }
+    ],
+    "indices": "警官 は 止まる(とまる)[01]{止まれ} と 言う{言った}",
+    "vocabIds": [
+      "1252330",
+      "1310620",
+      "1918560",
+      "2540200",
+      "1587040"
+    ],
+    "matches": {
+      "1252330": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいかん"
+      },
+      "1310620": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまれ"
+      },
+      "1587040": {
+        "start": 7,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1918560": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまれ"
+      },
+      "2540200": {
+        "start": 6,
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -1618,27 +2433,100 @@
     "matches": {
       "1252330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいかん"
       },
       "1284930": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "あいず"
       },
       "1310620": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1323080": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1370760": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "ふい"
       },
       "1437310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ふえ"
+      }
+    }
+  },
+  {
+    "id": "176354",
+    "original": "警官は懐中電灯で車に止まれと合図をした。",
+    "en": [
+      {
+        "id": "238110",
+        "text": "The policeman signaled the car to stop with a flashlight."
+      },
+      {
+        "id": "1247853",
+        "text": "Using a flashlight, the policeman signaled the car to stop."
+      }
+    ],
+    "indices": "警官 は 懐中電灯 で(#2028980) 車(くるま) に 止まる(とまる)[01]{止まれ} と 合図 を 為る(する){した}",
+    "vocabIds": [
+      "1252330",
+      "1200590",
+      "1200600",
+      "1443660",
+      "1323080",
+      "1310620",
+      "1918560",
+      "1284930"
+    ],
+    "matches": {
+      "1200590": {
+        "start": 3,
+        "length": 2,
+        "reading": "かいちゅう"
+      },
+      "1200600": {
+        "start": 3,
+        "length": 4,
+        "reading": "かいちゅうでんとう"
+      },
+      "1252330": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいかん"
+      },
+      "1284930": {
+        "start": 14,
+        "length": 2,
+        "reading": "あいず"
+      },
+      "1310620": {
+        "start": 10,
+        "length": 3,
+        "reading": "とまれ"
+      },
+      "1323080": {
+        "start": 8,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1443660": {
+        "start": 5,
+        "length": 2,
+        "reading": "でんとう"
+      },
+      "1918560": {
+        "start": 10,
+        "length": 3,
+        "reading": "とまれ"
       }
     }
   },
@@ -1662,23 +2550,85 @@
     "matches": {
       "1252330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいかん"
       },
       "1310620": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1323080": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1370760": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "ふい"
       },
       "1437310": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ふえ"
+      }
+    }
+  },
+  {
+    "id": "176372",
+    "original": "警官は「止まれ！」と叫びながら、泥棒を追いかけた。",
+    "en": [
+      {
+        "id": "238092",
+        "text": "The policeman ran after the thief, shouting \"Stop!\""
+      }
+    ],
+    "indices": "警官 は 止まる(とまる)[01]{止まれ} と 叫ぶ{叫び} 乍ら[01]{ながら} 泥棒 を 追いかける{追いかけた}",
+    "vocabIds": [
+      "1252330",
+      "1310620",
+      "1918560",
+      "1235910",
+      "1235890",
+      "1599340",
+      "1608720"
+    ],
+    "matches": {
+      "1235890": {
+        "start": 10,
+        "length": 2,
+        "reading": "さけび"
+      },
+      "1235910": {
+        "start": 10,
+        "length": 2,
+        "reading": "さけび"
+      },
+      "1252330": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいかん"
+      },
+      "1310620": {
+        "start": 4,
+        "length": 3,
+        "reading": "とまれ"
+      },
+      "1599340": {
+        "start": 16,
+        "length": 2,
+        "reading": "どろぼう"
+      },
+      "1608720": {
+        "start": 19,
+        "length": 4,
+        "reading": "おいかけ"
+      },
+      "1918560": {
+        "start": 4,
+        "length": 3,
+        "reading": "とまれ"
       }
     }
   },
@@ -1700,15 +2650,18 @@
     "matches": {
       "1222700": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きしゃ"
       },
       "1310620": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1457040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "とつぜん"
       }
     }
   },
@@ -1724,21 +2677,30 @@
     "indices": "汽車 が 急に[02] 止まる(とまる)[01]{止まった}",
     "vocabIds": [
       "1222700",
+      "1228560",
       "2269050",
       "1310620"
     ],
     "matches": {
       "1222700": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きしゃ"
+      },
+      "1228560": {
+        "start": 3,
+        "length": 1,
+        "reading": "きゅう"
       },
       "1310620": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "2269050": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -1760,45 +2722,18 @@
     "matches": {
       "1192700": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かがく"
       },
       "1310620": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1366190": {
         "start": 3,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "189685",
-    "original": "雨が止まなければ、外出しないつもりです。",
-    "en": [
-      {
-        "id": "26839",
-        "text": "We won't go out unless it stops raining."
-      }
-    ],
-    "indices": "雨 が 止む{止ま} 無ければ{なければ} 外出 為る(する){しない} 積もり{つもり} です",
-    "vocabIds": [
-      "1171900",
-      "1310620",
-      "2062710"
-    ],
-    "matches": {
-      "1171900": {
-        "start": 0,
-        "length": 1
-      },
-      "1310620": {
-        "start": 2,
-        "length": 3
-      },
-      "2062710": {
-        "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "しんぽ"
       }
     }
   },
@@ -1813,7 +2748,9 @@
     ],
     "indices": "一台 の 車(くるま) が 私(わたし)[01]{私の} 家(いえ)[01] の 前(まえ) で(#2028980) 止まる(とまる)[01]{止まった}",
     "vocabIds": [
+      "1160790",
       "1164610",
+      "1412560",
       "1323080",
       "1311110",
       "1191730",
@@ -1821,29 +2758,45 @@
       "1310620"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1164610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちだい"
       },
       "1191730": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1310620": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1323080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1392580": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1412560": {
+        "start": 1,
+        "length": 1,
+        "reading": "だい"
       }
     }
   },
@@ -1869,15 +2822,18 @@
     "matches": {
       "1310620": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1580490": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じょうきゃく"
       },
       "1600270": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "のせる"
       }
     }
   },
@@ -1898,11 +2854,13 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1589500": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "おりる"
       }
     }
   },
@@ -1918,16 +2876,69 @@
     "indices": "バス(#1098390) が 止まる(とまる)[01] 迄{まで} 降りる[02]{降りて} は 駄目{だめ} よ",
     "vocabIds": [
       "1310620",
-      "1589500"
+      "1589500",
+      "1631470"
     ],
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1589500": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おり"
+      },
+      "1631470": {
+        "start": 8,
+        "length": 2,
+        "reading": "おり"
+      }
+    }
+  },
+  {
+    "id": "198232",
+    "original": "バスが止まり、私たちは乗った。",
+    "en": [
+      {
+        "id": "35424",
+        "text": "The bus stopped and we got on."
+      }
+    ],
+    "indices": "バス(#1098390) が 止まる(とまる)[01]{止まり} 私たち は 乗る[01]{乗った}",
+    "vocabIds": [
+      "1310620",
+      "1658240",
+      "1311110",
+      "1311300",
+      "1355120"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1311110": {
+        "start": 7,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 7,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1355120": {
+        "start": 11,
+        "length": 2,
+        "reading": "のっ"
+      },
+      "1658240": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -1944,25 +2955,41 @@
     "vocabIds": [
       "1211510",
       "1310620",
-      "1382260",
+      "1382250",
+      "1422970",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 18,
+        "length": 3,
+        "reading": "ください"
       },
       "1211510": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんぜん"
       },
       "1310620": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
-      "1382260": {
+      "1382250": {
         "start": 11,
-        "length": 5
+        "length": 1,
+        "reading": "せき"
+      },
+      "1422970": {
+        "start": 13,
+        "length": 2,
+        "reading": "つい"
       }
     }
   },
@@ -1981,28 +3008,39 @@
       "1310620",
       "1291880",
       "1291800",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 19,
+        "length": 3,
+        "reading": "ください"
       },
       "1211510": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんぜん"
       },
       "1291800": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
       },
       "1291880": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ざせき"
       },
       "1310620": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       }
     }
   },
@@ -2023,11 +3061,13 @@
     "matches": {
       "1310620": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1509290": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かべ"
       }
     }
   },
@@ -2049,15 +3089,51 @@
     "matches": {
       "1310620": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1454080": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "みち"
       },
       "1604350": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "まんなか"
+      }
+    }
+  },
+  {
+    "id": "201731",
+    "original": "トイレの水が止まりません。",
+    "en": [
+      {
+        "id": "38943",
+        "text": "The toilet won't stop running."
+      }
+    ],
+    "indices": "トイレ~ の 水(みず) が 止まる(とまる)[01]{止まりません}",
+    "vocabIds": [
+      "1371260",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 6,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1371260": {
+        "start": 4,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1658240": {
+        "start": 6,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -2081,16 +3157,55 @@
     "indices": "丁度{ちょうど} 其の[01]{その} 時(とき) バス(#1098390) が 止まる(とまる)[01]{止まった}",
     "vocabIds": [
       "2002300",
+      "1315840",
       "1310620"
     ],
     "matches": {
       "1310620": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1315840": {
+        "start": 6,
+        "length": 1,
+        "reading": "とき"
       },
       "2002300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "そのとき"
+      }
+    }
+  },
+  {
+    "id": "203714",
+    "original": "タクシーは１台も止まらなかった。",
+    "en": [
+      {
+        "id": "40953",
+        "text": "No taxi stopped."
+      },
+      {
+        "id": "442983",
+        "text": "Not even one taxi stopped."
+      }
+    ],
+    "indices": "タクシー は 台(だい)[04] も 止まる(とまる)[01]{止まらなかった}",
+    "vocabIds": [
+      "1412560",
+      "1310620"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 8,
+        "length": 3,
+        "reading": "とまら"
+      },
+      "1412560": {
+        "start": 6,
+        "length": 1,
+        "reading": "だい"
       }
     }
   },
@@ -2111,11 +3226,13 @@
     "matches": {
       "1310620": {
         "start": 14,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1378100": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "せいもん"
       }
     }
   },
@@ -2136,20 +3253,29 @@
     "vocabIds": [
       "1311110",
       "1547720",
+      "1547710",
       "1310620"
     ],
     "matches": {
       "1310620": {
         "start": 13,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1547710": {
+        "start": 11,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 11,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -2172,19 +3298,50 @@
     "matches": {
       "1175140": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1310620": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1558370": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "2136180": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさな"
+      }
+    }
+  },
+  {
+    "id": "209564",
+    "original": "その車は止まらなかった。",
+    "en": [
+      {
+        "id": "46827",
+        "text": "The car didn't stop."
+      }
+    ],
+    "indices": "其の[01]{その} 車(くるま) は 止まる(とまる)[01]{止まらなかった}",
+    "vocabIds": [
+      "1323080",
+      "1310620"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 4,
+        "length": 3,
+        "reading": "とまら"
+      },
+      "1323080": {
+        "start": 2,
+        "length": 1,
+        "reading": "くるま"
       }
     }
   },
@@ -2207,19 +3364,23 @@
     "matches": {
       "1243490": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ぎんこう"
       },
       "1310620": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1392580": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       }
     }
   },
@@ -2234,22 +3395,19 @@
     ],
     "indices": "其の[01]{その} 時計 は 止まる(とまる)[01]{止まっている}",
     "vocabIds": [
-      "2002300",
-      "1252050",
+      "1316140",
       "1310620"
     ],
     "matches": {
-      "1252050": {
-        "start": 3,
-        "length": 1
-      },
       "1310620": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
-      "2002300": {
-        "start": 0,
-        "length": 3
+      "1316140": {
+        "start": 2,
+        "length": 2,
+        "reading": "とけい"
       }
     }
   },
@@ -2265,26 +3423,42 @@
     "indices": "其の[01]{その} 時(とき) 機械 の モーター が 急に[02] 止まる(とまる)[01]{止まった}",
     "vocabIds": [
       "2002300",
+      "1315840",
       "1220810",
+      "1228560",
       "2269050",
       "1310620"
     ],
     "matches": {
       "1220810": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1228560": {
+        "start": 12,
+        "length": 1,
+        "reading": "きゅう"
       },
       "1310620": {
         "start": 14,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "とき"
       },
       "2002300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "そのとき"
       },
       "2269050": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -2299,27 +3473,25 @@
     ],
     "indices": "其の[01]{その} 事故 で(#2028980) 交通[01]~ は 止まる(とまる)[01]{止まった}",
     "vocabIds": [
-      "2665570",
-      "1267120",
+      "1313850",
       "1272280",
       "1310620"
     ],
     "matches": {
-      "1267120": {
-        "start": 3,
-        "length": 1
-      },
       "1272280": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こうつう"
       },
       "1310620": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
-      "2665570": {
-        "start": 0,
-        "length": 3
+      "1313850": {
+        "start": 2,
+        "length": 2,
+        "reading": "じこ"
       }
     }
   },
@@ -2334,22 +3506,37 @@
     ],
     "indices": "其の[01]{その} 運転手 は 信号 で(#2028980) 止まる(とまる)[01]{止まった} はずが無い{はずがない}",
     "vocabIds": [
+      "1172830",
       "1172870",
+      "1327190",
       "1359240",
       "1310620"
     ],
     "matches": {
+      "1172830": {
+        "start": 2,
+        "length": 2,
+        "reading": "うんてん"
+      },
       "1172870": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "うんてんしゅ"
       },
       "1310620": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1327190": {
+        "start": 4,
+        "length": 1,
+        "reading": "しゅ"
       },
       "1359240": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しんごう"
       }
     }
   },
@@ -2370,36 +3557,49 @@
       "1410590",
       "1310620",
       "1558330",
-      "1516270"
+      "1516270",
+      "1640640"
     ],
     "matches": {
       "1098580": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ばすてい"
       },
       "1310620": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1376300": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "せいれつ"
       },
       "1410590": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "まっ"
       },
       "1516270": {
         "start": 34,
-        "length": 3
+        "length": 2,
+        "reading": "くずれ"
       },
       "1558330": {
         "start": 32,
-        "length": 1
+        "length": 1,
+        "reading": "れつ"
       },
       "1580650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
+      },
+      "1640640": {
+        "start": 34,
+        "length": 2,
+        "reading": "くずれ"
       }
     }
   },
@@ -2415,21 +3615,42 @@
     "indices": "而して{そして} 電車 は と言う{という} 音を立てる{音を立てて} 止まる(とまる)[01]{止まった}~",
     "vocabIds": [
       "1443530",
-      "1183650",
+      "1576900",
+      "1551530",
+      "2081610",
+      "2016360",
       "1310620"
     ],
     "matches": {
-      "1183650": {
-        "start": 13,
-        "length": 5
-      },
       "1310620": {
         "start": 18,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1443530": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1551530": {
+        "start": 15,
+        "length": 2,
+        "reading": "たて"
+      },
+      "1576900": {
+        "start": 13,
+        "length": 1,
+        "reading": "おと"
+      },
+      "2016360": {
+        "start": 15,
+        "length": 3,
+        "reading": "たてて"
+      },
+      "2081610": {
+        "start": 15,
+        "length": 2,
+        "reading": "たて"
       }
     }
   },
@@ -2450,36 +3671,76 @@
       "1483070",
       "1315920",
       "1420470",
-      "1590100"
+      "1590100",
+      "1712410"
     ],
     "matches": {
       "1310620": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315920": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1316140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1420470": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1483070": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1590100": {
         "start": 43,
-        "length": 5
+        "length": 4,
+        "reading": "かけだし"
+      },
+      "1712410": {
+        "start": 43,
+        "length": 4,
+        "reading": "かけだし"
+      }
+    }
+  },
+  {
+    "id": "214051",
+    "original": "せきが止まりません。",
+    "en": [
+      {
+        "id": "51341",
+        "text": "I can't stop coughing."
+      }
+    ],
+    "indices": "咳(せき){せき} が 止まる(とまる)[01]{止まりません}",
+    "vocabIds": [
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1658240": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -2502,19 +3763,113 @@
     "matches": {
       "1310620": {
         "start": 22,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1404630": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "あし"
       },
       "1457040": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "とつぜん"
       },
       "1607050": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      }
+    }
+  },
+  {
+    "id": "215542",
+    "original": "ジョニー君は廊下で座っていましたが、どうしても笑いが止まりません。",
+    "en": [
+      {
+        "id": "52844",
+        "text": "He goes and sits outside the class but he can't stop laughing."
+      }
+    ],
+    "indices": "君(きみ) は 廊下 で(#2028980) 座る[01]{座っていました} が 如何しても{どうしても} 笑い が 止まる(とまる)[01]{止まりません}",
+    "vocabIds": [
+      "1247250",
+      "1560670",
+      "1291800",
+      "1351280",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1247250": {
+        "start": 4,
+        "length": 1,
+        "reading": "くん"
+      },
+      "1291800": {
+        "start": 9,
+        "length": 2,
+        "reading": "すわっ"
+      },
+      "1310620": {
+        "start": 26,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1351280": {
+        "start": 23,
+        "length": 2,
+        "reading": "わらい"
+      },
+      "1560670": {
+        "start": 6,
+        "length": 2,
+        "reading": "ろうか"
+      },
+      "1658240": {
+        "start": 26,
+        "length": 3,
+        "reading": "とまり"
+      }
+    }
+  },
+  {
+    "id": "215748",
+    "original": "シャワーが止まりません。調べてください。",
+    "en": [
+      {
+        "id": "53050",
+        "text": "I can't turn the shower off. Could you check it for me?"
+      }
+    ],
+    "indices": "シャワー が 止まる(とまる)[01]{止まりません} 調べる{調べて} 下さい{ください}",
+    "vocabIds": [
+      "1310620",
+      "1658240",
+      "1429060",
+      "1429050"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 5,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1429050": {
+        "start": 12,
+        "length": 2,
+        "reading": "しらべ"
+      },
+      "1429060": {
+        "start": 12,
+        "length": 2,
+        "reading": "しらべ"
+      },
+      "1658240": {
+        "start": 5,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -2534,7 +3889,8 @@
     "matches": {
       "1310620": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       }
     }
   },
@@ -2554,7 +3910,62 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
+      }
+    }
+  },
+  {
+    "id": "224650",
+    "original": "ここでどのくらい止まりますか。",
+    "en": [
+      {
+        "id": "61796",
+        "text": "How long do we stop here?"
+      }
+    ],
+    "indices": "此処[01]{ここ} で(#2028980) どの位{どのくらい} 止まる(とまる)[02]{止まります} か",
+    "vocabIds": [
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 8,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1658240": {
+        "start": 8,
+        "length": 3,
+        "reading": "とまり"
+      }
+    }
+  },
+  {
+    "id": "225705",
+    "original": "くしゃみが止まりません。",
+    "en": [
+      {
+        "id": "63043",
+        "text": "I can't stop sneezing."
+      }
+    ],
+    "indices": "嚏{くしゃみ} が 止まる(とまる)[01]{止まりません}",
+    "vocabIds": [
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 5,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1658240": {
+        "start": 5,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -2578,7 +3989,8 @@
     "matches": {
       "1310620": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       }
     }
   },
@@ -2598,7 +4010,8 @@
     "matches": {
       "1310620": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       }
     }
   },
@@ -2621,19 +4034,23 @@
     "matches": {
       "1310620": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1323080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1412560": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "だい"
       },
       "1582820": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いりくち"
       }
     }
   },
@@ -2650,6 +4067,7 @@
     "vocabIds": [
       "1315920",
       "1514320",
+      "1311110",
       "1311300",
       "1310620",
       "1227940"
@@ -2657,23 +4075,102 @@
     "matches": {
       "1227940": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうそく"
       },
       "1310620": {
         "start": 13,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1311110": {
+        "start": 9,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1315920": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1514320": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "あるい"
+      }
+    }
+  },
+  {
+    "id": "235964",
+    "original": "１１番にお乗りにならないと。郵便局の前に止まりますから。",
+    "en": [
+      {
+        "id": "73345",
+        "text": "You want the Number 11. It stops in front of the post office."
+      }
+    ],
+    "indices": "番(ばん)[01] に 乗る[01]{お乗り} になる[02]{にならない} と 郵便局 の 前(まえ) に 止まる(とまる)[01]{止まります} から",
+    "vocabIds": [
+      "2022640",
+      "1354720",
+      "1605680",
+      "1542430",
+      "1239560",
+      "1392580",
+      "1392590",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1239560": {
+        "start": 16,
+        "length": 1,
+        "reading": "きょく"
+      },
+      "1310620": {
+        "start": 20,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1354720": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1392580": {
+        "start": 18,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1392590": {
+        "start": 18,
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1542430": {
+        "start": 14,
+        "length": 3,
+        "reading": "ゆうびんきょく"
+      },
+      "1605680": {
+        "start": 14,
+        "length": 2,
+        "reading": "ゆうびん"
+      },
+      "1658240": {
+        "start": 20,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "2022640": {
+        "start": 2,
+        "length": 1,
+        "reading": "ばん"
       }
     }
   },
@@ -2699,31 +4196,38 @@
     "matches": {
       "1194500": {
         "start": 43,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1310620": {
         "start": 30,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1311110": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1347750": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさい"
       },
       "1474910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しろい"
       },
       "1483090": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1499490": {
         "start": 45,
-        "length": 2
+        "length": 2,
+        "reading": "ぶぶん"
       }
     }
   },
@@ -2744,11 +4248,117 @@
     "matches": {
       "1253570": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "うつ"
       },
       "1310620": {
         "start": 0,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
+      }
+    }
+  },
+  {
+    "id": "869779",
+    "original": "彼がパブロと結婚するつもりだと公に宣言したとき、彼の祖母は心臓が止まりそうになったし、彼の叔母は目玉が飛び出してしまいそうだった。でも彼の妹は鼻高々だった。",
+    "en": [
+      {
+        "id": "851124",
+        "text": "When he openly declared he would marry Pablo, he almost gave his grandmother a heart attack and made his aunt's eyes burst out of their sockets; however, his little sister beamed with pride."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1254790",
+      "1578630",
+      "1389680",
+      "1000420",
+      "1396860",
+      "1360770",
+      "1310620",
+      "1658240",
+      "1607100",
+      "1535370",
+      "1485350",
+      "2005420",
+      "1524590",
+      "1600940"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 24,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1254790": {
+        "start": 6,
+        "length": 2,
+        "reading": "けっこん"
+      },
+      "1310620": {
+        "start": 32,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1360770": {
+        "start": 29,
+        "length": 2,
+        "reading": "しんぞう"
+      },
+      "1389680": {
+        "start": 17,
+        "length": 2,
+        "reading": "せんげん"
+      },
+      "1396860": {
+        "start": 26,
+        "length": 2,
+        "reading": "そぼ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1485350": {
+        "start": 51,
+        "length": 4,
+        "reading": "とびだし"
+      },
+      "1524590": {
+        "start": 69,
+        "length": 1,
+        "reading": "いもうと"
+      },
+      "1535370": {
+        "start": 48,
+        "length": 2,
+        "reading": "めだま"
+      },
+      "1578630": {
+        "start": 15,
+        "length": 1,
+        "reading": "おおやけ"
+      },
+      "1600940": {
+        "start": 71,
+        "length": 3,
+        "reading": "はなたかだか"
+      },
+      "1607100": {
+        "start": 45,
+        "length": 2,
+        "reading": "おば"
+      },
+      "1658240": {
+        "start": 32,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "2005420": {
+        "start": 51,
+        "length": 4,
+        "reading": "とびだし"
       }
     }
   },
@@ -2769,24 +4379,34 @@
       "1443530",
       "1310620",
       "1483380",
-      "1202450"
+      "1202450",
+      "2810010"
     ],
     "matches": {
       "1202450": {
         "start": 10,
-        "length": 4
+        "length": 2,
+        "reading": "あけ"
       },
       "1310620": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1443530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1483380": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "とびら"
+      },
+      "2810010": {
+        "start": 10,
+        "length": 2,
+        "reading": "あけ"
       }
     }
   },
@@ -2800,32 +4420,49 @@
       }
     ],
     "vocabIds": [
+      "1311110",
       "1311300",
       "1355120",
       "1443530",
+      "1228560",
       "2269050",
       "1310620"
     ],
     "matches": {
+      "1228560": {
+        "start": 10,
+        "length": 1,
+        "reading": "きゅう"
+      },
       "1310620": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1355120": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "のっ"
       },
       "1443530": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "2269050": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -2844,7 +4481,8 @@
     "matches": {
       "1310620": {
         "start": 10,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
       }
     }
   },
@@ -2863,16 +4501,24 @@
     ],
     "vocabIds": [
       "1310620",
-      "1205780"
+      "1205780",
+      "1613980"
     ],
     "matches": {
       "1205780": {
         "start": 20,
-        "length": 4
+        "length": 3,
+        "reading": "たしかめ"
       },
       "1310620": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1613980": {
+        "start": 20,
+        "length": 3,
+        "reading": "たしかめ"
       }
     }
   },
@@ -2888,20 +4534,29 @@
     "vocabIds": [
       "1438340",
       "1310620",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1259290": {
         "start": 12,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1438340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "てんじょう"
+      },
+      "2256270": {
+        "start": 12,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -2920,21 +4575,74 @@
     ],
     "vocabIds": [
       "1310620",
+      "1416830",
       "1416860",
-      "1589500"
+      "1589500",
+      "1631470"
     ],
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1416830": {
+        "start": 9,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416860": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "だれも"
       },
       "1589500": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "おり"
+      },
+      "1631470": {
+        "start": 11,
+        "length": 2,
+        "reading": "おり"
+      }
+    }
+  },
+  {
+    "id": "2665175",
+    "original": "貧乏ゆすりが止まりません。",
+    "en": [
+      {
+        "id": "2665176",
+        "text": "I can't stop shaking my leg."
+      }
+    ],
+    "vocabIds": [
+      "1490900",
+      "1490950",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 6,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1490900": {
+        "start": 0,
+        "length": 2,
+        "reading": "びんぼう"
+      },
+      "1490950": {
+        "start": 0,
+        "length": 5,
+        "reading": "びんぼうゆすり"
+      },
+      "1658240": {
+        "start": 6,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -2950,7 +4658,9 @@
     "vocabIds": [
       "1457040",
       "1242160",
-      "2776830",
+      "1585060",
+      "1548550",
+      "1548530",
       "1360770",
       "1310620",
       "1589350"
@@ -2958,27 +4668,95 @@
     "matches": {
       "1242160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "1310620": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1360770": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しんぞう"
       },
       "1457040": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とつぜん"
+      },
+      "1548530": {
+        "start": 7,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1548550": {
+        "start": 7,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1585060": {
+        "start": 5,
+        "length": 1,
+        "reading": "かみなり"
       },
       "1589350": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
+      }
+    }
+  },
+  {
+    "id": "2982999",
+    "original": "バスは止まらずに通り過ぎていった。",
+    "en": [
+      {
+        "id": "2474230",
+        "text": "The bus went by without stopping."
+      }
+    ],
+    "vocabIds": [
+      "1310620",
+      "1432980"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまら"
       },
-      "2776830": {
-        "start": 5,
-        "length": 5
+      "1432980": {
+        "start": 8,
+        "length": 4,
+        "reading": "とおりすぎ"
+      }
+    }
+  },
+  {
+    "id": "2985859",
+    "original": "止まれとおっしゃっているんですか？",
+    "en": [
+      {
+        "id": "2951538",
+        "text": "Are you telling me to stop?"
+      }
+    ],
+    "vocabIds": [
+      "1310620",
+      "1918560"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 0,
+        "length": 3,
+        "reading": "とまれ"
+      },
+      "1918560": {
+        "start": 0,
+        "length": 3,
+        "reading": "とまれ"
       }
     }
   },
@@ -3007,31 +4785,38 @@
     "matches": {
       "1199330": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1310620": {
         "start": 0,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1316140": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1316220": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "じこく"
       },
       "1317110": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "しめす"
       },
       "1376600": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "ただしい"
       },
       "1463770": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -3053,19 +4838,23 @@
     "matches": {
       "1245570": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くうこう"
       },
       "1310620": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1443530": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1578850": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -3091,19 +4880,23 @@
     "matches": {
       "1310620": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1318270": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じてん"
       },
       "1420970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちきゅう"
       },
       "1589350": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -3117,17 +4910,45 @@
       }
     ],
     "vocabIds": [
-      "1956480",
+      "1358280",
       "1310620"
     ],
     "matches": {
       "1310620": {
         "start": 9,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
       },
-      "1956480": {
+      "1358280": {
         "start": 4,
-        "length": 1
+        "length": 2,
+        "reading": "たべ"
+      }
+    }
+  },
+  {
+    "id": "4443360",
+    "original": "止まれ！",
+    "en": [
+      {
+        "id": "448320",
+        "text": "Stop!"
+      }
+    ],
+    "vocabIds": [
+      "1310620",
+      "1918560"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 0,
+        "length": 3,
+        "reading": "とまれ"
+      },
+      "1918560": {
+        "start": 0,
+        "length": 3,
+        "reading": "とまれ"
       }
     }
   },
@@ -3146,7 +4967,40 @@
     "matches": {
       "1310620": {
         "start": 11,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
+      }
+    }
+  },
+  {
+    "id": "5348187",
+    "original": "あなたは絶対止まりませんね。",
+    "en": [
+      {
+        "id": "3731958",
+        "text": "You never stop, do you?"
+      }
+    ],
+    "vocabIds": [
+      "1386840",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 6,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1386840": {
+        "start": 4,
+        "length": 2,
+        "reading": "ぜったい"
+      },
+      "1658240": {
+        "start": 6,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -3165,7 +5019,8 @@
     "matches": {
       "1310620": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       }
     }
   },
@@ -3189,11 +5044,50 @@
     "matches": {
       "1310620": {
         "start": 2,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      }
+    }
+  },
+  {
+    "id": "77741",
+    "original": "涙が止まりません。",
+    "en": [
+      {
+        "id": "3209723",
+        "text": "I cannot stop crying."
+      },
+      {
+        "id": "6710715",
+        "text": "I can't stop crying."
+      }
+    ],
+    "indices": "涙[01] が 止まる(とまる)[01]{止まりません}",
+    "vocabIds": [
+      "1555930",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 2,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1555930": {
+        "start": 0,
+        "length": 1,
+        "reading": "なみだ"
+      },
+      "1658240": {
+        "start": 2,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -3208,7 +5102,9 @@
     ],
     "vocabIds": [
       "1154330",
+      "1183720",
       "2810070",
+      "1320300",
       "1465590",
       "1607520",
       "1310620"
@@ -3216,23 +5112,38 @@
     "matches": {
       "1154330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くらい"
+      },
+      "1183720": {
+        "start": 2,
+        "length": 2,
+        "reading": "おんがく"
       },
       "1310620": {
         "start": 17,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1320300": {
+        "start": 4,
+        "length": 1,
+        "reading": "しつ"
       },
       "1465590": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はいる"
       },
       "1607520": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "えんそう"
       },
       "2810070": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "おんがくしつ"
       }
     }
   },
@@ -3255,23 +5166,28 @@
     "matches": {
       "1247250": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1310620": {
         "start": 13,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1323080": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1454290": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "どうろ"
       },
       "1521410": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぼくら"
       }
     }
   },
@@ -3286,45 +5202,94 @@
     ],
     "vocabIds": [
       "1310620",
-      "1429060"
+      "1429060",
+      "1429050"
     ],
     "matches": {
       "1310620": {
         "start": 5,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
+      },
+      "1429050": {
+        "start": 14,
+        "length": 2,
+        "reading": "しらべ"
       },
       "1429060": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "しらべ"
       }
     }
   },
   {
-    "id": "9550136",
-    "original": "雪は降り止まなかった。",
+    "id": "9853743",
+    "original": "このバスって動物園で止まりますか？",
     "en": [
       {
-        "id": "9550135",
-        "text": "It didn't stop snowing."
+        "id": "9729069",
+        "text": "Does this bus stop at the zoo?"
       }
     ],
     "vocabIds": [
-      "1386500",
-      "1631470",
-      "1310620"
+      "1451470",
+      "1451490",
+      "1176240",
+      "1310620",
+      "1658240"
+    ],
+    "matches": {
+      "1176240": {
+        "start": 8,
+        "length": 1,
+        "reading": "えん"
+      },
+      "1310620": {
+        "start": 10,
+        "length": 3,
+        "reading": "とまり"
+      },
+      "1451470": {
+        "start": 6,
+        "length": 2,
+        "reading": "どうぶつ"
+      },
+      "1451490": {
+        "start": 6,
+        "length": 3,
+        "reading": "どうぶつえん"
+      },
+      "1658240": {
+        "start": 10,
+        "length": 3,
+        "reading": "とまり"
+      }
+    }
+  },
+  {
+    "id": "9842767",
+    "original": "止まれ。",
+    "en": [
+      {
+        "id": "6102431",
+        "text": "Stop."
+      }
+    ],
+    "vocabIds": [
+      "1310620",
+      "1918560"
     ],
     "matches": {
       "1310620": {
-        "start": 4,
-        "length": 3
-      },
-      "1386500": {
         "start": 0,
-        "length": 1
+        "length": 3,
+        "reading": "とまれ"
       },
-      "1631470": {
-        "start": 2,
-        "length": 2
+      "1918560": {
+        "start": 0,
+        "length": 3,
+        "reading": "とまれ"
       }
     }
   },
@@ -3343,7 +5308,34 @@
     "matches": {
       "1310620": {
         "start": 5,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
+      }
+    }
+  },
+  {
+    "id": "10017188",
+    "original": "血が止まらないの。",
+    "en": [
+      {
+        "id": "6873451",
+        "text": "I can't stop the bleeding."
+      }
+    ],
+    "vocabIds": [
+      "1255060",
+      "1310620"
+    ],
+    "matches": {
+      "1255060": {
+        "start": 0,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1310620": {
+        "start": 2,
+        "length": 3,
+        "reading": "とまら"
       }
     }
   },
@@ -3363,11 +5355,57 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
       },
       "1338750": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっけつ"
+      }
+    }
+  },
+  {
+    "id": "10117729",
+    "original": "トムって、一度話し始めるとなかなか止まんないのよ。",
+    "en": [
+      {
+        "id": "10115641",
+        "text": "Once Tom starts talking, he's hard to stop."
+      }
+    ],
+    "vocabIds": [
+      "1576250",
+      "1562350",
+      "2449520",
+      "1307550",
+      "1310620"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 9,
+        "length": 3,
+        "reading": "はじめる"
+      },
+      "1310620": {
+        "start": 17,
+        "length": 3,
+        "reading": "とまん"
+      },
+      "1562350": {
+        "start": 7,
+        "length": 2,
+        "reading": "はなし"
+      },
+      "1576250": {
+        "start": 5,
+        "length": 2,
+        "reading": "いちど"
+      },
+      "2449520": {
+        "start": 7,
+        "length": 5,
+        "reading": "はなしはじめる"
       }
     }
   },
@@ -3387,35 +5425,13 @@
     "matches": {
       "1310620": {
         "start": 14,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
       },
       "1486720": {
         "start": 0,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "10498866",
-    "original": "トムは泣き止まなかった。",
-    "en": [
-      {
-        "id": "10498859",
-        "text": "Tom didn't stop crying."
-      }
-    ],
-    "vocabIds": [
-      "1229650",
-      "1310620"
-    ],
-    "matches": {
-      "1229650": {
-        "start": 3,
-        "length": 2
-      },
-      "1310620": {
-        "start": 5,
-        "length": 3
+        "length": 1,
+        "reading": "はな"
       }
     }
   },
@@ -3431,20 +5447,29 @@
     "vocabIds": [
       "1310620",
       "1445790",
+      "1445780",
       "1441000"
     ],
     "matches": {
       "1310620": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1441000": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
+      },
+      "1445780": {
+        "start": 9,
+        "length": 2,
+        "reading": "たおれ"
       },
       "1445790": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "たおれ"
       }
     }
   },
@@ -3463,7 +5488,8 @@
     "matches": {
       "1310620": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       }
     }
   },
@@ -3482,7 +5508,8 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       }
     }
   },
@@ -3503,15 +5530,56 @@
     "matches": {
       "1204300": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "せき"
       },
       "1310620": {
         "start": 5,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
       },
       "1428280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
+      }
+    }
+  },
+  {
+    "id": "10871968",
+    "original": "時計が止まっちゃったんだ。電池交換しないといけないな。",
+    "en": [
+      {
+        "id": "1860160",
+        "text": "The clock has stopped. It needs a new battery."
+      }
+    ],
+    "vocabIds": [
+      "1316140",
+      "1310620",
+      "1443620",
+      "1271750"
+    ],
+    "matches": {
+      "1271750": {
+        "start": 15,
+        "length": 2,
+        "reading": "こうかん"
+      },
+      "1310620": {
+        "start": 3,
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1316140": {
+        "start": 0,
+        "length": 2,
+        "reading": "とけい"
+      },
+      "1443620": {
+        "start": 13,
+        "length": 2,
+        "reading": "でんち"
       }
     }
   },
@@ -3529,28 +5597,77 @@
       "1443530",
       "1396130",
       "1310620",
-      "2630380"
+      "1305990"
+    ],
+    "matches": {
+      "1305990": {
+        "start": 20,
+        "length": 2,
+        "reading": "つかわ"
+      },
+      "1310620": {
+        "start": 8,
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1396130": {
+        "start": 6,
+        "length": 2,
+        "reading": "ぜんぶ"
+      },
+      "1413070": {
+        "start": 0,
+        "length": 2,
+        "reading": "おおあめ"
+      },
+      "1443530": {
+        "start": 3,
+        "length": 2,
+        "reading": "でんしゃ"
+      }
+    }
+  },
+  {
+    "id": "10899769",
+    "original": "わたしの前に車が止まりました。",
+    "en": [
+      {
+        "id": "10899770",
+        "text": "A car stopped in front of me."
+      }
+    ],
+    "vocabIds": [
+      "1392580",
+      "1392590",
+      "1323080",
+      "1310620",
+      "1658240"
     ],
     "matches": {
       "1310620": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "とまり"
       },
-      "1396130": {
+      "1323080": {
         "start": 6,
-        "length": 2
+        "length": 1,
+        "reading": "くるま"
       },
-      "1413070": {
-        "start": 0,
-        "length": 2
+      "1392580": {
+        "start": 4,
+        "length": 1,
+        "reading": "まえ"
       },
-      "1443530": {
-        "start": 3,
-        "length": 2
+      "1392590": {
+        "start": 4,
+        "length": 2,
+        "reading": "まえに"
       },
-      "2630380": {
-        "start": 20,
-        "length": 1
+      "1658240": {
+        "start": 8,
+        "length": 3,
+        "reading": "とまり"
       }
     }
   },
@@ -3566,25 +5683,41 @@
     "vocabIds": [
       "1323080",
       "1311110",
+      "1604890",
       "1808020",
+      "1392580",
       "1310620"
     ],
     "matches": {
       "1310620": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1392580": {
+        "start": 7,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1604890": {
+        "start": 5,
+        "length": 1,
+        "reading": "め"
       },
       "1808020": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "めのまえ"
       }
     }
   },
@@ -3604,11 +5737,13 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1316140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       }
     }
   },
@@ -3628,11 +5763,13 @@
     "matches": {
       "1310620": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1821240": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "かけどけい"
       }
     }
   },
@@ -3647,6 +5784,7 @@
     ],
     "vocabIds": [
       "1519230",
+      "1326980",
       "2451270",
       "1318260",
       "1535880",
@@ -3658,35 +5796,48 @@
     "matches": {
       "1191730": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1310620": {
         "start": 22,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1318260": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じたく"
+      },
+      "1326980": {
+        "start": 4,
+        "length": 2,
+        "reading": "とり"
       },
       "1339530": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "でまえ"
       },
       "1392580": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1519230": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わすれもの"
       },
       "1535880": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "もどっ"
       },
       "2451270": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "とり"
       }
     }
   },
@@ -3707,15 +5858,60 @@
     "matches": {
       "1255060": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ち"
       },
       "1310620": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       },
       "1360930": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しんぱい"
+      }
+    }
+  },
+  {
+    "id": "11619438",
+    "original": "腕時計が止まっちゃって、時間が分からなかったんだ。",
+    "en": [
+      {
+        "id": "404071",
+        "text": "My watch stopped, so I didn't know the time."
+      },
+      {
+        "id": "11633695",
+        "text": "My watch stopped, so I didn't know what time it was."
+      }
+    ],
+    "vocabIds": [
+      "1562870",
+      "1310620",
+      "1315920",
+      "1606560"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 4,
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1315920": {
+        "start": 12,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1562870": {
+        "start": 0,
+        "length": 3,
+        "reading": "うでどけい"
+      },
+      "1606560": {
+        "start": 15,
+        "length": 3,
+        "reading": "わから"
       }
     }
   },
@@ -3734,7 +5930,8 @@
     "matches": {
       "1310620": {
         "start": 10,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
       }
     }
   },
@@ -3753,7 +5950,8 @@
     "matches": {
       "1310620": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       }
     }
   },
@@ -3774,15 +5972,48 @@
     "matches": {
       "1310620": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1316140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
+      }
+    }
+  },
+  {
+    "id": "11005192",
+    "original": "涙が止まらなかった。",
+    "en": [
+      {
+        "id": "256860",
+        "text": "I couldn't help but cry."
+      },
+      {
+        "id": "4211893",
+        "text": "I couldn't stop crying."
+      }
+    ],
+    "vocabIds": [
+      "1555930",
+      "1310620"
+    ],
+    "matches": {
+      "1310620": {
+        "start": 2,
+        "length": 3,
+        "reading": "とまら"
+      },
+      "1555930": {
+        "start": 0,
+        "length": 1,
+        "reading": "なみだ"
       }
     }
   },
@@ -3797,16 +6028,24 @@
     ],
     "vocabIds": [
       "2002300",
+      "1315840",
       "1310620"
     ],
     "matches": {
       "1310620": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
+      },
+      "1315840": {
+        "start": 6,
+        "length": 1,
+        "reading": "とき"
       },
       "2002300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "そのとき"
       }
     }
   },
@@ -3825,7 +6064,8 @@
     "matches": {
       "1310620": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       }
     }
   },
@@ -3839,17 +6079,25 @@
       }
     ],
     "vocabIds": [
+      "1386840",
       "1610070",
       "1310620"
     ],
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 5
+        "length": 3,
+        "reading": "とまら"
+      },
+      "1386840": {
+        "start": 0,
+        "length": 2,
+        "reading": "ぜったい"
       },
       "1610070": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ぜったいに"
       }
     }
   },
@@ -3869,11 +6117,13 @@
     "matches": {
       "1310620": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1362720": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "しんこきゅう"
       }
     }
   }

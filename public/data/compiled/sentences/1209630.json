@@ -16,25 +16,35 @@
     "vocabIds": [
       "1483150",
       "1299680",
+      "1390930",
       "2035010",
       "1209630"
     ],
     "matches": {
       "1209630": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "かわかし"
       },
       "1299680": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "さら"
+      },
+      "1390930": {
+        "start": 5,
+        "length": 2,
+        "reading": "あらい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2035010": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "あらい"
       }
     }
   },
@@ -55,11 +65,13 @@
     "matches": {
       "1209630": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "かわかし"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       }
     }
   },
@@ -79,7 +91,35 @@
     "matches": {
       "1209630": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "かわかし"
+      }
+    }
+  },
+  {
+    "id": "200442",
+    "original": "とにかく服を乾かしなさい。",
+    "en": [
+      {
+        "id": "37643",
+        "text": "You must dry your clothes in any case."
+      }
+    ],
+    "indices": "兎に角{とにかく} 服(ふく)[01] を 乾かす{乾かし} 為さい{なさい}",
+    "vocabIds": [
+      "1500940",
+      "1209630"
+    ],
+    "matches": {
+      "1209630": {
+        "start": 6,
+        "length": 3,
+        "reading": "かわかし"
+      },
+      "1500940": {
+        "start": 4,
+        "length": 1,
+        "reading": "ふく"
       }
     }
   },
@@ -100,11 +140,13 @@
     "matches": {
       "1209630": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "かわかし"
       },
       "1477950": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かみ"
       }
     }
   },
@@ -124,11 +166,13 @@
     "matches": {
       "1209630": {
         "start": 1,
-        "length": 4
+        "length": 3,
+        "reading": "かわかし"
       },
       "1477950": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かみ"
       }
     }
   },
@@ -148,11 +192,13 @@
     "matches": {
       "1209630": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "かわかし"
       },
       "1477950": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かみ"
       }
     }
   },
@@ -174,19 +220,23 @@
     "matches": {
       "1209630": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "かわかし"
       },
       "1238550": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かがみ"
       },
       "1392580": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1477950": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かみ"
       }
     }
   },
@@ -200,22 +250,75 @@
       }
     ],
     "vocabIds": [
+      "1390980",
       "1391020",
+      "1502390",
       "1209630",
       "1315920"
     ],
     "matches": {
       "1209630": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かわかす"
       },
       "1315920": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1390980": {
+        "start": 0,
+        "length": 2,
+        "reading": "せんたく"
       },
       "1391020": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せんたくぶつ"
+      },
+      "1502390": {
+        "start": 2,
+        "length": 1,
+        "reading": "ぶつ"
+      }
+    }
+  },
+  {
+    "id": "12286967",
+    "original": "髪乾かしなよ。風邪ひくよ。",
+    "en": [
+      {
+        "id": "13724867",
+        "text": "Dry your hair! You will catch a cold."
+      }
+    ],
+    "vocabIds": [
+      "1477950",
+      "1209630",
+      "1583720",
+      "2183580"
+    ],
+    "matches": {
+      "1209630": {
+        "start": 1,
+        "length": 3,
+        "reading": "かわかし"
+      },
+      "1477950": {
+        "start": 0,
+        "length": 1,
+        "reading": "かみ"
+      },
+      "1583720": {
+        "start": 7,
+        "length": 2,
+        "reading": "かぜ"
+      },
+      "2183580": {
+        "start": 7,
+        "length": 4,
+        "reading": "かぜひく"
       }
     }
   }

@@ -1,35 +1,5 @@
 [
   {
-    "id": "115214",
-    "original": "彼は１秒のほんの何分の１かでそれをした。",
-    "en": [
-      {
-        "id": "288457",
-        "text": "He did it in only a fraction of a second."
-      }
-    ],
-    "indices": "彼(かれ)[01] は 一秒{１秒} の 本の{ほんの} 何分(なんぷん) の か で(#2028980) 其れ[01]{それ} を 為る(する){した}",
-    "vocabIds": [
-      "1483070",
-      "1490430",
-      "1189310"
-    ],
-    "matches": {
-      "1189310": {
-        "start": 8,
-        "length": 2
-      },
-      "1483070": {
-        "start": 0,
-        "length": 1
-      },
-      "1490430": {
-        "start": 3,
-        "length": 1
-      }
-    }
-  },
-  {
     "id": "187303",
     "original": "何分か経ったのか、それとも何時間か経ったのか、沼田先生が家に入ってきて、禎子の額に手を当てた。",
     "en": [
@@ -40,62 +10,91 @@
     ],
     "indices": "何分(なんぷん) か 経つ{経った} の か 其れとも{それとも} 何時間 か 経つ{経った} の か 先生(せんせい)[02] が 家(いえ)[01] に 入る(はいる){入って} 来る(くる){きて} の 額(ひたい) に 手 を 当てる{当てた}",
     "vocabIds": [
+      "1577100",
       "1189310",
+      "1502860",
       "1251100",
       "1188950",
+      "1315920",
       "1628100",
       "1387990",
       "1191730",
       "1465590",
-      "1307770",
       "1207500",
       "1327190",
-      "1448860"
+      "1448860",
+      "1448820"
     ],
     "matches": {
       "1188950": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "なんじかん"
       },
       "1189310": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なんふん"
       },
       "1191730": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1207500": {
         "start": 39,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
       },
       "1251100": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
       },
-      "1307770": {
-        "start": 37,
-        "length": 1
+      "1315920": {
+        "start": 14,
+        "length": 2,
+        "reading": "じかん"
       },
       "1327190": {
         "start": 41,
-        "length": 1
+        "length": 1,
+        "reading": "て"
       },
       "1387990": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
+      },
+      "1448820": {
+        "start": 43,
+        "length": 2,
+        "reading": "あて"
       },
       "1448860": {
         "start": 43,
-        "length": 3
+        "length": 2,
+        "reading": "あて"
       },
       "1465590": {
         "start": 30,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1502860": {
+        "start": 1,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なん"
       },
       "1628100": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ぬまた"
       }
     }
   },
@@ -115,7 +114,8 @@
     "matches": {
       "1189310": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにぶん"
       }
     }
   },
@@ -138,19 +138,23 @@
     "matches": {
       "1175140": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1189310": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "なにぶん"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1404630": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "あし"
       }
     }
   },
@@ -187,11 +191,13 @@
     "matches": {
       "1175140": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1189310": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "なにぶん"
       }
     }
   },
@@ -207,16 +213,24 @@
     "indices": "バス(#1098390) は 何分(なんぷん) 置きに{おきに} 出る{出ています} か",
     "vocabIds": [
       "1189310",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1189310": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なにぶん"
       },
       "1338240": {
         "start": 8,
-        "length": 2
+        "length": 1,
+        "reading": "で"
+      },
+      "1896380": {
+        "start": 8,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -237,11 +251,13 @@
     "matches": {
       "1189310": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "なにぶん"
       },
       "1557170": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "れいとう"
       }
     }
   },
@@ -256,12 +272,25 @@
     ],
     "indices": "オーブン で(#2028980) 何分(なんぷん)",
     "vocabIds": [
-      "1189310"
+      "1577100",
+      "1189310",
+      "1502860"
     ],
     "matches": {
       "1189310": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "なんふん"
+      },
+      "1502860": {
+        "start": 6,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1577100": {
+        "start": 5,
+        "length": 1,
+        "reading": "なん"
       }
     }
   },
@@ -278,20 +307,35 @@
     "vocabIds": [
       "1175140",
       "1514320",
-      "1189310"
+      "1577100",
+      "1189310",
+      "1502860"
     ],
     "matches": {
       "1175140": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1189310": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "なにぶん"
+      },
+      "1502860": {
+        "start": 10,
+        "length": 1,
+        "reading": "ぶん"
       },
       "1514320": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "あるい"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -308,24 +352,34 @@
       "1315920",
       "1502860",
       "1599390",
+      "1577100",
       "1189310"
     ],
     "matches": {
       "1189310": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "なんふん"
       },
       "1315920": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1502860": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ぶん"
+      },
+      "1577100": {
+        "start": 10,
+        "length": 1,
+        "reading": "なん"
       },
       "1599390": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "なおす"
       }
     }
   },
@@ -357,11 +411,13 @@
     "matches": {
       "1175140": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1189310": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "なにぶん"
       }
     }
   },
@@ -380,7 +436,8 @@
     "matches": {
       "1189310": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "なにぶん"
       }
     }
   },
@@ -396,6 +453,7 @@
     "vocabIds": [
       "1483070",
       "2445890",
+      "1517060",
       "1443600",
       "1198890",
       "1189310"
@@ -403,23 +461,33 @@
     "matches": {
       "1189310": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "なにぶん"
       },
       "1198890": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "とく"
       },
       "1443600": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "でんたく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1517060": {
+        "start": 11,
+        "length": 3,
+        "reading": "ほうていしき"
       },
       "2445890": {
         "start": 2,
-        "length": 12
+        "length": 12,
+        "reading": "ほうていしき"
       }
     }
   },
@@ -445,22 +513,165 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "1189310",
+      "1502860",
       "1589040",
+      "1441870",
       "1441860"
     ],
     "matches": {
       "1189310": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なんふん"
       },
       "1441860": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "つたえ"
+      },
+      "1441870": {
+        "start": 10,
+        "length": 2,
+        "reading": "つたえ"
+      },
+      "1502860": {
+        "start": 4,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なん"
       },
       "1589040": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おくれる"
+      }
+    }
+  },
+  {
+    "id": "10962357",
+    "original": "今、何時何分何秒ですか？",
+    "en": [
+      {
+        "id": "12022446",
+        "text": "What hour, minute, and second is it now?"
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "1577100",
+      "1188770",
+      "2406100",
+      "1315840",
+      "1189310",
+      "1502860",
+      "1490430"
+    ],
+    "matches": {
+      "1188770": {
+        "start": 2,
+        "length": 2,
+        "reading": "なんじ"
+      },
+      "1189310": {
+        "start": 4,
+        "length": 2,
+        "reading": "なんふん"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1315840": {
+        "start": 3,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1490430": {
+        "start": 7,
+        "length": 1,
+        "reading": "びょう"
+      },
+      "1502860": {
+        "start": 5,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1577100": {
+        "start": 2,
+        "length": 1,
+        "reading": "なん"
+      },
+      "2406100": {
+        "start": 2,
+        "length": 4,
+        "reading": "なんじなんふん"
+      }
+    }
+  },
+  {
+    "id": "10962354",
+    "original": "今、何時何分ですか？",
+    "en": [
+      {
+        "id": "10962352",
+        "text": "What's the exact time now?"
+      },
+      {
+        "id": "13061448",
+        "text": "What's the time now in hours and minutes?"
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "1577100",
+      "1188770",
+      "2406100",
+      "1315840",
+      "1189310",
+      "1502860"
+    ],
+    "matches": {
+      "1188770": {
+        "start": 2,
+        "length": 2,
+        "reading": "なんじ"
+      },
+      "1189310": {
+        "start": 4,
+        "length": 2,
+        "reading": "なんふん"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1315840": {
+        "start": 3,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1502860": {
+        "start": 5,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1577100": {
+        "start": 2,
+        "length": 1,
+        "reading": "なん"
+      },
+      "2406100": {
+        "start": 2,
+        "length": 4,
+        "reading": "なんじなんふん"
       }
     }
   }

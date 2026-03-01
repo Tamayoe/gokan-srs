@@ -15,21 +15,18 @@
     "indices": "は 初心者 だ が[03] 飲み込み[02]~ が 早い[01]{速い}",
     "vocabIds": [
       "1342860",
-      "1600390",
-      "2093400"
+      "1600390"
     ],
     "matches": {
       "1342860": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "しょしんしゃ"
       },
       "1600390": {
         "start": 8,
-        "length": 4
-      },
-      "2093400": {
-        "start": 13,
-        "length": 1
+        "length": 4,
+        "reading": "のみこみ"
       }
     }
   },
@@ -44,12 +41,55 @@
     ],
     "indices": "其れ[01]{それ} を 飲み込む{飲み込み} 為さい{なさい}",
     "vocabIds": [
+      "1600400",
       "1600390"
     ],
     "matches": {
       "1600390": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "のみこみ"
+      },
+      "1600400": {
+        "start": 3,
+        "length": 4,
+        "reading": "のみこみ"
+      }
+    }
+  },
+  {
+    "id": "1355517",
+    "original": "飲み込みが早いね。",
+    "en": [
+      {
+        "id": "20402",
+        "text": "You've got a good head on your shoulders."
+      },
+      {
+        "id": "4334400",
+        "text": "You are a fast learner."
+      }
+    ],
+    "vocabIds": [
+      "1600390",
+      "2836307",
+      "1404975"
+    ],
+    "matches": {
+      "1404975": {
+        "start": 5,
+        "length": 2,
+        "reading": "はやい"
+      },
+      "1600390": {
+        "start": 0,
+        "length": 4,
+        "reading": "のみこみ"
+      },
+      "2836307": {
+        "start": 0,
+        "length": 7,
+        "reading": "のみこみがはやい"
       }
     }
   },
@@ -68,7 +108,8 @@
     "matches": {
       "1600390": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "のみこみ"
       }
     }
   }

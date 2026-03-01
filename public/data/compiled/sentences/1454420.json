@@ -1,5 +1,44 @@
 [
   {
+    "id": "85232",
+    "original": "病人はもう峠を越した。",
+    "en": [
+      {
+        "id": "318481",
+        "text": "The patient is now safe."
+      }
+    ],
+    "indices": "病人 は もう 峠を越す{峠を越した}",
+    "vocabIds": [
+      "1490360",
+      "1454420",
+      "1175300",
+      "1632880"
+    ],
+    "matches": {
+      "1175300": {
+        "start": 7,
+        "length": 2,
+        "reading": "こし"
+      },
+      "1454420": {
+        "start": 5,
+        "length": 1,
+        "reading": "とうげ"
+      },
+      "1490360": {
+        "start": 0,
+        "length": 2,
+        "reading": "びょうにん"
+      },
+      "1632880": {
+        "start": 7,
+        "length": 2,
+        "reading": "こし"
+      }
+    }
+  },
+  {
     "id": "152033",
     "original": "私達が峠にさしかかる頃に雨になった。",
     "en": [
@@ -19,23 +58,61 @@
     "matches": {
       "1171900": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1454420": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "とうげ"
       },
       "1579080": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ころ"
+      }
+    }
+  },
+  {
+    "id": "197219",
+    "original": "ブームは峠を越した。",
+    "en": [
+      {
+        "id": "34401",
+        "text": "The boom has peaked out."
+      }
+    ],
+    "indices": "ブーム[02] は 峠を越す{峠を越した}~",
+    "vocabIds": [
+      "1454420",
+      "1175300",
+      "1632880"
+    ],
+    "matches": {
+      "1175300": {
+        "start": 6,
+        "length": 2,
+        "reading": "こし"
+      },
+      "1454420": {
+        "start": 4,
+        "length": 1,
+        "reading": "とうげ"
+      },
+      "1632880": {
+        "start": 6,
+        "length": 2,
+        "reading": "こし"
       }
     }
   },
@@ -55,20 +132,29 @@
     "vocabIds": [
       "1212210",
       "1454420",
+      "1175300",
       "1632880"
     ],
     "matches": {
+      "1175300": {
+        "start": 7,
+        "length": 2,
+        "reading": "こし"
+      },
       "1212210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かんじゃ"
       },
       "1454420": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "とうげ"
       },
       "1632880": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こし"
       }
     }
   },
@@ -85,29 +171,52 @@
       "1534050",
       "1454420",
       "1593070",
+      "2858626",
+      "1463770",
       "1464250",
+      "1423310",
       "1343460"
     ],
     "matches": {
       "1343460": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "あつい"
+      },
+      "1423310": {
+        "start": 14,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1454420": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "とうげ"
+      },
+      "1463770": {
+        "start": 13,
+        "length": 1,
+        "reading": "にち"
       },
       "1464250": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "にちちゅう"
       },
       "1534050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もうしょ"
       },
       "1593070": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "こえ"
+      },
+      "2858626": {
+        "start": 5,
+        "length": 2,
+        "reading": "こえ"
       }
     }
   }

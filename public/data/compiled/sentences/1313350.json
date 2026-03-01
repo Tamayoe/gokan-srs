@@ -1,5 +1,26 @@
 [
   {
+    "id": "150927",
+    "original": "歯車がかみ合っている。",
+    "en": [
+      {
+        "id": "263629",
+        "text": "The cog-wheels are in gear."
+      }
+    ],
+    "indices": "歯車[01]~ が 噛み合う[01]{かみ合っている}~",
+    "vocabIds": [
+      "1313350"
+    ],
+    "matches": {
+      "1313350": {
+        "start": 0,
+        "length": 2,
+        "reading": "はぐるま"
+      }
+    }
+  },
+  {
     "id": "170549",
     "original": "最後まで議論の歯車が噛み合わなかった。",
     "en": [
@@ -10,27 +31,37 @@
     ],
     "indices": "最後まで 議論 の 歯車がかみ合う{歯車が噛み合わなかった}",
     "vocabIds": [
+      "1293810",
       "1293830",
       "1226160",
       "1313350",
-      "1956260"
+      "1209150"
     ],
     "matches": {
+      "1209150": {
+        "start": 10,
+        "length": 4,
+        "reading": "かみあわ"
+      },
       "1226160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ぎろん"
+      },
+      "1293810": {
+        "start": 0,
+        "length": 2,
+        "reading": "さいご"
       },
       "1293830": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "さいごまで"
       },
       "1313350": {
         "start": 7,
-        "length": 2
-      },
-      "1956260": {
-        "start": 12,
-        "length": 1
+        "length": 2,
+        "reading": "はぐるま"
       }
     }
   },
@@ -51,11 +82,13 @@
     "matches": {
       "1313350": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はぐるま"
       },
       "2136180": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさな"
       }
     }
   }

@@ -16,11 +16,13 @@
     "matches": {
       "1421970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おそい"
       },
       "1528440": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
       }
     }
   },
@@ -40,7 +42,8 @@
     "matches": {
       "1528440": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
       }
     }
   },
@@ -60,7 +63,8 @@
     "matches": {
       "1528440": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
       }
     }
   },
@@ -75,6 +79,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 脈 は 規則正しい ですか",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1528440",
       "1223040"
@@ -82,15 +87,23 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1223040": {
         "start": 4,
-        "length": 5
+        "length": 5,
+        "reading": "きそくただしい"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1528440": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
       }
     }
   },
@@ -112,15 +125,98 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1377390": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せいじょう"
       },
       "1528440": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
+      }
+    }
+  },
+  {
+    "id": "190765",
+    "original": "医者は彼の脈をとった。",
+    "en": [
+      {
+        "id": "27925",
+        "text": "The doctor felt his pulse."
+      },
+      {
+        "id": "507214",
+        "text": "The doctor took his pulse."
+      }
+    ],
+    "indices": "医者 は 彼(かれ)[01] の 脈 を 取る{とった}",
+    "vocabIds": [
+      "1159980",
+      "1483070",
+      "1000420",
+      "1528440"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 3,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1159980": {
+        "start": 0,
+        "length": 2,
+        "reading": "いしゃ"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1528440": {
+        "start": 5,
+        "length": 1,
+        "reading": "みゃく"
+      }
+    }
+  },
+  {
+    "id": "190796",
+    "original": "医者は私の脈をとった。",
+    "en": [
+      {
+        "id": "27956",
+        "text": "The doctor felt my pulse."
+      },
+      {
+        "id": "616036",
+        "text": "The doctor took my pulse."
+      }
+    ],
+    "indices": "医者 は 私(わたし)[01]{私の} 脈 を 取る{とった}",
+    "vocabIds": [
+      "1159980",
+      "1311110",
+      "1528440"
+    ],
+    "matches": {
+      "1159980": {
+        "start": 0,
+        "length": 2,
+        "reading": "いしゃ"
+      },
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1528440": {
+        "start": 5,
+        "length": 1,
+        "reading": "みゃく"
       }
     }
   },
@@ -139,33 +235,33 @@
       "1212210",
       "1528440",
       "1348870",
-      "2093400",
       "1589350"
     ],
     "matches": {
       "1159980": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
       },
       "1212210": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かんじゃ"
       },
       "1348870": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1528440": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
       },
       "1589350": {
         "start": 15,
-        "length": 3
-      },
-      "2093400": {
-        "start": 12,
-        "length": 1
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -186,11 +282,13 @@
     "matches": {
       "1497190": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ふつう"
       },
       "1528440": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
       }
     }
   },
@@ -210,11 +308,13 @@
     "matches": {
       "1377390": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せいじょう"
       },
       "1528440": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
       }
     }
   },
@@ -234,11 +334,13 @@
     "matches": {
       "1212210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かんじゃ"
       },
       "1528440": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
       }
     }
   },
@@ -252,17 +354,245 @@
       }
     ],
     "vocabIds": [
-      "1528440",
-      "2093400"
+      "1528440"
     ],
     "matches": {
       "1528440": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "みゃく"
+      }
+    }
+  },
+  {
+    "id": "10109271",
+    "original": "中学生の頃に、あるセラピストの女性の方と話した後、すごく話が弾んだから「これは脈あり」って思って、キスしようとしたんだ。そしたら「やめなさい」って冷たくあしらわれた。「俺ってバカだよな」って痛感した瞬間でした。",
+    "en": [
+      {
+        "id": "10109272",
+        "text": "When I was in middle school, I was talking with my therapist, and we had such a great talk that I thought \"Maybe there's something between us\", and I tried to get a kiss. But she gave me the cold shoulder and told me to stop. It was at this moment I knew I had screwed up."
+      }
+    ],
+    "vocabIds": [
+      "1423660",
+      "1579080",
+      "1345250",
+      "1516930",
+      "1562350",
+      "1269320",
+      "1600900",
+      "1419400",
+      "1528440",
+      "2848462",
+      "1589350",
+      "1556730",
+      "1576870",
+      "1432760",
+      "1341210"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 23,
+        "length": 1,
+        "reading": "のち"
       },
-      "2093400": {
-        "start": 5,
-        "length": 1
+      "1341210": {
+        "start": 99,
+        "length": 2,
+        "reading": "しゅんかん"
+      },
+      "1345250": {
+        "start": 15,
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1419400": {
+        "start": 30,
+        "length": 2,
+        "reading": "はずん"
+      },
+      "1423660": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうがくせい"
+      },
+      "1432760": {
+        "start": 95,
+        "length": 2,
+        "reading": "つうかん"
+      },
+      "1516930": {
+        "start": 18,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1528440": {
+        "start": 39,
+        "length": 1,
+        "reading": "みゃく"
+      },
+      "1556730": {
+        "start": 73,
+        "length": 3,
+        "reading": "つめたく"
+      },
+      "1562350": {
+        "start": 20,
+        "length": 2,
+        "reading": "はなし"
+      },
+      "1576870": {
+        "start": 84,
+        "length": 1,
+        "reading": "おれ"
+      },
+      "1579080": {
+        "start": 4,
+        "length": 1,
+        "reading": "ころ"
+      },
+      "1589350": {
+        "start": 45,
+        "length": 2,
+        "reading": "おもっ"
+      },
+      "1600900": {
+        "start": 28,
+        "length": 1,
+        "reading": "はなし"
+      },
+      "2848462": {
+        "start": 39,
+        "length": 3,
+        "reading": "みゃくあり"
+      }
+    }
+  },
+  {
+    "id": "10109284",
+    "original": "中学校の時に、あるセラピストの女性の方と話した後、すごく話が弾んだから突如「これは脈あり」って思って、キスしようとしたんだ。そしたら「やめなさい」って怒られた。その後、次の授業に向かいながら、すごく恥ずかしくなった。",
+    "en": [
+      {
+        "id": "10109285",
+        "text": "In middle school, I was talking with my therapist, and seeing as we were having such a great talk, I suddenly thought \"There's my chance\", and I tried to get a kiss. But she told me to stop. Then, as I headed to my next class, I felt so embarrassed."
+      }
+    ],
+    "vocabIds": [
+      "1423650",
+      "1315840",
+      "2021540",
+      "1345250",
+      "1516930",
+      "1562350",
+      "1269320",
+      "1600900",
+      "1419400",
+      "1457090",
+      "1528440",
+      "2848462",
+      "1589350",
+      "1445690",
+      "1006860",
+      "1316380",
+      "1330290",
+      "1604800",
+      "1421630"
+    ],
+    "matches": {
+      "1006860": {
+        "start": 80,
+        "length": 3,
+        "reading": "そのご"
+      },
+      "1269320": {
+        "start": 23,
+        "length": 1,
+        "reading": "のち"
+      },
+      "1315840": {
+        "start": 4,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1316380": {
+        "start": 84,
+        "length": 1,
+        "reading": "つぎ"
+      },
+      "1330290": {
+        "start": 86,
+        "length": 2,
+        "reading": "じゅぎょう"
+      },
+      "1345250": {
+        "start": 15,
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1419400": {
+        "start": 30,
+        "length": 2,
+        "reading": "はずん"
+      },
+      "1421630": {
+        "start": 99,
+        "length": 5,
+        "reading": "はずかしく"
+      },
+      "1423650": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうがっこう"
+      },
+      "1445690": {
+        "start": 75,
+        "length": 2,
+        "reading": "おこら"
+      },
+      "1457090": {
+        "start": 35,
+        "length": 2,
+        "reading": "とつじょ"
+      },
+      "1516930": {
+        "start": 18,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1528440": {
+        "start": 41,
+        "length": 1,
+        "reading": "みゃく"
+      },
+      "1562350": {
+        "start": 20,
+        "length": 2,
+        "reading": "はなし"
+      },
+      "1589350": {
+        "start": 47,
+        "length": 2,
+        "reading": "おもっ"
+      },
+      "1600900": {
+        "start": 28,
+        "length": 1,
+        "reading": "はなし"
+      },
+      "1604800": {
+        "start": 89,
+        "length": 3,
+        "reading": "むかい"
+      },
+      "2021540": {
+        "start": 4,
+        "length": 2,
+        "reading": "ときに"
+      },
+      "2848462": {
+        "start": 41,
+        "length": 3,
+        "reading": "みゃくあり"
       }
     }
   }

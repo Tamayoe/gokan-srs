@@ -10,17 +10,25 @@
     ],
     "indices": "彼(かれ) の 死因 は 癌{ガン} だ{だった}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1310740"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1310740": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しいん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -35,6 +43,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 死因 は 未だに{いまだに} 謎[01] である",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1310740",
       "1459690"
@@ -42,15 +51,23 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1310740": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しいん"
       },
       "1459690": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "なぞ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -72,15 +89,18 @@
     "matches": {
       "1217110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がん"
       },
       "1310740": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しいん"
       },
       "1607070": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おじ"
       }
     }
   },
@@ -96,16 +116,30 @@
     "indices": "死因 は 心臓発作 だ{だった}",
     "vocabIds": [
       "1310740",
-      "1938900"
+      "1360770",
+      "1938900",
+      "1477470"
     ],
     "matches": {
       "1310740": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しいん"
+      },
+      "1360770": {
+        "start": 3,
+        "length": 2,
+        "reading": "しんぞう"
+      },
+      "1477470": {
+        "start": 5,
+        "length": 2,
+        "reading": "ほっさ"
       },
       "1938900": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "しんぞうほっさ"
       }
     }
   },
@@ -121,41 +155,66 @@
     "indices": "煙草を吸う{タバコを吸う} 人(ひと) の 数(かず) は 増える{増えている} だから 癌{ガン} は 間もなく[01] 一番(いちばん)[01] 多い 死因 となる だろう",
     "vocabIds": [
       "1891810",
+      "1228260",
       "1580640",
       "1580820",
       "1602440",
       "1215290",
+      "1165970",
       "1166030",
+      "1407460",
       "1310740"
     ],
     "matches": {
+      "1165970": {
+        "start": 29,
+        "length": 2,
+        "reading": "いちばん"
+      },
       "1166030": {
         "start": 29,
-        "length": 4
+        "length": 4,
+        "reading": "いちばんおおい"
       },
       "1215290": {
         "start": 24,
-        "length": 4
+        "length": 4,
+        "reading": "まもなく"
+      },
+      "1228260": {
+        "start": 4,
+        "length": 2,
+        "reading": "すう"
       },
       "1310740": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "しいん"
+      },
+      "1407460": {
+        "start": 31,
+        "length": 2,
+        "reading": "おおい"
       },
       "1580640": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1580820": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
       },
       "1602440": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "ふえ"
       },
       "1891810": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "たばこをすう"
       }
     }
   },
@@ -172,24 +231,28 @@
       "1310740",
       "1527140",
       "1459690",
-      "2508600"
+      "1584060"
     ],
     "matches": {
       "1310740": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しいん"
       },
       "1459690": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "なぞ"
       },
       "1527140": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "いまだに"
       },
-      "2508600": {
+      "1584060": {
         "start": 11,
-        "length": 1
+        "length": 2,
+        "reading": "つつま"
       }
     }
   },
@@ -203,22 +266,31 @@
       }
     ],
     "vocabIds": [
+      "1321110",
       "2830372",
       "1310740",
-      "2119750"
+      "1577100"
     ],
     "matches": {
       "1310740": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しいん"
       },
-      "2119750": {
+      "1321110": {
+        "start": 0,
+        "length": 2,
+        "reading": "じっさい"
+      },
+      "1577100": {
         "start": 14,
-        "length": 2
+        "length": 1,
+        "reading": "なに"
       },
       "2830372": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "じっさいのところ"
       }
     }
   }

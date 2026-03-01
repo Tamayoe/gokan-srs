@@ -1,5 +1,38 @@
 [
   {
+    "id": "88008",
+    "original": "彼女は大声で悪態をついた。",
+    "en": [
+      {
+        "id": "315698",
+        "text": "She cursed loudly."
+      }
+    ],
+    "indices": "彼女[01] は 大声 で(#2028980) 悪態をつく{悪態をついた}",
+    "vocabIds": [
+      "1483150",
+      "1414300",
+      "1152230"
+    ],
+    "matches": {
+      "1152230": {
+        "start": 6,
+        "length": 2,
+        "reading": "あくたい"
+      },
+      "1414300": {
+        "start": 3,
+        "length": 2,
+        "reading": "おおごえ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
     "id": "106124",
     "original": "彼は私に悪態を浴びせかけた。",
     "en": [
@@ -18,19 +51,152 @@
     "matches": {
       "1152230": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "あくたい"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "2013480": {
         "start": 7,
-        "length": 6
+        "length": 5,
+        "reading": "あびせかけ"
+      }
+    }
+  },
+  {
+    "id": "147367",
+    "original": "助言をしてやろうとしたのに彼は私に向かって猛烈に悪態をつくだけだった。",
+    "en": [
+      {
+        "id": "267193",
+        "text": "I tried to give him some advice, but he just abused me violently."
+      }
+    ],
+    "indices": "助言 を して遣る{してやろう} とする{とした} のに 彼(かれ)[01] は 私(わたし)[01] に 向かう{向かって} 猛烈{猛烈に} 悪態をつく 丈(だけ){だけ} だ{だった}",
+    "vocabIds": [
+      "1580230",
+      "1483070",
+      "1311110",
+      "1604800",
+      "1534100",
+      "1152230",
+      "1152240"
+    ],
+    "matches": {
+      "1152230": {
+        "start": 24,
+        "length": 2,
+        "reading": "あくたい"
+      },
+      "1152240": {
+        "start": 24,
+        "length": 5,
+        "reading": "あくたいをつく"
+      },
+      "1311110": {
+        "start": 15,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 13,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1534100": {
+        "start": 21,
+        "length": 2,
+        "reading": "もうれつ"
+      },
+      "1580230": {
+        "start": 0,
+        "length": 2,
+        "reading": "じょげん"
+      },
+      "1604800": {
+        "start": 17,
+        "length": 3,
+        "reading": "むかっ"
+      }
+    }
+  },
+  {
+    "id": "173991",
+    "original": "公然と悪態をつかないでよ。",
+    "en": [
+      {
+        "id": "240479",
+        "text": "Don't swear in public."
+      }
+    ],
+    "indices": "公然{公然と} 悪態をつく{悪態をつかないで} よ[01]",
+    "vocabIds": [
+      "1274190",
+      "1152230"
+    ],
+    "matches": {
+      "1152230": {
+        "start": 3,
+        "length": 2,
+        "reading": "あくたい"
+      },
+      "1274190": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうぜん"
+      }
+    }
+  },
+  {
+    "id": "195174",
+    "original": "メアリーは彼に考えうる限りの悪態をついた。",
+    "en": [
+      {
+        "id": "32348",
+        "text": "Mary called him every name she could think of."
+      }
+    ],
+    "indices": "は 彼(かれ)[01] に 考え得る{考えうる}~ 限り(かぎり)[02] の 悪態をつく{悪態をついた}~",
+    "vocabIds": [
+      "1483070",
+      "1281020",
+      "1281000",
+      "1264610",
+      "1152230"
+    ],
+    "matches": {
+      "1152230": {
+        "start": 14,
+        "length": 2,
+        "reading": "あくたい"
+      },
+      "1264610": {
+        "start": 11,
+        "length": 2,
+        "reading": "かぎり"
+      },
+      "1281000": {
+        "start": 7,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1281020": {
+        "start": 7,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1483070": {
+        "start": 5,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -50,7 +216,99 @@
     "matches": {
       "1152230": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "あくたい"
+      }
+    }
+  },
+  {
+    "id": "215291",
+    "original": "ジョンは私に悪態をついた。",
+    "en": [
+      {
+        "id": "52590",
+        "text": "John called me names."
+      }
+    ],
+    "indices": "は 私(わたし)[01] に 悪態をつく{悪態をついた}",
+    "vocabIds": [
+      "1311110",
+      "1152230"
+    ],
+    "matches": {
+      "1152230": {
+        "start": 6,
+        "length": 2,
+        "reading": "あくたい"
+      },
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
+      }
+    }
+  },
+  {
+    "id": "1383954",
+    "original": "彼は怒るとよく悪態をつく。",
+    "en": [
+      {
+        "id": "319857",
+        "text": "He often swears when he is angry."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1445690",
+      "1152230",
+      "1152240"
+    ],
+    "matches": {
+      "1152230": {
+        "start": 7,
+        "length": 2,
+        "reading": "あくたい"
+      },
+      "1152240": {
+        "start": 7,
+        "length": 5,
+        "reading": "あくたいをつく"
+      },
+      "1445690": {
+        "start": 2,
+        "length": 2,
+        "reading": "おこる"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "8614095",
+    "original": "トムは決して悪態をつかない。",
+    "en": [
+      {
+        "id": "8584435",
+        "text": "Tom never curses."
+      }
+    ],
+    "vocabIds": [
+      "1254130",
+      "1152230"
+    ],
+    "matches": {
+      "1152230": {
+        "start": 6,
+        "length": 2,
+        "reading": "あくたい"
+      },
+      "1254130": {
+        "start": 3,
+        "length": 3,
+        "reading": "けっして"
       }
     }
   }

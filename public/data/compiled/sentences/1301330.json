@@ -12,20 +12,35 @@
     "vocabIds": [
       "1431870",
       "1301330",
+      "1463770",
+      "1486720",
       "2060860"
     ],
     "matches": {
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1431870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちんきゃく"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1486720": {
+        "start": 8,
+        "length": 1,
+        "reading": "はな"
       },
       "2060860": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "はなにつく"
       }
     }
   },
@@ -42,35 +57,65 @@
     "vocabIds": [
       "1289220",
       "1301330",
+      "1463770",
       "1559610",
+      "1203620",
       "2670650",
+      "1173720",
       "1315220",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
+      "1173720": {
+        "start": 20,
+        "length": 2,
+        "reading": "えいが"
+      },
+      "1203620": {
+        "start": 18,
+        "length": 2,
+        "reading": "がいこく"
+      },
       "1259290": {
         "start": 26,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1315220": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "じまく"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       },
       "1559610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "れんぞく"
+      },
+      "2256270": {
+        "start": 26,
+        "length": 1,
+        "reading": "み"
       },
       "2670650": {
         "start": 18,
-        "length": 4
+        "length": 4,
+        "reading": "がいこくえいが"
       }
     }
   },
@@ -87,20 +132,29 @@
     "vocabIds": [
       "1311110",
       "1314400",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1314400": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "じむしょ"
+      },
+      "1463770": {
+        "start": 16,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -116,16 +170,24 @@
     "indices": "羅馬{ローマ} の ホテル の 予約[01] を[01] 三日[02]{３日} ずらす[02]{ずらさ}~ ねばならない{なければならなく} 成る[01]{なった}",
     "vocabIds": [
       "1543750",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 13,
+        "length": 1,
+        "reading": "にち"
       },
       "1543750": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
       }
     }
   },
@@ -143,29 +205,127 @@
       "1553170",
       "1423310",
       "1301330",
+      "1463770",
+      "1171900",
       "2851949",
-      "2213220"
+      "1282790",
+      "1281170",
+      "1465610",
+      "1465600"
     ],
     "matches": {
+      "1171900": {
+        "start": 8,
+        "length": 1,
+        "reading": "う"
+      },
+      "1281170": {
+        "start": 15,
+        "length": 2,
+        "reading": "こうりょ"
+      },
+      "1282790": {
+        "start": 10,
+        "length": 2,
+        "reading": "ふる"
+      },
       "1301330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1423310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1463770": {
+        "start": 7,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1465600": {
+        "start": 18,
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1465610": {
+        "start": 18,
+        "length": 2,
+        "reading": "いれ"
       },
       "1553170": {
         "start": 0,
-        "length": 2
-      },
-      "2213220": {
-        "start": 15,
-        "length": 6
+        "length": 2,
+        "reading": "りょこう"
       },
       "2851949": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "うがふる"
+      }
+    }
+  },
+  {
+    "id": "83330",
+    "original": "便名はＪＬ１２３便、８月２３日、東京までです。",
+    "en": [
+      {
+        "id": "320386",
+        "text": "Flight number is JL123, on August 23 for Tokyo."
+      }
+    ],
+    "indices": "便(びん)[01] 名(な) は 便(びん)[01] 八月{８月} 日(にち)[02] 東京 迄{まで} です",
+    "vocabIds": [
+      "1512360",
+      "2826937",
+      "1531330",
+      "1476730",
+      "2738200",
+      "1301330",
+      "1463770",
+      "1447690"
+    ],
+    "matches": {
+      "1301330": {
+        "start": 13,
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1447690": {
+        "start": 16,
+        "length": 2,
+        "reading": "とうきょう"
+      },
+      "1463770": {
+        "start": 14,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1476730": {
+        "start": 10,
+        "length": 2,
+        "reading": "はちがつ"
+      },
+      "1512360": {
+        "start": 0,
+        "length": 1,
+        "reading": "びん"
+      },
+      "1531330": {
+        "start": 1,
+        "length": 1,
+        "reading": "めい"
+      },
+      "2738200": {
+        "start": 12,
+        "length": 3,
+        "reading": "にさんにち"
+      },
+      "2826937": {
+        "start": 0,
+        "length": 2,
+        "reading": "びんめい"
       }
     }
   },
@@ -190,20 +350,35 @@
     "vocabIds": [
       "1497610",
       "1301330",
+      "1463770",
+      "1535880",
       "1535860"
     ],
     "matches": {
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1535860": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "もどり"
+      },
+      "1535880": {
+        "start": 7,
+        "length": 2,
+        "reading": "もどり"
       }
     }
   },
@@ -219,26 +394,54 @@
     "indices": "飛行機 の お陰で{おかげで} 私たち は 日(にち)[03] で(#2028980) 世界一周 が[01] 出来る{できる}",
     "vocabIds": [
       "1485470",
+      "1311110",
       "1311300",
       "1301330",
-      "1373890"
+      "1463770",
+      "1373860",
+      "1373890",
+      "1602010"
     ],
     "matches": {
       "1301330": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1311110": {
+        "start": 9,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1373860": {
+        "start": 18,
+        "length": 2,
+        "reading": "せかい"
       },
       "1373890": {
         "start": 18,
-        "length": 4
+        "length": 4,
+        "reading": "せかいいっしゅう"
+      },
+      "1463770": {
+        "start": 16,
+        "length": 1,
+        "reading": "にち"
       },
       "1485470": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
+      },
+      "1602010": {
+        "start": 20,
+        "length": 2,
+        "reading": "いっしゅう"
       }
     }
   },
@@ -255,35 +458,53 @@
     "vocabIds": [
       "1483150",
       "1301330",
+      "1463770",
       "1392580",
       "1312350",
       "1341670",
-      "2540200"
+      "2540200",
+      "1587040"
     ],
     "matches": {
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1312350": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1341670": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "じゅんび"
       },
       "1392580": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1587040": {
+        "start": 20,
+        "length": 2,
+        "reading": "いっ"
       },
       "2540200": {
         "start": 19,
-        "length": 4
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -301,24 +522,34 @@
       "1483090",
       "1289100",
       "1301330",
+      "1463770",
       "1254790"
     ],
     "matches": {
       "1254790": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けっこん"
       },
       "1289100": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こんげつ"
       },
       "1301330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 7,
+        "length": 1,
+        "reading": "にち"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -335,6 +566,7 @@
     "vocabIds": [
       "1483090",
       "1301330",
+      "1463770",
       "1269320",
       "1561330",
       "1335000",
@@ -343,27 +575,38 @@
     "matches": {
       "1269320": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1335000": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "いちぜろにち"
       },
       "1340000": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1561330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ろくがつ"
       }
     }
   },
@@ -384,25 +627,41 @@
     "vocabIds": [
       "1483090",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1422970"
     ],
     "matches": {
       "1301330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1392580": {
+        "start": 7,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1422970": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "つい"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -420,6 +679,7 @@
       "1483070",
       "1333450",
       "1301330",
+      "1463770",
       "1451150",
       "1348870",
       "1001820"
@@ -427,27 +687,38 @@
     "matches": {
       "1001820": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1301330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1333450": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "しゅう"
       },
       "1348870": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1451150": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
+      },
+      "1463770": {
+        "start": 7,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -464,20 +735,29 @@
     "vocabIds": [
       "1483070",
       "1301330",
+      "1463770",
       "1474850"
     ],
     "matches": {
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
       },
       "1474850": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -494,60 +774,35 @@
     "vocabIds": [
       "1483070",
       "1301330",
+      "1463770",
       "1311110",
       "1333500"
     ],
     "matches": {
       "1301330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1333500": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "113190",
-    "original": "彼はそのことを３日間よく考えた。",
-    "en": [
-      {
-        "id": "290484",
-        "text": "He thought the matter over for three days."
-      }
-    ],
-    "indices": "彼(かれ)[01] は 其の[01]{その} 事(こと){こと} を 三日間{３日間} 良く{よく} 考える{考えた}",
-    "vocabIds": [
-      "1483070",
-      "1301330",
-      "1215230",
-      "1281020"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 9,
-        "length": 1
-      },
-      "1281020": {
-        "start": 12,
-        "length": 3
-      },
-      "1301330": {
-        "start": 7,
-        "length": 2
-      },
-      "1483070": {
-        "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -565,6 +820,8 @@
       "1483070",
       "1340000",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1311110",
       "1518070"
@@ -572,27 +829,43 @@
     "matches": {
       "1301330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1340000": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
+      },
+      "1392580": {
+        "start": 13,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1463770": {
+        "start": 12,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1518070": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "たずね"
       }
     }
   },
@@ -609,20 +882,41 @@
     "vocabIds": [
       "1483070",
       "1301330",
+      "1463770",
+      "1730220",
+      "1464860",
       "1547720"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464860": {
+        "start": 3,
+        "length": 4,
+        "reading": "にちごとに"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1547720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
+      },
+      "1730220": {
+        "start": 3,
+        "length": 3,
+        "reading": "にちごと"
       }
     }
   },
@@ -639,25 +933,41 @@
     "vocabIds": [
       "1483070",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1231650"
     ],
     "matches": {
       "1231650": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "さっ"
       },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1392580": {
+        "start": 6,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -674,25 +984,47 @@
     "vocabIds": [
       "1483070",
       "1301330",
+      "1463770",
+      "1269320",
       "2640160",
+      "1535880",
       "2092960"
     ],
     "matches": {
+      "1269320": {
+        "start": 6,
+        "length": 1,
+        "reading": "ご"
+      },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1535880": {
+        "start": 8,
+        "length": 2,
+        "reading": "もどっ"
       },
       "2092960": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "もどってくる"
       },
       "2640160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -709,20 +1041,35 @@
     "vocabIds": [
       "1483070",
       "1301330",
+      "1463770",
+      "1221270",
       "1864140"
     ],
     "matches": {
+      "1221270": {
+        "start": 9,
+        "length": 2,
+        "reading": "かえっ"
+      },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1864140": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "かえってくる"
       }
     }
   },
@@ -739,25 +1086,35 @@
     "vocabIds": [
       "1483070",
       "1301330",
+      "1463770",
       "1155180",
       "1221430"
     ],
     "matches": {
       "1155180": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いない"
       },
       "1221430": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きたく"
       },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -774,110 +1131,29 @@
     "vocabIds": [
       "1483070",
       "1301330",
+      "1463770",
       "1490230"
     ],
     "matches": {
       "1301330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 9,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "124242",
-    "original": "東京に来て３日間しかたたないのに父が死んだという便りをもらった。",
-    "en": [
-      {
-        "id": "279752",
-        "text": "I had been in Tokyo only three days when I received news of my father's death."
-      }
-    ],
-    "indices": "東京 に 来る(くる){来て} 三日間{３日間} しか 経つ{たたない} のに 父 が 死ぬ{死んだ} と言う{という} 便り[01] を 貰う{もらった}",
-    "vocabIds": [
-      "1447690",
-      "1547720",
-      "1301330",
-      "1215230",
-      "1497610",
-      "1310730",
-      "1512410"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 7,
-        "length": 1
-      },
-      "1301330": {
-        "start": 5,
-        "length": 2
-      },
-      "1310730": {
-        "start": 18,
-        "length": 3
-      },
-      "1447690": {
-        "start": 0,
-        "length": 2
-      },
-      "1497610": {
-        "start": 16,
-        "length": 1
-      },
-      "1512410": {
-        "start": 24,
-        "length": 2
-      },
-      "1547720": {
-        "start": 3,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "137303",
-    "original": "大売り出しは今日から３日間続く。",
-    "en": [
-      {
-        "id": "275933",
-        "text": "The bargain sale will run for three days, beginning today."
-      }
-    ],
-    "indices": "大売り出し~ は 今日 から[01] 三日間{３日間} 続く",
-    "vocabIds": [
-      "1588850",
-      "1579110",
-      "1301330",
-      "1215230",
-      "1405790"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 12,
-        "length": 1
-      },
-      "1301330": {
-        "start": 10,
-        "length": 2
-      },
-      "1405790": {
-        "start": 13,
-        "length": 2
-      },
-      "1579110": {
-        "start": 6,
-        "length": 2
-      },
-      "1588850": {
-        "start": 0,
-        "length": 5
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -892,92 +1168,103 @@
     ],
     "indices": "大多数{大多数の} 日本人 従業員 は 夏休み を 日(ひ)[01] 以上 連続 為る(する){して} 取る{取り} たい[01] と 考える{考えている}",
     "vocabIds": [
+      "2082450",
       "1414460",
+      "1407860",
       "1464700",
+      "1335240",
       "1335250",
+      "1168610",
       "1191420",
       "1301330",
+      "1463770",
       "1155120",
       "1559610",
       "1326980",
-      "1281020"
+      "2451270",
+      "1281020",
+      "1281000"
     ],
     "matches": {
       "1155120": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1168610": {
+        "start": 9,
+        "length": 1,
+        "reading": "いん"
       },
       "1191420": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "なつやすみ"
+      },
+      "1281000": {
+        "start": 28,
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1281020": {
         "start": 28,
-        "length": 3
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1301330": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1326980": {
         "start": 23,
-        "length": 4
+        "length": 2,
+        "reading": "とり"
+      },
+      "1335240": {
+        "start": 7,
+        "length": 2,
+        "reading": "じゅうぎょう"
       },
       "1335250": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "じゅうぎょういん"
+      },
+      "1407860": {
+        "start": 1,
+        "length": 2,
+        "reading": "たすう"
       },
       "1414460": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "だいたすう"
+      },
+      "1463770": {
+        "start": 16,
+        "length": 1,
+        "reading": "にち"
       },
       "1464700": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんじん"
       },
       "1559610": {
         "start": 19,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "138056",
-    "original": "太郎は３日間東京に滞在しました。",
-    "en": [
-      {
-        "id": "275179",
-        "text": "Taro stayed in Tokyo for three days."
-      }
-    ],
-    "indices": "は 三日間{３日間} 東京 に 滞在 為る(する){しました}",
-    "vocabIds": [
-      "2862858",
-      "1301330",
-      "1215230",
-      "1447690",
-      "1410930"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "れんぞく"
       },
-      "1301330": {
-        "start": 3,
-        "length": 2
-      },
-      "1410930": {
-        "start": 9,
-        "length": 2
-      },
-      "1447690": {
-        "start": 6,
-        "length": 2
-      },
-      "2862858": {
+      "2082450": {
         "start": 0,
-        "length": 2
+        "length": 1,
+        "reading": "だい"
+      },
+      "2451270": {
+        "start": 23,
+        "length": 2,
+        "reading": "とり"
       }
     }
   },
@@ -994,20 +1281,29 @@
     "vocabIds": [
       "1403020",
       "1301330",
+      "1463770",
       "1195990"
     ],
     "matches": {
       "1195990": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "すぎさっ"
       },
       "1301330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1403020": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さわぎ"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -1024,102 +1320,71 @@
     "vocabIds": [
       "1387870",
       "1464880",
-      "1194500",
-      "1307770",
       "1198180",
       "1483150",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1221270",
-      "2540200"
+      "2540200",
+      "1587040"
     ],
     "matches": {
-      "1194500": {
-        "start": 6,
-        "length": 1
-      },
       "1198180": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
       },
       "1221270": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "かえっ"
       },
       "1301330": {
         "start": 17,
-        "length": 2
-      },
-      "1307770": {
-        "start": 7,
-        "length": 1
+        "length": 2,
+        "reading": "さんにち"
       },
       "1387870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんしゅう"
+      },
+      "1392580": {
+        "start": 19,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1463770": {
+        "start": 18,
+        "length": 1,
+        "reading": "にち"
       },
       "1464880": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にちよう"
       },
       "1483150": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1587040": {
+        "start": 25,
+        "length": 2,
+        "reading": "いっ"
       },
       "2540200": {
         "start": 24,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "142098",
-    "original": "切符は３日間有効です。",
-    "en": [
-      {
-        "id": "45819",
-        "text": "The ticket holds good for three days."
-      },
-      {
-        "id": "58176",
-        "text": "This ticket is good for three days."
-      },
-      {
-        "id": "530682",
-        "text": "This ticket is valid for three days."
-      },
-      {
-        "id": "1409674",
-        "text": "The ticket is good for three days."
-      }
-    ],
-    "indices": "切符 は 三日間{３日間} 有効{ゆうこう} である",
-    "vocabIds": [
-      "1385170",
-      "1301330",
-      "1215230",
-      "1541290"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 5,
-        "length": 1
-      },
-      "1301330": {
-        "start": 3,
-        "length": 2
-      },
-      "1385170": {
-        "start": 0,
-        "length": 2
-      },
-      "1541290": {
-        "start": 6,
-        "length": 2
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -1140,81 +1405,49 @@
       "1453810",
       "1521400",
       "1587100",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1368370": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じんせい"
       },
       "1376540": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "せいこううどく"
       },
       "1453810": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "あこがれる"
+      },
+      "1463770": {
+        "start": 30,
+        "length": 1,
+        "reading": "にち"
       },
       "1521400": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1587100": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "いきかた"
       },
       "1594930": {
         "start": 9,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "145075",
-    "original": "森は３日間炎を出して燃えていた。",
-    "en": [
-      {
-        "id": "269488",
-        "text": "The forest was in flames for three days."
-      }
-    ],
-    "indices": "森[01] は 三日間{３日間} 炎(ほのお) を 出す{出して} 燃える{燃えていた}",
-    "vocabIds": [
-      "1362490",
-      "1301330",
-      "1215230",
-      "1177070",
-      "1338180",
-      "1469570"
-    ],
-    "matches": {
-      "1177070": {
-        "start": 5,
-        "length": 1
-      },
-      "1215230": {
-        "start": 4,
-        "length": 1
-      },
-      "1301330": {
-        "start": 2,
-        "length": 2
-      },
-      "1338180": {
-        "start": 7,
-        "length": 3
-      },
-      "1362490": {
-        "start": 0,
-        "length": 1
-      },
-      "1469570": {
-        "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "しょうしょう"
       }
     }
   },
@@ -1234,16 +1467,24 @@
     "indices": "週休 三日{３日} だったら いい(#2820690)[01] のに な",
     "vocabIds": [
       "1609930",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1609930": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうきゅう"
       }
     }
   },
@@ -1260,25 +1501,41 @@
     "vocabIds": [
       "1483150",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1198180"
     ],
     "matches": {
       "1198180": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
       },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1392580": {
+        "start": 6,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -1295,20 +1552,29 @@
     "vocabIds": [
       "1311110",
       "1318400",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1318400": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "じどうしゃ"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -1325,20 +1591,29 @@
     "vocabIds": [
       "1311110",
       "1661600",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
       },
       "1661600": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "とうち"
       }
     }
   },
@@ -1354,71 +1629,48 @@
     "indices": "私(わたし)[01] は 其の[01]{その} 手紙 を 三日[02]{３日} 前(まえ) に 受け取る{受け取っていた}",
     "vocabIds": [
       "1311110",
-      "2829760",
-      "1311530",
+      "1327720",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1329650"
     ],
     "matches": {
       "1301330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1311530": {
-        "start": 5,
-        "length": 1
+      "1327720": {
+        "start": 4,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1329650": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1392580": {
+        "start": 9,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
-      "2829760": {
-        "start": 2,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "160440",
-    "original": "私はそこに３日間滞在した。",
-    "en": [
-      {
-        "id": "254081",
-        "text": "I stayed there for three days."
-      }
-    ],
-    "indices": "私(わたし)[01] は 其処(そこ){そこ} に 三日間{３日間} 滞在 為る(する){した}",
-    "vocabIds": [
-      "1311110",
-      "1301330",
-      "1215230",
-      "1410930"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 7,
-        "length": 1
-      },
-      "1301330": {
-        "start": 5,
-        "length": 2
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1410930": {
+      "1463770": {
         "start": 8,
-        "length": 2
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -1434,228 +1686,24 @@
     "indices": "其処(そこ){そこ} に 日(にち)[03] 滞在 為る(する){する} 積もり{つもり} だ よ",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1410930"
     ],
     "matches": {
       "1301330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1410930": {
         "start": 7,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "161030",
-    "original": "私はこの３日間なにも食べていない。",
-    "en": [
-      {
-        "id": "253488",
-        "text": "I have not eaten anything for the last three days."
+        "length": 2,
+        "reading": "たいざい"
       },
-      {
-        "id": "7780562",
-        "text": "I haven't eaten anything for the last three days."
-      },
-      {
-        "id": "7794613",
-        "text": "I've eaten nothing for the past three days."
-      },
-      {
-        "id": "7794612",
-        "text": "I haven't eaten anything for the past three days."
-      }
-    ],
-    "indices": "私(わたし)[01] は 此の{この} 三日間{３日間} 何も{なにも} 食べる{食べていない}",
-    "vocabIds": [
-      "1311110",
-      "1301330",
-      "1215230",
-      "1358280"
-    ],
-    "matches": {
-      "1215230": {
+      "1463770": {
         "start": 6,
-        "length": 1
-      },
-      "1301330": {
-        "start": 4,
-        "length": 2
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1358280": {
-        "start": 10,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "161273",
-    "original": "私は叔母の家に３日間滞在した。",
-    "en": [
-      {
-        "id": "253245",
-        "text": "I stayed at my aunt's house for three days."
-      }
-    ],
-    "indices": "私(わたし)[01] は 叔母 の 家(いえ)[01] に 三日間{３日間} 滞在 為る(する){した}",
-    "vocabIds": [
-      "1311110",
-      "1607100",
-      "1191730",
-      "1301330",
-      "1215230",
-      "1410930"
-    ],
-    "matches": {
-      "1191730": {
-        "start": 5,
-        "length": 1
-      },
-      "1215230": {
-        "start": 9,
-        "length": 1
-      },
-      "1301330": {
-        "start": 7,
-        "length": 2
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1410930": {
-        "start": 10,
-        "length": 2
-      },
-      "1607100": {
-        "start": 2,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "161955",
-    "original": "私は３日間名古屋に滞在するつもりです。",
-    "en": [
-      {
-        "id": "252560",
-        "text": "I intend to stay in Nagoya for three days."
-      }
-    ],
-    "indices": "私(わたし)[01] は 三日間{３日間} 名古屋 に 滞在 為る(する){する} 積もり{つもり} です",
-    "vocabIds": [
-      "1311110",
-      "1301330",
-      "1215230",
-      "2164620",
-      "1410930"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 4,
-        "length": 1
-      },
-      "1301330": {
-        "start": 2,
-        "length": 2
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1410930": {
-        "start": 9,
-        "length": 2
-      },
-      "2164620": {
-        "start": 5,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "161956",
-    "original": "私は３日間京都に滞在しています。",
-    "en": [
-      {
-        "id": "252559",
-        "text": "I have stayed in Kyoto for three days."
-      }
-    ],
-    "indices": "私(わたし)[01] は 三日間{３日間} 京都 に 滞在 為る(する){しています}",
-    "vocabIds": [
-      "1311110",
-      "1301330",
-      "1215230",
-      "1652350",
-      "1410930"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 4,
-        "length": 1
-      },
-      "1301330": {
-        "start": 2,
-        "length": 2
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1410930": {
-        "start": 8,
-        "length": 2
-      },
-      "1652350": {
-        "start": 5,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "161957",
-    "original": "私は３日間、ここに滞在する予定です。",
-    "en": [
-      {
-        "id": "252558",
-        "text": "I plan to stay here for three days."
-      }
-    ],
-    "indices": "私(わたし)[01] は 三日間{３日間} 此処[01]{ここ} に 滞在 為る(する){する} 予定 です",
-    "vocabIds": [
-      "1311110",
-      "1301330",
-      "1215230",
-      "1410930",
-      "1543240"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 4,
-        "length": 1
-      },
-      "1301330": {
-        "start": 2,
-        "length": 2
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1410930": {
-        "start": 9,
-        "length": 2
-      },
-      "1543240": {
-        "start": 13,
-        "length": 2
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -1672,25 +1720,35 @@
     "vocabIds": [
       "1311110",
       "1301330",
+      "1463770",
       "1524610",
       "1297760"
     ],
     "matches": {
       "1297760": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "さくせい"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1524610": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "まい"
       }
     }
   },
@@ -1706,16 +1764,24 @@
     "indices": "私(わたし)[01] は 日(にち)[03] 紐育{ニューヨーク} に 居る(いる)[01]{いた}",
     "vocabIds": [
       "1311110",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -1740,25 +1806,35 @@
     "vocabIds": [
       "1311110",
       "1301330",
+      "1463770",
       "1304970",
       "1227560"
     ],
     "matches": {
       "1227560": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1304970": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -1775,25 +1851,35 @@
     "vocabIds": [
       "1311110",
       "1301330",
+      "1463770",
       "1323080",
       "1332400"
     ],
     "matches": {
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1323080": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1332400": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうり"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -1810,25 +1896,35 @@
     "vocabIds": [
       "1311110",
       "1301330",
+      "1463770",
       "1304970",
       "1332760"
     ],
     "matches": {
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1304970": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1332760": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "おえる"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -1847,28 +1943,45 @@
       "2084840",
       "1307180",
       "1301330",
-      "1378690"
+      "1463770",
+      "1378690",
+      "1609350"
     ],
     "matches": {
       "1301330": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1307180": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しがつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1378690": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "うまれ"
+      },
+      "1463770": {
+        "start": 10,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1609350": {
+        "start": 12,
+        "length": 3,
+        "reading": "うまれ"
       },
       "2084840": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -1885,20 +1998,41 @@
     "vocabIds": [
       "1311110",
       "1301330",
+      "1463770",
+      "1730220",
+      "1464860",
       "1518070"
     ],
     "matches": {
       "1301330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464860": {
+        "start": 6,
+        "length": 4,
+        "reading": "にちごとに"
       },
       "1518070": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "たずね"
+      },
+      "1730220": {
+        "start": 6,
+        "length": 3,
+        "reading": "にちごと"
       }
     }
   },
@@ -1913,27 +2047,55 @@
     ],
     "indices": "私たち は もう 日(にち)[03] 隠れる[01]{隠れている} 事(こと){こと} に 決める{決めた}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1301330",
+      "1463770",
       "1170660",
-      "1254180"
+      "1613470",
+      "1254180",
+      "1630630"
     ],
     "matches": {
       "1170660": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かくれ"
       },
       "1254180": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "きめ"
       },
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1613470": {
+        "start": 10,
+        "length": 2,
+        "reading": "かくれ"
+      },
+      "1630630": {
+        "start": 18,
+        "length": 2,
+        "reading": "きめ"
       }
     }
   },
@@ -1948,14 +2110,21 @@
     ],
     "indices": "私たち は 此れから{これから} 三日[02]{３日} の 間(あいだ) に 皆さん が 全て{すべての} 人達{人たち} に 公平 で(#2028980) 環境問題 に 積極的{積極的な} 配慮 を 示す 決定 を 為る(する)[01]{する} 様(よう){よう} 要求 致す{いたします}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1301330",
+      "1463770",
       "1215230",
       "1202170",
+      "1580640",
       "1368740",
       "1274640",
+      "1213280",
       "1932330",
+      "1536010",
+      "1383010",
       "1383030",
+      "1437260",
       "1473210",
       "1317110",
       "1254380",
@@ -1964,51 +2133,98 @@
     "matches": {
       "1202170": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "みなさん"
+      },
+      "1213280": {
+        "start": 31,
+        "length": 2,
+        "reading": "かんきょう"
       },
       "1215230": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1254380": {
         "start": 45,
-        "length": 2
+        "length": 2,
+        "reading": "けってい"
       },
       "1274640": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "こうへい"
       },
       "1301330": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1317110": {
         "start": 43,
-        "length": 2
+        "length": 2,
+        "reading": "しめす"
       },
       "1368740": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "ひとたち"
+      },
+      "1383010": {
+        "start": 36,
+        "length": 2,
+        "reading": "せっきょく"
       },
       "1383030": {
         "start": 36,
-        "length": 3
+        "length": 3,
+        "reading": "せっきょくてき"
+      },
+      "1437260": {
+        "start": 38,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1463770": {
+        "start": 10,
+        "length": 1,
+        "reading": "にち"
       },
       "1473210": {
         "start": 40,
-        "length": 2
+        "length": 2,
+        "reading": "はいりょ"
+      },
+      "1536010": {
+        "start": 33,
+        "length": 2,
+        "reading": "もんだい"
       },
       "1546680": {
         "start": 52,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
+      },
+      "1580640": {
+        "start": 23,
+        "length": 1,
+        "reading": "ひと"
       },
       "1932330": {
         "start": 31,
-        "length": 4
+        "length": 4,
+        "reading": "かんきょうもんだい"
       }
     }
   },
@@ -2023,27 +2239,49 @@
     ],
     "indices": "私たち の 運動会 は 丁度{ちょうど} 三日[02]{３日} 前(まえ)[02] に 有る{あった}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1172940",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590"
     ],
     "matches": {
       "1172940": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "うんどうかい"
       },
       "1301330": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1392580": {
+        "start": 14,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1463770": {
+        "start": 13,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2064,50 +2302,29 @@
     "vocabIds": [
       "1522150",
       "1456360",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1456360": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "よむ"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
       },
       "1522150": {
         "start": 2,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "169563",
-    "original": "撮影は３日間でクランクアップします。",
-    "en": [
-      {
-        "id": "244923",
-        "text": "The picture will finish shooting in three days."
-      }
-    ],
-    "indices": "撮影 は 三日間{３日間} で(#2028980) クランクアップ~ 為る(する){します}",
-    "vocabIds": [
-      "1298800",
-      "1301330",
-      "1215230"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 5,
-        "length": 1
-      },
-      "1298800": {
-        "start": 0,
-        "length": 2
-      },
-      "1301330": {
-        "start": 3,
-        "length": 2
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -2126,33 +2343,57 @@
       "1607070",
       "1198180",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
-      "1632140"
+      "1632140",
+      "1587040"
     ],
     "matches": {
       "1198180": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
       },
       "1301330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1392580": {
+        "start": 13,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1463770": {
+        "start": 12,
+        "length": 1,
+        "reading": "にち"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
+      },
+      "1587040": {
+        "start": 30,
+        "length": 2,
+        "reading": "いっ"
       },
       "1607070": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "おじ"
       },
       "1632140": {
         "start": 29,
-        "length": 4
+        "length": 4,
+        "reading": "といって"
       }
     }
   },
@@ -2171,28 +2412,39 @@
       "1605820",
       "1281020",
       "1301330",
+      "1463770",
       "1487660"
     ],
     "matches": {
       "1278830": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "あわて"
       },
       "1281020": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "かんがえる"
       },
       "1301330": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 28,
+        "length": 1,
+        "reading": "にち"
       },
       "1487660": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1605820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -2215,38 +2467,63 @@
       "1483150",
       "1304970",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1295040",
-      "2540200"
+      "2540200",
+      "1587040"
     ],
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1295040": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "すませ"
       },
       "1301330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1304970": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1392580": {
+        "start": 13,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1463770": {
+        "start": 12,
+        "length": 1,
+        "reading": "にち"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1587040": {
+        "start": 23,
+        "length": 2,
+        "reading": "いっ"
       },
       "2540200": {
         "start": 22,
-        "length": 4
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -2263,25 +2540,41 @@
     "vocabIds": [
       "1247250",
       "1301330",
+      "1463770",
       "1215230",
+      "1381820",
       "2119870"
     ],
     "matches": {
       "1215230": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1381820": {
+        "start": 9,
+        "length": 2,
+        "reading": "しずか"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "2119870": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "しずかに"
       }
     }
   },
@@ -2298,30 +2591,47 @@
     "vocabIds": [
       "1247250",
       "1301330",
+      "1463770",
       "1323080",
       "1172830",
+      "1340450",
       "1008400"
     ],
     "matches": {
       "1008400": {
         "start": 14,
-        "length": 8
+        "length": 8,
+        "reading": "できるようになる"
       },
       "1172830": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "うんてん"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1323080": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1340450": {
+        "start": 14,
+        "length": 3,
+        "reading": "できる"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2339,24 +2649,40 @@
       "1247250",
       "1318290",
       "1301330",
-      "1411160"
+      "1463770",
+      "1411160",
+      "1411110"
     ],
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1318290": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
+      },
+      "1411110": {
+        "start": 10,
+        "length": 2,
+        "reading": "かし"
       },
       "1411160": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かし"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2372,155 +2698,24 @@
     "indices": "休暇 を 日(にち)[03] 伸ばす{延ばせません} か",
     "vocabIds": [
       "1227610",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1227610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうか"
       },
       "1301330": {
         "start": 5,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "186960",
-    "original": "家主は、この３日間暖房がきかなかった理由をあれこれ並べ立てたが、どうせ見え透いたウソだった。",
-    "en": [
-      {
-        "id": "24097",
-        "text": "The landlord told me a cock and bull story about why we didn't have heat for three days."
-      }
-    ],
-    "indices": "家主 は 此の{この} 三日間{３日間} 暖房 が 効く{きかなかった} 理由 を 彼此{あれこれ} 並べ立てる[03]{並べ立てた}~ が どうせ 見え透く{見え透いた} 嘘{ウソ} だ{だった}",
-    "vocabIds": [
-      "1191990",
-      "1301330",
-      "1215230",
-      "1419860",
-      "1550140",
-      "1508410",
-      "1259150"
-    ],
-    "matches": {
-      "1191990": {
-        "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
-      "1215230": {
-        "start": 8,
-        "length": 1
-      },
-      "1259150": {
-        "start": 35,
-        "length": 5
-      },
-      "1301330": {
+      "1463770": {
         "start": 6,
-        "length": 2
-      },
-      "1419860": {
-        "start": 9,
-        "length": 2
-      },
-      "1508410": {
-        "start": 25,
-        "length": 5
-      },
-      "1550140": {
-        "start": 18,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "189848",
-    "original": "雨が３日間降り続いた。",
-    "en": [
-      {
-        "id": "27004",
-        "text": "The rain lasted three days."
-      },
-      {
-        "id": "508812",
-        "text": "The rain lasted for three days."
-      }
-    ],
-    "indices": "雨 が 三日間{３日間} 降り続く{降り続いた}",
-    "vocabIds": [
-      "1171900",
-      "1301330",
-      "1215230",
-      "1852520"
-    ],
-    "matches": {
-      "1171900": {
-        "start": 0,
-        "length": 1
-      },
-      "1215230": {
-        "start": 4,
-        "length": 1
-      },
-      "1301330": {
-        "start": 2,
-        "length": 2
-      },
-      "1852520": {
-        "start": 5,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "190860",
-    "original": "医者は、母がもう３日間寝ている方がよいと忠告した。",
-    "en": [
-      {
-        "id": "28020",
-        "text": "The doctor advised that my mother stay in bed for three more days."
-      }
-    ],
-    "indices": "医者 は 母(はは) が もう 三日間{３日間} 寝る{寝ている} 方が良い{方がよい} と 忠告 為る(する){した}",
-    "vocabIds": [
-      "1159980",
-      "1514990",
-      "1301330",
-      "1215230",
-      "1360010",
-      "1516930",
-      "1426140"
-    ],
-    "matches": {
-      "1159980": {
-        "start": 0,
-        "length": 2
-      },
-      "1215230": {
-        "start": 10,
-        "length": 1
-      },
-      "1301330": {
-        "start": 8,
-        "length": 2
-      },
-      "1360010": {
-        "start": 11,
-        "length": 2
-      },
-      "1426140": {
-        "start": 20,
-        "length": 2
-      },
-      "1514990": {
-        "start": 4,
-        "length": 1
-      },
-      "1516930": {
-        "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2536,16 +2731,24 @@
     "indices": "私(わたし)[01]{わたし} は 三日[02]{３日} で(#2028980) 其れ[01]{それ} を 建てる{建てよう}",
     "vocabIds": [
       "1301330",
-      "2609780"
+      "1463770",
+      "1257330"
     ],
     "matches": {
+      "1257330": {
+        "start": 11,
+        "length": 3,
+        "reading": "たてよ"
+      },
       "1301330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
-      "2609780": {
-        "start": 11,
-        "length": 2
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2562,20 +2765,29 @@
     "vocabIds": [
       "1578010",
       "1301330",
-      "2211570"
+      "1463770",
+      "1333150"
     ],
     "matches": {
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1333150": {
+        "start": 9,
+        "length": 2,
+        "reading": "くさく"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1578010": {
         "start": 2,
-        "length": 1
-      },
-      "2211570": {
-        "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "さかな"
       }
     }
   },
@@ -2591,6 +2803,8 @@
     "indices": "本の{ほんの} 日(にち)[03] 前(まえ) に 彼女 に 会う[01]{会った}",
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1483150",
       "1198180"
@@ -2598,19 +2812,33 @@
     "matches": {
       "1198180": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
       },
       "1301330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1392580": {
+        "start": 7,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
       },
       "1483150": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -2626,36 +2854,66 @@
     "indices": "其れ[01]{それ} は 今日 から[01] 一週間 後(ご) 詰まり{つまり} 五月(ごがつ){５月} 三日{３日} に 行われる だろう",
     "vocabIds": [
       "1579110",
+      "1160790",
       "1163270",
+      "1333500",
       "1269320",
       "1268170",
       "1301330",
+      "1463770",
+      "1589060",
       "1643580"
     ],
     "matches": {
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163270": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "いちしゅうかん"
       },
       "1268170": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ごがつ"
       },
       "1269320": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1301330": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1333500": {
+        "start": 8,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1463770": {
+        "start": 18,
+        "length": 1,
+        "reading": "にち"
       },
       "1579110": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1589060": {
+        "start": 20,
+        "length": 2,
+        "reading": "おこなわ"
       },
       "1643580": {
         "start": 20,
-        "length": 4
+        "length": 4,
+        "reading": "おこなわれる"
       }
     }
   },
@@ -2674,28 +2932,45 @@
       "1269320",
       "1268170",
       "1301330",
+      "1463770",
+      "1589060",
       "1643580"
     ],
     "matches": {
       "1268170": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ごがつ"
       },
       "1269320": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1301330": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1333500": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1463770": {
+        "start": 18,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1589060": {
+        "start": 20,
+        "length": 2,
+        "reading": "おこなわ"
       },
       "1643580": {
         "start": 20,
-        "length": 4
+        "length": 4,
+        "reading": "おこなわれる"
       }
     }
   },
@@ -2715,16 +2990,24 @@
     "indices": "其れ[01]{それ} は 三日[02]{３日} 前(まえ)[02] の 事(こと){こと} だ{だった}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1392580"
     ],
     "matches": {
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1392580": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2740,21 +3023,30 @@
     "indices": "其れから{それから} 三日{３日} 目(め)[07] に の で(#2028980) 婚礼 が[01] 有る{あった}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1604890",
       "1289730"
     ],
     "matches": {
       "1289730": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "こんれい"
       },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1604890": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "め"
       }
     }
   },
@@ -2773,78 +3065,39 @@
       "1523400",
       "1595610",
       "1301330",
+      "1463770",
       "1487660"
     ],
     "matches": {
       "1301330": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 17,
+        "length": 1,
+        "reading": "にち"
       },
       "1487660": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1523400": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ほんやく"
       },
       "1561840": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ろんぶん"
       },
       "1595610": {
         "start": 11,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "206504",
-    "original": "その問題について手を打つ前に彼は３日間じっくり考えた。",
-    "en": [
-      {
-        "id": "43752",
-        "text": "He turned the problem over in his mind for three days before he did anything about it."
-      }
-    ],
-    "indices": "其の[01]{その} 問題 に就いて{について} 手を打つ[01] 前(まえ) に 彼(かれ)[01] は 三日間{３日間} じっくり 考える{考えた}",
-    "vocabIds": [
-      "1536010",
-      "2200440",
-      "1392590",
-      "1483070",
-      "1301330",
-      "1215230",
-      "1281020"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 18,
-        "length": 1
-      },
-      "1281020": {
-        "start": 23,
-        "length": 3
-      },
-      "1301330": {
-        "start": 16,
-        "length": 2
-      },
-      "1392590": {
-        "start": 12,
-        "length": 2
-      },
-      "1483070": {
-        "start": 14,
-        "length": 1
-      },
-      "1536010": {
-        "start": 2,
-        "length": 2
-      },
-      "2200440": {
-        "start": 8,
-        "length": 4
+        "length": 5,
+        "reading": "すくなくとも"
       }
     }
   },
@@ -2861,59 +3114,29 @@
     "vocabIds": [
       "1420400",
       "1457200",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1420400": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1457200": {
         "start": 6,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "208560",
-    "original": "その切符は３日間有効である。",
-    "en": [
-      {
-        "id": "45819",
-        "text": "The ticket holds good for three days."
+        "length": 2,
+        "reading": "とどい"
       },
-      {
-        "id": "1409674",
-        "text": "The ticket is good for three days."
-      }
-    ],
-    "indices": "其の[01]{その} 切符 は 三日間{３日間} 有効 である",
-    "vocabIds": [
-      "1385170",
-      "1301330",
-      "1215230",
-      "1541290"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 7,
-        "length": 1
-      },
-      "1301330": {
-        "start": 5,
-        "length": 2
-      },
-      "1385170": {
-        "start": 2,
-        "length": 2
-      },
-      "1541290": {
-        "start": 8,
-        "length": 2
+      "1463770": {
+        "start": 14,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2933,16 +3156,30 @@
     "indices": "其の[01]{その} 事(こと){こと} は 日(にち)[03] 考える{考えさせて} 呉れる{くれ}",
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1281020",
       "1281000"
     ],
     "matches": {
       "1281000": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1281020": {
+        "start": 9,
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1301330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2958,16 +3195,30 @@
     "indices": "は インフルエンザ で(#2028980) 三日[02]{３日} 寝る{寝ている}",
     "vocabIds": [
       "1301330",
-      "1360010"
+      "1463770",
+      "1360010",
+      "1642760"
     ],
     "matches": {
       "1301330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1360010": {
         "start": 13,
-        "length": 2
+        "length": 1,
+        "reading": "ね"
+      },
+      "1463770": {
+        "start": 12,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1642760": {
+        "start": 13,
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -2991,31 +3242,48 @@
     "indices": "此の{この} 本(ほん)[01] を 読む{読み} 終える のに 私(わたし)[01] は 三日[02]{３日} 掛かる[01]{かかった}",
     "vocabIds": [
       "1522150",
+      "1456360",
       "1456130",
       "1332760",
       "1311110",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1332760": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おえる"
       },
       "1456130": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "よみ"
+      },
+      "1456360": {
+        "start": 4,
+        "length": 2,
+        "reading": "よみ"
+      },
+      "1463770": {
+        "start": 14,
+        "length": 1,
+        "reading": "にち"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -3035,21 +3303,36 @@
     "indices": "此の{この} 本(ほん)[01] を 読む{読み} 上げる{あげる} の に 三日[02]{３日} 掛かる[01]{かかった}",
     "vocabIds": [
       "1522150",
+      "1456360",
       "1456130",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1456130": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "よみ"
+      },
+      "1456360": {
+        "start": 4,
+        "length": 2,
+        "reading": "よみ"
+      },
+      "1463770": {
+        "start": 12,
+        "length": 1,
+        "reading": "にち"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -3067,29 +3350,40 @@
       "1522150",
       "1247250",
       "1301330",
+      "1463770",
       "1456360",
       "1191060"
     ],
     "matches": {
       "1191060": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "かのう"
       },
       "1247250": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1456360": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "よむ"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -3106,30 +3400,53 @@
     "vocabIds": [
       "1522150",
       "1301330",
+      "1463770",
       "1311110",
       "1411160",
+      "1411110",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 13,
+        "length": 3,
+        "reading": "ください"
       },
       "1301330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1411110": {
+        "start": 10,
+        "length": 2,
+        "reading": "かし"
       },
       "1411160": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かし"
+      },
+      "1463770": {
+        "start": 7,
+        "length": 1,
+        "reading": "にち"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -3146,150 +3463,92 @@
     "vocabIds": [
       "2648780",
       "1301330",
+      "1463770",
       "1155180",
+      "1326830",
       "1599020"
     ],
     "matches": {
       "1155180": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いない"
       },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1326830": {
+        "start": 11,
+        "length": 4,
+        "reading": "とりかえ"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1599020": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "とりかえ"
       },
       "2648780": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "しな"
       }
     }
   },
   {
-    "id": "220858",
-    "original": "この切符は３日間有効です。",
+    "id": "226136",
+    "original": "カレンダーの日付は１９６４年９月２３日でした。",
     "en": [
       {
-        "id": "58176",
-        "text": "This ticket is good for three days."
+        "id": "63476",
+        "text": "The date on the calendar was September 23, 1964."
       }
     ],
-    "indices": "此の{この} 切符 は 三日間{３日間} 有効 です",
+    "indices": "カレンダー[01] の 日付 は 年(ねん)[01]~ 九月{９月}~ 日(にち)[02] です{でした}",
     "vocabIds": [
-      "1385170",
+      "1464340",
+      "2084840",
+      "1243660",
+      "2738200",
       "1301330",
-      "1215230",
-      "1541290"
+      "1463770"
     ],
     "matches": {
-      "1215230": {
-        "start": 7,
-        "length": 1
+      "1243660": {
+        "start": 14,
+        "length": 2,
+        "reading": "くがつ"
       },
       "1301330": {
-        "start": 5,
-        "length": 2
+        "start": 17,
+        "length": 2,
+        "reading": "さんにち"
       },
-      "1385170": {
-        "start": 2,
-        "length": 2
+      "1463770": {
+        "start": 18,
+        "length": 1,
+        "reading": "にち"
       },
-      "1541290": {
-        "start": 8,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "224056",
-    "original": "この３日間何も口にしていない。",
-    "en": [
-      {
-        "id": "61392",
-        "text": "I have eaten nothing for the past three days."
+      "1464340": {
+        "start": 6,
+        "length": 2,
+        "reading": "ひづけ"
       },
-      {
-        "id": "7794613",
-        "text": "I've eaten nothing for the past three days."
+      "2084840": {
+        "start": 13,
+        "length": 1,
+        "reading": "ねん"
       },
-      {
-        "id": "7794612",
-        "text": "I haven't eaten anything for the past three days."
-      },
-      {
-        "id": "253488",
-        "text": "I have not eaten anything for the last three days."
-      },
-      {
-        "id": "7780562",
-        "text": "I haven't eaten anything for the last three days."
-      },
-      {
-        "id": "838820",
-        "text": "I haven't eaten anything in the past three days."
-      }
-    ],
-    "indices": "此の{この} 三日間{３日間} 何も[01] 口にする[01]{口にしていない}~",
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1188490",
-      "1275640"
-    ],
-    "matches": {
-      "1188490": {
-        "start": 5,
-        "length": 2
-      },
-      "1215230": {
-        "start": 4,
-        "length": 1
-      },
-      "1275640": {
-        "start": 7,
-        "length": 1
-      },
-      "1301330": {
-        "start": 2,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "224057",
-    "original": "この３日間雨が降り続いている。",
-    "en": [
-      {
-        "id": "61393",
-        "text": "It has kept raining for the past three days."
-      }
-    ],
-    "indices": "此の{この} 三日間{３日間} 雨 が 降り続く{降り続いている}",
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1171900",
-      "1852520"
-    ],
-    "matches": {
-      "1171900": {
-        "start": 5,
-        "length": 1
-      },
-      "1215230": {
-        "start": 4,
-        "length": 1
-      },
-      "1301330": {
-        "start": 2,
-        "length": 2
-      },
-      "1852520": {
-        "start": 7,
-        "length": 5
+      "2738200": {
+        "start": 16,
+        "length": 3,
+        "reading": "にさんにち"
       }
     }
   },
@@ -3305,16 +3564,30 @@
     "indices": "従兄弟{いとこ} 達{たち} は 三日{３日} 中(じゅう)[02] に 来る(くる){くる} でしょう[01]",
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1464250",
       "1423310"
     ],
     "matches": {
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1423310": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464250": {
+        "start": 9,
+        "length": 2,
+        "reading": "にちちゅう"
       }
     }
   },
@@ -3332,29 +3605,40 @@
       "1605820",
       "1578010",
       "1301330",
+      "1463770",
       "1251100",
       "1497800"
     ],
     "matches": {
       "1251100": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たつ"
       },
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
       },
       "1497800": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "くさる"
       },
       "1578010": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "さかな"
       },
       "1605820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -3375,25 +3659,41 @@
     "vocabIds": [
       "1277450",
       "2037320",
+      "1008860",
       "1301330",
+      "1463770",
       "1559610"
     ],
     "matches": {
+      "1008860": {
+        "start": 7,
+        "length": 2,
+        "reading": "いえ"
+      },
       "1277450": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1301330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 11,
+        "length": 1,
+        "reading": "にち"
       },
       "1559610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "れんぞく"
       },
       "2037320": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "とはいえ"
       }
     }
   },
@@ -3409,16 +3709,24 @@
     "indices": "貴方(あなた)[01]{あなた} は 其れ[01]{それ} を 三日[02]{３日} で(#2028980) 建てる のです か",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1257330"
     ],
     "matches": {
       "1257330": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "たてる"
       },
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -3438,21 +3746,30 @@
     "indices": "貴方(あなた)[01]{あなた} に 本の{ほんの} 三日[02]{３日} しか 掛かる[01]{かからない} 事(こと){こと} が 私(わたし)[01] には 週間 掛かる[01]{かかります}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1311110",
       "1333500"
     ],
     "matches": {
       "1301330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1333500": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -3469,25 +3786,35 @@
     "vocabIds": [
       "1561330",
       "1301330",
+      "1463770",
       "1499320",
       "1543750"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1499320": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1543750": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
       },
       "1561330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ろくがつ"
       }
     }
   },
@@ -3503,21 +3830,30 @@
     "indices": "三日{３日} 連続 で(#2028980) 徹夜 為る(する){してる} から もう[01] あっぷあっぷ[02]{アップアップ}~ だ よ[01]",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1559610",
       "1437700"
     ],
     "matches": {
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1437700": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "てつや"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1559610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "れんぞく"
       }
     }
   },
@@ -3533,21 +3869,36 @@
     "indices": "三日[02]{３日} 連続 為る(する){して} 雨 が 降る(ふる){降った}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1559610",
-      "2851949"
+      "1171900",
+      "1282790"
     ],
     "matches": {
+      "1171900": {
+        "start": 6,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふっ"
+      },
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1559610": {
         "start": 2,
-        "length": 2
-      },
-      "2851949": {
-        "start": 6,
-        "length": 5
+        "length": 2,
+        "reading": "れんぞく"
       }
     }
   },
@@ -3563,21 +3914,42 @@
     "indices": "三日[02]{３日} 後(ご) に 来る(くる)[01]{来て} 下さい[02]{ください}",
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1269320",
       "2640160",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1547710": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 4,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "2640160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -3593,21 +3965,42 @@
     "indices": "三日[02]{３日} 続ける{続けて} 雨 が 降る(ふる){降った}",
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1405800",
       "2768100",
-      "2851949"
+      "1171900",
+      "1282790"
     ],
     "matches": {
+      "1171900": {
+        "start": 5,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふっ"
+      },
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1405800": {
+        "start": 2,
+        "length": 2,
+        "reading": "つづけ"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "2768100": {
         "start": 2,
-        "length": 3
-      },
-      "2851949": {
-        "start": 5,
-        "length": 5
+        "length": 3,
+        "reading": "つづけて"
       }
     }
   },
@@ -3623,100 +4016,54 @@
     "indices": "三日[02]{３日} 後(ご) になって初めて{になってはじめて} 彼女 が 失踪~ 為る(する){した} 事(こと){こと} を 知る{知った}",
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1269320",
+      "2640160",
       "2839813",
       "1483150",
       "1320260",
       "1420470"
     ],
     "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1320260": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しっそう"
       },
       "1420470": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1483150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "2640160": {
+        "start": 2,
+        "length": 2,
+        "reading": "ごに"
       },
       "2839813": {
         "start": 2,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "235268",
-    "original": "３日間便秘しています。",
-    "en": [
-      {
-        "id": "2660302",
-        "text": "I have been constipated for three days."
-      }
-    ],
-    "indices": "三日間{３日間} 便秘~ 為る(する){しています}",
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1512580"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 2,
-        "length": 1
-      },
-      "1301330": {
-        "start": 0,
-        "length": 2
-      },
-      "1512580": {
-        "start": 3,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "235269",
-    "original": "３日間続いて雨が降った。",
-    "en": [
-      {
-        "id": "26840",
-        "text": "It rained for three days on end."
-      },
-      {
-        "id": "2350812",
-        "text": "It rained continuously for three days."
-      }
-    ],
-    "indices": "三日間{３日間} 続く[01]{続いて} 雨 が 降る(ふる){降った}",
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "2542450",
-      "2851949"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 2,
-        "length": 1
-      },
-      "1301330": {
-        "start": 0,
-        "length": 2
-      },
-      "2542450": {
-        "start": 3,
-        "length": 3
-      },
-      "2851949": {
-        "start": 6,
-        "length": 5
+        "length": 5,
+        "reading": "ごになって"
       }
     }
   },
@@ -3732,98 +4079,30 @@
     "indices": "三日[02]{３日} 以内 に 返事 為る(する){します}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1155180",
       "1512220"
     ],
     "matches": {
       "1155180": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いない"
       },
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1512220": {
         "start": 5,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "235271",
-    "original": "３日間そこに滞在した。",
-    "en": [
-      {
-        "id": "72649",
-        "text": "He stayed there for three days."
-      }
-    ],
-    "indices": "三日間{３日間} 其処(そこ)[02]{そこ} に 滞在 為る(する){した}",
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1410930"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 2,
-        "length": 1
-      },
-      "1301330": {
-        "start": 0,
-        "length": 2
-      },
-      "1410930": {
-        "start": 6,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "235272",
-    "original": "３日間雨が降り続いている。",
-    "en": [
-      {
-        "id": "72648",
-        "text": "It has rained for three days on end."
-      },
-      {
-        "id": "10553553",
-        "text": "It's rained for three days on end."
-      },
-      {
-        "id": "6437512",
-        "text": "It's been raining for three days."
-      },
-      {
-        "id": "9444530",
-        "text": "It has been raining for three days."
-      }
-    ],
-    "indices": "三日間{３日間} 雨 が 降り続く{降り続いている}",
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1171900",
-      "1852520"
-    ],
-    "matches": {
-      "1171900": {
-        "start": 3,
-        "length": 1
-      },
-      "1215230": {
-        "start": 2,
-        "length": 1
-      },
-      "1301330": {
-        "start": 0,
-        "length": 2
-      },
-      "1852520": {
-        "start": 5,
-        "length": 5
+        "length": 2,
+        "reading": "へんじ"
       }
     }
   },
@@ -3839,21 +4118,36 @@
     "indices": "三日[02]{３日} 経つ{たって} から[06] 返事 が 来る(くる){来た}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1512220",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1512220": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "へんじ"
+      },
+      "1547710": {
+        "start": 10,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 10,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -3869,21 +4163,36 @@
     "indices": "三日{３日} 程{ほど} の 旅行 と 見る{見て} 置く[01]{おきましょう}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1553170",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1259290": {
         "start": 8,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1553170": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
+      },
+      "2256270": {
+        "start": 8,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -3900,20 +4209,29 @@
     "vocabIds": [
       "1300250",
       "1301330",
+      "1463770",
       "1373440"
     ],
     "matches": {
       "1300250": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんがつ"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1373440": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "ひなまつり"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -3929,16 +4247,24 @@
     "indices": "日(にち)[03] 滞在 を 伸ばす[08]{延ばし} たい[01] のです が[03]",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1410930"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1410930": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "たいざい"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -3954,16 +4280,30 @@
     "indices": "日(にち)[03] 寝る{寝てい} 為さい{なさい}",
     "vocabIds": [
       "1301330",
-      "1360010"
+      "1463770",
+      "1360010",
+      "1642760"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1360010": {
         "start": 4,
-        "length": 2
+        "length": 1,
+        "reading": "ね"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1642760": {
+        "start": 4,
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -3979,6 +4319,8 @@
     "indices": "日(にち)[03] 前(まえ)[02] に 彼(かれ)[01] と 駅 で(#2028980) 会う[01]{会った}",
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1483070",
       "1175140",
@@ -3987,23 +4329,38 @@
     "matches": {
       "1175140": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1198180": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1392580": {
+        "start": 4,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -4019,16 +4376,24 @@
     "indices": "日(にち)[03] 骨休め~ 為る(する){して}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1288580"
     ],
     "matches": {
       "1288580": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ほねやすめ"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4043,12 +4408,19 @@
     ],
     "indices": "日(にち)[03] ゆっくり 為る(する){する} と いい(#2820690)[01] です よ[01]",
     "vocabIds": [
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4071,12 +4443,19 @@
     ],
     "indices": "日(にち)[03] も すれば 良くなる{よくなる} よ[01]",
     "vocabIds": [
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4092,6 +4471,7 @@
     "indices": "日(にち)[03] で(#2028980) 東京 見物(けんぶつ) を 為る(する)[01]{する} 事(こと){こと} は 困難 です",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1447690",
       "1260000",
       "1289620"
@@ -4099,19 +4479,28 @@
     "matches": {
       "1260000": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けんぶつ"
       },
       "1289620": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "こんなん"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1447690": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "とうきょう"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4131,6 +4520,7 @@
     "indices": "三日{３日} 経つ{たって} 初めて[02] 彼(かれ)[01] が 到着 為る(する){した}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1342550",
       "1483070",
       "1449870"
@@ -4138,19 +4528,28 @@
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1342550": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "はじめて"
       },
       "1449870": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "とうちゃく"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -4166,16 +4565,24 @@
     "indices": "日(にち)[03] 其処(そこ)[02]{そこ} に 滞在 為る(する){した}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1410930"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1410930": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たいざい"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4191,21 +4598,30 @@
     "indices": "日(にち)[03] 経つ{たって} 初めて[02]{はじめて} 其の[01]{その} 知らせ が 届く[02]{届いた}",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1420400",
       "1457200"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1420400": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1457200": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "とどい"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4221,21 +4637,36 @@
     "indices": "日(にち)[03] すれば 彼(かれ)[01] は 帰って来る{帰ってくる} だろう[01]",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1483070",
+      "1221270",
       "1864140"
     ],
     "matches": {
+      "1221270": {
+        "start": 9,
+        "length": 2,
+        "reading": "かえっ"
+      },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1864140": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "かえってくる"
       }
     }
   },
@@ -4255,16 +4686,24 @@
     "indices": "日(にち)[03] すれば 開花[01]~ 為る(する){する} でしょう[01]",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1202550"
     ],
     "matches": {
       "1202550": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かいか"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4284,21 +4723,30 @@
     "indices": "日(にち)[03] 為る(する)[10]{したら} 元通り{元どおり} 元気 になる[01] よ[01]",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1260670",
       "1260720"
     ],
     "matches": {
       "1260670": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "もと"
       },
       "1260720": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "げんき"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4318,21 +4766,36 @@
     "indices": "日(にち)[03] 御(お){お} 車(くるま) を 貸す{お貸し} 頂ける[01]{いただけない} でしょうか",
     "vocabIds": [
       "1301330",
+      "1463770",
       "2863571",
+      "1323080",
       "1411110"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1323080": {
+        "start": 5,
+        "length": 1,
+        "reading": "くるま"
       },
       "1411110": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かし"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "2863571": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "おくるま"
       }
     }
   },
@@ -4348,6 +4811,7 @@
     "indices": "日(にち)[03] 置きに{おきに} 電話 為る(する)[11]{して} 然うすれば{そうすれば} 若し(もし){もし} 何か{なにか} 起きる[03]{起きて} も 連絡[01] が 保つ{保てる} から",
     "vocabIds": [
       "1301330",
+      "1463770",
       "1443840",
       "1223640",
       "1559900"
@@ -4355,19 +4819,28 @@
     "matches": {
       "1223640": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1443840": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1559900": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "れんらく"
       }
     }
   },
@@ -4384,25 +4857,92 @@
     "vocabIds": [
       "1162120",
       "1301330",
+      "1463770",
       "1919550",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 9,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1162120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちがつ"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1919550": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
+      },
+      "2036870": {
+        "start": 9,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
+    "id": "235945",
+    "original": "１３日の金曜日は不吉な日だと言われている。",
+    "en": [
+      {
+        "id": "73326",
+        "text": "It is said that Friday the 13th is an unlucky day."
+      }
+    ],
+    "indices": "日(にち)[02]~ の 金曜日 は 不吉{不吉な}~ 日(ひ)[01] だ と言われる{と言われている}",
+    "vocabIds": [
+      "2737290",
+      "1301330",
+      "1463770",
+      "1243320",
+      "1491910",
+      "1587040"
+    ],
+    "matches": {
+      "1243320": {
+        "start": 4,
+        "length": 3,
+        "reading": "きんようび"
+      },
+      "1301330": {
+        "start": 1,
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 2,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1491910": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふきつ"
+      },
+      "1587040": {
+        "start": 14,
+        "length": 2,
+        "reading": "いわ"
+      },
+      "2737290": {
+        "start": 0,
+        "length": 3,
+        "reading": "いちさんにち"
       }
     }
   },
@@ -4422,8 +4962,11 @@
     "indices": "才[01]{歳} の 誕生日 の 日(にち)[03] 後(ご) に も 学校 を 卒業[01] 為る(する){しました}",
     "vocabIds": [
       "1294940",
+      "1419080",
       "1419110",
+      "1463770",
       "1301330",
+      "1269320",
       "2640160",
       "1206730",
       "1405890"
@@ -4431,27 +4974,48 @@
     "matches": {
       "1206730": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1269320": {
+        "start": 12,
+        "length": 1,
+        "reading": "ご"
       },
       "1294940": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "さい"
       },
       "1301330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1405890": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "そつぎょう"
+      },
+      "1419080": {
+        "start": 4,
+        "length": 2,
+        "reading": "たんじょう"
       },
       "1419110": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "たんじょうび"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "び"
       },
       "2640160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -4471,16 +5035,24 @@
     "indices": "十月{１０月} 三日[01]{３日}~ です",
     "vocabIds": [
       "1334570",
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1334570": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じゅうがつ"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4500,79 +5072,42 @@
     "indices": "三日[02]{３日} 後(ご) に 又{また} 来る(くる)[01]{来て} 下さい[02]{ください}",
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1269320",
       "2640160",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1547710": {
+        "start": 6,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 6,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "2640160": {
         "start": 2,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "993894",
-    "original": "３日間お通じがありません。",
-    "en": [
-      {
-        "id": "2660302",
-        "text": "I have been constipated for three days."
-      }
-    ],
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "2453560"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 2,
-        "length": 1
-      },
-      "1301330": {
-        "start": 0,
-        "length": 2
-      },
-      "2453560": {
-        "start": 3,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "993896",
-    "original": "３日間便通がありません。",
-    "en": [
-      {
-        "id": "2660302",
-        "text": "I have been constipated for three days."
-      }
-    ],
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1512570"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 2,
-        "length": 1
-      },
-      "1301330": {
-        "start": 0,
-        "length": 2
-      },
-      "1512570": {
-        "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -4588,11 +5123,13 @@
     "vocabIds": [
       "1300250",
       "1301330",
+      "1463770",
       "1373440",
       "1344970",
       "1256170",
       "1375790",
       "1222770",
+      "1589060",
       "1643580",
       "1582710",
       "1442260",
@@ -4601,86 +5138,68 @@
     "matches": {
       "1222770": {
         "start": 27,
-        "length": 3
+        "length": 2,
+        "reading": "いのっ"
       },
       "1256170": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "けんこう"
       },
       "1281930": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "ぎょうじ"
       },
       "1300250": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんがつ"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1344970": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1373440": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "ひなまつり"
       },
       "1375790": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "せいちょう"
       },
       "1442260": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "でんとう"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1582710": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "1589060": {
+        "start": 30,
+        "length": 2,
+        "reading": "おこなわ"
       },
       "1643580": {
         "start": 30,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "1112465",
-    "original": "アメダスによればこの３日間で村の降水量は１２００ミリを超えた。",
-    "en": [
-      {
-        "id": "1681415",
-        "text": "According to AMeDAS, the amount of precipitation in the village has exceeded 1,200 mm in three days."
-      }
-    ],
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1406820",
-      "1282900",
-      "2858625"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 12,
-        "length": 1
-      },
-      "1282900": {
-        "start": 16,
-        "length": 3
-      },
-      "1301330": {
-        "start": 10,
-        "length": 2
-      },
-      "1406820": {
-        "start": 14,
-        "length": 1
-      },
-      "2858625": {
-        "start": 27,
-        "length": 2
+        "length": 4,
+        "reading": "おこなわれる"
       }
     }
   },
@@ -4699,21 +5218,36 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
       "1433470",
+      "1578850",
       "1578790"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1433470": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "つうち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1578790": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 10,
+        "length": 2,
+        "reading": "いき"
       }
     }
   },
@@ -4729,40 +5263,65 @@
     "vocabIds": [
       "1447690",
       "1338240",
+      "1896380",
       "1301330",
+      "1463770",
       "1497610",
       "1310730",
       "1420400",
-      "1329590"
+      "1329590",
+      "1659120"
     ],
     "matches": {
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1310730": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "しん"
       },
       "1329590": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "うけ"
       },
       "1338240": {
         "start": 3,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1420400": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1447690": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とうきょう"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
       },
       "1497610": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
+      },
+      "1659120": {
+        "start": 23,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "1896380": {
+        "start": 3,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -4777,16 +5336,24 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
       "1589060"
     ],
     "matches": {
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       },
       "1589060": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おこなっ"
       }
     }
   },
@@ -4801,16 +5368,24 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
       "1410930"
     ],
     "matches": {
       "1301330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1410930": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たいざい"
+      },
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4825,21 +5400,36 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
       "1227500",
-      "1326980"
+      "1326980",
+      "2809750"
     ],
     "matches": {
       "1227500": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "やすみ"
       },
       "1301330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1326980": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "とっ"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
+      },
+      "2809750": {
+        "start": 10,
+        "length": 2,
+        "reading": "とっ"
       }
     }
   },
@@ -4855,87 +5445,35 @@
     "vocabIds": [
       "1311110",
       "1301330",
+      "1463770",
+      "1392580",
       "1392590"
     ],
     "matches": {
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1392580": {
+        "start": 6,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 6,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "8983412",
-    "original": "トムは３日間、食べることができなかった。",
-    "en": [
-      {
-        "id": "5731004",
-        "text": "Tom couldn't eat for three days."
+        "length": 2,
+        "reading": "まえに"
       },
-      {
-        "id": "12528148",
-        "text": "Tom wasn't able to eat for three days."
-      }
-    ],
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1358280"
-    ],
-    "matches": {
-      "1215230": {
+      "1463770": {
         "start": 5,
-        "length": 1
-      },
-      "1301330": {
-        "start": 3,
-        "length": 2
-      },
-      "1358280": {
-        "start": 7,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "9028871",
-    "original": "雨は３日間降った。",
-    "en": [
-      {
-        "id": "2172744",
-        "text": "It rained for three days."
-      }
-    ],
-    "vocabIds": [
-      "1171900",
-      "1301330",
-      "1215230",
-      "1282790"
-    ],
-    "matches": {
-      "1171900": {
-        "start": 0,
-        "length": 1
-      },
-      "1215230": {
-        "start": 4,
-        "length": 1
-      },
-      "1282790": {
-        "start": 5,
-        "length": 3
-      },
-      "1301330": {
-        "start": 2,
-        "length": 2
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -4949,46 +5487,19 @@
       }
     ],
     "vocabIds": [
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 6,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "9293206",
-    "original": "３日間オーストラリアに滞在する予定なんだ。",
-    "en": [
-      {
-        "id": "7194877",
-        "text": "I plan to stay in Australia for three days."
-      }
-    ],
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1410930",
-      "1543240"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 2,
-        "length": 1
+        "length": 2,
+        "reading": "さんにち"
       },
-      "1301330": {
-        "start": 0,
-        "length": 2
-      },
-      "1410930": {
-        "start": 11,
-        "length": 2
-      },
-      "1543240": {
-        "start": 15,
-        "length": 2
+      "1463770": {
+        "start": 7,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -5002,12 +5513,19 @@
       }
     ],
     "vocabIds": [
-      "1301330"
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -5022,50 +5540,24 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
       "1474850"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1474850": {
         "start": 7,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "9519691",
-    "original": "３日間でその小説を読んだよ。",
-    "en": [
-      {
-        "id": "2388650",
-        "text": "I read the novel in three days."
-      }
-    ],
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1348430",
-      "1456360"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 2,
-        "length": 1
-      },
-      "1301330": {
-        "start": 0,
-        "length": 2
-      },
-      "1348430": {
-        "start": 6,
-        "length": 2
-      },
-      "1456360": {
-        "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "とまる"
       }
     }
   },
@@ -5081,49 +5573,29 @@
     "vocabIds": [
       "1348430",
       "1301330",
+      "1463770",
       "1456360"
     ],
     "matches": {
       "1301330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1348430": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうせつ"
       },
       "1456360": {
         "start": 9,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "9534558",
-    "original": "トムは３日間入院してたんだ。",
-    "en": [
-      {
-        "id": "6250605",
-        "text": "Tom spent three days in the hospital."
-      }
-    ],
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1465720"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "よん"
       },
-      "1301330": {
-        "start": 3,
-        "length": 2
-      },
-      "1465720": {
-        "start": 6,
-        "length": 2
+      "1463770": {
+        "start": 7,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -5139,20 +5611,91 @@
     "vocabIds": [
       "1490220",
       "1301330",
-      "2147200"
+      "1463770",
+      "1196000"
     ],
     "matches": {
+      "1196000": {
+        "start": 8,
+        "length": 3,
+        "reading": "すごし"
+      },
       "1301330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 7,
+        "length": 1,
+        "reading": "にち"
       },
       "1490220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "びょういん"
+      }
+    }
+  },
+  {
+    "id": "9755656",
+    "original": "私は１９８７年２月１３日に生まれました。",
+    "en": [
+      {
+        "id": "9719905",
+        "text": "I was born on February 13, 1987."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "2084840",
+      "1461560",
+      "2737290",
+      "1301330",
+      "1463770",
+      "1378690",
+      "1609350"
+    ],
+    "matches": {
+      "1301330": {
+        "start": 10,
+        "length": 2,
+        "reading": "さんにち"
       },
-      "2147200": {
-        "start": 8,
-        "length": 1
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1378690": {
+        "start": 13,
+        "length": 3,
+        "reading": "うまれ"
+      },
+      "1461560": {
+        "start": 7,
+        "length": 2,
+        "reading": "にがつ"
+      },
+      "1463770": {
+        "start": 11,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1609350": {
+        "start": 13,
+        "length": 3,
+        "reading": "うまれ"
+      },
+      "2084840": {
+        "start": 6,
+        "length": 1,
+        "reading": "ねん"
+      },
+      "2737290": {
+        "start": 9,
+        "length": 3,
+        "reading": "いちさんにち"
       }
     }
   },
@@ -5169,7 +5712,9 @@
       "1582710",
       "1300250",
       "1301330",
+      "1463770",
       "1448300",
+      "1266440",
       "1344970",
       "1375790",
       "1278400",
@@ -5178,75 +5723,107 @@
       "2075960",
       "1448290",
       "1194500",
+      "1357210",
       "1357160",
-      "1649520",
-      "1357600",
+      "1475470",
+      "1578770",
       "1600890"
     ],
     "matches": {
       "1194500": {
         "start": 45,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1217950": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "ねがう"
+      },
+      "1266440": {
+        "start": 17,
+        "length": 2,
+        "reading": "よば"
       },
       "1278400": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "こうふく"
       },
       "1281930": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "ぎょうじ"
       },
       "1300250": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんがつ"
       },
       "1301330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1344970": {
         "start": 21,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1357160": {
         "start": 49,
-        "length": 2
+        "length": 2,
+        "reading": "かざり"
       },
-      "1357600": {
-        "start": 61,
-        "length": 1
+      "1357210": {
+        "start": 49,
+        "length": 2,
+        "reading": "かざり"
       },
       "1375790": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "せいちょう"
       },
       "1448290": {
         "start": 43,
-        "length": 1
+        "length": 1,
+        "reading": "もも"
       },
       "1448300": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "もものせっく"
+      },
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1475470": {
+        "start": 59,
+        "length": 1,
+        "reading": "うす"
+      },
+      "1578770": {
+        "start": 60,
+        "length": 2,
+        "reading": "こうしょく"
       },
       "1582710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
       },
       "1600890": {
         "start": 71,
-        "length": 3
-      },
-      "1649520": {
-        "start": 59,
-        "length": 2
+        "length": 3,
+        "reading": "はなことば"
       },
       "2075960": {
         "start": 39,
-        "length": 3
+        "length": 3,
+        "reading": "おひなさま"
       }
     }
   },
@@ -5261,21 +5838,36 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
-      "1597470"
+      "1422970"
     ],
     "matches": {
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1392580": {
+        "start": 5,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
-      "1597470": {
+      "1422970": {
         "start": 7,
-        "length": 1
+        "length": 2,
+        "reading": "つき"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -5291,91 +5883,29 @@
     "vocabIds": [
       "1333450",
       "1301330",
+      "1463770",
       "1451150"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1333450": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "しゅう"
       },
       "1451150": {
         "start": 5,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "9453493",
-    "original": "定休日は、毎月曜日・第３日曜日です。",
-    "en": [
-      {
-        "id": "10262630",
-        "text": "Regularly closed days, every Monday and 3rd Sunday."
+        "length": 2,
+        "reading": "はたらい"
       },
-      {
-        "id": "10262634",
-        "text": "Closed regularly, every Monday and 3rd Sunday."
-      },
-      {
-        "id": "10262824",
-        "text": "We're regularly closed on Monday and 3rd Sunday."
-      },
-      {
-        "id": "10262825",
-        "text": "We're regularly closed, every Monday and 3rd Sunday."
-      },
-      {
-        "id": "10287722",
-        "text": "We're closed every Monday and the third Sunday of every month."
-      },
-      {
-        "id": "10313732",
-        "text": "We close every Monday and every third Sunday."
-      },
-      {
-        "id": "10313736",
-        "text": "We're closed every Monday and third Sunday."
-      },
-      {
-        "id": "10313742",
-        "text": "We're closed Mondays and every third Sunday."
-      },
-      {
-        "id": "10313744",
-        "text": "We close each Monday and every third Sunday."
-      }
-    ],
-    "vocabIds": [
-      "1435540",
-      "1584350",
-      "1545770",
-      "1415260",
-      "1301330"
-    ],
-    "matches": {
-      "1301330": {
-        "start": 11,
-        "length": 2
-      },
-      "1415260": {
-        "start": 10,
-        "length": 1
-      },
-      "1435540": {
-        "start": 0,
-        "length": 3
-      },
-      "1545770": {
-        "start": 7,
-        "length": 2
-      },
-      "1584350": {
-        "start": 5,
-        "length": 2
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -5390,31 +5920,42 @@
     ],
     "vocabIds": [
       "1311110",
-      "1607070",
       "1301330",
+      "1463770",
+      "1524650",
       "1524660",
       "1443840"
     ],
     "matches": {
       "1301330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1443840": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1524650": {
+        "start": 9,
+        "length": 1,
+        "reading": "ごと"
       },
       "1524660": {
         "start": 9,
-        "length": 2
-      },
-      "1607070": {
-        "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ごとに"
       }
     }
   },
@@ -5429,21 +5970,36 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1524650",
       "1524660",
       "1547720"
     ],
     "matches": {
       "1301330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1524650": {
+        "start": 10,
+        "length": 1,
+        "reading": "ごと"
       },
       "1524660": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ごとに"
       },
       "1547720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       }
     }
   },
@@ -5458,21 +6014,30 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
       "1155180",
       "1199680"
     ],
     "matches": {
       "1155180": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いない"
       },
       "1199680": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かいとう"
       },
       "1301330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -5487,45 +6052,36 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1730220",
+      "1464860",
       "1547720"
     ],
     "matches": {
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464860": {
+        "start": 4,
+        "length": 4,
+        "reading": "にちごとに"
       },
       "1547720": {
         "start": 11,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "10627021",
-    "original": "トムは３日間そこに滞在しました。",
-    "en": [
-      {
-        "id": "3185266",
-        "text": "Tom stayed there for three days."
-      }
-    ],
-    "vocabIds": [
-      "1301330",
-      "1215230",
-      "1410930"
-    ],
-    "matches": {
-      "1215230": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "くる"
       },
-      "1301330": {
-        "start": 3,
-        "length": 2
-      },
-      "1410930": {
-        "start": 9,
-        "length": 2
+      "1730220": {
+        "start": 4,
+        "length": 3,
+        "reading": "にちごと"
       }
     }
   },
@@ -5540,21 +6096,30 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
       "1215230",
       "1552760"
     ],
     "matches": {
       "1215230": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1552760": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "るす"
       }
     }
   },
@@ -5569,21 +6134,30 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
       "1191730",
       "1474850"
     ],
     "matches": {
       "1191730": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "か"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1474850": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       }
     }
   },
@@ -5597,17 +6171,25 @@
       }
     ],
     "vocabIds": [
-      "2720360",
-      "1301330"
+      "1589600",
+      "1301330",
+      "1463770"
     ],
     "matches": {
       "1301330": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
-      "2720360": {
+      "1463770": {
+        "start": 19,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1589600": {
         "start": 6,
-        "length": 1
+        "length": 3,
+        "reading": "おわら"
       }
     }
   },
@@ -5622,50 +6204,30 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1535880",
       "2092960"
     ],
     "matches": {
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1535880": {
+        "start": 8,
+        "length": 2,
+        "reading": "もどっ"
       },
       "2092960": {
         "start": 8,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "11195208",
-    "original": "太朗は、３日間日本にいました。",
-    "en": [
-      {
-        "id": "10773600",
-        "text": "Taro stayed in Japan for three days."
-      }
-    ],
-    "vocabIds": [
-      "2653970",
-      "1301330",
-      "2691900",
-      "2849135"
-    ],
-    "matches": {
-      "1301330": {
-        "start": 4,
-        "length": 2
-      },
-      "2653970": {
-        "start": 0,
-        "length": 1
-      },
-      "2691900": {
-        "start": 6,
-        "length": 2
-      },
-      "2849135": {
-        "start": 8,
-        "length": 2
+        "length": 5,
+        "reading": "もどってくる"
       }
     }
   },
@@ -5680,21 +6242,36 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1392580",
       "1392590",
       "1411300"
     ],
     "matches": {
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1392580": {
+        "start": 5,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1411300": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たいいん"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -5713,21 +6290,36 @@
     ],
     "vocabIds": [
       "1301330",
+      "1463770",
+      "1269320",
       "2640160",
       "1449870"
     ],
     "matches": {
+      "1269320": {
+        "start": 5,
+        "length": 1,
+        "reading": "ご"
+      },
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1449870": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "とうちゃく"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       },
       "2640160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ごに"
       }
     }
   }

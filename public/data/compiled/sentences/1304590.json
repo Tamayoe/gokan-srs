@@ -1,5 +1,44 @@
 [
   {
+    "id": "162468",
+    "original": "私の預金残高はどうなっていますか。",
+    "en": [
+      {
+        "id": "252046",
+        "text": "What's the balance of my account?"
+      }
+    ],
+    "indices": "私(わたし)[01]{私の} 預金~ 残高~ は 如何(どう){どう} 成る{なっています} か",
+    "vocabIds": [
+      "1311110",
+      "1545020",
+      "2620130",
+      "1304590"
+    ],
+    "matches": {
+      "1304590": {
+        "start": 4,
+        "length": 2,
+        "reading": "ざんだか"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1545020": {
+        "start": 2,
+        "length": 2,
+        "reading": "よきん"
+      },
+      "2620130": {
+        "start": 2,
+        "length": 4,
+        "reading": "よきんざんだか"
+      }
+    }
+  },
+  {
     "id": "169278",
     "original": "残高を教えてくれますか。",
     "en": [
@@ -11,16 +50,24 @@
     "indices": "残高 を 教える{教えて} 呉れる{くれます} か",
     "vocabIds": [
       "1304590",
-      "1236900"
+      "1236900",
+      "1236890"
     ],
     "matches": {
+      "1236890": {
+        "start": 3,
+        "length": 2,
+        "reading": "おしえ"
+      },
       "1236900": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "おしえ"
       },
       "1304590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ざんだか"
       }
     }
   },
@@ -41,11 +88,13 @@
     "matches": {
       "1304590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ざんだか"
       },
       "1420470": {
         "start": 3,
-        "length": 4
+        "length": 2,
+        "reading": "しり"
       }
     }
   },
@@ -65,11 +114,13 @@
     "matches": {
       "1276150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こうざ"
       },
       "1304590": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ざんだか"
       }
     }
   }

@@ -1,5 +1,38 @@
 [
   {
+    "id": "83628",
+    "original": "聞け、見よ、しかし黙っていよ。",
+    "en": [
+      {
+        "id": "320088",
+        "text": "Hear and see and be still."
+      }
+    ],
+    "indices": "聞く{聞け} 見る{見よ} 然し{しかし} 黙る{黙ってい} よ[01]",
+    "vocabIds": [
+      "2517260",
+      "1259290",
+      "1534930"
+    ],
+    "matches": {
+      "1259290": {
+        "start": 3,
+        "length": 2,
+        "reading": "みよ"
+      },
+      "1534930": {
+        "start": 9,
+        "length": 2,
+        "reading": "だまっ"
+      },
+      "2517260": {
+        "start": 0,
+        "length": 2,
+        "reading": "きけ"
+      }
+    }
+  },
+  {
     "id": "142641",
     "original": "声が聞けてうれしいよ。",
     "en": [
@@ -16,11 +49,40 @@
     "matches": {
       "1380440": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "こえ"
       },
       "2517260": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "きけ"
+      }
+    }
+  },
+  {
+    "id": "145604",
+    "original": "心ここに在らざれば聞けども聴こえず。",
+    "en": [
+      {
+        "id": "268958",
+        "text": "There are none so deaf as those who won't hear."
+      }
+    ],
+    "indices": "心(こころ) 此処[01]{ここ} に 有る{在らざれば} 聞く{聞けども} 聞こえる[01]{聴こえず}",
+    "vocabIds": [
+      "1360480",
+      "2517260"
+    ],
+    "matches": {
+      "1360480": {
+        "start": 0,
+        "length": 1,
+        "reading": "こころ"
+      },
+      "2517260": {
+        "start": 9,
+        "length": 2,
+        "reading": "きけ"
       }
     }
   },
@@ -37,25 +99,29 @@
     "vocabIds": [
       "1312350",
       "1254690",
-      "2259840",
+      "1593480",
       "2517260"
     ],
     "matches": {
       "1254690": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けっか"
       },
       "1312350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
-      "2259840": {
+      "1593480": {
         "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "こわく"
       },
       "2517260": {
         "start": 11,
-        "length": 4
+        "length": 2,
+        "reading": "きけ"
       }
     }
   },
@@ -72,6 +138,8 @@
     "vocabIds": [
       "1311110",
       "1449870",
+      "1421970",
+      "1483070",
       "1000420",
       "1176960",
       "2517260"
@@ -79,23 +147,38 @@
     "matches": {
       "1000420": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1176960": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "えんぜつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1421970": {
+        "start": 5,
+        "length": 3,
+        "reading": "おそかっ"
       },
       "1449870": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とうちゃく"
+      },
+      "1483070": {
+        "start": 11,
+        "length": 1,
+        "reading": "かれ"
       },
       "2517260": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "きけ"
       }
     }
   },
@@ -112,6 +195,7 @@
     "vocabIds": [
       "1204380",
       "1352130",
+      "1235910",
       "1318610",
       "1380440",
       "2517260"
@@ -119,23 +203,33 @@
     "matches": {
       "1204380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "がけ"
+      },
+      "1235910": {
+        "start": 5,
+        "length": 2,
+        "reading": "さけべ"
       },
       "1318610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1352130": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1380440": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "こえ"
       },
       "2517260": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "きける"
       }
     }
   },
@@ -151,16 +245,30 @@
     "indices": "貴方(あなた)[01]{あなた} は 時(じ)[01] に ラジオ で(#2028980) ニュース が 聞く{聞けます} よ[01]",
     "vocabIds": [
       "2845349",
+      "1315840",
+      "2021540",
       "2517260"
     ],
     "matches": {
+      "1315840": {
+        "start": 5,
+        "length": 1,
+        "reading": "じ"
+      },
+      "2021540": {
+        "start": 5,
+        "length": 2,
+        "reading": "じに"
+      },
       "2517260": {
         "start": 16,
-        "length": 4
+        "length": 2,
+        "reading": "きけ"
       },
       "2845349": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうじ"
       }
     }
   },
@@ -181,11 +289,13 @@
     "matches": {
       "1380440": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "こえ"
       },
       "2517260": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "きけ"
       }
     }
   },
@@ -206,15 +316,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1380440": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "こえ"
       },
       "2517260": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "きけ"
       }
     }
   },
@@ -235,15 +348,18 @@
     "matches": {
       "1247250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1482290": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ばんごう"
       },
       "2517260": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "きけ"
       }
     }
   },
@@ -264,15 +380,18 @@
     "matches": {
       "1219510": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "うれしい"
       },
       "1380440": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "こえ"
       },
       "2517260": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "きけ"
       }
     }
   },
@@ -293,15 +412,18 @@
     "matches": {
       "1219510": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "うれしい"
       },
       "1380440": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "こえ"
       },
       "2517260": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "きけ"
       }
     }
   },
@@ -319,27 +441,31 @@
       }
     ],
     "vocabIds": [
-      "1580260",
+      "1345930",
       "1523060",
       "1591430",
       "2517260"
     ],
     "matches": {
+      "1345930": {
+        "start": 5,
+        "length": 3,
+        "reading": "きずつけ"
+      },
       "1523060": {
         "start": 29,
-        "length": 2
-      },
-      "1580260": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "ほんとう"
       },
       "1591430": {
         "start": 32,
-        "length": 3
+        "length": 3,
+        "reading": "きもち"
       },
       "2517260": {
         "start": 36,
-        "length": 3
+        "length": 2,
+        "reading": "きけ"
       }
     }
   },
@@ -364,39 +490,18 @@
     "matches": {
       "1219510": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "うれしい"
       },
       "1380440": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "こえ"
       },
       "2517260": {
         "start": 2,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "12167690",
-    "original": "ちゃんと聞けって。そういう意味じゃないんだ。",
-    "en": [
-      {
-        "id": "9460815",
-        "text": "Listen, it wasn't meant like that."
-      }
-    ],
-    "vocabIds": [
-      "2517260",
-      "1156800"
-    ],
-    "matches": {
-      "1156800": {
-        "start": 13,
-        "length": 2
-      },
-      "2517260": {
-        "start": 4,
-        "length": 4
+        "length": 2,
+        "reading": "きけ"
       }
     }
   }

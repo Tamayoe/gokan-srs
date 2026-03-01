@@ -10,37 +10,61 @@
     ],
     "indices": "来る日も来る日も 其の[01]{その} 犬[01] は 主人(しゅじん) を 迎える[01]{迎え} に 駅 へ 行く[01]{行った}",
     "vocabIds": [
-      "1547740",
+      "1547720",
+      "1547730",
+      "1463770",
       "1258330",
       "1579780",
+      "1253190",
       "1253180",
       "1175140",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1175140": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1253180": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "むかえ"
+      },
+      "1253190": {
+        "start": 15,
+        "length": 2,
+        "reading": "むかえ"
       },
       "1258330": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
-      "1547740": {
+      "1463770": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひ"
+      },
+      "1547720": {
         "start": 0,
-        "length": 8
+        "length": 2,
+        "reading": "きたる"
+      },
+      "1547730": {
+        "start": 0,
+        "length": 3,
+        "reading": "きたるひ"
+      },
+      "1578850": {
+        "start": 20,
+        "length": 2,
+        "reading": "いっ"
       },
       "1579780": {
         "start": 12,
-        "length": 2
-      },
-      "1589060": {
-        "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -55,7 +79,9 @@
     ],
     "indices": "来る日も来る日も 其の[01]{その} 犬[01] は 駅 の 前(まえ) で(#2028980) 主人(しゅじん) を 待つ[01]{待って} 座る[01]{座っていた}",
     "vocabIds": [
-      "1547740",
+      "1547720",
+      "1547730",
+      "1463770",
       "1258330",
       "1175140",
       "1392580",
@@ -66,31 +92,48 @@
     "matches": {
       "1175140": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1258330": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1291800": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
       },
       "1392580": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1410590": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "まっ"
       },
-      "1547740": {
+      "1463770": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひ"
+      },
+      "1547720": {
         "start": 0,
-        "length": 8
+        "length": 2,
+        "reading": "きたる"
+      },
+      "1547730": {
+        "start": 0,
+        "length": 3,
+        "reading": "きたるひ"
       },
       "1579780": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -108,29 +151,140 @@
       "1483150",
       "1490230",
       "1579780",
-      "1009850",
-      "1440810"
+      "1495700"
     ],
     "matches": {
-      "1009850": {
-        "start": 8,
-        "length": 3
-      },
-      "1440810": {
-        "start": 11,
-        "length": 3
-      },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1490230": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
+      },
+      "1495700": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきそっ"
       },
       "1579780": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      }
+    }
+  },
+  {
+    "id": "92836",
+    "original": "彼女はご主人に比べてとても若く見えます。",
+    "en": [
+      {
+        "id": "310873",
+        "text": "She looks very young as against her husband."
+      },
+      {
+        "id": "11091780",
+        "text": "She looks very young compared to her husband."
+      }
+    ],
+    "indices": "彼女[01] は 御(ご){ご} 主人(しゅじん) に 比べる[01]{比べて} 迚も[01]{とても} 若い{若く} 見える(みえる){見えます}",
+    "vocabIds": [
+      "1483150",
+      "1270390",
+      "1579780",
+      "1009840",
+      "1483540",
+      "1003950",
+      "1324300",
+      "1259140"
+    ],
+    "matches": {
+      "1003950": {
+        "start": 7,
+        "length": 2,
+        "reading": "くらべ"
+      },
+      "1009840": {
+        "start": 6,
+        "length": 3,
+        "reading": "にくらべ"
+      },
+      "1259140": {
+        "start": 15,
+        "length": 2,
+        "reading": "みえ"
+      },
+      "1270390": {
+        "start": 3,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1324300": {
+        "start": 13,
+        "length": 2,
+        "reading": "わかく"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483540": {
+        "start": 7,
+        "length": 2,
+        "reading": "くらべ"
+      },
+      "1579780": {
+        "start": 4,
+        "length": 2,
+        "reading": "しゅじん"
+      }
+    }
+  },
+  {
+    "id": "92838",
+    "original": "彼女はご主人と性格が合わないそうよ。",
+    "en": [
+      {
+        "id": "310872",
+        "text": "They say she and her husband can't agree on anything."
+      }
+    ],
+    "indices": "彼女[01] は 御(ご){ご} 主人(しゅじん) と 性格 が 合う{合わない} 然う[01]{そう} よ[01]",
+    "vocabIds": [
+      "1483150",
+      "1270390",
+      "1579780",
+      "1375290",
+      "1284430"
+    ],
+    "matches": {
+      "1270390": {
+        "start": 3,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1284430": {
+        "start": 10,
+        "length": 2,
+        "reading": "あわ"
+      },
+      "1375290": {
+        "start": 7,
+        "length": 2,
+        "reading": "せいかく"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1579780": {
+        "start": 4,
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -152,50 +306,78 @@
       "1268990",
       "2005860",
       "1547720",
+      "1547710",
       "1522150",
+      "1473740",
       "1636070",
-      "2540200"
+      "2540200",
+      "1587040"
     ],
     "matches": {
       "1268990": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1344120": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょてん"
+      },
+      "1473740": {
+        "start": 27,
+        "length": 2,
+        "reading": "かい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1522150": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
+      },
+      "1547710": {
+        "start": 21,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 21,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1579110": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1579780": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1587040": {
+        "start": 32,
+        "length": 2,
+        "reading": "いっ"
       },
       "1636070": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "かい"
       },
       "2005860": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "もういちど"
       },
       "2540200": {
         "start": 31,
-        "length": 4
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -217,15 +399,18 @@
     "matches": {
       "1445670": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いかり"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -247,15 +432,18 @@
     "matches": {
       "1304760": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "つかえ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -272,25 +460,41 @@
     "vocabIds": [
       "1483070",
       "1579780",
-      "1888080",
+      "1379850",
+      "1338180",
+      "1339160",
       "1451150"
     ],
     "matches": {
+      "1338180": {
+        "start": 21,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 21,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1379850": {
+        "start": 19,
+        "length": 1,
+        "reading": "せい"
+      },
       "1451150": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579780": {
         "start": 2,
-        "length": 2
-      },
-      "1888080": {
-        "start": 19,
-        "length": 5
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -308,24 +512,73 @@
       "1483070",
       "1311110",
       "1579780",
-      "2861986"
+      "1501210",
+      "2861986",
+      "1539980"
     ],
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1501210": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふくしん"
+      },
+      "1539980": {
+        "start": 10,
+        "length": 1,
+        "reading": "とも"
       },
       "1579780": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "2861986": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "ふくしんのとも"
+      }
+    }
+  },
+  {
+    "id": "112700",
+    "original": "彼はその主人に仕えた。",
+    "en": [
+      {
+        "id": "290976",
+        "text": "He waited on his master."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 其の[01]{その} 主人(しゅじん) に 仕える{仕えた}",
+    "vocabIds": [
+      "1483070",
+      "1579780",
+      "1304760"
+    ],
+    "matches": {
+      "1304760": {
+        "start": 7,
+        "length": 2,
+        "reading": "つかえ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1579780": {
+        "start": 4,
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -347,15 +600,18 @@
     "matches": {
       "1191730": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579780": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -370,37 +626,55 @@
     ],
     "indices": "彼(かれ) の 話(はなし) を 聞く{聞けば} 彼(かれ) が 其の[01]{その} 家(いえ)[01] の 主人(しゅじん) だ と 考える{考えて} 仕舞う{しまう} だろう",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1600900",
-      "1483070",
+      "1591110",
       "1191730",
       "1579780",
-      "1281020"
+      "1281020",
+      "1281000"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1191730": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1281000": {
+        "start": 18,
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1281020": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1483070": {
-        "start": 8,
-        "length": 1
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1579780": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1591110": {
+        "start": 4,
+        "length": 2,
+        "reading": "きけ"
       },
       "1600900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -422,15 +696,18 @@
     "matches": {
       "1191730": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579780": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -452,15 +729,18 @@
     "matches": {
       "1329040": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さかや"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579780": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -477,35 +757,53 @@
     "vocabIds": [
       "1582710",
       "1326160",
+      "1423310",
       "1423320",
       "1579780",
+      "1279680",
       "1526860",
       "1580640"
     ],
     "matches": {
+      "1279680": {
+        "start": 12,
+        "length": 2,
+        "reading": "かまわ"
+      },
       "1326160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅふ"
+      },
+      "1423310": {
+        "start": 6,
+        "length": 1,
+        "reading": "なか"
       },
       "1423320": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "なかには"
       },
       "1526860": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "まんぞく"
       },
       "1579780": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1580640": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1582710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
       }
     }
   },
@@ -520,22 +818,82 @@
     ],
     "indices": "二人 の 主人(しゅじん) には 仕える{仕えられない}",
     "vocabIds": [
+      "1461140",
       "1582670",
+      "1580640",
       "1579780",
-      "1304750"
+      "1304760"
     ],
     "matches": {
-      "1304750": {
+      "1304760": {
         "start": 7,
-        "length": 1
+        "length": 2,
+        "reading": "つかえ"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
       },
       "1579780": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
       },
       "1582670": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ににん"
+      }
+    }
+  },
+  {
+    "id": "140990",
+    "original": "前のご主人にお会いになる勇気がありますか。",
+    "en": [
+      {
+        "id": "273582",
+        "text": "Do you feel equal to meeting your ex-husband?"
+      }
+    ],
+    "indices": "前(まえ) の 御(ご){ご} 主人(しゅじん) に 会う[01]{お会い} になる[01] 勇気 が[01] 有る{あります} か",
+    "vocabIds": [
+      "1392580",
+      "1270390",
+      "1579780",
+      "1198180",
+      "1539740"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 7,
+        "length": 2,
+        "reading": "あい"
+      },
+      "1270390": {
+        "start": 2,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1392580": {
+        "start": 0,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1539740": {
+        "start": 12,
+        "length": 2,
+        "reading": "ゆうき"
+      },
+      "1579780": {
+        "start": 3,
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -552,25 +910,35 @@
     "vocabIds": [
       "1387990",
       "1579780",
+      "1605820",
       "1605870",
       "2866713"
     ],
     "matches": {
       "1387990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1579780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1605820": {
+        "start": 10,
+        "length": 2,
+        "reading": "よく"
       },
       "1605870": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "よく"
       },
       "2866713": {
         "start": 12,
-        "length": 4
+        "length": 2,
+        "reading": "ねむれ"
       }
     }
   },
@@ -586,6 +954,7 @@
     "indices": "人(ひと) は 二人 の 主人(しゅじん) に 従う 事が出来る{ことはできない}",
     "vocabIds": [
       "1580640",
+      "1461140",
       "1582670",
       "1579780",
       "1335210"
@@ -593,19 +962,28 @@
     "matches": {
       "1335210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "したがう"
+      },
+      "1461140": {
+        "start": 2,
+        "length": 1,
+        "reading": "に"
       },
       "1579780": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1582670": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ににん"
       }
     }
   },
@@ -629,23 +1007,28 @@
     "matches": {
       "1191730": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1318610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1423310": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1579780": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -660,42 +1043,67 @@
     ],
     "indices": "食料 雑貨店 の 主人(しゅじん) は 自分[01] の 誠実{誠実さ} を 御(お){お} 客 に 何とか 説得 為る(する){した}",
     "vocabIds": [
+      "1358670",
       "2014810",
+      "1299290",
+      "1936120",
+      "1582120",
       "1579780",
       "1318610",
       "1381180",
-      "1226630",
       "1188420",
       "1386440"
     ],
     "matches": {
       "1188420": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "なんとか"
       },
-      "1226630": {
-        "start": 17,
-        "length": 1
+      "1299290": {
+        "start": 2,
+        "length": 2,
+        "reading": "ざっか"
       },
       "1318610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1358670": {
+        "start": 0,
+        "length": 2,
+        "reading": "しょくりょう"
       },
       "1381180": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "せいじつ"
       },
       "1386440": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "せっとく"
       },
       "1579780": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1582120": {
+        "start": 4,
+        "length": 1,
+        "reading": "てん"
+      },
+      "1936120": {
+        "start": 2,
+        "length": 3,
+        "reading": "ざっかてん"
       },
       "2014810": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "しょくりょうざっかてん"
       }
     }
   },
@@ -710,32 +1118,31 @@
     ],
     "indices": "召使い 達 は 主人(しゅじん) の 命令[01] を 実行 しようとする{しようとした}",
     "vocabIds": [
-      "1305720",
       "1416220",
       "1579780",
       "1532160",
       "1321040"
     ],
     "matches": {
-      "1305720": {
-        "start": 1,
-        "length": 2
-      },
       "1321040": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "じっこう"
       },
       "1416220": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1532160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "めいれい"
       },
       "1579780": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -752,25 +1159,23 @@
     "vocabIds": [
       "1337190",
       "1579780",
-      "1305720",
       "1416220"
     ],
     "matches": {
-      "1305720": {
-        "start": 6,
-        "length": 2
-      },
       "1337190": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "やど"
       },
       "1416220": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1579780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -786,16 +1191,24 @@
     "indices": "主人(しゅじん) を 呼ぶ{呼びます} よ[01]",
     "vocabIds": [
       "1579780",
+      "1266440",
       "2453540"
     ],
     "matches": {
+      "1266440": {
+        "start": 3,
+        "length": 2,
+        "reading": "よび"
+      },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "2453540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "よび"
       }
     }
   },
@@ -816,11 +1229,13 @@
     "matches": {
       "1266440": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "よん"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -842,15 +1257,18 @@
     "matches": {
       "1353320": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じょうず"
       },
       "1554310": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "りょうり"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -871,25 +1289,29 @@
     "vocabIds": [
       "1579780",
       "1465720",
-      "1512410",
-      "1291270"
+      "1291270",
+      "2711190"
     ],
     "matches": {
       "1291270": {
         "start": 20,
-        "length": 6
+        "length": 4,
+        "reading": "さしあげ"
       },
       "1465720": {
         "start": 3,
-        "length": 2
-      },
-      "1512410": {
-        "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "にゅういん"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "2711190": {
+        "start": 20,
+        "length": 4,
+        "reading": "さしあげ"
       }
     }
   },
@@ -914,27 +1336,33 @@
     "matches": {
       "1226630": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "きゃく"
       },
       "1259200": {
         "start": 14,
-        "length": 7
+        "length": 6,
+        "reading": "みせびらかし"
       },
       "1318610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1385070": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きって"
       },
       "1431850": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "めずらしい"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -952,24 +1380,28 @@
       "1579780",
       "1311110",
       "1012960",
-      "2125270"
+      "1486270"
     ],
     "matches": {
       "1012960": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "やりかた"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1486270": {
+        "start": 9,
+        "length": 1,
+        "reading": "まゆ"
       },
       "1579780": {
         "start": 0,
-        "length": 2
-      },
-      "2125270": {
-        "start": 9,
-        "length": 6
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -992,19 +1424,23 @@
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1465590": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1531950": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "めいじ"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1026,15 +1462,18 @@
     "matches": {
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1050,31 +1489,30 @@
     "indices": "主人(しゅじん) は 御(お){お} 客[01] に 七面鳥~ の 肉(にく)[02] を 切り分ける[01]{切り分けた}~",
     "vocabIds": [
       "1579780",
-      "1226630",
       "1319520",
       "1463520",
       "1384660"
     ],
     "matches": {
-      "1226630": {
-        "start": 4,
-        "length": 1
-      },
       "1319520": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "しちめんちょう"
       },
       "1384660": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "きりわけ"
       },
       "1463520": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "にく"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1090,16 +1528,24 @@
     "indices": "主人(しゅじん) に 大目玉~ を 食う[08]{食った}~",
     "vocabIds": [
       "1579780",
-      "2859287"
+      "1415120",
+      "1592100"
     ],
     "matches": {
+      "1415120": {
+        "start": 3,
+        "length": 3,
+        "reading": "おおめだま"
+      },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
-      "2859287": {
-        "start": 3,
-        "length": 7
+      "1592100": {
+        "start": 7,
+        "length": 2,
+        "reading": "くっ"
       }
     }
   },
@@ -1118,28 +1564,45 @@
       "1445650",
       "1589350",
       "1008890",
+      "1451750",
+      "1451770",
       "1579780"
     ],
     "matches": {
       "1008890": {
         "start": 13,
-        "length": 6
+        "length": 6,
+        "reading": "とおなじように"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1445650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1451750": {
+        "start": 14,
+        "length": 2,
+        "reading": "おなじ"
+      },
+      "1451770": {
+        "start": 14,
+        "length": 4,
+        "reading": "おなじよう"
       },
       "1579780": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1589350": {
         "start": 9,
-        "length": 4
+        "length": 2,
+        "reading": "おもわ"
       }
     }
   },
@@ -1162,19 +1625,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1313580": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1579780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1606590": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "わかれる"
       }
     }
   },
@@ -1190,31 +1657,54 @@
     "indices": "私(わたし)[01] は 交通渋滞 で(#2028980) 遅れる{遅れた} と[04] 主人(しゅじん) に 説明 為る(する){した}",
     "vocabIds": [
       "1311110",
+      "1272280",
       "1760790",
+      "1335570",
       "1589040",
+      "1422020",
       "1579780",
       "1386460"
     ],
     "matches": {
+      "1272280": {
+        "start": 2,
+        "length": 2,
+        "reading": "こうつう"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1335570": {
+        "start": 4,
+        "length": 2,
+        "reading": "じゅうたい"
       },
       "1386460": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "せつめい"
+      },
+      "1422020": {
+        "start": 7,
+        "length": 2,
+        "reading": "おくれ"
       },
       "1579780": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1589040": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "おくれ"
       },
       "1760790": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "こうつうじゅうたい"
       }
     }
   },
@@ -1236,40 +1726,54 @@
       "1451210",
       "1411790",
       "1483070",
-      "1512130"
+      "1512130",
+      "2202100"
     ],
     "matches": {
       "1277000": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こうろん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1411790": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "だいきん"
       },
       "1451210": {
         "start": 25,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1483070": {
         "start": 37,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512130": {
         "start": 44,
-        "length": 3
+        "length": 2,
+        "reading": "かえし"
       },
       "1579780": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1582120": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "みせ"
+      },
+      "2202100": {
+        "start": 44,
+        "length": 2,
+        "reading": "かえし"
       }
     }
   },
@@ -1292,19 +1796,23 @@
     "matches": {
       "1195720": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "かし"
       },
       "1304970": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1579780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1326,15 +1834,18 @@
     "matches": {
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1491150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ふあん"
       },
       "1579780": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1353,28 +1864,39 @@
       "1595610",
       "1579780",
       "1221250",
+      "1410590",
       "2021970"
     ],
     "matches": {
       "1221250": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かえり"
       },
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
+      },
+      "1410590": {
+        "start": 13,
+        "length": 2,
+        "reading": "まっ"
       },
       "1579780": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1595610": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "すくなくとも"
       },
       "2021970": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "まった"
       }
     }
   },
@@ -1397,19 +1919,23 @@
     "matches": {
       "1218440": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きがい"
       },
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1327120": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "まもっ"
       },
       "1579780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1429,32 +1955,44 @@
       "1380440",
       "1591110",
       "1419440",
+      "1429700",
       "2248530"
     ],
     "matches": {
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1380440": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "こえ"
       },
       "1419440": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "だんがん"
+      },
+      "1429700": {
+        "start": 19,
+        "length": 2,
+        "reading": "とん"
       },
       "1579780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1591110": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きく"
       },
       "2248530": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "とんで"
       }
     }
   },
@@ -1477,19 +2015,23 @@
     "matches": {
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1269320": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
       },
       "1495740": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "つい"
       },
       "1579780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1505,31 +2047,24 @@
     "indices": "金(かね)[01] は 良い{善い} 召使い{召使} だ が[03] 悪い(わるい) 主人(しゅじん) だ",
     "vocabIds": [
       "1242590",
-      "1394250",
-      "2630380",
       "1151260",
       "1579780"
     ],
     "matches": {
       "1151260": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1242590": {
         "start": 0,
-        "length": 1
-      },
-      "1394250": {
-        "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1579780": {
         "start": 10,
-        "length": 2
-      },
-      "2630380": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1545,21 +2080,30 @@
     "indices": "もう 分(ふん) すれば 主人 が 此処[01]{ここ} に 戻る{戻って} 参る[01]{まいります}",
     "vocabIds": [
       "2859157",
+      "1502860",
       "1579780",
       "1535880"
     ],
     "matches": {
+      "1502860": {
+        "start": 4,
+        "length": 1,
+        "reading": "ふん"
+      },
       "1535880": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "もどっ"
       },
       "1579780": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "2859157": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "さんぜろふん"
       }
     }
   },
@@ -1576,30 +2120,47 @@
     "vocabIds": [
       "1258330",
       "1485770",
+      "1361330",
       "1361130",
       "1579780",
+      "1269320",
       "2640160"
     ],
     "matches": {
       "1258330": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
+      },
+      "1269320": {
+        "start": 15,
+        "length": 1,
+        "reading": "のち"
       },
       "1361130": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ふり"
+      },
+      "1361330": {
+        "start": 6,
+        "length": 2,
+        "reading": "ふり"
       },
       "1485770": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "お"
       },
       "1579780": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "2640160": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "のちに"
       }
     }
   },
@@ -1621,15 +2182,18 @@
     "matches": {
       "1258330": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1420470": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1579780": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1650,11 +2214,13 @@
     "matches": {
       "1579780": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1587040": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いう"
       }
     }
   },
@@ -1670,21 +2236,265 @@
     "indices": "其の[01]{その} パン屋 の 主人(しゅじん) は いい(#2820690)[01] 人(ひと) です",
     "vocabIds": [
       "1103480",
+      "2082160",
       "1579780",
-      "1835630"
+      "1835630",
+      "1580640"
     ],
     "matches": {
       "1103480": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ぱんや"
       },
       "1579780": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1580640": {
+        "start": 11,
+        "length": 1,
+        "reading": "ひと"
       },
       "1835630": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "いいひと"
+      },
+      "2082160": {
+        "start": 4,
+        "length": 1,
+        "reading": "や"
+      }
+    }
+  },
+  {
+    "id": "217137",
+    "original": "ご主人は本日お見えになるでしょう。",
+    "en": [
+      {
+        "id": "54445",
+        "text": "I believe he'll be with us today."
+      }
+    ],
+    "indices": "御(ご){ご} 主人(しゅじん) は 本日 御(お){お} 見える(みえる)[03]{見え} になる[01] でしょう[01]",
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1523110",
+      "1001860"
+    ],
+    "matches": {
+      "1001860": {
+        "start": 6,
+        "length": 6,
+        "reading": "おみえになる"
+      },
+      "1270390": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1523110": {
+        "start": 4,
+        "length": 2,
+        "reading": "ほんじつ"
+      },
+      "1579780": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅじん"
+      }
+    }
+  },
+  {
+    "id": "217138",
+    "original": "ご主人はご在宅ですか。",
+    "en": [
+      {
+        "id": "54444",
+        "text": "Is the master of the house at home?"
+      },
+      {
+        "id": "1192252",
+        "text": "Is your husband at home?"
+      }
+    ],
+    "indices": "御(ご){ご} 主人(しゅじん) は 御(ご){ご} 在宅 ですか",
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1296540"
+    ],
+    "matches": {
+      "1270390": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1296540": {
+        "start": 5,
+        "length": 2,
+        "reading": "ざいたく"
+      },
+      "1579780": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅじん"
+      }
+    }
+  },
+  {
+    "id": "217139",
+    "original": "ご主人の健康診断を徹底的に行うことを勧めます。",
+    "en": [
+      {
+        "id": "54446",
+        "text": "I recommend a thorough checkup for your husband."
+      }
+    ],
+    "indices": "御(ご){ご} 主人(しゅじん) の 健康診断 を 徹底的{徹底的に} 行う 事(こと){こと} を 勧める{勧めます}",
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1256170",
+      "1256210",
+      "1365480",
+      "1437680",
+      "1589060",
+      "1595680",
+      "1210900"
+    ],
+    "matches": {
+      "1210900": {
+        "start": 18,
+        "length": 2,
+        "reading": "すすめ"
+      },
+      "1256170": {
+        "start": 4,
+        "length": 2,
+        "reading": "けんこう"
+      },
+      "1256210": {
+        "start": 4,
+        "length": 4,
+        "reading": "けんこうしんだん"
+      },
+      "1270390": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1365480": {
+        "start": 6,
+        "length": 2,
+        "reading": "しんだん"
+      },
+      "1437680": {
+        "start": 9,
+        "length": 3,
+        "reading": "てっていてき"
+      },
+      "1579780": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1589060": {
+        "start": 13,
+        "length": 2,
+        "reading": "おこなう"
+      },
+      "1595680": {
+        "start": 18,
+        "length": 2,
+        "reading": "すすめ"
+      }
+    }
+  },
+  {
+    "id": "217140",
+    "original": "ご主人によろしくお伝え下さい。",
+    "en": [
+      {
+        "id": "54447",
+        "text": "Please give my best regards to your husband."
+      }
+    ],
+    "indices": "御(ご){ご} 主人(しゅじん) に 宜しく[02]{よろしく} 伝える{お伝え} 下さい",
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1441870",
+      "1441860",
+      "1184280",
+      "1184270"
+    ],
+    "matches": {
+      "1184270": {
+        "start": 11,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 11,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1270390": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1441860": {
+        "start": 9,
+        "length": 2,
+        "reading": "つたえ"
+      },
+      "1441870": {
+        "start": 9,
+        "length": 2,
+        "reading": "つたえ"
+      },
+      "1579780": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅじん"
+      }
+    }
+  },
+  {
+    "id": "217141",
+    "original": "ご主人と交信なさりたいんですね。",
+    "en": [
+      {
+        "id": "54448",
+        "text": "I understand you wish to contact your husband."
+      }
+    ],
+    "indices": "御(ご){ご} 主人(しゅじん) と 交信 為さる{なさり} たい[01] のです{んです} ね(#2029080)[01]",
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1272170"
+    ],
+    "matches": {
+      "1270390": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1272170": {
+        "start": 4,
+        "length": 2,
+        "reading": "こうしん"
+      },
+      "1579780": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1699,7 +2509,9 @@
     ],
     "indices": "お手伝いさん~ 達{たち} は 主人(しゅじん) の 命令[01] を 実行 為る(する){しよう} と 努める{努めた}~",
     "vocabIds": [
+      "1612810",
       "1002110",
+      "1328170",
       "1579780",
       "1532160",
       "1321040",
@@ -1708,23 +2520,38 @@
     "matches": {
       "1002110": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "おてつだいさん"
       },
       "1240820": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "つとめ"
       },
       "1321040": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じっこう"
+      },
+      "1328170": {
+        "start": 1,
+        "length": 3,
+        "reading": "てつだい"
       },
       "1532160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "めいれい"
       },
       "1579780": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1612810": {
+        "start": 0,
+        "length": 4,
+        "reading": "おてつだい"
       }
     }
   },
@@ -1745,11 +2572,46 @@
     "matches": {
       "1191730": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1579780": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      }
+    }
+  },
+  {
+    "id": "233544",
+    "original": "あなたのご主人は食事にうるさいのかな？",
+    "en": [
+      {
+        "id": "70915",
+        "text": "Is your husband a picky eater?"
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} の ご主人~ は 食事[01] に 五月蝿い[03]{うるさい} の かな",
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1358490"
+    ],
+    "matches": {
+      "1270390": {
+        "start": 4,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1358490": {
+        "start": 8,
+        "length": 2,
+        "reading": "しょくじ"
+      },
+      "1579780": {
+        "start": 5,
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1769,7 +2631,8 @@
     "matches": {
       "1579780": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1792,19 +2655,23 @@
     "matches": {
       "1579780": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1580640": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1582120": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "みせ"
       },
       "1597040": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
       }
     }
   },
@@ -1821,84 +2688,118 @@
       "1579780",
       "1482180",
       "1207250",
+      "1477880",
       "2083730",
+      "1329010",
       "1214540",
       "1155120",
       "2037180",
+      "1582710",
       "1464670",
       "2423970",
       "1522150",
       "1586265",
       "2537950",
-      "1169870",
       "1463770",
+      "1169870",
       "1462900",
       "1405790"
     ],
     "matches": {
       "1155120": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
       "1169870": {
         "start": 60,
-        "length": 4
+        "length": 2,
+        "reading": "のま"
       },
       "1207250": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1214540": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "かん"
+      },
+      "1329010": {
+        "start": 15,
+        "length": 1,
+        "reading": "しゅ"
       },
       "1405790": {
         "start": 76,
-        "length": 3
+        "length": 2,
+        "reading": "つづい"
       },
       "1462900": {
         "start": 72,
-        "length": 2
+        "length": 2,
+        "reading": "ににち"
       },
       "1463770": {
-        "start": 64,
-        "length": 1
+        "start": 53,
+        "length": 1,
+        "reading": "び"
       },
       "1464670": {
         "start": 30,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんしゅ"
+      },
+      "1477880": {
+        "start": 13,
+        "length": 2,
+        "reading": "はっぽう"
       },
       "1482180": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ばんしゃく"
       },
       "1522150": {
         "start": 37,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1582710": {
+        "start": 30,
+        "length": 2,
+        "reading": "にっぽん"
       },
       "1586265": {
         "start": 42,
-        "length": 3
+        "length": 2,
+        "reading": "あい"
       },
       "2037180": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "あけ"
       },
       "2083730": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "はっぽうしゅ"
       },
       "2423970": {
         "start": 34,
-        "length": 1
+        "length": 1,
+        "reading": "かん"
       },
       "2537950": {
         "start": 51,
-        "length": 3
+        "length": 3,
+        "reading": "きゅうかんび"
       }
     }
   },
@@ -1913,21 +2814,36 @@
     ],
     "vocabIds": [
       "1258330",
-      "2827617",
-      "1579780"
+      "1358800",
+      "1361330",
+      "1579780",
+      "1432410"
     ],
     "matches": {
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
+      },
+      "1358800": {
+        "start": 2,
+        "length": 2,
+        "reading": "しっぽ"
+      },
+      "1361330": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふっ"
+      },
+      "1432410": {
+        "start": 12,
+        "length": 2,
+        "reading": "おい"
       },
       "1579780": {
         "start": 9,
-        "length": 2
-      },
-      "2827617": {
-        "start": 2,
-        "length": 6
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1948,15 +2864,18 @@
     "matches": {
       "1266430": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "よびりん"
       },
       "1532880": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "ならし"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -1973,6 +2892,7 @@
       "1577100",
       "2837167",
       "1547720",
+      "1547710",
       "1579780",
       "1311110",
       "1217730",
@@ -1981,31 +2901,43 @@
     "matches": {
       "1217730": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
       },
       "1259290": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "みる"
       },
       "1311110": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1547710": {
+        "start": 9,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 9,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1577100": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
       "1579780": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "2837167": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ところ"
       }
     }
   },
@@ -2022,6 +2954,7 @@
       "1577100",
       "2837167",
       "1547720",
+      "1547710",
       "1579780",
       "1311110",
       "1217730",
@@ -2030,31 +2963,43 @@
     "matches": {
       "1217730": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
       },
       "1259290": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "みる"
       },
       "1311110": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1547710": {
+        "start": 9,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 9,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1577100": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
       "1579780": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "2837167": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ところ"
       }
     }
   },
@@ -2076,19 +3021,99 @@
     "matches": {
       "1169250": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       },
       "1360130": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "ねこん"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1583720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
+      }
+    }
+  },
+  {
+    "id": "1191475",
+    "original": "ごめんください、山田です。ご主人にお目にかかりたいのですが。",
+    "en": [
+      {
+        "id": "5168040",
+        "text": "Excuse me, I'm Mr. Yamada. I would like to meet with your husband, if I may."
+      }
+    ],
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1535140"
+    ],
+    "matches": {
+      "1270390": {
+        "start": 13,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1535140": {
+        "start": 17,
+        "length": 6,
+        "reading": "おめにかかり"
+      },
+      "1579780": {
+        "start": 14,
+        "length": 2,
+        "reading": "しゅじん"
+      }
+    }
+  },
+  {
+    "id": "5748452",
+    "original": "クッキーはご主人様が嫌いだった。",
+    "en": [
+      {
+        "id": "5747790",
+        "text": "Cookie hated his owner."
+      }
+    ],
+    "vocabIds": [
+      "1270390",
+      "2793200",
+      "1579780",
+      "1545790",
+      "1257240"
+    ],
+    "matches": {
+      "1257240": {
+        "start": 10,
+        "length": 2,
+        "reading": "きらい"
+      },
+      "1270390": {
+        "start": 5,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1545790": {
+        "start": 8,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1579780": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "2793200": {
+        "start": 5,
+        "length": 4,
+        "reading": "ごしゅじんさま"
       }
     }
   },
@@ -2110,19 +3135,55 @@
     "matches": {
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1306280": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "しようにん"
       },
       "1467640": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ねこ"
       },
       "1579780": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      }
+    }
+  },
+  {
+    "id": "8762223",
+    "original": "ご主人もボストンの出身なんですか？",
+    "en": [
+      {
+        "id": "5591301",
+        "text": "Is your husband also from Boston?"
+      }
+    ],
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1339260"
+    ],
+    "matches": {
+      "1270390": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1339260": {
+        "start": 9,
+        "length": 2,
+        "reading": "しゅっしん"
+      },
+      "1579780": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -2138,20 +3199,29 @@
     "vocabIds": [
       "1579780",
       "1497610",
+      "1225920",
       "2010720"
     ],
     "matches": {
+      "1225920": {
+        "start": 7,
+        "length": 2,
+        "reading": "ぎり"
+      },
       "1497610": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "2010720": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "ぎりのちち"
       }
     }
   },
@@ -2165,12 +3235,10 @@
       }
     ],
     "vocabIds": [
-      "1629170",
-      "1297220",
+      "1311110",
       "1311300",
       "1350570",
       "1009810",
-      "1311110",
       "1579780",
       "1403400",
       "1164340"
@@ -2178,39 +3246,38 @@
     "matches": {
       "1009810": {
         "start": 22,
-        "length": 4
+        "length": 4,
+        "reading": "にたいする"
       },
       "1164340": {
         "start": 35,
-        "length": 2
-      },
-      "1297220": {
-        "start": 1,
-        "length": 1
+        "length": 2,
+        "reading": "いっそう"
       },
       "1311110": {
-        "start": 26,
-        "length": 1
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1350570": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "やきはらっ"
       },
       "1403400": {
         "start": 31,
-        "length": 3
+        "length": 3,
+        "reading": "にくしみ"
       },
       "1579780": {
         "start": 28,
-        "length": 2
-      },
-      "1629170": {
-        "start": 0,
-        "length": 1
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -2226,20 +3293,29 @@
     "vocabIds": [
       "1579780",
       "1468830",
-      "1335140"
+      "1335140",
+      "1584460"
     ],
     "matches": {
       "1335140": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "いちぜろまん"
       },
       "1468830": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねんしゅう"
       },
       "1579780": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1584460": {
+        "start": 12,
+        "length": 1,
+        "reading": "まん"
       }
     }
   },
@@ -2255,20 +3331,167 @@
     "vocabIds": [
       "1579780",
       "1468830",
-      "1335140"
+      "1335140",
+      "1584460"
     ],
     "matches": {
       "1335140": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "いちぜろまん"
       },
       "1468830": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねんしゅう"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1584460": {
+        "start": 8,
+        "length": 1,
+        "reading": "まん"
+      }
+    }
+  },
+  {
+    "id": "11030005",
+    "original": "ご主人は幸せ者だなぁ。",
+    "en": [
+      {
+        "id": "11029012",
+        "text": "Your husband is a lucky man."
+      }
+    ],
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1594060",
+      "1304910",
+      "1322990"
+    ],
+    "matches": {
+      "1270390": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1304910": {
+        "start": 4,
+        "length": 3,
+        "reading": "しあわせしゃ"
+      },
+      "1322990": {
+        "start": 6,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1579780": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1594060": {
+        "start": 4,
+        "length": 2,
+        "reading": "しあわせ"
+      }
+    }
+  },
+  {
+    "id": "11378696",
+    "original": "ご主人には精密検査をお勧めします。",
+    "en": [
+      {
+        "id": "54446",
+        "text": "I recommend a thorough checkup for your husband."
+      }
+    ],
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1380190",
+      "2829042",
+      "1257890",
+      "1002150",
+      "1595680",
+      "1210900"
+    ],
+    "matches": {
+      "1002150": {
+        "start": 10,
+        "length": 3,
+        "reading": "おすすめ"
+      },
+      "1210900": {
+        "start": 11,
+        "length": 2,
+        "reading": "すすめ"
+      },
+      "1257890": {
+        "start": 7,
+        "length": 2,
+        "reading": "けんさ"
+      },
+      "1270390": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1380190": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいみつ"
+      },
+      "1579780": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅじん"
+      },
+      "1595680": {
+        "start": 11,
+        "length": 2,
+        "reading": "すすめ"
+      },
+      "2829042": {
+        "start": 5,
+        "length": 4,
+        "reading": "せいみつけんさ"
+      }
+    }
+  },
+  {
+    "id": "11726923",
+    "original": "トムはメアリーのご主人の親友なんですよ。",
+    "en": [
+      {
+        "id": "1028538",
+        "text": "Tom is Mary's husband's best friend."
+      }
+    ],
+    "vocabIds": [
+      "1270390",
+      "1579780",
+      "1365410"
+    ],
+    "matches": {
+      "1270390": {
+        "start": 8,
+        "length": 3,
+        "reading": "ごしゅじん"
+      },
+      "1365410": {
+        "start": 12,
+        "length": 2,
+        "reading": "しんゆう"
+      },
+      "1579780": {
+        "start": 9,
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -2288,11 +3511,13 @@
     "matches": {
       "1535880": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "もどっ"
       },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       }
     }
   },
@@ -2307,21 +3532,42 @@
     ],
     "vocabIds": [
       "1579780",
+      "1358490",
       "2642210",
+      "1198160",
+      "1365050",
       "1853670"
     ],
     "matches": {
+      "1198160": {
+        "start": 8,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1358490": {
+        "start": 6,
+        "length": 2,
+        "reading": "しょくじ"
+      },
+      "1365050": {
+        "start": 10,
+        "length": 3,
+        "reading": "したしく"
+      },
       "1579780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1853670": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "したしく"
       },
       "2642210": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "しょくじかい"
       }
     }
   }

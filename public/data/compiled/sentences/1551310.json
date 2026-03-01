@@ -1,5 +1,92 @@
 [
   {
+    "id": "75193",
+    "original": "駅員に連絡したが、男はその場を立ち去り、改札口を出て行った。",
+    "en": [
+      {
+        "id": "328526",
+        "text": "They contacted the station staff but the man had left the area and gone out through the ticket barrier."
+      }
+    ],
+    "indices": "駅員~ に 連絡[01] 為る(する){した} が 男 は その場[01] を 立ち去る{立ち去り} 改札口 を 出る{出て} 行く{行った}",
+    "vocabIds": [
+      "1175150",
+      "1559900",
+      "1419990",
+      "2205240",
+      "1355790",
+      "1551310",
+      "1200840",
+      "1200850",
+      "1275640",
+      "1338240",
+      "1896380",
+      "1578850"
+    ],
+    "matches": {
+      "1175150": {
+        "start": 0,
+        "length": 2,
+        "reading": "えきいん"
+      },
+      "1200840": {
+        "start": 20,
+        "length": 2,
+        "reading": "かいさつ"
+      },
+      "1200850": {
+        "start": 20,
+        "length": 3,
+        "reading": "かいさつぐち"
+      },
+      "1275640": {
+        "start": 22,
+        "length": 1,
+        "reading": "ぐち"
+      },
+      "1338240": {
+        "start": 24,
+        "length": 1,
+        "reading": "で"
+      },
+      "1355790": {
+        "start": 13,
+        "length": 1,
+        "reading": "ば"
+      },
+      "1419990": {
+        "start": 9,
+        "length": 1,
+        "reading": "おとこ"
+      },
+      "1551310": {
+        "start": 15,
+        "length": 4,
+        "reading": "たちさり"
+      },
+      "1559900": {
+        "start": 3,
+        "length": 2,
+        "reading": "れんらく"
+      },
+      "1578850": {
+        "start": 26,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1896380": {
+        "start": 24,
+        "length": 1,
+        "reading": "で"
+      },
+      "2205240": {
+        "start": 11,
+        "length": 3,
+        "reading": "そのば"
+      }
+    }
+  },
+  {
     "id": "75771",
     "original": "彼は逃げるように野菜売り場を立ち去って、精肉コーナーへ。",
     "en": [
@@ -20,27 +107,33 @@
     "matches": {
       "1380130": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "せいにく"
       },
       "1450330": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "にげる"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1537370": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "やさい"
       },
       "1551310": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
       "1588550": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "うりば"
       }
     }
   },
@@ -58,34 +151,52 @@
       "1600900",
       "1596750",
       "1483090",
+      "1160790",
       "1576150",
+      "1580640",
       "1551310",
-      "1589060"
+      "1578850"
     ],
     "matches": {
+      "1160790": {
+        "start": 12,
+        "length": 1,
+        "reading": "いち"
+      },
       "1483090": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1551310": {
         "start": 19,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
       "1576150": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "いちにん"
       },
-      "1589060": {
+      "1578850": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1580640": {
+        "start": 13,
+        "length": 1,
+        "reading": "にん"
       },
       "1596750": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "たいくつ"
       },
       "1600900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -112,19 +223,23 @@
     "matches": {
       "1416220": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1540150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       },
       "1551310": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -141,20 +256,29 @@
     "vocabIds": [
       "1483150",
       "1509490",
+      "1285990",
       "1551310"
     ],
     "matches": {
+      "1285990": {
+        "start": 6,
+        "length": 2,
+        "reading": "つげ"
+      },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1509490": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わかれ"
       },
       "1551310": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -170,26 +294,42 @@
     "indices": "彼女[01] は 急に 泣く{泣き} 乍ら[01]{ながら} 立ち去る{立ち去って} 行く{いった}",
     "vocabIds": [
       "1483150",
+      "1228560",
       "2269050",
+      "1229840",
       "1229650",
       "1551310"
     ],
     "matches": {
+      "1228560": {
+        "start": 3,
+        "length": 1,
+        "reading": "きゅう"
+      },
       "1229650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 5,
+        "length": 2,
+        "reading": "なき"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1551310": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
       "2269050": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -211,15 +351,18 @@
     "matches": {
       "1151120": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あいさつ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1551310": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -240,11 +383,13 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1551310": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -266,15 +411,18 @@
     "matches": {
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1551310": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
       "1551800": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "りっぷく"
       }
     }
   },
@@ -296,15 +444,96 @@
     "matches": {
       "1155090": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いがい"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1551310": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "たちさる"
+      }
+    }
+  },
+  {
+    "id": "97903",
+    "original": "彼らはその場から立ち去りました。",
+    "en": [
+      {
+        "id": "305801",
+        "text": "They got away from the place."
+      }
+    ],
+    "indices": "彼ら(かれら) は その場[01] から 立ち去る{立ち去りました}",
+    "vocabIds": [
+      "1483090",
+      "2205240",
+      "1355790",
+      "1551310"
+    ],
+    "matches": {
+      "1355790": {
+        "start": 5,
+        "length": 1,
+        "reading": "ば"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1551310": {
+        "start": 8,
+        "length": 4,
+        "reading": "たちさり"
+      },
+      "2205240": {
+        "start": 3,
+        "length": 3,
+        "reading": "そのば"
+      }
+    }
+  },
+  {
+    "id": "98091",
+    "original": "彼らはここから立ち去りました。戻ってくることはないでしょう。",
+    "en": [
+      {
+        "id": "305611",
+        "text": "They have left here, perhaps for good."
+      }
+    ],
+    "indices": "彼ら(かれら) は 此処[01]{ここ} から 立ち去る{立ち去りました} 戻って来る{戻ってくる} 事(こと){こと} は 無い{ない} でしょう[01]",
+    "vocabIds": [
+      "1483090",
+      "1551310",
+      "1535880",
+      "2092960"
+    ],
+    "matches": {
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1535880": {
+        "start": 15,
+        "length": 2,
+        "reading": "もどっ"
+      },
+      "1551310": {
+        "start": 7,
+        "length": 4,
+        "reading": "たちさり"
+      },
+      "2092960": {
+        "start": 15,
+        "length": 5,
+        "reading": "もどってくる"
       }
     }
   },
@@ -321,20 +550,29 @@
     "vocabIds": [
       "1483070",
       "1551310",
+      "1578850",
       "1578790"
     ],
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
       "1578790": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 7,
+        "length": 2,
+        "reading": "いき"
       }
     }
   },
@@ -350,26 +588,30 @@
     "indices": "彼(かれ)[01] は 悲しい{悲しそうな} 顔つき を 為る(する){して} 立ち去る{立ち去って} 行く{いった}",
     "vocabIds": [
       "1483070",
-      "2187800",
+      "1483190",
       "1217850",
       "1551310"
     ],
     "matches": {
       "1217850": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "かおつき"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483190": {
+        "start": 2,
+        "length": 2,
+        "reading": "かなし"
       },
       "1551310": {
         "start": 13,
-        "length": 5
-      },
-      "2187800": {
-        "start": 2,
-        "length": 1
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -387,34 +629,58 @@
       "1483070",
       "1483150",
       "1604890",
+      "1470840",
+      "1470810",
       "1470830",
+      "1593410",
       "1457040",
       "1551310"
     ],
     "matches": {
       "1457040": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "とつぜん"
+      },
+      "1470810": {
+        "start": 7,
+        "length": 2,
+        "reading": "のぞき"
       },
       "1470830": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "のぞきこむ"
+      },
+      "1470840": {
+        "start": 7,
+        "length": 2,
+        "reading": "のぞき"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1551310": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
+      },
+      "1593410": {
+        "start": 9,
+        "length": 2,
+        "reading": "こむ"
       },
       "1604890": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "め"
       }
     }
   },
@@ -432,24 +698,34 @@
       "1483070",
       "1449870",
       "1551310",
+      "1229350",
       "1229340"
     ],
     "matches": {
       "1229340": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "もとめ"
+      },
+      "1229350": {
+        "start": 18,
+        "length": 2,
+        "reading": "もとめ"
       },
       "1449870": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とうちゃく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "たちさる"
       }
     }
   },
@@ -465,21 +741,30 @@
     "indices": "彼(かれ)[01] は 足早に 立ち去る{立ち去った}",
     "vocabIds": [
       "1483070",
+      "1404880",
       "1404890",
       "1551310"
     ],
     "matches": {
+      "1404880": {
+        "start": 2,
+        "length": 2,
+        "reading": "あしばや"
+      },
       "1404890": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "あしばやに"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -503,23 +788,28 @@
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1445690": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "おこっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
       "1587040": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -535,26 +825,42 @@
     "indices": "彼(かれ)[01] は 私たち に 別れを告げる{別れを告げて} 立ち去る{立ち去った}",
     "vocabIds": [
       "1483070",
+      "1311110",
       "1311300",
-      "2790960",
+      "1509490",
+      "1285990",
       "1551310"
     ],
     "matches": {
+      "1285990": {
+        "start": 9,
+        "length": 2,
+        "reading": "つげ"
+      },
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1509490": {
+        "start": 6,
+        "length": 2,
+        "reading": "わかれ"
       },
       "1551310": {
         "start": 13,
-        "length": 5
-      },
-      "2790960": {
-        "start": 6,
-        "length": 6
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -570,21 +876,30 @@
     "indices": "彼(かれ)[01] は 急ぐ{急いで} 立ち去る{立ち去った}",
     "vocabIds": [
       "1483070",
+      "1228650",
       "1228570",
       "1551310"
     ],
     "matches": {
       "1228570": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 2,
+        "length": 2,
+        "reading": "いそい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -605,11 +920,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -630,11 +947,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -655,11 +974,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 17,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -675,7 +996,7 @@
     "indices": "彼(かれ)[01] は 優しい{優しく} 微笑む{微笑んで} 息子[01] と 握手 を 為る(する){し} 立ち去る{立ち去って} 行く{いった}",
     "vocabIds": [
       "1483070",
-      "1539020",
+      "1539040",
       "1486030",
       "1404390",
       "1152730",
@@ -684,27 +1005,33 @@
     "matches": {
       "1152730": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "あくしゅ"
       },
       "1404390": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "むすこ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1486030": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "ほほえん"
       },
-      "1539020": {
+      "1539040": {
         "start": 3,
-        "length": 1
+        "length": 3,
+        "reading": "やさしく"
       },
       "1551310": {
         "start": 19,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -727,19 +1054,23 @@
     "matches": {
       "1217950": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "ねがっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1551310": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -754,27 +1085,82 @@
     ],
     "indices": "背の高い 男 が そこから 足早に 立ち去る{立ち去った}",
     "vocabIds": [
+      "2147990",
       "2152580",
+      "1283190",
       "1419990",
+      "1404880",
       "1404890",
       "1551310"
     ],
     "matches": {
+      "1283190": {
+        "start": 2,
+        "length": 2,
+        "reading": "たかい"
+      },
+      "1404880": {
+        "start": 10,
+        "length": 2,
+        "reading": "あしばや"
+      },
       "1404890": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "あしばやに"
       },
       "1419990": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1551310": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
+      },
+      "2147990": {
+        "start": 0,
+        "length": 1,
+        "reading": "せ"
       },
       "2152580": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "せのたかい"
+      }
+    }
+  },
+  {
+    "id": "136545",
+    "original": "誰もそのパーティーから立ち去ろうとしなかった。",
+    "en": [
+      {
+        "id": "276584",
+        "text": "No one was in a hurry to leave the party."
+      }
+    ],
+    "indices": "誰も[02] 其の[01]{その} パーティー から 立ち 去る{去ろう} とする{としなかった}",
+    "vocabIds": [
+      "1416830",
+      "1416860",
+      "1551310"
+    ],
+    "matches": {
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
+      },
+      "1416860": {
+        "start": 0,
+        "length": 2,
+        "reading": "だれも"
+      },
+      "1551310": {
+        "start": 11,
+        "length": 4,
+        "reading": "たちさろ"
       }
     }
   },
@@ -796,15 +1182,69 @@
     "matches": {
       "1349170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうねん"
       },
       "1416220": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1551310": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
+      }
+    }
+  },
+  {
+    "id": "153801",
+    "original": "私は彼の墓を立ち去り難かった。",
+    "en": [
+      {
+        "id": "260742",
+        "text": "I hesitated to leave his grave."
+      }
+    ],
+    "indices": "私(わたし)[01] は 彼(かれ)[01]{彼の} 墓~ を 立ち去る{立ち去り}~ 難い(にくい){難かった}",
+    "vocabIds": [
+      "1311110",
+      "1483070",
+      "1000420",
+      "1514840",
+      "1551310",
+      "2772730"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 2,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1514840": {
+        "start": 4,
+        "length": 1,
+        "reading": "はか"
+      },
+      "1551310": {
+        "start": 6,
+        "length": 4,
+        "reading": "たちさり"
+      },
+      "2772730": {
+        "start": 10,
+        "length": 3,
+        "reading": "がたかっ"
       }
     }
   },
@@ -826,15 +1266,154 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1546680": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       },
       "1551310": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "たちさる"
+      }
+    }
+  },
+  {
+    "id": "168461",
+    "original": "子供達！すぐに立ち去りなさい！",
+    "en": [
+      {
+        "id": "246030",
+        "text": "Beat it, kids!"
+      }
+    ],
+    "indices": "子供たち{子供達} 直ぐに{すぐに} 立ち去る{立ち去り} 為さい{なさい}",
+    "vocabIds": [
+      "1307850",
+      "1416220",
+      "1551310"
+    ],
+    "matches": {
+      "1307850": {
+        "start": 0,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1416220": {
+        "start": 2,
+        "length": 1,
+        "reading": "たち"
+      },
+      "1551310": {
+        "start": 7,
+        "length": 4,
+        "reading": "たちさり"
+      }
+    }
+  },
+  {
+    "id": "172808",
+    "original": "今すぐ立ち去れ。",
+    "en": [
+      {
+        "id": "241665",
+        "text": "Go away right now!"
+      },
+      {
+        "id": "7773278",
+        "text": "Go away right now."
+      }
+    ],
+    "indices": "今すぐ 立ち去る{立ち去れ}",
+    "vocabIds": [
+      "1288850",
+      "2026850",
+      "1551310"
+    ],
+    "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1551310": {
+        "start": 3,
+        "length": 4,
+        "reading": "たちされ"
+      },
+      "2026850": {
+        "start": 0,
+        "length": 3,
+        "reading": "いますぐ"
+      }
+    }
+  },
+  {
+    "id": "176159",
+    "original": "警察は人々を立ち去らせた。",
+    "en": [
+      {
+        "id": "238306",
+        "text": "The police dismissed the people."
+      }
+    ],
+    "indices": "警察 は 人々(ひとびと) を 立ち去る{立ち去らせた}",
+    "vocabIds": [
+      "1252390",
+      "1580650",
+      "1551310"
+    ],
+    "matches": {
+      "1252390": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいさつ"
+      },
+      "1551310": {
+        "start": 6,
+        "length": 4,
+        "reading": "たちさら"
+      },
+      "1580650": {
+        "start": 3,
+        "length": 2,
+        "reading": "ひとびと"
+      }
+    }
+  },
+  {
+    "id": "191618",
+    "original": "われわれは説明もなく立ち去れと命じられた。",
+    "en": [
+      {
+        "id": "28782",
+        "text": "We were ordered away without any explanation."
+      }
+    ],
+    "indices": "我々{われわれ} は 説明 も 無い{なく} 立ち去る{立ち去れ} と 命じる{命じられた}",
+    "vocabIds": [
+      "1386460",
+      "1551310",
+      "1531950"
+    ],
+    "matches": {
+      "1386460": {
+        "start": 5,
+        "length": 2,
+        "reading": "せつめい"
+      },
+      "1531950": {
+        "start": 15,
+        "length": 2,
+        "reading": "めいじ"
+      },
+      "1551310": {
+        "start": 10,
+        "length": 4,
+        "reading": "たちされ"
       }
     }
   },
@@ -851,20 +1430,29 @@
     "vocabIds": [
       "1457040",
       "1551310",
+      "1606560",
       "1502940"
     ],
     "matches": {
       "1457040": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "とつぜん"
       },
       "1502940": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "わかり"
       },
       "1551310": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
+      },
+      "1606560": {
+        "start": 24,
+        "length": 3,
+        "reading": "わかり"
       }
     }
   },
@@ -885,11 +1473,13 @@
     "matches": {
       "1419990": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1551310": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -910,11 +1500,13 @@
     "matches": {
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1551310": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -935,11 +1527,34 @@
     "matches": {
       "1258330": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1551310": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
+      }
+    }
+  },
+  {
+    "id": "214955",
+    "original": "すぐにここを立ち去りなさい。",
+    "en": [
+      {
+        "id": "52250",
+        "text": "Leave here at once."
+      }
+    ],
+    "indices": "直ぐに{すぐに} 此処[01]{ここ} を 立ち去る{立ち去り} 為さい{なさい}",
+    "vocabIds": [
+      "1551310"
+    ],
+    "matches": {
+      "1551310": {
+        "start": 6,
+        "length": 4,
+        "reading": "たちさり"
       }
     }
   },
@@ -954,17 +1569,145 @@
     ],
     "indices": "は さよなら も 言う{言わず} に 立ち去る{立ち去った}",
     "vocabIds": [
-      "1956230",
+      "1587040",
       "1551310"
     ],
     "matches": {
       "1551310": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
-      "1956230": {
+      "1587040": {
         "start": 9,
-        "length": 1
+        "length": 2,
+        "reading": "いわ"
+      }
+    }
+  },
+  {
+    "id": "220546",
+    "original": "この町から立ち去りなさい。",
+    "en": [
+      {
+        "id": "57870",
+        "text": "Get away from this city."
+      }
+    ],
+    "indices": "此の{この} 町(まち) から 立ち去る{立ち去り} 為さい{なさい}",
+    "vocabIds": [
+      "1603990",
+      "1551310"
+    ],
+    "matches": {
+      "1551310": {
+        "start": 5,
+        "length": 4,
+        "reading": "たちさり"
+      },
+      "1603990": {
+        "start": 2,
+        "length": 1,
+        "reading": "まち"
+      }
+    }
+  },
+  {
+    "id": "224720",
+    "original": "ここから立ち去れ。",
+    "en": [
+      {
+        "id": "62055",
+        "text": "Get away from here."
+      }
+    ],
+    "indices": "此処[01]{ここ} から 立ち去る{立ち去れ}",
+    "vocabIds": [
+      "1551310"
+    ],
+    "matches": {
+      "1551310": {
+        "start": 4,
+        "length": 4,
+        "reading": "たちされ"
+      }
+    }
+  },
+  {
+    "id": "225355",
+    "original": "ケイトは家族に家を立ち去らせた。",
+    "en": [
+      {
+        "id": "62692",
+        "text": "Kate made her family leave home."
+      }
+    ],
+    "indices": "は 家族 に 家(いえ)[01] を 立ち去る{立ち去らせた}",
+    "vocabIds": [
+      "1192150",
+      "1191730",
+      "1551310"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 7,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1192150": {
+        "start": 4,
+        "length": 2,
+        "reading": "かぞく"
+      },
+      "1551310": {
+        "start": 9,
+        "length": 4,
+        "reading": "たちさら"
+      }
+    }
+  },
+  {
+    "id": "232228",
+    "original": "あなたは何よりもまずここを立ち去らなければならない。",
+    "en": [
+      {
+        "id": "69598",
+        "text": "You must leave here before everything."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は 何よりもまず 此処[01]{ここ} を 立ち去る{立ち去ら} ねばならない{なければならない}",
+    "vocabIds": [
+      "1577100",
+      "1188530",
+      "2141560",
+      "2838080",
+      "1551310"
+    ],
+    "matches": {
+      "1188530": {
+        "start": 4,
+        "length": 3,
+        "reading": "なにより"
+      },
+      "1551310": {
+        "start": 13,
+        "length": 4,
+        "reading": "たちさら"
+      },
+      "1577100": {
+        "start": 4,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2141560": {
+        "start": 4,
+        "length": 4,
+        "reading": "なによりも"
+      },
+      "2838080": {
+        "start": 4,
+        "length": 6,
+        "reading": "なによりもまず"
       }
     }
   },
@@ -981,24 +1724,34 @@
       "1483070",
       "1576870",
       "1509490",
+      "1285990",
       "1551310"
     ],
     "matches": {
+      "1285990": {
+        "start": 7,
+        "length": 2,
+        "reading": "つげ"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1509490": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "わかれ"
       },
       "1551310": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
       "1576870": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       }
     }
   },
@@ -1024,35 +1777,43 @@
     "matches": {
       "1000420": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1307710": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "すがた"
       },
       "1386500": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ゆき"
       },
       "1423310": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1475520": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "うすれ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
       "1597350": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "だんだん"
       }
     }
   },
@@ -1075,23 +1836,104 @@
     "matches": {
       "1298230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さくねん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1352780": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しゃんはい"
       },
       "1535880": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "もどっ"
       },
       "1551310": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
+      }
+    }
+  },
+  {
+    "id": "2137341",
+    "original": "お前たちみんな、ここから立ち去れ。",
+    "en": [
+      {
+        "id": "2137345",
+        "text": "Get out of here, all of you!"
+      }
+    ],
+    "vocabIds": [
+      "1002290",
+      "2834051",
+      "1551310"
+    ],
+    "matches": {
+      "1002290": {
+        "start": 0,
+        "length": 2,
+        "reading": "おまえ"
+      },
+      "1551310": {
+        "start": 12,
+        "length": 4,
+        "reading": "たちされ"
+      },
+      "2834051": {
+        "start": 0,
+        "length": 4,
+        "reading": "おまえたち"
+      }
+    }
+  },
+  {
+    "id": "2230227",
+    "original": "トムは立ち去り、すぐに霧の中へと姿を消した。",
+    "en": [
+      {
+        "id": "2229586",
+        "text": "Tom walked away and soon disappeared into the fog."
+      }
+    ],
+    "vocabIds": [
+      "1551310",
+      "1531110",
+      "1423310",
+      "1307710",
+      "1350110"
+    ],
+    "matches": {
+      "1307710": {
+        "start": 16,
+        "length": 1,
+        "reading": "すがた"
+      },
+      "1350110": {
+        "start": 18,
+        "length": 2,
+        "reading": "けし"
+      },
+      "1423310": {
+        "start": 13,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1531110": {
+        "start": 11,
+        "length": 1,
+        "reading": "きり"
+      },
+      "1551310": {
+        "start": 3,
+        "length": 4,
+        "reading": "たちさり"
       }
     }
   },
@@ -1106,16 +1948,24 @@
     ],
     "vocabIds": [
       "1512220",
+      "1410590",
       "1551310"
     ],
     "matches": {
+      "1410590": {
+        "start": 6,
+        "length": 2,
+        "reading": "また"
+      },
       "1512220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "へんじ"
       },
       "1551310": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -1130,26 +1980,36 @@
     ],
     "vocabIds": [
       "1483070",
+      "1577100",
       "1188490",
-      "1956230",
+      "1587040",
       "1551310"
     ],
     "matches": {
       "1188490": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551310": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
-      "1956230": {
+      "1577100": {
+        "start": 2,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1587040": {
         "start": 4,
-        "length": 1
+        "length": 2,
+        "reading": "いわ"
       }
     }
   },
@@ -1163,17 +2023,25 @@
       }
     ],
     "vocabIds": [
+      "1404880",
       "1404890",
       "1551310"
     ],
     "matches": {
+      "1404880": {
+        "start": 3,
+        "length": 2,
+        "reading": "あしばや"
+      },
       "1404890": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "あしばやに"
       },
       "1551310": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -1187,22 +2055,19 @@
       }
     ],
     "vocabIds": [
-      "1361130",
-      "1277040",
+      "1361190",
       "1551310"
     ],
     "matches": {
-      "1277040": {
-        "start": 5,
-        "length": 2
-      },
-      "1361130": {
+      "1361190": {
         "start": 3,
-        "length": 2
+        "length": 4,
+        "reading": "ふりむき"
       },
       "1551310": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       }
     }
   },
@@ -1217,21 +2082,30 @@
     ],
     "vocabIds": [
       "1551310",
+      "1269320",
       "2640160",
       "1422970"
     ],
     "matches": {
+      "1269320": {
+        "start": 8,
+        "length": 1,
+        "reading": "のち"
+      },
       "1422970": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "つい"
       },
       "1551310": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "たちさっ"
       },
       "2640160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のちに"
       }
     }
   }

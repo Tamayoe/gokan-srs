@@ -1,100 +1,5 @@
 [
   {
-    "id": "74800",
-    "original": "一人で原始林へ乗り込もうとは君はなんて勇ましいんだ。",
-    "en": [
-      {
-        "id": "328919",
-        "text": "How brave of you to go alone into the primaeval forest!"
-      }
-    ],
-    "indices": "一人で 原始林~ へ 乗り込む[02]{乗り込もう}~ とは 君(きみ) は 何て{なんて} 勇ましい[01]~ のだ{んだ}",
-    "vocabIds": [
-      "1163700",
-      "1261560",
-      "1354720",
-      "1247250",
-      "1539660"
-    ],
-    "matches": {
-      "1163700": {
-        "start": 0,
-        "length": 3
-      },
-      "1247250": {
-        "start": 14,
-        "length": 1
-      },
-      "1261560": {
-        "start": 3,
-        "length": 3
-      },
-      "1354720": {
-        "start": 7,
-        "length": 2
-      },
-      "1539660": {
-        "start": 19,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "75333",
-    "original": "ヘロヘロになる前に、夏バテ対策をしっかり行い元気に夏を乗り切りましょう。",
-    "en": [
-      {
-        "id": "328386",
-        "text": "Let's take precautions against heat fatigue, before we flake out from the heat, and have a healthy summer."
-      }
-    ],
-    "indices": "ヘロヘロ になる[01] 前(まえ) に 夏ばて{夏バテ}~ 対策 を 確り{しっかり} 行う{行い} 元気 に 夏(なつ) を 乗り切る{乗り切りましょう}",
-    "vocabIds": [
-      "1392590",
-      "1610990",
-      "1410050",
-      "1589050",
-      "1260720",
-      "1191320",
-      "1354720",
-      "1383800"
-    ],
-    "matches": {
-      "1191320": {
-        "start": 25,
-        "length": 1
-      },
-      "1260720": {
-        "start": 22,
-        "length": 2
-      },
-      "1354720": {
-        "start": 27,
-        "length": 2
-      },
-      "1383800": {
-        "start": 29,
-        "length": 2
-      },
-      "1392590": {
-        "start": 7,
-        "length": 2
-      },
-      "1410050": {
-        "start": 13,
-        "length": 2
-      },
-      "1589050": {
-        "start": 20,
-        "length": 2
-      },
-      "1610990": {
-        "start": 10,
-        "length": 3
-      }
-    }
-  },
-  {
     "id": "75467",
     "original": "じゃあ２人乗りを許してやるからお前漕げ、俺が荷台に乗るから。",
     "en": [
@@ -108,6 +13,7 @@
       "1580640",
       "1354720",
       "1232870",
+      "1232860",
       "1002290",
       "1576870",
       "1195370",
@@ -116,31 +22,43 @@
     "matches": {
       "1002290": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
       },
       "1195370": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "にだい"
+      },
+      "1232860": {
+        "start": 8,
+        "length": 2,
+        "reading": "ゆるし"
       },
       "1232870": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "ゆるし"
       },
       "1354720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1355120": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "のる"
       },
       "1576870": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       },
       "1580640": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -159,32 +77,61 @@
     ],
     "indices": "明日 天気 が 良ければ 友達 と ヨット 乗り[01] に 行く[01]{行きます}",
     "vocabIds": [
+      "1584660",
       "2851968",
+      "1438690",
+      "1605820",
       "2059390",
       "1540170",
       "1354720",
+      "1578850",
       "1578790"
     ],
     "matches": {
       "1354720": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1438690": {
+        "start": 2,
+        "length": 2,
+        "reading": "てんき"
       },
       "1540170": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       },
       "1578790": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 19,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      },
+      "1605820": {
+        "start": 5,
+        "length": 3,
+        "reading": "よけれ"
       },
       "2059390": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "よければ"
       },
       "2851968": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "あしたてんき"
       }
     }
   },
@@ -200,16 +147,24 @@
     "indices": "毎日 何処{どこ} で(#2028980) バス(#1098390) に 乗る[01]{乗ります} か",
     "vocabIds": [
       "1524720",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 8,
+        "length": 2,
+        "reading": "のり"
       },
       "1524720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       }
     }
   },
@@ -230,66 +185,13 @@
     "matches": {
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1523110": {
         "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "90591",
-    "original": "彼女は機嫌が悪いというのも、いつも地下鉄に乗り遅れ仕事場まで歩く羽目になったからだ。",
-    "en": [
-      {
-        "id": "313121",
-        "text": "She is in a temper, because she missed her usual train in the subway and had to walk to work."
-      }
-    ],
-    "indices": "彼女[01] は 機嫌が悪い と言うのも{というのも} 何時も{いつも} 地下鉄 に 乗り遅れる{乗り遅れ} 仕事場 迄{まで} 歩く 羽目になる{羽目になった} から だ",
-    "vocabIds": [
-      "1483150",
-      "2235700",
-      "1420900",
-      "1354720",
-      "1422020",
-      "1304990",
-      "1514320",
-      "2123410"
-    ],
-    "matches": {
-      "1304990": {
-        "start": 25,
-        "length": 3
-      },
-      "1354720": {
-        "start": 21,
-        "length": 2
-      },
-      "1420900": {
-        "start": 17,
-        "length": 3
-      },
-      "1422020": {
-        "start": 23,
-        "length": 2
-      },
-      "1483150": {
-        "start": 0,
-        "length": 2
-      },
-      "1514320": {
-        "start": 30,
-        "length": 2
-      },
-      "2123410": {
-        "start": 32,
-        "length": 6
-      },
-      "2235700": {
-        "start": 3,
-        "length": 5
+        "length": 2,
+        "reading": "ほんじつ"
       }
     }
   },
@@ -306,55 +208,35 @@
     "vocabIds": [
       "1483150",
       "1002250",
+      "1374060",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1002250": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おせじ"
       },
       "1354720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 10,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1374060": {
+        "start": 7,
+        "length": 2,
+        "reading": "せじ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "97719",
-    "original": "彼らはバスに乗りこんだ最初の人たちだった。",
-    "en": [
-      {
-        "id": "305985",
-        "text": "They were the first to get into the bus."
-      }
-    ],
-    "indices": "彼ら(かれら) は バス(#1098390) に 乗り込む[01]{乗りこんだ} 最初{最初の} 人達{人たち} だ{だった}",
-    "vocabIds": [
-      "1483090",
-      "1354720",
-      "1293990",
-      "1368740"
-    ],
-    "matches": {
-      "1293990": {
-        "start": 11,
-        "length": 2
-      },
-      "1354720": {
-        "start": 6,
-        "length": 2
-      },
-      "1368740": {
-        "start": 14,
-        "length": 3
-      },
-      "1483090": {
-        "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -371,75 +253,29 @@
     "vocabIds": [
       "1483090",
       "1558370",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 8,
+        "length": 2,
+        "reading": "のり"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1558370": {
         "start": 5,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "98515",
-    "original": "彼らの結婚生活は暗礁に乗り上げ、近く離婚届を出すらしい。",
-    "en": [
-      {
-        "id": "305186",
-        "text": "I hear their marriage is on the rocks and they'll probably file for divorce soon."
-      }
-    ],
-    "indices": "彼ら(かれら){彼らの} 結婚 生活 は 暗礁[02] に 乗り上げる{乗り上げ} 近く 離婚 届 を 出す らしい",
-    "vocabIds": [
-      "1483090",
-      "2133260",
-      "1154580",
-      "1354720",
-      "1352300",
-      "1242160",
-      "2149940",
-      "1338180"
-    ],
-    "matches": {
-      "1154580": {
-        "start": 8,
-        "length": 2
-      },
-      "1242160": {
-        "start": 16,
-        "length": 2
-      },
-      "1338180": {
-        "start": 22,
-        "length": 2
-      },
-      "1352300": {
-        "start": 13,
-        "length": 2
-      },
-      "1354720": {
-        "start": 11,
-        "length": 2
-      },
-      "1483090": {
-        "start": 0,
-        "length": 2
-      },
-      "2133260": {
-        "start": 3,
-        "length": 4
-      },
-      "2149940": {
-        "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -457,24 +293,85 @@
       "1483070",
       "1493830",
       "1443530",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 10,
+        "length": 2,
+        "reading": "のり"
       },
       "1443530": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1493830": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ふちゅうい"
+      }
+    }
+  },
+  {
+    "id": "101884",
+    "original": "彼は電車を乗り間違えた。",
+    "en": [
+      {
+        "id": "301808",
+        "text": "He took the wrong train by mistake."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 電車 を 乗り間違える{乗り間違えた}",
+    "vocabIds": [
+      "1483070",
+      "1443530",
+      "1355120",
+      "1354720",
+      "1215330",
+      "2017170"
+    ],
+    "matches": {
+      "1215330": {
+        "start": 7,
+        "length": 3,
+        "reading": "まちがえ"
+      },
+      "1354720": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1443530": {
+        "start": 2,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2017170": {
+        "start": 7,
+        "length": 3,
+        "reading": "まちがえ"
       }
     }
   },
@@ -491,25 +388,98 @@
     "vocabIds": [
       "1483070",
       "1443530",
+      "1355120",
       "1354720",
       "1158890"
     ],
     "matches": {
       "1158890": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "ちがえ"
       },
       "1354720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
       },
       "1443530": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "102195",
+    "original": "彼は遅く起きた、その結果、バスに乗り損なった。",
+    "en": [
+      {
+        "id": "301499",
+        "text": "He got up late, so he missed the bus."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 遅い{遅く} 起きる{起きた} 其の[01]{その} 結果 バス(#1098390) に 乗り損なう{乗り損なった}",
+    "vocabIds": [
+      "1483070",
+      "1421970",
+      "1421980",
+      "1223640",
+      "2851217",
+      "1254690",
+      "1354720",
+      "1596510"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 4,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1254690": {
+        "start": 10,
+        "length": 2,
+        "reading": "けっか"
+      },
+      "1354720": {
+        "start": 16,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1421970": {
+        "start": 2,
+        "length": 2,
+        "reading": "おそく"
+      },
+      "1421980": {
+        "start": 2,
+        "length": 2,
+        "reading": "おそく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1596510": {
+        "start": 18,
+        "length": 3,
+        "reading": "そこなっ"
+      },
+      "2851217": {
+        "start": 8,
+        "length": 4,
+        "reading": "そのけっか"
       }
     }
   },
@@ -526,6 +496,7 @@
     "vocabIds": [
       "1483070",
       "1323080",
+      "1355120",
       "1354720",
       "1516930",
       "1420470"
@@ -533,23 +504,33 @@
     "matches": {
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 4,
+        "length": 2,
+        "reading": "のり"
       },
       "1420470": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1516930": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かた"
       }
     }
   },
@@ -565,36 +546,60 @@
     "indices": "彼(かれ)[01] は 私たち に 馬[01] の 乗る[01]{乗り} 方(かた) を 教える{教えて} 呉れる{くれた}",
     "vocabIds": [
       "1483070",
+      "1311110",
       "1311300",
       "1471560",
+      "1355120",
       "1354720",
       "1516930",
-      "1236900"
+      "1236900",
+      "1236890"
     ],
     "matches": {
+      "1236890": {
+        "start": 12,
+        "length": 2,
+        "reading": "おしえ"
+      },
       "1236900": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "おしえ"
+      },
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1354720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 8,
+        "length": 2,
+        "reading": "のり"
       },
       "1471560": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "うま"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1516930": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かた"
       }
     }
   },
@@ -612,6 +617,7 @@
       "1483070",
       "1307610",
       "1558370",
+      "1355120",
       "1354720",
       "1215260",
       "1422970"
@@ -619,27 +625,101 @@
     "matches": {
       "1215260": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "まにあっ"
       },
       "1307610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しはつ"
       },
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "1422970": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "つい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1558370": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
+      }
+    }
+  },
+  {
+    "id": "110253",
+    "original": "彼はわずかな差で最終電車に乗り損ねた。",
+    "en": [
+      {
+        "id": "293435",
+        "text": "He missed the last train by a minute."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 僅か[01]{わずかな} 差 で(#2028980) 最終電車 に 乗り損ねる{乗り損ねた}",
+    "vocabIds": [
+      "1483070",
+      "1291070",
+      "1293940",
+      "2607510",
+      "1443530",
+      "1355120",
+      "1354720",
+      "1406690"
+    ],
+    "matches": {
+      "1291070": {
+        "start": 6,
+        "length": 1,
+        "reading": "さ"
+      },
+      "1293940": {
+        "start": 8,
+        "length": 2,
+        "reading": "さいしゅう"
+      },
+      "1354720": {
+        "start": 13,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 13,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1406690": {
+        "start": 15,
+        "length": 2,
+        "reading": "そこね"
+      },
+      "1443530": {
+        "start": 10,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2607510": {
+        "start": 8,
+        "length": 4,
+        "reading": "さいしゅうでんしゃ"
       }
     }
   },
@@ -656,25 +736,41 @@
     "vocabIds": [
       "1483070",
       "1332960",
+      "1355120",
       "1354720",
-      "1835720"
+      "1835720",
+      "1222640"
     ],
     "matches": {
+      "1222640": {
+        "start": 16,
+        "length": 2,
+        "reading": "ぎみ"
+      },
       "1332960": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうでん"
       },
       "1354720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1835720": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "いいぎみ"
       }
     }
   },
@@ -694,21 +790,30 @@
     "indices": "電車 を[01] 乗る[01]{乗り} 違う(ちがう){違えています} よ[01]",
     "vocabIds": [
       "1443530",
+      "1355120",
       "1354720",
       "1158890"
     ],
     "matches": {
       "1158890": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "ちがえ"
       },
       "1354720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
       },
       "1443530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       }
     }
   },
@@ -728,16 +833,24 @@
     "indices": "調子 に 乗る{乗り} 過ぎる(すぎる){すぎる} な[01] よ[01]",
     "vocabIds": [
       "1429170",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
       },
       "1429170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうし"
       }
     }
   },
@@ -756,62 +869,37 @@
     ],
     "indices": "体重計~ に 乗る{乗り} 為さい{なさい}",
     "vocabIds": [
+      "1409540",
       "1759540",
+      "1252050",
+      "1355120",
       "1354720"
     ],
     "matches": {
+      "1252050": {
+        "start": 2,
+        "length": 1,
+        "reading": "けい"
+      },
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 4,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1409540": {
+        "start": 0,
+        "length": 2,
+        "reading": "たいじゅう"
       },
       "1759540": {
         "start": 0,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "145319",
-    "original": "新しい連立政府はこの難局を乗り切ろうとしています。",
-    "en": [
-      {
-        "id": "269244",
-        "text": "The new coalition government is trying to ride out the storm."
-      }
-    ],
-    "indices": "新しい 連立~ 政府 は 此の{この} 難局 を 乗り切る{乗り切ろう} とする{としています}",
-    "vocabIds": [
-      "1361490",
-      "1559960",
-      "1376070",
-      "1460930",
-      "1354720",
-      "1383750"
-    ],
-    "matches": {
-      "1354720": {
-        "start": 13,
-        "length": 2
-      },
-      "1361490": {
-        "start": 0,
-        "length": 3
-      },
-      "1376070": {
-        "start": 5,
-        "length": 2
-      },
-      "1383750": {
-        "start": 15,
-        "length": 1
-      },
-      "1460930": {
-        "start": 10,
-        "length": 2
-      },
-      "1559960": {
-        "start": 3,
-        "length": 2
+        "length": 3,
+        "reading": "たいじゅうけい"
       }
     }
   },
@@ -844,45 +932,80 @@
     "vocabIds": [
       "1580490",
       "1202150",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1202150": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "みな"
       },
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 4,
+        "length": 2,
+        "reading": "のり"
       },
       "1580490": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じょうきゃく"
       }
     }
   },
   {
-    "id": "146176",
-    "original": "乗り捨てできますか。",
+    "id": "146158",
+    "original": "乗客の乗り心地にはあまり注意が払われていなかった。",
     "en": [
       {
-        "id": "268386",
-        "text": "Can I drop off the car?"
+        "id": "268405",
+        "text": "Little attention was paid to the comfort for the passengers."
       }
     ],
-    "indices": "乗り捨てる{乗り捨て} 出来る{できます} か",
+    "indices": "乗客 の 乗り心地~ には 余り{あまり} 注意 が 払う[01]{払われていなかった}",
     "vocabIds": [
+      "1580490",
       "1354720",
-      "2844604"
+      "1600490",
+      "1360820",
+      "1426530",
+      "1501620"
     ],
     "matches": {
       "1354720": {
-        "start": 0,
-        "length": 2
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
       },
-      "2844604": {
-        "start": 2,
-        "length": 1
+      "1360820": {
+        "start": 5,
+        "length": 2,
+        "reading": "ごこち"
+      },
+      "1426530": {
+        "start": 12,
+        "length": 2,
+        "reading": "ちゅうい"
+      },
+      "1501620": {
+        "start": 15,
+        "length": 2,
+        "reading": "はらわ"
+      },
+      "1580490": {
+        "start": 0,
+        "length": 2,
+        "reading": "じょうきゃく"
+      },
+      "1600490": {
+        "start": 3,
+        "length": 4,
+        "reading": "のりごこち"
       }
     }
   },
@@ -910,7 +1033,8 @@
     "matches": {
       "1354720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -925,12 +1049,19 @@
     ],
     "indices": "乗る[01]{乗ります} か",
     "vocabIds": [
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 0,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -955,11 +1086,74 @@
     "matches": {
       "1333520": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうまつ"
       },
       "1354720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      }
+    }
+  },
+  {
+    "id": "150071",
+    "original": "自転車の二人乗りは危険だ。",
+    "en": [
+      {
+        "id": "264487",
+        "text": "Two people riding on a bicycle at the same time is dangerous."
+      },
+      {
+        "id": "418444",
+        "text": "Riding double on a bicycle is dangerous."
+      }
+    ],
+    "indices": "自転車 の 二人 乗り[01]~ は 危険 だ",
+    "vocabIds": [
+      "1318290",
+      "1461140",
+      "1582670",
+      "2224830",
+      "1580640",
+      "1354720",
+      "1218560"
+    ],
+    "matches": {
+      "1218560": {
+        "start": 9,
+        "length": 2,
+        "reading": "きけん"
+      },
+      "1318290": {
+        "start": 0,
+        "length": 3,
+        "reading": "じてんしゃ"
+      },
+      "1354720": {
+        "start": 6,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1461140": {
+        "start": 4,
+        "length": 1,
+        "reading": "に"
+      },
+      "1580640": {
+        "start": 5,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1582670": {
+        "start": 4,
+        "length": 2,
+        "reading": "ににん"
+      },
+      "2224830": {
+        "start": 4,
+        "length": 4,
+        "reading": "ににんのり"
       }
     }
   },
@@ -979,32 +1173,44 @@
       "1185170",
       "1245570",
       "1578790",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1185170": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "げしゃ"
       },
       "1245570": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "くうこう"
       },
       "1316380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1354720": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 18,
+        "length": 2,
+        "reading": "のり"
       },
       "1435080": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ていりゅうじょ"
       },
       "1578790": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
       }
     }
   },
@@ -1020,16 +1226,24 @@
     "indices": "次(つぎ)[01]{次の} バス(#1098390) に 乗る[01]{乗ります}",
     "vocabIds": [
       "1316380",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1316380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1354720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -1049,32 +1263,44 @@
       "1447690",
       "2164660",
       "1485470",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1354720": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 15,
+        "length": 2,
+        "reading": "のり"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1447690": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "とうきょう"
       },
       "1485470": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
       },
       "2164660": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さっぽろ"
       }
     }
   },
@@ -1094,32 +1320,44 @@
       "1246270",
       "1451750",
       "1558370",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1246270": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぐうぜん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1354720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 10,
+        "length": 2,
+        "reading": "のり"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1451750": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
       "1558370": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -1134,12 +1372,115 @@
     ],
     "indices": "何処{どこ} で(#2028980) バス(#1098390) に 乗る[01]{乗り} ましょうか",
     "vocabIds": [
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 6,
+        "length": 2,
+        "reading": "のり"
+      }
+    }
+  },
+  {
+    "id": "152876",
+    "original": "私は歩くよりむしろタクシーに乗りたい。",
+    "en": [
+      {
+        "id": "261670",
+        "text": "I'd rather take a taxi than walk."
+      }
+    ],
+    "indices": "私(わたし)[01] は 歩く より 寧ろ{むしろ} タクシー に 乗る[01]{乗り} たい",
+    "vocabIds": [
+      "1311110",
+      "1514320",
+      "1355120",
+      "1354720"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1354720": {
+        "start": 14,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 14,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1514320": {
+        "start": 2,
+        "length": 2,
+        "reading": "あるく"
+      }
+    }
+  },
+  {
+    "id": "156329",
+    "original": "私は自転車に乗りたい。なぜなら学校から遠くに住んでいるからだ。",
+    "en": [
+      {
+        "id": "258205",
+        "text": "I want to ride a bicycle, because I live far from my school."
+      }
+    ],
+    "indices": "私(わたし)[01] は 自転車 に 乗る[01]{乗り} たい[01] 何故なら{なぜなら} 学校 から 遠く[01] に 住む{住んでいる} から だ",
+    "vocabIds": [
+      "1311110",
+      "1318290",
+      "1355120",
+      "1354720",
+      "1206730",
+      "1177820",
+      "1334040"
+    ],
+    "matches": {
+      "1177820": {
+        "start": 19,
+        "length": 2,
+        "reading": "とおく"
+      },
+      "1206730": {
+        "start": 15,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1318290": {
+        "start": 2,
+        "length": 3,
+        "reading": "じてんしゃ"
+      },
+      "1334040": {
+        "start": 22,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1354720": {
+        "start": 6,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 6,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -1156,6 +1497,7 @@
     "vocabIds": [
       "1311110",
       "1318290",
+      "1355120",
       "1354720",
       "1599340",
       "1608720"
@@ -1163,23 +1505,33 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1318290": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1354720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 6,
+        "length": 2,
+        "reading": "のり"
       },
       "1599340": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "どろぼう"
       },
       "1608720": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "おいかけ"
       }
     }
   },
@@ -1198,28 +1550,39 @@
       "1316380",
       "1578790",
       "1485470",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1316380": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1354720": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 17,
+        "length": 2,
+        "reading": "のり"
       },
       "1485470": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
       },
       "1578790": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
       }
     }
   },
@@ -1237,24 +1600,34 @@
       "1311110",
       "1307610",
       "1558370",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1307610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しはつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "1558370": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -1271,30 +1644,92 @@
     "vocabIds": [
       "1311110",
       "2216900",
+      "1392580",
       "1243320",
+      "1293940",
       "2607510",
+      "1443530",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1243320": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "きんようび"
+      },
+      "1293940": {
+        "start": 10,
+        "length": 2,
+        "reading": "さいしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1354720": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 15,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1392580": {
+        "start": 4,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1443530": {
+        "start": 12,
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "2216900": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "このまえ"
       },
       "2607510": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "さいしゅうでんしゃ"
+      }
+    }
+  },
+  {
+    "id": "161298",
+    "original": "私はオートバイに乗りたい。",
+    "en": [
+      {
+        "id": "253220",
+        "text": "I want to ride a motorcycle."
+      }
+    ],
+    "indices": "私(わたし)[01] は オートバイ に 乗る[01]{乗り} たい",
+    "vocabIds": [
+      "1311110",
+      "1355120",
+      "1354720"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1354720": {
+        "start": 8,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 8,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -1312,24 +1747,34 @@
       "1311110",
       "1313670",
       "1223980",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1223980": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きどう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1313670": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じぎょう"
       },
       "1354720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 12,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -1344,57 +1789,76 @@
     ],
     "indices": "私たち は 其処(そこ){そこ} で(#2028980) バス(#1098390) に 乗る[01]{乗りました}",
     "vocabIds": [
+      "1311110",
       "1311300",
+      "1355120",
       "1354720"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1354720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 10,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
   {
-    "id": "169011",
-    "original": "仕方がない、困ったことだが、何とかうまく乗り切ろう。",
+    "id": "171811",
+    "original": "今日はいつものバスに乗り損ねた。",
     "en": [
       {
-        "id": "245476",
-        "text": "It can't be helped. Let's make the best of the bad job."
+        "id": "242664",
+        "text": "I missed my bus this morning."
       }
     ],
-    "indices": "仕方がない 困る[01]{困った} 事(こと){こと} だ が[03] 何とか 上手い[01]{うまく} 乗り切る{乗り切ろう}",
+    "indices": "今日 は 何時も{いつも} の バス(#1098390) に 乗り損ねる{乗り損ねた}",
     "vocabIds": [
-      "1305420",
-      "2823050",
-      "1188420",
+      "1579110",
+      "1289400",
+      "1355120",
       "1354720",
-      "1383750"
+      "1406690"
     ],
     "matches": {
-      "1188420": {
-        "start": 14,
-        "length": 3
-      },
-      "1305420": {
+      "1289400": {
         "start": 0,
-        "length": 5
+        "length": 3,
+        "reading": "きょうは"
       },
       "1354720": {
-        "start": 20,
-        "length": 2
+        "start": 10,
+        "length": 2,
+        "reading": "のり"
       },
-      "1383750": {
-        "start": 22,
-        "length": 1
+      "1355120": {
+        "start": 10,
+        "length": 2,
+        "reading": "のり"
       },
-      "2823050": {
-        "start": 6,
-        "length": 5
+      "1406690": {
+        "start": 12,
+        "length": 2,
+        "reading": "そこね"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -1418,23 +1882,28 @@
     "matches": {
       "1220550": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きかん"
       },
       "1354720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1516770": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ほうだい"
       },
       "1549660": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "りよう"
       },
       "2098290": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ない"
       }
     }
   },
@@ -1450,16 +1919,24 @@
     "indices": "皆さん 乗る{お乗り} 下さい{ください}",
     "vocabIds": [
       "1202170",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1202170": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "みなさん"
       },
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 4,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -1476,25 +1953,41 @@
     "vocabIds": [
       "1175140",
       "1514320",
+      "1177800",
       "1177790",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1175140": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "えき"
       },
       "1177790": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "とお"
+      },
+      "1177800": {
+        "start": 7,
+        "length": 1,
+        "reading": "とお"
       },
       "1354720": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 18,
+        "length": 2,
+        "reading": "のり"
       },
       "1514320": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あるく"
       }
     }
   },
@@ -1509,22 +2002,37 @@
     ],
     "indices": "雨 が 降る(ふる){降っていた} ので 私(わたし)[01] は タクシー に 乗る[01]{乗りました}",
     "vocabIds": [
-      "2851949",
+      "1171900",
+      "1282790",
       "1311110",
+      "1355120",
       "1354720"
     ],
     "matches": {
+      "1171900": {
+        "start": 0,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふっ"
+      },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1354720": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
-      "2851949": {
-        "start": 0,
-        "length": 5
+      "1355120": {
+        "start": 17,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -1546,24 +2054,34 @@
       "1164010",
       "1402540",
       "1558370",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1164010": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "いっしょうけんめい"
       },
       "1354720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 12,
+        "length": 2,
+        "reading": "のり"
       },
       "1402540": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "はしっ"
       },
       "1558370": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -1583,7 +2101,8 @@
     "matches": {
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -1599,21 +2118,75 @@
     "indices": "若し(もし){もし} 君(きみ)[01] が 彼の(あの){あの} バス(#1098390) に 乗り損なう{乗りそこなっていたら} 今(いま) 此処[01]{ここ} には 居る(いる)[03]{いない} ん[03] だろうに",
     "vocabIds": [
       "1247250",
+      "1355120",
       "1354720",
       "1288850"
     ],
     "matches": {
       "1247250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1288850": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1354720": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 9,
+        "length": 2,
+        "reading": "のり"
+      }
+    }
+  },
+  {
+    "id": "195793",
+    "original": "マイクがバスを乗り間違えたことは明らかだ。",
+    "en": [
+      {
+        "id": "32968",
+        "text": "It is clear that Mike took the wrong bus."
+      }
+    ],
+    "indices": "が バス(#1098390) を 乗り間違える{乗り間違えた} 事(こと){こと} は 明らか だ",
+    "vocabIds": [
+      "1355120",
+      "1354720",
+      "1215330",
+      "2017170",
+      "1532310"
+    ],
+    "matches": {
+      "1215330": {
+        "start": 9,
+        "length": 3,
+        "reading": "まちがえ"
+      },
+      "1354720": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1532310": {
+        "start": 16,
+        "length": 3,
+        "reading": "あきらか"
+      },
+      "2017170": {
+        "start": 9,
+        "length": 3,
+        "reading": "まちがえ"
       }
     }
   },
@@ -1629,116 +2202,165 @@
     "indices": "は 終電 に 乗り損ねる{乗りそこね} タクシー に 乗る[01]{乗らねばならなかった}",
     "vocabIds": [
       "1332960",
-      "1354720",
-      "2080750"
+      "1355120",
+      "1354720"
     ],
     "matches": {
       "1332960": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうでん"
       },
       "1354720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
-      "2080750": {
-        "start": 17,
-        "length": 1
+      "1355120": {
+        "start": 6,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
   {
-    "id": "196005",
-    "original": "ボブは自分の力でこの厳しい試練を乗り切らねばいけない。",
+    "id": "196268",
+    "original": "ボストン行きの乗り継ぎ便に乗りたいのですが。",
     "en": [
       {
-        "id": "33180",
-        "text": "Bob has to get through this ordeal on his own."
+        "id": "33446",
+        "text": "I want to get a connecting flight to Boston."
       }
     ],
-    "indices": "は 自分の力 で(#2028980) 此の{この} 厳しい 試練 を 乗り切る{乗り切らねばいけない}",
+    "indices": "ボストン 行き[01] の 乗り継ぎ 便(びん)[01] に 乗る[01]{乗り} たい[01] のです が[03]",
     "vocabIds": [
-      "2034500",
-      "1262530",
-      "1312590",
-      "1354720",
-      "1383750"
+      "1578790",
+      "2011410",
+      "2224710",
+      "1512360",
+      "1355120",
+      "1354720"
     ],
     "matches": {
-      "1262530": {
-        "start": 10,
-        "length": 3
-      },
-      "1312590": {
+      "1354720": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
-      "1354720": {
-        "start": 16,
-        "length": 2
+      "1355120": {
+        "start": 13,
+        "length": 2,
+        "reading": "のり"
       },
-      "1383750": {
-        "start": 18,
-        "length": 1
+      "1512360": {
+        "start": 11,
+        "length": 1,
+        "reading": "びん"
       },
-      "2034500": {
-        "start": 3,
-        "length": 4
+      "1578790": {
+        "start": 4,
+        "length": 2,
+        "reading": "いき"
+      },
+      "2011410": {
+        "start": 7,
+        "length": 4,
+        "reading": "のりつぎ"
+      },
+      "2224710": {
+        "start": 7,
+        "length": 5,
+        "reading": "のりつぎびん"
       }
     }
   },
   {
-    "id": "197155",
-    "original": "フットボールの試合で、観客はふつうどちらかのチームを熱心に応援するが、応援するものの中には勝ち目のあるチームに乗りかえようとするものが少数いる。",
+    "id": "196270",
+    "original": "ボストンへの乗り継ぎ便に乗りたいんです。",
     "en": [
       {
-        "id": "34337",
-        "text": "In a football game the spectators are usually ardent rooters for one of the two teams, but there also is a small group who will climb on the bandwagon of the winning team."
+        "id": "33446",
+        "text": "I want to get a connecting flight to Boston."
       }
     ],
-    "indices": "フットボール の 試合 で(#2028980) 観客 は 普通{ふつう} どちらか の チーム を 熱心{熱心に} 応援[02] 為る(する){する} が[03] 応援[02] 為る(する){する} 者(もの){もの} の 中(なか) には 勝ち目 の 有る{ある} チーム に 乗り換える[02]{乗りかえよう} とする[01] 物(もの){もの} が 少数 居る(いる){いる}",
+    "indices": "ボストン へ の 乗り継ぎ便~ に 乗る[01]{乗り} たい[01] のです{んです}",
     "vocabIds": [
-      "1312420",
-      "1214810",
-      "1467910",
-      "1179840",
-      "1423320",
-      "1346140",
-      "1354720",
-      "1349070"
+      "2011410",
+      "2224710",
+      "1512360",
+      "1355120",
+      "1354720"
     ],
     "matches": {
-      "1179840": {
-        "start": 29,
-        "length": 2
+      "1354720": {
+        "start": 12,
+        "length": 2,
+        "reading": "のり"
       },
-      "1214810": {
-        "start": 11,
-        "length": 2
+      "1355120": {
+        "start": 12,
+        "length": 2,
+        "reading": "のり"
       },
-      "1312420": {
-        "start": 7,
-        "length": 2
+      "1512360": {
+        "start": 10,
+        "length": 1,
+        "reading": "びん"
       },
-      "1346140": {
-        "start": 45,
-        "length": 3
+      "2011410": {
+        "start": 6,
+        "length": 4,
+        "reading": "のりつぎ"
       },
-      "1349070": {
-        "start": 67,
-        "length": 2
+      "2224710": {
+        "start": 6,
+        "length": 5,
+        "reading": "のりつぎびん"
+      }
+    }
+  },
+  {
+    "id": "198066",
+    "original": "バスを乗り間違えるなんて私はどうかしている。",
+    "en": [
+      {
+        "id": "35255",
+        "text": "It is careless of me to take the wrong bus."
+      }
+    ],
+    "indices": "バス(#1098390) を 乗り間違える なんて[01] 私(わたし)[01] は どうかしている",
+    "vocabIds": [
+      "1355120",
+      "1354720",
+      "2083630",
+      "1215330",
+      "1311110"
+    ],
+    "matches": {
+      "1215330": {
+        "start": 5,
+        "length": 4,
+        "reading": "まちがえる"
+      },
+      "1311110": {
+        "start": 12,
+        "length": 1,
+        "reading": "わたし"
       },
       "1354720": {
-        "start": 55,
-        "length": 2
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
       },
-      "1423320": {
-        "start": 42,
-        "length": 3
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
       },
-      "1467910": {
-        "start": 26,
-        "length": 2
+      "2083630": {
+        "start": 3,
+        "length": 6,
+        "reading": "のりまちがえる"
       }
     }
   },
@@ -1753,12 +2375,19 @@
     ],
     "indices": "バス(#1098390) に 乗る[01]{乗りましょう}",
     "vocabIds": [
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -1777,42 +2406,19 @@
     ],
     "indices": "バス(#1098390) に 乗る[01]{乗り} 為さい{なさい}",
     "vocabIds": [
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 3,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "198221",
-    "original": "バスが来て彼女は乗りこんだ。",
-    "en": [
-      {
-        "id": "35413",
-        "text": "When the bus came, she got on."
-      }
-    ],
-    "indices": "バス(#1098390) が 来る(くる)[01]{来て} 彼女[01] は 乗り込む[01]{乗りこんだ}",
-    "vocabIds": [
-      "1547720",
-      "1483150",
-      "1354720"
-    ],
-    "matches": {
-      "1354720": {
-        "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
-      "1483150": {
-        "start": 5,
-        "length": 2
-      },
-      "1547720": {
+      "1355120": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -1830,24 +2436,34 @@
       "1515120",
       "1603990",
       "1604350",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 17,
+        "length": 2,
+        "reading": "のり"
       },
       "1515120": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
       },
       "1603990": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "まち"
       },
       "1604350": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "まんなか"
       }
     }
   },
@@ -1866,22 +2482,43 @@
     ],
     "indices": "何処{どこ} で(#2028980) 乗り換える[01]{乗り替えたら} 良い{よい} か 教える{教えて} 呉れる{くれません} か",
     "vocabIds": [
+      "1355120",
       "1354720",
       "1589780",
-      "1236900"
+      "1410830",
+      "1236900",
+      "1236890"
     ],
     "matches": {
+      "1236890": {
+        "start": 12,
+        "length": 2,
+        "reading": "おしえ"
+      },
       "1236900": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "おしえ"
       },
       "1354720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1410830": {
+        "start": 5,
+        "length": 2,
+        "reading": "かえ"
       },
       "1589780": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "かえ"
       }
     }
   },
@@ -1900,17 +2537,70 @@
     ],
     "indices": "どうぞ[01] 乗る{お乗り} 下さい",
     "vocabIds": [
+      "1355120",
       "1354720",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 6,
+        "length": 3,
+        "reading": "ください"
       },
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 4,
+        "length": 2,
+        "reading": "のり"
+      }
+    }
+  },
+  {
+    "id": "202697",
+    "original": "ついうっかりしてバスを乗り間違えた。",
+    "en": [
+      {
+        "id": "39932",
+        "text": "I wasn't being mindful and got on a wrong bus by mistake."
+      }
+    ],
+    "indices": "つい うっかり 為る(する){して} バス(#1098390) を 乗り間違える{乗り間違えた}~",
+    "vocabIds": [
+      "1355120",
+      "1354720",
+      "1215330",
+      "2017170"
+    ],
+    "matches": {
+      "1215330": {
+        "start": 13,
+        "length": 3,
+        "reading": "まちがえ"
+      },
+      "1354720": {
+        "start": 11,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 11,
+        "length": 2,
+        "reading": "のり"
+      },
+      "2017170": {
+        "start": 13,
+        "length": 3,
+        "reading": "まちがえ"
       }
     }
   },
@@ -1925,122 +2615,58 @@
     ],
     "indices": "タクシー に 乗る[01]{乗り} ましょうか",
     "vocabIds": [
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
   {
-    "id": "214636",
-    "original": "スティーブはバスに乗り込もうとしている。",
+    "id": "220385",
+    "original": "この電車は乗り心地がいい。",
     "en": [
       {
-        "id": "51930",
-        "text": "Steve is getting on the bus."
+        "id": "57706",
+        "text": "This train rides very well."
       }
     ],
-    "indices": "は バス(#1098390) に 乗り込む[01]{乗り込もう} とする{としている}",
+    "indices": "此の{この} 電車 は 乗り心地 が いい",
     "vocabIds": [
-      "1354720"
-    ],
-    "matches": {
-      "1354720": {
-        "start": 9,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "216743",
-    "original": "さまざまな艱難辛苦を乗り越え、彼は南極大陸単独横断を成し遂げた。",
-    "en": [
-      {
-        "id": "54049",
-        "text": "He overcame all sorts of hardship and setbacks to succeed in a solo crossing of Antarctica."
-      }
-    ],
-    "indices": "様々(さまざま){さまざまな} 艱難辛苦~ を 乗り越える{乗り越え} 彼(かれ)[01] は 南極大陸~ 単独 横断[02] を 成し遂げる{成し遂げた}",
-    "vocabIds": [
-      "1571410",
+      "1443530",
       "1354720",
-      "2858626",
-      "1483070",
-      "1460240",
-      "1417780",
-      "1180900",
-      "1375550"
+      "1600490",
+      "1360820"
     ],
     "matches": {
-      "1180900": {
-        "start": 23,
-        "length": 2
-      },
       "1354720": {
-        "start": 10,
-        "length": 2
-      },
-      "1375550": {
-        "start": 26,
-        "length": 5
-      },
-      "1417780": {
-        "start": 21,
-        "length": 2
-      },
-      "1460240": {
-        "start": 17,
-        "length": 4
-      },
-      "1483070": {
-        "start": 15,
-        "length": 1
-      },
-      "1571410": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "のり"
       },
-      "2858626": {
-        "start": 12,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "218037",
-    "original": "これまでは民主党に投票したものだが、これからは共和党に乗りかえるつもりだ。",
-    "en": [
-      {
-        "id": "55346",
-        "text": "In the past I used to vote for the Democratic ticket, but from now on I'll climb on the Republican bandwagon."
-      }
-    ],
-    "indices": "此れ迄{これまで} は 民主党 に 投票 為る(する){した} 物(もの){もの} だ が[03] 此れから{これから} は 共和党 に 乗り換える[02]{乗りかえる} 積もり{つもり} だ",
-    "vocabIds": [
-      "1528880",
-      "1447320",
-      "1235390",
-      "1354720"
-    ],
-    "matches": {
-      "1235390": {
-        "start": 23,
-        "length": 3
+      "1360820": {
+        "start": 7,
+        "length": 2,
+        "reading": "ごこち"
       },
-      "1354720": {
-        "start": 27,
-        "length": 2
+      "1443530": {
+        "start": 2,
+        "length": 2,
+        "reading": "でんしゃ"
       },
-      "1447320": {
-        "start": 9,
-        "length": 2
-      },
-      "1528880": {
+      "1600490": {
         "start": 5,
-        "length": 3
+        "length": 4,
+        "reading": "のりごこち"
       }
     }
   },
@@ -2057,20 +2683,29 @@
     "vocabIds": [
       "1435080",
       "1482410",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 14,
+        "length": 2,
+        "reading": "のり"
       },
       "1435080": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ていりゅうじょ"
       },
       "1482410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ばんめ"
       }
     }
   },
@@ -2086,16 +2721,24 @@
     "indices": "此の{この} 自転車 は 乗る[01]{乗り} 易い{やすい}",
     "vocabIds": [
       "1318290",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1318290": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1354720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 6,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -2116,11 +2759,13 @@
     "matches": {
       "1354720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1580640": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -2141,11 +2786,13 @@
     "matches": {
       "1354720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1580640": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -2162,85 +2809,92 @@
     "vocabIds": [
       "1444510",
       "1578850",
+      "1177800",
       "1177790",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1177790": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "とお"
+      },
+      "1177800": {
+        "start": 16,
+        "length": 1,
+        "reading": "とお"
       },
       "1354720": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 28,
+        "length": 2,
+        "reading": "のり"
       },
       "1444510": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "とほ"
       },
       "1578850": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
   {
-    "id": "225859",
-    "original": "キャサリンが新車を買うように父にねだった時には下心があったのだ。彼女は自分が乗りまわすことができると思ったから。",
+    "id": "225290",
+    "original": "ケーブルカーに乗りたいが、高さが怖い。",
     "en": [
       {
-        "id": "63198",
-        "text": "Catherine had an ulterior motive when she urged her father to buy a new car. She hoped that she'd be able to drive it herself."
+        "id": "62627",
+        "text": "I'd like to ride the cable car, but I'm afraid of heights."
       }
     ],
-    "indices": "が 新車 を 買う[01] 様に{ように} 父 に 強請る[01]{ねだった} 時(とき) には 下心[01] が[01] 有る{あった} のだ 彼女[01] は 自分[01] が 乗り回す{乗りまわす} 事が出来る{ことができる} と 思う{思った} から",
+    "indices": "ケーブルカー に 乗る[01]{乗り} たい[01] が 高さ が 怖い",
     "vocabIds": [
-      "1361920",
-      "1473740",
-      "1497610",
-      "1315860",
-      "1185450",
-      "1483150",
-      "1318610",
+      "1355120",
       "1354720",
-      "1589350"
+      "1283190",
+      "2183260",
+      "1283200",
+      "1593480"
     ],
     "matches": {
-      "1185450": {
-        "start": 23,
-        "length": 2
+      "1283190": {
+        "start": 13,
+        "length": 1,
+        "reading": "たか"
       },
-      "1315860": {
-        "start": 20,
-        "length": 3
-      },
-      "1318610": {
-        "start": 35,
-        "length": 2
+      "1283200": {
+        "start": 13,
+        "length": 2,
+        "reading": "たかさ"
       },
       "1354720": {
-        "start": 38,
-        "length": 2
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
-      "1361920": {
-        "start": 6,
-        "length": 2
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
-      "1473740": {
-        "start": 9,
-        "length": 2
+      "1593480": {
+        "start": 16,
+        "length": 2,
+        "reading": "こわい"
       },
-      "1483150": {
-        "start": 32,
-        "length": 2
-      },
-      "1497610": {
-        "start": 14,
-        "length": 1
-      },
-      "1589350": {
-        "start": 50,
-        "length": 3
+      "2183260": {
+        "start": 13,
+        "length": 1,
+        "reading": "たか"
       }
     }
   },
@@ -2260,7 +2914,8 @@
     "matches": {
       "1354720": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -2282,15 +2937,18 @@
     "matches": {
       "1001770": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おきゃくさま"
       },
       "1202150": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "みな"
       },
       "1354720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -2307,20 +2965,29 @@
     "vocabIds": [
       "1584660",
       "1558370",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 13,
+        "length": 2,
+        "reading": "のり"
       },
       "1558370": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "1584660": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -2337,20 +3004,143 @@
     "vocabIds": [
       "1482330",
       "1228690",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1228690": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうこう"
       },
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "1482330": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "ばんせん"
+      }
+    }
+  },
+  {
+    "id": "234912",
+    "original": "９時３０分発の便に乗りたいです。",
+    "en": [
+      {
+        "id": "72290",
+        "text": "I'd like to take a 9:30 flight."
+      }
+    ],
+    "indices": "時(じ)[01] 分(ふん) 発[01] の 便(びん)[01] に 乗る[01]{乗り} たい[01] です",
+    "vocabIds": [
+      "2845349",
+      "1315840",
+      "2859157",
+      "1502860",
+      "1477120",
+      "1512360",
+      "1355120",
+      "1354720"
+    ],
+    "matches": {
+      "1315840": {
+        "start": 1,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1354720": {
+        "start": 9,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 9,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1477120": {
+        "start": 5,
+        "length": 1,
+        "reading": "はつ"
+      },
+      "1502860": {
+        "start": 4,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1512360": {
+        "start": 7,
+        "length": 1,
+        "reading": "びん"
+      },
+      "2845349": {
+        "start": 0,
+        "length": 2,
+        "reading": "きゅうじ"
+      },
+      "2859157": {
+        "start": 2,
+        "length": 3,
+        "reading": "さんぜろふん"
+      }
+    }
+  },
+  {
+    "id": "235032",
+    "original": "６時発のニューヨーク行きの列車に乗りたいのです。",
+    "en": [
+      {
+        "id": "72409",
+        "text": "I want to catch the six o'clock train to New York."
+      }
+    ],
+    "indices": "時(じ)[01] 発[01]~ の 紐育{ニューヨーク} 行き[01] の 列車 に 乗る[01]{乗り} たい[01] のです",
+    "vocabIds": [
+      "1315840",
+      "1477120",
+      "1578790",
+      "1558370",
+      "1355120",
+      "1354720"
+    ],
+    "matches": {
+      "1315840": {
+        "start": 1,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1354720": {
+        "start": 16,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 16,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1477120": {
+        "start": 2,
+        "length": 1,
+        "reading": "はつ"
+      },
+      "1558370": {
+        "start": 13,
+        "length": 2,
+        "reading": "れっしゃ"
+      },
+      "1578790": {
+        "start": 10,
+        "length": 2,
+        "reading": "いき"
       }
     }
   },
@@ -2366,16 +3156,24 @@
     "indices": "番(ばん)[01] の バス(#1098390) に 乗る[01]{乗りました}",
     "vocabIds": [
       "2022640",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "2022640": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ばん"
       }
     }
   },
@@ -2392,20 +3190,29 @@
     "vocabIds": [
       "1482330",
       "1558370",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 14,
+        "length": 2,
+        "reading": "のり"
       },
       "1482330": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "ばんせん"
       },
       "1558370": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -2421,16 +3228,24 @@
     "indices": "階(かい)[02] へ は エレベーター に 乗る[01]{乗り} 為さい{なさい}",
     "vocabIds": [
       "1203020",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1203020": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1354720": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 11,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -2446,31 +3261,54 @@
     "indices": "時(じ)[01] 分(ふん) 発[01] の 列車 に 乗る[01]{乗りましょう}",
     "vocabIds": [
       "1307230",
+      "1315840",
       "1335070",
+      "1502860",
       "1477120",
       "1558370",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1307230": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "よんじ"
+      },
+      "1315840": {
+        "start": 1,
+        "length": 1,
+        "reading": "じ"
       },
       "1335070": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いちぜろふん"
       },
       "1354720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 10,
+        "length": 2,
+        "reading": "のり"
       },
       "1477120": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はつ"
+      },
+      "1502860": {
+        "start": 4,
+        "length": 1,
+        "reading": "ふん"
       },
       "1558370": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -2486,16 +3324,24 @@
     "indices": "一人{１人} ずつ[01] バス(#1098390) に 乗る[01]{乗り} 為さい{なさい}",
     "vocabIds": [
       "1580640",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "1580640": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -2512,30 +3358,104 @@
     "vocabIds": [
       "2022640",
       "1354720",
+      "1605680",
       "1542430",
+      "1239560",
+      "1392580",
       "1392590",
+      "1310620",
       "1658240"
     ],
     "matches": {
+      "1239560": {
+        "start": 16,
+        "length": 1,
+        "reading": "きょく"
+      },
+      "1310620": {
+        "start": 20,
+        "length": 3,
+        "reading": "とまり"
+      },
       "1354720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1392580": {
+        "start": 18,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1542430": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "ゆうびんきょく"
+      },
+      "1605680": {
+        "start": 14,
+        "length": 2,
+        "reading": "ゆうびん"
       },
       "1658240": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "とまり"
       },
       "2022640": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ばん"
+      }
+    }
+  },
+  {
+    "id": "235981",
+    "original": "１１時４５分のに乗りたいんです。",
+    "en": [
+      {
+        "id": "73362",
+        "text": "I want to catch the 11:45."
+      }
+    ],
+    "indices": "時(じ)[01] 分(ふん) のに 乗る[01]{乗り} たい[01] のです{んです}",
+    "vocabIds": [
+      "2845370",
+      "1315840",
+      "2145670",
+      "1355120",
+      "1354720"
+    ],
+    "matches": {
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1354720": {
+        "start": 8,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 8,
+        "length": 2,
+        "reading": "のり"
+      },
+      "2145670": {
+        "start": 5,
+        "length": 2,
+        "reading": "ぶんの"
+      },
+      "2845370": {
+        "start": 0,
+        "length": 3,
+        "reading": "いちいちじ"
       }
     }
   },
@@ -2553,24 +3473,34 @@
       "1579840",
       "1658480",
       "1443530",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "1443530": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1579840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "じゅう"
       },
       "1658480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じはん"
       }
     }
   },
@@ -2586,120 +3516,230 @@
     "indices": "時(じ)[01] 前(まえ)[02] には ホテル を 出発{出発し} ねばならない{なければなりません} 然も無ければ{さもなければ} マイアミ 行き[02]~ の 電車 を 乗り逃がす{乗り逃がして}~ 仕舞う{しまいます}",
     "vocabIds": [
       "2845369",
+      "1315840",
+      "1392580",
       "1392590",
       "1340000",
       "1578790",
       "1443530",
+      "1355120",
       "1354720",
       "1450320"
     ],
     "matches": {
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "じ"
+      },
       "1340000": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
       },
       "1354720": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 39,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1392580": {
+        "start": 3,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1443530": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1450320": {
         "start": 41,
-        "length": 4
+        "length": 3,
+        "reading": "にがし"
       },
       "1578790": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
       },
       "2845369": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いちぜろじ"
       }
     }
   },
   {
-    "id": "459370",
-    "original": "冬眠の目的を考えれば、冬の食料の少ない季節を何とか乗り切ろうとした生物の適応だと思うのです。",
+    "id": "479989",
+    "original": "電車を乗り間違えた。",
     "en": [
       {
-        "id": "533242",
-        "text": "If you consider the objective of hibernation, I think it's the response of animals trying to somehow survive the winter season with its lack of food."
+        "id": "479978",
+        "text": "I got on the wrong train."
       }
     ],
     "vocabIds": [
-      "1446150",
-      "1535560",
-      "1281000",
-      "1446070",
-      "1358670",
-      "1348910",
-      "1222840",
-      "1188420",
+      "1443530",
+      "1355120",
       "1354720",
-      "1383750",
-      "1379430",
-      "1437350",
-      "1589350"
+      "1215330",
+      "2017170"
     ],
     "matches": {
-      "1188420": {
-        "start": 22,
-        "length": 3
-      },
-      "1222840": {
-        "start": 19,
-        "length": 2
-      },
-      "1281000": {
-        "start": 6,
-        "length": 2
-      },
-      "1348910": {
-        "start": 16,
-        "length": 3
+      "1215330": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
       },
       "1354720": {
-        "start": 25,
-        "length": 2
-      },
-      "1358670": {
-        "start": 13,
-        "length": 2
-      },
-      "1379430": {
-        "start": 33,
-        "length": 2
-      },
-      "1383750": {
-        "start": 27,
-        "length": 1
-      },
-      "1437350": {
-        "start": 36,
-        "length": 2
-      },
-      "1446070": {
-        "start": 11,
-        "length": 1
-      },
-      "1446150": {
-        "start": 0,
-        "length": 2
-      },
-      "1535560": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
-      "1589350": {
-        "start": 40,
-        "length": 2
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1443530": {
+        "start": 0,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "2017170": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
+      }
+    }
+  },
+  {
+    "id": "479991",
+    "original": "電車に乗り間違えた。",
+    "en": [
+      {
+        "id": "479978",
+        "text": "I got on the wrong train."
+      }
+    ],
+    "vocabIds": [
+      "1443530",
+      "1355120",
+      "1354720",
+      "1215330",
+      "2017170"
+    ],
+    "matches": {
+      "1215330": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
+      },
+      "1354720": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1443530": {
+        "start": 0,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "2017170": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
+      }
+    }
+  },
+  {
+    "id": "479993",
+    "original": "バスを乗り間違えた。",
+    "en": [
+      {
+        "id": "479979",
+        "text": "I got on the wrong bus."
+      }
+    ],
+    "vocabIds": [
+      "1355120",
+      "1354720",
+      "1215330",
+      "2017170"
+    ],
+    "matches": {
+      "1215330": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
+      },
+      "1354720": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
+      },
+      "2017170": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
+      }
+    }
+  },
+  {
+    "id": "479994",
+    "original": "バスに乗り間違えた。",
+    "en": [
+      {
+        "id": "479979",
+        "text": "I got on the wrong bus."
+      }
+    ],
+    "vocabIds": [
+      "1355120",
+      "1354720",
+      "1215330",
+      "2017170"
+    ],
+    "matches": {
+      "1215330": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
+      },
+      "1354720": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
+      },
+      "2017170": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
       }
     }
   },
@@ -2727,20 +3767,29 @@
     "vocabIds": [
       "1580490",
       "1394840",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
       },
       "1394840": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんいん"
       },
       "1580490": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じょうきゃく"
       }
     }
   },
@@ -2757,112 +3806,34 @@
       "1579110",
       "1311110",
       "1318290",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1318290": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1354720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 12,
+        "length": 2,
+        "reading": "のり"
       },
       "1579110": {
         "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "1137900",
-    "original": "これが事件現場に乗り捨てられていたものと同じ車です。",
-    "en": [
-      {
-        "id": "56119",
-        "text": "This is the same car that was left at the scene of the crime."
-      }
-    ],
-    "vocabIds": [
-      "1313830",
-      "1263760",
-      "1354720",
-      "2844604",
-      "1451750",
-      "1323080"
-    ],
-    "matches": {
-      "1263760": {
-        "start": 5,
-        "length": 2
-      },
-      "1313830": {
-        "start": 3,
-        "length": 2
-      },
-      "1323080": {
-        "start": 22,
-        "length": 1
-      },
-      "1354720": {
-        "start": 8,
-        "length": 2
-      },
-      "1451750": {
-        "start": 20,
-        "length": 2
-      },
-      "2844604": {
-        "start": 10,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "1139089",
-    "original": "彼は始発電車に飛び乗り、時間ぎりぎりでそこに到着した。",
-    "en": [
-      {
-        "id": "297105",
-        "text": "He caught the first train and got there just in time."
-      }
-    ],
-    "vocabIds": [
-      "1483070",
-      "2601460",
-      "2248520",
-      "1354720",
-      "1315920",
-      "1449870"
-    ],
-    "matches": {
-      "1315920": {
-        "start": 12,
-        "length": 2
-      },
-      "1354720": {
-        "start": 9,
-        "length": 2
-      },
-      "1449870": {
-        "start": 22,
-        "length": 2
-      },
-      "1483070": {
-        "start": 0,
-        "length": 1
-      },
-      "2248520": {
-        "start": 7,
-        "length": 2
-      },
-      "2601460": {
-        "start": 2,
-        "length": 4
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -2879,34 +3850,52 @@
       "1483150",
       "1231690",
       "1318290",
+      "1355120",
       "1354720",
       "1516930",
-      "1206050"
+      "1206050",
+      "1206040"
     ],
     "matches": {
+      "1206040": {
+        "start": 14,
+        "length": 2,
+        "reading": "おぼえ"
+      },
       "1206050": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "おぼえ"
       },
       "1231690": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょねん"
       },
       "1318290": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1354720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 10,
+        "length": 2,
+        "reading": "のり"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1516930": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "かた"
       }
     }
   },
@@ -2933,21 +3922,42 @@
     ],
     "vocabIds": [
       "2845370",
+      "1315840",
+      "2834641",
       "1443530",
+      "1355120",
       "1354720"
     ],
     "matches": {
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "じ"
+      },
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "1443530": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "2834641": {
+        "start": 2,
+        "length": 2,
+        "reading": "じの"
       },
       "2845370": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いちいちじ"
       }
     }
   },
@@ -2963,30 +3973,47 @@
     "vocabIds": [
       "1583640",
       "2002320",
+      "1463770",
       "1542790",
       "1471780",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 14,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "ひ"
       },
       "1471780": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ばしゃ"
       },
       "1542790": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうがた"
       },
       "1583640": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ふうふ"
       },
       "2002320": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "そのひ"
       }
     }
   },
@@ -3001,16 +4028,24 @@
     ],
     "vocabIds": [
       "1471560",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 2,
+        "length": 2,
+        "reading": "のり"
       },
       "1471560": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "うま"
       }
     }
   },
@@ -3025,16 +4060,24 @@
     ],
     "vocabIds": [
       "1001770",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1001770": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おきゃくさま"
       },
       "1354720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 8,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -3054,20 +4097,73 @@
     "vocabIds": [
       "1293780",
       "1454750",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1354720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 6,
+        "length": 2,
+        "reading": "のり"
       },
       "1454750": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "とっきゅう"
+      }
+    }
+  },
+  {
+    "id": "2242443",
+    "original": "私はむしろ歩くより、自転車に乗りたい。",
+    "en": [
+      {
+        "id": "752926",
+        "text": "I'd rather ride my bike than walk."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1514320",
+      "1318290",
+      "1355120",
+      "1354720"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1318290": {
+        "start": 10,
+        "length": 3,
+        "reading": "じてんしゃ"
+      },
+      "1354720": {
+        "start": 14,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 14,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1514320": {
+        "start": 5,
+        "length": 2,
+        "reading": "あるく"
       }
     }
   },
@@ -3095,45 +4191,13 @@
     "matches": {
       "1354720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1580640": {
         "start": 7,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "3895161",
-    "original": "急がないと終電に乗り遅れちゃうよ。",
-    "en": [
-      {
-        "id": "3129166",
-        "text": "If you don't hurry, you'll miss the last train."
-      }
-    ],
-    "vocabIds": [
-      "1228650",
-      "1332960",
-      "1354720",
-      "1422020"
-    ],
-    "matches": {
-      "1228650": {
-        "start": 0,
-        "length": 4
-      },
-      "1332960": {
-        "start": 5,
-        "length": 2
-      },
-      "1354720": {
-        "start": 8,
-        "length": 2
-      },
-      "1422020": {
-        "start": 10,
-        "length": 2
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -3153,36 +4217,49 @@
       "1182030",
       "1391780",
       "1458770",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1182030": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "きいろい"
       },
       "1296300": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "さい"
       },
       "1354720": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 33,
+        "length": 2,
+        "reading": "のり"
       },
       "1391780": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
       },
       "1458770": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "うちがわ"
       },
       "1549660": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "りよう"
       },
       "1598320": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "てすり"
       }
     }
   },
@@ -3197,16 +4274,24 @@
     ],
     "vocabIds": [
       "1323080",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1354720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 2,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -3221,16 +4306,24 @@
     ],
     "vocabIds": [
       "1318290",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1318290": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 4,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -3244,12 +4337,19 @@
       }
     ],
     "vocabIds": [
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -3264,26 +4364,42 @@
     ],
     "vocabIds": [
       "1318290",
+      "1355120",
       "1354720",
       "1516930",
-      "1206530"
+      "1206530",
+      "1640990"
     ],
     "matches": {
       "1206530": {
         "start": 11,
-        "length": 4
+        "length": 2,
+        "reading": "まなび"
       },
       "1318290": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "1516930": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "かた"
+      },
+      "1640990": {
+        "start": 11,
+        "length": 2,
+        "reading": "まなび"
       }
     }
   },
@@ -3297,22 +4413,37 @@
       }
     ],
     "vocabIds": [
+      "1355120",
       "1354720",
       "1516930",
-      "1206530"
+      "1206530",
+      "1640990"
     ],
     "matches": {
       "1206530": {
         "start": 11,
-        "length": 4
+        "length": 2,
+        "reading": "まなび"
       },
       "1354720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 7,
+        "length": 2,
+        "reading": "のり"
       },
       "1516930": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "かた"
+      },
+      "1640990": {
+        "start": 11,
+        "length": 2,
+        "reading": "まなび"
       }
     }
   },
@@ -3327,84 +4458,140 @@
     ],
     "vocabIds": [
       "1311110",
+      "1355120",
       "1354720",
       "1516930",
-      "1333070"
+      "1333070",
+      "1333060"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1333060": {
+        "start": 12,
+        "length": 2,
+        "reading": "ならい"
       },
       "1333070": {
         "start": 12,
-        "length": 4
+        "length": 2,
+        "reading": "ならい"
       },
       "1354720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 8,
+        "length": 2,
+        "reading": "のり"
       },
       "1516930": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かた"
       }
     }
   },
   {
-    "id": "9149369",
-    "original": "急がないと、電車に乗り遅れちゃうよ。",
+    "id": "9066883",
+    "original": "トムは最近乗りに乗ってるよな。",
     "en": [
       {
-        "id": "19702",
-        "text": "You'll miss the train if you don't hurry."
+        "id": "37296",
+        "text": "Tom is riding high these days."
       },
       {
-        "id": "19649",
-        "text": "Hurry up, or you will miss the train."
-      },
-      {
-        "id": "19683",
-        "text": "Hurry up, or you'll miss the train."
-      },
-      {
-        "id": "19703",
-        "text": "If you don't hurry, you'll miss the train."
-      },
-      {
-        "id": "1184075",
-        "text": "Hurry up or you'll miss the train."
-      },
-      {
-        "id": "8717375",
-        "text": "If you don't hurry, you'll miss your train."
-      },
-      {
-        "id": "19665",
-        "text": "You will miss the train if you don't hurry."
+        "id": "3902890",
+        "text": "Tom's doing very well these days."
       }
     ],
     "vocabIds": [
-      "1228650",
-      "1443530",
+      "1293780",
       "1354720",
-      "1422020"
+      "1355120"
     ],
     "matches": {
-      "1228650": {
-        "start": 0,
-        "length": 4
+      "1293780": {
+        "start": 3,
+        "length": 2,
+        "reading": "さいきん"
       },
       "1354720": {
-        "start": 9,
-        "length": 2
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
       },
-      "1422020": {
-        "start": 11,
-        "length": 2
+      "1355120": {
+        "start": 8,
+        "length": 2,
+        "reading": "のっ"
+      }
+    }
+  },
+  {
+    "id": "9080206",
+    "original": "最終バスに乗り損ねてさ、雨の中、家まで歩かなきゃいけなかったんだよ。",
+    "en": [
+      {
+        "id": "1503659",
+        "text": "I missed the last bus and had to walk home in the rain."
+      }
+    ],
+    "vocabIds": [
+      "1293940",
+      "1355120",
+      "1354720",
+      "1406690",
+      "1171900",
+      "1423310",
+      "1191730",
+      "1514320"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 12,
+        "length": 1,
+        "reading": "あめ"
       },
-      "1443530": {
-        "start": 6,
-        "length": 2
+      "1191730": {
+        "start": 16,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1293940": {
+        "start": 0,
+        "length": 2,
+        "reading": "さいしゅう"
+      },
+      "1354720": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1406690": {
+        "start": 7,
+        "length": 2,
+        "reading": "そこね"
+      },
+      "1423310": {
+        "start": 14,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1514320": {
+        "start": 19,
+        "length": 2,
+        "reading": "あるか"
       }
     }
   },
@@ -3418,12 +4605,19 @@
       }
     ],
     "vocabIds": [
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 4,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -3438,40 +4632,24 @@
     ],
     "vocabIds": [
       "1485470",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 4,
+        "length": 2,
+        "reading": "のり"
       },
       "1485470": {
         "start": 0,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "10034368",
-    "original": "乗り過ごしちゃったよ。",
-    "en": [
-      {
-        "id": "10034360",
-        "text": "We missed our stop."
-      }
-    ],
-    "vocabIds": [
-      "1354720",
-      "2147200"
-    ],
-    "matches": {
-      "1354720": {
-        "start": 0,
-        "length": 2
-      },
-      "2147200": {
-        "start": 2,
-        "length": 1
+        "length": 3,
+        "reading": "ひこうき"
       }
     }
   },
@@ -3492,15 +4670,18 @@
     "matches": {
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1354720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1580640": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -3519,16 +4700,24 @@
     ],
     "vocabIds": [
       "1354720",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1354720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1547710": {
+        "start": 11,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 11,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -3549,30 +4738,47 @@
     "vocabIds": [
       "1311110",
       "1315840",
+      "1355120",
       "1354720",
       "1516930",
+      "1333070",
       "1333060"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315840": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1333060": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ならい"
+      },
+      "1333070": {
+        "start": 15,
+        "length": 2,
+        "reading": "ならい"
       },
       "1354720": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 11,
+        "length": 2,
+        "reading": "のり"
       },
       "1516930": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "かた"
       }
     }
   },
@@ -3593,15 +4799,18 @@
     "matches": {
       "1323080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1354720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1397350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すてき"
       }
     }
   },
@@ -3617,20 +4826,55 @@
     "vocabIds": [
       "1540170",
       "1318290",
+      "1355120",
       "1354720"
     ],
     "matches": {
       "1318290": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1354720": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 11,
+        "length": 2,
+        "reading": "のり"
       },
       "1540170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
+      }
+    }
+  },
+  {
+    "id": "10914786",
+    "original": "タクシーに乗りたいんですが。",
+    "en": [
+      {
+        "id": "8892950",
+        "text": "I'd like to take a taxi."
+      }
+    ],
+    "vocabIds": [
+      "1355120",
+      "1354720"
+    ],
+    "matches": {
+      "1354720": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 5,
+        "length": 2,
+        "reading": "のり"
       }
     }
   },
@@ -3644,27 +4888,99 @@
       }
     ],
     "vocabIds": [
+      "1576870",
       "1863230",
+      "1461140",
+      "1582670",
       "1462470",
+      "1580640",
+      "1355120",
       "1354720",
-      "1406660"
+      "1406690"
     ],
     "matches": {
       "1354720": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
-      "1406660": {
+      "1355120": {
+        "start": 11,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1406690": {
         "start": 13,
-        "length": 1
+        "length": 2,
+        "reading": "そこね"
+      },
+      "1461140": {
+        "start": 3,
+        "length": 1,
+        "reading": "に"
       },
       "1462470": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "ににんとも"
+      },
+      "1576870": {
+        "start": 0,
+        "length": 1,
+        "reading": "おれ"
+      },
+      "1580640": {
+        "start": 4,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1582670": {
+        "start": 3,
+        "length": 2,
+        "reading": "ににん"
       },
       "1863230": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おれたち"
+      }
+    }
+  },
+  {
+    "id": "11299897",
+    "original": "電車、乗り間違えたみたい。",
+    "en": [
+      {
+        "id": "5177006",
+        "text": "I'm afraid I'm on the wrong train."
+      }
+    ],
+    "vocabIds": [
+      "1443530",
+      "1354720",
+      "1215330",
+      "2017170"
+    ],
+    "matches": {
+      "1215330": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
+      },
+      "1354720": {
+        "start": 3,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1443530": {
+        "start": 0,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "2017170": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
       }
     }
   },
@@ -3685,15 +5001,18 @@
     "matches": {
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1354720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1580640": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -3717,45 +5036,13 @@
     "matches": {
       "1354720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1402730": {
         "start": 5,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "11620132",
-    "original": "考え事に没頭してたら、乗り過ごしちゃったんだ。",
-    "en": [
-      {
-        "id": "241023",
-        "text": "Lost in thought, I missed my stop."
-      }
-    ],
-    "vocabIds": [
-      "1281040",
-      "1522010",
-      "1354720",
-      "2147200"
-    ],
-    "matches": {
-      "1281040": {
-        "start": 0,
-        "length": 3
-      },
-      "1354720": {
-        "start": 11,
-        "length": 2
-      },
-      "1522010": {
-        "start": 4,
-        "length": 2
-      },
-      "2147200": {
-        "start": 13,
-        "length": 1
+        "length": 2,
+        "reading": "おくっ"
       }
     }
   },
@@ -3769,79 +5056,73 @@
       }
     ],
     "vocabIds": [
+      "1602330",
       "2103590",
+      "1269320",
       "1394840",
+      "1355120",
       "1354720",
       "1316380",
+      "1535560",
       "1535580",
+      "1420730",
       "1604800"
     ],
     "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
       "1316380": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1354720": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 9,
+        "length": 2,
+        "reading": "のり"
       },
       "1394840": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんいん"
+      },
+      "1420730": {
+        "start": 16,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1535560": {
+        "start": 14,
+        "length": 2,
+        "reading": "もくてき"
       },
       "1535580": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "もくてきち"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1604800": {
         "start": 19,
-        "length": 4
+        "length": 3,
+        "reading": "むかっ"
       },
       "2103590": {
         "start": 0,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "11829282",
-    "original": "急がないと飛行機に乗り遅れちゃうよ。",
-    "en": [
-      {
-        "id": "19674",
-        "text": "Hurry up, or you'll miss your plane."
-      },
-      {
-        "id": "12351531",
-        "text": "If you don't hurry, you'll miss your flight."
-      },
-      {
-        "id": "12351532",
-        "text": "If you don't hurry, you'll miss your plane."
-      }
-    ],
-    "vocabIds": [
-      "1228650",
-      "1485470",
-      "1354720",
-      "1422020"
-    ],
-    "matches": {
-      "1228650": {
-        "start": 0,
-        "length": 4
-      },
-      "1354720": {
-        "start": 9,
-        "length": 2
-      },
-      "1422020": {
-        "start": 11,
-        "length": 2
-      },
-      "1485470": {
-        "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうしょくご"
       }
     }
   },
@@ -3857,6 +5138,7 @@
     "indices": "一口[02]~ 乗る{乗り} たがる{たがっている} 人(ひと) が 大勢(おおぜい) だ",
     "vocabIds": [
       "1162370",
+      "1355120",
       "1354720",
       "1580640",
       "1414220"
@@ -3864,19 +5146,28 @@
     "matches": {
       "1162370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひとくち"
       },
       "1354720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 2,
+        "length": 2,
+        "reading": "のり"
       },
       "1414220": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たいせい"
       },
       "1580640": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -3899,23 +5190,28 @@
     "matches": {
       "1195960": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "すぎ"
       },
       "1267460": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "また"
       },
       "1318290": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1354720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のり"
       },
       "1432680": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       }
     }
   }

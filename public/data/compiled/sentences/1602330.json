@@ -14,6 +14,7 @@
     ],
     "indices": "今日{きょう} 何(なに)[01] を 昼食(ちゅうしょく) に 食べる{食べました} か",
     "vocabIds": [
+      "1577100",
       "2851233",
       "1602330",
       "1358280"
@@ -21,15 +22,23 @@
     "matches": {
       "1358280": {
         "start": 8,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2851233": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なにを"
       }
     }
   },
@@ -44,32 +53,49 @@
     ],
     "indices": "マック[01] で(#2028980) 軽い{軽く} 昼食(ちゅうしょく) を 摂る{とって} NI{スタバ} で(#2028980) 珈琲{コーヒー} を 飲む[01]{飲んで} しゃぶしゃぶ[01]~ を 為る(する){し} 乍ら[01]{ながら} 飲み会~ と 言う{いう} 流れ だ",
     "vocabIds": [
-      "1956180",
+      "1252560",
       "1602330",
       "1169870",
+      "2151640",
       "2016170",
+      "1198160",
       "1552130"
     ],
     "matches": {
       "1169870": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "のん"
+      },
+      "1198160": {
+        "start": 39,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1252560": {
+        "start": 4,
+        "length": 2,
+        "reading": "かるく"
       },
       "1552130": {
         "start": 43,
-        "length": 2
+        "length": 2,
+        "reading": "ながれ"
       },
       "1602330": {
         "start": 6,
-        "length": 2
-      },
-      "1956180": {
-        "start": 4,
-        "length": 1
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2016170": {
         "start": 37,
-        "length": 3
+        "length": 3,
+        "reading": "のみかい"
+      },
+      "2151640": {
+        "start": 37,
+        "length": 2,
+        "reading": "のみ"
       }
     }
   },
@@ -90,11 +116,70 @@
     "matches": {
       "1536010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "82890",
+    "original": "母は昼食後すぐに運動しすぎてはいけないと言う。",
+    "en": [
+      {
+        "id": "320826",
+        "text": "My mother disapproves of too much exercise right after lunch."
+      }
+    ],
+    "indices": "母(はは) は 昼食後 直ぐに{すぐに} 運動 為る(する){し} 過ぎる(すぎる){すぎて} は 行けない[02]{いけない} と 言う",
+    "vocabIds": [
+      "1514990",
+      "1602330",
+      "2103590",
+      "1269320",
+      "1172910",
+      "1922760",
+      "1587040"
+    ],
+    "matches": {
+      "1172910": {
+        "start": 8,
+        "length": 2,
+        "reading": "うんどう"
+      },
+      "1269320": {
+        "start": 4,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1514990": {
+        "start": 0,
+        "length": 1,
+        "reading": "はは"
+      },
+      "1587040": {
+        "start": 20,
+        "length": 2,
+        "reading": "いう"
+      },
+      "1602330": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1922760": {
+        "start": 19,
+        "length": 3,
+        "reading": "という"
+      },
+      "2103590": {
+        "start": 2,
+        "length": 3,
+        "reading": "ちゅうしょくご"
       }
     }
   },
@@ -121,19 +206,23 @@
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1341670": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じゅんび"
       },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -161,21 +250,30 @@
     "indices": "母(はは) は 私たち の 昼食(ちゅうしょく) の したい{したく} を 為る(する){していた}",
     "vocabIds": [
       "1514990",
+      "1311110",
       "1311300",
       "1602330"
     ],
     "matches": {
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -203,23 +301,28 @@
     "matches": {
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1597890": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -242,19 +345,23 @@
     "matches": {
       "1358280": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1456420": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "どくしょ"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -281,19 +388,23 @@
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1597890": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
       },
       "1602330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -320,19 +431,23 @@
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1597890": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
       },
       "1602330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -358,105 +473,63 @@
     "matches": {
       "1358280": {
         "start": 9,
-        "length": 4
+        "length": 2,
+        "reading": "たべ"
       },
       "1497190": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ふつう"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
   {
-    "id": "87888",
-    "original": "彼女は昼食前はとても元気だったがその後気分が悪くなった。",
+    "id": "87890",
+    "original": "彼女は昼食時間までには帰ってくることになっている。",
     "en": [
       {
-        "id": "315819",
-        "text": "She was very well before lunch, but felt sick afterward."
+        "id": "315817",
+        "text": "She's supposed to be back by lunch time."
       }
     ],
-    "indices": "彼女[01] は 昼食(ちゅうしょく) 前(まえ) は 迚も[01]{とても} 元気 だ{だった} が その後 気分が悪い{気分が悪くなった}",
+    "indices": "彼女[01] は 昼食(ちゅうしょく) 時間 迄{まで} には 帰って来る{帰ってくる} ことになっている",
     "vocabIds": [
       "1483150",
       "1602330",
-      "1392580",
-      "1260720",
-      "1006860",
-      "1222590",
-      "2691760"
+      "1315920",
+      "1221270",
+      "1864140"
     ],
     "matches": {
-      "1006860": {
-        "start": 16,
-        "length": 3
+      "1221270": {
+        "start": 11,
+        "length": 2,
+        "reading": "かえっ"
       },
-      "1222590": {
-        "start": 19,
-        "length": 2
-      },
-      "1260720": {
-        "start": 10,
-        "length": 2
-      },
-      "1392580": {
+      "1315920": {
         "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "じかん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
-      "2691760": {
-        "start": 22,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "87889",
-    "original": "彼女は昼食前に戻ってくるものと思っています。",
-    "en": [
-      {
-        "id": "315818",
-        "text": "I expect her to come back before lunch."
-      }
-    ],
-    "indices": "彼女[01] は 昼食(ちゅうしょく) 前(まえ) に 戻って来る{戻ってくる} 物(もの){もの} と 思う{思っています}",
-    "vocabIds": [
-      "1483150",
-      "1602330",
-      "1392590",
-      "2092960",
-      "1589350"
-    ],
-    "matches": {
-      "1392590": {
-        "start": 5,
-        "length": 2
-      },
-      "1483150": {
-        "start": 0,
-        "length": 2
-      },
-      "1589350": {
-        "start": 15,
-        "length": 3
-      },
-      "1602330": {
-        "start": 3,
-        "length": 2
-      },
-      "2092960": {
-        "start": 7,
-        "length": 5
+      "1864140": {
+        "start": 11,
+        "length": 5,
+        "reading": "かえってくる"
       }
     }
   },
@@ -487,19 +560,23 @@
     "matches": {
       "1222590": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きぶん"
       },
       "1358280": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -516,30 +593,41 @@
     "vocabIds": [
       "1483150",
       "1602330",
+      "1221270",
       "1864140",
       "1497680",
       "1538130"
     ],
     "matches": {
+      "1221270": {
+        "start": 9,
+        "length": 2,
+        "reading": "かえっ"
+      },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1497680": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ちちおや"
       },
       "1538130": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1864140": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "かえってくる"
       }
     }
   },
@@ -561,15 +649,18 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1546220": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -586,25 +677,35 @@
     "vocabIds": [
       "1483150",
       "1602330",
+      "1589600",
       "1589590",
       "1169870"
     ],
     "matches": {
       "1169870": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "のん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589590": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 6,
+        "length": 3,
+        "reading": "おわり"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -626,15 +727,18 @@
     "matches": {
       "1328170": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "てつだい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -652,24 +756,34 @@
       "1483150",
       "1602330",
       "1315920",
+      "1221270",
       "1864140"
     ],
     "matches": {
+      "1221270": {
+        "start": 12,
+        "length": 2,
+        "reading": "かえっ"
+      },
       "1315920": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1864140": {
         "start": 12,
-        "length": 5
+        "length": 5,
+        "reading": "かえってくる"
       }
     }
   },
@@ -693,23 +807,28 @@
     "matches": {
       "1227720": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうけい"
       },
       "1315920": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1436320": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ていあん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -733,23 +852,28 @@
     "matches": {
       "1305990": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1524720": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       },
       "1542730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうしょく"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -771,15 +895,18 @@
     "matches": {
       "1191730": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -801,15 +928,18 @@
     "matches": {
       "1436130": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -831,15 +961,18 @@
     "matches": {
       "1358280": {
         "start": 13,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -860,11 +993,13 @@
     "matches": {
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -887,19 +1022,23 @@
     "matches": {
       "1198360": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かいぎ"
       },
       "1424900": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうだん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -922,19 +1061,23 @@
     "matches": {
       "1358530": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しょくたく"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1546220": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -951,20 +1094,29 @@
     "vocabIds": [
       "1483090",
       "1602330",
+      "1410590",
       "1640770"
     ],
     "matches": {
+      "1410590": {
+        "start": 6,
+        "length": 2,
+        "reading": "まち"
+      },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1640770": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まち"
       }
     }
   },
@@ -986,15 +1138,18 @@
     "matches": {
       "1295040": {
         "start": 18,
-        "length": 4
+        "length": 3,
+        "reading": "すませ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1602330": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1012,29 +1167,166 @@
       "1483070",
       "1483150",
       "1602330",
+      "1541900",
       "2844736",
-      "1338180"
+      "1587040",
+      "2827230",
+      "1338180",
+      "1339160"
     ],
     "matches": {
       "1338180": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 14,
+        "length": 2,
+        "reading": "だし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1541900": {
+        "start": 8,
+        "length": 2,
+        "reading": "さそお"
+      },
+      "1587040": {
+        "start": 12,
+        "length": 2,
+        "reading": "いい"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2827230": {
+        "start": 12,
+        "length": 4,
+        "reading": "いいだし"
       },
       "2844736": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "といい"
+      }
+    }
+  },
+  {
+    "id": "102137",
+    "original": "彼は昼食時に家にいないでしょう。",
+    "en": [
+      {
+        "id": "301557",
+        "text": "He won't be home at lunch time."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 昼食時~ に 家(いえ)[01] に 居る(いる)[01]{いない} でしょう[01]",
+    "vocabIds": [
+      "1483070",
+      "1602330",
+      "1893580",
+      "1315840",
+      "2021540",
+      "1191730"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 6,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1315840": {
+        "start": 4,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1602330": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1893580": {
+        "start": 2,
+        "length": 3,
+        "reading": "ちゅうしょくじ"
+      },
+      "2021540": {
+        "start": 4,
+        "length": 2,
+        "reading": "じに"
+      }
+    }
+  },
+  {
+    "id": "102138",
+    "original": "彼は昼食後また読書を始めた。",
+    "en": [
+      {
+        "id": "301556",
+        "text": "He resumed reading after lunch."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 昼食後~ 又{また} 読書 を 始める[01]{始めた}",
+    "vocabIds": [
+      "1483070",
+      "1602330",
+      "2103590",
+      "1269320",
+      "1456420",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 4,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1307550": {
+        "start": 10,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 10,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1456420": {
+        "start": 7,
+        "length": 2,
+        "reading": "どくしょ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1602330": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 2,
+        "length": 3,
+        "reading": "ちゅうしょくご"
       }
     }
   },
@@ -1051,20 +1343,35 @@
     "vocabIds": [
       "1483070",
       "1602330",
-      "2145280"
+      "1358280",
+      "1307550",
+      "1342540"
     ],
     "matches": {
+      "1307550": {
+        "start": 7,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 7,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1358280": {
+        "start": 5,
+        "length": 2,
+        "reading": "たべ"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
-      },
-      "2145280": {
-        "start": 5,
-        "length": 5
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1082,39 +1389,46 @@
       "1483070",
       "1602330",
       "1358280",
+      "1315840",
       "2021540",
       "1536010",
-      "1449530",
-      "1589320"
+      "1449530"
     ],
     "matches": {
+      "1315840": {
+        "start": 10,
+        "length": 1,
+        "reading": "とき"
+      },
       "1358280": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1449530": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "こたえ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1536010": {
         "start": 15,
-        "length": 2
-      },
-      "1589320": {
-        "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2021540": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -1131,25 +1445,35 @@
     "vocabIds": [
       "1483070",
       "1602330",
+      "1269320",
       "2640160",
       "1546580"
     ],
     "matches": {
+      "1269320": {
+        "start": 5,
+        "length": 1,
+        "reading": "のち"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1546580": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はまき"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2640160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "のちに"
       }
     }
   },
@@ -1171,15 +1495,18 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1598550": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "でかけ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1201,15 +1528,18 @@
     "matches": {
       "1358280": {
         "start": 12,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1227,24 +1557,34 @@
       "1483070",
       "1288850",
       "1602330",
-      "1326980"
+      "1326980",
+      "2809750"
     ],
     "matches": {
       "1288850": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "こん"
       },
       "1326980": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "とっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2809750": {
+        "start": 6,
+        "length": 2,
+        "reading": "とっ"
       }
     }
   },
@@ -1265,11 +1605,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1290,11 +1632,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1311,6 +1655,7 @@
     "vocabIds": [
       "1483070",
       "1007090",
+      "1155210",
       "1602330",
       "1329010",
       "1169870",
@@ -1319,27 +1664,38 @@
     "matches": {
       "1007090": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "それいらい"
+      },
+      "1155210": {
+        "start": 4,
+        "length": 2,
+        "reading": "いらい"
       },
       "1169870": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "のむ"
       },
       "1329010": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "さけ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1509350": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "くせ"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1360,11 +1716,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1602330": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1381,25 +1739,35 @@
     "vocabIds": [
       "1445590",
       "1602330",
+      "1315720",
       "1315710",
       "1519210"
     ],
     "matches": {
       "1315710": {
         "start": 7,
-        "length": 5
+        "length": 5,
+        "reading": "もってくる"
+      },
+      "1315720": {
+        "start": 7,
+        "length": 2,
+        "reading": "もっ"
       },
       "1445590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "どようび"
       },
       "1519210": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "わすれる"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1422,19 +1790,23 @@
     "matches": {
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1443840": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1532910": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "なっ"
       },
       "1602330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1451,55 +1823,323 @@
     "vocabIds": [
       "1602330",
       "1546200",
+      "1577100",
       "1188270",
       "1597890",
+      "1352320",
       "1352300"
     ],
     "matches": {
       "1188270": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1352300": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "あげ"
+      },
+      "1352320": {
+        "start": 17,
+        "length": 2,
+        "reading": "あげ"
       },
       "1546200": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "よう"
+      },
+      "1577100": {
+        "start": 11,
+        "length": 1,
+        "reading": "なに"
       },
       "1597890": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
   {
-    "id": "126370",
-    "original": "昼食前にしていただけますか。",
+    "id": "126372",
+    "original": "昼食後また授業が２時間ある。",
     "en": [
       {
-        "id": "277621",
-        "text": "Do you think you could make it before lunch?"
+        "id": "277619",
+        "text": "After lunch we have two more classes."
       }
     ],
-    "indices": "昼食(ちゅうしょく) 前(まえ) に 為る(する){して} 頂ける[01]{いただけます} か",
+    "indices": "昼食後 又{また} 授業 が 時間[02] 有る{ある}",
     "vocabIds": [
       "1602330",
-      "1392590"
+      "2103590",
+      "1269320",
+      "1330290",
+      "1315920"
     ],
     "matches": {
-      "1392590": {
+      "1269320": {
         "start": 2,
-        "length": 2
+        "length": 1,
+        "reading": "ご"
+      },
+      "1315920": {
+        "start": 9,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1330290": {
+        "start": 5,
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくご"
+      }
+    }
+  },
+  {
+    "id": "126373",
+    "original": "昼食後にゲームを続けよう。",
+    "en": [
+      {
+        "id": "277618",
+        "text": "Let's continue the game after lunch."
+      }
+    ],
+    "indices": "昼食後 に ゲーム を 続ける{続けよう}",
+    "vocabIds": [
+      "1602330",
+      "2103590",
+      "1269320",
+      "2640160",
+      "1405800"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1405800": {
+        "start": 8,
+        "length": 3,
+        "reading": "つづけよ"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくご"
+      },
+      "2640160": {
+        "start": 2,
+        "length": 2,
+        "reading": "ごに"
+      }
+    }
+  },
+  {
+    "id": "126374",
+    "original": "昼食後ではご都合いただけますか。",
+    "en": [
+      {
+        "id": "277617",
+        "text": "Would after lunch be convenient for you?"
+      }
+    ],
+    "indices": "昼食後 で(#2028980) は 御(ご){ご} 都合 頂ける[01]{いただけます} か",
+    "vocabIds": [
+      "1602330",
+      "2103590",
+      "1269320",
+      "1269350",
+      "1444980"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1269350": {
+        "start": 2,
+        "length": 2,
+        "reading": "ごで"
+      },
+      "1444980": {
+        "start": 6,
+        "length": 2,
+        "reading": "つごう"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくご"
+      }
+    }
+  },
+  {
+    "id": "126375",
+    "original": "昼食後、コーヒーを一杯いかがですか。",
+    "en": [
+      {
+        "id": "277616",
+        "text": "How about a cup of coffee after lunch?"
+      }
+    ],
+    "indices": "昼食後 珈琲{コーヒー} を 一杯[01] 如何(いかが){いかが} ですか",
+    "vocabIds": [
+      "1602330",
+      "2103590",
+      "1269320",
+      "1165670"
+    ],
+    "matches": {
+      "1165670": {
+        "start": 9,
+        "length": 2,
+        "reading": "いっぱい"
+      },
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくご"
+      }
+    }
+  },
+  {
+    "id": "126376",
+    "original": "昼食会のお約束ですが、どうも私の都合がつきかねます。",
+    "en": [
+      {
+        "id": "277615",
+        "text": "I'm afraid I won't be able to make it for our luncheon appointment."
+      }
+    ],
+    "indices": "昼食会 の 御(お){お} 約束[01] です が[03] どうも 私(わたし)[01]{私の} 都合 が 尽きる{つき} 兼ねる[01]{かねます}",
+    "vocabIds": [
+      "1602330",
+      "1426360",
+      "1198160",
+      "2813370",
+      "1538130",
+      "1311110",
+      "1444980"
+    ],
+    "matches": {
+      "1198160": {
+        "start": 2,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1311110": {
+        "start": 14,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1426360": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくかい"
+      },
+      "1444980": {
+        "start": 16,
+        "length": 2,
+        "reading": "つごう"
+      },
+      "1538130": {
+        "start": 5,
+        "length": 2,
+        "reading": "やくそく"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2813370": {
+        "start": 4,
+        "length": 3,
+        "reading": "おやくそく"
+      }
+    }
+  },
+  {
+    "id": "126377",
+    "original": "昼食会に１０人を招待した。",
+    "en": [
+      {
+        "id": "277614",
+        "text": "We asked ten people to the luncheon."
+      }
+    ],
+    "indices": "昼食会~ に 人(にん)[01] を 招待 為る(する){した}",
+    "vocabIds": [
+      "1602330",
+      "1426360",
+      "1198160",
+      "1580640",
+      "1349610"
+    ],
+    "matches": {
+      "1198160": {
+        "start": 2,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1349610": {
+        "start": 8,
+        "length": 2,
+        "reading": "しょうたい"
+      },
+      "1426360": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくかい"
+      },
+      "1580640": {
+        "start": 6,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1519,16 +2159,18 @@
     "indices": "昼食(ちゅうしょく) を 食べる{食べよう}",
     "vocabIds": [
       "1602330",
-      "1956480"
+      "1358280"
     ],
     "matches": {
+      "1358280": {
+        "start": 3,
+        "length": 3,
+        "reading": "たべよ"
+      },
       "1602330": {
         "start": 0,
-        "length": 2
-      },
-      "1956480": {
-        "start": 3,
-        "length": 1
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1546,29 +2188,40 @@
       "1602330",
       "1358280",
       "1247250",
+      "1163400",
       "1163420",
       "1598550"
     ],
     "matches": {
+      "1163400": {
+        "start": 14,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1247250": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1358280": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1598550": {
         "start": 17,
-        "length": 5
+        "length": 3,
+        "reading": "でかけ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1589,11 +2242,13 @@
     "matches": {
       "1358280": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1620,19 +2275,23 @@
     "matches": {
       "1358280": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1443840": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1532910": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "なっ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1648,16 +2307,24 @@
     "indices": "昼食(ちゅうしょく) を 一緒にする[01]{一緒にしない} か",
     "vocabIds": [
       "1602330",
+      "1163400",
       "1163420"
     ],
     "matches": {
+      "1163400": {
+        "start": 3,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1678,11 +2345,13 @@
     "matches": {
       "1315920": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1699,20 +2368,23 @@
     "vocabIds": [
       "1602330",
       "1332760",
-      "1884400"
+      "1315920"
     ],
     "matches": {
+      "1315920": {
+        "start": 14,
+        "length": 2,
+        "reading": "じかん"
+      },
       "1332760": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おえる"
       },
       "1602330": {
         "start": 0,
-        "length": 2
-      },
-      "1884400": {
-        "start": 14,
-        "length": 7
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1729,25 +2401,35 @@
     "vocabIds": [
       "1602330",
       "1247250",
+      "1163400",
       "1163420",
       "1598550"
     ],
     "matches": {
+      "1163400": {
+        "start": 14,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1247250": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1598550": {
         "start": 17,
-        "length": 5
+        "length": 3,
+        "reading": "でかけ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1771,23 +2453,28 @@
     "matches": {
       "1269320": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
       },
       "1483150": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1546220": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "1598550": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "でかける"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1809,24 +2496,28 @@
       "1602330",
       "1311110",
       "1416220",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
-      "1589060": {
+      "1578850": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1851,11 +2542,13 @@
     "matches": {
       "1315720": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1872,20 +2565,29 @@
     "vocabIds": [
       "1602330",
       "1205080",
+      "1315720",
       "1315710"
     ],
     "matches": {
       "1205080": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かくじん"
       },
       "1315710": {
         "start": 6,
-        "length": 5
+        "length": 5,
+        "reading": "もってくる"
+      },
+      "1315720": {
+        "start": 6,
+        "length": 2,
+        "reading": "もっ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1906,11 +2608,13 @@
     "matches": {
       "1577100": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1934,7 +2638,8 @@
     "matches": {
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1955,11 +2660,13 @@
     "matches": {
       "1358280": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1979,7 +2686,8 @@
     "matches": {
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -1999,7 +2707,8 @@
     "matches": {
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2016,25 +2725,47 @@
     "vocabIds": [
       "1602330",
       "1271660",
+      "1579840",
       "1334890",
+      "1461140",
+      "2612160",
       "1315840"
     ],
     "matches": {
       "1271660": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "まじえ"
       },
       "1315840": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "じ"
       },
       "1334890": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうに"
+      },
+      "1461140": {
+        "start": 19,
+        "length": 1,
+        "reading": "に"
+      },
+      "1579840": {
+        "start": 18,
+        "length": 1,
+        "reading": "じゅう"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2612160": {
+        "start": 19,
+        "length": 2,
+        "reading": "にじ"
       }
     }
   },
@@ -2059,11 +2790,13 @@
     "matches": {
       "1546220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2085,15 +2818,18 @@
     "matches": {
       "1269320": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
       },
       "1303620": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんぽ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2115,24 +2851,34 @@
       "1602330",
       "1423310",
       "1426650",
+      "1404975",
       "1956580"
     ],
     "matches": {
+      "1404975": {
+        "start": 17,
+        "length": 1,
+        "reading": "はや"
+      },
       "1423310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1426650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1956580": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "はや"
       }
     }
   },
@@ -2149,6 +2895,7 @@
     "vocabIds": [
       "1602330",
       "1334960",
+      "2612170",
       "1315840",
       "1315920",
       "1227500"
@@ -2156,23 +2903,33 @@
     "matches": {
       "1227500": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "やすみ"
       },
       "1315840": {
-        "start": 11,
-        "length": 1
+        "start": 7,
+        "length": 1,
+        "reading": "じ"
       },
       "1315920": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1334960": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いちにじ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2612170": {
+        "start": 6,
+        "length": 2,
+        "reading": "にじ"
       }
     }
   },
@@ -2193,11 +2950,13 @@
     "matches": {
       "1303620": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんぽ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2218,11 +2977,13 @@
     "matches": {
       "1577100": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2242,7 +3003,8 @@
     "matches": {
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2263,11 +3025,13 @@
     "matches": {
       "1589600": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "おわっ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2289,15 +3053,75 @@
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1377080": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1602330": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "143352",
+    "original": "世間一般のホテルなみにいえば良い昼食会だった。",
+    "en": [
+      {
+        "id": "271165",
+        "text": "It was a good luncheon, as hotels go."
+      }
+    ],
+    "indices": "世間一般~ の ホテル 並み[03]{なみ}~ に 言う{いえば} 良い 昼食会 だ{だった}",
+    "vocabIds": [
+      "1373970",
+      "2531900",
+      "1165790",
+      "1605820",
+      "1602330",
+      "1426360",
+      "1198160"
+    ],
+    "matches": {
+      "1165790": {
+        "start": 2,
+        "length": 2,
+        "reading": "いっぱん"
+      },
+      "1198160": {
+        "start": 18,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1373970": {
+        "start": 0,
+        "length": 2,
+        "reading": "せけん"
+      },
+      "1426360": {
+        "start": 16,
+        "length": 3,
+        "reading": "ちゅうしょくかい"
+      },
+      "1602330": {
+        "start": 16,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1605820": {
+        "start": 14,
+        "length": 2,
+        "reading": "よい"
+      },
+      "2531900": {
+        "start": 0,
+        "length": 4,
+        "reading": "せけんいっぱん"
       }
     }
   },
@@ -2312,8 +3136,11 @@
     ],
     "indices": "数人 の 学生(がくせい) が ベンチ に 座る[01]{座り}~ 昼食(ちゅうしょく) を 食べる{食べていた}",
     "vocabIds": [
+      "1580820",
       "1373090",
+      "1580640",
       "1206900",
+      "1291800",
       "1657640",
       "1602330",
       "1358280"
@@ -2321,23 +3148,43 @@
     "matches": {
       "1206900": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
+      },
+      "1291800": {
+        "start": 10,
+        "length": 2,
+        "reading": "すわり"
       },
       "1358280": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1373090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すうにん"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1580820": {
+        "start": 0,
+        "length": 1,
+        "reading": "すう"
       },
       "1602330": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1657640": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "すわり"
       }
     }
   },
@@ -2361,23 +3208,28 @@
     "matches": {
       "1330290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1358280": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1377080": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1424900": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうだん"
       },
       "1602330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2394,20 +3246,29 @@
     "vocabIds": [
       "1315920",
       "1602330",
+      "1228650",
       "1228570"
     ],
     "matches": {
       "1228570": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 12,
+        "length": 2,
+        "reading": "いそい"
       },
       "1315920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1602330": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2436,27 +3297,33 @@
     "matches": {
       "1226440": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "きっさてん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1397310": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "すばやい"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1602330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2474,6 +3341,7 @@
       "1311110",
       "1416220",
       "1226440",
+      "1228650",
       "1228570",
       "1602330",
       "1358280"
@@ -2481,27 +3349,38 @@
     "matches": {
       "1226440": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "きっさてん"
       },
       "1228570": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 7,
+        "length": 2,
+        "reading": "いそい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1602330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2520,6 +3399,7 @@
       "1416220",
       "1191730",
       "1221270",
+      "1269320",
       "1269350",
       "1602330",
       "1358280"
@@ -2527,31 +3407,43 @@
     "matches": {
       "1191730": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1221270": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "かえっ"
+      },
+      "1269320": {
+        "start": 8,
+        "length": 1,
+        "reading": "のち"
       },
       "1269350": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のちで"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1602330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2575,23 +3467,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1377080": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1602330": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2609,24 +3506,34 @@
       "1311110",
       "1416220",
       "1602330",
-      "2859465"
+      "1358280",
+      "1332760"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1332760": {
+        "start": 9,
+        "length": 2,
+        "reading": "おえ"
+      },
+      "1358280": {
+        "start": 7,
+        "length": 2,
+        "reading": "たべ"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1602330": {
         "start": 4,
-        "length": 2
-      },
-      "2859465": {
-        "start": 7,
-        "length": 5
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2658,23 +3565,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1543240": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "よてい"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2696,15 +3608,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1428390": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうしょく"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2726,15 +3641,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2758,23 +3676,28 @@
     "matches": {
       "1206730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1473740": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "かっ"
       },
       "1519210": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "わすれ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2796,15 +3719,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1349610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2825,11 +3751,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2847,24 +3775,34 @@
       "1311110",
       "1602330",
       "1762410",
+      "1549140",
       "1358280"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1549140": {
+        "start": 10,
+        "length": 1,
+        "reading": "たまご"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1762410": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ゆでたまご"
       }
     }
   },
@@ -2883,28 +3821,39 @@
       "1409540",
       "1263110",
       "1602330",
+      "1478190",
       "2009330"
     ],
     "matches": {
       "1263110": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "へらす"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1409540": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "たいじゅう"
+      },
+      "1478190": {
+        "start": 14,
+        "length": 2,
+        "reading": "ぬき"
       },
       "1602330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2009330": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ぬき"
       }
     }
   },
@@ -2927,19 +3876,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 8,
-        "length": 4
+        "length": 2,
+        "reading": "たべ"
       },
       "1377080": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2961,15 +3914,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1377080": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -2992,19 +3948,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1579110": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3027,19 +3987,23 @@
     "matches": {
       "1288850": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3065,15 +4029,18 @@
     "matches": {
       "1252560": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かるい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3089,6 +4056,7 @@
     "indices": "私(わたし)[01] は 急ぐ{急いで} 昼食(ちゅうしょく) を 終える{終えた}",
     "vocabIds": [
       "1311110",
+      "1228650",
       "1228570",
       "1602330",
       "1332760"
@@ -3096,19 +4064,28 @@
     "matches": {
       "1228570": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 2,
+        "length": 2,
+        "reading": "いそい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1332760": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おえ"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3132,21 +4109,30 @@
     "indices": "私(わたし)[01] は 急ぐ{急いで} 昼食(ちゅうしょく) を 摂る{とった}",
     "vocabIds": [
       "1311110",
+      "1228650",
       "1228570",
       "1602330"
     ],
     "matches": {
       "1228570": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 2,
+        "length": 2,
+        "reading": "いそい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3166,42 +4152,56 @@
       "1242160",
       "1334040",
       "1602330",
-      "1956480",
+      "1358280",
       "1191730",
+      "1535880",
       "2092960"
     ],
     "matches": {
       "1191730": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1206730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1242160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1334040": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "すん"
+      },
+      "1358280": {
+        "start": 19,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1535880": {
+        "start": 24,
+        "length": 2,
+        "reading": "もどっ"
       },
       "1602330": {
         "start": 16,
-        "length": 2
-      },
-      "1956480": {
-        "start": 19,
-        "length": 1
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2092960": {
         "start": 24,
-        "length": 5
+        "length": 5,
+        "reading": "もどってくる"
       }
     }
   },
@@ -3222,36 +4222,49 @@
       "1334040",
       "1602330",
       "1191730",
+      "1535880",
       "2092960"
     ],
     "matches": {
       "1191730": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1206730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1242160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1334040": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "すん"
+      },
+      "1535880": {
+        "start": 24,
+        "length": 2,
+        "reading": "もどっ"
       },
       "1602330": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2092960": {
         "start": 24,
-        "length": 5
+        "length": 5,
+        "reading": "もどってくる"
       }
     }
   },
@@ -3274,19 +4287,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1465590": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1602330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3309,19 +4326,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1465590": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1602330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2021030": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "とっ"
       }
     }
   },
@@ -3344,19 +4365,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315920": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1358280": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3382,15 +4407,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 7,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3419,11 +4447,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3449,15 +4479,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3483,15 +4516,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1332760": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "おえ"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3516,11 +4552,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3541,11 +4579,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1602330": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3574,20 +4614,29 @@
     "vocabIds": [
       "1311110",
       "1602330",
-      "2859465"
+      "1358280",
+      "1332760"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1332760": {
+        "start": 11,
+        "length": 2,
+        "reading": "おえ"
+      },
+      "1358280": {
+        "start": 9,
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 6,
-        "length": 2
-      },
-      "2859465": {
-        "start": 9,
-        "length": 5
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3605,29 +4654,40 @@
       "1311110",
       "1602330",
       "1511040",
+      "1590770",
       "1590790",
       "1358280"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1511040": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "へんこう"
+      },
+      "1590770": {
+        "start": 14,
+        "length": 3,
+        "reading": "かわり"
       },
       "1590790": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "かわりに"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3644,7 +4704,8 @@
     "vocabIds": [
       "1311110",
       "1602330",
-      "1591990",
+      "1221520",
+      "1221860",
       "1254760",
       "1203250",
       "1358280"
@@ -3652,27 +4713,38 @@
     "matches": {
       "1203250": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "そと"
+      },
+      "1221520": {
+        "start": 5,
+        "length": 1,
+        "reading": "き"
+      },
+      "1221860": {
+        "start": 5,
+        "length": 4,
+        "reading": "きをつけ"
       },
       "1254760": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "けっこう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 20,
-        "length": 4
-      },
-      "1591990": {
-        "start": 5,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3687,6 +4759,7 @@
     ],
     "indices": "私たち は 毎日 正午 に 昼食(ちゅうしょく) を 食べる{食べます}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1524720",
       "1377080",
@@ -3694,25 +4767,92 @@
       "1358280"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1358280": {
         "start": 12,
-        "length": 4
+        "length": 2,
+        "reading": "たべ"
       },
       "1377080": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1524720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       },
       "1602330": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "165434",
+    "original": "私たちは昼食後テレビを見た。",
+    "en": [
+      {
+        "id": "249071",
+        "text": "We watched TV after lunch."
+      }
+    ],
+    "indices": "私たち は 昼食後 テレビ を 見る{見た}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1602330",
+      "2103590",
+      "1269320",
+      "1259290",
+      "2256270"
+    ],
+    "matches": {
+      "1259290": {
+        "start": 11,
+        "length": 1,
+        "reading": "み"
+      },
+      "1269320": {
+        "start": 6,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1602330": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 4,
+        "length": 3,
+        "reading": "ちゅうしょくご"
+      },
+      "2256270": {
+        "start": 11,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -3727,27 +4867,43 @@
     ],
     "indices": "私たち 昼食(ちゅうしょく) に 出かける のだ けど 一緒 に 如何(どう){どう}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1602330",
       "1598550",
+      "1163400",
       "1163420"
     ],
     "matches": {
+      "1163400": {
+        "start": 16,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1598550": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "でかける"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3766,27 +4922,37 @@
     ],
     "indices": "私たち は 正午 頃(ころ){ごろ} 昼食(ちゅうしょく) を 食べる",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1377080",
       "1602330",
       "1358280"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1358280": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1377080": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1602330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3801,6 +4967,7 @@
     ],
     "indices": "私たち は 喫茶店 で(#2028980) 昼食(ちゅうしょく) を 食べる{食べた}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1226440",
       "1602330",
@@ -3809,19 +4976,28 @@
     "matches": {
       "1226440": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "きっさてん"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1358280": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3836,6 +5012,7 @@
     ],
     "indices": "私たち は 喫茶店~ で(#2028980) 昼食(ちゅうしょく) を 摂る{とった}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1226440",
       "1602330"
@@ -3843,15 +5020,23 @@
     "matches": {
       "1226440": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "きっさてん"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1602330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3866,27 +5051,43 @@
     ],
     "indices": "私たち は 喫茶店 で(#2028980) 急ぐ{急いで} 昼食(ちゅうしょく) を 摂る{とった}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1226440",
+      "1228650",
       "1228570",
       "1602330"
     ],
     "matches": {
       "1226440": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "きっさてん"
       },
       "1228570": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 8,
+        "length": 2,
+        "reading": "いそい"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1602330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3905,22 +5106,37 @@
     ],
     "indices": "私たち は 一緒に[01] 昼食(ちゅうしょく) を 摂る{とっていました}",
     "vocabIds": [
+      "1311110",
       "1311300",
+      "1163400",
       "1163420",
       "1602330"
     ],
     "matches": {
+      "1163400": {
+        "start": 4,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1602330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3935,27 +5151,37 @@
     ],
     "indices": "私たち は レストラン に 入る(はいる){入って} 昼食(ちゅうしょく) を 食べる{食べた}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1465590",
       "1602330",
       "1358280"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1358280": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1465590": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1602330": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -3970,6 +5196,7 @@
     ],
     "indices": "私たち は 普通 正午~ に 昼食(ちゅうしょく) を 食べる{食べます}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1497190",
       "1377080",
@@ -3977,25 +5204,35 @@
       "1358280"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1358280": {
         "start": 13,
-        "length": 4
+        "length": 2,
+        "reading": "たべ"
       },
       "1377080": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1497190": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ふつう"
       },
       "1602330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4010,6 +5247,7 @@
     ],
     "indices": "私たち と 外(そと) へ 昼食(ちゅうしょく) に 行く{いきません} か",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1203250",
       "1602330"
@@ -4017,15 +5255,23 @@
     "matches": {
       "1203250": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "そと"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4051,31 +5297,38 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1465590": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1483070": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1578850": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "1602330": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2021030": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "とっ"
       }
     }
   },
@@ -4099,23 +5352,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1443840": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1532910": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "なっ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4138,19 +5396,23 @@
     "matches": {
       "1307850": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1315720": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1416220": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4167,25 +5429,35 @@
     "vocabIds": [
       "1304680",
       "1602330",
+      "1269320",
       "1269350",
       "1358280"
     ],
     "matches": {
+      "1269320": {
+        "start": 8,
+        "length": 1,
+        "reading": "のち"
+      },
       "1269350": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のちで"
       },
       "1304680": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ざんねん"
       },
       "1358280": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4200,6 +5472,7 @@
     ],
     "indices": "今日 は 昼食(ちゅうしょく)~ を 摂る{とる} 時間[01] が 無い{ない}",
     "vocabIds": [
+      "1579110",
       "1289400",
       "1602330",
       "1315920"
@@ -4207,69 +5480,159 @@
     "matches": {
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1315920": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
   {
-    "id": "171749",
-    "original": "今日はどこで昼食する？",
+    "id": "171611",
+    "original": "今日は私があなたの昼食代を支払いましょう。",
     "en": [
       {
-        "id": "242480",
-        "text": "Where will you have lunch today?"
+        "id": "242864",
+        "text": "I'll pay the money for your lunch today."
+      },
+      {
+        "id": "1224663",
+        "text": "I'll pay for your lunch today."
       }
     ],
-    "indices": "今日 は 何処{どこ} で(#2028980) 昼食(ちゅうしょく) 為る(する){する}",
+    "indices": "今日 は 私(わたし)[01] が 貴方(あなた)[01]{あなた} の 昼食代 を 支払う{支払いましょう}",
     "vocabIds": [
+      "1579110",
       "1289400",
-      "1602330"
+      "1311110",
+      "1602330",
+      "2067820",
+      "1982860",
+      "1310300",
+      "1594480"
     ],
     "matches": {
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1310300": {
+        "start": 13,
+        "length": 3,
+        "reading": "しはらい"
+      },
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1594480": {
+        "start": 13,
+        "length": 3,
+        "reading": "しはらい"
       },
       "1602330": {
-        "start": 6,
-        "length": 2
+        "start": 9,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1982860": {
+        "start": 11,
+        "length": 1,
+        "reading": "だい"
+      },
+      "2067820": {
+        "start": 9,
+        "length": 3,
+        "reading": "ちゅうしょくだい"
       }
     }
   },
   {
-    "id": "171995",
-    "original": "今日どこで昼食する？",
+    "id": "172675",
+    "original": "今はその数字が正しいかを調べる時間がありませんが、昼食後には調べることができます。",
     "en": [
       {
-        "id": "242480",
-        "text": "Where will you have lunch today?"
-      },
-      {
-        "id": "1008826",
-        "text": "Where are you having lunch today?"
+        "id": "241800",
+        "text": "We don't have time to finish checking the figures now, but we can go over them after lunch."
       }
     ],
-    "indices": "今日 何処{どこ} で(#2028980) 昼食(ちゅうしょく) 為る(する){する}",
+    "indices": "今(いま) は 其の[01]{その} 数字[02] が 正しい か を 調べる 時間 が[01] 有る{ありません} が 昼食後 には 調べる 事が出来る{ことができます}",
     "vocabIds": [
-      "1579110",
-      "1602330"
+      "1288850",
+      "1373060",
+      "1376600",
+      "1429060",
+      "1315920",
+      "1602330",
+      "2103590",
+      "1269320",
+      "2640160"
     ],
     "matches": {
-      "1579110": {
+      "1269320": {
+        "start": 27,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1288850": {
         "start": 0,
-        "length": 2
+        "length": 1,
+        "reading": "いま"
+      },
+      "1315920": {
+        "start": 15,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1373060": {
+        "start": 4,
+        "length": 2,
+        "reading": "すうじ"
+      },
+      "1376600": {
+        "start": 7,
+        "length": 3,
+        "reading": "ただしい"
+      },
+      "1429060": {
+        "start": 12,
+        "length": 3,
+        "reading": "しらべる"
       },
       "1602330": {
-        "start": 5,
-        "length": 2
+        "start": 25,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 25,
+        "length": 3,
+        "reading": "ちゅうしょくご"
+      },
+      "2640160": {
+        "start": 27,
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -4285,26 +5648,30 @@
     "indices": "湖(みずうみ) に 行く[01]{行って} 昼食(ちゅうしょく) を 取る 事(こと){こと} の 成る{なってる} のだ{んだ}",
     "vocabIds": [
       "1267280",
-      "1589060",
+      "1578850",
       "1602330",
       "1326980"
     ],
     "matches": {
       "1267280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "みずうみ"
       },
       "1326980": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "とる"
       },
-      "1589060": {
+      "1578850": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4326,15 +5693,18 @@
     "matches": {
       "1358280": {
         "start": 14,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
       },
       "1377080": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1602330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4359,11 +5729,13 @@
     "matches": {
       "1252560": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かるい"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4385,15 +5757,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1358280": {
         "start": 8,
-        "length": 4
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4419,15 +5794,18 @@
     "matches": {
       "1246000": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くうふく"
       },
       "1483070": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1602330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4444,20 +5822,80 @@
     "vocabIds": [
       "1228650",
       "1602330",
-      "1589040"
+      "1589040",
+      "1422020"
     ],
     "matches": {
       "1228650": {
         "start": 0,
-        "length": 4
+        "length": 2,
+        "reading": "いそが"
+      },
+      "1422020": {
+        "start": 8,
+        "length": 2,
+        "reading": "おくれ"
       },
       "1589040": {
         "start": 8,
-        "length": 4
+        "length": 2,
+        "reading": "おくれ"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "184268",
+    "original": "学生の昼食時間は１２時から１時までです。",
+    "en": [
+      {
+        "id": "21396",
+        "text": "The students' lunch period is from twelve to one."
+      }
+    ],
+    "indices": "学生(がくせい) の 昼食(ちゅうしょく) 時間 は 時(じ)[01] から[01] 時(じ)[01] 迄{まで} です",
+    "vocabIds": [
+      "1206900",
+      "1602330",
+      "1315920",
+      "1334960",
+      "2612170",
+      "1315840"
+    ],
+    "matches": {
+      "1206900": {
+        "start": 0,
+        "length": 2,
+        "reading": "がくせい"
+      },
+      "1315840": {
+        "start": 10,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1315920": {
+        "start": 5,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1334960": {
+        "start": 8,
+        "length": 3,
+        "reading": "いちにじ"
+      },
+      "1602330": {
+        "start": 3,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2612170": {
+        "start": 9,
+        "length": 2,
+        "reading": "にじ"
       }
     }
   },
@@ -4479,15 +5917,18 @@
     "matches": {
       "1204650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいどう"
       },
       "1602330": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1610080": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぞい"
       }
     }
   },
@@ -4510,19 +5951,23 @@
     "matches": {
       "1198360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいぎ"
       },
       "1215230": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1227500": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "やすみ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4544,15 +5989,18 @@
     "matches": {
       "1358280": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -4568,41 +6016,54 @@
     "indices": "我々 は 何時もより{いつもより} 早く[01] 昼食(ちゅうしょく) を 食べる{食べて} 時半(じはん) に 出る{出た}",
     "vocabIds": [
       "1607050",
+      "1404975",
       "1400150",
       "1602330",
       "1358280",
-      "1334960",
-      "1478750",
-      "1338240"
+      "1658480",
+      "1338240",
+      "1896380"
     ],
     "matches": {
-      "1334960": {
-        "start": 16,
-        "length": 3
-      },
       "1338240": {
         "start": 21,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1358280": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1400150": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はやく"
       },
-      "1478750": {
-        "start": 19,
-        "length": 1
+      "1404975": {
+        "start": 8,
+        "length": 2,
+        "reading": "はやく"
       },
       "1602330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "1658480": {
+        "start": 18,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "1896380": {
+        "start": 21,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -4631,11 +6092,13 @@
     "matches": {
       "1358280": {
         "start": 5,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4655,7 +6118,8 @@
     "matches": {
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4683,7 +6147,8 @@
     "matches": {
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4700,30 +6165,92 @@
     "vocabIds": [
       "1602330",
       "1315920",
-      "2832092",
-      "1956180",
+      "1327190",
+      "1227570",
+      "1221830",
+      "1252560",
       "1358280"
     ],
     "matches": {
+      "1221830": {
+        "start": 14,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1227570": {
+        "start": 14,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1252560": {
+        "start": 17,
+        "length": 2,
+        "reading": "かるく"
+      },
       "1315920": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1327190": {
+        "start": 12,
+        "length": 1,
+        "reading": "て"
       },
       "1358280": {
         "start": 19,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "194726",
+    "original": "メアリーは昼食代を五ドル払った。",
+    "en": [
+      {
+        "id": "616188",
+        "text": "Mary paid five dollars for her lunch."
+      }
+    ],
+    "indices": "は 昼食代 を 五 弗[01]{ドル} 払う[01]{払った}",
+    "vocabIds": [
+      "1602330",
+      "2067820",
+      "1982860",
+      "1268060",
+      "1501620"
+    ],
+    "matches": {
+      "1268060": {
+        "start": 9,
+        "length": 1,
+        "reading": "ご"
       },
-      "1956180": {
-        "start": 17,
-        "length": 1
-      },
-      "2832092": {
+      "1501620": {
         "start": 12,
-        "length": 5
+        "length": 2,
+        "reading": "はらっ"
+      },
+      "1602330": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1982860": {
+        "start": 7,
+        "length": 1,
+        "reading": "だい"
+      },
+      "2067820": {
+        "start": 5,
+        "length": 3,
+        "reading": "ちゅうしょくだい"
       }
     }
   },
@@ -4739,21 +6266,30 @@
     "indices": "は 一日(いちにち){１日} 置きに{おきに} 其の[01]{その} レストラン へ 昼食(ちゅうしょく) に 行く",
     "vocabIds": [
       "2225040",
+      "1463770",
       "1602330",
       "1578850"
     ],
     "matches": {
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
+      },
       "1578850": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "1602330": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2225040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       }
     }
   },
@@ -4773,46 +6309,24 @@
     "indices": "未だ[02]{まだ} 昼食(ちゅうしょく) を 取る[07]{取ってない}",
     "vocabIds": [
       "1602330",
-      "1326980"
+      "1326980",
+      "2809750"
     ],
     "matches": {
       "1326980": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "とっ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "196750",
-    "original": "ベティは昼食前に来ることができるでしょう。",
-    "en": [
-      {
-        "id": "33929",
-        "text": "Betty will be able to come before noon."
-      }
-    ],
-    "indices": "は 昼食(ちゅうしょく) 前(まえ) に 来る(くる)[01] 事が出来る{ことができる} でしょう[01]",
-    "vocabIds": [
-      "1602330",
-      "1392590",
-      "1547720"
-    ],
-    "matches": {
-      "1392590": {
-        "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
-      "1547720": {
-        "start": 8,
-        "length": 2
-      },
-      "1602330": {
-        "start": 4,
-        "length": 2
+      "2809750": {
+        "start": 5,
+        "length": 2,
+        "reading": "とっ"
       }
     }
   },
@@ -4834,15 +6348,18 @@
     "matches": {
       "1478190": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぬく"
       },
       "1524720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4867,11 +6384,13 @@
     "matches": {
       "1332760": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "おえ"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4891,7 +6410,8 @@
     "matches": {
       "1602330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4907,16 +6427,18 @@
     "indices": "其の[01]{その} ツアー~ には 昼食(ちゅうしょく) は 含む[01]{含まれています} か",
     "vocabIds": [
       "1602330",
-      "1216840"
+      "1216880"
     ],
     "matches": {
-      "1216840": {
+      "1216880": {
         "start": 10,
-        "length": 4
+        "length": 2,
+        "reading": "ふくま"
       },
       "1602330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -4940,7 +6462,53 @@
     "matches": {
       "1602330": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "219195",
+    "original": "この料金に昼食代は入っていますか。",
+    "en": [
+      {
+        "id": "56511",
+        "text": "Is lunch included in this price?"
+      }
+    ],
+    "indices": "此の{この} 料金 に 昼食代 は 入る(はいる)[03]{入っています} か",
+    "vocabIds": [
+      "1554280",
+      "1602330",
+      "2067820",
+      "1982860",
+      "1465590"
+    ],
+    "matches": {
+      "1465590": {
+        "start": 9,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1554280": {
+        "start": 2,
+        "length": 2,
+        "reading": "りょうきん"
+      },
+      "1602330": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1982860": {
+        "start": 7,
+        "length": 1,
+        "reading": "だい"
+      },
+      "2067820": {
+        "start": 5,
+        "length": 3,
+        "reading": "ちゅうしょくだい"
       }
     }
   },
@@ -4961,11 +6529,64 @@
     "matches": {
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "222138",
+    "original": "この件は昼食後に再びとり上げよう。",
+    "en": [
+      {
+        "id": "59463",
+        "text": "Let's take up this matter after lunch."
+      }
+    ],
+    "indices": "此の{この} 件(けん) は 昼食(ちゅうしょく) 後(ご) に 再び 取り上げる[01]{とり上げよう}",
+    "vocabIds": [
+      "1255940",
+      "1602330",
+      "2103590",
+      "1269320",
+      "2640160",
+      "1292300"
+    ],
+    "matches": {
+      "1255940": {
+        "start": 2,
+        "length": 1,
+        "reading": "けん"
+      },
+      "1269320": {
+        "start": 6,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1292300": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふたたび"
+      },
+      "1602330": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 4,
+        "length": 3,
+        "reading": "ちゅうしょくご"
+      },
+      "2640160": {
+        "start": 6,
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -4985,7 +6606,8 @@
     "matches": {
       "1602330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5010,27 +6632,33 @@
     "matches": {
       "1198160": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1339460": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっせき"
       },
       "1461160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ふたつ"
       },
       "1577280": {
         "start": 32,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1602330": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2712120": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "そのかん"
       }
     }
   },
@@ -5050,7 +6678,8 @@
     "matches": {
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5070,7 +6699,8 @@
     "matches": {
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5091,11 +6721,56 @@
     "matches": {
       "1463770": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1602330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "231727",
+    "original": "あなたは昼食代を払わなくてもいいですよ。",
+    "en": [
+      {
+        "id": "69094",
+        "text": "You need not pay for your lunch."
+      },
+      {
+        "id": "502588",
+        "text": "You don't need to pay for your lunch."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は 昼食代~ を 払う[01]{払わ} なくても良い[01]{なくてもいい} です よ[01]",
+    "vocabIds": [
+      "1602330",
+      "2067820",
+      "1982860",
+      "1501620"
+    ],
+    "matches": {
+      "1501620": {
+        "start": 8,
+        "length": 2,
+        "reading": "はらわ"
+      },
+      "1602330": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1982860": {
+        "start": 6,
+        "length": 1,
+        "reading": "だい"
+      },
+      "2067820": {
+        "start": 4,
+        "length": 3,
+        "reading": "ちゅうしょくだい"
       }
     }
   },
@@ -5115,7 +6790,8 @@
     "matches": {
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5131,21 +6807,36 @@
     "indices": "時(じ)[01] に 遅い 昼食(ちゅうしょく) を 摂る{とった}",
     "vocabIds": [
       "2612170",
+      "1315840",
+      "2021540",
       "1421970",
       "1602330"
     ],
     "matches": {
+      "1315840": {
+        "start": 1,
+        "length": 1,
+        "reading": "じ"
+      },
       "1421970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "おそい"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2021540": {
+        "start": 1,
+        "length": 2,
+        "reading": "じに"
       },
       "2612170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にじ"
       }
     }
   },
@@ -5167,15 +6858,18 @@
     "matches": {
       "1483070": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1598550": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "でかけ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5199,6 +6893,7 @@
     "indices": "私(わたし)[01] は 急ぐ{急いで} 昼食(ちゅうしょく) を 食べる{食べた}",
     "vocabIds": [
       "1311110",
+      "1228650",
       "1228570",
       "1602330",
       "1358280"
@@ -5206,19 +6901,28 @@
     "matches": {
       "1228570": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 2,
+        "length": 2,
+        "reading": "いそい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5238,20 +6942,23 @@
     "vocabIds": [
       "1311110",
       "1602330",
-      "1297240"
+      "1597890"
     ],
     "matches": {
-      "1297240": {
-        "start": 5,
-        "length": 1
-      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1597890": {
+        "start": 5,
+        "length": 2,
+        "reading": "つくら"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5265,6 +6972,7 @@
       }
     ],
     "vocabIds": [
+      "1419990",
       "2854195",
       "1602330",
       "1358280"
@@ -5272,15 +6980,23 @@
     "matches": {
       "1358280": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1419990": {
+        "start": 0,
+        "length": 1,
+        "reading": "おとこ"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2854195": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おとこたち"
       }
     }
   },
@@ -5299,21 +7015,24 @@
     ],
     "vocabIds": [
       "1602330",
-      "2762490",
+      "1326980",
       "1002610"
     ],
     "matches": {
       "1002610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おなか"
+      },
+      "1326980": {
+        "start": 3,
+        "length": 2,
+        "reading": "とら"
       },
       "1602330": {
         "start": 0,
-        "length": 2
-      },
-      "2762490": {
-        "start": 3,
-        "length": 1
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5327,22 +7046,37 @@
       }
     ],
     "vocabIds": [
+      "1160790",
       "1576260",
+      "1463770",
       "1602330",
       "1578850"
     ],
     "matches": {
+      "1160790": {
+        "start": 5,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
+      },
       "1576260": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "1578850": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "1602330": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5364,19 +7098,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1377080": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しょうご"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5390,27 +7128,37 @@
       }
     ],
     "vocabIds": [
+      "1311110",
       "1311300",
       "1602330",
       "1358280",
       "1588730"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1358280": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1588730": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "えらん"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5427,29 +7175,52 @@
       "1602330",
       "1358280",
       "1315920",
+      "1579840",
       "1334590",
+      "1268060",
+      "1268590",
       "1502860"
     ],
     "matches": {
+      "1268060": {
+        "start": 17,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1268590": {
+        "start": 17,
+        "length": 2,
+        "reading": "ごふん"
+      },
       "1315920": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1334590": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうご"
       },
       "1358280": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1502860": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1579840": {
+        "start": 16,
+        "length": 1,
+        "reading": "じゅう"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5469,36 +7240,49 @@
       "1315840",
       "1311110",
       "1602330",
-      "2859465"
+      "1358280",
+      "1332760"
     ],
     "matches": {
       "1263400": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "げんかん"
       },
       "1266430": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "よびりん"
       },
       "1311110": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315840": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
+      },
+      "1332760": {
+        "start": 23,
+        "length": 2,
+        "reading": "おえ"
+      },
+      "1358280": {
+        "start": 21,
+        "length": 2,
+        "reading": "たべ"
       },
       "1532910": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "なっ"
       },
       "1602330": {
         "start": 18,
-        "length": 2
-      },
-      "2859465": {
-        "start": 21,
-        "length": 5
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5520,32 +7304,49 @@
       }
     ],
     "vocabIds": [
+      "1311110",
       "1311300",
+      "1163400",
       "1163420",
       "1602330",
       "1326980",
       "1589350"
     ],
     "matches": {
+      "1163400": {
+        "start": 4,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1326980": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "とる"
       },
       "1589350": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
       "1602330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5565,11 +7366,13 @@
     "matches": {
       "1295040": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "すませ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5592,23 +7395,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315920": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1326980": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "とる"
       },
       "1497180": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ふだん"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5628,11 +7436,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5647,21 +7457,30 @@
     ],
     "vocabIds": [
       "1524720",
+      "1163400",
       "1163420",
       "1602330"
     ],
     "matches": {
+      "1163400": {
+        "start": 10,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1524720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       },
       "1602330": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5681,11 +7500,13 @@
     "matches": {
       "1358280": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5705,11 +7526,13 @@
     "matches": {
       "1358280": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5733,11 +7556,13 @@
     "matches": {
       "1598550": {
         "start": 12,
-        "length": 6
+        "length": 3,
+        "reading": "でかけ"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5756,7 +7581,8 @@
     "matches": {
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5775,7 +7601,8 @@
     "matches": {
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5801,19 +7628,23 @@
     "matches": {
       "1155090": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "いがい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1542730": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうしょく"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5833,11 +7664,13 @@
     "matches": {
       "1358280": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5853,20 +7686,29 @@
     "vocabIds": [
       "1337190",
       "1602330",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1337190": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "やど"
       },
       "1338240": {
         "start": 6,
-        "length": 4
+        "length": 1,
+        "reading": "で"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1896380": {
+        "start": 6,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -5886,11 +7728,13 @@
     "matches": {
       "1358280": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5910,11 +7754,13 @@
     "matches": {
       "1341670": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じゅんび"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5934,11 +7780,13 @@
     "matches": {
       "1587290": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "いただい"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5958,11 +7806,13 @@
     "matches": {
       "1295070": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "すん"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -5984,19 +7834,23 @@
     "matches": {
       "1269320": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
       },
       "1348870": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1426370": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ひるね"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -6023,7 +7877,8 @@
     "matches": {
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -6046,23 +7901,28 @@
     "matches": {
       "1207590": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "かかっ"
       },
       "1312350": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1441660": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "てんすう"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -6081,7 +7941,8 @@
     "matches": {
       "1602330": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -6100,7 +7961,8 @@
     "matches": {
       "1602330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -6120,11 +7982,57 @@
     "matches": {
       "1315920": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1602330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "10145754",
+    "original": "この価格は昼食代込みですか？",
+    "en": [
+      {
+        "id": "56511",
+        "text": "Is lunch included in this price?"
+      }
+    ],
+    "vocabIds": [
+      "1189500",
+      "1602330",
+      "2067820",
+      "1982860",
+      "2078750"
+    ],
+    "matches": {
+      "1189500": {
+        "start": 2,
+        "length": 2,
+        "reading": "かかく"
+      },
+      "1602330": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1982860": {
+        "start": 7,
+        "length": 1,
+        "reading": "だい"
+      },
+      "2067820": {
+        "start": 5,
+        "length": 3,
+        "reading": "ちゅうしょくだい"
+      },
+      "2078750": {
+        "start": 8,
+        "length": 2,
+        "reading": "こみ"
       }
     }
   },
@@ -6146,19 +8054,23 @@
     "matches": {
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1546200": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "よう"
       },
       "1597890": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
       },
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -6184,15 +8096,87 @@
     "matches": {
       "1546220": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1609470": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かあさん"
+      }
+    }
+  },
+  {
+    "id": "126371",
+    "original": "昼食後、彼らは次の目的地に向かった。",
+    "en": [
+      {
+        "id": "10773519",
+        "text": "After eating lunch, they headed for their next destination."
+      }
+    ],
+    "indices": "昼食後 彼ら(かれら) は 次(つぎ)[01]{次の} 目的地 に 向かう{向かった}",
+    "vocabIds": [
+      "1602330",
+      "2103590",
+      "1269320",
+      "1483090",
+      "1316380",
+      "1535560",
+      "1535580",
+      "1420730",
+      "1604800"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1316380": {
+        "start": 7,
+        "length": 1,
+        "reading": "つぎ"
+      },
+      "1420730": {
+        "start": 11,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1483090": {
+        "start": 4,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1535560": {
+        "start": 9,
+        "length": 2,
+        "reading": "もくてき"
+      },
+      "1535580": {
+        "start": 9,
+        "length": 3,
+        "reading": "もくてきち"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1604800": {
+        "start": 13,
+        "length": 3,
+        "reading": "むかっ"
+      },
+      "2103590": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくご"
       }
     }
   },
@@ -6211,7 +8195,84 @@
     "matches": {
       "1602330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "11193523",
+    "original": "昼食後は空いてるわよ。",
+    "en": [
+      {
+        "id": "11193518",
+        "text": "I'm free after lunch."
+      }
+    ],
+    "vocabIds": [
+      "1602330",
+      "2103590",
+      "1269320",
+      "1586265"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1586265": {
+        "start": 4,
+        "length": 2,
+        "reading": "あい"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくご"
+      }
+    }
+  },
+  {
+    "id": "11193533",
+    "original": "昼食後は暇よ。",
+    "en": [
+      {
+        "id": "11193518",
+        "text": "I'm free after lunch."
+      }
+    ],
+    "vocabIds": [
+      "1602330",
+      "2103590",
+      "1269320",
+      "1577280"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1577280": {
+        "start": 4,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "2103590": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくご"
       }
     }
   },
@@ -6225,27 +8286,49 @@
       }
     ],
     "vocabIds": [
+      "1256170",
       "1256240",
+      "1437260",
       "1602330",
       "1414340",
+      "1206530",
       "1640990"
     ],
     "matches": {
+      "1206530": {
+        "start": 16,
+        "length": 2,
+        "reading": "まなび"
+      },
+      "1256170": {
+        "start": 0,
+        "length": 2,
+        "reading": "けんこう"
+      },
       "1256240": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けんこうてき"
       },
       "1414340": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たいせつ"
+      },
+      "1437260": {
+        "start": 2,
+        "length": 1,
+        "reading": "てき"
       },
       "1602330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1640990": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "まなび"
       }
     }
   },
@@ -6264,7 +8347,88 @@
     "matches": {
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
+      }
+    }
+  },
+  {
+    "id": "11779908",
+    "original": "昼食後は全員バスに乗り、次の目的地へと向かった。",
+    "en": [
+      {
+        "id": "8438321",
+        "text": "After lunch, we all boarded the bus and headed to our next destination."
+      }
+    ],
+    "vocabIds": [
+      "1602330",
+      "2103590",
+      "1269320",
+      "1394840",
+      "1355120",
+      "1354720",
+      "1316380",
+      "1535560",
+      "1535580",
+      "1420730",
+      "1604800"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1316380": {
+        "start": 12,
+        "length": 1,
+        "reading": "つぎ"
+      },
+      "1354720": {
+        "start": 9,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1355120": {
+        "start": 9,
+        "length": 2,
+        "reading": "のり"
+      },
+      "1394840": {
+        "start": 4,
+        "length": 2,
+        "reading": "ぜんいん"
+      },
+      "1420730": {
+        "start": 16,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1535560": {
+        "start": 14,
+        "length": 2,
+        "reading": "もくてき"
+      },
+      "1535580": {
+        "start": 14,
+        "length": 3,
+        "reading": "もくてきち"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
+      },
+      "1604800": {
+        "start": 19,
+        "length": 3,
+        "reading": "むかっ"
+      },
+      "2103590": {
+        "start": 0,
+        "length": 3,
+        "reading": "ちゅうしょくご"
       }
     }
   },
@@ -6285,15 +8449,18 @@
     "matches": {
       "1421970": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "おそい"
       },
       "1465590": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1602330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -6313,25 +8480,35 @@
     "vocabIds": [
       "1602330",
       "1315920",
+      "1392580",
       "1392590",
-      "1410800"
+      "1587290"
     ],
     "matches": {
       "1315920": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1392580": {
+        "start": 6,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
-      "1410800": {
+      "1587290": {
         "start": 8,
-        "length": 5
+        "length": 2,
+        "reading": "いただき"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -6349,6 +8526,7 @@
       }
     ],
     "vocabIds": [
+      "1579110",
       "1289400",
       "1206730",
       "1358550",
@@ -6358,23 +8536,33 @@
     "matches": {
       "1206730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1358280": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1358550": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しょくどう"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       },
       "1602330": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   },
@@ -6393,7 +8581,8 @@
     "matches": {
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       }
     }
   }

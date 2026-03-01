@@ -1,5 +1,68 @@
 [
   {
+    "id": "84186",
+    "original": "部屋の除湿のため窓を開けた。",
+    "en": [
+      {
+        "id": "319529",
+        "text": "I opened the windows to remove the damp from the room."
+      }
+    ],
+    "indices": "部屋[01] の 除湿~ の 為(ため){ため} 窓 を[01] 開ける(あける){開けた}",
+    "vocabIds": [
+      "1499320",
+      "2843095",
+      "1711240",
+      "1320390",
+      "2842990",
+      "1401400",
+      "1202450",
+      "2810010"
+    ],
+    "matches": {
+      "1202450": {
+        "start": 10,
+        "length": 2,
+        "reading": "あけ"
+      },
+      "1320390": {
+        "start": 4,
+        "length": 1,
+        "reading": "しめ"
+      },
+      "1401400": {
+        "start": 8,
+        "length": 1,
+        "reading": "まど"
+      },
+      "1499320": {
+        "start": 0,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1711240": {
+        "start": 3,
+        "length": 2,
+        "reading": "じょしめ"
+      },
+      "2810010": {
+        "start": 10,
+        "length": 2,
+        "reading": "あけ"
+      },
+      "2842990": {
+        "start": 4,
+        "length": 1,
+        "reading": "しめ"
+      },
+      "2843095": {
+        "start": 3,
+        "length": 1,
+        "reading": "じょ"
+      }
+    }
+  },
+  {
     "id": "91542",
     "original": "彼女はほこりを拭うのに湿った布を使った。",
     "en": [
@@ -19,23 +82,61 @@
     "matches": {
       "1305990": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
       },
       "1320390": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
       },
       "1357220": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぬぐう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1496840": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
+      }
+    }
+  },
+  {
+    "id": "115638",
+    "original": "彼は、タオルを水で湿らした。",
+    "en": [
+      {
+        "id": "288032",
+        "text": "He wet the towel with water."
+      }
+    ],
+    "indices": "彼(かれ)[01] は タオル を 水(みず) で(#2028980) 湿る{湿らした}",
+    "vocabIds": [
+      "1483070",
+      "1371260",
+      "1320390"
+    ],
+    "matches": {
+      "1320390": {
+        "start": 9,
+        "length": 2,
+        "reading": "しめら"
+      },
+      "1371260": {
+        "start": 7,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -53,29 +154,46 @@
       "1408370",
       "1320390",
       "1222170",
+      "1467930",
       "2109200",
+      "1950260",
       "1597890"
     ],
     "matches": {
       "1222170": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きこう"
       },
       "1320390": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
       },
       "1408370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいよう"
+      },
+      "1467930": {
+        "start": 9,
+        "length": 2,
+        "reading": "ねったい"
       },
       "1597890": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
+      },
+      "1950260": {
+        "start": 11,
+        "length": 2,
+        "reading": "うりん"
       },
       "2109200": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "ねったいうりん"
       }
     }
   },
@@ -94,17 +212,31 @@
     ],
     "indices": "洗濯物 は 未だ[01]{まだ} 湿る{湿っている}~",
     "vocabIds": [
+      "1390980",
       "1391020",
+      "1502390",
       "1320390"
     ],
     "matches": {
       "1320390": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
+      },
+      "1390980": {
+        "start": 0,
+        "length": 2,
+        "reading": "せんたく"
       },
       "1391020": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せんたくぶつ"
+      },
+      "1502390": {
+        "start": 2,
+        "length": 1,
+        "reading": "ぶつ"
       }
     }
   },
@@ -126,15 +258,18 @@
     "matches": {
       "1201190": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "うみ"
       },
       "1320390": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
       },
       "1499720": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かぜ"
       }
     }
   },
@@ -155,11 +290,13 @@
     "matches": {
       "1320390": {
         "start": 3,
-        "length": 4
+        "length": 2,
+        "reading": "しめら"
       },
       "1597150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たばこ"
       }
     }
   },
@@ -182,19 +319,23 @@
     "matches": {
       "1171900": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1293780": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1320390": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
       },
       "1445270": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ど"
       }
     }
   },
@@ -210,16 +351,63 @@
     "indices": "此の{この} 燐寸{マッチ} は 湿る{湿っていて} 火がつく{火がつかない}",
     "vocabIds": [
       "1320390",
-      "1626690"
+      "1193610"
+    ],
+    "matches": {
+      "1193610": {
+        "start": 11,
+        "length": 1,
+        "reading": "ひ"
+      },
+      "1320390": {
+        "start": 6,
+        "length": 2,
+        "reading": "しめっ"
+      }
+    }
+  },
+  {
+    "id": "224378",
+    "original": "ここに両手を置いて手を湿らせる。",
+    "en": [
+      {
+        "id": "61713",
+        "text": "Put your hands up here and get' em wet."
+      }
+    ],
+    "indices": "此処[01]{ここ} に 両手[01] を 置く[01]{置いて} 手[01] を 湿る{湿らせる}",
+    "vocabIds": [
+      "1553660",
+      "1421850",
+      "1327190",
+      "1320390",
+      "2608950"
     ],
     "matches": {
       "1320390": {
-        "start": 6,
-        "length": 3
-      },
-      "1626690": {
         "start": 11,
-        "length": 6
+        "length": 2,
+        "reading": "しめら"
+      },
+      "1327190": {
+        "start": 9,
+        "length": 1,
+        "reading": "て"
+      },
+      "1421850": {
+        "start": 6,
+        "length": 2,
+        "reading": "おい"
+      },
+      "1553660": {
+        "start": 3,
+        "length": 2,
+        "reading": "りょうて"
+      },
+      "2608950": {
+        "start": 11,
+        "length": 4,
+        "reading": "しめらせる"
       }
     }
   },
@@ -239,11 +427,13 @@
     "matches": {
       "1320390": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
       },
       "1421510": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じめん"
       }
     }
   },
@@ -263,11 +453,105 @@
     "matches": {
       "1320390": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
       },
       "1533950": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もうふ"
+      }
+    }
+  },
+  {
+    "id": "10003504",
+    "original": "この保湿クリーム、本当にコスパがいいの。余裕で半年以上もつし、これだけの大容量で千円もしないんなんて、すごくない？",
+    "en": [
+      {
+        "id": "10072860",
+        "text": "This moisturising cream is super cost effective. I still have some left even after half a year of use, and it doesn't even cost 1000 yen, isn't that amazing?"
+      }
+    ],
+    "vocabIds": [
+      "2077730",
+      "2844368",
+      "1320390",
+      "2842990",
+      "1611580",
+      "1544590",
+      "1583190",
+      "1155120",
+      "2082450",
+      "2373320",
+      "1545450",
+      "1388740",
+      "1175570"
+    ],
+    "matches": {
+      "1155120": {
+        "start": 25,
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1175570": {
+        "start": 41,
+        "length": 1,
+        "reading": "えん"
+      },
+      "1320390": {
+        "start": 3,
+        "length": 1,
+        "reading": "しめ"
+      },
+      "1388740": {
+        "start": 40,
+        "length": 1,
+        "reading": "せん"
+      },
+      "1544590": {
+        "start": 20,
+        "length": 2,
+        "reading": "よゆう"
+      },
+      "1545450": {
+        "start": 37,
+        "length": 2,
+        "reading": "ようりょう"
+      },
+      "1583190": {
+        "start": 23,
+        "length": 2,
+        "reading": "はんとし"
+      },
+      "1611580": {
+        "start": 9,
+        "length": 3,
+        "reading": "ほんとうに"
+      },
+      "2077730": {
+        "start": 2,
+        "length": 2,
+        "reading": "ほしめ"
+      },
+      "2082450": {
+        "start": 36,
+        "length": 1,
+        "reading": "だい"
+      },
+      "2373320": {
+        "start": 36,
+        "length": 3,
+        "reading": "だいようりょう"
+      },
+      "2842990": {
+        "start": 3,
+        "length": 1,
+        "reading": "しめ"
+      },
+      "2844368": {
+        "start": 2,
+        "length": 6,
+        "reading": "ほしめくりーむ"
       }
     }
   },
@@ -287,11 +571,13 @@
     "matches": {
       "1245470": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "くうき"
       },
       "1320390": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
       }
     }
   },
@@ -310,7 +596,8 @@
     "matches": {
       "1320390": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
       }
     }
   },
@@ -330,11 +617,135 @@
     "matches": {
       "1246740": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くつした"
       },
       "1320390": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
+      }
+    }
+  },
+  {
+    "id": "13146791",
+    "original": "室内干しの場合は、乾燥機や除湿器を利用すると効率的です。",
+    "en": [
+      {
+        "id": "13237094",
+        "text": "Using a dryer or dehumidifier makes the process of drying clothes indoors more efficient."
+      }
+    ],
+    "vocabIds": [
+      "1320350",
+      "2798350",
+      "1603510",
+      "1209620",
+      "1355810",
+      "1209920",
+      "1209940",
+      "2037700",
+      "2843095",
+      "1711240",
+      "1711250",
+      "1320390",
+      "2842990",
+      "1218880",
+      "1549660",
+      "1275210",
+      "1275240",
+      "1437260"
+    ],
+    "matches": {
+      "1209620": {
+        "start": 2,
+        "length": 2,
+        "reading": "ほし"
+      },
+      "1209920": {
+        "start": 9,
+        "length": 2,
+        "reading": "かんそう"
+      },
+      "1209940": {
+        "start": 9,
+        "length": 3,
+        "reading": "かんそうき"
+      },
+      "1218880": {
+        "start": 15,
+        "length": 1,
+        "reading": "うつわ"
+      },
+      "1275210": {
+        "start": 22,
+        "length": 2,
+        "reading": "こうりつ"
+      },
+      "1275240": {
+        "start": 22,
+        "length": 3,
+        "reading": "こうりつてき"
+      },
+      "1320350": {
+        "start": 0,
+        "length": 2,
+        "reading": "しつない"
+      },
+      "1320390": {
+        "start": 14,
+        "length": 1,
+        "reading": "しめ"
+      },
+      "1355810": {
+        "start": 5,
+        "length": 2,
+        "reading": "ばあい"
+      },
+      "1437260": {
+        "start": 24,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1549660": {
+        "start": 17,
+        "length": 2,
+        "reading": "りよう"
+      },
+      "1603510": {
+        "start": 2,
+        "length": 2,
+        "reading": "ほし"
+      },
+      "1711240": {
+        "start": 13,
+        "length": 2,
+        "reading": "じょしめ"
+      },
+      "1711250": {
+        "start": 13,
+        "length": 3,
+        "reading": "じょしめうつわ"
+      },
+      "2037700": {
+        "start": 11,
+        "length": 1,
+        "reading": "き"
+      },
+      "2798350": {
+        "start": 0,
+        "length": 4,
+        "reading": "しつないほし"
+      },
+      "2842990": {
+        "start": 14,
+        "length": 1,
+        "reading": "しめ"
+      },
+      "2843095": {
+        "start": 13,
+        "length": 1,
+        "reading": "じょ"
       }
     }
   }

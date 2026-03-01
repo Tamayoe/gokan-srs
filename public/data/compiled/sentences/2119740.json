@@ -11,9 +11,12 @@
     "indices": "政治 は 何だって[02] 私たち を 分割(ぶんかつ) したい の かしら 私たち は 誰 が 良い{よい} 人(ひと) で(#2028980) 誰 が 悪い(わるい) 人(ひと) か 知る{知っている} のに",
     "vocabIds": [
       "1375970",
+      "1577100",
       "2119740",
+      "1311110",
       "1311300",
       "1503280",
+      "1416830",
       "2864173",
       "1580640",
       "1151260",
@@ -22,35 +25,58 @@
     "matches": {
       "1151260": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
+      },
+      "1311110": {
+        "start": 7,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1375970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいじ"
+      },
+      "1416830": {
+        "start": 26,
+        "length": 1,
+        "reading": "だれ"
       },
       "1420470": {
         "start": 38,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1503280": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ぶんかつ"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
       },
       "1580640": {
         "start": 30,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "2119740": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       },
       "2864173": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "だれが"
       }
     }
   },
@@ -65,6 +91,7 @@
     ],
     "indices": "何だって[02]~ 私(わたし)[01]{私の} 本(ほん)[01] が こんな 所(ところ){ところ} に 有る{ある} ん[03] だろう",
     "vocabIds": [
+      "1577100",
       "2119740",
       "1311110",
       "1522150"
@@ -72,15 +99,23 @@
     "matches": {
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       },
       "2119740": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   },
@@ -102,12 +137,19 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2119740"
     ],
     "matches": {
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
+      },
       "2119740": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   },
@@ -127,16 +169,51 @@
     "indices": "医者 は 何(なに)[01] だ って",
     "vocabIds": [
       "1159980",
+      "1577100",
       "2119740"
     ],
     "matches": {
       "1159980": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
       },
       "2119740": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
+      }
+    }
+  },
+  {
+    "id": "203826",
+    "original": "だから何だってんだ。",
+    "en": [
+      {
+        "id": "41067",
+        "text": "So fuckin' what."
+      }
+    ],
+    "indices": "だから何だ~ って のだ{んだ}",
+    "vocabIds": [
+      "1577100",
+      "2119740"
+    ],
+    "matches": {
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2119740": {
+        "start": 3,
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   },
@@ -153,20 +230,29 @@
     "vocabIds": [
       "1382250",
       "1580640",
+      "1577100",
       "2119740"
     ],
     "matches": {
       "1382250": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "せき"
+      },
+      "1577100": {
+        "start": 20,
+        "length": 1,
+        "reading": "なに"
       },
       "1580640": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "2119740": {
         "start": 20,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   },
@@ -180,17 +266,25 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2119740",
       "1172830"
     ],
     "matches": {
       "1172830": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "うんてん"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       },
       "2119740": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   },
@@ -205,16 +299,24 @@
     ],
     "vocabIds": [
       "1001820",
+      "1577100",
       "2119740"
     ],
     "matches": {
       "1001820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
       },
       "2119740": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   },
@@ -236,22 +338,49 @@
       }
     ],
     "vocabIds": [
+      "1358280",
       "2765050",
+      "1577100",
       "2119740",
-      "1576250"
+      "1160790",
+      "1576250",
+      "1445160"
     ],
     "matches": {
+      "1160790": {
+        "start": 25,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1358280": {
+        "start": 6,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1445160": {
+        "start": 26,
+        "length": 1,
+        "reading": "ど"
+      },
       "1576250": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
+      },
+      "1577100": {
+        "start": 14,
+        "length": 1,
+        "reading": "なに"
       },
       "2119740": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       },
       "2765050": {
         "start": 6,
-        "length": 5
+        "length": 5,
+        "reading": "たべられる"
       }
     }
   },
@@ -265,12 +394,19 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2119740"
     ],
     "matches": {
+      "1577100": {
+        "start": 7,
+        "length": 1,
+        "reading": "なに"
+      },
       "2119740": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   },
@@ -284,12 +420,19 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2119740"
     ],
     "matches": {
+      "1577100": {
+        "start": 12,
+        "length": 1,
+        "reading": "なに"
+      },
       "2119740": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   },
@@ -304,16 +447,24 @@
     ],
     "vocabIds": [
       "1277450",
+      "1577100",
       "2119740"
     ],
     "matches": {
       "1277450": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なに"
       },
       "2119740": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   },
@@ -328,16 +479,24 @@
     ],
     "vocabIds": [
       "1547330",
+      "1577100",
       "2119740"
     ],
     "matches": {
       "1547330": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ほしい"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
       },
       "2119740": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "なにだって"
       }
     }
   }

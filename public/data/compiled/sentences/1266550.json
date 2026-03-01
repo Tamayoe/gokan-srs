@@ -17,15 +17,18 @@
     "matches": {
       "1266550": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "かたまる"
       },
       "1375390": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "せいしつ"
       },
       "1556630": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ひえる"
       }
     }
   },
@@ -42,55 +45,98 @@
     "vocabIds": [
       "1231590",
       "1552130",
-      "1621290",
-      "1400150",
+      "1397310",
+      "1310670",
       "1310660",
       "1266550",
       "1538100",
-      "2859157",
-      "1215230",
+      "2386360",
+      "2730730",
       "2142670"
     ],
     "matches": {
-      "1215230": {
-        "start": 24,
-        "length": 1
-      },
       "1231590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぎゅうにゅう"
       },
       "1266550": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "かたまる"
       },
       "1310660": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "とめ"
       },
-      "1400150": {
-        "start": 7,
-        "length": 2
+      "1310670": {
+        "start": 9,
+        "length": 2,
+        "reading": "とめ"
+      },
+      "1397310": {
+        "start": 6,
+        "length": 3,
+        "reading": "すばやく"
       },
       "1538100": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "やく"
       },
       "1552130": {
         "start": 3,
-        "length": 2
-      },
-      "1621290": {
-        "start": 6,
-        "length": 1
+        "length": 2,
+        "reading": "ながれ"
       },
       "2142670": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "せい"
       },
-      "2859157": {
-        "start": 21,
-        "length": 3
+      "2386360": {
+        "start": 23,
+        "length": 2,
+        "reading": "ふんかん"
+      },
+      "2730730": {
+        "start": 25,
+        "length": 1,
+        "reading": "せい"
+      }
+    }
+  },
+  {
+    "id": "78498",
+    "original": "卵の白身はゆでれば固まります。",
+    "en": [
+      {
+        "id": "325218",
+        "text": "You can set the white of an egg by boiling it."
+      }
+    ],
+    "indices": "卵(たまご)[01] の 白身[01] は 茹でる{ゆでれば} 固まる{固まります}",
+    "vocabIds": [
+      "1549140",
+      "1475240",
+      "1266550"
+    ],
+    "matches": {
+      "1266550": {
+        "start": 9,
+        "length": 3,
+        "reading": "かたまり"
+      },
+      "1475240": {
+        "start": 2,
+        "length": 2,
+        "reading": "しろみ"
+      },
+      "1549140": {
+        "start": 0,
+        "length": 1,
+        "reading": "たまご"
       }
     }
   },
@@ -107,20 +153,29 @@
     "vocabIds": [
       "1266550",
       "1557110",
-      "1556770"
+      "1556770",
+      "2827677"
     ],
     "matches": {
       "1266550": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かたまる"
       },
       "1556770": {
         "start": 19,
-        "length": 4
+        "length": 3,
+        "reading": "ひやし"
       },
       "1557110": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "れいぞうこ"
+      },
+      "2827677": {
+        "start": 19,
+        "length": 3,
+        "reading": "ひやし"
       }
     }
   },
@@ -136,21 +191,24 @@
     "indices": "牛乳 は 凍る{凍って} 固まる{固まった}",
     "vocabIds": [
       "1231590",
-      "2837668",
+      "1593100",
       "1266550"
     ],
     "matches": {
       "1231590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぎゅうにゅう"
       },
       "1266550": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "かたまっ"
       },
-      "2837668": {
+      "1593100": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "こおっ"
       }
     }
   },
@@ -172,15 +230,75 @@
     "matches": {
       "1252090": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1266550": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "かたまっ"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      }
+    }
+  },
+  {
+    "id": "189526",
+    "original": "雨降って地固まる。",
+    "en": [
+      {
+        "id": "400111",
+        "text": "Adversity strengthens the foundations."
+      },
+      {
+        "id": "954541",
+        "text": "What doesn't kill you makes you stronger."
+      },
+      {
+        "id": "26670",
+        "text": "After rain comes fair weather."
+      },
+      {
+        "id": "11029978",
+        "text": "After rain comes nice weather."
+      }
+    ],
+    "indices": "雨 降る(ふる){降って} 地(じ)[01]~ 固まる",
+    "vocabIds": [
+      "1171900",
+      "1172000",
+      "1282790",
+      "1420730",
+      "1266550"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 0,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1172000": {
+        "start": 0,
+        "length": 8,
+        "reading": "あめふってちかたまる"
+      },
+      "1266550": {
+        "start": 5,
+        "length": 3,
+        "reading": "かたまる"
+      },
+      "1282790": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふっ"
+      },
+      "1420730": {
+        "start": 4,
+        "length": 1,
+        "reading": "ち"
       }
     }
   },
@@ -205,27 +323,33 @@
     "matches": {
       "1193290": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "かしゅ"
       },
       "1266550": {
         "start": 28,
-        "length": 4
+        "length": 3,
+        "reading": "かたまっ"
       },
       "1375690": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1483150": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1531690": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "めいせい"
       },
       "1553170": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       }
     }
   },
@@ -246,11 +370,79 @@
     "matches": {
       "1266550": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "かたまる"
       },
       "1315920": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
+      }
+    }
+  },
+  {
+    "id": "228445",
+    "original": "いろいろトラブルもあったけど、雨降って地固まるってことになってほしいね。",
+    "en": [
+      {
+        "id": "65803",
+        "text": "We've been through a rough patch, but I hope it will have made us stronger."
+      }
+    ],
+    "indices": "色々[01]{いろいろ} トラブル[01] も 有る{あった} けど 雨降って地固まる~ って 事(こと){こと} になる{になって} 欲しい[02]{ほしい} ね(#2029080)[01]",
+    "vocabIds": [
+      "1171900",
+      "1172000",
+      "1282790",
+      "1420730",
+      "1266550"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 15,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1172000": {
+        "start": 15,
+        "length": 8,
+        "reading": "あめふってちかたまる"
+      },
+      "1266550": {
+        "start": 20,
+        "length": 3,
+        "reading": "かたまる"
+      },
+      "1282790": {
+        "start": 16,
+        "length": 2,
+        "reading": "ふっ"
+      },
+      "1420730": {
+        "start": 19,
+        "length": 1,
+        "reading": "ち"
+      }
+    }
+  },
+  {
+    "id": "234773",
+    "original": "あ、またコンピューターが固まっちゃったよ。",
+    "en": [
+      {
+        "id": "72149",
+        "text": "Argh! My computer froze up again."
+      }
+    ],
+    "indices": "あ[01] 又{また} コンピュータ{コンピューター}~ が 固まる{固まっ} じゃう{ちゃった} よ[01]",
+    "vocabIds": [
+      "1266550"
+    ],
+    "matches": {
+      "1266550": {
+        "start": 12,
+        "length": 3,
+        "reading": "かたまっ"
       }
     }
   },
@@ -266,30 +458,47 @@
     "vocabIds": [
       "1311110",
       "1357980",
+      "1385570",
       "1385580",
+      "1296370",
       "1266550",
       "1582200"
     ],
     "matches": {
       "1266550": {
         "start": 28,
-        "length": 4
+        "length": 3,
+        "reading": "かたまっ"
+      },
+      "1296370": {
+        "start": 26,
+        "length": 1,
+        "reading": "ざい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1357980": {
         "start": 12,
-        "length": 4
+        "length": 2,
+        "reading": "さわら"
+      },
+      "1385570": {
+        "start": 24,
+        "length": 2,
+        "reading": "せっちゃく"
       },
       "1385580": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "せっちゃくざい"
       },
       "1582200": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "とちゅう"
       }
     }
   },
@@ -311,19 +520,23 @@
     "matches": {
       "1266440": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "よぶ"
       },
       "1266550": {
         "start": 2,
-        "length": 4
+        "length": 3,
+        "reading": "かたまっ"
       },
       "1371260": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1488840": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "こおり"
       }
     }
   },
@@ -344,15 +557,18 @@
     "matches": {
       "1202150": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "みな"
       },
       "1236750": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうふ"
       },
       "1266550": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "かたまっ"
       }
     }
   },
@@ -372,11 +588,13 @@
     "matches": {
       "1266550": {
         "start": 2,
-        "length": 4
+        "length": 3,
+        "reading": "かたまっ"
       },
       "1467640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ねこ"
       }
     }
   },
@@ -395,7 +613,8 @@
     "matches": {
       "1266550": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "かたまっ"
       }
     }
   }

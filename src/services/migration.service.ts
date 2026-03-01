@@ -187,8 +187,8 @@ export class MigrationService {
                     const isGraduated = items.some(i => i.stage === 'graduated');
 
                     // Determine due date (closest due date)
-                    let closestReadingDue = items.map(i => i.reading.dueDate).filter(Boolean).sort()[0] || null;
-                    let closestMeaningDue = items.map(i => i.meaning.dueDate).filter(Boolean).sort()[0] || null;
+                    const closestReadingDue = items.map(i => i.reading.dueDate).filter(Boolean).sort()[0] || null;
+                    const closestMeaningDue = items.map(i => i.meaning.dueDate).filter(Boolean).sort()[0] || null;
 
                     baseItem.totalReviews = totalReviews;
                     baseItem.consecutiveFailures = consecutiveFailures;

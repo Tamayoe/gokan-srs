@@ -1,5 +1,44 @@
 [
   {
+    "id": "125686",
+    "original": "痛くも痒くもない。",
+    "en": [
+      {
+        "id": "278305",
+        "text": "Don't care a hang about it."
+      }
+    ],
+    "indices": "痛い[01]{痛く} も 痒い{痒く} も 無い{ない}",
+    "vocabIds": [
+      "1432680",
+      "1369990",
+      "2110790",
+      "1569570"
+    ],
+    "matches": {
+      "1369990": {
+        "start": 0,
+        "length": 2,
+        "reading": "いたく"
+      },
+      "1432680": {
+        "start": 0,
+        "length": 2,
+        "reading": "いたく"
+      },
+      "1569570": {
+        "start": 3,
+        "length": 2,
+        "reading": "かゆく"
+      },
+      "2110790": {
+        "start": 0,
+        "length": 8,
+        "reading": "いたくもかゆくもない"
+      }
+    }
+  },
+  {
     "id": "886082",
     "original": "蚊に刺されて痒いよ。何か薬持ってない？",
     "en": [
@@ -10,8 +49,9 @@
     ],
     "vocabIds": [
       "1196540",
-      "1598710",
+      "1306470",
       "1569570",
+      "1577100",
       "1188270",
       "1538160",
       "1315720"
@@ -19,27 +59,80 @@
     "matches": {
       "1188270": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1196540": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "か"
+      },
+      "1306470": {
+        "start": 2,
+        "length": 2,
+        "reading": "ささ"
       },
       "1315720": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1538160": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "くすり"
       },
       "1569570": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
       },
-      "1598710": {
-        "start": 2,
-        "length": 1
+      "1577100": {
+        "start": 10,
+        "length": 1,
+        "reading": "なに"
+      }
+    }
+  },
+  {
+    "id": "1031943",
+    "original": "パイナップルはダメなんだ。食べると口の中が痒くなっちゃうんだよ。",
+    "en": [
+      {
+        "id": "7766892",
+        "text": "Pineapples are no good. When I eat them, the inside of my mouth gets itchy."
+      },
+      {
+        "id": "7770570",
+        "text": "I can't eat pineapple. When I do, my mouth gets itchy."
+      }
+    ],
+    "vocabIds": [
+      "1358280",
+      "1275640",
+      "1423310",
+      "1569570"
+    ],
+    "matches": {
+      "1275640": {
+        "start": 17,
+        "length": 1,
+        "reading": "くち"
+      },
+      "1358280": {
+        "start": 13,
+        "length": 3,
+        "reading": "たべる"
+      },
+      "1423310": {
+        "start": 19,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1569570": {
+        "start": 21,
+        "length": 2,
+        "reading": "かゆく"
       }
     }
   },
@@ -60,15 +153,18 @@
     "matches": {
       "1255000": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けつまくえん"
       },
       "1569570": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
       },
       "1604890": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "め"
       }
     }
   },
@@ -83,16 +179,24 @@
     ],
     "vocabIds": [
       "1196540",
+      "1209240",
       "1569570"
     ],
     "matches": {
       "1196540": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "か"
+      },
+      "1209240": {
+        "start": 2,
+        "length": 2,
+        "reading": "かま"
       },
       "1569570": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
       }
     }
   },
@@ -112,11 +216,13 @@
     "matches": {
       "1486720": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1569570": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
       }
     }
   },
@@ -136,11 +242,13 @@
     "matches": {
       "1327190": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "て"
       },
       "1569570": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
       }
     }
   },
@@ -160,11 +268,13 @@
     "matches": {
       "1486720": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1569570": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
       }
     }
   },
@@ -180,20 +290,35 @@
     "vocabIds": [
       "1404630",
       "1569570",
-      "1188270"
+      "1577100",
+      "1188270",
+      "1209240"
     ],
     "matches": {
       "1188270": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
+      },
+      "1209240": {
+        "start": 9,
+        "length": 2,
+        "reading": "かま"
       },
       "1404630": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あし"
       },
       "1569570": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -212,7 +337,8 @@
     "matches": {
       "1569570": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
       }
     }
   },
@@ -231,7 +357,8 @@
     "matches": {
       "1569570": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
       }
     }
   },
@@ -250,7 +377,40 @@
     "matches": {
       "1569570": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かゆい"
+      }
+    }
+  },
+  {
+    "id": "11291099",
+    "original": "蚊にかまれて、痒くて痒くて。ぬり薬ある？",
+    "en": [
+      {
+        "id": "3751372",
+        "text": "I'm itching from mosquito bites. Do you have any ointment?"
+      }
+    ],
+    "vocabIds": [
+      "1196540",
+      "1569570",
+      "1538160"
+    ],
+    "matches": {
+      "1196540": {
+        "start": 0,
+        "length": 1,
+        "reading": "か"
+      },
+      "1538160": {
+        "start": 16,
+        "length": 1,
+        "reading": "やく"
+      },
+      "1569570": {
+        "start": 7,
+        "length": 2,
+        "reading": "かゆく"
       }
     }
   }

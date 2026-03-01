@@ -1,5 +1,56 @@
 [
   {
+    "id": "75586",
+    "original": "二度寝しないのっ！",
+    "en": [
+      {
+        "id": "328131",
+        "text": "Don't go back to sleep!"
+      }
+    ],
+    "indices": "二度寝~ 為る(する){しない} の{のっ}",
+    "vocabIds": [
+      "1461140",
+      "1462730",
+      "2220480",
+      "1445160",
+      "1360010",
+      "1642760"
+    ],
+    "matches": {
+      "1360010": {
+        "start": 2,
+        "length": 1,
+        "reading": "ね"
+      },
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 0,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1642760": {
+        "start": 2,
+        "length": 1,
+        "reading": "ね"
+      },
+      "2220480": {
+        "start": 0,
+        "length": 3,
+        "reading": "にどね"
+      }
+    }
+  },
+  {
     "id": "91887",
     "original": "彼女はトムに二度電話を入れた。",
     "en": [
@@ -11,21 +62,48 @@
     "indices": "彼女[01] は に 二度[01] 電話を入れる{電話を入れた}",
     "vocabIds": [
       "1483150",
+      "1461140",
       "1462730",
-      "2845823"
+      "1445160",
+      "1443840",
+      "1465610",
+      "1465600"
     ],
     "matches": {
+      "1443840": {
+        "start": 8,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1445160": {
+        "start": 7,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 6,
+        "length": 1,
+        "reading": "に"
+      },
       "1462730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
+      },
+      "1465600": {
+        "start": 11,
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1465610": {
+        "start": 11,
+        "length": 2,
+        "reading": "いれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
-      },
-      "2845823": {
-        "start": 8,
-        "length": 6
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -45,26 +123,105 @@
     "indices": "彼女 が 二度[01] 結婚{結婚した} 事(こと){こと} は 本当 だ{だった}",
     "vocabIds": [
       "1483150",
+      "1461140",
       "1462730",
+      "1445160",
       "1254790",
       "1523060"
     ],
     "matches": {
       "1254790": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けっこん"
+      },
+      "1445160": {
+        "start": 4,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 3,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1523060": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ほんとう"
+      }
+    }
+  },
+  {
+    "id": "101460",
+    "original": "彼は日本を去り二度と帰ってこなかった。",
+    "en": [
+      {
+        "id": "302235",
+        "text": "He left Japan never to come back."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 日本 を 去る[01]{去り} 二度と 帰る[01]{帰って} 来る(くる)[01]{こなかった}",
+    "vocabIds": [
+      "1483070",
+      "1582710",
+      "1231650",
+      "1461140",
+      "1462730",
+      "2110850",
+      "1445160",
+      "1221270"
+    ],
+    "matches": {
+      "1221270": {
+        "start": 10,
+        "length": 2,
+        "reading": "かえっ"
+      },
+      "1231650": {
+        "start": 5,
+        "length": 2,
+        "reading": "さり"
+      },
+      "1445160": {
+        "start": 8,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 7,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 7,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1582710": {
+        "start": 2,
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "2110850": {
+        "start": 7,
+        "length": 3,
+        "reading": "にどと"
       }
     }
   },
@@ -80,7 +237,9 @@
     "indices": "彼(かれ)[01] は 二度[01] 入試 に 失敗 為る(する){して} 大学 に 入学 為る(する){した}",
     "vocabIds": [
       "1483070",
+      "1461140",
       "1462730",
+      "1445160",
       "1466200",
       "1320140",
       "1413240",
@@ -89,27 +248,187 @@
     "matches": {
       "1320140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1413240": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1445160": {
+        "start": 3,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 2,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1465850": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "にゅうがく"
       },
       "1466200": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "にゅうし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "112506",
+    "original": "彼はその町を去り二度と姿を見せることはなかった。",
+    "en": [
+      {
+        "id": "291171",
+        "text": "He left the town and was never seen again."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 其の[01]{その} 町(まち) を 去る[01]{去り} 二度と 姿を見せる 事(こと){こと} は 無い{なかった}",
+    "vocabIds": [
+      "1483070",
+      "1603990",
+      "1231650",
+      "1461140",
+      "1462730",
+      "2110850",
+      "1445160",
+      "1307710",
+      "2835659",
+      "1259210"
+    ],
+    "matches": {
+      "1231650": {
+        "start": 6,
+        "length": 2,
+        "reading": "さり"
+      },
+      "1259210": {
+        "start": 13,
+        "length": 3,
+        "reading": "みせる"
+      },
+      "1307710": {
+        "start": 11,
+        "length": 1,
+        "reading": "すがた"
+      },
+      "1445160": {
+        "start": 9,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 8,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 8,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1603990": {
+        "start": 4,
+        "length": 1,
+        "reading": "まち"
+      },
+      "2110850": {
+        "start": 8,
+        "length": 3,
+        "reading": "にどと"
+      },
+      "2835659": {
+        "start": 11,
+        "length": 5,
+        "reading": "すがたをみせる"
+      }
+    }
+  },
+  {
+    "id": "115274",
+    "original": "彼は１９６０年にアフリカへ行き二度と戻らなかった。",
+    "en": [
+      {
+        "id": "288397",
+        "text": "He went to Africa in 1960 never to return."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 年(ねん) に 阿弗利加{アフリカ} へ 行く{行き} 二度と 戻る{戻らなかった}",
+    "vocabIds": [
+      "1483070",
+      "2084840",
+      "1578850",
+      "1578790",
+      "1461140",
+      "1462730",
+      "2110850",
+      "1445160",
+      "1535880"
+    ],
+    "matches": {
+      "1445160": {
+        "start": 16,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 15,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 15,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1535880": {
+        "start": 18,
+        "length": 2,
+        "reading": "もどら"
+      },
+      "1578790": {
+        "start": 13,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 13,
+        "length": 2,
+        "reading": "いき"
+      },
+      "2084840": {
+        "start": 6,
+        "length": 1,
+        "reading": "ねん"
+      },
+      "2110850": {
+        "start": 15,
+        "length": 3,
+        "reading": "にどと"
       }
     }
   },
@@ -124,32 +443,43 @@
     ],
     "indices": "二度[01] 聞く{聞いて} 一度 物(もの)[01] 言う{言え}",
     "vocabIds": [
+      "1461140",
       "1462730",
+      "1445160",
       "1591110",
       "1576250",
-      "1502390",
-      "1956230"
+      "1847000"
     ],
     "matches": {
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
       "1462730": {
         "start": 0,
-        "length": 2
-      },
-      "1502390": {
-        "start": 7,
-        "length": 1
+        "length": 2,
+        "reading": "にど"
       },
       "1576250": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
       },
       "1591110": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       },
-      "1956230": {
-        "start": 8,
-        "length": 1
+      "1847000": {
+        "start": 7,
+        "length": 3,
+        "reading": "ものゆえ"
       }
     }
   },
@@ -164,22 +494,37 @@
     ],
     "indices": "二度[01] も 失敗 為る(する){した} ので は 再び 遣る{やり} たい{たくなかった}",
     "vocabIds": [
+      "1461140",
       "1462730",
+      "1445160",
       "1320140",
       "1292300"
     ],
     "matches": {
       "1292300": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ふたたび"
       },
       "1320140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
+      },
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       }
     }
   },
@@ -194,42 +539,100 @@
     ],
     "indices": "二度[01] の 延期 の 後(あと) 其の[01]{その} 神聖{神聖な} 儀式 は 執り行う{執り行われた}",
     "vocabIds": [
+      "1461140",
       "1462730",
+      "1445160",
       "1176430",
       "1269320",
       "1364730",
       "1224700",
-      "2655810",
-      "1643580"
+      "1319610"
     ],
     "matches": {
       "1176430": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "えんき"
       },
       "1224700": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ぎしき"
       },
       "1269320": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
+      },
+      "1319610": {
+        "start": 16,
+        "length": 4,
+        "reading": "とりおこなわ"
       },
       "1364730": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しんせい"
+      },
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
+      }
+    }
+  },
+  {
+    "id": "123044",
+    "original": "二度あることは三度ある。",
+    "en": [
+      {
+        "id": "3387145",
+        "text": "It never rains but it pours."
+      }
+    ],
+    "indices": "二度[01] 有る{ある} 事(こと){こと} は 三度 有る{ある}",
+    "vocabIds": [
+      "1461140",
+      "1462730",
+      "1445160",
+      "1579350",
+      "1657970"
+    ],
+    "matches": {
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
       },
-      "1643580": {
-        "start": 18,
-        "length": 4
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
       },
-      "2655810": {
-        "start": 16,
-        "length": 1
+      "1462730": {
+        "start": 0,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1579350": {
+        "start": 7,
+        "length": 1,
+        "reading": "さん"
+      },
+      "1657970": {
+        "start": 7,
+        "length": 2,
+        "reading": "さんど"
       }
     }
   },
@@ -247,24 +650,166 @@
       "1456360",
       "1189600",
       "1522150",
-      "1462730"
+      "1461140",
+      "1462730",
+      "1445160"
     ],
     "matches": {
       "1189600": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かち"
+      },
+      "1445160": {
+        "start": 10,
+        "length": 1,
+        "reading": "ど"
       },
       "1456360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "よむ"
+      },
+      "1461140": {
+        "start": 9,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1522150": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
+      }
+    }
+  },
+  {
+    "id": "148814",
+    "original": "若い時は二度ない、どんとやれ、男なーら、人のやれないことをやれ。",
+    "en": [
+      {
+        "id": "265745",
+        "text": "You're only young once. Be a man and take on the world."
+      }
+    ],
+    "indices": "若い 時(とき) は 二度[01] 無い{ない} どんと[01]~ 遣る{やれ} 男 なら{なーら} 人(ひと) の 遣る{やれない} 事(こと){こと} を 遣る{やれ}",
+    "vocabIds": [
+      "1324300",
+      "1315840",
+      "1461140",
+      "1462730",
+      "1445160",
+      "1419990",
+      "1580640"
+    ],
+    "matches": {
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1324300": {
+        "start": 0,
+        "length": 2,
+        "reading": "わかい"
+      },
+      "1419990": {
+        "start": 15,
+        "length": 1,
+        "reading": "おとこ"
+      },
+      "1445160": {
+        "start": 5,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 4,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 4,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1580640": {
+        "start": 20,
+        "length": 1,
+        "reading": "ひと"
+      }
+    }
+  },
+  {
+    "id": "149625",
+    "original": "失った機会は決して二度とは来ない。",
+    "en": [
+      {
+        "id": "264933",
+        "text": "The lost chance will never come again."
+      }
+    ],
+    "indices": "失う{失った} 機会 は 決して 二度と は 来る(くる)[01]{来ない}",
+    "vocabIds": [
+      "1319750",
+      "1220800",
+      "1254130",
+      "1461140",
+      "1462730",
+      "2110850",
+      "1445160",
+      "1547720",
+      "1547710"
+    ],
+    "matches": {
+      "1220800": {
+        "start": 3,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1254130": {
+        "start": 6,
+        "length": 3,
+        "reading": "けっして"
+      },
+      "1319750": {
+        "start": 0,
+        "length": 2,
+        "reading": "うしなっ"
+      },
+      "1445160": {
+        "start": 10,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 9,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 9,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1547710": {
+        "start": 13,
+        "length": 1,
+        "reading": "こ"
+      },
+      "1547720": {
+        "start": 13,
+        "length": 1,
+        "reading": "こ"
+      },
+      "2110850": {
+        "start": 9,
+        "length": 3,
+        "reading": "にどと"
       }
     }
   },
@@ -280,36 +825,72 @@
     "indices": "私(わたし)[01] を 騙す{だます} の も 一度 なら 許す[02] だ が[03] 二度[01] 私(わたし)[01] を 騙す{だましたら} 君(きみ)[01] は 詐欺師 だ ぞ",
     "vocabIds": [
       "1311110",
+      "1160790",
       "1576250",
+      "1445160",
       "1232870",
+      "1461140",
       "1462730",
       "1247250",
-      "1291700"
+      "1291690",
+      "1291700",
+      "1956330"
     ],
     "matches": {
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
       "1232870": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ゆるす"
       },
       "1247250": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1291690": {
+        "start": 28,
+        "length": 2,
+        "reading": "さぎ"
       },
       "1291700": {
         "start": 28,
-        "length": 3
+        "length": 3,
+        "reading": "さぎし"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1445160": {
+        "start": 8,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 17,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1576250": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
+      },
+      "1956330": {
+        "start": 30,
+        "length": 1,
+        "reading": "し"
       }
     }
   },
@@ -326,35 +907,59 @@
     "vocabIds": [
       "1311110",
       "2084840",
+      "1461140",
       "1462730",
+      "1445160",
       "1497610",
+      "1343100",
       "2097010",
       "1578850"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1343100": {
+        "start": 8,
+        "length": 1,
+        "reading": "ところ"
+      },
+      "1445160": {
+        "start": 5,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 4,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1497610": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1578850": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "2084840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "とし"
       },
       "2097010": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ところへ"
       }
     }
   },
@@ -370,26 +975,42 @@
     "indices": "私(わたし)[01] は 欧羅巴{ヨーロッパ} へ 二度[01] 行く[01]{行った} 事がある{事があります}",
     "vocabIds": [
       "1311110",
+      "1461140",
       "1462730",
+      "1445160",
       "1589060",
       "1313580"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1313580": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
+      },
+      "1445160": {
+        "start": 9,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 8,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1589060": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "おこなっ"
       }
     }
   },
@@ -408,38 +1029,69 @@
       "1531710",
       "1154370",
       "1423310",
+      "1461140",
       "1462730",
+      "1445160",
+      "1266440",
       "1631030",
-      "1591150"
+      "1591150",
+      "1954660"
     ],
     "matches": {
       "1154370": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "くらやみ"
+      },
+      "1266440": {
+        "start": 12,
+        "length": 2,
+        "reading": "よば"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1423310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
+      },
+      "1445160": {
+        "start": 11,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 10,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1531710": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "なまえ"
       },
       "1591150": {
         "start": 18,
-        "length": 4
+        "length": 3,
+        "reading": "きこえ"
       },
       "1631030": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "よばれる"
+      },
+      "1954660": {
+        "start": 18,
+        "length": 3,
+        "reading": "きこえ"
       }
     }
   },
@@ -456,20 +1108,35 @@
     "vocabIds": [
       "1289370",
       "1578850",
-      "1462730"
+      "1461140",
+      "1462730",
+      "1445160"
     ],
     "matches": {
       "1289370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんど"
+      },
+      "1445160": {
+        "start": 13,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 12,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1578850": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -486,25 +1153,41 @@
     "vocabIds": [
       "1289070",
       "1311110",
+      "1461140",
       "1462730",
-      "1589060"
+      "1445160",
+      "1578850"
     ],
     "matches": {
       "1289070": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんかい"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1445160": {
+        "start": 6,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 5,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
-      "1589060": {
+      "1578850": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -520,21 +1203,36 @@
     "indices": "好機 が 二度[01] 訪れる 事(こと){こと} は 滅多にない{めったにない}",
     "vocabIds": [
       "1277600",
+      "1461140",
       "1462730",
+      "1445160",
       "1518080"
     ],
     "matches": {
       "1277600": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうき"
+      },
+      "1445160": {
+        "start": 4,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 3,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1518080": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おとずれる"
       }
     }
   },
@@ -551,25 +1249,41 @@
     "vocabIds": [
       "1299400",
       "1255430",
+      "1461140",
       "1462730",
+      "1445160",
       "1477390"
     ],
     "matches": {
       "1255430": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1299400": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ざっし"
+      },
+      "1445160": {
+        "start": 8,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 7,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1477390": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はっこう"
       }
     }
   },
@@ -585,26 +1299,42 @@
     "indices": "此の{この} 本(ほん)[01] は 二度[01] 読む 価値 が[01] 有る{ある}",
     "vocabIds": [
       "1522150",
+      "1461140",
       "1462730",
+      "1445160",
       "1456360",
       "1189600"
     ],
     "matches": {
       "1189600": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かち"
+      },
+      "1445160": {
+        "start": 5,
+        "length": 1,
+        "reading": "ど"
       },
       "1456360": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "よむ"
+      },
+      "1461140": {
+        "start": 4,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -621,30 +1351,47 @@
     "vocabIds": [
       "1522150",
       "1311110",
+      "1461140",
       "1462730",
+      "1445160",
       "1456360",
       "1589030"
     ],
     "matches": {
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1445160": {
+        "start": 8,
+        "length": 1,
+        "reading": "ど"
       },
       "1456360": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "よん"
+      },
+      "1461140": {
+        "start": 7,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1589030": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
       }
     }
   },
@@ -660,21 +1407,36 @@
     "indices": "彼の(あの){あの} 銀行 は 二度(にど)[01] 強盗 に 会う[02]{あった}",
     "vocabIds": [
       "1243490",
+      "1461140",
       "1462730",
+      "1445160",
       "1236500"
     ],
     "matches": {
       "1236500": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ごうとう"
       },
       "1243490": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぎんこう"
+      },
+      "1445160": {
+        "start": 6,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 5,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       }
     }
   },
@@ -693,47 +1455,80 @@
       "1579470",
       "1499720",
       "1576250",
+      "1370760",
       "2759690",
       "1171900",
+      "1461140",
       "1462730",
-      "1589500"
+      "1445160",
+      "1589500",
+      "1631470"
     ],
     "matches": {
       "1171900": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1370760": {
+        "start": 14,
+        "length": 2,
+        "reading": "ふき"
+      },
+      "1445160": {
+        "start": 20,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 19,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1463770": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "にち"
       },
       "1499720": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かぜ"
       },
       "1576250": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
       },
       "1579350": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "さん"
       },
       "1579470": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "よん"
       },
       "1589500": {
         "start": 21,
-        "length": 5
+        "length": 2,
+        "reading": "おり"
+      },
+      "1631470": {
+        "start": 21,
+        "length": 2,
+        "reading": "おり"
       },
       "2759690": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ふき"
       }
     }
   },
@@ -751,17 +1546,31 @@
       }
     ],
     "vocabIds": [
+      "1461140",
       "1462730",
+      "1445160",
       "1205900"
     ],
     "matches": {
       "1205900": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かくにん"
+      },
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       }
     }
   },
@@ -779,12 +1588,25 @@
       }
     ],
     "vocabIds": [
-      "1462730"
+      "1461140",
+      "1462730",
+      "1445160"
     ],
     "matches": {
+      "1445160": {
+        "start": 4,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 3,
+        "length": 1,
+        "reading": "に"
+      },
       "1462730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       }
     }
   },
@@ -798,27 +1620,129 @@
       }
     ],
     "vocabIds": [
+      "1160790",
       "1576250",
+      "1445160",
+      "1461140",
       "1462730",
       "1320140",
+      "1436730",
       "1436720"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1320140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1436720": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "あきらめ"
+      },
+      "1436730": {
+        "start": 13,
+        "length": 2,
+        "reading": "あきらめ"
+      },
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 3,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1576250": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
+      }
+    }
+  },
+  {
+    "id": "10335202",
+    "original": "目覚まし掛けて寝ても、ついつい二度寝しちゃって遅刻しちゃうんだよな。",
+    "en": [
+      {
+        "id": "10335212",
+        "text": "Even when I set an alarm clock before sleeping, I still oversleep until I'm late."
+      }
+    ],
+    "vocabIds": [
+      "1535340",
+      "1207610",
+      "2148680",
+      "1360010",
+      "1642760",
+      "1461140",
+      "1462730",
+      "2220480",
+      "1445160",
+      "1422050"
+    ],
+    "matches": {
+      "1207610": {
+        "start": 4,
+        "length": 2,
+        "reading": "かけ"
+      },
+      "1360010": {
+        "start": 7,
+        "length": 1,
+        "reading": "ね"
+      },
+      "1422050": {
+        "start": 23,
+        "length": 2,
+        "reading": "ちこく"
+      },
+      "1445160": {
+        "start": 16,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 15,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 15,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1535340": {
+        "start": 0,
+        "length": 4,
+        "reading": "めざまし"
+      },
+      "1642760": {
+        "start": 7,
+        "length": 1,
+        "reading": "ね"
+      },
+      "2148680": {
+        "start": 4,
+        "length": 2,
+        "reading": "かけ"
+      },
+      "2220480": {
+        "start": 15,
+        "length": 3,
+        "reading": "にどね"
       }
     }
   },
@@ -837,37 +1761,230 @@
       "1307790",
       "1516580",
       "1315840",
+      "1160790",
       "1576250",
+      "1445160",
+      "1461140",
       "1462730"
     ],
     "matches": {
+      "1160790": {
+        "start": 25,
+        "length": 1,
+        "reading": "いち"
+      },
       "1277450": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1307790": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "こそだて"
       },
       "1307850": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1315840": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
+      },
+      "1445160": {
+        "start": 26,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 28,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1516580": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ほうき"
       },
       "1576250": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
+      }
+    }
+  },
+  {
+    "id": "10714060",
+    "original": "二度寝ができなかったよ。",
+    "en": [
+      {
+        "id": "3177973",
+        "text": "I couldn't fall back to sleep."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1462730",
+      "2220480",
+      "1445160",
+      "1360010",
+      "1642760"
+    ],
+    "matches": {
+      "1360010": {
+        "start": 2,
+        "length": 1,
+        "reading": "ね"
+      },
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 0,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1642760": {
+        "start": 2,
+        "length": 1,
+        "reading": "ね"
+      },
+      "2220480": {
+        "start": 0,
+        "length": 3,
+        "reading": "にどね"
+      }
+    }
+  },
+  {
+    "id": "8555393",
+    "original": "二度寝ほど気持ち良いものはない。",
+    "en": [
+      {
+        "id": "10765265",
+        "text": "Nothing feels better than going back to sleep a second time."
+      }
+    ],
+    "vocabIds": [
+      "1461140",
+      "1462730",
+      "2220480",
+      "1445160",
+      "1360010",
+      "1642760"
+    ],
+    "matches": {
+      "1360010": {
+        "start": 2,
+        "length": 1,
+        "reading": "ね"
+      },
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 0,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1642760": {
+        "start": 2,
+        "length": 1,
+        "reading": "ね"
+      },
+      "2220480": {
+        "start": 0,
+        "length": 3,
+        "reading": "にどね"
+      }
+    }
+  },
+  {
+    "id": "11556373",
+    "original": "朝ご飯を食べて二度寝します。",
+    "en": [
+      {
+        "id": "1622849",
+        "text": "I'll eat my breakfast and go back to bed."
+      }
+    ],
+    "vocabIds": [
+      "1428280",
+      "1270590",
+      "1358280",
+      "1461140",
+      "1462730",
+      "2220480",
+      "1445160",
+      "1360010",
+      "1642760"
+    ],
+    "matches": {
+      "1270590": {
+        "start": 1,
+        "length": 2,
+        "reading": "ごはん"
+      },
+      "1358280": {
+        "start": 4,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1360010": {
+        "start": 9,
+        "length": 1,
+        "reading": "ね"
+      },
+      "1428280": {
+        "start": 0,
+        "length": 1,
+        "reading": "あさ"
+      },
+      "1445160": {
+        "start": 8,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 7,
+        "length": 1,
+        "reading": "に"
+      },
+      "1462730": {
+        "start": 7,
+        "length": 2,
+        "reading": "にど"
+      },
+      "1642760": {
+        "start": 9,
+        "length": 1,
+        "reading": "ね"
+      },
+      "2220480": {
+        "start": 7,
+        "length": 3,
+        "reading": "にどね"
       }
     }
   },
@@ -883,21 +2000,42 @@
     "indices": "好機 は 二度[01] 訪れる{訪れない}",
     "vocabIds": [
       "1277600",
+      "1461140",
       "1462730",
-      "1518080"
+      "1445160",
+      "1518080",
+      "1852840"
     ],
     "matches": {
       "1277600": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうき"
+      },
+      "1445160": {
+        "start": 4,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1461140": {
+        "start": 3,
+        "length": 1,
+        "reading": "に"
       },
       "1462730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にど"
       },
       "1518080": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "おとずれ"
+      },
+      "1852840": {
+        "start": 5,
+        "length": 2,
+        "reading": "おとずれ"
       }
     }
   }

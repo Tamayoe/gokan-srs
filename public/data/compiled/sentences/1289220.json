@@ -12,20 +12,35 @@
     "vocabIds": [
       "1289220",
       "2402090",
-      "1612680"
+      "1264610",
+      "1612680",
+      "1227500"
     ],
     "matches": {
+      "1227500": {
+        "start": 17,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1264610": {
+        "start": 7,
+        "length": 2,
+        "reading": "かぎり"
+      },
       "1289220": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1612680": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "おやすみ"
       },
       "2402090": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "をかぎりに"
       }
     }
   },
@@ -42,30 +57,41 @@
     "vocabIds": [
       "1289220",
       "2259150",
+      "1989500",
       "1371830",
       "1636070",
-      "2270390"
+      "1578850"
     ],
     "matches": {
       "1289220": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1371830": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "みずぎ"
+      },
+      "1578850": {
+        "start": 27,
+        "length": 2,
+        "reading": "いか"
       },
       "1636070": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "かい"
+      },
+      "1989500": {
+        "start": 8,
+        "length": 2,
+        "reading": "びらき"
       },
       "2259150": {
         "start": 5,
-        "length": 5
-      },
-      "2270390": {
-        "start": 27,
-        "length": 1
+        "length": 5,
+        "reading": "ぷーるびらき"
       }
     }
   },
@@ -82,35 +108,65 @@
     "vocabIds": [
       "1289220",
       "1301330",
+      "1463770",
       "1559610",
+      "1203620",
       "2670650",
+      "1173720",
       "1315220",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
+      "1173720": {
+        "start": 20,
+        "length": 2,
+        "reading": "えいが"
+      },
+      "1203620": {
+        "start": 18,
+        "length": 2,
+        "reading": "がいこく"
+      },
       "1259290": {
         "start": 26,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1301330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1315220": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "じまく"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       },
       "1559610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "れんぞく"
+      },
+      "2256270": {
+        "start": 26,
+        "length": 1,
+        "reading": "み"
       },
       "2670650": {
         "start": 18,
-        "length": 4
+        "length": 4,
+        "reading": "がいこくえいが"
       }
     }
   },
@@ -126,26 +182,123 @@
     "indices": "今週 は 訳あって~ 憂鬱{憂鬱な} 一週間 になる[01]{になり} そう[01] だ",
     "vocabIds": [
       "1289220",
+      "1538330",
       "2107790",
       "1605640",
-      "1163270"
+      "1160790",
+      "1163270",
+      "1333500"
     ],
     "matches": {
+      "1160790": {
+        "start": 12,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163270": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "いちしゅうかん"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1333500": {
+        "start": 13,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1538330": {
+        "start": 4,
+        "length": 1,
+        "reading": "わけ"
       },
       "1605640": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ゆううつ"
       },
       "2107790": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "わけあって"
+      }
+    }
+  },
+  {
+    "id": "82522",
+    "original": "忙しくなければ今週末に一緒に魚釣りに行きませんか。",
+    "en": [
+      {
+        "id": "321194",
+        "text": "Why don't you go fishing with us this weekend if you aren't busy?"
+      }
+    ],
+    "indices": "忙しい(いそがしい){忙しく} 無ければ[02]{なければ} 今週末 に 一緒に[01] 魚釣り に 行く[01]{行きません} か",
+    "vocabIds": [
+      "1519290",
+      "1289220",
+      "2100500",
+      "1525230",
+      "1525280",
+      "1163400",
+      "1163420",
+      "1233180",
+      "1578850",
+      "1578790"
+    ],
+    "matches": {
+      "1163400": {
+        "start": 11,
+        "length": 2,
+        "reading": "いっしょ"
+      },
+      "1163420": {
+        "start": 11,
+        "length": 3,
+        "reading": "いっしょに"
+      },
+      "1233180": {
+        "start": 14,
+        "length": 3,
+        "reading": "さかなつり"
+      },
+      "1289220": {
+        "start": 7,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1519290": {
+        "start": 0,
+        "length": 3,
+        "reading": "いそがしく"
+      },
+      "1525230": {
+        "start": 9,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1525280": {
+        "start": 9,
+        "length": 2,
+        "reading": "まつに"
+      },
+      "1578790": {
+        "start": 18,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 18,
+        "length": 2,
+        "reading": "いき"
+      },
+      "2100500": {
+        "start": 7,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -168,19 +321,23 @@
     "matches": {
       "1198760": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かいだん"
       },
       "1289220": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1307500": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "はじまる"
       },
       "1508070": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "へいわ"
       }
     }
   },
@@ -204,23 +361,28 @@
     "matches": {
       "1228040": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうじつ"
       },
       "1289220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1394840": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんいん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1552760": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "るす"
       }
     }
   },
@@ -238,29 +400,46 @@
       "1483090",
       "1289220",
       "2845368",
+      "1315840",
+      "2021540",
       "1428390",
       "1358280"
     ],
     "matches": {
       "1289220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1315840": {
+        "start": 7,
+        "length": 1,
+        "reading": "じ"
       },
       "1358280": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1428390": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうしょく"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
+      },
+      "2021540": {
+        "start": 7,
+        "length": 2,
+        "reading": "じに"
       },
       "2845368": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はちじ"
       }
     }
   },
@@ -282,15 +461,18 @@
     "matches": {
       "1289220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1445590": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "どようび"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -306,16 +488,24 @@
     "indices": "彼(かれ)[01] は 今週 ずっと 忙しい(いそがしい){忙しく} 為る(する){しています}",
     "vocabIds": [
       "1483070",
-      "1289220"
+      "1289220",
+      "1519290"
     ],
     "matches": {
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1519290": {
+        "start": 7,
+        "length": 3,
+        "reading": "いそがしく"
       }
     }
   },
@@ -331,16 +521,24 @@
     "indices": "彼(かれ)[01] は 今週 ずっと 迚も[01]{とても} 忙しい(いそがしい){忙しかった}",
     "vocabIds": [
       "1483070",
-      "1289220"
+      "1289220",
+      "1519290"
     ],
     "matches": {
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1519290": {
+        "start": 10,
+        "length": 4,
+        "reading": "いそがしかっ"
       }
     }
   },
@@ -357,30 +555,29 @@
     "vocabIds": [
       "1483070",
       "1289220",
-      "2845369",
-      "1215230",
+      "1315920",
       "1304560"
     ],
     "matches": {
-      "1215230": {
-        "start": 7,
-        "length": 1
-      },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1304560": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ざんぎょう"
+      },
+      "1315920": {
+        "start": 6,
+        "length": 2,
+        "reading": "じかん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
-      },
-      "2845369": {
-        "start": 4,
-        "length": 3
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -396,36 +593,72 @@
     "indices": "早速 本題に入る けど 飲む[01]{飲み} 会(かい) の 件(けん) なのだ{なんだ} 今週 の 金曜日 開く(あく)[04]{あいてる} かな",
     "vocabIds": [
       "1400300",
+      "1522970",
       "2788150",
+      "1465590",
+      "1169870",
+      "2151640",
       "2016170",
+      "1198160",
       "1255940",
       "1289220",
       "1243320"
     ],
     "matches": {
+      "1169870": {
+        "start": 10,
+        "length": 2,
+        "reading": "のみ"
+      },
+      "1198160": {
+        "start": 12,
+        "length": 1,
+        "reading": "かい"
+      },
       "1243320": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "きんようび"
       },
       "1255940": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "けん"
       },
       "1289220": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1400300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さっそく"
+      },
+      "1465590": {
+        "start": 5,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1522970": {
+        "start": 2,
+        "length": 2,
+        "reading": "ほんだい"
       },
       "2016170": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "のみかい"
+      },
+      "2151640": {
+        "start": 10,
+        "length": 2,
+        "reading": "のみ"
       },
       "2788150": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "ほんだいにはいる"
       }
     }
   },
@@ -441,21 +674,18 @@
     "indices": "先生(せんせい)[01] に 今週 会う[01]{会えます} か",
     "vocabIds": [
       "1387990",
-      "1289220",
-      "1198160"
+      "1289220"
     ],
     "matches": {
-      "1198160": {
-        "start": 5,
-        "length": 1
-      },
       "1289220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1387990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       }
     }
   },
@@ -472,25 +702,80 @@
     "vocabIds": [
       "1379380",
       "1289220",
+      "1357490",
       "1357500",
+      "1320300",
       "1465590"
     ],
     "matches": {
       "1289220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1320300": {
+        "start": 7,
+        "length": 1,
+        "reading": "しつ"
+      },
+      "1357490": {
+        "start": 5,
+        "length": 2,
+        "reading": "しょくいん"
       },
       "1357500": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "しょくいんしつ"
       },
       "1379380": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1465590": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
+      }
+    }
+  },
+  {
+    "id": "148142",
+    "original": "今週末までには届くはずです。",
+    "en": [
+      {
+        "id": "266417",
+        "text": "You should receive them by the end of the week."
+      }
+    ],
+    "indices": "今週末 迄に{までに} は 届く 筈[01]{はず} です",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1457200"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1457200": {
+        "start": 7,
+        "length": 2,
+        "reading": "とどく"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -511,36 +796,106 @@
       "1289220",
       "1199330",
       "1475810",
-      "1329590"
+      "1329590",
+      "1659120"
     ],
     "matches": {
       "1199330": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1204570": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "まち"
       },
       "1289220": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329590": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "うけ"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1475810": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ばくげき"
+      },
+      "1659120": {
+        "start": 12,
+        "length": 2,
+        "reading": "うけ"
+      }
+    }
+  },
+  {
+    "id": "157018",
+    "original": "私は今週末までにこの詩を暗記するように言われた。",
+    "en": [
+      {
+        "id": "257516",
+        "text": "I was told to learn this poem by heart by the end of this week."
+      }
+    ],
+    "indices": "私(わたし)[01] は 今週末 迄{まで} に 此の{この} 詩(し) を 暗記 為る(する){する} 様に{ように} 言う{言われた}",
+    "vocabIds": [
+      "1311110",
+      "1289220",
+      "2100500",
+      "1525230",
+      "1929950",
+      "1586910",
+      "1587040"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 2,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1525230": {
+        "start": 4,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1586910": {
+        "start": 12,
+        "length": 2,
+        "reading": "あんき"
+      },
+      "1587040": {
+        "start": 19,
+        "length": 2,
+        "reading": "いわ"
+      },
+      "1929950": {
+        "start": 10,
+        "length": 1,
+        "reading": "し"
+      },
+      "2100500": {
+        "start": 2,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -560,32 +915,44 @@
       "1304970",
       "1198360",
       "1485470",
+      "1578850",
       "1578790"
     ],
     "matches": {
       "1198360": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かいぎ"
       },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1304970": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1485470": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
       },
       "1578790": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 21,
+        "length": 2,
+        "reading": "いき"
       }
     }
   },
@@ -603,29 +970,34 @@
       "1311110",
       "1289220",
       "1227610",
-      "2762490",
+      "1326980",
       "1589350"
     ],
     "matches": {
       "1227610": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうか"
       },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1326980": {
+        "start": 7,
+        "length": 2,
+        "reading": "とろ"
       },
       "1589350": {
         "start": 11,
-        "length": 3
-      },
-      "2762490": {
-        "start": 7,
-        "length": 1
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -652,19 +1024,23 @@
     "matches": {
       "1227610": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうか"
       },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1326980": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "とる"
       }
     }
   },
@@ -685,20 +1061,29 @@
     "vocabIds": [
       "1311110",
       "1289220",
-      "1612680"
+      "1612680",
+      "1227500"
     ],
     "matches": {
+      "1227500": {
+        "start": 6,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1612680": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おやすみ"
       }
     }
   },
@@ -714,16 +1099,24 @@
     "indices": "私(わたし)[01] は 今週 ずっと 忙しい(いそがしい){忙しかった}",
     "vocabIds": [
       "1311110",
-      "1289220"
+      "1289220",
+      "1519290"
     ],
     "matches": {
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1519290": {
+        "start": 7,
+        "length": 4,
+        "reading": "いそがしかっ"
       }
     }
   },
@@ -749,15 +1142,18 @@
     "matches": {
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1519290": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       }
     }
   },
@@ -778,20 +1174,29 @@
     "vocabIds": [
       "1311110",
       "1289220",
-      "1612680"
+      "1612680",
+      "1227500"
     ],
     "matches": {
+      "1227500": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1612680": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おやすみ"
       }
     }
   },
@@ -817,15 +1222,18 @@
     "matches": {
       "1227500": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "やすみ"
       },
       "1289220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -840,27 +1248,37 @@
     ],
     "indices": "私たち は 今週 の 内(うち){うち} に 其の[01]{その} お金 を 返す[01]{返さ} 無くてはならない[02]{なくてはならない}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1289220",
       "1001820",
-      "2843845"
+      "1512130"
     ],
     "matches": {
       "1001820": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1289220": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
-      "2843845": {
+      "1512130": {
         "start": 15,
-        "length": 1
+        "length": 2,
+        "reading": "かえさ"
       }
     }
   },
@@ -882,15 +1300,483 @@
     "matches": {
       "1259590": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "みごろ"
       },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1593710": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "さくら"
+      }
+    }
+  },
+  {
+    "id": "172350",
+    "original": "今週末までにレポートを提出することになっている。",
+    "en": [
+      {
+        "id": "242125",
+        "text": "You are supposed to hand in the report by the end of this week."
+      }
+    ],
+    "indices": "今週末 迄{まで} に レポート を 提出[01] 為る(する){する} ことになっている",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1436410"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1436410": {
+        "start": 11,
+        "length": 2,
+        "reading": "ていしゅつ"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "172351",
+    "original": "今週末までにはぜひその仕事を終えていただきたいのです。",
+    "en": [
+      {
+        "id": "242124",
+        "text": "We'd like you to finish the job by the end of this week by all means."
+      }
+    ],
+    "indices": "今週末 迄{まで} には 是非[01]{ぜひ} 其の[01]{その} 仕事[01] を 終える{終えて} 頂く[01]{いただき} たい[01] のです",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1304970",
+      "1332760"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1304970": {
+        "start": 11,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1332760": {
+        "start": 14,
+        "length": 2,
+        "reading": "おえ"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "172352",
+    "original": "今週末までいくらかお金を貸してくれませんか。",
+    "en": [
+      {
+        "id": "242115",
+        "text": "Could you lend me some money until this weekend?"
+      }
+    ],
+    "indices": "今週末 迄{まで} 幾らか[01]{いくらか} お金 を 貸す[01]{貸して} 呉れる{くれません} か",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1001820",
+      "1411160",
+      "1411110"
+    ],
+    "matches": {
+      "1001820": {
+        "start": 9,
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1411110": {
+        "start": 12,
+        "length": 2,
+        "reading": "かし"
+      },
+      "1411160": {
+        "start": 12,
+        "length": 2,
+        "reading": "かし"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "172356",
+    "original": "今週末は何も予定がない。",
+    "en": [
+      {
+        "id": "242119",
+        "text": "I have nothing on this weekend."
+      }
+    ],
+    "indices": "今週末~ は 何も[01] 予定 が 無い{ない}",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1577100",
+      "1188490",
+      "1543240"
+    ],
+    "matches": {
+      "1188490": {
+        "start": 4,
+        "length": 2,
+        "reading": "なにも"
+      },
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1543240": {
+        "start": 6,
+        "length": 2,
+        "reading": "よてい"
+      },
+      "1577100": {
+        "start": 4,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "172357",
+    "original": "今週末は温泉に行く余裕はないね。すっからかんだ。",
+    "en": [
+      {
+        "id": "242118",
+        "text": "I can't afford to go to the onsen this weekend. I'm broke."
+      }
+    ],
+    "indices": "今週末 は 温泉 に 行く 余裕 は 無い{ない} ね(#2029080)[01] すっからかん[02]~ だ",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1183450",
+      "1578850",
+      "1544590"
+    ],
+    "matches": {
+      "1183450": {
+        "start": 4,
+        "length": 2,
+        "reading": "おんせん"
+      },
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1544590": {
+        "start": 9,
+        "length": 2,
+        "reading": "よゆう"
+      },
+      "1578850": {
+        "start": 7,
+        "length": 2,
+        "reading": "いく"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "172358",
+    "original": "今週末は３連休だ。",
+    "en": [
+      {
+        "id": "242117",
+        "text": "We're having a three-day weekend this week."
+      }
+    ],
+    "indices": "今週末 は 連休 だ",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "2660600",
+      "1559380"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1559380": {
+        "start": 5,
+        "length": 2,
+        "reading": "れんきゅう"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      },
+      "2660600": {
+        "start": 4,
+        "length": 3,
+        "reading": "さんれんきゅう"
+      }
+    }
+  },
+  {
+    "id": "172359",
+    "original": "今週末に学んだ何か重要な事を話して下さい。",
+    "en": [
+      {
+        "id": "242116",
+        "text": "Tell me something important you learned this weekend."
+      }
+    ],
+    "indices": "今週末 に 学ぶ{学んだ} 何か 重要{重要な} 事(こと) を 話す{話して} 下さい",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1525280",
+      "1206530",
+      "1577100",
+      "1188270",
+      "1336820",
+      "1313580",
+      "1562350",
+      "1184280",
+      "1184270"
+    ],
+    "matches": {
+      "1184270": {
+        "start": 17,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 17,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1188270": {
+        "start": 7,
+        "length": 2,
+        "reading": "なにか"
+      },
+      "1206530": {
+        "start": 4,
+        "length": 2,
+        "reading": "まなん"
+      },
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1313580": {
+        "start": 12,
+        "length": 1,
+        "reading": "こと"
+      },
+      "1336820": {
+        "start": 9,
+        "length": 2,
+        "reading": "じゅうよう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1525280": {
+        "start": 2,
+        "length": 2,
+        "reading": "まつに"
+      },
+      "1562350": {
+        "start": 14,
+        "length": 2,
+        "reading": "はなし"
+      },
+      "1577100": {
+        "start": 7,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "172361",
+    "original": "今週末、山に行くってのはどうかな？",
+    "en": [
+      {
+        "id": "242114",
+        "text": "Why don't we go to the mountains this weekend?"
+      }
+    ],
+    "indices": "今週末 山(やま)[01] に 行く って の は どうかな[01]",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1302680",
+      "1578850"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1302680": {
+        "start": 4,
+        "length": 1,
+        "reading": "やま"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1578850": {
+        "start": 6,
+        "length": 2,
+        "reading": "いく"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "172362",
+    "original": "今週末、何か計画はありますか。",
+    "en": [
+      {
+        "id": "242092",
+        "text": "Do you have anything on for this weekend?"
+      }
+    ],
+    "indices": "今週末 何か 計画 は 有る{あります} か",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1577100",
+      "1188270",
+      "1252090"
+    ],
+    "matches": {
+      "1188270": {
+        "start": 4,
+        "length": 2,
+        "reading": "なにか"
+      },
+      "1252090": {
+        "start": 6,
+        "length": 2,
+        "reading": "けいかく"
+      },
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1577100": {
+        "start": 4,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -914,31 +1800,66 @@
     "indices": "今週 は 期末試験 の 準備 の 為に[01]{ために} 夜遅く 迄{まで} 起きる{起きている}",
     "vocabIds": [
       "1289220",
+      "1220620",
       "1220630",
+      "1312350",
       "1341670",
+      "1536350",
       "2018890",
+      "1421970",
+      "1421980",
       "1223640"
     ],
     "matches": {
+      "1220620": {
+        "start": 7,
+        "length": 2,
+        "reading": "きまつ"
+      },
       "1220630": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "きまつしけん"
       },
       "1223640": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1312350": {
+        "start": 9,
+        "length": 2,
+        "reading": "しけん"
       },
       "1341670": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じゅんび"
+      },
+      "1421970": {
+        "start": 19,
+        "length": 2,
+        "reading": "おそく"
+      },
+      "1421980": {
+        "start": 19,
+        "length": 2,
+        "reading": "おそく"
+      },
+      "1536350": {
+        "start": 18,
+        "length": 1,
+        "reading": "よる"
       },
       "2018890": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "よるおそく"
       }
     }
   },
@@ -959,11 +1880,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1332760": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "おえ"
       }
     }
   },
@@ -985,15 +1908,18 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1315790": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じさん"
       },
       "1513060": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "べんとう"
       }
     }
   },
@@ -1009,21 +1935,30 @@
     "indices": "今週 は 非常に 忙しい(いそがしい)",
     "vocabIds": [
       "1289220",
+      "1484920",
       "1484930",
       "1519290"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1484920": {
+        "start": 3,
+        "length": 2,
+        "reading": "ひじょう"
       },
       "1484930": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ひじょうに"
       },
       "1519290": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       }
     }
   },
@@ -1039,16 +1974,30 @@
     "indices": "今週 は 中間試験~ が 三つ(みっつ){３つ}",
     "vocabIds": [
       "1289220",
-      "1942470"
+      "1423680",
+      "1942470",
+      "1312350"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1312350": {
+        "start": 5,
+        "length": 2,
+        "reading": "しけん"
+      },
+      "1423680": {
+        "start": 3,
+        "length": 2,
+        "reading": "ちゅうかん"
       },
       "1942470": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "ちゅうかんしけん"
       }
     }
   },
@@ -1065,20 +2014,23 @@
     "vocabIds": [
       "1289220",
       "1412880",
-      "2037940"
+      "1343950"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1343950": {
+        "start": 6,
+        "length": 2,
+        "reading": "かき"
       },
       "1412880": {
         "start": 3,
-        "length": 3
-      },
-      "2037940": {
-        "start": 6,
-        "length": 1
+        "length": 3,
+        "reading": "おおいに"
       }
     }
   },
@@ -1101,19 +2053,23 @@
     "matches": {
       "1273270": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうえん"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1526750": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "まんかい"
       },
       "1593710": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "さくら"
       }
     }
   },
@@ -1134,11 +2090,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1600020": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "ねあがり"
       }
     }
   },
@@ -1154,16 +2112,42 @@
     "indices": "今週 は 火災 予防 週間 です",
     "vocabIds": [
       "1289220",
-      "2530530"
+      "1193880",
+      "2530520",
+      "2530530",
+      "1543660",
+      "1333500"
     ],
     "matches": {
+      "1193880": {
+        "start": 3,
+        "length": 2,
+        "reading": "かさい"
+      },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1333500": {
+        "start": 7,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1543660": {
+        "start": 5,
+        "length": 2,
+        "reading": "よぼう"
+      },
+      "2530520": {
+        "start": 3,
+        "length": 4,
+        "reading": "かさいよぼう"
       },
       "2530530": {
         "start": 3,
-        "length": 6
+        "length": 6,
+        "reading": "かさいよぼうしゅうかん"
       }
     }
   },
@@ -1189,15 +2173,18 @@
     "matches": {
       "1173720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "えいが"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1352650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じょうえい"
       }
     }
   },
@@ -1219,15 +2206,18 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1358280": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1502390": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ぶつ"
       }
     }
   },
@@ -1247,7 +2237,8 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       }
     }
   },
@@ -1272,11 +2263,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1519290": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       }
     }
   },
@@ -1300,23 +2293,28 @@
     "matches": {
       "1211490": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "かんせい"
       },
       "1218150": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "きかく"
       },
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -1337,11 +2335,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1451150": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       }
     }
   },
@@ -1357,16 +2357,24 @@
     "indices": "今週 は ずっと 働き詰め{働きづめ} だ{だった}",
     "vocabIds": [
       "1289220",
-      "2267100"
+      "1451150",
+      "1451040"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
-      "2267100": {
+      "1451040": {
         "start": 6,
-        "length": 4
+        "length": 2,
+        "reading": "はたらき"
+      },
+      "1451150": {
+        "start": 6,
+        "length": 2,
+        "reading": "はたらき"
       }
     }
   },
@@ -1392,15 +2400,18 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1415000": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1519290": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       }
     }
   },
@@ -1421,11 +2432,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1438690": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "てんき"
       }
     }
   },
@@ -1445,7 +2458,8 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       }
     }
   },
@@ -1462,25 +2476,35 @@
     "vocabIds": [
       "1289220",
       "1333520",
+      "1577100",
       "1188270",
       "1538130"
     ],
     "matches": {
       "1188270": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1333520": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうまつ"
       },
       "1538130": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
+      },
+      "1577100": {
+        "start": 7,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -1496,6 +2520,8 @@
     "indices": "今週 の 終わりまで に 宿題 を 提出[01] 為る(する){して} 下さい{ください}",
     "vocabIds": [
       "1289220",
+      "1589600",
+      "1589590",
       "2199930",
       "1337270",
       "1436410"
@@ -1503,19 +2529,33 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1337270": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくだい"
       },
       "1436410": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ていしゅつ"
+      },
+      "1589590": {
+        "start": 3,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おわり"
       },
       "2199930": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "おわりまで"
       }
     }
   },
@@ -1531,16 +2571,30 @@
     "indices": "今週 の 終わりまで に 遣る{やらなくて} は 行けない[02]{いけません}",
     "vocabIds": [
       "1289220",
+      "1589600",
+      "1589590",
       "2199930"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1589590": {
+        "start": 3,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おわり"
       },
       "2199930": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "おわりまで"
       }
     }
   },
@@ -1559,33 +2613,63 @@
       "1243320",
       "1388660",
       "1465590",
+      "1169870",
+      "2151640",
       "2016170",
-      "1096940"
+      "1198160",
+      "1631370",
+      "1000730"
     ],
     "matches": {
-      "1096940": {
-        "start": 20,
-        "length": 2
+      "1000730": {
+        "start": 21,
+        "length": 4,
+        "reading": "いけない"
+      },
+      "1169870": {
+        "start": 16,
+        "length": 2,
+        "reading": "のみ"
+      },
+      "1198160": {
+        "start": 18,
+        "length": 1,
+        "reading": "かい"
       },
       "1243320": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "きんようび"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1388660": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せんやく"
       },
       "1465590": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1631370": {
+        "start": 21,
+        "length": 2,
+        "reading": "いけ"
       },
       "2016170": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "のみかい"
+      },
+      "2151640": {
+        "start": 16,
+        "length": 2,
+        "reading": "のみ"
       }
     }
   },
@@ -1603,24 +2687,34 @@
       "1289220",
       "1173720",
       "1356370",
-      "1236900"
+      "1236900",
+      "1236890"
     ],
     "matches": {
       "1173720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "えいが"
+      },
+      "1236890": {
+        "start": 8,
+        "length": 2,
+        "reading": "おしえ"
       },
       "1236900": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おしえ"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1356370": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じょうほう"
       }
     }
   },
@@ -1636,16 +2730,24 @@
     "indices": "今週 貴方(あなた)[01]{あなた} は 何(なに)[01] を 為る(する){していました} か",
     "vocabIds": [
       "1289220",
+      "1577100",
       "2851233"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なに"
       },
       "2851233": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "なにを"
       }
     }
   },
@@ -1668,19 +2770,23 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1372800": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ずいぶん"
       },
       "1451150": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       }
     }
   },
@@ -1706,15 +2812,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1303590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       }
     }
   },
@@ -1730,36 +2839,54 @@
     "indices": "何とか 頑張る{頑張って} 今週 仕事[01] を 終える{終えて} 下さい",
     "vocabIds": [
       "1188420",
+      "1217700",
       "1949660",
       "1289220",
       "1304970",
       "1332760",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 15,
+        "length": 3,
+        "reading": "ください"
       },
       "1188420": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "なんとか"
+      },
+      "1217700": {
+        "start": 3,
+        "length": 3,
+        "reading": "がんばっ"
       },
       "1289220": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1304970": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1332760": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "おえ"
       },
       "1949660": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "がんばって"
       }
     }
   },
@@ -1775,36 +2902,54 @@
     "indices": "もう 二日{２日} 連続 で(#2028980) 電車 が 遅れる{遅れて} 今週 は 最悪 だ{だった} よ[01]",
     "vocabIds": [
       "1462900",
+      "1463770",
       "1559610",
       "1443530",
       "1589040",
+      "1422020",
       "1289220",
       "1293720"
     ],
     "matches": {
       "1289220": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1293720": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "さいあく"
+      },
+      "1422020": {
+        "start": 10,
+        "length": 2,
+        "reading": "おくれ"
       },
       "1443530": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1462900": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ににち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1559610": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "れんぞく"
       },
       "1589040": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "おくれ"
       }
     }
   },
@@ -1820,6 +2965,7 @@
     "indices": "酷い(ひどい){ひどい} 風邪をひく{風邪を引いて} 仕舞う{しまって} 私(わたし)[01] は 今週 勉強[01] 出来る{できない}",
     "vocabIds": [
       "2827561",
+      "1583720",
       "1169250",
       "1311110",
       "1289220",
@@ -1828,23 +2974,33 @@
     "matches": {
       "1169250": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       },
       "1289220": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1512670": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1583720": {
+        "start": 3,
+        "length": 2,
+        "reading": "かぜ"
       },
       "2827561": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ひどいかぜ"
       }
     }
   },
@@ -1861,25 +3017,80 @@
     "vocabIds": [
       "1353260",
       "1289220",
+      "1220930",
       "2235700",
-      "1606560"
+      "1151260",
+      "1606560",
+      "1473740"
     ],
     "matches": {
+      "1151260": {
+        "start": 14,
+        "length": 2,
+        "reading": "わるい"
+      },
+      "1220930": {
+        "start": 11,
+        "length": 2,
+        "reading": "きげん"
+      },
       "1289220": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1353260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じょうし"
+      },
+      "1473740": {
+        "start": 20,
+        "length": 2,
+        "reading": "かい"
       },
       "1606560": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "わかる"
       },
       "2235700": {
         "start": 11,
-        "length": 5
+        "length": 5,
+        "reading": "きげんがわるい"
+      }
+    }
+  },
+  {
+    "id": "202271",
+    "original": "できれば今週末ですね。",
+    "en": [
+      {
+        "id": "39483",
+        "text": "This weekend, if possible."
+      }
+    ],
+    "indices": "出来れば{できれば} 今週末 です ね(#2029080)[01]",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 4,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 6,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "2100500": {
+        "start": 4,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -1899,7 +3110,8 @@
     "matches": {
       "1289220": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       }
     }
   },
@@ -1923,23 +3135,85 @@
     "matches": {
       "1254810": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "けっこんしき"
       },
       "1289220": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1397450": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "くみ"
       },
       "1521770": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぼくし"
       },
       "1589060": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "おこなっ"
+      }
+    }
+  },
+  {
+    "id": "210369",
+    "original": "その仕事は今週末に終わる予定だ。",
+    "en": [
+      {
+        "id": "47637",
+        "text": "That work will be finished at the end of this week."
+      }
+    ],
+    "indices": "其の[01]{その} 仕事[01] は 今週末 に 終わる 予定 だ",
+    "vocabIds": [
+      "1304970",
+      "1289220",
+      "2100500",
+      "1525230",
+      "1525280",
+      "1589600",
+      "1543240"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 5,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1304970": {
+        "start": 2,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1525230": {
+        "start": 7,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1525280": {
+        "start": 7,
+        "length": 2,
+        "reading": "まつに"
+      },
+      "1543240": {
+        "start": 12,
+        "length": 2,
+        "reading": "よてい"
+      },
+      "1589600": {
+        "start": 9,
+        "length": 3,
+        "reading": "おわる"
+      },
+      "2100500": {
+        "start": 5,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -1955,41 +3229,60 @@
     "indices": "此の{この} 所(ところ) 少し 疲れ を 感じる{感じている} ので 今週 は 泳ぐ{泳ぎ} に 行く[01]{行っていない}",
     "vocabIds": [
       "1725320",
+      "1343100",
       "1348870",
       "1483730",
       "1212260",
+      "1212250",
       "1289220",
       "1613570",
-      "1589060"
+      "1578850"
     ],
     "matches": {
+      "1212250": {
+        "start": 8,
+        "length": 2,
+        "reading": "かんじ"
+      },
       "1212260": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1289220": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1343100": {
+        "start": 2,
+        "length": 1,
+        "reading": "ところ"
       },
       "1348870": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1483730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "つかれ"
       },
-      "1589060": {
+      "1578850": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
       "1613570": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "およぎ"
       },
       "1725320": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "このところ"
       }
     }
   },
@@ -2009,7 +3302,8 @@
     "matches": {
       "1289220": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       }
     }
   },
@@ -2029,7 +3323,8 @@
     "matches": {
       "1289220": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       }
     }
   },
@@ -2045,16 +3340,30 @@
     "indices": "彼の(あの){あの} デパート で(#2028980) は 今週 メンズスーツ~ が 売り出し~ 中(ちゅう)[04] だ",
     "vocabIds": [
       "1289220",
-      "2844139"
+      "1588530",
+      "2844139",
+      "1423310"
     ],
     "matches": {
       "1289220": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1423310": {
+        "start": 21,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1588530": {
+        "start": 17,
+        "length": 4,
+        "reading": "うりだし"
       },
       "2844139": {
         "start": 17,
-        "length": 5
+        "length": 5,
+        "reading": "うりだしちゅう"
       }
     }
   },
@@ -2068,22 +3377,43 @@
       }
     ],
     "vocabIds": [
+      "1172610",
       "1172670",
+      "1605820",
+      "1605870",
       "1289220",
       "1586420"
     ],
     "matches": {
+      "1172610": {
+        "start": 0,
+        "length": 1,
+        "reading": "うん"
+      },
       "1172670": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "うんよく"
       },
       "1289220": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1586420": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "あたたかい"
+      },
+      "1605820": {
+        "start": 1,
+        "length": 2,
+        "reading": "よく"
+      },
+      "1605870": {
+        "start": 1,
+        "length": 2,
+        "reading": "よく"
       }
     }
   },
@@ -2102,52 +3432,104 @@
       "1544290",
       "1289220",
       "1199330",
+      "1192700",
       "1192750",
+      "1322990",
+      "1294180",
       "2810730",
+      "1223090",
+      "1387210",
       "1387280",
+      "1223680",
+      "1862270",
       "1223670",
       "1252360"
     ],
     "matches": {
       "1155120": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1192700": {
+        "start": 43,
+        "length": 2,
+        "reading": "かがく"
       },
       "1192750": {
         "start": 43,
-        "length": 3
+        "length": 3,
+        "reading": "かがくしゃ"
       },
       "1199330": {
         "start": 33,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
+      },
+      "1223090": {
+        "start": 52,
+        "length": 2,
+        "reading": "きぼ"
       },
       "1223670": {
         "start": 62,
-        "length": 5
+        "length": 5,
+        "reading": "おこりうる"
+      },
+      "1223680": {
+        "start": 62,
+        "length": 3,
+        "reading": "おこり"
       },
       "1252360": {
         "start": 68,
-        "length": 2
+        "length": 2,
+        "reading": "けいこく"
       },
       "1289220": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1294180": {
+        "start": 50,
+        "length": 2,
+        "reading": "さいだい"
+      },
+      "1322990": {
+        "start": 45,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1387210": {
+        "start": 60,
+        "length": 1,
+        "reading": "さき"
       },
       "1387280": {
         "start": 60,
-        "length": 2
+        "length": 2,
+        "reading": "さきに"
       },
       "1544290": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "よしん"
       },
       "1582710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "1862270": {
+        "start": 62,
+        "length": 3,
+        "reading": "おこり"
       },
       "2810730": {
         "start": 50,
-        "length": 4
+        "length": 4,
+        "reading": "さいだいきぼ"
       }
     }
   },
@@ -2163,55 +3545,71 @@
     "vocabIds": [
       "1289220",
       "1445590",
-      "1474900",
-      "2861714",
-      "2015400",
+      "1364670",
       "1604135",
+      "1604130",
       "1584990",
       "1423000",
+      "1597470",
+      "1163400",
       "1163420",
       "1578850"
     ],
     "matches": {
+      "1163400": {
+        "start": 27,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 27,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1364670": {
+        "start": 9,
+        "length": 2,
+        "reading": "じんじゃ"
       },
       "1423000": {
         "start": 25,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1445590": {
         "start": 3,
-        "length": 3
-      },
-      "1474900": {
-        "start": 7,
-        "length": 1
+        "length": 3,
+        "reading": "どようび"
       },
       "1578850": {
         "start": 30,
-        "length": 4
+        "length": 2,
+        "reading": "いか"
       },
       "1584990": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ゆかた"
+      },
+      "1597470": {
+        "start": 25,
+        "length": 1,
+        "reading": "き"
+      },
+      "1604130": {
+        "start": 13,
+        "length": 2,
+        "reading": "まつり"
       },
       "1604135": {
         "start": 12,
-        "length": 3
-      },
-      "2015400": {
-        "start": 10,
-        "length": 1
-      },
-      "2861714": {
-        "start": 8,
-        "length": 2
+        "length": 3,
+        "reading": "おまつり"
       }
     }
   },
@@ -2231,11 +3629,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1451150": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       }
     }
   },
@@ -2255,36 +3655,157 @@
       "1461140",
       "1463770",
       "1559610",
-      "1589040"
+      "1589040",
+      "1422020"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1293720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さいあく"
+      },
+      "1422020": {
+        "start": 18,
+        "length": 2,
+        "reading": "おくれ"
       },
       "1443530": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1461140": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "に"
       },
       "1463770": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "にち"
       },
       "1559610": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "れんぞく"
       },
       "1589040": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "おくれ"
+      }
+    }
+  },
+  {
+    "id": "1484938",
+    "original": "トムは今週末メアリーに会うのを楽しみにしている。",
+    "en": [
+      {
+        "id": "1028557",
+        "text": "Tom is looking forward to seeing Mary this coming weekend."
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1198180",
+      "1207250"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 11,
+        "length": 2,
+        "reading": "あう"
+      },
+      "1207250": {
+        "start": 15,
+        "length": 3,
+        "reading": "たのしみ"
+      },
+      "1289220": {
+        "start": 3,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 5,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "2100500": {
+        "start": 3,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "1528155",
+    "original": "私たちは今週末にテニスをする予定だ。",
+    "en": [
+      {
+        "id": "371418",
+        "text": "We are playing tennis this weekend."
+      },
+      {
+        "id": "6874193",
+        "text": "We're playing tennis this weekend."
+      },
+      {
+        "id": "6874281",
+        "text": "We plan to play tennis this weekend."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1289220",
+      "2100500",
+      "1525230",
+      "1525280",
+      "1543240"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 4,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1525230": {
+        "start": 6,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1525280": {
+        "start": 6,
+        "length": 2,
+        "reading": "まつに"
+      },
+      "1543240": {
+        "start": 14,
+        "length": 2,
+        "reading": "よてい"
+      },
+      "2100500": {
+        "start": 4,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -2304,32 +3825,158 @@
       "1001820",
       "1501620",
       "1538130",
-      "2268150"
+      "1327120"
     ],
     "matches": {
       "1001820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1289220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1327120": {
+        "start": 23,
+        "length": 2,
+        "reading": "まもら"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1501620": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はらう"
       },
       "1538130": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
+      }
+    }
+  },
+  {
+    "id": "2874581",
+    "original": "今週末は公民館で友達とボランティアをするんだ。",
+    "en": [
+      {
+        "id": "669300",
+        "text": "My friends and I are volunteering at the community center this weekend."
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1274780",
+      "1540170"
+    ],
+    "matches": {
+      "1274780": {
+        "start": 4,
+        "length": 3,
+        "reading": "こうみんかん"
       },
-      "2268150": {
-        "start": 23,
-        "length": 1
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1540170": {
+        "start": 8,
+        "length": 2,
+        "reading": "ともだち"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "3024516",
+    "original": "今週末は暇？",
+    "en": [
+      {
+        "id": "58568",
+        "text": "Are you free this weekend?"
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1577280"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1577280": {
+        "start": 4,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "3247983",
+    "original": "今週末空いてる？",
+    "en": [
+      {
+        "id": "58568",
+        "text": "Are you free this weekend?"
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1586265"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1586265": {
+        "start": 3,
+        "length": 2,
+        "reading": "あい"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -2358,15 +4005,18 @@
     "matches": {
       "1243310": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きんよう"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1330290": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       }
     }
   },
@@ -2389,19 +4039,23 @@
     "matches": {
       "1194500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1259590": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "みごろ"
       },
       "1289220": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1473460": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "うめ"
       }
     }
   },
@@ -2422,15 +4076,68 @@
     "matches": {
       "1194500": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1259590": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "みごろ"
       },
       "1289220": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      }
+    }
+  },
+  {
+    "id": "3808439",
+    "original": "この調子じゃ今週中に終わりそうにないね。",
+    "en": [
+      {
+        "id": "2164",
+        "text": "At this rate, we're not likely to be done before the end of the week."
+      }
+    ],
+    "vocabIds": [
+      "1429170",
+      "1289220",
+      "1289230",
+      "1423310",
+      "1589600",
+      "1589590"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 6,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1289230": {
+        "start": 6,
+        "length": 4,
+        "reading": "こんしゅうちゅうに"
+      },
+      "1423310": {
+        "start": 8,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1429170": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちょうし"
+      },
+      "1589590": {
+        "start": 10,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 10,
+        "length": 3,
+        "reading": "おわり"
       }
     }
   },
@@ -2453,23 +4160,72 @@
     "matches": {
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1548010": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "らいしゅう"
       },
       "1553170": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       },
       "1582710": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
+      }
+    }
+  },
+  {
+    "id": "6289882",
+    "original": "今週末はバルト海に行こうと思っています。",
+    "en": [
+      {
+        "id": "6219293",
+        "text": "We want to go to the Baltic coast this weekend."
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1578850",
+      "1589350"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1578850": {
+        "start": 9,
+        "length": 2,
+        "reading": "いこ"
+      },
+      "1589350": {
+        "start": 13,
+        "length": 2,
+        "reading": "おもっ"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -2493,11 +4249,51 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1578850": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
+      }
+    }
+  },
+  {
+    "id": "8663700",
+    "original": "今週末はボストンに行かないことにした。",
+    "en": [
+      {
+        "id": "5849810",
+        "text": "I've decided not to go to Boston this weekend."
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1578850"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1578850": {
+        "start": 9,
+        "length": 2,
+        "reading": "いか"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -2517,11 +4313,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1519290": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       }
     }
   },
@@ -2541,11 +4339,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1543240": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "よてい"
       }
     }
   },
@@ -2567,19 +4367,23 @@
     "matches": {
       "1191730": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1474850": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1521400": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       }
     }
   },
@@ -2593,12 +4397,19 @@
       }
     ],
     "vocabIds": [
-      "1289220"
+      "1289220",
+      "1519290"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1519290": {
+        "start": 5,
+        "length": 3,
+        "reading": "いそがしく"
       }
     }
   },
@@ -2613,31 +4424,48 @@
     ],
     "vocabIds": [
       "1289220",
+      "1220620",
       "2620660",
       "1512670",
+      "1421970",
       "1421980",
       "1223640"
     ],
     "matches": {
+      "1220620": {
+        "start": 8,
+        "length": 2,
+        "reading": "きまつ"
+      },
       "1223640": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
       },
       "1289220": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1421970": {
+        "start": 17,
+        "length": 2,
+        "reading": "おそく"
       },
       "1421980": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "おそく"
       },
       "1512670": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "2620660": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "きまつてすと"
       }
     }
   },
@@ -2653,20 +4481,29 @@
     "vocabIds": [
       "1289220",
       "1513065",
+      "1513060",
       "1315720"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1315720": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
+      },
+      "1513060": {
+        "start": 4,
+        "length": 2,
+        "reading": "べんとう"
       },
       "1513065": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おべんとう"
       }
     }
   },
@@ -2682,20 +4519,47 @@
     "vocabIds": [
       "1289220",
       "1562400",
-      "1420980"
+      "1420970",
+      "1420980",
+      "1183480",
+      "2658470",
+      "2056760"
     ],
     "matches": {
+      "1183480": {
+        "start": 8,
+        "length": 2,
+        "reading": "おんだん"
+      },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1420970": {
+        "start": 6,
+        "length": 2,
+        "reading": "ちきゅう"
       },
       "1420980": {
         "start": 6,
-        "length": 5
+        "length": 5,
+        "reading": "ちきゅうおんだんか"
       },
       "1562400": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わだい"
+      },
+      "2056760": {
+        "start": 10,
+        "length": 1,
+        "reading": "か"
+      },
+      "2658470": {
+        "start": 8,
+        "length": 3,
+        "reading": "おんだんか"
       }
     }
   },
@@ -2711,20 +4575,35 @@
     "vocabIds": [
       "1289220",
       "1420970",
-      "2658470"
+      "1183480",
+      "2658470",
+      "2056760"
     ],
     "matches": {
+      "1183480": {
+        "start": 12,
+        "length": 2,
+        "reading": "おんだん"
+      },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1420970": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちきゅう"
+      },
+      "2056760": {
+        "start": 14,
+        "length": 1,
+        "reading": "か"
       },
       "2658470": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "おんだんか"
       }
     }
   },
@@ -2740,20 +4619,35 @@
     "vocabIds": [
       "1289220",
       "1562400",
-      "1491720"
+      "1922780",
+      "1491720",
+      "1211970"
     ],
     "matches": {
+      "1211970": {
+        "start": 8,
+        "length": 2,
+        "reading": "かんよう"
+      },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1491720": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ふかんよう"
       },
       "1562400": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わだい"
+      },
+      "1922780": {
+        "start": 7,
+        "length": 1,
+        "reading": "ふ"
       }
     }
   },
@@ -2774,15 +4668,106 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1400200": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "はやおき"
       },
       "1524720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
+      }
+    }
+  },
+  {
+    "id": "9964028",
+    "original": "今週末、トムの所に行ってみようよ。",
+    "en": [
+      {
+        "id": "9964026",
+        "text": "Why don't we visit Tom this weekend?"
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1343100",
+      "1578850"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1343100": {
+        "start": 7,
+        "length": 1,
+        "reading": "ところ"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1578850": {
+        "start": 9,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "9964029",
+    "original": "今週末、トムの所に行ってみない？",
+    "en": [
+      {
+        "id": "9964026",
+        "text": "Why don't we visit Tom this weekend?"
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1343100",
+      "1578850"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1343100": {
+        "start": 7,
+        "length": 1,
+        "reading": "ところ"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1578850": {
+        "start": 9,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -2798,20 +4783,29 @@
     "vocabIds": [
       "1289220",
       "1464880",
-      "1171900"
+      "1171900",
+      "1282790"
     ],
     "matches": {
       "1171900": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふら"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1464880": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にちよう"
       }
     }
   },
@@ -2839,11 +4833,13 @@
     "matches": {
       "1227500": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "やすみ"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       }
     }
   },
@@ -2858,21 +4854,42 @@
     ],
     "vocabIds": [
       "1289220",
+      "1302210",
       "1981300",
+      "1392190",
+      "1202440",
       "2764520"
     ],
     "matches": {
+      "1202440": {
+        "start": 9,
+        "length": 2,
+        "reading": "ひらか"
+      },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1302210": {
+        "start": 3,
+        "length": 3,
+        "reading": "さんぎいん"
+      },
+      "1392190": {
+        "start": 6,
+        "length": 2,
+        "reading": "せんきょ"
       },
       "1981300": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "さんぎいんせんきょ"
       },
       "2764520": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "ひらかれる"
       }
     }
   },
@@ -2896,11 +4913,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1519290": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       }
     }
   },
@@ -2924,11 +4943,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1519290": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       }
     }
   },
@@ -2953,27 +4974,33 @@
     "matches": {
       "1204410": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "おおむね"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1405790": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "つづい"
       },
       "1438690": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "てんき"
       },
       "1463770": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1605820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -2989,20 +5016,29 @@
     "vocabIds": [
       "1289220",
       "1409540",
-      "1548550"
+      "1548550",
+      "1548530"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1409540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たいじゅう"
+      },
+      "1548530": {
+        "start": 6,
+        "length": 2,
+        "reading": "おち"
       },
       "1548550": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "おち"
       }
     }
   },
@@ -3017,16 +5053,30 @@
     ],
     "vocabIds": [
       "1289220",
+      "1605510",
+      "2796230",
       "2272950"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1605510": {
+        "start": 3,
+        "length": 2,
+        "reading": "やせ"
       },
       "2272950": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "やせた"
+      },
+      "2796230": {
+        "start": 3,
+        "length": 2,
+        "reading": "やせ"
       }
     }
   },
@@ -3047,15 +5097,18 @@
     "matches": {
       "1263120": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "へっ"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1409540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たいじゅう"
       }
     }
   },
@@ -3076,15 +5129,112 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1365450": {
         "start": 6,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1387990": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
+      }
+    }
+  },
+  {
+    "id": "10790033",
+    "original": "今週末は、ボストンには行かないよ。",
+    "en": [
+      {
+        "id": "10514385",
+        "text": "I'm not going to Boston this weekend."
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1578850"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1578850": {
+        "start": 11,
+        "length": 2,
+        "reading": "いか"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "10680319",
+    "original": "今週末、海を見に行こうよ。",
+    "en": [
+      {
+        "id": "10808535",
+        "text": "Let's go to the seaside this weekend."
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1201190",
+      "1259290",
+      "2256270",
+      "1578850"
+    ],
+    "matches": {
+      "1201190": {
+        "start": 4,
+        "length": 1,
+        "reading": "うみ"
+      },
+      "1259290": {
+        "start": 6,
+        "length": 1,
+        "reading": "み"
+      },
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1578850": {
+        "start": 8,
+        "length": 2,
+        "reading": "いこ"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      },
+      "2256270": {
+        "start": 6,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -3105,15 +5255,94 @@
     "matches": {
       "1289220": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1512670": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1583720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
+      }
+    }
+  },
+  {
+    "id": "10842072",
+    "original": "今週末、オーストラリアに来るの？",
+    "en": [
+      {
+        "id": "7194891",
+        "text": "Aren't you coming to Australia this weekend?"
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1547720"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1547720": {
+        "start": 12,
+        "length": 2,
+        "reading": "くる"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "10842073",
+    "original": "今週末は、オーストラリアに来られますか？",
+    "en": [
+      {
+        "id": "7194891",
+        "text": "Aren't you coming to Australia this weekend?"
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1547720"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1547720": {
+        "start": 13,
+        "length": 2,
+        "reading": "きたら"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -3128,21 +5357,76 @@
     ],
     "vocabIds": [
       "2842661",
+      "1582120",
       "1289220",
-      "1612680"
+      "1612680",
+      "1227500"
     ],
     "matches": {
+      "1227500": {
+        "start": 11,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1289220": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1582120": {
+        "start": 1,
+        "length": 1,
+        "reading": "みせ"
       },
       "1612680": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "おやすみ"
       },
       "2842661": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おみせ"
+      }
+    }
+  },
+  {
+    "id": "11185242",
+    "original": "今週末までにはやりなさいよ。",
+    "en": [
+      {
+        "id": "242090",
+        "text": "You must do it by the end of this week."
+      },
+      {
+        "id": "11188057",
+        "text": "Do it by the end of this week."
+      },
+      {
+        "id": "11188059",
+        "text": "Do it before the end of this week."
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -3162,11 +5446,13 @@
     "matches": {
       "1226480": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "つまっ"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       }
     }
   },
@@ -3190,11 +5476,147 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1589350": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
+      }
+    }
+  },
+  {
+    "id": "11563473",
+    "original": "今週末は何するの？",
+    "en": [
+      {
+        "id": "6024934",
+        "text": "What'll you be doing this weekend?"
+      },
+      {
+        "id": "266440",
+        "text": "What're you going to do this weekend?"
+      },
+      {
+        "id": "2682152",
+        "text": "What are you doing this weekend?"
+      },
+      {
+        "id": "3115797",
+        "text": "What are you going to do this weekend?"
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1577100"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1577100": {
+        "start": 4,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "11574638",
+    "original": "みんな、今週末は何するの？",
+    "en": [
+      {
+        "id": "11516462",
+        "text": "What are you guys doing this weekend?"
+      },
+      {
+        "id": "11576594",
+        "text": "What will all of you be doing this weekend?"
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1577100"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 4,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 6,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1577100": {
+        "start": 8,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2100500": {
+        "start": 4,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      }
+    }
+  },
+  {
+    "id": "11616944",
+    "original": "今週末は、お越しになりますか？",
+    "en": [
+      {
+        "id": "11614016",
+        "text": "Are you coming this weekend?"
+      },
+      {
+        "id": "12410655",
+        "text": "Will you be coming this weekend?"
+      }
+    ],
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "1981920"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1981920": {
+        "start": 5,
+        "length": 3,
+        "reading": "おこし"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -3217,7 +5639,8 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       }
     }
   },
@@ -3243,19 +5666,23 @@
     "matches": {
       "1171900": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1289220": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1333500": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1543630": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "よほう"
       }
     }
   },
@@ -3279,11 +5706,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1589350": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -3303,11 +5732,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1307040": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "よっつ"
       }
     }
   },
@@ -3326,7 +5757,64 @@
     "matches": {
       "1289220": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
+      }
+    }
+  },
+  {
+    "id": "6391920",
+    "original": "俺の友達は今週末に行くことができなかった。",
+    "en": [
+      {
+        "id": "12504792",
+        "text": "My friends couldn't go this weekend."
+      }
+    ],
+    "vocabIds": [
+      "1576870",
+      "1540170",
+      "1289220",
+      "2100500",
+      "1525230",
+      "1525280",
+      "1578850"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 5,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 7,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1525280": {
+        "start": 7,
+        "length": 2,
+        "reading": "まつに"
+      },
+      "1540170": {
+        "start": 2,
+        "length": 2,
+        "reading": "ともだち"
+      },
+      "1576870": {
+        "start": 0,
+        "length": 1,
+        "reading": "おれ"
+      },
+      "1578850": {
+        "start": 9,
+        "length": 2,
+        "reading": "いく"
+      },
+      "2100500": {
+        "start": 5,
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -3350,20 +5838,29 @@
     "vocabIds": [
       "1289220",
       "2842661",
+      "1582120",
       "1508590"
     ],
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1508590": {
         "start": 10,
-        "length": 4
+        "length": 2,
+        "reading": "しめ"
+      },
+      "1582120": {
+        "start": 8,
+        "length": 1,
+        "reading": "みせ"
       },
       "2842661": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おみせ"
       }
     }
   },
@@ -3384,15 +5881,18 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1387870": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せんしゅう"
       },
       "1519290": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       }
     }
   },
@@ -3414,19 +5914,23 @@
     "matches": {
       "1289220": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1387870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんしゅう"
       },
       "1516930": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       },
       "1519290": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       }
     }
   },
@@ -3446,11 +5950,13 @@
     "matches": {
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1530970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "むり"
       }
     }
   }

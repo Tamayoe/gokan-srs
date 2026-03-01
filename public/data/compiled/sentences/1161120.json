@@ -12,20 +12,29 @@
     "vocabIds": [
       "1288950",
       "1161120",
+      "1589500",
       "1631470"
     ],
     "matches": {
       "1161120": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひとあめ"
       },
       "1288950": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いまにも"
+      },
+      "1589500": {
+        "start": 5,
+        "length": 2,
+        "reading": "おり"
       },
       "1631470": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "おり"
       }
     }
   },
@@ -46,11 +55,13 @@
     "matches": {
       "1161120": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひとあめ"
       },
       "1288950": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いまにも"
       }
     }
   },
@@ -74,7 +85,77 @@
     "matches": {
       "1161120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひとあめ"
+      }
+    }
+  },
+  {
+    "id": "193445",
+    "original": "もし万一雨が降れば、彼はこないでしょう。",
+    "en": [
+      {
+        "id": "26847",
+        "text": "He won't come if it rains."
+      },
+      {
+        "id": "30611",
+        "text": "If it should rain, he will not come."
+      },
+      {
+        "id": "1438061",
+        "text": "If it rains, he won't come."
+      },
+      {
+        "id": "1438062",
+        "text": "If by any chance it should rain, he won't come."
+      }
+    ],
+    "indices": "若し(もし){もし} 万一[02] 雨 が 降る(ふる){降れば} 彼(かれ)[01] は 来る(くる)[01]{こない} でしょう[01]",
+    "vocabIds": [
+      "1584460",
+      "1525780",
+      "1160790",
+      "1161120",
+      "1171900",
+      "1282790",
+      "1483070"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 3,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1161120": {
+        "start": 3,
+        "length": 2,
+        "reading": "いちあめ"
+      },
+      "1171900": {
+        "start": 4,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 6,
+        "length": 2,
+        "reading": "ふれ"
+      },
+      "1483070": {
+        "start": 10,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1525780": {
+        "start": 2,
+        "length": 2,
+        "reading": "まんいち"
+      },
+      "1584460": {
+        "start": 2,
+        "length": 1,
+        "reading": "まん"
       }
     }
   },
@@ -90,41 +171,117 @@
     "indices": "此の{この} 空模様 から 察する と 日暮れ 前(まえ) に ひょっとしたら 一雨 降る(ふる) かも知れない{かも知れません}",
     "vocabIds": [
       "1246050",
+      "1056780",
       "1298740",
       "1464420",
+      "1392580",
       "1392590",
       "1161120",
       "1282790",
-      "1002975"
+      "1002975",
+      "1420490"
     ],
     "matches": {
       "1002975": {
         "start": 28,
-        "length": 7
+        "length": 7,
+        "reading": "かもしれません"
+      },
+      "1056780": {
+        "start": 7,
+        "length": 1,
+        "reading": "さっ"
       },
       "1161120": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ひとあめ"
       },
       "1246050": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "そらもよう"
       },
       "1282790": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "ふる"
       },
       "1298740": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "さっする"
+      },
+      "1392580": {
+        "start": 15,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1420490": {
+        "start": 30,
+        "length": 2,
+        "reading": "しれ"
       },
       "1464420": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "ひぐれ"
+      }
+    }
+  },
+  {
+    "id": "234435",
+    "original": "あす万一雨なら、私はゴルフはしない。",
+    "en": [
+      {
+        "id": "71811",
+        "text": "If it should rain tomorrow, I won't play golf."
+      }
+    ],
+    "indices": "明日{あす} 万一[02] 雨 なら 私(わたし)[01] は ゴルフ は 為る(する){しない}",
+    "vocabIds": [
+      "1584460",
+      "1525780",
+      "1160790",
+      "1161120",
+      "1171900",
+      "1311110"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 3,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1161120": {
+        "start": 3,
+        "length": 2,
+        "reading": "いちあめ"
+      },
+      "1171900": {
+        "start": 4,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1311110": {
+        "start": 8,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1525780": {
+        "start": 2,
+        "length": 2,
+        "reading": "まんいち"
+      },
+      "1584460": {
+        "start": 2,
+        "length": 1,
+        "reading": "まん"
       }
     }
   },
@@ -141,24 +298,34 @@
       "1161120",
       "1301940",
       "1315720",
+      "1516930",
       "2160680"
     ],
     "matches": {
       "1161120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひとあめ"
       },
       "1301940": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かさ"
       },
       "1315720": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
+      },
+      "1516930": {
+        "start": 15,
+        "length": 1,
+        "reading": "ほう"
       },
       "2160680": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -183,15 +350,18 @@
     "matches": {
       "1161120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひとあめ"
       },
       "1401400": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "まど"
       },
       "1508590": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "しめ"
       }
     }
   }

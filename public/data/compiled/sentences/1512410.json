@@ -1,5 +1,44 @@
 [
   {
+    "id": "75727",
+    "original": "風の便りに聞いた。",
+    "en": [
+      {
+        "id": "327991",
+        "text": "A little bird told me."
+      }
+    ],
+    "indices": "風の便り に 聞く{聞いた}",
+    "vocabIds": [
+      "1499720",
+      "2620360",
+      "1512410",
+      "1591110"
+    ],
+    "matches": {
+      "1499720": {
+        "start": 0,
+        "length": 1,
+        "reading": "かぜ"
+      },
+      "1512410": {
+        "start": 2,
+        "length": 2,
+        "reading": "たより"
+      },
+      "1591110": {
+        "start": 5,
+        "length": 2,
+        "reading": "きい"
+      },
+      "2620360": {
+        "start": 0,
+        "length": 4,
+        "reading": "かぜのたより"
+      }
+    }
+  },
+  {
     "id": "80927",
     "original": "無事に便りなし。",
     "en": [
@@ -10,17 +49,25 @@
     ],
     "indices": "無事[01] に 便り[01] 無し{なし}",
     "vocabIds": [
+      "1530030",
       "1530040",
       "1512410"
     ],
     "matches": {
       "1512410": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1530030": {
+        "start": 0,
+        "length": 2,
+        "reading": "ぶじ"
       },
       "1530040": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ぶじに"
       }
     }
   },
@@ -42,15 +89,18 @@
     "matches": {
       "1512410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1540170": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       },
       "1584360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まいとし"
       }
     }
   },
@@ -72,15 +122,18 @@
     "matches": {
       "1512410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1540170": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       },
       "1584350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まいつき"
       }
     }
   },
@@ -104,23 +157,28 @@
     "matches": {
       "1260720": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "げんき"
       },
       "1327720": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1512410": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1524590": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いもうと"
       },
       "1535330": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "めした"
       }
     }
   },
@@ -142,15 +200,18 @@
     "matches": {
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1598680": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -170,7 +231,8 @@
     "matches": {
       "1512410": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -188,6 +250,7 @@
       "1512410",
       "1529520",
       "1605820",
+      "1404390",
       "1404400",
       "1559900",
       "1260720"
@@ -195,27 +258,38 @@
     "matches": {
       "1260720": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "げんき"
+      },
+      "1404390": {
+        "start": 12,
+        "length": 2,
+        "reading": "むすこ"
       },
       "1404400": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "むすこさん"
       },
       "1512410": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1529520": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
       },
       "1559900": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "れんらく"
       },
       "1605820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -237,15 +311,18 @@
     "matches": {
       "1420400": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1512410": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1605820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -263,29 +340,52 @@
       "1512410",
       "1311110",
       "1483150",
+      "1577100",
       "1188770",
+      "1315840",
+      "2021540",
       "1422970"
     ],
     "matches": {
       "1188770": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "なんじ"
       },
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1315840": {
+        "start": 14,
+        "length": 1,
+        "reading": "じ"
       },
       "1422970": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "つく"
       },
       "1483150": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 13,
+        "length": 1,
+        "reading": "なん"
+      },
+      "2021540": {
+        "start": 14,
+        "length": 2,
+        "reading": "じに"
       }
     }
   },
@@ -302,25 +402,23 @@
     "vocabIds": [
       "1483150",
       "1483070",
-      "1512410",
-      "1640770"
+      "1512410"
     ],
     "matches": {
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
-      },
-      "1640770": {
-        "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -345,75 +443,59 @@
     "vocabIds": [
       "1483150",
       "1404390",
+      "1577100",
+      "1188640",
       "2857854",
+      "1194480",
       "1512410",
       "1529520",
       "1360930"
     ],
     "matches": {
+      "1188640": {
+        "start": 7,
+        "length": 3,
+        "reading": "なんかげつ"
+      },
+      "1194480": {
+        "start": 8,
+        "length": 2,
+        "reading": "かげつ"
+      },
       "1360930": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "しんぱい"
       },
       "1404390": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "むすこ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1529520": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
+      },
+      "1577100": {
+        "start": 7,
+        "length": 1,
+        "reading": "なん"
       },
       "2857854": {
         "start": 7,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "88821",
-    "original": "彼女は手紙に近くまたお便りしますと付け加えた。",
-    "en": [
-      {
-        "id": "314886",
-        "text": "She added in her letter that she would write again soon."
-      }
-    ],
-    "indices": "彼女[01] は 手紙 に 近い{近く} 又{また} 御(お){お} 便り[01] 為る(する){します} と 付け加える{付け加えた}",
-    "vocabIds": [
-      "1483150",
-      "1327720",
-      "1242160",
-      "1512410",
-      "1495790"
-    ],
-    "matches": {
-      "1242160": {
-        "start": 6,
-        "length": 2
-      },
-      "1327720": {
-        "start": 3,
-        "length": 2
-      },
-      "1483150": {
-        "start": 0,
-        "length": 2
-      },
-      "1495790": {
-        "start": 17,
-        "length": 5
-      },
-      "1512410": {
-        "start": 11,
-        "length": 2
+        "length": 4,
+        "reading": "なんかげつも"
       }
     }
   },
@@ -432,28 +514,33 @@
       "1311110",
       "1512410",
       "1538130",
-      "2268150"
+      "1327120"
     ],
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1327120": {
+        "start": 17,
+        "length": 2,
+        "reading": "まもら"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1538130": {
         "start": 14,
-        "length": 2
-      },
-      "2268150": {
-        "start": 17,
-        "length": 1
+        "length": 2,
+        "reading": "やくそく"
       }
     }
   },
@@ -470,25 +557,35 @@
     "vocabIds": [
       "1483150",
       "1311110",
+      "1547720",
       "2742070",
       "1512410"
     ],
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1547720": {
+        "start": 7,
+        "length": 2,
+        "reading": "こい"
       },
       "2742070": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こい"
       }
     }
   },
@@ -508,32 +605,101 @@
       "1512410",
       "1395620",
       "1219910",
-      "1315660"
+      "1315720",
+      "1612060",
+      "1405800"
     ],
     "matches": {
       "1219910": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "きぼう"
       },
-      "1315660": {
+      "1315720": {
         "start": 28,
-        "length": 5
+        "length": 2,
+        "reading": "もち"
       },
       "1395620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぜん"
+      },
+      "1405800": {
+        "start": 30,
+        "length": 2,
+        "reading": "つづけ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1496480": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "おっと"
       },
       "1512410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1612060": {
+        "start": 28,
+        "length": 2,
+        "reading": "もち"
+      }
+    }
+  },
+  {
+    "id": "95453",
+    "original": "彼女が結婚したということを風の便りに聞いた。",
+    "en": [
+      {
+        "id": "308252",
+        "text": "I heard from someone that she got married."
+      }
+    ],
+    "indices": "彼女 が 結婚{結婚した} と[04] 言う{いう} 事(こと){こと} を 風の便り~ に 聞く{聞いた}",
+    "vocabIds": [
+      "1483150",
+      "1254790",
+      "1499720",
+      "2620360",
+      "1512410",
+      "1591110"
+    ],
+    "matches": {
+      "1254790": {
+        "start": 3,
+        "length": 2,
+        "reading": "けっこん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1499720": {
+        "start": 13,
+        "length": 1,
+        "reading": "かぜ"
+      },
+      "1512410": {
+        "start": 15,
+        "length": 2,
+        "reading": "たより"
+      },
+      "1591110": {
+        "start": 18,
+        "length": 2,
+        "reading": "きい"
+      },
+      "2620360": {
+        "start": 13,
+        "length": 4,
+        "reading": "かぜのたより"
       }
     }
   },
@@ -554,11 +720,13 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -579,11 +747,13 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -599,21 +769,36 @@
     "indices": "彼女 から 一ヶ月 も 便り[01] が[01] 有る{ありません}",
     "vocabIds": [
       "1483150",
+      "1160790",
       "1587410",
+      "1194480",
       "1512410"
     ],
     "matches": {
+      "1160790": {
+        "start": 4,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1194480": {
+        "start": 5,
+        "length": 2,
+        "reading": "かげつ"
+      },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1587410": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "いちかげつ"
       }
     }
   },
@@ -634,11 +819,13 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -658,31 +845,48 @@
     "indices": "彼ら(かれら) には 長い間 彼(かれ) から 便り[01] が 無い",
     "vocabIds": [
       "1483090",
+      "1429750",
       "1429760",
+      "1215230",
       "1483070",
       "1512410",
       "1529520"
     ],
     "matches": {
+      "1215230": {
+        "start": 6,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1429750": {
+        "start": 4,
+        "length": 2,
+        "reading": "ながい"
+      },
       "1429760": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ながいま"
       },
       "1483070": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1512410": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1529520": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
       }
     }
   },
@@ -699,30 +903,41 @@
     "vocabIds": [
       "1483070",
       "1524690",
+      "1253890",
       "2833537",
       "1515120",
       "1512410"
     ],
     "matches": {
+      "1253890": {
+        "start": 4,
+        "length": 3,
+        "reading": "かかさ"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1515120": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
       },
       "1524690": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "まいしゅう"
       },
       "2833537": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "かかさず"
       }
     }
   },
@@ -740,24 +955,34 @@
       "1483070",
       "1483150",
       "1512410",
-      "1338180"
+      "1338180",
+      "1339160"
     ],
     "matches": {
       "1338180": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 8,
+        "length": 2,
+        "reading": "だし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -775,24 +1000,34 @@
       "1483070",
       "1311110",
       "1512410",
-      "2540200"
+      "2540200",
+      "1587040"
     ],
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1587040": {
+        "start": 10,
+        "length": 2,
+        "reading": "いっ"
       },
       "2540200": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -816,23 +1051,28 @@
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1538130": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
       },
       "1598680": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -858,31 +1098,38 @@
     "matches": {
       "1155210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いらい"
       },
       "1231690": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょねん"
       },
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1461560": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "にがつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -898,41 +1145,66 @@
     "indices": "彼(かれ)[01] は どんなに 忙しい(いそがしい){忙しくて} も 月(つき)[02] に 少なくとも 一度 は 故郷(ふるさと) の 父母 に 便りをする{便りをします}",
     "vocabIds": [
       "1483070",
+      "1519290",
       "1255430",
       "1595610",
+      "1160790",
       "1576250",
+      "1445160",
       "1603050",
       "1497690",
       "1512410"
     ],
     "matches": {
+      "1160790": {
+        "start": 19,
+        "length": 1,
+        "reading": "いち"
+      },
       "1255430": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
+      },
+      "1445160": {
+        "start": 20,
+        "length": 1,
+        "reading": "ど"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1497690": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "ちちはは"
       },
       "1512410": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1519290": {
+        "start": 6,
+        "length": 3,
+        "reading": "いそがしく"
       },
       "1576250": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
       },
       "1595610": {
         "start": 14,
-        "length": 5
+        "length": 5,
+        "reading": "すくなくとも"
       },
       "1603050": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "こきょう"
       }
     }
   },
@@ -950,24 +1222,34 @@
       "1483070",
       "1592250",
       "1550840",
+      "2013190",
       "1512410"
     ],
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1550840": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "はなれ"
       },
       "1592250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
+      },
+      "2013190": {
+        "start": 4,
+        "length": 2,
+        "reading": "はなれ"
       }
     }
   },
@@ -988,11 +1270,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -1014,15 +1298,18 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1579260": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -1038,36 +1325,42 @@
     "indices": "彼(かれ) から 何の(なんの) 便り[01] も 無い{ない} 儘{まま} 何ヶ月も{何ヵ月も} 過ぎる(すぎる){過ぎた}",
     "vocabIds": [
       "1483070",
+      "1577100",
       "1920245",
       "1512410",
-      "1577100",
-      "1255430",
-      "1195970"
+      "1195970",
+      "1195960"
     ],
     "matches": {
+      "1195960": {
+        "start": 16,
+        "length": 2,
+        "reading": "すぎ"
+      },
       "1195970": {
         "start": 16,
-        "length": 3
-      },
-      "1255430": {
-        "start": 14,
-        "length": 1
+        "length": 2,
+        "reading": "すぎ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1577100": {
-        "start": 12,
-        "length": 1
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
       },
       "1920245": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -1083,21 +1376,30 @@
     "indices": "彼(かれ) から 何(なに)[01] の 便り[01] も 無い{ない}",
     "vocabIds": [
       "1483070",
+      "1577100",
       "1920245",
       "1512410"
     ],
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
       },
       "1920245": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -1118,11 +1420,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -1145,19 +1449,23 @@
     "matches": {
       "1268060": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "2084840": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -1173,21 +1481,30 @@
     "indices": "彼(かれ) から 未だ[02]{まだ} 何の(なんの) 便り[01] も 貰う{もらっていない}",
     "vocabIds": [
       "1483070",
+      "1577100",
       "1920245",
       "1512410"
     ],
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 5,
+        "length": 1,
+        "reading": "なに"
       },
       "1920245": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -1203,21 +1520,30 @@
     "indices": "彼(かれ) から は 未だ[02]{まだ} その他に{そのほかに} は 何の(なんの) 便り[01] も 無い{ない}",
     "vocabIds": [
       "1483070",
+      "1577100",
       "1920245",
       "1512410"
     ],
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 12,
+        "length": 1,
+        "reading": "なに"
       },
       "1920245": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -1238,11 +1564,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -1258,21 +1586,36 @@
     "indices": "彼(かれ) から 随分[01]{ずいぶん} 長い間 便り[01] が 無い{ない}",
     "vocabIds": [
       "1483070",
+      "1429750",
       "1429760",
+      "1215230",
       "1512410"
     ],
     "matches": {
+      "1215230": {
+        "start": 9,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1429750": {
+        "start": 7,
+        "length": 2,
+        "reading": "ながい"
+      },
       "1429760": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ながいま"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -1293,11 +1636,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -1319,15 +1664,18 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "2857436": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
       }
     }
   },
@@ -1343,26 +1691,30 @@
     "indices": "彼(かれ) が 亜米利加{アメリカ} へ 行く[01]{行って} 以来 便り[01] が 無い{ない}",
     "vocabIds": [
       "1483070",
-      "1589060",
+      "1578850",
       "1155210",
       "1512410"
     ],
     "matches": {
       "1155210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いらい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
-      "1589060": {
+      "1578850": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -1379,40 +1731,47 @@
     "vocabIds": [
       "1447690",
       "1547720",
-      "1301330",
-      "1215230",
+      "1547710",
+      "2827650",
       "1497610",
       "1310730",
       "1512410"
     ],
     "matches": {
-      "1215230": {
-        "start": 7,
-        "length": 1
-      },
-      "1301330": {
-        "start": 5,
-        "length": 2
-      },
       "1310730": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "しん"
       },
       "1447690": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とうきょう"
       },
       "1497610": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1512410": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1547710": {
+        "start": 3,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 3,
-        "length": 2
+        "length": 1,
+        "reading": "き"
+      },
+      "2827650": {
+        "start": 6,
+        "length": 2,
+        "reading": "にちかん"
       }
     }
   },
@@ -1427,52 +1786,43 @@
     ],
     "indices": "長い間 彼(かれ) から 便り[01] が 無い",
     "vocabIds": [
+      "1429750",
       "1429760",
+      "1215230",
       "1483070",
       "1512410",
       "1529520"
     ],
     "matches": {
+      "1215230": {
+        "start": 2,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1429750": {
+        "start": 0,
+        "length": 2,
+        "reading": "ながい"
+      },
       "1429760": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ながいま"
       },
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1529520": {
         "start": 9,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "125978",
-    "original": "長い間お便りしなかったことをあなたにおわびしなければなりません。",
-    "en": [
-      {
-        "id": "278014",
-        "text": "I must apologize to you for not writing for so long."
-      }
-    ],
-    "indices": "長い間 御(お){お} 便り[01] 為る(する){し} 無い{なかった} 事(こと){こと} を 貴方(あなた)[01]{あなた} に 御(お){お} 詫び{わび} 為る(する){し} ねばならない{なければなりません}",
-    "vocabIds": [
-      "1429760",
-      "1512410"
-    ],
-    "matches": {
-      "1429760": {
-        "start": 0,
-        "length": 3
-      },
-      "1512410": {
-        "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
       }
     }
   },
@@ -1487,17 +1837,25 @@
     ],
     "indices": "息子[01] さん から 便り[01] が[01] 有る{ありました} か",
     "vocabIds": [
+      "1404390",
       "1404400",
       "1512410"
     ],
     "matches": {
+      "1404390": {
+        "start": 0,
+        "length": 2,
+        "reading": "むすこ"
+      },
       "1404400": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "むすこさん"
       },
       "1512410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -1519,54 +1877,18 @@
     "matches": {
       "1387500": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんげつ"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "148700",
-    "original": "主人は入院していますので、かわってお便り差し上げます。",
-    "en": [
-      {
-        "id": "265859",
-        "text": "I am writing on behalf of my husband, who is in the hospital."
-      },
-      {
-        "id": "917725",
-        "text": "Because my husband has been admitted to hospital, I am writing on his behalf."
-      }
-    ],
-    "indices": "主人(しゅじん) は 入院 為る(する){しています} ので 代わる{かわって} 御(お){お} 便り[01] 差し上げる[02]{差し上げます}",
-    "vocabIds": [
-      "1579780",
-      "1465720",
-      "1512410",
-      "1291270"
-    ],
-    "matches": {
-      "1291270": {
-        "start": 20,
-        "length": 6
-      },
-      "1465720": {
-        "start": 3,
-        "length": 2
-      },
-      "1512410": {
-        "start": 18,
-        "length": 2
-      },
-      "1579780": {
-        "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -1585,28 +1907,39 @@
       "1598680",
       "1311110",
       "1512410",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 17,
+        "length": 3,
+        "reading": "ください"
       },
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1512410": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1598680": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -1627,36 +1960,49 @@
       "1576290",
       "1512410",
       "1343950",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 20,
+        "length": 3,
+        "reading": "ください"
       },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1343950": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "かい"
       },
       "1512410": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1576290": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "いっぴつ"
       },
       "1598680": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -1679,19 +2025,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1514990": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1584350": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "まいつき"
       }
     }
   },
@@ -1710,28 +2060,39 @@
       "1483070",
       "1512410",
       "1547720",
-      "2105830"
+      "1207250",
+      "1410590"
     ],
     "matches": {
+      "1207250": {
+        "start": 12,
+        "length": 3,
+        "reading": "たのしみ"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1410590": {
+        "start": 16,
+        "length": 2,
+        "reading": "まっ"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1547720": {
         "start": 8,
-        "length": 2
-      },
-      "2105830": {
-        "start": 12,
-        "length": 7
+        "length": 2,
+        "reading": "くる"
       }
     }
   },
@@ -1749,29 +2110,46 @@
       "1311110",
       "1483070",
       "1255430",
+      "1160790",
       "1576250",
+      "1445160",
       "1512410"
     ],
     "matches": {
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
       "1255430": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1445160": {
+        "start": 8,
+        "length": 1,
+        "reading": "ど"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1576250": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
       }
     }
   },
@@ -1787,26 +2165,42 @@
     "indices": "私(わたし)[01] は 長い間 彼女 から 便り[01] を 貰う{もらっていません}",
     "vocabIds": [
       "1311110",
+      "1429750",
       "1429760",
+      "1215230",
       "1483150",
       "1512410"
     ],
     "matches": {
+      "1215230": {
+        "start": 4,
+        "length": 1,
+        "reading": "ま"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1429750": {
+        "start": 2,
+        "length": 2,
+        "reading": "ながい"
       },
       "1429760": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ながいま"
       },
       "1483150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -1822,6 +2216,7 @@
     "indices": "私(わたし)[01] は 長いこと 彼(かれ) から 便り[01] を 貰う{もらっていません}",
     "vocabIds": [
       "1311110",
+      "1429750",
       "2038050",
       "1483070",
       "1512410"
@@ -1829,49 +2224,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1429750": {
+        "start": 2,
+        "length": 2,
+        "reading": "ながい"
       },
       "1483070": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "2038050": {
         "start": 2,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "159459",
-    "original": "私はできるだけ何回も、あなたにお便りします。",
-    "en": [
-      {
-        "id": "255064",
-        "text": "I will write letters to you as often as I can."
-      }
-    ],
-    "indices": "私(わたし)[01] は 出来るだけ{できるだけ} 何回も 貴方(あなた)[01]{あなた} に 御(お){お} 便り[01] 為る(する){します}",
-    "vocabIds": [
-      "1311110",
-      "1188660",
-      "1512410"
-    ],
-    "matches": {
-      "1188660": {
-        "start": 7,
-        "length": 3
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1512410": {
-        "start": 16,
-        "length": 2
+        "length": 4,
+        "reading": "ながいこと"
       }
     }
   },
@@ -1891,56 +2265,48 @@
     "indices": "私(わたし)[01] は その時以来 彼女 から 便り[01] を 貰う{もらっていません}",
     "vocabIds": [
       "1311110",
+      "2002300",
       "2462160",
+      "1315840",
+      "1155210",
       "1483150",
       "1512410"
     ],
     "matches": {
+      "1155210": {
+        "start": 5,
+        "length": 2,
+        "reading": "いらい"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1315840": {
+        "start": 4,
+        "length": 1,
+        "reading": "とき"
       },
       "1483150": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "2002300": {
+        "start": 2,
+        "length": 3,
+        "reading": "そのとき"
       },
       "2462160": {
         "start": 2,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "161715",
-    "original": "お便り楽しみにお待ちしております。",
-    "en": [
-      {
-        "id": "63997",
-        "text": "I am looking forward to hearing from you."
-      }
-    ],
-    "indices": "御(お){お} 便り[01] 楽しみ[02]{楽しみに}~ 待つ[01]{お待ち} 為る(する)[12]{して} 居る(おる){おります}",
-    "vocabIds": [
-      "1512410",
-      "1207250",
-      "1640770"
-    ],
-    "matches": {
-      "1207250": {
-        "start": 3,
-        "length": 3
-      },
-      "1512410": {
-        "start": 1,
-        "length": 2
-      },
-      "1640770": {
-        "start": 8,
-        "length": 2
+        "length": 5,
+        "reading": "そのときいらい"
       }
     }
   },
@@ -1962,15 +2328,18 @@
     "matches": {
       "1207250": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1512410": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -1993,48 +2362,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1598680": {
         "start": 3,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "164832",
-    "original": "私にお便りください。",
-    "en": [
-      {
-        "id": "32648",
-        "text": "Drop me a line."
-      },
-      {
-        "id": "12282978",
-        "text": "Please write to me."
-      }
-    ],
-    "indices": "私(わたし)[01] に 御(お){お} 便り[01] 下さい{ください}",
-    "vocabIds": [
-      "1311110",
-      "1512410"
-    ],
-    "matches": {
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1512410": {
-        "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -2049,27 +2393,55 @@
     ],
     "indices": "私たち は その時以来 彼女 から 便り[01] を 貰う{もらっていない}",
     "vocabIds": [
+      "1311110",
       "1311300",
+      "2002300",
       "2462160",
+      "1315840",
+      "1155210",
       "1483150",
       "1512410"
     ],
     "matches": {
+      "1155210": {
+        "start": 7,
+        "length": 2,
+        "reading": "いらい"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1315840": {
+        "start": 6,
+        "length": 1,
+        "reading": "とき"
       },
       "1483150": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "2002300": {
+        "start": 4,
+        "length": 3,
+        "reading": "そのとき"
       },
       "2462160": {
         "start": 4,
-        "length": 5
+        "length": 5,
+        "reading": "そのときいらい"
       }
     }
   },
@@ -2085,7 +2457,9 @@
     "indices": "昨晩 長い間 便り[01] の 無い{なかった} 大学 時代 の 友人 から 電話 が[01] 有る{あった}",
     "vocabIds": [
       "1298240",
+      "1429750",
       "1429760",
+      "1215230",
       "1512410",
       "1413240",
       "1316300",
@@ -2093,33 +2467,50 @@
       "1443840"
     ],
     "matches": {
+      "1215230": {
+        "start": 5,
+        "length": 1,
+        "reading": "ま"
+      },
       "1298240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さくばん"
       },
       "1316300": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じだい"
       },
       "1413240": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1429750": {
+        "start": 3,
+        "length": 2,
+        "reading": "ながい"
       },
       "1429760": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ながいま"
       },
       "1443840": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1512410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1540150": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       }
     }
   },
@@ -2136,25 +2527,35 @@
     "vocabIds": [
       "1298230",
       "1155210",
+      "1577100",
       "1920245",
       "1512410"
     ],
     "matches": {
       "1155210": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いらい"
       },
       "1298230": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さくねん"
       },
       "1512410": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 7,
+        "length": 1,
+        "reading": "なに"
       },
       "1920245": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -2176,15 +2577,18 @@
     "matches": {
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2207,19 +2611,23 @@
     "matches": {
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2241,15 +2649,18 @@
     "matches": {
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2272,19 +2683,23 @@
     "matches": {
       "1247250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くん"
       },
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1351730": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "くわしい"
       },
       "1512410": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2307,19 +2722,23 @@
     "matches": {
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1483150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1529520": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
       }
     }
   },
@@ -2336,25 +2755,35 @@
     "vocabIds": [
       "1293780",
       "1483070",
+      "1577100",
       "1920245",
       "1512410"
     ],
     "matches": {
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なに"
       },
       "1920245": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -2371,20 +2800,29 @@
     "vocabIds": [
       "1293780",
       "1001990",
+      "1307640",
       "1512410"
     ],
     "matches": {
       "1001990": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "おねえさん"
       },
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
+      },
+      "1307640": {
+        "start": 3,
+        "length": 3,
+        "reading": "ねえさん"
       },
       "1512410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2399,27 +2837,43 @@
     ],
     "indices": "今まで の 所(ところ){ところ} は 彼女 から 何の(なんの) 便り[01] も 無い{ない}",
     "vocabIds": [
+      "1288850",
       "1587590",
       "1483150",
+      "1577100",
       "1920245",
       "1512410"
     ],
     "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
       "1483150": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 12,
+        "length": 1,
+        "reading": "なに"
       },
       "1587590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       },
       "1920245": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -2442,19 +2896,23 @@
     "matches": {
       "1277140": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "むこう"
       },
       "1512410": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1548370": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "たのむ"
       },
       "1576290": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いっぴつ"
       }
     }
   },
@@ -2475,11 +2933,13 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1512410": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2500,46 +2960,13 @@
     "matches": {
       "1483150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "179887",
-    "original": "近い内にお便りいただけることを楽しみにしています。",
-    "en": [
-      {
-        "id": "18746",
-        "text": "I'm looking forward to hearing from you soon."
-      }
-    ],
-    "indices": "近いうちに{近い内に} 御(お){お} 便り[01] 頂ける[01]{いただける} 事(こと){こと} を 楽しみにする{楽しみにしています}",
-    "vocabIds": [
-      "1242130",
-      "2098290",
-      "1512410",
-      "1207250"
-    ],
-    "matches": {
-      "1207250": {
-        "start": 15,
-        "length": 3
-      },
-      "1242130": {
-        "start": 0,
-        "length": 2
-      },
-      "1512410": {
-        "start": 5,
-        "length": 2
-      },
-      "2098290": {
-        "start": 2,
-        "length": 1
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2554,6 +2981,7 @@
     ],
     "indices": "近いうちに 彼女 から 便り[01] が[01] 有る{ある} 事(こと){こと} を 願う[01]{願っている}",
     "vocabIds": [
+      "1242130",
       "1242140",
       "1483150",
       "1512410",
@@ -2562,44 +2990,28 @@
     "matches": {
       "1217950": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "ねがっ"
+      },
+      "1242130": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちかい"
       },
       "1242140": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ちかいうちに"
       },
       "1483150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 9,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "179922",
-    "original": "近いうちにお便りいただけるのをたのしみにしています。",
-    "en": [
-      {
-        "id": "18776",
-        "text": "I am looking forward to hearing from you soon."
-      }
-    ],
-    "indices": "近いうちに 御(お){お} 便り[01] 頂ける[01]{いただける} の を 楽しみにする{たのしみにしています}",
-    "vocabIds": [
-      "1242140",
-      "1512410"
-    ],
-    "matches": {
-      "1242140": {
-        "start": 0,
-        "length": 5
-      },
-      "1512410": {
-        "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2625,15 +3037,18 @@
     "matches": {
       "1203620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がいこく"
       },
       "1404390": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "むすこ"
       },
       "1512410": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2656,19 +3071,23 @@
     "matches": {
       "1247250": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1410590": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "まっ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -2683,6 +3102,7 @@
     ],
     "indices": "何も 便り[01] が 無い{なかった} ので 私(わたし)[01] は もう[03] 一度{１度} 彼(かれ)[01] に 手紙 を 書く{書いた}",
     "vocabIds": [
+      "1577100",
       "1188490",
       "1512410",
       "1311110",
@@ -2694,31 +3114,43 @@
     "matches": {
       "1188490": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
       },
       "1311110": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327720": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1343950": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "かい"
       },
       "1445160": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ど"
       },
       "1483070": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -2734,26 +3166,24 @@
     "indices": "何 ヶ月{ヵ月} も 彼(かれ)[01] から 便り[01] が 無い{ない}",
     "vocabIds": [
       "1577100",
-      "1255430",
       "1483070",
       "1512410"
     ],
     "matches": {
-      "1255430": {
-        "start": 2,
-        "length": 1
-      },
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1577100": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       }
     }
   },
@@ -2775,45 +3205,18 @@
     "matches": {
       "1155660": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "いぜんとして"
       },
       "1483070": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 8,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "192130",
-    "original": "ロンドンに着いたらきっと一筆お便りくださいね。",
-    "en": [
-      {
-        "id": "29292",
-        "text": "Be sure to drop us a line as soon as you get to London."
-      }
-    ],
-    "indices": "ロンドン に 着く(つく)[01]{着いたら} 屹度[01]{きっと} 一筆[02] 御(お){お} 便り[01] 下さい{ください} ね(#2029080)[01]",
-    "vocabIds": [
-      "1422970",
-      "1576290",
-      "1512410"
-    ],
-    "matches": {
-      "1422970": {
-        "start": 5,
-        "length": 3
-      },
-      "1512410": {
-        "start": 15,
-        "length": 2
-      },
-      "1576290": {
-        "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2835,24 +3238,34 @@
       "1315920",
       "1247250",
       "1512410",
-      "1338180"
+      "1338180",
+      "1339160"
     ],
     "matches": {
       "1247250": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1315920": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1338180": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 16,
+        "length": 2,
+        "reading": "だし"
       },
       "1512410": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2873,31 +3286,13 @@
     "matches": {
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "195508",
-    "original": "またお便りください。",
-    "en": [
-      {
-        "id": "32682",
-        "text": "Please keep in touch."
-      }
-    ],
-    "indices": "又{また} 御(お){お} 便り[01] 下さい{ください}",
-    "vocabIds": [
-      "1512410"
-    ],
-    "matches": {
-      "1512410": {
-        "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -2921,23 +3316,28 @@
     "matches": {
       "1255430": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1311110": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1487400": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かならず"
       },
       "1512410": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1576250": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
       }
     }
   },
@@ -2954,20 +3354,29 @@
     "vocabIds": [
       "1512410",
       "1529420",
+      "1589350",
       "1589320"
     ],
     "matches": {
       "1512410": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1529420": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "ゆめにも"
       },
       "1589320": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 14,
+        "length": 2,
+        "reading": "おもい"
       }
     }
   },
@@ -2989,15 +3398,18 @@
     "matches": {
       "1006860": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "そのご"
       },
       "1483150": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -3012,17 +3424,25 @@
     ],
     "indices": "時々{ときどき} 息子[01] さん から 便り[01] が[01] 有る{あります} か",
     "vocabIds": [
+      "1404390",
       "1404400",
       "1512410"
     ],
     "matches": {
+      "1404390": {
+        "start": 4,
+        "length": 2,
+        "reading": "むすこ"
+      },
       "1404400": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "むすこさん"
       },
       "1512410": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -3043,11 +3463,13 @@
     "matches": {
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -3063,26 +3485,54 @@
     "indices": "それ以来 彼(かれ)[01] から 一度も 便り[01] が 無い{ない}",
     "vocabIds": [
       "1007090",
+      "1155210",
       "1483070",
+      "1160790",
+      "1576250",
       "2266600",
+      "1445160",
       "1512410"
     ],
     "matches": {
       "1007090": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "それいらい"
+      },
+      "1155210": {
+        "start": 2,
+        "length": 2,
+        "reading": "いらい"
+      },
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1445160": {
+        "start": 8,
+        "length": 1,
+        "reading": "ど"
       },
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1576250": {
+        "start": 7,
+        "length": 2,
+        "reading": "いちど"
       },
       "2266600": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "いちども"
       }
     }
   },
@@ -3098,26 +3548,42 @@
     "indices": "それ以来 彼(かれ)[01] から は 何の(なんの) 便り[01]~ も 有る{ありません}",
     "vocabIds": [
       "1007090",
+      "1155210",
       "1483070",
+      "1577100",
       "1920245",
       "1512410"
     ],
     "matches": {
       "1007090": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "それいらい"
+      },
+      "1155210": {
+        "start": 2,
+        "length": 2,
+        "reading": "いらい"
       },
       "1483070": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
       },
       "1920245": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -3132,27 +3598,55 @@
     ],
     "indices": "その時以来 彼(かれ)[01] から 何の(なんの) 便り[01] も 無い{ない}",
     "vocabIds": [
+      "2002300",
       "2462160",
+      "1315840",
+      "1155210",
       "1483070",
+      "1577100",
       "1920245",
       "1512410"
     ],
     "matches": {
+      "1155210": {
+        "start": 3,
+        "length": 2,
+        "reading": "いらい"
+      },
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "とき"
+      },
       "1483070": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
       },
       "1920245": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
+      },
+      "2002300": {
+        "start": 0,
+        "length": 3,
+        "reading": "そのとき"
       },
       "2462160": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "そのときいらい"
       }
     }
   },
@@ -3170,24 +3664,28 @@
       "1006860",
       "1483070",
       "1512410",
-      "1956960"
+      "1529520"
     ],
     "matches": {
       "1006860": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "そのご"
       },
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
-      "1956960": {
+      "1529520": {
         "start": 10,
-        "length": 1
+        "length": 3,
+        "reading": "なかっ"
       }
     }
   },
@@ -3208,36 +3706,13 @@
     "matches": {
       "1316680": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しだい"
       },
       "1512410": {
         "start": 7,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "214985",
-    "original": "すぐお便りをいただければありがたいと思います。",
-    "en": [
-      {
-        "id": "52253",
-        "text": "I would appreciate hearing from you soon."
-      }
-    ],
-    "indices": "直ぐ{すぐ} 御(お){お} 便り[01] を 頂ける[01]{いただければ} 有り難い{ありがたい} と 思う{思います}",
-    "vocabIds": [
-      "1512410",
-      "1589320"
-    ],
-    "matches": {
-      "1512410": {
-        "start": 3,
-        "length": 2
-      },
-      "1589320": {
-        "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -3258,11 +3733,13 @@
     "matches": {
       "1207250": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1512410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -3281,138 +3758,39 @@
       "1311110",
       "1198180",
       "1483150",
-      "1441870"
+      "1441870",
+      "1441860"
     ],
     "matches": {
       "1198180": {
         "start": 15,
-        "length": 4
+        "length": 2,
+        "reading": "あい"
       },
       "1311110": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1441860": {
+        "start": 25,
+        "length": 2,
+        "reading": "つたえ"
       },
       "1441870": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "つたえ"
       },
       "1483150": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 6,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "217421",
-    "original": "こんなに長い間お便りを差し上げなかったことをお詫びしなければなりません。",
-    "en": [
-      {
-        "id": "54730",
-        "text": "I must apologize for not having written for such a long time."
-      }
-    ],
-    "indices": "こんなに 長い間 御(お){お} 便り[01] を 差し上げる[02]{差し上げなかった} 事(こと){こと} を 詫びる{お詫び} 為る(する)[12]{し} ねばならない{なければなりません}",
-    "vocabIds": [
-      "1429760",
-      "1512410",
-      "1291270",
-      "2087420"
-    ],
-    "matches": {
-      "1291270": {
-        "start": 11,
-        "length": 5
-      },
-      "1429760": {
-        "start": 4,
-        "length": 3
-      },
-      "1512410": {
-        "start": 8,
-        "length": 2
-      },
-      "2087420": {
-        "start": 22,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "226654",
-    "original": "お便りを心待ちにしています。",
-    "en": [
-      {
-        "id": "17944",
-        "text": "I'm looking forward to hearing from you."
-      }
-    ],
-    "indices": "御(お){お} 便り[01] を 心待ちにする{心待ちにしています}",
-    "vocabIds": [
-      "1512410",
-      "1360800"
-    ],
-    "matches": {
-      "1360800": {
-        "start": 4,
-        "length": 3
-      },
-      "1512410": {
-        "start": 1,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "226655",
-    "original": "お便りを楽しみにしています。",
-    "en": [
-      {
-        "id": "63997",
-        "text": "I am looking forward to hearing from you."
-      }
-    ],
-    "indices": "貴方(あなた)[01]{あなた} の 御(お){お} 便り[01] を 楽しみにする{楽しみにしています}",
-    "vocabIds": [
-      "1512410",
-      "1207250"
-    ],
-    "matches": {
-      "1207250": {
-        "start": 4,
-        "length": 3
-      },
-      "1512410": {
-        "start": 1,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "226656",
-    "original": "お便りをお待ちしています。",
-    "en": [
-      {
-        "id": "64000",
-        "text": "I look forward to hearing from you."
-      }
-    ],
-    "indices": "御(お){お} 便り[01] を 待つ[01]{お待ち} 為る(する)[12]{しています}",
-    "vocabIds": [
-      "1512410",
-      "1640770"
-    ],
-    "matches": {
-      "1512410": {
-        "start": 1,
-        "length": 2
-      },
-      "1640770": {
-        "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -3428,21 +3806,30 @@
     "indices": "未だに{いまだに} 彼(かれ)[01] から 何の(なんの) 便り[01] も 無い{ない}",
     "vocabIds": [
       "1483070",
+      "1577100",
       "1920245",
       "1512410"
     ],
     "matches": {
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      },
+      "1577100": {
+        "start": 7,
+        "length": 1,
+        "reading": "なに"
       },
       "1920245": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "なにの"
       }
     }
   },
@@ -3458,21 +3845,30 @@
     "indices": "彼(あれ)[01]{あれ} 以来 彼(かれ)[01] から 便り[01] が 無い{ない}",
     "vocabIds": [
       "1981430",
+      "1155210",
       "1483070",
       "1512410"
     ],
     "matches": {
+      "1155210": {
+        "start": 2,
+        "length": 2,
+        "reading": "いらい"
+      },
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1981430": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "あれいらい"
       }
     }
   },
@@ -3493,41 +3889,13 @@
     "matches": {
       "1483150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 12,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "233802",
-    "original": "あなたにお会いできてよかったです。お便りを楽しみにしています。",
-    "en": [
-      {
-        "id": "71176",
-        "text": "It was nice to meet you, and I look forward to hearing from you."
-      }
-    ],
-    "indices": "貴方(あなた)[01]{あなた} に 会う[01]{お会い} 出来る{できて} 良い{よかった} です 御(お){お} 便り[01] を 楽しみにする{楽しみにしています}",
-    "vocabIds": [
-      "1198160",
-      "1512410",
-      "1207250"
-    ],
-    "matches": {
-      "1198160": {
-        "start": 5,
-        "length": 1
-      },
-      "1207250": {
-        "start": 21,
-        "length": 3
-      },
-      "1512410": {
-        "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -3550,48 +3918,23 @@
     "matches": {
       "1333500": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1360800": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "こころまち"
       },
       "1512410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1577100": {
         "start": 9,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "234145",
-    "original": "あなたからのお便りを楽しみにまっています。",
-    "en": [
-      {
-        "id": "71518",
-        "text": "We are looking forward to hearing from you soon."
-      },
-      {
-        "id": "2712572",
-        "text": "We're looking forward to hearing from you soon."
-      }
-    ],
-    "indices": "貴方(あなた)[01]{あなた} から の 御(お){お} 便り[01] を 楽しみに待つ{楽しみにまっています}",
-    "vocabIds": [
-      "1512410",
-      "1207250"
-    ],
-    "matches": {
-      "1207250": {
-        "start": 10,
-        "length": 3
-      },
-      "1512410": {
-        "start": 7,
-        "length": 2
+        "length": 1,
+        "reading": "なん"
       }
     }
   },
@@ -3613,15 +3956,18 @@
     "matches": {
       "1468380": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "ねんかん"
       },
       "1483150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512410": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -3636,70 +3982,60 @@
     ],
     "vocabIds": [
       "1483150",
+      "1242130",
       "1242140",
       "1512410",
       "1338180",
       "1310450",
       "1327720",
-      "2840365",
-      "1189960"
+      "1495790",
+      "1495780"
     ],
     "matches": {
-      "1189960": {
-        "start": 22,
-        "length": 3
+      "1242130": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちかい"
       },
       "1242140": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "ちかいうちに"
       },
       "1310450": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1327720": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1338180": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "だす"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1495780": {
+        "start": 20,
+        "length": 4,
+        "reading": "つけくわえ"
+      },
+      "1495790": {
+        "start": 20,
+        "length": 4,
+        "reading": "つけくわえ"
       },
       "1512410": {
         "start": 10,
-        "length": 2
-      },
-      "2840365": {
-        "start": 19,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "2869723",
-    "original": "お便りお待ちしております。",
-    "en": [
-      {
-        "id": "17944",
-        "text": "I'm looking forward to hearing from you."
-      }
-    ],
-    "vocabIds": [
-      "1512410",
-      "1640770"
-    ],
-    "matches": {
-      "1512410": {
-        "start": 1,
-        "length": 2
-      },
-      "1640770": {
-        "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       }
     }
   },
@@ -3719,11 +4055,61 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512410": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
+      }
+    }
+  },
+  {
+    "id": "10185241",
+    "original": "風の便りで聞きました。",
+    "en": [
+      {
+        "id": "327991",
+        "text": "A little bird told me."
+      },
+      {
+        "id": "10734939",
+        "text": "A little birdie told me."
+      }
+    ],
+    "vocabIds": [
+      "1499720",
+      "2620360",
+      "1512410",
+      "1591110",
+      "2701450"
+    ],
+    "matches": {
+      "1499720": {
+        "start": 0,
+        "length": 1,
+        "reading": "かぜ"
+      },
+      "1512410": {
+        "start": 2,
+        "length": 2,
+        "reading": "たより"
+      },
+      "1591110": {
+        "start": 5,
+        "length": 2,
+        "reading": "きき"
+      },
+      "2620360": {
+        "start": 0,
+        "length": 4,
+        "reading": "かぜのたより"
+      },
+      "2701450": {
+        "start": 5,
+        "length": 2,
+        "reading": "きき"
       }
     }
   },
@@ -3740,167 +4126,34 @@
       "1540170",
       "1260720",
       "1512410",
-      "1457200"
+      "1457200",
+      "1219510"
     ],
     "matches": {
+      "1219510": {
+        "start": 18,
+        "length": 3,
+        "reading": "うれしく"
+      },
       "1260720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "げんき"
       },
       "1457200": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "とどく"
       },
       "1512410": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たより"
       },
       "1540170": {
         "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "10520537",
-    "original": "お便りをありがとうございました。",
-    "en": [
-      {
-        "id": "64429",
-        "text": "Thank you for your letter."
-      },
-      {
-        "id": "5072016",
-        "text": "Thank you for your letters."
-      }
-    ],
-    "vocabIds": [
-      "1512410"
-    ],
-    "matches": {
-      "1512410": {
-        "start": 1,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "10520538",
-    "original": "お便りを本当にありがとうございました。",
-    "en": [
-      {
-        "id": "64421",
-        "text": "Thank you very much for your letter."
-      }
-    ],
-    "vocabIds": [
-      "1512410",
-      "1611580"
-    ],
-    "matches": {
-      "1512410": {
-        "start": 1,
-        "length": 2
-      },
-      "1611580": {
-        "start": 4,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "10682452",
-    "original": "たくさんのお便りをお待ちしています。",
-    "en": [
-      {
-        "id": "10808643",
-        "text": "I look forward to hearing all kinds of news from you."
-      }
-    ],
-    "vocabIds": [
-      "1512410",
-      "1640770"
-    ],
-    "matches": {
-      "1512410": {
-        "start": 6,
-        "length": 2
-      },
-      "1640770": {
-        "start": 10,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "11101217",
-    "original": "お便りをお待ちしております。",
-    "en": [
-      {
-        "id": "2860636",
-        "text": "I'm waiting for your letter."
-      }
-    ],
-    "vocabIds": [
-      "1512410",
-      "1640770"
-    ],
-    "matches": {
-      "1512410": {
-        "start": 1,
-        "length": 2
-      },
-      "1640770": {
-        "start": 5,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "11922429",
-    "original": "いつもお便りありがとう。",
-    "en": [
-      {
-        "id": "11724709",
-        "text": "It's always nice to hear from you."
-      }
-    ],
-    "vocabIds": [
-      "1512410"
-    ],
-    "matches": {
-      "1512410": {
-        "start": 4,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "10682451",
-    "original": "皆さまからのお便りをお待ちしています。",
-    "en": [
-      {
-        "id": "12589044",
-        "text": "We look forward to hearing from you."
-      }
-    ],
-    "vocabIds": [
-      "1202150",
-      "1512410",
-      "1640770"
-    ],
-    "matches": {
-      "1202150": {
-        "start": 0,
-        "length": 1
-      },
-      "1512410": {
-        "start": 7,
-        "length": 2
-      },
-      "1640770": {
-        "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       }
     }
   }

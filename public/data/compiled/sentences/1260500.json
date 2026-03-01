@@ -1,80 +1,5 @@
 [
   {
-    "id": "82048",
-    "original": "僕はドアに鍵をかけた覚えがあるよ。",
-    "en": [
-      {
-        "id": "321667",
-        "text": "I remember locking the door."
-      }
-    ],
-    "indices": "僕(ぼく)[01] は ドア に 鍵をかける{鍵をかけた} 覚え が[01] 有る{ある} よ[01]",
-    "vocabIds": [
-      "1521400",
-      "1260500",
-      "1206040"
-    ],
-    "matches": {
-      "1206040": {
-        "start": 10,
-        "length": 2
-      },
-      "1260500": {
-        "start": 5,
-        "length": 5
-      },
-      "1521400": {
-        "start": 0,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "82581",
-    "original": "忘れずにドアの鍵をかけなさい。",
-    "en": [
-      {
-        "id": "39088",
-        "text": "Remember to lock the door."
-      }
-    ],
-    "indices": "忘れる{忘れず} に ドア の 鍵をかける{鍵をかけ} 為さい{なさい}",
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 7,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "82582",
-    "original": "忘れずにドアに鍵をかけて下さい。",
-    "en": [
-      {
-        "id": "321134",
-        "text": "Don't fail to lock the door."
-      }
-    ],
-    "indices": "忘れる{忘れず} に ドア に 鍵をかける{鍵をかけて} 下さい",
-    "vocabIds": [
-      "1260500",
-      "1184270"
-    ],
-    "matches": {
-      "1184270": {
-        "start": 12,
-        "length": 3
-      },
-      "1260500": {
-        "start": 7,
-        "length": 5
-      }
-    }
-  },
-  {
     "id": "83740",
     "original": "物置に鍵をかけるのを忘れちゃった。",
     "en": [
@@ -86,270 +11,30 @@
     "indices": "物置~ に 鍵をかける の を 忘れる{忘れ} じゃう{ちゃった}",
     "vocabIds": [
       "1502690",
-      "1260500"
+      "1260490",
+      "1260500",
+      "1519210"
     ],
     "matches": {
+      "1260490": {
+        "start": 3,
+        "length": 1,
+        "reading": "かぎ"
+      },
       "1260500": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "かぎをかける"
       },
       "1502690": {
         "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "90215",
-    "original": "彼女は玄関の鍵をかけないままにしていた。",
-    "en": [
-      {
-        "id": "313499",
-        "text": "She had left the front door unlocked."
-      }
-    ],
-    "indices": "彼女[01] は 玄関 の 鍵をかける{鍵をかけない} 儘{まま} に 為る(する){していた}",
-    "vocabIds": [
-      "1483150",
-      "1263400",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 6,
-        "length": 6
+        "length": 2,
+        "reading": "ものおき"
       },
-      "1263400": {
-        "start": 3,
-        "length": 2
-      },
-      "1483150": {
-        "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "107650",
-    "original": "彼は鍵をかけて宝石を金庫にしまいこんだ。",
-    "en": [
-      {
-        "id": "296036",
-        "text": "He locked up his jewels in the safe."
-      }
-    ],
-    "indices": "彼(かれ)[01] は 鍵をかける{鍵をかけて} 宝石~ を 金庫 に 仕舞い込む{しまいこんだ}~",
-    "vocabIds": [
-      "1483070",
-      "1260500",
-      "1516220",
-      "1242850"
-    ],
-    "matches": {
-      "1242850": {
+      "1519210": {
         "start": 10,
-        "length": 2
-      },
-      "1260500": {
-        "start": 2,
-        "length": 5
-      },
-      "1483070": {
-        "start": 0,
-        "length": 1
-      },
-      "1516220": {
-        "start": 7,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "111781",
-    "original": "彼はドアに鍵をかけないでおいた。",
-    "en": [
-      {
-        "id": "291897",
-        "text": "He left the door unlocked."
-      },
-      {
-        "id": "4761108",
-        "text": "He didn't lock the door."
-      }
-    ],
-    "indices": "彼(かれ)[01] は ドア に 鍵をかける{鍵をかけないで} 置く[09]{おいた}",
-    "vocabIds": [
-      "1483070",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 5,
-        "length": 6
-      },
-      "1483070": {
-        "start": 0,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "124131",
-    "original": "盗難を恐れて彼女は宝石類を金庫に入れ鍵をかけてしまった。",
-    "en": [
-      {
-        "id": "279863",
-        "text": "She locked her jewels in the safe for fear they might be stolen."
-      }
-    ],
-    "indices": "盗難 を 恐れる{恐れて} 彼女[01] は 宝石 類(るい) を 金庫 に 入れる{入れ} 鍵をかける{鍵をかけて} 仕舞う{しまった}",
-    "vocabIds": [
-      "1448500",
-      "1589200",
-      "1483150",
-      "1516220",
-      "1556040",
-      "1242850",
-      "1465600",
-      "1260500"
-    ],
-    "matches": {
-      "1242850": {
-        "start": 13,
-        "length": 2
-      },
-      "1260500": {
-        "start": 18,
-        "length": 5
-      },
-      "1448500": {
-        "start": 0,
-        "length": 2
-      },
-      "1465600": {
-        "start": 16,
-        "length": 2
-      },
-      "1483150": {
-        "start": 6,
-        "length": 2
-      },
-      "1516220": {
-        "start": 9,
-        "length": 2
-      },
-      "1556040": {
-        "start": 11,
-        "length": 1
-      },
-      "1589200": {
-        "start": 3,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "137103",
-    "original": "誰かが押し入ろうとするといけないので、私はドアに鍵をかけた。",
-    "en": [
-      {
-        "id": "276133",
-        "text": "I locked the door, in case someone tried to get in."
-      }
-    ],
-    "indices": "誰か が 押し入る{押し入ろう} とする[01] と 行けない[01]{いけない} ので 私(わたし)[01] は ドア に 鍵をかける{鍵をかけた}",
-    "vocabIds": [
-      "1416840",
-      "1180130",
-      "2248360",
-      "1311110",
-      "1260500"
-    ],
-    "matches": {
-      "1180130": {
-        "start": 3,
-        "length": 2
-      },
-      "1260500": {
-        "start": 24,
-        "length": 5
-      },
-      "1311110": {
-        "start": 19,
-        "length": 1
-      },
-      "1416840": {
-        "start": 0,
-        "length": 2
-      },
-      "2248360": {
-        "start": 5,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "145649",
-    "original": "寝る前に窓に鍵をかけなさい。",
-    "en": [
-      {
-        "id": "268913",
-        "text": "Lock the window before going to bed."
-      }
-    ],
-    "indices": "寝る[02] 前(まえ) に 窓 に 鍵をかける{鍵をかけ} 為さい{なさい}",
-    "vocabIds": [
-      "1360010",
-      "1392590",
-      "1401400",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 6,
-        "length": 5
-      },
-      "1360010": {
-        "start": 0,
-        "length": 2
-      },
-      "1392590": {
-        "start": 2,
-        "length": 2
-      },
-      "1401400": {
-        "start": 4,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "145668",
-    "original": "寝るときは必ず鍵をかけてください。",
-    "en": [
-      {
-        "id": "268894",
-        "text": "Never fail to lock the door when you go to bed."
-      }
-    ],
-    "indices": "寝る[02] 時(とき){とき} は 必ず 鍵をかける{鍵をかけて} 下さい{ください}",
-    "vocabIds": [
-      "1360010",
-      "1487400",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 7,
-        "length": 5
-      },
-      "1360010": {
-        "start": 0,
-        "length": 2
-      },
-      "1487400": {
-        "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "わすれ"
       }
     }
   },
@@ -365,201 +50,48 @@
     "indices": "出かける 前(まえ) に ドア に 鍵をかける 様に{ように} 気を付けて{気をつけて} 下さい{ください}",
     "vocabIds": [
       "1598550",
+      "1392580",
       "1392590",
+      "1260490",
       "1260500",
-      "1591990"
+      "1221520",
+      "1221860"
     ],
     "matches": {
+      "1221520": {
+        "start": 17,
+        "length": 1,
+        "reading": "き"
+      },
+      "1221860": {
+        "start": 17,
+        "length": 4,
+        "reading": "きをつけ"
+      },
+      "1260490": {
+        "start": 9,
+        "length": 1,
+        "reading": "かぎ"
+      },
       "1260500": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "かぎをかける"
+      },
+      "1392580": {
+        "start": 4,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 4,
-        "length": 2
-      },
-      "1591990": {
-        "start": 17,
-        "length": 5
+        "length": 2,
+        "reading": "まえに"
       },
       "1598550": {
         "start": 0,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "147807",
-    "original": "出かける時には、鍵をかけて下さい。",
-    "en": [
-      {
-        "id": "39578",
-        "text": "Please lock the door when you leave."
-      }
-    ],
-    "indices": "出かける 時(とき) には 鍵をかける{鍵をかけて} 下さい",
-    "vocabIds": [
-      "1598550",
-      "1315860",
-      "1260500",
-      "1184270"
-    ],
-    "matches": {
-      "1184270": {
-        "start": 13,
-        "length": 3
-      },
-      "1260500": {
-        "start": 8,
-        "length": 5
-      },
-      "1315860": {
-        "start": 4,
-        "length": 3
-      },
-      "1598550": {
-        "start": 0,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "147815",
-    "original": "出かけるときは、ドアに鍵をかけて下さい。",
-    "en": [
-      {
-        "id": "39578",
-        "text": "Please lock the door when you leave."
-      }
-    ],
-    "indices": "出かける 時(とき){とき} は ドア に 鍵をかける{鍵をかけて} 下さい",
-    "vocabIds": [
-      "1598550",
-      "1260500",
-      "1184270"
-    ],
-    "matches": {
-      "1184270": {
-        "start": 16,
-        "length": 3
-      },
-      "1260500": {
-        "start": 11,
-        "length": 5
-      },
-      "1598550": {
-        "start": 0,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "149085",
-    "original": "車に鍵をかけておかなかったの？",
-    "en": [
-      {
-        "id": "265473",
-        "text": "Didn't you lock up your car?"
-      }
-    ],
-    "indices": "車 に 鍵をかける{鍵をかけて} 置く{おかなかった} の",
-    "vocabIds": [
-      "1323080",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 2,
-        "length": 5
-      },
-      "1323080": {
-        "start": 0,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "165074",
-    "original": "私たち、夜にはドアに鍵をかけてます。",
-    "en": [
-      {
-        "id": "249432",
-        "text": "We lock our doors at night."
-      }
-    ],
-    "indices": "私たち 夜 には ドア に 鍵をかける{鍵をかけてます}",
-    "vocabIds": [
-      "1311300",
-      "1536350",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 10,
-        "length": 5
-      },
-      "1311300": {
-        "start": 0,
-        "length": 3
-      },
-      "1536350": {
-        "start": 4,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "174546",
-    "original": "戸に必ず鍵をかけなさい。",
-    "en": [
-      {
-        "id": "239923",
-        "text": "Lock the door without fail."
-      }
-    ],
-    "indices": "戸(と)[01] に 必ず 鍵をかける{鍵をかけ} 為さい{なさい}",
-    "vocabIds": [
-      "1266970",
-      "1487400",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 4,
-        "length": 5
-      },
-      "1266970": {
-        "start": 0,
-        "length": 1
-      },
-      "1487400": {
-        "start": 2,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "175064",
-    "original": "鍵をかけてなかったので自転車を盗まれた。",
-    "en": [
-      {
-        "id": "239402",
-        "text": "His bicycle was stolen because he left it unlocked."
-      }
-    ],
-    "indices": "鍵をかける{鍵をかけてなかった} ので 自転車 を 盗む{盗まれた}",
-    "vocabIds": [
-      "1260500",
-      "1318290"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 0,
-        "length": 5
-      },
-      "1318290": {
-        "start": 11,
-        "length": 3
+        "length": 4,
+        "reading": "でかける"
       }
     }
   },
@@ -574,157 +106,25 @@
     ],
     "indices": "ドア に 鍵をかける の を 忘れる{忘れない} 様に{ように}",
     "vocabIds": [
+      "1260490",
       "1260500",
       "1519210"
     ],
     "matches": {
+      "1260490": {
+        "start": 3,
+        "length": 1,
+        "reading": "かぎ"
+      },
       "1260500": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "かぎをかける"
       },
       "1519210": {
         "start": 10,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "201877",
-    "original": "ドアに鍵をかけてくださいませんか。",
-    "en": [
-      {
-        "id": "39087",
-        "text": "Would you please lock the door?"
-      }
-    ],
-    "indices": "ドア に 鍵をかける{鍵をかけて}~ 下さる{くださいません} か",
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 3,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "201878",
-    "original": "ドアに鍵をかけておかなかったなんて君は不注意だったよ。",
-    "en": [
-      {
-        "id": "39090",
-        "text": "It was careless of you to leave the door unlocked."
-      }
-    ],
-    "indices": "ドア に 鍵をかける{鍵をかけて} 置く{おかなかった} なんて[01] 君(きみ)[01] は 不注意 だ{だった} よ[01]",
-    "vocabIds": [
-      "1260500",
-      "1247250",
-      "1493830"
-    ],
-    "matches": {
-      "1247250": {
-        "start": 17,
-        "length": 1
-      },
-      "1260500": {
-        "start": 3,
-        "length": 5
-      },
-      "1493830": {
-        "start": 19,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "201879",
-    "original": "ドアに鍵をかけたままにしておけ。",
-    "en": [
-      {
-        "id": "39089",
-        "text": "Keep the door locked."
-      }
-    ],
-    "indices": "ドア に 鍵をかける{鍵をかけた} 儘{まま} に 為る(する){して} 置く[09]{おけ}",
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 3,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "201880",
-    "original": "ドアに鍵をかけたままにしておきなさい。",
-    "en": [
-      {
-        "id": "39089",
-        "text": "Keep the door locked."
-      }
-    ],
-    "indices": "ドア に 鍵をかける{鍵をかけた} 儘{まま} に 為る(する){して} 置く[09]{おきなさい}",
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 3,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "204599",
-    "original": "それを鍵をかけないままにしておいた。",
-    "en": [
-      {
-        "id": "41839",
-        "text": "I left it unlocked."
-      }
-    ],
-    "indices": "其れ[01]{それ} を 鍵をかける{鍵をかけない} 儘{まま} に 為る(する){して} 置く{おいた}",
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 3,
-        "length": 6
-      }
-    }
-  },
-  {
-    "id": "214487",
-    "original": "すべてのドアに鍵をかけた後に、寝た。",
-    "en": [
-      {
-        "id": "51779",
-        "text": "After I locked all the doors, I went to bed."
-      }
-    ],
-    "indices": "全て{すべての} ドア に 鍵をかける{鍵をかけた} 後(あと)[02] に 寝る[02]{寝た}",
-    "vocabIds": [
-      "1260500",
-      "2640160",
-      "1360010"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 7,
-        "length": 5
-      },
-      "1360010": {
-        "start": 15,
-        "length": 2
-      },
-      "2640160": {
-        "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "わすれ"
       }
     }
   },
@@ -740,321 +140,42 @@
     "indices": "出かける 時(とき){とき} は ドア に 鍵をかける の を 忘れる{忘れない} 様に{ように} 気を付けて{気をつけて} 下さい[02]{ください}",
     "vocabIds": [
       "1598550",
+      "1260490",
       "1260500",
       "1519210",
-      "1591990"
+      "1221520",
+      "1221860"
     ],
     "matches": {
+      "1221520": {
+        "start": 25,
+        "length": 1,
+        "reading": "き"
+      },
+      "1221860": {
+        "start": 25,
+        "length": 4,
+        "reading": "きをつけ"
+      },
+      "1260490": {
+        "start": 11,
+        "length": 1,
+        "reading": "かぎ"
+      },
       "1260500": {
         "start": 11,
-        "length": 5
+        "length": 5,
+        "reading": "かぎをかける"
       },
       "1519210": {
         "start": 18,
-        "length": 4
-      },
-      "1591990": {
-        "start": 25,
-        "length": 5
+        "length": 2,
+        "reading": "わすれ"
       },
       "1598550": {
         "start": 0,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "2139083",
-    "original": "私は表玄関に鍵をかけた。",
-    "en": [
-      {
-        "id": "1887544",
-        "text": "I locked the front door."
-      }
-    ],
-    "vocabIds": [
-      "1311110",
-      "1489500",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 6,
-        "length": 5
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1489500": {
-        "start": 2,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "2617888",
-    "original": "トムは慎重にドアの鍵をかけた。",
-    "en": [
-      {
-        "id": "2047666",
-        "text": "Tom carefully locked the door."
-      }
-    ],
-    "vocabIds": [
-      "1361110",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 9,
-        "length": 5
-      },
-      "1361110": {
-        "start": 3,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "2960794",
-    "original": "トムはドアを閉めて鍵をかけた。",
-    "en": [
-      {
-        "id": "1092916",
-        "text": "Tom shut the door and locked it."
-      }
-    ],
-    "vocabIds": [
-      "1508590",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 9,
-        "length": 5
-      },
-      "1508590": {
-        "start": 6,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "3496838",
-    "original": "ドアに鍵をかけて。",
-    "en": [
-      {
-        "id": "39023",
-        "text": "Lock the door."
-      }
-    ],
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 3,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "3957457",
-    "original": "誰がドアの鍵をかけたのですか。",
-    "en": [
-      {
-        "id": "3636424",
-        "text": "Who locked the door?"
-      }
-    ],
-    "vocabIds": [
-      "2864173",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 5,
-        "length": 5
-      },
-      "2864173": {
-        "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "8853760",
-    "original": "トムはドアと窓に鍵をかけた。",
-    "en": [
-      {
-        "id": "6261010",
-        "text": "Tom locked the doors and windows."
-      }
-    ],
-    "vocabIds": [
-      "1401400",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 8,
-        "length": 5
-      },
-      "1401400": {
-        "start": 6,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "9468425",
-    "original": "ドアに鍵をかけてもらえますか？",
-    "en": [
-      {
-        "id": "39087",
-        "text": "Would you please lock the door?"
-      },
-      {
-        "id": "13481651",
-        "text": "Could you lock the door for me?"
-      }
-    ],
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 3,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "10107067",
-    "original": "トムはドアに鍵をかけないでおいた。",
-    "en": [
-      {
-        "id": "1024591",
-        "text": "Tom left the door unlocked."
-      }
-    ],
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 6,
-        "length": 6
-      }
-    }
-  },
-  {
-    "id": "10185141",
-    "original": "トムはドアに鍵をかけた。",
-    "en": [
-      {
-        "id": "1164450",
-        "text": "Tom locked the door."
-      }
-    ],
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 6,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "10489080",
-    "original": "トムにドアの鍵をかけてって言って。",
-    "en": [
-      {
-        "id": "6230696",
-        "text": "Tell Tom to lock the door."
-      }
-    ],
-    "vocabIds": [
-      "1260500",
-      "2757880"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 6,
-        "length": 5
-      },
-      "2757880": {
-        "start": 11,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "11635750",
-    "original": "ドアには鍵をかけておくね。",
-    "en": [
-      {
-        "id": "2544185",
-        "text": "I'm going to lock the door."
-      }
-    ],
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 4,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "12022618",
-    "original": "全てのドアに鍵をかけました。",
-    "en": [
-      {
-        "id": "9230004",
-        "text": "We locked all the doors."
-      },
-      {
-        "id": "12219175",
-        "text": "I locked all the doors."
-      }
-    ],
-    "vocabIds": [
-      "1595730",
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 6,
-        "length": 7
-      },
-      "1595730": {
-        "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "12191547",
-    "original": "ドアには鍵をかけないんだよ。",
-    "en": [
-      {
-        "id": "2281805",
-        "text": "We don't lock our doors."
-      }
-    ],
-    "vocabIds": [
-      "1260500"
-    ],
-    "matches": {
-      "1260500": {
-        "start": 4,
-        "length": 6
+        "length": 4,
+        "reading": "でかける"
       }
     }
   }

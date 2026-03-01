@@ -1,5 +1,44 @@
 [
   {
+    "id": "124966",
+    "original": "転がる石には苔が生えぬ。",
+    "en": [
+      {
+        "id": "279026",
+        "text": "A rolling stone gathers no moss."
+      }
+    ],
+    "indices": "転がる 石(いし)[01] には 苔[01] が 生える[01]{生えぬ}",
+    "vocabIds": [
+      "1441000",
+      "1382440",
+      "1411030",
+      "1378490"
+    ],
+    "matches": {
+      "1378490": {
+        "start": 8,
+        "length": 2,
+        "reading": "はえ"
+      },
+      "1382440": {
+        "start": 3,
+        "length": 1,
+        "reading": "いし"
+      },
+      "1411030": {
+        "start": 6,
+        "length": 1,
+        "reading": "こけ"
+      },
+      "1441000": {
+        "start": 0,
+        "length": 3,
+        "reading": "ころがる"
+      }
+    }
+  },
+  {
     "id": "125879",
     "original": "長靴にかびが生えた。",
     "en": [
@@ -16,11 +55,13 @@
     "matches": {
       "1378490": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1797820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ながぐつ"
       }
     }
   },
@@ -35,22 +76,37 @@
     ],
     "indices": "大草原~ には 木(き) が 生える[01]{生えない}",
     "vocabIds": [
+      "2082450",
       "2578320",
+      "1401970",
       "1534520",
       "1378490"
     ],
     "matches": {
       "1378490": {
         "start": 7,
-        "length": 4
+        "length": 2,
+        "reading": "はえ"
+      },
+      "1401970": {
+        "start": 1,
+        "length": 2,
+        "reading": "そうげん"
       },
       "1534520": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "き"
+      },
+      "2082450": {
+        "start": 0,
+        "length": 1,
+        "reading": "だい"
       },
       "2578320": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "だいそうげん"
       }
     }
   },
@@ -72,15 +128,57 @@
     "matches": {
       "1378490": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1401910": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くさ"
       },
       "1436130": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
+      }
+    }
+  },
+  {
+    "id": "142786",
+    "original": "生後６か月の息子に歯が生えかかっています。",
+    "en": [
+      {
+        "id": "271783",
+        "text": "My six-month old son is teething."
+      }
+    ],
+    "indices": "生後~ ヶ月{か月} の 息子[01] に 歯 が 生える[01]{生えかかっています}",
+    "vocabIds": [
+      "1378950",
+      "1404390",
+      "1313000",
+      "1378490"
+    ],
+    "matches": {
+      "1313000": {
+        "start": 9,
+        "length": 1,
+        "reading": "は"
+      },
+      "1378490": {
+        "start": 11,
+        "length": 2,
+        "reading": "はえ"
+      },
+      "1378950": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいご"
+      },
+      "1404390": {
+        "start": 6,
+        "length": 2,
+        "reading": "むすこ"
       }
     }
   },
@@ -101,11 +199,66 @@
     "matches": {
       "1357300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょくぶつ"
       },
       "1378490": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "はえる"
+      }
+    }
+  },
+  {
+    "id": "149675",
+    "original": "蒔かぬ種は生えぬ。",
+    "en": [
+      {
+        "id": "264883",
+        "text": "Seeds unsown do not grow."
+      },
+      {
+        "id": "375458",
+        "text": "No autumn fruit without spring blossom."
+      },
+      {
+        "id": "325240",
+        "text": "You cannot make an omelet without breaking eggs."
+      },
+      {
+        "id": "3033268",
+        "text": "You can't make an omelette without breaking eggs."
+      },
+      {
+        "id": "40561",
+        "text": "You can't make an omelet without breaking eggs."
+      },
+      {
+        "id": "7497129",
+        "text": "If you don't plant the seeds, they won't grow."
+      }
+    ],
+    "indices": "撒く{蒔かぬ} 種(たね)[01] は 生える[01]{生えぬ}",
+    "vocabIds": [
+      "2611890",
+      "2735690",
+      "1378490"
+    ],
+    "matches": {
+      "1378490": {
+        "start": 5,
+        "length": 2,
+        "reading": "はえ"
+      },
+      "2611890": {
+        "start": 0,
+        "length": 2,
+        "reading": "まか"
+      },
+      "2735690": {
+        "start": 3,
+        "length": 1,
+        "reading": "たね"
       }
     }
   },
@@ -120,17 +273,25 @@
     ],
     "indices": "撒く{蒔かぬ} 種(たね)[01]~ は 生える[01]{生えない}",
     "vocabIds": [
+      "2611890",
       "2735690",
       "1378490"
     ],
     "matches": {
       "1378490": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "はえ"
+      },
+      "2611890": {
+        "start": 0,
+        "length": 2,
+        "reading": "まか"
       },
       "2735690": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "たね"
       }
     }
   },
@@ -158,39 +319,48 @@
     "matches": {
       "1237030": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうかい"
       },
       "1299460": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ざっそう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1378490": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1384260": {
         "start": 21,
-        "length": 5
+        "length": 4,
+        "reading": "きりとっ"
       },
       "1396130": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       },
       "1401910": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "くさ"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1604290": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まわり"
       }
     }
   },
@@ -206,21 +376,30 @@
     "indices": "雑草~ が 急に 生える[01]{生えた}",
     "vocabIds": [
       "1299460",
+      "1228560",
       "2269050",
       "1378490"
     ],
     "matches": {
+      "1228560": {
+        "start": 3,
+        "length": 1,
+        "reading": "きゅう"
+      },
       "1299460": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ざっそう"
       },
       "1378490": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "2269050": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -247,19 +426,23 @@
     "matches": {
       "1255430": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1378490": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1401910": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くさ"
       },
       "1529520": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
       }
     }
   },
@@ -285,15 +468,18 @@
     "matches": {
       "1242590": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1378490": {
         "start": 4,
-        "length": 4
+        "length": 2,
+        "reading": "はえ"
       },
       "1534520": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -317,23 +503,61 @@
     "matches": {
       "1194500": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1215230": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1299460": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ざっそう"
       },
       "1378490": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1861770": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
+      }
+    }
+  },
+  {
+    "id": "208598",
+    "original": "その赤ちゃんは歯が生えはじめている。",
+    "en": [
+      {
+        "id": "45857",
+        "text": "The baby is cutting his teeth."
+      }
+    ],
+    "indices": "其の[01]{その} 赤ちゃん~ は 歯(は)~ が 生える[02]{生えはじめている}",
+    "vocabIds": [
+      "1383260",
+      "1313000",
+      "1378490"
+    ],
+    "matches": {
+      "1313000": {
+        "start": 7,
+        "length": 1,
+        "reading": "は"
+      },
+      "1378490": {
+        "start": 9,
+        "length": 2,
+        "reading": "はえ"
+      },
+      "1383260": {
+        "start": 2,
+        "length": 4,
+        "reading": "あかちゃん"
       }
     }
   },
@@ -355,15 +579,18 @@
     "matches": {
       "1378490": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1440730": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "てんちょう"
       },
       "1582120": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "みせ"
       }
     }
   },
@@ -386,19 +613,119 @@
     "matches": {
       "1362490": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "もり"
       },
       "1378490": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1528280": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "みっしゅう"
       },
       "1537250": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "の"
+      }
+    }
+  },
+  {
+    "id": "221764",
+    "original": "この子は今歯が生えかけているところです。",
+    "en": [
+      {
+        "id": "59090",
+        "text": "This child is teething now."
+      }
+    ],
+    "indices": "此の{この} 子(こ)[01] は 今(いま) 歯 が 生える[02]{生え}~ 掛ける{かけている} 所(ところ){ところ} です",
+    "vocabIds": [
+      "1307770",
+      "1288850",
+      "1313000",
+      "1378490"
+    ],
+    "matches": {
+      "1288850": {
+        "start": 4,
+        "length": 1,
+        "reading": "こん"
+      },
+      "1307770": {
+        "start": 2,
+        "length": 1,
+        "reading": "こ"
+      },
+      "1313000": {
+        "start": 5,
+        "length": 1,
+        "reading": "は"
+      },
+      "1378490": {
+        "start": 7,
+        "length": 2,
+        "reading": "はえ"
+      }
+    }
+  },
+  {
+    "id": "227647",
+    "original": "おたまじゃくしは大きくなるにつれ、尻尾が消えて足が生えはじめる。",
+    "en": [
+      {
+        "id": "65000",
+        "text": "As a tadpole grows, the tail disappears and legs begin to form."
+      }
+    ],
+    "indices": "お玉杓子[01]{おたまじゃくし} は 大きく 成る[01]{なる} に連れ{につれ} 尻尾 が 消える{消えて} 足(あし) が 生える[01]{生えはじめる}~",
+    "vocabIds": [
+      "1588880",
+      "2039990",
+      "2840112",
+      "1358800",
+      "1350040",
+      "1404630",
+      "1378490"
+    ],
+    "matches": {
+      "1350040": {
+        "start": 20,
+        "length": 2,
+        "reading": "きえ"
+      },
+      "1358800": {
+        "start": 17,
+        "length": 2,
+        "reading": "しっぽ"
+      },
+      "1378490": {
+        "start": 25,
+        "length": 2,
+        "reading": "はえ"
+      },
+      "1404630": {
+        "start": 23,
+        "length": 1,
+        "reading": "あし"
+      },
+      "1588880": {
+        "start": 8,
+        "length": 3,
+        "reading": "おおきく"
+      },
+      "2039990": {
+        "start": 8,
+        "length": 3,
+        "reading": "おおきく"
+      },
+      "2840112": {
+        "start": 8,
+        "length": 5,
+        "reading": "おおきくなる"
       }
     }
   },
@@ -420,15 +747,18 @@
     "matches": {
       "1171680": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "はね"
       },
       "1348530": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ことり"
       },
       "1378490": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       }
     }
   },
@@ -450,15 +780,18 @@
     "matches": {
       "1378490": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1422230": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たけ"
       },
       "1436130": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       }
     }
   },
@@ -472,27 +805,57 @@
       }
     ],
     "vocabIds": [
+      "1345020",
       "1922530",
       "1171680",
-      "1378490",
-      "1478440"
+      "1378490"
     ],
     "matches": {
       "1171680": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "はね"
+      },
+      "1345020": {
+        "start": 3,
+        "length": 2,
+        "reading": "じょおう"
       },
       "1378490": {
         "start": 12,
-        "length": 3
-      },
-      "1478440": {
-        "start": 19,
-        "length": 1
+        "length": 2,
+        "reading": "はえ"
       },
       "1922530": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "じょおうあり"
+      }
+    }
+  },
+  {
+    "id": "901653",
+    "original": "パンにカビが生えてるよ。これじゃあもう食べられないな。",
+    "en": [
+      {
+        "id": "924147",
+        "text": "There's mold on the bread. This means that we can't eat it anymore."
+      }
+    ],
+    "vocabIds": [
+      "1378490",
+      "1358280"
+    ],
+    "matches": {
+      "1358280": {
+        "start": 19,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1378490": {
+        "start": 6,
+        "length": 2,
+        "reading": "はえ"
       }
     }
   },
@@ -513,15 +876,18 @@
     "matches": {
       "1371260": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1378490": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1401910": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くさ"
       }
     }
   },
@@ -546,15 +912,18 @@
     "matches": {
       "1255430": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1378490": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1401910": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くさ"
       }
     }
   },
@@ -575,15 +944,18 @@
     "matches": {
       "1378490": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1487660": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1601810": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひげ"
       }
     }
   },
@@ -604,15 +976,110 @@
     "matches": {
       "1378490": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1415870": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たくさん"
       },
       "1534520": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "き"
+      }
+    }
+  },
+  {
+    "id": "11623788",
+    "original": "カビが生えたパンって、食べても大丈夫？",
+    "en": [
+      {
+        "id": "7974311",
+        "text": "Is it safe to eat moldy bread?"
+      },
+      {
+        "id": "11633754",
+        "text": "Is it OK to eat moldy bread?"
+      }
+    ],
+    "vocabIds": [
+      "1378490",
+      "1358280",
+      "1414150"
+    ],
+    "matches": {
+      "1358280": {
+        "start": 11,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1378490": {
+        "start": 3,
+        "length": 2,
+        "reading": "はえ"
+      },
+      "1414150": {
+        "start": 15,
+        "length": 3,
+        "reading": "だいじょうぶ"
+      }
+    }
+  },
+  {
+    "id": "11623793",
+    "original": "このパン、カビが生えてるよ。",
+    "en": [
+      {
+        "id": "7932674",
+        "text": "This bread is moldy."
+      }
+    ],
+    "vocabIds": [
+      "1378490"
+    ],
+    "matches": {
+      "1378490": {
+        "start": 8,
+        "length": 2,
+        "reading": "はえ"
+      }
+    }
+  },
+  {
+    "id": "11623802",
+    "original": "「このカビが生えたパン、どうしよう？」「カビが生えたんだったら、ゴミ箱に捨てちゃいな」",
+    "en": [
+      {
+        "id": "9435413",
+        "text": "\"What shall I do with this mouldy bread?\" \"If it's gone mouldy, throw it in the bin.\""
+      },
+      {
+        "id": "11633752",
+        "text": "\"What should I do with this moldy bread?\" \"If it's moldy, throw it in the trash.\""
+      }
+    ],
+    "vocabIds": [
+      "1378490",
+      "1005010",
+      "1322320"
+    ],
+    "matches": {
+      "1005010": {
+        "start": 32,
+        "length": 3,
+        "reading": "ごみばこ"
+      },
+      "1322320": {
+        "start": 36,
+        "length": 2,
+        "reading": "すて"
+      },
+      "1378490": {
+        "start": 6,
+        "length": 2,
+        "reading": "はえ"
       }
     }
   },
@@ -632,11 +1099,13 @@
     "matches": {
       "1362490": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "もり"
       },
       "1378490": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       }
     }
   },
@@ -658,19 +1127,23 @@
     "matches": {
       "1194480": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "かげつ"
       },
       "1313000": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "は"
       },
       "1378490": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はえ"
       },
       "1404390": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "むすこ"
       }
     }
   },
@@ -694,11 +1167,13 @@
     "matches": {
       "1378490": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "はえ"
       },
       "1401910": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くさ"
       }
     }
   }

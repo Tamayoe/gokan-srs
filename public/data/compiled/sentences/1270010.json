@@ -1,5 +1,44 @@
 [
   {
+    "id": "105649",
+    "original": "彼は私より３年後輩です。",
+    "en": [
+      {
+        "id": "298038",
+        "text": "He is my junior by three years."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 私(わたし)[01] より 年(ねん) 後輩~ です",
+    "vocabIds": [
+      "1483070",
+      "1311110",
+      "2084840",
+      "1270010"
+    ],
+    "matches": {
+      "1270010": {
+        "start": 7,
+        "length": 2,
+        "reading": "こうはい"
+      },
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2084840": {
+        "start": 6,
+        "length": 1,
+        "reading": "ねん"
+      }
+    }
+  },
+  {
     "id": "174282",
     "original": "後輩にノートＰＣをかりた。",
     "en": [
@@ -15,7 +54,8 @@
     "matches": {
       "1270010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうはい"
       }
     }
   },
@@ -37,15 +77,18 @@
     "matches": {
       "1270010": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうはい"
       },
       "1294940": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "とし"
       },
       "1576870": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       }
     }
   },
@@ -77,11 +120,13 @@
     "matches": {
       "1270010": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こうはい"
       },
       "1283500": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうこう"
       }
     }
   },
@@ -95,22 +140,37 @@
       }
     ],
     "vocabIds": [
+      "1283500",
       "2651120",
+      "1316300",
       "1184140",
       "1270010"
     ],
     "matches": {
       "1184140": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "した"
       },
       "1270010": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こうはい"
+      },
+      "1283500": {
+        "start": 3,
+        "length": 2,
+        "reading": "こうこう"
+      },
+      "1316300": {
+        "start": 5,
+        "length": 2,
+        "reading": "じだい"
       },
       "2651120": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "こうこうじだい"
       }
     }
   },
@@ -131,15 +191,80 @@
     "matches": {
       "1184140": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "か"
       },
       "1270010": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こうはい"
       },
       "1283500": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうこう"
+      }
+    }
+  },
+  {
+    "id": "9779190",
+    "original": "高校時代に入ってたクラブは、先輩後輩の仲がとってもよかったよ。",
+    "en": [
+      {
+        "id": "9980716",
+        "text": "Clubs I entered in high school were super good for gaining familiarity with my juniors and seniors."
+      }
+    ],
+    "vocabIds": [
+      "1283500",
+      "2651120",
+      "1316300",
+      "1465590",
+      "1388410",
+      "2105750",
+      "1270010",
+      "1425710"
+    ],
+    "matches": {
+      "1270010": {
+        "start": 16,
+        "length": 2,
+        "reading": "こうはい"
+      },
+      "1283500": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうこう"
+      },
+      "1316300": {
+        "start": 2,
+        "length": 2,
+        "reading": "じだい"
+      },
+      "1388410": {
+        "start": 14,
+        "length": 2,
+        "reading": "せんぱい"
+      },
+      "1425710": {
+        "start": 19,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1465590": {
+        "start": 5,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "2105750": {
+        "start": 14,
+        "length": 4,
+        "reading": "せんぱいこうはい"
+      },
+      "2651120": {
+        "start": 0,
+        "length": 4,
+        "reading": "こうこうじだい"
       }
     }
   },
@@ -160,15 +285,18 @@
     "matches": {
       "1207240": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "たのしい"
       },
       "1270010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうはい"
       },
       "1577100": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -183,16 +311,24 @@
     ],
     "vocabIds": [
       "1270010",
+      "1310670",
       "1310660"
     ],
     "matches": {
       "1270010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうはい"
       },
       "1310660": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "とめ"
+      },
+      "1310670": {
+        "start": 6,
+        "length": 2,
+        "reading": "とめ"
       }
     }
   },
@@ -224,11 +360,13 @@
     "matches": {
       "1207240": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "たのしい"
       },
       "1270010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうはい"
       }
     }
   }

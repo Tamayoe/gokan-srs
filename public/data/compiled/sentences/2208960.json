@@ -11,36 +11,54 @@
     "indices": "費用 は 別として 其の[01]{その} 橋(はし) を 架ける には 長い 時間[01] が 掛かる[01]{かかる} だろう",
     "vocabIds": [
       "1484620",
+      "1509430",
       "2235320",
       "1237410",
       "2208960",
       "1429750",
+      "1315920",
       "1884400"
     ],
     "matches": {
       "1237410": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "はし"
+      },
+      "1315920": {
+        "start": 19,
+        "length": 2,
+        "reading": "じかん"
       },
       "1429750": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ながい"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1509430": {
+        "start": 3,
+        "length": 1,
+        "reading": "べつ"
       },
       "1884400": {
         "start": 19,
-        "length": 6
+        "length": 6,
+        "reading": "じかんがかかる"
       },
       "2208960": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "かける"
       },
       "2235320": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "べつとして"
       }
     }
   },
@@ -55,6 +73,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 計画 は 其の[01]{その} 川[01] に 橋(はし) を 架ける 事(こと){こと} です",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1252090",
       "1390020",
@@ -64,23 +83,105 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1237410": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "はし"
       },
       "1252090": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1390020": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "2208960": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "かける"
+      }
+    }
+  },
+  {
+    "id": "141389",
+    "original": "川に橋が架けられています。",
+    "en": [
+      {
+        "id": "273182",
+        "text": "They're constructing a bridge over the river."
+      }
+    ],
+    "indices": "川[01] に 橋(はし) が 架ける{架けられています}",
+    "vocabIds": [
+      "1390020",
+      "1237410",
+      "2208960"
+    ],
+    "matches": {
+      "1237410": {
+        "start": 2,
+        "length": 1,
+        "reading": "はし"
+      },
+      "1390020": {
+        "start": 0,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "2208960": {
+        "start": 4,
+        "length": 2,
+        "reading": "かけ"
+      }
+    }
+  },
+  {
+    "id": "208512",
+    "original": "その川に大きな橋が架けられた。",
+    "en": [
+      {
+        "id": "45771",
+        "text": "A big bridge was built over the river."
+      }
+    ],
+    "indices": "其の[01]{その} 川[01] に 大きな 橋(はし) が 架ける{架けられた}",
+    "vocabIds": [
+      "1390020",
+      "1412890",
+      "1237410",
+      "2208960"
+    ],
+    "matches": {
+      "1237410": {
+        "start": 7,
+        "length": 1,
+        "reading": "はし"
+      },
+      "1390020": {
+        "start": 2,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1412890": {
+        "start": 4,
+        "length": 3,
+        "reading": "おおきな"
+      },
+      "2208960": {
+        "start": 9,
+        "length": 2,
+        "reading": "かけ"
       }
     }
   },
@@ -102,19 +203,23 @@
     "matches": {
       "1237410": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はし"
       },
       "1242160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "2084840": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       },
       "2208960": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かける"
       }
     }
   }

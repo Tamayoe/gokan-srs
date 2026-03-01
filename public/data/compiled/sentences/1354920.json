@@ -16,11 +16,67 @@
     "matches": {
       "1313580": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1354920": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "のりすてる"
+      }
+    }
+  },
+  {
+    "id": "146176",
+    "original": "乗り捨てできますか。",
+    "en": [
+      {
+        "id": "268386",
+        "text": "Can I drop off the car?"
+      }
+    ],
+    "indices": "乗り捨てる{乗り捨て} 出来る{できます} か",
+    "vocabIds": [
+      "1354920"
+    ],
+    "matches": {
+      "1354920": {
+        "start": 0,
+        "length": 4,
+        "reading": "のりすて"
+      }
+    }
+  },
+  {
+    "id": "192318",
+    "original": "レンタカーの乗り捨て料金はいくらだろう？",
+    "en": [
+      {
+        "id": "29481",
+        "text": "How much more does it cost to return the rental car to another location?"
+      }
+    ],
+    "indices": "レンタカー の 乗り捨てる{乗り捨て} 料金 は 幾ら{いくら} だろう",
+    "vocabIds": [
+      "1354920",
+      "2033670",
+      "1554280"
+    ],
+    "matches": {
+      "1354920": {
+        "start": 6,
+        "length": 4,
+        "reading": "のりすて"
+      },
+      "1554280": {
+        "start": 10,
+        "length": 2,
+        "reading": "りょうきん"
+      },
+      "2033670": {
+        "start": 6,
+        "length": 6,
+        "reading": "のりすてりょうきん"
       }
     }
   },
@@ -44,23 +100,28 @@
     "matches": {
       "1323080": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1354920": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "のりすて"
       },
       "1386500": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ゆき"
       },
       "1423310": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1861770": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -75,22 +136,37 @@
     ],
     "indices": "此れ[01]{これ} こそ 事故 現場 に 乗り捨てる{乗り捨てて} 有る{あった} 単車~ だ",
     "vocabIds": [
+      "1313850",
       "2638840",
+      "1263760",
       "1354920",
       "1417520"
     ],
     "matches": {
+      "1263760": {
+        "start": 6,
+        "length": 2,
+        "reading": "げんば"
+      },
+      "1313850": {
+        "start": 4,
+        "length": 2,
+        "reading": "じこ"
+      },
       "1354920": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "のりすて"
       },
       "1417520": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "たんしゃ"
       },
       "2638840": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "じこげんば"
       }
     }
   },
@@ -113,19 +189,67 @@
     "matches": {
       "1263760": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "げんば"
       },
       "1313830": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じけん"
       },
       "1318400": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "じどうしゃ"
       },
       "1354920": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "のりすて"
+      }
+    }
+  },
+  {
+    "id": "1137900",
+    "original": "これが事件現場に乗り捨てられていたものと同じ車です。",
+    "en": [
+      {
+        "id": "56119",
+        "text": "This is the same car that was left at the scene of the crime."
+      }
+    ],
+    "vocabIds": [
+      "1313830",
+      "1263760",
+      "1354920",
+      "1451750",
+      "1323080"
+    ],
+    "matches": {
+      "1263760": {
+        "start": 5,
+        "length": 2,
+        "reading": "げんば"
+      },
+      "1313830": {
+        "start": 3,
+        "length": 2,
+        "reading": "じけん"
+      },
+      "1323080": {
+        "start": 22,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1354920": {
+        "start": 8,
+        "length": 4,
+        "reading": "のりすて"
+      },
+      "1451750": {
+        "start": 20,
+        "length": 2,
+        "reading": "おなじ"
       }
     }
   }

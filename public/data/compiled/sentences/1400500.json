@@ -12,55 +12,252 @@
     "vocabIds": [
       "1483070",
       "1582000",
-      "1604890",
       "1400500",
       "1447350"
     ],
     "matches": {
       "1400500": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "やり"
       },
       "1447350": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "なげつけ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1582000": {
         "start": 2,
-        "length": 1
-      },
-      "1604890": {
-        "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "てき"
       }
     }
   },
   {
-    "id": "231773",
-    "original": "あなたは槍ヶ岳に登ったことがありますか。",
+    "id": "189690",
+    "original": "雨が降ろうが槍が降ろうが、必ず行きますよ。",
     "en": [
       {
-        "id": "69141",
-        "text": "Have you ever climbed Mt. Yari?"
+        "id": "26844",
+        "text": "I'll be there rain or shine."
       }
     ],
-    "indices": "貴方(あなた)[01]{あなた} は に 登る{登った} 事がある{ことがあります} か",
+    "indices": "雨 が 降る(ふる){降ろう} が 槍(やり)[01] が 降る(ふる){降ろう} が 必ず 行く[01]{行きます} よ[01]",
     "vocabIds": [
+      "1171900",
+      "1282790",
       "1400500",
-      "1207210"
+      "1487400",
+      "1578850",
+      "1578790"
     ],
     "matches": {
-      "1207210": {
-        "start": 6,
-        "length": 1
+      "1171900": {
+        "start": 0,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 2,
+        "length": 2,
+        "reading": "くだろ"
       },
       "1400500": {
-        "start": 4,
-        "length": 1
+        "start": 6,
+        "length": 1,
+        "reading": "やり"
+      },
+      "1487400": {
+        "start": 13,
+        "length": 2,
+        "reading": "かならず"
+      },
+      "1578790": {
+        "start": 15,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 15,
+        "length": 2,
+        "reading": "いき"
+      }
+    }
+  },
+  {
+    "id": "3143349",
+    "original": "明日は雨が降ろうが槍が降ろうが行くつもりです。",
+    "en": [
+      {
+        "id": "3143714",
+        "text": "I'm going to go tomorrow no matter what."
+      }
+    ],
+    "vocabIds": [
+      "1584660",
+      "1171900",
+      "1282790",
+      "1400500",
+      "1578850"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 3,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 5,
+        "length": 2,
+        "reading": "くだろ"
+      },
+      "1400500": {
+        "start": 9,
+        "length": 1,
+        "reading": "やり"
+      },
+      "1578850": {
+        "start": 15,
+        "length": 2,
+        "reading": "いく"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      }
+    }
+  },
+  {
+    "id": "8608718",
+    "original": "たとえ雨が降ろうと槍が降ろうと、私は旅に出る。",
+    "en": [
+      {
+        "id": "9986043",
+        "text": "Even if it is raining spears, I'm still going."
+      }
+    ],
+    "vocabIds": [
+      "1171900",
+      "1282790",
+      "1400500",
+      "1311110",
+      "1553120",
+      "2836191",
+      "1338240"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 3,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 5,
+        "length": 2,
+        "reading": "くだろ"
+      },
+      "1311110": {
+        "start": 16,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1338240": {
+        "start": 20,
+        "length": 2,
+        "reading": "でる"
+      },
+      "1400500": {
+        "start": 9,
+        "length": 1,
+        "reading": "やり"
+      },
+      "1553120": {
+        "start": 18,
+        "length": 1,
+        "reading": "たび"
+      },
+      "2836191": {
+        "start": 18,
+        "length": 4,
+        "reading": "たびにでる"
+      }
+    }
+  },
+  {
+    "id": "10206694",
+    "original": "雨が降ろうが槍が降ろうが、俺は行く。",
+    "en": [
+      {
+        "id": "10271660",
+        "text": "Whether rain shall fall, whether spears shall fall, I will go."
+      },
+      {
+        "id": "10271662",
+        "text": "Whether rain or spears shall fall, I will go."
+      },
+      {
+        "id": "10271663",
+        "text": "Whether rain or spears fall, I will go."
+      },
+      {
+        "id": "10271664",
+        "text": "Whether rain or fall, I will go."
+      },
+      {
+        "id": "10271666",
+        "text": "Whether rain or shine, I will go."
+      },
+      {
+        "id": "10271667",
+        "text": "Come hell or high water, I will go."
+      },
+      {
+        "id": "10310822",
+        "text": "I'll go, come what may."
+      },
+      {
+        "id": "11049446",
+        "text": "No matter what happens, I'll go."
+      }
+    ],
+    "vocabIds": [
+      "1171900",
+      "1282790",
+      "1400500",
+      "1576870",
+      "1578850"
+    ],
+    "matches": {
+      "1171900": {
+        "start": 0,
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1282790": {
+        "start": 2,
+        "length": 2,
+        "reading": "くだろ"
+      },
+      "1400500": {
+        "start": 6,
+        "length": 1,
+        "reading": "やり"
+      },
+      "1576870": {
+        "start": 13,
+        "length": 1,
+        "reading": "おれ"
+      },
+      "1578850": {
+        "start": 15,
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -79,41 +276,8 @@
     "matches": {
       "1400500": {
         "start": 3,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "10950930",
-    "original": "コインの表には槍投げ選手が描かれている。",
-    "en": [
-      {
-        "id": "12005492",
-        "text": "The coin's face depicts a javelin thrower."
-      }
-    ],
-    "vocabIds": [
-      "1489340",
-      "1400500",
-      "1628640",
-      "1392250"
-    ],
-    "matches": {
-      "1392250": {
-        "start": 10,
-        "length": 2
-      },
-      "1400500": {
-        "start": 7,
-        "length": 1
-      },
-      "1489340": {
-        "start": 4,
-        "length": 1
-      },
-      "1628640": {
-        "start": 8,
-        "length": 2
+        "length": 1,
+        "reading": "やり"
       }
     }
   }

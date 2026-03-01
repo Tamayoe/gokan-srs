@@ -14,28 +14,39 @@
       "1311110",
       "1000420",
       "1445650",
+      "1153440",
       "1153430"
     ],
     "matches": {
       "1000420": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1153430": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "あつかい"
+      },
+      "1153440": {
+        "start": 12,
+        "length": 2,
+        "reading": "あつかい"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1445650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -58,19 +69,23 @@
     "matches": {
       "1333090": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1417020": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "たんなる"
       },
       "1445650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -92,15 +107,18 @@
     "matches": {
       "1445650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1606450": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ろうどう"
       }
     }
   },
@@ -123,19 +141,23 @@
     "matches": {
       "1366770": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1445650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1482990": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ひてい"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -152,25 +174,137 @@
     "vocabIds": [
       "1483070",
       "1445650",
+      "1318720",
       "1318740",
       "1538130"
     ],
     "matches": {
+      "1318720": {
+        "start": 5,
+        "length": 2,
+        "reading": "じゆう"
+      },
       "1318740": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "じゆうに"
       },
       "1445650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1538130": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
+      }
+    }
+  },
+  {
+    "id": "124433",
+    "original": "奴隷制度は世界のほとんどの地域で廃止されている。",
+    "en": [
+      {
+        "id": "279561",
+        "text": "Slavery has been abolished in most parts of the world."
+      }
+    ],
+    "indices": "奴隷制度 は 世界 の 殆ど[03]{ほとんど} の 地域 で(#2028980) 廃止 為れる{されている}",
+    "vocabIds": [
+      "1445650",
+      "1762270",
+      "1374880",
+      "1373860",
+      "1420800",
+      "1472100"
+    ],
+    "matches": {
+      "1373860": {
+        "start": 5,
+        "length": 2,
+        "reading": "せかい"
+      },
+      "1374880": {
+        "start": 2,
+        "length": 2,
+        "reading": "せいど"
+      },
+      "1420800": {
+        "start": 13,
+        "length": 2,
+        "reading": "ちいき"
+      },
+      "1445650": {
+        "start": 0,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1472100": {
+        "start": 16,
+        "length": 2,
+        "reading": "はいし"
+      },
+      "1762270": {
+        "start": 0,
+        "length": 4,
+        "reading": "どれいせいど"
+      }
+    }
+  },
+  {
+    "id": "124435",
+    "original": "奴隷制度が非合法となってから１世紀以上になる。",
+    "en": [
+      {
+        "id": "279559",
+        "text": "It is over a century since slavery was made illegal."
+      }
+    ],
+    "indices": "奴隷制度 が 非合法~ となる{となって} から[06] 世紀 以上[01] になる[01]",
+    "vocabIds": [
+      "1445650",
+      "1762270",
+      "1374880",
+      "1484890",
+      "1373990",
+      "1155120"
+    ],
+    "matches": {
+      "1155120": {
+        "start": 17,
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1373990": {
+        "start": 15,
+        "length": 2,
+        "reading": "せいき"
+      },
+      "1374880": {
+        "start": 2,
+        "length": 2,
+        "reading": "せいど"
+      },
+      "1445650": {
+        "start": 0,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1484890": {
+        "start": 5,
+        "length": 3,
+        "reading": "ひごうほう"
+      },
+      "1762270": {
+        "start": 0,
+        "length": 4,
+        "reading": "どれいせいど"
       }
     }
   },
@@ -194,23 +328,28 @@
     "matches": {
       "1281440": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "こうろ"
       },
       "1423680": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうかん"
       },
       "1445650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1481090": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はんらん"
       },
       "1519130": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうがい"
       }
     }
   },
@@ -232,15 +371,18 @@
     "matches": {
       "1318000": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じしん"
       },
       "1378860": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1445650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       }
     }
   },
@@ -262,15 +404,18 @@
     "matches": {
       "1225940": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "あり"
       },
       "1445650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1451150": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       }
     }
   },
@@ -292,15 +437,18 @@
     "matches": {
       "1333090": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1366770": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1445650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       }
     }
   },
@@ -316,16 +464,99 @@
     "indices": "少年[01] は 奴隷[01] として 売る{売られた}",
     "vocabIds": [
       "1349170",
-      "1445650"
+      "1445650",
+      "1473950"
     ],
     "matches": {
       "1349170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうねん"
       },
       "1445650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1473950": {
+        "start": 8,
+        "length": 2,
+        "reading": "うら"
+      }
+    }
+  },
+  {
+    "id": "147554",
+    "original": "初めての奴隷制度禁止令は１９世紀半ばに行われた。",
+    "en": [
+      {
+        "id": "267006",
+        "text": "The first prohibition of slavery was in the mid-nineteenth century."
+      }
+    ],
+    "indices": "初めて の 奴隷制度 禁止 令(れい) は 世紀 半ば[01] に 行われる{行われた}",
+    "vocabIds": [
+      "1342550",
+      "1445650",
+      "1762270",
+      "1374880",
+      "1241550",
+      "2733860",
+      "1556150",
+      "1373990",
+      "1478780",
+      "1589060"
+    ],
+    "matches": {
+      "1241550": {
+        "start": 8,
+        "length": 2,
+        "reading": "きんし"
+      },
+      "1342550": {
+        "start": 0,
+        "length": 3,
+        "reading": "はじめて"
+      },
+      "1373990": {
+        "start": 14,
+        "length": 2,
+        "reading": "せいき"
+      },
+      "1374880": {
+        "start": 6,
+        "length": 2,
+        "reading": "せいど"
+      },
+      "1445650": {
+        "start": 4,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1478780": {
+        "start": 16,
+        "length": 2,
+        "reading": "なかば"
+      },
+      "1556150": {
+        "start": 10,
+        "length": 1,
+        "reading": "れい"
+      },
+      "1589060": {
+        "start": 19,
+        "length": 2,
+        "reading": "おこなわ"
+      },
+      "1762270": {
+        "start": 4,
+        "length": 4,
+        "reading": "どれいせいど"
+      },
+      "2733860": {
+        "start": 8,
+        "length": 3,
+        "reading": "きんしれい"
       }
     }
   },
@@ -342,25 +573,23 @@
     "vocabIds": [
       "1445650",
       "1331400",
-      "1208480",
-      "2256270"
+      "1208480"
     ],
     "matches": {
       "1208480": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かつりょく"
       },
       "1331400": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうきょう"
       },
       "1445650": {
         "start": 0,
-        "length": 2
-      },
-      "2256270": {
-        "start": 11,
-        "length": 1
+        "length": 2,
+        "reading": "どれい"
       }
     }
   },
@@ -379,28 +608,45 @@
       "1445650",
       "1589350",
       "1008890",
+      "1451750",
+      "1451770",
       "1579780"
     ],
     "matches": {
       "1008890": {
         "start": 13,
-        "length": 6
+        "length": 6,
+        "reading": "とおなじように"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1445650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1451750": {
+        "start": 14,
+        "length": 2,
+        "reading": "おなじ"
+      },
+      "1451770": {
+        "start": 14,
+        "length": 4,
+        "reading": "おなじよう"
       },
       "1579780": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1589350": {
         "start": 9,
-        "length": 4
+        "length": 2,
+        "reading": "おもわ"
       }
     }
   },
@@ -419,28 +665,45 @@
       "1373990",
       "1861770",
       "2584950",
-      "1445650"
+      "1580640",
+      "1445650",
+      "1473950"
     ],
     "matches": {
       "1373990": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せいき"
       },
       "1445650": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1473950": {
+        "start": 24,
+        "length": 2,
+        "reading": "うら"
+      },
+      "1580640": {
+        "start": 17,
+        "length": 1,
+        "reading": "じん"
       },
       "1591010": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "がっしゅうこく"
       },
       "1861770": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       },
       "2584950": {
         "start": 13,
-        "length": 5
+        "length": 5,
+        "reading": "あふりかじん"
       }
     }
   },
@@ -462,15 +725,18 @@
     "matches": {
       "1153430": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "あつかい"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1445650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       }
     }
   },
@@ -493,19 +759,23 @@
     "matches": {
       "1195840": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かちょう"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1445650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "2009430": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "はたらかせ"
       }
     }
   },
@@ -520,27 +790,64 @@
     ],
     "indices": "何人(なにびと){何びと}~ も 奴隷[01] の 状態 に 留め置く{留め置かれて}~ は ならない",
     "vocabIds": [
-      "1577100",
       "1445650",
       "1356730",
-      "1552690"
+      "1552710"
     ],
     "matches": {
       "1356730": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じょうたい"
       },
       "1445650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
-      "1552690": {
+      "1552710": {
         "start": 10,
-        "length": 2
+        "length": 4,
+        "reading": "とめおか"
+      }
+    }
+  },
+  {
+    "id": "192479",
+    "original": "リンカーンは奴隷制度に反対であった。",
+    "en": [
+      {
+        "id": "29642",
+        "text": "Lincoln was opposed to slavery."
+      }
+    ],
+    "indices": "は 奴隷制度~ に 反対 である{であった}",
+    "vocabIds": [
+      "1445650",
+      "1762270",
+      "1374880",
+      "1480670"
+    ],
+    "matches": {
+      "1374880": {
+        "start": 8,
+        "length": 2,
+        "reading": "せいど"
       },
-      "1577100": {
-        "start": 0,
-        "length": 1
+      "1445650": {
+        "start": 6,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1480670": {
+        "start": 11,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1762270": {
+        "start": 6,
+        "length": 4,
+        "reading": "どれいせいど"
       }
     }
   },
@@ -561,11 +868,13 @@
     "matches": {
       "1199250": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かいほう"
       },
       "1445650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       }
     }
   },
@@ -582,20 +891,29 @@
     "vocabIds": [
       "1445650",
       "1318720",
-      "1232870"
+      "1232870",
+      "1232860"
     ],
     "matches": {
+      "1232860": {
+        "start": 12,
+        "length": 2,
+        "reading": "ゆるし"
+      },
       "1232870": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "ゆるし"
       },
       "1318720": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じゆう"
       },
       "1445650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       }
     }
   },
@@ -611,16 +929,75 @@
     "indices": "は 奴隷[01] 達{たち} を 自由 に 為る(する){した}",
     "vocabIds": [
       "1445650",
+      "1318720",
       "1318740"
     ],
     "matches": {
+      "1318720": {
+        "start": 11,
+        "length": 2,
+        "reading": "じゆう"
+      },
       "1318740": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "じゆうに"
       },
       "1445650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
+      }
+    }
+  },
+  {
+    "id": "192483",
+    "original": "リンカーンは合衆国の奴隷制廃止に乗り出した。",
+    "en": [
+      {
+        "id": "29647",
+        "text": "Lincoln set out to abolish slavery in the United States."
+      }
+    ],
+    "indices": "は 合衆国 の 奴隷[01] 制 廃止 に 乗り出す[02]{乗り出した}",
+    "vocabIds": [
+      "1591010",
+      "1445650",
+      "2566570",
+      "1374620",
+      "1472100",
+      "1354940"
+    ],
+    "matches": {
+      "1354940": {
+        "start": 16,
+        "length": 4,
+        "reading": "のりだし"
+      },
+      "1374620": {
+        "start": 12,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1445650": {
+        "start": 10,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1472100": {
+        "start": 13,
+        "length": 2,
+        "reading": "はいし"
+      },
+      "1591010": {
+        "start": 6,
+        "length": 3,
+        "reading": "がっしゅうこく"
+      },
+      "2566570": {
+        "start": 10,
+        "length": 3,
+        "reading": "どれいせい"
       }
     }
   },
@@ -643,19 +1020,23 @@
     "matches": {
       "1199250": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かいほう"
       },
       "1445650": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1532160": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "めいれい"
       },
       "1581180": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんこく"
       }
     }
   },
@@ -672,20 +1053,29 @@
     "vocabIds": [
       "1445650",
       "1601890",
-      "1450330"
+      "1450330",
+      "1633800"
     ],
     "matches": {
       "1445650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1450330": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "にげ"
       },
       "1601890": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひっし"
+      },
+      "1633800": {
+        "start": 8,
+        "length": 2,
+        "reading": "にげ"
       }
     }
   },
@@ -704,33 +1094,45 @@
       "1318610",
       "1173030",
       "1510650",
-      "2020300",
+      "1864130",
+      "1236070",
       "1589350"
     ],
     "matches": {
       "1173030": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "うんめい"
+      },
+      "1236070": {
+        "start": 16,
+        "length": 2,
+        "reading": "つよく"
       },
       "1318610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1445650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1510650": {
         "start": 11,
-        "length": 4
+        "length": 2,
+        "reading": "かえ"
       },
       "1589350": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
-      "2020300": {
-        "start": 16,
-        "length": 1
+      "1864130": {
+        "start": 11,
+        "length": 2,
+        "reading": "かえ"
       }
     }
   },
@@ -755,27 +1157,33 @@
     "matches": {
       "1181560": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おうじょ"
       },
       "1238680": {
         "start": 29,
-        "length": 3
+        "length": 2,
+        "reading": "おどろい"
       },
       "1320830": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じつは"
       },
       "1415000": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1445650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1580290": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじょ"
       }
     }
   },
@@ -796,11 +1204,13 @@
     "matches": {
       "1445650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1451150": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       }
     }
   },
@@ -820,7 +1230,96 @@
     "matches": {
       "1445650": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
+      }
+    }
+  },
+  {
+    "id": "230164",
+    "original": "アメリカは奴隷制を廃止した。",
+    "en": [
+      {
+        "id": "67529",
+        "text": "America did away with slavery."
+      }
+    ],
+    "indices": "亜米利加{アメリカ} は 奴隷制~ を 廃止~ 為る(する){した}",
+    "vocabIds": [
+      "1445650",
+      "2566570",
+      "1374620",
+      "1472100"
+    ],
+    "matches": {
+      "1374620": {
+        "start": 7,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1445650": {
+        "start": 5,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1472100": {
+        "start": 9,
+        "length": 2,
+        "reading": "はいし"
+      },
+      "2566570": {
+        "start": 5,
+        "length": 3,
+        "reading": "どれいせい"
+      }
+    }
+  },
+  {
+    "id": "230183",
+    "original": "アメリカは1863年に奴隷制度を廃止した。",
+    "en": [
+      {
+        "id": "67549",
+        "text": "America did away with slavery in 1863."
+      },
+      {
+        "id": "10912646",
+        "text": "America abolished slavery in 1863."
+      }
+    ],
+    "indices": "亜米利加{アメリカ} は 年(ねん)[01] に 奴隷制度 を 廃止 為る(する){した}",
+    "vocabIds": [
+      "2084840",
+      "1445650",
+      "1762270",
+      "1374880",
+      "1472100"
+    ],
+    "matches": {
+      "1374880": {
+        "start": 13,
+        "length": 2,
+        "reading": "せいど"
+      },
+      "1445650": {
+        "start": 11,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1472100": {
+        "start": 16,
+        "length": 2,
+        "reading": "はいし"
+      },
+      "1762270": {
+        "start": 11,
+        "length": 4,
+        "reading": "どれいせいど"
+      },
+      "2084840": {
+        "start": 9,
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -839,28 +1338,363 @@
       "1342630",
       "1287830",
       "1445650",
-      "1378520"
+      "1378520",
+      "1378500"
     ],
     "matches": {
       "1287830": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こくじん"
       },
       "1342630": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しょき"
+      },
+      "1378500": {
+        "start": 20,
+        "length": 2,
+        "reading": "いき"
       },
       "1378520": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "いき"
       },
       "1445650": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1558050": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "れきし"
+      }
+    }
+  },
+  {
+    "id": "330800",
+    "original": "彼女は奴隷制終了のちょうど一世代後に生まれました。時は道に車もなく、そらに飛行機もなく時代です。その時彼女のような人は二つの理由で投票できませんでした。つまり、彼女が女性であったことと彼女の肌の色からです。",
+    "en": [
+      {
+        "id": "330541",
+        "text": "She was born just a generation past slavery; a time when there were no cars on the road or planes in the sky; when someone like her couldn't vote for two reasons — because she was a woman and because of the color of her skin."
+      }
+    ],
+    "indices": "",
+    "vocabIds": [
+      "1483150",
+      "1445650",
+      "2566570",
+      "1374620",
+      "1333040",
+      "1160790",
+      "1374190",
+      "1269320",
+      "2640160",
+      "1378690",
+      "1609350",
+      "1315840",
+      "1454080",
+      "1323080",
+      "1485470",
+      "1316300",
+      "2002300",
+      "1580640",
+      "1461160",
+      "1550140",
+      "1447320",
+      "1345250",
+      "1476450",
+      "2855897",
+      "1357600"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 13,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1269320": {
+        "start": 16,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1315840": {
+        "start": 25,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1316300": {
+        "start": 43,
+        "length": 2,
+        "reading": "じだい"
+      },
+      "1323080": {
+        "start": 29,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1333040": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅうりょう"
+      },
+      "1345250": {
+        "start": 83,
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1357600": {
+        "start": 97,
+        "length": 1,
+        "reading": "いろ"
+      },
+      "1374190": {
+        "start": 14,
+        "length": 2,
+        "reading": "せだい"
+      },
+      "1374620": {
+        "start": 5,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1378690": {
+        "start": 18,
+        "length": 3,
+        "reading": "うまれ"
+      },
+      "1445650": {
+        "start": 3,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1447320": {
+        "start": 65,
+        "length": 2,
+        "reading": "とうひょう"
+      },
+      "1454080": {
+        "start": 27,
+        "length": 1,
+        "reading": "みち"
+      },
+      "1461160": {
+        "start": 59,
+        "length": 2,
+        "reading": "ふたつ"
+      },
+      "1476450": {
+        "start": 95,
+        "length": 1,
+        "reading": "はだ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1485470": {
+        "start": 37,
+        "length": 3,
+        "reading": "ひこうき"
+      },
+      "1550140": {
+        "start": 62,
+        "length": 2,
+        "reading": "りゆう"
+      },
+      "1580640": {
+        "start": 57,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1609350": {
+        "start": 18,
+        "length": 3,
+        "reading": "うまれ"
+      },
+      "2002300": {
+        "start": 48,
+        "length": 3,
+        "reading": "そのとき"
+      },
+      "2566570": {
+        "start": 3,
+        "length": 3,
+        "reading": "どれいせい"
+      },
+      "2640160": {
+        "start": 16,
+        "length": 2,
+        "reading": "ごに"
+      },
+      "2855897": {
+        "start": 95,
+        "length": 3,
+        "reading": "はだのいろ"
+      }
+    }
+  },
+  {
+    "id": "347876",
+    "original": "奴隷制が終ってから一世代後に、彼女は生まれました。道路を走る自動車もなければ、空を飛ぶ飛行機もなかった時代です。その時代、彼女のような人はふたつの理由から投票できなかった。女性だから。そして皮膚の色ゆえに。",
+    "en": [
+      {
+        "id": "347788",
+        "text": "She was born just a generation past slavery. A time when there were no cars on the road or planes in the sky, when someone like her couldn't vote for two reasons: because she was a woman, and because of the color of her skin."
+      }
+    ],
+    "indices": "",
+    "vocabIds": [
+      "1445650",
+      "2566570",
+      "1374620",
+      "1160790",
+      "1374190",
+      "1269320",
+      "2640160",
+      "1483150",
+      "1378690",
+      "1609350",
+      "1454290",
+      "1402540",
+      "1318400",
+      "1245290",
+      "1890180",
+      "1429700",
+      "1485470",
+      "1316300",
+      "1580640",
+      "1550140",
+      "1447320",
+      "1345250",
+      "1483920",
+      "1357600"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 9,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1245290": {
+        "start": 39,
+        "length": 1,
+        "reading": "そら"
+      },
+      "1269320": {
+        "start": 12,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1316300": {
+        "start": 51,
+        "length": 2,
+        "reading": "じだい"
+      },
+      "1318400": {
+        "start": 30,
+        "length": 3,
+        "reading": "じどうしゃ"
+      },
+      "1345250": {
+        "start": 86,
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1357600": {
+        "start": 98,
+        "length": 1,
+        "reading": "いろ"
+      },
+      "1374190": {
+        "start": 10,
+        "length": 2,
+        "reading": "せだい"
+      },
+      "1374620": {
+        "start": 2,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1378690": {
+        "start": 18,
+        "length": 3,
+        "reading": "うまれ"
+      },
+      "1402540": {
+        "start": 28,
+        "length": 2,
+        "reading": "はしる"
+      },
+      "1429700": {
+        "start": 41,
+        "length": 2,
+        "reading": "とぶ"
+      },
+      "1445650": {
+        "start": 0,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1447320": {
+        "start": 77,
+        "length": 2,
+        "reading": "とうひょう"
+      },
+      "1454290": {
+        "start": 25,
+        "length": 2,
+        "reading": "どうろ"
+      },
+      "1483150": {
+        "start": 15,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483920": {
+        "start": 95,
+        "length": 2,
+        "reading": "ひふ"
+      },
+      "1485470": {
+        "start": 43,
+        "length": 3,
+        "reading": "ひこうき"
+      },
+      "1550140": {
+        "start": 73,
+        "length": 2,
+        "reading": "りゆう"
+      },
+      "1580640": {
+        "start": 67,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1609350": {
+        "start": 18,
+        "length": 3,
+        "reading": "うまれ"
+      },
+      "1890180": {
+        "start": 39,
+        "length": 4,
+        "reading": "そらをとぶ"
+      },
+      "2566570": {
+        "start": 0,
+        "length": 3,
+        "reading": "どれいせい"
+      },
+      "2640160": {
+        "start": 12,
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -875,31 +1709,166 @@
     ],
     "vocabIds": [
       "1316300",
+      "1236350",
+      "1236360",
       "1799720",
+      "1330880",
+      "1330910",
+      "1343100",
       "1330900",
+      "1322990",
       "1286170",
       "1445650"
     ],
     "matches": {
+      "1236350": {
+        "start": 10,
+        "length": 2,
+        "reading": "きょうせい"
+      },
+      "1236360": {
+        "start": 10,
+        "length": 4,
+        "reading": "きょうせいしゅうよう"
+      },
       "1286170": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "こっか"
       },
       "1316300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じだい"
+      },
+      "1322990": {
+        "start": 18,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1330880": {
+        "start": 12,
+        "length": 2,
+        "reading": "しゅうよう"
       },
       "1330900": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "しゅうようしゃ"
+      },
+      "1330910": {
+        "start": 12,
+        "length": 3,
+        "reading": "しゅうようしょ"
+      },
+      "1343100": {
+        "start": 14,
+        "length": 1,
+        "reading": "しょ"
       },
       "1445650": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1799720": {
         "start": 10,
-        "length": 5
+        "length": 5,
+        "reading": "きょうせいしゅうようしょ"
+      }
+    }
+  },
+  {
+    "id": "525302",
+    "original": "大統領は奴隷制度を廃止した。",
+    "en": [
+      {
+        "id": "275911",
+        "text": "The president abolished slavery."
+      },
+      {
+        "id": "525314",
+        "text": "The president has abolished slavery."
+      }
+    ],
+    "indices": "大統領 は 奴隷制度 を 廃止 為る(する){した}",
+    "vocabIds": [
+      "1414650",
+      "1445650",
+      "1762270",
+      "1374880",
+      "1472100"
+    ],
+    "matches": {
+      "1374880": {
+        "start": 6,
+        "length": 2,
+        "reading": "せいど"
+      },
+      "1414650": {
+        "start": 0,
+        "length": 3,
+        "reading": "だいとうりょう"
+      },
+      "1445650": {
+        "start": 4,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1472100": {
+        "start": 9,
+        "length": 2,
+        "reading": "はいし"
+      },
+      "1762270": {
+        "start": 4,
+        "length": 4,
+        "reading": "どれいせいど"
+      }
+    }
+  },
+  {
+    "id": "637886",
+    "original": "ヨーロッパでの奴隷制度の廃止は、やがてアメリカにも波及しました。",
+    "en": [
+      {
+        "id": "637887",
+        "text": "The abolition of slavery in Europe eventually reached America."
+      }
+    ],
+    "indices": "欧羅巴{ヨーロッパ} で(#2028980) の 奴隷制度 の 廃止 は 軈て{やがて} 亜米利加{アメリカ} に も 波及 為る(する){しました}",
+    "vocabIds": [
+      "1445650",
+      "1762270",
+      "1374880",
+      "1472100",
+      "1470990"
+    ],
+    "matches": {
+      "1374880": {
+        "start": 9,
+        "length": 2,
+        "reading": "せいど"
+      },
+      "1445650": {
+        "start": 7,
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1470990": {
+        "start": 25,
+        "length": 2,
+        "reading": "はきゅう"
+      },
+      "1472100": {
+        "start": 12,
+        "length": 2,
+        "reading": "はいし"
+      },
+      "1762270": {
+        "start": 7,
+        "length": 4,
+        "reading": "どれいせいど"
       }
     }
   },
@@ -919,11 +1888,13 @@
     "matches": {
       "1333090": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1445650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       }
     }
   },
@@ -938,21 +1909,42 @@
     ],
     "vocabIds": [
       "1445650",
+      "1343390",
       "1343430",
+      "1502390",
+      "1281020",
       "1281000"
     ],
     "matches": {
       "1281000": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1281020": {
+        "start": 9,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1343390": {
+        "start": 3,
+        "length": 2,
+        "reading": "しょゆう"
       },
       "1343430": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "しょゆうぶつ"
       },
       "1445650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
+      },
+      "1502390": {
+        "start": 5,
+        "length": 1,
+        "reading": "ぶつ"
       }
     }
   },
@@ -972,11 +1964,13 @@
     "matches": {
       "1153440": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "あつかっ"
       },
       "1445650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       }
     }
   },
@@ -1000,11 +1994,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1445650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       }
     }
   },
@@ -1026,19 +2022,23 @@
     "matches": {
       "1244350": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "くるしん"
       },
       "1304600": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ざんこく"
       },
       "1445650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どれい"
       },
       "1547270": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "よくあつ"
       }
     }
   }

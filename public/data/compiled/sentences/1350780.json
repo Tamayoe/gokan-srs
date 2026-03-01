@@ -17,15 +17,18 @@
     "matches": {
       "1350780": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "あせっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1500840": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ふくしゅう"
       }
     }
   },
@@ -42,25 +45,62 @@
     "vocabIds": [
       "1483070",
       "1422020",
-      "2451270",
+      "1326940",
+      "1350780"
+    ],
+    "matches": {
+      "1326940": {
+        "start": 5,
+        "length": 4,
+        "reading": "とりもどそ"
+      },
+      "1350780": {
+        "start": 11,
+        "length": 2,
+        "reading": "あせっ"
+      },
+      "1422020": {
+        "start": 2,
+        "length": 2,
+        "reading": "おくれ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "121477",
+    "original": "売り上げを伸ばそうと焦らなくてもいい。",
+    "en": [
+      {
+        "id": "282529",
+        "text": "Don't worry about making lots of sales."
+      }
+    ],
+    "indices": "売り上げ を 伸ばす{伸ばそう} と 焦る{焦らなくてもいい}",
+    "vocabIds": [
+      "1588500",
+      "1600290",
       "1350780"
     ],
     "matches": {
       "1350780": {
-        "start": 11,
-        "length": 3
+        "start": 10,
+        "length": 2,
+        "reading": "あせら"
       },
-      "1422020": {
-        "start": 2,
-        "length": 2
-      },
-      "1483070": {
+      "1588500": {
         "start": 0,
-        "length": 1
+        "length": 4,
+        "reading": "うりあげ"
       },
-      "2451270": {
+      "1600290": {
         "start": 5,
-        "length": 2
+        "length": 3,
+        "reading": "のばそ"
       }
     }
   },
@@ -81,11 +121,242 @@
     "matches": {
       "1350780": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "あせっ"
       },
       "1375690": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
+      }
+    }
+  },
+  {
+    "id": "146376",
+    "original": "焦らなくてもいいですよ。",
+    "en": [
+      {
+        "id": "19655",
+        "text": "You don't have to hurry."
+      }
+    ],
+    "indices": "焦る{焦らなくてもいい} です よ[01]",
+    "vocabIds": [
+      "1350780"
+    ],
+    "matches": {
+      "1350780": {
+        "start": 0,
+        "length": 2,
+        "reading": "あせら"
+      }
+    }
+  },
+  {
+    "id": "146377",
+    "original": "焦らずに頑張ってね。",
+    "en": [
+      {
+        "id": "268185",
+        "text": "Stay calm, and do your best."
+      },
+      {
+        "id": "1293077",
+        "text": "Stay calm and do your best."
+      }
+    ],
+    "indices": "焦らずに 頑張る{頑張って} ね(#2029080)[01]",
+    "vocabIds": [
+      "1350780",
+      "2073860",
+      "1217700",
+      "1949660"
+    ],
+    "matches": {
+      "1217700": {
+        "start": 4,
+        "length": 3,
+        "reading": "がんばっ"
+      },
+      "1350780": {
+        "start": 0,
+        "length": 2,
+        "reading": "あせら"
+      },
+      "1949660": {
+        "start": 4,
+        "length": 4,
+        "reading": "がんばって"
+      },
+      "2073860": {
+        "start": 0,
+        "length": 4,
+        "reading": "あせらずに"
+      }
+    }
+  },
+  {
+    "id": "146378",
+    "original": "焦らずに、目の前のステップを一つ一つのぼっていきたい。",
+    "en": [
+      {
+        "id": "268184",
+        "text": "I want to take things one step at a time without getting flustered. I want to live in the moment."
+      }
+    ],
+    "indices": "焦らずに 目の前 の ステップ(#1070550)[02]~ を 一つ一つ 登る[01]{のぼって} 行く{いき} たい",
+    "vocabIds": [
+      "1350780",
+      "2073860",
+      "1604890",
+      "1808020",
+      "1392580",
+      "1160820",
+      "1160830"
+    ],
+    "matches": {
+      "1160820": {
+        "start": 14,
+        "length": 2,
+        "reading": "ひとつ"
+      },
+      "1160830": {
+        "start": 14,
+        "length": 4,
+        "reading": "ひとつひとつ"
+      },
+      "1350780": {
+        "start": 0,
+        "length": 2,
+        "reading": "あせら"
+      },
+      "1392580": {
+        "start": 7,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1604890": {
+        "start": 5,
+        "length": 1,
+        "reading": "め"
+      },
+      "1808020": {
+        "start": 5,
+        "length": 3,
+        "reading": "めのまえ"
+      },
+      "2073860": {
+        "start": 0,
+        "length": 4,
+        "reading": "あせらずに"
+      }
+    }
+  },
+  {
+    "id": "168986",
+    "original": "司会者から、一言お祝いのスピーチって言われて焦ちゃったよ。",
+    "en": [
+      {
+        "id": "245501",
+        "text": "It made me nervous when I was asked by the host to offer some words of congratulation."
+      }
+    ],
+    "indices": "司会者~ から 一言 お祝い の スピーチ って 言う{言われて} 焦る{焦} じゃう{ちゃった} よ[01]",
+    "vocabIds": [
+      "1306640",
+      "1306650",
+      "1322990",
+      "1575990",
+      "1612770",
+      "1587040",
+      "1350780"
+    ],
+    "matches": {
+      "1306640": {
+        "start": 0,
+        "length": 2,
+        "reading": "しかい"
+      },
+      "1306650": {
+        "start": 0,
+        "length": 3,
+        "reading": "しかいしゃ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1350780": {
+        "start": 22,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1575990": {
+        "start": 6,
+        "length": 2,
+        "reading": "ひとこと"
+      },
+      "1587040": {
+        "start": 18,
+        "length": 2,
+        "reading": "いわ"
+      },
+      "1612770": {
+        "start": 8,
+        "length": 3,
+        "reading": "おいわい"
+      }
+    }
+  },
+  {
+    "id": "172640",
+    "original": "今は焦らずに時を待つべきだ。",
+    "en": [
+      {
+        "id": "241835",
+        "text": "We should not be rash now; we should wait for a good chance."
+      }
+    ],
+    "indices": "今(いま) は 焦らずに~ 時(とき) を 待つ[01] 可き{べき} だ",
+    "vocabIds": [
+      "1288850",
+      "1350780",
+      "2073860",
+      "1315840",
+      "1897280",
+      "1410590"
+    ],
+    "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1315840": {
+        "start": 6,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1350780": {
+        "start": 2,
+        "length": 2,
+        "reading": "あせら"
+      },
+      "1410590": {
+        "start": 8,
+        "length": 2,
+        "reading": "まつ"
+      },
+      "1897280": {
+        "start": 6,
+        "length": 4,
+        "reading": "ときをまつ"
+      },
+      "2073860": {
+        "start": 2,
+        "length": 4,
+        "reading": "あせらずに"
       }
     }
   },
@@ -103,24 +374,28 @@
       "1237180",
       "1237130",
       "1350780",
-      "1008870"
+      "1587040"
     ],
     "matches": {
-      "1008870": {
-        "start": 12,
-        "length": 5
-      },
       "1237130": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうし"
       },
       "1237180": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうしゅうじょ"
       },
       "1350780": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "あせる"
+      },
+      "1587040": {
+        "start": 13,
+        "length": 2,
+        "reading": "いわ"
       }
     }
   },
@@ -144,23 +419,28 @@
     "matches": {
       "1282100": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "こうどう"
       },
       "1350780": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "あせっ"
       },
       "1395620": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぜん"
       },
       "1478370": {
         "start": 18,
-        "length": 4
+        "length": 2,
+        "reading": "ともなわ"
       },
       "1591430": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きもち"
       }
     }
   },
@@ -176,16 +456,30 @@
     "indices": "今更{いまさら} 焦る{焦って} も 焼け石~ に 水(みず) だ{じゃない} 之(の)[06]{の}",
     "vocabIds": [
       "1350780",
-      "2152910"
+      "1742660",
+      "2152910",
+      "1371260"
     ],
     "matches": {
       "1350780": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "あせっ"
+      },
+      "1371260": {
+        "start": 12,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1742660": {
+        "start": 8,
+        "length": 3,
+        "reading": "やけいし"
       },
       "2152910": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "やけいしにみず"
       }
     }
   },
@@ -209,27 +503,53 @@
     "matches": {
       "1304970": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1343590": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しょむ"
       },
       "1350780": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "あせっ"
       },
       "1437260": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "てき"
       },
       "1552650": {
         "start": 19,
-        "length": 4
+        "length": 3,
+        "reading": "たまっ"
       },
       "1588810": {
         "start": 25,
-        "length": 6
+        "length": 4,
+        "reading": "おいつか"
+      }
+    }
+  },
+  {
+    "id": "894638",
+    "original": "焦らずのんびりやりましょうよ。",
+    "en": [
+      {
+        "id": "896035",
+        "text": "Let's do it at our own pace without hurrying."
+      }
+    ],
+    "vocabIds": [
+      "1350780"
+    ],
+    "matches": {
+      "1350780": {
+        "start": 0,
+        "length": 2,
+        "reading": "あせら"
       }
     }
   },
@@ -247,33 +567,33 @@
       "1355000",
       "1315840",
       "1422050",
-      "1350780",
-      "1215250"
+      "1350780"
     ],
     "matches": {
-      "1215250": {
-        "start": 39,
-        "length": 5
-      },
       "1315840": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1350780": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "あせっ"
       },
       "1355000": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "のりおくれ"
       },
       "1422050": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちこく"
       },
       "1443530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       }
     }
   },
@@ -291,17 +611,63 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2851233",
       "1350780"
     ],
     "matches": {
       "1350780": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "あせっ"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       },
       "2851233": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにを"
+      }
+    }
+  },
+  {
+    "id": "3480094",
+    "original": "焦っちゃだめだよ。最初から完璧にできる人なんていないんだから。",
+    "en": [
+      {
+        "id": "7910573",
+        "text": "Don’t fret about it. Nobody can do it perfectly from the start."
+      }
+    ],
+    "vocabIds": [
+      "1350780",
+      "1293990",
+      "1590970",
+      "1580640"
+    ],
+    "matches": {
+      "1293990": {
+        "start": 9,
+        "length": 2,
+        "reading": "さいしょ"
+      },
+      "1350780": {
+        "start": 0,
+        "length": 2,
+        "reading": "あせっ"
+      },
+      "1580640": {
+        "start": 19,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1590970": {
+        "start": 13,
+        "length": 2,
+        "reading": "かんぺき"
       }
     }
   },
@@ -320,7 +686,8 @@
     "matches": {
       "1350780": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "あせる"
       }
     }
   },
@@ -341,15 +708,18 @@
     "matches": {
       "1350780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あせる"
       },
       "1588730": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "えらん"
       },
       "1589220": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "おちつい"
       }
     }
   },
@@ -368,7 +738,8 @@
     "matches": {
       "1350780": {
         "start": 0,
-        "length": 4
+        "length": 2,
+        "reading": "あせら"
       }
     }
   },
@@ -383,16 +754,86 @@
     ],
     "vocabIds": [
       "1350780",
-      "1304960"
+      "1307550",
+      "1342540"
     ],
     "matches": {
-      "1304960": {
-        "start": 10,
-        "length": 4
+      "1307550": {
+        "start": 11,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 11,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1350780": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "あせっ"
+      }
+    }
+  },
+  {
+    "id": "10891217",
+    "original": "焦らず、一歩一歩歩むことが大切です。",
+    "en": [
+      {
+        "id": "11911273",
+        "text": "Without being hasty, it's important to move onwards step by step."
+      }
+    ],
+    "vocabIds": [
+      "1350780",
+      "1160790",
+      "1166460",
+      "1166470",
+      "1514290",
+      "1691050",
+      "1514360",
+      "1414340"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 4,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1166460": {
+        "start": 4,
+        "length": 2,
+        "reading": "いちほ"
+      },
+      "1166470": {
+        "start": 4,
+        "length": 4,
+        "reading": "いちほいちほ"
+      },
+      "1350780": {
+        "start": 0,
+        "length": 2,
+        "reading": "あせら"
+      },
+      "1414340": {
+        "start": 13,
+        "length": 2,
+        "reading": "たいせつ"
+      },
+      "1514290": {
+        "start": 5,
+        "length": 1,
+        "reading": "ほ"
+      },
+      "1514360": {
+        "start": 8,
+        "length": 2,
+        "reading": "あゆむ"
+      },
+      "1691050": {
+        "start": 5,
+        "length": 3,
+        "reading": "ほいちほ"
       }
     }
   }

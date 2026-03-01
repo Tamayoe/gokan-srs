@@ -1,35 +1,5 @@
 [
   {
-    "id": "89317",
-    "original": "彼女は私の目を見た。",
-    "en": [
-      {
-        "id": "314390",
-        "text": "She looked me in the eye."
-      }
-    ],
-    "indices": "彼女[01] は 私(わたし)[01]{私の} 目(め)[01] を 見る{見た}",
-    "vocabIds": [
-      "1483150",
-      "1311110",
-      "2179070"
-    ],
-    "matches": {
-      "1311110": {
-        "start": 3,
-        "length": 1
-      },
-      "1483150": {
-        "start": 0,
-        "length": 2
-      },
-      "2179070": {
-        "start": 5,
-        "length": 4
-      }
-    }
-  },
-  {
     "id": "93878",
     "original": "彼女の目を見ると猫を連想します。",
     "en": [
@@ -41,26 +11,42 @@
     "indices": "彼女[01]{彼女の} 目(め)[01] を 見る と 猫(ねこ)[01] を 連想 為る(する){します}",
     "vocabIds": [
       "1483150",
+      "1604890",
       "2179070",
+      "1259290",
       "1467640",
       "1559600"
     ],
     "matches": {
+      "1259290": {
+        "start": 5,
+        "length": 2,
+        "reading": "みる"
+      },
       "1467640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ねこ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1559600": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "れんそう"
+      },
+      "1604890": {
+        "start": 3,
+        "length": 1,
+        "reading": "め"
       },
       "2179070": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "めをみる"
       }
     }
   },
@@ -77,50 +63,41 @@
     "vocabIds": [
       "1311110",
       "1483150",
-      "2179070"
+      "1604890",
+      "2179070",
+      "1259290",
+      "1583260"
     ],
     "matches": {
+      "1259290": {
+        "start": 7,
+        "length": 2,
+        "reading": "みる"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1583260": {
+        "start": 11,
+        "length": 3,
+        "reading": "さけよ"
+      },
+      "1604890": {
+        "start": 5,
+        "length": 1,
+        "reading": "め"
       },
       "2179070": {
         "start": 5,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "203205",
-    "original": "だれかと握手するときは、その人の目を見なければなりません。",
-    "en": [
-      {
-        "id": "40442",
-        "text": "When you shake hands with somebody, you must look him in the eye."
-      }
-    ],
-    "indices": "誰か{だれか} と 握手 為る(する){する} 時(とき){とき} は 其の[01]{その} 人(ひと) の 目(め)[01] を 見る{見} ねばならない{なければなりません}",
-    "vocabIds": [
-      "1152730",
-      "2832864",
-      "2179070"
-    ],
-    "matches": {
-      "1152730": {
-        "start": 4,
-        "length": 2
-      },
-      "2179070": {
-        "start": 16,
-        "length": 4
-      },
-      "2832864": {
-        "start": 12,
-        "length": 3
+        "length": 4,
+        "reading": "めをみる"
       }
     }
   },
@@ -134,70 +111,25 @@
       }
     ],
     "vocabIds": [
-      "2179070"
+      "1604890",
+      "2179070",
+      "1259290"
     ],
     "matches": {
+      "1259290": {
+        "start": 7,
+        "length": 2,
+        "reading": "みる"
+      },
+      "1604890": {
+        "start": 5,
+        "length": 1,
+        "reading": "め"
+      },
       "2179070": {
         "start": 5,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "2472277",
-    "original": "34ページの下から7行目を見てください。",
-    "en": [
-      {
-        "id": "2594059",
-        "text": "Look at the seventh line from the bottom on page 34."
-      }
-    ],
-    "vocabIds": [
-      "1184140",
-      "2270390",
-      "2179070"
-    ],
-    "matches": {
-      "1184140": {
-        "start": 6,
-        "length": 1
-      },
-      "2179070": {
-        "start": 11,
-        "length": 4
-      },
-      "2270390": {
-        "start": 10,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "12211396",
-    "original": "ジリはおかしかった。リマは彼の目を見ただけで分かった。",
-    "en": [
-      {
-        "id": "11196244",
-        "text": "Ziri was crazy. Rima could see it in his eyes."
-      }
-    ],
-    "vocabIds": [
-      "1000420",
-      "2179070",
-      "1502920"
-    ],
-    "matches": {
-      "1000420": {
-        "start": 13,
-        "length": 2
-      },
-      "1502920": {
-        "start": 22,
-        "length": 4
-      },
-      "2179070": {
-        "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "めをみる"
       }
     }
   }

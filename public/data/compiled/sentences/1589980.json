@@ -16,11 +16,13 @@
     "matches": {
       "1549140": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たまご"
       },
       "1589980": {
         "start": 4,
-        "length": 6
+        "length": 4,
+        "reading": "かきまぜ"
       }
     }
   },
@@ -38,24 +40,34 @@
       "1549140",
       "1291600",
       "1465610",
+      "1465600",
       "1589980"
     ],
     "matches": {
       "1291600": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さとう"
+      },
+      "1465600": {
+        "start": 5,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
       },
       "1549140": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たまご"
       },
       "1589980": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "かきまぜ"
       }
     }
   },
@@ -77,15 +89,18 @@
     "matches": {
       "1305990": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589980": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "かきまぜ"
       }
     }
   },
@@ -106,11 +121,13 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589980": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "かきまぜ"
       }
     }
   },
@@ -127,20 +144,29 @@
     "vocabIds": [
       "1483150",
       "1465610",
+      "1465600",
       "1589980"
     ],
     "matches": {
+      "1465600": {
+        "start": 12,
+        "length": 2,
+        "reading": "いれ"
+      },
       "1465610": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589980": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "かきまぜ"
       }
     }
   },
@@ -158,24 +184,79 @@
       "1483070",
       "1002430",
       "1465610",
+      "1465600",
       "1589980"
     ],
     "matches": {
       "1002430": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おちゃ"
+      },
+      "1465600": {
+        "start": 9,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1589980": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "かきまぜ"
+      }
+    }
+  },
+  {
+    "id": "195557",
+    "original": "まず卵を強くかき混ぜそれをスープに加えます。",
+    "en": [
+      {
+        "id": "32731",
+        "text": "First beat the eggs and add them to the soup."
+      }
+    ],
+    "indices": "先ず[01]{まず} 卵(たまご)[01] を 強い(つよい){強く} かき混ぜる{かき混ぜ} 其れ[01]{それ} を スープ に 加える{加えます}",
+    "vocabIds": [
+      "1549140",
+      "1236070",
+      "1589980",
+      "1009710",
+      "1189960"
+    ],
+    "matches": {
+      "1009710": {
+        "start": 16,
+        "length": 3,
+        "reading": "にくわえ"
+      },
+      "1189960": {
+        "start": 17,
+        "length": 2,
+        "reading": "くわえ"
+      },
+      "1236070": {
+        "start": 4,
+        "length": 2,
+        "reading": "つよく"
+      },
+      "1549140": {
+        "start": 2,
+        "length": 1,
+        "reading": "たまご"
+      },
+      "1589980": {
+        "start": 6,
+        "length": 4,
+        "reading": "かきまぜ"
       }
     }
   },
@@ -190,27 +271,49 @@
     ],
     "indices": "其の[01]{その} 混ぜ物~ を かき混ぜる{かき混ぜて} 泡だつ{泡立ったら} 脇に置く{脇に置いて}~ 置く{おきましょう}",
     "vocabIds": [
+      "1290310",
       "1290320",
+      "1502390",
       "1589980",
       "1517550",
-      "1917310"
+      "1562530",
+      "1421850"
     ],
     "matches": {
+      "1290310": {
+        "start": 2,
+        "length": 2,
+        "reading": "まぜ"
+      },
       "1290320": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "まぜぶつ"
+      },
+      "1421850": {
+        "start": 19,
+        "length": 2,
+        "reading": "おい"
+      },
+      "1502390": {
+        "start": 4,
+        "length": 1,
+        "reading": "ぶつ"
       },
       "1517550": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "あわだっ"
+      },
+      "1562530": {
+        "start": 17,
+        "length": 1,
+        "reading": "わき"
       },
       "1589980": {
         "start": 6,
-        "length": 5
-      },
-      "1917310": {
-        "start": 17,
-        "length": 5
+        "length": 4,
+        "reading": "かきまぜ"
       }
     }
   },
@@ -229,7 +332,8 @@
     "matches": {
       "1589980": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "かきまぜ"
       }
     }
   },
@@ -252,7 +356,8 @@
     "matches": {
       "1589980": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "かきまぜ"
       }
     }
   },
@@ -267,21 +372,30 @@
     ],
     "vocabIds": [
       "1546040",
+      "1189960",
       "2527270",
       "1589980"
     ],
     "matches": {
+      "1189960": {
+        "start": 13,
+        "length": 2,
+        "reading": "くわえ"
+      },
       "1546040": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "とかし"
       },
       "1589980": {
         "start": 18,
-        "length": 5
+        "length": 4,
+        "reading": "かきまぜ"
       },
       "2527270": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "くわえて"
       }
     }
   },
@@ -296,16 +410,24 @@
     ],
     "vocabIds": [
       "1589980",
+      "1519210",
       "1409110"
     ],
     "matches": {
       "1409110": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "だめ"
+      },
+      "1519210": {
+        "start": 12,
+        "length": 2,
+        "reading": "わすれ"
       },
       "1589980": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "かきまぜる"
       }
     }
   }

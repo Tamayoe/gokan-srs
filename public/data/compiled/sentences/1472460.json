@@ -1,5 +1,113 @@
 [
   {
+    "id": "74095",
+    "original": "初期の自覚症状としては、排尿障害がありますが、多くの場合、はっきりとした症状がありません。",
+    "en": [
+      {
+        "id": "329625",
+        "text": "One of the early noticeable symptoms is trouble with urination, but often there are no clear symptoms."
+      }
+    ],
+    "indices": "初期{初期の} 自覚症状~ としては 排尿障害~ が 有る{あります} が 多くの場合 はっきり{はっきりと} 為る(する){した} 症状 が 有る{ありません}",
+    "vocabIds": [
+      "1342630",
+      "1317490",
+      "1317500",
+      "1351030",
+      "1472460",
+      "2261770",
+      "1352060",
+      "1861770",
+      "1407470",
+      "1355810"
+    ],
+    "matches": {
+      "1317490": {
+        "start": 3,
+        "length": 2,
+        "reading": "じかく"
+      },
+      "1317500": {
+        "start": 3,
+        "length": 4,
+        "reading": "じかくしょうじょう"
+      },
+      "1342630": {
+        "start": 0,
+        "length": 2,
+        "reading": "しょき"
+      },
+      "1351030": {
+        "start": 5,
+        "length": 2,
+        "reading": "しょうじょう"
+      },
+      "1352060": {
+        "start": 14,
+        "length": 2,
+        "reading": "しょうがい"
+      },
+      "1355810": {
+        "start": 26,
+        "length": 2,
+        "reading": "ばあい"
+      },
+      "1407470": {
+        "start": 23,
+        "length": 5,
+        "reading": "おおくのばあい"
+      },
+      "1472460": {
+        "start": 12,
+        "length": 2,
+        "reading": "はいにょう"
+      },
+      "1861770": {
+        "start": 23,
+        "length": 2,
+        "reading": "おおく"
+      },
+      "2261770": {
+        "start": 12,
+        "length": 4,
+        "reading": "はいにょうしょうがい"
+      }
+    }
+  },
+  {
+    "id": "121576",
+    "original": "排尿障害があります。",
+    "en": [
+      {
+        "id": "282429",
+        "text": "I have a urinary problem."
+      }
+    ],
+    "indices": "排尿障害 が[01] 有る{あります}",
+    "vocabIds": [
+      "1472460",
+      "2261770",
+      "1352060"
+    ],
+    "matches": {
+      "1352060": {
+        "start": 2,
+        "length": 2,
+        "reading": "しょうがい"
+      },
+      "1472460": {
+        "start": 0,
+        "length": 2,
+        "reading": "はいにょう"
+      },
+      "2261770": {
+        "start": 0,
+        "length": 4,
+        "reading": "はいにょうしょうがい"
+      }
+    }
+  },
+  {
     "id": "121577",
     "original": "排尿の終わり頃に痛みがあります。",
     "en": [
@@ -11,21 +119,42 @@
     "indices": "排尿~ の 終わり頃 に 痛み が[01] 有る{あります}",
     "vocabIds": [
       "1472460",
+      "1589600",
+      "1589590",
       "1863250",
+      "1579080",
       "1587300"
     ],
     "matches": {
       "1472460": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はいにょう"
+      },
+      "1579080": {
+        "start": 6,
+        "length": 1,
+        "reading": "ころ"
       },
       "1587300": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
+      },
+      "1589590": {
+        "start": 3,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おわり"
       },
       "1863250": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "おわりころ"
       }
     }
   },
@@ -45,21 +174,30 @@
     "indices": "排尿 の 時(とき) に 痛み が[01] 有る{あります}",
     "vocabIds": [
       "1472460",
+      "1315840",
       "2021540",
       "1587300"
     ],
     "matches": {
+      "1315840": {
+        "start": 3,
+        "length": 1,
+        "reading": "とき"
+      },
       "1472460": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はいにょう"
       },
       "1587300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       },
       "2021540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -74,21 +212,30 @@
     ],
     "vocabIds": [
       "1472460",
+      "1315840",
       "2021540",
       "1587300"
     ],
     "matches": {
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "じ"
+      },
       "1472460": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はいにょう"
       },
       "1587300": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       },
       "2021540": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じに"
       }
     }
   },
@@ -109,15 +256,18 @@
     "matches": {
       "1269320": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
       },
       "1472460": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はいにょう"
       },
       "1587300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       }
     }
   }

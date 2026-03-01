@@ -1,5 +1,50 @@
 [
   {
+    "id": "75478",
+    "original": "被写体に気づかれないようにそぉっとカメラを取り出し、ファインダーを覗く。",
+    "en": [
+      {
+        "id": "328240",
+        "text": "I quietly take out my camera, so as not to be noticed by my photographic subject, and peek through the finder."
+      }
+    ],
+    "indices": "被写体~ に 気付く{気づかれない} 様に{ように} そっと{そぉっと} カメラ を[01] 取り出す{取り出し} ファインダー~ を 覗く[01]",
+    "vocabIds": [
+      "1484470",
+      "1591330",
+      "1222530",
+      "1326770",
+      "1470840"
+    ],
+    "matches": {
+      "1222530": {
+        "start": 4,
+        "length": 4,
+        "reading": "きづかれ"
+      },
+      "1326770": {
+        "start": 21,
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1470840": {
+        "start": 33,
+        "length": 2,
+        "reading": "のぞく"
+      },
+      "1484470": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひしゃたい"
+      },
+      "1591330": {
+        "start": 4,
+        "length": 3,
+        "reading": "きづか"
+      }
+    }
+  },
+  {
     "id": "75857",
     "original": "適合率とは取り出した記事のうち、どの程度の記事が検索条件に合っているかを示す指標です。",
     "en": [
@@ -10,11 +55,15 @@
     ],
     "indices": "適合率~ とは 取り出す[02]{取り出した}~ 記事 之(の)[01]{の} 内(うち){うち} 何の(どの){どの} 程度 之(の)[01]{の} 記事 が 検索条件~ に 合う{合っている} か を 示す 指標 です",
     "vocabIds": [
+      "1437390",
       "2209630",
+      "1551200",
       "1326770",
       "1223240",
       "1436540",
+      "1257900",
       "2209940",
+      "1356510",
       "1284430",
       "1317110",
       "1309990"
@@ -22,35 +71,63 @@
     "matches": {
       "1223240": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "きじ"
+      },
+      "1257900": {
+        "start": 24,
+        "length": 2,
+        "reading": "けんさく"
       },
       "1284430": {
         "start": 29,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
       },
       "1309990": {
         "start": 38,
-        "length": 2
+        "length": 2,
+        "reading": "しひょう"
       },
       "1317110": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "しめす"
       },
       "1326770": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1356510": {
+        "start": 26,
+        "length": 2,
+        "reading": "じょうけん"
       },
       "1436540": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ていど"
+      },
+      "1437390": {
+        "start": 0,
+        "length": 2,
+        "reading": "てきごう"
+      },
+      "1551200": {
+        "start": 2,
+        "length": 1,
+        "reading": "りつ"
       },
       "2209630": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "てきごうりつ"
       },
       "2209940": {
         "start": 24,
-        "length": 4
+        "length": 4,
+        "reading": "けんさくじょうけん"
       }
     }
   },
@@ -73,19 +150,50 @@
     "matches": {
       "1296970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さいふ"
       },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1326770": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
+      }
+    }
+  },
+  {
+    "id": "91554",
+    "original": "彼女はペンをポケットから取り出しました。",
+    "en": [
+      {
+        "id": "312159",
+        "text": "She took a pen out of her pocket."
+      }
+    ],
+    "indices": "彼女[01] は ペン を ポケット から 取り出す[01]{取り出しました}",
+    "vocabIds": [
+      "1483150",
+      "1326770"
+    ],
+    "matches": {
+      "1326770": {
+        "start": 12,
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -102,25 +210,74 @@
     "vocabIds": [
       "1483150",
       "1328160",
+      "1577100",
       "1188270",
       "1326770"
     ],
     "matches": {
       "1188270": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1326770": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1328160": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "てさげ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1577100": {
+        "start": 8,
+        "length": 1,
+        "reading": "なに"
+      }
+    }
+  },
+  {
+    "id": "93144",
+    "original": "彼女はオーブンから何か取り出そうとしてかがんでいた。",
+    "en": [
+      {
+        "id": "310565",
+        "text": "She was stooping to take something out of the oven."
+      }
+    ],
+    "indices": "彼女[01] は オーブン から 何か 取り出す[01]{取り出そう} として[04] 屈む{かがんでいた}",
+    "vocabIds": [
+      "1483150",
+      "1577100",
+      "1188270",
+      "1326770"
+    ],
+    "matches": {
+      "1188270": {
+        "start": 9,
+        "length": 2,
+        "reading": "なにか"
+      },
+      "1326770": {
+        "start": 11,
+        "length": 4,
+        "reading": "とりだそ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -143,19 +300,23 @@
     "matches": {
       "1160820": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ひとつ"
       },
       "1326770": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1549140": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たまご"
       }
     }
   },
@@ -173,24 +334,34 @@
       "1483070",
       "1522150",
       "1326770",
+      "1456360",
       "1456130"
     ],
     "matches": {
       "1326770": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1456130": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "よみ"
+      },
+      "1456360": {
+        "start": 13,
+        "length": 2,
+        "reading": "よみ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -206,26 +377,48 @@
     "indices": "彼(かれ)[01] は 千円札 を 財布 から 取り出す[01]{取り出した}",
     "vocabIds": [
       "1483070",
+      "1388740",
       "1388790",
+      "1175570",
+      "1298970",
       "1296970",
       "1326770"
     ],
     "matches": {
+      "1175570": {
+        "start": 3,
+        "length": 1,
+        "reading": "えん"
+      },
       "1296970": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さいふ"
+      },
+      "1298970": {
+        "start": 4,
+        "length": 1,
+        "reading": "さつ"
       },
       "1326770": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1388740": {
+        "start": 2,
+        "length": 1,
+        "reading": "せん"
       },
       "1388790": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "せんえんさつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -241,21 +434,36 @@
     "indices": "彼(かれ)[01] は 数枚 の コイン を 取り出す[01]{取り出した}",
     "vocabIds": [
       "1483070",
+      "1580820",
       "1373280",
+      "1524610",
       "1326770"
     ],
     "matches": {
       "1326770": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1373280": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すうまい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1524610": {
+        "start": 3,
+        "length": 1,
+        "reading": "まい"
+      },
+      "1580820": {
+        "start": 2,
+        "length": 1,
+        "reading": "すう"
       }
     }
   },
@@ -277,15 +485,18 @@
     "matches": {
       "1326770": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580340": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "うわぎ"
       }
     }
   },
@@ -306,6 +517,7 @@
     "vocabIds": [
       "1483070",
       "1331740",
+      "1392580",
       "1392590",
       "1348470",
       "1326770",
@@ -315,31 +527,43 @@
     "matches": {
       "1326770": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1331740": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうしん"
       },
       "1348470": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こぜに"
       },
       "1352130": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
+      },
+      "1392580": {
+        "start": 4,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1421850": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "おく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -363,23 +587,28 @@
     "matches": {
       "1200480": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ふところ"
       },
       "1296970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さいふ"
       },
       "1326770": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580340": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "うわぎ"
       }
     }
   },
@@ -401,15 +630,18 @@
     "matches": {
       "1296970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さいふ"
       },
       "1326770": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -433,23 +665,28 @@
     "matches": {
       "1201490": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かいすい"
       },
       "1254870": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "けっしょう"
       },
       "1326770": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1576630": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "しお"
       }
     }
   },
@@ -465,31 +702,36 @@
     "indices": "彼(かれ)[01] は 引き出し{引出し} を[01] 開ける(あける){開けて} 手紙 を 取り出す[01]{取り出した}",
     "vocabIds": [
       "1483070",
-      "1339160",
       "1202450",
+      "2810010",
       "1327720",
       "1326770"
     ],
     "matches": {
       "1202450": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "あけ"
       },
       "1326770": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1327720": {
         "start": 10,
-        "length": 2
-      },
-      "1339160": {
-        "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2810010": {
+        "start": 6,
+        "length": 2,
+        "reading": "あけ"
       }
     }
   },
@@ -505,26 +747,42 @@
     "indices": "彼(かれ)[01] は 一枚(いちまい) の 紙(かみ) 切れ を 取り出す[01]{取り出した}",
     "vocabIds": [
       "1483070",
+      "1160790",
       "1166710",
+      "1524610",
       "1636280",
       "1326770"
     ],
     "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
       "1166710": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いちまい"
       },
       "1326770": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1524610": {
+        "start": 3,
+        "length": 1,
+        "reading": "まい"
       },
       "1636280": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かみきれ"
       }
     }
   },
@@ -540,21 +798,30 @@
     "indices": "彼(かれ)[01] は ポケット から 何か を 取り出す[01]{取り出した}",
     "vocabIds": [
       "1483070",
+      "1577100",
       "1188270",
       "1326770"
     ],
     "matches": {
       "1188270": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1326770": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 8,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -575,11 +842,13 @@
     "matches": {
       "1326770": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -601,15 +870,18 @@
     "matches": {
       "1326770": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1348410": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "こぎって"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -630,11 +902,13 @@
     "matches": {
       "1326770": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -655,11 +929,13 @@
     "matches": {
       "1326770": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -688,11 +964,13 @@
     "matches": {
       "1326770": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -714,15 +992,18 @@
     "matches": {
       "1326770": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1524610": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "まい"
       }
     }
   },
@@ -743,11 +1024,13 @@
     "matches": {
       "1326770": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -765,24 +1048,34 @@
       "1387990",
       "1585650",
       "1202450",
+      "2810010",
       "1326770"
     ],
     "matches": {
       "1202450": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "あけ"
       },
       "1326770": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1387990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1585650": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "はこ"
+      },
+      "2810010": {
+        "start": 5,
+        "length": 2,
+        "reading": "あけ"
       }
     }
   },
@@ -804,15 +1097,18 @@
     "matches": {
       "1255060": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ち"
       },
       "1326770": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "とりだす"
       },
       "1382440": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
       }
     }
   },
@@ -830,39 +1126,58 @@
       "1311110",
       "1483070",
       "1585650",
+      "1577100",
       "1188270",
       "1433870",
       "1326770",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1188270": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1259290": {
         "start": 25,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1326770": {
         "start": 19,
-        "length": 4
+        "length": 4,
+        "reading": "とりだす"
       },
       "1433870": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "つぼ"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
       },
       "1585650": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "はこ"
+      },
+      "2256270": {
+        "start": 25,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -877,17 +1192,37 @@
     ],
     "indices": "一本 の チョーク(#1078240) を 取り出す[01]{取り出した}",
     "vocabIds": [
+      "1160790",
       "1166600",
+      "1522150",
+      "1011740",
       "1326770"
     ],
     "matches": {
+      "1011740": {
+        "start": 1,
+        "length": 2,
+        "reading": "ほんの"
+      },
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1166600": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちほん"
       },
       "1326770": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1522150": {
+        "start": 1,
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -903,21 +1238,30 @@
     "indices": "は 卵(たまご)[01] を 一つずつ~ 取り出す[01]{取り出した}",
     "vocabIds": [
       "1549140",
+      "1160820",
       "1575930",
       "1326770"
     ],
     "matches": {
+      "1160820": {
+        "start": 7,
+        "length": 2,
+        "reading": "ひとつ"
+      },
       "1326770": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1549140": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "たまご"
       },
       "1575930": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "ひとつずつ"
       }
     }
   },
@@ -935,24 +1279,28 @@
       "1326770",
       "1483070",
       "1214540",
-      "2810010"
+      "1202450"
     ],
     "matches": {
+      "1202450": {
+        "start": 14,
+        "length": 3,
+        "reading": "あけよ"
+      },
       "1214540": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "かん"
       },
       "1326770": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 10,
-        "length": 1
-      },
-      "2810010": {
-        "start": 14,
-        "length": 2
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -973,11 +1321,64 @@
     "matches": {
       "1260490": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かぎ"
       },
       "1326770": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
+      }
+    }
+  },
+  {
+    "id": "394136",
+    "original": "マッチ箱をひとつと、糸の通った針を取り出します。",
+    "en": [
+      {
+        "id": "394137",
+        "text": "Take out a matchbox and a needle and thread."
+      }
+    ],
+    "indices": "マッチ箱 を 一つ{ひとつ} と 糸(いと) の 通る[04]{通った} 針[01] を 取り出す{取り出します}",
+    "vocabIds": [
+      "2521000",
+      "1585650",
+      "1311450",
+      "1433030",
+      "1366210",
+      "1326770"
+    ],
+    "matches": {
+      "1311450": {
+        "start": 10,
+        "length": 1,
+        "reading": "いと"
+      },
+      "1326770": {
+        "start": 17,
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1366210": {
+        "start": 15,
+        "length": 1,
+        "reading": "はり"
+      },
+      "1433030": {
+        "start": 12,
+        "length": 2,
+        "reading": "とおっ"
+      },
+      "1585650": {
+        "start": 3,
+        "length": 1,
+        "reading": "ばこ"
+      },
+      "2521000": {
+        "start": 0,
+        "length": 4,
+        "reading": "まっちばこ"
       }
     }
   },
@@ -994,40 +1395,103 @@
     "vocabIds": [
       "1214330",
       "1320970",
+      "1416830",
       "1416850",
       "1201490",
       "1576630",
       "1326770",
-      "1004550"
+      "1340450",
+      "1340430"
     ],
     "matches": {
-      "1004550": {
-        "start": 19,
-        "length": 7
-      },
       "1201490": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かいすい"
       },
       "1214330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かんたん"
       },
       "1320970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じっけん"
       },
       "1326770": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "とりだす"
+      },
+      "1340430": {
+        "start": 22,
+        "length": 2,
+        "reading": "でき"
+      },
+      "1340450": {
+        "start": 22,
+        "length": 2,
+        "reading": "でき"
+      },
+      "1416830": {
+        "start": 6,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416850": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "だれでも"
       },
       "1576630": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "しお"
+      }
+    }
+  },
+  {
+    "id": "939219",
+    "original": "彼のかばんから何も取り出さなかった。",
+    "en": [
+      {
+        "id": "689924",
+        "text": "I did not take anything from his bag."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1577100",
+      "1188490",
+      "1326770"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1188490": {
+        "start": 7,
+        "length": 2,
+        "reading": "なにも"
+      },
+      "1326770": {
+        "start": 9,
+        "length": 4,
+        "reading": "とりださ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 7,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -1042,21 +1506,36 @@
     ],
     "vocabIds": [
       "1549140",
+      "1160790",
       "1162290",
+      "1264740",
       "1326770"
     ],
     "matches": {
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
       "1162290": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いちこ"
+      },
+      "1264740": {
+        "start": 8,
+        "length": 1,
+        "reading": "こ"
       },
       "1326770": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1549140": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "たまご"
       }
     }
   },
@@ -1075,7 +1554,8 @@
     "matches": {
       "1326770": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       }
     }
   },
@@ -1098,23 +1578,28 @@
     "matches": {
       "1280530": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうか"
       },
       "1326770": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1522150": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1558050": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "れきし"
       }
     }
   },
@@ -1134,11 +1619,57 @@
     "matches": {
       "1208910": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かばん"
       },
       "1326770": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
+      }
+    }
+  },
+  {
+    "id": "2064416",
+    "original": "トムは自分の書類カバンからスコッチのボトルを取り出し、メアリーに手渡した。",
+    "en": [
+      {
+        "id": "1867839",
+        "text": "Tom took the bottle of Scotch from his briefcase and handed it to Mary."
+      }
+    ],
+    "vocabIds": [
+      "1318610",
+      "1344200",
+      "1326770",
+      "1328210",
+      "1328200"
+    ],
+    "matches": {
+      "1318610": {
+        "start": 3,
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1326770": {
+        "start": 22,
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1328200": {
+        "start": 32,
+        "length": 3,
+        "reading": "てわたし"
+      },
+      "1328210": {
+        "start": 32,
+        "length": 3,
+        "reading": "てわたし"
+      },
+      "1344200": {
+        "start": 6,
+        "length": 2,
+        "reading": "しょるい"
       }
     }
   },
@@ -1157,7 +1688,8 @@
     "matches": {
       "1326770": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       }
     }
   },
@@ -1173,20 +1705,29 @@
     "vocabIds": [
       "1242850",
       "1202450",
+      "2810010",
       "1326770"
     ],
     "matches": {
       "1202450": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "あけ"
       },
       "1242850": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きんこ"
       },
       "1326770": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "2810010": {
+        "start": 6,
+        "length": 2,
+        "reading": "あけ"
       }
     }
   },
@@ -1201,21 +1742,36 @@
     ],
     "vocabIds": [
       "1580340",
+      "1200590",
       "1200600",
+      "1443660",
       "1326770"
     ],
     "matches": {
+      "1200590": {
+        "start": 12,
+        "length": 2,
+        "reading": "かいちゅう"
+      },
       "1200600": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "かいちゅうでんとう"
       },
       "1326770": {
         "start": 17,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1443660": {
+        "start": 14,
+        "length": 2,
+        "reading": "でんとう"
       },
       "1580340": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "うわぎ"
       }
     }
   },
@@ -1235,11 +1791,13 @@
     "matches": {
       "1326770": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1463520": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "にく"
       }
     }
   },
@@ -1258,7 +1816,164 @@
     "matches": {
       "1326770": {
         "start": 18,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
+      }
+    }
+  },
+  {
+    "id": "9257758",
+    "original": "彼は自分の万年筆を取り出しました。",
+    "en": [
+      {
+        "id": "9116243",
+        "text": "He took out his fountain pen."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1318610",
+      "1526360",
+      "1326770"
+    ],
+    "matches": {
+      "1318610": {
+        "start": 2,
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1326770": {
+        "start": 9,
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1526360": {
+        "start": 5,
+        "length": 3,
+        "reading": "まんねんひつ"
+      }
+    }
+  },
+  {
+    "id": "9735112",
+    "original": "「ジュースが欲しい人は？」アンナは食器棚のジューサーを取り出しながら尋ねました。",
+    "en": [
+      {
+        "id": "9689791",
+        "text": "\"Who wants juice?\" asked Anna as she took the juicer out of the cupboard."
+      }
+    ],
+    "vocabIds": [
+      "1547330",
+      "1580640",
+      "1358430",
+      "1660270",
+      "1416700",
+      "1326770",
+      "1369940",
+      "2835838"
+    ],
+    "matches": {
+      "1326770": {
+        "start": 27,
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1358430": {
+        "start": 17,
+        "length": 2,
+        "reading": "しょっき"
+      },
+      "1369940": {
+        "start": 34,
+        "length": 2,
+        "reading": "たずね"
+      },
+      "1416700": {
+        "start": 19,
+        "length": 1,
+        "reading": "たな"
+      },
+      "1547330": {
+        "start": 6,
+        "length": 3,
+        "reading": "ほしい"
+      },
+      "1580640": {
+        "start": 9,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1660270": {
+        "start": 17,
+        "length": 3,
+        "reading": "しょっきたな"
+      },
+      "2835838": {
+        "start": 34,
+        "length": 2,
+        "reading": "たずね"
+      }
+    }
+  },
+  {
+    "id": "9735114",
+    "original": "「ジュースが飲みたい人！」アンナは戸棚からジューサーを取り出しながら聞きました。",
+    "en": [
+      {
+        "id": "9689791",
+        "text": "\"Who wants juice?\" asked Anna as she took the juicer out of the cupboard."
+      }
+    ],
+    "vocabIds": [
+      "1169870",
+      "2151640",
+      "1580640",
+      "1267050",
+      "1326770",
+      "1591110",
+      "2701450"
+    ],
+    "matches": {
+      "1169870": {
+        "start": 6,
+        "length": 2,
+        "reading": "のみ"
+      },
+      "1267050": {
+        "start": 17,
+        "length": 2,
+        "reading": "とだな"
+      },
+      "1326770": {
+        "start": 27,
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1580640": {
+        "start": 10,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1591110": {
+        "start": 34,
+        "length": 2,
+        "reading": "きき"
+      },
+      "2151640": {
+        "start": 6,
+        "length": 2,
+        "reading": "のみ"
+      },
+      "2701450": {
+        "start": 34,
+        "length": 2,
+        "reading": "きき"
       }
     }
   },
@@ -1272,37 +1987,43 @@
       }
     ],
     "vocabIds": [
-      "1621290",
-      "1400150",
+      "1397310",
       "1601650",
+      "1202450",
       "2810010",
       "1337000",
       "1326770"
     ],
     "matches": {
+      "1202450": {
+        "start": 11,
+        "length": 2,
+        "reading": "あけ"
+      },
       "1326770": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1337000": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "じゅう"
       },
-      "1400150": {
-        "start": 4,
-        "length": 2
+      "1397310": {
+        "start": 3,
+        "length": 3,
+        "reading": "すばやく"
       },
       "1601650": {
         "start": 6,
-        "length": 4
-      },
-      "1621290": {
-        "start": 3,
-        "length": 1
+        "length": 4,
+        "reading": "ひきだし"
       },
       "2810010": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "あけ"
       }
     }
   },
@@ -1322,11 +2043,13 @@
     "matches": {
       "1326770": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1601650": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "ひきだし"
       }
     }
   },
@@ -1346,11 +2069,13 @@
     "matches": {
       "1323080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1326770": {
         "start": 24,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       }
     }
   },
@@ -1377,26 +2102,106 @@
     ],
     "vocabIds": [
       "1327190",
+      "1465610",
       "1465600",
+      "1348410",
       "2866149",
+      "1427520",
       "1326770"
     ],
     "matches": {
       "1326770": {
         "start": 22,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       },
       "1327190": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "て"
+      },
+      "1348410": {
+        "start": 17,
+        "length": 3,
+        "reading": "こぎって"
+      },
+      "1427520": {
+        "start": 20,
+        "length": 1,
+        "reading": "ちょう"
       },
       "1465600": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1465610": {
+        "start": 14,
+        "length": 2,
+        "reading": "いれ"
       },
       "2866149": {
         "start": 17,
-        "length": 4
+        "length": 4,
+        "reading": "こぎってちょう"
+      }
+    }
+  },
+  {
+    "id": "11589160",
+    "original": "トムは雑誌を取り出し、読み始めた。",
+    "en": [
+      {
+        "id": "3171170",
+        "text": "Tom took out a magazine and began to read it."
+      },
+      {
+        "id": "12223453",
+        "text": "Tom took out a magazine and started reading."
+      },
+      {
+        "id": "12223456",
+        "text": "Tom took out a magazine and began reading."
+      }
+    ],
+    "vocabIds": [
+      "1299400",
+      "1326770",
+      "1456360",
+      "1456130",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1299400": {
+        "start": 3,
+        "length": 2,
+        "reading": "ざっし"
+      },
+      "1307550": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1326770": {
+        "start": 6,
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1342540": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1456130": {
+        "start": 11,
+        "length": 2,
+        "reading": "よみ"
+      },
+      "1456360": {
+        "start": 11,
+        "length": 2,
+        "reading": "よみ"
       }
     }
   },
@@ -1420,11 +2225,13 @@
     "matches": {
       "1250680": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "けいたい"
       },
       "1326770": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       }
     }
   },
@@ -1438,22 +2245,43 @@
       }
     ],
     "vocabIds": [
+      "1278070",
       "2729090",
+      "1585650",
       "1202450",
+      "2810010",
       "1326770"
     ],
     "matches": {
       "1202450": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "あけ"
+      },
+      "1278070": {
+        "start": 3,
+        "length": 2,
+        "reading": "こうぐ"
       },
       "1326770": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
+      },
+      "1585650": {
+        "start": 5,
+        "length": 1,
+        "reading": "ばこ"
       },
       "2729090": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "こうぐばこ"
+      },
+      "2810010": {
+        "start": 7,
+        "length": 2,
+        "reading": "あけ"
       }
     }
   },
@@ -1472,7 +2300,8 @@
     "matches": {
       "1326770": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "とりだし"
       }
     }
   }

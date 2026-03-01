@@ -13,24 +13,34 @@
       "1440710",
       "1270720",
       "1349440",
-      "1369940"
+      "1369940",
+      "2835838"
     ],
     "matches": {
       "1270720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
       },
       "1349440": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "うけたまわっ"
       },
       "1369940": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "たずね"
       },
       "1440710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "てんしゅ"
+      },
+      "2835838": {
+        "start": 17,
+        "length": 2,
+        "reading": "たずね"
       }
     }
   },
@@ -45,6 +55,7 @@
     ],
     "indices": "誰か が ご用{御用} を 伺う[01]{伺っている} でしょうか",
     "vocabIds": [
+      "1416830",
       "1416840",
       "1270720",
       "1305700"
@@ -52,45 +63,23 @@
     "matches": {
       "1270720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
       },
       "1305700": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "うかがっ"
+      },
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416840": {
         "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "139840",
-    "original": "足元に御用心願います。",
-    "en": [
-      {
-        "id": "274497",
-        "text": "Do watch your step."
-      }
-    ],
-    "indices": "足元 に 御(ご) 用心 願う[03]{願います}~",
-    "vocabIds": [
-      "1586390",
-      "1270720",
-      "1793910"
-    ],
-    "matches": {
-      "1270720": {
-        "start": 3,
-        "length": 2
-      },
-      "1586390": {
-        "start": 0,
-        "length": 2
-      },
-      "1793910": {
-        "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
       }
     }
   },
@@ -106,16 +95,18 @@
     "indices": "ご用{御用} は 何(なに)[01] でしょうか",
     "vocabIds": [
       "1270720",
-      "1611020"
+      "1577100"
     ],
     "matches": {
       "1270720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
       },
-      "1611020": {
+      "1577100": {
         "start": 3,
-        "length": 2
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -135,7 +126,8 @@
     "matches": {
       "1270720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
       }
     }
   },
@@ -151,31 +143,48 @@
     "indices": "君たち の 内(うち){うち} 誰か この方(このかた)[03] の ご用{御用} を 伺う[01]{伺っている} か",
     "vocabIds": [
       "1247310",
+      "1416830",
       "1416840",
       "1663210",
+      "1516930",
       "1270720",
       "1305700"
     ],
     "matches": {
       "1247310": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きみたち"
       },
       "1270720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
       },
       "1305700": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "うかがっ"
+      },
+      "1416830": {
+        "start": 6,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416840": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
+      },
+      "1516930": {
+        "start": 10,
+        "length": 1,
+        "reading": "ほう"
       },
       "1663210": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "このほう"
       }
     }
   },
@@ -190,17 +199,25 @@
     ],
     "indices": "何か ご用{御用} ですか",
     "vocabIds": [
+      "1577100",
       "1188270",
       "1270720"
     ],
     "matches": {
       "1188270": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1270720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -215,17 +232,25 @@
     ],
     "indices": "何か ご用{御用} が[01] 有る{あります} か",
     "vocabIds": [
+      "1577100",
       "1188270",
       "1270720"
     ],
     "matches": {
       "1188270": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1270720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -245,32 +270,8 @@
     "matches": {
       "1270720": {
         "start": 10,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "199694",
-    "original": "とりわけスリに御用心。",
-    "en": [
-      {
-        "id": "36896",
-        "text": "Above all, beware of pickpockets."
-      }
-    ],
-    "indices": "取り分け{とりわけ} 掏摸{スリ} に 御(ご) 用心",
-    "vocabIds": [
-      "1270720",
-      "1360480"
-    ],
-    "matches": {
-      "1270720": {
-        "start": 7,
-        "length": 2
-      },
-      "1360480": {
-        "start": 9,
-        "length": 1
+        "length": 2,
+        "reading": "ごよう"
       }
     }
   },
@@ -292,65 +293,61 @@
     "matches": {
       "1270720": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
       },
       "1546220": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "1584660": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
   {
-    "id": "214115",
-    "original": "スリに御用心。",
+    "id": "227416",
+    "original": "お安い御用ですよ。",
     "en": [
       {
-        "id": "51401",
-        "text": "Be on your guard against pickpockets."
+        "id": "413611",
+        "text": "No problem!"
+      },
+      {
+        "id": "1285608",
+        "text": "No sooner said than done."
       }
     ],
-    "indices": "掏摸{スリ} に 御(ご) 用心",
+    "indices": "お安い御用 です よ",
     "vocabIds": [
-      "1270720",
-      "1360480"
+      "2256380",
+      "2076340",
+      "1153670",
+      "1270720"
     ],
     "matches": {
+      "1153670": {
+        "start": 1,
+        "length": 2,
+        "reading": "やすい"
+      },
       "1270720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
       },
-      "1360480": {
-        "start": 5,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "224639",
-    "original": "ここでは、すりに御用心ください。",
-    "en": [
-      {
-        "id": "61965",
-        "text": "Beware of pickpockets here."
-      }
-    ],
-    "indices": "此処[01]{ここ} で(#2028980) は 掏摸{すり} に 御(ご) 用心 下さい{ください}",
-    "vocabIds": [
-      "1270720",
-      "1360480"
-    ],
-    "matches": {
-      "1270720": {
-        "start": 8,
-        "length": 2
+      "2076340": {
+        "start": 0,
+        "length": 5,
+        "reading": "おやすいごよう"
       },
-      "1360480": {
-        "start": 10,
-        "length": 1
+      "2256380": {
+        "start": 0,
+        "length": 3,
+        "reading": "おやすい"
       }
     }
   },
@@ -365,16 +362,18 @@
     ],
     "vocabIds": [
       "1270720",
-      "2464480"
+      "1349440"
     ],
     "matches": {
       "1270720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ごよう"
       },
-      "2464480": {
+      "1349440": {
         "start": 6,
-        "length": 1
+        "length": 2,
+        "reading": "うけたまわり"
       }
     }
   }

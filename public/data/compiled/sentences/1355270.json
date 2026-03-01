@@ -12,50 +12,192 @@
     "vocabIds": [
       "1558370",
       "1355270",
+      "1269320",
       "1269350",
       "1311110",
       "1296970",
       "1191730",
-      "1849920",
-      "1221520",
-      "1495740"
+      "1849920"
     ],
     "matches": {
       "1191730": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
-      "1221520": {
-        "start": 27,
-        "length": 1
+      "1269320": {
+        "start": 7,
+        "length": 1,
+        "reading": "のち"
       },
       "1269350": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "のちで"
       },
       "1296970": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "さいふ"
       },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1355270": {
         "start": 3,
-        "length": 2
-      },
-      "1495740": {
-        "start": 29,
-        "length": 3
+        "length": 2,
+        "reading": "じょうしゃ"
       },
       "1558370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "1849920": {
         "start": 17,
-        "length": 5
+        "length": 4,
+        "reading": "おきわすれ"
+      }
+    }
+  },
+  {
+    "id": "146143",
+    "original": "乗車券を売っている窓口はどこですか。",
+    "en": [
+      {
+        "id": "268419",
+        "text": "Where is the ticket-selling window?"
+      }
+    ],
+    "indices": "乗車券 を 売る{売っている} 窓口[01] は 何処{どこ} ですか",
+    "vocabIds": [
+      "1355270",
+      "1355290",
+      "1256730",
+      "1473950",
+      "1401420"
+    ],
+    "matches": {
+      "1256730": {
+        "start": 2,
+        "length": 1,
+        "reading": "けん"
+      },
+      "1355270": {
+        "start": 0,
+        "length": 2,
+        "reading": "じょうしゃ"
+      },
+      "1355290": {
+        "start": 0,
+        "length": 3,
+        "reading": "じょうしゃけん"
+      },
+      "1401420": {
+        "start": 9,
+        "length": 2,
+        "reading": "まどぐち"
+      },
+      "1473950": {
+        "start": 4,
+        "length": 2,
+        "reading": "うっ"
+      }
+    }
+  },
+  {
+    "id": "146144",
+    "original": "乗車券が見つからない。落としてしまったにちがいない。",
+    "en": [
+      {
+        "id": "268418",
+        "text": "I can't find my ticket. I must have lost it."
+      },
+      {
+        "id": "6681166",
+        "text": "I can't find my ticket. I must've lost it."
+      }
+    ],
+    "indices": "乗車券 が 見つかる{見つからない} 落とす[01]{落として} 仕舞う{しまった} に 違いない{ちがいない}",
+    "vocabIds": [
+      "1355270",
+      "1355290",
+      "1256730",
+      "1604550",
+      "1589260",
+      "2512880"
+    ],
+    "matches": {
+      "1256730": {
+        "start": 2,
+        "length": 1,
+        "reading": "けん"
+      },
+      "1355270": {
+        "start": 0,
+        "length": 2,
+        "reading": "じょうしゃ"
+      },
+      "1355290": {
+        "start": 0,
+        "length": 3,
+        "reading": "じょうしゃけん"
+      },
+      "1589260": {
+        "start": 11,
+        "length": 3,
+        "reading": "おとし"
+      },
+      "1604550": {
+        "start": 4,
+        "length": 4,
+        "reading": "みつから"
+      },
+      "2512880": {
+        "start": 11,
+        "length": 3,
+        "reading": "おとし"
+      }
+    }
+  },
+  {
+    "id": "146145",
+    "original": "乗車券が見つからない。",
+    "en": [
+      {
+        "id": "268417",
+        "text": "I can't find my ticket."
+      }
+    ],
+    "indices": "乗車券 が 見つかる{見つからない}",
+    "vocabIds": [
+      "1355270",
+      "1355290",
+      "1256730",
+      "1604550"
+    ],
+    "matches": {
+      "1256730": {
+        "start": 2,
+        "length": 1,
+        "reading": "けん"
+      },
+      "1355270": {
+        "start": 0,
+        "length": 2,
+        "reading": "じょうしゃ"
+      },
+      "1355290": {
+        "start": 0,
+        "length": 3,
+        "reading": "じょうしゃけん"
+      },
+      "1604550": {
+        "start": 4,
+        "length": 4,
+        "reading": "みつから"
       }
     }
   },
@@ -75,7 +217,96 @@
     "matches": {
       "1355270": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じょうしゃ"
+      }
+    }
+  },
+  {
+    "id": "219157",
+    "original": "この列車乗車券は３カ月有効だ。",
+    "en": [
+      {
+        "id": "56473",
+        "text": "This ticket is valid for three months."
+      }
+    ],
+    "indices": "此の{この} 列車 乗車券 は ヶ月{カ月} 有効 だ",
+    "vocabIds": [
+      "1558370",
+      "1355270",
+      "1355290",
+      "1256730",
+      "1541290"
+    ],
+    "matches": {
+      "1256730": {
+        "start": 6,
+        "length": 1,
+        "reading": "けん"
+      },
+      "1355270": {
+        "start": 4,
+        "length": 2,
+        "reading": "じょうしゃ"
+      },
+      "1355290": {
+        "start": 4,
+        "length": 3,
+        "reading": "じょうしゃけん"
+      },
+      "1541290": {
+        "start": 11,
+        "length": 2,
+        "reading": "ゆうこう"
+      },
+      "1558370": {
+        "start": 2,
+        "length": 2,
+        "reading": "れっしゃ"
+      }
+    }
+  },
+  {
+    "id": "236266",
+    "original": "「乗車券を拝見できますか」「はい、どうぞ」",
+    "en": [
+      {
+        "id": "73632",
+        "text": "\"Will you show me your ticket?\" \"Yes, of course.\""
+      },
+      {
+        "id": "1190206",
+        "text": "\"Can I see your ticket?\" \"Yes. Here it is.\""
+      }
+    ],
+    "indices": "乗車券~ を 拝見{拝見できますか} はい[01] どうぞ[02]",
+    "vocabIds": [
+      "1355270",
+      "1355290",
+      "1256730",
+      "1472270"
+    ],
+    "matches": {
+      "1256730": {
+        "start": 3,
+        "length": 1,
+        "reading": "けん"
+      },
+      "1355270": {
+        "start": 1,
+        "length": 2,
+        "reading": "じょうしゃ"
+      },
+      "1355290": {
+        "start": 1,
+        "length": 3,
+        "reading": "じょうしゃけん"
+      },
+      "1472270": {
+        "start": 5,
+        "length": 2,
+        "reading": "はいけん"
       }
     }
   },
@@ -90,16 +321,24 @@
     ],
     "vocabIds": [
       "1355270",
+      "1217950",
       "1217900"
     ],
     "matches": {
       "1217900": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねがい"
+      },
+      "1217950": {
+        "start": 3,
+        "length": 2,
+        "reading": "ねがい"
       },
       "1355270": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "じょうしゃ"
       }
     }
   },
@@ -115,25 +354,47 @@
     "vocabIds": [
       "1355270",
       "1296300",
+      "1172830",
       "1172870",
-      "1284930"
+      "1327190",
+      "1284930",
+      "1402730"
     ],
     "matches": {
+      "1172830": {
+        "start": 5,
+        "length": 2,
+        "reading": "うんてん"
+      },
       "1172870": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "うんてんしゅ"
       },
       "1284930": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "あいず"
       },
       "1296300": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "さい"
+      },
+      "1327190": {
+        "start": 7,
+        "length": 1,
+        "reading": "しゅ"
       },
       "1355270": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じょうしゃ"
+      },
+      "1402730": {
+        "start": 12,
+        "length": 2,
+        "reading": "おくら"
       }
     }
   }

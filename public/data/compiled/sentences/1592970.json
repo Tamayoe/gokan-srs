@@ -11,16 +11,30 @@
     "indices": "昨日{きのう} 交差点 で(#2028980) お釜を掘る[02]{お釜を掘られ}~ じゃう{ちゃった} よ[01]",
     "vocabIds": [
       "1592970",
-      "1270270"
+      "1270270",
+      "1209080",
+      "1246690"
     ],
     "matches": {
+      "1209080": {
+        "start": 8,
+        "length": 1,
+        "reading": "かま"
+      },
+      "1246690": {
+        "start": 10,
+        "length": 2,
+        "reading": "ほら"
+      },
       "1270270": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おかま"
       },
       "1592970": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -36,8 +50,6 @@
     "indices": "僕(ぼく)[01] の 錆び付く{錆付いた} フォード[02] が 故障[01] 為る(する){して} 交差点 を 塞ぐ{塞いで} 仕舞う{しまった}",
     "vocabIds": [
       "1521400",
-      "1593820",
-      "1495740",
       "1267180",
       "1592970",
       "1602590"
@@ -45,27 +57,23 @@
     "matches": {
       "1267180": {
         "start": 11,
-        "length": 2
-      },
-      "1495740": {
-        "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "こしょう"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1592970": {
         "start": 16,
-        "length": 3
-      },
-      "1593820": {
-        "start": 2,
-        "length": 1
+        "length": 3,
+        "reading": "こうさてん"
       },
       "1602590": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "ふさい"
       }
     }
   },
@@ -82,30 +90,59 @@
     "vocabIds": [
       "1483070",
       "1592970",
+      "1434920",
       "1943040",
+      "1359240",
       "1260140",
-      "1655350"
+      "1410010",
+      "1655350",
+      "1323080"
     ],
     "matches": {
       "1260140": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "みおとし"
+      },
+      "1323080": {
+        "start": 21,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1359240": {
+        "start": 8,
+        "length": 2,
+        "reading": "しんごう"
+      },
+      "1410010": {
+        "start": 19,
+        "length": 2,
+        "reading": "たいこう"
+      },
+      "1434920": {
+        "start": 6,
+        "length": 2,
+        "reading": "ていし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1592970": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       },
       "1655350": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "たいこうしゃ"
       },
       "1943040": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "ていししんごう"
       }
     }
   },
@@ -130,11 +167,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1592970": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -149,42 +188,73 @@
     ],
     "indices": "道なり~ に 進む(すすむ){進んで} 三つ(みっつ) 目(め)[07] の 交差点 を 左(ひだり)[01] に 曲がる[02]{曲がって} 下さい",
     "vocabIds": [
+      "1454080",
       "2138440",
+      "1365980",
       "2399750",
       "1299740",
       "1604890",
       "1592970",
-      "1608460",
+      "1290800",
+      "1239730",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 22,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1239730": {
+        "start": 18,
+        "length": 3,
+        "reading": "まがっ"
+      },
+      "1290800": {
+        "start": 16,
+        "length": 1,
+        "reading": "ひだり"
       },
       "1299740": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "みっつ"
+      },
+      "1365980": {
+        "start": 4,
+        "length": 2,
+        "reading": "すすん"
+      },
+      "1454080": {
+        "start": 0,
+        "length": 1,
+        "reading": "みち"
       },
       "1592970": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       },
       "1604890": {
         "start": 10,
-        "length": 1
-      },
-      "1608460": {
-        "start": 16,
-        "length": 6
+        "length": 1,
+        "reading": "め"
       },
       "2138440": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "みちなり"
       },
       "2399750": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "すすんで"
       }
     }
   },
@@ -203,16 +273,24 @@
     ],
     "vocabIds": [
       "1592970",
-      "2827742"
+      "1171010",
+      "1239730"
     ],
     "matches": {
+      "1171010": {
+        "start": 6,
+        "length": 1,
+        "reading": "みぎ"
+      },
+      "1239730": {
+        "start": 8,
+        "length": 3,
+        "reading": "まがっ"
+      },
       "1592970": {
         "start": 2,
-        "length": 3
-      },
-      "2827742": {
-        "start": 6,
-        "length": 6
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -234,24 +312,34 @@
       "1316380",
       "1592970",
       "1171010",
+      "1239730",
       "1630280"
     ],
     "matches": {
       "1171010": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "みぎ"
+      },
+      "1239730": {
+        "start": 8,
+        "length": 3,
+        "reading": "まがり"
       },
       "1316380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1592970": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       },
       "1630280": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "まがり"
       }
     }
   },
@@ -268,25 +356,29 @@
     "vocabIds": [
       "1316380",
       "1592970",
-      "1589060",
+      "1578850",
       "1290930"
     ],
     "matches": {
       "1290930": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "させつ"
       },
       "1316380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
-      "1589060": {
+      "1578850": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
       "1592970": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -309,19 +401,23 @@
     "matches": {
       "1223680": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "おこっ"
       },
       "1242160": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "1313850": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       },
       "1592970": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -348,19 +444,23 @@
     "matches": {
       "1223640": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
       },
       "1242160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "1313850": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       },
       "1592970": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -377,20 +477,29 @@
     "vocabIds": [
       "1592970",
       "2838012",
-      "1040190"
+      "1040190",
+      "1956200"
     ],
     "matches": {
       "1040190": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "がすけつ"
       },
       "1592970": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
+      },
+      "1956200": {
+        "start": 9,
+        "length": 1,
+        "reading": "けつ"
       },
       "2838012": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "まんなか"
       }
     }
   },
@@ -408,34 +517,52 @@
       "1592970",
       "1359240",
       "1603990",
+      "1272280",
       "1272350",
+      "1313850",
       "1580820",
       "1602440"
     ],
     "matches": {
+      "1272280": {
+        "start": 9,
+        "length": 2,
+        "reading": "こうつう"
+      },
       "1272350": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "こうつうじこ"
+      },
+      "1313850": {
+        "start": 11,
+        "length": 2,
+        "reading": "じこ"
       },
       "1359240": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しんごう"
       },
       "1580820": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "かず"
       },
       "1592970": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       },
       "1602440": {
         "start": 16,
-        "length": 4
+        "length": 2,
+        "reading": "ふえ"
       },
       "1603990": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "まち"
       }
     }
   },
@@ -454,27 +581,25 @@
     ],
     "indices": "其の[01]{その} 事故 は 彼の(あの){あの} 交差点 で(#2028980) 起こる{起こった}",
     "vocabIds": [
-      "2665570",
-      "1267120",
+      "1313850",
       "1592970",
       "1223680"
     ],
     "matches": {
       "1223680": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "おこっ"
       },
-      "1267120": {
-        "start": 3,
-        "length": 1
+      "1313850": {
+        "start": 2,
+        "length": 2,
+        "reading": "じこ"
       },
       "1592970": {
         "start": 7,
-        "length": 3
-      },
-      "2665570": {
-        "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -489,32 +614,49 @@
     ],
     "indices": "せっかち{せっかちな}~ 運転者 が 赤信号 を 無視 為る(する){して} 交差点 を 通り抜ける{通りぬけた}",
     "vocabIds": [
+      "1172830",
       "1172860",
+      "1322990",
       "1634690",
       "1530020",
       "1592970",
       "1432920"
     ],
     "matches": {
+      "1172830": {
+        "start": 5,
+        "length": 2,
+        "reading": "うんてん"
+      },
       "1172860": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "うんてんしゃ"
+      },
+      "1322990": {
+        "start": 7,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1432920": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "とおり"
       },
       "1530020": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "むし"
       },
       "1592970": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       },
       "1634690": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "あかしんごう"
       }
     }
   },
@@ -530,21 +672,30 @@
     "indices": "此の{この} 交差点 は 何(なに)[01] と 呼ばれる[02]{呼ばれています} か",
     "vocabIds": [
       "1592970",
+      "1577100",
       "1188410",
-      "1631030"
+      "1266440"
     ],
     "matches": {
       "1188410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "なにと"
+      },
+      "1266440": {
+        "start": 8,
+        "length": 2,
+        "reading": "よば"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なに"
       },
       "1592970": {
         "start": 2,
-        "length": 3
-      },
-      "1631030": {
-        "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -570,15 +721,18 @@
     "matches": {
       "1223680": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "おこっ"
       },
       "1577100": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
       "1592970": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -607,15 +761,18 @@
     "matches": {
       "1313850": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       },
       "1477620": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はっせい"
       },
       "1592970": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -635,20 +792,29 @@
     "vocabIds": [
       "1316380",
       "1592970",
-      "2827742"
+      "1171010",
+      "1239730"
     ],
     "matches": {
+      "1171010": {
+        "start": 6,
+        "length": 1,
+        "reading": "みぎ"
+      },
+      "1239730": {
+        "start": 8,
+        "length": 3,
+        "reading": "まがっ"
+      },
       "1316380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1592970": {
         "start": 2,
-        "length": 3
-      },
-      "2827742": {
-        "start": 6,
-        "length": 6
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -668,11 +834,13 @@
     "matches": {
       "1313850": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       },
       "1592970": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -692,20 +860,29 @@
     "vocabIds": [
       "1316380",
       "1592970",
-      "2827742"
+      "1171010",
+      "1239730"
     ],
     "matches": {
+      "1171010": {
+        "start": 6,
+        "length": 1,
+        "reading": "みぎ"
+      },
+      "1239730": {
+        "start": 8,
+        "length": 3,
+        "reading": "まがっ"
+      },
       "1316380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1592970": {
         "start": 2,
-        "length": 3
-      },
-      "2827742": {
-        "start": 6,
-        "length": 6
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -721,20 +898,23 @@
     "vocabIds": [
       "1592970",
       "1531710",
-      "1611020"
+      "1577100"
     ],
     "matches": {
       "1531710": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "なまえ"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
       },
       "1592970": {
         "start": 2,
-        "length": 3
-      },
-      "1611020": {
-        "start": 9,
-        "length": 2
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   },
@@ -755,15 +935,18 @@
     "matches": {
       "1223640": {
         "start": 7,
-        "length": 5
+        "length": 2,
+        "reading": "おき"
       },
       "1313850": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
       },
       "1592970": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "こうさてん"
       }
     }
   }

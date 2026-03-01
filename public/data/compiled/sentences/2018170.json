@@ -1,50 +1,5 @@
 [
   {
-    "id": "76115",
-    "original": "山の麓に日が昇るが早いかただ一人山を登り始めた。",
-    "en": [
-      {
-        "id": "327603",
-        "text": "The sun had barely risen at the foot of the mountain when she set out alone up the slope."
-      }
-    ],
-    "indices": "山(やま)[01] の 麓~ に 日(ひ)[02] が 登る[02]{昇る} が早いか~ 唯{ただ} 一人 山(やま)[01] を 登る{登り} 始める[03]{始めた}",
-    "vocabIds": [
-      "1302680",
-      "1611440",
-      "1463770",
-      "2018170",
-      "1576150",
-      "1307550"
-    ],
-    "matches": {
-      "1302680": {
-        "start": 0,
-        "length": 1
-      },
-      "1307550": {
-        "start": 20,
-        "length": 3
-      },
-      "1463770": {
-        "start": 4,
-        "length": 1
-      },
-      "1576150": {
-        "start": 14,
-        "length": 2
-      },
-      "1611440": {
-        "start": 2,
-        "length": 1
-      },
-      "2018170": {
-        "start": 8,
-        "length": 4
-      }
-    }
-  },
-  {
     "id": "3416710",
     "original": "タクシーと地下鉄、どっちで行くほうが早いかな？",
     "en": [
@@ -56,20 +11,29 @@
     "vocabIds": [
       "1420900",
       "1578850",
-      "2018170"
+      "2018170",
+      "1404975"
     ],
     "matches": {
+      "1404975": {
+        "start": 18,
+        "length": 2,
+        "reading": "はやい"
+      },
       "1420900": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ちかてつ"
       },
       "1578850": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "2018170": {
         "start": 17,
-        "length": 4
+        "length": 4,
+        "reading": "がはやいか"
       }
     }
   },
@@ -84,51 +48,78 @@
     ],
     "vocabIds": [
       "1330290",
+      "1589600",
       "1589590",
       "1532910",
       "2018170",
+      "1404975",
       "1379380",
       "1416220",
       "1237150",
       "1338240",
-      "1589060"
+      "1896380",
+      "1578850"
     ],
     "matches": {
       "1237150": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "きょうしつ"
       },
       "1330290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1338240": {
         "start": 24,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1379380": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
+      },
+      "1404975": {
+        "start": 13,
+        "length": 2,
+        "reading": "はやい"
       },
       "1416220": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1532910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "なる"
       },
-      "1589060": {
+      "1578850": {
         "start": 26,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
       "1589590": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1896380": {
+        "start": 24,
+        "length": 1,
+        "reading": "で"
       },
       "2018170": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "がはやいか"
       }
     }
   },
@@ -143,11 +134,14 @@
     ],
     "vocabIds": [
       "1240200",
+      "1241850",
       "1727150",
+      "1595240",
       "1359240",
       "1357600",
       "1510790",
       "2018170",
+      "1404975",
       "1497610",
       "1323080",
       "1477610"
@@ -155,105 +149,63 @@
     "matches": {
       "1240200": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きわめて"
+      },
+      "1241850": {
+        "start": 3,
+        "length": 2,
+        "reading": "きんきゅう"
       },
       "1323080": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1357600": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "いろ"
       },
       "1359240": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しんごう"
+      },
+      "1404975": {
+        "start": 22,
+        "length": 2,
+        "reading": "はやい"
       },
       "1477610": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "はっしん"
       },
       "1497610": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1510790": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "かわる"
+      },
+      "1595240": {
+        "start": 5,
+        "length": 2,
+        "reading": "じたい"
       },
       "1727150": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "きんきゅうじたい"
       },
       "2018170": {
         "start": 21,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "11554921",
-    "original": "オンライン申請する方が早いかもね。",
-    "en": [
-      {
-        "id": "11554704",
-        "text": "If you apply online, it might be faster."
-      },
-      {
-        "id": "11554920",
-        "text": "It may be faster if you apply online."
-      }
-    ],
-    "vocabIds": [
-      "1363130",
-      "1516930",
-      "2018170"
-    ],
-    "matches": {
-      "1363130": {
-        "start": 5,
-        "length": 2
-      },
-      "1516930": {
-        "start": 9,
-        "length": 1
-      },
-      "2018170": {
-        "start": 10,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "11554922",
-    "original": "オンラインで申し込む方が早いかもよ。",
-    "en": [
-      {
-        "id": "11554920",
-        "text": "It may be faster if you apply online."
-      },
-      {
-        "id": "11554704",
-        "text": "If you apply online, it might be faster."
-      }
-    ],
-    "vocabIds": [
-      "1362890",
-      "1516930",
-      "2018170"
-    ],
-    "matches": {
-      "1362890": {
-        "start": 6,
-        "length": 4
-      },
-      "1516930": {
-        "start": 10,
-        "length": 1
-      },
-      "2018170": {
-        "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "がはやいか"
       }
     }
   }

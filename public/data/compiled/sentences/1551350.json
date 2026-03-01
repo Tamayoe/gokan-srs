@@ -1,5 +1,80 @@
 [
   {
+    "id": "76461",
+    "original": "ふと通りに目をやると、行き交う人の中に、１人立ち止まり俺を見下ろす者がいた。",
+    "en": [
+      {
+        "id": "327259",
+        "text": "As I glanced at the street there was somebody looking down at me in the middle of those walking past each other."
+      }
+    ],
+    "indices": "不図{ふと} 通り(とおり) に 目をやる と 行き交う~ 人(ひと) の 中(なか) に 一人{１人} 立ち止まる{立ち止まり} 俺(おれ) を 見下ろす 者(もの) が 居る(いる)[01]{いた}",
+    "vocabIds": [
+      "1432920",
+      "1604890",
+      "1535190",
+      "1281700",
+      "1580640",
+      "1423310",
+      "1551350",
+      "1576870",
+      "1259370",
+      "1322990"
+    ],
+    "matches": {
+      "1259370": {
+        "start": 29,
+        "length": 4,
+        "reading": "みおろす"
+      },
+      "1281700": {
+        "start": 11,
+        "length": 4,
+        "reading": "いきかう"
+      },
+      "1322990": {
+        "start": 33,
+        "length": 1,
+        "reading": "もの"
+      },
+      "1423310": {
+        "start": 17,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1432920": {
+        "start": 2,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1535190": {
+        "start": 5,
+        "length": 4,
+        "reading": "めをやる"
+      },
+      "1551350": {
+        "start": 22,
+        "length": 5,
+        "reading": "たちどまり"
+      },
+      "1576870": {
+        "start": 27,
+        "length": 1,
+        "reading": "おれ"
+      },
+      "1580640": {
+        "start": 15,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1604890": {
+        "start": 5,
+        "length": 1,
+        "reading": "め"
+      }
+    }
+  },
+  {
     "id": "77276",
     "original": "老人は休むために少しの間立ち止まった。",
     "en": [
@@ -19,23 +94,28 @@
     "matches": {
       "1215230": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1227560": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1348870": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1551350": {
         "start": 12,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1561090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ろうじん"
       }
     }
   },
@@ -53,24 +133,73 @@
       "1553210",
       "1551350",
       "1311110",
-      "1855740"
+      "1454080",
+      "1591110"
     ],
     "matches": {
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1454080": {
+        "start": 11,
+        "length": 1,
+        "reading": "みち"
       },
       "1551350": {
         "start": 3,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1553210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たびびと"
       },
-      "1855740": {
-        "start": 11,
-        "length": 5
+      "1591110": {
+        "start": 13,
+        "length": 2,
+        "reading": "きい"
+      }
+    }
+  },
+  {
+    "id": "87663",
+    "original": "彼女は突然立ち止まり、あたりを見回した。",
+    "en": [
+      {
+        "id": "316045",
+        "text": "Suddenly, she stopped and looked around."
+      }
+    ],
+    "indices": "彼女[01] は 突然 立ち止まる{立ち止まり} 辺り(あたり)[01]{あたり} を 見回す{見回した}",
+    "vocabIds": [
+      "1483150",
+      "1457040",
+      "1551350",
+      "1259400"
+    ],
+    "matches": {
+      "1259400": {
+        "start": 15,
+        "length": 3,
+        "reading": "みまわし"
+      },
+      "1457040": {
+        "start": 3,
+        "length": 2,
+        "reading": "とつぜん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1551350": {
+        "start": 5,
+        "length": 5,
+        "reading": "たちどまり"
       }
     }
   },
@@ -87,40 +216,59 @@
     "vocabIds": [
       "1483150",
       "1238550",
+      "1392580",
       "1392590",
       "1551350",
       "1288510",
       "1318610",
-      "1428830"
+      "1428830",
+      "1610960"
     ],
     "matches": {
       "1238550": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かがみ"
       },
       "1288510": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "ほれぼれ"
       },
       "1318610": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1392580": {
+        "start": 5,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1428830": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "ながめ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1551350": {
         "start": 7,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
+      },
+      "1610960": {
+        "start": 22,
+        "length": 2,
+        "reading": "ながめ"
       }
     }
   },
@@ -147,19 +295,23 @@
     "matches": {
       "1228260": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "すう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1551350": {
         "start": 11,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1597150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たばこ"
       }
     }
   },
@@ -181,15 +333,18 @@
     "matches": {
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1551350": {
         "start": 8,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1562350": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はなす"
       }
     }
   },
@@ -211,15 +366,18 @@
     "matches": {
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1551350": {
         "start": 8,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1562350": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はなす"
       }
     }
   },
@@ -235,21 +393,18 @@
     "indices": "彼(かれ)[01] は 立ち止まる{立ち止まって}~ ポスター~ を 覗き込む{のぞき込んだ}",
     "vocabIds": [
       "1483070",
-      "1551350",
-      "1593410"
+      "1551350"
     ],
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551350": {
         "start": 2,
-        "length": 6
-      },
-      "1593410": {
-        "start": 16,
-        "length": 3
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -267,29 +422,40 @@
       "1483070",
       "1551350",
       "1454080",
-      "2270390",
-      "1281020"
+      "1578850",
+      "1281020",
+      "1281000"
     ],
     "matches": {
+      "1281000": {
+        "start": 19,
+        "length": 2,
+        "reading": "かんがえ"
+      },
       "1281020": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1454080": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "みち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551350": {
         "start": 2,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
-      "2270390": {
+      "1578850": {
         "start": 14,
-        "length": 1
+        "length": 2,
+        "reading": "いこ"
       }
     }
   },
@@ -315,15 +481,18 @@
     "matches": {
       "1228260": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "すっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551350": {
         "start": 2,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -340,25 +509,35 @@
     "vocabIds": [
       "1483070",
       "1584800",
+      "1228560",
       "2269050",
       "1551350"
     ],
     "matches": {
+      "1228560": {
+        "start": 8,
+        "length": 1,
+        "reading": "きゅう"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551350": {
         "start": 10,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1584800": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "もん"
       },
       "2269050": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -376,34 +555,46 @@
       "1483070",
       "1311110",
       "1551350",
-      "1600900",
+      "1562300",
+      "1228650",
       "1228570",
       "1432980"
     ],
     "matches": {
       "1228570": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 18,
+        "length": 2,
+        "reading": "いそい"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1432980": {
         "start": 21,
-        "length": 5
+        "length": 4,
+        "reading": "とおりすぎ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551350": {
         "start": 4,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
-      "1600900": {
+      "1562300": {
         "start": 10,
-        "length": 1
+        "length": 4,
+        "reading": "はなしかけ"
       }
     }
   },
@@ -419,26 +610,36 @@
     "indices": "彼(かれ)[01] は 急に 立ち止まる{立ち止まって} 振り返る[02]{ふり返った}",
     "vocabIds": [
       "1483070",
+      "1228560",
       "2269050",
       "1551350",
       "1512150"
     ],
     "matches": {
+      "1228560": {
+        "start": 2,
+        "length": 1,
+        "reading": "きゅう"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512150": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "かえっ"
       },
       "1551350": {
         "start": 4,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "2269050": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -454,21 +655,30 @@
     "indices": "彼(かれ)[01] は 急に 立ち止まる{立ち止まった}",
     "vocabIds": [
       "1483070",
+      "1228560",
       "2269050",
       "1551350"
     ],
     "matches": {
+      "1228560": {
+        "start": 2,
+        "length": 1,
+        "reading": "きゅう"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551350": {
         "start": 4,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "2269050": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -491,19 +701,23 @@
     "matches": {
       "1333440": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "けとばし"
       },
       "1348400": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こいし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551350": {
         "start": 6,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -530,19 +744,23 @@
     "matches": {
       "1157080": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ため"
       },
       "1228260": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "すう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551350": {
         "start": 10,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -564,15 +782,18 @@
     "matches": {
       "1157070": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いす"
       },
       "1419990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1551350": {
         "start": 11,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -588,41 +809,54 @@
     "indices": "自分 が 何処{どこ} に 居る(いる)[01]{いる} の か 分かる{分からなくて} 彼女[01] は 路上 で(#2028980) 立ち止まる{立ち止まって} 道(みち) を 尋ねる[01]{尋ねた}",
     "vocabIds": [
       "1318610",
-      "1502860",
+      "1606560",
       "1483150",
       "1612340",
       "1551350",
       "1454080",
-      "1369940"
+      "1369940",
+      "2835838"
     ],
     "matches": {
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1369940": {
         "start": 32,
-        "length": 3
+        "length": 2,
+        "reading": "たずね"
       },
       "1454080": {
         "start": 30,
-        "length": 1
+        "length": 1,
+        "reading": "みち"
       },
       "1483150": {
         "start": 17,
-        "length": 2
-      },
-      "1502860": {
-        "start": 10,
-        "length": 1
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1551350": {
         "start": 23,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
+      },
+      "1606560": {
+        "start": 10,
+        "length": 3,
+        "reading": "わから"
       },
       "1612340": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ろじょう"
+      },
+      "2835838": {
+        "start": 32,
+        "length": 2,
+        "reading": "たずね"
       }
     }
   },
@@ -641,28 +875,39 @@
       "1551350",
       "1323080",
       "1432980",
+      "1410590",
       "2021970"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1323080": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1410590": {
+        "start": 17,
+        "length": 2,
+        "reading": "まっ"
       },
       "1432980": {
         "start": 10,
-        "length": 5
+        "length": 5,
+        "reading": "とおりすぎる"
       },
       "1551350": {
         "start": 2,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "2021970": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "まった"
       }
     }
   },
@@ -684,15 +929,132 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1551350": {
         "start": 2,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1604580": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "みつめ"
+      }
+    }
+  },
+  {
+    "id": "153160",
+    "original": "私は彼女を立ち止まらせようとしたが、彼女は急いで逃げた。",
+    "en": [
+      {
+        "id": "261384",
+        "text": "I tried to stop her but she made off in a hurry."
+      }
+    ],
+    "indices": "私(わたし)[01] は 彼女 を 立ち止まる{立ち止まらせよう} とする{とした} が 彼女[01] は 急ぐ{急いで} 逃げる[01]{逃げた}",
+    "vocabIds": [
+      "1311110",
+      "1483150",
+      "1551350",
+      "1228650",
+      "1228570",
+      "1450330",
+      "1633800"
+    ],
+    "matches": {
+      "1228570": {
+        "start": 21,
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 21,
+        "length": 2,
+        "reading": "いそい"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1450330": {
+        "start": 24,
+        "length": 2,
+        "reading": "にげ"
+      },
+      "1483150": {
+        "start": 2,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1551350": {
+        "start": 5,
+        "length": 5,
+        "reading": "たちどまら"
+      },
+      "1633800": {
+        "start": 24,
+        "length": 2,
+        "reading": "にげ"
+      }
+    }
+  },
+  {
+    "id": "153549",
+    "original": "私は彼を立ち止まらせようとした。しかし、彼は急いで逃げた。",
+    "en": [
+      {
+        "id": "260995",
+        "text": "I tried to stop him but he made off in a hurry."
+      }
+    ],
+    "indices": "私(わたし)[01] は 彼(かれ) を 立ち止まる{立ち止まらせよう} とする{とした} 然し{しかし} 彼(かれ)[01] は 急ぐ{急いで} 逃げる[01]{逃げた}",
+    "vocabIds": [
+      "1311110",
+      "1483070",
+      "1551350",
+      "1228650",
+      "1228570",
+      "1450330",
+      "1633800"
+    ],
+    "matches": {
+      "1228570": {
+        "start": 22,
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 22,
+        "length": 2,
+        "reading": "いそい"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1450330": {
+        "start": 25,
+        "length": 2,
+        "reading": "にげ"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1551350": {
+        "start": 4,
+        "length": 5,
+        "reading": "たちどまら"
+      },
+      "1633800": {
+        "start": 25,
+        "length": 2,
+        "reading": "にげ"
       }
     }
   },
@@ -713,20 +1075,29 @@
     "vocabIds": [
       "1311110",
       "1891810",
+      "1228260",
       "1551350"
     ],
     "matches": {
+      "1228260": {
+        "start": 6,
+        "length": 2,
+        "reading": "すう"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1551350": {
         "start": 11,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1891810": {
         "start": 2,
-        "length": 6
+        "length": 6,
+        "reading": "たばこをすう"
       }
     }
   },
@@ -742,6 +1113,8 @@
     "indices": "私(わたし)[01] は 大変{たいへん} 疲れる[01]{疲れた} ので 立ち止まる{立ち止まって} 休む[02]{休んだ}",
     "vocabIds": [
       "1311110",
+      "1483740",
+      "1483730",
       "1647590",
       "1551350",
       "1227560"
@@ -749,19 +1122,33 @@
     "matches": {
       "1227560": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483730": {
+        "start": 6,
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1483740": {
+        "start": 6,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1551350": {
         "start": 12,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1647590": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "つかれた"
       }
     }
   },
@@ -777,21 +1164,150 @@
     "indices": "は 其の[01]{その} 車(くるま) を 良く[01]{よく} 見る{見よう} と 立ち止まる{立ち止まった}",
     "vocabIds": [
       "1323080",
-      "2256270",
+      "1259290",
       "1551350"
     ],
     "matches": {
+      "1259290": {
+        "start": 9,
+        "length": 2,
+        "reading": "みよ"
+      },
       "1323080": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1551350": {
         "start": 13,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
+      }
+    }
+  },
+  {
+    "id": "201072",
+    "original": "ときおり彼女は立ち止まりあたりを見回した。",
+    "en": [
+      {
+        "id": "38278",
+        "text": "From time to time she stopped and looked round."
+      }
+    ],
+    "indices": "時折{ときおり} 彼女[01] は 立ち止まる{立ち止まり} 辺り(あたり)[01]{あたり} を 見回す{見回した}",
+    "vocabIds": [
+      "1483150",
+      "1551350",
+      "1259400"
+    ],
+    "matches": {
+      "1259400": {
+        "start": 16,
+        "length": 3,
+        "reading": "みまわし"
+      },
+      "1483150": {
+        "start": 4,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1551350": {
+        "start": 7,
+        "length": 5,
+        "reading": "たちどまり"
+      }
+    }
+  },
+  {
+    "id": "202640",
+    "original": "ついに彼は一軒の古い家の前に立ち止まり、そして街をもう一度ちらりと見た。",
+    "en": [
+      {
+        "id": "39874",
+        "text": "At last he stopped before an old house, and caught another glimpse of the town."
+      }
+    ],
+    "indices": "遂に[01]{ついに} 彼(かれ)[01] は 一軒 の 古い 家(いえ)[01] の 前(まえ) に 立ち止まる{立ち止まり} 而して{そして} 街(まち) を もう一度 ちらり{ちらりと} 見る{見た}",
+    "vocabIds": [
+      "1483070",
+      "1160790",
+      "1162190",
+      "2078590",
+      "1265070",
+      "1191730",
+      "1392580",
+      "1392590",
+      "1551350",
+      "1204570",
+      "2005860",
+      "1259290",
+      "2256270"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 5,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1162190": {
+        "start": 5,
+        "length": 2,
+        "reading": "いちけん"
+      },
+      "1191730": {
+        "start": 10,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1204570": {
+        "start": 23,
+        "length": 1,
+        "reading": "まち"
+      },
+      "1259290": {
+        "start": 33,
+        "length": 1,
+        "reading": "み"
+      },
+      "1265070": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふるい"
+      },
+      "1392580": {
+        "start": 12,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1392590": {
+        "start": 12,
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1551350": {
+        "start": 14,
+        "length": 5,
+        "reading": "たちどまり"
+      },
+      "2005860": {
+        "start": 25,
+        "length": 4,
+        "reading": "もういちど"
+      },
+      "2078590": {
+        "start": 6,
+        "length": 1,
+        "reading": "けん"
       },
       "2256270": {
-        "start": 9,
-        "length": 1
+        "start": 33,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -813,15 +1329,18 @@
     "matches": {
       "1361290": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "ふりかえっ"
       },
       "1551350": {
         "start": 7,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1561090": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ろうじん"
       }
     }
   },
@@ -838,30 +1357,29 @@
     "vocabIds": [
       "1553210",
       "1506420",
-      "2453540",
-      "1310660",
+      "1266330",
       "1551350"
     ],
     "matches": {
-      "1310660": {
-        "start": 10,
-        "length": 2
+      "1266330": {
+        "start": 8,
+        "length": 4,
+        "reading": "よびとめ"
       },
       "1506420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "へいし"
       },
       "1551350": {
         "start": 15,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1553210": {
         "start": 2,
-        "length": 2
-      },
-      "2453540": {
-        "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たびびと"
       }
     }
   },
@@ -878,20 +1396,23 @@
     "vocabIds": [
       "1471560",
       "1551350",
-      "1451160"
+      "1451210"
     ],
     "matches": {
-      "1451160": {
+      "1451210": {
         "start": 10,
-        "length": 1
+        "length": 2,
+        "reading": "うごこ"
       },
       "1471560": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "うま"
       },
       "1551350": {
         "start": 4,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -911,7 +1432,8 @@
     "matches": {
       "1551350": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "たちどまる"
       }
     }
   },
@@ -934,23 +1456,28 @@
     "matches": {
       "1167450": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちれん"
       },
       "1321040": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "じっこう"
       },
       "1460850": {
         "start": 29,
-        "length": 3
+        "length": 3,
+        "reading": "むずかしい"
       },
       "1551350": {
         "start": 14,
-        "length": 5
+        "length": 5,
+        "reading": "たちどまる"
       },
       "1552130": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ながれ"
       }
     }
   },
@@ -967,24 +1494,34 @@
       "1553210",
       "1551350",
       "1454080",
-      "1369940"
+      "1369940",
+      "2835838"
     ],
     "matches": {
       "1369940": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "たずね"
       },
       "1454080": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "みち"
       },
       "1551350": {
         "start": 3,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1553210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たびびと"
+      },
+      "2835838": {
+        "start": 15,
+        "length": 2,
+        "reading": "たずね"
       }
     }
   },
@@ -1000,25 +1537,29 @@
     "vocabIds": [
       "1483070",
       "1483090",
-      "1600900",
+      "1562300",
       "1551350"
     ],
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483090": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1551350": {
         "start": 12,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
-      "1600900": {
+      "1562300": {
         "start": 5,
-        "length": 1
+        "length": 5,
+        "reading": "はなしかけよ"
       }
     }
   },
@@ -1034,25 +1575,23 @@
     "vocabIds": [
       "1311110",
       "1483070",
-      "1551350",
-      "1222560"
+      "1551350"
     ],
     "matches": {
-      "1222560": {
-        "start": 14,
-        "length": 2
-      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1551350": {
         "start": 4,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -1072,11 +1611,13 @@
     "matches": {
       "1281020": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "かんがえる"
       },
       "1551350": {
         "start": 4,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -1090,7 +1631,6 @@
       }
     ],
     "vocabIds": [
-      "2231000",
       "1227720",
       "1348870",
       "1551350"
@@ -1098,19 +1638,44 @@
     "matches": {
       "1227720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうけい"
       },
       "1348870": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1551350": {
         "start": 14,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
+      }
+    }
+  },
+  {
+    "id": "9089375",
+    "original": "トムは立ち止まりコインを拾った。",
+    "en": [
+      {
+        "id": "2641610",
+        "text": "Tom stooped and picked up the coin."
+      }
+    ],
+    "vocabIds": [
+      "1551350",
+      "1332570"
+    ],
+    "matches": {
+      "1332570": {
+        "start": 12,
+        "length": 2,
+        "reading": "ひろっ"
       },
-      "2231000": {
-        "start": 1,
-        "length": 3
+      "1551350": {
+        "start": 3,
+        "length": 5,
+        "reading": "たちどまり"
       }
     }
   },
@@ -1124,22 +1689,31 @@
       }
     ],
     "vocabIds": [
+      "1311110",
       "1311300",
       "1392580",
       "1551350"
     ],
     "matches": {
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1392580": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1551350": {
         "start": 9,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -1154,16 +1728,24 @@
     ],
     "vocabIds": [
       "1321900",
+      "1298790",
       "1551350"
     ],
     "matches": {
+      "1298790": {
+        "start": 3,
+        "length": 2,
+        "reading": "とろ"
+      },
       "1321900": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゃしん"
       },
       "1551350": {
         "start": 7,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -1185,19 +1767,23 @@
     "matches": {
       "1432980": {
         "start": 6,
-        "length": 5
+        "length": 5,
+        "reading": "とおりすぎる"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1521400": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1551350": {
         "start": 16,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -1216,7 +1802,52 @@
     "matches": {
       "1551350": {
         "start": 3,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
+      }
+    }
+  },
+  {
+    "id": "11906657",
+    "original": "おじいさんは突如立ち止まり、周りを見渡した。",
+    "en": [
+      {
+        "id": "10345104",
+        "text": "The old man stopped suddenly and looked round."
+      }
+    ],
+    "vocabIds": [
+      "1457090",
+      "1551350",
+      "1604290",
+      "1259920",
+      "2599930"
+    ],
+    "matches": {
+      "1259920": {
+        "start": 17,
+        "length": 3,
+        "reading": "みわたし"
+      },
+      "1457090": {
+        "start": 6,
+        "length": 2,
+        "reading": "とつじょ"
+      },
+      "1551350": {
+        "start": 8,
+        "length": 5,
+        "reading": "たちどまり"
+      },
+      "1604290": {
+        "start": 14,
+        "length": 2,
+        "reading": "まわり"
+      },
+      "2599930": {
+        "start": 17,
+        "length": 3,
+        "reading": "みわたし"
       }
     }
   }

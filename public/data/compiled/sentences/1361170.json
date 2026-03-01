@@ -1,5 +1,44 @@
 [
   {
+    "id": "75751",
+    "original": "彼女は叫びながら、ナイフを振り回しました。",
+    "en": [
+      {
+        "id": "327967",
+        "text": "While she was screaming, she brandished the knife."
+      }
+    ],
+    "indices": "彼女[01] は 叫ぶ{叫び} 乍ら[01]{ながら} ナイフ を 振り回す{振り回しました}",
+    "vocabIds": [
+      "1483150",
+      "1235910",
+      "1235890",
+      "1361170"
+    ],
+    "matches": {
+      "1235890": {
+        "start": 3,
+        "length": 2,
+        "reading": "さけび"
+      },
+      "1235910": {
+        "start": 3,
+        "length": 2,
+        "reading": "さけび"
+      },
+      "1361170": {
+        "start": 13,
+        "length": 4,
+        "reading": "ふりまわし"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
     "id": "75753",
     "original": "彼女はわめき、警官たちに向かってナイフを振り回して脅すようなしぐさをしました。",
     "en": [
@@ -19,23 +58,28 @@
     "matches": {
       "1238070": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "おどす"
       },
       "1252330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けいかん"
       },
       "1361170": {
         "start": 20,
-        "length": 5
+        "length": 4,
+        "reading": "ふりまわし"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1604800": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "むかっ"
       }
     }
   },
@@ -57,15 +101,56 @@
     "matches": {
       "1218560": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "きけん"
       },
       "1361170": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "ふりまわす"
       },
       "1369890": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はもの"
+      }
+    }
+  },
+  {
+    "id": "11257884",
+    "original": "噂話に振り回されるな。",
+    "en": [
+      {
+        "id": "11260195",
+        "text": "Don't be swayed by gossip."
+      }
+    ],
+    "vocabIds": [
+      "1172590",
+      "1983920",
+      "1600900",
+      "1361170"
+    ],
+    "matches": {
+      "1172590": {
+        "start": 0,
+        "length": 1,
+        "reading": "うわさ"
+      },
+      "1361170": {
+        "start": 3,
+        "length": 4,
+        "reading": "ふりまわさ"
+      },
+      "1600900": {
+        "start": 1,
+        "length": 1,
+        "reading": "ばなし"
+      },
+      "1983920": {
+        "start": 0,
+        "length": 2,
+        "reading": "うわさばなし"
       }
     }
   }

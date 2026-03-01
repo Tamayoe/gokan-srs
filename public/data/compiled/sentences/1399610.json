@@ -1,5 +1,73 @@
 [
   {
+    "id": "5007",
+    "original": "想像力は私たちの生活のどの側面にも影響を与える。",
+    "en": [
+      {
+        "id": "1601",
+        "text": "Imagination affects every aspect of our lives."
+      }
+    ],
+    "vocabIds": [
+      "1399610",
+      "1749300",
+      "1554820",
+      "1311110",
+      "1311300",
+      "1378860",
+      "1404040",
+      "1173660",
+      "1544730"
+    ],
+    "matches": {
+      "1173660": {
+        "start": 17,
+        "length": 2,
+        "reading": "えいきょう"
+      },
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 4,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1378860": {
+        "start": 8,
+        "length": 2,
+        "reading": "せいかつ"
+      },
+      "1399610": {
+        "start": 0,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1404040": {
+        "start": 13,
+        "length": 2,
+        "reading": "そくめん"
+      },
+      "1544730": {
+        "start": 20,
+        "length": 3,
+        "reading": "あたえる"
+      },
+      "1554820": {
+        "start": 2,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 0,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      }
+    }
+  },
+  {
     "id": "5314",
     "original": "もし電気がないと、私たちの暮らしがどのようなものになるか想像できますか。",
     "en": [
@@ -15,26 +83,36 @@
     "indices": "若し(もし){もし} 電気[01] が 無い{ない} と 私たち の 暮らし が 何の様{どのような} 物(もの){もの} になる[01] か 想像 出来る{できます} か",
     "vocabIds": [
       "1443000",
+      "1311110",
       "1311300",
       "1514930",
       "1399610"
     ],
     "matches": {
+      "1311110": {
+        "start": 9,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1399610": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1443000": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "でんき"
       },
       "1514930": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "くらし"
       }
     }
   },
@@ -50,6 +128,7 @@
     "indices": "大学 出たて 之(の)[01]{の} 新人[01] は 資料 を 作る{作ったり} コピー[01] を 取る{とったり} と 裏方 仕事[01] に 徹する[02]~ 之(の)[01]{の} だろう と 勝手に 想像 為る(する){していた} のです が 見事[01]{見事に} 裏切る{裏切られました}",
     "vocabIds": [
       "1413240",
+      "1896380",
       "1778890",
       "1361960",
       "1312820",
@@ -57,64 +136,82 @@
       "1550650",
       "1304970",
       "1598340",
+      "1346190",
       "1346200",
       "1399610",
       "1259620",
-      "1550190",
-      "1383750"
+      "1550380"
     ],
     "matches": {
       "1259620": {
         "start": 53,
-        "length": 2
+        "length": 2,
+        "reading": "みごと"
       },
       "1304970": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1312820": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しりょう"
+      },
+      "1346190": {
+        "start": 40,
+        "length": 2,
+        "reading": "かって"
       },
       "1346200": {
         "start": 40,
-        "length": 3
+        "length": 3,
+        "reading": "かってに"
       },
       "1361960": {
         "start": 6,
-        "length": 2
-      },
-      "1383750": {
-        "start": 57,
-        "length": 1
+        "length": 2,
+        "reading": "しんじん"
       },
       "1399610": {
         "start": 43,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1413240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
-      "1550190": {
+      "1550380": {
         "start": 56,
-        "length": 1
+        "length": 3,
+        "reading": "うらぎら"
       },
       "1550650": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "うらかた"
       },
       "1597890": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
       },
       "1598340": {
         "start": 31,
-        "length": 3
+        "length": 3,
+        "reading": "てっする"
       },
       "1778890": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "でたて"
+      },
+      "1896380": {
+        "start": 2,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -134,7 +231,8 @@
     "matches": {
       "1399610": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -149,27 +247,82 @@
     ],
     "indices": "ひょっとして 今まで 気付く{気づいてなかった} のです か いや(#2830360)[02] まあ{まぁ} 想像 之(の)[01]{の} 埒外~ だ{だった} 物(もの){もん} で",
     "vocabIds": [
+      "1288850",
       "1587590",
       "1591330",
       "1399610",
       "1822140"
     ],
     "matches": {
+      "1288850": {
+        "start": 8,
+        "length": 1,
+        "reading": "いま"
+      },
       "1399610": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1587590": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       },
       "1591330": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "きづい"
       },
       "1822140": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "らちがい"
+      }
+    }
+  },
+  {
+    "id": "78215",
+    "original": "竜は想像上の生物である。",
+    "en": [
+      {
+        "id": "325503",
+        "text": "The dragon is an imaginary creature."
+      }
+    ],
+    "indices": "竜[01] は 想像上{想像上の} 生物(せいぶつ) である",
+    "vocabIds": [
+      "1629170",
+      "1399610",
+      "2201250",
+      "1352130",
+      "1379430"
+    ],
+    "matches": {
+      "1352130": {
+        "start": 4,
+        "length": 1,
+        "reading": "じょう"
+      },
+      "1379430": {
+        "start": 6,
+        "length": 2,
+        "reading": "せいぶつ"
+      },
+      "1399610": {
+        "start": 2,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1629170": {
+        "start": 0,
+        "length": 1,
+        "reading": "りゅう"
+      },
+      "2201250": {
+        "start": 2,
+        "length": 3,
+        "reading": "そうぞうじょう"
       }
     }
   },
@@ -191,15 +344,18 @@
     "matches": {
       "1213280": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かんきょう"
       },
       "1399610": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1520910": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ほっきょくぐま"
       }
     }
   },
@@ -222,19 +378,23 @@
     "matches": {
       "1247250": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1344970": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1399610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -256,15 +416,18 @@
     "matches": {
       "1344970": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1399610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -281,35 +444,29 @@
     "vocabIds": [
       "1483150",
       "1311110",
-      "1600900",
-      "1207610",
       "1416830",
       "1399610"
     ],
     "matches": {
-      "1207610": {
-        "start": 7,
-        "length": 3
-      },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1399610": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1416830": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
-      },
-      "1600900": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -331,15 +488,18 @@
     "matches": {
       "1307710": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "すがた"
       },
       "1399610": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -365,15 +525,18 @@
     "matches": {
       "1278400": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こうふく"
       },
       "1399610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -396,19 +559,221 @@
     "matches": {
       "1399610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1496800": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ふじさん"
       },
       "1582710": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
+      }
+    }
+  },
+  {
+    "id": "100711",
+    "original": "彼は非常に想像力にとんだ作家です。",
+    "en": [
+      {
+        "id": "291588",
+        "text": "He is a very imaginative writer."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 非常に 想像力 に 富む{とんだ} 作家 です",
+    "vocabIds": [
+      "1483070",
+      "1484920",
+      "1484930",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1297510"
+    ],
+    "matches": {
+      "1297510": {
+        "start": 12,
+        "length": 2,
+        "reading": "さっか"
+      },
+      "1399610": {
+        "start": 5,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1484920": {
+        "start": 2,
+        "length": 2,
+        "reading": "ひじょう"
+      },
+      "1484930": {
+        "start": 2,
+        "length": 3,
+        "reading": "ひじょうに"
+      },
+      "1554820": {
+        "start": 7,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 5,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      }
+    }
+  },
+  {
+    "id": "102874",
+    "original": "彼は想像力のたくましい少年であった。",
+    "en": [
+      {
+        "id": "300820",
+        "text": "He used to be an imaginative boy."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 想像力 の 逞しい[03]{たくましい}~ 少年[01] である{であった}",
+    "vocabIds": [
+      "1483070",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1349170"
+    ],
+    "matches": {
+      "1349170": {
+        "start": 11,
+        "length": 2,
+        "reading": "しょうねん"
+      },
+      "1399610": {
+        "start": 2,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1554820": {
+        "start": 4,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 2,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      }
+    }
+  },
+  {
+    "id": "102875",
+    "original": "彼は想像力が豊かだ。",
+    "en": [
+      {
+        "id": "300819",
+        "text": "He has a rich imagination."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 想像力 が 豊か[01] だ",
+    "vocabIds": [
+      "1483070",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1518130"
+    ],
+    "matches": {
+      "1399610": {
+        "start": 2,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1518130": {
+        "start": 6,
+        "length": 2,
+        "reading": "ゆたか"
+      },
+      "1554820": {
+        "start": 4,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 2,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      }
+    }
+  },
+  {
+    "id": "103260",
+    "original": "彼は生き生きとした想像力を持っている。",
+    "en": [
+      {
+        "id": "300433",
+        "text": "He has a very vivid imagination."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 生き生き{生き生きと}~ 為る(する){した} 想像力 を 持つ{持っている}",
+    "vocabIds": [
+      "1483070",
+      "1609130",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1315720"
+    ],
+    "matches": {
+      "1315720": {
+        "start": 13,
+        "length": 2,
+        "reading": "もっ"
+      },
+      "1399610": {
+        "start": 9,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1554820": {
+        "start": 11,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1609130": {
+        "start": 2,
+        "length": 4,
+        "reading": "いきいき"
+      },
+      "1749300": {
+        "start": 9,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -424,26 +789,99 @@
     "indices": "彼(かれ)[01] は 依頼人 が どんな 人間(にんげん)[01] だ{な} 之(の)[04]{の} か 想像 為る(する){して} 見る[05]{みた}",
     "vocabIds": [
       "1483070",
+      "1155710",
       "1575880",
+      "1580640",
       "1366770",
       "1399610"
     ],
     "matches": {
+      "1155710": {
+        "start": 2,
+        "length": 2,
+        "reading": "いらい"
+      },
       "1366770": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1399610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1575880": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いらいじん"
+      },
+      "1580640": {
+        "start": 4,
+        "length": 1,
+        "reading": "じん"
+      }
+    }
+  },
+  {
+    "id": "111596",
+    "original": "彼はとても驚くべき想像力を持っている。",
+    "en": [
+      {
+        "id": "292087",
+        "text": "He has a very surprising fancy."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 迚も[01]{とても} 驚くべき 想像力 を 持つ{持っている}",
+    "vocabIds": [
+      "1483070",
+      "1238680",
+      "1238690",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1315720"
+    ],
+    "matches": {
+      "1238680": {
+        "start": 5,
+        "length": 2,
+        "reading": "おどろく"
+      },
+      "1238690": {
+        "start": 5,
+        "length": 4,
+        "reading": "おどろくべき"
+      },
+      "1315720": {
+        "start": 13,
+        "length": 2,
+        "reading": "もっ"
+      },
+      "1399610": {
+        "start": 9,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1554820": {
+        "start": 11,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 9,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -467,23 +905,79 @@
     "matches": {
       "1211310": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "たえ"
       },
       "1289620": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "こんなん"
       },
       "1399610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1412890": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "おおきな"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "112089",
+    "original": "彼はたいへん想像力に富んだ作家です。",
+    "en": [
+      {
+        "id": "291588",
+        "text": "He is a very imaginative writer."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 大変{たいへん} 想像力 に 富む{富んだ} 作家 です",
+    "vocabIds": [
+      "1483070",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1496740",
+      "1297510"
+    ],
+    "matches": {
+      "1297510": {
+        "start": 13,
+        "length": 2,
+        "reading": "さっか"
+      },
+      "1399610": {
+        "start": 6,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1496740": {
+        "start": 10,
+        "length": 2,
+        "reading": "とん"
+      },
+      "1554820": {
+        "start": 8,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 6,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -502,48 +996,81 @@
       "1580640",
       "1429700",
       "1212670",
+      "1212660",
       "1399610",
       "1423310",
+      "1577100",
+      "1189170",
       "1189200",
+      "1445160",
       "1251700",
       "2248530"
     ],
     "matches": {
+      "1189170": {
+        "start": 26,
+        "length": 2,
+        "reading": "なんど"
+      },
       "1189200": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "なんども"
+      },
+      "1212660": {
+        "start": 10,
+        "length": 2,
+        "reading": "なれ"
       },
       "1212670": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "なれ"
       },
       "1251700": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "けいろ"
       },
       "1399610": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1423310": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1429700": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "とぶ"
+      },
+      "1445160": {
+        "start": 27,
+        "length": 1,
+        "reading": "ど"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 26,
+        "length": 1,
+        "reading": "なん"
       },
       "1580640": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "2248530": {
         "start": 34,
-        "length": 3
+        "length": 3,
+        "reading": "とんで"
       }
     }
   },
@@ -561,6 +1088,7 @@
       "1483070",
       "1311110",
       "1217730",
+      "1577100",
       "2851233",
       "1604570",
       "1399610"
@@ -568,27 +1096,38 @@
     "matches": {
       "1217730": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1399610": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なに"
       },
       "1604570": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "みつけ"
       },
       "2851233": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "なにを"
       }
     }
   },
@@ -604,31 +1143,54 @@
     "indices": "彼(かれ) が 完全試合~ を 成し遂げる とは 少しも 想像 出来る{できませんでした}",
     "vocabIds": [
       "1483070",
+      "1211510",
       "1614130",
+      "1312420",
       "1375550",
+      "1348870",
       "1348900",
       "1399610"
     ],
     "matches": {
+      "1211510": {
+        "start": 2,
+        "length": 2,
+        "reading": "かんぜん"
+      },
+      "1312420": {
+        "start": 4,
+        "length": 2,
+        "reading": "しあい"
+      },
+      "1348870": {
+        "start": 15,
+        "length": 2,
+        "reading": "すこし"
+      },
       "1348900": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "すこしも"
       },
       "1375550": {
         "start": 7,
-        "length": 5
+        "length": 5,
+        "reading": "なしとげる"
       },
       "1399610": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1614130": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "かんぜんしあい"
       }
     }
   },
@@ -651,19 +1213,62 @@
     "matches": {
       "1201260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かいがい"
       },
       "1399610": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1578850": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
+      }
+    }
+  },
+  {
+    "id": "120527",
+    "original": "彼が海外に行くなんて、想像がつかない。",
+    "en": [
+      {
+        "id": "283482",
+        "text": "I can hardly imagine him going abroad."
+      }
+    ],
+    "indices": "彼(かれ) が 海外 に 行く なんて[01] 想像がつく{想像がつかない}~",
+    "vocabIds": [
+      "1483070",
+      "1201260",
+      "1578850",
+      "1399610"
+    ],
+    "matches": {
+      "1201260": {
+        "start": 2,
+        "length": 2,
+        "reading": "かいがい"
+      },
+      "1399610": {
+        "start": 11,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1578850": {
+        "start": 5,
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -679,21 +1284,30 @@
     "indices": "彼(かれ) が 如何(どう){どう} 成る{なった} か 誰も[02] 想像 出来る{できない}",
     "vocabIds": [
       "1483070",
+      "1416830",
       "1416860",
       "1399610"
     ],
     "matches": {
       "1399610": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1416830": {
+        "start": 8,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416860": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "だれも"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -716,19 +1330,23 @@
     "matches": {
       "1172830": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "うんてん"
       },
       "1323080": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1399610": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -751,19 +1369,23 @@
     "matches": {
       "1206590": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "がっか"
       },
       "1399610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1437610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "てつがく"
       },
       "1460850": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "むずかしい"
       }
     }
   },
@@ -790,35 +1412,127 @@
     "matches": {
       "1156530": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いけん"
       },
       "1254640": {
         "start": 32,
-        "length": 4
+        "length": 4,
+        "reading": "むすびつく"
       },
       "1254690": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "けっか"
       },
       "1318610": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1399610": {
         "start": 38,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1477350": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "はつげん"
       },
       "1581400": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たにん"
       },
       "1589070": {
         "start": 6,
-        "length": 6
+        "length": 6,
+        "reading": "おさえつける"
+      }
+    }
+  },
+  {
+    "id": "140591",
+    "original": "想像力を働かせた。",
+    "en": [
+      {
+        "id": "273982",
+        "text": "I used my imagination."
+      }
+    ],
+    "indices": "想像力 を 働かせる[02]{働かせた}~",
+    "vocabIds": [
+      "1399610",
+      "1749300",
+      "1554820",
+      "2009430"
+    ],
+    "matches": {
+      "1399610": {
+        "start": 0,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1554820": {
+        "start": 2,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 0,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      },
+      "2009430": {
+        "start": 4,
+        "length": 3,
+        "reading": "はたらかせ"
+      }
+    }
+  },
+  {
+    "id": "140593",
+    "original": "想像力は、すべての文明の根本である。",
+    "en": [
+      {
+        "id": "273980",
+        "text": "Imagination is the root of all civilization."
+      }
+    ],
+    "indices": "想像力 は 全て{すべての} 文明[01] の 根本(こんぽん)[01]~ である",
+    "vocabIds": [
+      "1399610",
+      "1749300",
+      "1554820",
+      "1505650",
+      "2425140"
+    ],
+    "matches": {
+      "1399610": {
+        "start": 0,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1505650": {
+        "start": 9,
+        "length": 2,
+        "reading": "ぶんめい"
+      },
+      "1554820": {
+        "start": 2,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 0,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      },
+      "2425140": {
+        "start": 12,
+        "length": 2,
+        "reading": "こんぽん"
       }
     }
   },
@@ -838,7 +1552,8 @@
     "matches": {
       "1399610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -857,7 +1572,9 @@
     ],
     "indices": "進化論 は 私(わたし)[01]{私の} 想像 出来る{できる} 範囲 を 越える[02]{超えている}",
     "vocabIds": [
+      "1366000",
       "1646810",
+      "1957110",
       "1311110",
       "1399610",
       "1481890",
@@ -866,23 +1583,38 @@
     "matches": {
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1366000": {
+        "start": 0,
+        "length": 2,
+        "reading": "しんか"
       },
       "1399610": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1481890": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はんい"
       },
       "1646810": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しんかろん"
+      },
+      "1957110": {
+        "start": 2,
+        "length": 1,
+        "reading": "ろん"
       },
       "2858625": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こえ"
       }
     }
   },
@@ -906,23 +1638,28 @@
     "matches": {
       "1281620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうはい"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1399610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1602060": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ひどい"
       },
       "2164600": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうべ"
       }
     }
   },
@@ -940,34 +1677,58 @@
       "1358620",
       "1326980",
       "2841921",
+      "1155120",
+      "1275130",
       "1275150",
+      "1437260",
       "1012960",
       "1399610"
     ],
     "matches": {
       "1012960": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "やりかた"
+      },
+      "1155120": {
+        "start": 9,
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1275130": {
+        "start": 11,
+        "length": 2,
+        "reading": "こうか"
       },
       "1275150": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "こうかてき"
       },
       "1326980": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "とる"
       },
       "1358620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょくもつ"
       },
       "1399610": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1437260": {
+        "start": 13,
+        "length": 1,
+        "reading": "てき"
       },
       "2841921": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "これいじょう"
       }
     }
   },
@@ -984,25 +1745,98 @@
     "vocabIds": [
       "1349170",
       "1318610",
-      "2840111",
+      "1414170",
       "1399610"
     ],
     "matches": {
       "1318610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1349170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうねん"
       },
       "1399610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
-      "2840111": {
+      "1414170": {
         "start": 6,
-        "length": 6
+        "length": 2,
+        "reading": "おとな"
+      }
+    }
+  },
+  {
+    "id": "146937",
+    "original": "小説を書く時、私達は想像力を発揮する。",
+    "en": [
+      {
+        "id": "267624",
+        "text": "When we write a novel, we exercise our imagination."
+      }
+    ],
+    "indices": "小説 を 書く 時(とき) 私たち{私達} は 想像力 を 発揮 為る(する){する}",
+    "vocabIds": [
+      "1348430",
+      "1343950",
+      "1315840",
+      "1311110",
+      "1416220",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1477250"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 7,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1315840": {
+        "start": 5,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1343950": {
+        "start": 3,
+        "length": 2,
+        "reading": "かく"
+      },
+      "1348430": {
+        "start": 0,
+        "length": 2,
+        "reading": "しょうせつ"
+      },
+      "1399610": {
+        "start": 10,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1416220": {
+        "start": 8,
+        "length": 1,
+        "reading": "たち"
+      },
+      "1477250": {
+        "start": 14,
+        "length": 2,
+        "reading": "はっき"
+      },
+      "1554820": {
+        "start": 12,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 10,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -1017,17 +1851,25 @@
     ],
     "indices": "勝手に そんな風に{そんなふうに} 想像 為る(する){する} な[01] よ[01]",
     "vocabIds": [
+      "1346190",
       "1346200",
       "1399610"
     ],
     "matches": {
+      "1346190": {
+        "start": 0,
+        "length": 2,
+        "reading": "かって"
+      },
       "1346200": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かってに"
       },
       "1399610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -1048,11 +1890,13 @@
     "matches": {
       "1345340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じょそう"
       },
       "1399610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -1067,22 +1911,55 @@
     ],
     "indices": "自分 一人きり の 状況 を 想像 為る(する){して} ご覧[01]{ごらん}",
     "vocabIds": [
+      "1318610",
       "2848700",
+      "1160790",
+      "1576150",
+      "2253210",
+      "1580640",
       "1356700",
       "1399610"
     ],
     "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1318610": {
+        "start": 0,
+        "length": 2,
+        "reading": "じぶん"
+      },
       "1356700": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じょうきょう"
       },
       "1399610": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1576150": {
+        "start": 2,
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 3,
+        "length": 1,
+        "reading": "にん"
+      },
+      "2253210": {
+        "start": 2,
+        "length": 4,
+        "reading": "いちにんきり"
       },
       "2848700": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "じぶんいちにん"
       }
     }
   },
@@ -1098,21 +1975,48 @@
     "indices": "自分 が 億万長者~ だ と 想像 為る(する){して} ご覧[01]{ごらん}",
     "vocabIds": [
       "1318610",
+      "1182620",
+      "1759980",
       "1182670",
+      "1584460",
+      "1430000",
       "1399610"
     ],
     "matches": {
+      "1182620": {
+        "start": 3,
+        "length": 1,
+        "reading": "おく"
+      },
       "1182670": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "おくまんちょうじゃ"
       },
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1399610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1430000": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちょうじゃ"
+      },
+      "1584460": {
+        "start": 4,
+        "length": 1,
+        "reading": "まん"
+      },
+      "1759980": {
+        "start": 3,
+        "length": 2,
+        "reading": "おくまん"
       }
     }
   },
@@ -1131,28 +2035,51 @@
       "1536010",
       "1399610",
       "1001830",
-      "1937040"
+      "1249910",
+      "1318400",
+      "1937040",
+      "1313850"
     ],
     "matches": {
       "1001830": {
         "start": 21,
-        "length": 4
+        "length": 4,
+        "reading": "おにいさん"
+      },
+      "1249910": {
+        "start": 22,
+        "length": 3,
+        "reading": "にいさん"
+      },
+      "1313850": {
+        "start": 29,
+        "length": 2,
+        "reading": "じこ"
       },
       "1316380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
+      },
+      "1318400": {
+        "start": 26,
+        "length": 3,
+        "reading": "じどうしゃ"
       },
       "1399610": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1536010": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1937040": {
         "start": 26,
-        "length": 5
+        "length": 5,
+        "reading": "じどうしゃじこ"
       }
     }
   },
@@ -1174,15 +2101,18 @@
     "matches": {
       "1399610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1419370": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -1199,30 +2129,104 @@
     "vocabIds": [
       "1311110",
       "1483070",
+      "2147990",
       "2152580",
+      "1283190",
       "1580640",
       "1399610"
     ],
     "matches": {
+      "1283190": {
+        "start": 6,
+        "length": 2,
+        "reading": "たかい"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1399610": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      },
+      "2147990": {
+        "start": 4,
+        "length": 1,
+        "reading": "せ"
       },
       "2152580": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "せのたかい"
+      }
+    }
+  },
+  {
+    "id": "154841",
+    "original": "私は頭がよく、敏感で想像力に富んでいます。",
+    "en": [
+      {
+        "id": "259698",
+        "text": "I am clever, sensitive and imaginative."
+      }
+    ],
+    "indices": "私(わたし)[01] は 頭がいい{頭がよく} 敏感 で(#2028980) 想像力 に 富む{富んでいます}",
+    "vocabIds": [
+      "1311110",
+      "1582310",
+      "1491070",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1496740"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1399610": {
+        "start": 10,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1491070": {
+        "start": 7,
+        "length": 2,
+        "reading": "びんかん"
+      },
+      "1496740": {
+        "start": 14,
+        "length": 2,
+        "reading": "とん"
+      },
+      "1554820": {
+        "start": 12,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1582310": {
+        "start": 2,
+        "length": 1,
+        "reading": "あたま"
+      },
+      "1749300": {
+        "start": 10,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -1246,23 +2250,28 @@
     "matches": {
       "1203260": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "た"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1379430": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せいぶつ"
       },
       "1399610": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1562600": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "わくせい"
       }
     }
   },
@@ -1285,19 +2294,23 @@
     "matches": {
       "1255430": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1378860": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1399610": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -1319,15 +2332,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1368370": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じんせい"
       },
       "1399610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -1350,19 +2366,88 @@
     "matches": {
       "1304600": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ざんこく"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1399610": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483070": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "165502",
+    "original": "私たちは想像力を使うように奨励されています。",
+    "en": [
+      {
+        "id": "249003",
+        "text": "We are encouraged to use our imagination."
+      },
+      {
+        "id": "1689495",
+        "text": "They say you should use your imagination."
+      },
+      {
+        "id": "10548247",
+        "text": "We're encouraged to use our imagination."
+      }
+    ],
+    "indices": "私たち は 想像力 を 使う 様に{ように} 奨励 為れる{されています}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1305990",
+      "1347550"
+    ],
+    "matches": {
+      "1305990": {
+        "start": 8,
+        "length": 2,
+        "reading": "つかう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1347550": {
+        "start": 13,
+        "length": 2,
+        "reading": "しょうれい"
+      },
+      "1399610": {
+        "start": 4,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1554820": {
+        "start": 6,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 4,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -1377,22 +2462,43 @@
     ],
     "indices": "私たち は テレビ 之(の)[03]{の} 無い{ない} 日常生活 は 殆ど{ほとんど} 想像 も 出来る{できない}",
     "vocabIds": [
+      "1311110",
       "1311300",
+      "1464180",
       "1464200",
+      "1378860",
       "1399610"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1378860": {
+        "start": 12,
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1399610": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1464180": {
+        "start": 10,
+        "length": 2,
+        "reading": "にちじょう"
       },
       "1464200": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "にちじょうせいかつ"
       }
     }
   },
@@ -1407,27 +2513,31 @@
     ],
     "indices": "私たち が 鳥[01] の様に[01]{のように} 飛ぶ[01]{飛べる} と 想像 為る(する){して} ご覧[01]{ごらん}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1430250",
-      "1921980",
       "1399610"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1399610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1430250": {
         "start": 4,
-        "length": 1
-      },
-      "1921980": {
-        "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "とり"
       }
     }
   },
@@ -1442,27 +2552,43 @@
     ],
     "indices": "私たち が どんなに 楽しい{楽しかった} か 君(きみ)[01] 等(ら)[01]{ら} には 想像 も 付く(つく){つかない}",
     "vocabIds": [
+      "1311110",
       "1311300",
-      "1207230",
+      "1207240",
+      "1247250",
       "2662350",
       "1399610"
     ],
     "matches": {
-      "1207230": {
+      "1207240": {
         "start": 9,
-        "length": 1
+        "length": 4,
+        "reading": "たのしかっ"
+      },
+      "1247250": {
+        "start": 15,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1399610": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "2662350": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "きみら"
       }
     }
   },
@@ -1480,29 +2606,52 @@
       "1311110",
       "1272950",
       "1259290",
+      "2256270",
+      "1236690",
       "1399610",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 25,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1236690": {
+        "start": 12,
+        "length": 3,
+        "reading": "おそろし"
       },
       "1259290": {
         "start": 7,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1272950": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こうけい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1399610": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "2256270": {
+        "start": 7,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -1517,27 +2666,49 @@
     ],
     "indices": "残念ながら 君(きみ)[01]{君の} 想像 は 見当違い だ",
     "vocabIds": [
+      "1304680",
       "1304700",
       "1247250",
       "1399610",
-      "1715580"
+      "1259930",
+      "1715580",
+      "1158870"
     ],
     "matches": {
+      "1158870": {
+        "start": 12,
+        "length": 2,
+        "reading": "ちがい"
+      },
       "1247250": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1259930": {
+        "start": 10,
+        "length": 2,
+        "reading": "けんとう"
+      },
+      "1304680": {
+        "start": 0,
+        "length": 2,
+        "reading": "ざんねん"
       },
       "1304700": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ざんねんながら"
       },
       "1399610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1715580": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "けんとうちがい"
       }
     }
   },
@@ -1552,6 +2723,7 @@
     ],
     "indices": "残念ながら 君(きみ)[01]{君の} 想像 は 検討 違い だ",
     "vocabIds": [
+      "1304680",
       "1304700",
       "1247250",
       "1399610",
@@ -1561,23 +2733,96 @@
     "matches": {
       "1158870": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちがい"
       },
       "1247250": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1258000": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "けんとう"
+      },
+      "1304680": {
+        "start": 0,
+        "length": 2,
+        "reading": "ざんねん"
       },
       "1304700": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ざんねんながら"
       },
       "1399610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      }
+    }
+  },
+  {
+    "id": "170181",
+    "original": "作家は自分達の想像力を頼りにして書く。",
+    "en": [
+      {
+        "id": "244303",
+        "text": "Writers draw on their imagination."
+      }
+    ],
+    "indices": "作家 は 自分[01] 達 の 想像力 を 頼りにする{頼りにして} 書く",
+    "vocabIds": [
+      "1297510",
+      "1318610",
+      "1416220",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1548390",
+      "1343950"
+    ],
+    "matches": {
+      "1297510": {
+        "start": 0,
+        "length": 2,
+        "reading": "さっか"
+      },
+      "1318610": {
+        "start": 3,
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1343950": {
+        "start": 16,
+        "length": 2,
+        "reading": "かく"
+      },
+      "1399610": {
+        "start": 7,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1416220": {
+        "start": 5,
+        "length": 1,
+        "reading": "たち"
+      },
+      "1548390": {
+        "start": 11,
+        "length": 2,
+        "reading": "たより"
+      },
+      "1554820": {
+        "start": 9,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 7,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -1592,6 +2837,7 @@
     ],
     "indices": "今日 で(#2028980) は テレビ 之(の)[03]{の} 無い{ない} 生活 なんて[01] 想像 出来る{できない}",
     "vocabIds": [
+      "1579110",
       "2553140",
       "1378860",
       "1399610"
@@ -1599,15 +2845,86 @@
     "matches": {
       "1378860": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1399610": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       },
       "2553140": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "きょうでは"
+      }
+    }
+  },
+  {
+    "id": "174693",
+    "original": "言葉の世界では想像力は自然に内在する力の一つである。",
+    "en": [
+      {
+        "id": "239775",
+        "text": "In the world of words, the imagination is one of the forces of nature."
+      }
+    ],
+    "indices": "言葉[02] の 世界 で(#2028980) は 想像力 は 自然[03]{自然に} 内在~ 為る(する){する} 力(ちから) の 一つ[01] である",
+    "vocabIds": [
+      "1264540",
+      "1373860",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1318090",
+      "1458270",
+      "1160820"
+    ],
+    "matches": {
+      "1160820": {
+        "start": 20,
+        "length": 2,
+        "reading": "ひとつ"
+      },
+      "1264540": {
+        "start": 0,
+        "length": 2,
+        "reading": "ことば"
+      },
+      "1318090": {
+        "start": 11,
+        "length": 2,
+        "reading": "しぜん"
+      },
+      "1373860": {
+        "start": 3,
+        "length": 2,
+        "reading": "せかい"
+      },
+      "1399610": {
+        "start": 7,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1458270": {
+        "start": 14,
+        "length": 2,
+        "reading": "ないざい"
+      },
+      "1554820": {
+        "start": 9,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 7,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -1629,15 +2946,18 @@
     "matches": {
       "1255430": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1399610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1553170": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       }
     }
   },
@@ -1660,19 +2980,23 @@
     "matches": {
       "1255430": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1399610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1489880": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひょうめん"
       },
       "1514320": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "あるい"
       }
     }
   },
@@ -1694,15 +3018,18 @@
     "matches": {
       "1255430": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1352130": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1399610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -1723,11 +3050,13 @@
     "matches": {
       "1252090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1399610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -1747,32 +3076,44 @@
       "1597890",
       "1399610",
       "1313580",
-      "1340450"
+      "1340450",
+      "1340430"
     ],
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1313580": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
+      },
+      "1340430": {
+        "start": 18,
+        "length": 2,
+        "reading": "でき"
       },
       "1340450": {
         "start": 18,
-        "length": 4
+        "length": 2,
+        "reading": "でき"
       },
       "1399610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1597890": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "つくる"
       }
     }
   },
@@ -1794,15 +3135,18 @@
     "matches": {
       "1222590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きぶん"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1399610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -1824,15 +3168,18 @@
     "matches": {
       "1399610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1577120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なぜ"
       }
     }
   },
@@ -1853,11 +3200,13 @@
     "matches": {
       "1399610": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1577100": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -1879,15 +3228,63 @@
     "matches": {
       "1192700": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かがく"
       },
       "1399610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1590320": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かせつ"
+      }
+    }
+  },
+  {
+    "id": "188269",
+    "original": "音楽は想像力を豊かにする。",
+    "en": [
+      {
+        "id": "25411",
+        "text": "Music feeds our imagination."
+      }
+    ],
+    "indices": "音楽 は 想像力 を 豊か[01] に 為る(する){する}",
+    "vocabIds": [
+      "1183720",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1518130"
+    ],
+    "matches": {
+      "1183720": {
+        "start": 0,
+        "length": 2,
+        "reading": "おんがく"
+      },
+      "1399610": {
+        "start": 3,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1518130": {
+        "start": 7,
+        "length": 2,
+        "reading": "ゆたか"
+      },
+      "1554820": {
+        "start": 5,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 3,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -1910,22 +3307,49 @@
     ],
     "indices": "が 自動車 修理工場~ で(#2028980) 働く[01]{働いている} なんて[01] 想像 出来る{できます} か",
     "vocabIds": [
+      "1318400",
       "2849217",
+      "1332400",
+      "1937780",
+      "1578700",
       "1451150",
       "1399610"
     ],
     "matches": {
+      "1318400": {
+        "start": 3,
+        "length": 3,
+        "reading": "じどうしゃ"
+      },
+      "1332400": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅうり"
+      },
       "1399610": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1451150": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
+      },
+      "1578700": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうじょう"
+      },
+      "1937780": {
+        "start": 6,
+        "length": 4,
+        "reading": "しゅうりこうじょう"
       },
       "2849217": {
         "start": 3,
-        "length": 7
+        "length": 7,
+        "reading": "じどうしゃしゅうりこうじょう"
       }
     }
   },
@@ -1941,21 +3365,63 @@
     "indices": "テレビ が 無い{なかったら} 生活 が どんな 物(もの)[01] になる[01] か 想像 出来る{できます} か",
     "vocabIds": [
       "1378860",
+      "1502390",
       "1912650",
       "1399610"
     ],
     "matches": {
       "1378860": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1399610": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1502390": {
+        "start": 15,
+        "length": 1,
+        "reading": "もの"
       },
       "1912650": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "ものになる"
+      }
+    }
+  },
+  {
+    "id": "202526",
+    "original": "つまるところ想像力だろう。",
+    "en": [
+      {
+        "id": "39758",
+        "text": "After all, it might be imagination."
+      }
+    ],
+    "indices": "詰まる所{つまるところ}~ 想像力 だろう",
+    "vocabIds": [
+      "1399610",
+      "1749300",
+      "1554820"
+    ],
+    "matches": {
+      "1399610": {
+        "start": 6,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1554820": {
+        "start": 8,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 6,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -1972,20 +3438,29 @@
     "vocabIds": [
       "1315720",
       "1399610",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1259290": {
         "start": 18,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1315720": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1399610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "2256270": {
+        "start": 18,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -2006,11 +3481,275 @@
     "matches": {
       "1378860": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1399610": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      }
+    }
+  },
+  {
+    "id": "207667",
+    "original": "その展覧会は彼の想像力の産物だった。",
+    "en": [
+      {
+        "id": "44920",
+        "text": "The exhibition was a product of his imagination."
+      }
+    ],
+    "indices": "其の[01]{その} 展覧会 は 彼(かれ)[01] の 想像力 の 産物 だ{だった}",
+    "vocabIds": [
+      "1619690",
+      "1440660",
+      "1198160",
+      "1483070",
+      "1000420",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1303870"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 6,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1198160": {
+        "start": 4,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1303870": {
+        "start": 12,
+        "length": 2,
+        "reading": "さんぶつ"
+      },
+      "1399610": {
+        "start": 8,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1440660": {
+        "start": 2,
+        "length": 3,
+        "reading": "てんらんかい"
+      },
+      "1483070": {
+        "start": 6,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1554820": {
+        "start": 10,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1619690": {
+        "start": 2,
+        "length": 2,
+        "reading": "てんらん"
+      },
+      "1749300": {
+        "start": 8,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      }
+    }
+  },
+  {
+    "id": "209431",
+    "original": "その醜い肉屋の旦那はあの想像上の怪物に似ている。",
+    "en": [
+      {
+        "id": "46692",
+        "text": "That ugly butcher resembles that fictional monster."
+      },
+      {
+        "id": "10299893",
+        "text": "That ugly butcher's spouse resembles that one imaginary monster."
+      }
+    ],
+    "indices": "其の[01]{その} 醜い[01] 肉屋 の 旦那[01]~ は 彼の(あの){あの} 想像上{想像上の} 怪物 に 似る{似ている}",
+    "vocabIds": [
+      "1333810",
+      "1463540",
+      "1418410",
+      "1399610",
+      "2201250",
+      "1352130",
+      "1200330",
+      "1009770",
+      "1314600",
+      "1314550"
+    ],
+    "matches": {
+      "1009770": {
+        "start": 18,
+        "length": 3,
+        "reading": "ににて"
+      },
+      "1200330": {
+        "start": 16,
+        "length": 2,
+        "reading": "かいぶつ"
+      },
+      "1314550": {
+        "start": 19,
+        "length": 1,
+        "reading": "に"
+      },
+      "1314600": {
+        "start": 19,
+        "length": 1,
+        "reading": "に"
+      },
+      "1333810": {
+        "start": 2,
+        "length": 2,
+        "reading": "みにくい"
+      },
+      "1352130": {
+        "start": 14,
+        "length": 1,
+        "reading": "じょう"
+      },
+      "1399610": {
+        "start": 12,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1418410": {
+        "start": 7,
+        "length": 2,
+        "reading": "だんな"
+      },
+      "1463540": {
+        "start": 4,
+        "length": 2,
+        "reading": "にくや"
+      },
+      "2201250": {
+        "start": 12,
+        "length": 3,
+        "reading": "そうぞうじょう"
+      }
+    }
+  },
+  {
+    "id": "212145",
+    "original": "その音楽は私の想像力をかきたてた。",
+    "en": [
+      {
+        "id": "49425",
+        "text": "The music set my imagination to work."
+      }
+    ],
+    "indices": "其の[01]{その} 音楽 は 私(わたし)[01]{私の} 想像力 を 掻き立てる[02]{かきたてた}",
+    "vocabIds": [
+      "1183720",
+      "1311110",
+      "1399610",
+      "1749300",
+      "1554820"
+    ],
+    "matches": {
+      "1183720": {
+        "start": 2,
+        "length": 2,
+        "reading": "おんがく"
+      },
+      "1311110": {
+        "start": 5,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1399610": {
+        "start": 7,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1554820": {
+        "start": 9,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 7,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      }
+    }
+  },
+  {
+    "id": "213888",
+    "original": "そうした作品は完全に成功しているわけではないので、私の想像力が働く余地があるのだ。",
+    "en": [
+      {
+        "id": "51176",
+        "text": "Because they had not achieved complete success they gave more scope for the activity of my imagination."
+      }
+    ],
+    "indices": "然うした{そうした} 作品 は 完全{完全に} 成功 為る(する){している} 訳ではない{わけではない} ので 私(わたし)[01]{私の} 想像力 が 働く 余地 が[01] 有る{ある} のだ",
+    "vocabIds": [
+      "1297910",
+      "1211510",
+      "1375690",
+      "1311110",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1451150",
+      "1544380"
+    ],
+    "matches": {
+      "1211510": {
+        "start": 7,
+        "length": 2,
+        "reading": "かんぜん"
+      },
+      "1297910": {
+        "start": 4,
+        "length": 2,
+        "reading": "さくひん"
+      },
+      "1311110": {
+        "start": 25,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1375690": {
+        "start": 10,
+        "length": 2,
+        "reading": "せいこう"
+      },
+      "1399610": {
+        "start": 27,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1451150": {
+        "start": 31,
+        "length": 2,
+        "reading": "はたらく"
+      },
+      "1544380": {
+        "start": 33,
+        "length": 2,
+        "reading": "よち"
+      },
+      "1554820": {
+        "start": 29,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 27,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -2030,16 +3769,30 @@
     "indices": "御(ご){ご} 想像 に 御(お){お} 任せる[02]{任せします}~",
     "vocabIds": [
       "1399610",
-      "2070940"
+      "2070940",
+      "1467150",
+      "2741830"
     ],
     "matches": {
       "1399610": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1467150": {
+        "start": 5,
+        "length": 2,
+        "reading": "まかせ"
       },
       "2070940": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おまかせ"
+      },
+      "2741830": {
+        "start": 5,
+        "length": 2,
+        "reading": "まかせ"
       }
     }
   },
@@ -2062,19 +3815,131 @@
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1399610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1481890": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はんい"
       },
       "2858625": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "こえ"
+      }
+    }
+  },
+  {
+    "id": "219757",
+    "original": "この本のすべての登場人物は想像上のものです。",
+    "en": [
+      {
+        "id": "57077",
+        "text": "All the characters in this book are imaginary."
+      }
+    ],
+    "indices": "此の{この} 本(ほん)[01] の 全て{すべての} 登場人物 は 想像上{想像上の}~ 物(もの){もの} です",
+    "vocabIds": [
+      "1522150",
+      "1011740",
+      "1444800",
+      "1638880",
+      "1369070",
+      "1399610",
+      "2201250",
+      "1352130"
+    ],
+    "matches": {
+      "1011740": {
+        "start": 2,
+        "length": 2,
+        "reading": "ほんの"
+      },
+      "1352130": {
+        "start": 15,
+        "length": 1,
+        "reading": "じょう"
+      },
+      "1369070": {
+        "start": 10,
+        "length": 2,
+        "reading": "じんぶつ"
+      },
+      "1399610": {
+        "start": 13,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1444800": {
+        "start": 8,
+        "length": 2,
+        "reading": "とうじょう"
+      },
+      "1522150": {
+        "start": 2,
+        "length": 1,
+        "reading": "ほん"
+      },
+      "1638880": {
+        "start": 8,
+        "length": 4,
+        "reading": "とうじょうじんぶつ"
+      },
+      "2201250": {
+        "start": 13,
+        "length": 3,
+        "reading": "そうぞうじょう"
+      }
+    }
+  },
+  {
+    "id": "219791",
+    "original": "この本があなたの想像力を喚起してくれるでしょう。",
+    "en": [
+      {
+        "id": "57111",
+        "text": "This book will awaken your imagination."
+      }
+    ],
+    "indices": "此の{この} 本(ほん)[01] が 貴方(あなた)[01]{あなた} の 想像力 を 喚起~ 為る(する){して} 呉れる{くれる} でしょう[01]",
+    "vocabIds": [
+      "1522150",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1211270"
+    ],
+    "matches": {
+      "1211270": {
+        "start": 12,
+        "length": 2,
+        "reading": "かんき"
+      },
+      "1399610": {
+        "start": 8,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1522150": {
+        "start": 2,
+        "length": 1,
+        "reading": "ほん"
+      },
+      "1554820": {
+        "start": 10,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 8,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -2100,15 +3965,18 @@
     "matches": {
       "1203800": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がいしゅつ"
       },
       "1399610": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1438690": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "てんき"
       }
     }
   },
@@ -2134,15 +4002,69 @@
     "matches": {
       "1203800": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がいしゅつ"
       },
       "1399610": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1438690": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "てんき"
+      }
+    }
+  },
+  {
+    "id": "220933",
+    "original": "この世は我々の想像力にとっての画布そのものである。",
+    "en": [
+      {
+        "id": "58255",
+        "text": "This world is but canvas to our imaginations."
+      }
+    ],
+    "indices": "この世 は 我々 の 想像力 に取って{にとって} の 画布~ その物{そのもの} である",
+    "vocabIds": [
+      "2002260",
+      "1607050",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1197540"
+    ],
+    "matches": {
+      "1197540": {
+        "start": 15,
+        "length": 2,
+        "reading": "がふ"
+      },
+      "1399610": {
+        "start": 7,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1554820": {
+        "start": 9,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1607050": {
+        "start": 4,
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "1749300": {
+        "start": 7,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      },
+      "2002260": {
+        "start": 0,
+        "length": 3,
+        "reading": "このよ"
       }
     }
   },
@@ -2165,19 +4087,68 @@
     "matches": {
       "1316300": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "じだい"
       },
       "1390360": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せんそう"
       },
       "1399610": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "2002260": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "このよ"
+      }
+    }
+  },
+  {
+    "id": "221154",
+    "original": "この小説は想像力に富んでいる。",
+    "en": [
+      {
+        "id": "58475",
+        "text": "This novel is very imaginative."
+      }
+    ],
+    "indices": "此の{この} 小説 は 想像力~ に 富む{富んでいる}",
+    "vocabIds": [
+      "1348430",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1496740"
+    ],
+    "matches": {
+      "1348430": {
+        "start": 2,
+        "length": 2,
+        "reading": "しょうせつ"
+      },
+      "1399610": {
+        "start": 5,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1496740": {
+        "start": 9,
+        "length": 2,
+        "reading": "とん"
+      },
+      "1554820": {
+        "start": 7,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 5,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -2199,15 +4170,18 @@
     "matches": {
       "1198180": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "あう"
       },
       "1247250": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1399610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -2225,24 +4199,34 @@
       "1001820",
       "1373860",
       "1399610",
-      "1004550"
+      "1340450",
+      "1340430"
     ],
     "matches": {
       "1001820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
-      "1004550": {
-        "start": 12,
-        "length": 7
+      "1340430": {
+        "start": 15,
+        "length": 2,
+        "reading": "でき"
+      },
+      "1340450": {
+        "start": 15,
+        "length": 2,
+        "reading": "でき"
       },
       "1373860": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1399610": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -2259,25 +4243,41 @@
     "vocabIds": [
       "1202270",
       "1259290",
+      "2256270",
+      "1577100",
       "2851233",
       "1399610"
     ],
     "matches": {
       "1202270": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "え"
       },
       "1259290": {
         "start": 4,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1399610": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2256270": {
+        "start": 4,
+        "length": 1,
+        "reading": "み"
       },
       "2851233": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "なにを"
       }
     }
   },
@@ -2297,7 +4297,8 @@
     "matches": {
       "1399610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -2318,11 +4319,13 @@
     "matches": {
       "1222590": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きぶん"
       },
       "1399610": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -2338,16 +4341,24 @@
     "indices": "世紀 が どの様に{どのように} なる[01] か 想像 出来る{できます} か",
     "vocabIds": [
       "2859767",
+      "1373990",
       "1399610"
     ],
     "matches": {
+      "1373990": {
+        "start": 2,
+        "length": 2,
+        "reading": "せいき"
+      },
       "1399610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "2859767": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "にいちせいき"
       }
     }
   },
@@ -2363,21 +4374,36 @@
     "indices": "我々 は と言えば[02]{といえば} 進化論 を 想像 為る(する){する}",
     "vocabIds": [
       "1607050",
+      "1366000",
       "1646810",
+      "1957110",
       "1399610"
     ],
     "matches": {
+      "1366000": {
+        "start": 12,
+        "length": 2,
+        "reading": "しんか"
+      },
       "1399610": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       },
       "1646810": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "しんかろん"
+      },
+      "1957110": {
+        "start": 14,
+        "length": 1,
+        "reading": "ろん"
       }
     }
   },
@@ -2394,6 +4420,7 @@
     "vocabIds": [
       "1318610",
       "1399610",
+      "1311110",
       "1311300",
       "1278400",
       "1492350"
@@ -2401,23 +4428,33 @@
     "matches": {
       "1278400": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こうふく"
+      },
+      "1311110": {
+        "start": 10,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1399610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1492350": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ふこう"
       }
     }
   },
@@ -2442,27 +4479,33 @@
     "matches": {
       "1225450": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "ぎせい"
       },
       "1386710": {
         "start": 30,
-        "length": 3
+        "length": 2,
+        "reading": "たえ"
       },
       "1399610": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1495740": {
         "start": 12,
-        "length": 4
+        "length": 2,
+        "reading": "つか"
       },
       "1607050": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -2477,152 +4520,217 @@
     ],
     "indices": "",
     "vocabIds": [
+      "1387210",
       "1388170",
       "1348870",
+      "1392580",
       "1392590",
+      "1580350",
       "1352630",
+      "1226020",
       "2820720",
       "1427290",
       "1443840",
-      "1226020",
+      "1392190",
       "1392220",
-      "1429740",
-      "2670200",
+      "2080730",
+      "1429750",
+      "1600720",
       "1596960",
-      "1392580",
       "1150450",
       "1592250",
       "1580640",
       "2101130",
       "1501620",
       "1225450",
+      "1311110",
       "1311300",
       "1399610",
       "1539730",
-      "1365520",
       "1519210",
       "1258450",
+      "1370090",
       "2276360",
       "1451150",
       "1373860",
-      "2018880"
+      "2018880",
+      "1605820"
     ],
     "matches": {
       "1150450": {
         "start": 74,
-        "length": 3
+        "length": 3,
+        "reading": "あいする"
       },
       "1225450": {
         "start": 124,
-        "length": 2
+        "length": 2,
+        "reading": "ぎせい"
       },
       "1226020": {
-        "start": 38,
-        "length": 2
+        "start": 14,
+        "length": 2,
+        "reading": "ぎいん"
       },
       "1258450": {
         "start": 162,
-        "length": 2
+        "length": 2,
+        "reading": "けんしん"
+      },
+      "1311110": {
+        "start": 131,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 131,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1348870": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1352630": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "じょういんぎいん"
       },
-      "1365520": {
-        "start": 155,
-        "length": 1
+      "1370090": {
+        "start": 191,
+        "length": 3,
+        "reading": "つくし"
       },
       "1373860": {
         "start": 210,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
+      },
+      "1387210": {
+        "start": 0,
+        "length": 1,
+        "reading": "さき"
       },
       "1388170": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "さきほど"
+      },
+      "1392190": {
+        "start": 43,
+        "length": 2,
+        "reading": "せんきょ"
       },
       "1392220": {
         "start": 43,
-        "length": 3
+        "length": 3,
+        "reading": "せんきょせん"
       },
       "1392580": {
-        "start": 70,
-        "length": 1
+        "start": 5,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1399610": {
         "start": 140,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1427290": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ていちょう"
       },
-      "1429740": {
+      "1429750": {
         "start": 47,
-        "length": 1
+        "length": 2,
+        "reading": "ながく"
       },
       "1443840": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1451150": {
         "start": 195,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1501620": {
         "start": 116,
-        "length": 3
+        "length": 2,
+        "reading": "はらっ"
       },
       "1519210": {
         "start": 157,
-        "length": 3
+        "length": 2,
+        "reading": "わすれ"
       },
       "1539730": {
         "start": 149,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうかん"
+      },
+      "1580350": {
+        "start": 12,
+        "length": 2,
+        "reading": "じょういん"
       },
       "1580640": {
         "start": 99,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1592250": {
         "start": 79,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       },
       "1596960": {
         "start": 53,
-        "length": 3
+        "length": 2,
+        "reading": "たたかっ"
+      },
+      "1600720": {
+        "start": 50,
+        "length": 3,
+        "reading": "はげしく"
+      },
+      "1605820": {
+        "start": 215,
+        "length": 2,
+        "reading": "よい"
       },
       "2018880": {
         "start": 213,
-        "length": 4
+        "length": 4,
+        "reading": "よりよい"
+      },
+      "2080730": {
+        "start": 45,
+        "length": 1,
+        "reading": "せん"
       },
       "2101130": {
         "start": 107,
-        "length": 1
+        "length": 1,
+        "reading": "し"
       },
       "2276360": {
         "start": 191,
-        "length": 3
-      },
-      "2670200": {
-        "start": 50,
-        "length": 1
+        "length": 3,
+        "reading": "つくし"
       },
       "2820720": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "じつに"
       }
     }
   },
@@ -2641,63 +4749,197 @@
       "1399610",
       "1002590",
       "2408840",
+      "2757660",
+      "1247250",
       "1538130",
       "1432920",
+      "1361490",
       "1856610",
       "1312970",
       "1592900",
+      "1163400",
       "1163420",
+      "2136050",
+      "2079370",
+      "1559290",
+      "1559260",
       "1559280",
       "1631370"
     ],
     "matches": {
       "1002590": {
         "start": 29,
-        "length": 4
+        "length": 4,
+        "reading": "おとうさん"
+      },
+      "1163400": {
+        "start": 85,
+        "length": 2,
+        "reading": "いっしょ"
       },
       "1163420": {
         "start": 85,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
+      },
+      "1247250": {
+        "start": 45,
+        "length": 1,
+        "reading": "きみ"
       },
       "1247310": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "きみたち"
       },
       "1312970": {
         "start": 80,
-        "length": 2
+        "length": 2,
+        "reading": "かう"
+      },
+      "1361490": {
+        "start": 77,
+        "length": 3,
+        "reading": "あたらしく"
       },
       "1399610": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1432920": {
         "start": 64,
-        "length": 2
+        "length": 2,
+        "reading": "とおり"
       },
       "1538130": {
         "start": 60,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
+      },
+      "1559260": {
+        "start": 88,
+        "length": 2,
+        "reading": "つれ"
       },
       "1559280": {
         "start": 88,
-        "length": 3
+        "length": 3,
+        "reading": "つれて"
+      },
+      "1559290": {
+        "start": 88,
+        "length": 2,
+        "reading": "つれ"
       },
       "1592900": {
         "start": 82,
-        "length": 2
+        "length": 2,
+        "reading": "こいぬ"
       },
       "1631370": {
         "start": 91,
-        "length": 3
+        "length": 3,
+        "reading": "いける"
       },
       "1856610": {
         "start": 77,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしく"
+      },
+      "2079370": {
+        "start": 87,
+        "length": 4,
+        "reading": "につれて"
+      },
+      "2136050": {
+        "start": 87,
+        "length": 3,
+        "reading": "につれ"
       },
       "2408840": {
         "start": 38,
-        "length": 3
+        "length": 2,
+        "reading": "あいし"
+      },
+      "2757660": {
+        "start": 38,
+        "length": 2,
+        "reading": "あいし"
+      }
+    }
+  },
+  {
+    "id": "347888",
+    "original": "人が月面に着陸し、ベルリンでは壁が崩壊し、われわれの科学と想像力によって世界はつながりました。",
+    "en": [
+      {
+        "id": "347794",
+        "text": "A man touched down on the moon. A wall came down in Berlin. A world was connected by our own science and imagination."
+      }
+    ],
+    "vocabIds": [
+      "1580640",
+      "1255860",
+      "1423280",
+      "1509290",
+      "1516280",
+      "1192700",
+      "1399610",
+      "1749300",
+      "1554820",
+      "1373860"
+    ],
+    "matches": {
+      "1192700": {
+        "start": 26,
+        "length": 2,
+        "reading": "かがく"
+      },
+      "1255860": {
+        "start": 2,
+        "length": 2,
+        "reading": "げつめん"
+      },
+      "1373860": {
+        "start": 36,
+        "length": 2,
+        "reading": "せかい"
+      },
+      "1399610": {
+        "start": 29,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1423280": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちゃくりく"
+      },
+      "1509290": {
+        "start": 15,
+        "length": 1,
+        "reading": "かべ"
+      },
+      "1516280": {
+        "start": 17,
+        "length": 2,
+        "reading": "ほうかい"
+      },
+      "1554820": {
+        "start": 31,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1580640": {
+        "start": 0,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1749300": {
+        "start": 29,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -2713,20 +4955,35 @@
     "vocabIds": [
       "1399610",
       "1528060",
-      "1263730"
+      "1263710",
+      "1263730",
+      "1437260"
     ],
     "matches": {
+      "1263710": {
+        "start": 17,
+        "length": 2,
+        "reading": "げんじつ"
+      },
       "1263730": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "げんじつてき"
       },
       "1399610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1437260": {
+        "start": 19,
+        "length": 1,
+        "reading": "てき"
       },
       "1528060": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "みらい"
       }
     }
   },
@@ -2741,22 +4998,119 @@
     ],
     "indices": "インターネット の 断片的~ ニュース を 読む{読んでいる} 丈(だけ){だけ} です が まあ 大体[01]{だいたい} 想像がつく{想像がつきます}",
     "vocabIds": [
+      "1419790",
       "1704890",
+      "1437260",
       "1456360",
       "1399610"
     ],
     "matches": {
       "1399610": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1419790": {
+        "start": 8,
+        "length": 2,
+        "reading": "だんぺん"
+      },
+      "1437260": {
+        "start": 10,
+        "length": 1,
+        "reading": "てき"
       },
       "1456360": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "よん"
       },
       "1704890": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "だんぺんてき"
+      }
+    }
+  },
+  {
+    "id": "1125130",
+    "original": "竜は想像上の動物だ。",
+    "en": [
+      {
+        "id": "325506",
+        "text": "A dragon is a creature of fancy."
+      }
+    ],
+    "vocabIds": [
+      "1629170",
+      "1399610",
+      "2201250",
+      "1352130",
+      "1451470"
+    ],
+    "matches": {
+      "1352130": {
+        "start": 4,
+        "length": 1,
+        "reading": "じょう"
+      },
+      "1399610": {
+        "start": 2,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1451470": {
+        "start": 6,
+        "length": 2,
+        "reading": "どうぶつ"
+      },
+      "1629170": {
+        "start": 0,
+        "length": 1,
+        "reading": "りゅう"
+      },
+      "2201250": {
+        "start": 2,
+        "length": 3,
+        "reading": "そうぞうじょう"
+      }
+    }
+  },
+  {
+    "id": "1690040",
+    "original": "想像力を解き放て。",
+    "en": [
+      {
+        "id": "1690037",
+        "text": "Let your imagination run wild."
+      }
+    ],
+    "vocabIds": [
+      "1399610",
+      "1749300",
+      "1554820",
+      "2006230"
+    ],
+    "matches": {
+      "1399610": {
+        "start": 0,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1554820": {
+        "start": 2,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1749300": {
+        "start": 0,
+        "length": 3,
+        "reading": "そうぞうりょく"
+      },
+      "2006230": {
+        "start": 4,
+        "length": 4,
+        "reading": "ときはなて"
       }
     }
   },
@@ -2770,6 +5124,7 @@
       }
     ],
     "vocabIds": [
+      "1163400",
       "1163420",
       "1196000",
       "1304480",
@@ -2777,25 +5132,35 @@
       "1399610"
     ],
     "matches": {
+      "1163400": {
+        "start": 4,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1196000": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "すごす"
       },
       "1304480": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "のこり"
       },
       "1368370": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "じんせい"
       },
       "1399610": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -2817,19 +5182,23 @@
     "matches": {
       "1255430": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1352130": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1399610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -2850,15 +5219,18 @@
     "matches": {
       "1373860": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1399610": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1443000": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんき"
       }
     }
   },
@@ -2872,6 +5244,7 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1368370",
       "1399610"
@@ -2879,15 +5252,23 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1368370": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じんせい"
       },
       "1399610": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2903,20 +5284,41 @@
     "vocabIds": [
       "1582310",
       "1399610",
-      "2438400"
+      "1338240",
+      "1896380",
+      "1547720",
+      "1547710"
     ],
     "matches": {
+      "1338240": {
+        "start": 11,
+        "length": 1,
+        "reading": "で"
+      },
       "1399610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1547710": {
+        "start": 13,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 13,
+        "length": 1,
+        "reading": "き"
       },
       "1582310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "あたま"
       },
-      "2438400": {
+      "1896380": {
         "start": 11,
-        "length": 4
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -2936,11 +5338,13 @@
     "matches": {
       "1399610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1591430": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "きもち"
       }
     }
   },
@@ -2954,47 +5358,67 @@
       }
     ],
     "vocabIds": [
+      "1160790",
       "1576250",
+      "1445160",
       "1595730",
       "1334110",
       "1423000",
+      "1597470",
       "1203250",
-      "1338470",
       "1373860",
       "1399610"
     ],
     "matches": {
+      "1160790": {
+        "start": 8,
+        "length": 1,
+        "reading": "いち"
+      },
       "1203250": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "そと"
       },
       "1334110": {
         "start": 14,
-        "length": 2
-      },
-      "1338470": {
-        "start": 29,
-        "length": 3
+        "length": 2,
+        "reading": "じゅうにん"
       },
       "1373860": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1399610": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1423000": {
         "start": 24,
-        "length": 2
+        "length": 1,
+        "reading": "き"
+      },
+      "1445160": {
+        "start": 9,
+        "length": 1,
+        "reading": "ど"
       },
       "1576250": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いちど"
       },
       "1595730": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "すべて"
+      },
+      "1597470": {
+        "start": 24,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -3008,7 +5432,9 @@
       }
     ],
     "vocabIds": [
+      "1604890",
       "2396170",
+      "1465590",
       "1318610",
       "1399610",
       "1394800",
@@ -3017,23 +5443,38 @@
     "matches": {
       "1158880": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "ちがっ"
       },
       "1318610": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1394800": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "まったく"
       },
       "1399610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1465590": {
+        "start": 2,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1604890": {
+        "start": 0,
+        "length": 1,
+        "reading": "め"
       },
       "2396170": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "めにはいる"
       }
     }
   },
@@ -3056,21 +5497,30 @@
     ],
     "vocabIds": [
       "2841921",
+      "1155120",
       "1397300",
       "1399610"
     ],
     "matches": {
+      "1155120": {
+        "start": 2,
+        "length": 2,
+        "reading": "いじょう"
+      },
       "1397300": {
         "start": 4,
-        "length": 5
+        "length": 5,
+        "reading": "すばらしい"
       },
       "1399610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "2841921": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "これいじょう"
       }
     }
   },
@@ -3089,7 +5539,8 @@
     "matches": {
       "1399610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -3118,47 +5569,58 @@
     "matches": {
       "1198880": {
         "start": 35,
-        "length": 2
+        "length": 2,
+        "reading": "かいわ"
       },
       "1259860": {
         "start": 29,
-        "length": 4
+        "length": 4,
+        "reading": "みしらぬ"
       },
       "1307550": {
         "start": 38,
-        "length": 3
+        "length": 3,
+        "reading": "はじめる"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1397300": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "すばらしい"
       },
       "1399610": {
         "start": 51,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1458020": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "うちき"
       },
       "1460850": {
         "start": 47,
-        "length": 3
+        "length": 3,
+        "reading": "むずかしい"
       },
       "1483070": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1540150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       },
       "1580640": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -3177,7 +5639,8 @@
     "matches": {
       "1399610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -3198,15 +5661,18 @@
     "matches": {
       "1378860": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1399610": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1443000": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんき"
       }
     }
   },
@@ -3220,7 +5686,9 @@
       }
     ],
     "vocabIds": [
+      "1264960",
       "2631630",
+      "1518130",
       "1580640",
       "1329010",
       "1324200",
@@ -3230,27 +5698,43 @@
     "matches": {
       "1207240": {
         "start": 30,
-        "length": 3
+        "length": 3,
+        "reading": "たのしい"
+      },
+      "1264960": {
+        "start": 2,
+        "length": 2,
+        "reading": "こせい"
       },
       "1324200": {
         "start": 12,
-        "length": 6
+        "length": 5,
+        "reading": "くみかわし"
       },
       "1329010": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "さけ"
       },
       "1399610": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1518130": {
+        "start": 4,
+        "length": 2,
+        "reading": "ゆたか"
       },
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "2631630": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "こせいゆたか"
       }
     }
   },
@@ -3272,19 +5756,23 @@
     "matches": {
       "1307710": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "すがた"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1399610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "1597890": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "つくる"
       }
     }
   },
@@ -3299,21 +5787,30 @@
     ],
     "vocabIds": [
       "1266570",
+      "1266560",
       "2864817",
       "1399610"
     ],
     "matches": {
+      "1266560": {
+        "start": 4,
+        "length": 2,
+        "reading": "かため"
+      },
       "1266570": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "かため"
       },
       "1399610": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       },
       "2864817": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "あげる"
       }
     }
   },
@@ -3337,11 +5834,13 @@
     "matches": {
       "1378860": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1399610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   },
@@ -3364,7 +5863,56 @@
     "matches": {
       "1399610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      }
+    }
+  },
+  {
+    "id": "12629415",
+    "original": "それは想像に難くない。",
+    "en": [
+      {
+        "id": "5087185",
+        "text": "It's pretty easy to imagine."
+      },
+      {
+        "id": "13477147",
+        "text": "It's not hard to imagine."
+      }
+    ],
+    "vocabIds": [
+      "1399610",
+      "2068980",
+      "2069670",
+      "2772730",
+      "2772750"
+    ],
+    "matches": {
+      "1399610": {
+        "start": 3,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "2068980": {
+        "start": 3,
+        "length": 7,
+        "reading": "そうぞうにかたくない"
+      },
+      "2069670": {
+        "start": 5,
+        "length": 5,
+        "reading": "にかたくない"
+      },
+      "2772730": {
+        "start": 6,
+        "length": 2,
+        "reading": "かたく"
+      },
+      "2772750": {
+        "start": 6,
+        "length": 4,
+        "reading": "かたくない"
       }
     }
   },
@@ -3384,11 +5932,57 @@
     "matches": {
       "1214330": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かんたん"
       },
       "1399610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
+      }
+    }
+  },
+  {
+    "id": "10990447",
+    "original": "想像力のない人たちだ。",
+    "en": [
+      {
+        "id": "13676222",
+        "text": "They are people with no imagination."
+      }
+    ],
+    "vocabIds": [
+      "1399610",
+      "1749300",
+      "1554820",
+      "1580640",
+      "1368740"
+    ],
+    "matches": {
+      "1368740": {
+        "start": 6,
+        "length": 3,
+        "reading": "ひとたち"
+      },
+      "1399610": {
+        "start": 0,
+        "length": 2,
+        "reading": "そうぞう"
+      },
+      "1554820": {
+        "start": 2,
+        "length": 1,
+        "reading": "りょく"
+      },
+      "1580640": {
+        "start": 6,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1749300": {
+        "start": 0,
+        "length": 3,
+        "reading": "そうぞうりょく"
       }
     }
   },
@@ -3406,17 +6000,13 @@
       }
     ],
     "vocabIds": [
-      "1399610",
-      "2858625"
+      "1399610"
     ],
     "matches": {
       "1399610": {
         "start": 0,
-        "length": 2
-      },
-      "2858625": {
-        "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうぞう"
       }
     }
   }

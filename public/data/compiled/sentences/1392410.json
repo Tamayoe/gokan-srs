@@ -1,5 +1,66 @@
 [
   {
+    "id": "117488",
+    "original": "彼の古い車じゃ、一銭にもならないよ。",
+    "en": [
+      {
+        "id": "286176",
+        "text": "His old clunker isn't worth anything."
+      },
+      {
+        "id": "917772",
+        "text": "I'm telling you, his old car won't fetch a red cent."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 古い 車(くるま) じゃ(#2851029) 一銭 にも 成る{ならない} よ[01]",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1265070",
+      "1323080",
+      "1160790",
+      "2005930",
+      "1392410"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1160790": {
+        "start": 8,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1265070": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふるい"
+      },
+      "1323080": {
+        "start": 4,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1392410": {
+        "start": 9,
+        "length": 1,
+        "reading": "せん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2005930": {
+        "start": 8,
+        "length": 2,
+        "reading": "いちせん"
+      }
+    }
+  },
+  {
     "id": "118264",
     "original": "彼のビジネスプランは立派だけど、勘定あって銭足らず、という気もするけどね。",
     "en": [
@@ -10,6 +71,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} ビジネスプラン~ は 立派 だ けど 勘定 有る{あって} 銭(ぜに)[03]~ 足らず[02]~ と 言う{いう} 気(き)[04] も 為る(する){する} けど ね(#2029080)[01]",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1551790",
       "1210750",
@@ -20,27 +82,38 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1210750": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "かんじょう"
       },
       "1221520": {
         "start": 29,
-        "length": 1
+        "length": 1,
+        "reading": "き"
       },
       "1392410": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
       },
       "1404730": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "たらず"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1551790": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "りっぱ"
       }
     }
   },
@@ -57,50 +130,245 @@
     "vocabIds": [
       "1392410",
       "1555420",
+      "1414340",
       "2018350",
       "1413500"
     ],
     "matches": {
       "1392410": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
       },
       "1413500": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "たいきん"
+      },
+      "1414340": {
+        "start": 3,
+        "length": 2,
+        "reading": "たいせつ"
       },
       "1555420": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "りん"
       },
       "2018350": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "たいせつに"
       }
     }
   },
   {
-    "id": "202515",
-    "original": "つり銭のいらないようにお願いします。",
+    "id": "191312",
+    "original": "安物買いの銭失い。",
     "en": [
       {
-        "id": "39744",
-        "text": "Exact change, please."
+        "id": "28473",
+        "text": "Buy cheap and waste your money."
       }
     ],
-    "indices": "釣り銭{つり銭}~ の 要る{いらない} 様に{ように} お願いします",
+    "indices": "安物 買い~ の 銭(ぜに)[03] 失う{失い}",
     "vocabIds": [
+      "1154250",
+      "2152900",
+      "1636070",
       "1392410",
-      "1001720"
+      "2722750",
+      "1319750"
     ],
     "matches": {
-      "1001720": {
-        "start": 11,
-        "length": 6
+      "1154250": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすもの"
+      },
+      "1319750": {
+        "start": 6,
+        "length": 2,
+        "reading": "うしない"
       },
       "1392410": {
+        "start": 5,
+        "length": 1,
+        "reading": "ぜに"
+      },
+      "1636070": {
         "start": 2,
-        "length": 1
+        "length": 2,
+        "reading": "かい"
+      },
+      "2152900": {
+        "start": 0,
+        "length": 8,
+        "reading": "やすものかいのぜにうしない"
+      },
+      "2722750": {
+        "start": 5,
+        "length": 3,
+        "reading": "ぜにうしない"
+      }
+    }
+  },
+  {
+    "id": "193499",
+    "original": "もし彼のすすめに従っていたら、会社に一銭もなくなっていたかもしれません。",
+    "en": [
+      {
+        "id": "30664",
+        "text": "The firm might have lost all its money if it had taken his advice."
+      }
+    ],
+    "indices": "若し(もし){もし} 彼(かれ)[01] の 勧め{すすめ}~ に 従う{従っていたら} 会社[01] に 一銭 も 無くなる{なくなっていた} かも知れない{かもしれません}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "2630530",
+      "1335210",
+      "1335230",
+      "1198550",
+      "1160790",
+      "2005930",
+      "1392410"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 2,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1160790": {
+        "start": 18,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1198550": {
+        "start": 15,
+        "length": 2,
+        "reading": "かいしゃ"
+      },
+      "1335210": {
+        "start": 8,
+        "length": 2,
+        "reading": "したがっ"
+      },
+      "1335230": {
+        "start": 8,
+        "length": 3,
+        "reading": "したがって"
+      },
+      "1392410": {
+        "start": 19,
+        "length": 1,
+        "reading": "せん"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2005930": {
+        "start": 18,
+        "length": 2,
+        "reading": "いちせん"
+      },
+      "2630530": {
+        "start": 7,
+        "length": 4,
+        "reading": "にしたがって"
+      }
+    }
+  },
+  {
+    "id": "227247",
+    "original": "お金はほとんど一銭も残っていない。",
+    "en": [
+      {
+        "id": "64595",
+        "text": "I have hardly any money left."
+      }
+    ],
+    "indices": "お金 は 殆ど{ほとんど} 一銭~ も 残る{残っていない}",
+    "vocabIds": [
+      "1001820",
+      "1160790",
+      "2005930",
+      "1392410",
+      "1304510"
+    ],
+    "matches": {
+      "1001820": {
+        "start": 0,
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1304510": {
+        "start": 10,
+        "length": 2,
+        "reading": "のこっ"
+      },
+      "1392410": {
+        "start": 8,
+        "length": 1,
+        "reading": "せん"
+      },
+      "2005930": {
+        "start": 7,
+        "length": 2,
+        "reading": "いちせん"
+      }
+    }
+  },
+  {
+    "id": "230397",
+    "original": "あぶく銭を稼ごうとする開発業者たちよ。",
+    "en": [
+      {
+        "id": "67764",
+        "text": "They're some developers who aim to make a fast buck!"
+      }
+    ],
+    "indices": "泡銭{あぶく銭}~ を 稼ぐ{稼ごう} とする[01] 開発 業者~ 達{たち} よ[01]",
+    "vocabIds": [
+      "1747810",
+      "1392410",
+      "1194450",
+      "1202880",
+      "1239440"
+    ],
+    "matches": {
+      "1194450": {
+        "start": 5,
+        "length": 2,
+        "reading": "かせご"
+      },
+      "1202880": {
+        "start": 11,
+        "length": 2,
+        "reading": "かいはつ"
+      },
+      "1239440": {
+        "start": 13,
+        "length": 2,
+        "reading": "ぎょうしゃ"
+      },
+      "1392410": {
+        "start": 3,
+        "length": 1,
+        "reading": "ぜに"
+      },
+      "1747810": {
+        "start": 0,
+        "length": 4,
+        "reading": "あぶくぜに"
       }
     }
   },
@@ -116,21 +384,30 @@
     "indices": "一銭{１銭} 足りとも{たりとも} 無駄にする{むだにしない} の が 彼(かれ)[01] の 信条~ だ",
     "vocabIds": [
       "1392410",
+      "1483070",
       "1000420",
       "1359370"
     ],
     "matches": {
       "1000420": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1359370": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "しんじょう"
       },
       "1392410": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
+      },
+      "1483070": {
+        "start": 14,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -145,51 +422,104 @@
     ],
     "vocabIds": [
       "1327720",
-      "2843452",
       "1579350",
       "1392410",
       "1385070",
+      "1220050",
       "1858070",
       "1349400",
       "1352130",
       "1421850"
     ],
     "matches": {
+      "1220050": {
+        "start": 16,
+        "length": 2,
+        "reading": "いくにち"
+      },
       "1327720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1349400": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "とこのま"
       },
       "1352130": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1385070": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きって"
       },
       "1392410": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
       },
       "1421850": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "おい"
       },
       "1579350": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "さん"
       },
       "1858070": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "いくにちも"
+      }
+    }
+  },
+  {
+    "id": "1753644",
+    "original": "彼はたくさんのあぶく銭を得た。",
+    "en": [
+      {
+        "id": "299215",
+        "text": "He made a lot of easy money."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1747810",
+      "1392410",
+      "1588760",
+      "1454490"
+    ],
+    "matches": {
+      "1392410": {
+        "start": 10,
+        "length": 1,
+        "reading": "ぜに"
       },
-      "2843452": {
-        "start": 3,
-        "length": 1
+      "1454490": {
+        "start": 12,
+        "length": 1,
+        "reading": "え"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1588760": {
+        "start": 12,
+        "length": 1,
+        "reading": "え"
+      },
+      "1747810": {
+        "start": 7,
+        "length": 4,
+        "reading": "あぶくぜに"
       }
     }
   },
@@ -211,19 +541,23 @@
     "matches": {
       "1273270": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうえん"
       },
       "1392410": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
       },
       "1423310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1504610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ふんすい"
       }
     }
   }

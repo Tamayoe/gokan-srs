@@ -20,27 +20,33 @@
     "matches": {
       "1258710": {
         "start": 32,
-        "length": 1
+        "length": 1,
+        "reading": "きぬ"
       },
       "1311450": {
         "start": 34,
-        "length": 1
+        "length": 1,
+        "reading": "いと"
       },
       "1318290": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1323280": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "しゃりん"
       },
       "1340610": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "できあがる"
       },
       "1562610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わく"
       }
     }
   },
@@ -55,22 +61,31 @@
     ],
     "indices": "今まで の 所(ところ){ところ} 未だ[02]{まだ} 其の[01]{その} 仕事[01] は 出来上がる[01]{出来上がっていない}",
     "vocabIds": [
+      "1288850",
       "1587590",
       "1304970",
       "1340610"
     ],
     "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
       "1304970": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1340610": {
         "start": 15,
-        "length": 6
+        "length": 5,
+        "reading": "できあがっ"
       },
       "1587590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       }
     }
   },
@@ -85,17 +100,64 @@
     ],
     "indices": "今のところ 未だ[02]{まだ} セーター は 出来上がる[01]{出来上がっていない}",
     "vocabIds": [
+      "1288850",
       "1288960",
       "1340610"
     ],
     "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
       "1288960": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "いまのところ"
       },
       "1340610": {
         "start": 12,
-        "length": 6
+        "length": 5,
+        "reading": "できあがっ"
+      }
+    }
+  },
+  {
+    "id": "174441",
+    "original": "顧客候補のリストは出来上がりました。",
+    "en": [
+      {
+        "id": "240028",
+        "text": "Potential customers have been listed."
+      }
+    ],
+    "indices": "顧客 候補[01] の リスト(#1141500) は 出来上がる[01]{出来上がりました}",
+    "vocabIds": [
+      "1578540",
+      "1272730",
+      "1340610",
+      "1340600"
+    ],
+    "matches": {
+      "1272730": {
+        "start": 2,
+        "length": 2,
+        "reading": "こうほ"
+      },
+      "1340600": {
+        "start": 9,
+        "length": 5,
+        "reading": "できあがり"
+      },
+      "1340610": {
+        "start": 9,
+        "length": 5,
+        "reading": "できあがり"
+      },
+      "1578540": {
+        "start": 0,
+        "length": 2,
+        "reading": "こきゃく"
       }
     }
   },
@@ -116,11 +178,91 @@
     "matches": {
       "1252090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1340610": {
         "start": 3,
-        "length": 6
+        "length": 5,
+        "reading": "できあがっ"
+      }
+    }
+  },
+  {
+    "id": "200429",
+    "original": "どのくらいでこの洗濯物は出来上がりますか。",
+    "en": [
+      {
+        "id": "37630",
+        "text": "How soon will this laundry be ready?"
+      }
+    ],
+    "indices": "どの位{どのくらい} で(#2028980) 此の{この} 洗濯物 は 出来上がる[01]{出来上がります} か",
+    "vocabIds": [
+      "1390980",
+      "1391020",
+      "1502390",
+      "1340610",
+      "1340600"
+    ],
+    "matches": {
+      "1340600": {
+        "start": 12,
+        "length": 5,
+        "reading": "できあがり"
+      },
+      "1340610": {
+        "start": 12,
+        "length": 5,
+        "reading": "できあがり"
+      },
+      "1390980": {
+        "start": 8,
+        "length": 2,
+        "reading": "せんたく"
+      },
+      "1391020": {
+        "start": 8,
+        "length": 3,
+        "reading": "せんたくぶつ"
+      },
+      "1502390": {
+        "start": 10,
+        "length": 1,
+        "reading": "ぶつ"
+      }
+    }
+  },
+  {
+    "id": "217887",
+    "original": "これらの写真は、たいへんよく出来上がりました。",
+    "en": [
+      {
+        "id": "55197",
+        "text": "These photos have come out very well."
+      }
+    ],
+    "indices": "此れ等{これらの} 写真 は 大変[01]{たいへん} 良く[01]{よく} 出来上がる[01]{出来上がりました}",
+    "vocabIds": [
+      "1321900",
+      "1340610",
+      "1340600"
+    ],
+    "matches": {
+      "1321900": {
+        "start": 4,
+        "length": 2,
+        "reading": "しゃしん"
+      },
+      "1340600": {
+        "start": 14,
+        "length": 5,
+        "reading": "できあがり"
+      },
+      "1340610": {
+        "start": 14,
+        "length": 5,
+        "reading": "できあがり"
       }
     }
   },
@@ -134,22 +276,37 @@
       }
     ],
     "vocabIds": [
+      "1242490",
       "2014080",
+      "1423310",
       "1412640",
       "1340610"
     ],
     "matches": {
+      "1242490": {
+        "start": 0,
+        "length": 2,
+        "reading": "きんじつ"
+      },
       "1340610": {
         "start": 7,
-        "length": 5
+        "length": 5,
+        "reading": "できあがる"
       },
       "1412640": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "だいどころ"
+      },
+      "1423310": {
+        "start": 2,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "2014080": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "きんじつちゅうに"
       }
     }
   },
@@ -168,7 +325,8 @@
     "matches": {
       "1340610": {
         "start": 2,
-        "length": 6
+        "length": 5,
+        "reading": "できあがっ"
       }
     }
   },
@@ -191,7 +349,60 @@
     "matches": {
       "1340610": {
         "start": 0,
-        "length": 6
+        "length": 5,
+        "reading": "できあがっ"
+      }
+    }
+  },
+  {
+    "id": "8965597",
+    "original": "トムはもう出来上がっちゃってるよ。",
+    "en": [
+      {
+        "id": "5109621",
+        "text": "Tom is already drunk."
+      }
+    ],
+    "vocabIds": [
+      "1340610"
+    ],
+    "matches": {
+      "1340610": {
+        "start": 5,
+        "length": 5,
+        "reading": "できあがっ"
+      }
+    }
+  },
+  {
+    "id": "10854993",
+    "original": "図面が出来上がりました。",
+    "en": [
+      {
+        "id": "238019",
+        "text": "The plans have been drawn up."
+      }
+    ],
+    "vocabIds": [
+      "1370520",
+      "1340610",
+      "1340600"
+    ],
+    "matches": {
+      "1340600": {
+        "start": 3,
+        "length": 5,
+        "reading": "できあがり"
+      },
+      "1340610": {
+        "start": 3,
+        "length": 5,
+        "reading": "できあがり"
+      },
+      "1370520": {
+        "start": 0,
+        "length": 2,
+        "reading": "ずめん"
       }
     }
   },
@@ -206,21 +417,30 @@
     ],
     "vocabIds": [
       "1270590",
+      "1490430",
       "2841217",
       "1340610"
     ],
     "matches": {
       "1270590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ごはん"
       },
       "1340610": {
         "start": 11,
-        "length": 6
+        "length": 5,
+        "reading": "できあがっ"
+      },
+      "1490430": {
+        "start": 9,
+        "length": 1,
+        "reading": "びょう"
       },
       "2841217": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "びょうで"
       }
     }
   }

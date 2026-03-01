@@ -598,8 +598,8 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             // [MODIFIED] If we have NO due reviews, and we CAN add items...
             const needsCandidates = canAddNew && state.introCandidates.length === 0;
 
-            let newCandidates: Vocabulary[] = [];
-            let finalQueue = updatedQueue;
+            const newCandidates: Vocabulary[] = [];
+            const finalQueue = updatedQueue;
 
             if (needsCandidates) {
                 // IMPORTANT: Exclude current introCandidates from search to avoid duplicates
@@ -886,7 +886,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         // [UPDATED] Pass nextDue (QuizItem)
         // We need to reconstruct the QuizItem properly if it came from the "hack" above
-        let itemToLoad = nextDue;
+        const itemToLoad = nextDue;
         if (!itemToLoad.vocab && itemToLoad.vocabId) {
             // It's the Intro Candidate hack, keep as is
             // Or fix the hack? The hack is just to satisify TS in nextDue return type.

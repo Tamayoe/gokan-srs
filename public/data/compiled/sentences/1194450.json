@@ -1,5 +1,68 @@
 [
   {
+    "id": "4726",
+    "original": "私は一日に100ユーロ稼ぎます。",
+    "en": [
+      {
+        "id": "1299",
+        "text": "I make €100 a day."
+      },
+      {
+        "id": "1009351",
+        "text": "I make 100 euros per day."
+      },
+      {
+        "id": "3026315",
+        "text": "I make 100 euros a day."
+      },
+      {
+        "id": "757392",
+        "text": "I earn 100 Euros a day."
+      }
+    ],
+    "indices": "私(わたし) は 一日(いちにち) に ユーロ[01]~ 稼ぐ{稼ぎます}",
+    "vocabIds": [
+      "1311110",
+      "1160790",
+      "1576260",
+      "1463770",
+      "1194450",
+      "1194430"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1194430": {
+        "start": 11,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1194450": {
+        "start": 11,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1576260": {
+        "start": 2,
+        "length": 2,
+        "reading": "いちにち"
+      }
+    }
+  },
+  {
     "id": "4763",
     "original": "お金を稼ぎたいならアメリカが一番だ。",
     "en": [
@@ -15,20 +78,86 @@
     "vocabIds": [
       "1001820",
       "1194450",
+      "1194430",
       "1165970"
     ],
     "matches": {
       "1001820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1165970": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いちばん"
+      },
+      "1194430": {
+        "start": 3,
+        "length": 2,
+        "reading": "かせぎ"
       },
       "1194450": {
         "start": 3,
-        "length": 4
+        "length": 2,
+        "reading": "かせぎ"
+      }
+    }
+  },
+  {
+    "id": "75241",
+    "original": "バイトで学費を稼ぎながら大学に通ってる。まあ苦学生ってとこかな。",
+    "en": [
+      {
+        "id": "328478",
+        "text": "I pay my university fees to go to university by part-time work. Well, I'm a 'working student' I suppose."
+      }
+    ],
+    "indices": "バイト(#1097870) で(#2028980) 学費 を[01] 稼ぐ{稼ぎ} 乍ら[01]{ながら} 大学 に 通う[02]{通ってる} まあ 苦学生 って 所(ところ){とこ} かな",
+    "vocabIds": [
+      "1207060",
+      "1194450",
+      "1194430",
+      "1413240",
+      "1432850",
+      "1244410",
+      "1611000"
+    ],
+    "matches": {
+      "1194430": {
+        "start": 7,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1194450": {
+        "start": 7,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1207060": {
+        "start": 4,
+        "length": 2,
+        "reading": "がくひ"
+      },
+      "1244410": {
+        "start": 22,
+        "length": 2,
+        "reading": "くがく"
+      },
+      "1413240": {
+        "start": 12,
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1432850": {
+        "start": 15,
+        "length": 2,
+        "reading": "かよっ"
+      },
+      "1611000": {
+        "start": 24,
+        "length": 2,
+        "reading": "なっ"
       }
     }
   },
@@ -53,27 +182,33 @@
     "matches": {
       "1194450": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1247250": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1413500": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たいきん"
       },
       "1479890": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "はんぶん"
       },
       "1525780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まんいち"
       }
     }
   },
@@ -88,6 +223,7 @@
     ],
     "indices": "米国人 は 人(ひと) が 稼ぐ 金額 を 其の[01]{その} 人(ひと) の 能力(のうりょく) を 計る[01]{測る} 尺度 に 為る(する){する} と言われる{といわれている}",
     "vocabIds": [
+      "1508900",
       "1508910",
       "1580640",
       "1194450",
@@ -99,31 +235,43 @@
     "matches": {
       "1194450": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1242700": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きんがく"
       },
       "1324130": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "しゃくど"
       },
       "1470370": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "のうりょく"
+      },
+      "1508900": {
+        "start": 0,
+        "length": 2,
+        "reading": "べいこく"
       },
       "1508910": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "べいこくじん"
       },
       "1580640": {
-        "start": 5,
-        "length": 1
+        "start": 2,
+        "length": 1,
+        "reading": "じん"
       },
       "2832864": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "そのひと"
       }
     }
   },
@@ -139,21 +287,36 @@
     "indices": "彼女[01] は 週 平均[01] 听{ポンド} 稼ぐ",
     "vocabIds": [
       "1483150",
+      "1333450",
       "2852909",
+      "1583870",
       "1194450"
     ],
     "matches": {
       "1194450": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
+      },
+      "1333450": {
+        "start": 3,
+        "length": 1,
+        "reading": "しゅう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1583870": {
+        "start": 4,
+        "length": 2,
+        "reading": "へいきん"
       },
       "2852909": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "しゅうへいきん"
       }
     }
   },
@@ -177,23 +340,28 @@
     "matches": {
       "1001820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1305990": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
       },
       "1451750": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -210,25 +378,41 @@
     "vocabIds": [
       "1483150",
       "1419370",
+      "1378860",
       "1378890",
+      "1484590",
       "1194450"
     ],
     "matches": {
       "1194450": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
+      },
+      "1378860": {
+        "start": 12,
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1378890": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "せいかつひ"
       },
       "1419370": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1484590": {
+        "start": 14,
+        "length": 1,
+        "reading": "ひ"
       }
     }
   },
@@ -249,11 +433,13 @@
     "matches": {
       "1194450": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -274,25 +460,23 @@
     "vocabIds": [
       "1483150",
       "1194450",
-      "1517090",
-      "1589320"
+      "1517090"
     ],
     "matches": {
       "1194450": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1517090": {
         "start": 15,
-        "length": 2
-      },
-      "1589320": {
-        "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       }
     }
   },
@@ -309,20 +493,29 @@
     "vocabIds": [
       "1483150",
       "2225040",
+      "1463770",
       "1194450"
     ],
     "matches": {
       "1194450": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2225040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       }
     }
   },
@@ -342,32 +535,89 @@
       "1242590",
       "1194450",
       "1252090",
-      "1281020"
+      "1281020",
+      "1281000"
     ],
     "matches": {
       "1194450": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1242590": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1244680": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "くろう"
       },
       "1252090": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
+      },
+      "1281000": {
+        "start": 20,
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1281020": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
+      }
+    }
+  },
+  {
+    "id": "99843",
+    "original": "彼は毎月お金をいくら稼ぎますか。",
+    "en": [
+      {
+        "id": "303854",
+        "text": "How much money does he make a month?"
+      }
+    ],
+    "indices": "彼(かれ)[01] は 毎月 お金 を 幾ら{いくら} 稼ぐ{稼ぎます} か",
+    "vocabIds": [
+      "1483070",
+      "1584350",
+      "1001820",
+      "1194450",
+      "1194430"
+    ],
+    "matches": {
+      "1001820": {
+        "start": 4,
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1194430": {
+        "start": 10,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1194450": {
+        "start": 10,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1584350": {
+        "start": 2,
+        "length": 2,
+        "reading": "まいつき"
       }
     }
   },
@@ -391,23 +641,28 @@
     "matches": {
       "1175570": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1194450": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1584350": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "まいつき"
       },
       "1584460": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
       }
     }
   },
@@ -430,19 +685,23 @@
     "matches": {
       "1194450": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1427170": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちょきん"
       },
       "1451150": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -460,29 +719,40 @@
       "1483070",
       "1387500",
       "1335140",
+      "1584460",
       "1175570",
       "1194450"
     ],
     "matches": {
       "1175570": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1194450": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1335140": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "いちぜろまん"
       },
       "1387500": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せんげつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1584460": {
+        "start": 15,
+        "length": 1,
+        "reading": "まん"
       }
     }
   },
@@ -506,23 +776,28 @@
     "matches": {
       "1194450": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1242590": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1335080": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1378860": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -547,27 +822,33 @@
     "matches": {
       "1175570": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1194450": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1468830": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねんしゅう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1584460": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
       },
       "1595610": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "すくなくとも"
       }
     }
   },
@@ -592,27 +873,33 @@
     "matches": {
       "1194450": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1254570": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "あなば"
       },
       "1347750": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさい"
       },
       "1454510": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "とくい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1604570": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "みつけ"
       }
     }
   },
@@ -640,23 +927,28 @@
     "matches": {
       "1194450": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1230360": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうりょう"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1473230": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ばい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -685,25 +977,41 @@
     "vocabIds": [
       "1483070",
       "1311110",
+      "1579350",
       "1301420",
+      "1473230",
       "1194450"
     ],
     "matches": {
       "1194450": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1301420": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんばい"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1473230": {
+        "start": 5,
+        "length": 1,
+        "reading": "ばい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1579350": {
+        "start": 4,
+        "length": 1,
+        "reading": "さん"
       }
     }
   },
@@ -731,23 +1039,28 @@
     "matches": {
       "1194450": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1230360": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうりょう"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1473230": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ばい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -763,7 +1076,10 @@
     "indices": "彼(かれ)[01] は 使い切る{使い切れない} 程 の お金 を 稼ぐ",
     "vocabIds": [
       "1483070",
+      "1305990",
       "1305720",
+      "1384860",
+      "1384840",
       "1384940",
       "1436510",
       "1001820",
@@ -772,27 +1088,48 @@
     "matches": {
       "1001820": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1305720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "つかい"
+      },
+      "1305990": {
+        "start": 2,
+        "length": 2,
+        "reading": "つかい"
+      },
+      "1384840": {
+        "start": 4,
+        "length": 2,
+        "reading": "きれ"
+      },
+      "1384860": {
+        "start": 4,
+        "length": 2,
+        "reading": "きれ"
       },
       "1384940": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "きれない"
       },
       "1436510": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -808,6 +1145,7 @@
     "indices": "彼(かれ)[01] は 使う{使い} 切れる{きれない} 程{ほど} の 金(かね)[01] を 稼ぐ",
     "vocabIds": [
       "1483070",
+      "1305990",
       "1305720",
       "1242590",
       "1194450"
@@ -815,19 +1153,28 @@
     "matches": {
       "1194450": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1242590": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1305720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "つかい"
+      },
+      "1305990": {
+        "start": 2,
+        "length": 2,
+        "reading": "つかい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -851,23 +1198,85 @@
     "matches": {
       "1175570": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1194450": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1255430": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1584460": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
+      }
+    }
+  },
+  {
+    "id": "108221",
+    "original": "彼は金を稼ごうと一生懸命働いたが結局は失敗だった。",
+    "en": [
+      {
+        "id": "295465",
+        "text": "He worked hard to make money only to fail."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 金(かね)[01] を 稼ぐ{稼ごう} と 一生懸命 働く[01]{働いた} が 結局 は 失敗 だ{だった}",
+    "vocabIds": [
+      "1483070",
+      "1242590",
+      "1194450",
+      "1164010",
+      "1451150",
+      "1254730",
+      "1320140"
+    ],
+    "matches": {
+      "1164010": {
+        "start": 8,
+        "length": 4,
+        "reading": "いっしょうけんめい"
+      },
+      "1194450": {
+        "start": 4,
+        "length": 2,
+        "reading": "かせご"
+      },
+      "1242590": {
+        "start": 2,
+        "length": 1,
+        "reading": "きん"
+      },
+      "1254730": {
+        "start": 16,
+        "length": 2,
+        "reading": "けっきょく"
+      },
+      "1320140": {
+        "start": 19,
+        "length": 2,
+        "reading": "しっぱい"
+      },
+      "1451150": {
+        "start": 12,
+        "length": 2,
+        "reading": "はたらい"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -891,23 +1300,73 @@
     "matches": {
       "1164010": {
         "start": 13,
-        "length": 4
+        "length": 4,
+        "reading": "いっしょうけんめい"
       },
       "1194450": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1242590": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1451150": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "109576",
+    "original": "彼は演説を引き延ばして時を稼ごうとした。",
+    "en": [
+      {
+        "id": "294114",
+        "text": "He tried to gain time by making a longer speech."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 演説 を 引き延ばす{引き延ばして} 時(とき) を 稼ぐ{稼ごう} とする{とした}",
+    "vocabIds": [
+      "1483070",
+      "1176960",
+      "1950190",
+      "1315840",
+      "1194450"
+    ],
+    "matches": {
+      "1176960": {
+        "start": 2,
+        "length": 2,
+        "reading": "えんぜつ"
+      },
+      "1194450": {
+        "start": 13,
+        "length": 2,
+        "reading": "かせご"
+      },
+      "1315840": {
+        "start": 11,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1950190": {
+        "start": 5,
+        "length": 5,
+        "reading": "ひきのばし"
       }
     }
   },
@@ -923,31 +1382,48 @@
     "indices": "彼(かれ)[01] は 一日(いちにち) 二十(にじゅう) 弗[01]{ドル} 稼ぐ",
     "vocabIds": [
       "1483070",
+      "1160790",
       "1576260",
+      "1463770",
       "1461140",
       "1579840",
       "1194450"
     ],
     "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
       "1194450": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1461140": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "に"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1576260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "1579840": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "じゅう"
       }
     }
   },
@@ -970,19 +1446,143 @@
     "matches": {
       "1194450": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1242590": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1427170": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ちょきん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "110985",
+    "original": "彼はホームラン３本を打ち、８点を稼いだ。",
+    "en": [
+      {
+        "id": "292701",
+        "text": "He hit three home runs, scoring eight runs."
+      }
+    ],
+    "indices": "彼(かれ)[01] は ホームラン 本(ほん)[03] を 打つ(うつ){打ち} 点(てん)[03] を 稼ぐ{稼いだ}",
+    "vocabIds": [
+      "1483070",
+      "1522150",
+      "1408810",
+      "2859852",
+      "1007860",
+      "1194450"
+    ],
+    "matches": {
+      "1007860": {
+        "start": 14,
+        "length": 1,
+        "reading": "てん"
+      },
+      "1194450": {
+        "start": 16,
+        "length": 2,
+        "reading": "かせい"
+      },
+      "1408810": {
+        "start": 10,
+        "length": 2,
+        "reading": "うち"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1522150": {
+        "start": 8,
+        "length": 1,
+        "reading": "ほん"
+      },
+      "2859852": {
+        "start": 10,
+        "length": 2,
+        "reading": "うち"
+      }
+    }
+  },
+  {
+    "id": "111363",
+    "original": "彼はニューヨークで大金を稼ぎ、生まれた小さな町に帰っていった。",
+    "en": [
+      {
+        "id": "292320",
+        "text": "He made a lot of money in New York and went back to the small town where he was born."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 紐育{ニューヨーク} で(#2028980) 大金 を 稼ぐ{稼ぎ} 生まれる{生まれた} 小さな 町(まち) に 帰る{帰って} 行く{いった}",
+    "vocabIds": [
+      "1483070",
+      "1413500",
+      "1194450",
+      "1194430",
+      "1378690",
+      "1609350",
+      "2136180",
+      "1603990",
+      "1221270"
+    ],
+    "matches": {
+      "1194430": {
+        "start": 12,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1194450": {
+        "start": 12,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1221270": {
+        "start": 24,
+        "length": 2,
+        "reading": "かえっ"
+      },
+      "1378690": {
+        "start": 15,
+        "length": 3,
+        "reading": "うまれ"
+      },
+      "1413500": {
+        "start": 9,
+        "length": 2,
+        "reading": "たいきん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1603990": {
+        "start": 22,
+        "length": 1,
+        "reading": "まち"
+      },
+      "1609350": {
+        "start": 15,
+        "length": 3,
+        "reading": "うまれ"
+      },
+      "2136180": {
+        "start": 19,
+        "length": 3,
+        "reading": "ちいさな"
       }
     }
   },
@@ -1004,15 +1604,18 @@
     "matches": {
       "1001820": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1033,11 +1636,13 @@
     "matches": {
       "1194450": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1061,23 +1666,28 @@
     "matches": {
       "1155120": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
       "1194450": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1255430": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1304970": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1104,19 +1714,23 @@
     "matches": {
       "1194450": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1333500": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1595610": {
         "start": 6,
-        "length": 5
+        "length": 5,
+        "reading": "すくなくとも"
       }
     }
   },
@@ -1132,21 +1746,36 @@
     "indices": "彼(かれ) が 生活費 を 稼ぐ{稼いでいる}",
     "vocabIds": [
       "1483070",
+      "1378860",
       "1378890",
+      "1484590",
       "1194450"
     ],
     "matches": {
       "1194450": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
+      },
+      "1378860": {
+        "start": 2,
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1378890": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "せいかつひ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1484590": {
+        "start": 4,
+        "length": 1,
+        "reading": "ひ"
       }
     }
   },
@@ -1170,23 +1799,28 @@
     "matches": {
       "1194450": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1251130": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "けいえい"
       },
       "1413240": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
       "1413500": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいきん"
       },
       "1483090": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -1201,27 +1835,49 @@
     ],
     "indices": "熟練した 機械工~ は 可也{かなり} の 賃金 を 稼ぐ",
     "vocabIds": [
+      "1337930",
       "1885520",
+      "1220810",
       "1780100",
+      "2414410",
       "1431990",
       "1194450"
     ],
     "matches": {
       "1194450": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
+      },
+      "1220810": {
+        "start": 4,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1337930": {
+        "start": 0,
+        "length": 2,
+        "reading": "じゅくれん"
       },
       "1431990": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちんぎん"
       },
       "1780100": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "きかいこう"
       },
       "1885520": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "じゅくれんした"
+      },
+      "2414410": {
+        "start": 6,
+        "length": 1,
+        "reading": "こう"
       }
     }
   },
@@ -1237,56 +1893,135 @@
     "indices": "似る{似た} 所(ところ){ところ} で(#2028980) は 募金[01] 活動 に 従事 為る(する){する} 学生(がくせい) が 自ら(みずから) で(#2028980) 稼ぐ{稼いだ} 金(かね)[01] を 殆ど 募金[01] しようとする{しようとしない} 事(こと){こと} が 挙げる[01]{挙げられる}",
     "vocabIds": [
       "1314600",
+      "1314550",
+      "1514810",
       "2131670",
+      "1208360",
       "1335320",
       "1206900",
       "1317340",
       "1194450",
       "1242590",
       "1522050",
-      "1514810",
+      "2864818",
       "1232500"
     ],
     "matches": {
       "1194450": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1206900": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
+      },
+      "1208360": {
+        "start": 10,
+        "length": 2,
+        "reading": "かつどう"
       },
       "1232500": {
         "start": 42,
-        "length": 5
+        "length": 5,
+        "reading": "あげられる"
       },
       "1242590": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
+      },
+      "1314550": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
       },
       "1314600": {
         "start": 0,
-        "length": 2
+        "length": 1,
+        "reading": "に"
       },
       "1317340": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "みずから"
       },
       "1335320": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうじ"
       },
       "1514810": {
-        "start": 30,
-        "length": 2
+        "start": 8,
+        "length": 2,
+        "reading": "ぼきん"
       },
       "1522050": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "ほとんど"
       },
       "2131670": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "ぼきんかつどう"
+      },
+      "2864818": {
+        "start": 42,
+        "length": 2,
+        "reading": "あげ"
+      }
+    }
+  },
+  {
+    "id": "156228",
+    "original": "私は自分の生活費を稼がなくてはならない。",
+    "en": [
+      {
+        "id": "258306",
+        "text": "I've got to earn my own living."
+      }
+    ],
+    "indices": "私(わたし)[01] は 自分[01] の 生活費 を 稼ぐ{稼が}~ 無くてはならない[02]{なくてはならない}",
+    "vocabIds": [
+      "1311110",
+      "1318610",
+      "1378860",
+      "1378890",
+      "1484590",
+      "1194450"
+    ],
+    "matches": {
+      "1194450": {
+        "start": 9,
+        "length": 2,
+        "reading": "かせが"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1318610": {
+        "start": 2,
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1378860": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいかつ"
+      },
+      "1378890": {
+        "start": 5,
+        "length": 3,
+        "reading": "せいかつひ"
+      },
+      "1484590": {
+        "start": 7,
+        "length": 1,
+        "reading": "ひ"
       }
     }
   },
@@ -1304,24 +2039,34 @@
       "1311110",
       "1194450",
       "1001820",
-      "1595730"
+      "1595730",
+      "1427160"
     ],
     "matches": {
       "1001820": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1427160": {
+        "start": 9,
+        "length": 3,
+        "reading": "ためよ"
       },
       "1595730": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "すべて"
       }
     }
   },
@@ -1337,8 +2082,9 @@
     "indices": "私(わたし)[01] は ギャンブル には 向く[04]{向いてない} と 思う そう言う{そういう} 運 が 無い{ない} と言うか{というか} 働く[01]{働いて} 稼ぐ{稼いだ} 方(ほう) が 確実 だ し",
     "vocabIds": [
       "1311110",
-      "1277080",
+      "1604750",
       "1589350",
+      "1172610",
       "2830567",
       "1451150",
       "1194450",
@@ -1346,37 +2092,107 @@
       "1205830"
     ],
     "matches": {
+      "1172610": {
+        "start": 23,
+        "length": 1,
+        "reading": "うん"
+      },
       "1194450": {
         "start": 35,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1205830": {
         "start": 40,
-        "length": 2
-      },
-      "1277080": {
-        "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かくじつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451150": {
         "start": 32,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1516930": {
         "start": 38,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       },
       "1589350": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
+      },
+      "1604750": {
+        "start": 10,
+        "length": 2,
+        "reading": "むかい"
       },
       "2830567": {
         "start": 23,
-        "length": 4
+        "length": 4,
+        "reading": "うんがない"
+      }
+    }
+  },
+  {
+    "id": "174567",
+    "original": "孤児であったので、父は１０歳からお金を稼ぎはじめねばならなかった。",
+    "en": [
+      {
+        "id": "239902",
+        "text": "Being an orphan, my father had to start earning money at ten."
+      }
+    ],
+    "indices": "孤児 である{であった} ので 父 は 歳(さい)[01] から お金 を 稼ぐ{稼ぎ} 始める[03]{はじめ} ねばならない{ねばならなかった}",
+    "vocabIds": [
+      "1266810",
+      "1497610",
+      "1965500",
+      "1294940",
+      "1001820",
+      "1194450",
+      "1194430"
+    ],
+    "matches": {
+      "1001820": {
+        "start": 16,
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1194430": {
+        "start": 19,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1194450": {
+        "start": 19,
+        "length": 2,
+        "reading": "かせぎ"
+      },
+      "1266810": {
+        "start": 0,
+        "length": 2,
+        "reading": "こじ"
+      },
+      "1294940": {
+        "start": 13,
+        "length": 1,
+        "reading": "さい"
+      },
+      "1497610": {
+        "start": 9,
+        "length": 1,
+        "reading": "ちち"
+      },
+      "1965500": {
+        "start": 12,
+        "length": 2,
+        "reading": "ぜろさい"
       }
     }
   },
@@ -1392,9 +2208,13 @@
     "indices": " 現在[01] 平均的 熟練 労働者 は 一年{１年} に 一万 弗[01]{ドル} 以上[01] 稼ぐ",
     "vocabIds": [
       "1263650",
+      "1583870",
       "2119430",
+      "1437260",
       "1337930",
+      "1606450",
       "1560470",
+      "1322990",
       "2084840",
       "1160790",
       "1584460",
@@ -1404,39 +2224,68 @@
     "matches": {
       "1155120": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
       "1160790": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "いち"
       },
       "1194450": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1263650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "げんざい"
+      },
+      "1322990": {
+        "start": 9,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1337930": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じゅくれん"
+      },
+      "1437260": {
+        "start": 4,
+        "length": 1,
+        "reading": "てき"
       },
       "1560470": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ろうどうしゃ"
+      },
+      "1583870": {
+        "start": 2,
+        "length": 2,
+        "reading": "へいきん"
       },
       "1584460": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
+      },
+      "1606450": {
+        "start": 7,
+        "length": 2,
+        "reading": "ろうどう"
       },
       "2084840": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       },
       "2119430": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "へいきんてき"
       }
     }
   },
@@ -1461,27 +2310,72 @@
     "matches": {
       "1175570": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1194450": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1254130": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "けっして"
       },
       "1255430": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1491520": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "ふかのう"
       },
       "1584460": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
+      }
+    }
+  },
+  {
+    "id": "186637",
+    "original": "稼ぐに追いつく貧乏なし。",
+    "en": [
+      {
+        "id": "23772",
+        "text": "No poverty can catch up with industry."
+      }
+    ],
+    "indices": "稼ぐ に 追いつく 貧乏 無し{なし}",
+    "vocabIds": [
+      "1194450",
+      "2416820",
+      "1588810",
+      "1490900"
+    ],
+    "matches": {
+      "1194450": {
+        "start": 0,
+        "length": 2,
+        "reading": "かせぐ"
+      },
+      "1490900": {
+        "start": 7,
+        "length": 2,
+        "reading": "びんぼう"
+      },
+      "1588810": {
+        "start": 3,
+        "length": 4,
+        "reading": "おいつく"
+      },
+      "2416820": {
+        "start": 0,
+        "length": 11,
+        "reading": "かせぐにおいつくびんぼうなし"
       }
     }
   },
@@ -1506,27 +2400,33 @@
     "matches": {
       "1152170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あくせん"
       },
       "1194450": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1254730": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "けっきょく"
       },
       "1365520": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "み"
       },
       "1421400": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "じみち"
       },
       "1589350": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -1544,29 +2444,40 @@
       "1194450",
       "1242590",
       "1483070",
+      "1522150",
       "2849135",
       "1305990"
     ],
     "matches": {
       "1194450": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1242590": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1305990": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
       },
       "1483070": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1522150": {
+        "start": 13,
+        "length": 1,
+        "reading": "ほん"
       },
       "2849135": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ほんに"
       }
     }
   },
@@ -1587,11 +2498,13 @@
     "matches": {
       "1194450": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1463770": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       }
     }
   },
@@ -1608,7 +2521,9 @@
     "vocabIds": [
       "1605570",
       "1579080",
+      "1311110",
       "1311200",
+      "1318000",
       "1538100",
       "1473230",
       "1194450"
@@ -1616,27 +2531,43 @@
     "matches": {
       "1194450": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
+      },
+      "1311110": {
+        "start": 12,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311200": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "わたしじしん"
+      },
+      "1318000": {
+        "start": 13,
+        "length": 2,
+        "reading": "じしん"
       },
       "1473230": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ばい"
       },
       "1538100": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "やく"
       },
       "1579080": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ころ"
       },
       "1605570": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やとっ"
       }
     }
   },
@@ -1660,23 +2591,28 @@
     "matches": {
       "1194450": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1304970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1388740": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
       },
       "1468380": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねんかん"
       },
       "1483070": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1691,8 +2627,11 @@
     ],
     "indices": "の 悩み の 種(たね)[05] は 妻(#1294330)[01] が 彼(かれ)[01] の 稼ぐ 以上 に 御(お){お} 金を使う 事(こと){こと} だ",
     "vocabIds": [
+      "1469850",
       "1899400",
+      "2735690",
       "1294330",
+      "1483070",
       "1000420",
       "1194450",
       "1155120",
@@ -1702,31 +2641,53 @@
     "matches": {
       "1000420": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1001820": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1155120": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
       "1194450": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1294330": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "つま"
       },
       "1305990": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
+      },
+      "1469850": {
+        "start": 5,
+        "length": 2,
+        "reading": "なやみ"
+      },
+      "1483070": {
+        "start": 12,
+        "length": 1,
+        "reading": "かれ"
       },
       "1899400": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "なやみのたね"
+      },
+      "2735690": {
+        "start": 8,
+        "length": 1,
+        "reading": "たね"
       }
     }
   },
@@ -1743,6 +2704,7 @@
     "vocabIds": [
       "1001820",
       "1194450",
+      "1315920",
       "1884400",
       "1305990",
       "1000390"
@@ -1750,23 +2712,78 @@
     "matches": {
       "1000390": {
         "start": 24,
-        "length": 7
+        "length": 7,
+        "reading": "あっというまに"
       },
       "1001820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1305990": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
+      },
+      "1315920": {
+        "start": 8,
+        "length": 2,
+        "reading": "じかん"
       },
       "1884400": {
         "start": 8,
-        "length": 6
+        "length": 6,
+        "reading": "じかんがかかる"
+      }
+    }
+  },
+  {
+    "id": "230397",
+    "original": "あぶく銭を稼ごうとする開発業者たちよ。",
+    "en": [
+      {
+        "id": "67764",
+        "text": "They're some developers who aim to make a fast buck!"
+      }
+    ],
+    "indices": "泡銭{あぶく銭}~ を 稼ぐ{稼ごう} とする[01] 開発 業者~ 達{たち} よ[01]",
+    "vocabIds": [
+      "1747810",
+      "1392410",
+      "1194450",
+      "1202880",
+      "1239440"
+    ],
+    "matches": {
+      "1194450": {
+        "start": 5,
+        "length": 2,
+        "reading": "かせご"
+      },
+      "1202880": {
+        "start": 11,
+        "length": 2,
+        "reading": "かいはつ"
+      },
+      "1239440": {
+        "start": 13,
+        "length": 2,
+        "reading": "ぎょうしゃ"
+      },
+      "1392410": {
+        "start": 3,
+        "length": 1,
+        "reading": "ぜに"
+      },
+      "1747810": {
+        "start": 0,
+        "length": 4,
+        "reading": "あぶくぜに"
       }
     }
   },
@@ -1789,23 +2806,28 @@
     "matches": {
       "1155120": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
       "1194450": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1255430": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1304970": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1833,25 +2855,41 @@
     "vocabIds": [
       "1483070",
       "1311110",
+      "1579350",
       "1301420",
+      "1473230",
       "1194450"
     ],
     "matches": {
       "1194450": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1301420": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんばい"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1473230": {
+        "start": 5,
+        "length": 1,
+        "reading": "ばい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1579350": {
+        "start": 4,
+        "length": 1,
+        "reading": "さん"
       }
     }
   },
@@ -1872,15 +2910,18 @@
     "matches": {
       "1001820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1441210": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "てんしょく"
       }
     }
   },
@@ -1896,6 +2937,7 @@
     "vocabIds": [
       "1001820",
       "1194450",
+      "1315920",
       "1884400",
       "1305990",
       "2208410"
@@ -1903,23 +2945,33 @@
     "matches": {
       "1001820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1305990": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
+      },
+      "1315920": {
+        "start": 7,
+        "length": 2,
+        "reading": "じかん"
       },
       "1884400": {
         "start": 7,
-        "length": 6
+        "length": 6,
+        "reading": "じかんがかかる"
       },
       "2208410": {
         "start": 19,
-        "length": 6
+        "length": 6,
+        "reading": "あっというま"
       }
     }
   },
@@ -1938,32 +2990,44 @@
       "1481800",
       "1001820",
       "1194450",
+      "1589350",
       "1589320"
     ],
     "matches": {
       "1001820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1481800": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "はんばい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1578010": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "さかな"
       },
       "1589320": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 15,
+        "length": 2,
+        "reading": "おもい"
       }
     }
   },
@@ -1984,15 +3048,18 @@
     "matches": {
       "1001820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1231690": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょねん"
       }
     }
   },
@@ -2015,6 +3082,7 @@
       "1150410",
       "1590750",
       "1072980",
+      "1270910",
       "1364440",
       "1222770",
       "1487660"
@@ -2022,51 +3090,68 @@
     "matches": {
       "1072980": {
         "start": 39,
-        "length": 5
+        "length": 5,
+        "reading": "すぺいんご"
       },
       "1111590": {
         "start": 24,
-        "length": 5
+        "length": 5,
+        "reading": "ふらんすご"
       },
       "1150410": {
         "start": 30,
-        "length": 1
+        "length": 1,
+        "reading": "あい"
       },
       "1174420": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1194450": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1222770": {
         "start": 47,
-        "length": 2
+        "length": 2,
+        "reading": "いのる"
       },
       "1242590": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
+      },
+      "1270910": {
+        "start": 43,
+        "length": 1,
+        "reading": "ご"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1364440": {
         "start": 45,
-        "length": 1
+        "length": 1,
+        "reading": "かみ"
       },
       "1487660": {
         "start": 52,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1590750": {
         "start": 32,
-        "length": 3
+        "length": 3,
+        "reading": "かわす"
       },
       "1591110": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2087,15 +3172,18 @@
     "matches": {
       "1194450": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1473230": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ばい"
       },
       "1576870": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       }
     }
   },
@@ -2117,19 +3205,23 @@
     "matches": {
       "1001820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1311110": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1420470": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       }
     }
   },
@@ -2154,15 +3246,18 @@
     "matches": {
       "1194450": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1281020": {
         "start": 38,
-        "length": 3
+        "length": 3,
+        "reading": "かんがえる"
       },
       "1420470": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       }
     }
   },
@@ -2183,15 +3278,18 @@
     "matches": {
       "1194450": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1242590": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1530520": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "むだづかい"
       }
     }
   },
@@ -2214,19 +3312,23 @@
     "matches": {
       "1194450": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1234210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいば"
       },
       "1534490": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "もうかる"
       },
       "1956400": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "しゅう"
       }
     }
   },
@@ -2246,11 +3348,13 @@
     "matches": {
       "1194450": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1413500": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "たいきん"
       }
     }
   },
@@ -2270,11 +3374,13 @@
     "matches": {
       "1194450": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1413500": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たいきん"
       }
     }
   },
@@ -2294,11 +3400,13 @@
     "matches": {
       "1001820": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       }
     }
   },
@@ -2318,11 +3426,13 @@
     "matches": {
       "1001820": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       }
     }
   },
@@ -2344,19 +3454,23 @@
     "matches": {
       "1001820": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1204580": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まちかど"
       },
       "1419370": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       }
     }
   },
@@ -2371,16 +3485,24 @@
     ],
     "vocabIds": [
       "1001820",
-      "1194450"
+      "1194450",
+      "1194430"
     ],
     "matches": {
       "1001820": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1194430": {
+        "start": 7,
+        "length": 2,
+        "reading": "かせぎ"
       },
       "1194450": {
         "start": 7,
-        "length": 4
+        "length": 2,
+        "reading": "かせぎ"
       }
     }
   },
@@ -2400,11 +3522,13 @@
     "matches": {
       "1001820": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       }
     }
   },
@@ -2426,19 +3550,23 @@
     "matches": {
       "1194450": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1242590": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1337890": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じゅくち"
       },
       "1517090": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       }
     }
   },
@@ -2452,6 +3580,7 @@
       }
     ],
     "vocabIds": [
+      "1415780",
       "2837583",
       "1001820",
       "1194450"
@@ -2459,15 +3588,23 @@
     "matches": {
       "1001820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
+      },
+      "1415780": {
+        "start": 0,
+        "length": 2,
+        "reading": "たくはい"
       },
       "2837583": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "たくはいぴざ"
       }
     }
   },
@@ -2490,23 +3627,28 @@
     "matches": {
       "1001820": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1350040": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "きえ"
       },
       "1361490": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1982860": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "だい"
       }
     }
   },
@@ -2522,45 +3664,53 @@
     "vocabIds": [
       "1424150",
       "1323080",
+      "1473740",
       "1589350",
       "1288850",
       "1194450",
       "1504760",
-      "1361920",
-      "1473740"
+      "1361920"
     ],
     "matches": {
       "1194450": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1288850": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1323080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1361920": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "しんしゃ"
       },
       "1424150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうこ"
       },
       "1473740": {
-        "start": 37,
-        "length": 2
+        "start": 5,
+        "length": 2,
+        "reading": "かお"
       },
       "1504760": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "ふんぱつ"
       },
       "1589350": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -2575,21 +3725,30 @@
     ],
     "vocabIds": [
       "2707760",
+      "1307770",
       "1194450",
-      "2630380"
+      "1305990"
     ],
     "matches": {
       "1194450": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
-      "2630380": {
+      "1305990": {
         "start": 13,
-        "length": 1
+        "length": 2,
+        "reading": "つかっ"
+      },
+      "1307770": {
+        "start": 2,
+        "length": 1,
+        "reading": "こ"
       },
       "2707760": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あのこ"
       }
     }
   },
@@ -2603,17 +3762,31 @@
       }
     ],
     "vocabIds": [
+      "1378860",
       "1378890",
+      "1484590",
       "1194450"
     ],
     "matches": {
       "1194450": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
+      },
+      "1378860": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1378890": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せいかつひ"
+      },
+      "1484590": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひ"
       }
     }
   },
@@ -2627,17 +3800,31 @@
       }
     ],
     "vocabIds": [
+      "1378860",
       "1378890",
+      "1484590",
       "1194450"
     ],
     "matches": {
       "1194450": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
+      },
+      "1378860": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1378890": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せいかつひ"
+      },
+      "1484590": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひ"
       }
     }
   },
@@ -2657,11 +3844,13 @@
     "matches": {
       "1194450": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1413500": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たいきん"
       }
     }
   },
@@ -2682,15 +3871,56 @@
     "matches": {
       "1194450": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "かせい"
       },
       "1304970": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1576870": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
+      }
+    }
+  },
+  {
+    "id": "11015039",
+    "original": "上司が来るまで時間を稼いでくれ。",
+    "en": [
+      {
+        "id": "11770331",
+        "text": "Stall for time until the boss gets here."
+      }
+    ],
+    "vocabIds": [
+      "1353260",
+      "1547720",
+      "1315920",
+      "1194450"
+    ],
+    "matches": {
+      "1194450": {
+        "start": 10,
+        "length": 2,
+        "reading": "かせい"
+      },
+      "1315920": {
+        "start": 7,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1353260": {
+        "start": 0,
+        "length": 2,
+        "reading": "じょうし"
+      },
+      "1547720": {
+        "start": 3,
+        "length": 2,
+        "reading": "くる"
       }
     }
   },
@@ -2704,12 +3934,19 @@
       }
     ],
     "vocabIds": [
-      "1194450"
+      "1194450",
+      "1194430"
     ],
     "matches": {
+      "1194430": {
+        "start": 4,
+        "length": 2,
+        "reading": "かせぎ"
+      },
       "1194450": {
         "start": 4,
-        "length": 4
+        "length": 2,
+        "reading": "かせぎ"
       }
     }
   },
@@ -2731,12 +3968,19 @@
       }
     ],
     "vocabIds": [
-      "1194450"
+      "1194450",
+      "1194430"
     ],
     "matches": {
+      "1194430": {
+        "start": 3,
+        "length": 2,
+        "reading": "かせぎ"
+      },
       "1194450": {
         "start": 3,
-        "length": 4
+        "length": 2,
+        "reading": "かせぎ"
       }
     }
   }

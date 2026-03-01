@@ -11,26 +11,42 @@
     "indices": "彼女[01] は 強制的{強制的に} 私(わたし)[01] を 連れ出す[01]{連れ出した}",
     "vocabIds": [
       "1483150",
+      "1236350",
       "1236390",
+      "1437260",
       "1311110",
       "1559330"
     ],
     "matches": {
+      "1236350": {
+        "start": 3,
+        "length": 2,
+        "reading": "きょうせい"
+      },
       "1236390": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "きょうせいてき"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1437260": {
+        "start": 5,
+        "length": 1,
+        "reading": "てき"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1559330": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "つれだし"
       }
     }
   },
@@ -46,31 +62,192 @@
     "indices": "彼女[01] は 強制的{強制的に}~ 私(わたし)[01] を 一緒に[01] 連れ出す[01]{連れ出した}",
     "vocabIds": [
       "1483150",
+      "1236350",
       "1236390",
+      "1437260",
       "1311110",
+      "1163400",
       "1163420",
       "1559330"
     ],
     "matches": {
+      "1163400": {
+        "start": 9,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
+      },
+      "1236350": {
+        "start": 3,
+        "length": 2,
+        "reading": "きょうせい"
       },
       "1236390": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "きょうせいてき"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1437260": {
+        "start": 5,
+        "length": 1,
+        "reading": "てき"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1559330": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "つれだし"
+      }
+    }
+  },
+  {
+    "id": "100826",
+    "original": "彼は彼女をドライブに連れ出した。",
+    "en": [
+      {
+        "id": "302871",
+        "text": "He took her out for a drive."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 彼女 を ドライブ[01] に 連れ出す[01]{連れ出した}",
+    "vocabIds": [
+      "1483070",
+      "1483150",
+      "1559330"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483150": {
+        "start": 2,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1559330": {
+        "start": 10,
+        "length": 4,
+        "reading": "つれだし"
+      }
+    }
+  },
+  {
+    "id": "113610",
+    "original": "彼はジェーンを食事に連れ出した。",
+    "en": [
+      {
+        "id": "290063",
+        "text": "He took Jane out for dinner."
+      }
+    ],
+    "indices": "彼(かれ)[01] は を 食事 に 連れ出す[01]{連れ出した}",
+    "vocabIds": [
+      "1483070",
+      "1358490",
+      "1559330"
+    ],
+    "matches": {
+      "1358490": {
+        "start": 7,
+        "length": 2,
+        "reading": "しょくじ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1559330": {
+        "start": 10,
+        "length": 4,
+        "reading": "つれだし"
+      }
+    }
+  },
+  {
+    "id": "150981",
+    "original": "飼い犬を外に連れ出そうとした。",
+    "en": [
+      {
+        "id": "263575",
+        "text": "I tried to take our dog out of our house."
+      }
+    ],
+    "indices": "飼い犬~ を 外(そと) に 連れ出す[01]{連れ出そう} とする{とした}",
+    "vocabIds": [
+      "1589650",
+      "1203250",
+      "1559330"
+    ],
+    "matches": {
+      "1203250": {
+        "start": 4,
+        "length": 1,
+        "reading": "そと"
+      },
+      "1559330": {
+        "start": 6,
+        "length": 4,
+        "reading": "つれだそ"
+      },
+      "1589650": {
+        "start": 0,
+        "length": 3,
+        "reading": "かいいぬ"
+      }
+    }
+  },
+  {
+    "id": "153621",
+    "original": "私は彼を散歩に連れ出した。",
+    "en": [
+      {
+        "id": "260923",
+        "text": "I took him out for a walk."
+      }
+    ],
+    "indices": "私(わたし)[01] は 彼(かれ) を 散歩 に 連れ出す[01]{連れ出した}~",
+    "vocabIds": [
+      "1311110",
+      "1483070",
+      "1303620",
+      "1559330"
+    ],
+    "matches": {
+      "1303620": {
+        "start": 4,
+        "length": 2,
+        "reading": "さんぽ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1559330": {
+        "start": 7,
+        "length": 4,
+        "reading": "つれだし"
       }
     }
   },
@@ -94,23 +271,73 @@
     "matches": {
       "1154860": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "あんない"
       },
       "1203250": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "そと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1559330": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "つれだし"
+      }
+    }
+  },
+  {
+    "id": "185585",
+    "original": "我々は彼を外に連れ出して元気づけようとした。",
+    "en": [
+      {
+        "id": "22717",
+        "text": "We tried to cheer him up by taking him out."
+      }
+    ],
+    "indices": "我々 は 彼(かれ)[01] を 外(そと) に 連れ出す[01]{連れ出して} 元気付ける{元気づけよう} とする{とした}",
+    "vocabIds": [
+      "1607050",
+      "1483070",
+      "1203250",
+      "1559330",
+      "1260750"
+    ],
+    "matches": {
+      "1203250": {
+        "start": 5,
+        "length": 1,
+        "reading": "そと"
+      },
+      "1260750": {
+        "start": 12,
+        "length": 5,
+        "reading": "げんきづけよ"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1559330": {
+        "start": 7,
+        "length": 4,
+        "reading": "つれだし"
+      },
+      "1607050": {
+        "start": 0,
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -132,15 +359,107 @@
     "matches": {
       "1445590": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "どようび"
       },
       "1482110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ばん"
       },
       "1559330": {
         "start": 17,
-        "length": 5
+        "length": 4,
+        "reading": "つれだし"
+      }
+    }
+  },
+  {
+    "id": "216018",
+    "original": "ジムはここ３週間私を夕食に連れ出そうとしている。",
+    "en": [
+      {
+        "id": "53318",
+        "text": "Jim has been trying to take me out to dinner for the last three weeks."
+      }
+    ],
+    "indices": "は 此処{ここ} 週間 私(わたし)[01] を 夕食 に 連れ出す[01]{連れ出そう} とする{としている}",
+    "vocabIds": [
+      "1333500",
+      "1311110",
+      "1542730",
+      "1559330"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 8,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1333500": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1542730": {
+        "start": 10,
+        "length": 2,
+        "reading": "ゆうしょく"
+      },
+      "1559330": {
+        "start": 13,
+        "length": 4,
+        "reading": "つれだそ"
+      }
+    }
+  },
+  {
+    "id": "1034943",
+    "original": "私たちは彼を外に連れ出して元気づけようとした。",
+    "en": [
+      {
+        "id": "22717",
+        "text": "We tried to cheer him up by taking him out."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1483070",
+      "1203250",
+      "1559330",
+      "1260750"
+    ],
+    "matches": {
+      "1203250": {
+        "start": 6,
+        "length": 1,
+        "reading": "そと"
+      },
+      "1260750": {
+        "start": 13,
+        "length": 5,
+        "reading": "げんきづけよ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1559330": {
+        "start": 8,
+        "length": 4,
+        "reading": "つれだし"
       }
     }
   },
@@ -161,15 +480,42 @@
     "matches": {
       "1445580": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "どよう"
       },
       "1536350": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "よる"
       },
       "1559330": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "つれだし"
+      }
+    }
+  },
+  {
+    "id": "11604247",
+    "original": "トムはメアリーをランチに連れ出した。",
+    "en": [
+      {
+        "id": "8715703",
+        "text": "Tom took Mary out for lunch."
+      },
+      {
+        "id": "12221379",
+        "text": "Tom took Mary out to lunch."
+      }
+    ],
+    "vocabIds": [
+      "1559330"
+    ],
+    "matches": {
+      "1559330": {
+        "start": 12,
+        "length": 4,
+        "reading": "つれだし"
       }
     }
   }

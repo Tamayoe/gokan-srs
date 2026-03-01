@@ -11,6 +11,7 @@
     "indices": "彼ら(かれら) は 彼(かれ) の 正体 を 警察 に ばらす[01]{ばらした}",
     "vocabIds": [
       "1483090",
+      "1483070",
       "1000420",
       "1377530",
       "1252390"
@@ -18,19 +19,28 @@
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1252390": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "けいさつ"
       },
       "1377530": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -51,30 +61,29 @@
     "vocabIds": [
       "1483070",
       "1377530",
-      "2256270",
-      "2525520",
+      "1604720",
       "1188220"
     ],
     "matches": {
       "1188220": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かめん"
       },
       "1377530": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
-      "2256270": {
+      "1604720": {
         "start": 5,
-        "length": 1
-      },
-      "2525520": {
-        "start": 6,
-        "length": 1
+        "length": 3,
+        "reading": "みやぶら"
       }
     }
   },
@@ -91,10 +100,12 @@
     "vocabIds": [
       "1483070",
       "1318610",
+      "1359040",
       "2827068",
       "1242970",
       "1315720",
       "2540200",
+      "1587040",
       "1311110",
       "1000420",
       "1377530",
@@ -103,43 +114,63 @@
     "matches": {
       "1000420": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1242970": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "かねもち"
       },
       "1311110": {
         "start": 34,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315720": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1318610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1359040": {
+        "start": 5,
+        "length": 2,
+        "reading": "しんじ"
       },
       "1377530": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1587040": {
+        "start": 29,
+        "length": 2,
+        "reading": "いっ"
       },
       "1604720": {
         "start": 44,
-        "length": 4
+        "length": 3,
+        "reading": "みやぶっ"
       },
       "2540200": {
         "start": 28,
-        "length": 4
+        "length": 4,
+        "reading": "といった"
       },
       "2827068": {
         "start": 5,
-        "length": 6
+        "length": 6,
+        "reading": "しんじられない"
       }
     }
   },
@@ -156,25 +187,35 @@
     "vocabIds": [
       "1483070",
       "1959460",
+      "1580640",
       "1203620",
       "1377530"
     ],
     "matches": {
       "1203620": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "がいこく"
       },
       "1377530": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1580640": {
+        "start": 6,
+        "length": 1,
+        "reading": "じん"
       },
       "1959460": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "いぎりすじん"
       }
     }
   },
@@ -192,24 +233,28 @@
       "1467690",
       "1002290",
       "1377530",
-      "1502920"
+      "1606560"
     ],
     "matches": {
       "1002290": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
       },
       "1377530": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1467690": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "ねこかぶり"
       },
-      "1502920": {
+      "1606560": {
         "start": 13,
-        "length": 4
+        "length": 3,
+        "reading": "わかっ"
       }
     }
   },
@@ -225,31 +270,48 @@
     "indices": "私(わたし)[01] は 彼(かれ) の 正体 を 見破る 事(こと){こと} は 出来る{出来ませんでした}",
     "vocabIds": [
       "1311110",
+      "1483070",
       "1000420",
       "1377530",
       "1604720",
-      "1340450"
+      "1340450",
+      "1340430"
     ],
     "matches": {
       "1000420": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1340430": {
+        "start": 13,
+        "length": 2,
+        "reading": "でき"
       },
       "1340450": {
         "start": 13,
-        "length": 5
+        "length": 2,
+        "reading": "でき"
       },
       "1377530": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
       },
       "1604720": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "みやぶる"
       }
     }
   },
@@ -273,23 +335,28 @@
     "matches": {
       "1002590": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "おとうさん"
       },
       "1247250": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1259980": {
         "start": 18,
-        "length": 4
+        "length": 3,
+        "reading": "みぬい"
       },
       "1377530": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1419990": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       }
     }
   },
@@ -310,11 +377,13 @@
     "matches": {
       "1377530": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1601280": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ばくろ"
       }
     }
   },
@@ -329,27 +398,31 @@
     ],
     "indices": "其の[01]{その} 殺人者~ の 正体 は 手がかり[01]{手掛かり}~ が 全く{まったく} 無い{なかった}",
     "vocabIds": [
+      "1299100",
       "1299120",
-      "1377530",
-      "1327190",
-      "2033990"
+      "1322990",
+      "1377530"
     ],
     "matches": {
+      "1299100": {
+        "start": 2,
+        "length": 2,
+        "reading": "さつじん"
+      },
       "1299120": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "さつじんしゃ"
       },
-      "1327190": {
-        "start": 9,
-        "length": 1
+      "1322990": {
+        "start": 4,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1377530": {
         "start": 6,
-        "length": 2
-      },
-      "2033990": {
-        "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "しょうたい"
       }
     }
   },
@@ -367,29 +440,40 @@
       "1377530",
       "1198550",
       "1423310",
+      "1429060",
       "1429050",
       "1604300"
     ],
     "matches": {
       "1198550": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1377530": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1423310": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1429050": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "しらべ"
+      },
+      "1429060": {
+        "start": 20,
+        "length": 2,
+        "reading": "しらべ"
       },
       "1604300": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "まわっ"
       }
     }
   },
@@ -408,7 +492,8 @@
     "matches": {
       "1377530": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       }
     }
   },
@@ -425,34 +510,52 @@
       "1483070",
       "1497180",
       "2005890",
+      "1174420",
       "2658890",
+      "1237130",
       "1176780",
       "1377530"
     ],
     "matches": {
+      "1174420": {
+        "start": 12,
+        "length": 2,
+        "reading": "えいご"
+      },
       "1176780": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "えんじ"
+      },
+      "1237130": {
+        "start": 14,
+        "length": 2,
+        "reading": "きょうし"
       },
       "1377530": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1497180": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ふだん"
       },
       "2005890": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "やるき"
       },
       "2658890": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "えいごきょうし"
       }
     }
   },
@@ -466,17 +569,13 @@
       }
     ],
     "vocabIds": [
-      "1377530",
-      "2056720"
+      "1377530"
     ],
     "matches": {
       "1377530": {
         "start": 3,
-        "length": 2
-      },
-      "2056720": {
-        "start": 6,
-        "length": 1
+        "length": 2,
+        "reading": "しょうたい"
       }
     }
   }

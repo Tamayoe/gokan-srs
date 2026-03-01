@@ -10,27 +10,94 @@
     ],
     "indices": "洗面所~ の 栓 を 抜く[01] と 水(みず) が がばがば[02]{ガバガバ}~ 流れ出す{流れ出した}",
     "vocabIds": [
+      "1391050",
       "1391070",
+      "1343100",
+      "1956550",
       "1889130",
+      "1478190",
       "1371260",
       "1552170"
     ],
     "matches": {
+      "1343100": {
+        "start": 2,
+        "length": 1,
+        "reading": "しょ"
+      },
       "1371260": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
+      },
+      "1391050": {
+        "start": 0,
+        "length": 2,
+        "reading": "せんめん"
       },
       "1391070": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せんめんしょ"
+      },
+      "1478190": {
+        "start": 6,
+        "length": 2,
+        "reading": "ぬく"
       },
       "1552170": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "ながれだし"
       },
       "1889130": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "せんをぬく"
+      },
+      "1956550": {
+        "start": 4,
+        "length": 1,
+        "reading": "せん"
+      }
+    }
+  },
+  {
+    "id": "142030",
+    "original": "雪が解けると川に流れ出します。",
+    "en": [
+      {
+        "id": "272540",
+        "text": "When the snow melts it flows into the river."
+      }
+    ],
+    "indices": "雪 が 解ける(とける)[04] と 川[01] に 流れ出す{流れ出します}",
+    "vocabIds": [
+      "1386500",
+      "1198910",
+      "1390020",
+      "1552170"
+    ],
+    "matches": {
+      "1198910": {
+        "start": 2,
+        "length": 3,
+        "reading": "とける"
+      },
+      "1386500": {
+        "start": 0,
+        "length": 1,
+        "reading": "ゆき"
+      },
+      "1390020": {
+        "start": 6,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1552170": {
+        "start": 8,
+        "length": 4,
+        "reading": "ながれだし"
       }
     }
   },
@@ -52,15 +119,18 @@
     "matches": {
       "1199900": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "こわれ"
       },
       "1371260": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1552170": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "ながれだし"
       }
     }
   },
@@ -76,21 +146,36 @@
     "indices": "群衆 が 競技場 から どっと 流れ出す{流れ出した}",
     "vocabIds": [
       "1592510",
+      "1234080",
       "1800030",
+      "1355790",
       "1552170"
     ],
     "matches": {
+      "1234080": {
+        "start": 3,
+        "length": 2,
+        "reading": "きょうぎ"
+      },
+      "1355790": {
+        "start": 5,
+        "length": 1,
+        "reading": "じょう"
+      },
       "1552170": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "ながれだし"
       },
       "1592510": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぐんしゅう"
       },
       "1800030": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "きょうぎじょう"
       }
     }
   }

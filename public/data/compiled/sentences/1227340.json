@@ -13,24 +13,34 @@
       "1483070",
       "1206730",
       "1338240",
+      "1896380",
       "1227340"
     ],
     "matches": {
       "1206730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227340": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "ひさしい"
       },
       "1338240": {
         "start": 5,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1896380": {
+        "start": 5,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -48,24 +58,34 @@
       "1763330",
       "1316300",
       "1547720",
+      "1547710",
       "1227340"
     ],
     "matches": {
       "1227340": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "ひさしい"
       },
       "1316300": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じだい"
+      },
+      "1547710": {
+        "start": 9,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 9,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1763330": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ちほうじちたい"
       }
     }
   },
@@ -82,35 +102,231 @@
     "vocabIds": [
       "1413320",
       "1414910",
-      "1008870",
+      "1587040",
       "1227340",
       "1483070",
       "1186710"
     ],
     "matches": {
-      "1008870": {
-        "start": 7,
-        "length": 5
-      },
       "1186710": {
         "start": 27,
-        "length": 3
+        "length": 3,
+        "reading": "ばける"
       },
       "1227340": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "ひさしい"
       },
       "1413320": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "たいきばんせい"
       },
       "1414910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "おおもの"
       },
       "1483070": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1587040": {
+        "start": 8,
+        "length": 2,
+        "reading": "いわ"
+      }
+    }
+  },
+  {
+    "id": "154174",
+    "original": "私は彼に久しく会っていない。",
+    "en": [
+      {
+        "id": "260369",
+        "text": "I have not seen him for a long time."
+      },
+      {
+        "id": "19847",
+        "text": "I haven't seen him for a long time."
+      },
+      {
+        "id": "750648",
+        "text": "I've not seen him in a long time."
+      },
+      {
+        "id": "3703243",
+        "text": "I haven't seen him in a long time."
+      }
+    ],
+    "indices": "私(わたし)[01] は 彼(かれ) に 久しい{久しく} 会う[01]{会っていない}",
+    "vocabIds": [
+      "1311110",
+      "1483070",
+      "1227340",
+      "1227350",
+      "1198180"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 7,
+        "length": 2,
+        "reading": "あっ"
+      },
+      "1227340": {
+        "start": 4,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1227350": {
+        "start": 4,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "182720",
+    "original": "久しく彼に会わない。",
+    "en": [
+      {
+        "id": "19847",
+        "text": "I haven't seen him for a long time."
+      }
+    ],
+    "indices": "久しく~ 彼(かれ)[01] に 会う[01]{会わない}",
+    "vocabIds": [
+      "1227340",
+      "1227350",
+      "1483070",
+      "1198180"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 5,
+        "length": 2,
+        "reading": "あわ"
+      },
+      "1227340": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1227350": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "182721",
+    "original": "久しく手紙を書かなかった事をお許し下さい。",
+    "en": [
+      {
+        "id": "19848",
+        "text": "Please forgive me for not having written for a long time."
+      }
+    ],
+    "indices": "久しい{久しく} 手紙 を 書く{書かなかった} 事(こと) を 御(お){お} 許し(ゆるし) 下さい",
+    "vocabIds": [
+      "1227340",
+      "1227350",
+      "1327720",
+      "1343950",
+      "1313580",
+      "1184280",
+      "1184270"
+    ],
+    "matches": {
+      "1184270": {
+        "start": 17,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 17,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1227340": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1227350": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1313580": {
+        "start": 12,
+        "length": 1,
+        "reading": "こと"
+      },
+      "1327720": {
+        "start": 3,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1343950": {
+        "start": 6,
+        "length": 2,
+        "reading": "かか"
+      }
+    }
+  },
+  {
+    "id": "182722",
+    "original": "久しく会っていませんね。",
+    "en": [
+      {
+        "id": "417009",
+        "text": "I haven't seen you for a long time."
+      },
+      {
+        "id": "417019",
+        "text": "I haven't seen you for ages."
+      }
+    ],
+    "indices": "久しい{久しく} 会う[01]{会っていません} ね(#2029080)[01]",
+    "vocabIds": [
+      "1227340",
+      "1227350",
+      "1198180"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 3,
+        "length": 2,
+        "reading": "あっ"
+      },
+      "1227340": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1227350": {
+        "start": 0,
+        "length": 3,
+        "reading": "ひさしく"
       }
     }
   },
@@ -132,15 +348,18 @@
     "matches": {
       "1227340": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "ひさしい"
       },
       "1333090": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1472100": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はいし"
       }
     }
   },
@@ -162,15 +381,100 @@
     "matches": {
       "1227340": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ひさしい"
       },
       "1333090": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1386710": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "たえ"
+      }
+    }
+  },
+  {
+    "id": "2366114",
+    "original": "フランス語は久しく話していない。",
+    "en": [
+      {
+        "id": "1109368",
+        "text": "It's been a long time since I last spoke French."
+      }
+    ],
+    "vocabIds": [
+      "1111590",
+      "1227340",
+      "1227350",
+      "1562350"
+    ],
+    "matches": {
+      "1111590": {
+        "start": 0,
+        "length": 5,
+        "reading": "ふらんすご"
+      },
+      "1227340": {
+        "start": 6,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1227350": {
+        "start": 6,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1562350": {
+        "start": 9,
+        "length": 2,
+        "reading": "はなし"
+      }
+    }
+  },
+  {
+    "id": "2366125",
+    "original": "休みらしい休みは久しく取っていない。",
+    "en": [
+      {
+        "id": "1109369",
+        "text": "It's been a long time since I've had a real vacation."
+      }
+    ],
+    "vocabIds": [
+      "1227500",
+      "1227340",
+      "1227350",
+      "1326980",
+      "2809750"
+    ],
+    "matches": {
+      "1227340": {
+        "start": 8,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1227350": {
+        "start": 8,
+        "length": 3,
+        "reading": "ひさしく"
+      },
+      "1227500": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1326980": {
+        "start": 11,
+        "length": 2,
+        "reading": "とっ"
+      },
+      "2809750": {
+        "start": 11,
+        "length": 2,
+        "reading": "とっ"
       }
     }
   }

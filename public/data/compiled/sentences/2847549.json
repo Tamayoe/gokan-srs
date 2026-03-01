@@ -1,30 +1,5 @@
 [
   {
-    "id": "188150",
-    "original": "何があろうとも私はあきらめない。",
-    "en": [
-      {
-        "id": "24808",
-        "text": "Nothing can force me to give it up."
-      }
-    ],
-    "indices": "何があろうと{何があろうとも}~ 私(わたし)[01] は 諦める{あきらめない}",
-    "vocabIds": [
-      "2847549",
-      "1311110"
-    ],
-    "matches": {
-      "1311110": {
-        "start": 7,
-        "length": 1
-      },
-      "2847549": {
-        "start": 0,
-        "length": 6
-      }
-    }
-  },
-  {
     "id": "10276558",
     "original": "何があろうと諦めるつもりはありません。",
     "en": [
@@ -42,17 +17,25 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2847549",
       "1436730"
     ],
     "matches": {
       "1436730": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "あきらめる"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       },
       "2847549": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "なにがあろうと"
       }
     }
   },
@@ -66,17 +49,25 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2847549",
       "1260430"
     ],
     "matches": {
       "1260430": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "やりとげ"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       },
       "2847549": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "なにがあろうと"
       }
     }
   },
@@ -90,6 +81,7 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2847549",
       "1311110",
       "1527070"
@@ -97,15 +89,23 @@
     "matches": {
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1527070": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "みかた"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       },
       "2847549": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "なにがあろうと"
       }
     }
   },
@@ -119,22 +119,37 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "2847549",
       "1591430",
+      "1510790",
       "1510720"
     ],
     "matches": {
       "1510720": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "かわり"
+      },
+      "1510790": {
+        "start": 11,
+        "length": 3,
+        "reading": "かわり"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       },
       "1591430": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "きもち"
       },
       "2847549": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "なにがあろうと"
       }
     }
   }

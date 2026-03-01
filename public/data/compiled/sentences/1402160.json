@@ -19,23 +19,28 @@
     "matches": {
       "1344970": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1351360": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "わらう"
       },
       "1402160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1611920": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "むしんけい"
       }
     }
   },
@@ -50,32 +55,43 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 葬式 に 行く[01]{行かなかった} 事(こと) を 後悔 為る(する){している}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1402160",
-      "2270390",
+      "1578850",
       "1313580",
       "1269510"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1269510": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "こうかい"
       },
       "1313580": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1402160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
       },
-      "2270390": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1578850": {
         "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "いか"
       }
     }
   },
@@ -90,6 +106,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 葬式 には 大勢(おおぜい){大勢の} 人(ひと) が 参列 為る(する){した}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1402160",
       "1414220",
@@ -99,23 +116,33 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1302650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "さんれつ"
       },
       "1402160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
       },
       "1414220": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たいせい"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1580640": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -130,22 +157,37 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 葬式 には 出る{出なかった}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1402160",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1338240": {
         "start": 6,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1402160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1896380": {
+        "start": 6,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -162,25 +204,104 @@
     "vocabIds": [
       "1402160",
       "1287420",
-      "2839346",
+      "1500940",
+      "1423000",
+      "1597470",
       "1333090"
     ],
     "matches": {
       "1287420": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "くろい"
       },
       "1333090": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1402160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
       },
-      "2839346": {
+      "1423000": {
+        "start": 8,
+        "length": 1,
+        "reading": "き"
+      },
+      "1500940": {
         "start": 6,
-        "length": 4
+        "length": 1,
+        "reading": "ふく"
+      },
+      "1597470": {
+        "start": 8,
+        "length": 1,
+        "reading": "き"
+      }
+    }
+  },
+  {
+    "id": "171986",
+    "original": "今日のお昼時間は、いつものレストランは家族のお葬式でお休みだ。",
+    "en": [
+      {
+        "id": "242489",
+        "text": "At lunchtime today, our usual restaurant was closed because of a funeral in the family."
+      }
+    ],
+    "indices": "今日 の お昼 時間 は 何時も{いつも} の レストラン は 家族 の 御(お){お} 葬式 で(#2028980) 御(お){お} 休み[01] だ",
+    "vocabIds": [
+      "1579110",
+      "1660100",
+      "1315920",
+      "1192150",
+      "2854977",
+      "1402160",
+      "1612680",
+      "1227500"
+    ],
+    "matches": {
+      "1192150": {
+        "start": 19,
+        "length": 2,
+        "reading": "かぞく"
+      },
+      "1227500": {
+        "start": 27,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1315920": {
+        "start": 5,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1402160": {
+        "start": 23,
+        "length": 2,
+        "reading": "そうしき"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1612680": {
+        "start": 26,
+        "length": 3,
+        "reading": "おやすみ"
+      },
+      "1660100": {
+        "start": 3,
+        "length": 2,
+        "reading": "おひる"
+      },
+      "2854977": {
+        "start": 22,
+        "length": 3,
+        "reading": "おそうしき"
       }
     }
   },
@@ -198,24 +319,34 @@
       "1649500",
       "1402160",
       "1183720",
-      "1607520"
+      "1607520",
+      "1589350"
     ],
     "matches": {
       "1183720": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おんがく"
       },
       "1402160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
+      },
+      "1589350": {
+        "start": 21,
+        "length": 2,
+        "reading": "おもわ"
       },
       "1607520": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "えんそう"
       },
       "1649500": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おんがくか"
       }
     }
   },
@@ -234,28 +365,90 @@
       "1402160",
       "1421060",
       "1237030",
-      "1643580"
+      "1589060"
     ],
     "matches": {
       "1237030": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きょうかい"
       },
       "1402160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
       },
       "1421060": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じもと"
       },
       "1496670": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ふじん"
       },
-      "1643580": {
+      "1589060": {
         "start": 14,
-        "length": 4
+        "length": 2,
+        "reading": "おこなわ"
+      }
+    }
+  },
+  {
+    "id": "226915",
+    "original": "お葬式で、未亡人は黒いスーツ、帽子そして手袋をしてとてもしっかりとして見えた。",
+    "en": [
+      {
+        "id": "64262",
+        "text": "At the funeral, the widow looked very dignified, with her black suit, hat and gloves."
+      }
+    ],
+    "indices": "御(お){お} 葬式 で(#2028980) 未亡人 は 黒い[01] スーツ 帽子 而して{そして} 手袋 を 為る(する){して} 迚も[01]{とても} 確り{しっかり} として 見える(みえる){見えた}",
+    "vocabIds": [
+      "2854977",
+      "1402160",
+      "1528030",
+      "1287420",
+      "1519170",
+      "1328090",
+      "1259140"
+    ],
+    "matches": {
+      "1259140": {
+        "start": 35,
+        "length": 2,
+        "reading": "みえ"
+      },
+      "1287420": {
+        "start": 9,
+        "length": 2,
+        "reading": "くろい"
+      },
+      "1328090": {
+        "start": 20,
+        "length": 2,
+        "reading": "てぶくろ"
+      },
+      "1402160": {
+        "start": 1,
+        "length": 2,
+        "reading": "そうしき"
+      },
+      "1519170": {
+        "start": 15,
+        "length": 2,
+        "reading": "ぼうし"
+      },
+      "1528030": {
+        "start": 5,
+        "length": 3,
+        "reading": "みぼうじん"
+      },
+      "2854977": {
+        "start": 0,
+        "length": 3,
+        "reading": "おそうしき"
       }
     }
   },
@@ -272,30 +465,53 @@
     "vocabIds": [
       "1162120",
       "1300670",
+      "1463770",
       "2738480",
+      "2225040",
       "1402160",
+      "1227560",
       "1227500"
     ],
     "matches": {
       "1162120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちがつ"
       },
       "1227500": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 15,
+        "length": 2,
+        "reading": "やすみ"
       },
       "1300670": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "さんぜろにち"
       },
       "1402160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
+      },
+      "2225040": {
+        "start": 7,
+        "length": 2,
+        "reading": "いちにち"
       },
       "2738480": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "さんいちにち"
       }
     }
   },
@@ -316,15 +532,50 @@
     "matches": {
       "1212050": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんしょう"
       },
       "1319920": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しっけい"
       },
       "1402160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
+      }
+    }
+  },
+  {
+    "id": "8754840",
+    "original": "トムって、お葬式の時いた？",
+    "en": [
+      {
+        "id": "2645701",
+        "text": "Was Tom at the funeral?"
+      }
+    ],
+    "vocabIds": [
+      "2854977",
+      "1402160",
+      "1315840"
+    ],
+    "matches": {
+      "1315840": {
+        "start": 9,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1402160": {
+        "start": 6,
+        "length": 2,
+        "reading": "そうしき"
+      },
+      "2854977": {
+        "start": 5,
+        "length": 3,
+        "reading": "おそうしき"
       }
     }
   },
@@ -338,11 +589,12 @@
       }
     ],
     "vocabIds": [
+      "1324300",
       "2420910",
+      "1579080",
       "1254810",
       "1578850",
       "1587610",
-      "1607100",
       "1219680",
       "1333540",
       "1311110",
@@ -350,85 +602,176 @@
       "1456890",
       "1316380",
       "2022640",
+      "1587040",
       "2035290",
       "1351360",
       "1402160",
       "1451750",
-      "1304960",
-      "1000440"
+      "1307550",
+      "1342540",
+      "1000440",
+      "1580640",
+      "1368740"
     ],
     "matches": {
       "1000440": {
         "start": 115,
-        "length": 3
+        "length": 3,
+        "reading": "あのひと"
       },
       "1219680": {
         "start": 46,
-        "length": 3
+        "length": 2,
+        "reading": "よっ"
       },
       "1254810": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "けっこんしき"
       },
-      "1304960": {
-        "start": 107,
-        "length": 4
+      "1307550": {
+        "start": 108,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1311110": {
         "start": 52,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1316380": {
         "start": 62,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
+      },
+      "1324300": {
+        "start": 0,
+        "length": 2,
+        "reading": "わかい"
       },
       "1333540": {
         "start": 49,
-        "length": 3
+        "length": 2,
+        "reading": "つどっ"
+      },
+      "1342540": {
+        "start": 108,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1351360": {
         "start": 90,
-        "length": 2
+        "length": 2,
+        "reading": "わらう"
+      },
+      "1368740": {
+        "start": 117,
+        "length": 3,
+        "reading": "ひとたち"
       },
       "1402160": {
         "start": 100,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
       },
       "1451750": {
         "start": 103,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
       "1456890": {
         "start": 57,
-        "length": 3
+        "length": 2,
+        "reading": "つい"
       },
       "1562550": {
         "start": 54,
-        "length": 2
+        "length": 2,
+        "reading": "わきばら"
       },
       "1578850": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
+      },
+      "1579080": {
+        "start": 2,
+        "length": 1,
+        "reading": "ころ"
+      },
+      "1580640": {
+        "start": 117,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1587040": {
+        "start": 80,
+        "length": 2,
+        "reading": "いい"
       },
       "1587610": {
         "start": 16,
-        "length": 1
-      },
-      "1607100": {
-        "start": 36,
-        "length": 2
+        "length": 1,
+        "reading": "いや"
       },
       "2022640": {
         "start": 68,
-        "length": 1
+        "length": 1,
+        "reading": "ばん"
       },
       "2035290": {
         "start": 80,
-        "length": 5
+        "length": 5,
+        "reading": "いいながら"
       },
       "2420910": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わかいころ"
+      }
+    }
+  },
+  {
+    "id": "11656907",
+    "original": "今日はお葬式に行かなきゃいけないの。",
+    "en": [
+      {
+        "id": "2952182",
+        "text": "I have to go to a funeral today."
+      }
+    ],
+    "vocabIds": [
+      "1579110",
+      "1289400",
+      "2854977",
+      "1402160",
+      "1578850"
+    ],
+    "matches": {
+      "1289400": {
+        "start": 0,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1402160": {
+        "start": 4,
+        "length": 2,
+        "reading": "そうしき"
+      },
+      "1578850": {
+        "start": 7,
+        "length": 2,
+        "reading": "いか"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "2854977": {
+        "start": 3,
+        "length": 3,
+        "reading": "おそうしき"
       }
     }
   },
@@ -454,19 +797,23 @@
     "matches": {
       "1302650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "さんれつ"
       },
       "1402160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうしき"
       },
       "1415870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たくさん"
       },
       "1580640": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   }

@@ -11,21 +11,30 @@
     "indices": "あの人 は 化け物 の 様な{ような} 力持ち~ だ",
     "vocabIds": [
       "1000440",
+      "1580640",
       "1601300",
       "1555020"
     ],
     "matches": {
       "1000440": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あのひと"
       },
       "1555020": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "ちからもち"
+      },
+      "1580640": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひと"
       },
       "1601300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ばけもの"
       }
     }
   },
@@ -52,19 +61,23 @@
     "matches": {
       "1434180": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ひくい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1555020": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ちからもち"
       },
       "2147990": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "せ"
       }
     }
   },
@@ -80,21 +93,36 @@
     "indices": "彼(かれ)[01] は 背が低い が 力持ち だ",
     "vocabIds": [
       "1483070",
+      "2147990",
       "1472670",
+      "1434180",
       "1555020"
     ],
     "matches": {
+      "1434180": {
+        "start": 4,
+        "length": 2,
+        "reading": "ひくい"
+      },
       "1472670": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "せがひくい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1555020": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ちからもち"
+      },
+      "2147990": {
+        "start": 2,
+        "length": 1,
+        "reading": "せ"
       }
     }
   },
@@ -121,19 +149,74 @@
     "matches": {
       "1315610": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "もちあげる"
       },
       "1335080": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1555020": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "ちからもち"
+      }
+    }
+  },
+  {
+    "id": "188720",
+    "original": "彼は縁の下の力持ちだ。",
+    "en": [
+      {
+        "id": "25867",
+        "text": "He is an unsung hero."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 縁の下の力持ち~ だ",
+    "vocabIds": [
+      "1483070",
+      "1177490",
+      "1177510",
+      "1624380",
+      "1184140",
+      "1555020"
+    ],
+    "matches": {
+      "1177490": {
+        "start": 2,
+        "length": 1,
+        "reading": "えん"
+      },
+      "1177510": {
+        "start": 2,
+        "length": 3,
+        "reading": "えんのした"
+      },
+      "1184140": {
+        "start": 4,
+        "length": 1,
+        "reading": "した"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1555020": {
+        "start": 6,
+        "length": 3,
+        "reading": "ちからもち"
+      },
+      "1624380": {
+        "start": 2,
+        "length": 7,
+        "reading": "えんのしたのちからもち"
       }
     }
   },
@@ -148,21 +231,18 @@
     ],
     "vocabIds": [
       "1483150",
-      "1172610",
       "1555020"
     ],
     "matches": {
-      "1172610": {
-        "start": 12,
-        "length": 1
-      },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1555020": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "ちからもち"
       }
     }
   },
@@ -184,19 +264,23 @@
     "matches": {
       "1259140": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1320830": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じつは"
       },
       "1555020": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ちからもち"
       }
     }
   },
@@ -218,19 +302,23 @@
     "matches": {
       "1259140": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1320830": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じつは"
       },
       "1555020": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ちからもち"
       }
     }
   }

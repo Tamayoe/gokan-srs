@@ -13,8 +13,10 @@
       "1786720",
       "2084840",
       "1293700",
+      "1210360",
+      "1955940",
       "1210390",
-      "1564170",
+      "1262530",
       "1463770",
       "1341000",
       "1215400",
@@ -24,43 +26,63 @@
     "matches": {
       "1008860": {
         "start": 37,
-        "length": 4
+        "length": 2,
+        "reading": "いえ"
+      },
+      "1210360": {
+        "start": 8,
+        "length": 1,
+        "reading": "さむ"
       },
       "1210390": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さむさ"
       },
       "1215400": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "まぢか"
+      },
+      "1262530": {
+        "start": 11,
+        "length": 3,
+        "reading": "きびしく"
       },
       "1293700": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1341000": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "はる"
       },
       "1463770": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1475720": {
         "start": 30,
-        "length": 3
-      },
-      "1564170": {
-        "start": 11,
-        "length": 1
+        "length": 2,
+        "reading": "せまっ"
       },
       "1786720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だいかん"
+      },
+      "1955940": {
+        "start": 8,
+        "length": 1,
+        "reading": "さむ"
       },
       "2084840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -82,15 +104,18 @@
     "matches": {
       "1416740": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "たにま"
       },
       "1475720": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1542770": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ゆうぐれ"
       }
     }
   },
@@ -112,15 +137,18 @@
     "matches": {
       "1463770": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1475720": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1538130": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
       }
     }
   },
@@ -140,37 +168,152 @@
       "1312350",
       "1483150",
       "1360480",
+      "1588880",
       "2039990",
       "1602360"
     ],
     "matches": {
       "1312350": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1360480": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "こころ"
       },
       "1475720": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1483150": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1535540": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もくぜん"
+      },
+      "1588880": {
+        "start": 17,
+        "length": 3,
+        "reading": "おおきく"
       },
       "1602360": {
         "start": 20,
-        "length": 4
+        "length": 3,
+        "reading": "ひろがっ"
       },
       "2039990": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "おおきく"
+      }
+    }
+  },
+  {
+    "id": "87055",
+    "original": "彼女は必要に迫られて罪もないうそをついた。",
+    "en": [
+      {
+        "id": "316654",
+        "text": "She told a white lie out of necessity."
+      }
+    ],
+    "indices": "彼女[01] は 必要 に 迫る{迫られて} 罪 も 無い{ない} 嘘をつく{うそをついた}",
+    "vocabIds": [
+      "1483150",
+      "1487660",
+      "1475720",
+      "1296680"
+    ],
+    "matches": {
+      "1296680": {
+        "start": 10,
+        "length": 1,
+        "reading": "つみ"
+      },
+      "1475720": {
+        "start": 6,
+        "length": 2,
+        "reading": "せまら"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1487660": {
+        "start": 3,
+        "length": 2,
+        "reading": "ひつよう"
+      }
+    }
+  },
+  {
+    "id": "89178",
+    "original": "彼女は時間に迫られている様子で、しばしば壁の時計をちらりと見た。",
+    "en": [
+      {
+        "id": "314529",
+        "text": "She seemed pressed for time and often glanced at the clock on the wall."
+      }
+    ],
+    "indices": "彼女[01] は 時間 に 迫る{迫られている} 様子 で(#2028980) 屡々{しばしば} 壁[01] の 時計 を ちらり{ちらりと} 見る{見た}",
+    "vocabIds": [
+      "1483150",
+      "1315920",
+      "1475720",
+      "1545820",
+      "1509290",
+      "1316140",
+      "1259290",
+      "2256270"
+    ],
+    "matches": {
+      "1259290": {
+        "start": 29,
+        "length": 1,
+        "reading": "み"
+      },
+      "1315920": {
+        "start": 3,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1316140": {
+        "start": 22,
+        "length": 2,
+        "reading": "とけい"
+      },
+      "1475720": {
+        "start": 6,
+        "length": 2,
+        "reading": "せまら"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1509290": {
+        "start": 20,
+        "length": 1,
+        "reading": "かべ"
+      },
+      "1545820": {
+        "start": 12,
+        "length": 2,
+        "reading": "ようす"
+      },
+      "2256270": {
+        "start": 29,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -187,20 +330,29 @@
     "vocabIds": [
       "1483150",
       "1351600",
+      "1317110",
       "1475720"
     ],
     "matches": {
+      "1317110": {
+        "start": 6,
+        "length": 2,
+        "reading": "しめせ"
+      },
       "1351600": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しょうこ"
       },
       "1475720": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -223,19 +375,56 @@
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1475720": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1594480": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "しはらい"
+      }
+    }
+  },
+  {
+    "id": "113591",
+    "original": "彼はしつこく退職を迫られました。",
+    "en": [
+      {
+        "id": "290082",
+        "text": "He was hounded into quitting."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 執拗い{しつこく} 退職 を 迫る{迫られました}",
+    "vocabIds": [
+      "1483070",
+      "1411420",
+      "1475720"
+    ],
+    "matches": {
+      "1411420": {
+        "start": 6,
+        "length": 2,
+        "reading": "たいしょく"
+      },
+      "1475720": {
+        "start": 9,
+        "length": 2,
+        "reading": "せまら"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -250,17 +439,31 @@
     ],
     "indices": "薄暮れ~ が 迫る{迫った}",
     "vocabIds": [
+      "1475470",
       "2069410",
+      "1514950",
       "1475720"
     ],
     "matches": {
+      "1475470": {
+        "start": 0,
+        "length": 1,
+        "reading": "うす"
+      },
       "1475720": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
+      },
+      "1514950": {
+        "start": 1,
+        "length": 2,
+        "reading": "くれ"
       },
       "2069410": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "うすくれ"
       }
     }
   },
@@ -275,22 +478,88 @@
     ],
     "indices": "入学試験 が 間近[02]{間近に} 迫る{迫っていた}",
     "vocabIds": [
+      "1465850",
       "1465900",
+      "1312350",
       "1215400",
       "1475720"
     ],
     "matches": {
       "1215400": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "まぢか"
+      },
+      "1312350": {
+        "start": 2,
+        "length": 2,
+        "reading": "しけん"
+      },
+      "1465850": {
+        "start": 0,
+        "length": 2,
+        "reading": "にゅうがく"
       },
       "1465900": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "にゅうがくしけん"
       },
       "1475720": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
+      }
+    }
+  },
+  {
+    "id": "122487",
+    "original": "日本は外交政策の変更を迫られてきている。",
+    "en": [
+      {
+        "id": "281516",
+        "text": "Japan has been urged to alter her diplomatic policies."
+      }
+    ],
+    "indices": "日本 は 外交政策 の 変更 を 迫る{迫られて} 来る(くる){きている}",
+    "vocabIds": [
+      "1582710",
+      "1203540",
+      "1989530",
+      "1375950",
+      "1511040",
+      "1475720"
+    ],
+    "matches": {
+      "1203540": {
+        "start": 3,
+        "length": 2,
+        "reading": "がいこう"
+      },
+      "1375950": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいさく"
+      },
+      "1475720": {
+        "start": 11,
+        "length": 2,
+        "reading": "せまら"
+      },
+      "1511040": {
+        "start": 8,
+        "length": 2,
+        "reading": "へんこう"
+      },
+      "1582710": {
+        "start": 0,
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "1989530": {
+        "start": 3,
+        "length": 4,
+        "reading": "がいこうせいさく"
       }
     }
   },
@@ -307,25 +576,35 @@
     "vocabIds": [
       "1428280",
       "1315920",
+      "1269320",
       "2640160",
       "1475720"
     ],
     "matches": {
+      "1269320": {
+        "start": 9,
+        "length": 1,
+        "reading": "ご"
+      },
       "1315920": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1428280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1475720": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "2640160": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -347,15 +626,18 @@
     "matches": {
       "1397620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くみあい"
       },
       "1432020": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "ちんあげ"
       },
       "1475720": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       }
     }
   },
@@ -377,15 +659,75 @@
     "matches": {
       "1387990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1475720": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "143100",
+    "original": "政府は国家財政の建て直しを迫られている。",
+    "en": [
+      {
+        "id": "271468",
+        "text": "The government is compelled to reconstruct national finance."
+      }
+    ],
+    "indices": "政府 は 国家 財政 の 建て直す{建て直し} を 迫る{迫られている}",
+    "vocabIds": [
+      "1376070",
+      "1286170",
+      "2605600",
+      "1296830",
+      "1846550",
+      "1891610",
+      "1475720"
+    ],
+    "matches": {
+      "1286170": {
+        "start": 3,
+        "length": 2,
+        "reading": "こっか"
+      },
+      "1296830": {
+        "start": 5,
+        "length": 2,
+        "reading": "ざいせい"
+      },
+      "1376070": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいふ"
+      },
+      "1475720": {
+        "start": 13,
+        "length": 2,
+        "reading": "せまら"
+      },
+      "1846550": {
+        "start": 8,
+        "length": 4,
+        "reading": "たてなおし"
+      },
+      "1891610": {
+        "start": 8,
+        "length": 4,
+        "reading": "たてなおし"
+      },
+      "2605600": {
+        "start": 3,
+        "length": 4,
+        "reading": "こっかざいせい"
       }
     }
   },
@@ -400,22 +742,100 @@
     ],
     "indices": "世界的{世界的な} 危機 が すぐそこ[01] 迄{まで} 迫る{迫っている}",
     "vocabIds": [
+      "1373860",
       "1373940",
+      "1437260",
       "1218450",
       "1475720"
     ],
     "matches": {
       "1218450": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きき"
+      },
+      "1373860": {
+        "start": 0,
+        "length": 2,
+        "reading": "せかい"
       },
       "1373940": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "せかいてき"
+      },
+      "1437260": {
+        "start": 2,
+        "length": 1,
+        "reading": "てき"
       },
       "1475720": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
+      }
+    }
+  },
+  {
+    "id": "144647",
+    "original": "夫がカナダ人に熱を上げて、離婚を迫られています。",
+    "en": [
+      {
+        "id": "269917",
+        "text": "My husband got the hots for a Canadian and is threatening me with divorce."
+      }
+    ],
+    "indices": "夫(おっと) が カナダ人 に 熱を上げる{熱を上げて}~ 離婚 を 迫る{迫られています}",
+    "vocabIds": [
+      "1496480",
+      "2435310",
+      "1580640",
+      "1467710",
+      "1352320",
+      "1352300",
+      "1550880",
+      "1475720"
+    ],
+    "matches": {
+      "1352300": {
+        "start": 9,
+        "length": 2,
+        "reading": "あげ"
+      },
+      "1352320": {
+        "start": 9,
+        "length": 2,
+        "reading": "あげ"
+      },
+      "1467710": {
+        "start": 7,
+        "length": 1,
+        "reading": "ねつ"
+      },
+      "1475720": {
+        "start": 16,
+        "length": 2,
+        "reading": "せまら"
+      },
+      "1496480": {
+        "start": 0,
+        "length": 1,
+        "reading": "おっと"
+      },
+      "1550880": {
+        "start": 13,
+        "length": 2,
+        "reading": "りこん"
+      },
+      "1580640": {
+        "start": 5,
+        "length": 1,
+        "reading": "じん"
+      },
+      "2435310": {
+        "start": 2,
+        "length": 4,
+        "reading": "かなだじん"
       }
     }
   },
@@ -433,6 +853,8 @@
       "1362490",
       "1423310",
       "1483090",
+      "1221520",
+      "1591050",
       "2758300",
       "1218560",
       "1475720"
@@ -440,27 +862,43 @@
     "matches": {
       "1218560": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "きけん"
+      },
+      "1221520": {
+        "start": 8,
+        "length": 1,
+        "reading": "き"
       },
       "1362490": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "もり"
       },
       "1423310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1475720": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1483090": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1591050": {
+        "start": 8,
+        "length": 4,
+        "reading": "きがつく"
       },
       "2758300": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "きがつくと"
       }
     }
   },
@@ -482,15 +920,18 @@
     "matches": {
       "1003560": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こっこく"
       },
       "1315920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1475720": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       }
     }
   },
@@ -512,15 +953,18 @@
     "matches": {
       "1312350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1475720": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1535540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "もくぜん"
       }
     }
   },
@@ -540,12 +984,19 @@
       "1164340",
       "1502560",
       "1205590",
+      "1242130",
       "1242160",
       "1475720",
+      "1486090",
       "1486100",
+      "1955900",
+      "1226690",
       "1226700",
+      "1437260",
       "1410120",
+      "1214900",
       "1782800",
+      "1322990",
       "1215230",
       "1421850",
       "1420590",
@@ -554,63 +1005,113 @@
     "matches": {
       "1164340": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いっそう"
       },
       "1205200": {
         "start": 79,
-        "length": 2
+        "length": 2,
+        "reading": "かくだい"
       },
       "1205590": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "かくしん"
+      },
+      "1214900": {
+        "start": 56,
+        "length": 2,
+        "reading": "かんさつ"
       },
       "1215230": {
         "start": 61,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
+      },
+      "1226690": {
+        "start": 43,
+        "length": 2,
+        "reading": "きゃっかん"
       },
       "1226700": {
         "start": 43,
-        "length": 3
+        "length": 3,
+        "reading": "きゃっかんてき"
+      },
+      "1242130": {
+        "start": 19,
+        "length": 2,
+        "reading": "ちかく"
       },
       "1242160": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "1260660": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けんびきょう"
       },
       "1305990": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
+      },
+      "1322990": {
+        "start": 58,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1410120": {
         "start": 53,
-        "length": 2
+        "length": 2,
+        "reading": "たいしょう"
       },
       "1420590": {
         "start": 76,
-        "length": 2
+        "length": 2,
+        "reading": "ちしき"
       },
       "1421850": {
         "start": 68,
-        "length": 2
+        "length": 2,
+        "reading": "おく"
+      },
+      "1437260": {
+        "start": 45,
+        "length": 1,
+        "reading": "てき"
       },
       "1475720": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "せまる"
+      },
+      "1486090": {
+        "start": 35,
+        "length": 3,
+        "reading": "びせいぶつ"
       },
       "1486100": {
         "start": 35,
-        "length": 4
+        "length": 4,
+        "reading": "びせいぶつがく"
       },
       "1502560": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ぶっしつ"
       },
       "1782800": {
         "start": 56,
-        "length": 3
+        "length": 3,
+        "reading": "かんさつしゃ"
+      },
+      "1955900": {
+        "start": 38,
+        "length": 1,
+        "reading": "がく"
       }
     }
   },
@@ -626,36 +1127,66 @@
     "indices": "強引{強引な} 販売員 が 直ぐに{すぐに} 契約書 に 署名 為る(する){する} 様(よう){よう} 強い(つよい){強く} 迫る{迫った}",
     "vocabIds": [
       "1236170",
+      "1481800",
       "2134360",
+      "1168610",
+      "1250190",
       "1250210",
+      "2037940",
       "1343640",
-      "2020300",
+      "1236070",
       "1475720"
     ],
     "matches": {
+      "1168610": {
+        "start": 5,
+        "length": 1,
+        "reading": "いん"
+      },
+      "1236070": {
+        "start": 20,
+        "length": 2,
+        "reading": "つよく"
+      },
       "1236170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ごういん"
+      },
+      "1250190": {
+        "start": 10,
+        "length": 2,
+        "reading": "けいやく"
       },
       "1250210": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "けいやくしょ"
       },
       "1343640": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しょめい"
       },
       "1475720": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
-      "2020300": {
-        "start": 20,
-        "length": 1
+      "1481800": {
+        "start": 3,
+        "length": 2,
+        "reading": "はんばい"
+      },
+      "2037940": {
+        "start": 12,
+        "length": 1,
+        "reading": "しょ"
       },
       "2134360": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "はんばいいん"
       }
     }
   },
@@ -680,27 +1211,33 @@
     "matches": {
       "1373860": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1420800": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちいき"
       },
       "1475720": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1591080": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ききん"
       },
       "1604610": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "みとおし"
       },
       "1861770": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -717,30 +1254,100 @@
     "vocabIds": [
       "1215400",
       "1475720",
+      "1250830",
       "1991430",
+      "1199720",
       "1228890",
       "1554940"
     ],
     "matches": {
+      "1199720": {
+        "start": 8,
+        "length": 2,
+        "reading": "かいふく"
+      },
       "1215400": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まぢか"
       },
       "1228890": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうそく"
+      },
+      "1250830": {
+        "start": 6,
+        "length": 2,
+        "reading": "けいき"
       },
       "1475720": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1554940": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "ちからづよい"
       },
       "1991430": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "けいきかいふく"
+      }
+    }
+  },
+  {
+    "id": "185678",
+    "original": "我々は抵抗か隷属かの二者択一を迫られている。",
+    "en": [
+      {
+        "id": "22810",
+        "text": "We are faced with the alternative of resistance or slavery."
+      },
+      {
+        "id": "7820877",
+        "text": "We're faced with the choice between resistance and slavery."
+      },
+      {
+        "id": "7823979",
+        "text": "We are faced with the alternatives of resistance or slavery."
+      }
+    ],
+    "indices": "我々 は 抵抗 か 隷属~ か の 二者択一を迫られる{二者択一を迫られている}~",
+    "vocabIds": [
+      "1607050",
+      "1436260",
+      "1557620",
+      "1461960",
+      "1475720"
+    ],
+    "matches": {
+      "1436260": {
+        "start": 3,
+        "length": 2,
+        "reading": "ていこう"
+      },
+      "1461960": {
+        "start": 10,
+        "length": 4,
+        "reading": "にしゃたくいつ"
+      },
+      "1475720": {
+        "start": 15,
+        "length": 2,
+        "reading": "せまら"
+      },
+      "1557620": {
+        "start": 6,
+        "length": 2,
+        "reading": "れいぞく"
+      },
+      "1607050": {
+        "start": 0,
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -762,15 +1369,18 @@
     "matches": {
       "1475720": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1591080": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ききん"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -792,15 +1402,18 @@
     "matches": {
       "1196010": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あやまち"
       },
       "1196030": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かこ"
       },
       "1475720": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       }
     }
   },
@@ -815,32 +1428,25 @@
     ],
     "indices": "遠回し{遠回しに} 言う 代わりに{かわりに} は ずばり{ズバリ} 要点 に 迫る{迫った}",
     "vocabIds": [
-      "1177790",
-      "1199340",
       "1587040",
       "1546820",
       "1475720"
     ],
     "matches": {
-      "1177790": {
-        "start": 0,
-        "length": 1
-      },
-      "1199340": {
-        "start": 1,
-        "length": 2
-      },
       "1475720": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1546820": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ようてん"
       },
       "1587040": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "いう"
       }
     }
   },
@@ -868,23 +1474,28 @@
     "matches": {
       "1215400": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "まぢか"
       },
       "1311110": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1475720": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1519290": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       },
       "1594590": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "しめきり"
       }
     }
   },
@@ -900,21 +1511,30 @@
     "indices": "其の[01]{その} 船(ふね)[01] は 私たち の 船(ふね)[01] に 迫る{迫って} 来る(くる){きた}",
     "vocabIds": [
       "1602800",
+      "1311110",
       "1311300",
       "1475720"
     ],
     "matches": {
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1475720": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1602800": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ふね"
       }
     }
   },
@@ -929,42 +1549,144 @@
     ],
     "indices": "其の[01]{その} 押し の 強い(つよい) 男 は 私(わたし)[01] に 契約書 に 署名 為る(する){する} 様(よう){よう} 強い(つよい){強く} 迫る{迫った}",
     "vocabIds": [
+      "1180130",
       "2829650",
+      "1236070",
       "1419990",
       "1311110",
+      "1250190",
       "1250210",
+      "2037940",
       "1343640",
-      "2020300",
       "1475720"
     ],
     "matches": {
+      "1180130": {
+        "start": 2,
+        "length": 2,
+        "reading": "おし"
+      },
+      "1236070": {
+        "start": 5,
+        "length": 2,
+        "reading": "つよい"
+      },
+      "1250190": {
+        "start": 11,
+        "length": 2,
+        "reading": "けいやく"
+      },
       "1250210": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "けいやくしょ"
       },
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1343640": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しょめい"
       },
       "1419990": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1475720": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
-      "2020300": {
-        "start": 21,
-        "length": 1
+      "2037940": {
+        "start": 13,
+        "length": 1,
+        "reading": "しょ"
       },
       "2829650": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "おしのつよい"
+      }
+    }
+  },
+  {
+    "id": "236443",
+    "original": "「ペット・セミタリー」は真に迫ったサスペンス映画だった。",
+    "en": [
+      {
+        "id": "73810",
+        "text": "\"Pet Sematary\" was a real cliff-hanger."
+      }
+    ],
+    "indices": "は 真に(しんに) 迫る{迫った} サスペンス~ 映画 だ{だった}",
+    "vocabIds": [
+      "2868540",
+      "1475720",
+      "1173720"
+    ],
+    "matches": {
+      "1173720": {
+        "start": 22,
+        "length": 2,
+        "reading": "えいが"
+      },
+      "1475720": {
+        "start": 14,
+        "length": 2,
+        "reading": "せまっ"
+      },
+      "2868540": {
+        "start": 12,
+        "length": 2,
+        "reading": "しんに"
+      }
+    }
+  },
+  {
+    "id": "1489984",
+    "original": "そのロボットはあまりにも真に迫りすぎて気持ち悪かった。",
+    "en": [
+      {
+        "id": "675435",
+        "text": "The robot was so lifelike that it was creepy."
+      }
+    ],
+    "vocabIds": [
+      "2868540",
+      "1475720",
+      "2826164",
+      "1591430",
+      "1151260"
+    ],
+    "matches": {
+      "1151260": {
+        "start": 22,
+        "length": 3,
+        "reading": "わるかっ"
+      },
+      "1475720": {
+        "start": 14,
+        "length": 2,
+        "reading": "せまり"
+      },
+      "1591430": {
+        "start": 19,
+        "length": 3,
+        "reading": "きもち"
+      },
+      "2826164": {
+        "start": 14,
+        "length": 2,
+        "reading": "せまり"
+      },
+      "2868540": {
+        "start": 12,
+        "length": 2,
+        "reading": "しんに"
       }
     }
   },
@@ -983,32 +1705,38 @@
       "1310720",
       "1218560",
       "1475720",
-      "1580550"
+      "1359040"
     ],
     "matches": {
       "1159980": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
       },
       "1218560": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きけん"
       },
       "1310720": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "し"
+      },
+      "1359040": {
+        "start": 20,
+        "length": 2,
+        "reading": "しんじ"
       },
       "1475720": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       },
       "1483070": {
         "start": 5,
-        "length": 1
-      },
-      "1580550": {
-        "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1029,15 +1757,18 @@
     "matches": {
       "1304970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1475720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せまる"
       }
     }
   },
@@ -1058,15 +1789,88 @@
     "matches": {
       "1307850": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1475720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せまる"
+      }
+    }
+  },
+  {
+    "id": "9969719",
+    "original": "私は二者択一を迫られた。",
+    "en": [
+      {
+        "id": "280824",
+        "text": "I had to choose between the two."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1461960",
+      "1475720"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1461960": {
+        "start": 2,
+        "length": 4,
+        "reading": "にしゃたくいつ"
+      },
+      "1475720": {
+        "start": 7,
+        "length": 2,
+        "reading": "せまら"
+      }
+    }
+  },
+  {
+    "id": "9489323",
+    "original": "トムはテストがあと５時間に迫り、やっとエンジンが掛かった。",
+    "en": [
+      {
+        "id": "10118923",
+        "text": "With 5 hours to go until the test, Tom's engine finally started."
+      }
+    ],
+    "vocabIds": [
+      "1315920",
+      "1475720",
+      "2826164",
+      "1207590"
+    ],
+    "matches": {
+      "1207590": {
+        "start": 24,
+        "length": 3,
+        "reading": "かかっ"
+      },
+      "1315920": {
+        "start": 10,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1475720": {
+        "start": 13,
+        "length": 2,
+        "reading": "せまり"
+      },
+      "2826164": {
+        "start": 13,
+        "length": 2,
+        "reading": "せまり"
       }
     }
   },
@@ -1094,11 +1898,13 @@
     "matches": {
       "1315920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1475720": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       }
     }
   },
@@ -1127,15 +1933,18 @@
     "matches": {
       "1003560": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こっこく"
       },
       "1315920": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1475720": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "せまっ"
       }
     }
   }

@@ -16,11 +16,13 @@
     "matches": {
       "1316240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じさ"
       },
       "1365860": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "つらい"
       }
     }
   },
@@ -40,32 +42,44 @@
       "1212250",
       "1352130",
       "1591430",
+      "1151260",
       "2691760"
     ],
     "matches": {
+      "1151260": {
+        "start": 32,
+        "length": 2,
+        "reading": "わるく"
+      },
       "1212250": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
       },
       "1316240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じさ"
       },
       "1352130": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1529330": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ねむい"
       },
       "1591430": {
         "start": 28,
-        "length": 3
+        "length": 3,
+        "reading": "きもち"
       },
       "2691760": {
         "start": 32,
-        "length": 4
+        "length": 4,
+        "reading": "わるくなる"
       }
     }
   },
@@ -82,9 +96,12 @@
     "vocabIds": [
       "1316240",
       "1355810",
+      "1443320",
       "1443350",
       "1293700",
+      "1275130",
       "1275150",
+      "1437260",
       "1512610",
       "1328110",
       "1305990",
@@ -94,43 +111,164 @@
     "matches": {
       "1219910": {
         "start": 49,
-        "length": 2
+        "length": 2,
+        "reading": "きぼう"
+      },
+      "1275130": {
+        "start": 16,
+        "length": 2,
+        "reading": "こうか"
       },
       "1275150": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "こうかてき"
       },
       "1293700": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1305990": {
         "start": 34,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
       },
       "1316240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じさ"
       },
       "1328110": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "しゅだん"
       },
       "1355810": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ばあい"
+      },
+      "1437260": {
+        "start": 18,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1443320": {
+        "start": 8,
+        "length": 2,
+        "reading": "でんし"
       },
       "1443350": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "でんしめーる"
       },
       "1512610": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "べんり"
       },
       "1559900": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "れんらく"
+      }
+    }
+  },
+  {
+    "id": "158880",
+    "original": "私はまだ時差ぼけに苦しんでいます。",
+    "en": [
+      {
+        "id": "255647",
+        "text": "I'm still suffering from jet lag."
+      }
+    ],
+    "indices": "私(わたし)[01] は 未だ[01]{まだ} 時差ぼけ に 苦しむ{苦しんでいます}",
+    "vocabIds": [
+      "1311110",
+      "1316240",
+      "1316250",
+      "1244350"
+    ],
+    "matches": {
+      "1244350": {
+        "start": 9,
+        "length": 3,
+        "reading": "くるしん"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1316240": {
+        "start": 4,
+        "length": 2,
+        "reading": "じさ"
+      },
+      "1316250": {
+        "start": 4,
+        "length": 4,
+        "reading": "じさぼけ"
+      }
+    }
+  },
+  {
+    "id": "185077",
+    "original": "海外に行くと必ず、時差ぼけと下痢に悩まされる。",
+    "en": [
+      {
+        "id": "22208",
+        "text": "Whenever I go abroad, I suffer from jet lag and diarrhea."
+      }
+    ],
+    "indices": "海外 に 行く と 必ず 時差ぼけ と 下痢 に 悩ます{悩まされる}",
+    "vocabIds": [
+      "1201260",
+      "1578850",
+      "1487400",
+      "1316240",
+      "1316250",
+      "1186540",
+      "1469840"
+    ],
+    "matches": {
+      "1186540": {
+        "start": 14,
+        "length": 2,
+        "reading": "げり"
+      },
+      "1201260": {
+        "start": 0,
+        "length": 2,
+        "reading": "かいがい"
+      },
+      "1316240": {
+        "start": 9,
+        "length": 2,
+        "reading": "じさ"
+      },
+      "1316250": {
+        "start": 9,
+        "length": 4,
+        "reading": "じさぼけ"
+      },
+      "1469840": {
+        "start": 17,
+        "length": 3,
+        "reading": "なやまさ"
+      },
+      "1487400": {
+        "start": 6,
+        "length": 2,
+        "reading": "かならず"
+      },
+      "1578850": {
+        "start": 3,
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -153,19 +291,128 @@
     "matches": {
       "1198550": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1316240": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じさ"
       },
       "1433140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "つうきん"
       },
       "1453790": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "どうにゅう"
+      }
+    }
+  },
+  {
+    "id": "235750",
+    "original": "１週間経ったけど、ぼくはまだ時差ぼけに苦しんでいる。",
+    "en": [
+      {
+        "id": "73130",
+        "text": "It's been a week, but I'm still suffering from jet lag."
+      }
+    ],
+    "indices": "一週間{１週間} 経つ{経った} けど 僕(ぼく)[01]{ぼく} は 未だ[01]{まだ} 時差ぼけ に 苦しむ{苦しんでいる}",
+    "vocabIds": [
+      "1333500",
+      "1251100",
+      "1316240",
+      "1316250",
+      "1244350"
+    ],
+    "matches": {
+      "1244350": {
+        "start": 19,
+        "length": 3,
+        "reading": "くるしん"
+      },
+      "1251100": {
+        "start": 3,
+        "length": 2,
+        "reading": "たっ"
+      },
+      "1316240": {
+        "start": 14,
+        "length": 2,
+        "reading": "じさ"
+      },
+      "1316250": {
+        "start": 14,
+        "length": 4,
+        "reading": "じさぼけ"
+      },
+      "1333500": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅうかん"
+      }
+    }
+  },
+  {
+    "id": "2858338",
+    "original": "帰国して1週間になりますが、未だに時差ぼけが治りません。",
+    "en": [
+      {
+        "id": "2921275",
+        "text": "I've been back for a week, but I'm still suffering from jet lag."
+      },
+      {
+        "id": "2921276",
+        "text": "I've been back home for a week, but I'm still suffering from jet lag."
+      }
+    ],
+    "vocabIds": [
+      "1221330",
+      "1333500",
+      "1527140",
+      "1316240",
+      "1316250",
+      "1599400",
+      "1642700"
+    ],
+    "matches": {
+      "1221330": {
+        "start": 0,
+        "length": 2,
+        "reading": "きこく"
+      },
+      "1316240": {
+        "start": 17,
+        "length": 2,
+        "reading": "じさ"
+      },
+      "1316250": {
+        "start": 17,
+        "length": 4,
+        "reading": "じさぼけ"
+      },
+      "1333500": {
+        "start": 5,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1527140": {
+        "start": 14,
+        "length": 3,
+        "reading": "いまだに"
+      },
+      "1599400": {
+        "start": 22,
+        "length": 2,
+        "reading": "なおり"
+      },
+      "1642700": {
+        "start": 22,
+        "length": 2,
+        "reading": "なおり"
       }
     }
   },
@@ -185,11 +432,13 @@
     "matches": {
       "1304510": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "のこっ"
       },
       "1316240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じさ"
       }
     }
   },
@@ -204,36 +453,90 @@
     ],
     "vocabIds": [
       "1316240",
+      "1461140",
       "1582670",
+      "1580640",
+      "1315920",
       "1316010",
+      "1410410",
       "1443840",
+      "1582710",
       "1944820",
-      "2191630"
+      "1577100",
+      "1188770",
+      "2191630",
+      "1315840"
     ],
     "matches": {
+      "1188770": {
+        "start": 34,
+        "length": 2,
+        "reading": "なんじ"
+      },
+      "1315840": {
+        "start": 35,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1315920": {
+        "start": 15,
+        "length": 2,
+        "reading": "じかん"
+      },
       "1316010": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "じかんたい"
       },
       "1316240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じさ"
+      },
+      "1410410": {
+        "start": 17,
+        "length": 1,
+        "reading": "たい"
       },
       "1443840": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1461140": {
+        "start": 8,
+        "length": 1,
+        "reading": "に"
+      },
+      "1577100": {
+        "start": 34,
+        "length": 1,
+        "reading": "なん"
+      },
+      "1580640": {
+        "start": 9,
+        "length": 1,
+        "reading": "にん"
       },
       "1582670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ににん"
+      },
+      "1582710": {
+        "start": 27,
+        "length": 2,
+        "reading": "にっぽん"
       },
       "1944820": {
         "start": 27,
-        "length": 4
+        "length": 4,
+        "reading": "にっぽんじかん"
       },
       "2191630": {
         "start": 34,
-        "length": 4
+        "length": 4,
+        "reading": "なんじから"
       }
     }
   }

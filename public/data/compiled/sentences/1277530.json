@@ -12,20 +12,35 @@
     "vocabIds": [
       "1540150",
       "1277530",
-      "1883220"
+      "1357480",
+      "1883220",
+      "1331530"
     ],
     "matches": {
       "1277530": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1331530": {
+        "start": 8,
+        "length": 2,
+        "reading": "つく"
+      },
+      "1357480": {
+        "start": 6,
+        "length": 1,
+        "reading": "しょく"
       },
       "1540150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       },
       "1883220": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "しょくにつく"
       }
     }
   },
@@ -48,19 +63,23 @@
     "matches": {
       "1247250": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1277530": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1483150": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       }
     }
   },
@@ -76,31 +95,54 @@
     "indices": "彼女[01] は 初め(はじめ) から 日本文学 に 好意 を 抱く(#1584090){抱いている}",
     "vocabIds": [
       "1483150",
+      "2646830",
       "1307510",
+      "1582710",
       "1464810",
+      "1505190",
       "1277530",
       "1584090"
     ],
     "matches": {
       "1277530": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1307510": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "はじめから"
       },
       "1464810": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "にっぽんぶんがく"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1505190": {
+        "start": 9,
+        "length": 2,
+        "reading": "ぶんがく"
+      },
+      "1582710": {
+        "start": 7,
+        "length": 2,
+        "reading": "にっぽん"
       },
       "1584090": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "だい"
+      },
+      "2646830": {
+        "start": 3,
+        "length": 2,
+        "reading": "はじめ"
       }
     }
   },
@@ -119,33 +161,45 @@
       "1483150",
       "1277530",
       "1588760",
+      "1340450",
       "1340460",
       "1313580"
     ],
     "matches": {
       "1277530": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1313580": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
+      },
+      "1340450": {
+        "start": 12,
+        "length": 3,
+        "reading": "できる"
       },
       "1340460": {
         "start": 12,
-        "length": 5
+        "length": 5,
+        "reading": "できるだけ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1588760": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "える"
       }
     }
   },
@@ -163,29 +217,34 @@
       "1483070",
       "1483150",
       "1277530",
-      "1454490",
+      "1588760",
       "1217950"
     ],
     "matches": {
       "1217950": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "ねがっ"
       },
       "1277530": {
         "start": 5,
-        "length": 2
-      },
-      "1454490": {
-        "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "こうい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1588760": {
+        "start": 8,
+        "length": 2,
+        "reading": "えよ"
       }
     }
   },
@@ -207,15 +266,189 @@
     "matches": {
       "1277530": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "101032",
+    "original": "彼は彼女にとても好意的だ。",
+    "en": [
+      {
+        "id": "302665",
+        "text": "He is very friendly to her."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 彼女 に 迚も[01]{とても} 好意的 だ",
+    "vocabIds": [
+      "1483070",
+      "1483150",
+      "1277530",
+      "1835970",
+      "1437260"
+    ],
+    "matches": {
+      "1277530": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1437260": {
+        "start": 10,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483150": {
+        "start": 2,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1835970": {
+        "start": 8,
+        "length": 3,
+        "reading": "こういてき"
+      }
+    }
+  },
+  {
+    "id": "104513",
+    "original": "彼は取引銀行の店長に好意的な印象を与えた。",
+    "en": [
+      {
+        "id": "299178",
+        "text": "He made a favorable impression on his bank manager."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 取引 銀行 の 店長 に 好意的{好意的な} 印象を与える{印象を与えた}",
+    "vocabIds": [
+      "1483070",
+      "1599120",
+      "1243490",
+      "1440730",
+      "1277530",
+      "1835970",
+      "1437260",
+      "1168390",
+      "1544730",
+      "1544720"
+    ],
+    "matches": {
+      "1168390": {
+        "start": 14,
+        "length": 2,
+        "reading": "いんしょう"
+      },
+      "1243490": {
+        "start": 4,
+        "length": 2,
+        "reading": "ぎんこう"
+      },
+      "1277530": {
+        "start": 10,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1437260": {
+        "start": 12,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1440730": {
+        "start": 7,
+        "length": 2,
+        "reading": "てんちょう"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1544720": {
+        "start": 17,
+        "length": 2,
+        "reading": "あたえ"
+      },
+      "1544730": {
+        "start": 17,
+        "length": 2,
+        "reading": "あたえ"
+      },
+      "1599120": {
+        "start": 2,
+        "length": 2,
+        "reading": "とりひき"
+      },
+      "1835970": {
+        "start": 10,
+        "length": 3,
+        "reading": "こういてき"
+      }
+    }
+  },
+  {
+    "id": "109122",
+    "original": "彼は我々の計画に好意的だ。",
+    "en": [
+      {
+        "id": "294568",
+        "text": "He's sympathetic to our plan."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 我々 の 計画 に 好意的 だ",
+    "vocabIds": [
+      "1483070",
+      "1607050",
+      "1252090",
+      "1277530",
+      "1835970",
+      "1437260"
+    ],
+    "matches": {
+      "1252090": {
+        "start": 5,
+        "length": 2,
+        "reading": "けいかく"
+      },
+      "1277530": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1437260": {
+        "start": 10,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1607050": {
+        "start": 2,
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "1835970": {
+        "start": 8,
+        "length": 3,
+        "reading": "こういてき"
       }
     }
   },
@@ -234,28 +467,90 @@
       "1252090",
       "1412890",
       "1277530",
-      "1317110"
+      "1317110",
+      "1853460"
     ],
     "matches": {
       "1252090": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1277530": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1317110": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "しめし"
       },
       "1412890": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "おおきな"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1853460": {
+        "start": 13,
+        "length": 2,
+        "reading": "しめし"
+      }
+    }
+  },
+  {
+    "id": "116421",
+    "original": "彼の答えは好意的ではなかった。",
+    "en": [
+      {
+        "id": "287248",
+        "text": "His answer was not favorable."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 答え(#1449530) は 好意的 だ{ではなかった}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1449530",
+      "1277530",
+      "1835970",
+      "1437260"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1277530": {
+        "start": 5,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1437260": {
+        "start": 7,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1449530": {
+        "start": 2,
+        "length": 2,
+        "reading": "こたえ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1835970": {
+        "start": 5,
+        "length": 3,
+        "reading": "こういてき"
       }
     }
   },
@@ -271,26 +566,18 @@
     "indices": "人(ひと) の 好意 に 付け込む の は 嫌[01]{いや} だ ね(#2029080)[01]",
     "vocabIds": [
       "1580640",
-      "1277530",
-      "2840365",
-      "1593410"
+      "1277530"
     ],
     "matches": {
       "1277530": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1580640": {
         "start": 0,
-        "length": 1
-      },
-      "1593410": {
-        "start": 7,
-        "length": 2
-      },
-      "2840365": {
-        "start": 4,
-        "length": 3
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -315,20 +602,29 @@
     "vocabIds": [
       "1580640",
       "1277530",
-      "1213440"
+      "1213440",
+      "1213420"
     ],
     "matches": {
+      "1213420": {
+        "start": 5,
+        "length": 2,
+        "reading": "あまえ"
+      },
       "1213440": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "あまえ"
       },
       "1277530": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -344,6 +640,7 @@
     "indices": "私(わたし)[01] は 彼(かれ)[01]{彼の} 好意 の 返礼[01]~ に 贈り物 を 為る(する){した}",
     "vocabIds": [
       "1311110",
+      "1483070",
       "1000420",
       "1277530",
       "1512320",
@@ -352,23 +649,33 @@
     "matches": {
       "1000420": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1277530": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
       },
       "1512320": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "へんれい"
       },
       "1589030": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
       }
     }
   },
@@ -389,11 +696,13 @@
     "matches": {
       "1277530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1329650": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "うけとっ"
       }
     }
   },
@@ -416,19 +725,227 @@
     "matches": {
       "1212380": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かんしゃ"
       },
       "1277530": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1483150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2101130": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "し"
+      }
+    }
+  },
+  {
+    "id": "206709",
+    "original": "その本についての彼の論評は好意的だった。",
+    "en": [
+      {
+        "id": "43957",
+        "text": "His comments about the book were favorable."
+      }
+    ],
+    "indices": "其の[01]{その} 本(ほん)[01] に就いて{について} の 彼(かれ)[01] の 論評~ は 好意的 だ{だった}",
+    "vocabIds": [
+      "1522150",
+      "1483070",
+      "1000420",
+      "1561830",
+      "1277530",
+      "1835970",
+      "1437260"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 8,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1277530": {
+        "start": 13,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1437260": {
+        "start": 15,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1483070": {
+        "start": 8,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1522150": {
+        "start": 2,
+        "length": 1,
+        "reading": "ほん"
+      },
+      "1561830": {
+        "start": 10,
+        "length": 2,
+        "reading": "ろんぴょう"
+      },
+      "1835970": {
+        "start": 13,
+        "length": 3,
+        "reading": "こういてき"
+      }
+    }
+  },
+  {
+    "id": "212270",
+    "original": "その映画はとても好意的な批評を受けた。",
+    "en": [
+      {
+        "id": "49551",
+        "text": "The film received favourable criticism."
+      }
+    ],
+    "indices": "其の[01]{その} 映画 は 迚も{とても} 好意的{好意的な} 批評 を 受ける{受けた}",
+    "vocabIds": [
+      "1173720",
+      "1277530",
+      "1835970",
+      "1437260",
+      "1483440",
+      "1329590",
+      "1659120"
+    ],
+    "matches": {
+      "1173720": {
+        "start": 2,
+        "length": 2,
+        "reading": "えいが"
+      },
+      "1277530": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1329590": {
+        "start": 15,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "1437260": {
+        "start": 10,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1483440": {
+        "start": 12,
+        "length": 2,
+        "reading": "ひひょう"
+      },
+      "1659120": {
+        "start": 15,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "1835970": {
+        "start": 8,
+        "length": 3,
+        "reading": "こういてき"
+      }
+    }
+  },
+  {
+    "id": "212271",
+    "original": "その映画はとても好意的な批判を受けた。",
+    "en": [
+      {
+        "id": "49551",
+        "text": "The film received favourable criticism."
+      }
+    ],
+    "indices": "其の[01]{その} 映画 は 迚も{とても} 好意的{好意的な} 批判 を 受ける{受けた}",
+    "vocabIds": [
+      "1173720",
+      "1277530",
+      "1835970",
+      "1437260",
+      "1483420",
+      "1329590",
+      "1659120"
+    ],
+    "matches": {
+      "1173720": {
+        "start": 2,
+        "length": 2,
+        "reading": "えいが"
+      },
+      "1277530": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1329590": {
+        "start": 15,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "1437260": {
+        "start": 10,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1483420": {
+        "start": 12,
+        "length": 2,
+        "reading": "ひはん"
+      },
+      "1659120": {
+        "start": 15,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "1835970": {
+        "start": 8,
+        "length": 3,
+        "reading": "こういてき"
+      }
+    }
+  },
+  {
+    "id": "215484",
+    "original": "ジョンとアンは互いに好意を持っている。",
+    "en": [
+      {
+        "id": "52786",
+        "text": "John and Ann like each other."
+      }
+    ],
+    "indices": "と は 互いに 好意を持つ[02]{好意を持っている}~",
+    "vocabIds": [
+      "1268780",
+      "1277530",
+      "1315720"
+    ],
+    "matches": {
+      "1268780": {
+        "start": 7,
+        "length": 3,
+        "reading": "たがいに"
+      },
+      "1277530": {
+        "start": 10,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1315720": {
+        "start": 13,
+        "length": 2,
+        "reading": "もっ"
       }
     }
   },
@@ -449,11 +966,13 @@
     "matches": {
       "1212380": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんしゃ"
       },
       "1277530": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       }
     }
   },
@@ -469,21 +988,30 @@
     "indices": "御(ご){ご} 好意 を 深い{深く} 感謝 為る(する){します}",
     "vocabIds": [
       "1277530",
+      "1362640",
       "2843268",
       "1212380"
     ],
     "matches": {
       "1212380": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かんしゃ"
       },
       "1277530": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1362640": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふかく"
       },
       "2843268": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ふかく"
       }
     }
   },
@@ -500,30 +1028,35 @@
     "vocabIds": [
       "1277530",
       "2567590",
-      "2057810",
+      "1275320",
       "1270810",
       "1362950"
     ],
     "matches": {
       "1270810": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おれい"
+      },
+      "1275320": {
+        "start": 6,
+        "length": 2,
+        "reading": "あつく"
       },
       "1277530": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1362950": {
         "start": 11,
-        "length": 6
-      },
-      "2057810": {
-        "start": 6,
-        "length": 1
+        "length": 4,
+        "reading": "もうしあげ"
       },
       "2567590": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "にたいし"
       }
     }
   },
@@ -539,16 +1072,24 @@
     "indices": "御(ご){ご} 好意 に 感謝 致す{致します}",
     "vocabIds": [
       "1277530",
-      "1212380"
+      "1212380",
+      "1421900"
     ],
     "matches": {
       "1212380": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かんしゃ"
       },
       "1277530": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1421900": {
+        "start": 6,
+        "length": 2,
+        "reading": "いたし"
       }
     }
   },
@@ -570,15 +1111,87 @@
     "matches": {
       "1159230": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いこん"
       },
       "1277530": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
+      }
+    }
+  },
+  {
+    "id": "233366",
+    "original": "あなたの劇に対する好意的な批評が次号に出ます。",
+    "en": [
+      {
+        "id": "70736",
+        "text": "A favorable review of your play will appear in the next issue."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} の 劇 に対する 好意的{好意的な}~ 批評 が 次号~ に 出る{出ます}",
+    "vocabIds": [
+      "1253310",
+      "1009810",
+      "1277530",
+      "1835970",
+      "1437260",
+      "1483440",
+      "1316530",
+      "1338240",
+      "1896380"
+    ],
+    "matches": {
+      "1009810": {
+        "start": 5,
+        "length": 4,
+        "reading": "にたいする"
+      },
+      "1253310": {
+        "start": 4,
+        "length": 1,
+        "reading": "げき"
+      },
+      "1277530": {
+        "start": 9,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1316530": {
+        "start": 16,
+        "length": 2,
+        "reading": "じごう"
+      },
+      "1338240": {
+        "start": 19,
+        "length": 1,
+        "reading": "で"
+      },
+      "1437260": {
+        "start": 11,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1483440": {
+        "start": 13,
+        "length": 2,
+        "reading": "ひひょう"
+      },
+      "1835970": {
+        "start": 9,
+        "length": 3,
+        "reading": "こういてき"
+      },
+      "1896380": {
+        "start": 19,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -595,29 +1208,40 @@
       "1155920",
       "1580640",
       "1277530",
+      "1364440",
       "1590590",
       "1183140"
     ],
     "matches": {
       "1155920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いだい"
       },
       "1183140": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おんけい"
       },
       "1277530": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1364440": {
+        "start": 8,
+        "length": 1,
+        "reading": "かみ"
       },
       "1580640": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1590590": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かみ々"
       }
     }
   },
@@ -633,25 +1257,85 @@
     "vocabIds": [
       "1580640",
       "1277530",
+      "2863328",
       "1671850",
       "1404630"
     ],
     "matches": {
       "1277530": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1404630": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "あし"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1671850": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "むげに"
+      },
+      "2863328": {
+        "start": 5,
+        "length": 2,
+        "reading": "むげ"
+      }
+    }
+  },
+  {
+    "id": "11001556",
+    "original": "公式キャラクターが好意的に見てもかわいくない。",
+    "en": [
+      {
+        "id": "11489968",
+        "text": "The mascot's not cute, even by the most favorable standards."
+      }
+    ],
+    "vocabIds": [
+      "1273820",
+      "1277530",
+      "1835970",
+      "1437260",
+      "1259290",
+      "2256270"
+    ],
+    "matches": {
+      "1259290": {
+        "start": 13,
+        "length": 1,
+        "reading": "み"
+      },
+      "1273820": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうしき"
+      },
+      "1277530": {
+        "start": 9,
+        "length": 2,
+        "reading": "こうい"
+      },
+      "1437260": {
+        "start": 11,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1835970": {
+        "start": 9,
+        "length": 3,
+        "reading": "こういてき"
+      },
+      "2256270": {
+        "start": 13,
+        "length": 1,
+        "reading": "み"
       }
     }
   }

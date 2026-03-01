@@ -1,5 +1,38 @@
 [
   {
+    "id": "74123",
+    "original": "「なあ、そこの姉さん」「え？」「ちょっと相談に乗ってくれないか？」",
+    "en": [
+      {
+        "id": "329597",
+        "text": "\"Say, you, the lady over there.\" \"Eh?\" \"Could you give me a bit of advice?\""
+      }
+    ],
+    "indices": "なあ 其処(そこ){そこ} の 姉さん[02]~ え 一寸(ちょっと){ちょっと} 相談に乗る{相談に乗って}~ 呉れる{くれない} か",
+    "vocabIds": [
+      "1307640",
+      "1401210",
+      "1355120"
+    ],
+    "matches": {
+      "1307640": {
+        "start": 7,
+        "length": 3,
+        "reading": "ねえさん"
+      },
+      "1355120": {
+        "start": 23,
+        "length": 2,
+        "reading": "のっ"
+      },
+      "1401210": {
+        "start": 20,
+        "length": 2,
+        "reading": "そうだん"
+      }
+    }
+  },
+  {
     "id": "74435",
     "original": "医者に相談して鎮静剤を処方してもらうのはどうでしょうか。",
     "en": [
@@ -12,25 +45,98 @@
     "vocabIds": [
       "1159980",
       "1401210",
+      "1432120",
       "1432130",
+      "1296370",
       "1342500"
     ],
     "matches": {
       "1159980": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
+      },
+      "1296370": {
+        "start": 9,
+        "length": 1,
+        "reading": "ざい"
       },
       "1342500": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しょほう"
       },
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1432120": {
+        "start": 7,
+        "length": 2,
+        "reading": "ちんせい"
       },
       "1432130": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ちんせいざい"
+      }
+    }
+  },
+  {
+    "id": "74944",
+    "original": "「今日お父さんに会いに行く。進路相談だ」「いいですよ、そんなの」",
+    "en": [
+      {
+        "id": "328775",
+        "text": "\"I'm going to see your father today, about career counselling.\" \"You don't need to bother with that.\""
+      }
+    ],
+    "indices": "今日 お父さん に 会う{会い} に 行く 進路相談~ だ いい(#2820690)[02]~ です よ そんな の",
+    "vocabIds": [
+      "1579110",
+      "1002590",
+      "1198180",
+      "1578850",
+      "1366200",
+      "2196460",
+      "1401210"
+    ],
+    "matches": {
+      "1002590": {
+        "start": 3,
+        "length": 4,
+        "reading": "おとうさん"
+      },
+      "1198180": {
+        "start": 8,
+        "length": 2,
+        "reading": "あい"
+      },
+      "1366200": {
+        "start": 14,
+        "length": 2,
+        "reading": "しんろ"
+      },
+      "1401210": {
+        "start": 16,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1578850": {
+        "start": 11,
+        "length": 2,
+        "reading": "いく"
+      },
+      "1579110": {
+        "start": 1,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "2196460": {
+        "start": 14,
+        "length": 4,
+        "reading": "しんろそうだん"
       }
     }
   },
@@ -45,27 +151,49 @@
     ],
     "indices": "実は{じつは} 自由研究~ で(#2028980) 相談 したい 事がある{ことがあって} 何れ(どれ)[02]{どれ}~ ふん[01]{ふーん}~ 被子植物~ に就いて{について} 調べる{調べてる} の ね",
     "vocabIds": [
+      "1318720",
       "2259330",
+      "1258520",
       "1401210",
       "1771580",
-      "1429060"
+      "1429060",
+      "1429050"
     ],
     "matches": {
+      "1258520": {
+        "start": 6,
+        "length": 2,
+        "reading": "けんきゅう"
+      },
+      "1318720": {
+        "start": 4,
+        "length": 2,
+        "reading": "じゆう"
+      },
       "1401210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1429050": {
+        "start": 43,
+        "length": 2,
+        "reading": "しらべ"
       },
       "1429060": {
         "start": 43,
-        "length": 3
+        "length": 2,
+        "reading": "しらべ"
       },
       "1771580": {
         "start": 35,
-        "length": 4
+        "length": 4,
+        "reading": "ひししょくぶつ"
       },
       "2259330": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "じゆうけんきゅう"
       }
     }
   },
@@ -82,30 +210,53 @@
     "vocabIds": [
       "1401210",
       "1311110",
+      "1605820",
       "2059390",
+      "1365220",
       "2191980",
+      "1449540",
       "1449530"
     ],
     "matches": {
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1365220": {
+        "start": 14,
+        "length": 2,
+        "reading": "しんみ"
       },
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1449530": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "こたえ"
+      },
+      "1449540": {
+        "start": 20,
+        "length": 2,
+        "reading": "こたえ"
+      },
+      "1605820": {
+        "start": 10,
+        "length": 3,
+        "reading": "よけれ"
       },
       "2059390": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "よければ"
       },
       "2191980": {
         "start": 14,
-        "length": 6
+        "length": 6,
+        "reading": "しんみになって"
       }
     }
   },
@@ -121,8 +272,12 @@
     "indices": "其れ[01]{それ} は 出来ない相談 だ な 油物~ 為る(する){してる} 時(とき) に 火(ひ) の 側(そば)[01]{傍} から 離れる の は 言語道断 だ",
     "vocabIds": [
       "1340450",
+      "1340430",
       "1401210",
+      "1538590",
       "2206290",
+      "1502390",
+      "1315840",
       "2021540",
       "1193610",
       "2867582",
@@ -132,35 +287,63 @@
     "matches": {
       "1193610": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1264450": {
         "start": 30,
-        "length": 4
+        "length": 4,
+        "reading": "ごんごどうだん"
+      },
+      "1315840": {
+        "start": 17,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1340430": {
+        "start": 3,
+        "length": 2,
+        "reading": "でき"
       },
       "1340450": {
         "start": 3,
-        "length": 4
+        "length": 2,
+        "reading": "でき"
       },
       "1401210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1502390": {
+        "start": 13,
+        "length": 1,
+        "reading": "ぶつ"
+      },
+      "1538590": {
+        "start": 12,
+        "length": 1,
+        "reading": "あぶら"
       },
       "1550840": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "はなれる"
       },
       "2021540": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ときに"
       },
       "2206290": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "あぶらぶつ"
       },
       "2867582": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "はた"
       }
     }
   },
@@ -177,20 +360,29 @@
     "vocabIds": [
       "1553170",
       "1878110",
+      "1602710",
       "1401210"
     ],
     "matches": {
       "1401210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1553170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
+      },
+      "1602710": {
+        "start": 8,
+        "length": 2,
+        "reading": "りょうしん"
       },
       "1878110": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ごりょうしん"
       }
     }
   },
@@ -215,11 +407,52 @@
     "matches": {
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1530970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "むり"
+      }
+    }
+  },
+  {
+    "id": "82286",
+    "original": "僕には相談相手がない。",
+    "en": [
+      {
+        "id": "321429",
+        "text": "I have no one to turn to for advice."
+      }
+    ],
+    "indices": "僕(ぼく)[01] には 相談相手 が 無い{ない}",
+    "vocabIds": [
+      "1521400",
+      "1401210",
+      "2049240",
+      "1401000"
+    ],
+    "matches": {
+      "1401000": {
+        "start": 5,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1401210": {
+        "start": 3,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1521400": {
+        "start": 0,
+        "length": 1,
+        "reading": "ぼく"
+      },
+      "2049240": {
+        "start": 3,
+        "length": 4,
+        "reading": "そうだんあいて"
       }
     }
   },
@@ -241,15 +474,18 @@
     "matches": {
       "1252090": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1401210": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1516570": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ほうかご"
       }
     }
   },
@@ -270,11 +506,13 @@
     "matches": {
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
       }
     }
   },
@@ -299,11 +537,13 @@
     "matches": {
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
       }
     }
   },
@@ -328,6 +568,7 @@
     "vocabIds": [
       "1512850",
       "1401210",
+      "1269320",
       "1269350",
       "1254380",
       "1002420"
@@ -335,23 +576,33 @@
     "matches": {
       "1002420": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "おしらせ"
       },
       "1254380": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "けってい"
+      },
+      "1269320": {
+        "start": 8,
+        "length": 1,
+        "reading": "のち"
       },
       "1269350": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のちで"
       },
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
       }
     }
   },
@@ -376,11 +627,13 @@
     "matches": {
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
       }
     }
   },
@@ -404,23 +657,28 @@
     "matches": {
       "1318610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1401210": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1514990": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1536010": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -442,15 +700,67 @@
     "matches": {
       "1401210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512850": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
+      }
+    }
+  },
+  {
+    "id": "88185",
+    "original": "彼女は相談相手が欲しいんだよ。",
+    "en": [
+      {
+        "id": "315522",
+        "text": "She needs someone to turn to for advice."
+      },
+      {
+        "id": "2257915",
+        "text": "She wants someone she can turn to for advice."
+      }
+    ],
+    "indices": "彼女[01] は 相談相手 が 欲しい[01] ん[04] だ よ[01]",
+    "vocabIds": [
+      "1483150",
+      "1401210",
+      "2049240",
+      "1401000",
+      "1547330"
+    ],
+    "matches": {
+      "1401000": {
+        "start": 5,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1401210": {
+        "start": 3,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1547330": {
+        "start": 8,
+        "length": 3,
+        "reading": "ほしい"
+      },
+      "2049240": {
+        "start": 3,
+        "length": 4,
+        "reading": "そうだんあいて"
       }
     }
   },
@@ -466,6 +776,7 @@
     "indices": "彼女[01] は 何でも 両親 に 相談 為る(する){する}",
     "vocabIds": [
       "1483150",
+      "1577100",
       "1611030",
       "1602710",
       "1401210"
@@ -473,19 +784,28 @@
     "matches": {
       "1401210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
       },
       "1602710": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "りょうしん"
       },
       "1611030": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "なにでも"
       }
     }
   },
@@ -507,15 +827,18 @@
     "matches": {
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580640": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -531,6 +854,7 @@
     "indices": "彼(かれ)[01] は 何でも 打ち明ける(うちあける){打ち明けて} 相談 為る(する){する} 程{ほど} 兄(あに) を 信頼 為る(する){していない}",
     "vocabIds": [
       "1483070",
+      "1577100",
       "1611030",
       "1588130",
       "1401210",
@@ -540,27 +864,38 @@
     "matches": {
       "1249900": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "あに"
       },
       "1359730": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "しんらい"
       },
       "1401210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 2,
+        "length": 1,
+        "reading": "なに"
       },
       "1588130": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "うちあけ"
       },
       "1611030": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "なにでも"
       }
     }
   },
@@ -582,15 +917,18 @@
     "matches": {
       "1401210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -606,26 +944,36 @@
     "indices": "直接 自分で 弁護士 に 相談 した方がいい{したほうがいい} ん[04] では無い{ではない}",
     "vocabIds": [
       "1431110",
+      "1318610",
       "2830519",
       "1512850",
       "1401210"
     ],
     "matches": {
+      "1318610": {
+        "start": 2,
+        "length": 2,
+        "reading": "じぶん"
+      },
       "1401210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1431110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちょくせつ"
       },
       "1512850": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
       },
       "2830519": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "じぶんで"
       }
     }
   },
@@ -646,11 +994,13 @@
     "matches": {
       "1401210": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1416830": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       }
     }
   },
@@ -672,15 +1022,18 @@
     "matches": {
       "1387990": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1401210": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1414340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいせつ"
       }
     }
   },
@@ -697,30 +1050,23 @@
     "vocabIds": [
       "1203260",
       "1304480",
-      "1580640",
-      "1416220",
       "1401210"
     ],
     "matches": {
       "1203260": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "た"
       },
       "1304480": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "のこり"
       },
       "1401210": {
         "start": 8,
-        "length": 2
-      },
-      "1416220": {
-        "start": 6,
-        "length": 1
-      },
-      "1580640": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -740,16 +1086,24 @@
     "indices": "相談 に 来る(くる)[01]{来て} 下さい{ください}",
     "vocabIds": [
       "1401210",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1401210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1547710": {
+        "start": 3,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 3,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -766,30 +1120,104 @@
     "vocabIds": [
       "1376070",
       "1517040",
+      "1510650",
       "1864130",
       "1340450",
+      "1340430",
       "1401210"
     ],
     "matches": {
+      "1340430": {
+        "start": 13,
+        "length": 2,
+        "reading": "でき"
+      },
       "1340450": {
         "start": 13,
-        "length": 4
+        "length": 2,
+        "reading": "でき"
       },
       "1376070": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいふ"
       },
       "1401210": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1510650": {
+        "start": 6,
+        "length": 2,
+        "reading": "かえ"
       },
       "1517040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ほうしん"
       },
       "1864130": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かえ"
+      }
+    }
+  },
+  {
+    "id": "145972",
+    "original": "職業選択の際に先生が相談に乗ってくれた。",
+    "en": [
+      {
+        "id": "268590",
+        "text": "My teacher guided me in the choice of a career."
+      }
+    ],
+    "indices": "職業 選択 の 際(さい) に 先生(せんせい)[01] が 相談 に 乗る{乗って} 呉れる{くれた}",
+    "vocabIds": [
+      "1357510",
+      "1392290",
+      "1296300",
+      "1296330",
+      "1387990",
+      "1401210",
+      "1355120"
+    ],
+    "matches": {
+      "1296300": {
+        "start": 5,
+        "length": 1,
+        "reading": "さい"
+      },
+      "1296330": {
+        "start": 5,
+        "length": 2,
+        "reading": "さいに"
+      },
+      "1355120": {
+        "start": 13,
+        "length": 2,
+        "reading": "のっ"
+      },
+      "1357510": {
+        "start": 0,
+        "length": 2,
+        "reading": "しょくぎょう"
+      },
+      "1387990": {
+        "start": 7,
+        "length": 2,
+        "reading": "せんせい"
+      },
+      "1392290": {
+        "start": 2,
+        "length": 2,
+        "reading": "せんたく"
+      },
+      "1401210": {
+        "start": 10,
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -804,31 +1232,42 @@
     ],
     "vocabIds": [
       "1351030",
-      "1151230",
+      "1151260",
       "1159980",
       "1401210",
+      "1516930",
       "2160680"
     ],
     "matches": {
-      "1151230": {
+      "1151260": {
         "start": 3,
-        "length": 1
+        "length": 2,
+        "reading": "わるく"
       },
       "1159980": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
       },
       "1351030": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじょう"
       },
       "1401210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1516930": {
+        "start": 15,
+        "length": 1,
+        "reading": "ほう"
       },
       "2160680": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -850,15 +1289,18 @@
     "matches": {
       "1159980": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
       },
       "1351030": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじょう"
       },
       "1401210": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -879,11 +1321,13 @@
     "matches": {
       "1333550": {
         "start": 0,
-        "length": 4
+        "length": 3,
+        "reading": "あつまっ"
       },
       "1401210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -905,15 +1349,18 @@
     "matches": {
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1401210": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1536010": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -931,24 +1378,40 @@
       "1314050",
       "1512850",
       "1401210",
-      "2002660"
+      "2002660",
+      "1516930",
+      "2160680"
     ],
     "matches": {
       "1314050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぜん"
       },
       "1401210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
+      },
+      "1516930": {
+        "start": 11,
+        "length": 1,
+        "reading": "ほう"
       },
       "2002660": {
         "start": 9,
-        "length": 6
+        "length": 6,
+        "reading": "したほうがいい"
+      },
+      "2160680": {
+        "start": 11,
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -963,17 +1426,43 @@
     ],
     "indices": "歯列矯正~ に就いて{について} 御(ご){ご} 相談 したい のです が[03]",
     "vocabIds": [
+      "1313000",
+      "1313520",
       "1313530",
+      "1558330",
+      "1237800",
       "1401210"
     ],
     "matches": {
+      "1237800": {
+        "start": 2,
+        "length": 2,
+        "reading": "きょうせい"
+      },
+      "1313000": {
+        "start": 0,
+        "length": 1,
+        "reading": "は"
+      },
+      "1313520": {
+        "start": 0,
+        "length": 2,
+        "reading": "はれつ"
+      },
       "1313530": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "はれつきょうせい"
       },
       "1401210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1558330": {
+        "start": 1,
+        "length": 1,
+        "reading": "れつ"
       }
     }
   },
@@ -996,19 +1485,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1552740": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "りゅうがく"
       },
       "1602710": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "りょうしん"
       }
     }
   },
@@ -1030,15 +1523,18 @@
     "matches": {
       "1307630": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あね"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -1054,31 +1550,42 @@
     "indices": "私(わたし)[01] は 困る[01]{困った} 時(とき) は 何時でも{いつでも} 彼(かれ) に 相談 為る(する){する}",
     "vocabIds": [
       "1311110",
+      "1289590",
       "2823060",
       "1315840",
       "1483070",
       "1401210"
     ],
     "matches": {
+      "1289590": {
+        "start": 2,
+        "length": 2,
+        "reading": "こまっ"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315840": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1401210": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1483070": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "2823060": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "こまった"
       }
     }
   },
@@ -1101,19 +1608,23 @@
     "matches": {
       "1254790": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けっこん"
       },
       "1307630": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "あね"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -1136,19 +1647,23 @@
     "matches": {
       "1159130": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ゆいごん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401210": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
       }
     }
   },
@@ -1170,15 +1685,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1602710": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "りょうしん"
       }
     }
   },
@@ -1202,23 +1720,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1484150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひみつ"
       },
       "1580640": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1588130": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "うちあけ"
       }
     }
   },
@@ -1245,19 +1768,62 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401210": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1469850": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なやみ"
       },
       "1580640": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      }
+    }
+  },
+  {
+    "id": "164561",
+    "original": "私には相談相手がいない。",
+    "en": [
+      {
+        "id": "249946",
+        "text": "I have no one to go to for advice."
+      }
+    ],
+    "indices": "私(わたし)[01] には 相談相手 が 居る(いる)[01]{いない}",
+    "vocabIds": [
+      "1311110",
+      "1401210",
+      "2049240",
+      "1401000"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1401000": {
+        "start": 5,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1401210": {
+        "start": 3,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "2049240": {
+        "start": 3,
+        "length": 4,
+        "reading": "そうだんあいて"
       }
     }
   },
@@ -1287,15 +1853,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1540170": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       }
     }
   },
@@ -1317,15 +1886,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1540150": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       }
     }
   },
@@ -1346,36 +1918,61 @@
       "1502390",
       "1401210",
       "1247250",
-      "2188670"
+      "1160790",
+      "1166710",
+      "1524610",
+      "1209240"
     ],
     "matches": {
+      "1160790": {
+        "start": 30,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1166710": {
+        "start": 30,
+        "length": 2,
+        "reading": "いちまい"
+      },
+      "1209240": {
+        "start": 32,
+        "length": 2,
+        "reading": "かん"
+      },
       "1247250": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1289370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんど"
       },
       "1307550": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "はじめる"
       },
       "1361650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しんき"
       },
       "1401210": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1502390": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
       },
-      "2188670": {
-        "start": 30,
-        "length": 5
+      "1524610": {
+        "start": 31,
+        "length": 1,
+        "reading": "まい"
       }
     }
   },
@@ -1403,6 +2000,7 @@
     "indices": "決める 前(まえ) に 家族 と 相談 したい のです が[03]",
     "vocabIds": [
       "1254180",
+      "1392580",
       "1392590",
       "1192150",
       "1401210"
@@ -1410,19 +2008,28 @@
     "matches": {
       "1192150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かぞく"
       },
       "1254180": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きめる"
+      },
+      "1392580": {
+        "start": 3,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1401210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -1440,24 +2047,40 @@
       "1247250",
       "1512850",
       "1401210",
-      "2002660"
+      "2002660",
+      "1516930",
+      "2160680"
     ],
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1401210": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
+      },
+      "1516930": {
+        "start": 10,
+        "length": 1,
+        "reading": "ほう"
       },
       "2002660": {
         "start": 8,
-        "length": 6
+        "length": 6,
+        "reading": "したほうがいい"
+      },
+      "2160680": {
+        "start": 10,
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -1480,19 +2103,23 @@
     "matches": {
       "1189500": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かかく"
       },
       "1239440": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ぎょうしゃ"
       },
       "1401210": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -1512,32 +2139,44 @@
       "1401210",
       "1264770",
       "1553180",
+      "1322990",
       "1436360"
     ],
     "matches": {
       "1264770": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "こじん"
+      },
+      "1322990": {
+        "start": 15,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1436360": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ていきょう"
       },
       "1553170": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       },
       "1553180": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "りょこうしゃ"
       },
       "1606620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "わが"
       }
     }
   },
@@ -1552,6 +2191,7 @@
     ],
     "indices": "何か 悩み が[01] 有る{ある} の なら 彼(かれ)[01] に 相談 為る(する){する} と いい(#2820690)[01] です よ[01]",
     "vocabIds": [
+      "1577100",
       "1188270",
       "1469850",
       "1483070",
@@ -1560,19 +2200,28 @@
     "matches": {
       "1188270": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1401210": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1469850": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "なやみ"
       },
       "1483070": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -1587,22 +2236,64 @@
     ],
     "indices": "依頼人~ は 弁護士 と 相談 為る(する){した}",
     "vocabIds": [
+      "1155710",
       "1575880",
+      "1580640",
       "1512850",
       "1401210"
     ],
     "matches": {
+      "1155710": {
+        "start": 0,
+        "length": 2,
+        "reading": "いらい"
+      },
       "1401210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
       },
       "1575880": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いらいじん"
+      },
+      "1580640": {
+        "start": 2,
+        "length": 1,
+        "reading": "じん"
+      }
+    }
+  },
+  {
+    "id": "193175",
+    "original": "ものは相談だけど。",
+    "en": [
+      {
+        "id": "30340",
+        "text": "I have something to ask of you."
+      }
+    ],
+    "indices": "物(もの){もの} は 相談 だ けど",
+    "vocabIds": [
+      "2419620",
+      "1401210"
+    ],
+    "matches": {
+      "1401210": {
+        "start": 3,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "2419620": {
+        "start": 0,
+        "length": 5,
+        "reading": "ものはそうだん"
       }
     }
   },
@@ -1623,11 +2314,64 @@
     "matches": {
       "1247250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1401210": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      }
+    }
+  },
+  {
+    "id": "197087",
+    "original": "ブラウンさんは我々の財政上の相談相手です。",
+    "en": [
+      {
+        "id": "34268",
+        "text": "Mr Brown is our financial adviser."
+      }
+    ],
+    "indices": "さん は 我々 の 財政[02]~ 上(じょう)[01] の 相談相手~ です",
+    "vocabIds": [
+      "1607050",
+      "1296830",
+      "1352130",
+      "1401210",
+      "2049240",
+      "1401000"
+    ],
+    "matches": {
+      "1296830": {
+        "start": 10,
+        "length": 2,
+        "reading": "ざいせい"
+      },
+      "1352130": {
+        "start": 12,
+        "length": 1,
+        "reading": "じょう"
+      },
+      "1401000": {
+        "start": 16,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1401210": {
+        "start": 14,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1607050": {
+        "start": 7,
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "2049240": {
+        "start": 14,
+        "length": 4,
+        "reading": "そうだんあいて"
       }
     }
   },
@@ -1650,19 +2394,50 @@
     "matches": {
       "1001820": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1315720": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1401210": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1602710": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "りょうしん"
+      }
+    }
+  },
+  {
+    "id": "205445",
+    "original": "それはとてもできない相談だ。",
+    "en": [
+      {
+        "id": "485096",
+        "text": "It is out of the question."
+      }
+    ],
+    "indices": "其れ[01]{それ} は 迚も{とても} 出来ない相談{できない相談} だ",
+    "vocabIds": [
+      "2232290",
+      "1401210"
+    ],
+    "matches": {
+      "1401210": {
+        "start": 10,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "2232290": {
+        "start": 6,
+        "length": 6,
+        "reading": "できないそうだん"
       }
     }
   },
@@ -1683,11 +2458,13 @@
     "matches": {
       "1387990": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1401210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -1709,15 +2486,18 @@
     "matches": {
       "1401210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1483070": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1536010": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -1732,27 +2512,25 @@
     ],
     "indices": "其の[01]{その} 先生(せんせい)[01] は 何時も[01]{いつも} 相談 し易い{しやすい}~ 人(ひと) だ{だった}",
     "vocabIds": [
-      "2601570",
-      "1378440",
+      "1387990",
       "1401210",
       "1580640"
     ],
     "matches": {
-      "1378440": {
-        "start": 3,
-        "length": 1
+      "1387990": {
+        "start": 2,
+        "length": 2,
+        "reading": "せんせい"
       },
       "1401210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1580640": {
         "start": 14,
-        "length": 1
-      },
-      "2601570": {
-        "start": 0,
-        "length": 3
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -1768,6 +2546,7 @@
     "indices": "其の[01]{その} 事(こと) に関して は 同僚 と 相談 為る(する){し} ねばならない{なければなりません}",
     "vocabIds": [
       "2665570",
+      "1313580",
       "1009740",
       "1453580",
       "1401210"
@@ -1775,19 +2554,28 @@
     "matches": {
       "1009740": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "にかんして"
+      },
+      "1313580": {
+        "start": 2,
+        "length": 1,
+        "reading": "こと"
       },
       "1401210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1453580": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "どうりょう"
       },
       "2665570": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "そのこと"
       }
     }
   },
@@ -1809,15 +2597,18 @@
     "matches": {
       "1255940": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "けん"
       },
       "1401210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1497610": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       }
     }
   },
@@ -1839,15 +2630,18 @@
     "matches": {
       "1252090": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1401210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1497610": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       }
     }
   },
@@ -1868,11 +2662,13 @@
     "matches": {
       "1387990": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1401210": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -1892,7 +2688,8 @@
     "matches": {
       "1401210": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -1909,6 +2706,7 @@
     "vocabIds": [
       "1255940",
       "1401210",
+      "1483070",
       "1000420",
       "1156530",
       "1591110"
@@ -1916,23 +2714,33 @@
     "matches": {
       "1000420": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1156530": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "いけん"
       },
       "1255940": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "けん"
       },
       "1401210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1483070": {
+        "start": 15,
+        "length": 1,
+        "reading": "かれ"
       },
       "1591110": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "きく"
       }
     }
   },
@@ -1956,7 +2764,8 @@
     "matches": {
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -1975,28 +2784,63 @@
       "1469850",
       "1401210",
       "1154820",
-      "2103215"
+      "1742020",
+      "1200480",
+      "1465590",
+      "1465600",
+      "1554450",
+      "1299030"
     ],
     "matches": {
       "1154820": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "あんがい"
+      },
+      "1200480": {
+        "start": 28,
+        "length": 1,
+        "reading": "ふところ"
+      },
+      "1299030": {
+        "start": 36,
+        "length": 2,
+        "reading": "ころさ"
       },
       "1304970": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1401210": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1465590": {
+        "start": 30,
+        "length": 2,
+        "reading": "はいれ"
+      },
+      "1465600": {
+        "start": 30,
+        "length": 2,
+        "reading": "はいれ"
       },
       "1469850": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "なやみ"
       },
-      "2103215": {
+      "1554450": {
+        "start": 33,
+        "length": 2,
+        "reading": "りょうし"
+      },
+      "1742020": {
         "start": 26,
-        "length": 13
+        "length": 2,
+        "reading": "きゅうちょう"
       }
     }
   },
@@ -2018,15 +2862,18 @@
     "matches": {
       "1401210": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
       },
       "1536010": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -2047,11 +2894,13 @@
     "matches": {
       "1387990": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1401210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2071,7 +2920,8 @@
     "matches": {
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2091,11 +2941,13 @@
     "matches": {
       "1401210": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2116,15 +2968,18 @@
     "matches": {
       "1366200": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しんろ"
       },
       "1387990": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1401210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2146,17 +3001,25 @@
       }
     ],
     "vocabIds": [
+      "1416830",
       "2038160",
       "1401210"
     ],
     "matches": {
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
       },
       "2038160": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "だれにも"
       }
     }
   },
@@ -2172,20 +3035,35 @@
     "vocabIds": [
       "1159980",
       "1401210",
-      "2002660"
+      "2002660",
+      "1516930",
+      "2160680"
     ],
     "matches": {
       "1159980": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
       },
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1516930": {
+        "start": 7,
+        "length": 1,
+        "reading": "ほう"
       },
       "2002660": {
         "start": 5,
-        "length": 6
+        "length": 6,
+        "reading": "したほうがいい"
+      },
+      "2160680": {
+        "start": 7,
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -2200,21 +3078,30 @@
     ],
     "vocabIds": [
       "1255940",
+      "1218760",
       "1218770",
       "1401210"
     ],
     "matches": {
+      "1218760": {
+        "start": 7,
+        "length": 2,
+        "reading": "よろこん"
+      },
       "1218770": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "よろこんで"
       },
       "1255940": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "けん"
       },
       "1401210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2228,17 +3115,31 @@
       }
     ],
     "vocabIds": [
+      "1225130",
       "2661920",
+      "1267880",
       "1401210"
     ],
     "matches": {
+      "1225130": {
+        "start": 5,
+        "length": 2,
+        "reading": "ぎじゅつ"
+      },
+      "1267880": {
+        "start": 7,
+        "length": 2,
+        "reading": "こもん"
+      },
       "1401210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "2661920": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "ぎじゅつこもん"
       }
     }
   },
@@ -2254,35 +3155,59 @@
     "vocabIds": [
       "1311110",
       "1289140",
+      "1331670",
       "1331720",
+      "1387210",
+      "1254180",
       "1630630",
       "1581930",
       "1401210"
     ],
     "matches": {
+      "1254180": {
+        "start": 9,
+        "length": 2,
+        "reading": "きめ"
+      },
       "1289140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんご"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1331670": {
+        "start": 5,
+        "length": 2,
+        "reading": "しゅうしょく"
       },
       "1331720": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "しゅうしょくさき"
+      },
+      "1387210": {
+        "start": 7,
+        "length": 1,
+        "reading": "さき"
       },
       "1401210": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1581930": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "おとうと"
       },
       "1630630": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きめ"
       }
     }
   },
@@ -2297,36 +3222,54 @@
     ],
     "vocabIds": [
       "1382100",
+      "1605820",
       "1605870",
       "1606560",
+      "1401210",
       "2860914",
-      "1589060",
-      "1401210"
+      "1198160",
+      "1578850"
     ],
     "matches": {
+      "1198160": {
+        "start": 18,
+        "length": 1,
+        "reading": "かい"
+      },
       "1382100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぜいきん"
       },
       "1401210": {
-        "start": 23,
-        "length": 2
+        "start": 16,
+        "length": 2,
+        "reading": "そうだん"
       },
-      "1589060": {
+      "1578850": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1605820": {
+        "start": 6,
+        "length": 2,
+        "reading": "よく"
       },
       "1605870": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "よく"
       },
       "1606560": {
         "start": 8,
-        "length": 5
+        "length": 3,
+        "reading": "わから"
       },
       "2860914": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "そうだんかい"
       }
     }
   },
@@ -2349,23 +3292,28 @@
     "matches": {
       "1165970": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "いちばん"
       },
       "1401210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1469850": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なやみ"
       },
       "1558800": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れんあい"
       },
       "1558920": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こいびと"
       }
     }
   },
@@ -2385,11 +3333,13 @@
     "matches": {
       "1252390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさつ"
       },
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2403,17 +3353,25 @@
       }
     ],
     "vocabIds": [
+      "1416830",
       "1416840",
       "1401210"
     ],
     "matches": {
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416840": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
       }
     }
   },
@@ -2436,7 +3394,8 @@
     "matches": {
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2450,17 +3409,25 @@
       }
     ],
     "vocabIds": [
+      "1416830",
       "1416840",
       "1401210"
     ],
     "matches": {
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416840": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
       }
     }
   },
@@ -2480,11 +3447,13 @@
     "matches": {
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -2499,6 +3468,7 @@
     ],
     "vocabIds": [
       "1254180",
+      "1392580",
       "1392590",
       "1294330",
       "1401210"
@@ -2506,19 +3476,28 @@
     "matches": {
       "1254180": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きめる"
       },
       "1294330": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "つま"
+      },
+      "1392580": {
+        "start": 3,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1401210": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2538,11 +3517,13 @@
     "matches": {
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -2558,7 +3539,9 @@
     "indices": "会社 の 利用規約~ を 作成 為る(する){する} 際(さい) は 弁護士 に 相談{ご相談} 下さる{ください}",
     "vocabIds": [
       "1198550",
+      "1549660",
       "2831622",
+      "1223110",
       "1297760",
       "1296300",
       "1512850",
@@ -2567,27 +3550,43 @@
     "matches": {
       "1198550": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
+      },
+      "1223110": {
+        "start": 5,
+        "length": 2,
+        "reading": "きやく"
       },
       "1296300": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "さい"
       },
       "1297760": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さくせい"
       },
       "1401210": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1512850": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
+      },
+      "1549660": {
+        "start": 3,
+        "length": 2,
+        "reading": "りよう"
       },
       "2831622": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "りようきやく"
       }
     }
   },
@@ -2607,11 +3606,69 @@
     "matches": {
       "1307630": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あね"
       },
       "1401210": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      }
+    }
+  },
+  {
+    "id": "9773342",
+    "original": "あいつ、進路相談があるんだってさ。だから今日は俺とお前だけだよ。",
+    "en": [
+      {
+        "id": "327737",
+        "text": "He's got a career guidance meeting. So today it's just me and you."
+      }
+    ],
+    "vocabIds": [
+      "1366200",
+      "2196460",
+      "1401210",
+      "1579110",
+      "1289400",
+      "1576870",
+      "1002290"
+    ],
+    "matches": {
+      "1002290": {
+        "start": 25,
+        "length": 2,
+        "reading": "おまえ"
+      },
+      "1289400": {
+        "start": 20,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1366200": {
+        "start": 4,
+        "length": 2,
+        "reading": "しんろ"
+      },
+      "1401210": {
+        "start": 6,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1576870": {
+        "start": 23,
+        "length": 1,
+        "reading": "おれ"
+      },
+      "1579110": {
+        "start": 20,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "2196460": {
+        "start": 4,
+        "length": 4,
+        "reading": "しんろそうだん"
       }
     }
   },
@@ -2631,11 +3688,13 @@
     "matches": {
       "1159980": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
       },
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2655,11 +3714,13 @@
     "matches": {
       "1159930": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いし"
       },
       "1401210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2678,7 +3739,52 @@
     "matches": {
       "1401210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
+      }
+    }
+  },
+  {
+    "id": "3393816",
+    "original": "何かあったらいつでも相談に乗るからね。",
+    "en": [
+      {
+        "id": "9990236",
+        "text": "I'm always available to give advice if anything happens."
+      }
+    ],
+    "vocabIds": [
+      "1577100",
+      "1188270",
+      "1401210",
+      "1853990",
+      "1355120"
+    ],
+    "matches": {
+      "1188270": {
+        "start": 0,
+        "length": 2,
+        "reading": "なにか"
+      },
+      "1355120": {
+        "start": 13,
+        "length": 2,
+        "reading": "のる"
+      },
+      "1401210": {
+        "start": 10,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1853990": {
+        "start": 10,
+        "length": 5,
+        "reading": "そうだんにのる"
       }
     }
   },
@@ -2698,11 +3804,13 @@
     "matches": {
       "1355120": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "のっ"
       },
       "1401210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2716,27 +3824,75 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "1188270",
       "1401210",
       "1481890",
+      "1554820",
       "2134530"
     ],
     "matches": {
       "1188270": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1401210": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1481890": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "はんい"
+      },
+      "1554820": {
+        "start": 18,
+        "length": 1,
+        "reading": "ちから"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       },
       "2134530": {
         "start": 18,
-        "length": 4
+        "length": 4,
+        "reading": "ちからになる"
+      }
+    }
+  },
+  {
+    "id": "10389503",
+    "original": "トムには相談相手がいないんだよ。",
+    "en": [
+      {
+        "id": "3181425",
+        "text": "Tom has no one to talk to."
+      }
+    ],
+    "vocabIds": [
+      "1401210",
+      "2049240",
+      "1401000"
+    ],
+    "matches": {
+      "1401000": {
+        "start": 6,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1401210": {
+        "start": 4,
+        "length": 2,
+        "reading": "そうだん"
+      },
+      "2049240": {
+        "start": 4,
+        "length": 4,
+        "reading": "そうだんあいて"
       }
     }
   },
@@ -2754,28 +3910,39 @@
       "1401210",
       "1254380",
       "1459400",
-      "1270820"
+      "1270820",
+      "1559900"
     ],
     "matches": {
       "1254380": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "けってい"
       },
       "1270820": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "ごれんらく"
       },
       "1401210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1459400": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ないよう"
       },
       "1512850": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "べんごし"
+      },
+      "1559900": {
+        "start": 17,
+        "length": 2,
+        "reading": "れんらく"
       }
     }
   },
@@ -2795,11 +3962,13 @@
     "matches": {
       "1401210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1540170": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       }
     }
   },
@@ -2820,15 +3989,18 @@
     "matches": {
       "1255940": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "けん"
       },
       "1353260": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じょうし"
       },
       "1401210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2847,7 +4019,8 @@
     "matches": {
       "1401210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2870,23 +4043,60 @@
     "matches": {
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329590": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "うける"
       },
       "1359620": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しんよう"
       },
       "1401210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1436510": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
+      }
+    }
+  },
+  {
+    "id": "11035526",
+    "original": "上司も相談に乗ってくれた。",
+    "en": [
+      {
+        "id": "11499924",
+        "text": "I also received advice from my superior."
+      }
+    ],
+    "vocabIds": [
+      "1353260",
+      "1401210",
+      "1355120"
+    ],
+    "matches": {
+      "1353260": {
+        "start": 0,
+        "length": 2,
+        "reading": "じょうし"
+      },
+      "1355120": {
+        "start": 6,
+        "length": 2,
+        "reading": "のっ"
+      },
+      "1401210": {
+        "start": 3,
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2905,7 +4115,8 @@
     "matches": {
       "1401210": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   },
@@ -2924,7 +4135,8 @@
     "matches": {
       "1401210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       }
     }
   }

@@ -1,5 +1,38 @@
 [
   {
+    "id": "85176",
+    "original": "貧血気味です。",
+    "en": [
+      {
+        "id": "318537",
+        "text": "I'm anemic."
+      }
+    ],
+    "indices": "貧血 気味(ぎみ) です",
+    "vocabIds": [
+      "1490800",
+      "2052600",
+      "1222640"
+    ],
+    "matches": {
+      "1222640": {
+        "start": 2,
+        "length": 2,
+        "reading": "ぎみ"
+      },
+      "1490800": {
+        "start": 0,
+        "length": 2,
+        "reading": "ひんけつ"
+      },
+      "2052600": {
+        "start": 0,
+        "length": 4,
+        "reading": "ひんけつぎみ"
+      }
+    }
+  },
+  {
     "id": "85177",
     "original": "貧血で倒れました。",
     "en": [
@@ -11,16 +44,24 @@
     "indices": "貧血 で(#2028980) 倒れる{倒れました}",
     "vocabIds": [
       "1490800",
-      "1445790"
+      "1445790",
+      "1445780"
     ],
     "matches": {
+      "1445780": {
+        "start": 3,
+        "length": 2,
+        "reading": "たおれ"
+      },
       "1445790": {
         "start": 3,
-        "length": 5
+        "length": 2,
+        "reading": "たおれ"
       },
       "1490800": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひんけつ"
       }
     }
   },
@@ -43,19 +84,23 @@
     "matches": {
       "1159980": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
       },
       "1257890": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "けんさ"
       },
       "1490800": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひんけつ"
       },
       "1503870": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ぶんせき"
       }
     }
   },
@@ -74,7 +119,8 @@
     "matches": {
       "1490800": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひんけつ"
       }
     }
   }

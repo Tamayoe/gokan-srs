@@ -13,24 +13,34 @@
       "1313080",
       "1313000",
       "1326980",
+      "2809750",
       "1484620"
     ],
     "matches": {
       "1313000": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "は"
       },
       "1313080": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "はいしゃ"
       },
       "1326980": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "とっ"
       },
       "1484620": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "2809750": {
+        "start": 16,
+        "length": 2,
+        "reading": "とっ"
       }
     }
   },
@@ -56,31 +66,83 @@
     "matches": {
       "1151260": {
         "start": 48,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1164510": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "いったい"
       },
       "1375470": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいのう"
       },
       "1437260": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "てき"
       },
       "1484620": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1536010": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1603660": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうだい"
+      }
+    }
+  },
+  {
+    "id": "78161",
+    "original": "旅行の総費用を計算してくれますか。",
+    "en": [
+      {
+        "id": "325557",
+        "text": "Can you work out the total cost of the trip?"
+      }
+    ],
+    "indices": "旅行 の 総(そう) 費用 を 計算[01]~ 為る(する){して} 呉れる{くれます} か",
+    "vocabIds": [
+      "1553170",
+      "1401470",
+      "2131460",
+      "1484620",
+      "1252140"
+    ],
+    "matches": {
+      "1252140": {
+        "start": 7,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1401470": {
+        "start": 3,
+        "length": 1,
+        "reading": "そう"
+      },
+      "1484620": {
+        "start": 4,
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1553170": {
+        "start": 0,
+        "length": 2,
+        "reading": "りょこう"
+      },
+      "2131460": {
+        "start": 3,
+        "length": 3,
+        "reading": "そうひよう"
       }
     }
   },
@@ -102,15 +164,18 @@
     "matches": {
       "1315920": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1536010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -132,15 +197,18 @@
     "matches": {
       "1315920": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1536010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -157,20 +225,29 @@
     "vocabIds": [
       "1484620",
       "1396130",
+      "1163400",
       "1163420"
     ],
     "matches": {
+      "1163400": {
+        "start": 5,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1396130": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -188,24 +265,40 @@
       "1484620",
       "1329640",
       "1322990",
-      "1254390"
+      "1254380",
+      "1254390",
+      "1258080"
     ],
     "matches": {
+      "1254380": {
+        "start": 9,
+        "length": 2,
+        "reading": "けってい"
+      },
       "1254390": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "けっていけん"
+      },
+      "1258080": {
+        "start": 11,
+        "length": 1,
+        "reading": "けん"
       },
       "1322990": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
       },
       "1329640": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "うけもつ"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -221,36 +314,54 @@
     "indices": "費用 は 別として 其の[01]{その} 橋(はし) を 築く には 長い 時間[01] が 掛かる[01]{かかる} だろう",
     "vocabIds": [
       "1484620",
+      "1509430",
       "2235320",
       "1237410",
       "1422140",
       "1429750",
+      "1315920",
       "1884400"
     ],
     "matches": {
       "1237410": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "はし"
+      },
+      "1315920": {
+        "start": 18,
+        "length": 2,
+        "reading": "じかん"
       },
       "1422140": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きずく"
       },
       "1429750": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ながい"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1509430": {
+        "start": 3,
+        "length": 1,
+        "reading": "べつ"
       },
       "1884400": {
         "start": 18,
-        "length": 6
+        "length": 6,
+        "reading": "じかんがかかる"
       },
       "2235320": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "べつとして"
       }
     }
   },
@@ -266,36 +377,54 @@
     "indices": "費用 は 別として 其の[01]{その} 橋(はし) を 架ける には 長い 時間[01] が 掛かる[01]{かかる} だろう",
     "vocabIds": [
       "1484620",
+      "1509430",
       "2235320",
       "1237410",
       "2208960",
       "1429750",
+      "1315920",
       "1884400"
     ],
     "matches": {
       "1237410": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "はし"
+      },
+      "1315920": {
+        "start": 19,
+        "length": 2,
+        "reading": "じかん"
       },
       "1429750": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ながい"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1509430": {
+        "start": 3,
+        "length": 1,
+        "reading": "べつ"
       },
       "1884400": {
         "start": 19,
-        "length": 6
+        "length": 6,
+        "reading": "じかんがかかる"
       },
       "2208960": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "かける"
       },
       "2235320": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "べつとして"
       }
     }
   },
@@ -312,20 +441,29 @@
     "vocabIds": [
       "1484620",
       "1583870",
-      "2225040"
+      "2225040",
+      "1463770"
     ],
     "matches": {
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
+      },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1583870": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "へいきん"
       },
       "2225040": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       }
     }
   },
@@ -341,21 +479,30 @@
     "indices": "費用 は 彼(かれ) の 負担 になる[01] だろう",
     "vocabIds": [
       "1484620",
+      "1483070",
       "1000420",
       "1498130"
     ],
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1498130": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ふたん"
       }
     }
   },
@@ -377,15 +524,18 @@
     "matches": {
       "1175570": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1396130": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -402,20 +552,41 @@
     "vocabIds": [
       "1484620",
       "1294220",
-      "2138590"
+      "1160790",
+      "2138590",
+      "1584460",
+      "1175570"
     ],
     "matches": {
+      "1160790": {
+        "start": 5,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1175570": {
+        "start": 7,
+        "length": 1,
+        "reading": "えん"
+      },
       "1294220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さいてい"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1584460": {
+        "start": 6,
+        "length": 1,
+        "reading": "まん"
       },
       "2138590": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いちまんえん"
       }
     }
   },
@@ -431,21 +602,36 @@
     "indices": "費用 は 何千 弗[01]{ドル} にも 達する だろう",
     "vocabIds": [
       "1484620",
+      "1577100",
       "1189120",
+      "1388740",
       "1416230"
     ],
     "matches": {
       "1189120": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なんせん"
+      },
+      "1388740": {
+        "start": 4,
+        "length": 1,
+        "reading": "せん"
       },
       "1416230": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "たっする"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なん"
       }
     }
   },
@@ -461,26 +647,42 @@
     "indices": "費用 は 一人 頭(あたま) 一(いち) 万(まん) 円(えん) です",
     "vocabIds": [
       "1484620",
-      "1576150",
-      "1582310",
-      "2138590"
+      "1160790",
+      "1368880",
+      "2138590",
+      "1584460",
+      "1175570"
     ],
     "matches": {
+      "1160790": {
+        "start": 3,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1175570": {
+        "start": 8,
+        "length": 1,
+        "reading": "えん"
+      },
+      "1368880": {
+        "start": 4,
+        "length": 2,
+        "reading": "じんとう"
+      },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
-      "1576150": {
-        "start": 3,
-        "length": 2
-      },
-      "1582310": {
-        "start": 5,
-        "length": 1
+      "1584460": {
+        "start": 7,
+        "length": 1,
+        "reading": "まん"
       },
       "2138590": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "いちまんえん"
       }
     }
   },
@@ -497,20 +699,29 @@
     "vocabIds": [
       "1484620",
       "1257500",
+      "1315920",
       "1884400"
     ],
     "matches": {
       "1257500": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けんちく"
+      },
+      "1315920": {
+        "start": 17,
+        "length": 2,
+        "reading": "じかん"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1884400": {
         "start": 17,
-        "length": 6
+        "length": 6,
+        "reading": "じかんがかかる"
       }
     }
   },
@@ -526,16 +737,24 @@
     "indices": "費用 は 限り限り{ギリギリ} 迄{まで} 切り詰める{切り詰められた}",
     "vocabIds": [
       "1484620",
+      "1384000",
       "1383990"
     ],
     "matches": {
       "1383990": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "きりつめ"
+      },
+      "1384000": {
+        "start": 9,
+        "length": 4,
+        "reading": "きりつめ"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -557,15 +776,18 @@
     "matches": {
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1485470": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
       },
       "1578850": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -582,25 +804,35 @@
     "vocabIds": [
       "1484620",
       "2121800",
+      "1584460",
       "1175570",
       "1352290"
     ],
     "matches": {
       "1175570": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1352290": {
         "start": 8,
-        "length": 5
+        "length": 3,
+        "reading": "あがら"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1584460": {
+        "start": 4,
+        "length": 1,
+        "reading": "まん"
       },
       "2121800": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いちまん"
       }
     }
   },
@@ -618,24 +850,34 @@
       "1484620",
       "1007860",
       "1252090",
+      "1363030",
       "1612010"
     ],
     "matches": {
       "1007860": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "てん"
       },
       "1252090": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
+      },
+      "1363030": {
+        "start": 15,
+        "length": 3,
+        "reading": "もうしぶん"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1612010": {
         "start": 15,
-        "length": 6
+        "length": 6,
+        "reading": "もうしぶんのない"
       }
     }
   },
@@ -655,7 +897,8 @@
     "matches": {
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -686,19 +929,23 @@
     "matches": {
       "1189600": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かち"
       },
       "1436360": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ていきょう"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1609040": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "あたいする"
       }
     }
   },
@@ -715,20 +962,23 @@
     "vocabIds": [
       "1484620",
       "1428390",
-      "1216840"
+      "1216880"
     ],
     "matches": {
-      "1216840": {
+      "1216880": {
         "start": 7,
-        "length": 4
+        "length": 2,
+        "reading": "ふくま"
       },
       "1428390": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうしょく"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -750,15 +1000,18 @@
     "matches": {
       "1242590": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1335080": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -784,15 +1037,18 @@
     "matches": {
       "1303910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんしゅつ"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1545350": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       }
     }
   },
@@ -813,11 +1069,13 @@
     "matches": {
       "1303910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "さんしゅつ"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -834,30 +1092,86 @@
     "vocabIds": [
       "1483150",
       "1484620",
+      "1267870",
       "2629520",
-      "1191730",
-      "1357160"
+      "1191730"
     ],
     "matches": {
       "1191730": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
-      "1357160": {
-        "start": 11,
-        "length": 2
+      "1267870": {
+        "start": 6,
+        "length": 2,
+        "reading": "かえりみ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "2629520": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かえりみ"
+      }
+    }
+  },
+  {
+    "id": "90093",
+    "original": "彼女は高額の修理費用を予算に計上しなかった。",
+    "en": [
+      {
+        "id": "313621",
+        "text": "She didn't factor the high cost of repairs into the budget."
+      }
+    ],
+    "indices": "彼女[01] は 高額 の 修理 費用 を 予算 に 計上 為る(する){しなかった}",
+    "vocabIds": [
+      "1483150",
+      "1283320",
+      "1332400",
+      "1484620",
+      "1543000",
+      "1252200"
+    ],
+    "matches": {
+      "1252200": {
+        "start": 14,
+        "length": 2,
+        "reading": "けいじょう"
+      },
+      "1283320": {
+        "start": 3,
+        "length": 2,
+        "reading": "こうがく"
+      },
+      "1332400": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅうり"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1484620": {
+        "start": 8,
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1543000": {
+        "start": 11,
+        "length": 2,
+        "reading": "よさん"
       }
     }
   },
@@ -873,21 +1187,18 @@
     "indices": "彼ら(かれら) は 費用 を 切り詰める{切りつめ} ねばならない{なければならない} だろう",
     "vocabIds": [
       "1483090",
-      "1484620",
-      "1383800"
+      "1484620"
     ],
     "matches": {
-      "1383800": {
-        "start": 6,
-        "length": 2
-      },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -909,15 +1220,18 @@
     "matches": {
       "1252140": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -939,15 +1253,18 @@
     "matches": {
       "1407520": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たがく"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1484620": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -966,28 +1283,90 @@
       "1484620",
       "1604590",
       "1414870",
-      "1873180"
+      "1252140",
+      "1873180",
+      "1158870"
     ],
     "matches": {
+      "1158870": {
+        "start": 16,
+        "length": 2,
+        "reading": "ちがい"
+      },
+      "1252140": {
+        "start": 14,
+        "length": 2,
+        "reading": "けいさん"
+      },
       "1414870": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おおはば"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1604590": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "みつもり"
       },
       "1873180": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "けいさんちがい"
+      }
+    }
+  },
+  {
+    "id": "98512",
+    "original": "彼らの結婚費用は相当なものだった。",
+    "en": [
+      {
+        "id": "305189",
+        "text": "Their expenses for the wedding were considerable."
+      }
+    ],
+    "indices": "彼ら(かれら){彼らの} 結婚費用~ は 相当[04]{相当な} 物(もの)[02]{もの} だ{だった}",
+    "vocabIds": [
+      "1483090",
+      "1254790",
+      "1934080",
+      "1484620",
+      "1401240"
+    ],
+    "matches": {
+      "1254790": {
+        "start": 3,
+        "length": 2,
+        "reading": "けっこん"
+      },
+      "1401240": {
+        "start": 8,
+        "length": 2,
+        "reading": "そうとう"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1484620": {
+        "start": 5,
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1934080": {
+        "start": 3,
+        "length": 4,
+        "reading": "けっこんひよう"
       }
     }
   },
@@ -1009,15 +1388,18 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1484620": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1616690": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "どがいし"
       }
     }
   },
@@ -1040,19 +1422,23 @@
     "matches": {
       "1198550": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1484620": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1553170": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       }
     }
   },
@@ -1067,27 +1453,49 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 企画 は 難しい{むずかしくて} 沢山{たくさん} の 費用 が 掛かる[01]{かかる} 為(ため){ため} 全く{まったく} 問題外 だ",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1218150",
       "1484620",
-      "1823190"
+      "1536010",
+      "1823190",
+      "1203250"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1203250": {
+        "start": 31,
+        "length": 1,
+        "reading": "がい"
       },
       "1218150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1484620": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1536010": {
+        "start": 29,
+        "length": 2,
+        "reading": "もんだい"
       },
       "1823190": {
         "start": 29,
-        "length": 3
+        "length": 3,
+        "reading": "もんだいがい"
       }
     }
   },
@@ -1102,6 +1510,7 @@
     ],
     "indices": "彼(かれ) の 概算 に依ると{によると} 家(いえ)[01] の 新築 費用 は 万(まん) 円(えん) です",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1204450",
       "1191730",
@@ -1113,31 +1522,43 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1175570": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1191730": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1204450": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がいさん"
       },
       "1362160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しんちく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1484620": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1584460": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
       }
     }
   },
@@ -1156,28 +1577,90 @@
       "1578790",
       "1484620",
       "1413240",
-      "2216000"
+      "1338180",
+      "1339160"
     ],
     "matches": {
+      "1338180": {
+        "start": 11,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 11,
+        "length": 2,
+        "reading": "だし"
+      },
       "1413240": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
       "1484620": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1578790": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
       },
       "1582710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
+      }
+    }
+  },
+  {
+    "id": "142059",
+    "original": "設定料金に労務費用は含みません。",
+    "en": [
+      {
+        "id": "272511",
+        "text": "The stated price does not include labor charges."
+      }
+    ],
+    "indices": "設定[01]~ 料金 に 労務~ 費用 は 含む[01]{含みません}",
+    "vocabIds": [
+      "1386060",
+      "1554280",
+      "1560610",
+      "1484620",
+      "1216880",
+      "1216850"
+    ],
+    "matches": {
+      "1216850": {
+        "start": 10,
+        "length": 2,
+        "reading": "ふくみ"
       },
-      "2216000": {
-        "start": 11,
-        "length": 6
+      "1216880": {
+        "start": 10,
+        "length": 2,
+        "reading": "ふくみ"
+      },
+      "1386060": {
+        "start": 0,
+        "length": 2,
+        "reading": "せってい"
+      },
+      "1484620": {
+        "start": 7,
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1554280": {
+        "start": 2,
+        "length": 2,
+        "reading": "りょうきん"
+      },
+      "1560610": {
+        "start": 5,
+        "length": 2,
+        "reading": "ろうむ"
       }
     }
   },
@@ -1200,19 +1683,23 @@
     "matches": {
       "1191870": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かぐ"
       },
       "1361490": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1484620": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1485650": {
         "start": 11,
-        "length": 5
+        "length": 5,
+        "reading": "そなえつける"
       }
     }
   },
@@ -1235,19 +1722,23 @@
     "matches": {
       "1344210": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "しょ"
       },
       "1386070": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "せつび"
       },
       "1484620": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1501620": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "はらっ"
       }
     }
   },
@@ -1265,6 +1756,7 @@
       "1323080",
       "1473740",
       "1254180",
+      "1392580",
       "1392590",
       "1484620",
       "1252140"
@@ -1272,27 +1764,38 @@
     "matches": {
       "1252140": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1254180": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "きめる"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1392580": {
+        "start": 11,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1473740": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かう"
       },
       "1484620": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -1309,35 +1812,53 @@
     "vocabIds": [
       "1323080",
       "1332400",
+      "1589600",
       "1589590",
       "1484620",
       "1270190",
+      "1420410",
       "1420400"
     ],
     "matches": {
       "1270190": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "お"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1332400": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうり"
       },
       "1420400": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
+      },
+      "1420410": {
+        "start": 17,
+        "length": 3,
+        "reading": "しらせ"
       },
       "1484620": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1589590": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 5,
+        "length": 3,
+        "reading": "おわり"
       }
     }
   },
@@ -1352,27 +1873,37 @@
     ],
     "indices": "実際に 掛かる[01]{かかった} 費用 は 見積り{見積もり} より 高い{高かった}",
     "vocabIds": [
+      "1321110",
       "1321120",
       "1484620",
       "1604590",
-      "2183260"
+      "1283190"
     ],
     "matches": {
+      "1283190": {
+        "start": 16,
+        "length": 3,
+        "reading": "たかかっ"
+      },
+      "1321110": {
+        "start": 0,
+        "length": 2,
+        "reading": "じっさい"
+      },
       "1321120": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じっさいに"
       },
       "1484620": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1604590": {
         "start": 10,
-        "length": 4
-      },
-      "2183260": {
-        "start": 16,
-        "length": 1
+        "length": 4,
+        "reading": "みつもり"
       }
     }
   },
@@ -1393,11 +1924,13 @@
     "matches": {
       "1313000": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "は"
       },
       "1484620": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -1420,19 +1953,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1484620": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1493700": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ふそく"
       },
       "1553170": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       }
     }
   },
@@ -1454,15 +1991,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1484620": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1535560": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "もくてき"
       }
     }
   },
@@ -1478,21 +2018,36 @@
     "indices": "新しい 家を建てる のに 沢山{たくさん} 費用 が 掛かる[01]{かかった}",
     "vocabIds": [
       "1361490",
+      "1191730",
       "1855450",
+      "1257330",
       "1484620"
     ],
     "matches": {
+      "1191730": {
+        "start": 3,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1257330": {
+        "start": 5,
+        "length": 3,
+        "reading": "たてる"
+      },
       "1361490": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1484620": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1855450": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "いえをたてる"
       }
     }
   },
@@ -1507,42 +2062,97 @@
     ],
     "indices": "近い将来 塵(ごみ){ゴミ} 処理 費用 が 容積~ 基準 で(#2028980) 有料 化 為れる{される} 可能性 が 高い",
     "vocabIds": [
+      "1242130",
       "1242150",
+      "1347710",
       "1342510",
       "1484620",
       "1545420",
       "1591210",
+      "1541690",
       "2842993",
-      "1191090"
+      "2056760",
+      "1191060",
+      "1191080",
+      "1191090",
+      "1375260",
+      "1283190"
     ],
     "matches": {
+      "1191060": {
+        "start": 23,
+        "length": 2,
+        "reading": "かのう"
+      },
+      "1191080": {
+        "start": 23,
+        "length": 3,
+        "reading": "かのうせい"
+      },
       "1191090": {
         "start": 23,
-        "length": 6
+        "length": 6,
+        "reading": "かのうせいがたかい"
+      },
+      "1242130": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちかい"
       },
       "1242150": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "ちかいしょうらい"
+      },
+      "1283190": {
+        "start": 27,
+        "length": 2,
+        "reading": "たかい"
       },
       "1342510": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しょり"
+      },
+      "1347710": {
+        "start": 2,
+        "length": 2,
+        "reading": "しょうらい"
+      },
+      "1375260": {
+        "start": 25,
+        "length": 1,
+        "reading": "せい"
       },
       "1484620": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1541690": {
+        "start": 17,
+        "length": 2,
+        "reading": "ゆうりょう"
       },
       "1545420": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ようせき"
       },
       "1591210": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きじゅん"
+      },
+      "2056760": {
+        "start": 19,
+        "length": 1,
+        "reading": "か"
       },
       "2842993": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "ゆうりょうか"
       }
     }
   },
@@ -1557,22 +2167,37 @@
     ],
     "indices": "休み中[01] の 費用 は 此れ[01]{これ} で(#2028980) 足りる[01] かな",
     "vocabIds": [
+      "1227500",
       "1227550",
+      "1423310",
       "1484620",
       "1404740"
     ],
     "matches": {
+      "1227500": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1227550": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "やすみちゅう"
       },
       "1404740": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "たりる"
+      },
+      "1423310": {
+        "start": 2,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1484620": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -1591,28 +2216,33 @@
       "1172690",
       "1484620",
       "1353450",
-      "1157310"
+      "1405800"
     ],
     "matches": {
-      "1157310": {
-        "start": 12,
-        "length": 4
-      },
       "1172690": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "うんえい"
       },
       "1206730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1353450": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じょうしょう"
+      },
+      "1405800": {
+        "start": 13,
+        "length": 2,
+        "reading": "つづけ"
       },
       "1484620": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -1629,20 +2259,29 @@
     "vocabIds": [
       "1607050",
       "1484620",
-      "1383850"
+      "1383850",
+      "1721470"
     ],
     "matches": {
       "1383850": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "きりさげ"
       },
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "1721470": {
+        "start": 6,
+        "length": 4,
+        "reading": "きりさげ"
       }
     }
   },
@@ -1661,28 +2300,39 @@
       "1252090",
       "1484620",
       "1007860",
-      "1281020"
+      "1281020",
+      "1281000"
     ],
     "matches": {
       "1007860": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "てん"
       },
       "1252090": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
+      },
+      "1281000": {
+        "start": 28,
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1281020": {
         "start": 28,
-        "length": 3
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1484620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -1699,30 +2349,47 @@
     "vocabIds": [
       "1607050",
       "1252090",
+      "1536010",
       "1536050",
+      "1007860",
       "1484620",
       "1315920"
     ],
     "matches": {
+      "1007860": {
+        "start": 8,
+        "length": 1,
+        "reading": "てん"
+      },
       "1252090": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1315920": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1484620": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1536010": {
+        "start": 6,
+        "length": 2,
+        "reading": "もんだい"
       },
       "1536050": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "もんだいてん"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -1746,23 +2413,28 @@
     "matches": {
       "1159980": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
       },
       "1358180": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "くいこむ"
       },
       "1427170": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちょきん"
       },
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1611580": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ほんとうに"
       }
     }
   },
@@ -1785,19 +2457,23 @@
     "matches": {
       "1175570": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1381320": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "せいきゅう"
       },
       "1484620": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1584460": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
       }
     }
   },
@@ -1813,26 +2489,48 @@
     "indices": "パーティー の 費用 は 一人当たり~ 円(えん)[01] です",
     "vocabIds": [
       "1484620",
+      "1160790",
       "1576150",
+      "1580640",
+      "1368870",
       "1448780",
       "1175570"
     ],
     "matches": {
+      "1160790": {
+        "start": 9,
+        "length": 1,
+        "reading": "いち"
+      },
       "1175570": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
+      },
+      "1368870": {
+        "start": 10,
+        "length": 4,
+        "reading": "にんあたり"
       },
       "1448780": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "あたり"
       },
       "1484620": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1576150": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 10,
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -1853,11 +2551,13 @@
     "matches": {
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1536010": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -1872,32 +2572,31 @@
     ],
     "indices": "其れ[01]{それ} に 関する 費用 に就いて{について} は 僕(ぼく)[01] の 知った事ではない",
     "vocabIds": [
-      "1215790",
       "1484620",
       "1521400",
       "1420470",
       "1313580"
     ],
     "matches": {
-      "1215790": {
-        "start": 3,
-        "length": 3
-      },
       "1313580": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1420470": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1484620": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1521400": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       }
     }
   },
@@ -1918,11 +2617,13 @@
     "matches": {
       "1315920": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1484620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -1939,20 +2640,29 @@
     "vocabIds": [
       "1484620",
       "1002420",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1002420": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "おしらせ"
       },
       "1184270": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 9,
+        "length": 3,
+        "reading": "ください"
       },
       "1484620": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -1974,15 +2684,18 @@
     "matches": {
       "1483070": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1484620": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1498130": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ふたん"
       }
     }
   },
@@ -2003,11 +2716,13 @@
     "matches": {
       "1484620": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1611560": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ほっきにん"
       }
     }
   },
@@ -2022,7 +2737,9 @@
     ],
     "indices": "其の[01]{その} 大(だい)[01] 富豪 は 費用 には 関係ない{関係なく} 其の[01]{その} 傑作[01] を 購入 為る(する){する} 積もり{つもり} だ{だった}",
     "vocabIds": [
+      "2082450",
       "2192870",
+      "1496780",
       "1484620",
       "1215810",
       "1253840",
@@ -2031,23 +2748,38 @@
     "matches": {
       "1215810": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かんけい"
       },
       "1253840": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "けっさく"
       },
       "1282440": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "こうにゅう"
       },
       "1484620": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1496780": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふごう"
+      },
+      "2082450": {
+        "start": 2,
+        "length": 1,
+        "reading": "だい"
       },
       "2192870": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "だいふごう"
       }
     }
   },
@@ -2069,15 +2801,18 @@
     "matches": {
       "1257480": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "けんぞう"
       },
       "1484620": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1602800": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ふね"
       }
     }
   },
@@ -2092,22 +2827,37 @@
     ],
     "indices": "其の[01]{その} 原子力船~ は 可也{かなり} の 費用 を 掛ける[04]{かけて} 建造 為れる{された}",
     "vocabIds": [
+      "1261750",
       "1934430",
+      "1602800",
       "1484620",
       "1257480"
     ],
     "matches": {
       "1257480": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "けんぞう"
+      },
+      "1261750": {
+        "start": 2,
+        "length": 3,
+        "reading": "げんしりょく"
       },
       "1484620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1602800": {
+        "start": 5,
+        "length": 1,
+        "reading": "せん"
       },
       "1934430": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "げんしりょくせん"
       }
     }
   },
@@ -2123,26 +2873,42 @@
     "indices": "其の[01]{その} 計画 を 実行に移す のに 多大{多大な} 費用 が 掛かる[01]{かかった}",
     "vocabIds": [
       "1252090",
+      "1321040",
       "1252100",
+      "1158160",
       "1407900",
       "1484620"
     ],
     "matches": {
+      "1158160": {
+        "start": 8,
+        "length": 2,
+        "reading": "うつす"
+      },
       "1252090": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1252100": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "じっこうにうつす"
+      },
+      "1321040": {
+        "start": 5,
+        "length": 2,
+        "reading": "じっこう"
       },
       "1407900": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ただい"
       },
       "1484620": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -2166,23 +2932,28 @@
     "matches": {
       "1252090": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1484620": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1509430": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "べつ"
       },
       "1584695": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "めん"
       },
       "1605820": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -2204,15 +2975,18 @@
     "matches": {
       "1252140": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1484620": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1553170": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       }
     }
   },
@@ -2235,19 +3009,23 @@
     "matches": {
       "1165970": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "いちばん"
       },
       "1423310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1484620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1517090": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       }
     }
   },
@@ -2263,21 +3041,30 @@
     "indices": "此の{この} 費用 は 誰 が 出す[01] の",
     "vocabIds": [
       "1484620",
+      "1416830",
       "2864173",
       "1338180"
     ],
     "matches": {
       "1338180": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "だす"
+      },
+      "1416830": {
+        "start": 5,
+        "length": 1,
+        "reading": "だれ"
       },
       "1484620": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "2864173": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "だれが"
       }
     }
   },
@@ -2295,24 +3082,40 @@
       "1341080",
       "1201260",
       "1484620",
+      "1404700",
+      "2399300",
       "2399310"
     ],
     "matches": {
       "1201260": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かいがい"
       },
       "1341080": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "はるやすみ"
+      },
+      "1404700": {
+        "start": 13,
+        "length": 2,
+        "reading": "たし"
       },
       "1484620": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "2399300": {
+        "start": 13,
+        "length": 2,
+        "reading": "たし"
       },
       "2399310": {
         "start": 13,
-        "length": 5
+        "length": 5,
+        "reading": "たしにする"
       }
     }
   },
@@ -2335,19 +3138,23 @@
     "matches": {
       "1252090": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいかく"
       },
       "1321040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じっこう"
       },
       "1407520": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "たがく"
       },
       "1484620": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -2370,19 +3177,23 @@
     "matches": {
       "1175570": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1220210": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
       },
       "1484620": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1584460": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
       }
     }
   },
@@ -2403,11 +3214,13 @@
     "matches": {
       "1484620": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1602440": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ふえる"
       }
     }
   },
@@ -2429,15 +3242,18 @@
     "matches": {
       "1335080": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1484620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1553170": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       }
     }
   },
@@ -2458,11 +3274,13 @@
     "matches": {
       "1396130": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       },
       "1484620": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -2483,15 +3301,18 @@
     "matches": {
       "1252140": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1484620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1553170": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       }
     }
   },
@@ -2511,11 +3332,13 @@
     "matches": {
       "1414470": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "だいたい"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -2537,19 +3360,73 @@
     "matches": {
       "1175570": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1388740": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
       },
       "1401510": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうがく"
       },
       "1484620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      }
+    }
+  },
+  {
+    "id": "11055454",
+    "original": "初期費用の高さがハードルになる。",
+    "en": [
+      {
+        "id": "11123479",
+        "text": "The initial cost is a hurdle."
+      }
+    ],
+    "vocabIds": [
+      "1342630",
+      "2851200",
+      "1484620",
+      "1283190",
+      "2183260",
+      "1283200"
+    ],
+    "matches": {
+      "1283190": {
+        "start": 5,
+        "length": 1,
+        "reading": "たか"
+      },
+      "1283200": {
+        "start": 5,
+        "length": 2,
+        "reading": "たかさ"
+      },
+      "1342630": {
+        "start": 0,
+        "length": 2,
+        "reading": "しょき"
+      },
+      "1484620": {
+        "start": 2,
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "2183260": {
+        "start": 5,
+        "length": 1,
+        "reading": "たか"
+      },
+      "2851200": {
+        "start": 0,
+        "length": 4,
+        "reading": "しょきひよう"
       }
     }
   },
@@ -2568,7 +3445,8 @@
     "matches": {
       "1484620": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -2593,15 +3471,18 @@
     "matches": {
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1332400": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうり"
       },
       "1484620": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -2622,15 +3503,18 @@
     "matches": {
       "1207590": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "かかる"
       },
       "1420470": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1484620": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   }

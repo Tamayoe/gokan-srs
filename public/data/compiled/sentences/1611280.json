@@ -1,5 +1,68 @@
 [
   {
+    "id": "74404",
+    "original": "これだけで厄介払いできたら安いもので、みな大喜びした。",
+    "en": [
+      {
+        "id": "329316",
+        "text": "We were all pleased to be so cheaply quit of him."
+      }
+    ],
+    "indices": "此れ丈{これだけ} で(#2028980) 厄介払い~ 出来る{できたら} 安い 物(もの){もの} で(#2028980) 皆{みな} 大喜び 為る(する){した}",
+    "vocabIds": [
+      "1537820",
+      "1537850",
+      "1501620",
+      "1611280",
+      "1153670",
+      "2082450",
+      "1413310",
+      "1606140"
+    ],
+    "matches": {
+      "1153670": {
+        "start": 13,
+        "length": 2,
+        "reading": "やすい"
+      },
+      "1413310": {
+        "start": 21,
+        "length": 3,
+        "reading": "だいよろこび"
+      },
+      "1501620": {
+        "start": 7,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1537820": {
+        "start": 5,
+        "length": 2,
+        "reading": "やっかい"
+      },
+      "1537850": {
+        "start": 5,
+        "length": 4,
+        "reading": "やっかいはらい"
+      },
+      "1606140": {
+        "start": 22,
+        "length": 2,
+        "reading": "よろこび"
+      },
+      "1611280": {
+        "start": 7,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "2082450": {
+        "start": 21,
+        "length": 1,
+        "reading": "だい"
+      }
+    }
+  },
+  {
     "id": "79406",
     "original": "勇者に敬意を払いなさい。",
     "en": [
@@ -12,20 +75,29 @@
     "vocabIds": [
       "1539800",
       "1250720",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1250720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいい"
+      },
+      "1501620": {
+        "start": 6,
+        "length": 2,
+        "reading": "はらい"
       },
       "1539800": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうしゃ"
       },
       "1611280": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -47,24 +119,34 @@
       "1584660",
       "1223610",
       "1001820",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1001820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1223610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あなた"
+      },
+      "1501620": {
+        "start": 10,
+        "length": 2,
+        "reading": "はらい"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       },
       "1611280": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -79,17 +161,133 @@
     ],
     "indices": "別々に~ 払う{払います}",
     "vocabIds": [
+      "1603290",
       "1603300",
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 3,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1603290": {
+        "start": 0,
+        "length": 2,
+        "reading": "べつべつ"
+      },
       "1603300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "べつべつに"
       },
       "1611280": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
+      }
+    }
+  },
+  {
+    "id": "92852",
+    "original": "彼女はゴミを払い落とすために敷物を振った。",
+    "en": [
+      {
+        "id": "310857",
+        "text": "She shook the rug to get the dust out of it."
+      }
+    ],
+    "indices": "彼女[01] は 塵(ごみ){ゴミ} を 払い落とす 為に{ために} 敷物 を 振る(ふる)[01]{振った}",
+    "vocabIds": [
+      "1483150",
+      "1501620",
+      "1611280",
+      "1902500",
+      "1589260",
+      "1361330"
+    ],
+    "matches": {
+      "1361330": {
+        "start": 17,
+        "length": 2,
+        "reading": "ふっ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1501620": {
+        "start": 6,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1589260": {
+        "start": 8,
+        "length": 3,
+        "reading": "おとす"
+      },
+      "1611280": {
+        "start": 6,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1902500": {
+        "start": 6,
+        "length": 5,
+        "reading": "はらいおとす"
+      }
+    }
+  },
+  {
+    "id": "92853",
+    "original": "彼女はごみを払い落とすためにここに集まった。",
+    "en": [
+      {
+        "id": "310856",
+        "text": "She shook the rug to get dust out of it."
+      }
+    ],
+    "indices": "彼女[01] は 塵(ごみ){ごみ} を 払い落とす~ 為に{ために} 此処{ここ} に 集まる{集まった}",
+    "vocabIds": [
+      "1483150",
+      "1501620",
+      "1611280",
+      "1902500",
+      "1589260",
+      "1333550"
+    ],
+    "matches": {
+      "1333550": {
+        "start": 17,
+        "length": 3,
+        "reading": "あつまっ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1501620": {
+        "start": 6,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1589260": {
+        "start": 8,
+        "length": 3,
+        "reading": "おとす"
+      },
+      "1611280": {
+        "start": 6,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1902500": {
+        "start": 6,
+        "length": 5,
+        "reading": "はらいおとす"
       }
     }
   },
@@ -107,99 +305,40 @@
       "1483070",
       "1549600",
       "1495770",
+      "1495750",
       "1323940",
       "1611280"
     ],
     "matches": {
       "1323940": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しゃっきん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1495750": {
+        "start": 5,
+        "length": 2,
+        "reading": "つけ"
       },
       "1495770": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "つけ"
       },
       "1549600": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "りそく"
       },
       "1611280": {
         "start": 10,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "100484",
-    "original": "彼は不安を払いのけようとした。",
-    "en": [
-      {
-        "id": "303214",
-        "text": "He tried to banish his anxiety."
-      }
-    ],
-    "indices": "彼(かれ)[01] は 不安 を 払い除ける{払いのけよう}~ とする{とした}",
-    "vocabIds": [
-      "1483070",
-      "1491150",
-      "1611280"
-    ],
-    "matches": {
-      "1483070": {
-        "start": 0,
-        "length": 1
-      },
-      "1491150": {
-        "start": 2,
-        "length": 2
-      },
-      "1611280": {
-        "start": 5,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "103476",
-    "original": "彼は酔払い運転のかどで５ポンドの科料に処せられた。",
-    "en": [
-      {
-        "id": "300217",
-        "text": "He was fined five pounds for drunken driving."
-      }
-    ],
-    "indices": "彼(かれ)[01] は 酔っ払い{酔払い} 運転[02] の 廉(かど){かど} で(#2028980) 听{ポンド} の 科料~ に 処する{処せられた}",
-    "vocabIds": [
-      "1483070",
-      "1611280",
-      "1172830",
-      "1192780",
-      "2837167"
-    ],
-    "matches": {
-      "1172830": {
-        "start": 5,
-        "length": 2
-      },
-      "1192780": {
-        "start": 16,
-        "length": 2
-      },
-      "1483070": {
-        "start": 0,
-        "length": 1
-      },
-      "1611280": {
-        "start": 3,
-        "length": 2
-      },
-      "2837167": {
-        "start": 19,
-        "length": 1
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -218,28 +357,39 @@
       "1351360",
       "1483150",
       "1281000",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1281000": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1351360": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "わらっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1501620": {
+        "start": 17,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -254,77 +404,37 @@
     ],
     "indices": "倍付け~ で(#2028980) 払う[01]{払います} よ[01]",
     "vocabIds": [
+      "1473230",
       "2121020",
+      "1495750",
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1473230": {
+        "start": 0,
+        "length": 1,
+        "reading": "ばい"
+      },
+      "1495750": {
+        "start": 1,
+        "length": 2,
+        "reading": "づけ"
+      },
+      "1501620": {
+        "start": 4,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       },
       "2121020": {
         "start": 0,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "137549",
-    "original": "大阪の中村さんから料金受信人払いの電話が入っています。お受けになりますか。",
-    "en": [
-      {
-        "id": "275687",
-        "text": "This is a collect call from Mr Nakamura in Osaka. Will you accept the charge?"
-      }
-    ],
-    "indices": "大阪 の さん から 料金 受信人~ 払い の 電話 が 入る(はいる){入っています} 受ける{お受け} になる[02]{になります} か",
-    "vocabIds": [
-      "2078800",
-      "1423310",
-      "1406820",
-      "1554280",
-      "1697710",
-      "1611280",
-      "1443840",
-      "1465590",
-      "1659120"
-    ],
-    "matches": {
-      "1406820": {
-        "start": 4,
-        "length": 1
-      },
-      "1423310": {
-        "start": 3,
-        "length": 1
-      },
-      "1443840": {
-        "start": 17,
-        "length": 2
-      },
-      "1465590": {
-        "start": 20,
-        "length": 3
-      },
-      "1554280": {
-        "start": 9,
-        "length": 2
-      },
-      "1611280": {
-        "start": 14,
-        "length": 2
-      },
-      "1659120": {
-        "start": 28,
-        "length": 2
-      },
-      "1697710": {
-        "start": 11,
-        "length": 3
-      },
-      "2078800": {
-        "start": 0,
-        "length": 2
+        "length": 3,
+        "reading": "ばいづけ"
       }
     }
   },
@@ -340,21 +450,36 @@
     "indices": "代金 は レジ[02] で(#2028980) 御(お){お} 払う[01]{払い} 下さい",
     "vocabIds": [
       "1411790",
+      "1501620",
       "1611280",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 9,
+        "length": 3,
+        "reading": "ください"
       },
       "1411790": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だいきん"
+      },
+      "1501620": {
+        "start": 7,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -385,44 +510,92 @@
       "1401000",
       "1232920",
       "1426530",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1198180": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "あう"
       },
       "1232920": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "きょり"
       },
       "1318610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1342550": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "はじめて"
       },
       "1401000": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "あいて"
       },
       "1426530": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうい"
       },
       "1487400": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かならず"
+      },
+      "1501620": {
+        "start": 27,
+        "length": 2,
+        "reading": "はらい"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1611280": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
+      }
+    }
+  },
+  {
+    "id": "147664",
+    "original": "出来高払いでやっています。",
+    "en": [
+      {
+        "id": "266896",
+        "text": "We are doing business at piecework payment basis."
+      }
+    ],
+    "indices": "出来高払い~ で(#2028980) 遣る{やっています}",
+    "vocabIds": [
+      "1340520",
+      "1340540",
+      "1611280"
+    ],
+    "matches": {
+      "1340520": {
+        "start": 0,
+        "length": 3,
+        "reading": "できだか"
+      },
+      "1340540": {
+        "start": 0,
+        "length": 5,
+        "reading": "できだかはらい"
+      },
+      "1611280": {
+        "start": 3,
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -437,27 +610,43 @@
     ],
     "indices": "実際のところ 女(おんな) は 殆ど{ほとんど} 注意を払う{注意を払いません}",
     "vocabIds": [
+      "1321110",
       "2830372",
       "1344930",
       "1426530",
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1321110": {
+        "start": 0,
+        "length": 2,
+        "reading": "じっさい"
+      },
       "1344930": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "おんな"
       },
       "1426530": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうい"
+      },
+      "1501620": {
+        "start": 15,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       },
       "2830372": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "じっさいのところ"
       }
     }
   },
@@ -472,17 +661,37 @@
     ],
     "indices": "自分 の 分(ぶん)[01] は 払う[01]{払います}",
     "vocabIds": [
+      "1318610",
       "1885100",
+      "1502860",
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1318610": {
+        "start": 0,
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1501620": {
+        "start": 5,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1502860": {
+        "start": 3,
+        "length": 1,
+        "reading": "ぶん"
+      },
       "1611280": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       },
       "1885100": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "じぶんのぶん"
       }
     }
   },
@@ -500,24 +709,34 @@
       "1769960",
       "1404740",
       "1311110",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1311110": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1404740": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "たり"
+      },
+      "1501620": {
+        "start": 18,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       },
       "1769960": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "もちあわせ"
       }
     }
   },
@@ -533,16 +752,24 @@
     "indices": "私(わたし)[01] が 払う[01]{払います}",
     "vocabIds": [
       "1311110",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1501620": {
+        "start": 2,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -559,20 +786,29 @@
     "vocabIds": [
       "1311110",
       "1001820",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1001820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1501620": {
+        "start": 11,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -588,26 +824,48 @@
     "indices": "子犬 一匹 に 彼(かれ)[01] は 弗[01]{ドル} も 払う[01]{払いました}",
     "vocabIds": [
       "1592900",
+      "1160790",
       "1166060",
+      "1583370",
       "1483070",
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
       "1166060": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いちひき"
       },
       "1483070": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1501620": {
+        "start": 13,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1583370": {
+        "start": 3,
+        "length": 1,
+        "reading": "ひき"
       },
       "1592900": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こいぬ"
       },
       "1611280": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -624,20 +882,29 @@
     "vocabIds": [
       "1342540",
       "1420160",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1342540": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はじめ"
       },
       "1420160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "だんせい"
+      },
+      "1501620": {
+        "start": 16,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -654,20 +921,29 @@
     "vocabIds": [
       "1304970",
       "1426530",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1304970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1426530": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうい"
+      },
+      "1501620": {
+        "start": 9,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -685,24 +961,118 @@
       "1289140",
       "1295710",
       "1426530",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1289140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんご"
       },
       "1295710": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さいぶ"
       },
       "1426530": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうい"
+      },
+      "1501620": {
+        "start": 12,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
+      }
+    }
+  },
+  {
+    "id": "174932",
+    "original": "現金払いには１０パーセント割引いたします。",
+    "en": [
+      {
+        "id": "239535",
+        "text": "We give a 10% discount for cash."
+      }
+    ],
+    "indices": "現金払い~ には パーセント~ 割引~ 致す{いたします}",
+    "vocabIds": [
+      "1263550",
+      "1263620",
+      "1611280",
+      "1606950"
+    ],
+    "matches": {
+      "1263550": {
+        "start": 0,
+        "length": 2,
+        "reading": "げんきん"
+      },
+      "1263620": {
+        "start": 0,
+        "length": 4,
+        "reading": "げんきんはらい"
+      },
+      "1606950": {
+        "start": 13,
+        "length": 2,
+        "reading": "わりびき"
+      },
+      "1611280": {
+        "start": 2,
+        "length": 2,
+        "reading": "はらい"
+      }
+    }
+  },
+  {
+    "id": "190236",
+    "original": "一年でローンが払いきれるかね。",
+    "en": [
+      {
+        "id": "27394",
+        "text": "Can you pay off your loans in a year?"
+      }
+    ],
+    "indices": "一年 で(#2028980) ローン(#1147020) が 払う[01]{払い} 切れる{きれる} か ね(#2029080)[01]",
+    "vocabIds": [
+      "1160790",
+      "1576280",
+      "2084840",
+      "1501620",
+      "1611280"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1501620": {
+        "start": 7,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1576280": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちねん"
+      },
+      "1611280": {
+        "start": 7,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "2084840": {
+        "start": 1,
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -717,17 +1087,31 @@
     ],
     "indices": "ローン(#1147020) は 何回 払い[01] ですか",
     "vocabIds": [
+      "1577100",
       "1188650",
+      "1199330",
       "1611280"
     ],
     "matches": {
       "1188650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "なんかい"
+      },
+      "1199330": {
+        "start": 5,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1577100": {
+        "start": 4,
+        "length": 1,
+        "reading": "なん"
       },
       "1611280": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -742,27 +1126,94 @@
     ],
     "indices": "ぼんやり として 目を逸らす{目をそらす}~ な 自分[01] の 為る(する){している} 事(こと){こと} に 注意を払う{注意を払い} 為さい{なさい}",
     "vocabIds": [
+      "1604890",
       "1912050",
       "1318610",
       "1426530",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1318610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1426530": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうい"
+      },
+      "1501620": {
+        "start": 27,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1604890": {
+        "start": 7,
+        "length": 1,
+        "reading": "め"
       },
       "1611280": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       },
       "1912050": {
         "start": 7,
-        "length": 5
+        "length": 5,
+        "reading": "めをそらす"
+      }
+    }
+  },
+  {
+    "id": "201419",
+    "original": "どうして彼らの疑いと恐怖を払いのけることができようか。",
+    "en": [
+      {
+        "id": "38629",
+        "text": "How can we dispel their doubts and fears?"
+      }
+    ],
+    "indices": "如何して{どうして} 彼ら(かれら){彼らの} 疑い と 恐怖 を 払い除ける{払いのける} 事が出来る{ことができよう} か",
+    "vocabIds": [
+      "1483090",
+      "1225490",
+      "1236750",
+      "1501620",
+      "1611280",
+      "1501590"
+    ],
+    "matches": {
+      "1225490": {
+        "start": 7,
+        "length": 2,
+        "reading": "うたがい"
+      },
+      "1236750": {
+        "start": 10,
+        "length": 2,
+        "reading": "きょうふ"
+      },
+      "1483090": {
+        "start": 4,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1501590": {
+        "start": 13,
+        "length": 5,
+        "reading": "はらいのける"
+      },
+      "1501620": {
+        "start": 13,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1611280": {
+        "start": 13,
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -777,12 +1228,19 @@
     ],
     "indices": "タオル の 埃(ほこり){ほこり} を 払う{払い} 為さい{なさい}",
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 8,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -804,15 +1262,18 @@
     "matches": {
       "1198550": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1589730": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かいもの"
       },
       "1611280": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -828,31 +1289,54 @@
     "indices": "其の[01]{その} 年老いる{年老いた} 農園主 は 彼(かれ)[01] に 余り{あまり} 給料 を 払う[01]{払いませんでした}",
     "vocabIds": [
       "1469310",
+      "1470610",
       "2121930",
+      "1324960",
       "1483070",
       "1230360",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1230360": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうりょう"
+      },
+      "1324960": {
+        "start": 8,
+        "length": 1,
+        "reading": "ぬし"
       },
       "1469310": {
         "start": 2,
-        "length": 4
+        "length": 3,
+        "reading": "としおい"
+      },
+      "1470610": {
+        "start": 6,
+        "length": 2,
+        "reading": "のうえん"
       },
       "1483070": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1501620": {
+        "start": 18,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       },
       "2121930": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "のうえんぬし"
       }
     }
   },
@@ -869,20 +1353,29 @@
     "vocabIds": [
       "1246700",
       "1411790",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1246700": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くつ"
       },
       "1411790": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "だいきん"
+      },
+      "1501620": {
+        "start": 7,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -897,12 +1390,19 @@
     ],
     "indices": "其の[01]{その} ドレス に 幾ら[01]{いくら} 払う[01]{払いました} か",
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 9,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -923,41 +1423,13 @@
     "matches": {
       "1198550": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1611280": {
         "start": 6,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "221179",
-    "original": "この小切手は持参人払いだ。",
-    "en": [
-      {
-        "id": "58501",
-        "text": "This check is payable to the bearer."
-      }
-    ],
-    "indices": "此の{この} 小切手 は 持参人~ 払い~ だ",
-    "vocabIds": [
-      "1348410",
-      "1770010",
-      "1611280"
-    ],
-    "matches": {
-      "1348410": {
-        "start": 2,
-        "length": 3
-      },
-      "1611280": {
-        "start": 9,
-        "length": 2
-      },
-      "1770010": {
-        "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -973,16 +1445,24 @@
     "indices": "此処{ここ} は 私(わたし)[01] が 払う[01]{払います}",
     "vocabIds": [
       "1311110",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1501620": {
+        "start": 5,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -998,16 +1478,67 @@
     "indices": "は 咳き払い{せき払い} を 為る(する){して} 話す{話し} 始める[03]{始めた}",
     "vocabIds": [
       "1611280",
-      "2449520"
+      "1562350",
+      "1307550",
+      "1342540"
     ],
     "matches": {
+      "1307550": {
+        "start": 14,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 14,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1562350": {
+        "start": 12,
+        "length": 2,
+        "reading": "はなし"
+      },
       "1611280": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
+      }
+    }
+  },
+  {
+    "id": "229322",
+    "original": "いい厄介払いだ。",
+    "en": [
+      {
+        "id": "66680",
+        "text": "Good riddance!"
       },
-      "2449520": {
-        "start": 12,
-        "length": 5
+      {
+        "id": "8077438",
+        "text": "Good riddance."
+      }
+    ],
+    "indices": "いい 厄介払い だ",
+    "vocabIds": [
+      "1537820",
+      "1537850",
+      "1611280"
+    ],
+    "matches": {
+      "1537820": {
+        "start": 2,
+        "length": 2,
+        "reading": "やっかい"
+      },
+      "1537850": {
+        "start": 2,
+        "length": 4,
+        "reading": "やっかいはらい"
+      },
+      "1611280": {
+        "start": 4,
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1022,12 +1553,51 @@
     ],
     "indices": "カード(#1036400)[04]~ で(#2028980) 払う[01]{払います}",
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 8,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
+      }
+    }
+  },
+  {
+    "id": "410181",
+    "original": "これを買って、ＶＩＳＡカードで払いたいんですけど。",
+    "en": [
+      {
+        "id": "72159",
+        "text": "I'd like to pay for this with my Visa card."
+      }
+    ],
+    "vocabIds": [
+      "1473740",
+      "1501620",
+      "1611280"
+    ],
+    "matches": {
+      "1473740": {
+        "start": 3,
+        "length": 2,
+        "reading": "かっ"
+      },
+      "1501620": {
+        "start": 15,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1611280": {
+        "start": 15,
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1046,16 +1616,24 @@
     ],
     "vocabIds": [
       "1311110",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1501620": {
+        "start": 2,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1069,12 +1647,19 @@
       }
     ],
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 3,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1091,24 +1676,34 @@
       "1318610",
       "1210750",
       "2830519",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1210750": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんじょう"
       },
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1501620": {
+        "start": 9,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       },
       "2830519": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "じぶんで"
       }
     }
   },
@@ -1122,12 +1717,19 @@
       }
     ],
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 9,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1141,12 +1743,19 @@
       }
     ],
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 0,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1160,17 +1769,31 @@
       }
     ],
     "vocabIds": [
+      "1501620",
       "1611280",
+      "1195970",
       "1195960"
     ],
     "matches": {
       "1195960": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1195970": {
+        "start": 2,
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1501620": {
+        "start": 0,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1184,12 +1807,67 @@
       }
     ],
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 0,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
+      }
+    }
+  },
+  {
+    "id": "10541561",
+    "original": "出世払いで構わないよ。",
+    "en": [
+      {
+        "id": "10578119",
+        "text": "I don't care about being paid back."
+      },
+      {
+        "id": "10578122",
+        "text": "I don't mind paying you back."
+      }
+    ],
+    "vocabIds": [
+      "1339340",
+      "2830251",
+      "1611280",
+      "1279680",
+      "1866610"
+    ],
+    "matches": {
+      "1279680": {
+        "start": 5,
+        "length": 2,
+        "reading": "かまわ"
+      },
+      "1339340": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅっせ"
+      },
+      "1611280": {
+        "start": 2,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1866610": {
+        "start": 5,
+        "length": 4,
+        "reading": "かまわない"
+      },
+      "2830251": {
+        "start": 0,
+        "length": 4,
+        "reading": "しゅっせはらい"
       }
     }
   },
@@ -1204,16 +1882,24 @@
     ],
     "vocabIds": [
       "1311110",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1501620": {
+        "start": 2,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1234,15 +1920,18 @@
     "matches": {
       "1230360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうりょう"
       },
       "1333450": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "しゅう"
       },
       "1611280": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1257,16 +1946,24 @@
     ],
     "vocabIds": [
       "1311110",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1501620": {
+        "start": 7,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1280,12 +1977,19 @@
       }
     ],
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 10,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1302,24 +2006,64 @@
       "1268060",
       "1388740",
       "1175570",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1175570": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1268060": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1388740": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
+      },
+      "1501620": {
+        "start": 5,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
+      }
+    }
+  },
+  {
+    "id": "11582360",
+    "original": "カードで払いたいんですが。",
+    "en": [
+      {
+        "id": "10733946",
+        "text": "I want to pay by credit card."
+      },
+      {
+        "id": "62773",
+        "text": "I'd like to pay by credit card."
+      }
+    ],
+    "vocabIds": [
+      "1501620",
+      "1611280"
+    ],
+    "matches": {
+      "1501620": {
+        "start": 4,
+        "length": 2,
+        "reading": "はらい"
+      },
+      "1611280": {
+        "start": 4,
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1333,12 +2077,19 @@
       }
     ],
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 8,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1352,12 +2103,19 @@
       }
     ],
     "vocabIds": [
+      "1501620",
       "1611280"
     ],
     "matches": {
+      "1501620": {
+        "start": 9,
+        "length": 2,
+        "reading": "はらい"
+      },
       "1611280": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1374,20 +2132,29 @@
     "vocabIds": [
       "1246700",
       "1411790",
+      "1501620",
       "1611280"
     ],
     "matches": {
       "1246700": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くつ"
       },
       "1411790": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "だいきん"
+      },
+      "1501620": {
+        "start": 7,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1405,17 +2172,31 @@
       }
     ],
     "vocabIds": [
+      "1501620",
       "1611280",
-      "1384860"
+      "1384860",
+      "1384840"
     ],
     "matches": {
+      "1384840": {
+        "start": 8,
+        "length": 2,
+        "reading": "きれ"
+      },
       "1384860": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "きれ"
+      },
+      "1501620": {
+        "start": 6,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   },
@@ -1430,21 +2211,36 @@
     ],
     "vocabIds": [
       "1002290",
+      "1501620",
       "1611280",
+      "1195970",
       "1195960"
     ],
     "matches": {
       "1002290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
       },
       "1195960": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1195970": {
+        "start": 5,
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1501620": {
+        "start": 3,
+        "length": 2,
+        "reading": "はらい"
       },
       "1611280": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はらい"
       }
     }
   }

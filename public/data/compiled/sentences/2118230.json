@@ -18,19 +18,56 @@
     "matches": {
       "1196380": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かはんすう"
       },
       "1286240": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こっかい"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "2118230": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "せいし"
+      }
+    }
+  },
+  {
+    "id": "118635",
+    "original": "彼に機先を制された。",
+    "en": [
+      {
+        "id": "285028",
+        "text": "He had the jump on me."
+      }
+    ],
+    "indices": "彼(かれ) に 機先を制する{機先を制された}",
+    "vocabIds": [
+      "1483070",
+      "1221010",
+      "2118230"
+    ],
+    "matches": {
+      "1221010": {
+        "start": 2,
+        "length": 2,
+        "reading": "きせん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2118230": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいさ"
       }
     }
   },
@@ -51,11 +88,130 @@
     "matches": {
       "1455500": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "どく"
       },
       "2118230": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せいす"
+      }
+    }
+  },
+  {
+    "id": "123437",
+    "original": "毒を以て毒を制す。",
+    "en": [
+      {
+        "id": "280560",
+        "text": "Diamond cuts diamond."
+      }
+    ],
+    "indices": "毒 を 持つ{持って} 毒 を 制する{制す}",
+    "vocabIds": [
+      "1455500",
+      "2609990",
+      "2215420",
+      "2118230"
+    ],
+    "matches": {
+      "1455500": {
+        "start": 0,
+        "length": 1,
+        "reading": "どく"
+      },
+      "2118230": {
+        "start": 6,
+        "length": 2,
+        "reading": "せいす"
+      },
+      "2215420": {
+        "start": 1,
+        "length": 3,
+        "reading": "をもって"
+      },
+      "2609990": {
+        "start": 0,
+        "length": 8,
+        "reading": "どくをもってどくをせいす"
+      }
+    }
+  },
+  {
+    "id": "141901",
+    "original": "先んずれば人を制す。",
+    "en": [
+      {
+        "id": "243993",
+        "text": "First come, first served."
+      }
+    ],
+    "indices": "先んずる{先んずれば} 人(ひと) を 制する{制す}",
+    "vocabIds": [
+      "1387340",
+      "2418670",
+      "1580640",
+      "2118230"
+    ],
+    "matches": {
+      "1387340": {
+        "start": 0,
+        "length": 4,
+        "reading": "さきんずれ"
+      },
+      "1580640": {
+        "start": 5,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "2118230": {
+        "start": 7,
+        "length": 2,
+        "reading": "せいす"
+      },
+      "2418670": {
+        "start": 0,
+        "length": 9,
+        "reading": "さきんずればひとをせいす"
+      }
+    }
+  },
+  {
+    "id": "148001",
+    "original": "柔よく剛を制す。",
+    "en": [
+      {
+        "id": "266558",
+        "text": "Soft words win hard hearts."
+      }
+    ],
+    "indices": "柔(じゅう)~ 良く{よく} 剛~ を 制する{制す}",
+    "vocabIds": [
+      "2039460",
+      "2637400",
+      "2080860",
+      "2118230"
+    ],
+    "matches": {
+      "2039460": {
+        "start": 0,
+        "length": 1,
+        "reading": "やわら"
+      },
+      "2080860": {
+        "start": 3,
+        "length": 1,
+        "reading": "ごう"
+      },
+      "2118230": {
+        "start": 5,
+        "length": 2,
+        "reading": "せいす"
+      },
+      "2637400": {
+        "start": 0,
+        "length": 7,
+        "reading": "やわらよくごうをせいす"
       }
     }
   },
@@ -71,26 +227,30 @@
     "indices": "連中 が 此の{この} 事(こと){こと} に 気付く{気づかぬ} 内(うち){うち} 機先を制する{機先を制した}~ 方がいい{ほうがいい} でしょう",
     "vocabIds": [
       "1559700",
-      "1221520",
+      "1591330",
       "1221010",
       "2118230"
     ],
     "matches": {
       "1221010": {
         "start": 14,
-        "length": 2
-      },
-      "1221520": {
-        "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "きせん"
       },
       "1559700": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れんちゅう"
+      },
+      "1591330": {
+        "start": 8,
+        "length": 3,
+        "reading": "きづか"
       },
       "2118230": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "せいし"
       }
     }
   }

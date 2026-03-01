@@ -17,15 +17,72 @@
     "matches": {
       "1231590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぎゅうにゅう"
       },
       "1304280": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
       },
       "1497800": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "くさっ"
+      }
+    }
+  },
+  {
+    "id": "182275",
+    "original": "牛乳は酸っぱくなりやすい。",
+    "en": [
+      {
+        "id": "19466",
+        "text": "Milk easily turns sour."
+      }
+    ],
+    "indices": "牛乳 は 酸っぱい{酸っぱく} 成る[01]{なり} 易い{やすい}",
+    "vocabIds": [
+      "1231590",
+      "1304280"
+    ],
+    "matches": {
+      "1231590": {
+        "start": 0,
+        "length": 2,
+        "reading": "ぎゅうにゅう"
+      },
+      "1304280": {
+        "start": 3,
+        "length": 4,
+        "reading": "すっぱく"
+      }
+    }
+  },
+  {
+    "id": "182289",
+    "original": "牛乳は、酸っぱくなった。",
+    "en": [
+      {
+        "id": "19474",
+        "text": "The milk turned sour."
+      }
+    ],
+    "indices": "牛乳 は 酸っぱい{酸っぱく} 成る[01]{なった}",
+    "vocabIds": [
+      "1231590",
+      "1304280"
+    ],
+    "matches": {
+      "1231590": {
+        "start": 0,
+        "length": 2,
+        "reading": "ぎゅうにゅう"
+      },
+      "1304280": {
+        "start": 4,
+        "length": 4,
+        "reading": "すっぱく"
       }
     }
   },
@@ -49,7 +106,29 @@
     "matches": {
       "1304280": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
+      }
+    }
+  },
+  {
+    "id": "195052",
+    "original": "ミルクが酸っぱくなった。",
+    "en": [
+      {
+        "id": "32226",
+        "text": "The milk went sour."
+      }
+    ],
+    "indices": "ミルク が 酸っぱい{酸っぱく} 成る[01]{なった}",
+    "vocabIds": [
+      "1304280"
+    ],
+    "matches": {
+      "1304280": {
+        "start": 4,
+        "length": 4,
+        "reading": "すっぱく"
       }
     }
   },
@@ -66,20 +145,50 @@
     "vocabIds": [
       "1231590",
       "1304280",
+      "1526960",
       "2831089"
     ],
     "matches": {
       "1231590": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぎゅうにゅう"
       },
       "1304280": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
+      },
+      "1526960": {
+        "start": 9,
+        "length": 1,
+        "reading": "あじ"
       },
       "2831089": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "あじがする"
+      }
+    }
+  },
+  {
+    "id": "212669",
+    "original": "そのブドウは酸っぱそうだ。",
+    "en": [
+      {
+        "id": "49952",
+        "text": "The grapes seem to be sour."
+      }
+    ],
+    "indices": "其の[01]{その} 葡萄{ブドウ} は 酸っぱい{酸っぱ} そう[01] だ",
+    "vocabIds": [
+      "1304280"
+    ],
+    "matches": {
+      "1304280": {
+        "start": 6,
+        "length": 3,
+        "reading": "すっぱ"
       }
     }
   },
@@ -94,22 +203,37 @@
     ],
     "indices": "其の[01]{その} 葡萄{ブドウ} は 甘い(あまい)[01]{甘} そう[01] に 見える(みえる){見えます} が 実際 は 酸っぱい のです",
     "vocabIds": [
+      "1213400",
       "1259140",
+      "1321110",
       "2830216",
       "1304280"
     ],
     "matches": {
+      "1213400": {
+        "start": 6,
+        "length": 1,
+        "reading": "あま"
+      },
       "1259140": {
         "start": 10,
-        "length": 4
+        "length": 2,
+        "reading": "みえ"
       },
       "1304280": {
         "start": 19,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
+      },
+      "1321110": {
+        "start": 16,
+        "length": 2,
+        "reading": "じっさい"
       },
       "2830216": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "じっさいは"
       }
     }
   },
@@ -126,20 +250,29 @@
     "vocabIds": [
       "1600430",
       "1304280",
+      "1526960",
       "2831089"
     ],
     "matches": {
       "1304280": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
+      },
+      "1526960": {
+        "start": 10,
+        "length": 1,
+        "reading": "あじ"
       },
       "1600430": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "のみもの"
       },
       "2831089": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "あじがする"
       }
     }
   },
@@ -156,20 +289,56 @@
     "vocabIds": [
       "1594930",
       "1304280",
+      "1526960",
       "2831089"
     ],
     "matches": {
       "1304280": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
+      },
+      "1526960": {
+        "start": 12,
+        "length": 1,
+        "reading": "あじ"
       },
       "1594930": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しょうしょう"
       },
       "2831089": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "あじがする"
+      }
+    }
+  },
+  {
+    "id": "223246",
+    "original": "このブドウはとても酸っぱくて食べられない。",
+    "en": [
+      {
+        "id": "60578",
+        "text": "These grapes are so sour that I can't eat them."
+      }
+    ],
+    "indices": "此の{この} 葡萄{ブドウ} は 迚も{とても} 酸っぱい{酸っぱくて} 食べる{食べられない}",
+    "vocabIds": [
+      "1304280",
+      "1358280"
+    ],
+    "matches": {
+      "1304280": {
+        "start": 9,
+        "length": 4,
+        "reading": "すっぱく"
+      },
+      "1358280": {
+        "start": 14,
+        "length": 2,
+        "reading": "たべ"
       }
     }
   },
@@ -185,16 +354,24 @@
     "indices": "此の{この} 葡萄{ブドウ} は 酸っぱい 味がする{味がする}",
     "vocabIds": [
       "1304280",
+      "1526960",
       "2831089"
     ],
     "matches": {
       "1304280": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
+      },
+      "1526960": {
+        "start": 10,
+        "length": 1,
+        "reading": "あじ"
       },
       "2831089": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "あじがする"
       }
     }
   },
@@ -218,7 +395,60 @@
     "matches": {
       "1304280": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
+      }
+    }
+  },
+  {
+    "id": "223959",
+    "original": "このオレンジは酸っぱすぎる。",
+    "en": [
+      {
+        "id": "61294",
+        "text": "There is too much acid in this orange."
+      },
+      {
+        "id": "1815582",
+        "text": "This orange is too sour."
+      }
+    ],
+    "indices": "此の{この} オレンジ は 酸っぱい{酸っぱ} 過ぎる(すぎる){すぎる}",
+    "vocabIds": [
+      "1304280"
+    ],
+    "matches": {
+      "1304280": {
+        "start": 7,
+        "length": 3,
+        "reading": "すっぱ"
+      }
+    }
+  },
+  {
+    "id": "227428",
+    "original": "オレンジはとても酸っぱくて食べられなかった。",
+    "en": [
+      {
+        "id": "64780",
+        "text": "It was so sour an orange that I could not eat it."
+      }
+    ],
+    "indices": "オレンジ は 迚も[01]{とても} 酸っぱい{酸っぱくて} 食べる{食べられなかった}",
+    "vocabIds": [
+      "1304280",
+      "1358280"
+    ],
+    "matches": {
+      "1304280": {
+        "start": 8,
+        "length": 4,
+        "reading": "すっぱく"
+      },
+      "1358280": {
+        "start": 13,
+        "length": 2,
+        "reading": "たべ"
       }
     }
   },
@@ -238,7 +468,8 @@
     "matches": {
       "1304280": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
       }
     }
   },
@@ -253,6 +484,7 @@
     ],
     "vocabIds": [
       "1259290",
+      "2256270",
       "1275640",
       "1423310",
       "1304280",
@@ -261,23 +493,33 @@
     "matches": {
       "1212250": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
       },
       "1259290": {
         "start": 4,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1275640": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "くち"
       },
       "1304280": {
         "start": 13,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
       },
       "1423310": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
+      },
+      "2256270": {
+        "start": 4,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -297,11 +539,107 @@
     "matches": {
       "1304280": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "すっぱい"
       },
       "1499230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぶどう"
+      }
+    }
+  },
+  {
+    "id": "9453632",
+    "original": "「この梅干し、酸っぱくないね」「塩抜きして蜂蜜に漬けてたからね」",
+    "en": [
+      {
+        "id": "10152103",
+        "text": "\"These umeboshi aren't sour at all.\" \"That's because their saltiness has been removed and they've been soaked in honey.\""
+      }
+    ],
+    "vocabIds": [
+      "1473500",
+      "1304280",
+      "1576630",
+      "2684300",
+      "2009330",
+      "1517860",
+      "1433680",
+      "2083400"
+    ],
+    "matches": {
+      "1304280": {
+        "start": 7,
+        "length": 4,
+        "reading": "すっぱく"
+      },
+      "1433680": {
+        "start": 24,
+        "length": 2,
+        "reading": "つけ"
+      },
+      "1473500": {
+        "start": 3,
+        "length": 3,
+        "reading": "うめぼし"
+      },
+      "1517860": {
+        "start": 21,
+        "length": 2,
+        "reading": "はちみつ"
+      },
+      "1576630": {
+        "start": 16,
+        "length": 1,
+        "reading": "しお"
+      },
+      "2009330": {
+        "start": 17,
+        "length": 2,
+        "reading": "ぬき"
+      },
+      "2083400": {
+        "start": 24,
+        "length": 2,
+        "reading": "つけ"
+      },
+      "2684300": {
+        "start": 16,
+        "length": 3,
+        "reading": "しおぬき"
+      }
+    }
+  },
+  {
+    "id": "12167719",
+    "original": "この実は、まだ酸っぱくて食べれない。",
+    "en": [
+      {
+        "id": "10794569",
+        "text": "This fruit is still too sour to eat."
+      }
+    ],
+    "vocabIds": [
+      "1320830",
+      "1304280",
+      "1358280"
+    ],
+    "matches": {
+      "1304280": {
+        "start": 7,
+        "length": 4,
+        "reading": "すっぱく"
+      },
+      "1320830": {
+        "start": 2,
+        "length": 2,
+        "reading": "じつは"
+      },
+      "1358280": {
+        "start": 12,
+        "length": 2,
+        "reading": "たべ"
       }
     }
   }

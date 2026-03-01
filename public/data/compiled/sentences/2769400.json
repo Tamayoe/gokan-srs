@@ -1,34 +1,5 @@
 [
   {
-    "id": "141563",
-    "original": "先生は出席を取った。",
-    "en": [
-      {
-        "id": "273007",
-        "text": "The teacher called the roll in class."
-      },
-      {
-        "id": "273006",
-        "text": "The teacher called the roll."
-      }
-    ],
-    "indices": "先生(せんせい)[01] は 出席 を 取る{取った}",
-    "vocabIds": [
-      "1387990",
-      "2769400"
-    ],
-    "matches": {
-      "1387990": {
-        "start": 0,
-        "length": 2
-      },
-      "2769400": {
-        "start": 3,
-        "length": 6
-      }
-    }
-  },
-  {
     "id": "10910324",
     "original": "出席を取るぞ。",
     "en": [
@@ -42,12 +13,25 @@
       }
     ],
     "vocabIds": [
-      "2769400"
+      "1339460",
+      "2769400",
+      "1326980"
     ],
     "matches": {
+      "1326980": {
+        "start": 3,
+        "length": 2,
+        "reading": "とる"
+      },
+      "1339460": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅっせき"
+      },
       "2769400": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "しゅっせきをとる"
       }
     }
   }

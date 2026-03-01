@@ -11,21 +11,30 @@
     "indices": "来る(くる){来た} 者(もの){もの} は 皆 捕まる[01]{捕まった}",
     "vocabIds": [
       "1547720",
+      "1547710",
       "1202150",
       "1514110"
     ],
     "matches": {
       "1202150": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "みな"
       },
       "1514110": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
+      },
+      "1547710": {
+        "start": 0,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 0,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -42,20 +51,29 @@
     "vocabIds": [
       "1483150",
       "1516220",
+      "1448440",
       "1514110"
     ],
     "matches": {
+      "1448440": {
+        "start": 6,
+        "length": 2,
+        "reading": "ぬすも"
+      },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1514110": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1516220": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ほうせき"
       }
     }
   },
@@ -77,15 +95,18 @@
     "matches": {
       "1448440": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "ぬすん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1514110": {
         "start": 16,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       }
     }
   },
@@ -102,20 +123,29 @@
     "vocabIds": [
       "1483070",
       "1450330",
+      "1633800",
       "1514110"
     ],
     "matches": {
       "1450330": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "にげる"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1514110": {
         "start": 17,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
+      },
+      "1633800": {
+        "start": 6,
+        "length": 2,
+        "reading": "にげ"
       }
     }
   },
@@ -132,20 +162,131 @@
     "vocabIds": [
       "1483070",
       "2144660",
+      "1158950",
       "1514110"
     ],
     "matches": {
+      "1158950": {
+        "start": 6,
+        "length": 2,
+        "reading": "いはん"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1514110": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "2144660": {
         "start": 2,
-        "length": 6
+        "length": 6,
+        "reading": "すぴーどいはん"
+      }
+    }
+  },
+  {
+    "id": "121248",
+    "original": "反逆者はついに捕まり牢獄に監禁された。",
+    "en": [
+      {
+        "id": "282757",
+        "text": "The rebel was ultimately captured and confined to prison."
+      }
+    ],
+    "indices": "反逆者 は 遂に[01]{ついに} 捕まる[01]{捕まり} 牢獄 に 監禁 為れる{された}",
+    "vocabIds": [
+      "1601180",
+      "1480280",
+      "1322990",
+      "1514110",
+      "1644550",
+      "1213610"
+    ],
+    "matches": {
+      "1213610": {
+        "start": 13,
+        "length": 2,
+        "reading": "かんきん"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1480280": {
+        "start": 0,
+        "length": 3,
+        "reading": "はんぎゃくしゃ"
+      },
+      "1514110": {
+        "start": 7,
+        "length": 3,
+        "reading": "つかまり"
+      },
+      "1601180": {
+        "start": 0,
+        "length": 2,
+        "reading": "はんぎゃく"
+      },
+      "1644550": {
+        "start": 10,
+        "length": 2,
+        "reading": "ろうごく"
+      }
+    }
+  },
+  {
+    "id": "121249",
+    "original": "反逆者はついに捕まり刑務所に監禁された。",
+    "en": [
+      {
+        "id": "282757",
+        "text": "The rebel was ultimately captured and confined to prison."
+      }
+    ],
+    "indices": "反逆者 は 遂に[01]{ついに} 捕まる[01]{捕まり} 刑務所 に 監禁 為れる{された}",
+    "vocabIds": [
+      "1601180",
+      "1480280",
+      "1322990",
+      "1514110",
+      "1249820",
+      "1213610"
+    ],
+    "matches": {
+      "1213610": {
+        "start": 14,
+        "length": 2,
+        "reading": "かんきん"
+      },
+      "1249820": {
+        "start": 10,
+        "length": 3,
+        "reading": "けいむしょ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1480280": {
+        "start": 0,
+        "length": 3,
+        "reading": "はんぎゃくしゃ"
+      },
+      "1514110": {
+        "start": 7,
+        "length": 3,
+        "reading": "つかまり"
+      },
+      "1601180": {
+        "start": 0,
+        "length": 2,
+        "reading": "はんぎゃく"
       }
     }
   },
@@ -167,15 +308,45 @@
     "matches": {
       "1330470": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうじん"
       },
       "1450450": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とうそう"
       },
       "1514110": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
+      }
+    }
+  },
+  {
+    "id": "125367",
+    "original": "泥棒はきっとそのうちに捕まります。",
+    "en": [
+      {
+        "id": "278627",
+        "text": "The thief is certain to be caught eventually."
+      }
+    ],
+    "indices": "泥棒 は 屹度[01]{きっと} その内に{そのうちに} 捕まる[01]{捕まります}",
+    "vocabIds": [
+      "1599340",
+      "1514110"
+    ],
+    "matches": {
+      "1514110": {
+        "start": 11,
+        "length": 3,
+        "reading": "つかまり"
+      },
+      "1599340": {
+        "start": 0,
+        "length": 2,
+        "reading": "どろぼう"
       }
     }
   },
@@ -191,21 +362,36 @@
     "indices": "泥棒 は 現行犯 で(#2028980) 捕まる[01]{捕まった}",
     "vocabIds": [
       "1599340",
+      "1263630",
       "1630950",
+      "2081460",
       "1514110"
     ],
     "matches": {
+      "1263630": {
+        "start": 4,
+        "length": 2,
+        "reading": "げんこう"
+      },
       "1514110": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1599340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どろぼう"
       },
       "1630950": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "げんこうはん"
+      },
+      "2081460": {
+        "start": 6,
+        "length": 1,
+        "reading": "はん"
       }
     }
   },
@@ -231,15 +417,18 @@
     "matches": {
       "1481630": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "はんにん"
       },
       "1514110": {
         "start": 7,
-        "length": 5
+        "length": 3,
+        "reading": "つかまら"
       },
       "1610240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だっそう"
       }
     }
   },
@@ -254,27 +443,43 @@
     ],
     "indices": "信号無視~ 為る(する){して} 道(みち) を[03] 渡る と 此処[01]{ここ} で(#2028980) は 捕まる[01]",
     "vocabIds": [
+      "1359240",
       "1359320",
+      "1530020",
       "1454080",
       "1444680",
       "1514110"
     ],
     "matches": {
+      "1359240": {
+        "start": 0,
+        "length": 2,
+        "reading": "しんごう"
+      },
       "1359320": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "しんごうむし"
       },
       "1444680": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "わたる"
       },
       "1454080": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "みち"
       },
       "1514110": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "つかまる"
+      },
+      "1530020": {
+        "start": 2,
+        "length": 2,
+        "reading": "むし"
       }
     }
   },
@@ -289,17 +494,31 @@
     ],
     "indices": "殺人犯 は 未だ[02]{まだ} 捕まる[01]{捕まっていない}",
     "vocabIds": [
+      "1299100",
       "1879020",
+      "2081460",
       "1514110"
     ],
     "matches": {
+      "1299100": {
+        "start": 0,
+        "length": 2,
+        "reading": "さつじん"
+      },
       "1514110": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1879020": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "さつじんはん"
+      },
+      "2081460": {
+        "start": 2,
+        "length": 1,
+        "reading": "はん"
       }
     }
   },
@@ -314,17 +533,31 @@
     ],
     "indices": "詐欺師 が 捕まる[01]{捕まった}",
     "vocabIds": [
+      "1291690",
       "1291700",
+      "1956330",
       "1514110"
     ],
     "matches": {
+      "1291690": {
+        "start": 0,
+        "length": 2,
+        "reading": "さぎ"
+      },
       "1291700": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "さぎし"
       },
       "1514110": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
+      },
+      "1956330": {
+        "start": 2,
+        "length": 1,
+        "reading": "し"
       }
     }
   },
@@ -341,20 +574,50 @@
     "vocabIds": [
       "1252390",
       "1514110",
+      "1236660",
       "2027610"
     ],
     "matches": {
+      "1236660": {
+        "start": 9,
+        "length": 2,
+        "reading": "おそれ"
+      },
       "1252390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさつ"
       },
       "1514110": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "つかまる"
       },
       "2027610": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "おそれがある"
+      }
+    }
+  },
+  {
+    "id": "192278",
+    "original": "ロープにしっかり捕まりなさい。",
+    "en": [
+      {
+        "id": "29441",
+        "text": "Hold on to the rope."
+      }
+    ],
+    "indices": "ロープ に 確り{しっかり} 捕まる[01]{捕まり} 為さい{なさい}",
+    "vocabIds": [
+      "1514110"
+    ],
+    "matches": {
+      "1514110": {
+        "start": 8,
+        "length": 3,
+        "reading": "つかまり"
       }
     }
   },
@@ -372,24 +635,40 @@
       "1448440",
       "1514110",
       "1307850",
-      "2573820"
+      "1478060",
+      "1329590",
+      "1659120"
     ],
     "matches": {
       "1307850": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
+      },
+      "1329590": {
+        "start": 30,
+        "length": 2,
+        "reading": "うけ"
       },
       "1448440": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "ぬすん"
+      },
+      "1478060": {
+        "start": 28,
+        "length": 1,
+        "reading": "ばっ"
       },
       "1514110": {
         "start": 13,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
-      "2573820": {
-        "start": 28,
-        "length": 5
+      "1659120": {
+        "start": 30,
+        "length": 2,
+        "reading": "うけ"
       }
     }
   },
@@ -409,7 +688,8 @@
     "matches": {
       "1514110": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       }
     }
   },
@@ -426,20 +706,29 @@
     "vocabIds": [
       "1499320",
       "1338240",
+      "1896380",
       "1514110"
     ],
     "matches": {
       "1338240": {
         "start": 11,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1499320": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1514110": {
         "start": 21,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
+      },
+      "1896380": {
+        "start": 11,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -461,15 +750,18 @@
     "matches": {
       "1514110": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "つかまる"
       },
       "1584670": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "まぬかれ"
       },
       "1599340": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "どろぼう"
       }
     }
   },
@@ -493,23 +785,28 @@
     "matches": {
       "1004430": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "こそどろ"
       },
       "1263760": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "げんば"
       },
       "1401400": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "まど"
       },
       "1514110": {
         "start": 18,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "2002090": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "こじあけ"
       }
     }
   },
@@ -530,11 +827,13 @@
     "matches": {
       "1514110": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1516560": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ほうか"
       }
     }
   },
@@ -550,21 +849,42 @@
     "indices": "は ナチス~ に 捕まる[01] の を 恐れる{恐れ} 乍ら[01]{ながら} 暮らす[01]{暮らした}",
     "vocabIds": [
       "1514110",
+      "1589200",
+      "1236660",
       "2543180",
-      "1514940"
+      "1514940",
+      "1514930"
     ],
     "matches": {
+      "1236660": {
+        "start": 13,
+        "length": 2,
+        "reading": "おそれ"
+      },
       "1514110": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "つかまる"
+      },
+      "1514930": {
+        "start": 18,
+        "length": 3,
+        "reading": "くらし"
       },
       "1514940": {
         "start": 18,
-        "length": 4
+        "length": 3,
+        "reading": "くらし"
+      },
+      "1589200": {
+        "start": 13,
+        "length": 2,
+        "reading": "おそれ"
       },
       "2543180": {
         "start": 13,
-        "length": 5
+        "length": 5,
+        "reading": "おそれながら"
       }
     }
   },
@@ -583,33 +903,57 @@
       "1330470",
       "1514110",
       "1304480",
+      "1288850",
       "2851484",
-      "2859231"
+      "1450450",
+      "2859231",
+      "1423310"
     ],
     "matches": {
+      "1288850": {
+        "start": 17,
+        "length": 1,
+        "reading": "いま"
+      },
       "1304480": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "のこり"
       },
       "1330470": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうじん"
+      },
+      "1423310": {
+        "start": 21,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1450450": {
+        "start": 19,
+        "length": 2,
+        "reading": "とうそう"
       },
       "1514110": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1580640": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "2851484": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "いまも"
       },
       "2859231": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "とうそうちゅう"
       }
     }
   },
@@ -629,11 +973,13 @@
     "matches": {
       "1514110": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1525800": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "まんびき"
       }
     }
   },
@@ -656,7 +1002,8 @@
     "matches": {
       "1514110": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       }
     }
   },
@@ -675,7 +1022,28 @@
     "matches": {
       "1514110": {
         "start": 0,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
+      }
+    }
+  },
+  {
+    "id": "5348241",
+    "original": "捕まりました。",
+    "en": [
+      {
+        "id": "2245786",
+        "text": "I got caught."
+      }
+    ],
+    "vocabIds": [
+      "1514110"
+    ],
+    "matches": {
+      "1514110": {
+        "start": 0,
+        "length": 3,
+        "reading": "つかまり"
       }
     }
   },
@@ -689,22 +1057,57 @@
       }
     ],
     "vocabIds": [
+      "1579840",
       "2862883",
+      "1580640",
       "1379380",
       "1514110"
     ],
     "matches": {
       "1379380": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1514110": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
+      },
+      "1579840": {
+        "start": 0,
+        "length": 1,
+        "reading": "じゅう"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
       },
       "2862883": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうにん"
+      }
+    }
+  },
+  {
+    "id": "8576152",
+    "original": "捕まりたくなかった。",
+    "en": [
+      {
+        "id": "6269645",
+        "text": "I didn't want to get caught."
+      }
+    ],
+    "vocabIds": [
+      "1514110"
+    ],
+    "matches": {
+      "1514110": {
+        "start": 0,
+        "length": 3,
+        "reading": "つかまり"
       }
     }
   },
@@ -729,15 +1132,18 @@
     "matches": {
       "1219510": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "うれしい"
       },
       "1514110": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1599340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どろぼう"
       }
     }
   },
@@ -761,11 +1167,13 @@
     "matches": {
       "1514110": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1599340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どろぼう"
       }
     }
   },
@@ -785,11 +1193,13 @@
     "matches": {
       "1255880": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "げつよう"
       },
       "1514110": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       }
     }
   },
@@ -805,20 +1215,29 @@
     "vocabIds": [
       "1540170",
       "2144660",
+      "1158950",
       "1514110"
     ],
     "matches": {
+      "1158950": {
+        "start": 9,
+        "length": 2,
+        "reading": "いはん"
+      },
       "1514110": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1540170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       },
       "2144660": {
         "start": 5,
-        "length": 6
+        "length": 6,
+        "reading": "すぴーどいはん"
       }
     }
   },
@@ -834,20 +1253,91 @@
     "vocabIds": [
       "1579260",
       "2144660",
+      "1158950",
       "1514110"
     ],
     "matches": {
+      "1158950": {
+        "start": 8,
+        "length": 2,
+        "reading": "いはん"
+      },
       "1514110": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       },
       "2144660": {
         "start": 4,
-        "length": 6
+        "length": 6,
+        "reading": "すぴーどいはん"
+      }
+    }
+  },
+  {
+    "id": "9699169",
+    "original": "渡米しようとしたら国境警備隊に捕まりました。",
+    "en": [
+      {
+        "id": "10109452",
+        "text": "I got caught by the border patrol when I tried to go to the USA."
+      }
+    ],
+    "vocabIds": [
+      "1444720",
+      "1286320",
+      "2404170",
+      "2198590",
+      "1252490",
+      "1933960",
+      "1956610",
+      "1514110"
+    ],
+    "matches": {
+      "1252490": {
+        "start": 11,
+        "length": 2,
+        "reading": "けいび"
+      },
+      "1286320": {
+        "start": 9,
+        "length": 2,
+        "reading": "こっきょう"
+      },
+      "1444720": {
+        "start": 0,
+        "length": 2,
+        "reading": "とべい"
+      },
+      "1514110": {
+        "start": 15,
+        "length": 3,
+        "reading": "つかまり"
+      },
+      "1933960": {
+        "start": 11,
+        "length": 3,
+        "reading": "けいびたい"
+      },
+      "1956610": {
+        "start": 13,
+        "length": 1,
+        "reading": "たい"
+      },
+      "2198590": {
+        "start": 9,
+        "length": 5,
+        "reading": "こっきょうけいびたい"
+      },
+      "2404170": {
+        "start": 9,
+        "length": 4,
+        "reading": "こっきょうけいび"
       }
     }
   },
@@ -868,15 +1358,18 @@
     "matches": {
       "1514110": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1610240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だっそう"
       },
       "2081460": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はん"
       }
     }
   },
@@ -895,7 +1388,8 @@
     "matches": {
       "1514110": {
         "start": 0,
-        "length": 5
+        "length": 3,
+        "reading": "つかまら"
       }
     }
   },
@@ -909,22 +1403,37 @@
       }
     ],
     "vocabIds": [
+      "1338180",
       "1339160",
       "1195970",
+      "1195960",
       "1514110"
     ],
     "matches": {
+      "1195960": {
+        "start": 10,
+        "length": 2,
+        "reading": "すぎ"
+      },
       "1195970": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1338180": {
+        "start": 8,
+        "length": 2,
+        "reading": "だし"
       },
       "1339160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "だし"
       },
       "1514110": {
         "start": 13,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       }
     }
   },
@@ -947,7 +1456,8 @@
     "matches": {
       "1514110": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       }
     }
   },
@@ -970,7 +1480,8 @@
     "matches": {
       "1514110": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       }
     }
   },
@@ -984,17 +1495,37 @@
       }
     ],
     "vocabIds": [
+      "1372670",
+      "1372660",
       "1700010",
+      "1172830",
       "1514110"
     ],
     "matches": {
+      "1172830": {
+        "start": 7,
+        "length": 2,
+        "reading": "うんてん"
+      },
+      "1372660": {
+        "start": 3,
+        "length": 4,
+        "reading": "よっぱらい"
+      },
+      "1372670": {
+        "start": 3,
+        "length": 4,
+        "reading": "よっぱらい"
+      },
       "1514110": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
       "1700010": {
         "start": 3,
-        "length": 6
+        "length": 6,
+        "reading": "よっぱらいうんてん"
       }
     }
   },
@@ -1008,17 +1539,31 @@
       }
     ],
     "vocabIds": [
+      "1169900",
       "1169910",
+      "1172830",
       "1514110"
     ],
     "matches": {
+      "1169900": {
+        "start": 6,
+        "length": 2,
+        "reading": "いんしゅ"
+      },
       "1169910": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "いんしゅうんてん"
+      },
+      "1172830": {
+        "start": 8,
+        "length": 2,
+        "reading": "うんてん"
       },
       "1514110": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       }
     }
   },
@@ -1043,15 +1588,18 @@
     "matches": {
       "1252390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさつ"
       },
       "1514110": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "つかまる"
       },
       "1589350": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -1066,16 +1614,48 @@
     ],
     "vocabIds": [
       "1514110",
-      "1957070"
+      "1605820"
     ],
     "matches": {
       "1514110": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
       },
-      "1957070": {
+      "1605820": {
         "start": 7,
-        "length": 1
+        "length": 3,
+        "reading": "よかっ"
+      }
+    }
+  },
+  {
+    "id": "11998676",
+    "original": "鳥がネコに捕まっちゃったよ。",
+    "en": [
+      {
+        "id": "278153",
+        "text": "A bird was caught by a cat."
+      },
+      {
+        "id": "12229364",
+        "text": "The bird was caught by the cat."
+      }
+    ],
+    "vocabIds": [
+      "1430250",
+      "1514110"
+    ],
+    "matches": {
+      "1430250": {
+        "start": 0,
+        "length": 1,
+        "reading": "とり"
+      },
+      "1514110": {
+        "start": 5,
+        "length": 3,
+        "reading": "つかまっ"
       }
     }
   },
@@ -1090,16 +1670,24 @@
     ],
     "vocabIds": [
       "1397900",
+      "1514140",
       "1514110"
     ],
     "matches": {
       "1397900": {
         "start": 4,
-        "length": 5
+        "length": 5,
+        "reading": "ねずみとり"
       },
       "1514110": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "つかまっ"
+      },
+      "1514140": {
+        "start": 7,
+        "length": 2,
+        "reading": "とり"
       }
     }
   }

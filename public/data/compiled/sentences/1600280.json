@@ -1,5 +1,87 @@
 [
   {
+    "id": "5184",
+    "original": "喉が渇いた。",
+    "en": [
+      {
+        "id": "1814",
+        "text": "I'm thirsty."
+      },
+      {
+        "id": "2245803",
+        "text": "I got thirsty."
+      }
+    ],
+    "indices": "",
+    "vocabIds": [
+      "1600280",
+      "1208520"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "81960",
+    "original": "僕は興奮していて、何も喉を通らない。",
+    "en": [
+      {
+        "id": "321755",
+        "text": "I'm too excited to eat anything."
+      }
+    ],
+    "indices": "僕(ぼく)[01] は 興奮 為る(する){していて} 何も 喉を通る{喉を通らない}~",
+    "vocabIds": [
+      "1521400",
+      "1238380",
+      "1577100",
+      "1188490",
+      "1600280",
+      "1433030"
+    ],
+    "matches": {
+      "1188490": {
+        "start": 9,
+        "length": 2,
+        "reading": "なにも"
+      },
+      "1238380": {
+        "start": 2,
+        "length": 2,
+        "reading": "こうふん"
+      },
+      "1433030": {
+        "start": 13,
+        "length": 2,
+        "reading": "とおら"
+      },
+      "1521400": {
+        "start": 0,
+        "length": 1,
+        "reading": "ぼく"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1600280": {
+        "start": 11,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
     "id": "91695",
     "original": "彼女はパンを喉に詰まらせた。",
     "en": [
@@ -12,20 +94,23 @@
     "vocabIds": [
       "1483150",
       "1600280",
-      "1226470"
+      "1226480"
     ],
     "matches": {
-      "1226470": {
+      "1226480": {
         "start": 8,
-        "length": 5
+        "length": 3,
+        "reading": "つまら"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1600280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -48,19 +133,23 @@
     "matches": {
       "1208510": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かわき"
       },
       "1390780": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "いずみ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1600280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -78,29 +167,91 @@
       "1483070",
       "1412890",
       "1465610",
+      "1465600",
       "1600280",
       "1208510"
     ],
     "matches": {
       "1208510": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "かわき"
       },
       "1412890": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "おおきな"
+      },
+      "1465600": {
+        "start": 9,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1600280": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "111591",
+    "original": "彼は、とても喉が渇いてるから水をくれと言った。",
+    "en": [
+      {
+        "id": "292092",
+        "text": "He was very thirsty and asked for some water."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 迚も[01]{とても} 喉が渇く{喉が渇いてる} から 水(みず) を 呉れる{くれ} と 言う{言った}",
+    "vocabIds": [
+      "1483070",
+      "1600280",
+      "1208520",
+      "1371260",
+      "2540200",
+      "1587040"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 8,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1371260": {
+        "start": 14,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1587040": {
+        "start": 19,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1600280": {
+        "start": 6,
+        "length": 1,
+        "reading": "のど"
+      },
+      "2540200": {
+        "start": 18,
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -115,32 +266,211 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 名前 が 喉(のど)[01] 迄{まで} 出かかる{出かかっていた} が 思い出す{思い出せなかった}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1531710",
       "1600280",
-      "2734530",
-      "1589340"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1338240": {
+        "start": 8,
+        "length": 1,
+        "reading": "で"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1531710": {
         "start": 2,
-        "length": 2
-      },
-      "1589340": {
-        "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "なまえ"
       },
       "1600280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
-      "2734530": {
+      "1896380": {
         "start": 8,
-        "length": 5
+        "length": 1,
+        "reading": "で"
+      }
+    }
+  },
+  {
+    "id": "123817",
+    "original": "頭痛と喉の痛みがありますか。",
+    "en": [
+      {
+        "id": "280178",
+        "text": "Do you have a headache and a sore throat?"
+      }
+    ],
+    "indices": "頭痛 と 喉(のど)[01] の 痛み が[01] 有る{あります} か",
+    "vocabIds": [
+      "1450890",
+      "1600280",
+      "1920250",
+      "1587300"
+    ],
+    "matches": {
+      "1450890": {
+        "start": 0,
+        "length": 2,
+        "reading": "ずつう"
+      },
+      "1587300": {
+        "start": 5,
+        "length": 2,
+        "reading": "いたみ"
+      },
+      "1600280": {
+        "start": 3,
+        "length": 1,
+        "reading": "のど"
+      },
+      "1920250": {
+        "start": 3,
+        "length": 4,
+        "reading": "のどのいたみ"
+      }
+    }
+  },
+  {
+    "id": "145905",
+    "original": "食べ物によっては喉が渇くものがある。",
+    "en": [
+      {
+        "id": "268657",
+        "text": "Some kinds of food make us thirsty."
+      }
+    ],
+    "indices": "食べ物 に因って{によって} は 喉が渇く{喉が渇く} 物(もの){もの} が[01] 有る{ある}",
+    "vocabIds": [
+      "1358340",
+      "1600280",
+      "1277350",
+      "1208520"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 10,
+        "length": 2,
+        "reading": "かわく"
+      },
+      "1277350": {
+        "start": 8,
+        "length": 4,
+        "reading": "のどがかわく"
+      },
+      "1358340": {
+        "start": 0,
+        "length": 3,
+        "reading": "たべもの"
+      },
+      "1600280": {
+        "start": 8,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "159279",
+    "original": "とても喉が渇いているの。",
+    "en": [
+      {
+        "id": "255235",
+        "text": "I'm very thirsty."
+      }
+    ],
+    "indices": "迚も[01]{とても} 喉が渇く{喉が渇いている} の",
+    "vocabIds": [
+      "1600280",
+      "1208520"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 5,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1600280": {
+        "start": 3,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "159280",
+    "original": "私はとても喉が渇いたので何か冷たい飲み物が欲しかった。",
+    "en": [
+      {
+        "id": "255243",
+        "text": "I was very thirsty and I wanted to drink something cold."
+      }
+    ],
+    "indices": "私(わたし)[01] は 迚も[01]{とても} 喉が渇く{喉が渇いた} ので 何か 冷たい[01] 飲み物 が 欲しい[01]{欲しかった}",
+    "vocabIds": [
+      "1311110",
+      "1600280",
+      "1208520",
+      "1577100",
+      "1188270",
+      "1556730",
+      "1600430",
+      "1547330"
+    ],
+    "matches": {
+      "1188270": {
+        "start": 12,
+        "length": 2,
+        "reading": "なにか"
+      },
+      "1208520": {
+        "start": 7,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1547330": {
+        "start": 21,
+        "length": 4,
+        "reading": "ほしかっ"
+      },
+      "1556730": {
+        "start": 14,
+        "length": 3,
+        "reading": "つめたい"
+      },
+      "1577100": {
+        "start": 12,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1600280": {
+        "start": 5,
+        "length": 1,
+        "reading": "のど"
+      },
+      "1600430": {
+        "start": 17,
+        "length": 3,
+        "reading": "のみもの"
       }
     }
   },
@@ -162,15 +492,18 @@
     "matches": {
       "1223640": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "おき"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1600280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -195,11 +528,13 @@
     "matches": {
       "1288550": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ほね"
       },
       "1600280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -220,11 +555,13 @@
     "matches": {
       "1288550": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ほね"
       },
       "1600280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -240,21 +577,30 @@
     "indices": "喉(のど)[01] が 痛い[01]{痛くて} 鼻水 も 出る{でます}",
     "vocabIds": [
       "1600280",
+      "1432680",
       "1369990",
       "1487060"
     ],
     "matches": {
       "1369990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いたく"
+      },
+      "1432680": {
+        "start": 2,
+        "length": 2,
+        "reading": "いたく"
       },
       "1487060": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はなみず"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -270,26 +616,48 @@
     "indices": "喉(のど)[01] が 痛い[01]{痛くて} 熱(ねつ) が[01] 有る{あります} 風邪薬~ は 有る{あります} か",
     "vocabIds": [
       "1600280",
+      "1432680",
       "1369990",
       "1467710",
-      "1609540"
+      "1583720",
+      "1609540",
+      "1538160"
     ],
     "matches": {
       "1369990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いたく"
+      },
+      "1432680": {
+        "start": 2,
+        "length": 2,
+        "reading": "いたく"
       },
       "1467710": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ねつ"
+      },
+      "1538160": {
+        "start": 15,
+        "length": 1,
+        "reading": "やく"
+      },
+      "1583720": {
+        "start": 13,
+        "length": 2,
+        "reading": "かぜ"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
       "1609540": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "かぜやく"
       }
     }
   },
@@ -310,11 +678,13 @@
     "matches": {
       "1432680": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -339,11 +709,170 @@
     "matches": {
       "1432680": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "173827",
+    "original": "喉が渇いているようでしたら、ご自由に飲み物を取ってお飲みください。",
+    "en": [
+      {
+        "id": "240643",
+        "text": "Feel free to get yourself a drink if you are thirsty."
+      }
+    ],
+    "indices": "喉が渇く{喉が渇いている} 様です{ようでしたら}~ 御(ご){ご} 自由に 飲み物 を 取る{取って} 飲む[01]{お飲み} 下さい{ください}",
+    "vocabIds": [
+      "1600280",
+      "1208520",
+      "1318720",
+      "1318740",
+      "1600430",
+      "1326980",
+      "2809750",
+      "1169870",
+      "2151640"
+    ],
+    "matches": {
+      "1169870": {
+        "start": 26,
+        "length": 2,
+        "reading": "のみ"
+      },
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1318720": {
+        "start": 15,
+        "length": 2,
+        "reading": "じゆう"
+      },
+      "1318740": {
+        "start": 15,
+        "length": 3,
+        "reading": "じゆうに"
+      },
+      "1326980": {
+        "start": 22,
+        "length": 2,
+        "reading": "とっ"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
+      },
+      "1600430": {
+        "start": 18,
+        "length": 3,
+        "reading": "のみもの"
+      },
+      "2151640": {
+        "start": 26,
+        "length": 2,
+        "reading": "のみ"
+      },
+      "2809750": {
+        "start": 22,
+        "length": 2,
+        "reading": "とっ"
+      }
+    }
+  },
+  {
+    "id": "173828",
+    "original": "喉が渇いています。何か冷たい飲物を下さい。",
+    "en": [
+      {
+        "id": "240642",
+        "text": "I am thirsty. Please give me something cold to drink."
+      },
+      {
+        "id": "1009288",
+        "text": "I'm thirsty. Please give me a cold drink."
+      }
+    ],
+    "indices": "喉が渇く{喉が渇いています} 何か 冷たい[01] 飲み物{飲物} を 下さい[01]",
+    "vocabIds": [
+      "1600280",
+      "1208520",
+      "1577100",
+      "1188270",
+      "1556730",
+      "1184280",
+      "1184270"
+    ],
+    "matches": {
+      "1184270": {
+        "start": 17,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 17,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1188270": {
+        "start": 9,
+        "length": 2,
+        "reading": "なにか"
+      },
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1556730": {
+        "start": 11,
+        "length": 3,
+        "reading": "つめたい"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "173829",
+    "original": "喉が渇いていないのですか。",
+    "en": [
+      {
+        "id": "240641",
+        "text": "Aren't you thirsty?"
+      }
+    ],
+    "indices": "喉が渇く{喉が渇いていない} のです か",
+    "vocabIds": [
+      "1600280",
+      "1208520"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -359,21 +888,30 @@
     "indices": "煙草 の 吸う[01]{吸い} 過ぎ{すぎ} で(#2028980) 喉(のど)[01] が 痛い[01]",
     "vocabIds": [
       "1597150",
+      "1228260",
       "1600280",
       "1432680"
     ],
     "matches": {
+      "1228260": {
+        "start": 3,
+        "length": 2,
+        "reading": "すい"
+      },
       "1432680": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
       "1597150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たばこ"
       },
       "1600280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -389,16 +927,24 @@
     "indices": "喉が渇く{喉が渇きました}",
     "vocabIds": [
       "1600280",
+      "1208520",
       "1208510"
     ],
     "matches": {
       "1208510": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かわき"
+      },
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわき"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -419,11 +965,13 @@
     "matches": {
       "1467710": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ねつ"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -444,11 +992,13 @@
     "matches": {
       "1212250": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -465,7 +1015,9 @@
     "vocabIds": [
       "1536350",
       "1483090",
+      "1484920",
       "1484930",
+      "1483740",
       "1483730",
       "1246000",
       "1600280"
@@ -473,27 +1025,43 @@
     "matches": {
       "1246000": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "くうふく"
       },
       "1483090": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1483730": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1483740": {
+        "start": 10,
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1484920": {
+        "start": 7,
+        "length": 2,
+        "reading": "ひじょう"
       },
       "1484930": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ひじょうに"
       },
       "1536350": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "よる"
       },
       "1600280": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -509,26 +1077,48 @@
     "indices": "其の[01]{その} 女性[01] は 助ける[02]{助けて} と 叫ぶ{叫ぼう} とする{とした} が 言葉[02] が 喉(のど)[01] に 痞える{つかえた}",
     "vocabIds": [
       "1345250",
+      "1344410",
+      "1344390",
       "1344400",
+      "1235910",
       "1264540",
       "1600280"
     ],
     "matches": {
+      "1235910": {
+        "start": 11,
+        "length": 2,
+        "reading": "さけぼ"
+      },
       "1264540": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
+      },
+      "1344390": {
+        "start": 6,
+        "length": 2,
+        "reading": "たすけ"
       },
       "1344400": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "たすけて"
+      },
+      "1344410": {
+        "start": 6,
+        "length": 2,
+        "reading": "たすけ"
       },
       "1345250": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
       },
       "1600280": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -549,11 +1139,70 @@
     "matches": {
       "1311110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1600280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "221578",
+    "original": "この時計、喉から手が出るほど欲しかったんだ。",
+    "en": [
+      {
+        "id": "58902",
+        "text": "I wanted this watch so badly I could taste it."
+      }
+    ],
+    "indices": "此の{この} 時計 喉から手が出る~ 程{ほど} 欲しい{欲しかった} のだ{んだ}",
+    "vocabIds": [
+      "1316140",
+      "1600280",
+      "2028680",
+      "1327190",
+      "2620820",
+      "1338240",
+      "1547330"
+    ],
+    "matches": {
+      "1316140": {
+        "start": 2,
+        "length": 2,
+        "reading": "とけい"
+      },
+      "1327190": {
+        "start": 8,
+        "length": 1,
+        "reading": "て"
+      },
+      "1338240": {
+        "start": 10,
+        "length": 2,
+        "reading": "でる"
+      },
+      "1547330": {
+        "start": 14,
+        "length": 4,
+        "reading": "ほしかっ"
+      },
+      "1600280": {
+        "start": 5,
+        "length": 1,
+        "reading": "のど"
+      },
+      "2028680": {
+        "start": 5,
+        "length": 7,
+        "reading": "のどからてがでる"
+      },
+      "2620820": {
+        "start": 8,
+        "length": 4,
+        "reading": "てがでる"
       }
     }
   },
@@ -568,7 +1217,8 @@
     ],
     "indices": "お腹が空く{お腹が空いていた} 許り[03]{ばかり} である{でなく} 私たち{私達} は 喉(のど)[01] の 渇き にも 苦しむ{苦しんでいた}",
     "vocabIds": [
-      "2021520",
+      "1002610",
+      "1586265",
       "1311110",
       "1416220",
       "1600280",
@@ -576,29 +1226,40 @@
       "1244350"
     ],
     "matches": {
+      "1002610": {
+        "start": 0,
+        "length": 2,
+        "reading": "おなか"
+      },
       "1208510": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "かわき"
       },
       "1244350": {
         "start": 24,
-        "length": 4
+        "length": 3,
+        "reading": "くるしん"
       },
       "1311110": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
+      },
+      "1586265": {
+        "start": 3,
+        "length": 2,
+        "reading": "あい"
       },
       "1600280": {
         "start": 18,
-        "length": 1
-      },
-      "2021520": {
-        "start": 0,
-        "length": 6
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -624,19 +1285,23 @@
     "matches": {
       "1306390": {
         "start": 2,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1466920": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しく"
       },
       "1568220": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "とげ"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -657,15 +1322,18 @@
     "matches": {
       "1306390": {
         "start": 2,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1568220": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "とげ"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -687,19 +1355,23 @@
     "matches": {
       "1288550": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほね"
       },
       "1306390": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1578010": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "さかな"
       },
       "1600280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -713,8 +1385,10 @@
       }
     ],
     "vocabIds": [
+      "1177800",
       "1177820",
       "1550840",
+      "2013190",
       "1371260",
       "1228560",
       "1600280",
@@ -722,33 +1396,50 @@
       "1341810"
     ],
     "matches": {
+      "1177800": {
+        "start": 0,
+        "length": 2,
+        "reading": "とおく"
+      },
       "1177820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とおく"
       },
       "1208510": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "かわき"
       },
       "1228560": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "きゅう"
       },
       "1341810": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "うるおし"
       },
       "1371260": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1550840": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "はなれ"
       },
       "1600280": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
+      },
+      "2013190": {
+        "start": 2,
+        "length": 2,
+        "reading": "はなれ"
       }
     }
   },
@@ -771,23 +1462,28 @@
     "matches": {
       "1169250": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       },
       "1409140": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "からだ"
       },
       "1432680": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
       "1583720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
       },
       "1600280": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -802,21 +1498,30 @@
     ],
     "vocabIds": [
       "1600280",
+      "1432680",
       "1369990",
       "1486130"
     ],
     "matches": {
       "1369990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いたく"
+      },
+      "1432680": {
+        "start": 2,
+        "length": 2,
+        "reading": "いたく"
       },
       "1486130": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "びねつ"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -830,37 +1535,49 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "1188370",
       "1587040",
       "1600280",
-      "2734530",
-      "1531710",
-      "1589340"
+      "1338240",
+      "1896380",
+      "1531710"
     ],
     "matches": {
       "1188370": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "なにて"
+      },
+      "1338240": {
+        "start": 23,
+        "length": 1,
+        "reading": "で"
       },
       "1531710": {
         "start": 35,
-        "length": 2
+        "length": 2,
+        "reading": "なまえ"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
       },
       "1587040": {
         "start": 11,
-        "length": 2
-      },
-      "1589340": {
-        "start": 38,
-        "length": 3
+        "length": 2,
+        "reading": "いう"
       },
       "1600280": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
-      "2734530": {
+      "1896380": {
         "start": 23,
-        "length": 5
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -874,17 +1591,25 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1600280"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1600280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -906,28 +1631,45 @@
       "1209650",
       "1600280",
       "1208520",
-      "2857751"
+      "1204300",
+      "2857751",
+      "1338240"
     ],
     "matches": {
+      "1204300": {
+        "start": 12,
+        "length": 1,
+        "reading": "せき"
+      },
       "1208520": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "かわい"
       },
       "1209650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かわく"
       },
       "1245470": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くうき"
+      },
+      "1338240": {
+        "start": 14,
+        "length": 2,
+        "reading": "でる"
       },
       "1600280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
       "2857751": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "せきがでる"
       }
     }
   },
@@ -953,19 +1695,23 @@
     "matches": {
       "1169250": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       },
       "1428280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1583720": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
       },
       "1600280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -988,7 +1734,8 @@
     "matches": {
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1006,49 +1753,82 @@
       "1247250",
       "1521400",
       "1534520",
+      "1577100",
+      "1188490",
       "2179900",
       "1408370",
+      "1184140",
       "1881540",
       "1597040",
       "1600280",
+      "1208520",
       "1208510"
     ],
     "matches": {
+      "1184140": {
+        "start": 14,
+        "length": 1,
+        "reading": "した"
+      },
+      "1188490": {
+        "start": 6,
+        "length": 2,
+        "reading": "なにも"
+      },
       "1208510": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "かわき"
+      },
+      "1208520": {
+        "start": 24,
+        "length": 2,
+        "reading": "かわき"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1408370": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "たいよう"
       },
       "1521400": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1534520": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "き"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なに"
       },
       "1597040": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
       },
       "1600280": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
       "1881540": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "したに"
       },
       "2179900": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "なにもない"
       }
     }
   },
@@ -1069,15 +1849,18 @@
     "matches": {
       "1208520": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かわい"
       },
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1600280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1101,11 +1884,13 @@
     "matches": {
       "1432680": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
       "1600280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1125,11 +1910,321 @@
     "matches": {
       "1208520": {
         "start": 1,
-        "length": 3
+        "length": 2,
+        "reading": "かわい"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "8720707",
+    "original": "トムは喉が渇いて死にそうだった。",
+    "en": [
+      {
+        "id": "3071442",
+        "text": "Tom was dying of thirst."
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520",
+      "1310730",
+      "2602220",
+      "2127500"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 5,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1310730": {
+        "start": 8,
+        "length": 2,
+        "reading": "しに"
+      },
+      "1600280": {
+        "start": 3,
+        "length": 1,
+        "reading": "のど"
+      },
+      "2127500": {
+        "start": 8,
+        "length": 4,
+        "reading": "しにそう"
+      },
+      "2602220": {
+        "start": 8,
+        "length": 2,
+        "reading": "しに"
+      }
+    }
+  },
+  {
+    "id": "8720717",
+    "original": "喉が渇いて死にそうだよ。水をくれ！",
+    "en": [
+      {
+        "id": "5661533",
+        "text": "I'm dying of thirst. Give me water!"
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520",
+      "1310730",
+      "2602220",
+      "2127500",
+      "1371260"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1310730": {
+        "start": 5,
+        "length": 2,
+        "reading": "しに"
+      },
+      "1371260": {
+        "start": 12,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
+      },
+      "2127500": {
+        "start": 5,
+        "length": 4,
+        "reading": "しにそう"
+      },
+      "2602220": {
+        "start": 5,
+        "length": 2,
+        "reading": "しに"
+      }
+    }
+  },
+  {
+    "id": "8720788",
+    "original": "差し当たり喉が渇いて死にそうだよ。",
+    "en": [
+      {
+        "id": "7824401",
+        "text": "I'm dying of thirst at the moment."
+      }
+    ],
+    "vocabIds": [
+      "1291290",
+      "1600280",
+      "1208520",
+      "1310730",
+      "2602220",
+      "2127500"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 7,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1291290": {
+        "start": 0,
+        "length": 5,
+        "reading": "さしあたり"
+      },
+      "1310730": {
+        "start": 10,
+        "length": 2,
+        "reading": "しに"
+      },
+      "1600280": {
+        "start": 5,
+        "length": 1,
+        "reading": "のど"
+      },
+      "2127500": {
+        "start": 10,
+        "length": 4,
+        "reading": "しにそう"
+      },
+      "2602220": {
+        "start": 10,
+        "length": 2,
+        "reading": "しに"
+      }
+    }
+  },
+  {
+    "id": "8720790",
+    "original": "今は喉が渇いて死にそうだ。",
+    "en": [
+      {
+        "id": "7824401",
+        "text": "I'm dying of thirst at the moment."
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "1600280",
+      "1208520",
+      "1310730",
+      "2602220",
+      "2127500"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 4,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1310730": {
+        "start": 7,
+        "length": 2,
+        "reading": "しに"
+      },
+      "1600280": {
+        "start": 2,
+        "length": 1,
+        "reading": "のど"
+      },
+      "2127500": {
+        "start": 7,
+        "length": 4,
+        "reading": "しにそう"
+      },
+      "2602220": {
+        "start": 7,
+        "length": 2,
+        "reading": "しに"
+      }
+    }
+  },
+  {
+    "id": "8894537",
+    "original": "何で喉が渇いてること、トムに言わなかったの？",
+    "en": [
+      {
+        "id": "3204054",
+        "text": "Why didn't you tell Tom you were thirsty?"
+      }
+    ],
+    "vocabIds": [
+      "1611020",
+      "1600280",
+      "1208520",
+      "1587040"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 4,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1587040": {
+        "start": 14,
+        "length": 2,
+        "reading": "いわ"
+      },
+      "1600280": {
+        "start": 2,
+        "length": 1,
+        "reading": "のど"
+      },
+      "1611020": {
+        "start": 0,
+        "length": 2,
+        "reading": "なんで"
+      }
+    }
+  },
+  {
+    "id": "8945980",
+    "original": "トムは喉が渇いてなかったと思うんだけど。",
+    "en": [
+      {
+        "id": "6657275",
+        "text": "I don't think Tom was thirsty."
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520",
+      "1589350"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 5,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1589350": {
+        "start": 13,
+        "length": 2,
+        "reading": "おもう"
+      },
+      "1600280": {
+        "start": 3,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "8986274",
+    "original": "何で猫はゴロゴロと喉を鳴らすの？",
+    "en": [
+      {
+        "id": "3821316",
+        "text": "Why do cats purr?"
+      }
+    ],
+    "vocabIds": [
+      "1611020",
+      "1467640",
+      "1600280",
+      "2829466",
+      "1532880"
+    ],
+    "matches": {
+      "1467640": {
+        "start": 2,
+        "length": 1,
+        "reading": "ねこ"
+      },
+      "1532880": {
+        "start": 11,
+        "length": 3,
+        "reading": "ならす"
+      },
+      "1600280": {
+        "start": 9,
+        "length": 1,
+        "reading": "のど"
+      },
+      "1611020": {
+        "start": 0,
+        "length": 2,
+        "reading": "なんで"
+      },
+      "2829466": {
+        "start": 9,
+        "length": 5,
+        "reading": "のどをならす"
       }
     }
   },
@@ -1150,15 +2245,94 @@
     "matches": {
       "1467640": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ねこ"
       },
       "1600280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
       "1611020": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なんで"
+      }
+    }
+  },
+  {
+    "id": "9015057",
+    "original": "気持ちが高ぶっちゃって、何も喉を通らないよ。",
+    "en": [
+      {
+        "id": "321755",
+        "text": "I'm too excited to eat anything."
+      }
+    ],
+    "vocabIds": [
+      "1591430",
+      "1283210",
+      "1577100",
+      "1188490",
+      "1600280",
+      "1433030"
+    ],
+    "matches": {
+      "1188490": {
+        "start": 12,
+        "length": 2,
+        "reading": "なにも"
+      },
+      "1283210": {
+        "start": 4,
+        "length": 3,
+        "reading": "たかぶっ"
+      },
+      "1433030": {
+        "start": 16,
+        "length": 2,
+        "reading": "とおら"
+      },
+      "1577100": {
+        "start": 12,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1591430": {
+        "start": 0,
+        "length": 3,
+        "reading": "きもち"
+      },
+      "1600280": {
+        "start": 14,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "9107124",
+    "original": "トムは喉が渇いてなかったけど、メアリーは渇いてたんだ。",
+    "en": [
+      {
+        "id": "6665876",
+        "text": "Tom wasn't thirsty, but Mary was."
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 5,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1600280": {
+        "start": 3,
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1178,11 +2352,177 @@
     "matches": {
       "1208520": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かわい"
       },
       "1600280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "9733072",
+    "original": "緊張しすぎて食べ物が喉を通らないんだ。",
+    "en": [
+      {
+        "id": "9732886",
+        "text": "I'm too nervous to eat anything."
+      }
+    ],
+    "vocabIds": [
+      "1241880",
+      "1358340",
+      "1600280",
+      "1433030"
+    ],
+    "matches": {
+      "1241880": {
+        "start": 0,
+        "length": 2,
+        "reading": "きんちょう"
+      },
+      "1358340": {
+        "start": 6,
+        "length": 3,
+        "reading": "たべもの"
+      },
+      "1433030": {
+        "start": 12,
+        "length": 2,
+        "reading": "とおら"
+      },
+      "1600280": {
+        "start": 10,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "9859657",
+    "original": "喉の痛みと頭痛はありますか？",
+    "en": [
+      {
+        "id": "4296983",
+        "text": "Do you have a sore throat and a headache?"
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1920250",
+      "1587300",
+      "1450890"
+    ],
+    "matches": {
+      "1450890": {
+        "start": 5,
+        "length": 2,
+        "reading": "ずつう"
+      },
+      "1587300": {
+        "start": 2,
+        "length": 2,
+        "reading": "いたみ"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
+      },
+      "1920250": {
+        "start": 0,
+        "length": 4,
+        "reading": "のどのいたみ"
+      }
+    }
+  },
+  {
+    "id": "9943386",
+    "original": "しょっちゅう喉が渇くんだよ。",
+    "en": [
+      {
+        "id": "66113",
+        "text": "I'm always thirsty."
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1277350",
+      "1208520"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 8,
+        "length": 2,
+        "reading": "かわく"
+      },
+      "1277350": {
+        "start": 6,
+        "length": 4,
+        "reading": "のどがかわく"
+      },
+      "1600280": {
+        "start": 6,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "957559",
+    "original": "今日はなんだか喉が渇いてしょうがない。朝から水ばっかり飲んでるよ。",
+    "en": [
+      {
+        "id": "9983031",
+        "text": "Somehow today my throat has become dry and I can't stand it. Since the morning all I have been drinking is water."
+      }
+    ],
+    "vocabIds": [
+      "1579110",
+      "1289400",
+      "1600280",
+      "1208520",
+      "1428280",
+      "1371260",
+      "1169870"
+    ],
+    "matches": {
+      "1169870": {
+        "start": 27,
+        "length": 2,
+        "reading": "のん"
+      },
+      "1208520": {
+        "start": 9,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1289400": {
+        "start": 0,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1371260": {
+        "start": 22,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1428280": {
+        "start": 19,
+        "length": 1,
+        "reading": "あさ"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1600280": {
+        "start": 7,
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1198,20 +2538,29 @@
     "vocabIds": [
       "1371260",
       "1169870",
-      "1600280"
+      "1600280",
+      "1341810"
     ],
     "matches": {
       "1169870": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "のん"
+      },
+      "1341810": {
+        "start": 7,
+        "length": 2,
+        "reading": "うるおし"
       },
       "1371260": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1600280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1226,21 +2575,24 @@
     ],
     "vocabIds": [
       "1600280",
-      "2734530",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1338240": {
-        "start": 14,
-        "length": 2
+        "start": 3,
+        "length": 1,
+        "reading": "で"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
-      "2734530": {
+      "1896380": {
         "start": 3,
-        "length": 5
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -1259,16 +2611,24 @@
     ],
     "vocabIds": [
       "1600280",
-      "2734530"
+      "1338240",
+      "1896380"
     ],
     "matches": {
+      "1338240": {
+        "start": 3,
+        "length": 1,
+        "reading": "で"
+      },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
-      "2734530": {
+      "1896380": {
         "start": 3,
-        "length": 5
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -1283,26 +2643,36 @@
     ],
     "vocabIds": [
       "1467640",
+      "1315840",
       "2021540",
       "1600280",
       "1532880"
     ],
     "matches": {
+      "1315840": {
+        "start": 5,
+        "length": 1,
+        "reading": "とき"
+      },
       "1467640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ねこ"
       },
       "1532880": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "ならす"
       },
       "1600280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
       "2021540": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -1321,7 +2691,162 @@
     "matches": {
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "10125578",
+    "original": "めっちゃ喉が渇いた。",
+    "en": [
+      {
+        "id": "5826163",
+        "text": "I got very thirsty."
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 6,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1600280": {
+        "start": 4,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "10200088",
+    "original": "すごい喉が渇いてるから、水をくれって言ってたよ。",
+    "en": [
+      {
+        "id": "292092",
+        "text": "He was very thirsty and asked for some water."
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520",
+      "1371260",
+      "1587040"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 5,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1371260": {
+        "start": 12,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1587040": {
+        "start": 18,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1600280": {
+        "start": 3,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "10200090",
+    "original": "喉が渇いてるから、ビール持ってきて！",
+    "en": [
+      {
+        "id": "273998",
+        "text": "Make with the beers, I'm thirsty!"
+      },
+      {
+        "id": "11179292",
+        "text": "I'm thirsty, so bring me a beer."
+      },
+      {
+        "id": "11179299",
+        "text": "I'm thirsty. Bring me a beer!"
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520",
+      "1315720"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1315720": {
+        "start": 12,
+        "length": 2,
+        "reading": "もっ"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "10200098",
+    "original": "喉が渇いたら、自由にお飲みください。",
+    "en": [
+      {
+        "id": "240643",
+        "text": "Feel free to get yourself a drink if you are thirsty."
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520",
+      "1318720",
+      "1318740",
+      "1169870",
+      "2151640"
+    ],
+    "matches": {
+      "1169870": {
+        "start": 11,
+        "length": 2,
+        "reading": "のみ"
+      },
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1318720": {
+        "start": 7,
+        "length": 2,
+        "reading": "じゆう"
+      },
+      "1318740": {
+        "start": 7,
+        "length": 3,
+        "reading": "じゆうに"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
+      },
+      "2151640": {
+        "start": 11,
+        "length": 2,
+        "reading": "のみ"
       }
     }
   },
@@ -1340,7 +2865,8 @@
     "matches": {
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1359,7 +2885,8 @@
     "matches": {
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1373,27 +2900,43 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1531710",
       "1600280",
-      "2734530"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1338240": {
+        "start": 8,
+        "length": 1,
+        "reading": "で"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1531710": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "なまえ"
       },
       "1600280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
-      "2734530": {
+      "1896380": {
         "start": 8,
-        "length": 5
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -1409,20 +2952,29 @@
     "vocabIds": [
       "1264540",
       "1600280",
-      "2734530"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1264540": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
+      },
+      "1338240": {
+        "start": 7,
+        "length": 1,
+        "reading": "で"
       },
       "1600280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
-      "2734530": {
+      "1896380": {
         "start": 7,
-        "length": 5
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -1436,6 +2988,7 @@
       }
     ],
     "vocabIds": [
+      "1227370",
       "1227360",
       "1429990",
       "1600280"
@@ -1443,15 +2996,23 @@
     "matches": {
       "1227360": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ひさしぶりに"
+      },
+      "1227370": {
+        "start": 0,
+        "length": 4,
+        "reading": "ひさしぶり"
       },
       "1429990": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ちょうじかん"
       },
       "1600280": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1469,6 +3030,7 @@
       }
     ],
     "vocabIds": [
+      "1228650",
       "1228570",
       "1358280",
       "1600280",
@@ -1477,19 +3039,28 @@
     "matches": {
       "1226480": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "つまる"
       },
       "1228570": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 4,
+        "length": 2,
+        "reading": "いそい"
       },
       "1358280": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1600280": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1511,19 +3082,23 @@
     "matches": {
       "1208520": {
         "start": 1,
-        "length": 3
+        "length": 2,
+        "reading": "かわい"
       },
       "1556730": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "つめたい"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
       "1600430": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "のみもの"
       }
     }
   },
@@ -1545,19 +3120,23 @@
     "matches": {
       "1288550": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ほね"
       },
       "1306390": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1578010": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "さかな"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1577,11 +3156,13 @@
     "matches": {
       "1348870": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1601,11 +3182,13 @@
     "matches": {
       "1432680": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1626,15 +3209,18 @@
     "matches": {
       "1169870": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "のん"
       },
       "1538160": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "くすり"
       },
       "1600280": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1657,23 +3243,28 @@
     "matches": {
       "1165670": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いっぱい"
       },
       "1169870": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "のん"
       },
       "1208510": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かわき"
       },
       "1538750": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いやす"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1694,15 +3285,18 @@
     "matches": {
       "1169870": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "のむ"
       },
       "1371260": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1600280": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1716,22 +3310,43 @@
       }
     ],
     "vocabIds": [
+      "1500330",
       "2089030",
+      "1552090",
+      "1177180",
       "1600280",
       "1432680"
     ],
     "matches": {
+      "1177180": {
+        "start": 6,
+        "length": 1,
+        "reading": "けむり"
+      },
       "1432680": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
+      },
+      "1500330": {
+        "start": 4,
+        "length": 1,
+        "reading": "ふく"
+      },
+      "1552090": {
+        "start": 5,
+        "length": 1,
+        "reading": "ながれ"
       },
       "1600280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
       "2089030": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ふくながれけむり"
       }
     }
   },
@@ -1753,19 +3368,23 @@
     "matches": {
       "1288550": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほね"
       },
       "1306390": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "ささっ"
       },
       "1578010": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "さかな"
       },
       "1600280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1785,11 +3404,13 @@
     "matches": {
       "1432680": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
       "1600280": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1810,15 +3431,70 @@
     "matches": {
       "1348870": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1432710": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いたむ"
       },
       "1600280": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "11756043",
+    "original": "喉が渇いたな。ビールありますか？",
+    "en": [
+      {
+        "id": "9972000",
+        "text": "I'm thirsty. Do you have any beer?"
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
+      }
+    }
+  },
+  {
+    "id": "11831607",
+    "original": "喉が渇いてるんじゃないかな。",
+    "en": [
+      {
+        "id": "11229723",
+        "text": "I think she's thirsty."
+      }
+    ],
+    "vocabIds": [
+      "1600280",
+      "1208520"
+    ],
+    "matches": {
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわい"
+      },
+      "1600280": {
+        "start": 0,
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1841,7 +3517,8 @@
     "matches": {
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1856,16 +3533,24 @@
     ],
     "vocabIds": [
       "1600280",
+      "1208520",
       "1208510"
     ],
     "matches": {
       "1208510": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かわき"
+      },
+      "1208520": {
+        "start": 2,
+        "length": 2,
+        "reading": "かわき"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       }
     }
   },
@@ -1885,11 +3570,13 @@
     "matches": {
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
       "1600430": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "のみもの"
       }
     }
   },
@@ -1910,15 +3597,18 @@
     "matches": {
       "1208520": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "かわい"
       },
       "1600280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "のど"
       },
       "1600430": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "のみもの"
       }
     }
   },
@@ -1934,30 +3624,35 @@
     "vocabIds": [
       "1600280",
       "1432680",
-      "2845586",
+      "1315840",
       "1556730",
-      "1547320"
+      "1547330"
     ],
     "matches": {
+      "1315840": {
+        "start": 4,
+        "length": 1,
+        "reading": "とき"
+      },
       "1432680": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
-      "1547320": {
+      "1547330": {
         "start": 18,
-        "length": 1
+        "length": 3,
+        "reading": "ほしく"
       },
       "1556730": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "つめたい"
       },
       "1600280": {
         "start": 0,
-        "length": 1
-      },
-      "2845586": {
-        "start": 4,
-        "length": 3
+        "length": 1,
+        "reading": "のど"
       }
     }
   }

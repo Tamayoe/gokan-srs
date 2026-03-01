@@ -1,5 +1,44 @@
 [
   {
+    "id": "170667",
+    "original": "最近は異常気象がよくある。",
+    "en": [
+      {
+        "id": "243815",
+        "text": "We often have unusual weather these days."
+      }
+    ],
+    "indices": "最近 は 異常気象 が 良くある{よくある}",
+    "vocabIds": [
+      "1293780",
+      "1157760",
+      "1930170",
+      "1222270"
+    ],
+    "matches": {
+      "1157760": {
+        "start": 3,
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1222270": {
+        "start": 5,
+        "length": 2,
+        "reading": "きしょう"
+      },
+      "1293780": {
+        "start": 0,
+        "length": 2,
+        "reading": "さいきん"
+      },
+      "1930170": {
+        "start": 3,
+        "length": 4,
+        "reading": "いじょうきしょう"
+      }
+    }
+  },
+  {
     "id": "183342",
     "original": "機長は気象訓示を受ける為に気象室へ行く。",
     "en": [
@@ -14,38 +53,51 @@
       "1222270",
       "1247410",
       "1329590",
+      "1157080",
       "1157150",
       "1320300",
       "1578850"
     ],
     "matches": {
+      "1157080": {
+        "start": 11,
+        "length": 1,
+        "reading": "ため"
+      },
       "1157150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ために"
       },
       "1221040": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きちょう"
       },
       "1222270": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きしょう"
       },
       "1247410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "くんじ"
       },
       "1320300": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "しつ"
       },
       "1329590": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "うける"
       },
       "1578850": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -60,7 +112,9 @@
     ],
     "indices": "環境汚染 は 異常{異常な} 気象~ 状況 を 引き起こす[01]{引き起こしている}",
     "vocabIds": [
+      "1213280",
       "1666030",
+      "1179040",
       "1157760",
       "1222270",
       "1356700",
@@ -69,23 +123,195 @@
     "matches": {
       "1157760": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
       "1168880": {
         "start": 14,
-        "length": 6
+        "length": 5,
+        "reading": "ひきおこし"
+      },
+      "1179040": {
+        "start": 2,
+        "length": 2,
+        "reading": "おせん"
+      },
+      "1213280": {
+        "start": 0,
+        "length": 2,
+        "reading": "かんきょう"
       },
       "1222270": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きしょう"
       },
       "1356700": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "じょうきょう"
       },
       "1666030": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "かんきょうおせん"
+      }
+    }
+  },
+  {
+    "id": "224238",
+    "original": "ここ何年か異常気象がつづいている。",
+    "en": [
+      {
+        "id": "61573",
+        "text": "We've been having strange weather the past few years."
+      }
+    ],
+    "indices": "此処[02]{ここ} 何年 か 異常気象~ が 続く[01]{つづいている}",
+    "vocabIds": [
+      "1577100",
+      "1189250",
+      "2084840",
+      "1157760",
+      "1930170",
+      "1222270"
+    ],
+    "matches": {
+      "1157760": {
+        "start": 5,
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1189250": {
+        "start": 2,
+        "length": 2,
+        "reading": "なんねん"
+      },
+      "1222270": {
+        "start": 7,
+        "length": 2,
+        "reading": "きしょう"
+      },
+      "1577100": {
+        "start": 2,
+        "length": 1,
+        "reading": "なん"
+      },
+      "1930170": {
+        "start": 5,
+        "length": 4,
+        "reading": "いじょうきしょう"
+      },
+      "2084840": {
+        "start": 3,
+        "length": 1,
+        "reading": "ねん"
+      }
+    }
+  },
+  {
+    "id": "9112507",
+    "original": "環境汚染は、異常気象を誘発している。",
+    "en": [
+      {
+        "id": "21016",
+        "text": "Environmental pollution is causing abnormal weather conditions."
+      }
+    ],
+    "vocabIds": [
+      "1213280",
+      "1666030",
+      "1179040",
+      "1157760",
+      "1930170",
+      "1222270",
+      "1542030"
+    ],
+    "matches": {
+      "1157760": {
+        "start": 6,
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1179040": {
+        "start": 2,
+        "length": 2,
+        "reading": "おせん"
+      },
+      "1213280": {
+        "start": 0,
+        "length": 2,
+        "reading": "かんきょう"
+      },
+      "1222270": {
+        "start": 8,
+        "length": 2,
+        "reading": "きしょう"
+      },
+      "1542030": {
+        "start": 11,
+        "length": 2,
+        "reading": "ゆうはつ"
+      },
+      "1666030": {
+        "start": 0,
+        "length": 4,
+        "reading": "かんきょうおせん"
+      },
+      "1930170": {
+        "start": 6,
+        "length": 4,
+        "reading": "いじょうきしょう"
+      }
+    }
+  },
+  {
+    "id": "10993939",
+    "original": "気象局は、島に、人員を配置した。",
+    "en": [
+      {
+        "id": "11232873",
+        "text": "The weather bureau stationed personnel on the island."
+      }
+    ],
+    "vocabIds": [
+      "1222270",
+      "2856316",
+      "1239560",
+      "1446760",
+      "1366570",
+      "1473150"
+    ],
+    "matches": {
+      "1222270": {
+        "start": 0,
+        "length": 2,
+        "reading": "きしょう"
+      },
+      "1239560": {
+        "start": 2,
+        "length": 1,
+        "reading": "きょく"
+      },
+      "1366570": {
+        "start": 8,
+        "length": 2,
+        "reading": "じんいん"
+      },
+      "1446760": {
+        "start": 5,
+        "length": 1,
+        "reading": "しま"
+      },
+      "1473150": {
+        "start": 11,
+        "length": 2,
+        "reading": "はいち"
+      },
+      "2856316": {
+        "start": 0,
+        "length": 3,
+        "reading": "きしょうきょく"
       }
     }
   }

@@ -1,5 +1,95 @@
 [
   {
+    "id": "75053",
+    "original": "お世話になった全ての方々にお礼の言葉を述べたいと思います。",
+    "en": [
+      {
+        "id": "328666",
+        "text": "I'd like to say a word of thanks to all those gentlemen and ladies whose care I have been in."
+      }
+    ],
+    "indices": "お世話になる{お世話になった} 全て{全ての} 方々(かたがた)[01] に お礼 の 言葉[02] を 述べる{述べ} たい[01] と 思う{思います}",
+    "vocabIds": [
+      "2144410",
+      "1595730",
+      "1584100",
+      "1270810",
+      "1264540",
+      "1340820",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1264540": {
+        "start": 16,
+        "length": 2,
+        "reading": "ことば"
+      },
+      "1270810": {
+        "start": 13,
+        "length": 2,
+        "reading": "おれい"
+      },
+      "1340820": {
+        "start": 19,
+        "length": 2,
+        "reading": "のべ"
+      },
+      "1584100": {
+        "start": 10,
+        "length": 2,
+        "reading": "かたがた"
+      },
+      "1589320": {
+        "start": 24,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 24,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1595730": {
+        "start": 7,
+        "length": 2,
+        "reading": "すべて"
+      },
+      "2144410": {
+        "start": 0,
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "76511",
+    "original": "ども、愚弟がお世話になってるようで。",
+    "en": [
+      {
+        "id": "327209",
+        "text": "Thanks, I hear you've been taking care of my little brat of a brother."
+      }
+    ],
+    "indices": "どうも[01]{ども} 愚弟[02]~ が お世話になる{お世話になってる} 様(よう){よう} で",
+    "vocabIds": [
+      "1828670",
+      "2144410"
+    ],
+    "matches": {
+      "1828670": {
+        "start": 3,
+        "length": 2,
+        "reading": "ぐてい"
+      },
+      "2144410": {
+        "start": 6,
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
     "id": "83257",
     "original": "弁護士をお世話願えませんか。",
     "en": [
@@ -11,21 +101,18 @@
     "indices": "弁護士 を 御(お){お} 世話[03] 願う[03]{願えません} か",
     "vocabIds": [
       "1512850",
-      "2144410",
-      "1956020"
+      "2144410"
     ],
     "matches": {
       "1512850": {
         "start": 0,
-        "length": 3
-      },
-      "1956020": {
-        "start": 7,
-        "length": 1
+        "length": 3,
+        "reading": "べんごし"
       },
       "2144410": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -54,11 +141,13 @@
     "matches": {
       "1415000": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "2144410": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -76,29 +165,168 @@
       "2078800",
       "1310230",
       "1741260",
+      "1423310",
       "1423320",
       "2144410"
     ],
     "matches": {
       "1310230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "してん"
+      },
+      "1423310": {
+        "start": 7,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1423320": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうには"
       },
       "1741260": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ざいきん"
       },
       "2078800": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おおさか"
       },
       "2144410": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "137748",
+    "original": "大きなお世話だ。",
+    "en": [
+      {
+        "id": "16996",
+        "text": "Mind your own business!"
+      },
+      {
+        "id": "29909",
+        "text": "Mind your own business."
+      },
+      {
+        "id": "324771",
+        "text": "None of your business."
+      },
+      {
+        "id": "514940",
+        "text": "That's none of your business."
+      },
+      {
+        "id": "16994",
+        "text": "It's none of your business."
+      },
+      {
+        "id": "42807",
+        "text": "It is none of your business."
+      },
+      {
+        "id": "665819",
+        "text": "It's none of your business!"
+      },
+      {
+        "id": "1102535",
+        "text": "That's none of your business!"
+      },
+      {
+        "id": "5496609",
+        "text": "That's none of your beeswax."
+      }
+    ],
+    "indices": "大きなお世話 だ",
+    "vocabIds": [
+      "1412890",
+      "1412920",
+      "2144410"
+    ],
+    "matches": {
+      "1412890": {
+        "start": 0,
+        "length": 3,
+        "reading": "おおきな"
+      },
+      "1412920": {
+        "start": 0,
+        "length": 6,
+        "reading": "おおきなおせわ"
+      },
+      "2144410": {
+        "start": 3,
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "140841",
+    "original": "全てを考えると君は故郷へ帰って両親のお世話をするべきだ。",
+    "en": [
+      {
+        "id": "404076",
+        "text": "All things considered, I think you should go back home and take care of your parents."
+      }
+    ],
+    "indices": "全て を 考える と 君(きみ)[01] は 故郷(ふるさと) へ 帰る[01]{帰って} 両親 の お世話をする 可き{べき} だ",
+    "vocabIds": [
+      "1595730",
+      "1281020",
+      "1247250",
+      "1603050",
+      "1221270",
+      "1602710",
+      "2144410",
+      "1949370"
+    ],
+    "matches": {
+      "1221270": {
+        "start": 12,
+        "length": 2,
+        "reading": "かえっ"
+      },
+      "1247250": {
+        "start": 7,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1281020": {
+        "start": 3,
+        "length": 3,
+        "reading": "かんがえる"
+      },
+      "1595730": {
+        "start": 0,
+        "length": 2,
+        "reading": "すべて"
+      },
+      "1602710": {
+        "start": 15,
+        "length": 2,
+        "reading": "りょうしん"
+      },
+      "1603050": {
+        "start": 9,
+        "length": 2,
+        "reading": "こきょう"
+      },
+      "1949370": {
+        "start": 18,
+        "length": 6,
+        "reading": "おせわをする"
+      },
+      "2144410": {
+        "start": 18,
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -120,15 +348,18 @@
     "matches": {
       "1388300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんじつ"
       },
       "1415000": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "2144410": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -143,22 +374,31 @@
     ],
     "indices": "今から 彼女 が 貴方(あなた)[01]{あなた} の お世話をする{お世話をします}~",
     "vocabIds": [
+      "1288850",
       "2663180",
       "1483150",
       "2144410"
     ],
     "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
       "1483150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2144410": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       },
       "2663180": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いまから"
       }
     }
   },
@@ -186,7 +426,8 @@
     "matches": {
       "2144410": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -234,7 +475,8 @@
     "matches": {
       "2144410": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -249,17 +491,70 @@
     ],
     "indices": "ニューヨーク 滞在中 には お世話になる{お世話になりました}",
     "vocabIds": [
+      "1410930",
       "1753700",
+      "1423310",
+      "1423320",
       "2144410"
     ],
     "matches": {
+      "1410930": {
+        "start": 6,
+        "length": 2,
+        "reading": "たいざい"
+      },
+      "1423310": {
+        "start": 8,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1423320": {
+        "start": 8,
+        "length": 3,
+        "reading": "ちゅうには"
+      },
       "1753700": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "たいざいちゅう"
       },
       "2144410": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "204409",
+    "original": "そんなことは余計なお世話だ。",
+    "en": [
+      {
+        "id": "29909",
+        "text": "Mind your own business."
+      }
+    ],
+    "indices": "そんな 事(こと){こと} は 余計なお世話~ だ",
+    "vocabIds": [
+      "1544090",
+      "1544100",
+      "2144410"
+    ],
+    "matches": {
+      "1544090": {
+        "start": 6,
+        "length": 2,
+        "reading": "よけい"
+      },
+      "1544100": {
+        "start": 6,
+        "length": 6,
+        "reading": "よけいなおせわ"
+      },
+      "2144410": {
+        "start": 9,
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -276,40 +571,59 @@
     "vocabIds": [
       "1270810",
       "1362950",
+      "1421970",
       "1421980",
       "1669070",
       "1518120",
+      "1296300",
       "1296330",
       "2144410"
     ],
     "matches": {
       "1270810": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おれい"
+      },
+      "1296300": {
+        "start": 24,
+        "length": 1,
+        "reading": "さい"
       },
       "1296330": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "さいに"
       },
       "1362950": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "もうしあげる"
+      },
+      "1421970": {
+        "start": 10,
+        "length": 2,
+        "reading": "おそく"
       },
       "1421980": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おそく"
       },
       "1518120": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "ほうもん"
       },
       "1669070": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "きこく"
       },
       "2144410": {
         "start": 27,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -325,21 +639,59 @@
     "indices": "お世話になる{お世話になりました} 事(こと){こと} を 深い{深く} 感謝 致す{いたします}",
     "vocabIds": [
       "2144410",
+      "1362640",
       "2843268",
       "1212380"
     ],
     "matches": {
       "1212380": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かんしゃ"
+      },
+      "1362640": {
+        "start": 12,
+        "length": 2,
+        "reading": "ふかく"
       },
       "2144410": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       },
       "2843268": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ふかく"
+      }
+    }
+  },
+  {
+    "id": "226997",
+    "original": "お世話になっております。",
+    "en": [
+      {
+        "id": "64346",
+        "text": "It has always been a pleasure to work with you."
+      },
+      {
+        "id": "12755783",
+        "text": "Thank you for your continued support."
+      },
+      {
+        "id": "64407",
+        "text": "Thank you for your assistance."
+      }
+    ],
+    "indices": "お世話になる{お世話になって} 居る(おる)[02]{おります}",
+    "vocabIds": [
+      "2144410"
+    ],
+    "matches": {
+      "2144410": {
+        "start": 0,
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -371,7 +723,35 @@
     "matches": {
       "2144410": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "228447",
+    "original": "いろいろとお世話になって本当にすみませんでした。",
+    "en": [
+      {
+        "id": "65805",
+        "text": "Thank you very much for everything."
+      }
+    ],
+    "indices": "色々[01]{いろいろと} お世話になる{お世話になって} 本当に 済みません{すみませんでした}",
+    "vocabIds": [
+      "2144410",
+      "1611580"
+    ],
+    "matches": {
+      "1611580": {
+        "start": 12,
+        "length": 3,
+        "reading": "ほんとうに"
+      },
+      "2144410": {
+        "start": 5,
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -395,7 +775,59 @@
     "matches": {
       "2144410": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "228767",
+    "original": "いつもお世話になっていますから、一旦緩急あれば、すぐさま馳せ参じます。",
+    "en": [
+      {
+        "id": "66126",
+        "text": "You're always there for me, so if you're ever in dire straits, just let me know and I'll come running."
+      }
+    ],
+    "indices": "何時も[01]{いつも} お世話になる{お世話になっています} から 一旦 緩急[03]~ 有る{あれば} 直ぐ様{すぐさま} 馳せ参じる{馳せ参じます}~",
+    "vocabIds": [
+      "2144410",
+      "1164650",
+      "2041630",
+      "1214470",
+      "1949560",
+      "2525350"
+    ],
+    "matches": {
+      "1164650": {
+        "start": 16,
+        "length": 2,
+        "reading": "いったん"
+      },
+      "1214470": {
+        "start": 18,
+        "length": 2,
+        "reading": "かんきゅう"
+      },
+      "1949560": {
+        "start": 28,
+        "length": 2,
+        "reading": "はせ"
+      },
+      "2041630": {
+        "start": 16,
+        "length": 4,
+        "reading": "いったんかんきゅう"
+      },
+      "2144410": {
+        "start": 3,
+        "length": 3,
+        "reading": "おせわ"
+      },
+      "2525350": {
+        "start": 30,
+        "length": 2,
+        "reading": "さんじ"
       }
     }
   },
@@ -412,25 +844,98 @@
     "vocabIds": [
       "2144410",
       "1311110",
+      "1577100",
       "1611030",
+      "1218760",
       "1218770"
     ],
     "matches": {
+      "1218760": {
+        "start": 33,
+        "length": 2,
+        "reading": "よろこん"
+      },
       "1218770": {
         "start": 33,
-        "length": 3
+        "length": 3,
+        "reading": "よろこんで"
       },
       "1311110": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1577100": {
+        "start": 30,
+        "length": 1,
+        "reading": "なに"
       },
       "1611030": {
         "start": 30,
-        "length": 3
+        "length": 3,
+        "reading": "なにでも"
       },
       "2144410": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "236264",
+    "original": "新しい靴買おうなんて思ったことあるかって？大きなお世話だよ。",
+    "en": [
+      {
+        "id": "73629",
+        "text": "Have I ever thought of buying a new pair of shoes? Mind your own business."
+      }
+    ],
+    "indices": "新しい 靴 買う[01]{買おう} なんて[01] 思う{思った} 事がある{ことある} か って 大きなお世話~ だ よ",
+    "vocabIds": [
+      "1361490",
+      "1246700",
+      "1473740",
+      "1589350",
+      "1412890",
+      "1412920",
+      "2144410"
+    ],
+    "matches": {
+      "1246700": {
+        "start": 3,
+        "length": 1,
+        "reading": "くつ"
+      },
+      "1361490": {
+        "start": 0,
+        "length": 3,
+        "reading": "あたらしい"
+      },
+      "1412890": {
+        "start": 21,
+        "length": 3,
+        "reading": "おおきな"
+      },
+      "1412920": {
+        "start": 21,
+        "length": 6,
+        "reading": "おおきなおせわ"
+      },
+      "1473740": {
+        "start": 4,
+        "length": 2,
+        "reading": "かお"
+      },
+      "1589350": {
+        "start": 10,
+        "length": 2,
+        "reading": "おもっ"
+      },
+      "2144410": {
+        "start": 24,
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -448,28 +953,45 @@
       "1513410",
       "1378840",
       "2013910",
-      "2144410"
+      "1444680",
+      "2144410",
+      "1421900"
     ],
     "matches": {
       "1287070": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こくみん"
       },
       "1378840": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しょうがい"
+      },
+      "1421900": {
+        "start": 24,
+        "length": 2,
+        "reading": "いたし"
+      },
+      "1444680": {
+        "start": 13,
+        "length": 2,
+        "reading": "わたっ"
       },
       "1513410": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ほけん"
       },
       "2013910": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "にわたって"
       },
       "2144410": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -489,11 +1011,13 @@
     "matches": {
       "1483150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2144410": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -514,15 +1038,62 @@
     "matches": {
       "1219510": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "うれしい"
       },
       "1383260": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "あかちゃん"
       },
       "2144410": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "2223703",
+    "original": "余計なお世話だ。",
+    "en": [
+      {
+        "id": "16994",
+        "text": "It's none of your business."
+      },
+      {
+        "id": "324771",
+        "text": "None of your business."
+      },
+      {
+        "id": "665819",
+        "text": "It's none of your business!"
+      },
+      {
+        "id": "42807",
+        "text": "It is none of your business."
+      }
+    ],
+    "vocabIds": [
+      "1544090",
+      "1544100",
+      "2144410"
+    ],
+    "matches": {
+      "1544090": {
+        "start": 0,
+        "length": 2,
+        "reading": "よけい"
+      },
+      "1544100": {
+        "start": 0,
+        "length": 6,
+        "reading": "よけいなおせわ"
+      },
+      "2144410": {
+        "start": 3,
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -537,22 +1108,267 @@
     ],
     "indices": "子供たち の お世話~ を 手伝う{手伝って} 呉れる{くれない}",
     "vocabIds": [
+      "1307850",
       "1307870",
       "2144410",
       "1328190"
     ],
     "matches": {
+      "1307850": {
+        "start": 0,
+        "length": 2,
+        "reading": "こども"
+      },
       "1307870": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "こどもたち"
       },
       "1328190": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "てつだっ"
       },
       "2144410": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "4301799",
+    "original": "卒業前に、大変お世話になった先生のところへ、お礼のご挨拶に伺った。",
+    "en": [
+      {
+        "id": "4411464",
+        "text": "Before graduation, I went to visit my teacher to express my gratitude for everything he'd done for me."
+      }
+    ],
+    "vocabIds": [
+      "1405890",
+      "1392580",
+      "1392590",
+      "1415000",
+      "2144410",
+      "1387990",
+      "1270810",
+      "2256060",
+      "1151120",
+      "1305700"
+    ],
+    "matches": {
+      "1151120": {
+        "start": 26,
+        "length": 2,
+        "reading": "あいさつ"
+      },
+      "1270810": {
+        "start": 22,
+        "length": 2,
+        "reading": "おれい"
+      },
+      "1305700": {
+        "start": 29,
+        "length": 2,
+        "reading": "うかがっ"
+      },
+      "1387990": {
+        "start": 14,
+        "length": 2,
+        "reading": "せんせい"
+      },
+      "1392580": {
+        "start": 2,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1392590": {
+        "start": 2,
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1405890": {
+        "start": 0,
+        "length": 2,
+        "reading": "そつぎょう"
+      },
+      "1415000": {
+        "start": 5,
+        "length": 2,
+        "reading": "たいへん"
+      },
+      "2144410": {
+        "start": 7,
+        "length": 3,
+        "reading": "おせわ"
+      },
+      "2256060": {
+        "start": 25,
+        "length": 3,
+        "reading": "ごあいさつ"
+      }
+    }
+  },
+  {
+    "id": "889671",
+    "original": "いつもお世話になっております。",
+    "en": [
+      {
+        "id": "6884708",
+        "text": "You're always a great help."
+      }
+    ],
+    "vocabIds": [
+      "2144410"
+    ],
+    "matches": {
+      "2144410": {
+        "start": 3,
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "9307957",
+    "original": "大きなお世話だわ。",
+    "en": [
+      {
+        "id": "29909",
+        "text": "Mind your own business."
+      },
+      {
+        "id": "514940",
+        "text": "That's none of your business."
+      },
+      {
+        "id": "16996",
+        "text": "Mind your own business!"
+      },
+      {
+        "id": "1102535",
+        "text": "That's none of your business!"
+      },
+      {
+        "id": "5496609",
+        "text": "That's none of your beeswax."
+      }
+    ],
+    "vocabIds": [
+      "1412890",
+      "1412920",
+      "2144410"
+    ],
+    "matches": {
+      "1412890": {
+        "start": 0,
+        "length": 3,
+        "reading": "おおきな"
+      },
+      "1412920": {
+        "start": 0,
+        "length": 6,
+        "reading": "おおきなおせわ"
+      },
+      "2144410": {
+        "start": 3,
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "9878619",
+    "original": "いつも大変お世話になっております。",
+    "en": [
+      {
+        "id": "9878514",
+        "text": "Thank you very much for your cooperation."
+      }
+    ],
+    "vocabIds": [
+      "1415000",
+      "2144410"
+    ],
+    "matches": {
+      "1415000": {
+        "start": 3,
+        "length": 2,
+        "reading": "たいへん"
+      },
+      "2144410": {
+        "start": 5,
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "8602049",
+    "original": "在校生たちは、お世話になった先輩たちにきれいな花束を贈る計画を立てていた。",
+    "en": [
+      {
+        "id": "10124423",
+        "text": "Our current students have been planning on giving beautiful bouquets of flowers to seniors who have helped them."
+      }
+    ],
+    "vocabIds": [
+      "1296490",
+      "2144410",
+      "1388410",
+      "1194790",
+      "1403550",
+      "1252090",
+      "1551530",
+      "2081610",
+      "2016360"
+    ],
+    "matches": {
+      "1194790": {
+        "start": 23,
+        "length": 2,
+        "reading": "はなたば"
+      },
+      "1252090": {
+        "start": 28,
+        "length": 2,
+        "reading": "けいかく"
+      },
+      "1296490": {
+        "start": 0,
+        "length": 3,
+        "reading": "ざいこうせい"
+      },
+      "1388410": {
+        "start": 14,
+        "length": 2,
+        "reading": "せんぱい"
+      },
+      "1403550": {
+        "start": 26,
+        "length": 2,
+        "reading": "おくる"
+      },
+      "1551530": {
+        "start": 31,
+        "length": 2,
+        "reading": "たて"
+      },
+      "2016360": {
+        "start": 31,
+        "length": 3,
+        "reading": "たてて"
+      },
+      "2081610": {
+        "start": 31,
+        "length": 2,
+        "reading": "たて"
+      },
+      "2144410": {
+        "start": 7,
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -567,21 +1383,68 @@
     ],
     "vocabIds": [
       "1002590",
+      "1429750",
       "1429760",
+      "1215230",
       "2144410"
     ],
     "matches": {
       "1002590": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "おとうさん"
+      },
+      "1215230": {
+        "start": 7,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1429750": {
+        "start": 5,
+        "length": 2,
+        "reading": "ながい"
       },
       "1429760": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ながいま"
       },
       "2144410": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "1019459",
+    "original": "余計なお世話するな！",
+    "en": [
+      {
+        "id": "16996",
+        "text": "Mind your own business!"
+      }
+    ],
+    "vocabIds": [
+      "1544090",
+      "1544100",
+      "2144410"
+    ],
+    "matches": {
+      "1544090": {
+        "start": 0,
+        "length": 2,
+        "reading": "よけい"
+      },
+      "1544100": {
+        "start": 0,
+        "length": 6,
+        "reading": "よけいなおせわ"
+      },
+      "2144410": {
+        "start": 3,
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   },
@@ -603,19 +1466,49 @@
     "matches": {
       "1304970": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1383260": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "あかちゃん"
       },
       "2144410": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おせわ"
+      }
+    }
+  },
+  {
+    "id": "11030191",
+    "original": "これからお世話になるね。",
+    "en": [
+      {
+        "id": "13743931",
+        "text": "I'll be in your care from now on."
+      }
+    ],
+    "vocabIds": [
+      "2144410",
+      "1002260"
+    ],
+    "matches": {
+      "1002260": {
+        "start": 4,
+        "length": 6,
+        "reading": "おせわになる"
+      },
+      "2144410": {
+        "start": 4,
+        "length": 3,
+        "reading": "おせわ"
       }
     }
   }

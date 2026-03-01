@@ -11,6 +11,7 @@
     "indices": "彼(かれ)[01] は 大の[03] 相撲 狂[01] だ",
     "vocabIds": [
       "1483070",
+      "2082450",
       "2229100",
       "1401360",
       "2081470"
@@ -18,19 +19,79 @@
     "matches": {
       "1401360": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "2081470": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "きょう"
+      },
+      "2082450": {
+        "start": 2,
+        "length": 1,
+        "reading": "だい"
       },
       "2229100": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "だいの"
+      }
+    }
+  },
+  {
+    "id": "102823",
+    "original": "彼は相撲取りとしては少し軽い。",
+    "en": [
+      {
+        "id": "300871",
+        "text": "He is a little light for a sumo wrestler."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 相撲取り としては 少し 軽い",
+    "vocabIds": [
+      "1483070",
+      "1401360",
+      "1401380",
+      "2451270",
+      "1348870",
+      "1252560"
+    ],
+    "matches": {
+      "1252560": {
+        "start": 12,
+        "length": 2,
+        "reading": "かるい"
+      },
+      "1348870": {
+        "start": 10,
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1401360": {
+        "start": 2,
+        "length": 2,
+        "reading": "すもう"
+      },
+      "1401380": {
+        "start": 2,
+        "length": 4,
+        "reading": "すもうとり"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2451270": {
+        "start": 4,
+        "length": 2,
+        "reading": "とり"
       }
     }
   },
@@ -46,26 +107,57 @@
     "indices": "彼(かれ)[01] は 相撲 を 腕組み{腕組} を 為る(する){して} 見つめる{みつめていた}",
     "vocabIds": [
       "1483070",
-      "1401360",
-      "1562850",
-      "1397450"
+      "1401360"
     ],
     "matches": {
-      "1397450": {
-        "start": 7,
-        "length": 1
-      },
       "1401360": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "122682",
+    "original": "彼らは日本のお相撲さんだよ。",
+    "en": [
+      {
+        "id": "281320",
+        "text": "They are Japanese sumo wrestlers."
+      }
+    ],
+    "indices": "彼ら(かれら) は 日本 の 御(お){お} 相撲 さん だ よ[01]",
+    "vocabIds": [
+      "1483090",
+      "1582710",
+      "2817040",
+      "1401360"
+    ],
+    "matches": {
+      "1401360": {
+        "start": 7,
+        "length": 2,
+        "reading": "すもう"
       },
-      "1562850": {
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1582710": {
+        "start": 3,
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "2817040": {
         "start": 6,
-        "length": 1
+        "length": 5,
+        "reading": "おすもうさん"
       }
     }
   },
@@ -81,16 +173,24 @@
     "indices": "相撲 を 見る{見た} 事がある{ことがあります} か",
     "vocabIds": [
       "1401360",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1259290": {
         "start": 3,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1401360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
+      },
+      "2256270": {
+        "start": 3,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -115,20 +215,35 @@
     "vocabIds": [
       "1401360",
       "1582710",
-      "1442270"
+      "1442260",
+      "1442270",
+      "1437260"
     ],
     "matches": {
       "1401360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
+      },
+      "1437260": {
+        "start": 8,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1442260": {
+        "start": 6,
+        "length": 2,
+        "reading": "でんとう"
       },
       "1442270": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "でんとうてき"
       },
       "1582710": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
       }
     }
   },
@@ -145,20 +260,29 @@
     "vocabIds": [
       "1401360",
       "1483150",
-      "2527500"
+      "1238410",
+      "1315720"
     ],
     "matches": {
+      "1238410": {
+        "start": 25,
+        "length": 2,
+        "reading": "きょうみ"
+      },
+      "1315720": {
+        "start": 28,
+        "length": 2,
+        "reading": "もた"
+      },
       "1401360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
       },
       "1483150": {
         "start": 19,
-        "length": 2
-      },
-      "2527500": {
-        "start": 25,
-        "length": 7
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -174,31 +298,105 @@
     "indices": "講堂 が 暑い{暑く} 成る[01]{なる} と 何時も[01]{いつも} 私(わたし)[01] は ファン を 相撲 に 連れて行く{連れていく}",
     "vocabIds": [
       "1282340",
-      "2656110",
+      "1343460",
       "1311110",
       "1401360",
-      "2079370"
+      "2136050",
+      "2079370",
+      "1559290",
+      "1559260",
+      "1559280"
     ],
     "matches": {
       "1282340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうどう"
       },
       "1311110": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1343460": {
+        "start": 3,
+        "length": 2,
+        "reading": "あつく"
       },
       "1401360": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
+      },
+      "1559260": {
+        "start": 21,
+        "length": 2,
+        "reading": "つれ"
+      },
+      "1559280": {
+        "start": 21,
+        "length": 3,
+        "reading": "つれて"
+      },
+      "1559290": {
+        "start": 21,
+        "length": 2,
+        "reading": "つれ"
       },
       "2079370": {
         "start": 20,
-        "length": 4
+        "length": 4,
+        "reading": "につれて"
       },
-      "2656110": {
-        "start": 3,
-        "length": 1
+      "2136050": {
+        "start": 20,
+        "length": 3,
+        "reading": "につれ"
+      }
+    }
+  },
+  {
+    "id": "177082",
+    "original": "君は相撲取りの隣にくるとちっぽけにみえる。",
+    "en": [
+      {
+        "id": "15930",
+        "text": "You look tiny next to a sumo wrestler."
+      }
+    ],
+    "indices": "君(きみ)[01] は 相撲取り の 隣 に 来る(くる){くる} と ちっぽけ に 見える(みえる){みえる}",
+    "vocabIds": [
+      "1247250",
+      "1401360",
+      "1401380",
+      "2451270",
+      "1555830"
+    ],
+    "matches": {
+      "1247250": {
+        "start": 0,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1401360": {
+        "start": 2,
+        "length": 2,
+        "reading": "すもう"
+      },
+      "1401380": {
+        "start": 2,
+        "length": 4,
+        "reading": "すもうとり"
+      },
+      "1555830": {
+        "start": 7,
+        "length": 1,
+        "reading": "となり"
+      },
+      "2451270": {
+        "start": 4,
+        "length": 2,
+        "reading": "とり"
       }
     }
   },
@@ -224,15 +422,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1351730": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "くわしい"
       },
       "1401360": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
       }
     }
   },
@@ -251,28 +452,39 @@
       "1307640",
       "1401360",
       "1259290",
+      "2256270",
       "1207270"
     ],
     "matches": {
       "1207270": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "たのしん"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1259290": {
         "start": 13,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1307640": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ねえさん"
       },
       "1401360": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
+      },
+      "2256270": {
+        "start": 13,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -290,29 +502,40 @@
       "1155150",
       "1401360",
       "1259290",
-      "1004540",
+      "2256270",
+      "1313580",
       "1420470"
     ],
     "matches": {
-      "1004540": {
-        "start": 13,
-        "length": 5
-      },
       "1155150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いぜん"
       },
       "1259290": {
         "start": 11,
-        "length": 2
+        "length": 1,
+        "reading": "み"
+      },
+      "1313580": {
+        "start": 13,
+        "length": 1,
+        "reading": "こと"
       },
       "1401360": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
       },
       "1420470": {
         "start": 29,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
+      },
+      "2256270": {
+        "start": 11,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -335,19 +558,23 @@
     "matches": {
       "1259290": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "みる"
       },
       "1313580": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1401360": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
       },
       "1589350": {
         "start": 26,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -366,38 +593,102 @@
       "1226160",
       "1401360",
       "1277450",
+      "1203620",
       "1203650",
+      "1580640",
       "1407460",
       "1264670"
     ],
     "matches": {
+      "1203620": {
+        "start": 18,
+        "length": 2,
+        "reading": "がいこく"
+      },
       "1203650": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "がいこくじん"
       },
       "1226160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぎろん"
       },
       "1264670": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "げんてい"
       },
       "1277450": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1401360": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
       },
       "1407460": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "おおい"
+      },
+      "1580640": {
+        "start": 20,
+        "length": 1,
+        "reading": "じん"
+      }
+    }
+  },
+  {
+    "id": "235560",
+    "original": "２５０キロというのは相撲取りとしても並外れた体重だ。",
+    "en": [
+      {
+        "id": "72940",
+        "text": "Two hundred fifty kilograms is an extraordinary weight even for a sumo wrestler."
+      }
+    ],
+    "indices": "キロ と言うのは[01]{というのは} 相撲取り~ としても 並外れる{並外れた} 体重 だ",
+    "vocabIds": [
+      "1401360",
+      "1401380",
+      "2451270",
+      "1599670",
+      "1409540"
+    ],
+    "matches": {
+      "1401360": {
+        "start": 10,
+        "length": 2,
+        "reading": "すもう"
+      },
+      "1401380": {
+        "start": 10,
+        "length": 4,
+        "reading": "すもうとり"
+      },
+      "1409540": {
+        "start": 22,
+        "length": 2,
+        "reading": "たいじゅう"
+      },
+      "1599670": {
+        "start": 18,
+        "length": 3,
+        "reading": "なみはずれ"
+      },
+      "2451270": {
+        "start": 12,
+        "length": 2,
+        "reading": "とり"
       }
     }
   },
@@ -417,11 +708,13 @@
     "matches": {
       "1214960": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんせん"
       },
       "1401360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すもう"
       }
     }
   }

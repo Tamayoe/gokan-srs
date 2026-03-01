@@ -16,11 +16,13 @@
     "matches": {
       "1401000": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あいて"
       },
       "1609750": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こいする"
       }
     }
   },
@@ -39,33 +41,51 @@
       "1609750",
       "1401000",
       "1344970",
+      "1158050",
       "2806420",
+      "1524590",
       "1587040"
     ],
     "matches": {
+      "1158050": {
+        "start": 18,
+        "length": 2,
+        "reading": "いぼ"
+      },
       "1344970": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1401000": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "あいて"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
+      },
+      "1524590": {
+        "start": 20,
+        "length": 1,
+        "reading": "いもうと"
       },
       "1587040": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "いう"
       },
       "1609750": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "こいする"
       },
       "2806420": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "いぼいもうと"
       }
     }
   },
@@ -86,20 +106,29 @@
     "vocabIds": [
       "1247250",
       "1609750",
+      "1324300",
       "2193250"
     ],
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1324300": {
+        "start": 7,
+        "length": 1,
+        "reading": "わか"
       },
       "1609750": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "こいする"
       },
       "2193250": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わか"
       }
     }
   },
@@ -120,11 +149,13 @@
     "matches": {
       "1307770": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1609750": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "こいする"
       }
     }
   },
@@ -140,6 +171,7 @@
     "indices": "然し{しかし} 其の[01]{その} 時(とき) 彼(かれ)[01] は 倫敦{ロンドン} で(#2028980) 語学[01] を 学ぶ{学んでいる} 学生(がくせい) の ワイルド~ を 恋する 様になる{ようになった}",
     "vocabIds": [
       "2002300",
+      "1315840",
       "1483070",
       "1271010",
       "1206530",
@@ -149,27 +181,64 @@
     "matches": {
       "1206530": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "まなん"
       },
       "1206900": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1271010": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ごがく"
+      },
+      "1315840": {
+        "start": 6,
+        "length": 1,
+        "reading": "とき"
       },
       "1483070": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1609750": {
         "start": 36,
-        "length": 3
+        "length": 3,
+        "reading": "こいする"
       },
       "2002300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "そのとき"
+      }
+    }
+  },
+  {
+    "id": "10185263",
+    "original": "君に恋してたんだ。",
+    "en": [
+      {
+        "id": "9819361",
+        "text": "I was in love with you."
+      }
+    ],
+    "vocabIds": [
+      "1247250",
+      "1609750"
+    ],
+    "matches": {
+      "1247250": {
+        "start": 0,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1609750": {
+        "start": 2,
+        "length": 2,
+        "reading": "こいし"
       }
     }
   }

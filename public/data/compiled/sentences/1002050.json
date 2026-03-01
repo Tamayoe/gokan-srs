@@ -1,53 +1,5 @@
 [
   {
-    "id": "227089",
-    "original": "お邪魔しました。",
-    "en": [
-      {
-        "id": "64438",
-        "text": "Thank you very much for your hospitality."
-      },
-      {
-        "id": "870625",
-        "text": "Sorry for the interruption."
-      }
-    ],
-    "indices": "御(お){お} 邪魔 為る(する){しました}",
-    "vocabIds": [
-      "1002050"
-    ],
-    "matches": {
-      "1002050": {
-        "start": 0,
-        "length": 7
-      }
-    }
-  },
-  {
-    "id": "8898998",
-    "original": "先日はお邪魔しました。",
-    "en": [
-      {
-        "id": "273082",
-        "text": "Forgive me for interrupting you the other day."
-      }
-    ],
-    "vocabIds": [
-      "1388300",
-      "1002050"
-    ],
-    "matches": {
-      "1002050": {
-        "start": 3,
-        "length": 7
-      },
-      "1388300": {
-        "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
     "id": "13117622",
     "original": "お邪魔します。",
     "en": [
@@ -61,12 +13,25 @@
       }
     ],
     "vocabIds": [
-      "1002050"
+      "2157330",
+      "1002050",
+      "1323500"
     ],
     "matches": {
       "1002050": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "おじゃまします"
+      },
+      "1323500": {
+        "start": 1,
+        "length": 2,
+        "reading": "じゃま"
+      },
+      "2157330": {
+        "start": 0,
+        "length": 3,
+        "reading": "おじゃま"
       }
     }
   }

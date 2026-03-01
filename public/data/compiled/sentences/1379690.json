@@ -16,11 +16,13 @@
     "matches": {
       "1214810": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かんきゃく"
       },
       "1379690": {
         "start": 3,
-        "length": 6
+        "length": 5,
+        "reading": "もりあがっ"
       }
     }
   },
@@ -35,22 +37,37 @@
     ],
     "indices": "火山活動~ で(#2028980) 地面 が 盛り上がる[01]{盛り上がった}~",
     "vocabIds": [
+      "1193910",
       "1193930",
+      "1208360",
       "1421510",
       "1379690"
     ],
     "matches": {
+      "1193910": {
+        "start": 0,
+        "length": 2,
+        "reading": "かざん"
+      },
       "1193930": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "かざんかつどう"
+      },
+      "1208360": {
+        "start": 2,
+        "length": 2,
+        "reading": "かつどう"
       },
       "1379690": {
         "start": 8,
-        "length": 6
+        "length": 5,
+        "reading": "もりあがっ"
       },
       "1421510": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じめん"
       }
     }
   },
@@ -65,17 +82,13 @@
     ],
     "indices": "ゲーム で(#2028980) 一段(いちだん)[01]{一段と} 盛り上がる[02]{盛り上がった}",
     "vocabIds": [
-      "1164690",
       "1379690"
     ],
     "matches": {
-      "1164690": {
-        "start": 4,
-        "length": 2
-      },
       "1379690": {
         "start": 7,
-        "length": 6
+        "length": 5,
+        "reading": "もりあがっ"
       }
     }
   },
@@ -90,9 +103,12 @@
     ],
     "indices": "おいおい[01]~ 一枚看板 の お前[01] が 来る(くる)[01]{来れない} ん[03] じゃ(#2851029) 今日 の 合コン~ 盛り上がる[02]{盛り上がらない} よ[01]",
     "vocabIds": [
+      "1160790",
+      "1166710",
       "1166740",
+      "1524610",
+      "1213990",
       "1002290",
-      "1547710",
       "1579110",
       "1951580",
       "1379690"
@@ -100,27 +116,48 @@
     "matches": {
       "1002290": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
+      },
+      "1160790": {
+        "start": 5,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1166710": {
+        "start": 5,
+        "length": 2,
+        "reading": "いちまい"
       },
       "1166740": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "いちまいかんばん"
+      },
+      "1213990": {
+        "start": 7,
+        "length": 2,
+        "reading": "かんばん"
       },
       "1379690": {
         "start": 27,
-        "length": 7
+        "length": 5,
+        "reading": "もりあがら"
       },
-      "1547710": {
-        "start": 13,
-        "length": 1
+      "1524610": {
+        "start": 6,
+        "length": 1,
+        "reading": "まい"
       },
       "1579110": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1951580": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "ごうこん"
       }
     }
   },
@@ -141,15 +178,38 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1379690": {
         "start": 8,
-        "length": 6
+        "length": 5,
+        "reading": "もりあがっ"
       },
       "1516930": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
+      }
+    }
+  },
+  {
+    "id": "3507460",
+    "original": "さあ、みんなで盛り上がろう！",
+    "en": [
+      {
+        "id": "1345555",
+        "text": "Let's party!"
+      }
+    ],
+    "vocabIds": [
+      "1379690"
+    ],
+    "matches": {
+      "1379690": {
+        "start": 7,
+        "length": 5,
+        "reading": "もりあがろ"
       }
     }
   },
@@ -170,15 +230,62 @@
     "matches": {
       "1239700": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きょく"
       },
       "1379690": {
         "start": 11,
-        "length": 5
+        "length": 5,
+        "reading": "もりあがる"
       },
       "1591110": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
+      }
+    }
+  },
+  {
+    "id": "9832924",
+    "original": "みなさん、今宵はたくさん飲んで食べて盛り上がりましょう！",
+    "en": [
+      {
+        "id": "10180725",
+        "text": "Everybody, let's eat and drink in plenty and have a great time tonight!"
+      }
+    ],
+    "vocabIds": [
+      "1289260",
+      "1169870",
+      "1358280",
+      "1379690",
+      "1379680"
+    ],
+    "matches": {
+      "1169870": {
+        "start": 12,
+        "length": 2,
+        "reading": "のん"
+      },
+      "1289260": {
+        "start": 5,
+        "length": 2,
+        "reading": "こよい"
+      },
+      "1358280": {
+        "start": 15,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1379680": {
+        "start": 18,
+        "length": 5,
+        "reading": "もりあがり"
+      },
+      "1379690": {
+        "start": 18,
+        "length": 5,
+        "reading": "もりあがり"
       }
     }
   }

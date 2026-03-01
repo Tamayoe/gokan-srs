@@ -19,11 +19,13 @@
     "matches": {
       "1328190": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "てつだっ"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -39,26 +41,24 @@
     "indices": "お前 に 付き合う 程{ほど} 暇(ひま)[01] だ{じゃない} 何か{なんか} しょぼん~ だ よ{よぉ}",
     "vocabIds": [
       "1002290",
-      "1009850",
-      "1284430",
+      "1597790",
       "1577280"
     ],
     "matches": {
       "1002290": {
         "start": 1,
-        "length": 2
-      },
-      "1009850": {
-        "start": 3,
-        "length": 3
-      },
-      "1284430": {
-        "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
       },
       "1577280": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1597790": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -77,28 +77,39 @@
       "1503160",
       "1304970",
       "1328190",
+      "1547720",
       "2742070"
     ],
     "matches": {
       "1304970": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1328190": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "てつだっ"
       },
       "1503160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぶんけ"
+      },
+      "1547720": {
+        "start": 13,
+        "length": 2,
+        "reading": "こい"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2742070": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "こい"
       }
     }
   },
@@ -121,19 +132,23 @@
     "matches": {
       "1419370": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       },
       "1542160": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "あそん"
       },
       "1559160": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "れんしゅう"
       },
       "1577280": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -156,19 +171,56 @@
     "matches": {
       "1249930": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "あにき"
       },
       "1305990": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
       },
       "1399790": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "そうじ"
       },
       "1577280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "78152",
+    "original": "旅行をする暇がない。",
+    "en": [
+      {
+        "id": "325566",
+        "text": "I can't afford the time to travel."
+      }
+    ],
+    "indices": "旅行 を 為る(する)[01]{する} 暇がない~",
+    "vocabIds": [
+      "1553170",
+      "1577280",
+      "1904710"
+    ],
+    "matches": {
+      "1553170": {
+        "start": 0,
+        "length": 2,
+        "reading": "りょこう"
+      },
+      "1577280": {
+        "start": 5,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1904710": {
+        "start": 5,
+        "length": 4,
+        "reading": "ひまがない"
       }
     }
   },
@@ -191,19 +243,23 @@
     "matches": {
       "1242590": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1553170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       },
       "1577280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1578850": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -225,15 +281,114 @@
     "matches": {
       "1445590": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "どようび"
       },
       "1548010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "らいしゅう"
       },
       "1577280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "80485",
+    "original": "明日の夕方はお暇ですか。",
+    "en": [
+      {
+        "id": "323232",
+        "text": "Are you free tomorrow evening?"
+      }
+    ],
+    "indices": "明日 の 夕方 は 御(お){お} 暇(ひま)[01] ですか",
+    "vocabIds": [
+      "1584660",
+      "1542790",
+      "2016850",
+      "1577280"
+    ],
+    "matches": {
+      "1542790": {
+        "start": 3,
+        "length": 2,
+        "reading": "ゆうがた"
+      },
+      "1577280": {
+        "start": 7,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      },
+      "2016850": {
+        "start": 6,
+        "length": 2,
+        "reading": "おひま"
+      }
+    }
+  },
+  {
+    "id": "80624",
+    "original": "明日お暇ならば、京都のあちこちをご案内できます。",
+    "en": [
+      {
+        "id": "323093",
+        "text": "If you are free tomorrow, I can show you around Kyoto."
+      }
+    ],
+    "indices": "明日 御(お){お} 暇(ひま)[01] なら{ならば} 京都 の 彼方此方[01]{あちこち} を ご案内[01]~ 出来る{できます}",
+    "vocabIds": [
+      "1584660",
+      "2016850",
+      "2821310",
+      "1577280",
+      "1652350",
+      "2833392",
+      "1154860"
+    ],
+    "matches": {
+      "1154860": {
+        "start": 17,
+        "length": 2,
+        "reading": "あんない"
+      },
+      "1577280": {
+        "start": 3,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      },
+      "1652350": {
+        "start": 8,
+        "length": 2,
+        "reading": "きょうと"
+      },
+      "2016850": {
+        "start": 2,
+        "length": 2,
+        "reading": "おひま"
+      },
+      "2821310": {
+        "start": 2,
+        "length": 4,
+        "reading": "おひまなら"
+      },
+      "2833392": {
+        "start": 16,
+        "length": 3,
+        "reading": "ごあんない"
       }
     }
   },
@@ -259,15 +414,18 @@
     "matches": {
       "1456360": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "よむ"
       },
       "1522150": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -288,11 +446,13 @@
     "matches": {
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -307,6 +467,7 @@
     ],
     "indices": "僕たち は ゲーム を 楽しむ 為(ため){ため} と言うより{というより} 唯[01]{ただ} 暇を潰す{暇をつぶす} 為に{ために} チェス を 為る(する){した}",
     "vocabIds": [
+      "1521400",
       "1521420",
       "1207270",
       "1577280"
@@ -314,15 +475,23 @@
     "matches": {
       "1207270": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "たのしむ"
+      },
+      "1521400": {
+        "start": 0,
+        "length": 1,
+        "reading": "ぼく"
       },
       "1521420": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ぼくたち"
       },
       "1577280": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -337,6 +506,7 @@
     ],
     "indices": "忙しい(いそがしい){忙しくて} 私(わたし)[01] に メール(#1132620)[01] 出す 暇(ひま)[02] も 無い{ない} の かな",
     "vocabIds": [
+      "1519290",
       "1311110",
       "1338180",
       "1577280"
@@ -344,15 +514,68 @@
     "matches": {
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1338180": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "だす"
+      },
+      "1519290": {
+        "start": 0,
+        "length": 3,
+        "reading": "いそがしく"
       },
       "1577280": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "82535",
+    "original": "忙しい蜂は悲しんでいる暇がない。",
+    "en": [
+      {
+        "id": "321181",
+        "text": "The busy bee has no time for sorrow."
+      }
+    ],
+    "indices": "忙しい(いそがしい) 蜂 は 悲しむ{悲しんでいる} 暇がない",
+    "vocabIds": [
+      "1519290",
+      "1517840",
+      "1483200",
+      "1577280",
+      "1904710"
+    ],
+    "matches": {
+      "1483200": {
+        "start": 5,
+        "length": 3,
+        "reading": "かなしん"
+      },
+      "1517840": {
+        "start": 3,
+        "length": 1,
+        "reading": "はち"
+      },
+      "1519290": {
+        "start": 0,
+        "length": 3,
+        "reading": "いそがしい"
+      },
+      "1577280": {
+        "start": 11,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1904710": {
+        "start": 11,
+        "length": 4,
+        "reading": "ひまがない"
       }
     }
   },
@@ -379,19 +602,23 @@
     "matches": {
       "1298730": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "さっし"
       },
       "1343950": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かく"
       },
       "1512220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "へんじ"
       },
       "1577280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -409,24 +636,95 @@
       "1497610",
       "1464900",
       "1577280",
-      "2070730"
+      "2070730",
+      "1264640"
     ],
     "matches": {
+      "1264640": {
+        "start": 12,
+        "length": 2,
+        "reading": "かぎら"
+      },
       "1464900": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1577280": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2070730": {
         "start": 10,
-        "length": 6
+        "length": 6,
+        "reading": "とはかぎらない"
+      }
+    }
+  },
+  {
+    "id": "84627",
+    "original": "父は暇なときにはよく推理小説を読んでいました。",
+    "en": [
+      {
+        "id": "319087",
+        "text": "Father would often read detective stories in his spare time."
+      },
+      {
+        "id": "12459204",
+        "text": "My father often reads detective novels in his free time."
+      }
+    ],
+    "indices": "父 は 暇な時{暇なとき} には 良く[02]{よく} 推理小説 を 読む{読んでいました}",
+    "vocabIds": [
+      "1497610",
+      "1577280",
+      "1192790",
+      "1371220",
+      "1713000",
+      "1348430",
+      "1456360"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 2,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1348430": {
+        "start": 12,
+        "length": 2,
+        "reading": "しょうせつ"
+      },
+      "1371220": {
+        "start": 10,
+        "length": 2,
+        "reading": "すいり"
+      },
+      "1456360": {
+        "start": 15,
+        "length": 2,
+        "reading": "よん"
+      },
+      "1497610": {
+        "start": 0,
+        "length": 1,
+        "reading": "ちち"
+      },
+      "1577280": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1713000": {
+        "start": 10,
+        "length": 4,
+        "reading": "すいりしょうせつ"
       }
     }
   },
@@ -444,24 +742,118 @@
       "1497610",
       "1577280",
       "1434040",
+      "1578850",
       "1578790"
     ],
     "matches": {
       "1434040": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "つり"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1578790": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 11,
+        "length": 2,
+        "reading": "いき"
+      }
+    }
+  },
+  {
+    "id": "84678",
+    "original": "父はとても忙しいので本を読む暇がない。",
+    "en": [
+      {
+        "id": "319036",
+        "text": "My father, who is very busy, has no time to read books."
+      }
+    ],
+    "indices": "父 は 迚も[01]{とても} 忙しい(いそがしい) ので 本(ほん)[01] を 読む 暇がない",
+    "vocabIds": [
+      "1497610",
+      "1519290",
+      "1522150",
+      "1456360",
+      "1577280",
+      "1904710"
+    ],
+    "matches": {
+      "1456360": {
+        "start": 12,
+        "length": 2,
+        "reading": "よむ"
+      },
+      "1497610": {
+        "start": 0,
+        "length": 1,
+        "reading": "ちち"
+      },
+      "1519290": {
+        "start": 5,
+        "length": 3,
+        "reading": "いそがしい"
+      },
+      "1522150": {
+        "start": 10,
+        "length": 1,
+        "reading": "ほん"
+      },
+      "1577280": {
+        "start": 14,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1904710": {
+        "start": 14,
+        "length": 4,
+        "reading": "ひまがない"
+      }
+    }
+  },
+  {
+    "id": "85145",
+    "original": "貧乏暇なしですよ。",
+    "en": [
+      {
+        "id": "318568",
+        "text": "Poor men have no leisure."
+      }
+    ],
+    "indices": "貧乏暇なし~ です よ[01]",
+    "vocabIds": [
+      "1490900",
+      "2166580",
+      "1577280"
+    ],
+    "matches": {
+      "1490900": {
+        "start": 0,
+        "length": 2,
+        "reading": "びんぼう"
+      },
+      "1577280": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2166580": {
+        "start": 0,
+        "length": 5,
+        "reading": "びんぼうひまなし"
       }
     }
   },
@@ -485,23 +877,28 @@
     "matches": {
       "1289370": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こんど"
       },
       "1311110": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1464900": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1577280": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -523,15 +920,57 @@
     "matches": {
       "1315750": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "もてあまし"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1577280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "90833",
+    "original": "彼女は暇なときは、ほとんどピアノを弾いている。",
+    "en": [
+      {
+        "id": "312879",
+        "text": "She gives most of her spare time to playing the piano."
+      }
+    ],
+    "indices": "彼女[01] は 暇な時{暇なとき} は 殆ど{ほとんど} ピアノ[01] を 弾く(ひく){弾いている}",
+    "vocabIds": [
+      "1483150",
+      "1577280",
+      "1192790",
+      "1419370"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 3,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1419370": {
+        "start": 17,
+        "length": 2,
+        "reading": "ひい"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1577280": {
+        "start": 3,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -552,36 +991,13 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1577280": {
         "start": 3,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "97454",
-    "original": "彼らは暇潰しのためおしゃべりをした。",
-    "en": [
-      {
-        "id": "306248",
-        "text": "They chatted with each other to pass the time."
-      }
-    ],
-    "indices": "彼ら(かれら) は 暇潰し[01] の 為(ため){ため} お喋り{おしゃべり} を 為る(する){した}",
-    "vocabIds": [
-      "1483090",
-      "1577280"
-    ],
-    "matches": {
-      "1483090": {
-        "start": 0,
-        "length": 2
-      },
-      "1577280": {
-        "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -599,29 +1015,40 @@
       "1483090",
       "1577280",
       "1603990",
+      "1228650",
       "1228570",
       "1535880"
     ],
     "matches": {
       "1228570": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 13,
+        "length": 2,
+        "reading": "いそい"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1535880": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "もどっ"
       },
       "1577280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1603990": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "まち"
       }
     }
   },
@@ -642,11 +1069,13 @@
     "matches": {
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1577280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -668,15 +1097,18 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1584660": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -698,15 +1130,18 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1577280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1584660": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -729,19 +1164,56 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1519290": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       },
       "1577280": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1589350": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
+      }
+    }
+  },
+  {
+    "id": "109210",
+    "original": "彼は暇なときにそれをやった。",
+    "en": [
+      {
+        "id": "294479",
+        "text": "He did it at his leisure."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 暇な時{暇なとき} に 其れ[01]{それ} を 遣る{やった}",
+    "vocabIds": [
+      "1483070",
+      "1577280",
+      "1192790"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 2,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577280": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -765,23 +1237,28 @@
     "matches": {
       "1315920": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1549660": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "りよう"
       },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1609800": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "さいだいげん"
       }
     }
   },
@@ -799,24 +1276,28 @@
       "1483070",
       "1577280",
       "1233180",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1233180": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "さかなつり"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
-      "1589060": {
+      "1578850": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -838,15 +1319,18 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1529520": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
       },
       "1577280": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -872,31 +1356,38 @@
     "matches": {
       "1304970": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1350340": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しょうぼう"
       },
       "1394800": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "まったく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1577280": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1587040": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いう"
       },
       "2012170": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "おおいそがし"
       }
     }
   },
@@ -913,25 +1404,35 @@
     "vocabIds": [
       "1589730",
       "1577280",
+      "1289470",
       "1289480",
       "1196970"
     ],
     "matches": {
       "1196970": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "がまん"
+      },
+      "1289470": {
+        "start": 15,
+        "length": 2,
+        "reading": "こんばん"
       },
       "1289480": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "こんばんは"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1589730": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かいもの"
       }
     }
   },
@@ -955,23 +1456,77 @@
     "matches": {
       "1293700": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1463770": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1464900": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1577280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "123365",
+    "original": "読書をする暇がないほど多忙な人はいない。",
+    "en": [
+      {
+        "id": "280633",
+        "text": "Nobody is so busy that they cannot find time to read."
+      },
+      {
+        "id": "6873336",
+        "text": "No one is so busy that they can't find time to read."
+      }
+    ],
+    "indices": "読書 を 為る(する)[01]{する} 暇がない 程{ほど} 多忙{多忙な} 人(ひと) は 居る(いる)[01]{いない}",
+    "vocabIds": [
+      "1456420",
+      "1577280",
+      "1904710",
+      "1408040",
+      "1580640"
+    ],
+    "matches": {
+      "1408040": {
+        "start": 11,
+        "length": 2,
+        "reading": "たぼう"
+      },
+      "1456420": {
+        "start": 0,
+        "length": 2,
+        "reading": "どくしょ"
+      },
+      "1577280": {
+        "start": 5,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1580640": {
+        "start": 14,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1904710": {
+        "start": 5,
+        "length": 4,
+        "reading": "ひまがない"
       }
     }
   },
@@ -994,19 +1549,23 @@
     "matches": {
       "1445590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "どようび"
       },
       "1463770": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1029,19 +1588,23 @@
     "matches": {
       "1315840": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1445590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "どようび"
       },
       "1497610": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1065,23 +1628,28 @@
     "matches": {
       "1293700": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1445590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "どようび"
       },
       "1463770": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1521400": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1577280": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1105,23 +1673,85 @@
     "matches": {
       "1373970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せけん"
       },
       "1407460": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "おおい"
       },
       "1456420": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "どくしょ"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1580640": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      }
+    }
+  },
+  {
+    "id": "151132",
+    "original": "試験が済むまでは忙しくて暇がないだろうと思います。",
+    "en": [
+      {
+        "id": "263424",
+        "text": "I am afraid that I shall not be free till the examination is over."
+      }
+    ],
+    "indices": "試験 が 済む[01] 迄{まで} は 忙しい(いそがしい){忙しくて} 暇がない だろう と 思う{思います}",
+    "vocabIds": [
+      "1312350",
+      "1295070",
+      "1519290",
+      "1577280",
+      "1904710",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1295070": {
+        "start": 3,
+        "length": 2,
+        "reading": "すむ"
+      },
+      "1312350": {
+        "start": 0,
+        "length": 2,
+        "reading": "しけん"
+      },
+      "1519290": {
+        "start": 8,
+        "length": 3,
+        "reading": "いそがしく"
+      },
+      "1577280": {
+        "start": 12,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1589320": {
+        "start": 20,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 20,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1904710": {
+        "start": 12,
+        "length": 4,
+        "reading": "ひまがない"
       }
     }
   },
@@ -1143,15 +1773,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1584660": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -1174,19 +1807,62 @@
     "matches": {
       "1268990": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1584660": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
+      }
+    }
+  },
+  {
+    "id": "152786",
+    "original": "私は本当に夏休暇が来るのを待ちこがれています。",
+    "en": [
+      {
+        "id": "261763",
+        "text": "I'm really longing for summer vacation."
+      }
+    ],
+    "indices": "私(わたし)[01] は 本当に 夏(なつ) 休暇 が 来る(くる) の を 待ち焦がれる{待ちこがれています}",
+    "vocabIds": [
+      "1311110",
+      "1611580",
+      "1577280",
+      "1547720"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1547720": {
+        "start": 9,
+        "length": 2,
+        "reading": "くる"
+      },
+      "1577280": {
+        "start": 7,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1611580": {
+        "start": 2,
+        "length": 3,
+        "reading": "ほんとうに"
       }
     }
   },
@@ -1208,15 +1884,18 @@
     "matches": {
       "1512670": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1529520": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1243,19 +1922,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1464900": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1487410": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "かならずしも"
       },
       "1577280": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1281,24 +1964,67 @@
       "1311110",
       "1464900",
       "1577280",
-      "2070730"
+      "2070730",
+      "1264640"
     ],
     "matches": {
+      "1264640": {
+        "start": 14,
+        "length": 2,
+        "reading": "かぎら"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1464900": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1577280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2070730": {
         "start": 12,
-        "length": 6
+        "length": 6,
+        "reading": "とはかぎらない"
+      }
+    }
+  },
+  {
+    "id": "154789",
+    "original": "読書の暇がない。",
+    "en": [
+      {
+        "id": "259752",
+        "text": "I have no leisure for reading."
+      }
+    ],
+    "indices": "読書~ の 暇がない",
+    "vocabIds": [
+      "1456420",
+      "1577280",
+      "1904710"
+    ],
+    "matches": {
+      "1456420": {
+        "start": 0,
+        "length": 2,
+        "reading": "どくしょ"
+      },
+      "1577280": {
+        "start": 3,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1904710": {
+        "start": 3,
+        "length": 4,
+        "reading": "ひまがない"
       }
     }
   },
@@ -1320,15 +2046,18 @@
     "matches": {
       "1303620": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんぽ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1347,33 +2076,45 @@
       "1579260",
       "1304970",
       "1295040",
+      "1579110",
       "1289400",
       "1577280"
     ],
     "matches": {
       "1289400": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1295040": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "すませ"
       },
       "1304970": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1579110": {
+        "start": 17,
+        "length": 2,
+        "reading": "きょう"
       },
       "1579260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -1392,33 +2133,45 @@
       "1579260",
       "1304970",
       "1295040",
+      "1579110",
       "1289400",
       "1577280"
     ],
     "matches": {
       "1289400": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1295040": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "すませ"
       },
       "1304970": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1579110": {
+        "start": 14,
+        "length": 2,
+        "reading": "きょう"
       },
       "1579260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -1444,15 +2197,18 @@
     "matches": {
       "1288850": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "こん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1474,15 +2230,18 @@
     "matches": {
       "1268990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1501,28 +2260,78 @@
       "1577280",
       "1315920",
       "1929950",
-      "2037940"
+      "1343950"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315920": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1343950": {
+        "start": 9,
+        "length": 2,
+        "reading": "かき"
       },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1929950": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "し"
+      }
+    }
+  },
+  {
+    "id": "158003",
+    "original": "私は暇なときはラジオを聴いて過ごすことが多いです。",
+    "en": [
+      {
+        "id": "256527",
+        "text": "I often spend my leisure time listening to the radio."
+      }
+    ],
+    "indices": "私(わたし)[01] は 暇な時{暇なとき} は ラジオ を 聞く[02]{聴いて} 過ごす 事(こと){こと} が 多い です",
+    "vocabIds": [
+      "1311110",
+      "1577280",
+      "1192790",
+      "1196000",
+      "1407460"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 2,
+        "length": 4,
+        "reading": "ひまなとき"
       },
-      "2037940": {
-        "start": 9,
-        "length": 1
+      "1196000": {
+        "start": 14,
+        "length": 3,
+        "reading": "すごす"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1407460": {
+        "start": 20,
+        "length": 2,
+        "reading": "おおい"
+      },
+      "1577280": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1543,11 +2352,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1563,36 +2374,84 @@
     "indices": "私(わたし)[01] は 一日中 暇(ひま)[01] です ので 何時でも{いつでも} 貴方(あなた)[01]{あなた} の 都合の良い{都合のよい} 時(とき) に 伺う[01]{伺います}",
     "vocabIds": [
       "1311110",
+      "1160790",
+      "1576260",
       "1165500",
+      "1463770",
+      "1464250",
+      "1423310",
       "1577280",
       "1444980",
+      "1315840",
       "2021540",
+      "1305700",
       "1859890"
     ],
     "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
       "1165500": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いちにちちゅう"
+      },
+      "1305700": {
+        "start": 26,
+        "length": 2,
+        "reading": "うかがい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1315840": {
+        "start": 24,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1423310": {
+        "start": 4,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1444980": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "つごう"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464250": {
+        "start": 3,
+        "length": 2,
+        "reading": "にちちゅう"
+      },
+      "1576260": {
+        "start": 2,
+        "length": 2,
+        "reading": "いちにち"
       },
       "1577280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1859890": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "うかがい"
       },
       "2021540": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -1615,19 +2474,56 @@
     "matches": {
       "1001820": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1155150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いぜん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "158800",
+    "original": "私はめったに暇なときがない。",
+    "en": [
+      {
+        "id": "255727",
+        "text": "I am seldom at leisure."
+      }
+    ],
+    "indices": "私(わたし)[01] は 滅多に{めったに} 暇な時{暇なとき} が 無い{ない}",
+    "vocabIds": [
+      "1311110",
+      "1577280",
+      "1192790"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 6,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1577280": {
+        "start": 6,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1649,15 +2545,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1464900": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1577280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1674,7 +2573,10 @@
     "vocabIds": [
       "1311110",
       "2225040",
+      "1463770",
+      "1464250",
       "1423310",
+      "1519290",
       "1220210",
       "1550840",
       "1577280"
@@ -1682,27 +2584,93 @@
     "matches": {
       "1220210": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1423310": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464250": {
+        "start": 3,
+        "length": 2,
+        "reading": "にちちゅう"
+      },
+      "1519290": {
+        "start": 5,
+        "length": 3,
+        "reading": "いそがしく"
       },
       "1550840": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "はなれる"
       },
       "1577280": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2225040": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
+      }
+    }
+  },
+  {
+    "id": "163922",
+    "original": "私の暇なときに、それをやれると思います。",
+    "en": [
+      {
+        "id": "250588",
+        "text": "I think I can do it in my spare time."
+      }
+    ],
+    "indices": "私(わたし)[01]{私の} 暇な時{暇なとき} に 其れ[01]{それ} を 遣る{やれる} と 思う{思います}",
+    "vocabIds": [
+      "1311110",
+      "1577280",
+      "1192790",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 2,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1577280": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1589320": {
+        "start": 15,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 15,
+        "length": 2,
+        "reading": "おもい"
       }
     }
   },
@@ -1724,15 +2692,61 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1553170": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       },
       "1577280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "164500",
+    "original": "本を読む暇がない。",
+    "en": [
+      {
+        "id": "250008",
+        "text": "I have no time to read books."
+      },
+      {
+        "id": "1989782",
+        "text": "I don't have time to read books."
+      }
+    ],
+    "indices": "本(ほん)[01] を 読む 暇(ひま)[02] が 無い{ない}",
+    "vocabIds": [
+      "1522150",
+      "1456360",
+      "1577280",
+      "1904710"
+    ],
+    "matches": {
+      "1456360": {
+        "start": 2,
+        "length": 2,
+        "reading": "よむ"
+      },
+      "1522150": {
+        "start": 0,
+        "length": 1,
+        "reading": "ほん"
+      },
+      "1577280": {
+        "start": 4,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1904710": {
+        "start": 4,
+        "length": 4,
+        "reading": "ひまがない"
       }
     }
   },
@@ -1748,26 +2762,42 @@
     "indices": "私(わたし)[01] には 政治活動 に 従事 為る(する){する} 暇(ひま)[02] は 無い{ない}",
     "vocabIds": [
       "1311110",
+      "1375970",
       "1996360",
+      "1208360",
       "1335320",
       "1577280"
     ],
     "matches": {
+      "1208360": {
+        "start": 5,
+        "length": 2,
+        "reading": "かつどう"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1335320": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうじ"
+      },
+      "1375970": {
+        "start": 3,
+        "length": 2,
+        "reading": "せいじ"
       },
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1996360": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "せいじかつどう"
       }
     }
   },
@@ -1789,15 +2819,18 @@
     "matches": {
       "1242590": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1821,23 +2854,28 @@
     "matches": {
       "1001820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1305990": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1335080": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1577280": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1860,64 +2898,23 @@
     "matches": {
       "1304970": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1328190": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "てつだう"
       },
       "1577280": {
         "start": 15,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "166954",
-    "original": "私たちの社会で余暇として通っているのものは、実は暇潰しなのである。",
-    "en": [
-      {
-        "id": "247548",
-        "text": "What passes for leisure in our society is actually time-consuming."
-      }
-    ],
-    "indices": "私たち の 社会 で(#2028980) 余暇 として 通る[12]{通っている} の 物(もの){もの} は 実は 暇潰し[01] なのである",
-    "vocabIds": [
-      "1311300",
-      "1322700",
-      "1543980",
-      "1432850",
-      "1320830",
-      "1577280"
-    ],
-    "matches": {
-      "1311300": {
-        "start": 0,
-        "length": 3
-      },
-      "1320830": {
-        "start": 22,
-        "length": 2
-      },
-      "1322700": {
-        "start": 4,
-        "length": 2
-      },
-      "1432850": {
-        "start": 12,
-        "length": 3
-      },
-      "1543980": {
-        "start": 7,
-        "length": 2
-      },
-      "1577280": {
-        "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1934,25 +2931,23 @@
     "vocabIds": [
       "1307630",
       "1577280",
-      "1409540",
-      "1554640"
+      "1409540"
     ],
     "matches": {
       "1307630": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あね"
       },
       "1409540": {
         "start": 8,
-        "length": 2
-      },
-      "1554640": {
-        "start": 11,
-        "length": 1
+        "length": 2,
+        "reading": "たいじゅう"
       },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -1974,15 +2969,18 @@
     "matches": {
       "1207230": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "らく"
       },
       "1304970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2011,11 +3009,13 @@
     "matches": {
       "1304680": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ざんねん"
       },
       "1577280": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2039,23 +3039,28 @@
     "matches": {
       "1293700": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1407460": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "おおい"
       },
       "1519290": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いそがしい"
       },
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1580640": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -2084,11 +3089,13 @@
     "matches": {
       "1289520": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんや"
       },
       "1577280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2111,19 +3118,23 @@
     "matches": {
       "1270400": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "おいで"
       },
       "1289520": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんや"
       },
       "1542070": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "あそび"
       },
       "1577280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2144,11 +3155,13 @@
     "matches": {
       "1289470": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんばん"
       },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2170,15 +3183,18 @@
     "matches": {
       "1289470": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんばん"
       },
       "1315840": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "じ"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2201,19 +3217,23 @@
     "matches": {
       "1268990": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1497610": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1577280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -2235,15 +3255,18 @@
     "matches": {
       "1268990": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -2265,40 +3288,54 @@
       "1375970",
       "1215870",
       "1259210",
-      "1002970"
+      "1002970",
+      "1420490"
     ],
     "matches": {
       "1002970": {
         "start": 29,
-        "length": 6
+        "length": 6,
+        "reading": "かもしれない"
       },
       "1206900": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1215870": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "かんしん"
       },
       "1259210": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "みせる"
       },
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1315920": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1375970": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "せいじ"
+      },
+      "1420490": {
+        "start": 31,
+        "length": 2,
+        "reading": "しれ"
       },
       "1577280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2320,15 +3357,18 @@
     "matches": {
       "1268990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1348870": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2348,7 +3388,8 @@
     "matches": {
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2370,15 +3411,18 @@
     "matches": {
       "1156560": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いし"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2401,99 +3445,195 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1420470": {
         "start": 9,
-        "length": 4
+        "length": 2,
+        "reading": "しり"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1584660": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
   {
-    "id": "183123",
-    "original": "汽車旅行には読書がよい暇潰しになる。",
+    "id": "179054",
+    "original": "君が暇なときにまた来るよ。",
     "en": [
       {
-        "id": "20245",
-        "text": "Reading kills time on a train trip."
-      }
-    ],
-    "indices": "汽車 旅行 には 読書 が 良い{よい} 暇潰し[01] になる[01]",
-    "vocabIds": [
-      "1222700",
-      "1553170",
-      "1456420",
-      "1577280"
-    ],
-    "matches": {
-      "1222700": {
-        "start": 0,
-        "length": 2
+        "id": "17909",
+        "text": "I'll come again when you are free."
       },
-      "1456420": {
-        "start": 6,
-        "length": 2
-      },
-      "1553170": {
-        "start": 2,
-        "length": 2
-      },
-      "1577280": {
-        "start": 11,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "186812",
-    "original": "暇潰しに街をぶらぶらした。",
-    "en": [
       {
-        "id": "23949",
-        "text": "I strolled along the streets to kill time."
+        "id": "7977868",
+        "text": "I'll come again when you're free."
       }
     ],
-    "indices": "暇潰し[01]~ に 街(まち) を ぶらぶら 為る(する){した}",
+    "indices": "君(きみ)[01] が 暇な時{暇なとき} に 又{また} 来る(くる)[01] よ[01]",
     "vocabIds": [
+      "1247250",
       "1577280",
-      "1204570"
+      "1192790",
+      "1547720"
     ],
     "matches": {
-      "1204570": {
-        "start": 4,
-        "length": 1
+      "1192790": {
+        "start": 2,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1247250": {
+        "start": 0,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1547720": {
+        "start": 9,
+        "length": 2,
+        "reading": "くる"
       },
       "1577280": {
-        "start": 0,
-        "length": 1
+        "start": 2,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
   {
-    "id": "186813",
-    "original": "暇潰しにテレビゲームをしよう。",
+    "id": "179620",
+    "original": "金曜日の午後はお暇ですか。",
     "en": [
       {
-        "id": "23950",
-        "text": "Let's play some video games to kill time."
+        "id": "18478",
+        "text": "Are you free on Friday afternoon?"
       }
     ],
-    "indices": "暇潰し[01] に ＴＶゲーム{テレビゲーム} を 為る(する){しよう}",
+    "indices": "金曜日 の 午後 は 御(お){お} 暇(ひま)[01] ですか",
     "vocabIds": [
+      "1243320",
+      "1268990",
+      "2016850",
       "1577280"
     ],
     "matches": {
-      "1577280": {
+      "1243320": {
         "start": 0,
-        "length": 1
+        "length": 3,
+        "reading": "きんようび"
+      },
+      "1268990": {
+        "start": 4,
+        "length": 2,
+        "reading": "ごご"
+      },
+      "1577280": {
+        "start": 8,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 7,
+        "length": 2,
+        "reading": "おひま"
+      }
+    }
+  },
+  {
+    "id": "183367",
+    "original": "この機会のおかげで私たちは大いに手間暇が省けた。",
+    "en": [
+      {
+        "id": "20490",
+        "text": "Thanks to the opportunity, we were able to avoid substantial effort."
+      }
+    ],
+    "indices": "此の(この){この} 機会 の お陰で{おかげで} 私たち は 大いに 手間暇~ が 省く{省けた}",
+    "vocabIds": [
+      "1220800",
+      "1311110",
+      "1311300",
+      "1412880",
+      "1327410",
+      "1664250",
+      "1577280"
+    ],
+    "matches": {
+      "1220800": {
+        "start": 2,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1311110": {
+        "start": 9,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 9,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1327410": {
+        "start": 16,
+        "length": 2,
+        "reading": "てま"
+      },
+      "1412880": {
+        "start": 13,
+        "length": 3,
+        "reading": "おおいに"
+      },
+      "1577280": {
+        "start": 18,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1664250": {
+        "start": 16,
+        "length": 3,
+        "reading": "てまひま"
+      }
+    }
+  },
+  {
+    "id": "186643",
+    "original": "火曜日はお暇ですか。",
+    "en": [
+      {
+        "id": "23779",
+        "text": "Are you free on Tuesday?"
+      }
+    ],
+    "indices": "火曜日 は 御(お){お} 暇(ひま)[01] ですか",
+    "vocabIds": [
+      "1194290",
+      "2016850",
+      "1577280"
+    ],
+    "matches": {
+      "1194290": {
+        "start": 0,
+        "length": 3,
+        "reading": "かようび"
+      },
+      "1577280": {
+        "start": 5,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 4,
+        "length": 2,
+        "reading": "おひま"
       }
     }
   },
@@ -2510,6 +3650,7 @@
     "vocabIds": [
       "1577280",
       "1423310",
+      "1577100",
       "1188490",
       "1602120",
       "1196000"
@@ -2517,23 +3658,33 @@
     "matches": {
       "1188490": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
       },
       "1196000": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "すごし"
       },
       "1423310": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1602120": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひび"
       }
     }
   },
@@ -2550,7 +3701,6 @@
     "vocabIds": [
       "1577280",
       "1315920",
-      "1407450",
       "1407460",
       "1483070",
       "1207240"
@@ -2558,27 +3708,28 @@
     "matches": {
       "1207240": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "たのしい"
       },
       "1315920": {
         "start": 2,
-        "length": 2
-      },
-      "1407450": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "じかん"
       },
       "1407460": {
-        "start": 9,
-        "length": 2
+        "start": 5,
+        "length": 3,
+        "reading": "おおけれ"
       },
       "1483070": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2594,21 +3745,30 @@
     "indices": "暇な時 に 出かける{出かけ} 為さい{なさい}",
     "vocabIds": [
       "1577280",
+      "1315840",
       "2021540",
       "1598550"
     ],
     "matches": {
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "とき"
+      },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1598550": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "でかけ"
       },
       "2021540": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -2628,26 +3788,36 @@
     "indices": "暇な時 に 此の{この} 本(ほん)[01] を 読む{読んで} 下さい{ください}",
     "vocabIds": [
       "1577280",
+      "1315840",
       "2021540",
       "1522150",
       "1456360"
     ],
     "matches": {
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "とき"
+      },
       "1456360": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "よん"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2021540": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -2672,11 +3842,121 @@
     "matches": {
       "1542070": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あそび"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "186820",
+    "original": "暇なときは何をしていますか。",
+    "en": [
+      {
+        "id": "23957",
+        "text": "What do you do in your free time?"
+      },
+      {
+        "id": "70157",
+        "text": "What do you do in your spare time?"
+      },
+      {
+        "id": "2763602",
+        "text": "How do you spend your free time?"
+      }
+    ],
+    "indices": "暇な時{暇なとき} は 何(なに)[01] を 為る(する){しています} か",
+    "vocabIds": [
+      "1577280",
+      "1192790",
+      "1577100",
+      "2851233"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 0,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1577100": {
+        "start": 5,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1577280": {
+        "start": 0,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2851233": {
+        "start": 5,
+        "length": 2,
+        "reading": "なにを"
+      }
+    }
+  },
+  {
+    "id": "186821",
+    "original": "暇なときはいつでも遊びに来て下さい。",
+    "en": [
+      {
+        "id": "23958",
+        "text": "Come and see me whenever you are free."
+      },
+      {
+        "id": "10276597",
+        "text": "Come and see me whenever you're free."
+      }
+    ],
+    "indices": "暇な時{暇なとき}~ は 何時でも{いつでも} 遊びに来る{遊びに来て} 下さい",
+    "vocabIds": [
+      "1577280",
+      "1192790",
+      "1542070",
+      "1547720",
+      "1547710",
+      "1184280",
+      "1184270"
+    ],
+    "matches": {
+      "1184270": {
+        "start": 14,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 14,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1192790": {
+        "start": 0,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1542070": {
+        "start": 9,
+        "length": 2,
+        "reading": "あそび"
+      },
+      "1547710": {
+        "start": 12,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 12,
+        "length": 1,
+        "reading": "き"
+      },
+      "1577280": {
+        "start": 0,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2696,7 +3976,35 @@
     "matches": {
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "186823",
+    "original": "暇なとき、これをしてくれ。",
+    "en": [
+      {
+        "id": "23960",
+        "text": "Do this at your leisure."
+      }
+    ],
+    "indices": "暇な時{暇なとき} 此れ[01]{これ} を 為る(する){して} 呉れる{くれ}",
+    "vocabIds": [
+      "1577280",
+      "1192790"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 0,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1577280": {
+        "start": 0,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2712,21 +4020,36 @@
     "indices": "暇(ひま)[01] だろう が 忙しい(いそがしい){忙しかろう} が 貴方(あなた)[01]{あなた} は 其の[01]{その} 式[02] に 出る{出} ねばならない{なければならない} でしょう[01]",
     "vocabIds": [
       "1577280",
+      "1519290",
       "1319060",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1319060": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "しき"
       },
       "1338240": {
         "start": 19,
-        "length": 2
+        "length": 1,
+        "reading": "で"
+      },
+      "1519290": {
+        "start": 5,
+        "length": 4,
+        "reading": "いそがしかろ"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1896380": {
+        "start": 19,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -2749,19 +4072,23 @@
     "matches": {
       "1303620": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "さんぽ"
       },
       "1483150": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1598550": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "でかけ"
       }
     }
   },
@@ -2777,6 +4104,7 @@
     "indices": "家(いえ)[01] に 居る(いる)[01]{いる} 時(とき){とき} は 色々[01]{いろいろと} 遣る{やる} 事(こと){こと} が 多く を[01] 見る 暇(ひま)[02] も 無い{ない}",
     "vocabIds": [
       "1191730",
+      "1407460",
       "1861770",
       "1259290",
       "1577280"
@@ -2784,19 +4112,28 @@
     "matches": {
       "1191730": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1259290": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "みる"
+      },
+      "1407460": {
+        "start": 17,
+        "length": 2,
+        "reading": "おおく"
       },
       "1577280": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1861770": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -2811,22 +4148,37 @@
     ],
     "indices": "噂話~ の 御(お){お} 相手をする{相手をしている} 暇(ひま)[02] は 無い{ない}",
     "vocabIds": [
+      "1172590",
       "1983920",
+      "1600900",
       "1401000",
       "1577280"
     ],
     "matches": {
+      "1172590": {
+        "start": 0,
+        "length": 1,
+        "reading": "うわさ"
+      },
       "1401000": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "あいて"
       },
       "1577280": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1600900": {
+        "start": 1,
+        "length": 1,
+        "reading": "はなし"
       },
       "1983920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "うわさはなし"
       }
     }
   },
@@ -2849,22 +4201,37 @@
     ],
     "indices": "一つには 金(かね)[01] が 無い{ない} し 又[04]{また} 一つには 其の[01]{その} 暇(ひま)[02] も 無い{ない}",
     "vocabIds": [
+      "1160820",
       "2762790",
+      "1242590",
       "1866230",
       "1577280"
     ],
     "matches": {
+      "1160820": {
+        "start": 0,
+        "length": 2,
+        "reading": "ひとつ"
+      },
+      "1242590": {
+        "start": 4,
+        "length": 1,
+        "reading": "きん"
+      },
       "1577280": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1866230": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "きんがない"
       },
       "2762790": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "ひとつには"
       }
     }
   },
@@ -2883,6 +4250,7 @@
     ],
     "indices": "一つには お金 が 無い 為る(する){し} 又[04]{また} 一つには 暇(ひま)[02] が 無い",
     "vocabIds": [
+      "1160820",
       "2762790",
       "1001820",
       "1529520",
@@ -2891,19 +4259,79 @@
     "matches": {
       "1001820": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
+      },
+      "1160820": {
+        "start": 0,
+        "length": 2,
+        "reading": "ひとつ"
       },
       "1529520": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ない"
       },
       "1577280": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2762790": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "ひとつには"
+      }
+    }
+  },
+  {
+    "id": "193012",
+    "original": "やる仕事がたくさんあって初めて暇なときを１２分に楽しめる。",
+    "en": [
+      {
+        "id": "30178",
+        "text": "It is impossible to enjoy idling thoroughly unless one has plenty of work to do."
+      }
+    ],
+    "indices": "遣る{やる} 仕事[01] が 沢山{たくさん} 有る{あって} 初めて[02] 暇な時{暇なとき} を 十二分{１２分に} 楽しむ{楽しめる}",
+    "vocabIds": [
+      "1304970",
+      "1342550",
+      "1577280",
+      "1192790",
+      "2219180",
+      "1502860"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 15,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1304970": {
+        "start": 2,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1342550": {
+        "start": 12,
+        "length": 3,
+        "reading": "はじめて"
+      },
+      "1502860": {
+        "start": 22,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1577280": {
+        "start": 15,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2219180": {
+        "start": 21,
+        "length": 2,
+        "reading": "にふん"
       }
     }
   },
@@ -2926,19 +4354,23 @@
     "matches": {
       "1247250": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1328190": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "てつだう"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -2962,23 +4394,28 @@
     "matches": {
       "1304970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1522150": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2859455": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "よめる"
       }
     }
   },
@@ -2993,22 +4430,13 @@
     ],
     "indices": "若し(もし){もし} 暇(ひま)[01] だったら 手伝う{手伝える} のに",
     "vocabIds": [
-      "1577280",
-      "1327190",
-      "1441870"
+      "1577280"
     ],
     "matches": {
-      "1327190": {
-        "start": 7,
-        "length": 1
-      },
-      "1441870": {
-        "start": 8,
-        "length": 3
-      },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -3031,19 +4459,95 @@
     "matches": {
       "1111590": {
         "start": 10,
-        "length": 5
+        "length": 5,
+        "reading": "ふらんすご"
       },
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1512670": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "200838",
+    "original": "ところで今日の午後はお暇ですか。",
+    "en": [
+      {
+        "id": "38040",
+        "text": "By the way, are you free this afternoon?"
+      }
+    ],
+    "indices": "所で[01]{ところで} 今日 の 午後 御(お){お} 暇(ひま)[01] ですか",
+    "vocabIds": [
+      "1579110",
+      "1268990",
+      "2016850",
+      "1577280"
+    ],
+    "matches": {
+      "1268990": {
+        "start": 7,
+        "length": 2,
+        "reading": "ごご"
+      },
+      "1577280": {
+        "start": 11,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1579110": {
+        "start": 4,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "2016850": {
+        "start": 10,
+        "length": 2,
+        "reading": "おひま"
+      }
+    }
+  },
+  {
+    "id": "200839",
+    "original": "ところで午後お暇ですか。",
+    "en": [
+      {
+        "id": "38040",
+        "text": "By the way, are you free this afternoon?"
+      }
+    ],
+    "indices": "所で[01]{ところで} 午後 御(お){お} 暇(ひま)[01] ですか",
+    "vocabIds": [
+      "1268990",
+      "2016850",
+      "1577280"
+    ],
+    "matches": {
+      "1268990": {
+        "start": 4,
+        "length": 2,
+        "reading": "ごご"
+      },
+      "1577280": {
+        "start": 7,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 6,
+        "length": 2,
+        "reading": "おひま"
       }
     }
   },
@@ -3064,11 +4568,13 @@
     "matches": {
       "1289470": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こんばん"
       },
       "1577280": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -3083,7 +4589,9 @@
     ],
     "indices": "所で[01]{ところで} 其処(そこ){そこ} に 滞在中 観光 に 行く 暇(ひま)[01] は 有る{ありました} か",
     "vocabIds": [
+      "1410930",
       "1753700",
+      "1423310",
       "1214840",
       "1578850",
       "1577280"
@@ -3091,19 +4599,126 @@
     "matches": {
       "1214840": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かんこう"
+      },
+      "1410930": {
+        "start": 8,
+        "length": 2,
+        "reading": "たいざい"
+      },
+      "1423310": {
+        "start": 10,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1577280": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1578850": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "1753700": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "たいざいちゅう"
+      }
+    }
+  },
+  {
+    "id": "204065",
+    "original": "そんな茶飯事は聞いている暇がない。",
+    "en": [
+      {
+        "id": "41307",
+        "text": "I have no time to listen to such everyday affairs."
+      }
+    ],
+    "indices": "そんな 茶飯事~ は 聞く{聞いている} 暇がない",
+    "vocabIds": [
+      "1422820",
+      "1591110",
+      "1577280",
+      "1904710"
+    ],
+    "matches": {
+      "1422820": {
+        "start": 3,
+        "length": 3,
+        "reading": "さはんじ"
+      },
+      "1577280": {
+        "start": 12,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1591110": {
+        "start": 7,
+        "length": 2,
+        "reading": "きい"
+      },
+      "1904710": {
+        "start": 12,
+        "length": 4,
+        "reading": "ひまがない"
+      }
+    }
+  },
+  {
+    "id": "204474",
+    "original": "そろそろお暇します。",
+    "en": [
+      {
+        "id": "41716",
+        "text": "It is time I left here."
+      }
+    ],
+    "indices": "そろそろ お暇 為る(する){します}",
+    "vocabIds": [
+      "2016850",
+      "1577280"
+    ],
+    "matches": {
+      "1577280": {
+        "start": 5,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 4,
+        "length": 2,
+        "reading": "おひま"
+      }
+    }
+  },
+  {
+    "id": "205309",
+    "original": "それは暇なときにすればよろしい。",
+    "en": [
+      {
+        "id": "42552",
+        "text": "You can do it at your leisure."
+      }
+    ],
+    "indices": "其れ[01]{それ} は 暇な時{暇なとき} に すれば 宜しい{よろしい}",
+    "vocabIds": [
+      "1577280",
+      "1192790"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 3,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1577280": {
+        "start": 3,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -3130,19 +4745,23 @@
     "matches": {
       "1456360": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "よむ"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1604550": {
         "start": 8,
-        "length": 6
+        "length": 4,
+        "reading": "みつから"
       }
     }
   },
@@ -3159,20 +4778,35 @@
     "vocabIds": [
       "1522150",
       "1577280",
-      "2021540"
+      "1315840",
+      "2021540",
+      "1456360"
     ],
     "matches": {
+      "1315840": {
+        "start": 6,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1456360": {
+        "start": 8,
+        "length": 2,
+        "reading": "よめ"
+      },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2021540": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -3195,44 +4829,23 @@
     "matches": {
       "1315920": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1446070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ふゆ"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1701770": {
         "start": 13,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "210480",
-    "original": "その雑誌は暇潰しです。",
-    "en": [
-      {
-        "id": "47748",
-        "text": "The magazine is for killing time."
-      }
-    ],
-    "indices": "其の[01]{その} 雑誌 は 暇潰し[01] です",
-    "vocabIds": [
-      "1299400",
-      "1577280"
-    ],
-    "matches": {
-      "1299400": {
-        "start": 2,
-        "length": 2
-      },
-      "1577280": {
-        "start": 5,
-        "length": 1
+        "length": 3,
+        "reading": "かきもの"
       }
     }
   },
@@ -3252,7 +4865,35 @@
     "matches": {
       "1577280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "214325",
+    "original": "スポーツをする暇がない。",
+    "en": [
+      {
+        "id": "51617",
+        "text": "I have no leisure for sport."
+      }
+    ],
+    "indices": "スポーツ を 為る(する)[01]{する} 暇がない",
+    "vocabIds": [
+      "1577280",
+      "1904710"
+    ],
+    "matches": {
+      "1577280": {
+        "start": 7,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1904710": {
+        "start": 7,
+        "length": 4,
+        "reading": "ひまがない"
       }
     }
   },
@@ -3267,22 +4908,37 @@
     ],
     "indices": "は 酷い(ひどい){ひどく} 急ぐ{急いでいた} ので 話をする 暇(ひま)[02]~ も 無い{なかった}",
     "vocabIds": [
+      "1228650",
       "1228570",
+      "1600900",
       "2078760",
       "1577280"
     ],
     "matches": {
       "1228570": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 7,
+        "length": 2,
+        "reading": "いそい"
       },
       "1577280": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1600900": {
+        "start": 14,
+        "length": 1,
+        "reading": "はなし"
       },
       "2078760": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "はなしをする"
       }
     }
   },
@@ -3298,21 +4954,30 @@
     "indices": "この前[03]{この前の} 日曜日 は 偶々[01]{たまたま} 暇(ひま)[01] だ{だった}",
     "vocabIds": [
       "2216900",
+      "1392580",
       "1464900",
       "1577280"
     ],
     "matches": {
+      "1392580": {
+        "start": 2,
+        "length": 1,
+        "reading": "まえ"
+      },
       "1464900": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2216900": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "このまえ"
       }
     }
   },
@@ -3333,11 +4998,13 @@
     "matches": {
       "1333520": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうまつ"
       },
       "1577280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -3352,22 +5019,49 @@
     ],
     "indices": "此の{この} 一週間 息付く{息つく}~ 暇(ひま)[02] も 無い{ない} 程{ほど} 忙しい(いそがしい){忙しかった}",
     "vocabIds": [
+      "1160790",
       "1163270",
+      "1333500",
+      "1404320",
       "2211970",
-      "1577280"
+      "1577280",
+      "1519290"
     ],
     "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163270": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いちしゅうかん"
+      },
+      "1333500": {
+        "start": 3,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1404320": {
+        "start": 5,
+        "length": 1,
+        "reading": "いき"
+      },
+      "1519290": {
+        "start": 14,
+        "length": 4,
+        "reading": "いそがしかっ"
       },
       "1577280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2211970": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いきつく"
       }
     }
   },
@@ -3382,27 +5076,49 @@
     ],
     "indices": "ここの所{ここのところ} 目が回る~ 程{ほど} 仕事[01] が 忙しい(いそがしい){忙しくて} ビデオ[02] を 見る 暇(ひま)[02] も 無い{ない}",
     "vocabIds": [
+      "1604890",
       "1535090",
+      "1604300",
       "1304970",
+      "1519290",
       "1259290",
       "1577280"
     ],
     "matches": {
       "1259290": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "みる"
       },
       "1304970": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1519290": {
+        "start": 15,
+        "length": 3,
+        "reading": "いそがしく"
       },
       "1535090": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "めがまわる"
       },
       "1577280": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1604300": {
+        "start": 8,
+        "length": 2,
+        "reading": "まわる"
+      },
+      "1604890": {
+        "start": 6,
+        "length": 1,
+        "reading": "め"
       }
     }
   },
@@ -3419,25 +5135,35 @@
     "vocabIds": [
       "1311110",
       "1261340",
-      "1715610",
+      "1259290",
+      "2256270",
       "1577280"
     ],
     "matches": {
+      "1259290": {
+        "start": 13,
+        "length": 1,
+        "reading": "み"
+      },
       "1261340": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "げんこう"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1577280": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
-      "1715610": {
+      "2256270": {
         "start": 13,
-        "length": 4
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -3457,7 +5183,8 @@
     "matches": {
       "1577280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -3482,27 +5209,33 @@
     "matches": {
       "1198160": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1339460": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっせき"
       },
       "1461160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ふたつ"
       },
       "1577280": {
         "start": 32,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1602330": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2712120": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "そのかん"
       }
     }
   },
@@ -3523,11 +5256,151 @@
     "matches": {
       "1002290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
       },
       "1577280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "227393",
+    "original": "お暇の折にはぜひ遊びに来てください。",
+    "en": [
+      {
+        "id": "64745",
+        "text": "Do come and see us when you are free."
+      }
+    ],
+    "indices": "お暇 の 折[01]~ には 是非[01]{ぜひ} 遊びに来る{遊びに来て} 下さい{ください}",
+    "vocabIds": [
+      "2016850",
+      "1577280",
+      "1385780",
+      "1542070",
+      "1547720",
+      "1547710"
+    ],
+    "matches": {
+      "1385780": {
+        "start": 3,
+        "length": 1,
+        "reading": "おり"
+      },
+      "1542070": {
+        "start": 8,
+        "length": 2,
+        "reading": "あそび"
+      },
+      "1547710": {
+        "start": 11,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 11,
+        "length": 1,
+        "reading": "き"
+      },
+      "1577280": {
+        "start": 1,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 0,
+        "length": 2,
+        "reading": "おひま"
+      }
+    }
+  },
+  {
+    "id": "227394",
+    "original": "お暇する時間です。",
+    "en": [
+      {
+        "id": "64746",
+        "text": "It's time to be going."
+      }
+    ],
+    "indices": "お暇 為る(する){する} 時間[01] です",
+    "vocabIds": [
+      "2016850",
+      "1577280",
+      "1315920"
+    ],
+    "matches": {
+      "1315920": {
+        "start": 4,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1577280": {
+        "start": 1,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 0,
+        "length": 2,
+        "reading": "おひま"
+      }
+    }
+  },
+  {
+    "id": "229033",
+    "original": "いつお暇ですか。",
+    "en": [
+      {
+        "id": "16758",
+        "text": "When will you be free?"
+      }
+    ],
+    "indices": "何時(いつ){いつ} 御(お){お} 暇(ひま)[01] ですか",
+    "vocabIds": [
+      "1577280"
+    ],
+    "matches": {
+      "1577280": {
+        "start": 3,
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "231540",
+    "original": "あなたは明日お暇ですか。",
+    "en": [
+      {
+        "id": "68908",
+        "text": "Are you free tomorrow?"
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は 明日 御(お){お} 暇(ひま)[01] ですか",
+    "vocabIds": [
+      "1584660",
+      "2016850",
+      "1577280"
+    ],
+    "matches": {
+      "1577280": {
+        "start": 7,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1584660": {
+        "start": 4,
+        "length": 2,
+        "reading": "あした"
+      },
+      "2016850": {
+        "start": 6,
+        "length": 2,
+        "reading": "おひま"
       }
     }
   },
@@ -3549,15 +5422,18 @@
     "matches": {
       "1315920": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1549660": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "りよう"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -3579,15 +5455,75 @@
     "matches": {
       "1315920": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1549660": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "りよう"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "232787",
+    "original": "あなたはお暇な時には何をなさいます？",
+    "en": [
+      {
+        "id": "70157",
+        "text": "What do you do in your spare time?"
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は 御(お){お} 暇な時 には 何(なに)[01] を 為さる{なさいます}",
+    "vocabIds": [
+      "2016850",
+      "1577280",
+      "1315840",
+      "2021540",
+      "1315860",
+      "1577100",
+      "2851233"
+    ],
+    "matches": {
+      "1315840": {
+        "start": 7,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1315860": {
+        "start": 7,
+        "length": 3,
+        "reading": "ときには"
+      },
+      "1577100": {
+        "start": 10,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1577280": {
+        "start": 5,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 4,
+        "length": 2,
+        "reading": "おひま"
+      },
+      "2021540": {
+        "start": 7,
+        "length": 2,
+        "reading": "ときに"
+      },
+      "2851233": {
+        "start": 10,
+        "length": 2,
+        "reading": "なにを"
       }
     }
   },
@@ -3603,26 +5539,103 @@
     "indices": "貴方(あなた)[01]{あなた} が 暇な時 に 此の{この} 書類 に 目を通す{目を通して} 下さい[02]{ください}",
     "vocabIds": [
       "1577280",
+      "1315840",
       "2021540",
       "1344200",
-      "1535250"
+      "1604890",
+      "2100520",
+      "1432900",
+      "1896920"
     ],
     "matches": {
+      "1315840": {
+        "start": 6,
+        "length": 1,
+        "reading": "とき"
+      },
       "1344200": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しょるい"
       },
-      "1535250": {
-        "start": 13,
-        "length": 5
+      "1432900": {
+        "start": 15,
+        "length": 2,
+        "reading": "とおし"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1604890": {
+        "start": 13,
+        "length": 1,
+        "reading": "め"
+      },
+      "1896920": {
+        "start": 15,
+        "length": 2,
+        "reading": "とおし"
       },
       "2021540": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ときに"
+      },
+      "2100520": {
+        "start": 14,
+        "length": 4,
+        "reading": "をとおして"
+      }
+    }
+  },
+  {
+    "id": "234246",
+    "original": "あなたがお暇な時にお会いしたいのですが。",
+    "en": [
+      {
+        "id": "71620",
+        "text": "I'd like to see you when you are free."
+      },
+      {
+        "id": "8954422",
+        "text": "I'd like to see you when you're free."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} が 御(お){お} 暇な時 に 会う[01]{お会い} したい のです が[03]",
+    "vocabIds": [
+      "2016850",
+      "1577280",
+      "1315840",
+      "2021540",
+      "1198180"
+    ],
+    "matches": {
+      "1198180": {
+        "start": 10,
+        "length": 2,
+        "reading": "あい"
+      },
+      "1315840": {
+        "start": 7,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1577280": {
+        "start": 5,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 4,
+        "length": 2,
+        "reading": "おひま"
+      },
+      "2021540": {
+        "start": 7,
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -3644,15 +5657,71 @@
     "matches": {
       "1174070": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "えいえん"
       },
       "1345930": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "きずつける"
       },
       "1577280": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "234755",
+    "original": "ああ、もうお暇しなくては。",
+    "en": [
+      {
+        "id": "72133",
+        "text": "Well, I have to go now."
+      }
+    ],
+    "indices": "嗚呼{ああ} もう[02] お暇 為る(する){しなくては}",
+    "vocabIds": [
+      "2016850",
+      "1577280"
+    ],
+    "matches": {
+      "1577280": {
+        "start": 6,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 5,
+        "length": 2,
+        "reading": "おひま"
+      }
+    }
+  },
+  {
+    "id": "794260",
+    "original": "暇なときにやりなさい。",
+    "en": [
+      {
+        "id": "241726",
+        "text": "Do it when you have time."
+      }
+    ],
+    "vocabIds": [
+      "1577280",
+      "1192790"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 0,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1577280": {
+        "start": 0,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -3676,11 +5745,51 @@
     "matches": {
       "1204570": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "まち"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "1037850",
+    "original": "暇なときはよく音楽を聞いています。",
+    "en": [
+      {
+        "id": "454113",
+        "text": "I often spend my free time listening to music."
+      }
+    ],
+    "vocabIds": [
+      "1577280",
+      "1192790",
+      "1183720",
+      "1591110"
+    ],
+    "matches": {
+      "1183720": {
+        "start": 7,
+        "length": 2,
+        "reading": "おんがく"
+      },
+      "1192790": {
+        "start": 0,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1577280": {
+        "start": 0,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1591110": {
+        "start": 10,
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -3700,11 +5809,13 @@
     "matches": {
       "1464900": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -3732,77 +5843,48 @@
     "matches": {
       "1318610": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1329000": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅみ"
       },
       "1473190": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "はいふ"
       },
       "1524590": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いもうと"
       },
       "1531040": {
         "start": 38,
-        "length": 2
+        "length": 2,
+        "reading": "むりょう"
       },
       "1546200": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "よう"
       },
       "1577280": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1597890": {
         "start": 27,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
       },
       "1604570": {
         "start": 23,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "1184120",
-    "original": "ある者は暇潰しに本を読む。",
-    "en": [
-      {
-        "id": "263947",
-        "text": "Some read books to kill time."
-      },
-      {
-        "id": "1360811",
-        "text": "Some people read books to kill time."
-      }
-    ],
-    "vocabIds": [
-      "1322990",
-      "1577280",
-      "1522150",
-      "1456360"
-    ],
-    "matches": {
-      "1322990": {
-        "start": 2,
-        "length": 1
-      },
-      "1456360": {
-        "start": 10,
-        "length": 2
-      },
-      "1522150": {
-        "start": 8,
-        "length": 1
-      },
-      "1577280": {
-        "start": 4,
-        "length": 1
+        "length": 3,
+        "reading": "みつけ"
       }
     }
   },
@@ -3819,34 +5901,52 @@
       "1611580",
       "1577280",
       "1522150",
+      "1456360",
       "1620890",
       "1370420",
-      "1323560"
+      "1323560",
+      "1323540"
     ],
     "matches": {
+      "1323540": {
+        "start": 17,
+        "length": 2,
+        "reading": "かり"
+      },
       "1323560": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "かり"
       },
       "1370420": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "としょかん"
+      },
+      "1456360": {
+        "start": 8,
+        "length": 2,
+        "reading": "よめ"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1611580": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ほんとうに"
       },
       "1620890": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "くりつ"
       }
     }
   },
@@ -3866,11 +5966,63 @@
     "matches": {
       "1512670": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "1579002",
+    "original": "残念ながら、今日は暇がない。",
+    "en": [
+      {
+        "id": "1578677",
+        "text": "Unfortunately, I don't have time today."
+      }
+    ],
+    "vocabIds": [
+      "1304680",
+      "1304700",
+      "1579110",
+      "1289400",
+      "1577280",
+      "1904710"
+    ],
+    "matches": {
+      "1289400": {
+        "start": 6,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1304680": {
+        "start": 0,
+        "length": 2,
+        "reading": "ざんねん"
+      },
+      "1304700": {
+        "start": 0,
+        "length": 5,
+        "reading": "ざんねんながら"
+      },
+      "1577280": {
+        "start": 9,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1579110": {
+        "start": 6,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1904710": {
+        "start": 9,
+        "length": 4,
+        "reading": "ひまがない"
       }
     }
   },
@@ -3894,11 +6046,13 @@
     "matches": {
       "1386460": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せつめい"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -3914,95 +6068,155 @@
     "vocabIds": [
       "1423640",
       "1315840",
+      "1497180",
       "2744730",
       "1524720",
       "1315920",
       "1512670",
+      "1551050",
       "2531890",
+      "1499290",
       "1540170",
       "1392580",
+      "1516260",
       "1622100",
       "1502860",
       "1577280",
       "1392590",
       "2220300",
+      "1191730",
       "1576870",
       "2005870",
+      "2414420",
       "1631240",
+      "1375760",
       "1326990"
     ],
     "matches": {
+      "1191730": {
+        "start": 88,
+        "length": 1,
+        "reading": "いえ"
+      },
       "1315840": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1315920": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1326990": {
         "start": 114,
-        "length": 3
+        "length": 2,
+        "reading": "とれ"
+      },
+      "1375760": {
+        "start": 112,
+        "length": 2,
+        "reading": "せいせき"
       },
       "1392580": {
         "start": 39,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 77,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1423640": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうがく"
+      },
+      "1497180": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふだん"
+      },
+      "1499290": {
+        "start": 24,
+        "length": 1,
+        "reading": "ぶ"
       },
       "1502860": {
         "start": 58,
-        "length": 1
+        "length": 1,
+        "reading": "ぶん"
       },
       "1512670": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1516260": {
+        "start": 47,
+        "length": 2,
+        "reading": "くずさ"
       },
       "1524720": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       },
       "1540170": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
+      },
+      "1551050": {
+        "start": 22,
+        "length": 2,
+        "reading": "りくじょう"
       },
       "1576870": {
         "start": 105,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       },
       "1577280": {
         "start": 63,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1622100": {
         "start": 54,
-        "length": 2
+        "length": 2,
+        "reading": "ぶかつ"
       },
       "1631240": {
         "start": 111,
-        "length": 3
+        "length": 3,
+        "reading": "こうせいせき"
       },
       "2005870": {
         "start": 107,
-        "length": 4
+        "length": 4,
+        "reading": "もうすこし"
       },
       "2220300": {
         "start": 87,
-        "length": 2
+        "length": 2,
+        "reading": "んいえ"
+      },
+      "2414420": {
+        "start": 111,
+        "length": 1,
+        "reading": "こう"
       },
       "2531890": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "りくじょうぶ"
       },
       "2744730": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "ふだんから"
       }
     }
   },
@@ -4017,6 +6231,7 @@
     ],
     "vocabIds": [
       "1522150",
+      "1315720",
       "1315710",
       "1519210",
       "1577280"
@@ -4024,19 +6239,28 @@
     "matches": {
       "1315710": {
         "start": 1,
-        "length": 5
+        "length": 5,
+        "reading": "もってくる"
+      },
+      "1315720": {
+        "start": 1,
+        "length": 2,
+        "reading": "もっ"
       },
       "1519210": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "わすれ"
       },
       "1522150": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4056,11 +6280,13 @@
     "matches": {
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1591720": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きょうりょく"
       }
     }
   },
@@ -4078,28 +6304,71 @@
       "1184140",
       "1505090",
       "1523400",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184140": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "した"
       },
       "1184270": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 16,
+        "length": 3,
+        "reading": "ください"
       },
       "1505090": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ぶん"
       },
       "1523400": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ほんやく"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "2197686",
+    "original": "貧乏暇なし。",
+    "en": [
+      {
+        "id": "2595714",
+        "text": "There is no rest for the poor."
+      }
+    ],
+    "vocabIds": [
+      "1490900",
+      "2166580",
+      "1577280"
+    ],
+    "matches": {
+      "1490900": {
+        "start": 0,
+        "length": 2,
+        "reading": "びんぼう"
+      },
+      "1577280": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2166580": {
+        "start": 0,
+        "length": 5,
+        "reading": "びんぼうひまなし"
       }
     }
   },
@@ -4113,8 +6382,10 @@
       }
     ],
     "vocabIds": [
+      "1579110",
       "1289400",
       "1304970",
+      "1519290",
       "1660100",
       "1358280",
       "1577280"
@@ -4122,23 +6393,38 @@
     "matches": {
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1304970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1358280": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
+      },
+      "1519290": {
+        "start": 6,
+        "length": 3,
+        "reading": "いそがしく"
       },
       "1577280": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       },
       "1660100": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おひる"
       }
     }
   },
@@ -4161,7 +6447,8 @@
     "matches": {
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4189,20 +6476,29 @@
     "vocabIds": [
       "1577280",
       "1315840",
+      "1577100",
       "2851233"
     ],
     "matches": {
       "1315840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
+      },
+      "1577100": {
+        "start": 4,
+        "length": 1,
+        "reading": "なに"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2851233": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "なにを"
       }
     }
   },
@@ -4216,17 +6512,31 @@
       }
     ],
     "vocabIds": [
+      "1289220",
       "2100500",
+      "1525230",
       "1577280"
     ],
     "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "2100500": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こんしゅうまつ"
       }
     }
   },
@@ -4240,17 +6550,25 @@
       }
     ],
     "vocabIds": [
+      "1579110",
       "1289400",
       "1577280"
     ],
     "matches": {
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1577280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -4266,35 +6584,67 @@
     "vocabIds": [
       "1562310",
       "1577280",
-      "1307770",
       "1355970",
       "1374300",
       "1487660"
     ],
     "matches": {
-      "1307770": {
-        "start": 21,
-        "length": 1
-      },
       "1355970": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "つねに"
       },
       "1374300": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "せわ"
       },
       "1487660": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1562310": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "はなしあう"
       },
       "1577280": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "3589986",
+    "original": "暇なとき何してるの？",
+    "en": [
+      {
+        "id": "23957",
+        "text": "What do you do in your free time?"
+      }
+    ],
+    "vocabIds": [
+      "1577280",
+      "1192790",
+      "1577100"
+    ],
+    "matches": {
+      "1192790": {
+        "start": 0,
+        "length": 4,
+        "reading": "ひまなとき"
+      },
+      "1577100": {
+        "start": 4,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1577280": {
+        "start": 0,
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4315,15 +6665,18 @@
     "matches": {
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1562350": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "はなし"
       },
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4337,17 +6690,31 @@
       }
     ],
     "vocabIds": [
+      "1172590",
       "1983920",
+      "1600900",
       "1577280"
     ],
     "matches": {
+      "1172590": {
+        "start": 0,
+        "length": 1,
+        "reading": "うわさ"
+      },
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1600900": {
+        "start": 1,
+        "length": 1,
+        "reading": "ばなし"
       },
       "1983920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "うわさばなし"
       }
     }
   },
@@ -4367,11 +6734,13 @@
     "matches": {
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1600900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -4391,11 +6760,69 @@
     "matches": {
       "1577280": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
+      }
+    }
+  },
+  {
+    "id": "2432354",
+    "original": "毎日泣いたり笑ったりするのに忙しくて、勉強する暇がないんだ。",
+    "en": [
+      {
+        "id": "4641371",
+        "text": "I'm so busy laughing and crying every day I don't have time to study."
+      }
+    ],
+    "vocabIds": [
+      "1524720",
+      "1229840",
+      "1351360",
+      "1519290",
+      "1512670",
+      "1577280",
+      "1904710"
+    ],
+    "matches": {
+      "1229840": {
+        "start": 2,
+        "length": 2,
+        "reading": "ない"
+      },
+      "1351360": {
+        "start": 6,
+        "length": 2,
+        "reading": "わらっ"
+      },
+      "1512670": {
+        "start": 19,
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1519290": {
+        "start": 14,
+        "length": 3,
+        "reading": "いそがしく"
+      },
+      "1524720": {
+        "start": 0,
+        "length": 2,
+        "reading": "まいにち"
+      },
+      "1577280": {
+        "start": 23,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1904710": {
+        "start": 23,
+        "length": 4,
+        "reading": "ひまがない"
       }
     }
   },
@@ -4410,6 +6837,7 @@
     ],
     "vocabIds": [
       "2830440",
+      "1416220",
       "1579110",
       "1268990",
       "1577280"
@@ -4417,19 +6845,28 @@
     "matches": {
       "1268990": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
+      },
+      "1416220": {
+        "start": 3,
+        "length": 1,
+        "reading": "たち"
       },
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1579110": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "2830440": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "あなたたち"
       }
     }
   },
@@ -4448,7 +6885,8 @@
     "matches": {
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4468,11 +6906,13 @@
     "matches": {
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "こん"
       },
       "1577280": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4493,15 +6933,18 @@
     "matches": {
       "1255890": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "げつようび"
       },
       "1536350": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "よる"
       },
       "1577280": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4521,11 +6964,13 @@
     "matches": {
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -4545,11 +6990,13 @@
     "matches": {
       "1464900": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1577280": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4565,35 +7012,53 @@
     "vocabIds": [
       "1577280",
       "1315840",
+      "1577100",
       "2851233",
       "1277450",
       "1521400",
-      "2249810"
+      "1202270",
+      "1583460"
     ],
     "matches": {
+      "1202270": {
+        "start": 26,
+        "length": 1,
+        "reading": "え"
+      },
       "1277450": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1315840": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1521400": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
+      },
+      "1577100": {
+        "start": 8,
+        "length": 1,
+        "reading": "なに"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
-      "2249810": {
-        "start": 26,
-        "length": 5
+      "1583460": {
+        "start": 28,
+        "length": 2,
+        "reading": "えがい"
       },
       "2851233": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "なにを"
       }
     }
   },
@@ -4609,25 +7074,41 @@
     "vocabIds": [
       "1577280",
       "1315840",
+      "1577100",
       "2851233",
-      "2249810"
+      "1202270",
+      "1583460"
     ],
     "matches": {
+      "1202270": {
+        "start": 21,
+        "length": 1,
+        "reading": "え"
+      },
       "1315840": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
       },
       "1577280": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
-      "2249810": {
-        "start": 21,
-        "length": 5
+      "1583460": {
+        "start": 23,
+        "length": 2,
+        "reading": "えがい"
       },
       "2851233": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "なにを"
       }
     }
   },
@@ -4642,21 +7123,24 @@
     ],
     "vocabIds": [
       "1577280",
-      "2845586",
+      "1315840",
       "1577100"
     ],
     "matches": {
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "とき"
+      },
       "1577100": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
       "1577280": {
         "start": 0,
-        "length": 1
-      },
-      "2845586": {
-        "start": 2,
-        "length": 3
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4679,7 +7163,46 @@
     "matches": {
       "1577280": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "9843671",
+    "original": "遅くなってきましたので、そろそろお暇いたします。",
+    "en": [
+      {
+        "id": "31196",
+        "text": "It's getting late, so we'd better get going."
+      }
+    ],
+    "vocabIds": [
+      "1421970",
+      "1421980",
+      "2016850",
+      "1577280"
+    ],
+    "matches": {
+      "1421970": {
+        "start": 0,
+        "length": 2,
+        "reading": "おそく"
+      },
+      "1421980": {
+        "start": 0,
+        "length": 2,
+        "reading": "おそく"
+      },
+      "1577280": {
+        "start": 17,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 16,
+        "length": 2,
+        "reading": "おひま"
       }
     }
   },
@@ -4694,21 +7217,36 @@
     ],
     "vocabIds": [
       "1584660",
+      "1160790",
       "1576260",
+      "1463770",
       "1577280"
     ],
     "matches": {
+      "1160790": {
+        "start": 8,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1463770": {
+        "start": 9,
+        "length": 1,
+        "reading": "にち"
+      },
       "1576260": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "1577280": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -4728,11 +7266,13 @@
     "matches": {
       "1358280": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "たべる"
       },
       "1577280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4755,16 +7295,24 @@
     ],
     "vocabIds": [
       "1577280",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1259290": {
         "start": 10,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2256270": {
+        "start": 10,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -4779,6 +7327,7 @@
     ],
     "vocabIds": [
       "1497610",
+      "1519290",
       "1303620",
       "1578850",
       "1577280"
@@ -4786,19 +7335,28 @@
     "matches": {
       "1303620": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんぽ"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
+      },
+      "1519290": {
+        "start": 2,
+        "length": 2,
+        "reading": "いそがし"
       },
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1578850": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -4815,24 +7373,34 @@
       "1192150",
       "1315920",
       "1521400",
-      "1577280"
+      "1577280",
+      "1542160"
     ],
     "matches": {
       "1192150": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かぞく"
       },
       "1315920": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1521400": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
+      },
+      "1542160": {
+        "start": 29,
+        "length": 2,
+        "reading": "あそぼ"
       },
       "1577280": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4847,6 +7415,7 @@
     ],
     "vocabIds": [
       "1289520",
+      "1542160",
       "1530970",
       "1192150",
       "1315920",
@@ -4856,27 +7425,38 @@
     "matches": {
       "1192150": {
         "start": 53,
-        "length": 2
+        "length": 2,
+        "reading": "かぞく"
       },
       "1289520": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "こんや"
       },
       "1315920": {
         "start": 56,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1521400": {
         "start": 62,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1530970": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "むり"
+      },
+      "1542160": {
+        "start": 12,
+        "length": 2,
+        "reading": "あそぼ"
       },
       "1577280": {
         "start": 64,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4897,15 +7477,44 @@
     "matches": {
       "1288850": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1304680": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ざんねん"
       },
       "1577280": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      }
+    }
+  },
+  {
+    "id": "10722292",
+    "original": "もうお暇しないと。",
+    "en": [
+      {
+        "id": "64746",
+        "text": "It's time to be going."
+      }
+    ],
+    "vocabIds": [
+      "2016850",
+      "1577280"
+    ],
+    "matches": {
+      "1577280": {
+        "start": 3,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "2016850": {
+        "start": 2,
+        "length": 2,
+        "reading": "おひま"
       }
     }
   },
@@ -4920,21 +7529,18 @@
     ],
     "vocabIds": [
       "1464530",
-      "1427510",
       "1577280"
     ],
     "matches": {
-      "1427510": {
-        "start": 4,
-        "length": 3
-      },
       "1464530": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にほんご"
       },
       "1577280": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4954,11 +7560,13 @@
     "matches": {
       "1315920": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -4979,15 +7587,128 @@
     "matches": {
       "1534930": {
         "start": 26,
-        "length": 3
+        "length": 2,
+        "reading": "だまっ"
       },
       "1577280": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1589600": {
         "start": 0,
-        "length": 5
+        "length": 3,
+        "reading": "おわら"
+      }
+    }
+  },
+  {
+    "id": "3530913",
+    "original": "願わくば一生、物を言ったり考えたりする暇もなく、朝から晩まで働きづめに働いて、そしてバタリと死にたいものだ。",
+    "en": [
+      {
+        "id": "11123836",
+        "text": "Hopefully, I will work hard from morning till night all my life, without time to say or think anything, and then I will suddenly die."
+      }
+    ],
+    "vocabIds": [
+      "1956020",
+      "2177740",
+      "1576200",
+      "1502390",
+      "1587040",
+      "1281020",
+      "1281000",
+      "1577280",
+      "1859090",
+      "1428280",
+      "2853393",
+      "1482110",
+      "1451150",
+      "1451040",
+      "1310730",
+      "2602220"
+    ],
+    "matches": {
+      "1281000": {
+        "start": 13,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1281020": {
+        "start": 13,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1310730": {
+        "start": 46,
+        "length": 2,
+        "reading": "しに"
+      },
+      "1428280": {
+        "start": 24,
+        "length": 1,
+        "reading": "あさ"
+      },
+      "1451040": {
+        "start": 30,
+        "length": 2,
+        "reading": "はたらき"
+      },
+      "1451150": {
+        "start": 30,
+        "length": 2,
+        "reading": "はたらき"
+      },
+      "1482110": {
+        "start": 27,
+        "length": 1,
+        "reading": "ばん"
+      },
+      "1502390": {
+        "start": 7,
+        "length": 1,
+        "reading": "もの"
+      },
+      "1576200": {
+        "start": 4,
+        "length": 2,
+        "reading": "いっしょう"
+      },
+      "1577280": {
+        "start": 19,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1587040": {
+        "start": 9,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1859090": {
+        "start": 19,
+        "length": 4,
+        "reading": "ひまもなく"
+      },
+      "1956020": {
+        "start": 0,
+        "length": 1,
+        "reading": "ねがい"
+      },
+      "2177740": {
+        "start": 0,
+        "length": 4,
+        "reading": "ねがいわくば"
+      },
+      "2602220": {
+        "start": 46,
+        "length": 2,
+        "reading": "しに"
+      },
+      "2853393": {
+        "start": 24,
+        "length": 6,
+        "reading": "あさからばんまで"
       }
     }
   },
@@ -5001,17 +7722,31 @@
       }
     ],
     "vocabIds": [
+      "1602330",
       "2103590",
+      "1269320",
       "1577280"
     ],
     "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1602330": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "2103590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうしょくご"
       }
     }
   },
@@ -5032,24 +7767,40 @@
       "1584660",
       "1577280",
       "1540170",
-      "2020900"
+      "1542070",
+      "2020900",
+      "1578850"
     ],
     "matches": {
       "1540170": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
+      },
+      "1542070": {
+        "start": 11,
+        "length": 2,
+        "reading": "あそび"
       },
       "1577280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1578850": {
+        "start": 14,
+        "length": 2,
+        "reading": "いく"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       },
       "2020900": {
         "start": 11,
-        "length": 5
+        "length": 5,
+        "reading": "あそびにいく"
       }
     }
   },
@@ -5074,15 +7825,18 @@
     "matches": {
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1579100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けさ"
       },
       "1589350": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -5111,15 +7865,18 @@
     "matches": {
       "1456360": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "よん"
       },
       "1522150": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -5139,11 +7896,13 @@
     "matches": {
       "1464900": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1577280": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -5162,21 +7921,36 @@
     ],
     "vocabIds": [
       "1595730",
+      "1314270",
       "2017640",
+      "1342510",
       "1577280"
     ],
     "matches": {
+      "1314270": {
+        "start": 3,
+        "length": 2,
+        "reading": "じむ"
+      },
+      "1342510": {
+        "start": 5,
+        "length": 2,
+        "reading": "しょり"
+      },
       "1577280": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1595730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すべて"
       },
       "2017640": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "じむしょり"
       }
     }
   },
@@ -5196,11 +7970,13 @@
     "matches": {
       "1577100": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
       "1577280": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -5221,15 +7997,18 @@
     "matches": {
       "1002290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
       },
       "1577280": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1597890": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
       }
     }
   },
@@ -5250,15 +8029,18 @@
     "matches": {
       "1577280": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       },
       "1584640": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "みょうごにち"
       },
       "1584660": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -5285,16 +8067,18 @@
     ],
     "vocabIds": [
       "1577280",
-      "1642760"
+      "1360010"
     ],
     "matches": {
+      "1360010": {
+        "start": 4,
+        "length": 2,
+        "reading": "ねよ"
+      },
       "1577280": {
         "start": 0,
-        "length": 1
-      },
-      "1642760": {
-        "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   },
@@ -5309,26 +8093,24 @@
     ],
     "vocabIds": [
       "1542070",
-      "1009850",
-      "1284430",
+      "1597790",
       "1577280"
     ],
     "matches": {
-      "1009850": {
-        "start": 7,
-        "length": 3
-      },
-      "1284430": {
-        "start": 10,
-        "length": 3
-      },
       "1542070": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "あそび"
       },
       "1577280": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1597790": {
+        "start": 8,
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -5349,15 +8131,18 @@
     "matches": {
       "1255430": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1463770": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "にち"
       },
       "1577280": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひま"
       }
     }
   }

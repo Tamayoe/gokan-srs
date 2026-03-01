@@ -21,31 +21,38 @@
     "matches": {
       "1237160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258200": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "けんり"
       },
       "1329590": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "うける"
       },
       "1401240": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "そうとう"
       },
       "1413240": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
       "1477910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はつめい"
       },
       "1655380": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "たいか"
       }
     }
   },
@@ -62,25 +69,47 @@
     "vocabIds": [
       "1413240",
       "1237160",
+      "1299100",
       "1936100",
-      "1223660"
+      "1313830",
+      "1223660",
+      "2087400"
     ],
     "matches": {
       "1223660": {
         "start": 21,
-        "length": 4
+        "length": 3,
+        "reading": "おこし"
       },
       "1237160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1299100": {
+        "start": 16,
+        "length": 2,
+        "reading": "さつじん"
+      },
+      "1313830": {
+        "start": 18,
+        "length": 2,
+        "reading": "じけん"
       },
       "1413240": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
       "1936100": {
         "start": 16,
-        "length": 4
+        "length": 4,
+        "reading": "さつじんじけん"
+      },
+      "2087400": {
+        "start": 21,
+        "length": 3,
+        "reading": "おこし"
       }
     }
   },
@@ -99,28 +128,39 @@
       "1330290",
       "1237160",
       "1587040",
+      "1326980",
       "2451270"
     ],
     "matches": {
       "1111590": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ふらんすご"
       },
       "1237160": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1326980": {
+        "start": 25,
+        "length": 2,
+        "reading": "とり"
       },
       "1330290": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1587040": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
       "2451270": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "とり"
       }
     }
   },
@@ -136,6 +176,7 @@
     "indices": "明日 私たち の 教授 は 英国 に 帰る の よ[01]",
     "vocabIds": [
       "1584660",
+      "1311110",
       "1311300",
       "1237160",
       "1174450",
@@ -144,23 +185,33 @@
     "matches": {
       "1174450": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "えいこく"
       },
       "1221270": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かえる"
       },
       "1237160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -185,27 +236,141 @@
     "matches": {
       "1193320": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かしょう"
       },
       "1237160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1438050": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "91680",
+    "original": "彼女はピアノの個人教授を受けている。",
+    "en": [
+      {
+        "id": "312032",
+        "text": "She takes private piano lessons."
+      }
+    ],
+    "indices": "彼女[01] は ピアノ[01] の 個人教授~ を 受ける{受けている}",
+    "vocabIds": [
+      "1483150",
+      "1264770",
+      "1264790",
+      "1237160",
+      "1329590",
+      "1659120"
+    ],
+    "matches": {
+      "1237160": {
+        "start": 9,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1264770": {
+        "start": 7,
+        "length": 2,
+        "reading": "こじん"
+      },
+      "1264790": {
+        "start": 7,
+        "length": 4,
+        "reading": "こじんきょうじゅ"
+      },
+      "1329590": {
+        "start": 12,
+        "length": 2,
+        "reading": "うけ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1659120": {
+        "start": 12,
+        "length": 2,
+        "reading": "うけ"
+      }
+    }
+  },
+  {
+    "id": "95325",
+    "original": "彼女が新たに教授陣に加わった人です。",
+    "en": [
+      {
+        "id": "308381",
+        "text": "She is a new addition to the teaching staff."
+      }
+    ],
+    "indices": "彼女 が 新た[01] に 教授陣 に 加わる{加わった} 人(ひと) です",
+    "vocabIds": [
+      "1483150",
+      "1361510",
+      "1237160",
+      "1870180",
+      "1956490",
+      "1189980",
+      "1580640"
+    ],
+    "matches": {
+      "1189980": {
+        "start": 10,
+        "length": 3,
+        "reading": "くわわっ"
+      },
+      "1237160": {
+        "start": 6,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1361510": {
+        "start": 3,
+        "length": 2,
+        "reading": "あらた"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1580640": {
+        "start": 14,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1870180": {
+        "start": 6,
+        "length": 3,
+        "reading": "きょうじゅじん"
+      },
+      "1956490": {
+        "start": 8,
+        "length": 1,
+        "reading": "じん"
       }
     }
   },
@@ -227,15 +392,18 @@
     "matches": {
       "1237160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1385220": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "せつぼう"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -251,26 +419,54 @@
     "indices": "彼(かれ)[01] は 大学 の 経済学 の 教授 です",
     "vocabIds": [
       "1483070",
+      "2845011",
       "5627729",
+      "1413240",
+      "1251320",
       "1251380",
+      "1955900",
       "1237160"
     ],
     "matches": {
       "1237160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1251320": {
+        "start": 7,
+        "length": 2,
+        "reading": "けいざい"
       },
       "1251380": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "けいざいがく"
+      },
+      "1413240": {
+        "start": 4,
+        "length": 2,
+        "reading": "だいがく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1955900": {
+        "start": 9,
+        "length": 1,
+        "reading": "がく"
+      },
+      "2845011": {
+        "start": 2,
+        "length": 2,
+        "reading": "ひょうご"
       },
       "5627729": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "ひょうごだいがく"
       }
     }
   },
@@ -286,7 +482,9 @@
     "indices": "彼(かれ)[01] は 博士論文~ を 月末 迄{まで} に 教授 に 提出[01] 為る(する){し} ねばならない{なければならない}",
     "vocabIds": [
       "1483070",
+      "1474620",
       "1583010",
+      "1561840",
       "1255840",
       "1237160",
       "1436410"
@@ -294,23 +492,38 @@
     "matches": {
       "1237160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1255840": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "げつまつ"
       },
       "1436410": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ていしゅつ"
+      },
+      "1474620": {
+        "start": 2,
+        "length": 2,
+        "reading": "はかせ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1561840": {
+        "start": 4,
+        "length": 2,
+        "reading": "ろんぶん"
       },
       "1583010": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "はかせろんぶん"
       }
     }
   },
@@ -328,24 +541,85 @@
       "1483070",
       "1413240",
       "1316300",
-      "1237160"
+      "1237160",
+      "1557350"
     ],
     "matches": {
       "1237160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1316300": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じだい"
       },
       "1413240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1557350": {
+        "start": 10,
+        "length": 3,
+        "reading": "はげまさ"
+      }
+    }
+  },
+  {
+    "id": "102431",
+    "original": "彼は大学教授というよりむしろ小学校の教師である。",
+    "en": [
+      {
+        "id": "301263",
+        "text": "He is not so much a professor as a school teacher."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 大学教授 と言うより{というより} 寧ろ{むしろ} 小学校 の 教師 である",
+    "vocabIds": [
+      "1483070",
+      "1413240",
+      "1941890",
+      "1237160",
+      "1347870",
+      "1237130"
+    ],
+    "matches": {
+      "1237130": {
+        "start": 18,
+        "length": 2,
+        "reading": "きょうし"
+      },
+      "1237160": {
+        "start": 4,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1347870": {
+        "start": 14,
+        "length": 3,
+        "reading": "しょうがっこう"
+      },
+      "1413240": {
+        "start": 2,
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1941890": {
+        "start": 2,
+        "length": 4,
+        "reading": "だいがくきょうじゅ"
       }
     }
   },
@@ -366,11 +640,13 @@
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -392,15 +668,18 @@
     "matches": {
       "1159880": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いがくぶ"
       },
       "1237160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -423,19 +702,23 @@
     "matches": {
       "1174420": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1237160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1413240": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -451,21 +734,36 @@
     "indices": "彼(かれ)[01] は の 生物学 教授 だ",
     "vocabIds": [
       "1483070",
+      "1379430",
       "1379450",
+      "1955900",
       "1237160"
     ],
     "matches": {
       "1237160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1379430": {
+        "start": 8,
+        "length": 2,
+        "reading": "せいぶつ"
       },
       "1379450": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "せいぶつがく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1955900": {
+        "start": 10,
+        "length": 1,
+        "reading": "がく"
       }
     }
   },
@@ -488,19 +786,23 @@
     "matches": {
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1406400": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そんけい"
       },
       "1412880": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "おおいに"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -518,24 +820,34 @@
       "1483070",
       "1237160",
       "1562340",
+      "1363740",
       "1363750"
     ],
     "matches": {
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1363740": {
+        "start": 11,
+        "length": 2,
+        "reading": "まね"
       },
       "1363750": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "まねし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1562340": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "はなしかた"
       }
     }
   },
@@ -558,19 +870,23 @@
     "matches": {
       "1156530": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いけん"
       },
       "1237160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1318610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -592,15 +908,81 @@
     "matches": {
       "1237160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "5031288": {
         "start": 2,
-        "length": 8
+        "length": 8,
+        "reading": "けんぶりっじだいがく"
+      }
+    }
+  },
+  {
+    "id": "120067",
+    "original": "彼が新しく教授陣に加わった人です。",
+    "en": [
+      {
+        "id": "283881",
+        "text": "He is a new addition to the teaching staff."
+      }
+    ],
+    "indices": "彼(かれ) が 新しい{新しく} 教授陣~ に 加わる{加わった} 人(ひと) です",
+    "vocabIds": [
+      "1483070",
+      "1361490",
+      "1856610",
+      "1237160",
+      "1870180",
+      "1956490",
+      "1189980",
+      "1580640"
+    ],
+    "matches": {
+      "1189980": {
+        "start": 9,
+        "length": 3,
+        "reading": "くわわっ"
+      },
+      "1237160": {
+        "start": 5,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1361490": {
+        "start": 2,
+        "length": 3,
+        "reading": "あたらしく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1580640": {
+        "start": 13,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1856610": {
+        "start": 2,
+        "length": 3,
+        "reading": "あたらしく"
+      },
+      "1870180": {
+        "start": 5,
+        "length": 3,
+        "reading": "きょうじゅじん"
+      },
+      "1956490": {
+        "start": 7,
+        "length": 1,
+        "reading": "じん"
       }
     }
   },
@@ -615,47 +997,55 @@
     ],
     "indices": "教授 は 彼(かれ)[01]{彼の} 研究 を 手伝う{手伝って} 呉れる{くれる} 人(ひと) を 求める{求めている}",
     "vocabIds": [
-      "1442730",
-      "1423310",
       "1237160",
+      "1483070",
       "1000420",
       "1258520",
       "1328190",
       "1580640",
-      "1229350"
+      "1229350",
+      "1229340"
     ],
     "matches": {
       "1000420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1229340": {
+        "start": 19,
+        "length": 2,
+        "reading": "もとめ"
       },
       "1229350": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "もとめ"
       },
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258520": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1328190": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "てつだっ"
       },
-      "1423310": {
-        "start": 1,
-        "length": 1
-      },
-      "1442730": {
-        "start": 0,
-        "length": 1
+      "1483070": {
+        "start": 5,
+        "length": 1,
+        "reading": "かれ"
       },
       "1580640": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -673,34 +1063,46 @@
       "1861770",
       "1206900",
       "1237160",
+      "1587040",
       "2405870",
       "1591110",
-      "2061260"
+      "1460850"
     ],
     "matches": {
       "1206900": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1237160": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1460850": {
+        "start": 34,
+        "length": 4,
+        "reading": "むずかしかっ"
+      },
+      "1587040": {
+        "start": 21,
+        "length": 2,
+        "reading": "いわ"
       },
       "1591110": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "きく"
       },
       "1861770": {
         "start": 0,
-        "length": 2
-      },
-      "2061260": {
-        "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       },
       "2405870": {
         "start": 21,
-        "length": 6
+        "length": 6,
+        "reading": "いわんとする"
       }
     }
   },
@@ -724,23 +1126,28 @@
     "matches": {
       "1237160": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1318610": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1380440": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "こえ"
       },
       "1403060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうおん"
       },
       "1432900": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "とおす"
       }
     }
   },
@@ -761,36 +1168,49 @@
       "1237160",
       "1362640",
       "1529370",
-      "1535200"
+      "1604890",
+      "1206060"
     ],
     "matches": {
+      "1206060": {
+        "start": 23,
+        "length": 3,
+        "reading": "さまし"
+      },
       "1237160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1273030": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こうせん"
       },
       "1362640": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ふかい"
       },
       "1401400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "まど"
       },
       "1465590": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1529370": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ねむり"
       },
-      "1535200": {
+      "1604890": {
         "start": 21,
-        "length": 6
+        "length": 1,
+        "reading": "め"
       }
     }
   },
@@ -805,7 +1225,6 @@
     ],
     "indices": "教授 は 化学[01] 学会~ で(#2028980) 司会 を 勤める[02]{務めた}",
     "vocabIds": [
-      "1442730",
       "1237160",
       "1186760",
       "1206610",
@@ -814,23 +1233,23 @@
     "matches": {
       "1186760": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かがく"
       },
       "1206610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "がっかい"
       },
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1306640": {
         "start": 10,
-        "length": 2
-      },
-      "1442730": {
-        "start": 1,
-        "length": 1
+        "length": 2,
+        "reading": "しかい"
       }
     }
   },
@@ -845,10 +1264,6 @@
     ],
     "indices": "は 教授 の 指導[01] の 下(もと)[01]{もと} 歴史 を 研究 為る(する){している}",
     "vocabIds": [
-      "1376590",
-      "1589190",
-      "2252790",
-      "1449910",
       "1237160",
       "1309950",
       "1558050",
@@ -857,35 +1272,23 @@
     "matches": {
       "1237160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258520": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1309950": {
         "start": 8,
-        "length": 2
-      },
-      "1376590": {
-        "start": 0,
-        "length": 1
-      },
-      "1449910": {
-        "start": 4,
-        "length": 1
+        "length": 2,
+        "reading": "しどう"
       },
       "1558050": {
         "start": 13,
-        "length": 2
-      },
-      "1589190": {
-        "start": 1,
-        "length": 1
-      },
-      "2252790": {
-        "start": 3,
-        "length": 1
+        "length": 2,
+        "reading": "れきし"
       }
     }
   },
@@ -911,40 +1314,60 @@
       "1562360",
       "1449190",
       "1313580",
+      "1589350",
+      "1589320",
       "2408690"
     ],
     "matches": {
       "1174420": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1313580": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1368740": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ひとたち"
       },
       "1449190": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "とうぜん"
       },
       "1562360": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "はなせる"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1589320": {
+        "start": 24,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 24,
+        "length": 2,
+        "reading": "おもい"
       },
       "2408690": {
         "start": 24,
-        "length": 4
+        "length": 4,
+        "reading": "おもいがち"
       }
     }
   },
@@ -970,31 +1393,38 @@
     "matches": {
       "1174420": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1237160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1449190": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "とうぜん"
       },
       "1562360": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "はなせる"
       },
       "1589350": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -1017,19 +1447,23 @@
     "matches": {
       "1237160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1406400": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "そんけい"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       }
     }
   },
@@ -1045,36 +1479,60 @@
     "indices": "私(わたし)[01] を 死ぬほど 退屈 為せる{させた} の は 何よりも 教授 の 話(はなし) だ{だった}",
     "vocabIds": [
       "1311110",
+      "1310730",
       "2836931",
       "1596750",
+      "1577100",
+      "1188530",
       "2141560",
       "1237160",
       "1600900"
     ],
     "matches": {
+      "1188530": {
+        "start": 14,
+        "length": 3,
+        "reading": "なにより"
+      },
       "1237160": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1310730": {
+        "start": 2,
+        "length": 2,
+        "reading": "しぬ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1577100": {
+        "start": 14,
+        "length": 1,
+        "reading": "なに"
       },
       "1596750": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たいくつ"
       },
       "1600900": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       },
       "2141560": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "なによりも"
       },
       "2836931": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "しぬほど"
       }
     }
   },
@@ -1093,28 +1551,51 @@
       "1237160",
       "1315840",
       "2859157",
-      "1198190"
+      "1502860",
+      "1198180",
+      "1198190",
+      "1538130"
     ],
     "matches": {
+      "1198180": {
+        "start": 11,
+        "length": 2,
+        "reading": "あう"
+      },
       "1198190": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "あうやくそく"
       },
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315840": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "じ"
+      },
+      "1502860": {
+        "start": 9,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1538130": {
+        "start": 13,
+        "length": 2,
+        "reading": "やくそく"
       },
       "2859157": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "さんぜろふん"
       }
     }
   },
@@ -1139,11 +1620,13 @@
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -1160,25 +1643,80 @@
     "vocabIds": [
       "1311110",
       "1237160",
+      "1376760",
       "2854056",
+      "1587040",
       "1344550"
     ],
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1344550": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "じょきょうじゅ"
+      },
+      "1376760": {
+        "start": 12,
+        "length": 2,
+        "reading": "せいかく"
+      },
+      "1587040": {
+        "start": 15,
+        "length": 2,
+        "reading": "いえ"
       },
       "2854056": {
         "start": 12,
-        "length": 6
+        "length": 6,
+        "reading": "せいかくにいえば"
+      }
+    }
+  },
+  {
+    "id": "162364",
+    "original": "私は、この教授法はよいとおもう。",
+    "en": [
+      {
+        "id": "252150",
+        "text": "I believe in this method of teaching."
+      }
+    ],
+    "indices": "私(わたし)[01] は 此の{この} 教授法 は 良い{よい} と 思う{おもう}",
+    "vocabIds": [
+      "1311110",
+      "1237160",
+      "1761730",
+      "1438050"
+    ],
+    "matches": {
+      "1237160": {
+        "start": 5,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1438050": {
+        "start": 7,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1761730": {
+        "start": 5,
+        "length": 3,
+        "reading": "きょうじゅほう"
       }
     }
   },
@@ -1193,52 +1731,79 @@
     ],
     "indices": "私たち は 教授 の 示す{示した} 問題 を 解く(とく)[03]{解こう} と 試みる{試みた} が 迚も{とても} 面倒{面倒な} 問い に 思える{思えた}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1237160",
       "1317110",
+      "1853460",
       "1536010",
-      "2076480",
+      "1198890",
       "1312280",
+      "1312270",
       "1533550",
       "1535930",
       "1309440"
     ],
     "matches": {
+      "1198890": {
+        "start": 13,
+        "length": 2,
+        "reading": "ほどこ"
+      },
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1309440": {
         "start": 31,
-        "length": 3
+        "length": 2,
+        "reading": "おもえ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1312270": {
+        "start": 17,
+        "length": 2,
+        "reading": "こころみ"
       },
       "1312280": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "こころみ"
       },
       "1317110": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "しめし"
       },
       "1533550": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "めんどう"
       },
       "1535930": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "とい"
       },
       "1536010": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
-      "2076480": {
-        "start": 13,
-        "length": 1
+      "1853460": {
+        "start": 7,
+        "length": 2,
+        "reading": "しめし"
       }
     }
   },
@@ -1253,6 +1818,7 @@
     ],
     "indices": "私たち は 其の[01]{その} 教授 が 昔 から 言う{言っている} 洒落(しゃれ)[01]{しゃれに}~ うんざり 為る(する){している}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1237160",
       "1382370",
@@ -1261,19 +1827,160 @@
     "matches": {
       "1237160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1382370": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "むかし"
       },
       "1587040": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
+      }
+    }
+  },
+  {
+    "id": "166889",
+    "original": "私たちの先生は新しい英語の教授法を使おうとした。",
+    "en": [
+      {
+        "id": "247613",
+        "text": "Our teacher tried to use a new method of teaching English."
+      }
+    ],
+    "indices": "私たち の 先生(せんせい)[01] は 新しい 英語 の 教授法 を 使う[01]{使おう} とする{とした}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1387990",
+      "1361490",
+      "1174420",
+      "1237160",
+      "1761730",
+      "1438050",
+      "1305990"
+    ],
+    "matches": {
+      "1174420": {
+        "start": 10,
+        "length": 2,
+        "reading": "えいご"
+      },
+      "1237160": {
+        "start": 13,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1305990": {
+        "start": 17,
+        "length": 2,
+        "reading": "つかお"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1361490": {
+        "start": 7,
+        "length": 3,
+        "reading": "あたらしい"
+      },
+      "1387990": {
+        "start": 4,
+        "length": 2,
+        "reading": "せんせい"
+      },
+      "1438050": {
+        "start": 15,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1761730": {
+        "start": 13,
+        "length": 3,
+        "reading": "きょうじゅほう"
+      }
+    }
+  },
+  {
+    "id": "166979",
+    "original": "私たちの高校では新しい教授法を採用することにした。",
+    "en": [
+      {
+        "id": "247523",
+        "text": "Our high school has decided to adopt a new teaching method."
+      }
+    ],
+    "indices": "私たち の 高校 で(#2028980) は 新しい 教授法 を 採用 為る(する){する} 事にする{ことにした}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1283500",
+      "1361490",
+      "1237160",
+      "1761730",
+      "1438050",
+      "1294890"
+    ],
+    "matches": {
+      "1237160": {
+        "start": 11,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1283500": {
+        "start": 4,
+        "length": 2,
+        "reading": "こうこう"
+      },
+      "1294890": {
+        "start": 15,
+        "length": 2,
+        "reading": "さいよう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1361490": {
+        "start": 8,
+        "length": 3,
+        "reading": "あたらしい"
+      },
+      "1438050": {
+        "start": 13,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1761730": {
+        "start": 11,
+        "length": 3,
+        "reading": "きょうじゅほう"
       }
     }
   },
@@ -1288,8 +1995,6 @@
     ],
     "indices": "教授 が 大学院 の 研究 を 指導[01] 為る(する){して} 下さる{くださった}",
     "vocabIds": [
-      "1269320",
-      "1449910",
       "1237160",
       "1413250",
       "1258520",
@@ -1298,27 +2003,92 @@
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258520": {
         "start": 9,
-        "length": 2
-      },
-      "1269320": {
-        "start": 0,
-        "length": 1
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1309950": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しどう"
       },
       "1413250": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "だいがくいん"
+      }
+    }
+  },
+  {
+    "id": "180145",
+    "original": "教授会は学部長の提案を採用した。",
+    "en": [
+      {
+        "id": "19005",
+        "text": "The faculty meeting adopted the dean's proposal."
+      }
+    ],
+    "indices": "教授会~ は 学部長 の 提案 を 採用 為る(する){した}",
+    "vocabIds": [
+      "1237160",
+      "1761720",
+      "1198160",
+      "1207080",
+      "1207100",
+      "1429740",
+      "1953820",
+      "1436320",
+      "1294890"
+    ],
+    "matches": {
+      "1198160": {
+        "start": 2,
+        "length": 1,
+        "reading": "かい"
       },
-      "1449910": {
-        "start": 1,
-        "length": 1
+      "1207080": {
+        "start": 4,
+        "length": 2,
+        "reading": "がくぶ"
+      },
+      "1207100": {
+        "start": 4,
+        "length": 3,
+        "reading": "がくぶちょう"
+      },
+      "1237160": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1294890": {
+        "start": 11,
+        "length": 2,
+        "reading": "さいよう"
+      },
+      "1429740": {
+        "start": 6,
+        "length": 1,
+        "reading": "ちょう"
+      },
+      "1436320": {
+        "start": 8,
+        "length": 2,
+        "reading": "ていあん"
+      },
+      "1761720": {
+        "start": 0,
+        "length": 3,
+        "reading": "きょうじゅかい"
+      },
+      "1953820": {
+        "start": 6,
+        "length": 2,
+        "reading": "ちょうの"
       }
     }
   },
@@ -1334,21 +2104,24 @@
     "indices": "教授 は 物思い に 耽る[01]{ふけっている} 様(よう){よう} に 見える(みえる){見えた}",
     "vocabIds": [
       "1237160",
-      "2849635",
+      "1642080",
       "1259140"
     ],
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1259140": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "みえ"
       },
-      "2849635": {
+      "1642080": {
         "start": 3,
-        "length": 8
+        "length": 3,
+        "reading": "ものおもい"
       }
     }
   },
@@ -1372,23 +2145,28 @@
     "matches": {
       "1153440": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "あつかっ"
       },
       "1206900": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1318610": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1483150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -1411,19 +2189,23 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1282260": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "こうぎ"
       },
       "1425080": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうとう"
       },
       "1536010": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -1439,8 +2221,8 @@
     "indices": "教授 は 新刊~ 本(ほん)[01] を 何(なん)[04] 冊(さつ)[02] か 紐育{ニューヨーク} に 注文(ちゅうもん)[01] 為る(する){した}",
     "vocabIds": [
       "1237160",
-      "1361580",
-      "1522150",
+      "1361480",
+      "2585940",
       "1577100",
       "1298520",
       "1426650"
@@ -1448,27 +2230,33 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1298520": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
       },
-      "1361580": {
+      "1361480": {
         "start": 3,
-        "length": 2
+        "length": 1,
+        "reading": "しん"
       },
       "1426650": {
         "start": 17,
-        "length": 2
-      },
-      "1522150": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1577100": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
+      },
+      "2585940": {
+        "start": 4,
+        "length": 2,
+        "reading": "かんぽん"
       }
     }
   },
@@ -1490,15 +2278,18 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1319580": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "しかっ"
       },
       "1330290": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       }
     }
   },
@@ -1514,26 +2305,54 @@
     "indices": "教授 は 試験問題~ が 注意深く チェック[02] 為れる{された} 事(こと){こと} を 確かめる{確かめた}",
     "vocabIds": [
       "1237160",
+      "1312350",
       "1936680",
+      "1536010",
+      "1610330",
       "2680640",
-      "1205780"
+      "1205780",
+      "1613980"
     ],
     "matches": {
       "1205780": {
         "start": 22,
-        "length": 4
+        "length": 3,
+        "reading": "たしかめ"
       },
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1312350": {
+        "start": 3,
+        "length": 2,
+        "reading": "しけん"
+      },
+      "1536010": {
+        "start": 5,
+        "length": 2,
+        "reading": "もんだい"
+      },
+      "1610330": {
+        "start": 8,
+        "length": 4,
+        "reading": "ちゅういぶかく"
+      },
+      "1613980": {
+        "start": 22,
+        "length": 3,
+        "reading": "たしかめ"
       },
       "1936680": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "しけんもんだい"
       },
       "2680640": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "ちゅういぶかく"
       }
     }
   },
@@ -1551,24 +2370,34 @@
       "1237160",
       "1311110",
       "1258520",
-      "1557350"
+      "1557350",
+      "1901610"
     ],
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258520": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1557350": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "はげまし"
+      },
+      "1901610": {
+        "start": 8,
+        "length": 3,
+        "reading": "はげまし"
       }
     }
   },
@@ -1584,21 +2413,36 @@
     "indices": "教授 は 研究 休暇 で(#2028980) 日本 に 居る(いる)[01]{いる}",
     "vocabIds": [
       "1237160",
+      "1258520",
       "2603880",
+      "1227610",
       "1582710"
     ],
     "matches": {
+      "1227610": {
+        "start": 5,
+        "length": 2,
+        "reading": "きゅうか"
+      },
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1258520": {
+        "start": 3,
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1582710": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
       },
       "2603880": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "けんきゅうきゅうか"
       }
     }
   },
@@ -1614,31 +2458,60 @@
     "indices": "教授 は 期末試験 を 一週間 延期 為る(する){する} と 約束[01] 為る(する){した}",
     "vocabIds": [
       "1237160",
+      "1220620",
       "1220630",
+      "1312350",
+      "1160790",
       "1163270",
+      "1333500",
       "1176430",
       "1538130"
     ],
     "matches": {
+      "1160790": {
+        "start": 8,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163270": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "いちしゅうかん"
       },
       "1176430": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "えんき"
+      },
+      "1220620": {
+        "start": 3,
+        "length": 2,
+        "reading": "きまつ"
       },
       "1220630": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "きまつしけん"
       },
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1312350": {
+        "start": 5,
+        "length": 2,
+        "reading": "しけん"
+      },
+      "1333500": {
+        "start": 9,
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1538130": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
       }
     }
   },
@@ -1662,23 +2535,28 @@
     "matches": {
       "1206900": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1229350": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "もとめる"
       },
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258520": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1539230": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうしゅう"
       }
     }
   },
@@ -1700,15 +2578,18 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1282260": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こうぎ"
       },
       "1558050": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "れきし"
       }
     }
   },
@@ -1724,16 +2605,24 @@
     "indices": "教授 は にっこり{にっこりと} 微笑む{微笑みました}",
     "vocabIds": [
       "1237160",
+      "1486030",
       "1486010"
     ],
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1486010": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ほほえみ"
+      },
+      "1486030": {
+        "start": 8,
+        "length": 3,
+        "reading": "ほほえみ"
       }
     }
   },
@@ -1755,15 +2644,18 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1536010": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1850420": {
         "start": 11,
-        "length": 6
+        "length": 5,
+        "reading": "ときあかし"
       }
     }
   },
@@ -1786,19 +2678,23 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1320230": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しつれい"
       },
       "1587040": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "いう"
       },
       "1589350": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -1820,15 +2716,18 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1343940": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "かきとめ"
       },
       "1600900": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -1849,11 +2748,13 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1600900": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -1870,20 +2771,29 @@
     "vocabIds": [
       "1237160",
       "1282240",
-      "1360010"
+      "1360010",
+      "1642760"
     ],
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1282240": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こうえん"
       },
       "1360010": {
         "start": 9,
-        "length": 2
+        "length": 1,
+        "reading": "ね"
+      },
+      "1642760": {
+        "start": 9,
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -1899,16 +2809,24 @@
     "indices": "教授 が 皆{みんな} の 勘定 を 払う[01]{払って} 呉れる{くれた}",
     "vocabIds": [
       "1237160",
-      "1867610"
+      "1210750",
+      "1501620"
     ],
     "matches": {
+      "1210750": {
+        "start": 7,
+        "length": 2,
+        "reading": "かんじょう"
+      },
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
-      "1867610": {
-        "start": 7,
-        "length": 6
+      "1501620": {
+        "start": 10,
+        "length": 2,
+        "reading": "はらっ"
       }
     }
   },
@@ -1930,15 +2848,18 @@
     "matches": {
       "1220620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きまつ"
       },
       "1237160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1436410": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ていしゅつ"
       }
     }
   },
@@ -1959,36 +2880,49 @@
       "1600900",
       "1546820",
       "1426530",
-      "1277100"
+      "1277100",
+      "1277090"
     ],
     "matches": {
       "1206900": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1277090": {
+        "start": 15,
+        "length": 2,
+        "reading": "むけ"
       },
       "1277100": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "むけ"
       },
       "1416220": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1426530": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうい"
       },
       "1546820": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ようてん"
       },
       "1600900": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -2011,19 +2945,80 @@
     "matches": {
       "1206900": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1237160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1344650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "じょしゅ"
       },
       "1429120": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうさ"
+      }
+    }
+  },
+  {
+    "id": "184386",
+    "original": "学校は新しい英語教授法を採用した。",
+    "en": [
+      {
+        "id": "21514",
+        "text": "The school adopted the new method of teaching English."
+      }
+    ],
+    "indices": "学校 は 新しい 英語 教授法 を 採用 為る(する){した}",
+    "vocabIds": [
+      "1206730",
+      "1361490",
+      "1174420",
+      "1237160",
+      "1761730",
+      "1438050",
+      "1294890"
+    ],
+    "matches": {
+      "1174420": {
+        "start": 6,
+        "length": 2,
+        "reading": "えいご"
+      },
+      "1206730": {
+        "start": 0,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1237160": {
+        "start": 8,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1294890": {
+        "start": 12,
+        "length": 2,
+        "reading": "さいよう"
+      },
+      "1361490": {
+        "start": 3,
+        "length": 3,
+        "reading": "あたらしい"
+      },
+      "1438050": {
+        "start": 10,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1761730": {
+        "start": 8,
+        "length": 3,
+        "reading": "きょうじゅほう"
       }
     }
   },
@@ -2045,29 +3040,91 @@
       "1607050",
       "1237160",
       "2453520",
-      "1355540",
-      "1518300"
+      "1355540"
     ],
     "matches": {
       "1237160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1355540": {
         "start": 11,
-        "length": 2
-      },
-      "1518300": {
-        "start": 15,
-        "length": 4
+        "length": 2,
+        "reading": "じょうだん"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       },
       "2453520": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "おきまり"
+      }
+    }
+  },
+  {
+    "id": "186426",
+    "original": "我が校は新しい教授法を採用した。",
+    "en": [
+      {
+        "id": "23562",
+        "text": "Our school has adopted a new teaching method."
+      }
+    ],
+    "indices": "我が校 は 新しい 教授法 を 採用 為る(する){した}",
+    "vocabIds": [
+      "1606620",
+      "2005900",
+      "2259610",
+      "1361490",
+      "1237160",
+      "1761730",
+      "1438050",
+      "1294890"
+    ],
+    "matches": {
+      "1237160": {
+        "start": 7,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1294890": {
+        "start": 11,
+        "length": 2,
+        "reading": "さいよう"
+      },
+      "1361490": {
+        "start": 4,
+        "length": 3,
+        "reading": "あたらしい"
+      },
+      "1438050": {
+        "start": 9,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1606620": {
+        "start": 0,
+        "length": 2,
+        "reading": "わが"
+      },
+      "1761730": {
+        "start": 7,
+        "length": 3,
+        "reading": "きょうじゅほう"
+      },
+      "2005900": {
+        "start": 0,
+        "length": 3,
+        "reading": "わがこう"
+      },
+      "2259610": {
+        "start": 2,
+        "length": 1,
+        "reading": "こう"
       }
     }
   },
@@ -2082,17 +3139,31 @@
     ],
     "indices": "一人 の 教授~ が 囁く{ささやいた}~",
     "vocabIds": [
+      "1160790",
       "1576150",
+      "1580640",
       "1237160"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1237160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1576150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -2107,37 +3178,43 @@
     ],
     "indices": "教授 は 言語学 の 研究 の 為(ため){ため} 亜米利加{アメリカ} へ 行く[01]{行った}",
     "vocabIds": [
-      "2252790",
-      "1449910",
       "1237160",
+      "1264420",
       "1264430",
+      "1955900",
       "1258520",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258520": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
+      },
+      "1264420": {
+        "start": 5,
+        "length": 2,
+        "reading": "げんご"
       },
       "1264430": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "げんごがく"
       },
-      "1449910": {
-        "start": 1,
-        "length": 1
-      },
-      "1589060": {
+      "1578850": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
-      "2252790": {
-        "start": 0,
-        "length": 1
+      "1955900": {
+        "start": 7,
+        "length": 1,
+        "reading": "がく"
       }
     }
   },
@@ -2161,23 +3238,28 @@
     "matches": {
       "1174420": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1237160": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1449190": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "とうぜん"
       },
       "1562360": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "はなせる"
       },
       "1589350": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -2199,15 +3281,18 @@
     "matches": {
       "1237160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1467280": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "にんめい"
       },
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2224,25 +3309,80 @@
     "vocabIds": [
       "1237160",
       "1231690",
+      "1342440",
       "1718640",
+      "1297240",
       "1340030"
     ],
     "matches": {
       "1231690": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きょねん"
       },
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1297240": {
+        "start": 11,
+        "length": 1,
+        "reading": "さく"
       },
       "1340030": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱん"
+      },
+      "1342440": {
+        "start": 9,
+        "length": 2,
+        "reading": "しょじょ"
       },
       "1718640": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "しょじょさく"
+      }
+    }
+  },
+  {
+    "id": "196679",
+    "original": "ヘレブラント博士はそのすぐれた大学の准教授である。",
+    "en": [
+      {
+        "id": "33858",
+        "text": "Dr. Hellebrandt is an associate professor in that excellent university."
+      }
+    ],
+    "indices": "博士[01] は 其の[01]{その} 優れる{すぐれた} 大学 の 准教授~ である",
+    "vocabIds": [
+      "1474620",
+      "1413240",
+      "2178020",
+      "1237160"
+    ],
+    "matches": {
+      "1237160": {
+        "start": 19,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1413240": {
+        "start": 15,
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1474620": {
+        "start": 6,
+        "length": 2,
+        "reading": "はかせ"
+      },
+      "2178020": {
+        "start": 18,
+        "length": 3,
+        "reading": "じゅんきょうじゅ"
       }
     }
   },
@@ -2262,32 +3402,44 @@
       "1522150",
       "1340030",
       "1415000",
+      "1218760",
       "1218770"
     ],
     "matches": {
+      "1218760": {
+        "start": 21,
+        "length": 2,
+        "reading": "よろこん"
+      },
       "1218770": {
         "start": 21,
-        "length": 3
+        "length": 3,
+        "reading": "よろこんで"
       },
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1318610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1340030": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱん"
       },
       "1415000": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1522150": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -2308,11 +3460,13 @@
     "matches": {
       "1237160": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1593570": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "ごぞんじ"
       }
     }
   },
@@ -2334,15 +3488,18 @@
     "matches": {
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1497610": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1540150": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       }
     }
   },
@@ -2359,30 +3516,98 @@
     "vocabIds": [
       "1561840",
       "1237160",
+      "1419080",
       "1419110",
+      "1463770",
       "1284430",
       "1340030"
     ],
     "matches": {
       "1237160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1284430": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "あう"
       },
       "1340030": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱん"
+      },
+      "1419080": {
+        "start": 8,
+        "length": 2,
+        "reading": "たんじょう"
       },
       "1419110": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "たんじょうび"
+      },
+      "1463770": {
+        "start": 10,
+        "length": 1,
+        "reading": "び"
       },
       "1561840": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ろんぶん"
+      }
+    }
+  },
+  {
+    "id": "208987",
+    "original": "その上、ある大学教授と対談しなければならない。",
+    "en": [
+      {
+        "id": "46247",
+        "text": "In addition, I have to interview a professor."
+      }
+    ],
+    "indices": "その上(そのうえ)[01] 有る{ある} 大学教授 と 対談~ 為る(する){し} ねばならない{なければならない}",
+    "vocabIds": [
+      "1006880",
+      "1352130",
+      "1413240",
+      "1941890",
+      "1237160",
+      "1410230"
+    ],
+    "matches": {
+      "1006880": {
+        "start": 0,
+        "length": 3,
+        "reading": "そのうえ"
+      },
+      "1237160": {
+        "start": 8,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1352130": {
+        "start": 2,
+        "length": 1,
+        "reading": "うえ"
+      },
+      "1410230": {
+        "start": 11,
+        "length": 2,
+        "reading": "たいだん"
+      },
+      "1413240": {
+        "start": 6,
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1941890": {
+        "start": 6,
+        "length": 4,
+        "reading": "だいがくきょうじゅ"
       }
     }
   },
@@ -2399,25 +3624,41 @@
     "vocabIds": [
       "1324300",
       "1237160",
+      "1345140",
       "1761910",
+      "1206900",
       "1580640"
     ],
     "matches": {
+      "1206900": {
+        "start": 9,
+        "length": 2,
+        "reading": "がくせい"
+      },
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1324300": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "わかい"
+      },
+      "1345140": {
+        "start": 7,
+        "length": 2,
+        "reading": "じょし"
       },
       "1580640": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1761910": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "じょしがくせい"
       }
     }
   },
@@ -2433,21 +3674,36 @@
     "indices": "其の[01]{その} 教授 は 現代[01] 文学 に 詳しい",
     "vocabIds": [
       "1237160",
+      "1263810",
       "2638570",
+      "1505190",
       "1351730"
     ],
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1263810": {
+        "start": 5,
+        "length": 2,
+        "reading": "げんだい"
       },
       "1351730": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "くわしい"
+      },
+      "1505190": {
+        "start": 7,
+        "length": 2,
+        "reading": "ぶんがく"
       },
       "2638570": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "げんだいぶんがく"
       }
     }
   },
@@ -2463,31 +3719,36 @@
     "indices": "其の[01]{その} 教授 は 迚も[01]{とても} 早い[01]{速く} 話す{話した} ので 誰も 理解 出来る{できなかった}",
     "vocabIds": [
       "1237160",
-      "2093400",
       "1562350",
+      "1416830",
       "1416860",
       "1549910"
     ],
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1416830": {
+        "start": 16,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416860": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "だれも"
       },
       "1549910": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "りかい"
       },
       "1562350": {
         "start": 10,
-        "length": 3
-      },
-      "2093400": {
-        "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "はなし"
       }
     }
   },
@@ -2504,6 +3765,7 @@
     "vocabIds": [
       "1237160",
       "2093400",
+      "1416830",
       "1416860",
       "1587040",
       "1549910"
@@ -2511,23 +3773,33 @@
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1416830": {
+        "start": 16,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416860": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "だれも"
       },
       "1549910": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "りかい"
       },
       "1587040": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
       "2093400": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "はや"
       }
     }
   },
@@ -2549,15 +3821,18 @@
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258520": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1531490": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "なだかい"
       }
     }
   },
@@ -2578,11 +3853,13 @@
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258090": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "けんい"
       }
     }
   },
@@ -2604,15 +3881,18 @@
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1549910": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "りかい"
       }
     }
   },
@@ -2630,24 +3910,28 @@
       "1237160",
       "1250720",
       "1263490",
-      "2764520"
+      "1202440"
     ],
     "matches": {
+      "1202440": {
+        "start": 17,
+        "length": 2,
+        "reading": "ひらか"
+      },
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1250720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けいい"
       },
       "1263490": {
         "start": 8,
-        "length": 3
-      },
-      "2764520": {
-        "start": 17,
-        "length": 4
+        "length": 2,
+        "reading": "あらわし"
       }
     }
   },
@@ -2665,34 +3949,121 @@
       "1223240",
       "1477840",
       "1237160",
+      "1419080",
       "1419110",
+      "1463770",
       "1164740",
-      "1643580"
+      "1589060"
     ],
     "matches": {
       "1164740": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "いっち"
       },
       "1223240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きじ"
       },
       "1237160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1419080": {
+        "start": 11,
+        "length": 2,
+        "reading": "たんじょう"
       },
       "1419110": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "たんじょうび"
+      },
+      "1463770": {
+        "start": 13,
+        "length": 1,
+        "reading": "び"
       },
       "1477840": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はっぴょう"
       },
-      "1643580": {
+      "1589060": {
         "start": 22,
-        "length": 4
+        "length": 2,
+        "reading": "おこなわ"
+      }
+    }
+  },
+  {
+    "id": "212372",
+    "original": "その委員会は主に大学教授で構成されている。",
+    "en": [
+      {
+        "id": "49654",
+        "text": "The committee is composed chiefly of professors."
+      }
+    ],
+    "indices": "其の[01]{その} 委員会 は 主に 大学教授 で(#2028980) 構成 為れる{されている}",
+    "vocabIds": [
+      "1156100",
+      "1156110",
+      "1198160",
+      "1324960",
+      "1324990",
+      "1413240",
+      "1941890",
+      "1237160",
+      "1279730"
+    ],
+    "matches": {
+      "1156100": {
+        "start": 2,
+        "length": 2,
+        "reading": "いいん"
+      },
+      "1156110": {
+        "start": 2,
+        "length": 3,
+        "reading": "いいんかい"
+      },
+      "1198160": {
+        "start": 4,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1237160": {
+        "start": 10,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1279730": {
+        "start": 13,
+        "length": 2,
+        "reading": "こうせい"
+      },
+      "1324960": {
+        "start": 6,
+        "length": 1,
+        "reading": "おも"
+      },
+      "1324990": {
+        "start": 6,
+        "length": 2,
+        "reading": "おもに"
+      },
+      "1413240": {
+        "start": 8,
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1941890": {
+        "start": 8,
+        "length": 4,
+        "reading": "だいがくきょうじゅ"
       }
     }
   },
@@ -2708,6 +4079,7 @@
     "indices": "其の[01]{その} アメリカ人 の 教授 は 京都 の 事(こと) を 良く[01]{よく} 知る{知っている}",
     "vocabIds": [
       "1018890",
+      "1580640",
       "1237160",
       "1652350",
       "1313580",
@@ -2716,23 +4088,33 @@
     "matches": {
       "1018890": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "あめりかじん"
       },
       "1237160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1313580": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1420470": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1580640": {
+        "start": 6,
+        "length": 1,
+        "reading": "じん"
       },
       "1652350": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きょうと"
       }
     }
   },
@@ -2748,31 +4130,72 @@
     "indices": "教授 は 英語学 で(#2028980) は 最高[01] 級[02] の 学者 の 一人 と 認める(みとめる){みとめられている}",
     "vocabIds": [
       "1237160",
+      "1174420",
       "2833593",
+      "1955900",
+      "1956280",
       "1657710",
+      "1283400",
       "1206800",
-      "1576150"
+      "1160790",
+      "1576150",
+      "1580640"
     ],
     "matches": {
+      "1160790": {
+        "start": 19,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1174420": {
+        "start": 6,
+        "length": 2,
+        "reading": "えいご"
+      },
       "1206800": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "がくしゃ"
       },
       "1237160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1283400": {
+        "start": 13,
+        "length": 2,
+        "reading": "こうきゅう"
       },
       "1576150": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 20,
+        "length": 1,
+        "reading": "にん"
       },
       "1657710": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "さいこうきゅう"
+      },
+      "1955900": {
+        "start": 8,
+        "length": 1,
+        "reading": "がく"
+      },
+      "1956280": {
+        "start": 12,
+        "length": 1,
+        "reading": "さい"
       },
       "2833593": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "えいごがく"
       }
     }
   },
@@ -2788,26 +4211,48 @@
     "indices": "教授 は 其の[01]{その} 一風変わった 生活 振り(ぶり){ぶり} が 有名[01] だ",
     "vocabIds": [
       "1237160",
+      "1166220",
       "1166230",
+      "1510790",
+      "1510690",
       "1378860",
       "1541620"
     ],
     "matches": {
+      "1166220": {
+        "start": 8,
+        "length": 2,
+        "reading": "いっぷう"
+      },
       "1166230": {
         "start": 8,
-        "length": 6
+        "length": 6,
+        "reading": "いっぷうかわった"
       },
       "1237160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1378860": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
+      },
+      "1510690": {
+        "start": 10,
+        "length": 4,
+        "reading": "かわった"
+      },
+      "1510790": {
+        "start": 10,
+        "length": 3,
+        "reading": "かわっ"
       },
       "1541620": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうめい"
       }
     }
   },
@@ -2824,30 +4269,59 @@
     "vocabIds": [
       "1237160",
       "1008850",
+      "1587040",
+      "1483070",
       "1000420",
       "1344650",
-      "1317180"
+      "1317170",
+      "1317180",
+      "1177800"
     ],
     "matches": {
       "1000420": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1008850": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "といえば"
+      },
+      "1177800": {
+        "start": 17,
+        "length": 2,
+        "reading": "とおい"
       },
       "1237160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1317170": {
+        "start": 15,
+        "length": 1,
+        "reading": "みみ"
       },
       "1317180": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "みみがとおい"
       },
       "1344650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じょしゅ"
+      },
+      "1483070": {
+        "start": 10,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1587040": {
+        "start": 6,
+        "length": 2,
+        "reading": "いえ"
       }
     }
   },
@@ -2870,54 +4344,71 @@
       "1199680",
       "1340820",
       "1155090",
-      "2840365",
-      "1189960",
+      "1495790",
+      "1577100",
+      "1188490",
       "2179900"
     ],
     "matches": {
       "1009740": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "にかんして"
       },
       "1155090": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "いがい"
       },
-      "1189960": {
-        "start": 34,
-        "length": 3
+      "1188490": {
+        "start": 40,
+        "length": 2,
+        "reading": "なにも"
       },
       "1199680": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "かいとう"
       },
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1293810": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さいご"
       },
       "1340820": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "のべ"
       },
       "1392680": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんかい"
       },
       "1483420": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ひはん"
+      },
+      "1495790": {
+        "start": 32,
+        "length": 5,
+        "reading": "つけくわえる"
+      },
+      "1577100": {
+        "start": 40,
+        "length": 1,
+        "reading": "なに"
       },
       "2179900": {
         "start": 40,
-        "length": 4
-      },
-      "2840365": {
-        "start": 31,
-        "length": 3
+        "length": 4,
+        "reading": "なにもない"
       }
     }
   },
@@ -2939,15 +4430,63 @@
     "matches": {
       "1237160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1411350": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たいかん"
       },
       "1548220": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "らいねん"
+      }
+    }
+  },
+  {
+    "id": "222410",
+    "original": "この記事はある大学教授によって書かれました。",
+    "en": [
+      {
+        "id": "59737",
+        "text": "This article was written by a college professor."
+      }
+    ],
+    "indices": "此の{この} 記事 は 有る{ある} 大学教授~ に因って{によって} 書く{書かれました}",
+    "vocabIds": [
+      "1223240",
+      "1413240",
+      "1941890",
+      "1237160",
+      "1343950"
+    ],
+    "matches": {
+      "1223240": {
+        "start": 2,
+        "length": 2,
+        "reading": "きじ"
+      },
+      "1237160": {
+        "start": 9,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1343950": {
+        "start": 15,
+        "length": 2,
+        "reading": "かか"
+      },
+      "1413240": {
+        "start": 7,
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1941890": {
+        "start": 7,
+        "length": 4,
+        "reading": "だいがくきょうじゅ"
       }
     }
   },
@@ -2970,19 +4509,23 @@
     "matches": {
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1258520": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1289980": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こんちゅう"
       },
       "1468380": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねんかん"
       }
     }
   },
@@ -3005,19 +4548,23 @@
     "matches": {
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1453220": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "どうねん"
       },
       "1497610": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       }
     }
   },
@@ -3042,27 +4589,90 @@
     "matches": {
       "1215320": {
         "start": 38,
-        "length": 3
+        "length": 3,
+        "reading": "まちがい"
       },
       "1237160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1264420": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "げんご"
       },
       "1264540": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1266440": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "よぶ"
       },
       "1305990": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
+      }
+    }
+  },
+  {
+    "id": "231122",
+    "original": "あの学校では新しい英語教授法を採用した。",
+    "en": [
+      {
+        "id": "68489",
+        "text": "They adopted a new method of teaching English in that school."
+      }
+    ],
+    "indices": "彼の(あの){あの} 学校 で(#2028980) は 新しい 英語 教授法~ を 採用[01] 為る(する){した}",
+    "vocabIds": [
+      "1206730",
+      "1361490",
+      "1174420",
+      "1237160",
+      "1761730",
+      "1438050",
+      "1294890"
+    ],
+    "matches": {
+      "1174420": {
+        "start": 9,
+        "length": 2,
+        "reading": "えいご"
+      },
+      "1206730": {
+        "start": 2,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1237160": {
+        "start": 11,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1294890": {
+        "start": 15,
+        "length": 2,
+        "reading": "さいよう"
+      },
+      "1361490": {
+        "start": 6,
+        "length": 3,
+        "reading": "あたらしい"
+      },
+      "1438050": {
+        "start": 13,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1761730": {
+        "start": 11,
+        "length": 3,
+        "reading": "きょうじゅほう"
       }
     }
   },
@@ -3079,25 +4689,41 @@
     "vocabIds": [
       "1580640",
       "1237160",
+      "1156100",
       "1156110",
+      "1198160",
       "1279730"
     ],
     "matches": {
+      "1156100": {
+        "start": 8,
+        "length": 2,
+        "reading": "いいん"
+      },
       "1156110": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "いいんかい"
+      },
+      "1198160": {
+        "start": 10,
+        "length": 1,
+        "reading": "かい"
       },
       "1237160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1279730": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こうせい"
       },
       "1580640": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -3120,19 +4746,23 @@
     "matches": {
       "1206900": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1237160": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1562350": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はなし"
       },
       "1577100": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -3149,20 +4779,29 @@
     "vocabIds": [
       "1237160",
       "1174380",
-      "1236900"
+      "1236900",
+      "1236890"
     ],
     "matches": {
       "1174380": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "えいかいわ"
+      },
+      "1236890": {
+        "start": 7,
+        "length": 2,
+        "reading": "おしえ"
       },
       "1236900": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "おしえ"
       },
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       }
     }
   },
@@ -3178,26 +4817,98 @@
     "indices": "は 牛津{オックスフォード} の 仏蘭西{フランス} 文学 の 教授 で(#2028980) 奥さん は フランス人 だ",
     "vocabIds": [
       "2403410",
+      "1505190",
       "1237160",
       "1179330",
-      "2083500"
+      "2083500",
+      "1580640"
     ],
     "matches": {
       "1179330": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "おくさん"
       },
       "1237160": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1505190": {
+        "start": 17,
+        "length": 2,
+        "reading": "ぶんがく"
+      },
+      "1580640": {
+        "start": 32,
+        "length": 1,
+        "reading": "じん"
       },
       "2083500": {
         "start": 28,
-        "length": 5
+        "length": 5,
+        "reading": "ふらんすじん"
       },
       "2403410": {
         "start": 13,
-        "length": 6
+        "length": 6,
+        "reading": "ふらんすぶんがく"
+      }
+    }
+  },
+  {
+    "id": "873954",
+    "original": "彼はかつて大学教授であり、研究者でもあった。",
+    "en": [
+      {
+        "id": "803339",
+        "text": "He was a former university professor and researcher."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1413240",
+      "1941890",
+      "1237160",
+      "1258520",
+      "1258590",
+      "1322990"
+    ],
+    "matches": {
+      "1237160": {
+        "start": 7,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1258520": {
+        "start": 13,
+        "length": 2,
+        "reading": "けんきゅう"
+      },
+      "1258590": {
+        "start": 13,
+        "length": 3,
+        "reading": "けんきゅうしゃ"
+      },
+      "1322990": {
+        "start": 15,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1413240": {
+        "start": 5,
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1941890": {
+        "start": 5,
+        "length": 4,
+        "reading": "だいがくきょうじゅ"
       }
     }
   },
@@ -3212,41 +4923,54 @@
     ],
     "vocabIds": [
       "1499320",
+      "1392580",
       "1392590",
       "1597040",
       "1580640",
-      "1558090",
-      "1192680",
+      "1558050",
+      "1206590",
       "1237160"
     ],
     "matches": {
-      "1192680": {
-        "start": 15,
-        "length": 1
+      "1206590": {
+        "start": 14,
+        "length": 2,
+        "reading": "がっか"
       },
       "1237160": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1392580": {
+        "start": 3,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1499320": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
-      "1558090": {
+      "1558050": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "れきし"
       },
       "1580640": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597040": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
       }
     }
   },
@@ -3267,15 +4991,18 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1310300": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "しはらっ"
       },
       "1502860": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ぶん"
       }
     }
   },
@@ -3290,21 +5017,30 @@
     ],
     "vocabIds": [
       "1000440",
+      "1580640",
       "5555810",
       "1237160"
     ],
     "matches": {
       "1000440": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あのひと"
       },
       "1237160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1580640": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひと"
       },
       "5555810": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "とうだい"
       }
     }
   },
@@ -3327,7 +5063,50 @@
     "matches": {
       "1237160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      }
+    }
+  },
+  {
+    "id": "2226309",
+    "original": "私は大学教授です。",
+    "en": [
+      {
+        "id": "256939",
+        "text": "I am a professor."
+      },
+      {
+        "id": "5853142",
+        "text": "I'm a professor."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1413240",
+      "1941890",
+      "1237160"
+    ],
+    "matches": {
+      "1237160": {
+        "start": 4,
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1413240": {
+        "start": 2,
+        "length": 2,
+        "reading": "だいがく"
+      },
+      "1941890": {
+        "start": 2,
+        "length": 4,
+        "reading": "だいがくきょうじゅ"
       }
     }
   },
@@ -3348,15 +5127,18 @@
     "matches": {
       "1237160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1361490": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1589350": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -3377,15 +5159,18 @@
     "matches": {
       "1237160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -3404,7 +5189,8 @@
     "matches": {
       "1237160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       }
     }
   },
@@ -3424,11 +5210,13 @@
     "matches": {
       "1237160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1413240": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       }
     }
   },
@@ -3453,15 +5241,18 @@
     "matches": {
       "1237160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1413240": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
       "1420470": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       }
     }
   },
@@ -3482,15 +5273,18 @@
     "matches": {
       "1002590": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "おとうさん"
       },
       "1237160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1413240": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       }
     }
   },
@@ -3511,15 +5305,18 @@
     "matches": {
       "1237160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1502790": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぶつり"
       }
     }
   },
@@ -3545,19 +5342,23 @@
     "matches": {
       "1111590": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "ふらんすご"
       },
       "1237160": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451740": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "おないどし"
       }
     }
   },
@@ -3577,11 +5378,13 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "2036870": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -3597,50 +5400,77 @@
     "vocabIds": [
       "1312350",
       "1417040",
-      "2762490",
+      "1326990",
       "1530970",
       "1584660",
       "1423000",
+      "1597470",
       "1237160",
       "2036870",
+      "1578850",
+      "2840505",
       "2020140"
     ],
     "matches": {
       "1237160": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1312350": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
+      },
+      "1326990": {
+        "start": 14,
+        "length": 2,
+        "reading": "とれ"
       },
       "1417040": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たんい"
       },
       "1423000": {
         "start": 35,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1530970": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "むり"
+      },
+      "1578850": {
+        "start": 49,
+        "length": 2,
+        "reading": "いっ"
       },
       "1584660": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
+      },
+      "1597470": {
+        "start": 35,
+        "length": 1,
+        "reading": "き"
       },
       "2020140": {
         "start": 49,
-        "length": 6
+        "length": 6,
+        "reading": "いってきます"
       },
       "2036870": {
         "start": 44,
-        "length": 3
+        "length": 3,
+        "reading": "おねがい"
       },
-      "2762490": {
-        "start": 14,
-        "length": 1
+      "2840505": {
+        "start": 49,
+        "length": 4,
+        "reading": "いってき"
       }
     }
   },
@@ -3655,21 +5485,36 @@
     ],
     "vocabIds": [
       "2002300",
+      "1315840",
+      "2021540",
       "1237160",
       "1465590"
     ],
     "matches": {
       "1237160": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1315840": {
+        "start": 6,
+        "length": 1,
+        "reading": "とき"
       },
       "1465590": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "2002300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "そのとき"
+      },
+      "2021540": {
+        "start": 6,
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -3690,15 +5535,18 @@
     "matches": {
       "1111590": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ふらんすご"
       },
       "1237160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1451740": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "おないどし"
       }
     }
   },
@@ -3717,7 +5565,8 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       }
     }
   },
@@ -3732,16 +5581,30 @@
     ],
     "vocabIds": [
       "1237160",
-      "1258570"
+      "1258520",
+      "1258570",
+      "1320300"
     ],
     "matches": {
       "1237160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
+      },
+      "1258520": {
+        "start": 8,
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1258570": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "けんきゅうしつ"
+      },
+      "1320300": {
+        "start": 10,
+        "length": 1,
+        "reading": "しつ"
       }
     }
   },
@@ -3758,24 +5621,34 @@
       "1237160",
       "1491330",
       "1528060",
-      "1563040"
+      "1563040",
+      "1563030"
     ],
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1491330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ふおん"
       },
       "1528060": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "みらい"
+      },
+      "1563030": {
+        "start": 12,
+        "length": 4,
+        "reading": "ほのめかし"
       },
       "1563040": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "ほのめかし"
       }
     }
   }

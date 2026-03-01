@@ -12,55 +12,65 @@
     "vocabIds": [
       "1521400",
       "2268520",
+      "1299680",
       "1315720",
-      "1502860",
       "1426530",
       "1581610",
-      "2244240",
+      "1208640",
       "1371260",
       "1552110",
       "1349380"
     ],
     "matches": {
+      "1208640": {
+        "start": 35,
+        "length": 2,
+        "reading": "すべら"
+      },
+      "1299680": {
+        "start": 6,
+        "length": 1,
+        "reading": "さら"
+      },
       "1315720": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1349380": {
         "start": 56,
-        "length": 1
+        "length": 1,
+        "reading": "ゆか"
       },
       "1371260": {
         "start": 39,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1426530": {
         "start": 21,
-        "length": 2
-      },
-      "1502860": {
-        "start": 19,
-        "length": 1
+        "length": 2,
+        "reading": "ちゅうい"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1552110": {
         "start": 48,
-        "length": 4
+        "length": 4,
+        "reading": "ながしこむ"
       },
       "1581610": {
         "start": 32,
-        "length": 1
-      },
-      "2244240": {
-        "start": 35,
-        "length": 4
+        "length": 1,
+        "reading": "はじ"
       },
       "2268520": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "すーぷさら"
       }
     }
   },
@@ -76,21 +86,69 @@
     "indices": "寝室 の カーテン は 端(はし) が 色褪せる{色あせて} 来る(くる){きた}",
     "vocabIds": [
       "1360140",
-      "1581610",
-      "1357600"
+      "1581610"
     ],
     "matches": {
-      "1357600": {
-        "start": 10,
-        "length": 1
-      },
       "1360140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しんしつ"
       },
       "1581610": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
+      }
+    }
+  },
+  {
+    "id": "154989",
+    "original": "私は通りを端から端まで歩いた。",
+    "en": [
+      {
+        "id": "259550",
+        "text": "I walked the length of the street."
+      }
+    ],
+    "indices": "私(わたし)[01] は 通り(とおり) を 端(はし) から 端(はし) 迄{まで} 歩く{歩いた}",
+    "vocabIds": [
+      "1311110",
+      "1432920",
+      "1581610",
+      "2464070",
+      "2464080",
+      "1514320"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1432920": {
+        "start": 2,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1514320": {
+        "start": 11,
+        "length": 2,
+        "reading": "あるい"
+      },
+      "1581610": {
+        "start": 5,
+        "length": 1,
+        "reading": "はじ"
+      },
+      "2464070": {
+        "start": 5,
+        "length": 3,
+        "reading": "はじから"
+      },
+      "2464080": {
+        "start": 5,
+        "length": 6,
+        "reading": "はじからはじまで"
       }
     }
   },
@@ -112,15 +170,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1581610": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       }
     }
   },
@@ -135,8 +196,10 @@
     ],
     "indices": "私たち は 夫れ夫れ{それぞれ} テーブル の 端(はし) を 持つ{持ち} テーブル を 部屋[01] の 隅 へ 運ぶ[01]{運んだ}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1581610",
+      "1315720",
       "1612060",
       "1499320",
       "1246440",
@@ -145,27 +208,94 @@
     "matches": {
       "1172660": {
         "start": 28,
-        "length": 3
+        "length": 2,
+        "reading": "はこん"
       },
       "1246440": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1315720": {
+        "start": 15,
+        "length": 2,
+        "reading": "もち"
       },
       "1499320": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1581610": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       },
       "1612060": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "もち"
+      }
+    }
+  },
+  {
+    "id": "170329",
+    "original": "妻は部屋のむこう端から私に合図した。",
+    "en": [
+      {
+        "id": "244154",
+        "text": "My wife gave me a sign from across the room."
+      }
+    ],
+    "indices": "妻(#1294330)[01] は 部屋[01] の 向こう{むこう} 端(はし) から 私(わたし)[01] に 合図 為る(する){した}",
+    "vocabIds": [
+      "1294330",
+      "1499320",
+      "1581610",
+      "2464070",
+      "1311110",
+      "1284930"
+    ],
+    "matches": {
+      "1284930": {
+        "start": 13,
+        "length": 2,
+        "reading": "あいず"
+      },
+      "1294330": {
+        "start": 0,
+        "length": 1,
+        "reading": "つま"
+      },
+      "1311110": {
+        "start": 11,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1499320": {
+        "start": 2,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1581610": {
+        "start": 8,
+        "length": 1,
+        "reading": "はじ"
+      },
+      "2464070": {
+        "start": 8,
+        "length": 3,
+        "reading": "はじから"
       }
     }
   },
@@ -187,15 +317,18 @@
     "matches": {
       "1220210": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
       },
       "1387210": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "さき"
       },
       "1581610": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       }
     }
   },
@@ -221,31 +354,38 @@
     "matches": {
       "1152720": {
         "start": 7,
-        "length": 4
+        "length": 2,
+        "reading": "にぎら"
       },
       "1229880": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "たま"
       },
       "1327190": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "て"
       },
       "1375600": {
         "start": 29,
-        "length": 5
+        "length": 4,
+        "reading": "なりたっ"
       },
       "1382440": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
       },
       "1429750": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ながい"
       },
       "1581610": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       }
     }
   },
@@ -265,7 +405,8 @@
     "matches": {
       "1581610": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       }
     }
   },
@@ -300,19 +441,23 @@
     "matches": {
       "1277140": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "むこう"
       },
       "1291800": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
       },
       "1416830": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       },
       "1581610": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       }
     }
   },
@@ -333,11 +478,13 @@
     "matches": {
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1581610": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       }
     }
   },
@@ -360,19 +507,23 @@
     "matches": {
       "1364600": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "しんけいしつ"
       },
       "1509350": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "くせ"
       },
       "1580290": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじょ"
       },
       "1581610": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       }
     }
   },
@@ -393,11 +544,52 @@
     "matches": {
       "1171010": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "みぎ"
       },
       "1581610": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
+      }
+    }
+  },
+  {
+    "id": "221536",
+    "original": "この辞書には序文はあるが端書きがない。",
+    "en": [
+      {
+        "id": "58861",
+        "text": "This dictionary has a preface, not a foreword."
+      }
+    ],
+    "indices": "此の{この} 辞書[01] には 序文 は 有る{ある} が[03] 端書き(はしがき)~ が 無い{ない}",
+    "vocabIds": [
+      "1318970",
+      "1345530",
+      "1581610",
+      "1654450"
+    ],
+    "matches": {
+      "1318970": {
+        "start": 2,
+        "length": 2,
+        "reading": "じしょ"
+      },
+      "1345530": {
+        "start": 6,
+        "length": 2,
+        "reading": "じょぶん"
+      },
+      "1581610": {
+        "start": 12,
+        "length": 1,
+        "reading": "はじ"
+      },
+      "1654450": {
+        "start": 12,
+        "length": 3,
+        "reading": "はじがき"
       }
     }
   },
@@ -419,15 +611,18 @@
     "matches": {
       "1392580": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1416700": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "たな"
       },
       "1581610": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       }
     }
   },
@@ -448,41 +643,13 @@
     "matches": {
       "1315720": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1581610": {
         "start": 4,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "235189",
-    "original": "500ドルなんて彼にとっては端金だ。",
-    "en": [
-      {
-        "id": "72567",
-        "text": "Five hundred dollars is a small sum for him."
-      }
-    ],
-    "indices": "弗[01]{ドル} なんて[01] 彼(かれ) に取って{にとって} は 端金 だ",
-    "vocabIds": [
-      "1483070",
-      "1581610",
-      "1242590"
-    ],
-    "matches": {
-      "1242590": {
-        "start": 15,
-        "length": 1
-      },
-      "1483070": {
-        "start": 8,
-        "length": 1
-      },
-      "1581610": {
-        "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       }
     }
   },
@@ -498,81 +665,189 @@
     "indices": "三人{３人} の 内(うち){うちの} 一人{１人} が 芝刈り機 で(#2028980) 私(わたし)[01]{私の} 庭 を 大雑把[02]{大雑把に} 颯と[01]{さっと} 刈る{刈り} もう一人 が 妻(#1294330)[01] の 庭 の 端(はし) の 伸びる[01]{伸びた} 雑草 を 颯と[01]{さっと} 三回{３回} 刈る{刈り} 残り{残りの} 一人 は トラック(#1085760) に 上がる[01]{上がって} 煙草を吸う{タバコをすっていた}",
     "vocabIds": [
       "1580640",
+      "1321610",
+      "1816860",
       "1321620",
+      "2037700",
       "1311110",
       "1436130",
       "1412950",
-      "1209360",
+      "1209540",
       "2267340",
+      "1160790",
+      "1576150",
       "1294330",
       "1581610",
       "1358870",
+      "1600300",
       "1299460",
       "1199330",
       "1304480",
-      "1576150",
       "1352290"
     ],
     "matches": {
+      "1160790": {
+        "start": 30,
+        "length": 1,
+        "reading": "いち"
+      },
       "1199330": {
         "start": 51,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
-      "1209360": {
+      "1209540": {
         "start": 25,
-        "length": 1
+        "length": 2,
+        "reading": "かり"
       },
       "1294330": {
         "start": 33,
-        "length": 1
+        "length": 1,
+        "reading": "つま"
       },
       "1299460": {
         "start": 42,
-        "length": 2
+        "length": 2,
+        "reading": "ざっそう"
       },
       "1304480": {
         "start": 55,
-        "length": 2
+        "length": 2,
+        "reading": "のこり"
       },
       "1311110": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1321610": {
+        "start": 9,
+        "length": 1,
+        "reading": "しば"
       },
       "1321620": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "しばがりき"
       },
       "1352290": {
         "start": 66,
-        "length": 4
+        "length": 3,
+        "reading": "あがっ"
       },
       "1358870": {
         "start": 39,
-        "length": 3
+        "length": 2,
+        "reading": "のび"
       },
       "1412950": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "おおざっぱ"
       },
       "1436130": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       },
       "1576150": {
-        "start": 58,
-        "length": 2
+        "start": 30,
+        "length": 2,
+        "reading": "いちにん"
       },
       "1580640": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "1581610": {
         "start": 37,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
+      },
+      "1600300": {
+        "start": 39,
+        "length": 2,
+        "reading": "のび"
+      },
+      "1816860": {
+        "start": 9,
+        "length": 3,
+        "reading": "しばがり"
+      },
+      "2037700": {
+        "start": 12,
+        "length": 1,
+        "reading": "き"
       },
       "2267340": {
         "start": 28,
-        "length": 4
+        "length": 4,
+        "reading": "もういちにん"
+      }
+    }
+  },
+  {
+    "id": "236831",
+    "original": "鉛筆が私の机の端から転がり落ちた。",
+    "en": [
+      {
+        "id": "25776",
+        "text": "My pencil fell off the edge of my desk."
+      }
+    ],
+    "indices": "鉛筆 が 私(わたし)[01]{私の} 机 の 端(はし) から 転がり落ちる{転がり落ちた}",
+    "vocabIds": [
+      "1178590",
+      "1311110",
+      "1220210",
+      "1581610",
+      "2464070",
+      "1441000",
+      "1548550",
+      "1548530"
+    ],
+    "matches": {
+      "1178590": {
+        "start": 0,
+        "length": 2,
+        "reading": "えんぴつ"
+      },
+      "1220210": {
+        "start": 5,
+        "length": 1,
+        "reading": "つくえ"
+      },
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1441000": {
+        "start": 10,
+        "length": 3,
+        "reading": "ころがり"
+      },
+      "1548530": {
+        "start": 13,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1548550": {
+        "start": 13,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1581610": {
+        "start": 7,
+        "length": 1,
+        "reading": "はじ"
+      },
+      "2464070": {
+        "start": 7,
+        "length": 3,
+        "reading": "はじから"
       }
     }
   },
@@ -587,36 +862,48 @@
     ],
     "vocabIds": [
       "1499720",
-      "1921980",
+      "1485230",
       "1311110",
       "1581610",
       "1382440",
+      "1421850",
       "2854117"
     ],
     "matches": {
       "1311110": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1382440": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
+      },
+      "1421850": {
+        "start": 22,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1485230": {
+        "start": 2,
+        "length": 3,
+        "reading": "とばさ"
       },
       "1499720": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かぜ"
       },
       "1581610": {
         "start": 18,
-        "length": 1
-      },
-      "1921980": {
-        "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       },
       "2854117": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "おき"
       }
     }
   },
@@ -636,11 +923,13 @@
     "matches": {
       "1581610": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       },
       "1589080": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "おさえ"
       }
     }
   }

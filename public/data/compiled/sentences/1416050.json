@@ -1,5 +1,56 @@
 [
   {
+    "id": "110103",
+    "original": "彼は椅子を叩き壊して薪にした。",
+    "en": [
+      {
+        "id": "293585",
+        "text": "He broke up the chair for firewood."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 椅子(いす)[01] を 叩き壊す{叩き壊して}~ 薪[02] に 為る(する){した}",
+    "vocabIds": [
+      "1483070",
+      "1157070",
+      "1416170",
+      "1416050",
+      "1199890",
+      "1365010"
+    ],
+    "matches": {
+      "1157070": {
+        "start": 2,
+        "length": 2,
+        "reading": "いす"
+      },
+      "1199890": {
+        "start": 7,
+        "length": 2,
+        "reading": "こわし"
+      },
+      "1365010": {
+        "start": 10,
+        "length": 1,
+        "reading": "たきぎ"
+      },
+      "1416050": {
+        "start": 5,
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1416170": {
+        "start": 5,
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
     "id": "137570",
     "original": "大口叩きは何もできない。",
     "en": [
@@ -12,20 +63,29 @@
     "vocabIds": [
       "1643480",
       "1416050",
+      "1577100",
       "1188490"
     ],
     "matches": {
       "1188490": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
       },
       "1416050": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1577100": {
+        "start": 5,
+        "length": 1,
+        "reading": "なに"
       },
       "1643480": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おおぐち"
       }
     }
   },
@@ -40,26 +100,42 @@
     ],
     "vocabIds": [
       "1410590",
+      "1416830",
       "1416840",
       "1311110",
+      "1416170",
       "1416050"
     ],
     "matches": {
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1410590": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "まっ"
       },
       "1416050": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1416170": {
+        "start": 12,
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1416830": {
+        "start": 4,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416840": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
       }
     }
   },
@@ -81,15 +157,18 @@
     "matches": {
       "1401000": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あいて"
       },
       "1416050": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はたき"
       },
       "1580640": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -105,31 +184,99 @@
     "indices": "試合 が 始まる{始まれば} 彼(かれ)[01] は 初め(はじめ) から 飛ばす[03]{とばして}~ 行く{いく} だろう 為る(する){し} は 簡単{簡単に} 叩きのめす{叩きのめされて}~ 仕舞う{しまう} だろう",
     "vocabIds": [
       "1312420",
+      "1307500",
       "1483070",
+      "2646830",
       "1307510",
       "1214330",
+      "1416170",
       "1416050"
     ],
     "matches": {
       "1214330": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "かんたん"
+      },
+      "1307500": {
+        "start": 3,
+        "length": 3,
+        "reading": "はじまれ"
       },
       "1307510": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "はじめから"
       },
       "1312420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しあい"
       },
       "1416050": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1416170": {
+        "start": 34,
+        "length": 2,
+        "reading": "はたき"
       },
       "1483070": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2646830": {
+        "start": 10,
+        "length": 2,
+        "reading": "はじめ"
+      }
+    }
+  },
+  {
+    "id": "166369",
+    "original": "私たちはその男を叩きのめした。",
+    "en": [
+      {
+        "id": "248134",
+        "text": "We beat the man up."
+      }
+    ],
+    "indices": "私たち は 其の[01]{その} 男 を 叩きのめす{叩きのめした}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1419990",
+      "1416170",
+      "1416050"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1416050": {
+        "start": 8,
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1416170": {
+        "start": 8,
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1419990": {
+        "start": 6,
+        "length": 1,
+        "reading": "おとこ"
       }
     }
   },
@@ -151,154 +298,92 @@
       "1311110",
       "1164680",
       "1437680",
+      "1416170",
       "1416050"
     ],
     "matches": {
       "1164680": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "いちだん"
       },
       "1198550": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1221430": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きたく"
       },
       "1311110": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416050": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1416170": {
+        "start": 28,
+        "length": 2,
+        "reading": "はたき"
       },
       "1437680": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "てっていてき"
       },
       "1542640": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さくや"
       },
       "1582200": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "とちゅう"
       }
     }
   },
   {
-    "id": "211413",
-    "original": "その教訓は私の頭に叩き込まれた。",
+    "id": "9700587",
+    "original": "あいつが窓を叩き割ったんだ。",
     "en": [
       {
-        "id": "48688",
-        "text": "The lesson was driven into my head."
+        "id": "8893052",
+        "text": "He smashed a window."
       }
     ],
-    "indices": "其の[01]{その} 教訓 は 私(わたし)[01]{私の} 頭(あたま) に 叩き込む{叩き込まれた}",
     "vocabIds": [
-      "1237080",
-      "1311110",
-      "1582310",
-      "1416050"
-    ],
-    "matches": {
-      "1237080": {
-        "start": 2,
-        "length": 2
-      },
-      "1311110": {
-        "start": 5,
-        "length": 1
-      },
-      "1416050": {
-        "start": 9,
-        "length": 2
-      },
-      "1582310": {
-        "start": 7,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "221974",
-    "original": "この考えを学生達に叩き込もうと思う。",
-    "en": [
-      {
-        "id": "59301",
-        "text": "I intend to hammer this idea into the students' heads."
-      }
-    ],
-    "indices": "此の{この} 考え を 学生(がくせい) 達 に 叩き込む[03]{叩き込もう}~ と 思う",
-    "vocabIds": [
-      "1281000",
-      "1206900",
-      "1416220",
+      "1401400",
+      "1416170",
       "1416050",
-      "1589350"
+      "1208000"
     ],
     "matches": {
-      "1206900": {
-        "start": 5,
-        "length": 2
-      },
-      "1281000": {
-        "start": 2,
-        "length": 2
-      },
-      "1416050": {
-        "start": 9,
-        "length": 2
-      },
-      "1416220": {
-        "start": 7,
-        "length": 1
-      },
-      "1589350": {
-        "start": 15,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "1154113",
-    "original": "サーブを打ったと同時にラケットがすっぽ抜け、コートに叩きつけられたラケットが折れてしまった。",
-    "en": [
-      {
-        "id": "1528020",
-        "text": "The racket slipped from my hands and broke itself on the court when I made the serve."
-      }
-    ],
-    "vocabIds": [
-      "1408810",
-      "1452510",
-      "2841555",
-      "1416050",
-      "1385920"
-    ],
-    "matches": {
-      "1385920": {
-        "start": 38,
-        "length": 3
-      },
-      "1408810": {
-        "start": 4,
-        "length": 3
-      },
-      "1416050": {
-        "start": 26,
-        "length": 2
-      },
-      "1452510": {
+      "1208000": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "わっ"
       },
-      "2841555": {
-        "start": 19,
-        "length": 2
+      "1401400": {
+        "start": 4,
+        "length": 1,
+        "reading": "まど"
+      },
+      "1416050": {
+        "start": 6,
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1416170": {
+        "start": 6,
+        "length": 2,
+        "reading": "はたき"
       }
     }
   },
@@ -312,17 +397,31 @@
       }
     ],
     "vocabIds": [
+      "1416170",
       "1416050",
-      "1307550"
+      "1307550",
+      "1342540"
     ],
     "matches": {
       "1307550": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 9,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1416050": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はたき"
+      },
+      "1416170": {
+        "start": 7,
+        "length": 2,
+        "reading": "はたき"
       }
     }
   }

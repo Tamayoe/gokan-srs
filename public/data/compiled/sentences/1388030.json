@@ -15,32 +15,44 @@
       "1311110",
       "1416220",
       "1388030",
-      "1314600"
+      "1314600",
+      "1314550"
     ],
     "matches": {
       "1311110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1314550": {
+        "start": 17,
+        "length": 1,
+        "reading": "に"
       },
       "1314600": {
         "start": 17,
-        "length": 2
+        "length": 1,
+        "reading": "に"
       },
       "1388030": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       },
       "1416220": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1423240": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きもの"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -55,22 +67,31 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 先祖 は 愛蘭{アイルランド} から 其処(そこ){そこ} に 行く[01]{行った}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1388030",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1388030": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       },
-      "1589060": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1578850": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -96,31 +117,38 @@
     "matches": {
       "1002690": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "おぼん"
       },
       "1215230": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1318610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1359040": {
         "start": 28,
-        "length": 3
+        "length": 2,
+        "reading": "しんじ"
       },
       "1388030": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       },
       "1416220": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1464700": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんじん"
       }
     }
   },
@@ -144,23 +172,28 @@
     "matches": {
       "1376310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほし"
       },
       "1388030": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       },
       "1420470": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1456330": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "よみかた"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -176,26 +209,87 @@
     "indices": "此の{この} 日(ひ)[01] 私たち は 先祖 の 墓参り を 為る(する)[01]{する}",
     "vocabIds": [
       "1463770",
+      "1311110",
       "1311300",
       "1388030",
       "1584020"
     ],
     "matches": {
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1388030": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       },
       "1463770": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1584020": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "はかまいり"
+      }
+    }
+  },
+  {
+    "id": "220840",
+    "original": "この先祖伝来の家宝は君の物だ。",
+    "en": [
+      {
+        "id": "58162",
+        "text": "This heirloom shall be yours."
+      }
+    ],
+    "indices": "此の{この} 先祖伝来{先祖伝来の}~ 家宝~ は 君(きみ)[01]{君の} 物(もの)[01] だ",
+    "vocabIds": [
+      "1388030",
+      "1388040",
+      "1442450",
+      "1192470",
+      "1247250",
+      "1502390"
+    ],
+    "matches": {
+      "1192470": {
+        "start": 7,
+        "length": 2,
+        "reading": "かほう"
+      },
+      "1247250": {
+        "start": 10,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1388030": {
+        "start": 2,
+        "length": 2,
+        "reading": "せんぞ"
+      },
+      "1388040": {
+        "start": 2,
+        "length": 4,
+        "reading": "せんぞでんらい"
+      },
+      "1442450": {
+        "start": 4,
+        "length": 2,
+        "reading": "でんらい"
+      },
+      "1502390": {
+        "start": 12,
+        "length": 1,
+        "reading": "もの"
       }
     }
   },
@@ -217,15 +311,18 @@
     "matches": {
       "1388030": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       },
       "1541620": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうめい"
       },
       "1580640": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -245,32 +342,44 @@
       "1388030",
       "1442100",
       "1441870",
+      "1257330",
       "2609780"
     ],
     "matches": {
       "1223340": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きねん"
+      },
+      "1257330": {
+        "start": 23,
+        "length": 2,
+        "reading": "たて"
       },
       "1340570": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "できごと"
       },
       "1388030": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       },
       "1441870": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "つたえる"
       },
       "1442100": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "でんせつ"
       },
       "2609780": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "たて"
       }
     }
   },
@@ -284,47 +393,73 @@
       }
     ],
     "vocabIds": [
+      "1311110",
       "1311300",
       "1388030",
       "1488000",
       "1268060",
+      "1579840",
       "1952370",
+      "2084840",
       "1392580",
       "1592250",
-      "1597470"
+      "1416680"
     ],
     "matches": {
       "1268060": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1388030": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       },
       "1392580": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1416680": {
+        "start": 16,
+        "length": 5,
+        "reading": "たどりつき"
       },
       "1488000": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひゃく"
+      },
+      "1579840": {
+        "start": 9,
+        "length": 1,
+        "reading": "じゅう"
       },
       "1592250": {
         "start": 14,
-        "length": 1
-      },
-      "1597470": {
-        "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       },
       "1952370": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうねん"
+      },
+      "2084840": {
+        "start": 10,
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -339,7 +474,9 @@
     ],
     "vocabIds": [
       "1579130",
+      "1518460",
       "1898960",
+      "1514990",
       "1220100",
       "1588480",
       "1233910",
@@ -352,43 +489,63 @@
     "matches": {
       "1198160": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1220100": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きちゅう"
       },
       "1233910": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "くよう"
       },
       "1388030": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       },
       "1399790": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "そうじ"
       },
       "1514840": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "はか"
+      },
+      "1514990": {
+        "start": 5,
+        "length": 1,
+        "reading": "はは"
+      },
+      "1518460": {
+        "start": 3,
+        "length": 2,
+        "reading": "なき"
       },
       "1578850": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "1579130": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ことし"
       },
       "1588480": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "うらぼん"
       },
       "1898960": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "なきはは"
       }
     }
   },
@@ -412,27 +569,33 @@
     "matches": {
       "1267740": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "ほこり"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1315720": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1318610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1329600": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "うけつい"
       },
       "1388030": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せんぞ"
       }
     }
   }

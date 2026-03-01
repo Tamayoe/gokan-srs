@@ -1,40 +1,5 @@
 [
   {
-    "id": "81657",
-    "original": "本の貸出しは１度に５冊までですよ。",
-    "en": [
-      {
-        "id": "322058",
-        "text": "You are allowed to check out not more than five books at a time."
-      }
-    ],
-    "indices": "本(ほん)[01] の 貸出し は 一度{１度} に 冊(さつ)[02] 迄{まで} です よ[01]",
-    "vocabIds": [
-      "1011740",
-      "1590240",
-      "1007270",
-      "1298520"
-    ],
-    "matches": {
-      "1007270": {
-        "start": 7,
-        "length": 2
-      },
-      "1011740": {
-        "start": 0,
-        "length": 2
-      },
-      "1298520": {
-        "start": 10,
-        "length": 1
-      },
-      "1590240": {
-        "start": 2,
-        "length": 2
-      }
-    }
-  },
-  {
     "id": "179566",
     "original": "銀行は産業向け貸出を減らしている。",
     "en": [
@@ -54,47 +19,28 @@
     "matches": {
       "1243490": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぎんこう"
       },
       "1263110": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "へらし"
       },
       "1277090": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "むけ"
       },
       "1303770": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんぎょう"
       },
       "1590240": {
         "start": 7,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "9049824",
-    "original": "こちらの本は貸出しできないんです。",
-    "en": [
-      {
-        "id": "71159",
-        "text": "I can't lend you this book."
-      }
-    ],
-    "vocabIds": [
-      "1522150",
-      "1590240"
-    ],
-    "matches": {
-      "1522150": {
-        "start": 4,
-        "length": 1
-      },
-      "1590240": {
-        "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かしだし"
       }
     }
   },
@@ -120,60 +66,91 @@
       "1582305",
       "1598350",
       "2863332",
+      "2078850",
+      "1400350",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 52,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1315840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "じ"
       },
       "1333040": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうりょう"
       },
       "1370410": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "としょ"
+      },
+      "1400350": {
+        "start": 49,
+        "length": 3,
+        "reading": "はやめに"
       },
       "1502860": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "ふん"
       },
       "1508620": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "へいかん"
       },
       "1512180": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "へんきゃく"
       },
       "1523110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ほんじつ"
       },
       "1582305": {
         "start": 42,
-        "length": 1
+        "length": 1,
+        "reading": "とう"
       },
       "1588060": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "うけつけ"
       },
       "1590240": {
         "start": 40,
-        "length": 2
+        "length": 2,
+        "reading": "かしだし"
       },
       "1598350": {
         "start": 44,
-        "length": 3
+        "length": 3,
+        "reading": "てつづき"
+      },
+      "2036870": {
+        "start": 52,
+        "length": 3,
+        "reading": "おねがい"
+      },
+      "2078850": {
+        "start": 49,
+        "length": 2,
+        "reading": "はやめ"
       },
       "2863332": {
         "start": 48,
-        "length": 4
+        "length": 4,
+        "reading": "おはやめに"
       }
     }
   },
@@ -189,55 +166,77 @@
     "vocabIds": [
       "1263650",
       "1590240",
-      "2639350",
-      "1223130",
+      "1423310",
+      "1184690",
       "1370410",
       "1512180",
       "1220560",
       "1195970",
+      "1195960",
       "1405000",
+      "2036870",
       "1001730"
     ],
     "matches": {
       "1001730": {
         "start": 39,
-        "length": 8
+        "length": 8,
+        "reading": "おねがいいたします"
+      },
+      "1184690": {
+        "start": 6,
+        "length": 2,
+        "reading": "かき"
+      },
+      "1195960": {
+        "start": 16,
+        "length": 2,
+        "reading": "すぎ"
       },
       "1195970": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "すぎ"
       },
       "1220560": {
         "start": 13,
-        "length": 2
-      },
-      "1223130": {
-        "start": 7,
-        "length": 1
+        "length": 2,
+        "reading": "きげん"
       },
       "1263650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "げんざい"
       },
       "1370410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "としょ"
       },
       "1405000": {
         "start": 24,
-        "length": 3
+        "length": 3,
+        "reading": "すみやか"
+      },
+      "1423310": {
+        "start": 4,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1512180": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "へんきゃく"
       },
       "1590240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かしだし"
       },
-      "2639350": {
-        "start": 4,
-        "length": 3
+      "2036870": {
+        "start": 39,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   }

@@ -9,62 +9,136 @@
       }
     ],
     "vocabIds": [
+      "1283500",
       "2651120",
+      "1316300",
       "1293700",
       "1269510",
       "1580650",
       "1369940",
       "1414580",
       "1580640",
+      "1591420",
       "1951150",
       "1004320",
+      "1587040",
       "1315920",
       "1530510"
     ],
     "matches": {
       "1004320": {
         "start": 33,
-        "length": 4
+        "length": 4,
+        "reading": "こういう"
       },
       "1269510": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こうかい"
+      },
+      "1283500": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうこう"
       },
       "1293700": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1315920": {
         "start": 38,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1316300": {
+        "start": 2,
+        "length": 2,
+        "reading": "じだい"
       },
       "1369940": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "たずねる"
       },
       "1414580": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "たいてい"
       },
       "1530510": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "むだ"
       },
       "1580640": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1580650": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
+      },
+      "1587040": {
+        "start": 35,
+        "length": 2,
+        "reading": "いう"
+      },
+      "1591420": {
+        "start": 29,
+        "length": 3,
+        "reading": "きまっ"
       },
       "1951150": {
         "start": 29,
-        "length": 4
+        "length": 4,
+        "reading": "きまって"
       },
       "2651120": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "こうこうじだい"
+      }
+    }
+  },
+  {
+    "id": "177927",
+    "original": "君はいつもああ言えばこう言うね。",
+    "en": [
+      {
+        "id": "16773",
+        "text": "You always talk back to me, don't you?"
+      }
+    ],
+    "indices": "君(きみ)[01] は 何時も[01]{いつも} ああ言えばこう言う ね(#2029080)[01]",
+    "vocabIds": [
+      "1247250",
+      "1982130",
+      "1587040",
+      "1004320"
+    ],
+    "matches": {
+      "1004320": {
+        "start": 10,
+        "length": 4,
+        "reading": "こういう"
+      },
+      "1247250": {
+        "start": 0,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1587040": {
+        "start": 7,
+        "length": 2,
+        "reading": "いえ"
+      },
+      "1982130": {
+        "start": 5,
+        "length": 9,
+        "reading": "ああいえばこういう"
       }
     }
   },
@@ -80,21 +154,30 @@
     "indices": "こう言う 人(ひと) も 居る(いる){いれば} ああ 言う 人(ひと) も 居る(いる){いる}",
     "vocabIds": [
       "1004320",
+      "1587040",
       "1580640",
       "2085090"
     ],
     "matches": {
       "1004320": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "こういう"
       },
       "1580640": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1587040": {
+        "start": 2,
+        "length": 2,
+        "reading": "いう"
       },
       "2085090": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "ああいう"
       }
     }
   },
@@ -110,21 +193,75 @@
     "indices": "こう言う 状況 で(#2028980) は 旨く{うまく} 言葉[02] が である{でなかった}",
     "vocabIds": [
       "1004320",
+      "1587040",
       "1356700",
       "1264540"
     ],
     "matches": {
       "1004320": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "こういう"
       },
       "1264540": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1356700": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じょうきょう"
+      },
+      "1587040": {
+        "start": 2,
+        "length": 2,
+        "reading": "いう"
+      }
+    }
+  },
+  {
+    "id": "232882",
+    "original": "あなたはああ言えばこう言うで、私のことをちっとも聞いてくれないのね。",
+    "en": [
+      {
+        "id": "70252",
+        "text": "You always bandy words with me: you never listen to me."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は ああ言えばこう言う で(#2028980) 私(わたし)[01] 之(の)[01]{の} 事(こと){こと} を 些とも{ちっとも} 聞く{聞いて} 呉れる{くれない} の ね(#2029080)[01]",
+    "vocabIds": [
+      "1982130",
+      "1587040",
+      "1004320",
+      "1311110",
+      "1591110"
+    ],
+    "matches": {
+      "1004320": {
+        "start": 9,
+        "length": 4,
+        "reading": "こういう"
+      },
+      "1311110": {
+        "start": 15,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1587040": {
+        "start": 6,
+        "length": 2,
+        "reading": "いえ"
+      },
+      "1591110": {
+        "start": 24,
+        "length": 2,
+        "reading": "きい"
+      },
+      "1982130": {
+        "start": 4,
+        "length": 9,
+        "reading": "ああいえばこういう"
       }
     }
   },
@@ -139,52 +276,43 @@
     ],
     "indices": "ああ言えばこう言う{ああ言えば、こう言う}~ 全く{まったく} 口が減らない~ 奴(やつ)[01] だ",
     "vocabIds": [
-      "1956230",
+      "1587040",
       "1004320",
+      "1275640",
       "2399430",
+      "1263120",
       "1445640"
     ],
     "matches": {
       "1004320": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "こういう"
+      },
+      "1263120": {
+        "start": 18,
+        "length": 2,
+        "reading": "へら"
+      },
+      "1275640": {
+        "start": 16,
+        "length": 1,
+        "reading": "くち"
       },
       "1445640": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "やっこ"
       },
-      "1956230": {
+      "1587040": {
         "start": 2,
-        "length": 1
+        "length": 2,
+        "reading": "いえ"
       },
       "2399430": {
         "start": 16,
-        "length": 6
-      }
-    }
-  },
-  {
-    "id": "9448086",
-    "original": "君のためを思えばこそこう言ってるんだ。",
-    "en": [
-      {
-        "id": "9448091",
-        "text": "It is precisely because I have your best interests at heart that I am saying this."
-      }
-    ],
-    "indices": "君(きみ) の 為(ため){ため} を 思う(おもう)[01]{思えば} こそ[03]~ こう言う{こう言ってるんだ}",
-    "vocabIds": [
-      "1247250",
-      "1004320"
-    ],
-    "matches": {
-      "1004320": {
-        "start": 10,
-        "length": 5
-      },
-      "1247250": {
-        "start": 0,
-        "length": 1
+        "length": 6,
+        "reading": "くちがへらない"
       }
     }
   }

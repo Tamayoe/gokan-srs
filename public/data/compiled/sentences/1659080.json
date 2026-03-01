@@ -17,15 +17,57 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1659080": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "109267",
+    "original": "彼は家を手放したくなかった。",
+    "en": [
+      {
+        "id": "294423",
+        "text": "He didn't want to part with his house."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 家(いえ)[01] を 手放す{手放し} たい{たくなかった}",
+    "vocabIds": [
+      "1483070",
+      "1191730",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 2,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1328370": {
+        "start": 4,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1659080": {
+        "start": 4,
+        "length": 3,
+        "reading": "てばなし"
       }
     }
   },
@@ -44,17 +86,85 @@
     ],
     "indices": "気に入る{気にいった} 物(もの){もの} は 中々[02]{なかなか} 手放し~ が たい[01] 物(もの){もの} だ",
     "vocabIds": [
-      "1221520",
+      "1328370",
       "1659080"
     ],
     "matches": {
-      "1221520": {
-        "start": 0,
-        "length": 1
+      "1328370": {
+        "start": 12,
+        "length": 3,
+        "reading": "てばなし"
       },
       "1659080": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "191532",
+    "original": "愛車を手放した。",
+    "en": [
+      {
+        "id": "28695",
+        "text": "I parted with my old car."
+      }
+    ],
+    "indices": "愛車 を 手放す{手放した}",
+    "vocabIds": [
+      "1150780",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1150780": {
+        "start": 0,
+        "length": 2,
+        "reading": "あいしゃ"
+      },
+      "1328370": {
+        "start": 3,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1659080": {
+        "start": 3,
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "199288",
+    "original": "なぜあなたがそれを手放したがっているのかどうしても分からない。",
+    "en": [
+      {
+        "id": "36490",
+        "text": "I have no idea why you want to part with that."
+      }
+    ],
+    "indices": "何故(なぜ){なぜ} 貴方(あなた)[01]{あなた} が 其れ[01]{それ} を 手放す{手放し} たがる{たがっている} の か 如何しても{どうしても} 分かる{分からない}",
+    "vocabIds": [
+      "1328370",
+      "1659080",
+      "1606560"
+    ],
+    "matches": {
+      "1328370": {
+        "start": 9,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1606560": {
+        "start": 25,
+        "length": 3,
+        "reading": "わから"
+      },
+      "1659080": {
+        "start": 9,
+        "length": 3,
+        "reading": "てばなし"
       }
     }
   },
@@ -70,16 +180,211 @@
     "indices": "どんな事があっても{どんなことがあっても} 私(わたし)[01] は 其れ[01]{それ} を 手放す{手放しません}",
     "vocabIds": [
       "1311110",
+      "1328370",
       "1659080"
     ],
     "matches": {
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1328370": {
+        "start": 15,
+        "length": 3,
+        "reading": "てばなし"
       },
       "1659080": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "200046",
+    "original": "トムはただちにその金を手放した。",
+    "en": [
+      {
+        "id": "37247",
+        "text": "Tom lost no time in parting with the money."
+      }
+    ],
+    "indices": "は 直ちに{ただちに} 其の[01]{その} 金(かね)[01] を 手放す{手放した}",
+    "vocabIds": [
+      "1242590",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1242590": {
+        "start": 9,
+        "length": 1,
+        "reading": "きん"
+      },
+      "1328370": {
+        "start": 11,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1659080": {
+        "start": 11,
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "201485",
+    "original": "どうして家を手放したの？",
+    "en": [
+      {
+        "id": "38695",
+        "text": "Why did you part with your house?"
+      }
+    ],
+    "indices": "如何して{どうして} 家(いえ)[01] を 手放す{手放した} の",
+    "vocabIds": [
+      "1191730",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 4,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1328370": {
+        "start": 6,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1659080": {
+        "start": 6,
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "213867",
+    "original": "いやだったけど愛車を手放した。",
+    "en": [
+      {
+        "id": "51155",
+        "text": "I parted with my old car, though I hated to do so."
+      }
+    ],
+    "indices": "嫌[01]{いや} だ{だった} けど 愛車~ を 手放す{手放した}",
+    "vocabIds": [
+      "1150780",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1150780": {
+        "start": 7,
+        "length": 2,
+        "reading": "あいしゃ"
+      },
+      "1328370": {
+        "start": 10,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1659080": {
+        "start": 10,
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "1487118",
+    "original": "私は縄を手放した。",
+    "en": [
+      {
+        "id": "261966",
+        "text": "I let go of the rope."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1459830",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1328370": {
+        "start": 4,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1459830": {
+        "start": 2,
+        "length": 1,
+        "reading": "なわ"
+      },
+      "1659080": {
+        "start": 4,
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "10032409",
+    "original": "彼女は自分の人形を全て手放した。",
+    "en": [
+      {
+        "id": "314693",
+        "text": "She gave away all her dolls."
+      }
+    ],
+    "vocabIds": [
+      "1483150",
+      "1318610",
+      "1367120",
+      "1595730",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1318610": {
+        "start": 3,
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1328370": {
+        "start": 11,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1367120": {
+        "start": 6,
+        "length": 2,
+        "reading": "にんぎょう"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1595730": {
+        "start": 9,
+        "length": 2,
+        "reading": "すべて"
+      },
+      "1659080": {
+        "start": 11,
+        "length": 3,
+        "reading": "てばなし"
       }
     }
   },
@@ -94,16 +399,137 @@
     ],
     "vocabIds": [
       "1505090",
+      "1328370",
       "1659080"
     ],
     "matches": {
+      "1328370": {
+        "start": 20,
+        "length": 3,
+        "reading": "てばなし"
+      },
       "1505090": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ぶん"
       },
       "1659080": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "156606",
+    "original": "使い慣れた家具を手放したくない。",
+    "en": [
+      {
+        "id": "10671762",
+        "text": "I don't want to get rid of the familiar furniture."
+      }
+    ],
+    "indices": "使い慣れる{使い慣れた} 家具 を 手放す{手放し} たい{たくない}",
+    "vocabIds": [
+      "1305780",
+      "1191870",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1191870": {
+        "start": 5,
+        "length": 2,
+        "reading": "かぐ"
+      },
+      "1305780": {
+        "start": 0,
+        "length": 4,
+        "reading": "つかいなれ"
+      },
+      "1328370": {
+        "start": 8,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1659080": {
+        "start": 8,
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "11858121",
+    "original": "フルタイムで働くようになってからというもの、たくさんの趣味を手放した。",
+    "en": [
+      {
+        "id": "9946757",
+        "text": "After I started working full-time, a lot of my hobbies fell by the wayside."
+      }
+    ],
+    "vocabIds": [
+      "1451150",
+      "1329000",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1328370": {
+        "start": 30,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1329000": {
+        "start": 27,
+        "length": 2,
+        "reading": "しゅみ"
+      },
+      "1451150": {
+        "start": 6,
+        "length": 2,
+        "reading": "はたらく"
+      },
+      "1659080": {
+        "start": 30,
+        "length": 3,
+        "reading": "てばなし"
+      }
+    }
+  },
+  {
+    "id": "11058358",
+    "original": "車は手放したくないな。",
+    "en": [
+      {
+        "id": "13674087",
+        "text": "I feel like I don't want to part with the car."
+      },
+      {
+        "id": "13674089",
+        "text": "I don't feel like selling the car."
+      }
+    ],
+    "vocabIds": [
+      "1323080",
+      "1328370",
+      "1659080"
+    ],
+    "matches": {
+      "1323080": {
+        "start": 0,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1328370": {
+        "start": 2,
+        "length": 3,
+        "reading": "てばなし"
+      },
+      "1659080": {
+        "start": 2,
+        "length": 3,
+        "reading": "てばなし"
       }
     }
   }

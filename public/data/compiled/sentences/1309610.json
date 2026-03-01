@@ -1,5 +1,62 @@
 [
   {
+    "id": "76465",
+    "original": "フェアにやろうとは申しませんけど、無思慮な行動はおやめ頂きたいですわ。",
+    "en": [
+      {
+        "id": "327255",
+        "text": "I will not say play fair but I would wish that you refrain from indiscreet acts."
+      }
+    ],
+    "indices": "フェア に 遣る{やろう} と は 申す{申しません} けど 無思慮{無思慮な}~ 行動 は 止める(やめる){おやめ} 頂く{頂き} たい[01] です わ",
+    "vocabIds": [
+      "1363090",
+      "2607720",
+      "1956960",
+      "1954900",
+      "1309610",
+      "1282100",
+      "1587290"
+    ],
+    "matches": {
+      "1282100": {
+        "start": 21,
+        "length": 2,
+        "reading": "こうどう"
+      },
+      "1309610": {
+        "start": 18,
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1363090": {
+        "start": 9,
+        "length": 2,
+        "reading": "もうし"
+      },
+      "1587290": {
+        "start": 27,
+        "length": 2,
+        "reading": "いただき"
+      },
+      "1954900": {
+        "start": 17,
+        "length": 3,
+        "reading": "むしりょ"
+      },
+      "1956960": {
+        "start": 17,
+        "length": 1,
+        "reading": "む"
+      },
+      "2607720": {
+        "start": 9,
+        "length": 2,
+        "reading": "もうし"
+      }
+    }
+  },
+  {
     "id": "91935",
     "original": "彼女はとても思慮深く、しんぼうづよい。",
     "en": [
@@ -12,20 +69,131 @@
     "vocabIds": [
       "1483150",
       "1309610",
+      "1362640",
       "2843268"
     ],
     "matches": {
       "1309610": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1362640": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふかく"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2843268": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ふかく"
+      }
+    }
+  },
+  {
+    "id": "111580",
+    "original": "彼はとても思慮深い人だ。",
+    "en": [
+      {
+        "id": "292102",
+        "text": "He is a very thoughtful person."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 迚も[01]{とても} 思慮深い~ 人(ひと) だ",
+    "vocabIds": [
+      "1483070",
+      "1309610",
+      "1309620",
+      "1362640",
+      "1580640"
+    ],
+    "matches": {
+      "1309610": {
+        "start": 5,
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1309620": {
+        "start": 5,
+        "length": 4,
+        "reading": "しりょふかい"
+      },
+      "1362640": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふかい"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1580640": {
+        "start": 9,
+        "length": 1,
+        "reading": "ひと"
+      }
+    }
+  },
+  {
+    "id": "116520",
+    "original": "彼の忠告はいつでも大変思慮分別がある。",
+    "en": [
+      {
+        "id": "287149",
+        "text": "His advice is always very sensible."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 忠告 は 何時でも{いつでも} 大変 思慮 分別(ふんべつ) が[01] 有る{ある}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1426140",
+      "1415000",
+      "1309610",
+      "2031070",
+      "1504200"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1309610": {
+        "start": 11,
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1415000": {
+        "start": 9,
+        "length": 2,
+        "reading": "たいへん"
+      },
+      "1426140": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちゅうこく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1504200": {
+        "start": 13,
+        "length": 2,
+        "reading": "ふんべつ"
+      },
+      "2031070": {
+        "start": 11,
+        "length": 4,
+        "reading": "しりょふんべつ"
       }
     }
   },
@@ -40,27 +208,353 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 思慮~ の 無い{無} さ[01] には  驚く[01]{驚いた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1309610",
+      "1529520",
       "1956960",
       "1238680"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1238680": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "おどろい"
       },
       "1309610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1529520": {
+        "start": 5,
+        "length": 1,
+        "reading": "な"
       },
       "1956960": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "な"
+      }
+    }
+  },
+  {
+    "id": "142600",
+    "original": "誠実で偏見がなく思慮深い人を捜しています。",
+    "en": [
+      {
+        "id": "271970",
+        "text": "Looking for somebody sincere, open-minded, thoughtful."
+      }
+    ],
+    "indices": "誠実 で(#2028980) 偏見 が 無い{なく} 思慮深い 人(ひと) を 探す[01]{捜しています}",
+    "vocabIds": [
+      "1381180",
+      "1510380",
+      "1309610",
+      "1309620",
+      "1362640",
+      "1580640"
+    ],
+    "matches": {
+      "1309610": {
+        "start": 8,
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1309620": {
+        "start": 8,
+        "length": 4,
+        "reading": "しりょふかい"
+      },
+      "1362640": {
+        "start": 10,
+        "length": 2,
+        "reading": "ふかい"
+      },
+      "1381180": {
+        "start": 0,
+        "length": 2,
+        "reading": "せいじつ"
+      },
+      "1510380": {
+        "start": 3,
+        "length": 2,
+        "reading": "へんけん"
+      },
+      "1580640": {
+        "start": 12,
+        "length": 1,
+        "reading": "ひと"
+      }
+    }
+  },
+  {
+    "id": "146609",
+    "original": "少年ながら、彼はたいへん思慮深い。",
+    "en": [
+      {
+        "id": "267953",
+        "text": "He's only a boy, but he is very thoughtful."
+      }
+    ],
+    "indices": "少年[01] 乍ら[02]{ながら} 彼(かれ)[01] は 大変{たいへん} 思慮深い",
+    "vocabIds": [
+      "1349170",
+      "1483070",
+      "1309610",
+      "1309620",
+      "1362640"
+    ],
+    "matches": {
+      "1309610": {
+        "start": 12,
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1309620": {
+        "start": 12,
+        "length": 4,
+        "reading": "しりょふかい"
+      },
+      "1349170": {
+        "start": 0,
+        "length": 2,
+        "reading": "しょうねん"
+      },
+      "1362640": {
+        "start": 14,
+        "length": 2,
+        "reading": "ふかい"
+      },
+      "1483070": {
+        "start": 6,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "178079",
+    "original": "君の年齢ならもっと思慮分別があってしかるべきだ。",
+    "en": [
+      {
+        "id": "16931",
+        "text": "You should know better at your age."
+      }
+    ],
+    "indices": "君(きみ)[01]{君の} 年齢 なら もっと 思慮 分別(ふんべつ) が[01] 有る{あって} 然るべき{しかるべき} だ",
+    "vocabIds": [
+      "1247250",
+      "1600240",
+      "1309610",
+      "2031070",
+      "1504200"
+    ],
+    "matches": {
+      "1247250": {
+        "start": 0,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1309610": {
+        "start": 9,
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1504200": {
+        "start": 11,
+        "length": 2,
+        "reading": "ふんべつ"
+      },
+      "1600240": {
+        "start": 2,
+        "length": 2,
+        "reading": "ねんれい"
+      },
+      "2031070": {
+        "start": 9,
+        "length": 4,
+        "reading": "しりょふんべつ"
+      }
+    }
+  },
+  {
+    "id": "204625",
+    "original": "それを隠しておくとは貴方もなかなか思慮深い。",
+    "en": [
+      {
+        "id": "41866",
+        "text": "You also must be very prudent, to keep that hidden."
+      }
+    ],
+    "indices": "其れ[01]{それ} を 隠す{隠して} 置く[09]{おく} とは 貴方(あなた) も 中々{なかなか} 思慮深い",
+    "vocabIds": [
+      "1170650",
+      "2077780",
+      "1223610",
+      "1309610",
+      "1309620",
+      "1362640"
+    ],
+    "matches": {
+      "1170650": {
+        "start": 3,
+        "length": 2,
+        "reading": "かくし"
+      },
+      "1223610": {
+        "start": 10,
+        "length": 2,
+        "reading": "あなた"
+      },
+      "1309610": {
+        "start": 17,
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1309620": {
+        "start": 17,
+        "length": 4,
+        "reading": "しりょふかい"
+      },
+      "1362640": {
+        "start": 19,
+        "length": 2,
+        "reading": "ふかい"
+      },
+      "2077780": {
+        "start": 3,
+        "length": 2,
+        "reading": "かくし"
+      }
+    }
+  },
+  {
+    "id": "868214",
+    "original": "習慣は無思慮な人々を支配する。",
+    "en": [
+      {
+        "id": "868212",
+        "text": "Habit rules the unreflecting herd."
+      }
+    ],
+    "vocabIds": [
+      "1333090",
+      "1956960",
+      "1954900",
+      "1309610",
+      "1580650",
+      "1310270"
+    ],
+    "matches": {
+      "1309610": {
+        "start": 4,
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1310270": {
+        "start": 10,
+        "length": 2,
+        "reading": "しはい"
+      },
+      "1333090": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1580650": {
+        "start": 7,
+        "length": 2,
+        "reading": "ひとびと"
+      },
+      "1954900": {
+        "start": 3,
+        "length": 3,
+        "reading": "むしりょ"
+      },
+      "1956960": {
+        "start": 3,
+        "length": 1,
+        "reading": "む"
+      }
+    }
+  },
+  {
+    "id": "1202388",
+    "original": "用心深い鳥は木を選ぶ。思慮深い従者は主を選ぶ。",
+    "en": [
+      {
+        "id": "392249",
+        "text": "A prudent bird chooses its tree. A wise servant chooses his master."
+      }
+    ],
+    "vocabIds": [
+      "1546330",
+      "1430250",
+      "1534520",
+      "1588730",
+      "1309610",
+      "1309620",
+      "1362640",
+      "1335330",
+      "1324960"
+    ],
+    "matches": {
+      "1309610": {
+        "start": 11,
+        "length": 2,
+        "reading": "しりょ"
+      },
+      "1309620": {
+        "start": 11,
+        "length": 4,
+        "reading": "しりょふかい"
+      },
+      "1324960": {
+        "start": 18,
+        "length": 1,
+        "reading": "おも"
+      },
+      "1335330": {
+        "start": 15,
+        "length": 2,
+        "reading": "じゅうしゃ"
+      },
+      "1362640": {
+        "start": 13,
+        "length": 2,
+        "reading": "ふかい"
+      },
+      "1430250": {
+        "start": 4,
+        "length": 1,
+        "reading": "とり"
+      },
+      "1534520": {
+        "start": 6,
+        "length": 1,
+        "reading": "き"
+      },
+      "1546330": {
+        "start": 0,
+        "length": 4,
+        "reading": "ようじんぶかい"
+      },
+      "1588730": {
+        "start": 8,
+        "length": 2,
+        "reading": "えらぶ"
       }
     }
   }

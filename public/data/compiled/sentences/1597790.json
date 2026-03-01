@@ -1,5 +1,71 @@
 [
   {
+    "id": "74008",
+    "original": "この天気とは気長に付き合っていくしかない。",
+    "en": [
+      {
+        "id": "329712",
+        "text": "You have to learn to put up with this weather."
+      }
+    ],
+    "indices": "此の{この} 天気 と は 気長{気長に} 付き合う[02]{付き合って} 行く{いく} しか無い[01]{しかない}",
+    "vocabIds": [
+      "1438690",
+      "1222480",
+      "1597790"
+    ],
+    "matches": {
+      "1222480": {
+        "start": 6,
+        "length": 2,
+        "reading": "きなが"
+      },
+      "1438690": {
+        "start": 2,
+        "length": 2,
+        "reading": "てんき"
+      },
+      "1597790": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "74009",
+    "original": "10分だけ付き合おう。",
+    "en": [
+      {
+        "id": "329711",
+        "text": "I can spare you just 10 minutes."
+      }
+    ],
+    "indices": "十分(じっぷん){10分} 丈(だけ){だけ} 付き合う[02]{付き合おう}",
+    "vocabIds": [
+      "1502860",
+      "2000520",
+      "1597790"
+    ],
+    "matches": {
+      "1502860": {
+        "start": 2,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1597790": {
+        "start": 5,
+        "length": 4,
+        "reading": "つきあお"
+      },
+      "2000520": {
+        "start": 2,
+        "length": 3,
+        "reading": "ふんだけ"
+      }
+    }
+  },
+  {
     "id": "74076",
     "original": "「じゃ留年しなかったら付き合ってくれんの？」「タラレバ話って好きじゃないの」",
     "en": [
@@ -18,19 +84,56 @@
     "matches": {
       "1277450": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1597790": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "1600900": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "ばなし"
       },
       "1612260": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "りゅうねん"
+      }
+    }
+  },
+  {
+    "id": "75631",
+    "original": "「お前に付き合うほど暇じゃない」「なんかしょぼんだよぉ」",
+    "en": [
+      {
+        "id": "328087",
+        "text": "\"I haven't got the time to keep up with you.\" \"That's rather depressing.\""
+      }
+    ],
+    "indices": "お前 に 付き合う 程{ほど} 暇(ひま)[01] だ{じゃない} 何か{なんか} しょぼん~ だ よ{よぉ}",
+    "vocabIds": [
+      "1002290",
+      "1597790",
+      "1577280"
+    ],
+    "matches": {
+      "1002290": {
+        "start": 1,
+        "length": 2,
+        "reading": "おまえ"
+      },
+      "1577280": {
+        "start": 10,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1597790": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -48,6 +151,7 @@
       "1288850",
       "1311110",
       "1483070",
+      "1420450",
       "1595070",
       "1597790",
       "1194480",
@@ -58,39 +162,53 @@
     "matches": {
       "1194480": {
         "start": 45,
-        "length": 2
+        "length": 2,
+        "reading": "かげつ"
       },
       "1254340": {
         "start": 69,
-        "length": 2
+        "length": 2,
+        "reading": "けっしん"
       },
       "1254790": {
         "start": 65,
-        "length": 2
+        "length": 2,
+        "reading": "けっこん"
       },
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 61,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1420450": {
+        "start": 20,
+        "length": 4,
+        "reading": "しりあい"
       },
       "1483070": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1595070": {
         "start": 20,
-        "length": 4
+        "length": 4,
+        "reading": "しりあい"
       },
       "1597790": {
         "start": 32,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -111,11 +229,88 @@
     "matches": {
       "1579080": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ころ"
       },
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "76847",
+    "original": "うっとうしい梅雨期に、すっきりしない話で恐縮ですが、少しの間お付き合いください。",
+    "en": [
+      {
+        "id": "326873",
+        "text": "I'm ashamed to tell such a muddled story in this dreary, rainy season, but please bear with me for a while."
+      }
+    ],
+    "indices": "鬱陶しい{うっとうしい} 梅雨期~ に すっきり[03]~ 為る(する){しない} 話(はなし)[01] で(#2028980) 恐縮[02] です が 少し 之(の)[01]{の} 間(あいだ)[02] お付き合い 下さい{ください}",
+    "vocabIds": [
+      "1582960",
+      "1473470",
+      "1220540",
+      "1600900",
+      "1236740",
+      "1348870",
+      "1215230",
+      "2404810",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1215230": {
+        "start": 29,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1220540": {
+        "start": 8,
+        "length": 1,
+        "reading": "き"
+      },
+      "1236740": {
+        "start": 20,
+        "length": 2,
+        "reading": "きょうしゅく"
+      },
+      "1348870": {
+        "start": 26,
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1473470": {
+        "start": 6,
+        "length": 3,
+        "reading": "つゆき"
+      },
+      "1495640": {
+        "start": 31,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1582960": {
+        "start": 6,
+        "length": 2,
+        "reading": "つゆ"
+      },
+      "1597790": {
+        "start": 31,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1600900": {
+        "start": 18,
+        "length": 1,
+        "reading": "はなし"
+      },
+      "2404810": {
+        "start": 30,
+        "length": 5,
+        "reading": "おつきあい"
       }
     }
   },
@@ -134,28 +329,78 @@
       "1311110",
       "1419990",
       "1597790",
-      "1610070"
+      "1386840",
+      "1610070",
+      "1232870"
     ],
     "matches": {
+      "1232870": {
+        "start": 17,
+        "length": 2,
+        "reading": "ゆるそ"
+      },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1386840": {
+        "start": 14,
+        "length": 2,
+        "reading": "ぜったい"
       },
       "1419990": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1597790": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       },
       "1602710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "りょうしん"
       },
       "1610070": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "ぜったいに"
+      }
+    }
+  },
+  {
+    "id": "81686",
+    "original": "僕のこと好きじゃないのに付き合ってたってこと？",
+    "en": [
+      {
+        "id": "2662038",
+        "text": "You don't like me, but you were dating me?"
+      }
+    ],
+    "indices": "僕たち{僕達} を 好き(すき) だ{じゃない} のに",
+    "vocabIds": [
+      "1521400",
+      "1277450",
+      "1597790"
+    ],
+    "matches": {
+      "1277450": {
+        "start": 4,
+        "length": 2,
+        "reading": "すき"
+      },
+      "1521400": {
+        "start": 0,
+        "length": 1,
+        "reading": "ぼく"
+      },
+      "1597790": {
+        "start": 12,
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -178,19 +423,23 @@
     "matches": {
       "1468380": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねんかん"
       },
       "1483150": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1597790": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -207,25 +456,35 @@
     "vocabIds": [
       "1597790",
       "1425790",
-      "2256270",
-      "2832864"
+      "1259290",
+      "2832864",
+      "1580640"
     ],
     "matches": {
+      "1259290": {
+        "start": 7,
+        "length": 2,
+        "reading": "みれ"
+      },
       "1425790": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "なかま"
+      },
+      "1580640": {
+        "start": 13,
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 0,
-        "length": 4
-      },
-      "2256270": {
-        "start": 7,
-        "length": 1
+        "length": 4,
+        "reading": "つきあう"
       },
       "2832864": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "そのひと"
       }
     }
   },
@@ -248,19 +507,62 @@
     "matches": {
       "1151260": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1425790": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "なかま"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1597790": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "93228",
+    "original": "彼女はいつも付き合いやすい人だ。",
+    "en": [
+      {
+        "id": "310480",
+        "text": "She has always been easy to get along with."
+      }
+    ],
+    "indices": "彼女[01] は 何時も[01]{いつも} 付き合う{付き合い} 易い{やすい} 人(ひと) だ",
+    "vocabIds": [
+      "1483150",
+      "1597790",
+      "1495640",
+      "1580640"
+    ],
+    "matches": {
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1495640": {
+        "start": 6,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1580640": {
+        "start": 13,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1597790": {
+        "start": 6,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -276,26 +578,42 @@
     "indices": "彼女[01] は 有る{ある} 外国人 学生(がくせい) と 付き合う{付き合っている}",
     "vocabIds": [
       "1483150",
+      "1203620",
       "1203650",
+      "1580640",
       "1206900",
       "1597790"
     ],
     "matches": {
+      "1203620": {
+        "start": 5,
+        "length": 2,
+        "reading": "がいこく"
+      },
       "1203650": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "がいこくじん"
       },
       "1206900": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1580640": {
+        "start": 7,
+        "length": 1,
+        "reading": "じん"
       },
       "1597790": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -317,15 +635,18 @@
     "matches": {
       "1284430": {
         "start": 30,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1597790": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -342,20 +663,95 @@
     "vocabIds": [
       "1483070",
       "1597790",
-      "1533570"
+      "1533580"
     ],
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
-      "1533570": {
+      "1533580": {
         "start": 9,
-        "length": 2
+        "length": 3,
+        "reading": "おもしろく"
       },
       "1597790": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "100442",
+    "original": "彼は付き合いにくい男だ。",
+    "en": [
+      {
+        "id": "303256",
+        "text": "He is hard to get along with."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 付き合う{付き合い} 難い(にくい){にくい} 男 だ",
+    "vocabIds": [
+      "1483070",
+      "1597790",
+      "1495640",
+      "1419990"
+    ],
+    "matches": {
+      "1419990": {
+        "start": 9,
+        "length": 1,
+        "reading": "おとこ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1495640": {
+        "start": 2,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 2,
+        "length": 4,
+        "reading": "つきあい"
+      }
+    }
+  },
+  {
+    "id": "100443",
+    "original": "彼は付き合いにくい。",
+    "en": [
+      {
+        "id": "68075",
+        "text": "He is hard to deal with."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 付き合う{付き合い} 難い(にくい){にくい}",
+    "vocabIds": [
+      "1483070",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1495640": {
+        "start": 2,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 2,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -373,24 +769,34 @@
       "1483070",
       "1242970",
       "1597790",
+      "1495640",
       "1217950"
     ],
     "matches": {
       "1217950": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "ねがっ"
       },
       "1242970": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かねもち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1495640": {
+        "start": 6,
+        "length": 4,
+        "reading": "つきあい"
       },
       "1597790": {
         "start": 6,
-        "length": 6
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -412,15 +818,18 @@
     "matches": {
       "1152550": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あくゆう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -445,27 +854,33 @@
     "matches": {
       "1242160": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "1461140": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "に"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1597790": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "2084840": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -488,19 +903,23 @@
     "matches": {
       "1345250": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1486360": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "うつくしい"
       },
       "1597790": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -523,19 +942,23 @@
     "matches": {
       "1194480": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かげつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579350": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "さん"
       },
       "1597790": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -551,26 +974,42 @@
     "indices": "彼(かれ)[01] は 有る{ある} 外国人 学生(がくせい) と 付き合う{付き合っている}",
     "vocabIds": [
       "1483070",
+      "1203620",
       "1203650",
+      "1580640",
       "1206900",
       "1597790"
     ],
     "matches": {
+      "1203620": {
+        "start": 4,
+        "length": 2,
+        "reading": "がいこく"
+      },
       "1203650": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "がいこくじん"
       },
       "1206900": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1580640": {
+        "start": 6,
+        "length": 1,
+        "reading": "じん"
       },
       "1597790": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -593,19 +1032,56 @@
     "matches": {
       "1345250": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1583260": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "さけ"
       },
       "1597790": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
+      }
+    }
+  },
+  {
+    "id": "115684",
+    "original": "彼は、ガールフレンドを無理やりいっぱい付き合わせた。",
+    "en": [
+      {
+        "id": "287986",
+        "text": "He made his girlfriend go out for a drink with him."
+      }
+    ],
+    "indices": "彼(かれ)[01] は ガールフレンド を 無理やり 一杯[02]{いっぱい} 付き合う{付き合わせた}",
+    "vocabIds": [
+      "1483070",
+      "1531030",
+      "1597790"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1531030": {
+        "start": 11,
+        "length": 4,
+        "reading": "むりやり"
+      },
+      "1597790": {
+        "start": 19,
+        "length": 4,
+        "reading": "つきあわ"
       }
     }
   },
@@ -622,20 +1098,29 @@
     "vocabIds": [
       "1483070",
       "1597790",
+      "1516930",
       "2160680"
     ],
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1516930": {
+        "start": 8,
+        "length": 1,
+        "reading": "ほう"
       },
       "1597790": {
         "start": 2,
-        "length": 6
+        "length": 4,
+        "reading": "つきあわ"
       },
       "2160680": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -657,15 +1142,18 @@
     "matches": {
       "1460850": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "むずかしい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -687,15 +1175,18 @@
     "matches": {
       "1460850": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "むずかしい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -716,11 +1207,13 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -744,23 +1237,79 @@
     "matches": {
       "1315840": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1427360": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ていねい"
       },
       "1464700": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんじん"
       },
       "1540150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       },
       "1597790": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
+      }
+    }
+  },
+  {
+    "id": "136715",
+    "original": "誰もあの人と付き合いたがらないのは、あの人がわがままだからです。",
+    "en": [
+      {
+        "id": "276521",
+        "text": "It is because of his selfishness that no one wants to associate with him."
+      }
+    ],
+    "indices": "誰も[02] あの人 と 付き合い たがる{たがらない} の は あの人 が 我が儘[01]{わがまま} だから です",
+    "vocabIds": [
+      "1416830",
+      "1416860",
+      "1000440",
+      "1580640",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1000440": {
+        "start": 2,
+        "length": 3,
+        "reading": "あのひと"
+      },
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
+      },
+      "1416860": {
+        "start": 0,
+        "length": 2,
+        "reading": "だれも"
+      },
+      "1495640": {
+        "start": 6,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1580640": {
+        "start": 4,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1597790": {
+        "start": 6,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -783,19 +1332,23 @@
     "matches": {
       "1375290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいかく"
       },
       "1580640": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       },
       "1605820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -817,15 +1370,18 @@
     "matches": {
       "1366770": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -847,15 +1403,18 @@
     "matches": {
       "1510790": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "かわる"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -878,19 +1437,68 @@
     "matches": {
       "1490010": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ひょうか"
       },
       "1540170": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
+      }
+    }
+  },
+  {
+    "id": "144774",
+    "original": "親友を少し作ってずっと付き合いなさい。",
+    "en": [
+      {
+        "id": "269790",
+        "text": "Make a few good friends and stick to them."
+      }
+    ],
+    "indices": "親友 を 少し 作る[01]{作って} ずっと 付き合う{付き合い} 為さい{なさい}",
+    "vocabIds": [
+      "1365410",
+      "1348870",
+      "1597890",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1348870": {
+        "start": 3,
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1365410": {
+        "start": 0,
+        "length": 2,
+        "reading": "しんゆう"
+      },
+      "1495640": {
+        "start": 11,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 11,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597890": {
+        "start": 5,
+        "length": 2,
+        "reading": "つくっ"
       }
     }
   },
@@ -914,23 +1522,28 @@
     "matches": {
       "1359730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しんらい"
       },
       "1404740": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "たりる"
       },
       "1580640": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1589350": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "1597790": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -947,35 +1560,53 @@
     "vocabIds": [
       "1321110",
       "1483150",
+      "1416830",
       "1416840",
       "1597790",
       "1521400",
-      "1436730"
+      "1436730",
+      "1436720"
     ],
     "matches": {
       "1321110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じっさい"
+      },
+      "1416830": {
+        "start": 6,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416840": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
+      },
+      "1436720": {
+        "start": 26,
+        "length": 2,
+        "reading": "あきらめ"
       },
       "1436730": {
         "start": 26,
-        "length": 4
+        "length": 2,
+        "reading": "あきらめ"
       },
       "1483150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1521400": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1597790": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -992,30 +1623,47 @@
     "vocabIds": [
       "1311110",
       "1524590",
+      "1519480",
       "1519490",
+      "1405770",
       "1597790",
-      "1589320"
+      "1309250"
     ],
     "matches": {
+      "1309250": {
+        "start": 19,
+        "length": 6,
+        "reading": "おもいとどまら"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1405770": {
+        "start": 6,
+        "length": 1,
+        "reading": "ぞく"
+      },
+      "1519480": {
+        "start": 4,
+        "length": 2,
+        "reading": "ぼうそう"
       },
       "1519490": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ぼうそうぞく"
       },
       "1524590": {
         "start": 2,
-        "length": 1
-      },
-      "1589320": {
-        "start": 19,
-        "length": 2
+        "length": 1,
+        "reading": "いもうと"
       },
       "1597790": {
         "start": 13,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -1045,15 +1693,114 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "154326",
+    "original": "私は彼と誠実に付き合ってきました。",
+    "en": [
+      {
+        "id": "260216",
+        "text": "I have been honest with him."
+      }
+    ],
+    "indices": "私(わたし)[01] は 彼(かれ) と 誠実{誠実に} 付き合う{付き合って} 来る(くる){きました}",
+    "vocabIds": [
+      "1311110",
+      "1483070",
+      "1381180",
+      "1597790"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1381180": {
+        "start": 4,
+        "length": 2,
+        "reading": "せいじつ"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1597790": {
+        "start": 7,
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "162493",
+    "original": "私の友人はガールフレンドと別れ、今度は私と付き合いたがっている。",
+    "en": [
+      {
+        "id": "252021",
+        "text": "My friend broke up with his girlfriend and now he wants to go out with me."
+      }
+    ],
+    "indices": "私(わたし)[01]{私の} 友人 は ガールフレンド と 別れる{別れ} 今度[01] は 私(わたし)[01] と 付き合う{付き合い} たがる{たがっている}",
+    "vocabIds": [
+      "1311110",
+      "1540150",
+      "1606590",
+      "1509490",
+      "1289370",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1289370": {
+        "start": 16,
+        "length": 2,
+        "reading": "こんど"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1495640": {
+        "start": 21,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1509490": {
+        "start": 13,
+        "length": 2,
+        "reading": "わかれ"
+      },
+      "1540150": {
+        "start": 2,
+        "length": 2,
+        "reading": "ゆうじん"
+      },
+      "1597790": {
+        "start": 21,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1606590": {
+        "start": 13,
+        "length": 2,
+        "reading": "わかれ"
       }
     }
   },
@@ -1071,39 +1818,52 @@
       "1311110",
       "1597790",
       "1483070",
+      "1605820",
       "1605870",
-      "1539020",
+      "1539040",
       "1582310",
       "1455850"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1455850": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "どくしん"
       },
       "1483070": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
-      "1539020": {
+      "1539040": {
         "start": 23,
-        "length": 1
+        "length": 3,
+        "reading": "やさしく"
       },
       "1582310": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "あたま"
       },
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      },
+      "1605820": {
+        "start": 20,
+        "length": 2,
+        "reading": "よく"
       },
       "1605870": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "よく"
       }
     }
   },
@@ -1118,22 +1878,13 @@
     ],
     "indices": "さん と 付き合う{付き合っている}~ の",
     "vocabIds": [
-      "2081550",
-      "1307770",
       "1597790"
     ],
     "matches": {
-      "1307770": {
-        "start": 2,
-        "length": 1
-      },
       "1597790": {
         "start": 6,
-        "length": 5
-      },
-      "2081550": {
-        "start": 1,
-        "length": 1
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1148,6 +1899,7 @@
     ],
     "indices": "今まで は で(#2028980) 付き合う{付き合って} 来る(くる){きた} けど{けれど} 今後 は 是々非々~ の 立場 で(#2028980) 付き合う よ[01]",
     "vocabIds": [
+      "1288850",
       "1587590",
       "1597790",
       "1289140",
@@ -1155,25 +1907,74 @@
       "1551710"
     ],
     "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
       "1289140": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "こんご"
       },
       "1551710": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "たちば"
       },
       "1587590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       },
       "1596260": {
         "start": 25,
-        "length": 4
+        "length": 4,
+        "reading": "ぜぜひひ"
       },
       "1597790": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "175929",
+    "original": "決して付き合いやすい男じゃない。",
+    "en": [
+      {
+        "id": "238536",
+        "text": "He is by no means a pleasant fellow to associate with."
+      }
+    ],
+    "indices": "決して 付き合う{付き合い} 易い{やすい} 男 だ{じゃない}",
+    "vocabIds": [
+      "1254130",
+      "1597790",
+      "1495640",
+      "1419990"
+    ],
+    "matches": {
+      "1254130": {
+        "start": 0,
+        "length": 3,
+        "reading": "けっして"
+      },
+      "1419990": {
+        "start": 10,
+        "length": 1,
+        "reading": "おとこ"
+      },
+      "1495640": {
+        "start": 3,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 3,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -1191,24 +1992,34 @@
       "1247250",
       "1483070",
       "1597790",
+      "1467530",
       "1611790"
     ],
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1467530": {
+        "start": 10,
+        "length": 2,
+        "reading": "みとめ"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       },
       "1611790": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "みとめ"
       }
     }
   },
@@ -1231,19 +2042,23 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1304200": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "さんせい"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -1258,37 +2073,100 @@
     ],
     "indices": "何年 か 前(まえ)[02] 彼女[01] は 暴走族 の 連中 と 付き合う{付き合っていた}",
     "vocabIds": [
+      "1577100",
       "1189250",
+      "2084840",
       "1392580",
       "1483150",
+      "1519480",
       "1519490",
+      "1405770",
       "1559700",
       "1597790"
     ],
     "matches": {
       "1189250": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なんねん"
       },
       "1392580": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1405770": {
+        "start": 10,
+        "length": 1,
+        "reading": "ぞく"
       },
       "1483150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1519480": {
+        "start": 8,
+        "length": 2,
+        "reading": "ぼうそう"
       },
       "1519490": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ぼうそうぞく"
       },
       "1559700": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "れんちゅう"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なん"
       },
       "1597790": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      },
+      "2084840": {
+        "start": 1,
+        "length": 1,
+        "reading": "ねん"
+      }
+    }
+  },
+  {
+    "id": "190210",
+    "original": "一杯付き合いませんか。",
+    "en": [
+      {
+        "id": "27368",
+        "text": "Would you join me in a drink?"
+      }
+    ],
+    "indices": "一杯[02] 付き合う[02]{付き合いません}~ か",
+    "vocabIds": [
+      "1165670",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1165670": {
+        "start": 0,
+        "length": 2,
+        "reading": "いっぱい"
+      },
+      "1495640": {
+        "start": 2,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 2,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -1308,7 +2186,53 @@
     "matches": {
       "1597790": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "195071",
+    "original": "みなさん最後まで御付き合いください。",
+    "en": [
+      {
+        "id": "32245",
+        "text": "Stay with me, ladies and gentlemen."
+      }
+    ],
+    "indices": "皆さん{みなさん} 最後まで 御(ご) 付き合い 下さい{ください}",
+    "vocabIds": [
+      "1293810",
+      "1293830",
+      "1270190",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1270190": {
+        "start": 8,
+        "length": 1,
+        "reading": "お"
+      },
+      "1293810": {
+        "start": 4,
+        "length": 2,
+        "reading": "さいご"
+      },
+      "1293830": {
+        "start": 4,
+        "length": 4,
+        "reading": "さいごまで"
+      },
+      "1495640": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -1329,11 +2253,13 @@
     "matches": {
       "1419990": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1597790": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1353,7 +2279,134 @@
     "matches": {
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "196902",
+    "original": "フレッドはジェーンが好きになり、彼女と付き合い始めた。",
+    "en": [
+      {
+        "id": "34082",
+        "text": "Fred took a liking to Jane and started dating her."
+      }
+    ],
+    "indices": "は が 好きになる{好きになり} 彼女 と 付き合う{付き合い} 始める[03]{始めた}",
+    "vocabIds": [
+      "1277450",
+      "1483150",
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1277450": {
+        "start": 10,
+        "length": 2,
+        "reading": "すき"
+      },
+      "1307550": {
+        "start": 23,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 23,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1483150": {
+        "start": 16,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1495640": {
+        "start": 19,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 19,
+        "length": 4,
+        "reading": "つきあい"
+      }
+    }
+  },
+  {
+    "id": "197105",
+    "original": "ブライアンは彼女と付き合い始めた事を後悔し、別れたいと思っています。",
+    "en": [
+      {
+        "id": "34286",
+        "text": "Brian regrets starting a relationship with her and wants to escape from her."
+      }
+    ],
+    "indices": "は 彼女 と 付き合う{付き合い} 始める[03]{始めた} 事(こと) を 後悔 為る(する){し} 別れる{別れ} たい[01] と 思う{思っています}",
+    "vocabIds": [
+      "1483150",
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540",
+      "1313580",
+      "1269510",
+      "1606590",
+      "1509490",
+      "1589350"
+    ],
+    "matches": {
+      "1269510": {
+        "start": 18,
+        "length": 2,
+        "reading": "こうかい"
+      },
+      "1307550": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1313580": {
+        "start": 16,
+        "length": 1,
+        "reading": "こと"
+      },
+      "1342540": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1483150": {
+        "start": 6,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1495640": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1509490": {
+        "start": 22,
+        "length": 2,
+        "reading": "わかれ"
+      },
+      "1589350": {
+        "start": 27,
+        "length": 2,
+        "reading": "おもっ"
+      },
+      "1597790": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1606590": {
+        "start": 22,
+        "length": 2,
+        "reading": "わかれ"
       }
     }
   },
@@ -1374,11 +2427,13 @@
     "matches": {
       "1419990": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1597790": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -1399,11 +2454,13 @@
     "matches": {
       "1186590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "げれつ"
       },
       "1597790": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1426,19 +2483,23 @@
     "matches": {
       "1271990": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "こうさい"
       },
       "1483070": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580640": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 10,
-        "length": 6
+        "length": 4,
+        "reading": "つきあわ"
       }
     }
   },
@@ -1456,29 +2517,46 @@
       "1580640",
       "1597790",
       "1483070",
+      "1160790",
+      "1576150",
       "1163700",
       "1277450"
     ],
     "matches": {
+      "1160790": {
+        "start": 19,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163700": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "いちにんで"
       },
       "1277450": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1483070": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1576150": {
+        "start": 19,
+        "length": 2,
+        "reading": "いちにん"
       },
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "じん"
       },
       "1597790": {
         "start": 10,
-        "length": 6
+        "length": 4,
+        "reading": "つきあわ"
       }
     }
   },
@@ -1506,23 +2584,28 @@
     "matches": {
       "1002590": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "おとうさん"
       },
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1420470": {
         "start": 27,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1445690": {
         "start": 35,
-        "length": 3
+        "length": 2,
+        "reading": "おこっ"
       },
       "1597790": {
         "start": 17,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1543,11 +2626,90 @@
     "matches": {
       "1419990": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1597790": {
         "start": 18,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "230708",
+    "original": "あの人は付き合いにくい。",
+    "en": [
+      {
+        "id": "68075",
+        "text": "He is hard to deal with."
+      }
+    ],
+    "indices": "あの人 は 付き合う{付き合い} 難い(にくい){にくい}",
+    "vocabIds": [
+      "1000440",
+      "1580640",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1000440": {
+        "start": 0,
+        "length": 3,
+        "reading": "あのひと"
+      },
+      "1495640": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1580640": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1597790": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあい"
+      }
+    }
+  },
+  {
+    "id": "478227",
+    "original": "私の日本語の練習に付き合ってくれませんか。",
+    "en": [
+      {
+        "id": "476034",
+        "text": "Can you practice Japanese with me?"
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1464530",
+      "1559160",
+      "1597790"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1464530": {
+        "start": 2,
+        "length": 3,
+        "reading": "にほんご"
+      },
+      "1559160": {
+        "start": 6,
+        "length": 2,
+        "reading": "れんしゅう"
+      },
+      "1597790": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1568,15 +2730,18 @@
     "matches": {
       "1337780": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "じゅく"
       },
       "1387990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1592,25 +2757,35 @@
     "vocabIds": [
       "1483070",
       "1394840",
+      "1310460",
       "1310490",
       "1597790"
     ],
     "matches": {
+      "1310460": {
+        "start": 11,
+        "length": 3,
+        "reading": "うまく"
+      },
       "1310490": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "うまく"
       },
       "1394840": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんいん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1628,22 +2803,67 @@
       }
     ],
     "vocabIds": [
+      "1416830",
       "1416840",
       "1597790",
-      "2081550"
+      "1420470"
     ],
     "matches": {
+      "1416830": {
+        "start": 3,
+        "length": 1,
+        "reading": "だれ"
+      },
       "1416840": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
+      },
+      "1420470": {
+        "start": 14,
+        "length": 2,
+        "reading": "しら"
       },
       "1597790": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "1107746",
+    "original": "きみに付き合ってる人がいるとは知らなかった。",
+    "en": [
+      {
+        "id": "853249",
+        "text": "I didn't know you were seeing someone."
       },
-      "2081550": {
-        "start": 14,
-        "length": 1
+      {
+        "id": "7513410",
+        "text": "I didn't know that you were seeing someone."
+      }
+    ],
+    "vocabIds": [
+      "1597790",
+      "1580640",
+      "1420470"
+    ],
+    "matches": {
+      "1420470": {
+        "start": 15,
+        "length": 2,
+        "reading": "しら"
+      },
+      "1580640": {
+        "start": 9,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1597790": {
+        "start": 3,
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1667,27 +2887,71 @@
     "matches": {
       "1242970": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "かねもち"
       },
       "1322320": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "すて"
       },
       "1419990": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1597790": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "1163700",
+    "original": "ナンシーは私には付き合いにくい女の子だ。",
+    "en": [
+      {
+        "id": "36172",
+        "text": "Nancy is a hard girl for me to deal with."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1597790",
+      "1495640",
+      "1344970"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 5,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1344970": {
+        "start": 15,
+        "length": 3,
+        "reading": "おんなのこ"
+      },
+      "1495640": {
+        "start": 8,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 8,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -1702,21 +2966,18 @@
     ],
     "vocabIds": [
       "1597790",
-      "1160790",
-      "1255430"
+      "1160790"
     ],
     "matches": {
       "1160790": {
         "start": 14,
-        "length": 1
-      },
-      "1255430": {
-        "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "いち"
       },
       "1597790": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1736,25 +2997,35 @@
     "vocabIds": [
       "1483150",
       "1597790",
+      "1313580",
       "2585220",
       "1365410"
     ],
     "matches": {
+      "1313580": {
+        "start": 8,
+        "length": 1,
+        "reading": "こと"
+      },
       "1365410": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "しんゆう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "2585220": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "ことがない"
       }
     }
   },
@@ -1774,30 +3045,53 @@
     "vocabIds": [
       "1483150",
       "1597790",
+      "1313580",
       "2585220",
       "1540130",
-      "1009730"
+      "1009730",
+      "1195970",
+      "1195960"
     ],
     "matches": {
       "1009730": {
         "start": 15,
-        "length": 5
+        "length": 5,
+        "reading": "にすぎない"
+      },
+      "1195960": {
+        "start": 16,
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1195970": {
+        "start": 16,
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1313580": {
+        "start": 8,
+        "length": 1,
+        "reading": "こと"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1540130": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじょう"
       },
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "2585220": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "ことがない"
       }
     }
   },
@@ -1814,34 +3108,40 @@
       "1483150",
       "1416830",
       "1597790",
-      "2757880",
+      "1587040",
       "1521400",
       "1359040"
     ],
     "matches": {
       "1359040": {
         "start": 26,
-        "length": 4
+        "length": 2,
+        "reading": "しんじ"
       },
       "1416830": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1521400": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
+      },
+      "1587040": {
+        "start": 18,
+        "length": 2,
+        "reading": "いっ"
       },
       "1597790": {
         "start": 9,
-        "length": 5
-      },
-      "2757880": {
-        "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -1855,42 +3155,55 @@
       }
     ],
     "vocabIds": [
-      "1539980",
       "1483150",
       "1606590",
+      "1509490",
       "1307770",
       "1289370",
       "1311110",
-      "1597790"
+      "1597790",
+      "1495640"
     ],
     "matches": {
       "1289370": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "こんど"
       },
       "1307770": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1311110": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
-      "1539980": {
-        "start": 0,
-        "length": 1
+      "1495640": {
+        "start": 23,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1509490": {
+        "start": 7,
+        "length": 2,
+        "reading": "わかれ"
       },
       "1597790": {
         "start": 23,
-        "length": 6
+        "length": 4,
+        "reading": "つきあい"
       },
       "1606590": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "わかれ"
       }
     }
   },
@@ -1913,23 +3226,60 @@
     "matches": {
       "1194500": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "はな"
       },
       "1315720": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "もっ"
       },
       "1580640": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1589030": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "おくりもの"
       },
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "1987783",
+    "original": "お付き合い願えますか？",
+    "en": [
+      {
+        "id": "1987785",
+        "text": "Can I ask you to join me?"
+      }
+    ],
+    "vocabIds": [
+      "2404810",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1495640": {
+        "start": 1,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 1,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "2404810": {
+        "start": 0,
+        "length": 5,
+        "reading": "おつきあい"
       }
     }
   },
@@ -1961,11 +3311,13 @@
     "matches": {
       "1589350": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
       "1597790": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -1985,11 +3337,13 @@
     "matches": {
       "1589350": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2005,20 +3359,29 @@
     "vocabIds": [
       "1596930",
       "1597790",
+      "1495640",
       "1589350"
     ],
     "matches": {
+      "1495640": {
+        "start": 17,
+        "length": 4,
+        "reading": "つきあい"
+      },
       "1589350": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "1596930": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たしか"
       },
       "1597790": {
         "start": 17,
-        "length": 6
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -2040,19 +3403,23 @@
     "matches": {
       "1344970": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1464700": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんじん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2075,23 +3442,28 @@
     "matches": {
       "1259140": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
       },
       "1344970": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1464700": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんじん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 17,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2112,15 +3484,57 @@
     "matches": {
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1580640": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "2301811",
+    "original": "彼は付き合いにくい人だ。",
+    "en": [
+      {
+        "id": "297107",
+        "text": "He's a difficult person to deal with."
+      }
+    ],
+    "indices": "彼(かれ) は 付き合う{付き合い} 難い(にくい){にくい} 人(ひと) だ",
+    "vocabIds": [
+      "1483070",
+      "1597790",
+      "1495640",
+      "1580640"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1495640": {
+        "start": 2,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1580640": {
+        "start": 9,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1597790": {
+        "start": 2,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -2148,7 +3562,8 @@
     "matches": {
       "1597790": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2169,15 +3584,18 @@
     "matches": {
       "1424270": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうごく"
       },
       "1552750": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "りゅうがくせい"
       },
       "1597790": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2202,15 +3620,18 @@
     "matches": {
       "1424300": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうごくじん"
       },
       "1552750": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "りゅうがくせい"
       },
       "1597790": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2232,19 +3653,61 @@
     "matches": {
       "1344970": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1531710": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なまえ"
       },
       "1589600": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "おわる"
       },
       "1597790": {
         "start": 18,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "2424414",
+    "original": "メアリーはトムにフラれてからジョンと付き合い始めた。",
+    "en": [
+      {
+        "id": "1096278",
+        "text": "After Tom dumped Mary, she started seeing John."
+      }
+    ],
+    "vocabIds": [
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 22,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 22,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1495640": {
+        "start": 18,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 18,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -2266,15 +3729,18 @@
     "matches": {
       "1242160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちかく"
       },
       "1597790": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "2084840": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -2295,15 +3761,18 @@
     "matches": {
       "1392580": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1597790": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "2084840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -2324,15 +3793,68 @@
     "matches": {
       "1286060": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こくはく"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       },
       "1597790": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
+      }
+    }
+  },
+  {
+    "id": "2739681",
+    "original": "トムはメアリーと別れてからアリスと付き合い始めた。",
+    "en": [
+      {
+        "id": "2419490",
+        "text": "After Tom broke up with Mary, he started dating Alice."
+      }
+    ],
+    "vocabIds": [
+      "1606590",
+      "1509490",
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 21,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 21,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1495640": {
+        "start": 17,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1509490": {
+        "start": 8,
+        "length": 2,
+        "reading": "わかれ"
+      },
+      "1597790": {
+        "start": 17,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1606590": {
+        "start": 8,
+        "length": 2,
+        "reading": "わかれ"
       }
     }
   },
@@ -2346,27 +3868,19 @@
       }
     ],
     "vocabIds": [
-      "1534520",
-      "1406820",
       "1540170",
       "1597790"
     ],
     "matches": {
-      "1406820": {
-        "start": 1,
-        "length": 1
-      },
-      "1534520": {
-        "start": 0,
-        "length": 1
-      },
       "1540170": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       },
       "1597790": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2385,7 +3899,8 @@
     "matches": {
       "1597790": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -2400,21 +3915,86 @@
     ],
     "vocabIds": [
       "1597790",
+      "1461140",
       "1582670",
+      "1580640",
+      "1425710",
       "2827365"
     ],
     "matches": {
+      "1425710": {
+        "start": 35,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1461140": {
+        "start": 30,
+        "length": 1,
+        "reading": "に"
+      },
+      "1580640": {
+        "start": 31,
+        "length": 1,
+        "reading": "にん"
+      },
       "1582670": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "ににん"
       },
       "1597790": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "2827365": {
         "start": 35,
-        "length": 3
+        "length": 3,
+        "reading": "なかいい"
+      }
+    }
+  },
+  {
+    "id": "3262717",
+    "original": "そんなにトムが好きなら私と別れてトムと付き合えば？",
+    "en": [
+      {
+        "id": "3274454",
+        "text": "If you like Tom so much, why not break up with me and date him?"
+      }
+    ],
+    "vocabIds": [
+      "1277450",
+      "1311110",
+      "1606590",
+      "1509490",
+      "1597790"
+    ],
+    "matches": {
+      "1277450": {
+        "start": 7,
+        "length": 2,
+        "reading": "すき"
+      },
+      "1311110": {
+        "start": 11,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1509490": {
+        "start": 13,
+        "length": 2,
+        "reading": "わかれ"
+      },
+      "1597790": {
+        "start": 19,
+        "length": 4,
+        "reading": "つきあえ"
+      },
+      "1606590": {
+        "start": 13,
+        "length": 2,
+        "reading": "わかれ"
       }
     }
   },
@@ -2437,7 +4017,8 @@
     "matches": {
       "1597790": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2461,11 +4042,13 @@
     "matches": {
       "1420470": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1597790": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2486,15 +4069,18 @@
     "matches": {
       "1344970": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
       },
       "1464700": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんじん"
       },
       "1597790": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2521,7 +4107,8 @@
     "matches": {
       "1597790": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2541,11 +4128,13 @@
     "matches": {
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1597790": {
         "start": 2,
-        "length": 6
+        "length": 4,
+        "reading": "つきあわ"
       }
     }
   },
@@ -2564,7 +4153,8 @@
     "matches": {
       "1597790": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -2580,25 +4170,29 @@
     "vocabIds": [
       "1311110",
       "1597790",
-      "1416840",
+      "1416830",
       "1591110"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1416840": {
+      "1416830": {
         "start": 13,
-        "length": 2
+        "length": 1,
+        "reading": "だれ"
       },
       "1591110": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       },
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2617,7 +4211,8 @@
     "matches": {
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2638,15 +4233,18 @@
     "matches": {
       "1356370": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "じょうほう"
       },
       "1416830": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       },
       "1597790": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2662,25 +4260,35 @@
     "vocabIds": [
       "1203260",
       "1580640",
+      "1497190",
       "2847506",
       "1597790"
     ],
     "matches": {
       "1203260": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "た"
+      },
+      "1497190": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふつう"
       },
       "1580640": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       },
       "2847506": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ふつうに"
       }
     }
   },
@@ -2699,7 +4307,8 @@
     "matches": {
       "1597790": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2720,15 +4329,18 @@
     "matches": {
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1597790": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2752,11 +4364,13 @@
     "matches": {
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2778,19 +4392,201 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1589350": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "8576182",
+    "original": "いつから付き合い始めたの？",
+    "en": [
+      {
+        "id": "2364104",
+        "text": "When did you start dating?"
+      },
+      {
+        "id": "2364105",
+        "text": "When did you two start dating?"
+      }
+    ],
+    "vocabIds": [
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 8,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 8,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1495640": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあい"
+      }
+    }
+  },
+  {
+    "id": "8587320",
+    "original": "トムってメアリーといつから付き合い始めたの？",
+    "en": [
+      {
+        "id": "8587312",
+        "text": "When did Tom start dating Mary?"
+      }
+    ],
+    "vocabIds": [
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 17,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 17,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1495640": {
+        "start": 13,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 13,
+        "length": 4,
+        "reading": "つきあい"
+      }
+    }
+  },
+  {
+    "id": "8619772",
+    "original": "トムとメアリーは高校の友達で、卒業してから数年後に付き合い始めた。",
+    "en": [
+      {
+        "id": "1095933",
+        "text": "Tom and Mary were friends in high school and started dating a few years after graduating."
+      }
+    ],
+    "vocabIds": [
+      "1283500",
+      "1540170",
+      "1405890",
+      "1580820",
+      "1373230",
+      "2835321",
+      "2084840",
+      "1468570",
+      "1269320",
+      "2640160",
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 23,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1283500": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうこう"
+      },
+      "1307550": {
+        "start": 29,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 29,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1373230": {
+        "start": 21,
+        "length": 2,
+        "reading": "すうねん"
+      },
+      "1405890": {
+        "start": 15,
+        "length": 2,
+        "reading": "そつぎょう"
+      },
+      "1468570": {
+        "start": 22,
+        "length": 2,
+        "reading": "ねんご"
+      },
+      "1495640": {
+        "start": 25,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1540170": {
+        "start": 11,
+        "length": 2,
+        "reading": "ともだち"
+      },
+      "1580820": {
+        "start": 21,
+        "length": 1,
+        "reading": "すう"
+      },
+      "1597790": {
+        "start": 25,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "2084840": {
+        "start": 22,
+        "length": 1,
+        "reading": "ねん"
+      },
+      "2640160": {
+        "start": 23,
+        "length": 2,
+        "reading": "ごに"
+      },
+      "2835321": {
+        "start": 21,
+        "length": 3,
+        "reading": "すうねんご"
       }
     }
   },
@@ -2809,7 +4605,8 @@
     "matches": {
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2824,26 +4621,42 @@
     ],
     "vocabIds": [
       "1576870",
+      "1307630",
       "1307650",
+      "2260030",
       "1524590",
       "1597790"
     ],
     "matches": {
+      "1307630": {
+        "start": 2,
+        "length": 1,
+        "reading": "あね"
+      },
       "1307650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あねたか"
       },
       "1524590": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "いもうと"
       },
       "1576870": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       },
       "1597790": {
         "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      },
+      "2260030": {
+        "start": 3,
+        "length": 1,
+        "reading": "たか"
       }
     }
   },
@@ -2866,23 +4679,28 @@
     "matches": {
       "1307640": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ねえさん"
       },
       "1483140": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かれし"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1524590": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いもうと"
       },
       "1597790": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2902,11 +4720,13 @@
     "matches": {
       "1580640": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "1597790": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2922,20 +4742,29 @@
     "vocabIds": [
       "1311110",
       "1597790",
+      "1420470",
       "1420420"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1420420": {
         "start": 13,
-        "length": 4
+        "length": 4,
+        "reading": "しらない"
+      },
+      "1420470": {
+        "start": 13,
+        "length": 2,
+        "reading": "しら"
       },
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -2950,16 +4779,24 @@
     ],
     "vocabIds": [
       "1483150",
-      "1597790"
+      "1597790",
+      "1495640"
     ],
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1495640": {
+        "start": 3,
+        "length": 4,
+        "reading": "つきあい"
       },
       "1597790": {
         "start": 3,
-        "length": 6
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -2980,15 +4817,18 @@
     "matches": {
       "1151260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1559700": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "れんちゅう"
       },
       "1597790": {
         "start": 6,
-        "length": 6
+        "length": 4,
+        "reading": "つきあわ"
       }
     }
   },
@@ -3007,7 +4847,34 @@
     "matches": {
       "1597790": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "9489089",
+    "original": "買い物に付き合ってくれない？",
+    "en": [
+      {
+        "id": "249617",
+        "text": "Will you go shopping with me?"
+      }
+    ],
+    "vocabIds": [
+      "1589730",
+      "1597790"
+    ],
+    "matches": {
+      "1589730": {
+        "start": 0,
+        "length": 3,
+        "reading": "かいもの"
+      },
+      "1597790": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3029,28 +4896,75 @@
       "1212250",
       "1151260",
       "1597790",
-      "1310660"
+      "1310670"
     ],
     "matches": {
       "1151260": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1212250": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
       },
-      "1310660": {
+      "1310670": {
         "start": 20,
-        "length": 2
+        "length": 3,
+        "reading": "とめろ"
       },
       "1419990": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1597790": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
+      }
+    }
+  },
+  {
+    "id": "9694337",
+    "original": "トムとメアリーって付き合い始めたばかりなんだよ。",
+    "en": [
+      {
+        "id": "9694364",
+        "text": "Tom and Mary just started dating."
+      },
+      {
+        "id": "9694366",
+        "text": "Tom and Mary have just started dating."
+      }
+    ],
+    "vocabIds": [
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1495640": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -3066,20 +4980,23 @@
     "vocabIds": [
       "1580640",
       "1597790",
-      "2081550"
+      "1420470"
     ],
     "matches": {
+      "1420470": {
+        "start": 12,
+        "length": 2,
+        "reading": "しら"
+      },
       "1580640": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "1597790": {
         "start": 3,
-        "length": 5
-      },
-      "2081550": {
-        "start": 12,
-        "length": 1
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3099,11 +5016,13 @@
     "matches": {
       "1580640": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "1597790": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3122,77 +5041,122 @@
       "1479890",
       "1294940",
       "1404700",
+      "2399300",
       "1184140",
       "1401000",
+      "1386840",
       "1610070",
       "2404810",
+      "1495640",
       "1605820",
       "1600900",
       "1591110",
       "1263650",
       "1597790",
-      "1189250"
+      "1577100",
+      "1189250",
+      "2084840"
     ],
     "matches": {
       "1184140": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "した"
       },
       "1189250": {
         "start": 102,
-        "length": 2
+        "length": 2,
+        "reading": "なんねん"
       },
       "1263650": {
         "start": 62,
-        "length": 2
+        "length": 2,
+        "reading": "げんざい"
       },
       "1294940": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "さい"
       },
       "1318610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1386840": {
+        "start": 27,
+        "length": 2,
+        "reading": "ぜったい"
       },
       "1401000": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "あいて"
       },
       "1404700": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "たし"
       },
       "1479890": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はんぶん"
+      },
+      "1495640": {
+        "start": 31,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1577100": {
+        "start": 102,
+        "length": 1,
+        "reading": "なん"
       },
       "1591110": {
         "start": 48,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       },
       "1597790": {
         "start": 88,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       },
       "1600240": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねんれい"
       },
       "1600900": {
         "start": 46,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       },
       "1605820": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       },
       "1610070": {
         "start": 27,
-        "length": 3
+        "length": 3,
+        "reading": "ぜったいに"
+      },
+      "2084840": {
+        "start": 103,
+        "length": 1,
+        "reading": "ねん"
+      },
+      "2399300": {
+        "start": 14,
+        "length": 2,
+        "reading": "たし"
       },
       "2404810": {
         "start": 30,
-        "length": 5
+        "length": 5,
+        "reading": "おつきあい"
       }
     }
   },
@@ -3206,12 +5170,19 @@
       }
     ],
     "vocabIds": [
-      "1597790"
+      "1597790",
+      "1495640"
     ],
     "matches": {
+      "1495640": {
+        "start": 3,
+        "length": 4,
+        "reading": "つきあい"
+      },
       "1597790": {
         "start": 3,
-        "length": 6
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -3233,19 +5204,23 @@
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "2084840": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -3261,30 +5236,53 @@
     "vocabIds": [
       "1483070",
       "1597790",
+      "1590200",
       "2179320",
+      "1430250",
       "1222590",
-      "1606590"
+      "1606590",
+      "1509490"
     ],
     "matches": {
       "1222590": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "きぶん"
+      },
+      "1430250": {
+        "start": 12,
+        "length": 1,
+        "reading": "とり"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1509490": {
+        "start": 30,
+        "length": 2,
+        "reading": "わかれ"
+      },
+      "1590200": {
+        "start": 10,
+        "length": 1,
+        "reading": "かご"
       },
       "1597790": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "1606590": {
         "start": 30,
-        "length": 3
+        "length": 2,
+        "reading": "わかれ"
       },
       "2179320": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "かごのとり"
       }
     }
   },
@@ -3308,11 +5306,13 @@
     "matches": {
       "1277450": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3327,16 +5327,24 @@
     ],
     "vocabIds": [
       "1247250",
-      "1597790"
+      "1597790",
+      "1495640"
     ],
     "matches": {
       "1247250": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1495640": {
+        "start": 13,
+        "length": 4,
+        "reading": "つきあい"
       },
       "1597790": {
         "start": 13,
-        "length": 6
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -3351,6 +5359,7 @@
     ],
     "vocabIds": [
       "1540170",
+      "1163400",
       "1163420",
       "1334040",
       "1509430",
@@ -3359,53 +5368,75 @@
       "1486170",
       "1311110",
       "1483150",
+      "1386840",
       "1610070",
       "1587610"
     ],
     "matches": {
+      "1163400": {
+        "start": 18,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1311110": {
         "start": 85,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1334040": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "すん"
+      },
+      "1386840": {
+        "start": 94,
+        "length": 2,
+        "reading": "ぜったい"
       },
       "1483150": {
         "start": 87,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1486170": {
         "start": 81,
-        "length": 2
+        "length": 2,
+        "reading": "びみょう"
       },
       "1509430": {
         "start": 60,
-        "length": 1
+        "length": 1,
+        "reading": "べつ"
       },
       "1540170": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       },
       "1580640": {
         "start": 62,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1587610": {
         "start": 97,
-        "length": 1
+        "length": 1,
+        "reading": "いや"
       },
       "1597790": {
         "start": 64,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "1610070": {
         "start": 94,
-        "length": 3
+        "length": 3,
+        "reading": "ぜったいに"
       }
     }
   },
@@ -3423,28 +5454,39 @@
       "1212250",
       "1483070",
       "1597790",
+      "1279060",
       "1279050"
     ],
     "matches": {
       "1212250": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
       },
       "1279050": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "ひかえ"
+      },
+      "1279060": {
+        "start": 25,
+        "length": 2,
+        "reading": "ひかえ"
       },
       "1420160": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "だんせい"
       },
       "1483070": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 18,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -3463,32 +5505,38 @@
       "1151260",
       "1483070",
       "1597790",
-      "1310660"
+      "1310670"
     ],
     "matches": {
       "1151260": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1212250": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
       },
-      "1310660": {
+      "1310670": {
         "start": 18,
-        "length": 2
+        "length": 3,
+        "reading": "とめろ"
       },
       "1419990": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1483070": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1597790": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -3508,11 +5556,13 @@
     "matches": {
       "1587610": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "いや"
       },
       "1597790": {
         "start": 1,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3527,21 +5577,18 @@
     ],
     "vocabIds": [
       "1597790",
-      "1288850",
-      "1255430"
+      "1288850"
     ],
     "matches": {
-      "1255430": {
-        "start": 12,
-        "length": 1
-      },
       "1288850": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3560,7 +5607,8 @@
     "matches": {
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3574,17 +5622,31 @@
       }
     ],
     "vocabIds": [
+      "1461140",
       "1582670",
+      "1580640",
       "1597790"
     ],
     "matches": {
+      "1461140": {
+        "start": 0,
+        "length": 1,
+        "reading": "に"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
+      },
       "1582670": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ににん"
       },
       "1597790": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3604,11 +5666,51 @@
     "matches": {
       "1206730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1597790": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "10512962",
+    "original": "買い物に付き合っていただけますか？",
+    "en": [
+      {
+        "id": "10208658",
+        "text": "Could you please come shopping with me?"
+      },
+      {
+        "id": "10208656",
+        "text": "Would you please come shopping with me?"
+      },
+      {
+        "id": "10512986",
+        "text": "Would you please go shopping with me?"
+      },
+      {
+        "id": "12463937",
+        "text": "Could you go shopping with me?"
+      }
+    ],
+    "vocabIds": [
+      "1589730",
+      "1597790"
+    ],
+    "matches": {
+      "1589730": {
+        "start": 0,
+        "length": 3,
+        "reading": "かいもの"
+      },
+      "1597790": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3624,40 +5726,59 @@
     "vocabIds": [
       "1579110",
       "1516570",
+      "1577100",
       "1188270",
       "1543240",
       "1509480",
+      "1578850",
       "1578790",
       "1597790"
     ],
     "matches": {
       "1188270": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1509480": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "べつに"
       },
       "1516570": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ほうかご"
       },
       "1543240": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "よてい"
+      },
+      "1577100": {
+        "start": 8,
+        "length": 1,
+        "reading": "なに"
       },
       "1578790": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 33,
+        "length": 2,
+        "reading": "いき"
       },
       "1579110": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1597790": {
         "start": 47,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3674,13 +5795,14 @@
       "1348770",
       "1580640",
       "1597790",
-      "2268150",
+      "1327120",
       "1212250",
       "1423660",
       "1598550",
       "1212330",
       "1289180",
       "1365770",
+      "1221520",
       "2563780",
       "1516930",
       "1407460"
@@ -3688,55 +5810,73 @@
     "matches": {
       "1212250": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
       },
       "1212330": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "かんかく"
+      },
+      "1221520": {
+        "start": 59,
+        "length": 1,
+        "reading": "き"
       },
       "1289180": {
         "start": 51,
-        "length": 2
+        "length": 2,
+        "reading": "いまどき"
+      },
+      "1327120": {
+        "start": 12,
+        "length": 2,
+        "reading": "まもら"
       },
       "1348770": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こがら"
       },
       "1365770": {
         "start": 54,
-        "length": 2
+        "length": 2,
+        "reading": "しんちょう"
       },
       "1407460": {
         "start": 68,
-        "length": 2
+        "length": 2,
+        "reading": "おおい"
       },
       "1423660": {
         "start": 27,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうがくせい"
       },
       "1516930": {
         "start": 66,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       },
       "1580640": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       },
       "1598550": {
         "start": 31,
-        "length": 4
-      },
-      "2268150": {
-        "start": 12,
-        "length": 1
+        "length": 3,
+        "reading": "でかけ"
       },
       "2563780": {
         "start": 59,
-        "length": 5
+        "length": 5,
+        "reading": "きにしない"
       }
     }
   },
@@ -3753,10 +5893,11 @@
       "1348770",
       "1580640",
       "1597790",
-      "2268150",
+      "1327120",
       "1212250",
       "1423660",
       "1598550",
+      "1221520",
       "1221540",
       "1289180",
       "1365770",
@@ -3765,47 +5906,63 @@
     "matches": {
       "1212250": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
+      },
+      "1221520": {
+        "start": 41,
+        "length": 1,
+        "reading": "き"
       },
       "1221540": {
         "start": 41,
-        "length": 4
+        "length": 4,
+        "reading": "きがする"
       },
       "1221680": {
         "start": 62,
-        "length": 4
+        "length": 4,
+        "reading": "きにする"
       },
       "1289180": {
         "start": 54,
-        "length": 2
+        "length": 2,
+        "reading": "いまどき"
+      },
+      "1327120": {
+        "start": 11,
+        "length": 2,
+        "reading": "まもら"
       },
       "1348770": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こがら"
       },
       "1365770": {
         "start": 57,
-        "length": 2
+        "length": 2,
+        "reading": "しんちょう"
       },
       "1423660": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうがくせい"
       },
       "1580640": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       },
       "1598550": {
         "start": 30,
-        "length": 4
-      },
-      "2268150": {
-        "start": 11,
-        "length": 1
+        "length": 3,
+        "reading": "でかけ"
       }
     }
   },
@@ -3819,37 +5976,61 @@
       }
     ],
     "vocabIds": [
+      "1288850",
       "1587590",
+      "1577100",
       "1189100",
       "1580640",
       "1597790",
+      "1228560",
       "2269050",
       "1589350"
     ],
     "matches": {
       "1189100": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "なんにん"
+      },
+      "1228560": {
+        "start": 25,
+        "length": 1,
+        "reading": "きゅう"
+      },
+      "1288850": {
+        "start": 1,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1577100": {
+        "start": 4,
+        "length": 1,
+        "reading": "なん"
       },
       "1580640": {
-        "start": 7,
-        "length": 1
+        "start": 5,
+        "length": 1,
+        "reading": "にん"
       },
       "1587590": {
         "start": 1,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       },
       "1589350": {
         "start": 38,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
       "1597790": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "2269050": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -3876,7 +6057,8 @@
     "matches": {
       "1597790": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3896,11 +6078,51 @@
     "matches": {
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1597790": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "10741291",
+    "original": "私にお付き合いください。",
+    "en": [
+      {
+        "id": "3096364",
+        "text": "Please come with me."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "2404810",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1495640": {
+        "start": 3,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 3,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "2404810": {
+        "start": 2,
+        "length": 5,
+        "reading": "おつきあい"
       }
     }
   },
@@ -3919,7 +6141,8 @@
     "matches": {
       "1597790": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3950,7 +6173,8 @@
     "matches": {
       "1597790": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -3978,11 +6202,13 @@
     "matches": {
       "1416830": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       },
       "1597790": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4000,43 +6226,63 @@
       "1320830",
       "1345250",
       "1597790",
+      "1495640",
       "1589350",
       "1311110",
+      "1324300",
       "2193250",
       "1530970"
     ],
     "matches": {
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1311110": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1320830": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じつは"
+      },
+      "1324300": {
+        "start": 31,
+        "length": 1,
+        "reading": "わか"
       },
       "1345250": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1495640": {
+        "start": 10,
+        "length": 4,
+        "reading": "つきあい"
       },
       "1530970": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "むり"
       },
       "1589350": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
       "1597790": {
         "start": 10,
-        "length": 6
+        "length": 4,
+        "reading": "つきあい"
       },
       "2193250": {
         "start": 31,
-        "length": 1
+        "length": 1,
+        "reading": "わか"
       }
     }
   },
@@ -4051,16 +6297,136 @@
     ],
     "vocabIds": [
       "1000440",
-      "1597790"
+      "1580640",
+      "1597790",
+      "1495640"
     ],
     "matches": {
       "1000440": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あのひと"
+      },
+      "1495640": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1580640": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 4,
-        "length": 6
+        "length": 4,
+        "reading": "つきあい"
+      }
+    }
+  },
+  {
+    "id": "11236559",
+    "original": "結婚の話なんて早すぎじゃない？まだ付き合い始めたばかりでしょ？",
+    "en": [
+      {
+        "id": "11236514",
+        "text": "Don't you think it's a bit early to be talking about getting married? I mean, you guys just started dating."
+      }
+    ],
+    "vocabIds": [
+      "1254790",
+      "1600900",
+      "1956580",
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1254790": {
+        "start": 0,
+        "length": 2,
+        "reading": "けっこん"
+      },
+      "1307550": {
+        "start": 21,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 21,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1495640": {
+        "start": 17,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 17,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1600900": {
+        "start": 3,
+        "length": 1,
+        "reading": "はなし"
+      },
+      "1956580": {
+        "start": 7,
+        "length": 1,
+        "reading": "はや"
+      }
+    }
+  },
+  {
+    "id": "11240291",
+    "original": "遅くまで付き合わせてごめんね。君と話してると楽しくて。",
+    "en": [
+      {
+        "id": "11240293",
+        "text": "I'm sorry I kept you up so late! It's just so fun to talk to you."
+      }
+    ],
+    "vocabIds": [
+      "1421970",
+      "1421980",
+      "1597790",
+      "1247250",
+      "1562350",
+      "1207240"
+    ],
+    "matches": {
+      "1207240": {
+        "start": 22,
+        "length": 3,
+        "reading": "たのしく"
+      },
+      "1247250": {
+        "start": 15,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1421970": {
+        "start": 0,
+        "length": 2,
+        "reading": "おそく"
+      },
+      "1421980": {
+        "start": 0,
+        "length": 2,
+        "reading": "おそく"
+      },
+      "1562350": {
+        "start": 17,
+        "length": 2,
+        "reading": "はなし"
+      },
+      "1597790": {
+        "start": 4,
+        "length": 4,
+        "reading": "つきあわ"
       }
     }
   },
@@ -4075,26 +6441,42 @@
     ],
     "vocabIds": [
       "2803020",
+      "1600900",
       "1311110",
+      "1226960",
       "2116880",
       "1597790"
     ],
     "matches": {
+      "1226960": {
+        "start": 9,
+        "length": 1,
+        "reading": "ぎゃく"
+      },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1597790": {
         "start": 24,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
+      },
+      "1600900": {
+        "start": 5,
+        "length": 1,
+        "reading": "はなし"
       },
       "2116880": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ぎゃくなん"
       },
       "2803020": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "ここだけのはなし"
       }
     }
   },
@@ -4115,40 +6497,54 @@
       "1579080",
       "1509490",
       "1156640",
-      "1304960"
+      "1307550",
+      "1342540"
     ],
     "matches": {
       "1156640": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "いしき"
       },
       "1291140": {
         "start": 9,
-        "length": 6
+        "length": 5,
+        "reading": "さしかかっ"
       },
-      "1304960": {
-        "start": 24,
-        "length": 6
+      "1307550": {
+        "start": 25,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 25,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1509490": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "わかれ"
       },
       "1579080": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "ころ"
       },
       "1583190": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はんとし"
       },
       "1597790": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "1604890": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "め"
       }
     }
   },
@@ -4163,16 +6559,30 @@
     ],
     "vocabIds": [
       "1597790",
-      "1587410"
+      "1160790",
+      "1587410",
+      "1194480"
     ],
     "matches": {
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1194480": {
+        "start": 8,
+        "length": 2,
+        "reading": "かげつ"
+      },
       "1587410": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "いちかげつ"
       },
       "1597790": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4189,24 +6599,28 @@
       "1536010",
       "1597790",
       "1521400",
-      "2081550"
+      "1420470"
     ],
     "matches": {
+      "1420470": {
+        "start": 23,
+        "length": 2,
+        "reading": "しら"
+      },
       "1521400": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1536010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1597790": {
         "start": 12,
-        "length": 5
-      },
-      "2081550": {
-        "start": 23,
-        "length": 1
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4228,19 +6642,115 @@
     "matches": {
       "1289520": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こんや"
       },
       "1307770": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1382370": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むかし"
       },
       "1597790": {
         "start": 1,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "11557428",
+    "original": "トムは年上の女性と付き合い始めた。",
+    "en": [
+      {
+        "id": "11557422",
+        "text": "Tom has started dating an older woman."
+      },
+      {
+        "id": "12317780",
+        "text": "Tom started dating an older woman."
+      }
+    ],
+    "vocabIds": [
+      "1468870",
+      "1345250",
+      "1597790",
+      "1495640",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1345250": {
+        "start": 6,
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1468870": {
+        "start": 3,
+        "length": 2,
+        "reading": "としうえ"
+      },
+      "1495640": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1597790": {
+        "start": 9,
+        "length": 4,
+        "reading": "つきあい"
+      }
+    }
+  },
+  {
+    "id": "11557429",
+    "original": "トムさぁ、年上の人と付き合いだしたんだ。",
+    "en": [
+      {
+        "id": "11557422",
+        "text": "Tom has started dating an older woman."
+      }
+    ],
+    "vocabIds": [
+      "1468870",
+      "1580640",
+      "1597790",
+      "1495640"
+    ],
+    "matches": {
+      "1468870": {
+        "start": 5,
+        "length": 2,
+        "reading": "としうえ"
+      },
+      "1495640": {
+        "start": 10,
+        "length": 4,
+        "reading": "つきあい"
+      },
+      "1580640": {
+        "start": 8,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1597790": {
+        "start": 10,
+        "length": 4,
+        "reading": "つきあい"
       }
     }
   },
@@ -4264,11 +6774,13 @@
     "matches": {
       "1597790": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       },
       "1913290": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "やつら"
       }
     }
   },
@@ -4290,7 +6802,9 @@
       }
     ],
     "vocabIds": [
+      "1288850",
       "1587590",
+      "1577100",
       "1189100",
       "1580640",
       "1597790"
@@ -4298,19 +6812,33 @@
     "matches": {
       "1189100": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なんにん"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なん"
       },
       "1580640": {
-        "start": 6,
-        "length": 1
+        "start": 4,
+        "length": 1,
+        "reading": "にん"
       },
       "1587590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       },
       "1597790": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4335,15 +6863,18 @@
     "matches": {
       "1416830": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       },
       "1589350": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
       "1597790": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4364,15 +6895,18 @@
     "matches": {
       "1436730": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "あきらめる"
       },
       "1445640": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "やつ"
       },
       "1597790": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   },
@@ -4386,17 +6920,31 @@
       }
     ],
     "vocabIds": [
+      "1220350",
       "1220360",
+      "1322990",
       "1597790"
     ],
     "matches": {
+      "1220350": {
+        "start": 4,
+        "length": 2,
+        "reading": "きこん"
+      },
       "1220360": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "きこんしゃ"
+      },
+      "1322990": {
+        "start": 6,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1597790": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4416,11 +6964,13 @@
     "matches": {
       "1367720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひとづま"
       },
       "1597790": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4460,11 +7010,13 @@
     "matches": {
       "1580640": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4504,11 +7056,13 @@
     "matches": {
       "1580640": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4532,11 +7086,89 @@
     "matches": {
       "1419990": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "12701144",
+    "original": "あなたのお遊びに付き合ってる暇なんてないの。",
+    "en": [
+      {
+        "id": "6985028",
+        "text": "I don't have time for your games."
+      }
+    ],
+    "vocabIds": [
+      "1542070",
+      "1597790",
+      "1577280"
+    ],
+    "matches": {
+      "1542070": {
+        "start": 5,
+        "length": 2,
+        "reading": "あそび"
+      },
+      "1577280": {
+        "start": 14,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1597790": {
+        "start": 8,
+        "length": 4,
+        "reading": "つきあっ"
+      }
+    }
+  },
+  {
+    "id": "10590079",
+    "original": "トムが誰と付き合おうと、私の知ったこっちゃない。",
+    "en": [
+      {
+        "id": "12717061",
+        "text": "It's none of my concern as to whoever Tom dates."
+      }
+    ],
+    "vocabIds": [
+      "1416830",
+      "1597790",
+      "1311110",
+      "1420470",
+      "2863342"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 12,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1416830": {
+        "start": 3,
+        "length": 1,
+        "reading": "だれ"
+      },
+      "1420470": {
+        "start": 14,
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1597790": {
+        "start": 5,
+        "length": 4,
+        "reading": "つきあお"
+      },
+      "2863342": {
+        "start": 14,
+        "length": 9,
+        "reading": "しったこっち"
       }
     }
   },
@@ -4552,20 +7184,29 @@
     "vocabIds": [
       "1597790",
       "1580640",
-      "1606590"
+      "1606590",
+      "1509490"
     ],
     "matches": {
+      "1509490": {
+        "start": 14,
+        "length": 2,
+        "reading": "わかれ"
+      },
       "1580640": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1597790": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       },
       "1606590": {
         "start": 14,
-        "length": 5
+        "length": 2,
+        "reading": "わかれ"
       }
     }
   },
@@ -4586,15 +7227,18 @@
     "matches": {
       "1580640": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1591900": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きれい"
       },
       "1597790": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "つきあっ"
       }
     }
   },
@@ -4618,11 +7262,13 @@
     "matches": {
       "1344930": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "おんな"
       },
       "1597790": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "つきあう"
       }
     }
   }

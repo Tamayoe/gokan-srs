@@ -1,5 +1,203 @@
 [
   {
+    "id": "148093",
+    "original": "住所氏名を言ってください。",
+    "en": [
+      {
+        "id": "266466",
+        "text": "Name and address, please."
+      }
+    ],
+    "indices": "住所氏名 を 言う{言って} 下さい{ください}",
+    "vocabIds": [
+      "1334080",
+      "1937910",
+      "1311060",
+      "1587040"
+    ],
+    "matches": {
+      "1311060": {
+        "start": 2,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1334080": {
+        "start": 0,
+        "length": 2,
+        "reading": "じゅうしょ"
+      },
+      "1587040": {
+        "start": 5,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1937910": {
+        "start": 0,
+        "length": 4,
+        "reading": "じゅうしょしめい"
+      }
+    }
+  },
+  {
+    "id": "176069",
+    "original": "警察官は彼らの住所氏名を詰問した。",
+    "en": [
+      {
+        "id": "238091",
+        "text": "The policeman demanded their names and addresses."
+      }
+    ],
+    "indices": "警察官 は 彼ら(かれら){彼らの} 住所氏名 を 詰問 為る(する){した}",
+    "vocabIds": [
+      "1252400",
+      "1483090",
+      "1334080",
+      "1937910",
+      "1311060",
+      "1226570"
+    ],
+    "matches": {
+      "1226570": {
+        "start": 12,
+        "length": 2,
+        "reading": "きつもん"
+      },
+      "1252400": {
+        "start": 0,
+        "length": 3,
+        "reading": "けいさつかん"
+      },
+      "1311060": {
+        "start": 9,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1334080": {
+        "start": 7,
+        "length": 2,
+        "reading": "じゅうしょ"
+      },
+      "1483090": {
+        "start": 4,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1937910": {
+        "start": 7,
+        "length": 4,
+        "reading": "じゅうしょしめい"
+      }
+    }
+  },
+  {
+    "id": "176373",
+    "original": "警官は、彼らの住所氏名を詰問した。",
+    "en": [
+      {
+        "id": "238091",
+        "text": "The policeman demanded their names and addresses."
+      }
+    ],
+    "indices": "警官 は 彼ら(かれら){彼らの} 住所氏名~ を 詰問 為る(する){した}",
+    "vocabIds": [
+      "1252330",
+      "1483090",
+      "1334080",
+      "1937910",
+      "1311060",
+      "1226570"
+    ],
+    "matches": {
+      "1226570": {
+        "start": 12,
+        "length": 2,
+        "reading": "きつもん"
+      },
+      "1252330": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいかん"
+      },
+      "1311060": {
+        "start": 9,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1334080": {
+        "start": 7,
+        "length": 2,
+        "reading": "じゅうしょ"
+      },
+      "1483090": {
+        "start": 4,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1937910": {
+        "start": 7,
+        "length": 4,
+        "reading": "じゅうしょしめい"
+      }
+    }
+  },
+  {
+    "id": "193471",
+    "original": "もし彼女の住所氏名を知っていれば、私は彼女に手紙が書けるのだが。",
+    "en": [
+      {
+        "id": "30637",
+        "text": "If I knew her name and address, I could write to her."
+      }
+    ],
+    "indices": "若し(もし){もし} 彼女[01]{彼女の} 住所氏名 を 知る{知っていれば} 私(わたし)[01] は 彼女 に 手紙 が 書く{書ける} のだ が[03]",
+    "vocabIds": [
+      "1483150",
+      "1334080",
+      "1937910",
+      "1311060",
+      "1420470",
+      "1311110",
+      "1327720"
+    ],
+    "matches": {
+      "1311060": {
+        "start": 7,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1311110": {
+        "start": 17,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1327720": {
+        "start": 22,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1334080": {
+        "start": 5,
+        "length": 2,
+        "reading": "じゅうしょ"
+      },
+      "1420470": {
+        "start": 10,
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1483150": {
+        "start": 2,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1937910": {
+        "start": 5,
+        "length": 4,
+        "reading": "じゅうしょしめい"
+      }
+    }
+  },
+  {
     "id": "201338",
     "original": "どうぞここにあなたの住所、氏名、それに電話番号を書いて下さい。",
     "en": [
@@ -12,30 +210,53 @@
     "vocabIds": [
       "1334080",
       "1311060",
+      "1443840",
       "1443940",
+      "1482290",
       "1343950",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 27,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 27,
+        "length": 3,
+        "reading": "ください"
       },
       "1311060": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しめい"
       },
       "1334080": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうしょ"
       },
       "1343950": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "かい"
+      },
+      "1443840": {
+        "start": 19,
+        "length": 2,
+        "reading": "でんわ"
       },
       "1443940": {
         "start": 19,
-        "length": 4
+        "length": 4,
+        "reading": "でんわばんごう"
+      },
+      "1482290": {
+        "start": 21,
+        "length": 2,
+        "reading": "ばんごう"
       }
     }
   },
@@ -53,24 +274,67 @@
       "1499690",
       "1334080",
       "1311060",
-      "2037940"
+      "1343950"
     ],
     "matches": {
       "1311060": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しめい"
       },
       "1334080": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうしょ"
+      },
+      "1343950": {
+        "start": 11,
+        "length": 2,
+        "reading": "かき"
       },
       "1499690": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ふうとう"
+      }
+    }
+  },
+  {
+    "id": "233202",
+    "original": "あなたの住所氏名を書きなさい。",
+    "en": [
+      {
+        "id": "70366",
+        "text": "Write your name and address."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} の 住所氏名 を 書く{書き} 為さい{なさい}",
+    "vocabIds": [
+      "1334080",
+      "1937910",
+      "1311060",
+      "1343950"
+    ],
+    "matches": {
+      "1311060": {
+        "start": 6,
+        "length": 2,
+        "reading": "しめい"
       },
-      "2037940": {
-        "start": 11,
-        "length": 1
+      "1334080": {
+        "start": 4,
+        "length": 2,
+        "reading": "じゅうしょ"
+      },
+      "1343950": {
+        "start": 9,
+        "length": 2,
+        "reading": "かき"
+      },
+      "1937910": {
+        "start": 4,
+        "length": 4,
+        "reading": "じゅうしょしめい"
       }
     }
   },
@@ -90,16 +354,18 @@
     "indices": "貴方(あなた)[01]{あなた} の 氏名 は 何(なに)[01] ですか",
     "vocabIds": [
       "1311060",
-      "1611020"
+      "1577100"
     ],
     "matches": {
       "1311060": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しめい"
       },
-      "1611020": {
+      "1577100": {
         "start": 7,
-        "length": 2
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -115,25 +381,41 @@
     "vocabIds": [
       "1311060",
       "1334080",
+      "1443840",
       "1443940",
+      "1482290",
       "1223330"
     ],
     "matches": {
       "1223330": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "きにゅう"
       },
       "1311060": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しめい"
       },
       "1334080": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうしょ"
+      },
+      "1443840": {
+        "start": 10,
+        "length": 2,
+        "reading": "でんわ"
       },
       "1443940": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "でんわばんごう"
+      },
+      "1482290": {
+        "start": 12,
+        "length": 2,
+        "reading": "ばんごう"
       }
     }
   },
@@ -148,16 +430,30 @@
     ],
     "vocabIds": [
       "1311060",
-      "1268310"
+      "1268300",
+      "1268310",
+      "1342220"
     ],
     "matches": {
+      "1268300": {
+        "start": 3,
+        "length": 3,
+        "reading": "ごじゅうおん"
+      },
       "1268310": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "ごじゅうおんじゅん"
       },
       "1311060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1342220": {
+        "start": 6,
+        "length": 1,
+        "reading": "じゅん"
       }
     }
   },
@@ -185,11 +481,13 @@
     "matches": {
       "1311060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しめい"
       },
       "1342220": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "じゅん"
       }
     }
   },
@@ -210,15 +508,18 @@
     "matches": {
       "1223330": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きにゅう"
       },
       "1311060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しめい"
       },
       "1334080": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうしょ"
       }
     }
   }

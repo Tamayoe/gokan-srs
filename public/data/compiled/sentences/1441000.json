@@ -16,15 +16,18 @@
     "matches": {
       "1382440": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
       },
       "1411030": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こけ"
       },
       "1441000": {
         "start": 1,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
       }
     }
   },
@@ -45,41 +48,106 @@
       "1421850",
       "1441000",
       "1548550",
+      "1312370",
       "2081600",
+      "2081610",
+      "1551530",
       "2016360"
     ],
     "matches": {
       "1220210": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
+      },
+      "1312370": {
+        "start": 26,
+        "length": 3,
+        "reading": "しけんかん"
       },
       "1352130": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1359970": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "ねかせ"
       },
       "1421850": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おく"
       },
       "1441000": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "ころがっ"
       },
       "1548550": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "おちる"
+      },
+      "1551530": {
+        "start": 32,
+        "length": 2,
+        "reading": "たて"
       },
       "2016360": {
         "start": 32,
-        "length": 3
+        "length": 3,
+        "reading": "たてて"
       },
       "2081600": {
         "start": 26,
-        "length": 5
+        "length": 5,
+        "reading": "しけんかんだて"
+      },
+      "2081610": {
+        "start": 29,
+        "length": 2,
+        "reading": "だて"
+      }
+    }
+  },
+  {
+    "id": "75456",
+    "original": "ほらっ！ジャガイモが全部転がり出てるわよ。ほんっと、あんたってトロいわねぇ・・・。",
+    "en": [
+      {
+        "id": "328262",
+        "text": "Just look! The potatoes are all rolling out! You're a real dullard aren't you?"
+      }
+    ],
+    "indices": "ほら{ほらっ} じゃが芋{ジャガイモ} が 全部 転がる{転がり} 出る{出てる} わ よ 本当{ほんっと} 貴方(あんた){あんた} って とろい{トロい}~ わね{わねぇ}",
+    "vocabIds": [
+      "1396130",
+      "1441000",
+      "1338240",
+      "1896380"
+    ],
+    "matches": {
+      "1338240": {
+        "start": 15,
+        "length": 1,
+        "reading": "で"
+      },
+      "1396130": {
+        "start": 10,
+        "length": 2,
+        "reading": "ぜんぶ"
+      },
+      "1441000": {
+        "start": 12,
+        "length": 3,
+        "reading": "ころがり"
+      },
+      "1896380": {
+        "start": 15,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -99,42 +167,83 @@
       "1441000",
       "1576870",
       "1530020",
-      "2252790",
       "1580290",
       "1535970"
     ],
     "matches": {
       "1349380": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ゆか"
       },
       "1416830": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       },
       "1441000": {
         "start": 19,
-        "length": 4
+        "length": 3,
+        "reading": "ころがっ"
       },
       "1530020": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "むし"
       },
       "1535970": {
         "start": 40,
-        "length": 6
+        "length": 5,
+        "reading": "といただし"
       },
       "1576870": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       },
       "1580290": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじょ"
+      }
+    }
+  },
+  {
+    "id": "111033",
+    "original": "彼はベッドから転がり落ちた。",
+    "en": [
+      {
+        "id": "292652",
+        "text": "He rolled off the bed."
+      }
+    ],
+    "indices": "彼(かれ)[01] は ベッド から 転がり落ちる{転がり落ちた}",
+    "vocabIds": [
+      "1483070",
+      "1441000",
+      "1548550",
+      "1548530"
+    ],
+    "matches": {
+      "1441000": {
+        "start": 7,
+        "length": 3,
+        "reading": "ころがり"
       },
-      "2252790": {
-        "start": 32,
-        "length": 1
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1548530": {
+        "start": 10,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1548550": {
+        "start": 10,
+        "length": 2,
+        "reading": "おち"
       }
     }
   },
@@ -152,24 +261,28 @@
       "1441000",
       "1382440",
       "1411030",
-      "1378440"
+      "1378490"
     ],
     "matches": {
-      "1378440": {
+      "1378490": {
         "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "はえ"
       },
       "1382440": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
       },
       "1411030": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こけ"
       },
       "1441000": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
       }
     }
   },
@@ -191,15 +304,108 @@
     "matches": {
       "1382440": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
       },
       "1411030": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こけ"
       },
       "1441000": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
+      }
+    }
+  },
+  {
+    "id": "148911",
+    "original": "車輪はゆっくり転がり始めた。",
+    "en": [
+      {
+        "id": "265647",
+        "text": "The wheel began to roll slowly."
+      }
+    ],
+    "indices": "車輪 は ゆっくり 転がる{転がり}~ 始める[03]{始めた}",
+    "vocabIds": [
+      "1323280",
+      "1441000",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 10,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1323280": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゃりん"
+      },
+      "1342540": {
+        "start": 10,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1441000": {
+        "start": 7,
+        "length": 3,
+        "reading": "ころがり"
+      }
+    }
+  },
+  {
+    "id": "183662",
+    "original": "岩は丘の斜面を転がり落ちた。",
+    "en": [
+      {
+        "id": "20785",
+        "text": "The rock rolled down the hillside."
+      }
+    ],
+    "indices": "岩 は 丘(おか) の 斜面~ を 転がり落ちる{転がり落ちた}~",
+    "vocabIds": [
+      "1217270",
+      "1588920",
+      "1322470",
+      "1441000",
+      "1548550",
+      "1548530"
+    ],
+    "matches": {
+      "1217270": {
+        "start": 0,
+        "length": 1,
+        "reading": "いわ"
+      },
+      "1322470": {
+        "start": 4,
+        "length": 2,
+        "reading": "しゃめん"
+      },
+      "1441000": {
+        "start": 7,
+        "length": 3,
+        "reading": "ころがり"
+      },
+      "1548530": {
+        "start": 10,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1548550": {
+        "start": 10,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1588920": {
+        "start": 2,
+        "length": 1,
+        "reading": "おか"
       }
     }
   },
@@ -221,15 +427,18 @@
     "matches": {
       "1180860": {
         "start": 7,
-        "length": 4
+        "length": 3,
+        "reading": "よこぎっ"
       },
       "1321650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しばふ"
       },
       "1441000": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "ころがっ"
       }
     }
   },
@@ -245,21 +454,36 @@
     "indices": "ボール(#1123550)[01] は 道(みち) の 向こう側 に 転がる{転がった}",
     "vocabIds": [
       "1454080",
+      "1277140",
       "1604830",
+      "1581310",
       "1441000"
     ],
     "matches": {
+      "1277140": {
+        "start": 6,
+        "length": 3,
+        "reading": "むこう"
+      },
       "1441000": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "ころがっ"
       },
       "1454080": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "みち"
+      },
+      "1581310": {
+        "start": 9,
+        "length": 1,
+        "reading": "がわ"
       },
       "1604830": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -277,24 +501,91 @@
       "1600900",
       "1001820",
       "1441000",
-      "1216250"
+      "1604230"
     ],
     "matches": {
       "1001820": {
         "start": 8,
-        "length": 2
-      },
-      "1216250": {
-        "start": 29,
-        "length": 1
+        "length": 2,
+        "reading": "おかね"
       },
       "1441000": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
       },
       "1600900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
+      },
+      "1604230": {
+        "start": 29,
+        "length": 3,
+        "reading": "まるかっ"
+      }
+    }
+  },
+  {
+    "id": "236831",
+    "original": "鉛筆が私の机の端から転がり落ちた。",
+    "en": [
+      {
+        "id": "25776",
+        "text": "My pencil fell off the edge of my desk."
+      }
+    ],
+    "indices": "鉛筆 が 私(わたし)[01]{私の} 机 の 端(はし) から 転がり落ちる{転がり落ちた}",
+    "vocabIds": [
+      "1178590",
+      "1311110",
+      "1220210",
+      "1581610",
+      "2464070",
+      "1441000",
+      "1548550",
+      "1548530"
+    ],
+    "matches": {
+      "1178590": {
+        "start": 0,
+        "length": 2,
+        "reading": "えんぴつ"
+      },
+      "1220210": {
+        "start": 5,
+        "length": 1,
+        "reading": "つくえ"
+      },
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1441000": {
+        "start": 10,
+        "length": 3,
+        "reading": "ころがり"
+      },
+      "1548530": {
+        "start": 13,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1548550": {
+        "start": 13,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1581610": {
+        "start": 7,
+        "length": 1,
+        "reading": "はじ"
+      },
+      "2464070": {
+        "start": 7,
+        "length": 3,
+        "reading": "はじから"
       }
     }
   },
@@ -316,19 +607,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1441000": {
         "start": 17,
-        "length": 4
+        "length": 3,
+        "reading": "ころがっ"
       },
       "1537300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "やきゅう"
       },
       "1586390": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あしもと"
       }
     }
   },
@@ -344,20 +639,97 @@
     "vocabIds": [
       "1441000",
       "1382440",
-      "1411030"
+      "2012100"
     ],
     "matches": {
       "1382440": {
         "start": 3,
-        "length": 1
-      },
-      "1411030": {
-        "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "いし"
       },
       "1441000": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
+      },
+      "2012100": {
+        "start": 5,
+        "length": 3,
+        "reading": "こけむさ"
+      }
+    }
+  },
+  {
+    "id": "3480731",
+    "original": "トムは６時半にベッドから転がり出ると、もつれた足でキッチンへ行き、トースターに二枚パンを突っ込んだ。",
+    "en": [
+      {
+        "id": "1040566",
+        "text": "Tom rolled out of bed at 6:30, shuffled into the kitchen and put two slices of bread into the toaster."
+      }
+    ],
+    "vocabIds": [
+      "1658480",
+      "1441000",
+      "1338240",
+      "1404630",
+      "1578850",
+      "1578790",
+      "1461140",
+      "1954200",
+      "1524610",
+      "1456940"
+    ],
+    "matches": {
+      "1338240": {
+        "start": 15,
+        "length": 2,
+        "reading": "でる"
+      },
+      "1404630": {
+        "start": 23,
+        "length": 1,
+        "reading": "あし"
+      },
+      "1441000": {
+        "start": 12,
+        "length": 3,
+        "reading": "ころがり"
+      },
+      "1456940": {
+        "start": 44,
+        "length": 4,
+        "reading": "つっこん"
+      },
+      "1461140": {
+        "start": 39,
+        "length": 1,
+        "reading": "に"
+      },
+      "1524610": {
+        "start": 40,
+        "length": 1,
+        "reading": "まい"
+      },
+      "1578790": {
+        "start": 30,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 30,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1658480": {
+        "start": 4,
+        "length": 2,
+        "reading": "じはん"
+      },
+      "1954200": {
+        "start": 39,
+        "length": 2,
+        "reading": "にまい"
       }
     }
   },
@@ -372,21 +744,30 @@
     ],
     "vocabIds": [
       "1220210",
+      "1184140",
       "1881540",
       "1441000"
     ],
     "matches": {
+      "1184140": {
+        "start": 6,
+        "length": 1,
+        "reading": "した"
+      },
       "1220210": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
       },
       "1441000": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "ころがっ"
       },
       "1881540": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "したに"
       }
     }
   },
@@ -406,36 +787,55 @@
       "1245320",
       "1441000",
       "1259290",
-      "2834014"
+      "2256270",
+      "1264540",
+      "1319750"
     ],
     "matches": {
       "1245320": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "あきかん"
       },
       "1259290": {
         "start": 28,
-        "length": 2
+        "length": 1,
+        "reading": "み"
+      },
+      "1264540": {
+        "start": 42,
+        "length": 2,
+        "reading": "ことば"
+      },
+      "1319750": {
+        "start": 45,
+        "length": 2,
+        "reading": "うしなっ"
       },
       "1441000": {
         "start": 21,
-        "length": 4
+        "length": 3,
+        "reading": "ころがっ"
       },
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1531190": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むすめ"
       },
       "1595510": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "すいがら"
       },
-      "2834014": {
-        "start": 42,
-        "length": 6
+      "2256270": {
+        "start": 28,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -451,20 +851,29 @@
     "vocabIds": [
       "1310620",
       "1445790",
+      "1445780",
       "1441000"
     ],
     "matches": {
       "1310620": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1441000": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "ころがる"
+      },
+      "1445780": {
+        "start": 9,
+        "length": 2,
+        "reading": "たおれ"
       },
       "1445790": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "たおれ"
       }
     }
   },
@@ -489,15 +898,18 @@
     "matches": {
       "1299400": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ざっし"
       },
       "1352130": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1441000": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "ころがっ"
       }
     }
   }

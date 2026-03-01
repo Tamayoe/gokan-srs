@@ -11,16 +11,57 @@
     "indices": "お風呂 を 召す[05]{お召し}~ 下さい{ください}",
     "vocabIds": [
       "2220600",
+      "1500100",
       "1002130"
     ],
     "matches": {
       "1002130": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おめしし"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "78216",
+    "original": "隆、もうお風呂に入った？",
+    "en": [
+      {
+        "id": "325502",
+        "text": "Have you taken a bath yet, Takashi?"
+      }
+    ],
+    "indices": "もう お風呂に入る{お風呂に入った}",
+    "vocabIds": [
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1465590": {
+        "start": 8,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 4,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -41,20 +82,23 @@
     "vocabIds": [
       "1514990",
       "2220600",
-      "2248360"
+      "1500100"
     ],
     "matches": {
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "2220600": {
         "start": 3,
-        "length": 3
-      },
-      "2248360": {
-        "start": 7,
-        "length": 1
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -73,12 +117,19 @@
     ],
     "indices": "お風呂 は 付く(つく)[06]{ついてます}~ か",
     "vocabIds": [
-      "2220600"
+      "2220600",
+      "1500100"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -98,21 +149,36 @@
     "indices": "お風呂 の 支度 が[01] 出来る{出来ました}",
     "vocabIds": [
       "2220600",
+      "1500100",
       "1310260",
-      "1340450"
+      "1340450",
+      "1340430"
     ],
     "matches": {
       "1310260": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "したく"
+      },
+      "1340430": {
+        "start": 7,
+        "length": 2,
+        "reading": "でき"
       },
       "1340450": {
         "start": 7,
-        "length": 5
+        "length": 2,
+        "reading": "でき"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -131,28 +197,114 @@
       "1307770",
       "1547600",
       "2220600",
-      "1465610"
+      "1500100",
+      "1465610",
+      "1465600"
     ],
     "matches": {
       "1307770": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
+      },
+      "1465600": {
+        "start": 16,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1500100": {
+        "start": 13,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1547600": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "はだか"
       },
       "2220600": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "95700",
+    "original": "彼女がお風呂に入ったとたんに郵便屋さんが小包みをもってドアをノックした。",
+    "en": [
+      {
+        "id": "308005",
+        "text": "Hardly had she got in the bath when the postman knocked on the door with a parcel."
+      }
+    ],
+    "indices": "彼女 が お風呂に入る{お風呂に入った} 途端に{とたんに} 郵便屋 さん が 小包{小包み} を 持つ{もって} ドア を ノック[01] 為る(する){した}",
+    "vocabIds": [
+      "1483150",
+      "2220600",
+      "1500100",
+      "1465590",
+      "1605680",
+      "1542420",
+      "2082160",
+      "2083540",
+      "1515340"
+    ],
+    "matches": {
+      "1465590": {
+        "start": 7,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1515340": {
+        "start": 21,
+        "length": 2,
+        "reading": "つつみ"
+      },
+      "1542420": {
+        "start": 14,
+        "length": 3,
+        "reading": "ゆうびんや"
+      },
+      "1605680": {
+        "start": 14,
+        "length": 2,
+        "reading": "ゆうびん"
+      },
+      "2082160": {
+        "start": 16,
+        "length": 1,
+        "reading": "や"
+      },
+      "2083540": {
+        "start": 20,
+        "length": 1,
+        "reading": "しょう"
+      },
+      "2220600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -169,25 +321,35 @@
     "vocabIds": [
       "1483070",
       "2220600",
+      "1500100",
       "1588120",
       "1277450"
     ],
     "matches": {
       "1277450": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1500100": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1588120": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "うたう"
       },
       "2220600": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -205,54 +367,133 @@
       "1445590",
       "1536350",
       "1192150",
+      "1416830",
       "1416860",
       "1419900",
       "1392580",
       "1265070",
       "2220600",
+      "1500100",
+      "1597850",
       "1597860",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1192150": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かぞく"
       },
       "1265070": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ふるい"
       },
       "1392580": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1416830": {
+        "start": 9,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416860": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "だれも"
       },
       "1419900": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "だんろ"
       },
       "1445590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "どようび"
       },
       "1465410": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 30,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 24,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1536350": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "よる"
+      },
+      "1597850": {
+        "start": 27,
+        "length": 2,
+        "reading": "つぎつぎ"
       },
       "1597860": {
         "start": 27,
-        "length": 3
+        "length": 3,
+        "reading": "つぎつぎに"
       },
       "2220600": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "125912",
+    "original": "長くお風呂に入っていたら手がふやけてしまった。",
+    "en": [
+      {
+        "id": "278080",
+        "text": "My hands became swollen up while taking a long bath."
+      }
+    ],
+    "indices": "長い{長く} お風呂に入る{お風呂に入っていたら} 手 が ふやける[01]{ふやけて}~ 仕舞う{しまった}",
+    "vocabIds": [
+      "1429750",
+      "2220600",
+      "1500100",
+      "1465590",
+      "1327190"
+    ],
+    "matches": {
+      "1327190": {
+        "start": 12,
+        "length": 1,
+        "reading": "て"
+      },
+      "1429750": {
+        "start": 0,
+        "length": 2,
+        "reading": "ながく"
+      },
+      "1465590": {
+        "start": 6,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 2,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -271,22 +512,43 @@
     ],
     "indices": "早く お風呂に入る{お風呂に入り} 為さい{なさい}",
     "vocabIds": [
+      "1404975",
       "1400150",
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1400150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はやく"
+      },
+      "1404975": {
+        "start": 0,
+        "length": 2,
+        "reading": "はやく"
       },
       "1465410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 6,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -311,20 +573,35 @@
     "vocabIds": [
       "1383260",
       "2220600",
-      "1465610"
+      "1500100",
+      "1465610",
+      "1465600"
     ],
     "matches": {
       "1383260": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "あかちゃん"
+      },
+      "1465600": {
+        "start": 9,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1500100": {
+        "start": 6,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -348,26 +625,117 @@
     "indices": "週 に 何回 お風呂 に 入る(はいる){入ります} か",
     "vocabIds": [
       "1333450",
+      "1577100",
       "1188650",
+      "1199330",
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1188650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "なんかい"
+      },
+      "1199330": {
+        "start": 3,
+        "length": 1,
+        "reading": "かい"
       },
       "1333450": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "しゅう"
       },
       "1465410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 8,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1577100": {
+        "start": 2,
+        "length": 1,
+        "reading": "なん"
       },
       "2220600": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "152680",
+    "original": "私は毎晩熱いお風呂に入るのが好きです。",
+    "en": [
+      {
+        "id": "261869",
+        "text": "I like to take a hot bath every night before bed."
+      }
+    ],
+    "indices": "私(わたし)[01] は 毎晩 熱い お風呂 に 入る(はいる) の が 好き(すき) です",
+    "vocabIds": [
+      "1311110",
+      "1524730",
+      "1467720",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590",
+      "1277450"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 6,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1277450": {
+        "start": 14,
+        "length": 2,
+        "reading": "すき"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1465590": {
+        "start": 10,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1467720": {
+        "start": 4,
+        "length": 2,
+        "reading": "あつい"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1524730": {
+        "start": 2,
+        "length": 2,
+        "reading": "まいばん"
+      },
+      "2220600": {
+        "start": 6,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -385,24 +753,40 @@
       "1311110",
       "1524720",
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1465410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 8,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1524720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       },
       "2220600": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -424,24 +808,138 @@
       "1311110",
       "1524720",
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1465410": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 12,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 9,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1524720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       },
       "2220600": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "161218",
+    "original": "私はお風呂に入っているんだ。",
+    "en": [
+      {
+        "id": "253300",
+        "text": "I am taking a bath now."
+      },
+      {
+        "id": "924163",
+        "text": "I'm taking a bath."
+      },
+      {
+        "id": "6873210",
+        "text": "I'm taking a bath now."
+      }
+    ],
+    "indices": "私(わたし)[01] は お風呂 に 入る(いる)[01]{入っている} のだ{んだ}",
+    "vocabIds": [
+      "1311110",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1465590": {
+        "start": 6,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 2,
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "168053",
+    "original": "私がお風呂に入ったとたんに電話が鳴った。",
+    "en": [
+      {
+        "id": "246443",
+        "text": "I had hardly got into the bath when the phone rang."
+      }
+    ],
+    "indices": "私(わたし)[01] が お風呂に入る{お風呂に入った} 途端に{とたんに} 電話 が 鳴る{鳴った}",
+    "vocabIds": [
+      "1311110",
+      "2220600",
+      "1500100",
+      "1465590",
+      "1443840",
+      "1532910"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1443840": {
+        "start": 13,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1465590": {
+        "start": 6,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1532910": {
+        "start": 16,
+        "length": 2,
+        "reading": "なっ"
+      },
+      "2220600": {
+        "start": 2,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -457,26 +955,42 @@
     "indices": "妻(#1294330)[01] は 彼(かれ)[01]{彼の} 為に[01]{ために} お風呂 を 用意 為る(する){した}",
     "vocabIds": [
       "1294330",
+      "1483070",
       "1000420",
       "2220600",
+      "1500100",
       "1546220"
     ],
     "matches": {
       "1000420": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1294330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つま"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1500100": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1546220": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "2220600": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -493,20 +1007,29 @@
     "vocabIds": [
       "1269320",
       "2220600",
+      "1500100",
       "1002510"
     ],
     "matches": {
       "1002510": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おゆ"
       },
       "1269320": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
+      },
+      "1500100": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -530,26 +1053,36 @@
     "indices": "は が お風呂に入る{お風呂に入ら} 無ければ{なければ} デート は 為る(する){しない} と 彼(かれ)[01] に 言う{言いました}",
     "vocabIds": [
       "2220600",
-      "2248360",
+      "1500100",
+      "1465590",
       "1483070",
-      "1956230"
+      "1587040"
     ],
     "matches": {
+      "1465590": {
+        "start": 12,
+        "length": 2,
+        "reading": "はいら"
+      },
       "1483070": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
-      "1956230": {
+      "1500100": {
+        "start": 9,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1587040": {
         "start": 29,
-        "length": 1
+        "length": 2,
+        "reading": "いい"
       },
       "2220600": {
         "start": 8,
-        "length": 3
-      },
-      "2248360": {
-        "start": 12,
-        "length": 1
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -565,16 +1098,24 @@
     "indices": "お風呂 沸く{沸いてる}",
     "vocabIds": [
       "2220600",
+      "1500100",
       "1606680"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "1606680": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "わい"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -590,16 +1131,24 @@
     "indices": "お風呂 沸く{沸いた} わ よ[01]",
     "vocabIds": [
       "2220600",
+      "1500100",
       "1606680"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "1606680": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "わい"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -614,12 +1163,19 @@
     ],
     "indices": "お風呂 は 有る{ありませんでした}",
     "vocabIds": [
-      "2220600"
+      "2220600",
+      "1500100"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -635,16 +1191,69 @@
     "indices": "お風呂 の 用意 が[01] 出来る{できました}",
     "vocabIds": [
       "2220600",
+      "1500100",
       "1546220"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "1546220": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "226698",
+    "original": "お風呂に入る時間ですよ。",
+    "en": [
+      {
+        "id": "64042",
+        "text": "It's time to take a bath."
+      }
+    ],
+    "indices": "お風呂 に 入る(はいる) 時間 です よ",
+    "vocabIds": [
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590",
+      "1315920"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 0,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1315920": {
+        "start": 6,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1465590": {
+        "start": 4,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 0,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -659,12 +1268,58 @@
     ],
     "indices": "お風呂に入る{お風呂にはいる} と 寛ぐ{くつろぐ} ね(#2029080)[01]",
     "vocabIds": [
-      "2220600"
+      "2220600",
+      "1500100"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "226700",
+    "original": "お風呂に入っているとき、電話がなった。",
+    "en": [
+      {
+        "id": "64043",
+        "text": "When I was taking a bath, the telephone rang."
+      }
+    ],
+    "indices": "お風呂に入る[01]{お風呂に入っている}~ 時(とき){とき} 電話 が 鳴る{なった}",
+    "vocabIds": [
+      "2220600",
+      "1500100",
+      "1465590",
+      "1443840"
+    ],
+    "matches": {
+      "1443840": {
+        "start": 12,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1465590": {
+        "start": 4,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 0,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -679,12 +1334,64 @@
     ],
     "indices": "お風呂 に 漬かる[01]{つかっている} 事(こと){こと} 程{ほど} 寛げる{くつろげる} 物(もの){もの} は 無い{ない}",
     "vocabIds": [
-      "2220600"
+      "2220600",
+      "1500100"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "233972",
+    "original": "あなたが電話したとき、私はお風呂に入っていたのです。",
+    "en": [
+      {
+        "id": "71344",
+        "text": "I was taking a bath when you called me."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} が 電話 為る(する)[11]{した} 時(とき){とき} 私(わたし)[01] は お風呂に入る{お風呂に入っていた} のです",
+    "vocabIds": [
+      "1443840",
+      "1311110",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 11,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1443840": {
+        "start": 4,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1465590": {
+        "start": 17,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 14,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 13,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -700,21 +1407,36 @@
     "indices": "此の{この} お風呂 熱い{熱くて} 入れる{入れない} よ[01]",
     "vocabIds": [
       "2220600",
-      "1467710",
-      "1465610"
+      "1500100",
+      "1467720",
+      "1465610",
+      "1465600"
     ],
     "matches": {
+      "1465600": {
+        "start": 15,
+        "length": 2,
+        "reading": "いれ"
+      },
       "1465610": {
         "start": 15,
-        "length": 4
+        "length": 2,
+        "reading": "いれ"
       },
-      "1467710": {
+      "1467720": {
         "start": 12,
-        "length": 1
+        "length": 2,
+        "reading": "あつく"
+      },
+      "1500100": {
+        "start": 9,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -738,26 +1460,110 @@
     "indices": "一週間{１週間} に 何回 お風呂に入る{お風呂に入ります} か",
     "vocabIds": [
       "1333500",
+      "1577100",
       "1188650",
+      "1199330",
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1188650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "なんかい"
+      },
+      "1199330": {
+        "start": 5,
+        "length": 1,
+        "reading": "かい"
       },
       "1333500": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1465410": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 10,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1577100": {
+        "start": 4,
+        "length": 1,
+        "reading": "なん"
       },
       "2220600": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "382377",
+    "original": "昨夜は泥酔してお風呂に入らないで寝ちゃった。",
+    "en": [
+      {
+        "id": "505446",
+        "text": "Last night I was dead drunk and fell asleep without having a bath."
+      }
+    ],
+    "vocabIds": [
+      "1542640",
+      "1436980",
+      "2220600",
+      "1500100",
+      "1465590",
+      "1360010",
+      "1642760"
+    ],
+    "matches": {
+      "1360010": {
+        "start": 16,
+        "length": 1,
+        "reading": "ね"
+      },
+      "1436980": {
+        "start": 3,
+        "length": 2,
+        "reading": "でいすい"
+      },
+      "1465590": {
+        "start": 11,
+        "length": 2,
+        "reading": "はいら"
+      },
+      "1500100": {
+        "start": 8,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1542640": {
+        "start": 0,
+        "length": 2,
+        "reading": "さくや"
+      },
+      "1642760": {
+        "start": 16,
+        "length": 1,
+        "reading": "ね"
+      },
+      "2220600": {
+        "start": 7,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -777,16 +1583,24 @@
     "indices": "彼女 は お風呂 に 居る(いる){います}",
     "vocabIds": [
       "1483150",
-      "2220600"
+      "2220600",
+      "1500100"
     ],
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -801,6 +1615,7 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1269320",
       "1311110",
       "1600430",
@@ -809,23 +1624,33 @@
     "matches": {
       "1169870": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "のん"
       },
       "1269320": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
       },
       "1311110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1600430": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "のみもの"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -844,42 +1669,68 @@
       "1579080",
       "1482480",
       "1363480",
+      "1461140",
       "1461990",
+      "1333500",
       "2220600",
-      "2248360"
+      "1500100",
+      "1465590"
     ],
     "matches": {
+      "1333500": {
+        "start": 18,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
       "1363480": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "まなつ"
       },
       "1381740": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "あおにさい"
+      },
+      "1461140": {
+        "start": 17,
+        "length": 1,
+        "reading": "に"
       },
       "1461990": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "にしゅうかん"
+      },
+      "1465590": {
+        "start": 27,
+        "length": 2,
+        "reading": "はいら"
       },
       "1482480": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ばんから"
+      },
+      "1500100": {
+        "start": 24,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1576870": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       },
       "1579080": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ころ"
       },
       "2220600": {
         "start": 23,
-        "length": 3
-      },
-      "2248360": {
-        "start": 27,
-        "length": 1
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -895,25 +1746,35 @@
     "vocabIds": [
       "1311110",
       "2220600",
+      "1500100",
       "1451750",
-      "2081550"
+      "1420470"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1420470": {
+        "start": 26,
+        "length": 2,
+        "reading": "しり"
       },
       "1451750": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
-      "2081550": {
-        "start": 26,
-        "length": 1
+      "1500100": {
+        "start": 12,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -928,21 +1789,68 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
+      "1387210",
       "1387280",
       "1465590"
     ],
     "matches": {
+      "1387210": {
+        "start": 3,
+        "length": 1,
+        "reading": "さき"
+      },
       "1387280": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さきに"
       },
       "1465590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "897045",
+    "original": "お風呂に入ってくるよ。",
+    "en": [
+      {
+        "id": "2393",
+        "text": "I'm going to take a bath."
+      }
+    ],
+    "vocabIds": [
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1465590": {
+        "start": 4,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 0,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -957,21 +1865,42 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
+      "1906650",
       "1352190",
+      "1169870",
       "2151640"
     ],
     "matches": {
+      "1169870": {
+        "start": 12,
+        "length": 2,
+        "reading": "のみ"
+      },
       "1352190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "あがり"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1906650": {
+        "start": 1,
+        "length": 5,
+        "reading": "ふろあがり"
       },
       "2151640": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "のみ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -988,24 +1917,194 @@
       "1483070",
       "1524700",
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1465410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 8,
+        "length": 2,
+        "reading": "はいり"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1500100": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1524700": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "まいあさ"
       },
       "2220600": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "1160683",
+    "original": "私はいつも寝る前にお風呂に入る。",
+    "en": [
+      {
+        "id": "254902",
+        "text": "I always take a bath before going to bed."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1360010",
+      "1392580",
+      "1392590",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 9,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1360010": {
+        "start": 5,
+        "length": 2,
+        "reading": "ねる"
+      },
+      "1392580": {
+        "start": 7,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1392590": {
+        "start": 7,
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1465590": {
+        "start": 13,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 10,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 9,
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "1167053",
+    "original": "今はお風呂に入りたい気分だ。",
+    "en": [
+      {
+        "id": "257446",
+        "text": "I feel like taking a bath now."
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "2220600",
+      "1500100",
+      "1465590",
+      "1465410",
+      "1222590"
+    ],
+    "matches": {
+      "1222590": {
+        "start": 10,
+        "length": 2,
+        "reading": "きぶん"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1465410": {
+        "start": 6,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 6,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 2,
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "1229042",
+    "original": "今お風呂に入っているところなんだ。",
+    "en": [
+      {
+        "id": "253300",
+        "text": "I am taking a bath now."
+      },
+      {
+        "id": "6873210",
+        "text": "I'm taking a bath now."
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "こん"
+      },
+      "1465590": {
+        "start": 5,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 1,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1020,16 +2119,62 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1465410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 5,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "1436030",
+    "original": "トムはお風呂に入っていた。",
+    "en": [
+      {
+        "id": "1140962",
+        "text": "Tom was in the shower."
+      }
+    ],
+    "vocabIds": [
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1465590": {
+        "start": 7,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1043,22 +2188,43 @@
       }
     ],
     "vocabIds": [
+      "1579110",
       "1289400",
       "2220600",
-      "1465610"
+      "1500100",
+      "1465610",
+      "1465600"
     ],
     "matches": {
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1465600": {
+        "start": 10,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       },
       "2220600": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1072,12 +2238,19 @@
       }
     ],
     "vocabIds": [
-      "2220600"
+      "2220600",
+      "1500100"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1098,24 +2271,40 @@
       "1311110",
       "1524720",
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1465410": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 10,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1524720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "まいにち"
       },
       "2220600": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1134,16 +2323,62 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1586265"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "1586265": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "あい"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "2526924",
+    "original": "トムは今お風呂に入っている。",
+    "en": [
+      {
+        "id": "1024845",
+        "text": "Tom is taking a bath now."
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1288850": {
+        "start": 3,
+        "length": 1,
+        "reading": "こん"
+      },
+      "1465590": {
+        "start": 8,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 4,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1157,37 +2392,73 @@
       }
     ],
     "vocabIds": [
+      "1580820",
+      "1373230",
       "2654980",
-      "1459870",
-      "1446760",
+      "2084840",
+      "1392580",
+      "1582710",
       "1464770",
+      "1437260",
       "2220600",
+      "1500100",
       "1409420"
     ],
     "matches": {
+      "1373230": {
+        "start": 0,
+        "length": 2,
+        "reading": "すうねん"
+      },
+      "1392580": {
+        "start": 2,
+        "length": 1,
+        "reading": "まえ"
+      },
       "1409420": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "たいけん"
       },
-      "1446760": {
-        "start": 13,
-        "length": 1
-      },
-      "1459870": {
-        "start": 12,
-        "length": 1
+      "1437260": {
+        "start": 17,
+        "length": 1,
+        "reading": "てき"
       },
       "1464770": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんてき"
+      },
+      "1500100": {
+        "start": 20,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1580820": {
+        "start": 0,
+        "length": 1,
+        "reading": "すう"
+      },
+      "1582710": {
+        "start": 15,
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "2084840": {
+        "start": 1,
+        "length": 1,
+        "reading": "ねん"
       },
       "2220600": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       },
       "2654980": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "すうねんまえ"
       }
     }
   },
@@ -1201,52 +2472,91 @@
       }
     ],
     "vocabIds": [
+      "1593475",
       "1279330",
+      "1320300",
       "1420110",
       "1606590",
+      "1509490",
       "2220600",
+      "1500100",
+      "1500140",
       "1355790",
       "1465590",
-      "1589060",
+      "1578850",
       "1244250",
       "1290550"
     ],
     "matches": {
       "1244250": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "くべつ"
       },
       "1279330": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こういしつ"
       },
       "1290550": {
         "start": 35,
-        "length": 2
+        "length": 2,
+        "reading": "こんよく"
+      },
+      "1320300": {
+        "start": 2,
+        "length": 1,
+        "reading": "しつ"
       },
       "1355790": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "じょう"
       },
       "1420110": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "だんじょ"
       },
       "1465590": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
-      "1589060": {
+      "1500100": {
+        "start": 17,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1500140": {
+        "start": 17,
+        "length": 3,
+        "reading": "ふろじょう"
+      },
+      "1509490": {
+        "start": 7,
+        "length": 2,
+        "reading": "わかれ"
+      },
+      "1578850": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1593475": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうい"
       },
       "1606590": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "わかれ"
       },
       "2220600": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1262,20 +2572,29 @@
     "vocabIds": [
       "1387210",
       "2220600",
+      "1500100",
       "1465590"
     ],
     "matches": {
       "1387210": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "さき"
       },
       "1465590": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 1,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1290,16 +2609,66 @@
     ],
     "vocabIds": [
       "2220600",
-      "1338240"
+      "1500100",
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1338240": {
         "start": 17,
-        "length": 2
+        "length": 1,
+        "reading": "で"
+      },
+      "1500100": {
+        "start": 14,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1896380": {
+        "start": 17,
+        "length": 1,
+        "reading": "で"
       },
       "2220600": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "4521692",
+    "original": "お風呂に入ってください。",
+    "en": [
+      {
+        "id": "4959434",
+        "text": "Please get into the bath."
+      },
+      {
+        "id": "326916",
+        "text": "Please take a bath."
+      }
+    ],
+    "vocabIds": [
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1465590": {
+        "start": 4,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 0,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1313,22 +2682,43 @@
       }
     ],
     "vocabIds": [
+      "1404975",
       "1400150",
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1400150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はやく"
+      },
+      "1404975": {
+        "start": 0,
+        "length": 2,
+        "reading": "はやく"
       },
       "1465410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 5,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1347,16 +2737,136 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1465590"
     ],
     "matches": {
       "1465590": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "8586799",
+    "original": "トムは長い間お風呂に入っていない。",
+    "en": [
+      {
+        "id": "8586751",
+        "text": "Tom hasn't taken a bath in a long time."
+      }
+    ],
+    "vocabIds": [
+      "1429750",
+      "1429760",
+      "1215230",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1215230": {
+        "start": 5,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1429750": {
+        "start": 3,
+        "length": 2,
+        "reading": "ながい"
+      },
+      "1429760": {
+        "start": 3,
+        "length": 3,
+        "reading": "ながいま"
+      },
+      "1465590": {
+        "start": 10,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 6,
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "8613422",
+    "original": "トムは大抵いつも夕飯の前にお風呂に入る。",
+    "en": [
+      {
+        "id": "1027204",
+        "text": "Tom almost always takes a bath before dinner."
+      }
+    ],
+    "vocabIds": [
+      "1414580",
+      "1584910",
+      "1392580",
+      "1392590",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 13,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1392580": {
+        "start": 11,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1392590": {
+        "start": 11,
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1414580": {
+        "start": 3,
+        "length": 2,
+        "reading": "たいてい"
+      },
+      "1465590": {
+        "start": 17,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 14,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1584910": {
+        "start": 8,
+        "length": 2,
+        "reading": "ゆうはん"
+      },
+      "2220600": {
+        "start": 13,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1383,16 +2893,30 @@
     ],
     "vocabIds": [
       "2220600",
-      "1465610"
+      "1500100",
+      "1465610",
+      "1465600"
     ],
     "matches": {
+      "1465600": {
+        "start": 7,
+        "length": 2,
+        "reading": "いれ"
+      },
       "1465610": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1407,16 +2931,24 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1546220"
     ],
     "matches": {
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "1546220": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "2220600": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1431,16 +2963,30 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1465410": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 4,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1455,16 +3001,74 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
+      "1500140",
       "1355790"
     ],
     "matches": {
       "1355790": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "じょう"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1500140": {
+        "start": 4,
+        "length": 3,
+        "reading": "ふろじょう"
       },
       "2220600": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "8979339",
+    "original": "トムは毎朝お風呂に入るんだ。",
+    "en": [
+      {
+        "id": "5848181",
+        "text": "Tom takes a bath every morning."
+      }
+    ],
+    "vocabIds": [
+      "1524700",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 5,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1465590": {
+        "start": 9,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 6,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1524700": {
+        "start": 3,
+        "length": 2,
+        "reading": "まいあさ"
+      },
+      "2220600": {
+        "start": 5,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1479,21 +3083,74 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1499320",
       "2036870"
     ],
     "matches": {
       "1499320": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2036870": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "おねがい"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "9036013",
+    "original": "今夜はお風呂に入るとするか。",
+    "en": [
+      {
+        "id": "257634",
+        "text": "I think I'll take a bath tonight."
+      }
+    ],
+    "vocabIds": [
+      "1289520",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 3,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1289520": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんや"
+      },
+      "1465590": {
+        "start": 7,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1508,16 +3165,80 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1352290"
     ],
     "matches": {
       "1352290": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "あがっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "9165676",
+    "original": "トムはメアリーがお風呂に入ってる隙に、彼女の日記をこっそり読んだんだよ。",
+    "en": [
+      {
+        "id": "9161037",
+        "text": "Tom secretly read Mary's diary while she was taking a bath."
+      }
+    ],
+    "vocabIds": [
+      "2220600",
+      "1500100",
+      "1465590",
+      "1253780",
+      "1483150",
+      "1463930",
+      "1456360"
+    ],
+    "matches": {
+      "1253780": {
+        "start": 16,
+        "length": 1,
+        "reading": "ひま"
+      },
+      "1456360": {
+        "start": 29,
+        "length": 2,
+        "reading": "よん"
+      },
+      "1463930": {
+        "start": 22,
+        "length": 2,
+        "reading": "にっき"
+      },
+      "1465590": {
+        "start": 12,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1483150": {
+        "start": 19,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1500100": {
+        "start": 9,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 8,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1531,22 +3252,37 @@
       }
     ],
     "vocabIds": [
+      "1524720",
       "2826021",
       "2220600",
+      "1500100",
       "1465590"
     ],
     "matches": {
       "1465590": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1524720": {
+        "start": 0,
+        "length": 2,
+        "reading": "まいにち"
       },
       "2220600": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       },
       "2826021": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "まいにちのように"
       }
     }
   },
@@ -1561,21 +3297,80 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
+      "1160790",
       "1576260",
+      "1463770",
       "1465590"
     ],
     "matches": {
+      "1160790": {
+        "start": 4,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
+      },
       "1465590": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1576260": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "9472423",
+    "original": "電話もらったときさ、お風呂に入ってたんだよ。",
+    "en": [
+      {
+        "id": "71344",
+        "text": "I was taking a bath when you called me."
+      }
+    ],
+    "vocabIds": [
+      "1443840",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1443840": {
+        "start": 0,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1465590": {
+        "start": 14,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 11,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 10,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1590,46 +3385,66 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1352290",
+      "1610230",
       "1581570",
+      "1343100",
       "1465590",
       "1315840",
       "1371390",
-      "2827623",
-      "2451270"
+      "1357230"
     ],
     "matches": {
       "1315840": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
+      },
+      "1343100": {
+        "start": 11,
+        "length": 1,
+        "reading": "しょ"
       },
       "1352290": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "あがっ"
+      },
+      "1357230": {
+        "start": 29,
+        "length": 4,
+        "reading": "ふきとり"
       },
       "1371390": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "みずけ"
       },
       "1465590": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1581570": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "だついしょ"
+      },
+      "1610230": {
+        "start": 9,
+        "length": 2,
+        "reading": "だつい"
       },
       "2220600": {
         "start": 0,
-        "length": 3
-      },
-      "2451270": {
-        "start": 31,
-        "length": 2
-      },
-      "2827623": {
-        "start": 29,
-        "length": 2
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1644,16 +3459,24 @@
     ],
     "vocabIds": [
       "1499320",
-      "2220600"
+      "2220600",
+      "1500100"
     ],
     "matches": {
       "1499320": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1668,16 +3491,24 @@
     ],
     "vocabIds": [
       "2220600",
-      "2838455"
+      "1500100",
+      "1390930"
     ],
     "matches": {
+      "1390930": {
+        "start": 3,
+        "length": 2,
+        "reading": "あらっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "2220600": {
         "start": 0,
-        "length": 3
-      },
-      "2838455": {
-        "start": 3,
-        "length": 1
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1692,101 +3523,162 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1606680",
       "1002610",
       "1586265",
+      "1577100",
       "1188270",
+      "1387210",
       "1387280",
       "1358280",
       "1530970",
       "1188490",
       "1357980",
+      "1500140",
       "1355790",
       "1575400",
       "1153430",
+      "1594110",
       "1305440",
       "2854795",
+      "1228650",
       "1228570",
       "1352290",
       "1401400",
+      "1202450",
       "2810010"
     ],
     "matches": {
       "1002610": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "おなか"
       },
       "1153430": {
         "start": 67,
-        "length": 2
+        "length": 2,
+        "reading": "あつかい"
       },
       "1188270": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1188490": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
+      },
+      "1202450": {
+        "start": 112,
+        "length": 2,
+        "reading": "あけ"
       },
       "1228570": {
         "start": 89,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 89,
+        "length": 2,
+        "reading": "いそい"
       },
       "1305440": {
         "start": 75,
-        "length": 4
+        "length": 4,
+        "reading": "しかたない"
       },
       "1352290": {
         "start": 105,
-        "length": 4
+        "length": 3,
+        "reading": "あがっ"
       },
       "1355790": {
         "start": 52,
-        "length": 1
+        "length": 1,
+        "reading": "じょう"
       },
       "1357980": {
         "start": 43,
-        "length": 4
+        "length": 2,
+        "reading": "さわら"
       },
       "1358280": {
         "start": 28,
-        "length": 4
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1387210": {
+        "start": 26,
+        "length": 1,
+        "reading": "さき"
       },
       "1387280": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "さきに"
       },
       "1401400": {
         "start": 110,
-        "length": 1
+        "length": 1,
+        "reading": "まど"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1500140": {
+        "start": 50,
+        "length": 3,
+        "reading": "ふろじょう"
       },
       "1530970": {
         "start": 38,
-        "length": 2
+        "length": 2,
+        "reading": "むり"
       },
       "1575400": {
         "start": 64,
-        "length": 3
+        "length": 3,
+        "reading": "ばいきん"
+      },
+      "1577100": {
+        "start": 24,
+        "length": 1,
+        "reading": "なに"
       },
       "1586265": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "あい"
+      },
+      "1594110": {
+        "start": 75,
+        "length": 2,
+        "reading": "しかた"
       },
       "1606680": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "わい"
       },
       "2220600": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       },
       "2810010": {
         "start": 112,
-        "length": 2
+        "length": 2,
+        "reading": "あけ"
       },
       "2854795": {
         "start": 85,
-        "length": 3
+        "length": 3,
+        "reading": "ごじせい"
       }
     }
   },
@@ -1809,21 +3701,74 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1390930",
+      "1465610",
       "1465600"
     ],
     "matches": {
       "1390930": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "あらっ"
       },
       "1465600": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1465610": {
+        "start": 7,
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "10318086",
+    "original": "トムくんは今お風呂に入ってるところよ。",
+    "en": [
+      {
+        "id": "1024845",
+        "text": "Tom is taking a bath now."
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1288850": {
+        "start": 5,
+        "length": 1,
+        "reading": "こん"
+      },
+      "1465590": {
+        "start": 10,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 6,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1838,26 +3783,86 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
+      "1956550",
       "1889130",
+      "1478190",
       "1002510",
       "1263120"
     ],
     "matches": {
       "1002510": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おゆ"
       },
       "1263120": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "へっ"
+      },
+      "1478190": {
+        "start": 6,
+        "length": 2,
+        "reading": "ぬく"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1889130": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "せんをぬく"
+      },
+      "1956550": {
+        "start": 4,
+        "length": 1,
+        "reading": "せん"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "10605727",
+    "original": "お風呂に入ってから寝るのよ。",
+    "en": [
+      {
+        "id": "319806",
+        "text": "Take a bath and then go to bed."
+      }
+    ],
+    "vocabIds": [
+      "2220600",
+      "1500100",
+      "1465590",
+      "1360010"
+    ],
+    "matches": {
+      "1360010": {
+        "start": 9,
+        "length": 2,
+        "reading": "ねる"
+      },
+      "1465590": {
+        "start": 4,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 0,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1872,21 +3877,42 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1338240",
-      "1360010"
+      "1896380",
+      "1360010",
+      "1642760"
     ],
     "matches": {
       "1338240": {
         "start": 11,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1360010": {
         "start": 38,
-        "length": 2
+        "length": 1,
+        "reading": "ね"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1642760": {
+        "start": 38,
+        "length": 1,
+        "reading": "ね"
+      },
+      "1896380": {
+        "start": 11,
+        "length": 1,
+        "reading": "で"
       },
       "2220600": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1902,25 +3928,103 @@
     "vocabIds": [
       "1364210",
       "2220600",
+      "1500100",
       "1360010",
-      "1582220"
+      "1642760",
+      "1446180",
+      "1582220",
+      "1310730"
     ],
     "matches": {
+      "1310730": {
+        "start": 17,
+        "length": 2,
+        "reading": "しぬ"
+      },
       "1360010": {
         "start": 10,
-        "length": 2
+        "length": 1,
+        "reading": "ね"
       },
       "1364210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まふゆ"
+      },
+      "1446180": {
+        "start": 15,
+        "length": 2,
+        "reading": "こごえ"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1582220": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "こごえしぬ"
+      },
+      "1642760": {
+        "start": 10,
+        "length": 1,
+        "reading": "ね"
       },
       "2220600": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "10617875",
+    "original": "朝は必ずお風呂に入るんだ。",
+    "en": [
+      {
+        "id": "261795",
+        "text": "I always take a bath in the morning."
+      }
+    ],
+    "vocabIds": [
+      "1428280",
+      "1487400",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 4,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1428280": {
+        "start": 0,
+        "length": 1,
+        "reading": "あさ"
+      },
+      "1465590": {
+        "start": 8,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1487400": {
+        "start": 2,
+        "length": 2,
+        "reading": "かならず"
+      },
+      "1500100": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 4,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1937,34 +4041,58 @@
       "1598680",
       "1497610",
       "2220600",
+      "1500100",
+      "1500140",
       "1355790",
       "1588120",
-      "1591150"
+      "1591150",
+      "1954660"
     ],
     "matches": {
       "1355790": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "じょう"
       },
       "1497610": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
+      },
+      "1500100": {
+        "start": 6,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1500140": {
+        "start": 6,
+        "length": 3,
+        "reading": "ふろじょう"
       },
       "1588120": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "うたっ"
       },
       "1591150": {
         "start": 17,
-        "length": 4
+        "length": 3,
+        "reading": "きこえ"
       },
       "1598680": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ときどき"
+      },
+      "1954660": {
+        "start": 17,
+        "length": 3,
+        "reading": "きこえ"
       },
       "2220600": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -1983,26 +4111,86 @@
     ],
     "vocabIds": [
       "2225040",
+      "1463770",
       "1199330",
       "2220600",
+      "1500100",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1199330": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1465410": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 9,
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1500100": {
+        "start": 6,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       },
       "2225040": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
+      }
+    }
+  },
+  {
+    "id": "10828319",
+    "original": "父はお風呂に入ってます。",
+    "en": [
+      {
+        "id": "10656559",
+        "text": "My father is taking a bath."
+      }
+    ],
+    "vocabIds": [
+      "1497610",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1465590": {
+        "start": 6,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1497610": {
+        "start": 0,
+        "length": 1,
+        "reading": "ちち"
+      },
+      "1500100": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 2,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -2017,6 +4205,8 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
+      "1906650",
       "1352190",
       "1542730",
       "1358280"
@@ -2024,19 +4214,33 @@
     "matches": {
       "1352190": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "あがり"
       },
       "1358280": {
         "start": 14,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1500100": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1542730": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうしょく"
+      },
+      "1906650": {
+        "start": 5,
+        "length": 5,
+        "reading": "ふろあがり"
       },
       "2220600": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -2051,6 +4255,7 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1352290",
       "1584910",
       "1358280"
@@ -2058,19 +4263,28 @@
     "matches": {
       "1352290": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "あがっ"
       },
       "1358280": {
         "start": 19,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1500100": {
+        "start": 5,
+        "length": 2,
+        "reading": "ふろ"
       },
       "1584910": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうはん"
       },
       "2220600": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -2100,12 +4314,69 @@
       }
     ],
     "vocabIds": [
-      "2220600"
+      "2220600",
+      "1500100"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "11336844",
+    "original": "今からお風呂に入る。",
+    "en": [
+      {
+        "id": "11336862",
+        "text": "I'm going to take a bath now."
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "2663180",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 3,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1465590": {
+        "start": 7,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おふろ"
+      },
+      "2663180": {
+        "start": 0,
+        "length": 3,
+        "reading": "いまから"
       }
     }
   },
@@ -2121,20 +4392,61 @@
     "vocabIds": [
       "1270590",
       "2220600",
+      "1500100",
       "1311110"
     ],
     "matches": {
       "1270590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ごはん"
       },
       "1311110": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1500100": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "11733684",
+    "original": "お風呂に入ったとこだよ。",
+    "en": [
+      {
+        "id": "2601307",
+        "text": "I just took a bath."
+      }
+    ],
+    "vocabIds": [
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1465590": {
+        "start": 4,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "2220600": {
+        "start": 0,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -2157,16 +4469,126 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1315920"
     ],
     "matches": {
       "1315920": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "11910197",
+    "original": "子供って、お風呂に入るのを嫌がるのよ。",
+    "en": [
+      {
+        "id": "245976",
+        "text": "Children don't like to take a bath."
+      },
+      {
+        "id": "12287029",
+        "text": "Children don't like to take baths."
+      },
+      {
+        "id": "10742951",
+        "text": "Children don't like taking baths."
+      }
+    ],
+    "vocabIds": [
+      "1307850",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590",
+      "1609260"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 5,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1307850": {
+        "start": 0,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1465590": {
+        "start": 9,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 6,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1609260": {
+        "start": 13,
+        "length": 3,
+        "reading": "いやがる"
+      },
+      "2220600": {
+        "start": 5,
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "11994169",
+    "original": "お風呂に入ってから、寝なさい。",
+    "en": [
+      {
+        "id": "11477747",
+        "text": "Have your bath and then go to bed."
+      }
+    ],
+    "vocabIds": [
+      "2220600",
+      "1500100",
+      "1465590",
+      "1360010",
+      "1642760"
+    ],
+    "matches": {
+      "1360010": {
+        "start": 10,
+        "length": 1,
+        "reading": "ね"
+      },
+      "1465590": {
+        "start": 4,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1642760": {
+        "start": 10,
+        "length": 1,
+        "reading": "ね"
+      },
+      "2220600": {
+        "start": 0,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -2181,16 +4603,200 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1607180"
     ],
     "matches": {
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
+      },
       "1607180": {
         "start": 11,
-        "length": 4
+        "length": 2,
+        "reading": "つかえ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "12141058",
+    "original": "毎晩、お風呂に入ってるよ。",
+    "en": [
+      {
+        "id": "12140960",
+        "text": "Every evening I have a bath."
+      }
+    ],
+    "vocabIds": [
+      "1524730",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1465590": {
+        "start": 7,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1524730": {
+        "start": 0,
+        "length": 2,
+        "reading": "まいばん"
+      },
+      "2220600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "12146793",
+    "original": "毎日お風呂に入るよ。",
+    "en": [
+      {
+        "id": "1526474",
+        "text": "I bathe every day."
+      }
+    ],
+    "vocabIds": [
+      "1524720",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 2,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1465590": {
+        "start": 6,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1500100": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1524720": {
+        "start": 0,
+        "length": 2,
+        "reading": "まいにち"
+      },
+      "2220600": {
+        "start": 2,
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "12399815",
+    "original": "彼はいつも夕方にお風呂に入る。",
+    "en": [
+      {
+        "id": "6217957",
+        "text": "He usually takes a bath in the evening."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1542790",
+      "2220600",
+      "1002600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1002600": {
+        "start": 8,
+        "length": 6,
+        "reading": "おふろにはいる"
+      },
+      "1465590": {
+        "start": 12,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1500100": {
+        "start": 9,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1542790": {
+        "start": 5,
+        "length": 2,
+        "reading": "ゆうがた"
+      },
+      "2220600": {
+        "start": 8,
+        "length": 3,
+        "reading": "おふろ"
+      }
+    }
+  },
+  {
+    "id": "10901637",
+    "original": "今日はお風呂に入らないでください。",
+    "en": [
+      {
+        "id": "12597747",
+        "text": "Please don't bathe today."
+      }
+    ],
+    "vocabIds": [
+      "1579110",
+      "1289400",
+      "2220600",
+      "1500100",
+      "1465590"
+    ],
+    "matches": {
+      "1289400": {
+        "start": 0,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1465590": {
+        "start": 7,
+        "length": 2,
+        "reading": "はいら"
+      },
+      "1500100": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふろ"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "2220600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   },
@@ -2205,21 +4811,30 @@
     ],
     "vocabIds": [
       "2220600",
+      "1500100",
       "1371260",
-      "2799140"
+      "1169870"
     ],
     "matches": {
+      "1169870": {
+        "start": 6,
+        "length": 2,
+        "reading": "のん"
+      },
       "1371260": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
+      },
+      "1500100": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふろ"
       },
       "2220600": {
         "start": 0,
-        "length": 3
-      },
-      "2799140": {
-        "start": 6,
-        "length": 1
+        "length": 3,
+        "reading": "おふろ"
       }
     }
   }

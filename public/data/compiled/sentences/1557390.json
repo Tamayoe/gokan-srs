@@ -1,41 +1,79 @@
 [
   {
-    "id": "87396",
-    "original": "彼女は彼に小説を書くように励ました。",
+    "id": "100104",
+    "original": "彼は弁護士になるために日夜勉強に励んだ。",
     "en": [
       {
-        "id": "316312",
-        "text": "She encouraged him to write a novel."
+        "id": "303593",
+        "text": "He studied day and night with a view to becoming a lawyer."
       }
     ],
-    "indices": "彼女[01] は 彼(かれ) に 小説 を 書く 様に{ように} 励ます{励ました}",
+    "indices": "彼(かれ)[01] は 弁護士 になる[01] 為に{ために} 日夜 勉強[01] に 励む{励んだ}",
     "vocabIds": [
-      "1483150",
       "1483070",
-      "1348430",
-      "1343950",
+      "1512850",
+      "1464870",
+      "1512670",
       "1557390"
     ],
     "matches": {
-      "1343950": {
-        "start": 8,
-        "length": 2
-      },
-      "1348430": {
-        "start": 5,
-        "length": 2
+      "1464870": {
+        "start": 11,
+        "length": 2,
+        "reading": "にちや"
       },
       "1483070": {
-        "start": 3,
-        "length": 1
-      },
-      "1483150": {
         "start": 0,
-        "length": 2
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1512670": {
+        "start": 13,
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1512850": {
+        "start": 2,
+        "length": 3,
+        "reading": "べんごし"
       },
       "1557390": {
-        "start": 13,
-        "length": 4
+        "start": 16,
+        "length": 2,
+        "reading": "はげん"
+      }
+    }
+  },
+  {
+    "id": "100119",
+    "original": "彼は勉強に励んでいる。",
+    "en": [
+      {
+        "id": "303578",
+        "text": "He is diligent in his study."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 勉強[01] に 励む{励んでいる}",
+    "vocabIds": [
+      "1483070",
+      "1512670",
+      "1557390"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1512670": {
+        "start": 2,
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1557390": {
+        "start": 5,
+        "length": 2,
+        "reading": "はげん"
       }
     }
   },
@@ -57,85 +95,69 @@
     "matches": {
       "1427120": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちょじゅつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1557390": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はげん"
       }
     }
   },
   {
-    "id": "102743",
-    "original": "彼は息子にもっと勉強するようにと励ました。",
+    "id": "172576",
+    "original": "今まで以上にいっそう勉強に励みなさい。",
     "en": [
       {
-        "id": "300951",
-        "text": "He encouraged his son to study harder."
+        "id": "241899",
+        "text": "You should study even more than before."
       }
     ],
-    "indices": "彼(かれ)[01] は 息子[01] に もっと 勉強[01]{勉強する} 様に{ように} と 励ます{励ました}",
+    "indices": "今まで 以上 に 一層[01]{いっそう}~ 勉強[01] に 励む{励み}~ 為さい{なさい}",
     "vocabIds": [
-      "1483070",
-      "1404390",
+      "1288850",
+      "1587590",
+      "1155120",
       "1512670",
-      "1557390"
+      "1557390",
+      "1557360"
     ],
     "matches": {
-      "1404390": {
-        "start": 2,
-        "length": 2
+      "1155120": {
+        "start": 3,
+        "length": 2,
+        "reading": "いじょう"
       },
-      "1483070": {
+      "1288850": {
         "start": 0,
-        "length": 1
-      },
-      "1512670": {
-        "start": 8,
-        "length": 2
-      },
-      "1557390": {
-        "start": 16,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "155545",
-    "original": "私は生徒たちにもっと勉強するよう励ました。",
-    "en": [
-      {
-        "id": "258993",
-        "text": "I inspired my students to work harder."
-      }
-    ],
-    "indices": "私(わたし)[01] は 生徒 達{たち} に もっと 勉強[01]{勉強する} 様(よう){よう} 励ます{励ました}",
-    "vocabIds": [
-      "1311110",
-      "1379380",
-      "1512670",
-      "1557390"
-    ],
-    "matches": {
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1379380": {
-        "start": 2,
-        "length": 2
+        "length": 1,
+        "reading": "いま"
       },
       "1512670": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1557360": {
+        "start": 13,
+        "length": 2,
+        "reading": "はげみ"
       },
       "1557390": {
-        "start": 16,
-        "length": 4
+        "start": 13,
+        "length": 2,
+        "reading": "はげみ"
+      },
+      "1587590": {
+        "start": 0,
+        "length": 3,
+        "reading": "いままで"
       }
     }
   },
@@ -158,19 +180,23 @@
     "matches": {
       "1228100": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうよう"
       },
       "1304970": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1557390": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "はげん"
       }
     }
   },
@@ -192,50 +218,18 @@
     "matches": {
       "1304970": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1318610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1557390": {
         "start": 13,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "215661",
-    "original": "ジョージはエリーにもう一度懸命に勉強するよう励ました。",
-    "en": [
-      {
-        "id": "52963",
-        "text": "George encouraged Ellie to study hard again."
-      }
-    ],
-    "indices": "は に もう一度 懸命{懸命に} 勉強[01]{勉強する} 様(よう){よう} 励ます{励ました}",
-    "vocabIds": [
-      "2005860",
-      "1257730",
-      "1512670",
-      "1557390"
-    ],
-    "matches": {
-      "1257730": {
-        "start": 13,
-        "length": 2
-      },
-      "1512670": {
-        "start": 16,
-        "length": 2
-      },
-      "1557390": {
-        "start": 22,
-        "length": 4
-      },
-      "2005860": {
-        "start": 9,
-        "length": 4
+        "length": 2,
+        "reading": "はげん"
       }
     }
   },
@@ -252,70 +246,187 @@
     "vocabIds": [
       "1453550",
       "1582710",
+      "1425600",
       "2627240",
+      "1203040",
+      "1583870",
       "2119430",
+      "1437260",
       "1330790",
       "1580650",
+      "1153270",
       "1153280",
+      "1407860",
       "1389460",
       "1592250",
       "1294330",
+      "1605570",
+      "1318610",
       "2830519",
       "1599590",
       "1557390"
     ],
     "matches": {
+      "1153270": {
+        "start": 27,
+        "length": 3,
+        "reading": "あっとうてき"
+      },
       "1153280": {
         "start": 27,
-        "length": 5
+        "length": 5,
+        "reading": "あっとうてきたすう"
+      },
+      "1203040": {
+        "start": 15,
+        "length": 2,
+        "reading": "かいきゅう"
       },
       "1294330": {
         "start": 41,
-        "length": 1
+        "length": 1,
+        "reading": "つま"
+      },
+      "1318610": {
+        "start": 53,
+        "length": 2,
+        "reading": "じぶん"
       },
       "1330790": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうにゅう"
       },
       "1389460": {
         "start": 33,
-        "length": 3
+        "length": 3,
+        "reading": "しめる"
+      },
+      "1407860": {
+        "start": 30,
+        "length": 2,
+        "reading": "たすう"
+      },
+      "1425600": {
+        "start": 13,
+        "length": 2,
+        "reading": "ちゅうりゅう"
+      },
+      "1437260": {
+        "start": 20,
+        "length": 1,
+        "reading": "てき"
       },
       "1453550": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "どうよう"
       },
       "1557390": {
         "start": 61,
-        "length": 2
+        "length": 2,
+        "reading": "はげむ"
       },
       "1580650": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
       },
       "1582710": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "1583870": {
+        "start": 18,
+        "length": 2,
+        "reading": "へいきん"
       },
       "1592250": {
         "start": 36,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       },
       "1599590": {
         "start": 56,
-        "length": 4
+        "length": 4,
+        "reading": "なにもかも"
+      },
+      "1605570": {
+        "start": 49,
+        "length": 2,
+        "reading": "やとわ"
       },
       "2119430": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "へいきんてき"
       },
       "2627240": {
         "start": 13,
-        "length": 4
+        "length": 4,
+        "reading": "ちゅうりゅうかいきゅう"
       },
       "2830519": {
         "start": 53,
-        "length": 3
+        "length": 3,
+        "reading": "じぶんで"
+      }
+    }
+  },
+  {
+    "id": "11457357",
+    "original": "彼は、科学者になるために勉学に励みました。",
+    "en": [
+      {
+        "id": "10013888",
+        "text": "He studied hard to become a scientist."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1192700",
+      "1192750",
+      "1322990",
+      "1512660",
+      "1557390",
+      "1557360"
+    ],
+    "matches": {
+      "1192700": {
+        "start": 3,
+        "length": 2,
+        "reading": "かがく"
+      },
+      "1192750": {
+        "start": 3,
+        "length": 3,
+        "reading": "かがくしゃ"
+      },
+      "1322990": {
+        "start": 5,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1512660": {
+        "start": 12,
+        "length": 2,
+        "reading": "べんがく"
+      },
+      "1557360": {
+        "start": 15,
+        "length": 2,
+        "reading": "はげみ"
+      },
+      "1557390": {
+        "start": 15,
+        "length": 2,
+        "reading": "はげみ"
       }
     }
   }

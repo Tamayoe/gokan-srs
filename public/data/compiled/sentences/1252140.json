@@ -1,5 +1,86 @@
 [
   {
+    "id": "74240",
+    "original": "項目が増えたり減ったりする表示なら、Accessでなくて表計算ソフトを活用すべきだと思います。",
+    "en": [
+      {
+        "id": "329480",
+        "text": "For a display where the data items increase and decrease I think you are best making use of a spreadsheet program, not Access."
+      }
+    ],
+    "indices": "項目 が 増える{増えたり} 減る{減ったり} 為る(する){する} 表示 なら である{でなくて} 表計算ソフト を 活用 す可き{すべき} だ と 思う{思います}",
+    "vocabIds": [
+      "1283000",
+      "1602440",
+      "1263120",
+      "1489610",
+      "1489340",
+      "2383970",
+      "2108080",
+      "1252140",
+      "1208460",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1208460": {
+        "start": 35,
+        "length": 2,
+        "reading": "かつよう"
+      },
+      "1252140": {
+        "start": 29,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1263120": {
+        "start": 7,
+        "length": 2,
+        "reading": "へっ"
+      },
+      "1283000": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうもく"
+      },
+      "1489340": {
+        "start": 28,
+        "length": 1,
+        "reading": "おもて"
+      },
+      "1489610": {
+        "start": 13,
+        "length": 2,
+        "reading": "ひょうじ"
+      },
+      "1589320": {
+        "start": 42,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 42,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1602440": {
+        "start": 3,
+        "length": 2,
+        "reading": "ふえ"
+      },
+      "2108080": {
+        "start": 28,
+        "length": 6,
+        "reading": "おもてけいさんそふと"
+      },
+      "2383970": {
+        "start": 28,
+        "length": 3,
+        "reading": "おもてけいさん"
+      }
+    }
+  },
+  {
     "id": "76736",
     "original": "この式によって電場を計算してやると、結果は次のようになる。",
     "en": [
@@ -14,28 +95,114 @@
       "1443550",
       "1252140",
       "1254690",
+      "1316380",
       "1316410"
     ],
     "matches": {
       "1252140": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1254690": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "けっか"
+      },
+      "1316380": {
+        "start": 21,
+        "length": 1,
+        "reading": "つぎ"
       },
       "1316410": {
         "start": 21,
-        "length": 5
+        "length": 5,
+        "reading": "つぎのように"
       },
       "1319060": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "しき"
       },
       "1443550": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "でんじょう"
+      }
+    }
+  },
+  {
+    "id": "76880",
+    "original": "アンケートの集計は、表計算ソフトで行っていましたが、最近は、データベースソフトでの集計の方が容易な気がして、データベースソフトで集計しています。",
+    "en": [
+      {
+        "id": "326840",
+        "text": "We used to compile survey results using spreadsheet programs but recently we feel that database software's summing methods are quicker so we use databases to total them."
+      }
+    ],
+    "indices": "アンケート の 集計 は 表計算ソフト で(#2028980) 行う{行っていました} が 最近 は データベース ソフト[03] で(#2028980) の 集計 の 方(ほう) が 容易{容易な} 気がする{気がして} データベース ソフト[03] で(#2028980) 集計 為る(する){しています}",
+    "vocabIds": [
+      "1333640",
+      "1489340",
+      "2383970",
+      "2108080",
+      "1252140",
+      "1589060",
+      "1293780",
+      "1516930",
+      "1545350",
+      "1221520"
+    ],
+    "matches": {
+      "1221520": {
+        "start": 49,
+        "length": 1,
+        "reading": "き"
+      },
+      "1252140": {
+        "start": 11,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1293780": {
+        "start": 26,
+        "length": 2,
+        "reading": "さいきん"
+      },
+      "1333640": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅうけい"
+      },
+      "1489340": {
+        "start": 10,
+        "length": 1,
+        "reading": "おもて"
+      },
+      "1516930": {
+        "start": 44,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1545350": {
+        "start": 46,
+        "length": 2,
+        "reading": "ようい"
+      },
+      "1589060": {
+        "start": 17,
+        "length": 2,
+        "reading": "おこなっ"
+      },
+      "2108080": {
+        "start": 10,
+        "length": 6,
+        "reading": "おもてけいさんそふと"
+      },
+      "2383970": {
+        "start": 10,
+        "length": 3,
+        "reading": "おもてけいさん"
       }
     }
   },
@@ -51,21 +218,36 @@
     "indices": "旅行 の 総(そう) 費用 を 計算[01]~ 為る(する){して} 呉れる{くれます} か",
     "vocabIds": [
       "1553170",
+      "1401470",
       "2131460",
+      "1484620",
       "1252140"
     ],
     "matches": {
       "1252140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1401470": {
+        "start": 3,
+        "length": 1,
+        "reading": "そう"
+      },
+      "1484620": {
+        "start": 4,
+        "length": 2,
+        "reading": "ひよう"
       },
       "1553170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       },
       "2131460": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "そうひよう"
       }
     }
   },
@@ -91,15 +273,18 @@
     "matches": {
       "1242590": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1252140": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1548220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "らいねん"
       }
     }
   },
@@ -116,25 +301,47 @@
     "vocabIds": [
       "1545420",
       "1252140",
+      "1335640",
       "2845365",
+      "1180570",
+      "1362640",
       "1362650"
     ],
     "matches": {
+      "1180570": {
+        "start": 13,
+        "length": 1,
+        "reading": "よこ"
+      },
       "1252140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1335640": {
+        "start": 11,
+        "length": 1,
+        "reading": "たて"
+      },
+      "1362640": {
+        "start": 15,
+        "length": 1,
+        "reading": "ふか"
       },
       "1362650": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ふかさ"
       },
       "1545420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ようせき"
       },
       "2845365": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "たてとよこ"
       }
     }
   },
@@ -156,15 +363,18 @@
     "matches": {
       "1252140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1611610": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "まちがっ"
       }
     }
   },
@@ -187,19 +397,23 @@
     "matches": {
       "1252140": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1310180": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ししゅつ"
       },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1584350": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "まいつき"
       }
     }
   },
@@ -221,15 +435,81 @@
     "matches": {
       "1252140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1382100": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぜいきん"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
+      }
+    }
+  },
+  {
+    "id": "85363",
+    "original": "表計算ソフトは、覚えておくと何かと便利よ。",
+    "en": [
+      {
+        "id": "318350",
+        "text": "Once you get the hang of it, spreadsheet software is really useful."
+      }
+    ],
+    "indices": "表計算ソフト~ は 覚える[01]{覚えて} 置く[09]{おく} と 何かと 便利 よ[01]",
+    "vocabIds": [
+      "1489340",
+      "2383970",
+      "2108080",
+      "1252140",
+      "1206050",
+      "1206040",
+      "1189280",
+      "1512610"
+    ],
+    "matches": {
+      "1189280": {
+        "start": 14,
+        "length": 3,
+        "reading": "なにかと"
+      },
+      "1206040": {
+        "start": 8,
+        "length": 2,
+        "reading": "おぼえ"
+      },
+      "1206050": {
+        "start": 8,
+        "length": 2,
+        "reading": "おぼえ"
+      },
+      "1252140": {
+        "start": 1,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1489340": {
+        "start": 0,
+        "length": 1,
+        "reading": "おもて"
+      },
+      "1512610": {
+        "start": 17,
+        "length": 2,
+        "reading": "べんり"
+      },
+      "2108080": {
+        "start": 0,
+        "length": 6,
+        "reading": "おもてけいさんそふと"
+      },
+      "2383970": {
+        "start": 0,
+        "length": 3,
+        "reading": "おもてけいさん"
       }
     }
   },
@@ -253,23 +533,28 @@
     "matches": {
       "1203260": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "た"
       },
       "1252140": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1379380": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1404975": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "はやい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -291,24 +576,34 @@
       "1483150",
       "1330790",
       "1588760",
+      "1454490",
       "1252140"
     ],
     "matches": {
       "1252140": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1330790": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうにゅう"
+      },
+      "1454490": {
+        "start": 13,
+        "length": 1,
+        "reading": "え"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1588760": {
         "start": 13,
-        "length": 2
+        "length": 1,
+        "reading": "え"
       }
     }
   },
@@ -330,15 +625,75 @@
     "matches": {
       "1252140": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1484620": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
+      }
+    }
+  },
+  {
+    "id": "98410",
+    "original": "彼らの費用の見積もりは大幅な計算違いだった。",
+    "en": [
+      {
+        "id": "305292",
+        "text": "Their estimate of the cost was wide of the mark."
+      }
+    ],
+    "indices": "彼ら(かれら){彼らの} 費用 の 見積り{見積もり} は 大幅{大幅な} 計算違い~ だ{だった}",
+    "vocabIds": [
+      "1483090",
+      "1484620",
+      "1604590",
+      "1414870",
+      "1252140",
+      "1873180",
+      "1158870"
+    ],
+    "matches": {
+      "1158870": {
+        "start": 16,
+        "length": 2,
+        "reading": "ちがい"
+      },
+      "1252140": {
+        "start": 14,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1414870": {
+        "start": 11,
+        "length": 2,
+        "reading": "おおはば"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1484620": {
+        "start": 3,
+        "length": 2,
+        "reading": "ひよう"
+      },
+      "1604590": {
+        "start": 6,
+        "length": 4,
+        "reading": "みつもり"
+      },
+      "1873180": {
+        "start": 14,
+        "length": 4,
+        "reading": "けいさんちがい"
       }
     }
   },
@@ -362,23 +717,28 @@
     "matches": {
       "1252140": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1254690": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "けっか"
       },
       "1281830": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こうい"
       },
       "1318610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -400,15 +760,18 @@
     "matches": {
       "1252140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1310180": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ししゅつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -431,19 +794,23 @@
     "matches": {
       "1252140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1272780": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひかり"
       },
       "1405050": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "そくど"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -465,15 +832,18 @@
     "matches": {
       "1252140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1454510": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "とくい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -495,15 +865,18 @@
     "matches": {
       "1252140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1404975": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はやい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -525,15 +898,18 @@
     "matches": {
       "1252140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1353320": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じょうず"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -548,42 +924,73 @@
     ],
     "indices": "電子計算機~ は 人間(にんげん)[01] の 頭脳(ずのう) が 計算[01] 為る(する){する} の と 丁度{ちょうど} 同じよう{同じように} 計算[01] 為る(する){する} 事(こと) が[01] 出来る[01]",
     "vocabIds": [
+      "1443320",
       "1443420",
+      "1252140",
+      "1592560",
+      "2037700",
       "1366770",
       "1450900",
-      "1252140",
+      "1451750",
       "1451770",
       "1313580",
       "1340450"
     ],
     "matches": {
       "1252140": {
-        "start": 12,
-        "length": 2
+        "start": 2,
+        "length": 2,
+        "reading": "けいさん"
       },
       "1313580": {
         "start": 31,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1340450": {
         "start": 33,
-        "length": 3
+        "length": 3,
+        "reading": "できる"
       },
       "1366770": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
+      },
+      "1443320": {
+        "start": 0,
+        "length": 2,
+        "reading": "でんし"
       },
       "1443420": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "でんしけいさんき"
       },
       "1450900": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ずのう"
+      },
+      "1451750": {
+        "start": 22,
+        "length": 2,
+        "reading": "おなじ"
       },
       "1451770": {
         "start": 22,
-        "length": 4
+        "length": 4,
+        "reading": "おなじよう"
+      },
+      "1592560": {
+        "start": 2,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2037700": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -606,19 +1013,23 @@
     "matches": {
       "1232920": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょり"
       },
       "1252140": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1255430": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1420970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちきゅう"
       }
     }
   },
@@ -635,25 +1046,29 @@
     "vocabIds": [
       "1420160",
       "1252140",
-      "2093400",
-      "1922760"
+      "1922760",
+      "1587040"
     ],
     "matches": {
       "1252140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1420160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だんせい"
+      },
+      "1587040": {
+        "start": 9,
+        "length": 2,
+        "reading": "いう"
       },
       "1922760": {
         "start": 8,
-        "length": 3
-      },
-      "2093400": {
-        "start": 6,
-        "length": 1
+        "length": 3,
+        "reading": "という"
       }
     }
   },
@@ -672,38 +1087,45 @@
       "1166180",
       "1345250",
       "1252140",
-      "2093400",
       "1922760",
+      "1587040",
       "1530750"
     ],
     "matches": {
       "1166180": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いちぶ"
       },
       "1252140": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1345250": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
       },
       "1420160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だんせい"
       },
       "1530750": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ぶなん"
+      },
+      "1587040": {
+        "start": 18,
+        "length": 2,
+        "reading": "いう"
       },
       "1922760": {
         "start": 17,
-        "length": 3
-      },
-      "2093400": {
-        "start": 15,
-        "length": 1
+        "length": 3,
+        "reading": "という"
       }
     }
   },
@@ -726,19 +1148,23 @@
     "matches": {
       "1252140": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1420160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だんせい"
       },
       "1421970": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おそい"
       },
       "1580640": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -761,19 +1187,23 @@
     "matches": {
       "1252140": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1305990": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
       },
       "1309650": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ゆび"
       },
       "1420010": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おとこのこ"
       }
     }
   },
@@ -790,30 +1220,53 @@
     "vocabIds": [
       "1409560",
       "1252140",
+      "1335640",
       "2845365",
+      "1180570",
+      "1362640",
       "1362650",
-      "2148680"
+      "1207610"
     ],
     "matches": {
+      "1180570": {
+        "start": 12,
+        "length": 1,
+        "reading": "よこ"
+      },
+      "1207610": {
+        "start": 17,
+        "length": 3,
+        "reading": "かけれ"
+      },
       "1252140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1335640": {
+        "start": 10,
+        "length": 1,
+        "reading": "たて"
+      },
+      "1362640": {
+        "start": 14,
+        "length": 1,
+        "reading": "ふか"
       },
       "1362650": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ふかさ"
       },
       "1409560": {
         "start": 0,
-        "length": 2
-      },
-      "2148680": {
-        "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "たいせき"
       },
       "2845365": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "たてとよこ"
       }
     }
   },
@@ -831,24 +1284,34 @@
       "1345250",
       "1252140",
       "1324520",
-      "1922760"
+      "1922760",
+      "1587040"
     ],
     "matches": {
       "1252140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1324520": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "よわい"
       },
       "1345250": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1587040": {
+        "start": 9,
+        "length": 2,
+        "reading": "いう"
       },
       "1922760": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "という"
       }
     }
   },
@@ -865,25 +1328,23 @@
     "vocabIds": [
       "1345250",
       "1252140",
-      "2093400",
       "1580640"
     ],
     "matches": {
       "1252140": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1345250": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
       },
       "1580640": {
         "start": 9,
-        "length": 1
-      },
-      "2093400": {
-        "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -901,6 +1362,7 @@
       "1323080",
       "1473740",
       "1254180",
+      "1392580",
       "1392590",
       "1484620",
       "1252140"
@@ -908,27 +1370,38 @@
     "matches": {
       "1252140": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1254180": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "きめる"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1392580": {
+        "start": 11,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1473740": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かう"
       },
       "1484620": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       }
     }
   },
@@ -943,27 +1416,43 @@
     ],
     "indices": "失礼[02] です が[03] 貴方(あなた)[01]{あなた} の 計算[01] が 間違える{間違えている} 事(こと){こと} を 指摘 為せる{させて} 貰う[02]{もらいます}",
     "vocabIds": [
+      "1320230",
       "2864550",
       "1252140",
       "1215330",
+      "2017170",
       "1309940"
     ],
     "matches": {
       "1215330": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "まちがえ"
       },
       "1252140": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1309940": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "してき"
+      },
+      "1320230": {
+        "start": 0,
+        "length": 2,
+        "reading": "しつれい"
+      },
+      "2017170": {
+        "start": 12,
+        "length": 3,
+        "reading": "まちがえ"
       },
       "2864550": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "しつれいですが"
       }
     }
   },
@@ -987,23 +1476,28 @@
     "matches": {
       "1001820": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1252140": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1305990": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1548010": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "らいしゅう"
       }
     }
   },
@@ -1019,21 +1513,30 @@
     "indices": "私(わたし)[01] は 急ぐ{急いで} 計算[01] を 為る(する){した}",
     "vocabIds": [
       "1311110",
+      "1228650",
       "1228570",
       "1252140"
     ],
     "matches": {
       "1228570": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いそいで"
+      },
+      "1228650": {
+        "start": 2,
+        "length": 2,
+        "reading": "いそい"
       },
       "1252140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -1052,33 +1555,126 @@
       "1443000",
       "1252140",
       "1218880",
+      "1373990",
       "1374000",
+      "1525230",
+      "1525280",
       "1338820"
     ],
     "matches": {
       "1218880": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "き"
       },
       "1252140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1293990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいしょ"
       },
       "1338820": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しゅつげん"
+      },
+      "1373990": {
+        "start": 11,
+        "length": 2,
+        "reading": "せいき"
       },
       "1374000": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "せいきまつ"
       },
       "1443000": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "でんき"
+      },
+      "1525230": {
+        "start": 13,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1525280": {
+        "start": 13,
+        "length": 2,
+        "reading": "まつに"
+      }
+    }
+  },
+  {
+    "id": "175006",
+    "original": "原始的な計算機が、コンピューターの開発されるずっと以前に存在していた。",
+    "en": [
+      {
+        "id": "239461",
+        "text": "Primitive calculating machines existed long before computers were developed."
+      }
+    ],
+    "indices": "原始的{原始的な} 計算機 が コンピュータ{コンピューター} の 開発 為れる{される} ずっと 以前[02] に 存在 為る(する){していた}",
+    "vocabIds": [
+      "1261500",
+      "1261540",
+      "1437260",
+      "1252140",
+      "1592560",
+      "2037700",
+      "1202880",
+      "1155150",
+      "1406150"
+    ],
+    "matches": {
+      "1155150": {
+        "start": 25,
+        "length": 2,
+        "reading": "いぜん"
+      },
+      "1202880": {
+        "start": 17,
+        "length": 2,
+        "reading": "かいはつ"
+      },
+      "1252140": {
+        "start": 4,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1261500": {
+        "start": 0,
+        "length": 2,
+        "reading": "げんし"
+      },
+      "1261540": {
+        "start": 0,
+        "length": 3,
+        "reading": "げんしてき"
+      },
+      "1406150": {
+        "start": 28,
+        "length": 2,
+        "reading": "そんざい"
+      },
+      "1437260": {
+        "start": 2,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1592560": {
+        "start": 4,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2037700": {
+        "start": 6,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -1100,15 +1696,114 @@
     "matches": {
       "1252140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1254690": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けっか"
       },
       "1407460": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おおい"
+      }
+    }
+  },
+  {
+    "id": "176401",
+    "original": "計算書は四半期ごとに郵送されます。",
+    "en": [
+      {
+        "id": "238063",
+        "text": "Statements will be mailed every quarter."
+      }
+    ],
+    "indices": "計算書~ は 四半期~ 毎に{ごとに} 郵送~ 為れる{されます}",
+    "vocabIds": [
+      "1252140",
+      "1252180",
+      "2037940",
+      "1307330",
+      "1542380"
+    ],
+    "matches": {
+      "1252140": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1252180": {
+        "start": 0,
+        "length": 3,
+        "reading": "けいさんしょ"
+      },
+      "1307330": {
+        "start": 4,
+        "length": 3,
+        "reading": "しはんき"
+      },
+      "1542380": {
+        "start": 10,
+        "length": 2,
+        "reading": "ゆうそう"
+      },
+      "2037940": {
+        "start": 2,
+        "length": 1,
+        "reading": "しょ"
+      }
+    }
+  },
+  {
+    "id": "176402",
+    "original": "計算機はすばらしい発明品だ。",
+    "en": [
+      {
+        "id": "238062",
+        "text": "The calculator is a wonderful invention."
+      }
+    ],
+    "indices": "計算機 は 素晴らしい{すばらしい} 発明品 だ",
+    "vocabIds": [
+      "1252140",
+      "1592560",
+      "2037700",
+      "1477910",
+      "1679360",
+      "2648780"
+    ],
+    "matches": {
+      "1252140": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1477910": {
+        "start": 9,
+        "length": 2,
+        "reading": "はつめい"
+      },
+      "1592560": {
+        "start": 0,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "1679360": {
+        "start": 9,
+        "length": 3,
+        "reading": "はつめいひん"
+      },
+      "2037700": {
+        "start": 2,
+        "length": 1,
+        "reading": "き"
+      },
+      "2648780": {
+        "start": 11,
+        "length": 1,
+        "reading": "ひん"
       }
     }
   },
@@ -1123,22 +1818,31 @@
     ],
     "indices": "計算機 が[01] 有る{あれば} 計算[01] は 遥かに[01]{はるかに} 楽(らく)[01] だ",
     "vocabIds": [
-      "1592560",
       "1252140",
+      "1592560",
+      "2037700",
       "1207230"
     ],
     "matches": {
       "1207230": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "らく"
       },
       "1252140": {
-        "start": 7,
-        "length": 2
+        "start": 0,
+        "length": 2,
+        "reading": "けいさん"
       },
       "1592560": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2037700": {
+        "start": 2,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -1159,11 +1863,13 @@
     "matches": {
       "1252140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1592690": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "けんざん"
       }
     }
   },
@@ -1184,11 +1890,13 @@
     "matches": {
       "1215320": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "まちがい"
       },
       "1252140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       }
     }
   },
@@ -1205,20 +1913,35 @@
     "vocabIds": [
       "1252140",
       "1271320",
-      "2213220"
+      "1281170",
+      "1465610",
+      "1465600"
     ],
     "matches": {
       "1252140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1271320": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ごさ"
       },
-      "2213220": {
+      "1281170": {
         "start": 11,
-        "length": 8
+        "length": 2,
+        "reading": "こうりょ"
+      },
+      "1465600": {
+        "start": 14,
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1465610": {
+        "start": 14,
+        "length": 2,
+        "reading": "いれ"
       }
     }
   },
@@ -1233,32 +1956,61 @@
     ],
     "indices": "契約者~ と 話す 迄{まで} は 最終的{最終的な} 予算 を 計算[01] 為る(する){する} 事(こと){こと} は 出来る{できません}",
     "vocabIds": [
+      "1250190",
       "1933820",
+      "1322990",
       "1562350",
+      "1293940",
       "1721330",
+      "1437260",
       "1543000",
       "1252140"
     ],
     "matches": {
+      "1250190": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいやく"
+      },
       "1252140": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1293940": {
+        "start": 9,
+        "length": 2,
+        "reading": "さいしゅう"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1437260": {
+        "start": 11,
+        "length": 1,
+        "reading": "てき"
       },
       "1543000": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "よさん"
       },
       "1562350": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "はなす"
       },
       "1721330": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "さいしゅうてき"
       },
       "1933820": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けいやくしゃ"
       }
     }
   },
@@ -1275,20 +2027,29 @@
     "vocabIds": [
       "1247250",
       "1252140",
-      "1215330"
+      "1215330",
+      "2017170"
     ],
     "matches": {
       "1215330": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "まちがえ"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1252140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "2017170": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
       }
     }
   },
@@ -1306,24 +2067,34 @@
       "1607050",
       "1252140",
       "1223980",
-      "1203310"
+      "1203310",
+      "1203300"
     ],
     "matches": {
+      "1203300": {
+        "start": 17,
+        "length": 2,
+        "reading": "はずれ"
+      },
       "1203310": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "はずれ"
       },
       "1223980": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きどう"
       },
       "1252140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -1338,7 +2109,9 @@
     ],
     "indices": "科学者 は 惑星 間(かん)[02] の 距離 を 容易{容易に} 計算[01] 出来る{できる}",
     "vocabIds": [
+      "1192700",
       "1192750",
+      "1322990",
       "1562600",
       "1215230",
       "1232920",
@@ -1346,29 +2119,45 @@
       "1252140"
     ],
     "matches": {
+      "1192700": {
+        "start": 0,
+        "length": 2,
+        "reading": "かがく"
+      },
       "1192750": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かがくしゃ"
       },
       "1215230": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かん"
       },
       "1232920": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きょり"
       },
       "1252140": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1545350": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ようい"
       },
       "1562600": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "わくせい"
       }
     }
   },
@@ -1385,20 +2174,140 @@
     "vocabIds": [
       "2005860",
       "1252140",
-      "1430580"
+      "1605620"
     ],
     "matches": {
       "1252140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
-      "1430580": {
-        "start": 12,
-        "length": 1
+      "1605620": {
+        "start": 10,
+        "length": 4,
+        "reading": "やりなおさ"
       },
       "2005860": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "もういちど"
+      }
+    }
+  },
+  {
+    "id": "196288",
+    "original": "ポケットの計算機は靴下と同じくらい安く買え、また、鉛筆や消しゴムと同じくらい、何千人というイギリスの学童にとっては生活に不可欠のものである。",
+    "en": [
+      {
+        "id": "33466",
+        "text": "Pocket calculators are as cheap to buy as a pair of socks, and as essential to thousands of British school children as a pencil and eraser."
+      }
+    ],
+    "indices": "ポケット の 計算機 は 靴下 と 同じくらい 安く 買う[01]{買え} 又{また} 鉛筆 や 消しゴム と 同じくらい 何千 人(にん) と言う{という} 英吉利{イギリス} の 学童 に取って{にとって} は 生活 に 不可欠 の ものである",
+    "vocabIds": [
+      "1252140",
+      "1592560",
+      "2037700",
+      "1246740",
+      "1451750",
+      "2068060",
+      "1153670",
+      "1913180",
+      "1178590",
+      "1350080",
+      "1577100",
+      "1189120",
+      "1388740",
+      "1580640",
+      "1207010",
+      "1378860",
+      "1491400"
+    ],
+    "matches": {
+      "1153670": {
+        "start": 17,
+        "length": 2,
+        "reading": "やすく"
+      },
+      "1178590": {
+        "start": 25,
+        "length": 2,
+        "reading": "えんぴつ"
+      },
+      "1189120": {
+        "start": 39,
+        "length": 2,
+        "reading": "なんせん"
+      },
+      "1207010": {
+        "start": 50,
+        "length": 2,
+        "reading": "がくどう"
+      },
+      "1246740": {
+        "start": 9,
+        "length": 2,
+        "reading": "くつした"
+      },
+      "1252140": {
+        "start": 5,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1350080": {
+        "start": 28,
+        "length": 4,
+        "reading": "けしごむ"
+      },
+      "1378860": {
+        "start": 57,
+        "length": 2,
+        "reading": "せいかつ"
+      },
+      "1388740": {
+        "start": 40,
+        "length": 1,
+        "reading": "せん"
+      },
+      "1451750": {
+        "start": 12,
+        "length": 2,
+        "reading": "おなじ"
+      },
+      "1491400": {
+        "start": 60,
+        "length": 3,
+        "reading": "ふかけつ"
+      },
+      "1577100": {
+        "start": 39,
+        "length": 1,
+        "reading": "なん"
+      },
+      "1580640": {
+        "start": 41,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1592560": {
+        "start": 5,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "1913180": {
+        "start": 17,
+        "length": 2,
+        "reading": "やすく"
+      },
+      "2037700": {
+        "start": 7,
+        "length": 1,
+        "reading": "き"
+      },
+      "2068060": {
+        "start": 12,
+        "length": 5,
+        "reading": "おなじくらい"
       }
     }
   },
@@ -1419,11 +2328,13 @@
     "matches": {
       "1252140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1611610": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "まちがっ"
       }
     }
   },
@@ -1438,22 +2349,31 @@
     ],
     "indices": "ビジネスマン が 計算機 を 使う{使って} 計算[01] 為る(する){している}",
     "vocabIds": [
+      "1252140",
       "1592560",
-      "1305990",
-      "1252140"
+      "2037700",
+      "1305990"
     ],
     "matches": {
       "1252140": {
-        "start": 14,
-        "length": 2
+        "start": 7,
+        "length": 2,
+        "reading": "けいさん"
       },
       "1305990": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
       },
       "1592560": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2037700": {
+        "start": 9,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -1468,6 +2388,7 @@
     ],
     "indices": "何れ丈{どれだけ} 本(ほん)[01] に 使う{使った} か を ざっと 計算[01] 為る(する){して} 見る[05]{みて} 下さい{ください}",
     "vocabIds": [
+      "1522150",
       "2849135",
       "1305990",
       "1252140"
@@ -1475,15 +2396,23 @@
     "matches": {
       "1252140": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1305990": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
+      },
+      "1522150": {
+        "start": 4,
+        "length": 1,
+        "reading": "ほん"
       },
       "2849135": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ほんに"
       }
     }
   },
@@ -1504,11 +2433,13 @@
     "matches": {
       "1252140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1376760": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せいかく"
       }
     }
   },
@@ -1530,15 +2461,18 @@
     "matches": {
       "1175570": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1252140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1584460": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
       }
     }
   },
@@ -1558,37 +2492,50 @@
       "1006900",
       "1208360",
       "1584695",
+      "1278410",
       "1951480",
-      "2630380"
+      "1305990"
     ],
     "matches": {
       "1006900": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "そのた"
       },
       "1208360": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かつどう"
       },
       "1252140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1278410": {
+        "start": 18,
+        "length": 2,
+        "reading": "ひろく"
+      },
+      "1305990": {
+        "start": 20,
+        "length": 2,
+        "reading": "つかわ"
       },
       "1442240": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "でんたつ"
       },
       "1584695": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "めん"
       },
       "1951480": {
         "start": 18,
-        "length": 2
-      },
-      "2630380": {
-        "start": 20,
-        "length": 1
+        "length": 2,
+        "reading": "ひろく"
       }
     }
   },
@@ -1610,15 +2557,159 @@
     "matches": {
       "1252140": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1484620": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1553170": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
+      }
+    }
+  },
+  {
+    "id": "216238",
+    "original": "しかし今日では、計算機は学校の試験では自由に使うことが出来るし、数学の試験の時に聞こえる音といえば、子供たちが計算機を叩く音しかしない、という学校も多い。",
+    "en": [
+      {
+        "id": "53542",
+        "text": "Nowadays, however, calculators can be used freely in school examinations, and already in many schools the only sound to be heard during a math exam is the sound of children tapping on their calculators."
+      }
+    ],
+    "indices": "然し{しかし} 今日 で(#2028980) は 計算機 は 学校 の 試験 で(#2028980) は 自由に 使う 事が出来る{ことが出来る} 為る(する){し} 数学 の 試験 の 時(とき) に 聞こえる[01] 音(おと)[01] と言えば[02]{といえば} 子供たち が 計算機 を 叩く(たたく)[01] 音(おと)[01] しか 為る(する){しない} と言う{という} 学校 も 多い",
+    "vocabIds": [
+      "1579110",
+      "2553140",
+      "1252140",
+      "1592560",
+      "2037700",
+      "1206730",
+      "1312350",
+      "1318720",
+      "1318740",
+      "1305990",
+      "1004550",
+      "1340450",
+      "1372980",
+      "1315840",
+      "2021540",
+      "1591150",
+      "1576900",
+      "1307850",
+      "1307870",
+      "1416170",
+      "1407460"
+    ],
+    "matches": {
+      "1004550": {
+        "start": 24,
+        "length": 6,
+        "reading": "ことができる"
+      },
+      "1206730": {
+        "start": 12,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1252140": {
+        "start": 8,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1305990": {
+        "start": 22,
+        "length": 2,
+        "reading": "つかう"
+      },
+      "1307850": {
+        "start": 50,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1307870": {
+        "start": 50,
+        "length": 4,
+        "reading": "こどもたち"
+      },
+      "1312350": {
+        "start": 15,
+        "length": 2,
+        "reading": "しけん"
+      },
+      "1315840": {
+        "start": 38,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1318720": {
+        "start": 19,
+        "length": 2,
+        "reading": "じゆう"
+      },
+      "1318740": {
+        "start": 19,
+        "length": 3,
+        "reading": "じゆうに"
+      },
+      "1340450": {
+        "start": 27,
+        "length": 3,
+        "reading": "できる"
+      },
+      "1372980": {
+        "start": 32,
+        "length": 2,
+        "reading": "すうがく"
+      },
+      "1407460": {
+        "start": 74,
+        "length": 2,
+        "reading": "おおい"
+      },
+      "1416170": {
+        "start": 59,
+        "length": 2,
+        "reading": "たたく"
+      },
+      "1576900": {
+        "start": 44,
+        "length": 1,
+        "reading": "おと"
+      },
+      "1579110": {
+        "start": 3,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1591150": {
+        "start": 40,
+        "length": 4,
+        "reading": "きこえる"
+      },
+      "1592560": {
+        "start": 8,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2021540": {
+        "start": 38,
+        "length": 2,
+        "reading": "ときに"
+      },
+      "2037700": {
+        "start": 10,
+        "length": 1,
+        "reading": "き"
+      },
+      "2553140": {
+        "start": 3,
+        "length": 4,
+        "reading": "きょうでは"
       }
     }
   },
@@ -1641,19 +2732,23 @@
     "matches": {
       "1001820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1198550": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1252140": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1521410": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぼくら"
       }
     }
   },
@@ -1668,22 +2763,175 @@
     ],
     "indices": "コンピュータ{コンピューター} は 非常に 早く{速く} 計算[01] が[01] 出来る{できる}",
     "vocabIds": [
+      "1484920",
       "1484930",
-      "2093400",
       "1252140"
     ],
     "matches": {
       "1252140": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1484920": {
+        "start": 8,
+        "length": 2,
+        "reading": "ひじょう"
       },
       "1484930": {
         "start": 8,
-        "length": 3
-      },
-      "2093400": {
+        "length": 3,
+        "reading": "ひじょうに"
+      }
+    }
+  },
+  {
+    "id": "217244",
+    "original": "コンピューターは単なる計算機だと考えられている。",
+    "en": [
+      {
+        "id": "54552",
+        "text": "Computers can be thought of as mere calculating machines."
+      }
+    ],
+    "indices": "コンピュータ{コンピューター} は 単なる 計算機 だ と 考える{考えられている}",
+    "vocabIds": [
+      "1417020",
+      "1252140",
+      "1592560",
+      "2037700",
+      "1281020",
+      "1281000"
+    ],
+    "matches": {
+      "1252140": {
         "start": 11,
-        "length": 1
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1281000": {
+        "start": 16,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1281020": {
+        "start": 16,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1417020": {
+        "start": 8,
+        "length": 3,
+        "reading": "たんなる"
+      },
+      "1592560": {
+        "start": 11,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2037700": {
+        "start": 13,
+        "length": 1,
+        "reading": "き"
+      }
+    }
+  },
+  {
+    "id": "229842",
+    "original": "ある数学の教師は、「計算機があれば、子供は正しい答えは出しますが、どうしてそういう答えになったのかは全く理解していないのです」と言っている。",
+    "en": [
+      {
+        "id": "67205",
+        "text": "A math teacher says, \"With a calculator, the child can reach the right answer, but have no idea at all how he got there.\""
+      }
+    ],
+    "indices": "或る{ある} 数学 の 教師 は 計算機 が[01] 有る{あれば} 子供 は 正しい 答え(#1449530) は 出す[01]{出します} が 如何して{どうして} そう言う{そういう} 答え(#1449530) になる[01]{になった} の か[02] は 全く 理解 為る(する){していない} のです と 言う{言っている}",
+    "vocabIds": [
+      "1372980",
+      "1237130",
+      "1252140",
+      "1592560",
+      "2037700",
+      "1307850",
+      "1376600",
+      "1449530",
+      "1338180",
+      "1339160",
+      "1394800",
+      "1549910",
+      "1632140",
+      "1587040"
+    ],
+    "matches": {
+      "1237130": {
+        "start": 5,
+        "length": 2,
+        "reading": "きょうし"
+      },
+      "1252140": {
+        "start": 10,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1307850": {
+        "start": 18,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1338180": {
+        "start": 27,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 27,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1372980": {
+        "start": 2,
+        "length": 2,
+        "reading": "すうがく"
+      },
+      "1376600": {
+        "start": 21,
+        "length": 3,
+        "reading": "ただしい"
+      },
+      "1394800": {
+        "start": 50,
+        "length": 2,
+        "reading": "まったく"
+      },
+      "1449530": {
+        "start": 24,
+        "length": 2,
+        "reading": "こたえ"
+      },
+      "1549910": {
+        "start": 52,
+        "length": 2,
+        "reading": "りかい"
+      },
+      "1587040": {
+        "start": 64,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1592560": {
+        "start": 10,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "1632140": {
+        "start": 63,
+        "length": 4,
+        "reading": "といって"
+      },
+      "2037700": {
+        "start": 12,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -1698,7 +2946,11 @@
     ],
     "indices": "に取って{にとって} 理論物理学~ は 遊び[01] の 様な{ような} 物(もの){もの} だ{だった} が そんな 彼(かれ)[01] も 税金 の 計算[01] となると~ からきし 駄目 だ{だった}",
     "vocabIds": [
+      "1550160",
       "1795890",
+      "1502790",
+      "1502800",
+      "1955900",
       "1542070",
       "1483070",
       "1382100",
@@ -1708,27 +2960,53 @@
     "matches": {
       "1252140": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1382100": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "ぜいきん"
       },
       "1409110": {
         "start": 49,
-        "length": 2
+        "length": 2,
+        "reading": "だめ"
       },
       "1483070": {
         "start": 34,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1502790": {
+        "start": 14,
+        "length": 2,
+        "reading": "ぶつり"
+      },
+      "1502800": {
+        "start": 14,
+        "length": 3,
+        "reading": "ぶつりがく"
       },
       "1542070": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "あそび"
+      },
+      "1550160": {
+        "start": 12,
+        "length": 2,
+        "reading": "りろん"
       },
       "1795890": {
         "start": 12,
-        "length": 5
+        "length": 5,
+        "reading": "りろんぶつりがく"
+      },
+      "1955900": {
+        "start": 16,
+        "length": 1,
+        "reading": "がく"
       }
     }
   },
@@ -1743,42 +3021,124 @@
     ],
     "indices": "ＧＮＰ は 一定期間 に 国[01] に因って{によって} 生産(せいさん) 為れる{された} 全て{すべての} 商品 と サービス[01] の 市場価値~ の 総額 として 計算[01] 為れる{される}",
     "vocabIds": [
+      "1164950",
       "1164970",
+      "1220550",
       "1592250",
       "1378990",
       "1347310",
+      "1308305",
       "1936320",
+      "1189600",
       "1401510",
       "1252140"
     ],
     "matches": {
+      "1164950": {
+        "start": 4,
+        "length": 2,
+        "reading": "いってい"
+      },
       "1164970": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "いっていきかん"
+      },
+      "1189600": {
+        "start": 33,
+        "length": 2,
+        "reading": "かち"
+      },
+      "1220550": {
+        "start": 6,
+        "length": 2,
+        "reading": "きかん"
       },
       "1252140": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1308305": {
+        "start": 31,
+        "length": 2,
+        "reading": "しじょう"
       },
       "1347310": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "しょうひん"
       },
       "1378990": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "せいさん"
       },
       "1401510": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "そうがく"
       },
       "1592250": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       },
       "1936320": {
         "start": 31,
-        "length": 4
+        "length": 4,
+        "reading": "しじょうかち"
+      }
+    }
+  },
+  {
+    "id": "236872",
+    "original": "この計算機は調子が良くない。",
+    "en": [
+      {
+        "id": "59516",
+        "text": "Something is wrong with this calculator."
+      }
+    ],
+    "indices": "此の{この} 計算機 は 調子がいい[01]{調子が良くない}~",
+    "vocabIds": [
+      "1252140",
+      "1592560",
+      "2037700",
+      "1429170",
+      "1605820",
+      "1605870"
+    ],
+    "matches": {
+      "1252140": {
+        "start": 2,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1429170": {
+        "start": 6,
+        "length": 2,
+        "reading": "ちょうし"
+      },
+      "1592560": {
+        "start": 2,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "1605820": {
+        "start": 9,
+        "length": 2,
+        "reading": "よく"
+      },
+      "1605870": {
+        "start": 9,
+        "length": 2,
+        "reading": "よく"
+      },
+      "2037700": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -1793,22 +3153,93 @@
     ],
     "indices": "此の{この} ソフトウェア{ソフトウエア} は ギブスサンプリング~ の アルゴリズム~ に依り{により} マルコフ連鎖モンテカルロ法~ の 計算 を 行う{行います}",
     "vocabIds": [
+      "2332140",
       "2565360",
+      "1559490",
+      "1136160",
+      "1438050",
       "1252140",
+      "1589060",
       "1589050"
     ],
     "matches": {
+      "1136160": {
+        "start": 34,
+        "length": 7,
+        "reading": "もんてかるろほう"
+      },
       "1252140": {
         "start": 42,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1438050": {
+        "start": 40,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1559490": {
+        "start": 32,
+        "length": 2,
+        "reading": "れんさ"
       },
       "1589050": {
         "start": 45,
-        "length": 2
+        "length": 2,
+        "reading": "おこない"
+      },
+      "1589060": {
+        "start": 45,
+        "length": 2,
+        "reading": "おこない"
+      },
+      "2332140": {
+        "start": 28,
+        "length": 6,
+        "reading": "まるこふれんさ"
       },
       "2565360": {
         "start": 28,
-        "length": 13
+        "length": 13,
+        "reading": "まるこふれんさもんてかるろほう"
+      }
+    }
+  },
+  {
+    "id": "1158411",
+    "original": "この計算機、何だかおかしいんだ。",
+    "en": [
+      {
+        "id": "59516",
+        "text": "Something is wrong with this calculator."
+      }
+    ],
+    "vocabIds": [
+      "1252140",
+      "1592560",
+      "2037700",
+      "1188350"
+    ],
+    "matches": {
+      "1188350": {
+        "start": 6,
+        "length": 3,
+        "reading": "なんだか"
+      },
+      "1252140": {
+        "start": 2,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1592560": {
+        "start": 2,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2037700": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -1829,15 +3260,18 @@
     "matches": {
       "1252140": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1484620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ひよう"
       },
       "1553170": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       }
     }
   },
@@ -1858,15 +3292,92 @@
     "matches": {
       "1252140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1340450": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "できる"
       },
       "1443600": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんたく"
+      }
+    }
+  },
+  {
+    "id": "7894419",
+    "original": "客さんに値段を伝えるとき、日本の店員さんはたびたび計算機を使って見せる。",
+    "en": [
+      {
+        "id": "7894418",
+        "text": "When stating the price to customers, Japanese clerks often type the number on a calculator and hold it up."
+      }
+    ],
+    "vocabIds": [
+      "1226630",
+      "1600160",
+      "1441870",
+      "1582710",
+      "1440670",
+      "1252140",
+      "1592560",
+      "2037700",
+      "1305990",
+      "1259210"
+    ],
+    "matches": {
+      "1226630": {
+        "start": 0,
+        "length": 1,
+        "reading": "きゃく"
+      },
+      "1252140": {
+        "start": 25,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1259210": {
+        "start": 32,
+        "length": 3,
+        "reading": "みせる"
+      },
+      "1305990": {
+        "start": 29,
+        "length": 2,
+        "reading": "つかっ"
+      },
+      "1440670": {
+        "start": 16,
+        "length": 2,
+        "reading": "てんいん"
+      },
+      "1441870": {
+        "start": 7,
+        "length": 3,
+        "reading": "つたえる"
+      },
+      "1582710": {
+        "start": 13,
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "1592560": {
+        "start": 25,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "1600160": {
+        "start": 4,
+        "length": 2,
+        "reading": "ねだん"
+      },
+      "2037700": {
+        "start": 27,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -1886,11 +3397,13 @@
     "matches": {
       "1252140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1611610": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "まちがっ"
       }
     }
   },
@@ -1911,15 +3424,18 @@
     "matches": {
       "1214330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんたん"
       },
       "1244470": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "にがて"
       },
       "1252140": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       }
     }
   },
@@ -1936,6 +3452,7 @@
       "1460850",
       "1536010",
       "1198910",
+      "1578150",
       "1243650",
       "1214330",
       "1252140",
@@ -1944,31 +3461,43 @@
     "matches": {
       "1198910": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "とける"
       },
       "1214330": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "かんたん"
       },
       "1243650": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうきゅう"
       },
       "1244470": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "にがて"
       },
       "1252140": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1460850": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "むずかしい"
       },
       "1536010": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
+      },
+      "1578150": {
+        "start": 20,
+        "length": 1,
+        "reading": "きゅう"
       }
     }
   },
@@ -1984,20 +3513,23 @@
     "vocabIds": [
       "1311110",
       "1252140",
-      "1376590"
+      "1376600"
     ],
     "matches": {
       "1252140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1376590": {
+      "1376600": {
         "start": 5,
-        "length": 1
+        "length": 4,
+        "reading": "ただしかっ"
       }
     }
   },
@@ -2017,11 +3549,13 @@
     "matches": {
       "1232920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょり"
       },
       "1252140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       }
     }
   },
@@ -2039,33 +3573,45 @@
       "1162170",
       "1259140",
       "1006870",
+      "1320800",
       "1570520",
       "1252140"
     ],
     "matches": {
       "1006870": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "そのじつ"
       },
       "1162170": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いっけん"
       },
       "1252140": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1259140": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
+      },
+      "1320800": {
+        "start": 28,
+        "length": 1,
+        "reading": "じつ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1570520": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "ちみつ"
       }
     }
   },
@@ -2079,32 +3625,55 @@
       }
     ],
     "vocabIds": [
+      "1192700",
       "1192750",
+      "1322990",
       "1305990",
       "1252140",
       "1342510",
+      "1589060",
       "1589050"
     ],
     "matches": {
+      "1192700": {
+        "start": 0,
+        "length": 2,
+        "reading": "かがく"
+      },
       "1192750": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かがくしゃ"
       },
       "1252140": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1305990": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1342510": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "しょり"
       },
       "1589050": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "おこない"
+      },
+      "1589060": {
+        "start": 27,
+        "length": 2,
+        "reading": "おこない"
       }
     }
   },
@@ -2118,22 +3687,43 @@
       }
     ],
     "vocabIds": [
+      "1192700",
       "1192750",
+      "1322990",
       "1252140",
+      "1305990",
       "1305720"
     ],
     "matches": {
+      "1192700": {
+        "start": 0,
+        "length": 2,
+        "reading": "かがく"
+      },
       "1192750": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かがくしゃ"
       },
       "1252140": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1305720": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "つかい"
+      },
+      "1305990": {
+        "start": 22,
+        "length": 2,
+        "reading": "つかい"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       }
     }
   },
@@ -2151,28 +3741,109 @@
       "1456360",
       "1343950",
       "1252140",
-      "2866243"
+      "1236940"
     ],
     "matches": {
       "1206730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1236940": {
+        "start": 22,
+        "length": 3,
+        "reading": "おそわり"
       },
       "1252140": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1343950": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かい"
       },
       "1456360": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "よん"
+      }
+    }
+  },
+  {
+    "id": "11741925",
+    "original": "計算機使えば。",
+    "en": [
+      {
+        "id": "10143605",
+        "text": "Use a calculator."
+      }
+    ],
+    "vocabIds": [
+      "1252140",
+      "1592560",
+      "2037700",
+      "1305990"
+    ],
+    "matches": {
+      "1252140": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいさん"
       },
-      "2866243": {
-        "start": 22,
-        "length": 1
+      "1305990": {
+        "start": 3,
+        "length": 2,
+        "reading": "つかえ"
+      },
+      "1592560": {
+        "start": 0,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2037700": {
+        "start": 2,
+        "length": 1,
+        "reading": "き"
+      }
+    }
+  },
+  {
+    "id": "11741927",
+    "original": "計算機を使えよ。",
+    "en": [
+      {
+        "id": "10143605",
+        "text": "Use a calculator."
+      }
+    ],
+    "vocabIds": [
+      "1252140",
+      "1592560",
+      "2037700",
+      "1305990"
+    ],
+    "matches": {
+      "1252140": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1305990": {
+        "start": 4,
+        "length": 2,
+        "reading": "つかえ"
+      },
+      "1592560": {
+        "start": 0,
+        "length": 3,
+        "reading": "けいさんき"
+      },
+      "2037700": {
+        "start": 2,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -2188,20 +3859,29 @@
     "vocabIds": [
       "1311110",
       "1252140",
-      "1215330"
+      "1215330",
+      "2017170"
     ],
     "matches": {
       "1215330": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "まちがえ"
       },
       "1252140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "2017170": {
+        "start": 5,
+        "length": 3,
+        "reading": "まちがえ"
       }
     }
   },
@@ -2226,15 +3906,18 @@
     "matches": {
       "1244470": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "にがて"
       },
       "1252140": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
       },
       "1601260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ばか"
       }
     }
   },
@@ -2258,72 +3941,117 @@
       "1278100",
       "1202340",
       "2453520",
-      "2653970",
       "1521400",
       "2259330",
+      "1258520",
+      "1456420",
       "2727560",
+      "1212480",
+      "1683220",
+      "1505090",
+      "1217700",
       "1949660"
     ],
     "matches": {
       "1191420": {
         "start": 1,
-        "length": 3
+        "length": 3,
+        "reading": "なつやすみ"
       },
       "1202340": {
         "start": 39,
-        "length": 3
+        "length": 3,
+        "reading": "えにっき"
+      },
+      "1212480": {
+        "start": 89,
+        "length": 2,
+        "reading": "かんそう"
       },
       "1213170": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
+      },
+      "1217700": {
+        "start": 116,
+        "length": 3,
+        "reading": "がんばっ"
       },
       "1252140": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "けいさん"
+      },
+      "1258520": {
+        "start": 84,
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1278100": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "こうさく"
       },
       "1318720": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "じゆう"
       },
       "1337270": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくだい"
       },
       "1427520": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "ちょう"
+      },
+      "1456420": {
+        "start": 87,
+        "length": 2,
+        "reading": "どくしょ"
+      },
+      "1505090": {
+        "start": 91,
+        "length": 1,
+        "reading": "ぶん"
       },
       "1521400": {
         "start": 64,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1577100": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
+      },
+      "1683220": {
+        "start": 89,
+        "length": 3,
+        "reading": "かんそうぶん"
       },
       "1949660": {
         "start": 116,
-        "length": 4
+        "length": 4,
+        "reading": "がんばって"
       },
       "2259330": {
         "start": 82,
-        "length": 4
+        "length": 4,
+        "reading": "じゆうけんきゅう"
       },
       "2453520": {
         "start": 47,
-        "length": 4
-      },
-      "2653970": {
-        "start": 59,
-        "length": 1
+        "length": 4,
+        "reading": "おきまり"
       },
       "2727560": {
         "start": 87,
-        "length": 5
+        "length": 5,
+        "reading": "どくしょかんそうぶん"
       }
     }
   }

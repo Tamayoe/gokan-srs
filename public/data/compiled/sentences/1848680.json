@@ -1,5 +1,40 @@
 [
   {
+    "id": "93106",
+    "original": "彼女はオレンジからジュースを絞り出そうとした。",
+    "en": [
+      {
+        "id": "310603",
+        "text": "She tried to express juice from the orange."
+      },
+      {
+        "id": "410508",
+        "text": "She tried to squeeze the juice out of the orange."
+      },
+      {
+        "id": "410513",
+        "text": "She tried to squeeze the juice from the orange."
+      }
+    ],
+    "indices": "彼女[01] は オレンジ から ジュース[01]~ を 絞り出す{絞り出そう}~ とする{とした}",
+    "vocabIds": [
+      "1483150",
+      "1848680"
+    ],
+    "matches": {
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1848680": {
+        "start": 14,
+        "length": 4,
+        "reading": "しぼりだそ"
+      }
+    }
+  },
+  {
     "id": "105389",
     "original": "彼は歯磨きをチューブから絞り出した。",
     "en": [
@@ -17,15 +52,18 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1601040": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "はみがき"
       },
       "1848680": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "しぼりだし"
       }
     }
   }

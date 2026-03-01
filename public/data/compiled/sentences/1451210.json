@@ -1,5 +1,32 @@
 [
   {
+    "id": "74114",
+    "original": "その車は動こうとしなかった。",
+    "en": [
+      {
+        "id": "329606",
+        "text": "The car wouldn't start."
+      }
+    ],
+    "indices": "其の[01]{その} 車(くるま) は 動く{動こう} とする{としなかった}",
+    "vocabIds": [
+      "1323080",
+      "1451210"
+    ],
+    "matches": {
+      "1323080": {
+        "start": 2,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1451210": {
+        "start": 4,
+        "length": 2,
+        "reading": "うごこ"
+      }
+    }
+  },
+  {
     "id": "74592",
     "original": "肩関節は、単独で動くほか、腕の動きにも連動して動きます。",
     "en": [
@@ -10,7 +37,10 @@
     ],
     "indices": "肩 関節 は 単独 で(#2028980) 動く 他(ほか){ほか} 腕(うで)[01] の 動き に も 連動[01]~ 為る(する){して} 動く{動きます}",
     "vocabIds": [
+      "1258950",
       "2683100",
+      "1215960",
+      "1417780",
       "1417790",
       "1451210",
       "1562850",
@@ -18,29 +48,50 @@
       "1559710"
     ],
     "matches": {
+      "1215960": {
+        "start": 1,
+        "length": 2,
+        "reading": "かんせつ"
+      },
+      "1258950": {
+        "start": 0,
+        "length": 1,
+        "reading": "かた"
+      },
+      "1417780": {
+        "start": 5,
+        "length": 2,
+        "reading": "たんどく"
+      },
       "1417790": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "たんどくで"
       },
       "1451180": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "うごき"
       },
       "1451210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1559710": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "れんどう"
       },
       "1562850": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "うで"
       },
       "2683100": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かたかんせつ"
       }
     }
   },
@@ -55,27 +106,163 @@
     ],
     "indices": "静かに 皆{みんな} その場[01] を 動く{動かないで} 此れ[01]{これ} から 持ち物検査~ を 始める[01]{はじめます}",
     "vocabIds": [
+      "1381820",
       "2119870",
       "2205240",
+      "1355790",
       "1451210",
-      "2117990"
+      "1605240",
+      "2117990",
+      "1257890"
     ],
     "matches": {
+      "1257890": {
+        "start": 24,
+        "length": 2,
+        "reading": "けんさ"
+      },
+      "1355790": {
+        "start": 9,
+        "length": 1,
+        "reading": "ば"
+      },
+      "1381820": {
+        "start": 0,
+        "length": 2,
+        "reading": "しずか"
+      },
       "1451210": {
         "start": 11,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1605240": {
+        "start": 21,
+        "length": 3,
+        "reading": "もちもの"
       },
       "2117990": {
         "start": 21,
-        "length": 5
+        "length": 5,
+        "reading": "もちものけんさ"
       },
       "2119870": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しずかに"
       },
       "2205240": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "そのば"
+      }
+    }
+  },
+  {
+    "id": "76396",
+    "original": "むろん、舟は何百艘も水面を動きまわっているが、どれでもいいというわけにはいかない。",
+    "en": [
+      {
+        "id": "327324",
+        "text": "Of course there were several hundred boats moving around on the water but not just any old one would do."
+      }
+    ],
+    "indices": "無論{むろん} 船(ふね)[01]{舟} は 何百 艘 も 水面 を 動き回る{動きまわっている} が[03] 何れでも{どれでも} いい(#2820690)[01] と 言う{いう} 訳にはいかない{わけにはいかない}",
+    "vocabIds": [
+      "1577100",
+      "1189290",
+      "1488000",
+      "2077160",
+      "1372120",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1189290": {
+        "start": 6,
+        "length": 2,
+        "reading": "なんひゃく"
+      },
+      "1372120": {
+        "start": 10,
+        "length": 2,
+        "reading": "すいめん"
+      },
+      "1451180": {
+        "start": 13,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 13,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1488000": {
+        "start": 7,
+        "length": 1,
+        "reading": "ひゃく"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なん"
+      },
+      "2077160": {
+        "start": 8,
+        "length": 1,
+        "reading": "そう"
+      }
+    }
+  },
+  {
+    "id": "77393",
+    "original": "路面電車は電気で動く。",
+    "en": [
+      {
+        "id": "326326",
+        "text": "Streetcars run on electricity."
+      }
+    ],
+    "indices": "路面電車 は 電気[01] で(#2028980) 動く",
+    "vocabIds": [
+      "1644630",
+      "1810370",
+      "1443530",
+      "1443000",
+      "1896450",
+      "1451210"
+    ],
+    "matches": {
+      "1443000": {
+        "start": 5,
+        "length": 2,
+        "reading": "でんき"
+      },
+      "1443530": {
+        "start": 2,
+        "length": 2,
+        "reading": "でんしゃ"
+      },
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1644630": {
+        "start": 0,
+        "length": 2,
+        "reading": "ろめん"
+      },
+      "1810370": {
+        "start": 0,
+        "length": 4,
+        "reading": "ろめんでんしゃ"
+      },
+      "1896450": {
+        "start": 5,
+        "length": 5,
+        "reading": "でんきでうごく"
       }
     }
   },
@@ -96,11 +283,13 @@
     "matches": {
       "1451210": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1558370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -122,15 +311,57 @@
     "matches": {
       "1284930": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あいず"
       },
       "1451210": {
         "start": 11,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
+      }
+    }
+  },
+  {
+    "id": "83087",
+    "original": "母はいつも忙しく動きまわっている。",
+    "en": [
+      {
+        "id": "320629",
+        "text": "My mother is always on the go."
+      }
+    ],
+    "indices": "母(はは) は 何時も[01]{いつも} 忙しい(いそがしい){忙しく} 動き 回る(まわる)[11]{まわっている}",
+    "vocabIds": [
+      "1514990",
+      "1519290",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1451180": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1514990": {
+        "start": 0,
+        "length": 1,
+        "reading": "はは"
+      },
+      "1519290": {
+        "start": 5,
+        "length": 3,
+        "reading": "いそがしく"
       }
     }
   },
@@ -151,11 +382,163 @@
     "matches": {
       "1451210": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1488880": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひょうが"
+      }
+    }
+  },
+  {
+    "id": "92883",
+    "original": "彼女はこの機械を動かせない。",
+    "en": [
+      {
+        "id": "310826",
+        "text": "She cannot work this machine."
+      }
+    ],
+    "indices": "彼女[01] は 此の{この} 機械 を[02] 動く{動かせない}",
+    "vocabIds": [
+      "1483150",
+      "1220810",
+      "1451210"
+    ],
+    "matches": {
+      "1220810": {
+        "start": 5,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "94349",
+    "original": "彼女の自動車は途中で動かなくなった。",
+    "en": [
+      {
+        "id": "309357",
+        "text": "Her car broke down on the way."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 自動車 は 途中 で(#2028980) 動く{動かなく} 成る[01]{なった}",
+    "vocabIds": [
+      "1483150",
+      "1318400",
+      "1582200",
+      "1451210"
+    ],
+    "matches": {
+      "1318400": {
+        "start": 3,
+        "length": 3,
+        "reading": "じどうしゃ"
+      },
+      "1451210": {
+        "start": 10,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1582200": {
+        "start": 7,
+        "length": 2,
+        "reading": "とちゅう"
+      }
+    }
+  },
+  {
+    "id": "95914",
+    "original": "彼を起こすといけないから、私たちは動かなかった。",
+    "en": [
+      {
+        "id": "307791",
+        "text": "We did not move for fear we should wake him up."
+      }
+    ],
+    "indices": "彼(かれ) を 起こす と 行けない[07]{いけない} から 私たち は 動く{動かなかった}",
+    "vocabIds": [
+      "1483070",
+      "1223660",
+      "1311110",
+      "1311300",
+      "1451210"
+    ],
+    "matches": {
+      "1223660": {
+        "start": 2,
+        "length": 3,
+        "reading": "おこす"
+      },
+      "1311110": {
+        "start": 13,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 13,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1451210": {
+        "start": 17,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "98823",
+    "original": "彼は梃子でも動こうとしませんでした。",
+    "en": [
+      {
+        "id": "304878",
+        "text": "There was no budging him."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 梃子 でも 動く{動こう} とする{としませんでした}",
+    "vocabIds": [
+      "1483070",
+      "1598310",
+      "1451210"
+    ],
+    "matches": {
+      "1451210": {
+        "start": 6,
+        "length": 2,
+        "reading": "うごこ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1598310": {
+        "start": 2,
+        "length": 2,
+        "reading": "てこ"
       }
     }
   },
@@ -177,15 +560,18 @@
     "matches": {
       "1313580": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1451210": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -204,28 +590,39 @@
       "1451210",
       "1344390",
       "1414300",
+      "1229350",
       "1229340"
     ],
     "matches": {
       "1229340": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "もとめ"
+      },
+      "1229350": {
+        "start": 17,
+        "length": 2,
+        "reading": "もとめ"
       },
       "1344390": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "たすけ"
       },
       "1414300": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "おおごえ"
       },
       "1451210": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -249,23 +646,28 @@
     "matches": {
       "1193950": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かじ"
       },
       "1221170": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きびん"
       },
       "1350090": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "けしとめ"
       },
       "1451210": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -281,21 +683,36 @@
     "indices": "彼(かれ)[01] は いいね(#2829960)[01]~ 打てば響く~ 様に{ように} 直ぐ{すぐ} 動く{動いて} 呉れる{くれる} よ[01]",
     "vocabIds": [
       "1483070",
+      "1408810",
       "2735790",
+      "1238610",
       "1451210"
     ],
     "matches": {
+      "1238610": {
+        "start": 9,
+        "length": 2,
+        "reading": "ひびく"
+      },
+      "1408810": {
+        "start": 6,
+        "length": 2,
+        "reading": "ぶて"
+      },
       "1451210": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "2735790": {
         "start": 6,
-        "length": 5
+        "length": 5,
+        "reading": "ぶてばひびく"
       }
     }
   },
@@ -310,6 +727,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 目(め)[01] は 彼方此方[01]{あちらこちら} に 動く{動いた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1604890",
       "1451210"
@@ -317,15 +735,189 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1451210": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1604890": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "め"
+      }
+    }
+  },
+  {
+    "id": "119445",
+    "original": "彼が目を覚ましてはいけないので私たちは動かなかった。",
+    "en": [
+      {
+        "id": "284218",
+        "text": "We didn't move so that we would not wake him up."
+      }
+    ],
+    "indices": "彼(かれ) が 目を覚ます[01]{目を覚まして} は 行けない[02]{いけない} ので 私たち は 動く{動かなかった}",
+    "vocabIds": [
+      "1483070",
+      "1604890",
+      "1206060",
+      "1311110",
+      "1311300",
+      "1451210"
+    ],
+    "matches": {
+      "1206060": {
+        "start": 4,
+        "length": 3,
+        "reading": "さまし"
+      },
+      "1311110": {
+        "start": 15,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 15,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1451210": {
+        "start": 19,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1604890": {
+        "start": 2,
+        "length": 1,
+        "reading": "め"
+      }
+    }
+  },
+  {
+    "id": "120745",
+    "original": "彼がバスに乗るとすぐにバスは動き始めた。",
+    "en": [
+      {
+        "id": "283263",
+        "text": "As soon as he got on the bus, it began to move."
+      }
+    ],
+    "indices": "彼(かれ) が バス(#1098390) に 乗る[01] と 直ぐに{すぐに} バス(#1098390) は 動く{動き} 始める[03]{始めた}",
+    "vocabIds": [
+      "1483070",
+      "1355120",
+      "1451210",
+      "1451180",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 16,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 16,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1355120": {
+        "start": 5,
+        "length": 2,
+        "reading": "のる"
+      },
+      "1451180": {
+        "start": 14,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 14,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "121622",
+    "original": "馬は頑として動かなかった。",
+    "en": [
+      {
+        "id": "282379",
+        "text": "The horse would not move."
+      }
+    ],
+    "indices": "馬[01] は 頑として 動く{動かなかった}",
+    "vocabIds": [
+      "1471560",
+      "1633010",
+      "1451210"
+    ],
+    "matches": {
+      "1451210": {
+        "start": 6,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1471560": {
+        "start": 0,
+        "length": 1,
+        "reading": "うま"
+      },
+      "1633010": {
+        "start": 2,
+        "length": 4,
+        "reading": "がんとして"
+      }
+    }
+  },
+  {
+    "id": "121626",
+    "original": "馬はどうしても動こうとしなかった。",
+    "en": [
+      {
+        "id": "282379",
+        "text": "The horse would not move."
+      },
+      {
+        "id": "12744473",
+        "text": "The horse just wouldn't budge."
+      }
+    ],
+    "indices": "馬[01] は 如何しても{どうしても} 動く{動こう} とする{としなかった}",
+    "vocabIds": [
+      "1471560",
+      "1451210"
+    ],
+    "matches": {
+      "1451210": {
+        "start": 7,
+        "length": 2,
+        "reading": "うごこ"
+      },
+      "1471560": {
+        "start": 0,
+        "length": 1,
+        "reading": "うま"
       }
     }
   },
@@ -347,15 +939,18 @@
     "matches": {
       "1259140": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
       },
       "1451210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1451470": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どうぶつ"
       }
     }
   },
@@ -376,11 +971,70 @@
     "matches": {
       "1253570": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "うつ"
       },
       "1451210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      }
+    }
+  },
+  {
+    "id": "123789",
+    "original": "動き始めるまで待った方がいいんじゃないかしら。",
+    "en": [
+      {
+        "id": "280206",
+        "text": "We may as well cool our jets and wait until it starts moving again."
+      }
+    ],
+    "indices": "動く{動き} 始める[03] 迄{まで} 待つ[01]{待った} 方がいい ん[03] だ{じゃない} かしら",
+    "vocabIds": [
+      "1451210",
+      "1451180",
+      "1307550",
+      "1410590",
+      "2021970",
+      "1516930",
+      "2160680"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 2,
+        "length": 3,
+        "reading": "はじめる"
+      },
+      "1410590": {
+        "start": 7,
+        "length": 2,
+        "reading": "まっ"
+      },
+      "1451180": {
+        "start": 0,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 0,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1516930": {
+        "start": 10,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "2021970": {
+        "start": 7,
+        "length": 3,
+        "reading": "まった"
+      },
+      "2160680": {
+        "start": 10,
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -404,7 +1058,8 @@
     "matches": {
       "1451210": {
         "start": 0,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -440,7 +1095,8 @@
     "matches": {
       "1451210": {
         "start": 0,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -463,19 +1119,23 @@
     "matches": {
       "1218560": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "きけん"
       },
       "1451210": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1558370": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "1598860": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "とびおりる"
       }
     }
   },
@@ -496,11 +1156,13 @@
     "matches": {
       "1451210": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1531940": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "いのち"
       }
     }
   },
@@ -523,19 +1185,23 @@
     "matches": {
       "1218560": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きけん"
       },
       "1451210": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1485370": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "とびのる"
       },
       "1558370": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -558,19 +1224,23 @@
     "matches": {
       "1218560": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きけん"
       },
       "1443530": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "でんしゃ"
       },
       "1451210": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1485370": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "とびのる"
       }
     }
   },
@@ -600,15 +1270,18 @@
     "matches": {
       "1254130": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "けっして"
       },
       "1323080": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1451210": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -634,15 +1307,57 @@
     "matches": {
       "1324650": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "よわっ"
       },
       "1443620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんち"
       },
       "1451210": {
         "start": 15,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
+      }
+    }
+  },
+  {
+    "id": "125398",
+    "original": "禎子はもっと言いたかったが、口と舌がどうしても動かなかった。",
+    "en": [
+      {
+        "id": "278595",
+        "text": "Sadako wanted to say more, but her mouth and tongue wouldn't move."
+      }
+    ],
+    "indices": "は もっと 言う{言い} たい{たかった} が 口(くち)[01] と 舌[01] が 如何しても{どうしても} 動く{動かなかった}",
+    "vocabIds": [
+      "1587040",
+      "1275640",
+      "1387010",
+      "1451210"
+    ],
+    "matches": {
+      "1275640": {
+        "start": 14,
+        "length": 1,
+        "reading": "くち"
+      },
+      "1387010": {
+        "start": 16,
+        "length": 1,
+        "reading": "した"
+      },
+      "1451210": {
+        "start": 23,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1587040": {
+        "start": 6,
+        "length": 2,
+        "reading": "いい"
       }
     }
   },
@@ -660,9 +1375,13 @@
       "1430330",
       "1477650",
       "2868540",
+      "1238700",
       "1831080",
+      "1437260",
       "1007860",
+      "1532910",
       "2015460",
+      "1577650",
       "1404040",
       "1456040",
       "1451210"
@@ -670,39 +1389,68 @@
     "matches": {
       "1007860": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "てん"
+      },
+      "1238700": {
+        "start": 11,
+        "length": 2,
+        "reading": "きょうい"
       },
       "1404040": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "そくめん"
       },
       "1430330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうるい"
+      },
+      "1437260": {
+        "start": 13,
+        "length": 1,
+        "reading": "てき"
       },
       "1451210": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1456040": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "どくりつ"
       },
       "1477650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はっせい"
+      },
+      "1532910": {
+        "start": 18,
+        "length": 1,
+        "reading": "な"
+      },
+      "1577650": {
+        "start": 19,
+        "length": 1,
+        "reading": "かん"
       },
       "1831080": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "きょういてき"
       },
       "2015460": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "なかん"
       },
       "2868540": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しんに"
       }
     }
   },
@@ -719,6 +1467,7 @@
     "vocabIds": [
       "1426530",
       "1259290",
+      "2256270",
       "1417330",
       "1477170",
       "1311110",
@@ -729,35 +1478,87 @@
     "matches": {
       "1259140": {
         "start": 31,
-        "length": 4
+        "length": 2,
+        "reading": "みえ"
       },
       "1259290": {
         "start": 4,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1311110": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1359940": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "くちびる"
       },
       "1417330": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "たんご"
       },
       "1426530": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうい"
       },
       "1451210": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1477170": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "はつおん"
+      },
+      "2256270": {
+        "start": 4,
+        "length": 1,
+        "reading": "み"
+      }
+    }
+  },
+  {
+    "id": "136602",
+    "original": "誰もこの機械を動かせないんです。",
+    "en": [
+      {
+        "id": "276574",
+        "text": "No one can operate this machine."
+      }
+    ],
+    "indices": "誰も[02] 此の{この} 機械 を[02] 動く{動かせない} のです{んです}",
+    "vocabIds": [
+      "1416830",
+      "1416860",
+      "1220810",
+      "1451210"
+    ],
+    "matches": {
+      "1220810": {
+        "start": 4,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
+      },
+      "1416860": {
+        "start": 0,
+        "length": 2,
+        "reading": "だれも"
+      },
+      "1451210": {
+        "start": 7,
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -776,7 +1577,9 @@
     ],
     "indices": "太陽電池~ で(#2028980) 動く 自動車 を 望む[01]{望んでいる}",
     "vocabIds": [
+      "1408370",
       "1787470",
+      "1443620",
       "1451210",
       "1318400",
       "1519630"
@@ -784,19 +1587,33 @@
     "matches": {
       "1318400": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "じどうしゃ"
+      },
+      "1408370": {
+        "start": 0,
+        "length": 2,
+        "reading": "たいよう"
+      },
+      "1443620": {
+        "start": 2,
+        "length": 2,
+        "reading": "でんち"
       },
       "1451210": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1519630": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "のぞん"
       },
       "1787470": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "たいようでんち"
       }
     }
   },
@@ -815,17 +1632,88 @@
     ],
     "indices": "操り人形~ は ワイヤー~ で(#2028980) 動く",
     "vocabIds": [
+      "1400000",
       "1621790",
+      "1367120",
       "1451210"
     ],
     "matches": {
+      "1367120": {
+        "start": 2,
+        "length": 2,
+        "reading": "にんぎょう"
+      },
+      "1400000": {
+        "start": 0,
+        "length": 2,
+        "reading": "あやつり"
+      },
       "1451210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1621790": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "あやつりにんぎょう"
+      }
+    }
+  },
+  {
+    "id": "142046",
+    "original": "説明書の通りにそれぞれの部分をチェックしましたが、動きませんでした。",
+    "en": [
+      {
+        "id": "272524",
+        "text": "I checked every part according to the instruction book, but it did not run."
+      }
+    ],
+    "indices": "説明書 の 通り(とおり) に 夫れ夫れ{それぞれ} の 部分 を チェック[02] 為る(する){しました} が 動く{動きませんでした}",
+    "vocabIds": [
+      "1386460",
+      "1386470",
+      "2037940",
+      "1432920",
+      "1499490",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1386460": {
+        "start": 0,
+        "length": 2,
+        "reading": "せつめい"
+      },
+      "1386470": {
+        "start": 0,
+        "length": 3,
+        "reading": "せつめいしょ"
+      },
+      "1432920": {
+        "start": 4,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1451180": {
+        "start": 25,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 25,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1499490": {
+        "start": 12,
+        "length": 2,
+        "reading": "ぶぶん"
+      },
+      "2037940": {
+        "start": 2,
+        "length": 1,
+        "reading": "しょ"
       }
     }
   },
@@ -844,42 +1732,61 @@
     ],
     "indices": "世界経済 が 亜米利加{アメリカ} 経済 を 中心(ちゅうしん) に 動く{動いている} と言う{という} 事実 は 誰も 否定[01] 出来る{できない}",
     "vocabIds": [
+      "1373860",
       "1939690",
       "1251320",
       "1424550",
       "1451210",
       "1313960",
+      "1416830",
       "1416860",
       "1482990"
     ],
     "matches": {
       "1251320": {
-        "start": 9,
-        "length": 2
+        "start": 2,
+        "length": 2,
+        "reading": "けいざい"
       },
       "1313960": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "じじつ"
+      },
+      "1373860": {
+        "start": 0,
+        "length": 2,
+        "reading": "せかい"
+      },
+      "1416830": {
+        "start": 26,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416860": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "だれも"
       },
       "1424550": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしん"
       },
       "1451210": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1482990": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "ひてい"
       },
       "1939690": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "せかいけいざい"
       }
     }
   },
@@ -895,21 +1802,18 @@
     "indices": "人々(ひとびと) は もっと もっと 速く 動く 様になる{ようになりました}",
     "vocabIds": [
       "1580650",
-      "2093400",
       "1451210"
     ],
     "matches": {
       "1451210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1580650": {
         "start": 0,
-        "length": 2
-      },
-      "2093400": {
-        "start": 9,
-        "length": 1
+        "length": 2,
+        "reading": "ひとびと"
       }
     }
   },
@@ -930,11 +1834,46 @@
     "matches": {
       "1360770": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しんぞう"
       },
       "1451210": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      }
+    }
+  },
+  {
+    "id": "145606",
+    "original": "心が動くね。",
+    "en": [
+      {
+        "id": "268957",
+        "text": "That sounds very tempting."
+      }
+    ],
+    "indices": "心(こころ) が 動く ね(#2029080)[01]",
+    "vocabIds": [
+      "1360480",
+      "1639990",
+      "1451210"
+    ],
+    "matches": {
+      "1360480": {
+        "start": 0,
+        "length": 1,
+        "reading": "こころ"
+      },
+      "1451210": {
+        "start": 2,
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1639990": {
+        "start": 0,
+        "length": 4,
+        "reading": "こころがうごく"
       }
     }
   },
@@ -959,27 +1898,162 @@
     "matches": {
       "1244340": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "くるしみ"
       },
       "1333520": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうまつ"
       },
       "1419040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たんせき"
       },
       "1451210": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1527010": {
         "start": 19,
-        "length": 4
+        "length": 3,
+        "reading": "あじわっ"
       },
       "1615010": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "しちてんはっとう"
+      }
+    }
+  },
+  {
+    "id": "148376",
+    "original": "受け取ったコーヒーミルが動きません。",
+    "en": [
+      {
+        "id": "266183",
+        "text": "The coffee mill that I received does not work."
+      }
+    ],
+    "indices": "受け取る{受け取った} コーヒーミル~ が 動く{動きません}",
+    "vocabIds": [
+      "1329650",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1329650": {
+        "start": 0,
+        "length": 4,
+        "reading": "うけとっ"
+      },
+      "1451180": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごき"
+      }
+    }
+  },
+  {
+    "id": "149120",
+    "original": "車が混んで何時間も動かなかった。",
+    "en": [
+      {
+        "id": "265438",
+        "text": "We were stuck for hours in a traffic jam."
+      }
+    ],
+    "indices": "車 が 混む[01]{混んで} 何時間 も 動く{動かなかった}",
+    "vocabIds": [
+      "1323080",
+      "2849867",
+      "1577100",
+      "1188950",
+      "1315920",
+      "1451210"
+    ],
+    "matches": {
+      "1188950": {
+        "start": 5,
+        "length": 3,
+        "reading": "なんじかん"
+      },
+      "1315920": {
+        "start": 6,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1323080": {
+        "start": 0,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1451210": {
+        "start": 9,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1577100": {
+        "start": 5,
+        "length": 1,
+        "reading": "なん"
+      },
+      "2849867": {
+        "start": 2,
+        "length": 2,
+        "reading": "こん"
+      }
+    }
+  },
+  {
+    "id": "149126",
+    "original": "車が空港へ行く途中で動かなくなった。",
+    "en": [
+      {
+        "id": "265432",
+        "text": "The car broke down on the way to the airport."
+      }
+    ],
+    "indices": "車 が 空港 へ 行く 途中 で(#2028980) 動く{動かなくなった}",
+    "vocabIds": [
+      "1323080",
+      "1245570",
+      "1578850",
+      "1582200",
+      "1451210"
+    ],
+    "matches": {
+      "1245570": {
+        "start": 2,
+        "length": 2,
+        "reading": "くうこう"
+      },
+      "1323080": {
+        "start": 0,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1451210": {
+        "start": 10,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1578850": {
+        "start": 5,
+        "length": 2,
+        "reading": "いく"
+      },
+      "1582200": {
+        "start": 7,
+        "length": 2,
+        "reading": "とちゅう"
       }
     }
   },
@@ -999,32 +2073,44 @@
       "1310620",
       "1347750",
       "1451210",
+      "1259830",
       "1259820"
     ],
     "matches": {
       "1259820": {
         "start": 31,
-        "length": 3
+        "length": 3,
+        "reading": "みおくり"
+      },
+      "1259830": {
+        "start": 31,
+        "length": 3,
+        "reading": "みおくり"
       },
       "1310620": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1318400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じどうしゃ"
       },
       "1347750": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさい"
       },
       "1433210": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "つうこうにん"
       },
       "1451210": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -1043,33 +2129,45 @@
       "1332400",
       "1288850",
       "1429170",
+      "1605820",
       "1605870",
       "1451210"
     ],
     "matches": {
       "1288850": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1316140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1332400": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうり"
       },
       "1429170": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうし"
       },
       "1451210": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1605820": {
+        "start": 14,
+        "length": 2,
+        "reading": "よく"
       },
       "1605870": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "よく"
       }
     }
   },
@@ -1086,20 +2184,29 @@
     "vocabIds": [
       "1316140",
       "1451210",
-      "1535340"
+      "1535340",
+      "1532910"
     ],
     "matches": {
       "1316140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1451210": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1532910": {
+        "start": 20,
+        "length": 2,
+        "reading": "なら"
       },
       "1535340": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "めざまし"
       }
     }
   },
@@ -1121,15 +2228,18 @@
     "matches": {
       "1312300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しうんてん"
       },
       "1323250": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しゃりょう"
       },
       "1451210": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -1149,32 +2259,44 @@
       "1492570",
       "1451210",
       "1502680",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1245290": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "そら"
       },
       "1259290": {
         "start": 13,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1492570": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ふしぎ"
       },
       "1502680": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ぶったい"
+      },
+      "2256270": {
+        "start": 13,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -1192,34 +2314,52 @@
       "1311110",
       "1191730",
       "1423310",
+      "1577100",
       "1188270",
       "1451210",
-      "1212260"
+      "1212260",
+      "1212250"
     ],
     "matches": {
       "1188270": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1191730": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1212250": {
+        "start": 13,
+        "length": 2,
+        "reading": "かんじ"
       },
       "1212260": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1423310": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1451210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -1235,31 +2375,48 @@
     "indices": "私(わたし)[01] は 何か が 背中 で(#2028980) 動く{動いている} の を 感じる{感じた}",
     "vocabIds": [
       "1311110",
+      "1577100",
       "1188270",
       "1472800",
       "1451210",
-      "1212260"
+      "1212260",
+      "1212250"
     ],
     "matches": {
       "1188270": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
+      },
+      "1212250": {
+        "start": 15,
+        "length": 2,
+        "reading": "かんじ"
       },
       "1212260": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451210": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1472800": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "せなか"
+      },
+      "1577100": {
+        "start": 2,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -1281,40 +2438,54 @@
       "1451210",
       "1411790",
       "1483070",
-      "1512130"
+      "1512130",
+      "2202100"
     ],
     "matches": {
       "1277000": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こうろん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1411790": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "だいきん"
       },
       "1451210": {
         "start": 25,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1483070": {
         "start": 37,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512130": {
         "start": 44,
-        "length": 3
+        "length": 2,
+        "reading": "かえし"
       },
       "1579780": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しゅじん"
       },
       "1582120": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "みせ"
+      },
+      "2202100": {
+        "start": 44,
+        "length": 2,
+        "reading": "かえし"
       }
     }
   },
@@ -1336,15 +2507,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1451210": {
         "start": 8,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -1367,19 +2541,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1316140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1376760": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "せいかく"
       },
       "1451210": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -1401,15 +2579,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1316140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1451210": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -1424,22 +2605,31 @@
     ],
     "indices": "私たち は 何時も[01]{いつも} 地球 と共に{とともに} 動く{動いている}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1420970",
       "1451210"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1420970": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちきゅう"
       },
       "1451210": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -1454,9 +2644,13 @@
     ],
     "indices": "私たち の 惑星 は 飛ぶ 鳥[01] の 気軽[01]~ さ[01] で(#2028980) 宇宙 を[03] 動く{動いている}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1562600",
+      "1429700",
       "2195600",
+      "1430250",
+      "1981730",
       "1222110",
       "1171300",
       "1451210"
@@ -1464,27 +2658,53 @@
     "matches": {
       "1171300": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "うちゅう"
       },
       "1222110": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きがる"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1429700": {
+        "start": 7,
+        "length": 2,
+        "reading": "とぶ"
+      },
+      "1430250": {
+        "start": 9,
+        "length": 1,
+        "reading": "とり"
       },
       "1451210": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1562600": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "わくせい"
+      },
+      "1981730": {
+        "start": 11,
+        "length": 2,
+        "reading": "きがる"
       },
       "2195600": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "とぶとり"
       }
     }
   },
@@ -1503,28 +2723,78 @@
       "1483070",
       "1215230",
       "1451210",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 22,
+        "length": 3,
+        "reading": "ください"
       },
       "1215230": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451210": {
         "start": 15,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "168249",
+    "original": "指は鍵盤のあちらこちらに動きました。",
+    "en": [
+      {
+        "id": "246244",
+        "text": "They moved up and down the keys."
+      }
+    ],
+    "indices": "指 は 鍵盤~ の 彼方此方[01]{あちらこちら} に 動く{動きました}",
+    "vocabIds": [
+      "1309650",
+      "1260520",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1260520": {
+        "start": 2,
+        "length": 2,
+        "reading": "けんばん"
+      },
+      "1309650": {
+        "start": 0,
+        "length": 1,
+        "reading": "ゆび"
+      },
+      "1451180": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごき"
       }
     }
   },
@@ -1546,15 +2816,18 @@
     "matches": {
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1355850": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ばしょ"
       },
       "1451210": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -1571,30 +2844,47 @@
     "vocabIds": [
       "1273510",
       "1272280",
+      "1538850",
       "1947790",
+      "1220870",
       "1376760",
       "1451210"
     ],
     "matches": {
+      "1220870": {
+        "start": 7,
+        "length": 2,
+        "reading": "きかん"
+      },
       "1272280": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうつう"
       },
       "1273510": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうきょう"
       },
       "1376760": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "せいかく"
       },
       "1451210": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1538850": {
+        "start": 5,
+        "length": 2,
+        "reading": "ゆそう"
       },
       "1947790": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "ゆそうきかん"
       }
     }
   },
@@ -1609,22 +2899,37 @@
     ],
     "indices": "交通事故 が[01] 有る{あって} 吋{インチ} も 動く{動かない} 渋滞 になる{になって} 仕舞う{しまいました}",
     "vocabIds": [
+      "1272280",
       "1272350",
+      "1313850",
       "1451210",
       "1335570"
     ],
     "matches": {
+      "1272280": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうつう"
+      },
       "1272350": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "こうつうじこ"
+      },
+      "1313850": {
+        "start": 2,
+        "length": 2,
+        "reading": "じこ"
       },
       "1335570": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうたい"
       },
       "1451210": {
         "start": 14,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -1641,40 +2946,35 @@
     "vocabIds": [
       "1258330",
       "1352130",
-      "2248520",
-      "1352190",
-      "2039350",
-      "1215230",
+      "1429690",
+      "2386360",
       "1451210"
     ],
     "matches": {
-      "1215230": {
-        "start": 15,
-        "length": 1
-      },
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1352130": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
-      "1352190": {
-        "start": 9,
-        "length": 3
+      "1429690": {
+        "start": 7,
+        "length": 5,
+        "reading": "とびあがり"
       },
       "1451210": {
         "start": 16,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
-      "2039350": {
-        "start": 13,
-        "length": 2
-      },
-      "2248520": {
-        "start": 7,
-        "length": 2
+      "2386360": {
+        "start": 14,
+        "length": 2,
+        "reading": "ふんかん"
       }
     }
   },
@@ -1697,19 +2997,23 @@
     "matches": {
       "1252390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさつ"
       },
       "1356370": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じょうほう"
       },
       "1451210": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1466290": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にゅうしゅ"
       }
     }
   },
@@ -1732,19 +3036,23 @@
     "matches": {
       "1164680": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いちだん"
       },
       "1451210": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1528280": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "みっしゅう"
       },
       "1592515": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぐんしゅう"
       }
     }
   },
@@ -1767,19 +3075,23 @@
     "matches": {
       "1164680": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いちだん"
       },
       "1451210": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1528280": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "みっしゅう"
       },
       "1592510": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぐんしゅう"
       }
     }
   },
@@ -1799,7 +3111,8 @@
     "matches": {
       "1451210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -1815,7 +3128,9 @@
     "indices": "牛[01] は 背の高い 緑色 の 草(くさ) の 中(なか) を ゆっくり 動く{動いていました}",
     "vocabIds": [
       "1231490",
+      "2147990",
       "2152580",
+      "1283190",
       "1555320",
       "1401910",
       "1423310",
@@ -1824,27 +3139,43 @@
     "matches": {
       "1231490": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "うし"
+      },
+      "1283190": {
+        "start": 4,
+        "length": 2,
+        "reading": "たかい"
       },
       "1401910": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "くさ"
       },
       "1423310": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1451210": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1555320": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "りょくしょく"
+      },
+      "2147990": {
+        "start": 2,
+        "length": 1,
+        "reading": "せ"
       },
       "2152580": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "せのたかい"
       }
     }
   },
@@ -1867,19 +3198,86 @@
     "matches": {
       "1204650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かいどう"
       },
       "1228040": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうじつ"
       },
       "1323080": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1451210": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      }
+    }
+  },
+  {
+    "id": "183760",
+    "original": "間もなく飛行機は動き始め、その後離陸します。",
+    "en": [
+      {
+        "id": "20883",
+        "text": "Soon the plane begins to move, and then it takes off."
+      }
+    ],
+    "indices": "間もなく[01] 飛行機 は 動く{動き} 始める[03]{始め} その後 離陸 為る(する){します}",
+    "vocabIds": [
+      "1215290",
+      "1485470",
+      "1451210",
+      "1451180",
+      "1307550",
+      "1342540",
+      "1006860",
+      "1550970"
+    ],
+    "matches": {
+      "1006860": {
+        "start": 13,
+        "length": 3,
+        "reading": "そのご"
+      },
+      "1215290": {
+        "start": 0,
+        "length": 4,
+        "reading": "まもなく"
+      },
+      "1307550": {
+        "start": 10,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 10,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1451180": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1485470": {
+        "start": 4,
+        "length": 3,
+        "reading": "ひこうき"
+      },
+      "1550970": {
+        "start": 16,
+        "length": 2,
+        "reading": "りりく"
       }
     }
   },
@@ -1901,15 +3299,102 @@
     "matches": {
       "1346240": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しょうり"
       },
       "1451210": {
         "start": 6,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      }
+    }
+  },
+  {
+    "id": "187059",
+    "original": "家のオーブンが今日上手く動かなかったのね。",
+    "en": [
+      {
+        "id": "24196",
+        "text": "The oven in my house didn't run well today."
+      }
+    ],
+    "indices": "家(いえ)[01] の オーブン が 今日 上手い[01]{上手く} 動く{動かなかった} の ね(#2029080)[01]",
+    "vocabIds": [
+      "1191730",
+      "1579110",
+      "1310460",
+      "1310490",
+      "1451210"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 0,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1310460": {
+        "start": 9,
+        "length": 3,
+        "reading": "うまく"
+      },
+      "1310490": {
+        "start": 9,
+        "length": 3,
+        "reading": "うまく"
+      },
+      "1451210": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1579110": {
+        "start": 7,
+        "length": 2,
+        "reading": "きょう"
+      }
+    }
+  },
+  {
+    "id": "188355",
+    "original": "俺は動き続ける。",
+    "en": [
+      {
+        "id": "25497",
+        "text": "I gotta keep on movin'."
+      }
+    ],
+    "indices": "俺(おれ) は 動き 続ける",
+    "vocabIds": [
+      "1576870",
+      "1451210",
+      "1451180",
+      "1405800"
+    ],
+    "matches": {
+      "1405800": {
+        "start": 4,
+        "length": 3,
+        "reading": "つづける"
+      },
+      "1451180": {
+        "start": 2,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 2,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1576870": {
+        "start": 0,
+        "length": 1,
+        "reading": "おれ"
       }
     }
   },
@@ -1925,21 +3410,75 @@
     "indices": "遠く[01] に 何か 動く{動いている} 物(もの){もの} が[01] 有る{あった}",
     "vocabIds": [
       "1177820",
+      "1577100",
       "1188270",
       "1451210"
     ],
     "matches": {
       "1177820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とおく"
       },
       "1188270": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1451210": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
+      }
+    }
+  },
+  {
+    "id": "190063",
+    "original": "一歩でも動けばおまえを殺すぞ。",
+    "en": [
+      {
+        "id": "27219",
+        "text": "If you move a step, and you will be a dead man."
+      }
+    ],
+    "indices": "一歩 でも 動く{動けば} お前{おまえ} を 殺す ぞ",
+    "vocabIds": [
+      "1160790",
+      "1166460",
+      "1514290",
+      "1451210",
+      "1299030"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1166460": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちほ"
+      },
+      "1299030": {
+        "start": 11,
+        "length": 2,
+        "reading": "ころす"
+      },
+      "1451210": {
+        "start": 4,
+        "length": 2,
+        "reading": "うごけ"
+      },
+      "1514290": {
+        "start": 1,
+        "length": 1,
+        "reading": "ほ"
       }
     }
   },
@@ -1954,22 +3493,37 @@
     ],
     "indices": "一歩 でも 動く{動いて} 見る[05]{みろ} お前{おまえ} の 命(いのち) は 無い{ない} ぞ",
     "vocabIds": [
+      "1160790",
       "1166460",
+      "1514290",
       "1451210",
       "1531940"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1166460": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちほ"
       },
       "1451210": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1514290": {
+        "start": 1,
+        "length": 1,
+        "reading": "ほ"
       },
       "1531940": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "いのち"
       }
     }
   },
@@ -1984,27 +3538,100 @@
     ],
     "indices": "一歩 でも 動く{動いて} ご覧[01]{ごらん} 崖 から 落ちる[01]{落ちて} 仕舞う{しまう} よ[01]",
     "vocabIds": [
+      "1160790",
       "1166460",
+      "1514290",
       "1451210",
       "1204380",
-      "1548550"
+      "1548550",
+      "1548530"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1166460": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちほ"
       },
       "1204380": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "がけ"
       },
       "1451210": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1514290": {
+        "start": 1,
+        "length": 1,
+        "reading": "ほ"
+      },
+      "1548530": {
+        "start": 14,
+        "length": 2,
+        "reading": "おち"
       },
       "1548550": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "おち"
+      }
+    }
+  },
+  {
+    "id": "190498",
+    "original": "一人でこの机を動かせますか。",
+    "en": [
+      {
+        "id": "27659",
+        "text": "Can you move this desk by yourself?"
+      }
+    ],
+    "indices": "一人で 此の{この} 机 を 動かす[01]{動かせます} か",
+    "vocabIds": [
+      "1160790",
+      "1576150",
+      "1163700",
+      "1580640",
+      "1220210",
+      "1451210"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1163700": {
+        "start": 0,
+        "length": 3,
+        "reading": "いちにんで"
+      },
+      "1220210": {
+        "start": 5,
+        "length": 1,
+        "reading": "つくえ"
+      },
+      "1451210": {
+        "start": 7,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1576150": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -2028,23 +3655,28 @@
     "matches": {
       "1154370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くらやみ"
       },
       "1423310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1451210": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1502390": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
       },
       "2136180": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさな"
       }
     }
   },
@@ -2061,25 +3693,35 @@
     "vocabIds": [
       "1154370",
       "1423310",
+      "1577100",
       "1188270",
       "1451210"
     ],
     "matches": {
       "1154370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くらやみ"
       },
       "1188270": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1423310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1451210": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1577100": {
+        "start": 5,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -2103,23 +3745,79 @@
     "matches": {
       "1249960": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうだい"
       },
       "1375690": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1451210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1485230": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "とばす"
       },
       "1485470": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
+      }
+    }
+  },
+  {
+    "id": "192795",
+    "original": "よくリーダーを見て、その通りに動きなさい。",
+    "en": [
+      {
+        "id": "29961",
+        "text": "Watch your leader and act accordingly."
+      }
+    ],
+    "indices": "良く{よく} リーダー(#1140590)[01] を 見る{見て} その通り[01] に 動く{動き} 為さい{なさい}",
+    "vocabIds": [
+      "1259290",
+      "2256270",
+      "2057830",
+      "1432920",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1259290": {
+        "start": 7,
+        "length": 1,
+        "reading": "み"
+      },
+      "1432920": {
+        "start": 12,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1451180": {
+        "start": 15,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 15,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "2057830": {
+        "start": 10,
+        "length": 4,
+        "reading": "そのとおり"
+      },
+      "2256270": {
+        "start": 7,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -2139,7 +3837,8 @@
     "matches": {
       "1451210": {
         "start": 9,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -2161,15 +3860,18 @@
     "matches": {
       "1310730": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "しん"
       },
       "1451210": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1514290": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ほ"
       }
     }
   },
@@ -2190,11 +3892,38 @@
     "matches": {
       "1451210": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1473950": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "うっ"
+      }
+    }
+  },
+  {
+    "id": "195855",
+    "original": "ポンプはちゃんと動かなかった。",
+    "en": [
+      {
+        "id": "33030",
+        "text": "The pump did not act as it should have."
+      },
+      {
+        "id": "2073712",
+        "text": "The pump didn't work properly."
+      }
+    ],
+    "indices": "ポンプ~ は ちゃんと 動く{動かなかった}",
+    "vocabIds": [
+      "1451210"
+    ],
+    "matches": {
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -2215,11 +3944,64 @@
     "matches": {
       "1318340": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じどう"
       },
       "1451210": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      }
+    }
+  },
+  {
+    "id": "196707",
+    "original": "ベルが鳴って、列車は動き始めた。",
+    "en": [
+      {
+        "id": "33886",
+        "text": "The bell rang, and the train began to move."
+      }
+    ],
+    "indices": "ベル が 鳴る{鳴って} 列車 は 動く{動き} 始める[03]{始めた}",
+    "vocabIds": [
+      "1532910",
+      "1558370",
+      "1451210",
+      "1451180",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1307550": {
+        "start": 12,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 12,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1451180": {
+        "start": 10,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 10,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1532910": {
+        "start": 3,
+        "length": 2,
+        "reading": "なっ"
+      },
+      "1558370": {
+        "start": 7,
+        "length": 2,
+        "reading": "れっしゃ"
       }
     }
   },
@@ -2240,11 +4022,40 @@
     "matches": {
       "1352710": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じょうげ"
       },
       "1451210": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      }
+    }
+  },
+  {
+    "id": "198235",
+    "original": "バスが橋のたもとで動かなくなった。",
+    "en": [
+      {
+        "id": "35427",
+        "text": "The bus broke down at one end of the bridge."
+      }
+    ],
+    "indices": "バス(#1098390) が 橋(はし) の 袂[02]{たもと} で(#2028980) 動く{動かなくなった}",
+    "vocabIds": [
+      "1237410",
+      "1451210"
+    ],
+    "matches": {
+      "1237410": {
+        "start": 3,
+        "length": 1,
+        "reading": "はし"
+      },
+      "1451210": {
+        "start": 9,
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -2273,11 +4084,70 @@
     "matches": {
       "1259210": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "みせ"
       },
       "1451210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      }
+    }
+  },
+  {
+    "id": "202093",
+    "original": "デモの最中秘密警察が人込みの中を動きまわった。",
+    "en": [
+      {
+        "id": "39305",
+        "text": "Secret police moved among the crowd during the demonstration."
+      }
+    ],
+    "indices": "デモ の 最中(さいちゅう) 秘密警察~ が 人込み の 中(なか) を 動き回る{動きまわった}",
+    "vocabIds": [
+      "1579210",
+      "1484150",
+      "1731380",
+      "1252390",
+      "1423310",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1252390": {
+        "start": 7,
+        "length": 2,
+        "reading": "けいさつ"
+      },
+      "1423310": {
+        "start": 14,
+        "length": 1,
+        "reading": "なか"
+      },
+      "1451180": {
+        "start": 16,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 16,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1484150": {
+        "start": 5,
+        "length": 2,
+        "reading": "ひみつ"
+      },
+      "1579210": {
+        "start": 3,
+        "length": 2,
+        "reading": "さいちゅう"
+      },
+      "1731380": {
+        "start": 5,
+        "length": 4,
+        "reading": "ひみつけいさつ"
       }
     }
   },
@@ -2292,22 +4162,82 @@
     ],
     "indices": "誰{だれ} でも 而して{そして} 何でも 前(まえ) より 忙しい(いそがしい){忙し} そう[01]{そうに} 動く 様になる{ようになりました}",
     "vocabIds": [
+      "1577100",
+      "1611020",
       "1611030",
       "1392580",
+      "1519290",
       "1451210"
     ],
     "matches": {
       "1392580": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1451210": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1519290": {
+        "start": 13,
+        "length": 2,
+        "reading": "いそがし"
+      },
+      "1577100": {
+        "start": 7,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1611020": {
+        "start": 7,
+        "length": 2,
+        "reading": "なにで"
       },
       "1611030": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "なにでも"
+      }
+    }
+  },
+  {
+    "id": "207055",
+    "original": "その病人は起きて動きまわっている。",
+    "en": [
+      {
+        "id": "44305",
+        "text": "The patient is up and about."
+      }
+    ],
+    "indices": "其の[01]{その} 病人 は 起きる{起きて} 動き回る{動きまわっている}",
+    "vocabIds": [
+      "1490360",
+      "1223640",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 5,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1451180": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1490360": {
+        "start": 2,
+        "length": 2,
+        "reading": "びょうにん"
       }
     }
   },
@@ -2328,11 +4258,85 @@
     "matches": {
       "1451210": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1488880": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひょうが"
+      }
+    }
+  },
+  {
+    "id": "207214",
+    "original": "その箱はとても重くて私には動かせなかった。",
+    "en": [
+      {
+        "id": "44465",
+        "text": "The box was so heavy I could not move it."
+      }
+    ],
+    "indices": "其の[01]{その} 箱[01] は 迚も{とても} 重い[01]{重くて} 私(わたし)[01] には 動かす[01]{動かせなかった}",
+    "vocabIds": [
+      "1585650",
+      "1335750",
+      "1311110",
+      "1451210"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 10,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1335750": {
+        "start": 7,
+        "length": 2,
+        "reading": "おもく"
+      },
+      "1451210": {
+        "start": 13,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1585650": {
+        "start": 2,
+        "length": 1,
+        "reading": "はこ"
+      }
+    }
+  },
+  {
+    "id": "207265",
+    "original": "その馬は立ち止まって動こうとしなかった。",
+    "en": [
+      {
+        "id": "44515",
+        "text": "The horse stopped and wouldn't move."
+      }
+    ],
+    "indices": "其の[01]{その} 馬[01] は 立ち止まる{立ち止まって} 動く{動こう} とする{としなかった}",
+    "vocabIds": [
+      "1471560",
+      "1551350",
+      "1451210"
+    ],
+    "matches": {
+      "1451210": {
+        "start": 10,
+        "length": 2,
+        "reading": "うごこ"
+      },
+      "1471560": {
+        "start": 2,
+        "length": 1,
+        "reading": "うま"
+      },
+      "1551350": {
+        "start": 4,
+        "length": 5,
+        "reading": "たちどまっ"
       }
     }
   },
@@ -2356,23 +4360,139 @@
     "matches": {
       "1290800": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひだり"
       },
       "1292300": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ふたたび"
       },
       "1419990": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1451210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1562850": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "うで"
+      }
+    }
+  },
+  {
+    "id": "208994",
+    "original": "その象は一歩も動こうとしない。",
+    "en": [
+      {
+        "id": "46254",
+        "text": "The elephant won't move an inch."
+      }
+    ],
+    "indices": "其の[01]{その} 象(ぞう) は 一歩[01] も 動く{動こう} とする{としない}",
+    "vocabIds": [
+      "1351830",
+      "1160790",
+      "1166460",
+      "1514290",
+      "1451210"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 4,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1166460": {
+        "start": 4,
+        "length": 2,
+        "reading": "いちほ"
+      },
+      "1351830": {
+        "start": 2,
+        "length": 1,
+        "reading": "ぞう"
+      },
+      "1451210": {
+        "start": 7,
+        "length": 2,
+        "reading": "うごこ"
+      },
+      "1514290": {
+        "start": 5,
+        "length": 1,
+        "reading": "ほ"
+      }
+    }
+  },
+  {
+    "id": "209552",
+    "original": "その車は動かなくなった。",
+    "en": [
+      {
+        "id": "46813",
+        "text": "The car didn't move."
+      }
+    ],
+    "indices": "其の[01]{その} 車(くるま) は 動く{動かなくなった}",
+    "vocabIds": [
+      "1323080",
+      "1451210"
+    ],
+    "matches": {
+      "1323080": {
+        "start": 2,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1451210": {
+        "start": 4,
+        "length": 2,
+        "reading": "うごか"
+      }
+    }
+  },
+  {
+    "id": "209690",
+    "original": "その自動車は電気で動く。",
+    "en": [
+      {
+        "id": "46952",
+        "text": "The automobile runs on electricity."
+      }
+    ],
+    "indices": "其の[01]{その} 自動車 は 電気[01] で(#2028980) 動く",
+    "vocabIds": [
+      "1318400",
+      "1443000",
+      "1896450",
+      "1451210"
+    ],
+    "matches": {
+      "1318400": {
+        "start": 2,
+        "length": 3,
+        "reading": "じどうしゃ"
+      },
+      "1443000": {
+        "start": 6,
+        "length": 2,
+        "reading": "でんき"
+      },
+      "1451210": {
+        "start": 9,
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1896450": {
+        "start": 6,
+        "length": 5,
+        "reading": "でんきでうごく"
       }
     }
   },
@@ -2390,24 +4510,40 @@
       "1307770",
       "1451210",
       "1259290",
+      "2256270",
+      "2010330",
       "2010340"
     ],
     "matches": {
       "1259290": {
         "start": 15,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1307770": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1451210": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "2010330": {
+        "start": 17,
+        "length": 4,
+        "reading": "あとずさり"
       },
       "2010340": {
         "start": 17,
-        "length": 4
+        "length": 4,
+        "reading": "あとずさり"
+      },
+      "2256270": {
+        "start": 15,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -2425,6 +4561,7 @@
       "1262880",
       "1156640",
       "1423310",
+      "1337210",
       "1855050",
       "1381910",
       "1451210"
@@ -2432,27 +4569,38 @@
     "matches": {
       "1156640": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "いしき"
       },
       "1262880": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "まぼろし"
+      },
+      "1337210": {
+        "start": 9,
+        "length": 2,
+        "reading": "やどり"
       },
       "1381910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "せいじゃく"
       },
       "1423310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1451210": {
         "start": 18,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1855050": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "やどり"
       }
     }
   },
@@ -2467,27 +4615,43 @@
     ],
     "indices": "其の[01]{その} 機械 装置 は 磁気 の 力(ちから) で(#2028980) 動く",
     "vocabIds": [
+      "1220810",
       "2849065",
+      "1402360",
       "1316990",
       "1554820",
       "1451210"
     ],
     "matches": {
+      "1220810": {
+        "start": 2,
+        "length": 2,
+        "reading": "きかい"
+      },
       "1316990": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じき"
+      },
+      "1402360": {
+        "start": 4,
+        "length": 2,
+        "reading": "そうち"
       },
       "1451210": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1554820": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ちから"
       },
       "2849065": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "きかいそうち"
       }
     }
   },
@@ -2509,15 +4673,18 @@
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1318470": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "じどうてき"
       },
       "1451210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -2540,19 +4707,23 @@
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1316990": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じき"
       },
       "1451210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1554820": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ちから"
       }
     }
   },
@@ -2568,21 +4739,30 @@
     "indices": "其の[01]{その} 機械 は 休み[01] 無い{なく} 動く",
     "vocabIds": [
       "1220810",
+      "1227500",
       "2424600",
       "1451210"
     ],
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1227500": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
       },
       "1451210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "2424600": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "やすみなく"
       }
     }
   },
@@ -2603,11 +4783,13 @@
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1451210": {
         "start": 7,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -2623,26 +4805,24 @@
     "indices": "其の[01]{その} 家(いえ)[01] の 事(こと){こと} は 全て{すべて} 叔母さん を 中心(ちゅうしん) に 動く{動いていた}",
     "vocabIds": [
       "1191730",
-      "1607100",
       "1424550",
       "1451210"
     ],
     "matches": {
       "1191730": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1424550": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしん"
       },
       "1451210": {
         "start": 22,
-        "length": 3
-      },
-      "1607100": {
-        "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -2663,11 +4843,52 @@
     "matches": {
       "1263650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "げんざい"
       },
       "1451210": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      }
+    }
+  },
+  {
+    "id": "213281",
+    "original": "そのかばんは重すぎて私には動かせなかった。",
+    "en": [
+      {
+        "id": "50567",
+        "text": "The bag was too heavy for me to move."
+      }
+    ],
+    "indices": "其の[01]{その} 鞄{かばん} は 重い[01]{重} 過ぎる(すぎる){すぎて} 私(わたし)[01] には 動かす[01]{動かせなかった}",
+    "vocabIds": [
+      "1335750",
+      "2108240",
+      "1311110",
+      "1451210"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 10,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1335750": {
+        "start": 6,
+        "length": 1,
+        "reading": "おも"
+      },
+      "1451210": {
+        "start": 13,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "2108240": {
+        "start": 6,
+        "length": 1,
+        "reading": "おも"
       }
     }
   },
@@ -2688,11 +4909,13 @@
     "matches": {
       "1356930": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じょうき"
       },
       "1451210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -2709,25 +4932,119 @@
     "vocabIds": [
       "1203260",
       "1580640",
+      "1416830",
       "1416860",
       "1451210"
     ],
     "matches": {
       "1203260": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "た"
+      },
+      "1416830": {
+        "start": 8,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416860": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "だれも"
       },
       "1451210": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1580640": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      }
+    }
+  },
+  {
+    "id": "217668",
+    "original": "これを右に回せば機械は動きます。",
+    "en": [
+      {
+        "id": "54978",
+        "text": "Turn this to the right, and the machine will start."
+      }
+    ],
+    "indices": "此れ[01]{これ} を 右[01] に 回す[01]{回せば} 機械 は 動く{動きます}",
+    "vocabIds": [
+      "1171010",
+      "1199350",
+      "1220810",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1171010": {
+        "start": 3,
+        "length": 1,
+        "reading": "みぎ"
+      },
+      "1199350": {
+        "start": 5,
+        "length": 2,
+        "reading": "まわせ"
+      },
+      "1220810": {
+        "start": 8,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1451180": {
+        "start": 11,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 11,
+        "length": 2,
+        "reading": "うごき"
+      }
+    }
+  },
+  {
+    "id": "217933",
+    "original": "これらの機械はすべて電気で動きます。",
+    "en": [
+      {
+        "id": "55242",
+        "text": "These machines are all powered by electricity."
+      }
+    ],
+    "indices": "此れ等{これらの} 機械 は 全て{すべて} 電気[01] で(#2028980) 動く{動きます}",
+    "vocabIds": [
+      "1220810",
+      "1443000",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1220810": {
+        "start": 4,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1443000": {
+        "start": 10,
+        "length": 2,
+        "reading": "でんき"
+      },
+      "1451180": {
+        "start": 13,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 13,
+        "length": 2,
+        "reading": "うごき"
       }
     }
   },
@@ -2748,11 +5065,13 @@
     "matches": {
       "1220810": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1451210": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -2776,23 +5095,28 @@
     "matches": {
       "1157510": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "ことなっ"
       },
       "1317110": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "しめす"
       },
       "1451210": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1492740": {
         "start": 33,
-        "length": 3
+        "length": 3,
+        "reading": "ふじゅうぶん"
       },
       "1503630": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぶんし"
       }
     }
   },
@@ -2814,15 +5138,63 @@
     "matches": {
       "1386500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ゆき"
       },
       "1451210": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1558370": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
+      }
+    }
+  },
+  {
+    "id": "220878",
+    "original": "この石は重すぎて私には動かせない。",
+    "en": [
+      {
+        "id": "58200",
+        "text": "This stone is too heavy for me to move."
+      }
+    ],
+    "indices": "此の{この} 石(いし)[01] は 重い[01]{重} 過ぎる(すぎる){すぎて} 私(わたし)[01] には 動かす[01]{動かせない}",
+    "vocabIds": [
+      "1382440",
+      "1335750",
+      "2108240",
+      "1311110",
+      "1451210"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 8,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1335750": {
+        "start": 4,
+        "length": 1,
+        "reading": "おも"
+      },
+      "1382440": {
+        "start": 2,
+        "length": 1,
+        "reading": "いし"
+      },
+      "1451210": {
+        "start": 11,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "2108240": {
+        "start": 4,
+        "length": 1,
+        "reading": "おも"
       }
     }
   },
@@ -2848,31 +5220,38 @@
     "matches": {
       "1172830": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "うんてん"
       },
       "1323080": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1361490": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1372670": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "よっぱらっ"
       },
       "1451210": {
         "start": 34,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1455170": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "とくちょう"
       },
       "1580640": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -2893,11 +5272,13 @@
     "matches": {
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1451210": {
         "start": 4,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -2913,21 +5294,30 @@
     "indices": "此の{この} 車(くるま) は 天然[01]~ 瓦斯{ガス} で(#2028980) 動く",
     "vocabIds": [
       "1323080",
+      "1439580",
       "1998710",
       "1451210"
     ],
     "matches": {
       "1323080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1439580": {
+        "start": 4,
+        "length": 2,
+        "reading": "てんねん"
       },
       "1451210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1998710": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "てんねんがす"
       }
     }
   },
@@ -2942,17 +5332,43 @@
     ],
     "indices": "此の{この} 自動販売機~ 動く{動かない} のです{んです} が[03]",
     "vocabIds": [
+      "1318340",
       "1318480",
+      "1481800",
+      "1481810",
+      "2037700",
       "1451210"
     ],
     "matches": {
+      "1318340": {
+        "start": 2,
+        "length": 2,
+        "reading": "じどう"
+      },
       "1318480": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "じどうはんばいき"
       },
       "1451210": {
         "start": 8,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1481800": {
+        "start": 4,
+        "length": 2,
+        "reading": "はんばい"
+      },
+      "1481810": {
+        "start": 4,
+        "length": 3,
+        "reading": "はんばいき"
+      },
+      "2037700": {
+        "start": 6,
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -2973,11 +5389,13 @@
     "matches": {
       "1316140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1451210": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -2998,11 +5416,52 @@
     "matches": {
       "1316140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1451210": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      }
+    }
+  },
+  {
+    "id": "221591",
+    "original": "この時計は電気で動く。",
+    "en": [
+      {
+        "id": "58915",
+        "text": "This clock is electric."
+      }
+    ],
+    "indices": "此の{この} 時計 は 電気[01] で(#2028980) 動く",
+    "vocabIds": [
+      "1316140",
+      "1443000",
+      "1896450",
+      "1451210"
+    ],
+    "matches": {
+      "1316140": {
+        "start": 2,
+        "length": 2,
+        "reading": "とけい"
+      },
+      "1443000": {
+        "start": 5,
+        "length": 2,
+        "reading": "でんき"
+      },
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1896450": {
+        "start": 5,
+        "length": 5,
+        "reading": "でんきでうごく"
       }
     }
   },
@@ -3023,11 +5482,13 @@
     "matches": {
       "1451210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1594100": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "しかけ"
       }
     }
   },
@@ -3050,19 +5511,62 @@
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1443000": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "でんき"
       },
       "1451210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1554820": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ちから"
+      }
+    }
+  },
+  {
+    "id": "222457",
+    "original": "この機械は電気で動く。",
+    "en": [
+      {
+        "id": "59785",
+        "text": "This machine is driven by electricity."
+      }
+    ],
+    "indices": "此の{この} 機械 は 電気[01] で(#2028980) 動く",
+    "vocabIds": [
+      "1220810",
+      "1443000",
+      "1896450",
+      "1451210"
+    ],
+    "matches": {
+      "1220810": {
+        "start": 2,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1443000": {
+        "start": 5,
+        "length": 2,
+        "reading": "でんき"
+      },
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1896450": {
+        "start": 5,
+        "length": 5,
+        "reading": "でんきでうごく"
       }
     }
   },
@@ -3084,15 +5588,18 @@
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1347750": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさい"
       },
       "1451210": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -3114,15 +5621,18 @@
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1386460": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "せつめい"
       },
       "1451210": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -3139,25 +5649,35 @@
     "vocabIds": [
       "1220810",
       "1451210",
+      "1321110",
       "1321120",
       "1386460"
     ],
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1321110": {
+        "start": 16,
+        "length": 2,
+        "reading": "じっさい"
       },
       "1321120": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "じっさいに"
       },
       "1386460": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "せつめい"
       },
       "1451210": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -3179,15 +5699,18 @@
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1225530": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "うたがわしい"
       },
       "1451210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -3206,6 +5729,8 @@
       "1591330",
       "1352300",
       "1172830",
+      "1318610",
+      "2830519",
       "2059350",
       "1323080",
       "1451210",
@@ -3214,35 +5739,53 @@
     "matches": {
       "1004690": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "このかん"
       },
       "1172830": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "うんてん"
+      },
+      "1318610": {
+        "start": 29,
+        "length": 2,
+        "reading": "じぶん"
       },
       "1323080": {
         "start": 36,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1352300": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "あげ"
       },
       "1451210": {
         "start": 37,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1589350": {
         "start": 42,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "1591330": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "きづい"
       },
       "2059350": {
         "start": 29,
-        "length": 4
+        "length": 4,
+        "reading": "じぶんでも"
+      },
+      "2830519": {
+        "start": 29,
+        "length": 3,
+        "reading": "じぶんで"
       }
     }
   },
@@ -3264,15 +5807,18 @@
     "matches": {
       "1318400": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "じどうしゃ"
       },
       "1443620": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "でんち"
       },
       "1451210": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -3292,7 +5838,8 @@
     "matches": {
       "1451210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -3313,11 +5860,106 @@
     "matches": {
       "1429170": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうし"
       },
       "1451210": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      }
+    }
+  },
+  {
+    "id": "225013",
+    "original": "こうした熊独特の特徴が、熊が動かずに狩猟すること（アザラシの呼吸孔の脇でじっと動かず、アザラシが海面に上がってくるのを待つ）を好む説明になっている。",
+    "en": [
+      {
+        "id": "62348",
+        "text": "These special characteristics explain its preference for still-hunting (lying motionless beside a seal's breathing hole, waiting for one to surface)."
+      }
+    ],
+    "indices": "斯うした{こうした}~ 熊 独特{独特の} 特徴 が 熊 が 動く{動かず} に 狩猟~ 為る(する){する} 事(こと){こと} 海豹{アザラシ}~ の 呼吸孔~ の 脇(わき)[01] で(#2028980) 凝乎と(じっと)[01]{じっと}~ 動く{動かず} 海豹{アザラシ} が 海面 に 上がる{上がって} 来る(くる){くる} の を 待つ[01] を 好む 説明 になる[01]{になっている}",
+    "vocabIds": [
+      "1246850",
+      "1456010",
+      "1455170",
+      "1451210",
+      "1328760",
+      "1266470",
+      "2256580",
+      "1562530",
+      "1201780",
+      "1352290",
+      "1410590",
+      "1277520",
+      "1386460"
+    ],
+    "matches": {
+      "1201780": {
+        "start": 48,
+        "length": 2,
+        "reading": "かいめん"
+      },
+      "1246850": {
+        "start": 4,
+        "length": 1,
+        "reading": "くま"
+      },
+      "1266470": {
+        "start": 30,
+        "length": 2,
+        "reading": "こきゅう"
+      },
+      "1277520": {
+        "start": 63,
+        "length": 2,
+        "reading": "このむ"
+      },
+      "1328760": {
+        "start": 18,
+        "length": 2,
+        "reading": "しゅりょう"
+      },
+      "1352290": {
+        "start": 51,
+        "length": 3,
+        "reading": "あがっ"
+      },
+      "1386460": {
+        "start": 65,
+        "length": 2,
+        "reading": "せつめい"
+      },
+      "1410590": {
+        "start": 59,
+        "length": 2,
+        "reading": "まつ"
+      },
+      "1451210": {
+        "start": 14,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1455170": {
+        "start": 8,
+        "length": 2,
+        "reading": "とくちょう"
+      },
+      "1456010": {
+        "start": 5,
+        "length": 2,
+        "reading": "どくとく"
+      },
+      "1562530": {
+        "start": 34,
+        "length": 1,
+        "reading": "わき"
+      },
+      "2256580": {
+        "start": 30,
+        "length": 3,
+        "reading": "こきゅうあな"
       }
     }
   },
@@ -3349,32 +5991,44 @@
       "1501110",
       "1411070",
       "1465610",
+      "1465600",
       "1451210"
     ],
     "matches": {
       "1307850": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1312880": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "めす"
       },
       "1411070": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ふくろ"
       },
       "1451210": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1465600": {
+        "start": 15,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
       },
       "1501110": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "はら"
       }
     }
   },
@@ -3396,15 +6050,18 @@
     "matches": {
       "1325910": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しゅちょう"
       },
       "1420970": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちきゅう"
       },
       "1451210": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -3425,11 +6082,13 @@
     "matches": {
       "1323080": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1451210": {
         "start": 14,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -3446,20 +6105,68 @@
     "vocabIds": [
       "1309370",
       "1451210",
-      "2237250"
+      "1586940",
+      "2237250",
+      "1156990"
     ],
     "matches": {
+      "1156990": {
+        "start": 33,
+        "length": 2,
+        "reading": "やすし"
+      },
       "1309370": {
         "start": 5,
-        "length": 6
+        "length": 4,
+        "reading": "おもいなやま"
       },
       "1451210": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1586940": {
+        "start": 25,
+        "length": 3,
+        "reading": "あんずる"
       },
       "2237250": {
         "start": 25,
-        "length": 10
+        "length": 10,
+        "reading": "あんずるよりうむがやすし"
+      }
+    }
+  },
+  {
+    "id": "228797",
+    "original": "いつまたこの機械は動きはじめますか。",
+    "en": [
+      {
+        "id": "66155",
+        "text": "When will this machine be put in motion again?"
+      }
+    ],
+    "indices": "何時(いつ){いつ} 又{また} 此の{この} 機械 は 動く{動き} 始める[03]{はじめます} か",
+    "vocabIds": [
+      "1220810",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1220810": {
+        "start": 6,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1451180": {
+        "start": 9,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 9,
+        "length": 2,
+        "reading": "うごき"
       }
     }
   },
@@ -3480,11 +6187,13 @@
     "matches": {
       "1451210": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1592250": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       }
     }
   },
@@ -3509,11 +6218,13 @@
     "matches": {
       "1316140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1451210": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -3530,20 +6241,29 @@
     "vocabIds": [
       "1421510",
       "1451210",
-      "1212260"
+      "1212260",
+      "1212250"
     ],
     "matches": {
+      "1212250": {
+        "start": 11,
+        "length": 2,
+        "reading": "かんじ"
+      },
       "1212260": {
         "start": 11,
-        "length": 5
+        "length": 2,
+        "reading": "かんじ"
       },
       "1421510": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じめん"
       },
       "1451210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -3566,19 +6286,80 @@
     "matches": {
       "1323080": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1361490": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1429170": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうし"
       },
       "1451210": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      }
+    }
+  },
+  {
+    "id": "235360",
+    "original": "３０分走った後でその車は動かなくなった。",
+    "en": [
+      {
+        "id": "72738",
+        "text": "The car broke down after half an hour's driving."
+      }
+    ],
+    "indices": "分(ふん) 走る[02]{走った} 後(あと)[02] で(#2028980) 其の[01]{その} 車(くるま) は 動く{動かなくなった}",
+    "vocabIds": [
+      "2859157",
+      "1502860",
+      "1402540",
+      "1269320",
+      "1269350",
+      "1323080",
+      "1451210"
+    ],
+    "matches": {
+      "1269320": {
+        "start": 6,
+        "length": 1,
+        "reading": "のち"
+      },
+      "1269350": {
+        "start": 6,
+        "length": 2,
+        "reading": "のちで"
+      },
+      "1323080": {
+        "start": 10,
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1402540": {
+        "start": 3,
+        "length": 2,
+        "reading": "はしっ"
+      },
+      "1451210": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1502860": {
+        "start": 2,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "2859157": {
+        "start": 0,
+        "length": 3,
+        "reading": "さんぜろふん"
       }
     }
   },
@@ -3595,25 +6376,41 @@
     "vocabIds": [
       "1451210",
       "1394840",
+      "1243490",
       "1804250",
+      "1236500",
       "1235910"
     ],
     "matches": {
       "1235910": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "さけん"
+      },
+      "1236500": {
+        "start": 12,
+        "length": 2,
+        "reading": "ごうとう"
+      },
+      "1243490": {
+        "start": 10,
+        "length": 2,
+        "reading": "ぎんこう"
       },
       "1394840": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんいん"
       },
       "1451210": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1804250": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "ぎんこうごうとう"
       }
     }
   },
@@ -3628,22 +6425,43 @@
     ],
     "indices": "此の{この} ゲーム は 基本的{基本的に} キーボード と ゲームパッド~ で(#2028980) 動く 様(よう){よう} に 成る{なっています} が コンフィグ~ 丈(だけ){だけ} は マウス(#1127140)[02] しか 操作 出来る{できません}",
     "vocabIds": [
+      "1219190",
+      "1219260",
       "1219270",
+      "1437260",
       "1451210",
       "1400050"
     ],
     "matches": {
+      "1219190": {
+        "start": 6,
+        "length": 2,
+        "reading": "きほん"
+      },
+      "1219260": {
+        "start": 6,
+        "length": 3,
+        "reading": "きほんてき"
+      },
       "1219270": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "きほんてきに"
       },
       "1400050": {
         "start": 48,
-        "length": 2
+        "length": 2,
+        "reading": "そうさ"
+      },
+      "1437260": {
+        "start": 8,
+        "length": 1,
+        "reading": "てき"
       },
       "1451210": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -3667,21 +6485,30 @@
     "indices": "バグ だ か 何 だ か 分かんない~ けど 此の{この} ソフト は ちゃんと 動く{動かない}",
     "vocabIds": [
       "1188350",
+      "1606560",
       "2158960",
       "1451210"
     ],
     "matches": {
       "1188350": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1451210": {
         "start": 25,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1606560": {
+        "start": 7,
+        "length": 3,
+        "reading": "わかん"
       },
       "2158960": {
         "start": 7,
-        "length": 5
+        "length": 5,
+        "reading": "わかんない"
       }
     }
   },
@@ -3700,7 +6527,8 @@
     "matches": {
       "1451210": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -3721,15 +6549,44 @@
     "matches": {
       "1188350": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "なんだか"
       },
       "1451210": {
         "start": 25,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1606560": {
         "start": 7,
-        "length": 5
+        "length": 3,
+        "reading": "わから"
+      }
+    }
+  },
+  {
+    "id": "910460",
+    "original": "病気で動かれなくなったのではないかな。",
+    "en": [
+      {
+        "id": "910581",
+        "text": "I wonder if she might not have become unable to move because of an illness."
+      }
+    ],
+    "vocabIds": [
+      "1490230",
+      "1451210"
+    ],
+    "matches": {
+      "1451210": {
+        "start": 3,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1490230": {
+        "start": 0,
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -3749,11 +6606,13 @@
     "matches": {
       "1213280": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "かんきょう"
       },
       "1451210": {
         "start": 19,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -3777,11 +6636,13 @@
     "matches": {
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1451210": {
         "start": 6,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -3796,8 +6657,7 @@
     ],
     "vocabIds": [
       "1483070",
-      "1621290",
-      "1400150",
+      "1397310",
       "1451210",
       "1193610",
       "1350110"
@@ -3805,27 +6665,28 @@
     "matches": {
       "1193610": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1350110": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "けし"
       },
-      "1400150": {
-        "start": 3,
-        "length": 2
+      "1397310": {
+        "start": 2,
+        "length": 3,
+        "reading": "すばやく"
       },
       "1451210": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
-      },
-      "1621290": {
-        "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -3850,15 +6711,18 @@
     "matches": {
       "1316140": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1377390": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せいじょう"
       },
       "1451210": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -3883,15 +6747,18 @@
     "matches": {
       "1309650": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ゆび"
       },
       "1327190": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "て"
       },
       "1451210": {
         "start": 12,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -3914,7 +6781,8 @@
     "matches": {
       "1451210": {
         "start": 3,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -3934,11 +6802,13 @@
     "matches": {
       "1421510": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じめん"
       },
       "1451210": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -3955,29 +6825,40 @@
       "1318610",
       "1535880",
       "2205240",
+      "1355790",
       "1451210",
-      "1547320"
+      "1547330"
     ],
     "matches": {
       "1318610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1355790": {
+        "start": 17,
+        "length": 1,
+        "reading": "ば"
       },
       "1451210": {
         "start": 19,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1535880": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "もどる"
       },
-      "1547320": {
+      "1547330": {
         "start": 24,
-        "length": 1
+        "length": 4,
+        "reading": "ほしかっ"
       },
       "2205240": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "そのば"
       }
     }
   },
@@ -3992,21 +6873,30 @@
     ],
     "vocabIds": [
       "1451210",
+      "1351730",
       "1351740",
       "1386460"
     ],
     "matches": {
+      "1351730": {
+        "start": 12,
+        "length": 3,
+        "reading": "くわしく"
+      },
       "1351740": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "くわしく"
       },
       "1386460": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "せつめい"
       },
       "1451210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -4020,6 +6910,7 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "1188270",
       "1533730",
       "1269410",
@@ -4028,19 +6919,28 @@
     "matches": {
       "1188270": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1269410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "うしろ"
       },
       "1451210": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1533730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しげみ"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -4056,35 +6956,53 @@
     "vocabIds": [
       "1252330",
       "1337000",
+      "1277100",
       "1277090",
       "1451210",
       "1414300",
-      "1352320"
+      "1352320",
+      "1352300"
     ],
     "matches": {
       "1252330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいかん"
       },
       "1277090": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "むけ"
+      },
+      "1277100": {
+        "start": 8,
+        "length": 2,
+        "reading": "むけ"
       },
       "1337000": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "じゅう"
+      },
+      "1352300": {
+        "start": 21,
+        "length": 2,
+        "reading": "あげ"
       },
       "1352320": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "あげ"
       },
       "1414300": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "おおごえ"
       },
       "1451210": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -4106,19 +7024,55 @@
     "matches": {
       "1264610": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かぎり"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451210": {
         "start": 9,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1587040": {
         "start": 2,
-        "length": 4
+        "length": 2,
+        "reading": "いわ"
+      }
+    }
+  },
+  {
+    "id": "2145798",
+    "original": "動き続けましょう。",
+    "en": [
+      {
+        "id": "2007816",
+        "text": "Let's keep moving."
+      }
+    ],
+    "vocabIds": [
+      "1451210",
+      "1451180",
+      "1405800"
+    ],
+    "matches": {
+      "1405800": {
+        "start": 2,
+        "length": 2,
+        "reading": "つづけ"
+      },
+      "1451180": {
+        "start": 0,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 0,
+        "length": 2,
+        "reading": "うごき"
       }
     }
   },
@@ -4137,7 +7091,100 @@
     "matches": {
       "1451210": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      }
+    }
+  },
+  {
+    "id": "2450903",
+    "original": "「スカイライナー」はゆっくりと動き始め、そして軽快に速度を上げながら、私たちを東京へと運んで行った。",
+    "en": [
+      {
+        "id": "2592784",
+        "text": "The \"skyliner\" slowly started moving and, picking up speed effortlessly, it carried us towards Tokyo."
+      }
+    ],
+    "vocabIds": [
+      "1451210",
+      "1451180",
+      "1307550",
+      "1342540",
+      "1252600",
+      "1405050",
+      "1352320",
+      "1352300",
+      "1311110",
+      "1311300",
+      "1447690",
+      "1172660",
+      "1578850"
+    ],
+    "matches": {
+      "1172660": {
+        "start": 43,
+        "length": 2,
+        "reading": "はこん"
+      },
+      "1252600": {
+        "start": 23,
+        "length": 2,
+        "reading": "けいかい"
+      },
+      "1307550": {
+        "start": 17,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1311110": {
+        "start": 35,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 35,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1342540": {
+        "start": 17,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1352300": {
+        "start": 29,
+        "length": 2,
+        "reading": "あげ"
+      },
+      "1352320": {
+        "start": 29,
+        "length": 2,
+        "reading": "あげ"
+      },
+      "1405050": {
+        "start": 26,
+        "length": 2,
+        "reading": "そくど"
+      },
+      "1447690": {
+        "start": 39,
+        "length": 2,
+        "reading": "とうきょう"
+      },
+      "1451180": {
+        "start": 15,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 15,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1578850": {
+        "start": 46,
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -4161,27 +7208,83 @@
     "matches": {
       "1155400": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "くらい"
       },
       "1421510": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じめん"
       },
       "1451210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1451750": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
       "1454510": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "とくい"
       },
       "1534520": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "き"
+      }
+    }
+  },
+  {
+    "id": "3362334",
+    "original": "そのエレベーター、今日は動きませんよ。",
+    "en": [
+      {
+        "id": "462698",
+        "text": "The elevator is out of order today."
+      },
+      {
+        "id": "8440040",
+        "text": "The elevator isn't working today."
+      },
+      {
+        "id": "12744476",
+        "text": "That elevator isn't working today."
+      },
+      {
+        "id": "12744477",
+        "text": "That elevator is out of order today."
+      }
+    ],
+    "vocabIds": [
+      "1579110",
+      "1289400",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1289400": {
+        "start": 9,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1451180": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1579110": {
+        "start": 9,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -4205,27 +7308,33 @@
     "matches": {
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "こん"
       },
       "1324330": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じゃっかん"
       },
       "1377390": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "せいじょう"
       },
       "1451210": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       },
       "1451350": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "どうさ"
       },
       "1582430": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "にぶい"
       }
     }
   },
@@ -4241,20 +7350,29 @@
     "vocabIds": [
       "1451210",
       "1986050",
+      "1385480",
       "1377390"
     ],
     "matches": {
       "1377390": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "せいじょう"
+      },
+      "1385480": {
+        "start": 33,
+        "length": 2,
+        "reading": "せつぞく"
       },
       "1451210": {
         "start": 12,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1986050": {
         "start": 26,
-        "length": 9
+        "length": 9,
+        "reading": "いんたーねっとせつぞく"
       }
     }
   },
@@ -4269,21 +7387,36 @@
     ],
     "vocabIds": [
       "1451210",
+      "1160790",
       "1166460",
+      "1514290",
       "1299030"
     ],
     "matches": {
+      "1160790": {
+        "start": 4,
+        "length": 1,
+        "reading": "いち"
+      },
       "1166460": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "いちほ"
       },
       "1299030": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ころす"
       },
       "1451210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1514290": {
+        "start": 5,
+        "length": 1,
+        "reading": "ほ"
       }
     }
   },
@@ -4302,7 +7435,8 @@
     "matches": {
       "1451210": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -4337,7 +7471,8 @@
     "matches": {
       "1451210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -4356,7 +7491,8 @@
     "matches": {
       "1451210": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -4379,7 +7515,8 @@
     "matches": {
       "1451210": {
         "start": 0,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -4399,11 +7536,13 @@
     "matches": {
       "1420970": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちきゅう"
       },
       "1451210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -4417,22 +7556,19 @@
       }
     ],
     "vocabIds": [
-      "2002300",
-      "1252050",
+      "1316140",
       "1451210"
     ],
     "matches": {
-      "1252050": {
-        "start": 3,
-        "length": 1
+      "1316140": {
+        "start": 2,
+        "length": 2,
+        "reading": "とけい"
       },
       "1451210": {
         "start": 5,
-        "length": 3
-      },
-      "2002300": {
-        "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -4452,11 +7588,13 @@
     "matches": {
       "1316140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とけい"
       },
       "1451210": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -4479,7 +7617,34 @@
     "matches": {
       "1451210": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      }
+    }
+  },
+  {
+    "id": "8889935",
+    "original": "指が動かせないんだよ。",
+    "en": [
+      {
+        "id": "6604267",
+        "text": "I can't move my fingers."
+      }
+    ],
+    "vocabIds": [
+      "1309650",
+      "1451210"
+    ],
+    "matches": {
+      "1309650": {
+        "start": 0,
+        "length": 1,
+        "reading": "ゆび"
+      },
+      "1451210": {
+        "start": 2,
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -4499,11 +7664,13 @@
     "matches": {
       "1407980": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たぶん"
       },
       "1451210": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -4523,11 +7690,13 @@
     "matches": {
       "1451210": {
         "start": 6,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       },
       "1562870": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "うでどけい"
       }
     }
   },
@@ -4550,7 +7719,8 @@
     "matches": {
       "1451210": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -4569,7 +7739,8 @@
     "matches": {
       "1451210": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -4596,7 +7767,8 @@
     "matches": {
       "1451210": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -4616,11 +7788,13 @@
     "matches": {
       "1443620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "でんち"
       },
       "1451210": {
         "start": 17,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -4641,15 +7815,18 @@
     "matches": {
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1343950": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "かい"
       },
       "1451210": {
         "start": 13,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -4681,11 +7858,13 @@
     "matches": {
       "1360770": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しんぞう"
       },
       "1451210": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -4704,7 +7883,8 @@
     "matches": {
       "1451210": {
         "start": 7,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -4723,7 +7903,8 @@
     "matches": {
       "1451210": {
         "start": 6,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -4739,25 +7920,73 @@
     "vocabIds": [
       "1220810",
       "1451210",
+      "1321110",
       "1321120",
-      "2256270"
+      "1259210"
     ],
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1259210": {
+        "start": 16,
+        "length": 2,
+        "reading": "みせ"
+      },
+      "1321110": {
+        "start": 12,
+        "length": 2,
+        "reading": "じっさい"
       },
       "1321120": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "じっさいに"
       },
       "1451210": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      }
+    }
+  },
+  {
+    "id": "10901432",
+    "original": "このおもちゃの車は電池で動きます。",
+    "en": [
+      {
+        "id": "61297",
+        "text": "This toy car runs on batteries."
+      }
+    ],
+    "vocabIds": [
+      "1323080",
+      "1443620",
+      "1451210",
+      "1451180"
+    ],
+    "matches": {
+      "1323080": {
+        "start": 7,
+        "length": 1,
+        "reading": "くるま"
       },
-      "2256270": {
-        "start": 16,
-        "length": 1
+      "1443620": {
+        "start": 9,
+        "length": 2,
+        "reading": "でんち"
+      },
+      "1451180": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごき"
+      },
+      "1451210": {
+        "start": 12,
+        "length": 2,
+        "reading": "うごき"
       }
     }
   },
@@ -4784,7 +8013,8 @@
     "matches": {
       "1451210": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -4815,7 +8045,52 @@
     "matches": {
       "1451210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      }
+    }
+  },
+  {
+    "id": "11052107",
+    "original": "このマウス、急に動かなくなったよ。",
+    "en": [
+      {
+        "id": "10800005",
+        "text": "This mouse suddenly doesn't work."
+      },
+      {
+        "id": "12047893",
+        "text": "This mouse suddenly quit working."
+      },
+      {
+        "id": "12047894",
+        "text": "This mouse suddenly stopped working."
+      },
+      {
+        "id": "10800006",
+        "text": "This mouse has suddenly stopped working."
+      }
+    ],
+    "vocabIds": [
+      "1228560",
+      "2269050",
+      "1451210"
+    ],
+    "matches": {
+      "1228560": {
+        "start": 6,
+        "length": 1,
+        "reading": "きゅう"
+      },
+      "1451210": {
+        "start": 8,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "2269050": {
+        "start": 6,
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -4836,11 +8111,13 @@
     "matches": {
       "1188420": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "なんとか"
       },
       "1451210": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
       }
     }
   },
@@ -4863,23 +8140,262 @@
     "matches": {
       "1242590": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1289590": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "こまっ"
       },
       "1366770": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1368180": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "にんじょう"
       },
       "1451210": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      }
+    }
+  },
+  {
+    "id": "8923433",
+    "original": "今日ね、常務がパソコン持って来たの。もうねぇ、びっくりして「どうなされたんですか？」って聞いたら「パソコンが動かなくなったから電話したんだけど、田中くんが４階まで持って来いって言うから、持ってきたよ」って。みんな顔面蒼白状態。まぁ、言うまでもなくその後、田中、部長にこっぴどく叱られてたけどね。仕方ないよね。けど、次は我が身。気を付けようって思った。",
+    "en": [
+      {
+        "id": "11380237",
+        "text": "Today, the managing director came in carrying a computer. Well, I was surprised and asked, \"Can I help you with anything?\", and he said, \"My computer stopped working, so I called, but Tanaka told me to bring it up to the 4th floor, so here I am.\" Everyone turned pale. Well, needless to say, our boss gave Tanaka a real going-over. It couldn't be helped. It could've been any one of us though, so I thought, \"I better be careful.\""
+      }
+    ],
+    "vocabIds": [
+      "1579110",
+      "1356130",
+      "1315720",
+      "1547720",
+      "1547710",
+      "1591110",
+      "1451210",
+      "1443840",
+      "1203020",
+      "1769980",
+      "2742070",
+      "2757880",
+      "1587040",
+      "1217860",
+      "2043320",
+      "1616250",
+      "1356730",
+      "1264350",
+      "2067940",
+      "1006860",
+      "1499460",
+      "1319580",
+      "1594110",
+      "1305440",
+      "1316380",
+      "1196690",
+      "1221520",
+      "1495770",
+      "1589350"
+    ],
+    "matches": {
+      "1006860": {
+        "start": 123,
+        "length": 3,
+        "reading": "そのご"
+      },
+      "1196690": {
+        "start": 159,
+        "length": 3,
+        "reading": "わがみ"
+      },
+      "1203020": {
+        "start": 78,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1217860": {
+        "start": 106,
+        "length": 2,
+        "reading": "がんめん"
+      },
+      "1221520": {
+        "start": 163,
+        "length": 1,
+        "reading": "き"
+      },
+      "1264350": {
+        "start": 116,
+        "length": 7,
+        "reading": "いうまでもなく"
+      },
+      "1305440": {
+        "start": 147,
+        "length": 4,
+        "reading": "しかたない"
+      },
+      "1315720": {
+        "start": 11,
+        "length": 2,
+        "reading": "もっ"
+      },
+      "1316380": {
+        "start": 157,
+        "length": 1,
+        "reading": "つぎ"
+      },
+      "1319580": {
+        "start": 138,
+        "length": 2,
+        "reading": "しから"
+      },
+      "1356130": {
+        "start": 4,
+        "length": 2,
+        "reading": "じょうむ"
+      },
+      "1356730": {
+        "start": 110,
+        "length": 2,
+        "reading": "じょうたい"
+      },
+      "1443840": {
+        "start": 63,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1451210": {
+        "start": 54,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1495770": {
+        "start": 165,
+        "length": 3,
+        "reading": "つけよ"
+      },
+      "1499460": {
+        "start": 130,
+        "length": 2,
+        "reading": "ぶちょう"
+      },
+      "1547710": {
+        "start": 14,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 14,
+        "length": 1,
+        "reading": "き"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1587040": {
+        "start": 88,
+        "length": 2,
+        "reading": "いう"
+      },
+      "1589350": {
+        "start": 171,
+        "length": 2,
+        "reading": "おもっ"
+      },
+      "1591110": {
+        "start": 44,
+        "length": 2,
+        "reading": "きい"
+      },
+      "1594110": {
+        "start": 147,
+        "length": 2,
+        "reading": "しかた"
+      },
+      "1616250": {
+        "start": 108,
+        "length": 2,
+        "reading": "そうはく"
+      },
+      "1769980": {
+        "start": 81,
+        "length": 5,
+        "reading": "もってこい"
+      },
+      "2043320": {
+        "start": 106,
+        "length": 4,
+        "reading": "がんめんそうはく"
+      },
+      "2067940": {
+        "start": 116,
+        "length": 7,
+        "reading": "いうまでもなく"
+      },
+      "2742070": {
+        "start": 84,
+        "length": 2,
+        "reading": "こい"
+      },
+      "2757880": {
+        "start": 86,
+        "length": 4,
+        "reading": "っていう"
+      }
+    }
+  },
+  {
+    "id": "11384798",
+    "original": "パソコンが動かなくなりました。",
+    "en": [
+      {
+        "id": "5301746",
+        "text": "My laptop's stopped working."
+      }
+    ],
+    "vocabIds": [
+      "1451210"
+    ],
+    "matches": {
+      "1451210": {
+        "start": 5,
+        "length": 2,
+        "reading": "うごか"
+      }
+    }
+  },
+  {
+    "id": "11384799",
+    "original": "僕のパソコン、動かなくなったんだけど。",
+    "en": [
+      {
+        "id": "5301746",
+        "text": "My laptop's stopped working."
+      }
+    ],
+    "vocabIds": [
+      "1521400",
+      "1451210"
+    ],
+    "matches": {
+      "1451210": {
+        "start": 7,
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1521400": {
+        "start": 0,
+        "length": 1,
+        "reading": "ぼく"
       }
     }
   },
@@ -4899,11 +8415,13 @@
     "matches": {
       "1309650": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ゆび"
       },
       "1451210": {
         "start": 2,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -4922,7 +8440,8 @@
     "matches": {
       "1451210": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -4936,6 +8455,7 @@
       }
     ],
     "vocabIds": [
+      "1589040",
       "1422020",
       "1335570",
       "1323080",
@@ -4944,19 +8464,28 @@
     "matches": {
       "1323080": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1335570": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうたい"
       },
       "1422020": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "おくれ"
       },
       "1451210": {
         "start": 15,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
+      },
+      "1589040": {
+        "start": 3,
+        "length": 2,
+        "reading": "おくれ"
       }
     }
   },
@@ -4974,38 +8503,57 @@
       "1245290",
       "1497420",
       "1259140",
+      "1321110",
       "2830216",
+      "2093400",
       "1404990",
       "1451210"
     ],
     "matches": {
       "1245290": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "そら"
       },
       "1255430": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1259140": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
+      },
+      "1321110": {
+        "start": 25,
+        "length": 2,
+        "reading": "じっさい"
       },
       "1404990": {
         "start": 35,
-        "length": 2
+        "length": 2,
+        "reading": "はやさ"
       },
       "1451210": {
         "start": 38,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1497420": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "うい"
+      },
+      "2093400": {
+        "start": 35,
+        "length": 1,
+        "reading": "はや"
       },
       "2830216": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "じっさいは"
       }
     }
   },
@@ -5025,11 +8573,13 @@
     "matches": {
       "1220810": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1451210": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       }
     }
   },
@@ -5050,15 +8600,18 @@
     "matches": {
       "1366060": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しんこう"
       },
       "1451210": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
       },
       "1452500": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どうじ"
       }
     }
   },
@@ -5072,12 +8625,19 @@
       }
     ],
     "vocabIds": [
-      "1451210"
+      "1451210",
+      "1529390"
     ],
     "matches": {
       "1451210": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "うごい"
+      },
+      "1529390": {
+        "start": 9,
+        "length": 2,
+        "reading": "ねむっ"
       }
     }
   },
@@ -5097,11 +8657,13 @@
     "matches": {
       "1220810": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1451210": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "うごか"
       }
     }
   },
@@ -5116,16 +8678,24 @@
     ],
     "vocabIds": [
       "1451210",
-      "2540200"
+      "2540200",
+      "1587040"
     ],
     "matches": {
       "1451210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "うごく"
+      },
+      "1587040": {
+        "start": 7,
+        "length": 2,
+        "reading": "いっ"
       },
       "2540200": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "といった"
       }
     }
   }

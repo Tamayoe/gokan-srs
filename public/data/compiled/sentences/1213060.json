@@ -1,5 +1,38 @@
 [
   {
+    "id": "77136",
+    "original": "脇の下に汗をかいた。",
+    "en": [
+      {
+        "id": "326583",
+        "text": "I perspired under the arms."
+      }
+    ],
+    "indices": "脇の下 に 汗をかく{汗をかいた}",
+    "vocabIds": [
+      "1980740",
+      "1213060",
+      "1473740"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 4,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1473740": {
+        "start": 6,
+        "length": 2,
+        "reading": "かい"
+      },
+      "1980740": {
+        "start": 0,
+        "length": 3,
+        "reading": "わきのした"
+      }
+    }
+  },
+  {
     "id": "78793",
     "original": "踊り子の優雅さは懸命な練習、汗と苦しさから生まれるのです。",
     "en": [
@@ -15,37 +48,95 @@
       "1257730",
       "1559160",
       "1213060",
+      "1244320",
       "2675950",
       "1378690"
     ],
     "matches": {
       "1213060": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1244320": {
+        "start": 16,
+        "length": 2,
+        "reading": "くるし"
       },
       "1257730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "けんめい"
       },
       "1378690": {
         "start": 21,
-        "length": 4
+        "length": 4,
+        "reading": "うまれる"
       },
       "1539180": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうが"
       },
       "1546900": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おどりこ"
       },
       "1559160": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "れんしゅう"
       },
       "2675950": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "くるしさ"
+      }
+    }
+  },
+  {
+    "id": "85838",
+    "original": "肥えた人は概してよく汗をかく。",
+    "en": [
+      {
+        "id": "317874",
+        "text": "Fat people generally sweat a lot."
+      }
+    ],
+    "indices": "肥える[01]{肥えた} 人(ひと) は 概して 良く{よく} 汗をかく",
+    "vocabIds": [
+      "1484260",
+      "1580640",
+      "1204400",
+      "1213060",
+      "1213080"
+    ],
+    "matches": {
+      "1204400": {
+        "start": 5,
+        "length": 3,
+        "reading": "がいして"
+      },
+      "1213060": {
+        "start": 10,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1213080": {
+        "start": 10,
+        "length": 4,
+        "reading": "あせをかく"
+      },
+      "1484260": {
+        "start": 0,
+        "length": 2,
+        "reading": "こえ"
+      },
+      "1580640": {
+        "start": 3,
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -63,24 +154,34 @@
       "1483150",
       "1477950",
       "1213060",
-      "1467620"
+      "1467620",
+      "2847182"
     ],
     "matches": {
       "1213060": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1467620": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "ぬれ"
       },
       "1477950": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かみ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "2847182": {
+        "start": 7,
+        "length": 2,
+        "reading": "ぬれ"
       }
     }
   },
@@ -102,15 +203,63 @@
     "matches": {
       "1213060": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1217730": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "94584",
+    "original": "彼女の額は玉の汗だった。",
+    "en": [
+      {
+        "id": "309122",
+        "text": "Her brow was beaded with perspiration."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 額(ひたい) は 玉(たま)[01] の 汗(あせ)[01] だ{だった}",
+    "vocabIds": [
+      "1483150",
+      "1207500",
+      "1240530",
+      "1828480",
+      "1213060"
+    ],
+    "matches": {
+      "1207500": {
+        "start": 3,
+        "length": 1,
+        "reading": "がく"
+      },
+      "1213060": {
+        "start": 7,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1240530": {
+        "start": 5,
+        "length": 1,
+        "reading": "たま"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1828480": {
+        "start": 5,
+        "length": 3,
+        "reading": "たまのあせ"
       }
     }
   },
@@ -132,15 +281,75 @@
     "matches": {
       "1207500": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
       },
       "1213060": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "99162",
+    "original": "彼は裸の背中と腕に玉のような汗をかいていた。",
+    "en": [
+      {
+        "id": "304537",
+        "text": "His naked back and arms were beaded with sweat."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 裸{裸の} 背中 と 腕(うで)[01] に 玉(たま)[01] 之(の)[01]{の} 様な{ような} 汗をかく{汗をかいていた}",
+    "vocabIds": [
+      "1483070",
+      "1547600",
+      "1472800",
+      "1562850",
+      "1240530",
+      "1213060",
+      "1473740"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 14,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1240530": {
+        "start": 9,
+        "length": 1,
+        "reading": "たま"
+      },
+      "1472800": {
+        "start": 4,
+        "length": 2,
+        "reading": "せなか"
+      },
+      "1473740": {
+        "start": 16,
+        "length": 2,
+        "reading": "かい"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1547600": {
+        "start": 2,
+        "length": 1,
+        "reading": "はだか"
+      },
+      "1562850": {
+        "start": 7,
+        "length": 1,
+        "reading": "うで"
       }
     }
   },
@@ -162,15 +371,18 @@
     "matches": {
       "1213060": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1217730": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -191,11 +403,13 @@
     "matches": {
       "1213060": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -218,19 +432,23 @@
     "matches": {
       "1207500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
       },
       "1213060": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1357220": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "ぬぐっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -245,6 +463,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 顔(かお) に 汗(あせ)[01] が 滲む{にじんでいた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1217730",
       "1213060"
@@ -252,15 +471,68 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1213060": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1217730": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "117867",
+    "original": "彼の額は汗まみれだった。",
+    "en": [
+      {
+        "id": "285797",
+        "text": "Sweat bathed his forehead."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 額(ひたい) は 汗(あせ)[01] 塗れ{まみれ} だ{だった}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1207500",
+      "1213060",
+      "2760810"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1207500": {
+        "start": 2,
+        "length": 1,
+        "reading": "がく"
+      },
+      "1213060": {
+        "start": 4,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2760810": {
+        "start": 4,
+        "length": 4,
+        "reading": "あせまみれ"
       }
     }
   },
@@ -275,6 +547,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 額(ひたい) の 汗(あせ)[01] を 拭う{ぬぐった}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1207500",
       "1213060"
@@ -282,15 +555,23 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1207500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
       },
       "1213060": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -305,32 +586,49 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 額(ひたい) に 玉(たま)[01] 之(の)[01]{の} 様な{ような} 汗(あせ)[01] が 出る{出ていた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1207500",
       "1240530",
       "1213060",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1207500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
       },
       "1213060": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1240530": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "たま"
       },
       "1338240": {
         "start": 11,
-        "length": 2
+        "length": 1,
+        "reading": "で"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1896380": {
+        "start": 11,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -345,6 +643,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 額(ひたい) には 玉(たま)[02]~ 之(の)[01]{の} 様な{ような} 汗(あせ)[01] が 浮かぶ{浮かんでいた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1207500",
       "1240530",
@@ -354,23 +653,33 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1207500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
       },
       "1213060": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1240530": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "たま"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1497430": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "うかん"
       }
     }
   },
@@ -385,6 +694,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 額(ひたい) から 汗(あせ)[01] が どっと 流れ出る{流れ出ていた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1207500",
       "1213060",
@@ -393,19 +703,28 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1207500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
       },
       "1213060": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1552180": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "ながれで"
       }
     }
   },
@@ -422,30 +741,53 @@
     "vocabIds": [
       "1483070",
       "1588120",
+      "1183970",
       "2839604",
+      "1203310",
       "1327190",
-      "1213060"
+      "1213060",
+      "1152720"
     ],
     "matches": {
+      "1152720": {
+        "start": 28,
+        "length": 2,
+        "reading": "にぎっ"
+      },
+      "1183970": {
+        "start": 10,
+        "length": 2,
+        "reading": "おんてい"
+      },
+      "1203310": {
+        "start": 13,
+        "length": 3,
+        "reading": "はずれる"
+      },
       "1213060": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1327190": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "て"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1588120": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "うたう"
       },
       "2839604": {
         "start": 10,
-        "length": 6
+        "length": 6,
+        "reading": "おんていがはずれる"
       }
     }
   },
@@ -463,29 +805,85 @@
       "1415520",
       "1213060",
       "1217730",
+      "1552140",
       "1552130",
-      "1307550"
+      "1307550",
+      "1342540"
     ],
     "matches": {
       "1213060": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1217730": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
       },
       "1307550": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 12,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1415520": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たき"
       },
       "1552130": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ながれ"
+      },
+      "1552140": {
+        "start": 10,
+        "length": 2,
+        "reading": "ながれ"
+      }
+    }
+  },
+  {
+    "id": "137599",
+    "original": "大汗をかいた。",
+    "en": [
+      {
+        "id": "275637",
+        "text": "They sweated gallons."
+      }
+    ],
+    "indices": "大汗(おおあせ)~ を 掻く[02]{かいた}",
+    "vocabIds": [
+      "2082450",
+      "2427790",
+      "1213060",
+      "1473740"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 1,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1473740": {
+        "start": 3,
+        "length": 2,
+        "reading": "かい"
+      },
+      "2082450": {
+        "start": 0,
+        "length": 1,
+        "reading": "だい"
+      },
+      "2427790": {
+        "start": 0,
+        "length": 2,
+        "reading": "だいあせ"
       }
     }
   },
@@ -500,22 +898,25 @@
     ],
     "indices": "暑い{暑かった} ので 彼女[01] は 汗(あせ)[01] びっしょり になる{になりました}",
     "vocabIds": [
-      "2656110",
+      "1343460",
       "1483150",
       "1213060"
     ],
     "matches": {
       "1213060": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1343460": {
+        "start": 0,
+        "length": 3,
+        "reading": "あつかっ"
       },
       "1483150": {
         "start": 7,
-        "length": 2
-      },
-      "2656110": {
-        "start": 0,
-        "length": 1
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -538,19 +939,92 @@
     "matches": {
       "1213060": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1335080": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1583720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
       },
       "1599400": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "なおる"
+      }
+    }
+  },
+  {
+    "id": "165663",
+    "original": "私たちは手に汗を握って野球の試合を見た。",
+    "en": [
+      {
+        "id": "248842",
+        "text": "We watched the baseball game with excitement."
+      }
+    ],
+    "indices": "私たち は 手 に 汗(あせ)[01] を 握る{握って} 野球 の 試合 を 見る{見た}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1327190",
+      "1213060",
+      "1152720",
+      "1537300",
+      "1312420",
+      "1259290",
+      "2256270"
+    ],
+    "matches": {
+      "1152720": {
+        "start": 8,
+        "length": 2,
+        "reading": "にぎっ"
+      },
+      "1213060": {
+        "start": 6,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1259290": {
+        "start": 17,
+        "length": 1,
+        "reading": "み"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1312420": {
+        "start": 14,
+        "length": 2,
+        "reading": "しあい"
+      },
+      "1327190": {
+        "start": 4,
+        "length": 1,
+        "reading": "て"
+      },
+      "1537300": {
+        "start": 11,
+        "length": 2,
+        "reading": "やきゅう"
+      },
+      "2256270": {
+        "start": 17,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -575,27 +1049,33 @@
     "matches": {
       "1213060": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1255060": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1436360": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ていきょう"
       },
       "1555930": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "なみだ"
       },
       "1560270": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ろうく"
       }
     }
   },
@@ -617,15 +1097,18 @@
     "matches": {
       "1172910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "うんどう"
       },
       "1213060": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1600720": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "はげしい"
       }
     }
   },
@@ -641,26 +1124,42 @@
     "indices": "汗(あせ)[01] が 彼(かれ)[01] の 顔(かお) から 滴り落ちる{したたり落ちて}~ 来る(くる){くる}",
     "vocabIds": [
       "1213060",
+      "1483070",
       "1000420",
       "1217730",
-      "1548550"
+      "1548550",
+      "1548530"
     ],
     "matches": {
       "1000420": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1213060": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1217730": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1548530": {
+        "start": 11,
+        "length": 2,
+        "reading": "おち"
       },
       "1548550": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "おち"
       }
     }
   },
@@ -677,25 +1176,53 @@
     "vocabIds": [
       "1213060",
       "1207500",
+      "1437230",
+      "1437220",
       "1880730",
-      "1212260"
+      "1548550",
+      "1212260",
+      "1212250"
     ],
     "matches": {
       "1207500": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
+      },
+      "1212250": {
+        "start": 11,
+        "length": 2,
+        "reading": "かんじ"
       },
       "1212260": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1213060": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1437220": {
+        "start": 4,
+        "length": 2,
+        "reading": "したたり"
+      },
+      "1437230": {
+        "start": 4,
+        "length": 2,
+        "reading": "したたり"
+      },
+      "1548550": {
+        "start": 6,
+        "length": 3,
+        "reading": "おちる"
       },
       "1880730": {
         "start": 4,
-        "length": 5
+        "length": 5,
+        "reading": "したたりおちる"
       }
     }
   },
@@ -715,7 +1242,8 @@
     "matches": {
       "1213060": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       }
     }
   },
@@ -736,11 +1264,13 @@
     "matches": {
       "1207500": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
       },
       "1213060": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       }
     }
   },
@@ -757,20 +1287,29 @@
     "vocabIds": [
       "1207500",
       "1213060",
-      "1548550"
+      "1548550",
+      "1548530"
     ],
     "matches": {
       "1207500": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
       },
       "1213060": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1548530": {
+        "start": 9,
+        "length": 2,
+        "reading": "おち"
       },
       "1548550": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "おち"
       }
     }
   },
@@ -787,30 +1326,80 @@
     "vocabIds": [
       "1191320",
       "1213060",
-      "1415870",
-      "1371260",
-      "2799140"
+      "1415850",
+      "1302980",
+      "1169870"
     ],
     "matches": {
+      "1169870": {
+        "start": 16,
+        "length": 2,
+        "reading": "のま"
+      },
       "1191320": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なつ"
       },
       "1213060": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
-      "1371260": {
-        "start": 14,
-        "length": 1
+      "1302980": {
+        "start": 13,
+        "length": 2,
+        "reading": "さんすい"
       },
-      "1415870": {
+      "1415850": {
         "start": 12,
-        "length": 2
+        "length": 1,
+        "reading": "さわ"
+      }
+    }
+  },
+  {
+    "id": "191625",
+    "original": "われわれは暑さで汗をかいていた。",
+    "en": [
+      {
+        "id": "28788",
+        "text": "We were sweating in the heat."
+      }
+    ],
+    "indices": "我々{われわれ} は 暑い{暑} さ[01] で(#2028980) 汗をかく{汗をかいていた}",
+    "vocabIds": [
+      "1343460",
+      "2656110",
+      "1343480",
+      "1213060",
+      "1473740"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 8,
+        "length": 1,
+        "reading": "あせ"
       },
-      "2799140": {
-        "start": 16,
-        "length": 1
+      "1343460": {
+        "start": 5,
+        "length": 1,
+        "reading": "あつ"
+      },
+      "1343480": {
+        "start": 5,
+        "length": 2,
+        "reading": "あつさ"
+      },
+      "1473740": {
+        "start": 10,
+        "length": 2,
+        "reading": "かい"
+      },
+      "2656110": {
+        "start": 5,
+        "length": 1,
+        "reading": "あつ"
       }
     }
   },
@@ -832,15 +1421,18 @@
     "matches": {
       "1202150": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "みな"
       },
       "1213060": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1612930": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "びしょぬれ"
       }
     }
   },
@@ -861,11 +1453,13 @@
     "matches": {
       "1213060": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1228330": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうしゅう"
       }
     }
   },
@@ -882,7 +1476,9 @@
     "vocabIds": [
       "1002510",
       "1423310",
+      "1160790",
       "1576260",
+      "1463770",
       "1213060",
       "1612200",
       "1244680",
@@ -894,43 +1490,63 @@
     "matches": {
       "1002510": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おゆ"
+      },
+      "1160790": {
+        "start": 5,
+        "length": 1,
+        "reading": "いち"
       },
       "1207270": {
         "start": 49,
-        "length": 4
+        "length": 3,
+        "reading": "たのしん"
       },
       "1213060": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1244680": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "くろう"
       },
       "1378860": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "せいかつ"
       },
       "1390900": {
         "start": 16,
-        "length": 5
+        "length": 5,
+        "reading": "あらいおとす"
       },
       "1423310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "にち"
       },
       "1576260": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "1602120": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "ひび"
       },
       "1612200": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "よごれ"
       }
     }
   },
@@ -948,24 +1564,78 @@
       "1213060",
       "1612930",
       "1550840",
+      "2013190",
       "1333150"
     ],
     "matches": {
       "1213060": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1333150": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "くさい"
       },
       "1550840": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "はなれ"
       },
       "1612930": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "びしょぬれ"
+      },
+      "2013190": {
+        "start": 12,
+        "length": 2,
+        "reading": "はなれ"
+      }
+    }
+  },
+  {
+    "id": "745793",
+    "original": "私はトレッドミル上を走って汗をかいた。",
+    "en": [
+      {
+        "id": "745794",
+        "text": "I broke a sweat running on the treadmill."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1352130",
+      "1402540",
+      "1213060",
+      "1473740"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 13,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1352130": {
+        "start": 8,
+        "length": 1,
+        "reading": "じょう"
+      },
+      "1402540": {
+        "start": 10,
+        "length": 2,
+        "reading": "はしっ"
+      },
+      "1473740": {
+        "start": 15,
+        "length": 2,
+        "reading": "かい"
       }
     }
   },
@@ -979,8 +1649,11 @@
       }
     ],
     "vocabIds": [
+      "1409140",
       "1409600",
+      "1423310",
       "1213060",
+      "1404975",
       "1400150",
       "1500100",
       "1465590"
@@ -988,23 +1661,87 @@
     "matches": {
       "1213060": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1400150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はやく"
+      },
+      "1404975": {
+        "start": 11,
+        "length": 2,
+        "reading": "はやく"
+      },
+      "1409140": {
+        "start": 0,
+        "length": 1,
+        "reading": "からだ"
       },
       "1409600": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "からだちゅう"
+      },
+      "1423310": {
+        "start": 1,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1465590": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1500100": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ふろ"
+      }
+    }
+  },
+  {
+    "id": "1519415",
+    "original": "制汗性は便利です。",
+    "en": [
+      {
+        "id": "1519418",
+        "text": "Antiperspirant is useful."
+      }
+    ],
+    "vocabIds": [
+      "1374620",
+      "2701280",
+      "1213060",
+      "1375260",
+      "1512610"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 1,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1374620": {
+        "start": 0,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1375260": {
+        "start": 2,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1512610": {
+        "start": 4,
+        "length": 2,
+        "reading": "べんり"
+      },
+      "2701280": {
+        "start": 0,
+        "length": 3,
+        "reading": "せいあせせい"
       }
     }
   },
@@ -1027,7 +1764,8 @@
     "matches": {
       "1213060": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       }
     }
   },
@@ -1042,21 +1780,36 @@
     ],
     "vocabIds": [
       "1213060",
+      "1604890",
       "2396170",
+      "1465590",
       "1432680"
     ],
     "matches": {
       "1213060": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1432680": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
+      },
+      "1465590": {
+        "start": 7,
+        "length": 2,
+        "reading": "はいる"
+      },
+      "1604890": {
+        "start": 5,
+        "length": 1,
+        "reading": "め"
       },
       "2396170": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "めにはいる"
       }
     }
   },
@@ -1075,47 +1828,188 @@
       "1521400",
       "1188270",
       "1151260",
-      "2540200",
+      "1587040",
       "1158880",
       "1213060",
-      "2396170"
+      "1604890",
+      "1465590"
     ],
     "matches": {
       "1151260": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1158880": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ちがう"
       },
       "1188270": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1213060": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1229840": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "ない"
+      },
+      "1465590": {
+        "start": 29,
+        "length": 2,
+        "reading": "はいっ"
       },
       "1521400": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1577100": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
-      "2396170": {
+      "1587040": {
+        "start": 16,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1604890": {
         "start": 27,
-        "length": 5
+        "length": 1,
+        "reading": "め"
+      }
+    }
+  },
+  {
+    "id": "3451088",
+    "original": "はっきり言うけど、おまえ汗臭いぞ。",
+    "en": [
+      {
+        "id": "3451087",
+        "text": "To put it bluntly, your sweat smells awful."
+      }
+    ],
+    "vocabIds": [
+      "2759720",
+      "1587040",
+      "1213060",
+      "1621750",
+      "1333150"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 12,
+        "length": 1,
+        "reading": "あせ"
       },
-      "2540200": {
-        "start": 15,
-        "length": 4
+      "1333150": {
+        "start": 13,
+        "length": 2,
+        "reading": "くさい"
+      },
+      "1587040": {
+        "start": 4,
+        "length": 2,
+        "reading": "いう"
+      },
+      "1621750": {
+        "start": 12,
+        "length": 3,
+        "reading": "あせくさい"
+      },
+      "2759720": {
+        "start": 0,
+        "length": 6,
+        "reading": "はっきりいう"
+      }
+    }
+  },
+  {
+    "id": "3083275",
+    "original": "この部屋はとても暑いので汗をかいています。",
+    "en": [
+      {
+        "id": "3079140",
+        "text": "It's so warm in this room that I'm sweating."
+      }
+    ],
+    "vocabIds": [
+      "1499320",
+      "1343460",
+      "1213060",
+      "1473740"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 12,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1343460": {
+        "start": 8,
+        "length": 2,
+        "reading": "あつい"
+      },
+      "1473740": {
+        "start": 14,
+        "length": 2,
+        "reading": "かい"
+      },
+      "1499320": {
+        "start": 2,
+        "length": 2,
+        "reading": "へや"
+      }
+    }
+  },
+  {
+    "id": "9237679",
+    "original": "トムは大汗をかき始めた。",
+    "en": [
+      {
+        "id": "9233095",
+        "text": "Tom began to sweat like a pig."
+      }
+    ],
+    "vocabIds": [
+      "2082450",
+      "2427790",
+      "1213060",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 4,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1307550": {
+        "start": 8,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 8,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "2082450": {
+        "start": 3,
+        "length": 1,
+        "reading": "だい"
+      },
+      "2427790": {
+        "start": 3,
+        "length": 2,
+        "reading": "だいあせ"
       }
     }
   },
@@ -1130,16 +2024,56 @@
     ],
     "vocabIds": [
       "1213060",
-      "1307550"
+      "1307550",
+      "1342540"
     ],
     "matches": {
       "1213060": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1307550": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 12,
+        "length": 2,
+        "reading": "はじめ"
+      }
+    }
+  },
+  {
+    "id": "9865421",
+    "original": "運動して、いっぱい汗をかいた。",
+    "en": [
+      {
+        "id": "10121918",
+        "text": "I sweated a lot by exercising."
+      }
+    ],
+    "vocabIds": [
+      "1172910",
+      "1213060",
+      "1473740"
+    ],
+    "matches": {
+      "1172910": {
+        "start": 0,
+        "length": 2,
+        "reading": "うんどう"
+      },
+      "1213060": {
+        "start": 9,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1473740": {
+        "start": 11,
+        "length": 2,
+        "reading": "かい"
       }
     }
   },
@@ -1157,28 +2091,159 @@
       "1172910",
       "1415520",
       "1213060",
-      "1552140"
+      "1552140",
+      "1552130"
     ],
     "matches": {
       "1172910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "うんどう"
       },
       "1213060": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1363480": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まなつ"
       },
       "1415520": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "たき"
+      },
+      "1552130": {
+        "start": 16,
+        "length": 2,
+        "reading": "ながれ"
       },
       "1552140": {
         "start": 16,
-        "length": 4
+        "length": 2,
+        "reading": "ながれ"
+      }
+    }
+  },
+  {
+    "id": "10287420",
+    "original": "太っている人は大抵汗かきだ。",
+    "en": [
+      {
+        "id": "317874",
+        "text": "Fat people generally sweat a lot."
+      }
+    ],
+    "vocabIds": [
+      "1408220",
+      "1580640",
+      "1414580",
+      "1213060",
+      "1621740"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 9,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1408220": {
+        "start": 0,
+        "length": 2,
+        "reading": "ふとっ"
+      },
+      "1414580": {
+        "start": 7,
+        "length": 2,
+        "reading": "たいてい"
+      },
+      "1580640": {
+        "start": 5,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1621740": {
+        "start": 9,
+        "length": 3,
+        "reading": "あせかき"
+      }
+    }
+  },
+  {
+    "id": "10605055",
+    "original": "汗臭いよ。シャワー浴びてこい。",
+    "en": [
+      {
+        "id": "10605048",
+        "text": "You smell sweaty. Go and have a shower."
+      }
+    ],
+    "vocabIds": [
+      "1213060",
+      "1621750",
+      "1333150",
+      "1547450"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 0,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1333150": {
+        "start": 1,
+        "length": 2,
+        "reading": "くさい"
+      },
+      "1547450": {
+        "start": 9,
+        "length": 2,
+        "reading": "あび"
+      },
+      "1621750": {
+        "start": 0,
+        "length": 3,
+        "reading": "あせくさい"
+      }
+    }
+  },
+  {
+    "id": "10605056",
+    "original": "汗臭い。シャワー浴びといで。",
+    "en": [
+      {
+        "id": "10605048",
+        "text": "You smell sweaty. Go and have a shower."
+      }
+    ],
+    "vocabIds": [
+      "1213060",
+      "1621750",
+      "1333150",
+      "1547450"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 0,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1333150": {
+        "start": 1,
+        "length": 2,
+        "reading": "くさい"
+      },
+      "1547450": {
+        "start": 8,
+        "length": 2,
+        "reading": "あび"
+      },
+      "1621750": {
+        "start": 0,
+        "length": 3,
+        "reading": "あせくさい"
       }
     }
   },
@@ -1198,11 +2263,13 @@
     "matches": {
       "1213060": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1568800": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "にじむ"
       }
     }
   },
@@ -1216,27 +2283,43 @@
       }
     ],
     "vocabIds": [
+      "1579110",
       "1289400",
       "1371320",
       "1213060",
-      "1552120"
+      "1552120",
+      "1552100"
     ],
     "matches": {
       "1213060": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1371320": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "すいえい"
+      },
+      "1552100": {
+        "start": 10,
+        "length": 2,
+        "reading": "ながし"
       },
       "1552120": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "ながし"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -1255,7 +2338,8 @@
     "matches": {
       "1213060": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       }
     }
   },
@@ -1271,45 +2355,77 @@
     "vocabIds": [
       "1422970",
       "1213060",
+      "1443670",
       "2849193",
+      "1318290",
       "1355120",
       "1445640",
-      "2836257",
+      "1432280",
+      "1217700",
       "1949660",
-      "1497980"
+      "1497980",
+      "1497960"
     ],
     "matches": {
       "1213060": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1217700": {
+        "start": 54,
+        "length": 3,
+        "reading": "がんばっ"
+      },
+      "1318290": {
+        "start": 26,
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1355120": {
         "start": 30,
-        "length": 3
+        "length": 2,
+        "reading": "のっ"
       },
       "1422970": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "つい"
+      },
+      "1432280": {
+        "start": 36,
+        "length": 4,
+        "reading": "おいこさ"
+      },
+      "1443670": {
+        "start": 24,
+        "length": 2,
+        "reading": "でんどう"
       },
       "1445640": {
         "start": 34,
-        "length": 1
+        "length": 1,
+        "reading": "やつ"
+      },
+      "1497960": {
+        "start": 73,
+        "length": 2,
+        "reading": "まけ"
       },
       "1497980": {
         "start": 73,
-        "length": 3
+        "length": 2,
+        "reading": "まけ"
       },
       "1949660": {
         "start": 54,
-        "length": 4
-      },
-      "2836257": {
-        "start": 38,
-        "length": 1
+        "length": 4,
+        "reading": "がんばって"
       },
       "2849193": {
         "start": 24,
-        "length": 5
+        "length": 5,
+        "reading": "でんどうじてんしゃ"
       }
     }
   },
@@ -1328,7 +2444,40 @@
     "matches": {
       "1213060": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
+      }
+    }
+  },
+  {
+    "id": "8571357",
+    "original": "私は汗かきです。",
+    "en": [
+      {
+        "id": "5853199",
+        "text": "I sweat a lot."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1213060",
+      "1621740"
+    ],
+    "matches": {
+      "1213060": {
+        "start": 2,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1621740": {
+        "start": 2,
+        "length": 3,
+        "reading": "あせかき"
       }
     }
   },
@@ -1347,7 +2496,52 @@
     "matches": {
       "1213060": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
+      }
+    }
+  },
+  {
+    "id": "12700774",
+    "original": "それは、手に汗握る試合だった。",
+    "en": [
+      {
+        "id": "4855919",
+        "text": "That was an exciting game."
+      }
+    ],
+    "vocabIds": [
+      "1327190",
+      "2841392",
+      "1213060",
+      "1152720",
+      "1312420"
+    ],
+    "matches": {
+      "1152720": {
+        "start": 7,
+        "length": 2,
+        "reading": "にぎる"
+      },
+      "1213060": {
+        "start": 6,
+        "length": 1,
+        "reading": "あせ"
+      },
+      "1312420": {
+        "start": 9,
+        "length": 2,
+        "reading": "しあい"
+      },
+      "1327190": {
+        "start": 4,
+        "length": 1,
+        "reading": "て"
+      },
+      "2841392": {
+        "start": 4,
+        "length": 5,
+        "reading": "てにあせにぎる"
       }
     }
   },
@@ -1361,67 +2555,115 @@
       }
     ],
     "vocabIds": [
-      "1335080",
-      "1215230",
+      "1579840",
+      "2386360",
       "1227720",
+      "1544730",
       "1544720",
       "1548940",
+      "1641530",
       "1477950",
+      "1254600",
+      "1599390",
       "1430650",
       "1258950",
       "1213060",
+      "1310260",
       "1936470",
+      "1499320",
       "1266470",
       "1376140"
     ],
     "matches": {
       "1213060": {
         "start": 24,
-        "length": 1
-      },
-      "1215230": {
-        "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あせ"
       },
       "1227720": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうけい"
+      },
+      "1254600": {
+        "start": 17,
+        "length": 2,
+        "reading": "ゆい"
       },
       "1258950": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "かた"
       },
       "1266470": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "こきゅう"
       },
-      "1335080": {
-        "start": 0,
-        "length": 2
+      "1310260": {
+        "start": 31,
+        "length": 2,
+        "reading": "したく"
       },
       "1376140": {
         "start": 39,
-        "length": 3
+        "length": 3,
+        "reading": "ととのえる"
       },
       "1430650": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "なおし"
       },
       "1477950": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "かみ"
+      },
+      "1499320": {
+        "start": 33,
+        "length": 2,
+        "reading": "へや"
       },
       "1544720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "あたえ"
+      },
+      "1544730": {
+        "start": 7,
+        "length": 2,
+        "reading": "あたえ"
       },
       "1548940": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "みだれ"
+      },
+      "1579840": {
+        "start": 0,
+        "length": 1,
+        "reading": "じゅう"
+      },
+      "1599390": {
+        "start": 19,
+        "length": 2,
+        "reading": "なおし"
+      },
+      "1641530": {
+        "start": 12,
+        "length": 2,
+        "reading": "みだれ"
       },
       "1936470": {
         "start": 31,
-        "length": 4
+        "length": 4,
+        "reading": "したくへや"
+      },
+      "2386360": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふんかん"
       }
     }
   }

@@ -22,19 +22,23 @@
     "matches": {
       "1194280": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かよう"
       },
       "1255880": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "げつよう"
       },
       "1548010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "らいしゅう"
       },
       "1559380": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "れんきゅう"
       }
     }
   },
@@ -51,40 +55,35 @@
     "vocabIds": [
       "1387990",
       "1559380",
-      "1580640",
-      "1397450",
       "1627510",
       "1341670",
-      "1956960"
+      "1529520"
     ],
     "matches": {
       "1341670": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "じゅんび"
       },
       "1387990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
-      "1397450": {
-        "start": 24,
-        "length": 1
+      "1529520": {
+        "start": 37,
+        "length": 3,
+        "reading": "なかっ"
       },
       "1559380": {
         "start": 3,
-        "length": 2
-      },
-      "1580640": {
-        "start": 23,
-        "length": 1
+        "length": 2,
+        "reading": "れんきゅう"
       },
       "1627510": {
         "start": 26,
-        "length": 2
-      },
-      "1956960": {
-        "start": 37,
-        "length": 1
+        "length": 2,
+        "reading": "ほしゅう"
       }
     }
   },
@@ -101,20 +100,29 @@
     "vocabIds": [
       "1584660",
       "1559380",
-      "2221760"
+      "2221760",
+      "1222590"
     ],
     "matches": {
+      "1222590": {
+        "start": 18,
+        "length": 2,
+        "reading": "きぶん"
+      },
       "1559380": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "れんきゅう"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       },
       "2221760": {
         "start": 14,
-        "length": 6
+        "length": 6,
+        "reading": "るんるんきぶん"
       }
     }
   },
@@ -134,32 +142,134 @@
       "1559380",
       "1549660",
       "1238540",
-      "1518080"
+      "1518080",
+      "1852840"
     ],
     "matches": {
       "1238540": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きょうり"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1518080": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "おとずれ"
       },
       "1549660": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "りよう"
       },
       "1559380": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "れんきゅう"
       },
       "1598840": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "とびいし"
+      },
+      "1852840": {
+        "start": 17,
+        "length": 2,
+        "reading": "おとずれ"
+      }
+    }
+  },
+  {
+    "id": "172185",
+    "original": "今度の３連休には何をしますか。",
+    "en": [
+      {
+        "id": "242290",
+        "text": "How will you spend the coming three-day holiday?"
+      }
+    ],
+    "indices": "今度 の 連休 には 何(なに)[01] を 為る(する){します} か",
+    "vocabIds": [
+      "1289370",
+      "2660600",
+      "1559380",
+      "1577100",
+      "2851233"
+    ],
+    "matches": {
+      "1289370": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんど"
+      },
+      "1559380": {
+        "start": 4,
+        "length": 2,
+        "reading": "れんきゅう"
+      },
+      "1577100": {
+        "start": 8,
+        "length": 1,
+        "reading": "なに"
+      },
+      "2660600": {
+        "start": 3,
+        "length": 3,
+        "reading": "さんれんきゅう"
+      },
+      "2851233": {
+        "start": 8,
+        "length": 2,
+        "reading": "なにを"
+      }
+    }
+  },
+  {
+    "id": "172358",
+    "original": "今週末は３連休だ。",
+    "en": [
+      {
+        "id": "242117",
+        "text": "We're having a three-day weekend this week."
+      }
+    ],
+    "indices": "今週末 は 連休 だ",
+    "vocabIds": [
+      "1289220",
+      "2100500",
+      "1525230",
+      "2660600",
+      "1559380"
+    ],
+    "matches": {
+      "1289220": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんしゅう"
+      },
+      "1525230": {
+        "start": 2,
+        "length": 1,
+        "reading": "まつ"
+      },
+      "1559380": {
+        "start": 5,
+        "length": 2,
+        "reading": "れんきゅう"
+      },
+      "2100500": {
+        "start": 0,
+        "length": 3,
+        "reading": "こんしゅうまつ"
+      },
+      "2660600": {
+        "start": 4,
+        "length": 3,
+        "reading": "さんれんきゅう"
       }
     }
   },
@@ -174,46 +284,84 @@
     ],
     "vocabIds": [
       "1559380",
+      "1423310",
       "1423320",
       "1861770",
       "1421210",
       "1432220",
-      "1484360",
+      "1484350",
+      "1329590",
+      "1659120",
+      "1448160",
       "2557980",
+      "1421450",
       "1338880"
     ],
     "matches": {
+      "1329590": {
+        "start": 34,
+        "length": 2,
+        "reading": "うけ"
+      },
       "1338880": {
         "start": 42,
-        "length": 4
+        "length": 3,
+        "reading": "でむい"
       },
       "1421210": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "じしん"
+      },
+      "1421450": {
+        "start": 39,
+        "length": 2,
+        "reading": "ちほう"
+      },
+      "1423310": {
+        "start": 11,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1423320": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうには"
       },
       "1432220": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "つなみ"
       },
-      "1484360": {
+      "1448160": {
+        "start": 37,
+        "length": 2,
+        "reading": "とうほく"
+      },
+      "1484350": {
         "start": 31,
-        "length": 6
+        "length": 2,
+        "reading": "ひがい"
       },
       "1559380": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "れんきゅう"
+      },
+      "1659120": {
+        "start": 34,
+        "length": 2,
+        "reading": "うけ"
       },
       "1861770": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       },
       "2557980": {
         "start": 37,
-        "length": 4
+        "length": 4,
+        "reading": "とうほくちほう"
       }
     }
   },
@@ -227,32 +375,37 @@
       }
     ],
     "vocabIds": [
-      "2193980",
+      "1409140",
       "1432680",
       "1559380",
       "1553170",
-      "1207230"
+      "1207240"
     ],
     "matches": {
-      "1207230": {
+      "1207240": {
         "start": 20,
-        "length": 1
+        "length": 4,
+        "reading": "たのしかっ"
+      },
+      "1409140": {
+        "start": 2,
+        "length": 1,
+        "reading": "からだ"
       },
       "1432680": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
       "1553170": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       },
       "1559380": {
         "start": 11,
-        "length": 2
-      },
-      "2193980": {
-        "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "れんきゅう"
       }
     }
   },
@@ -268,21 +421,74 @@
     "indices": "来週 の 月火 と 連休 です",
     "vocabIds": [
       "1548010",
+      "1255430",
       "2211610",
+      "1193610",
       "1559380"
     ],
     "matches": {
+      "1193610": {
+        "start": 4,
+        "length": 1,
+        "reading": "ひ"
+      },
+      "1255430": {
+        "start": 3,
+        "length": 1,
+        "reading": "つき"
+      },
       "1548010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "らいしゅう"
       },
       "1559380": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "れんきゅう"
       },
       "2211610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "つきひ"
+      }
+    }
+  },
+  {
+    "id": "8021113",
+    "original": "次の週末は３連休だ。",
+    "en": [
+      {
+        "id": "8018173",
+        "text": "We have a three-day weekend next week."
+      }
+    ],
+    "vocabIds": [
+      "1316380",
+      "1333520",
+      "2660600",
+      "1559380"
+    ],
+    "matches": {
+      "1316380": {
+        "start": 0,
+        "length": 1,
+        "reading": "つぎ"
+      },
+      "1333520": {
+        "start": 2,
+        "length": 2,
+        "reading": "しゅうまつ"
+      },
+      "1559380": {
+        "start": 6,
+        "length": 2,
+        "reading": "れんきゅう"
+      },
+      "2660600": {
+        "start": 5,
+        "length": 3,
+        "reading": "さんれんきゅう"
       }
     }
   },
@@ -302,11 +508,13 @@
     "matches": {
       "1207250": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1559380": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れんきゅう"
       }
     }
   },
@@ -325,7 +533,8 @@
     "matches": {
       "1559380": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "れんきゅう"
       }
     }
   },
@@ -346,15 +555,18 @@
     "matches": {
       "1196000": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "すごす"
       },
       "1559380": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れんきゅう"
       },
       "1577100": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       }
     }
   }

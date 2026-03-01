@@ -1,5 +1,50 @@
 [
   {
+    "id": "75353",
+    "original": "「お先に失礼しま～す」「お、なんだ、また定時上がりかよ」",
+    "en": [
+      {
+        "id": "328366",
+        "text": "\"Bye, see you tomorrow.\" \"Oh, what's this? Leaving on the dot again?\""
+      }
+    ],
+    "indices": "お先に失礼します{お先に失礼しま～す} お 何だ{なんだ} 又{また} 定時上がり~ か よ",
+    "vocabIds": [
+      "1002280",
+      "1320230",
+      "1435590",
+      "2233730",
+      "1352190"
+    ],
+    "matches": {
+      "1002280": {
+        "start": 1,
+        "length": 3,
+        "reading": "おさきに"
+      },
+      "1320230": {
+        "start": 4,
+        "length": 2,
+        "reading": "しつれい"
+      },
+      "1352190": {
+        "start": 22,
+        "length": 3,
+        "reading": "あがり"
+      },
+      "1435590": {
+        "start": 20,
+        "length": 2,
+        "reading": "ていじ"
+      },
+      "2233730": {
+        "start": 20,
+        "length": 5,
+        "reading": "ていじあがり"
+      }
+    }
+  },
+  {
     "id": "77463",
     "original": "列車は定時に到着しそうに思われない。",
     "en": [
@@ -13,24 +58,28 @@
       "1558370",
       "1435590",
       "1449870",
-      "1309470"
+      "1589350"
     ],
     "matches": {
-      "1309470": {
-        "start": 12,
-        "length": 5
-      },
       "1435590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ていじ"
       },
       "1449870": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "とうちゃく"
       },
       "1558370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
+      },
+      "1589350": {
+        "start": 12,
+        "length": 2,
+        "reading": "おもわ"
       }
     }
   },
@@ -53,19 +102,23 @@
     "matches": {
       "1435590": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ていじ"
       },
       "1449870": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "とうちゃく"
       },
       "1483150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1549340": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あらし"
       }
     }
   },
@@ -88,19 +141,98 @@
     "matches": {
       "1435590": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ていじ"
       },
       "1449870": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "とうちゃく"
       },
       "1549340": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あらし"
       },
       "1607050": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      }
+    }
+  },
+  {
+    "id": "102145",
+    "original": "彼は昼間の仕事のほかに、毎晩定時制高校に通っている。",
+    "en": [
+      {
+        "id": "301549",
+        "text": "He goes to a part-time high school every evening in addition to the work he does during the day."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 昼間 の 仕事[01]{仕事の} 他に{ほかに} 毎晩 定時制~ 高校 に 通う[02]{通っている}",
+    "vocabIds": [
+      "1483070",
+      "1581710",
+      "1304970",
+      "1524730",
+      "1435590",
+      "1435600",
+      "2841536",
+      "1374620",
+      "1283500",
+      "1432850"
+    ],
+    "matches": {
+      "1283500": {
+        "start": 17,
+        "length": 2,
+        "reading": "こうこう"
+      },
+      "1304970": {
+        "start": 5,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1374620": {
+        "start": 16,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1432850": {
+        "start": 20,
+        "length": 2,
+        "reading": "かよっ"
+      },
+      "1435590": {
+        "start": 14,
+        "length": 2,
+        "reading": "ていじ"
+      },
+      "1435600": {
+        "start": 14,
+        "length": 3,
+        "reading": "ていじせい"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1524730": {
+        "start": 12,
+        "length": 2,
+        "reading": "まいばん"
+      },
+      "1581710": {
+        "start": 2,
+        "length": 2,
+        "reading": "ひるま"
+      },
+      "2841536": {
+        "start": 14,
+        "length": 5,
+        "reading": "ていじせいこうこう"
       }
     }
   },
@@ -115,8 +247,6 @@
     ],
     "indices": "煩雑{繁雑な} 手続き を 済ませる{すませ} 船(ふね)[01] が 定時 に 出港 出来る{できる} 為に{ために} は 特別 の 上(うえ) にも 特別{特別な} 計らい{はからい} が 如何しても{どうしても} 必要[01] である",
     "vocabIds": [
-      "2850353",
-      "1299240",
       "1598350",
       "1602800",
       "1435590",
@@ -126,41 +256,40 @@
       "1487660"
     ],
     "matches": {
-      "1299240": {
-        "start": 1,
-        "length": 1
-      },
       "1338890": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっこう"
       },
       "1352130": {
         "start": 29,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1435590": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ていじ"
       },
       "1455280": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "とくべつ"
       },
       "1487660": {
         "start": 46,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1598350": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "てつづき"
       },
       "1602800": {
         "start": 11,
-        "length": 1
-      },
-      "2850353": {
-        "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ふね"
       }
     }
   },
@@ -179,28 +308,39 @@
       "1558370",
       "1435590",
       "1422970",
+      "1313580",
       "1004540"
     ],
     "matches": {
       "1004540": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "ことがある"
+      },
+      "1313580": {
+        "start": 12,
+        "length": 1,
+        "reading": "こと"
       },
       "1422970": {
         "start": 8,
-        "length": 4
+        "length": 2,
+        "reading": "つか"
       },
       "1435590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ていじ"
       },
       "1558370": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "1598680": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -224,23 +364,28 @@
     "matches": {
       "1172610": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "うん"
       },
       "1172740": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "うんこう"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1435590": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ていじ"
       },
       "1485470": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
       }
     }
   },
@@ -262,15 +407,18 @@
     "matches": {
       "1340000": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
       },
       "1435590": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ていじ"
       },
       "1485470": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
       }
     }
   },
@@ -284,7 +432,9 @@
       }
     ],
     "vocabIds": [
+      "1315920",
       "2103620",
+      "1432920",
       "1295040",
       "1435590",
       "1221270"
@@ -292,19 +442,33 @@
     "matches": {
       "1221270": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かえる"
       },
       "1295040": {
         "start": 5,
-        "length": 4
+        "length": 3,
+        "reading": "すませ"
+      },
+      "1315920": {
+        "start": 0,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1432920": {
+        "start": 2,
+        "length": 2,
+        "reading": "どおり"
       },
       "1435590": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ていじ"
       },
       "2103620": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "じかんどおり"
       }
     }
   }

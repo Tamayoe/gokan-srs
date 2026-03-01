@@ -1,5 +1,97 @@
 [
   {
+    "id": "76331",
+    "original": "延泊をお願いできますか？",
+    "en": [
+      {
+        "id": "327389",
+        "text": "Can I extend my stay?"
+      }
+    ],
+    "indices": "延泊 を お願いできますか",
+    "vocabIds": [
+      "2081130",
+      "1919550",
+      "2036870",
+      "2221720"
+    ],
+    "matches": {
+      "1919550": {
+        "start": 1,
+        "length": 1,
+        "reading": "はく"
+      },
+      "2036870": {
+        "start": 3,
+        "length": 3,
+        "reading": "おねがい"
+      },
+      "2081130": {
+        "start": 0,
+        "length": 2,
+        "reading": "のべはく"
+      },
+      "2221720": {
+        "start": 3,
+        "length": 8,
+        "reading": "おねがいできますか"
+      }
+    }
+  },
+  {
+    "id": "77963",
+    "original": "料金は、税別で一泊１００ドルです。",
+    "en": [
+      {
+        "id": "325755",
+        "text": "The room charge is 100 USD a night plus tax."
+      },
+      {
+        "id": "679024",
+        "text": "The room charge is $100 a night plus tax."
+      },
+      {
+        "id": "679025",
+        "text": "It costs $100 a night not counting tax."
+      }
+    ],
+    "indices": "料金 は 税別~ で(#2028980) 一泊 弗[01]{ドル} です",
+    "vocabIds": [
+      "1554280",
+      "1382150",
+      "1160790",
+      "1165700",
+      "1919550"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1165700": {
+        "start": 7,
+        "length": 2,
+        "reading": "いちはく"
+      },
+      "1382150": {
+        "start": 4,
+        "length": 2,
+        "reading": "ぜいべつ"
+      },
+      "1554280": {
+        "start": 0,
+        "length": 2,
+        "reading": "りょうきん"
+      },
+      "1919550": {
+        "start": 8,
+        "length": 1,
+        "reading": "はく"
+      }
+    }
+  },
+  {
     "id": "78971",
     "original": "予約を３泊から５泊に変更したいのですが。",
     "en": [
@@ -17,15 +109,18 @@
     "matches": {
       "1511040": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "へんこう"
       },
       "1543750": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
       },
       "1919550": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -47,120 +142,18 @@
     "matches": {
       "1511040": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "へんこう"
       },
       "1543750": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
       },
       "1919550": {
         "start": 4,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "112422",
-    "original": "彼はその部屋に泊まろうと提案した。",
-    "en": [
-      {
-        "id": "291255",
-        "text": "He proposed that they put up at that inn."
-      }
-    ],
-    "indices": "彼(かれ)[01] は 其の[01]{その} 部屋[01] に 泊まる[01]{泊まろう} と 提案 為る(する){した}",
-    "vocabIds": [
-      "1483070",
-      "1499320",
-      "1919550",
-      "1436320"
-    ],
-    "matches": {
-      "1436320": {
-        "start": 12,
-        "length": 2
-      },
-      "1483070": {
-        "start": 0,
-        "length": 1
-      },
-      "1499320": {
-        "start": 4,
-        "length": 2
-      },
-      "1919550": {
-        "start": 7,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "124110",
-    "original": "当ホテルは、２０００人のお客が泊まれます。",
-    "en": [
-      {
-        "id": "279885",
-        "text": "Our hotel accommodates 2000 guests."
-      }
-    ],
-    "indices": "当 ホテル は 人(にん)[01] の 御(お){お} 客[01] が 泊まる[01]{泊まれます}",
-    "vocabIds": [
-      "2081170",
-      "1580640",
-      "1226630",
-      "1919550"
-    ],
-    "matches": {
-      "1226630": {
-        "start": 13,
-        "length": 1
-      },
-      "1580640": {
-        "start": 10,
-        "length": 1
-      },
-      "1919550": {
-        "start": 15,
-        "length": 1
-      },
-      "2081170": {
-        "start": 0,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "137745",
-    "original": "大きなホテルに泊まれば、ホテルのプールが利用出来る。",
-    "en": [
-      {
-        "id": "275492",
-        "text": "If you stay at a big hotel, you can use their swimming pool."
-      }
-    ],
-    "indices": "大きな ホテル に 泊まる[01]{泊まれば} ホテル の プール[01] が 利用 出来る",
-    "vocabIds": [
-      "1412890",
-      "1919550",
-      "1549660",
-      "1340450"
-    ],
-    "matches": {
-      "1340450": {
-        "start": 22,
-        "length": 3
-      },
-      "1412890": {
-        "start": 0,
-        "length": 3
-      },
-      "1549660": {
-        "start": 20,
-        "length": 2
-      },
-      "1919550": {
-        "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -184,167 +177,85 @@
     "matches": {
       "1006900": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "そのた"
       },
       "1595730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "すべて"
       },
       "1919550": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       },
       "2078750": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こみ"
       },
       "2081570": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぜい"
       }
     }
   },
   {
-    "id": "146625",
-    "original": "少年たちはあなたの所に泊っていませんか。",
+    "id": "152649",
+    "original": "私は名古屋に一泊旅行をする計画をしている。",
     "en": [
       {
-        "id": "267937",
-        "text": "Aren't the boys staying with you?"
+        "id": "261900",
+        "text": "I am planning to make an overnight trip to Nagoya."
       }
     ],
-    "indices": "少年[01] 達{たち} は 貴方(あなた)[01]{あなた} の 所(ところ) に 泊まる[01]{泊っていません} か",
-    "vocabIds": [
-      "1349170",
-      "1343100",
-      "1919550"
-    ],
-    "matches": {
-      "1343100": {
-        "start": 9,
-        "length": 1
-      },
-      "1349170": {
-        "start": 0,
-        "length": 2
-      },
-      "1919550": {
-        "start": 11,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "151956",
-    "original": "私達の所に数日泊ったらいかがですか。",
-    "en": [
-      {
-        "id": "262597",
-        "text": "How about staying with us for a few days?"
-      }
-    ],
-    "indices": "私たち{私達} の 所(ところ) に 数日 泊まる[01]{泊ったら} 如何(いかが){いかが} ですか",
+    "indices": "私(わたし)[01] は 名古屋 に 一泊 旅行 を 為る(する)[01]{する} 計画 を 為る(する){している}",
     "vocabIds": [
       "1311110",
-      "1416220",
-      "1343100",
-      "1373200",
-      "1919550"
+      "2164620",
+      "1160790",
+      "1165700",
+      "1919550",
+      "1553170",
+      "1252090"
     ],
     "matches": {
+      "1160790": {
+        "start": 6,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1165700": {
+        "start": 6,
+        "length": 2,
+        "reading": "いちはく"
+      },
+      "1252090": {
+        "start": 13,
+        "length": 2,
+        "reading": "けいかく"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1343100": {
-        "start": 3,
-        "length": 1
-      },
-      "1373200": {
-        "start": 5,
-        "length": 2
-      },
-      "1416220": {
-        "start": 1,
-        "length": 1
+      "1553170": {
+        "start": 8,
+        "length": 2,
+        "reading": "りょこう"
       },
       "1919550": {
         "start": 7,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "152031",
-    "original": "私が泊っているホテルは駅の近くにある。",
-    "en": [
-      {
-        "id": "262521",
-        "text": "The hotel which I am staying at is near the station."
+        "length": 1,
+        "reading": "はく"
       },
-      {
-        "id": "1494266",
-        "text": "The hotel I'm staying at is near the station."
-      }
-    ],
-    "indices": "私(わたし) が 泊まる[01]{泊っている} ホテル は 駅 の 近く[01] に 有る{ある}",
-    "vocabIds": [
-      "1311110",
-      "1919550",
-      "1175140",
-      "1242160"
-    ],
-    "matches": {
-      "1175140": {
-        "start": 11,
-        "length": 1
-      },
-      "1242160": {
-        "start": 13,
-        "length": 2
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1919550": {
+      "2164620": {
         "start": 2,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "171107",
-    "original": "今夜は空港の近くのホテルに泊まらなければならない。",
-    "en": [
-      {
-        "id": "243372",
-        "text": "I have to stay at a hotel near the airport tonight."
-      }
-    ],
-    "indices": "今夜 は 空港 の 近く[01] の ホテル に 泊まる[01]{泊まら} ねばならない{なければならない}",
-    "vocabIds": [
-      "1289520",
-      "1245570",
-      "1242160",
-      "1919550"
-    ],
-    "matches": {
-      "1242160": {
-        "start": 6,
-        "length": 2
-      },
-      "1245570": {
-        "start": 3,
-        "length": 2
-      },
-      "1289520": {
-        "start": 0,
-        "length": 2
-      },
-      "1919550": {
-        "start": 13,
-        "length": 1
+        "length": 3,
+        "reading": "なごや"
       }
     }
   },
@@ -367,69 +278,23 @@
     "matches": {
       "1289470": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんばん"
       },
       "1543750": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
       },
       "1579350": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "さん"
       },
       "1919550": {
         "start": 5,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "172931",
-    "original": "今、どこにお泊りですか。",
-    "en": [
-      {
-        "id": "37978",
-        "text": "Where are you staying?"
-      }
-    ],
-    "indices": "今(いま) 何処{どこ} に 御(お){お} 泊まり{泊り} ですか",
-    "vocabIds": [
-      "1288850",
-      "1919550"
-    ],
-    "matches": {
-      "1288850": {
-        "start": 0,
-        "length": 1
-      },
-      "1919550": {
-        "start": 6,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "179336",
-    "original": "空港へのアクセスがいいところに泊まろうよ。",
-    "en": [
-      {
-        "id": "18192",
-        "text": "Let's stay somewhere with easy airport access."
-      }
-    ],
-    "indices": "空港 へ の アクセス[01]~ が いい(#2820690)[01] 所(ところ){ところ} に 泊まる[01]{泊まろう} よ[01]",
-    "vocabIds": [
-      "1245570",
-      "1919550"
-    ],
-    "matches": {
-      "1245570": {
-        "start": 0,
-        "length": 2
-      },
-      "1919550": {
-        "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -451,15 +316,18 @@
     "matches": {
       "1543240": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "よてい"
       },
       "1577100": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       },
       "1919550": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -484,11 +352,13 @@
     "matches": {
       "1577100": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       },
       "1919550": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -508,62 +378,130 @@
       "1499320",
       "1320300",
       "1919550",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 12,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1153670": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やすい"
       },
       "1165970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちばん"
       },
       "1320300": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "しつ"
       },
       "1499320": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1919550": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
+      },
+      "2036870": {
+        "start": 12,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
   {
-    "id": "194542",
-    "original": "もう１日滞在を延ばしたいのですが、泊まれますか。",
+    "id": "190209",
+    "original": "一泊いくらですか。",
     "en": [
       {
-        "id": "31716",
-        "text": "I'd like to stay one more night. Is that possible?"
+        "id": "27367",
+        "text": "What's the daily rate?"
       }
     ],
-    "indices": "もう 一日(いちにち){１日} 滞在 を 伸ばす[08]{延ばし}~ たい[01] のです が[03] 泊まる[01]{泊まれます} か",
+    "indices": "一泊 幾ら{いくら} ですか",
     "vocabIds": [
-      "2225040",
-      "1410930",
+      "1160790",
+      "1165700",
       "1919550"
     ],
     "matches": {
-      "1410930": {
-        "start": 4,
-        "length": 2
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1165700": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちはく"
       },
       "1919550": {
-        "start": 17,
-        "length": 1
+        "start": 1,
+        "length": 1,
+        "reading": "はく"
+      }
+    }
+  },
+  {
+    "id": "194279",
+    "original": "もう一日延泊できますか。",
+    "en": [
+      {
+        "id": "31452",
+        "text": "I'd like to stay another night if I can."
       },
-      "2225040": {
+      {
+        "id": "13482234",
+        "text": "Can I extend my stay for another day?"
+      },
+      {
+        "id": "13482238",
+        "text": "Can I extend my stay for one more day?"
+      }
+    ],
+    "indices": "もう 一日(いちにち) 延泊~ 出来る{できます} か",
+    "vocabIds": [
+      "1160790",
+      "1576260",
+      "1463770",
+      "2081130",
+      "1919550"
+    ],
+    "matches": {
+      "1160790": {
         "start": 2,
-        "length": 2
+        "length": 1,
+        "reading": "いち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1576260": {
+        "start": 2,
+        "length": 2,
+        "reading": "いちにち"
+      },
+      "1919550": {
+        "start": 5,
+        "length": 1,
+        "reading": "はく"
+      },
+      "2081130": {
+        "start": 4,
+        "length": 2,
+        "reading": "のべはく"
       }
     }
   },
@@ -582,53 +520,39 @@
       "1499320",
       "1461140",
       "1919550",
-      "1323560"
+      "1323560",
+      "1323540"
     ],
     "matches": {
+      "1323540": {
+        "start": 15,
+        "length": 2,
+        "reading": "かり"
+      },
       "1323560": {
         "start": 15,
-        "length": 4
+        "length": 2,
+        "reading": "かり"
       },
       "1461140": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "に"
       },
       "1499320": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1583630": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "つき"
       },
       "1919550": {
         "start": 14,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "200776",
-    "original": "どちらに御泊りですか。",
-    "en": [
-      {
-        "id": "37978",
-        "text": "Where are you staying?"
-      }
-    ],
-    "indices": "何方(どちら){どちら} に 御(ご) 泊まり{泊り} ですか",
-    "vocabIds": [
-      "1270190",
-      "1919550"
-    ],
-    "matches": {
-      "1270190": {
-        "start": 4,
-        "length": 1
-      },
-      "1919550": {
-        "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -645,135 +569,41 @@
     "vocabIds": [
       "1499320",
       "1629300",
+      "1307320",
+      "1463770",
       "1919550",
       "2036870"
     ],
     "matches": {
+      "1307320": {
+        "start": 9,
+        "length": 2,
+        "reading": "よんにち"
+      },
+      "1463770": {
+        "start": 10,
+        "length": 1,
+        "reading": "にち"
+      },
       "1499320": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1629300": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "によんにち"
       },
       "1919550": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       },
       "2036870": {
         "start": 15,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "218836",
-    "original": "これが彼の泊っているお寺です。",
-    "en": [
-      {
-        "id": "56151",
-        "text": "This is the temple where he stays."
-      }
-    ],
-    "indices": "此れ[01]{これ} が 彼(かれ)[01] の 泊まる[01]{泊っている} 御(お){お} 寺(てら)~ です",
-    "vocabIds": [
-      "1000420",
-      "1919550",
-      "2271230"
-    ],
-    "matches": {
-      "1000420": {
-        "start": 3,
-        "length": 2
-      },
-      "1919550": {
-        "start": 5,
-        "length": 1
-      },
-      "2271230": {
-        "start": 10,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "225695",
-    "original": "ぐずぐずしていたために、高いホテルに一晩泊まらざるをえなくなった。",
-    "en": [
-      {
-        "id": "63033",
-        "text": "The delay forced us to stay overnight in an expensive hotel."
-      }
-    ],
-    "indices": "愚図愚図[01]{ぐずぐず} 為る(する){していた} 為に{ために} 高い[02] ホテル に 一晩 泊まる[01]{泊まら} ざるを得ない{ざるをえなく} 成る[01]{なった}",
-    "vocabIds": [
-      "1283190",
-      "1165960",
-      "1919550"
-    ],
-    "matches": {
-      "1165960": {
-        "start": 18,
-        "length": 2
-      },
-      "1283190": {
-        "start": 12,
-        "length": 2
-      },
-      "1919550": {
-        "start": 20,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "226773",
-    "original": "お泊りになってはいかがですか。",
-    "en": [
-      {
-        "id": "64120",
-        "text": "What do you say to staying?"
-      }
-    ],
-    "indices": "御(お){お} 泊まり{泊り} になる{になって} は 如何(いかが){いかが} ですか",
-    "vocabIds": [
-      "1919550"
-    ],
-    "matches": {
-      "1919550": {
-        "start": 1,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "227581",
-    "original": "叔母がここに一週間泊りにやってくる。",
-    "en": [
-      {
-        "id": "64934",
-        "text": "My aunt will come here for a week."
-      }
-    ],
-    "indices": "叔母 が 此処[01]{ここ} に 一週間 泊まり{泊り} に やって来る{やってくる}",
-    "vocabIds": [
-      "1607100",
-      "1163270",
-      "1919550"
-    ],
-    "matches": {
-      "1163270": {
-        "start": 6,
-        "length": 3
-      },
-      "1607100": {
-        "start": 0,
-        "length": 2
-      },
-      "1919550": {
-        "start": 9,
-        "length": 1
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -793,7 +623,8 @@
     "matches": {
       "1919550": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -813,37 +644,8 @@
     "matches": {
       "1919550": {
         "start": 12,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "232464",
-    "original": "あなたはどのくらい箱根にお泊りですか。",
-    "en": [
-      {
-        "id": "69835",
-        "text": "How long will you stay in Hakone?"
-      }
-    ],
-    "indices": "貴方(あなた)[01]{あなた} は どの位{どのくらい} に 御(お){お} 泊まり{泊り} ですか",
-    "vocabIds": [
-      "1585650",
-      "1290020",
-      "1919550"
-    ],
-    "matches": {
-      "1290020": {
-        "start": 10,
-        "length": 1
-      },
-      "1585650": {
-        "start": 9,
-        "length": 1
-      },
-      "1919550": {
-        "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -862,28 +664,51 @@
       "1499320",
       "1320300",
       "2737910",
+      "2225040",
+      "1463770",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 29,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1320300": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "しつ"
+      },
+      "1463770": {
+        "start": 23,
+        "length": 1,
+        "reading": "にち"
       },
       "1499320": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1919550": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
+      },
+      "2036870": {
+        "start": 29,
+        "length": 3,
+        "reading": "おねがい"
+      },
+      "2225040": {
+        "start": 22,
+        "length": 2,
+        "reading": "いちにち"
       },
       "2737910": {
         "start": 21,
-        "length": 3
+        "length": 3,
+        "reading": "にいちにち"
       }
     }
   },
@@ -899,16 +724,24 @@
     "indices": "一泊{１泊} 弗[01]{ドル} の シングル(#1063530)[01]~ の お部屋[01] が 御座います{ございます}",
     "vocabIds": [
       "1919550",
-      "2453580"
+      "2453580",
+      "1499320"
     ],
     "matches": {
+      "1499320": {
+        "start": 13,
+        "length": 2,
+        "reading": "へや"
+      },
       "1919550": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       },
       "2453580": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "おへや"
       }
     }
   },
@@ -927,28 +760,39 @@
       "1499320",
       "1163110",
       "1289470",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 26,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1163110": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "いっしつ"
       },
       "1289470": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "こんばん"
       },
       "1499320": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1919550": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
+      },
+      "2036870": {
+        "start": 26,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -965,25 +809,41 @@
     "vocabIds": [
       "1162120",
       "1301330",
+      "1463770",
       "1919550",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 9,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1162120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちがつ"
       },
       "1301330": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1919550": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
+      },
+      "2036870": {
+        "start": 9,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -1005,44 +865,65 @@
       "1463770",
       "1584460",
       "1175570",
-      "2179110"
+      "2670200",
+      "2179110",
+      "2082150"
     ],
     "matches": {
       "1175570": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "えん"
       },
       "1216170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かんこく"
       },
       "1463770": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "にち"
       },
       "1553170": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       },
       "1579350": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "さん"
       },
       "1579470": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "よん"
       },
       "1584460": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "まん"
       },
       "1919550": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
+      },
+      "2082150": {
+        "start": 18,
+        "length": 1,
+        "reading": "やす"
       },
       "2179110": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "げきやす"
+      },
+      "2670200": {
+        "start": 17,
+        "length": 1,
+        "reading": "げき"
       }
     }
   },
@@ -1065,23 +946,28 @@
     "matches": {
       "1289520": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんや"
       },
       "1543750": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
       },
       "1579350": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "さん"
       },
       "1919550": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       },
       "2036870": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -1098,264 +984,120 @@
       "1586840",
       "1255890",
       "1268990",
+      "1160790",
       "1164610",
+      "1412560",
+      "1433720",
       "2668620",
+      "1471780",
       "1311110",
       "1919550",
+      "1392580",
       "1392590",
       "2855824"
     ],
     "matches": {
+      "1160790": {
+        "start": 9,
+        "length": 1,
+        "reading": "いち"
+      },
       "1164610": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "いちだい"
       },
       "1255890": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "げつようび"
       },
       "1268990": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ごご"
       },
       "1311110": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1392580": {
+        "start": 28,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1412560": {
+        "start": 10,
+        "length": 1,
+        "reading": "だい"
+      },
+      "1433720": {
+        "start": 12,
+        "length": 1,
+        "reading": "つじ"
+      },
+      "1471780": {
+        "start": 13,
+        "length": 2,
+        "reading": "ばしゃ"
       },
       "1586840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ある"
       },
       "1919550": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       },
       "2668620": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "つじばしゃ"
       },
       "2855824": {
         "start": 30,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       }
     }
   },
   {
-    "id": "1244754",
-    "original": "土曜の晩には、パリから、一晩泊りで彼女の夫が来る筈になつてゐるのです。",
+    "id": "10172633",
+    "original": "車中泊だったよ。",
     "en": [
       {
-        "id": "1245081",
-        "text": "Her husband was supposed to come visit her from Paris for a single night Saturday night."
+        "id": "7961561",
+        "text": "I spent the night in my car."
       }
     ],
     "vocabIds": [
-      "1445580",
-      "1482110",
-      "1165960",
-      "1919550",
-      "1483150",
-      "1496480",
-      "1547720",
-      "1476430"
+      "1658900",
+      "2520720",
+      "1919550"
     ],
     "matches": {
-      "1165960": {
-        "start": 12,
-        "length": 2
-      },
-      "1445580": {
+      "1658900": {
         "start": 0,
-        "length": 2
-      },
-      "1476430": {
-        "start": 24,
-        "length": 1
-      },
-      "1482110": {
-        "start": 3,
-        "length": 1
-      },
-      "1483150": {
-        "start": 17,
-        "length": 2
-      },
-      "1496480": {
-        "start": 20,
-        "length": 1
-      },
-      "1547720": {
-        "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "しゃちゅう"
       },
       "1919550": {
-        "start": 14,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "1244977",
-    "original": "或る月曜日の午後、一台の辻馬車が、私の泊っているホテルの前に駐まりました。",
-    "en": [
-      {
-        "id": "1248706",
-        "text": "On a certain Monday afternoon, a single horse carriage stopped in front of the hotel where I was staying."
-      }
-    ],
-    "vocabIds": [
-      "1586840",
-      "1255890",
-      "1268990",
-      "1164610",
-      "2668620",
-      "1311110",
-      "1919550",
-      "1392590",
-      "2855824"
-    ],
-    "matches": {
-      "1164610": {
-        "start": 9,
-        "length": 2
-      },
-      "1255890": {
         "start": 2,
-        "length": 3
+        "length": 1,
+        "reading": "はく"
       },
-      "1268990": {
-        "start": 6,
-        "length": 2
-      },
-      "1311110": {
-        "start": 17,
-        "length": 1
-      },
-      "1392590": {
-        "start": 28,
-        "length": 2
-      },
-      "1586840": {
+      "2520720": {
         "start": 0,
-        "length": 1
-      },
-      "1919550": {
-        "start": 19,
-        "length": 1
-      },
-      "2668620": {
-        "start": 12,
-        "length": 3
-      },
-      "2855824": {
-        "start": 30,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "1245005",
-    "original": "土曜の晩には、パリから、一晩泊りで彼女の夫が来る筈になっているのです。",
-    "en": [
-      {
-        "id": "1245081",
-        "text": "Her husband was supposed to come visit her from Paris for a single night Saturday night."
-      }
-    ],
-    "vocabIds": [
-      "1445580",
-      "1482110",
-      "1165960",
-      "1919550",
-      "1483150",
-      "1496480",
-      "1547720",
-      "1476430"
-    ],
-    "matches": {
-      "1165960": {
-        "start": 12,
-        "length": 2
-      },
-      "1445580": {
-        "start": 0,
-        "length": 2
-      },
-      "1476430": {
-        "start": 24,
-        "length": 1
-      },
-      "1482110": {
-        "start": 3,
-        "length": 1
-      },
-      "1483150": {
-        "start": 17,
-        "length": 2
-      },
-      "1496480": {
-        "start": 20,
-        "length": 1
-      },
-      "1547720": {
-        "start": 22,
-        "length": 2
-      },
-      "1919550": {
-        "start": 14,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "8608867",
-    "original": "君、ここには泊まれないよ。",
-    "en": [
-      {
-        "id": "1954918",
-        "text": "You can't stay here."
-      }
-    ],
-    "vocabIds": [
-      "1247250",
-      "1919550"
-    ],
-    "matches": {
-      "1247250": {
-        "start": 0,
-        "length": 1
-      },
-      "1919550": {
-        "start": 6,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "9477867",
-    "original": "みんな同じホテルに泊まろうよ。",
-    "en": [
-      {
-        "id": "6348542",
-        "text": "Let's all stay at the same hotel."
-      }
-    ],
-    "vocabIds": [
-      "1451750",
-      "1919550"
-    ],
-    "matches": {
-      "1451750": {
-        "start": 3,
-        "length": 2
-      },
-      "1919550": {
-        "start": 9,
-        "length": 1
+        "length": 3,
+        "reading": "しゃちゅうはく"
       }
     }
   },
@@ -1376,34 +1118,18 @@
     "matches": {
       "1302810": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんかん"
       },
       "1553130": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "りょかん"
       },
       "1919550": {
         "start": 7,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "10624304",
-    "original": "ここに泊まろうよ。",
-    "en": [
-      {
-        "id": "5146886",
-        "text": "Let's stay here."
-      }
-    ],
-    "vocabIds": [
-      "1919550"
-    ],
-    "matches": {
-      "1919550": {
-        "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -1422,46 +1148,8 @@
     "matches": {
       "1919550": {
         "start": 1,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "10781969",
-    "original": "私達は狭い部屋に泊まらされることになった。",
-    "en": [
-      {
-        "id": "248885",
-        "text": "We were made to stay in a small room."
-      }
-    ],
-    "vocabIds": [
-      "1311110",
-      "1416220",
-      "1237680",
-      "1499320",
-      "1919550"
-    ],
-    "matches": {
-      "1237680": {
-        "start": 3,
-        "length": 2
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1416220": {
-        "start": 1,
-        "length": 1
-      },
-      "1499320": {
-        "start": 5,
-        "length": 2
-      },
-      "1919550": {
-        "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -1481,11 +1169,45 @@
     "matches": {
       "1267320": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こはん"
       },
       "1919550": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
+      }
+    }
+  },
+  {
+    "id": "11637481",
+    "original": "一泊いくらですか？",
+    "en": [
+      {
+        "id": "11524588",
+        "text": "How much does a night cost?"
+      }
+    ],
+    "vocabIds": [
+      "1160790",
+      "1165700",
+      "1919550"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1165700": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちはく"
+      },
+      "1919550": {
+        "start": 1,
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -1505,11 +1227,13 @@
     "matches": {
       "1577100": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       },
       "1919550": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -1530,15 +1254,18 @@
     "matches": {
       "1543240": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "よてい"
       },
       "1577100": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       },
       "1919550": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -1557,31 +1284,8 @@
     "matches": {
       "1919550": {
         "start": 10,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "11801341",
-    "original": "ここに泊まろうと思う。",
-    "en": [
-      {
-        "id": "11264397",
-        "text": "I think we'll stay here."
-      }
-    ],
-    "vocabIds": [
-      "1919550",
-      "1589350"
-    ],
-    "matches": {
-      "1589350": {
-        "start": 8,
-        "length": 2
-      },
-      "1919550": {
-        "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -1601,11 +1305,13 @@
     "matches": {
       "1463770": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "にち"
       },
       "1919550": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -1636,31 +1342,8 @@
     "matches": {
       "1919550": {
         "start": 1,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "11027693",
-    "original": "今日はホテルに泊まろう。",
-    "en": [
-      {
-        "id": "12484097",
-        "text": "Let's stay at a hotel tonight."
-      }
-    ],
-    "vocabIds": [
-      "1289400",
-      "1919550"
-    ],
-    "matches": {
-      "1289400": {
-        "start": 0,
-        "length": 3
-      },
-      "1919550": {
-        "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   },
@@ -1682,19 +1365,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1770610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "どうちゅう"
       },
       "1919550": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "はく"
       }
     }
   }

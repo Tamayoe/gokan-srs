@@ -14,82 +14,41 @@ interface SmartVocabListProps {
 type SortField = 'added_date' | 'srs_stage' | 'next_review' | 'failures' | 'kanji_rank';
 type SortDirection = 'asc' | 'desc';
 
-interface EnrichedVocab {
-    vocab: Vocabulary;
-    progress: VocabProgress;
-}
-
 export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) {
-    const [data, setData] = useState<EnrichedVocab[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [loadingProgress, setLoadingProgress] = useState(0);
+    const [vocabCache, setVocabCache] = useState<Record<string, Vocabulary>>({});
+    const [isLoadingVocabs, setIsLoadingVocabs] = useState(false);
 
     const [searchQuery, setSearchQuery] = useState("");
     const [sortField, setSortField] = useState<SortField>('added_date');
     const [sortDir, setSortDir] = useState<SortDirection>('desc');
 
-    // Batch load vocabulary with concurrency limit
+    const [page, setPage] = useState(1);
+    const ITEMS_PER_PAGE = 30;
+
+    // Load frequency index for sorting by kanji rank on unloaded items
+    const [frequencyRanks, setFrequencyRanks] = useState<Record<string, number>>({});
     useEffect(() => {
-        let isCancelled = false;
-        const loadAll = async () => {
-            const results: EnrichedVocab[] = [];
-            const ids = progress.map(p => p.vocabId);
-            const total = ids.length;
-
-            if (total === 0) {
-                setIsLoading(false);
-                return;
+        let mounted = true;
+        VocabularyService.loadFrequencyIndex().then(idx => {
+            if (idx && mounted) {
+                const ranks: Record<string, number> = {};
+                idx.forEach((entry, i) => ranks[entry.id] = i);
+                setFrequencyRanks(ranks);
             }
-
-            // Simple batching to avoid clogging network/main thread
-            const BATCH_SIZE = 20;
-            for (let i = 0; i < total; i += BATCH_SIZE) {
-                if (isCancelled) return;
-
-                const batchIds = ids.slice(i, i + BATCH_SIZE);
-                const promises = batchIds.map(async (id) => {
-                    // Try to map progress to vocab
-                    const p = progress.find(px => px.vocabId === id)!;
-                    try {
-                        const v = await VocabularyService.loadVocab(id);
-                        if (v) return { vocab: v, progress: p };
-                    } catch (e) {
-                        console.error(`Failed to load vocab ${id}`, e);
-                    }
-                    return null;
-                });
-
-                const batchResults = await Promise.all(promises);
-                batchResults.forEach(r => {
-                    if (r) results.push(r);
-                });
-
-                setLoadingProgress(Math.round(((i + BATCH_SIZE) / total) * 100));
-
-                // Small yield to UI
-                await new Promise(r => setTimeout(r, 0));
-            }
-
-            if (!isCancelled) {
-                setData(results);
-                setIsLoading(false);
-            }
-        };
-
-        loadAll();
-
-        return () => { isCancelled = true; };
-    }, [progress]);
+        });
+        return () => { mounted = false; };
+    }, []);
 
     // Filtering & Sorting
-    const processedData = useMemo(() => {
-        let d = [...data];
+    const processedProgress = useMemo(() => {
+        let pArray = [...progress];
 
         // 1. Search
         if (searchQuery) {
             const q = searchQuery.toLowerCase();
-            d = d.filter(item => {
-                const v = item.vocab;
+            pArray = pArray.filter(p => {
+                const v = vocabCache[p.vocabId];
+                if (!v) return false;
                 return (
                     v.writtenForm.kanji.includes(q) ||
                     v.reading.primary.includes(q) ||
@@ -99,34 +58,32 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
         }
 
         // 2. Sort
-        d.sort((a, b) => {
-            let valA: any = 0;
-            let valB: any = 0;
+        pArray.sort((a, b) => {
+            let valA: number = 0;
+            let valB: number = 0;
 
             switch (sortField) {
                 case 'added_date':
-                    valA = a.progress.introductionAt ? new Date(a.progress.introductionAt).getTime() : 0;
-                    valB = b.progress.introductionAt ? new Date(b.progress.introductionAt).getTime() : 0;
+                    valA = a.introductionAt ? new Date(a.introductionAt).getTime() : 0;
+                    valB = b.introductionAt ? new Date(b.introductionAt).getTime() : 0;
                     break;
                 case 'next_review':
-                    // Null next review (mastered/new) should be pushed to end usually, or treat as far future?
-                    valA = a.progress.nextReviewAt ? new Date(a.progress.nextReviewAt).getTime() : 9999999999999;
-                    valB = b.progress.nextReviewAt ? new Date(b.progress.nextReviewAt).getTime() : 9999999999999;
+                    valA = a.nextReviewAt ? new Date(a.nextReviewAt).getTime() : 9999999999999;
+                    valB = b.nextReviewAt ? new Date(b.nextReviewAt).getTime() : 9999999999999;
                     break;
                 case 'srs_stage':
-                    // graduated > learning
-                    valA = a.progress.stage === 'graduated' ? 1 : 0;
-                    valB = b.progress.stage === 'graduated' ? 1 : 0;
+                    valA = a.stage === 'graduated' ? 1 : 0;
+                    valB = b.stage === 'graduated' ? 1 : 0;
                     break;
                 case 'failures':
-                    valA = (a.progress.reading?.history?.filter(h => h.result === 'wrong').length || 0) +
-                        (a.progress.meaning?.history?.filter(h => h.result === 'wrong').length || 0);
-                    valB = (b.progress.reading?.history?.filter(h => h.result === 'wrong').length || 0) +
-                        (b.progress.meaning?.history?.filter(h => h.result === 'wrong').length || 0);
+                    valA = (a.reading?.history?.filter(h => h.result === 'wrong').length || 0) +
+                        (a.meaning?.history?.filter(h => h.result === 'wrong').length || 0);
+                    valB = (b.reading?.history?.filter(h => h.result === 'wrong').length || 0) +
+                        (b.meaning?.history?.filter(h => h.result === 'wrong').length || 0);
                     break;
                 case 'kanji_rank':
-                    valA = a.vocab.frequency?.kanjiRank || 99999;
-                    valB = b.vocab.frequency?.kanjiRank || 99999;
+                    valA = frequencyRanks[a.vocabId] ?? 99999;
+                    valB = frequencyRanks[b.vocabId] ?? 99999;
                     break;
             }
 
@@ -135,22 +92,66 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
             return 0;
         });
 
-        return d;
-    }, [data, searchQuery, sortField, sortDir]);
+        return pArray;
+    }, [progress, searchQuery, sortField, sortDir, vocabCache, frequencyRanks]);
 
-    // Pagination? Let's just limit render for now or use simple pagination if list is huge.
-    // For < 500 items, render all is fine. For 2000, maybe slow.
-    // Let's implement simple pagination.
-    const [page, setPage] = useState(1);
-    const ITEMS_PER_PAGE = 30;
-    const totalPages = Math.ceil(processedData.length / ITEMS_PER_PAGE);
-    const displayedItems = processedData.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+    // Pagination
+    const totalPages = Math.ceil(processedProgress.length / ITEMS_PER_PAGE) || 1;
+    const displayedItems = processedProgress.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+
+    // Reset page on filter change
+    useEffect(() => { setPage(1); }, [searchQuery, sortField, sortDir]);
+
+    // Fetch missing Vocab JSON files for the displayed page ONLY
+    useEffect(() => {
+        let isCancelled = false;
+
+        const loadMissing = async () => {
+            const missingIds = displayedItems
+                .map(p => p.vocabId)
+                .filter(id => !vocabCache[id]);
+
+            if (missingIds.length === 0) return;
+
+            setIsLoadingVocabs(true);
+
+            const promises = missingIds.map(async (id) => {
+                try {
+                    return await VocabularyService.loadVocab(id);
+                } catch (e) {
+                    console.error(`Failed to load vocab ${id}`, e);
+                    return null;
+                }
+            });
+
+            const results = await Promise.all(promises);
+
+            if (!isCancelled) {
+                setVocabCache(prev => {
+                    const next = { ...prev };
+                    let changed = false;
+                    for (const v of results) {
+                        if (v) {
+                            next[v.id] = v;
+                            changed = true;
+                        }
+                    }
+                    return changed ? next : prev;
+                });
+                setIsLoadingVocabs(false);
+            }
+        };
+
+        loadMissing();
+
+        return () => { isCancelled = true; };
+    }, [displayedItems, vocabCache]);
 
     // Reset page on filter change
     useEffect(() => { setPage(1); }, [searchQuery, sortField, sortDir]);
 
 
-    if (isLoading) {
+    if (progress.length > 0 && isLoadingVocabs && displayedItems.some(p => !vocabCache[p.vocabId])) {
         return (
             <div className="flex flex-col gap-4 animate-fade-in">
                 {/* Skeleton Controls */}
@@ -167,12 +168,6 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                     {Array.from({ length: 12 }).map((_, i) => (
                         <VocabCardSkeleton key={i} />
                     ))}
-                </div>
-
-                {/* Loading Progress Bar - Optional but helpful if batching takes time */}
-                <div className="fixed bottom-4 right-4 bg-surface border border-divider shadow-md rounded-full px-4 py-2 flex items-center gap-3 z-50">
-                    <div className="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin" />
-                    <span className="text-xs text-primary font-medium">Loading... {loadingProgress}%</span>
                 </div>
             </div>
         );
@@ -218,14 +213,18 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
 
             {/* List */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                {displayedItems.map(({ vocab, progress }) => (
-                    <VocabCard
-                        key={vocab.id}
-                        vocab={vocab}
-                        progress={progress}
-                        onClick={() => onVocabClick?.(vocab.id)}
-                    />
-                ))}
+                {displayedItems.map((p) => {
+                    const vocab = vocabCache[p.vocabId];
+                    if (!vocab) return <VocabCardSkeleton key={p.vocabId} />;
+                    return (
+                        <VocabCard
+                            key={vocab.id}
+                            vocab={vocab}
+                            progress={p}
+                            onClick={() => onVocabClick?.(vocab.id)}
+                        />
+                    );
+                })}
                 {displayedItems.length === 0 && (
                     <div className="col-span-full py-12 text-center text-tertiary">
                         No vocabulary found.

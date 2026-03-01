@@ -1,5 +1,71 @@
 [
   {
+    "id": "74706",
+    "original": "みかけはそうではないのに本当は意地が悪い。",
+    "en": [
+      {
+        "id": "329013",
+        "text": "He doesn't look that way, but he's really a nasty piece of work."
+      }
+    ],
+    "indices": "見かけ{みかけ} は 然う[01]{そう} では無い{ではない} のに 本当 は 意地 が 悪い(わるい)",
+    "vocabIds": [
+      "1156720",
+      "2590010",
+      "1151260"
+    ],
+    "matches": {
+      "1151260": {
+        "start": 18,
+        "length": 2,
+        "reading": "わるい"
+      },
+      "1156720": {
+        "start": 15,
+        "length": 2,
+        "reading": "いじ"
+      },
+      "2590010": {
+        "start": 15,
+        "length": 5,
+        "reading": "いじがわるい"
+      }
+    }
+  },
+  {
+    "id": "91200",
+    "original": "彼女は意地悪女だ。",
+    "en": [
+      {
+        "id": "312514",
+        "text": "She's a big teaser."
+      }
+    ],
+    "indices": "彼女[01] は 意地悪 女(おんな) だ",
+    "vocabIds": [
+      "1483150",
+      "1156720",
+      "1151940"
+    ],
+    "matches": {
+      "1151940": {
+        "start": 5,
+        "length": 2,
+        "reading": "あくじょ"
+      },
+      "1156720": {
+        "start": 3,
+        "length": 2,
+        "reading": "いじ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
     "id": "117741",
     "original": "彼の兄は私に意地が悪かった。",
     "en": [
@@ -10,32 +76,43 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 兄(あに) は 私(わたし)[01] に 意地 が 悪い(わるい){悪かった}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1249900",
       "1311110",
       "1156720",
-      "1151230"
+      "1151260"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
-      "1151230": {
+      "1151260": {
         "start": 9,
-        "length": 1
+        "length": 3,
+        "reading": "わるかっ"
       },
       "1156720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いじ"
       },
       "1249900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あに"
       },
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -50,42 +127,55 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 意地~ の 悪い(わるい) 発言 で(#2028980) 講義 が 一層[01] 激しい{激しく} 成る[01]{なった}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1156720",
       "1151260",
       "1477350",
       "1282260",
       "1164340",
-      "2670200"
+      "1600720"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1151260": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1156720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いじ"
       },
       "1164340": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いっそう"
       },
       "1282260": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "こうぎ"
       },
       "1477350": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はつげん"
       },
-      "2670200": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1600720": {
         "start": 16,
-        "length": 1
+        "length": 3,
+        "reading": "はげしく"
       }
     }
   },
@@ -109,63 +199,75 @@
     "matches": {
       "1151260": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1156720": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "いじ"
       },
       "1181700": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "おうさま"
       },
       "1334040": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "すん"
       },
       "1382370": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むかし"
       }
     }
   },
   {
-    "id": "163846",
-    "original": "私の金に意地汚く手を出すな。",
+    "id": "177960",
+    "original": "君はあくまで意地を張るのだね。",
     "en": [
       {
-        "id": "250664",
-        "text": "Don't put your greedy hands on my money."
+        "id": "16267",
+        "text": "You will have your own way."
+      },
+      {
+        "id": "375488",
+        "text": "You're never going to give in, are you?"
+      },
+      {
+        "id": "13343139",
+        "text": "You will insist on your way all the way, won't you?"
       }
     ],
-    "indices": "私(わたし)[01]{私の} 金(かね)[01] に 意地汚い{意地汚く}~ 手を出す[04]~ な[01]",
+    "indices": "君(きみ)[01] は 飽く迄{あくまで}~ 意地を張る~ のだ ね(#2029080)[01]",
     "vocabIds": [
-      "1311110",
-      "1242590",
+      "1247250",
       "1156720",
-      "2553430",
-      "1896030"
+      "1632820",
+      "1427900"
     ],
     "matches": {
       "1156720": {
-        "start": 4,
-        "length": 2
-      },
-      "1242590": {
-        "start": 2,
-        "length": 1
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1896030": {
-        "start": 8,
-        "length": 4
-      },
-      "2553430": {
         "start": 6,
-        "length": 1
+        "length": 2,
+        "reading": "いじ"
+      },
+      "1247250": {
+        "start": 0,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1427900": {
+        "start": 9,
+        "length": 2,
+        "reading": "はる"
+      },
+      "1632820": {
+        "start": 6,
+        "length": 5,
+        "reading": "いじをはる"
       }
     }
   },
@@ -186,36 +288,204 @@
       "1419990",
       "1524230",
       "1426680",
-      "1510650"
+      "1510650",
+      "1864130"
     ],
     "matches": {
       "1151260": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1156720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いじ"
       },
       "1419990": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1426680": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "むし"
       },
       "1510650": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "かえ"
       },
       "1524150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "まじょ"
       },
       "1524230": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "まほう"
+      },
+      "1864130": {
+        "start": 25,
+        "length": 2,
+        "reading": "かえ"
+      }
+    }
+  },
+  {
+    "id": "206131",
+    "original": "その老人は見かけほど意地悪くなかった。",
+    "en": [
+      {
+        "id": "43377",
+        "text": "The old man was not as mean as he looked."
+      }
+    ],
+    "indices": "其の[01]{その} 老人 は 見かけ 程{ほど} 意地悪い{意地悪くなかった}~",
+    "vocabIds": [
+      "1561090",
+      "1604420",
+      "1156720",
+      "1151260"
+    ],
+    "matches": {
+      "1151260": {
+        "start": 12,
+        "length": 2,
+        "reading": "わるく"
+      },
+      "1156720": {
+        "start": 10,
+        "length": 2,
+        "reading": "いじ"
+      },
+      "1561090": {
+        "start": 2,
+        "length": 2,
+        "reading": "ろうじん"
+      },
+      "1604420": {
+        "start": 5,
+        "length": 3,
+        "reading": "みかけ"
+      }
+    }
+  },
+  {
+    "id": "228782",
+    "original": "いつまでも意地張ってないで、こっちに来なよ。",
+    "en": [
+      {
+        "id": "66139",
+        "text": "Stop being such a hard-ass. Come on over."
+      }
+    ],
+    "indices": "何時までも{いつまでも} 意地張る{意地張ってないで}~ 此方(こちら){こっち} に 来る(くる)[01]{来} な[02] よ[01]",
+    "vocabIds": [
+      "1156720",
+      "1427900",
+      "1547720",
+      "1547710"
+    ],
+    "matches": {
+      "1156720": {
+        "start": 5,
+        "length": 2,
+        "reading": "いじ"
+      },
+      "1427900": {
+        "start": 7,
+        "length": 2,
+        "reading": "はっ"
+      },
+      "1547710": {
+        "start": 18,
+        "length": 1,
+        "reading": "き"
+      },
+      "1547720": {
+        "start": 18,
+        "length": 1,
+        "reading": "き"
+      }
+    }
+  },
+  {
+    "id": "232507",
+    "original": "あなたはどうしても意地を張るのだね。",
+    "en": [
+      {
+        "id": "16267",
+        "text": "You will have your own way."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は 如何しても{どうしても} 意地を張る のだ ね(#2029080)[01]",
+    "vocabIds": [
+      "1156720",
+      "1632820",
+      "1427900"
+    ],
+    "matches": {
+      "1156720": {
+        "start": 9,
+        "length": 2,
+        "reading": "いじ"
+      },
+      "1427900": {
+        "start": 12,
+        "length": 2,
+        "reading": "はる"
+      },
+      "1632820": {
+        "start": 9,
+        "length": 5,
+        "reading": "いじをはる"
+      }
+    }
+  },
+  {
+    "id": "926875",
+    "original": "いつまでも意地を張ってないで、いい加減彼と仲直りしたらどうなの？",
+    "en": [
+      {
+        "id": "7911058",
+        "text": "Why don't you quit being so stubborn and instead try to make up with him?"
+      }
+    ],
+    "vocabIds": [
+      "1156720",
+      "1427900",
+      "1277440",
+      "1483070",
+      "1426000"
+    ],
+    "matches": {
+      "1156720": {
+        "start": 5,
+        "length": 2,
+        "reading": "いじ"
+      },
+      "1277440": {
+        "start": 15,
+        "length": 4,
+        "reading": "いいかげん"
+      },
+      "1426000": {
+        "start": 21,
+        "length": 3,
+        "reading": "なかなおり"
+      },
+      "1427900": {
+        "start": 8,
+        "length": 2,
+        "reading": "はっ"
+      },
+      "1483070": {
+        "start": 19,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -230,26 +500,24 @@
     ],
     "vocabIds": [
       "1156720",
-      "2247920",
       "1427900",
       "1266860"
     ],
     "matches": {
       "1156720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いじ"
       },
       "1266860": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "こりつ"
       },
       "1427900": {
-        "start": 6,
-        "length": 2
-      },
-      "2247920": {
         "start": 3,
-        "length": 1
+        "length": 2,
+        "reading": "はれ"
       }
     }
   },
@@ -270,15 +538,56 @@
     "matches": {
       "1151260": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1156720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いじ"
       },
       "1451470": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "どうぶつ"
+      }
+    }
+  },
+  {
+    "id": "11851989",
+    "original": "意地でも謝らない人っているよね？",
+    "en": [
+      {
+        "id": "11915799",
+        "text": "Some people will really just do whatever it takes to not apologize, huh?"
+      }
+    ],
+    "vocabIds": [
+      "1156720",
+      "2518220",
+      "1323010",
+      "1580640"
+    ],
+    "matches": {
+      "1156720": {
+        "start": 0,
+        "length": 2,
+        "reading": "いじ"
+      },
+      "1323010": {
+        "start": 4,
+        "length": 2,
+        "reading": "あやまら"
+      },
+      "1580640": {
+        "start": 8,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "2518220": {
+        "start": 0,
+        "length": 4,
+        "reading": "いじでも"
       }
     }
   }

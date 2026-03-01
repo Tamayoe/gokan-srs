@@ -1,5 +1,44 @@
 [
   {
+    "id": "101311",
+    "original": "彼は馬にその垣を飛び越えさせた。",
+    "en": [
+      {
+        "id": "302385",
+        "text": "He jumped his horse over the fence."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 馬[01] に 其の[01]{その} 垣 を 飛び越える[01]{飛び越えさせた}",
+    "vocabIds": [
+      "1483070",
+      "1471560",
+      "1204780",
+      "1485250"
+    ],
+    "matches": {
+      "1204780": {
+        "start": 6,
+        "length": 1,
+        "reading": "かき"
+      },
+      "1471560": {
+        "start": 2,
+        "length": 1,
+        "reading": "うま"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1485250": {
+        "start": 8,
+        "length": 4,
+        "reading": "とびこえ"
+      }
+    }
+  },
+  {
     "id": "104126",
     "original": "彼は小川を飛び越える勇気がなかった。",
     "en": [
@@ -18,19 +57,23 @@
     "matches": {
       "1348460": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おがわ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1485250": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "とびこえる"
       },
       "1539740": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうき"
       }
     }
   },
@@ -46,7 +89,6 @@
     "indices": "彼(かれ)[01] は 思い切って{思いきって} 小川 を 飛び越える[01] 勇気 が[01] 有る{あった} の か",
     "vocabIds": [
       "1483070",
-      "1589320",
       "1348460",
       "1485250",
       "1539740"
@@ -54,23 +96,23 @@
     "matches": {
       "1348460": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おがわ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1485250": {
         "start": 10,
-        "length": 5
+        "length": 5,
+        "reading": "とびこえる"
       },
       "1539740": {
         "start": 15,
-        "length": 2
-      },
-      "1589320": {
-        "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうき"
       }
     }
   },
@@ -92,15 +134,18 @@
     "matches": {
       "1204800": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かきね"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1485250": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       }
     }
   },
@@ -123,19 +168,23 @@
     "matches": {
       "1390800": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "あさい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1485250": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       },
       "1578720": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "みぞ"
       }
     }
   },
@@ -154,33 +203,57 @@
       "1349170",
       "1204800",
       "1485250",
+      "1450330",
+      "1633800",
       "2853124",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1204800": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かきね"
       },
       "1259290": {
         "start": 23,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1349170": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しょうねん"
+      },
+      "1450330": {
+        "start": 16,
+        "length": 2,
+        "reading": "にげ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1485250": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
+      },
+      "1633800": {
+        "start": 16,
+        "length": 2,
+        "reading": "にげ"
+      },
+      "2256270": {
+        "start": 23,
+        "length": 1,
+        "reading": "み"
       },
       "2853124": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "にげて"
       }
     }
   },
@@ -195,6 +268,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 馬[01] は 柵(さく) を 飛び越える[01]{飛び越えた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1471560",
       "1298250",
@@ -203,19 +277,28 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1298250": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "しがらみ"
       },
       "1471560": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "うま"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1485250": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       }
     }
   },
@@ -237,15 +320,18 @@
     "matches": {
       "1471560": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "うま"
       },
       "1485250": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       },
       "1584800": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "もん"
       }
     }
   },
@@ -260,22 +346,31 @@
     ],
     "indices": "馬[01] に 乗る{乗って} 此の{この} 小川 を 飛び越える[01]{飛び越えて} 見る[05]{みよう}",
     "vocabIds": [
-      "1860440",
+      "1471560",
+      "1355120",
       "1348460",
       "1485250"
     ],
     "matches": {
       "1348460": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おがわ"
+      },
+      "1355120": {
+        "start": 2,
+        "length": 2,
+        "reading": "のっ"
+      },
+      "1471560": {
+        "start": 0,
+        "length": 1,
+        "reading": "うま"
       },
       "1485250": {
         "start": 10,
-        "length": 5
-      },
-      "1860440": {
-        "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       }
     }
   },
@@ -290,6 +385,7 @@
     ],
     "indices": "太った 男 が 浅い 溝(みぞ) を 飛び越える[01]{飛び越えて} 蹌踉ける{よろけた}",
     "vocabIds": [
+      "1408220",
       "1408190",
       "1419990",
       "1390800",
@@ -299,23 +395,33 @@
     "matches": {
       "1390800": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "あさい"
       },
       "1408190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ふとった"
+      },
+      "1408220": {
+        "start": 0,
+        "length": 2,
+        "reading": "ふとっ"
       },
       "1419990": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1485250": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       },
       "1578720": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "みぞ"
       }
     }
   },
@@ -337,15 +443,18 @@
     "matches": {
       "1298250": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "しがらみ"
       },
       "1349170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうねん"
       },
       "1485250": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       }
     }
   },
@@ -365,32 +474,44 @@
       "1258330",
       "1506870",
       "1485250",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1258330": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1259290": {
         "start": 15,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1474910": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しろい"
       },
       "1485250": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "とびこえる"
       },
       "1506870": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "へい"
+      },
+      "2256270": {
+        "start": 15,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -411,11 +532,13 @@
     "matches": {
       "1258330": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1485250": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       }
     }
   },
@@ -436,11 +559,13 @@
     "matches": {
       "1485250": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       },
       "1506870": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "へい"
       }
     }
   },
@@ -462,15 +587,18 @@
     "matches": {
       "1214330": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんたん"
       },
       "1298250": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "しがらみ"
       },
       "1485250": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       }
     }
   },
@@ -491,11 +619,13 @@
     "matches": {
       "1485250": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       },
       "1509290": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かべ"
       }
     }
   },
@@ -516,11 +646,13 @@
     "matches": {
       "1352130": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1485250": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       }
     }
   },
@@ -543,23 +675,52 @@
     "matches": {
       "1254480": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "あな"
       },
       "1402610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "そうしゃ"
       },
       "1421510": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じめん"
       },
       "1485250": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "とびこえ"
       },
       "1586265": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "あい"
+      }
+    }
+  },
+  {
+    "id": "1503512",
+    "original": "飛び越えろ！",
+    "en": [
+      {
+        "id": "1102981",
+        "text": "Jump!"
+      },
+      {
+        "id": "4356532",
+        "text": "Jump across."
+      }
+    ],
+    "vocabIds": [
+      "1485250"
+    ],
+    "matches": {
+      "1485250": {
+        "start": 0,
+        "length": 5,
+        "reading": "とびこえろ"
       }
     }
   },
@@ -579,11 +740,13 @@
     "matches": {
       "1258330": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1485250": {
         "start": 7,
-        "length": 7
+        "length": 4,
+        "reading": "とびこえ"
       }
     }
   }

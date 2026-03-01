@@ -51,9 +51,9 @@ export class GoogleDriveSync {
 
     async initialize(localEnvelope?: SyncEnvelope): Promise<SyncEnvelope | null> {
         await this.ensureFolder();
-        let remoteEnvelope = await this.fetchRemoteEnvelope();
+        const remoteEnvelope = await this.fetchRemoteEnvelope();
         let remoteProgress = remoteEnvelope?.progress || null;
-        let remoteSettings = remoteEnvelope?.settings || null;
+        const remoteSettings = remoteEnvelope?.settings || null;
 
         if (remoteProgress && MigrationService.needsMigration(remoteProgress)) {
             remoteProgress = await MigrationService.migrateMergedVocabsAsync(remoteProgress as any) as ProgressWithMetadata;
@@ -105,9 +105,9 @@ export class GoogleDriveSync {
             };
         }
 
-        let remoteEnvelope = await this.fetchRemoteEnvelope();
+        const remoteEnvelope = await this.fetchRemoteEnvelope();
         let remoteProgress = remoteEnvelope?.progress || null;
-        let remoteSettings = remoteEnvelope?.settings || null;
+        const remoteSettings = remoteEnvelope?.settings || null;
 
         if (remoteProgress && MigrationService.needsMigration(remoteProgress)) {
             remoteProgress = await MigrationService.migrateMergedVocabsAsync(remoteProgress as any) as ProgressWithMetadata;

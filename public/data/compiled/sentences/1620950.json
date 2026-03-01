@@ -17,15 +17,18 @@
     "matches": {
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1536010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1620950": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "もんなし"
       }
     }
   },
@@ -49,7 +52,8 @@
     "matches": {
       "1620950": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "もんなし"
       }
     }
   },
@@ -71,15 +75,18 @@
     "matches": {
       "1452950": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "どうぜん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1620950": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "もんなし"
       }
     }
   },
@@ -102,19 +109,23 @@
     "matches": {
       "1304970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1320140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1620950": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "もんなし"
       }
     }
   },
@@ -134,26 +145,118 @@
     "indices": "君(きみ)[01] と 一緒に[01] 行く[01]{行き} たい[01] けど{けれど} 文無し~ なのだ{なんだ}",
     "vocabIds": [
       "1247250",
+      "1163400",
       "1163420",
+      "1578850",
       "1578790",
       "1620950"
     ],
     "matches": {
+      "1163400": {
+        "start": 2,
+        "length": 2,
+        "reading": "いっしょ"
+      },
       "1163420": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いっしょに"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1578790": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 5,
+        "length": 2,
+        "reading": "いき"
       },
       "1620950": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "もんなし"
+      }
+    }
+  },
+  {
+    "id": "2176066",
+    "original": "あなたは一文無しなのだと思いました。",
+    "en": [
+      {
+        "id": "1961731",
+        "text": "I thought you were broke."
+      }
+    ],
+    "vocabIds": [
+      "1160790",
+      "1166380",
+      "1620950",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 4,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1166380": {
+        "start": 4,
+        "length": 4,
+        "reading": "いちもんなし"
+      },
+      "1589320": {
+        "start": 12,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 12,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1620950": {
+        "start": 5,
+        "length": 3,
+        "reading": "もんなし"
+      }
+    }
+  },
+  {
+    "id": "8677325",
+    "original": "トムとメアリーは一文無しなのかも。",
+    "en": [
+      {
+        "id": "6676533",
+        "text": "I suspect Tom and Mary are broke."
+      }
+    ],
+    "vocabIds": [
+      "1160790",
+      "1166380",
+      "1620950"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 8,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1166380": {
+        "start": 8,
+        "length": 4,
+        "reading": "いちもんなし"
+      },
+      "1620950": {
+        "start": 9,
+        "length": 3,
+        "reading": "もんなし"
       }
     }
   },
@@ -173,11 +276,13 @@
     "matches": {
       "1589350": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
       "1620950": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "もんなし"
       }
     }
   }

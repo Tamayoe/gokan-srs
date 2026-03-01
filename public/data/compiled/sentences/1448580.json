@@ -1,21 +1,52 @@
 [
   {
-    "id": "76444",
-    "original": "ボイラは湯あかがびっしりついた。",
+    "id": "75314",
+    "original": "なんか・・・女湯から悲鳴が聞こえてくるんだけど。",
     "en": [
       {
-        "id": "327276",
-        "text": "The boiler was heavily scaled."
+        "id": "328405",
+        "text": "Say ... I can hear screams coming from the women's bath."
       }
     ],
-    "indices": "ボイラー{ボイラ}~ は 湯垢{湯あか}~ が びっしり~ 付く(つく)[01]{ついた}~",
+    "indices": "何か{なんか} 女湯~ から 悲鳴 が 聞こえる[01]{聞こえて} 来る(くる){くる} ん[03] だ けど",
     "vocabIds": [
-      "1448580"
+      "1344930",
+      "1345390",
+      "1448580",
+      "1483350",
+      "1591150",
+      "1954660"
     ],
     "matches": {
+      "1344930": {
+        "start": 6,
+        "length": 1,
+        "reading": "おんな"
+      },
+      "1345390": {
+        "start": 6,
+        "length": 2,
+        "reading": "おんなゆ"
+      },
       "1448580": {
-        "start": 4,
-        "length": 1
+        "start": 7,
+        "length": 1,
+        "reading": "ゆ"
+      },
+      "1483350": {
+        "start": 10,
+        "length": 2,
+        "reading": "ひめい"
+      },
+      "1591150": {
+        "start": 13,
+        "length": 3,
+        "reading": "きこえ"
+      },
+      "1954660": {
+        "start": 13,
+        "length": 3,
+        "reading": "きこえ"
       }
     }
   },
@@ -33,24 +64,34 @@
       "1501720",
       "1448580",
       "1576630",
-      "1465610"
+      "1465610",
+      "1465600"
     ],
     "matches": {
       "1448580": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
+      },
+      "1465600": {
+        "start": 10,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
       },
       "1501720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ふっとう"
       },
       "1576630": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "しお"
       }
     }
   },
@@ -72,15 +113,18 @@
     "matches": {
       "1448580": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1465610": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いれる"
       },
       "1500100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ふろ"
       }
     }
   },
@@ -97,6 +141,7 @@
     "vocabIds": [
       "1464700",
       "1360010",
+      "1392580",
       "1392590",
       "1467720",
       "1448580",
@@ -105,102 +150,38 @@
     "matches": {
       "1277450": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1360010": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ねる"
+      },
+      "1392580": {
+        "start": 6,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1448580": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1464700": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんじん"
       },
       "1467720": {
         "start": 8,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "123210",
-    "original": "鍋が湯わかしを黒いという。",
-    "en": [
-      {
-        "id": "280789",
-        "text": "The pot calls the kettle black."
-      }
-    ],
-    "indices": "鍋 が 湯沸し{湯わかし}~ を 黒い[01] と 言う{いう}",
-    "vocabIds": [
-      "1459720",
-      "1448580",
-      "1287420"
-    ],
-    "matches": {
-      "1287420": {
-        "start": 7,
-        "length": 2
-      },
-      "1448580": {
-        "start": 2,
-        "length": 1
-      },
-      "1459720": {
-        "start": 0,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "124128",
-    "original": "湯川博士は科学研究に重要な役割を果たした。",
-    "en": [
-      {
-        "id": "279867",
-        "text": "Dr. Yukawa played an important part in the scientific study."
-      }
-    ],
-    "indices": "博士[01] は 科学 研究 に 重要{重要な} 役割を果たす{役割を果たした}",
-    "vocabIds": [
-      "1448580",
-      "1390020",
-      "1474620",
-      "2060040",
-      "1336820",
-      "2806030"
-    ],
-    "matches": {
-      "1336820": {
-        "start": 10,
-        "length": 2
-      },
-      "1390020": {
-        "start": 1,
-        "length": 1
-      },
-      "1448580": {
-        "start": 0,
-        "length": 1
-      },
-      "1474620": {
-        "start": 2,
-        "length": 2
-      },
-      "2060040": {
-        "start": 5,
-        "length": 4
-      },
-      "2806030": {
-        "start": 13,
-        "length": 7
+        "length": 2,
+        "reading": "あつい"
       }
     }
   },
@@ -219,28 +200,33 @@
       "1379950",
       "1463650",
       "1429330",
-      "1008870"
+      "1587040"
     ],
     "matches": {
-      "1008870": {
-        "start": 17,
-        "length": 5
-      },
       "1379950": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せいしん"
       },
       "1429330": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうわ"
       },
       "1448580": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1463650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "にくたい"
+      },
+      "1587040": {
+        "start": 18,
+        "length": 2,
+        "reading": "いわ"
       }
     }
   },
@@ -258,24 +244,34 @@
       "1322510",
       "1448580",
       "1549140",
-      "1465610"
+      "1465610",
+      "1465600"
     ],
     "matches": {
       "1322510": {
         "start": 0,
-        "length": 6
+        "length": 5,
+        "reading": "にえたぎっ"
       },
       "1448580": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
+      },
+      "1465600": {
+        "start": 14,
+        "length": 2,
+        "reading": "いれ"
       },
       "1465610": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "いれ"
       },
       "1549140": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "たまご"
       }
     }
   },
@@ -301,15 +297,18 @@
     "matches": {
       "1270190": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1448580": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1501660": {
         "start": 3,
-        "length": 4
+        "length": 3,
+        "reading": "わかし"
       }
     }
   },
@@ -331,15 +330,18 @@
     "matches": {
       "1270190": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1448580": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1501720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ふっとう"
       }
     }
   },
@@ -355,116 +357,42 @@
     "indices": "間欠泉~ は 時間[02] 毎に 湯 を 噴出 為る(する){する}",
     "vocabIds": [
       "1715210",
-      "2612170",
-      "1215230",
+      "1315920",
+      "1524650",
       "1524660",
       "1448580",
       "1504600"
     ],
     "matches": {
-      "1215230": {
-        "start": 6,
-        "length": 1
+      "1315920": {
+        "start": 5,
+        "length": 2,
+        "reading": "じかん"
       },
       "1448580": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1504600": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ふんしゅつ"
+      },
+      "1524650": {
+        "start": 7,
+        "length": 1,
+        "reading": "ごと"
       },
       "1524660": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ごとに"
       },
       "1715210": {
         "start": 0,
-        "length": 3
-      },
-      "2612170": {
-        "start": 4,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "185170",
-    "original": "壊れた湯飲みの補充をした。",
-    "en": [
-      {
-        "id": "22301",
-        "text": "I replaced the broken cups with new ones."
-      }
-    ],
-    "indices": "壊れる[01]{壊れた} 湯飲み~ の 補充[02] を 為る(する){した}",
-    "vocabIds": [
-      "1199900",
-      "1448580",
-      "2151640",
-      "1514580"
-    ],
-    "matches": {
-      "1199900": {
-        "start": 0,
-        "length": 3
-      },
-      "1448580": {
-        "start": 3,
-        "length": 1
-      },
-      "1514580": {
-        "start": 7,
-        "length": 2
-      },
-      "2151640": {
-        "start": 4,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "198581",
-    "original": "ノーベル賞受賞者湯川博士は１９８１年に死去した。",
-    "en": [
-      {
-        "id": "35774",
-        "text": "Dr. Yukawa, the Nobel prize winner, died in 1981."
-      }
-    ],
-    "indices": "ノーベル賞 受賞者~ 博士[01] は 年(ねん) に 死去~ 為る(する){した}",
-    "vocabIds": [
-      "2646900",
-      "1448580",
-      "1390020",
-      "1474620",
-      "2084840",
-      "1310800"
-    ],
-    "matches": {
-      "1310800": {
-        "start": 19,
-        "length": 2
-      },
-      "1390020": {
-        "start": 9,
-        "length": 1
-      },
-      "1448580": {
-        "start": 8,
-        "length": 1
-      },
-      "1474620": {
-        "start": 10,
-        "length": 2
-      },
-      "2084840": {
-        "start": 17,
-        "length": 1
-      },
-      "2646900": {
-        "start": 0,
-        "length": 8
+        "length": 3,
+        "reading": "かんけつせん"
       }
     }
   },
@@ -484,56 +412,8 @@
     "matches": {
       "1448580": {
         "start": 2,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "605278",
-    "original": "湯あがりの化粧をした顔には、ほんのりと赤みを帯びて、見ちがえるほど美しかった。",
-    "en": [
-      {
-        "id": "605320",
-        "text": "Her face after the bath, with a slight tinge of red, was beautiful as to mistake her for someone else."
-      }
-    ],
-    "vocabIds": [
-      "1448580",
-      "1577040",
-      "1217730",
-      "2081980",
-      "1410430",
-      "2256270",
-      "1486350"
-    ],
-    "matches": {
-      "1217730": {
-        "start": 10,
-        "length": 1
-      },
-      "1410430": {
-        "start": 22,
-        "length": 3
-      },
-      "1448580": {
-        "start": 0,
-        "length": 1
-      },
-      "1486350": {
-        "start": 33,
-        "length": 1
-      },
-      "1577040": {
-        "start": 5,
-        "length": 2
-      },
-      "2081980": {
-        "start": 19,
-        "length": 2
-      },
-      "2256270": {
-        "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       }
     }
   },
@@ -560,19 +440,23 @@
     "matches": {
       "1291600": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さとう"
       },
       "1448580": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1465610": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いれる"
       },
       "1546070": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "とける"
       }
     }
   },
@@ -593,15 +477,18 @@
     "matches": {
       "1410590": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "まっ"
       },
       "1448580": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1606680": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "わく"
       }
     }
   },
@@ -622,59 +509,74 @@
     "matches": {
       "1399880": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "かきまわす"
       },
       "1448580": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1467720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あつい"
       }
     }
   },
   {
-    "id": "13714041",
-    "original": "湯飲みにはお茶を入れてお茶碗にはご飯をよそいます。",
+    "id": "11582510",
+    "original": "パスタを茹でたら、ざるに上げて湯切りをするといいよ。",
     "en": [
       {
-        "id": "13714042",
-        "text": "We pour tea in a teacup and serve rice in a rice bowl."
+        "id": "11563045",
+        "text": "After boiling the pasta, you should drain it in a colander."
       }
     ],
     "vocabIds": [
+      "1571470",
+      "2692870",
+      "1352320",
+      "1352300",
       "1448580",
-      "2151640",
-      "2830620",
-      "1002430",
-      "1562840",
-      "1270590"
+      "2732600",
+      "1383800"
     ],
     "matches": {
-      "1002430": {
-        "start": 11,
-        "length": 2
+      "1352300": {
+        "start": 12,
+        "length": 2,
+        "reading": "あげ"
       },
-      "1270590": {
+      "1352320": {
+        "start": 12,
+        "length": 2,
+        "reading": "あげ"
+      },
+      "1383800": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ぎり"
       },
       "1448580": {
-        "start": 0,
-        "length": 1
+        "start": 15,
+        "length": 1,
+        "reading": "ゆ"
       },
-      "1562840": {
-        "start": 13,
-        "length": 1
+      "1571470": {
+        "start": 4,
+        "length": 2,
+        "reading": "ゆで"
       },
-      "2151640": {
-        "start": 1,
-        "length": 2
+      "2692870": {
+        "start": 4,
+        "length": 2,
+        "reading": "ゆで"
       },
-      "2830620": {
-        "start": 5,
-        "length": 6
+      "2732600": {
+        "start": 15,
+        "length": 3,
+        "reading": "ゆぎり"
       }
     }
   },
@@ -691,24 +593,34 @@
       "1446130",
       "1605750",
       "1448580",
+      "1465590",
       "1465410"
     ],
     "matches": {
       "1446130": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とうじ"
       },
       "1448580": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ゆ"
       },
       "1465410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はいり"
+      },
+      "1465590": {
+        "start": 8,
+        "length": 2,
+        "reading": "はいり"
       },
       "1605750": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ゆず"
       }
     }
   }

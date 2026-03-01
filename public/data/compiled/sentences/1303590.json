@@ -12,6 +12,7 @@
     "vocabIds": [
       "1553120",
       "1578850",
+      "1392580",
       "1392590",
       "1311110",
       "1303590"
@@ -19,23 +20,33 @@
     "matches": {
       "1303590": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1392580": {
+        "start": 4,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1553120": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たび"
       },
       "1578850": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       }
     }
   },
@@ -50,22 +61,37 @@
     ],
     "indices": "理髪師~ は 人(ひと) の 髭{ひげ} を 剃る{そり} 散髪 を 為る(する)[01]{する} 人(ひと) である",
     "vocabIds": [
+      "1550070",
       "1550080",
+      "1956330",
       "1580640",
       "1303590"
     ],
     "matches": {
       "1303590": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
+      },
+      "1550070": {
+        "start": 0,
+        "length": 2,
+        "reading": "りはつ"
       },
       "1550080": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "りはつし"
       },
       "1580640": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1956330": {
+        "start": 2,
+        "length": 1,
+        "reading": "し"
       }
     }
   },
@@ -80,17 +106,31 @@
     ],
     "indices": "髭剃り と 散髪 を 為る(する){して} 貰う[02]{もらった}",
     "vocabIds": [
+      "1601810",
       "1487310",
+      "1581900",
       "1303590"
     ],
     "matches": {
       "1303590": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1487310": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ひげすり"
+      },
+      "1581900": {
+        "start": 1,
+        "length": 2,
+        "reading": "すり"
+      },
+      "1601810": {
+        "start": 0,
+        "length": 1,
+        "reading": "ひげ"
       }
     }
   },
@@ -113,19 +153,23 @@
     "matches": {
       "1199330": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1255430": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "つき"
       },
       "1303590": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -145,26 +189,24 @@
     "indices": "彼(かれ)[01] は ひと月~ に 回 散髪 為る(する){する}",
     "vocabIds": [
       "1483070",
-      "1255430",
       "1199330",
       "1303590"
     ],
     "matches": {
       "1199330": {
         "start": 7,
-        "length": 1
-      },
-      "1255430": {
-        "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1303590": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -186,15 +228,69 @@
     "matches": {
       "1303590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1349410": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とこや"
+      }
+    }
+  },
+  {
+    "id": "156648",
+    "original": "私は散髪屋で髪を刈ってもらった。",
+    "en": [
+      {
+        "id": "257885",
+        "text": "I had my hair cut at the barber's."
+      }
+    ],
+    "indices": "私(わたし)[01] は 散髪屋~ で(#2028980) 髪 を 刈る{刈って} 貰う[02]{もらった}",
+    "vocabIds": [
+      "1311110",
+      "1303590",
+      "1754710",
+      "2082160",
+      "1477950",
+      "1209540"
+    ],
+    "matches": {
+      "1209540": {
+        "start": 8,
+        "length": 2,
+        "reading": "かっ"
+      },
+      "1303590": {
+        "start": 2,
+        "length": 2,
+        "reading": "さんぱつ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1477950": {
+        "start": 6,
+        "length": 1,
+        "reading": "かみ"
+      },
+      "1754710": {
+        "start": 2,
+        "length": 3,
+        "reading": "さんぱつや"
+      },
+      "2082160": {
+        "start": 4,
+        "length": 1,
+        "reading": "や"
       }
     }
   },
@@ -215,11 +311,13 @@
     "matches": {
       "1303590": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -244,11 +342,13 @@
     "matches": {
       "1303590": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -269,11 +369,13 @@
     "matches": {
       "1303590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1315840": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       }
     }
   },
@@ -294,11 +396,13 @@
     "matches": {
       "1277450": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1303590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       }
     }
   },
@@ -322,16 +426,24 @@
     "indices": "散髪 為る(する){して} 下さい",
     "vocabIds": [
       "1303590",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 4,
+        "length": 3,
+        "reading": "ください"
       },
       "1303590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       }
     }
   },
@@ -351,7 +463,8 @@
     "matches": {
       "1303590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       }
     }
   },
@@ -372,11 +485,13 @@
     "matches": {
       "1303590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1516930": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       }
     }
   },
@@ -398,15 +513,18 @@
     "matches": {
       "1303590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1349410": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とこや"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -427,11 +545,13 @@
     "matches": {
       "1303590": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -457,15 +577,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1303590": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1487660": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       }
     }
   },
@@ -491,15 +614,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1289220": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1303590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       }
     }
   },
@@ -514,17 +640,86 @@
     ],
     "indices": "何よりも 散髪~ を 為る(する){し} ねばならない{なければならない}",
     "vocabIds": [
+      "1577100",
+      "1188530",
       "2141560",
       "1303590"
     ],
     "matches": {
+      "1188530": {
+        "start": 0,
+        "length": 3,
+        "reading": "なにより"
+      },
       "1303590": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       },
       "2141560": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "なによりも"
+      }
+    }
+  },
+  {
+    "id": "194199",
+    "original": "もう散髪屋さんに、行ってもいい頃です。",
+    "en": [
+      {
+        "id": "31369",
+        "text": "It's time you went to the barber's."
+      },
+      {
+        "id": "1341429",
+        "text": "It's about time you went to the barber's."
+      }
+    ],
+    "indices": "もう 散髪屋 さん に 行く[01]{行って} も いい頃 です",
+    "vocabIds": [
+      "1303590",
+      "1754710",
+      "2082160",
+      "1578850",
+      "2118250",
+      "1579080"
+    ],
+    "matches": {
+      "1303590": {
+        "start": 2,
+        "length": 2,
+        "reading": "さんぱつ"
+      },
+      "1578850": {
+        "start": 9,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1579080": {
+        "start": 15,
+        "length": 1,
+        "reading": "ころ"
+      },
+      "1754710": {
+        "start": 2,
+        "length": 3,
+        "reading": "さんぱつや"
+      },
+      "2082160": {
+        "start": 4,
+        "length": 1,
+        "reading": "や"
+      },
+      "2118250": {
+        "start": 13,
+        "length": 3,
+        "reading": "いいころ"
       }
     }
   },
@@ -548,7 +743,8 @@
     "matches": {
       "1303590": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       }
     }
   },
@@ -569,11 +765,13 @@
     "matches": {
       "1303590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -588,16 +786,24 @@
     ],
     "vocabIds": [
       "1303590",
+      "1578850",
       "2840505"
     ],
     "matches": {
       "1303590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
+      },
+      "1578850": {
+        "start": 3,
+        "length": 2,
+        "reading": "いっ"
       },
       "2840505": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "いってき"
       }
     }
   },
@@ -620,21 +826,36 @@
     ],
     "vocabIds": [
       "1483070",
+      "1255430",
       "2692240",
+      "1160790",
       "1303590"
     ],
     "matches": {
+      "1160790": {
+        "start": 3,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1255430": {
+        "start": 2,
+        "length": 1,
+        "reading": "つき"
+      },
       "1303590": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "2692240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "つきいち"
       }
     }
   },
@@ -654,20 +875,23 @@
     "vocabIds": [
       "1311110",
       "1303590",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1303590": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1589060": {
+      "1578850": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -683,20 +907,105 @@
     "vocabIds": [
       "1303590",
       "1543750",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 6,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1303590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
       },
       "1543750": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
+      },
+      "2036870": {
+        "start": 6,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
+    "id": "11178870",
+    "original": "月に一回、散髪屋に行きます。",
+    "en": [
+      {
+        "id": "5172580",
+        "text": "Once a month, I go to the barber."
+      },
+      {
+        "id": "463862",
+        "text": "I go to the barber once a month."
+      },
+      {
+        "id": "257210",
+        "text": "I go to the barber's once a month."
+      }
+    ],
+    "vocabIds": [
+      "1255430",
+      "1160790",
+      "1161310",
+      "1199330",
+      "1303590",
+      "1754710",
+      "2082160",
+      "1578850",
+      "1578790"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1161310": {
+        "start": 2,
+        "length": 2,
+        "reading": "いちかい"
+      },
+      "1199330": {
+        "start": 3,
+        "length": 1,
+        "reading": "かい"
+      },
+      "1255430": {
+        "start": 0,
+        "length": 1,
+        "reading": "つき"
+      },
+      "1303590": {
+        "start": 5,
+        "length": 2,
+        "reading": "さんぱつ"
+      },
+      "1578790": {
+        "start": 9,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 9,
+        "length": 2,
+        "reading": "いき"
+      },
+      "1754710": {
+        "start": 5,
+        "length": 3,
+        "reading": "さんぱつや"
+      },
+      "2082160": {
+        "start": 7,
+        "length": 1,
+        "reading": "や"
       }
     }
   },
@@ -712,30 +1021,35 @@
     "vocabIds": [
       "1579260",
       "1303590",
-      "1589060",
+      "1578850",
       "1289070",
       "1221740"
     ],
     "matches": {
       "1221740": {
         "start": 18,
-        "length": 5
+        "length": 4,
+        "reading": "きにいっ"
       },
       "1289070": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こんかい"
       },
       "1303590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "さんぱつ"
+      },
+      "1578850": {
+        "start": 6,
+        "length": 2,
+        "reading": "いっ"
       },
       "1579260": {
         "start": 0,
-        "length": 2
-      },
-      "1589060": {
-        "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "きのう"
       }
     }
   }

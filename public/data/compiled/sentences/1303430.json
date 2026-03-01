@@ -20,27 +20,33 @@
     "matches": {
       "1191730": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1196970": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "がまん"
       },
       "1257240": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "きらい"
       },
       "1303430": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1492160": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ふけつ"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       }
     }
   },
@@ -62,15 +68,55 @@
     "matches": {
       "1289590": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "こまっ"
       },
       "1303430": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
+      }
+    }
+  },
+  {
+    "id": "84144",
+    "original": "部屋は散らかり放題だった。",
+    "en": [
+      {
+        "id": "319570",
+        "text": "The room was all messed up."
+      },
+      {
+        "id": "319571",
+        "text": "The room was in total disorder."
+      }
+    ],
+    "indices": "部屋[01] は 散らかる{散らかり}~ 放題~ だ{だった}",
+    "vocabIds": [
+      "1499320",
+      "1303430",
+      "1516770"
+    ],
+    "matches": {
+      "1303430": {
+        "start": 3,
+        "length": 4,
+        "reading": "ちらかり"
+      },
+      "1499320": {
+        "start": 0,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1516770": {
+        "start": 7,
+        "length": 2,
+        "reading": "ほうだい"
       }
     }
   },
@@ -92,15 +138,18 @@
     "matches": {
       "1303430": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1499320": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1522150": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -122,15 +171,18 @@
     "matches": {
       "1303430": {
         "start": 11,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1362360": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しんぶん"
       },
       "1499320": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       }
     }
   },
@@ -145,6 +197,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 部屋[01] は 散らかる{散らかっていた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1499320",
       "1303430"
@@ -152,15 +205,72 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1303430": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
+      }
+    }
+  },
+  {
+    "id": "116216",
+    "original": "彼の部屋の散らかりようで彼があわてて出かけたことがわかった。",
+    "en": [
+      {
+        "id": "287453",
+        "text": "His untidy room announced that he had abruptly departed."
+      },
+      {
+        "id": "11845632",
+        "text": "It was clear from the mess in his room that he had been in a hurry when he left."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 部屋[01] の 散らかる{散らかり} 様(よう){よう} で(#2028980) 彼(かれ) が 慌てる{あわてて} 出かける{出かけた} 事(こと){こと} が 分かる{わかった}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1499320",
+      "1303430",
+      "1598550"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1303430": {
+        "start": 5,
+        "length": 4,
+        "reading": "ちらかり"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1499320": {
+        "start": 2,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1598550": {
+        "start": 18,
+        "length": 3,
+        "reading": "でかけ"
       }
     }
   },
@@ -177,25 +287,23 @@
     "vocabIds": [
       "1311110",
       "1499320",
-      "1303430",
-      "1516920"
+      "1303430"
     ],
     "matches": {
       "1303430": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1499320": {
         "start": 2,
-        "length": 2
-      },
-      "1516920": {
-        "start": 14,
-        "length": 1
+        "length": 2,
+        "reading": "へや"
       }
     }
   },
@@ -218,19 +326,23 @@
     "matches": {
       "1303430": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1376230": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "せいとん"
       },
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       }
     }
   },
@@ -245,22 +357,13 @@
     ],
     "indices": "子供部屋~ は 散らかる{散らかっている}",
     "vocabIds": [
-      "1307850",
-      "1499320",
       "1303430"
     ],
     "matches": {
       "1303430": {
         "start": 5,
-        "length": 5
-      },
-      "1307850": {
-        "start": 0,
-        "length": 2
-      },
-      "1499320": {
-        "start": 2,
-        "length": 2
+        "length": 4,
+        "reading": "ちらかっ"
       }
     }
   },
@@ -276,31 +379,36 @@
     "indices": "一体[01] 誰 が この様に{このように} 散らかる{散らかった} 状態 を 全て{すべて} 片付ける{片づける} の だろうか",
     "vocabIds": [
       "1164510",
+      "1416830",
       "2864173",
       "1303430",
-      "1356730",
-      "1516920"
+      "1356730"
     ],
     "matches": {
       "1164510": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いったい"
       },
       "1303430": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1356730": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じょうたい"
       },
-      "1516920": {
-        "start": 20,
-        "length": 1
+      "1416830": {
+        "start": 2,
+        "length": 1,
+        "reading": "だれ"
       },
       "2864173": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "だれが"
       }
     }
   },
@@ -322,15 +430,18 @@
     "matches": {
       "1158810": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いふく"
       },
       "1303430": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1499320": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       }
     }
   },
@@ -352,19 +463,23 @@
     "matches": {
       "1303430": {
         "start": 23,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1399790": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "そうじ"
       },
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -380,20 +495,41 @@
     "vocabIds": [
       "1499320",
       "1303430",
-      "2418780"
+      "1404630",
+      "1450270",
+      "1745060",
+      "1355790"
     ],
     "matches": {
       "1303430": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
+      },
+      "1355790": {
+        "start": 20,
+        "length": 1,
+        "reading": "じょう"
+      },
+      "1404630": {
+        "start": 16,
+        "length": 1,
+        "reading": "あし"
+      },
+      "1450270": {
+        "start": 18,
+        "length": 2,
+        "reading": "ふみ"
       },
       "1499320": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
-      "2418780": {
-        "start": 16,
-        "length": 8
+      "1745060": {
+        "start": 18,
+        "length": 3,
+        "reading": "ふみじょう"
       }
     }
   },
@@ -414,15 +550,18 @@
     "matches": {
       "1002290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
       },
       "1303430": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1499320": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       }
     }
   },
@@ -450,11 +589,13 @@
     "matches": {
       "1303430": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
       },
       "1436130": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       }
     }
   },
@@ -468,17 +609,25 @@
       }
     ],
     "vocabIds": [
+      "1576870",
       "2406140",
       "1303430"
     ],
     "matches": {
       "1303430": {
         "start": 4,
-        "length": 5
+        "length": 4,
+        "reading": "ちらかっ"
+      },
+      "1576870": {
+        "start": 0,
+        "length": 1,
+        "reading": "おれ"
       },
       "2406140": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おれんち"
       }
     }
   }

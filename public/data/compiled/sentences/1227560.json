@@ -12,25 +12,23 @@
     "vocabIds": [
       "1259290",
       "1198550",
-      "1227560",
-      "1313580"
+      "1227560"
     ],
     "matches": {
       "1198550": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1227560": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1259290": {
         "start": 8,
-        "length": 2
-      },
-      "1313580": {
-        "start": 21,
-        "length": 1
+        "length": 2,
+        "reading": "みる"
       }
     }
   },
@@ -48,34 +46,52 @@
       "1579260",
       "1227560",
       "1502860",
+      "1579110",
       "1289400",
       "1582310",
-      "1297050"
+      "1297050",
+      "1297040"
     ],
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1289400": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1297040": {
+        "start": 16,
+        "length": 2,
+        "reading": "さえ"
       },
       "1297050": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "さえ"
       },
       "1502860": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ぶん"
+      },
+      "1579110": {
+        "start": 11,
+        "length": 2,
+        "reading": "きょう"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       },
       "1582310": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "あたま"
       }
     }
   },
@@ -91,6 +107,7 @@
     "indices": "お兄ちゃん[01] 凄い[02]{すごい} 熱(ねつ) だ よ 荷物[01] は いい(#2820690)[01] から 其処(そこ){そこ} の 木陰 で(#2028980) 休む{休んでて}",
     "vocabIds": [
       "1001840",
+      "2275890",
       "1467710",
       "1195430",
       "1534570",
@@ -99,23 +116,33 @@
     "matches": {
       "1001840": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "おにいちゃん"
       },
       "1195430": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "にもつ"
       },
       "1227560": {
         "start": 28,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1467710": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ねつ"
       },
       "1534570": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "こかげ"
+      },
+      "2275890": {
+        "start": 1,
+        "length": 4,
+        "reading": "にいちゃん"
       }
     }
   },
@@ -139,23 +166,200 @@
     "matches": {
       "1215230": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1227560": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1348870": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1551350": {
         "start": 12,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1561090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ろうじん"
+      }
+    }
+  },
+  {
+    "id": "78166",
+    "original": "旅行のため、彼は一週間休みます。",
+    "en": [
+      {
+        "id": "325552",
+        "text": "His trip will keep him away from the office for a week."
+      }
+    ],
+    "indices": "旅行 の 為(ため){ため} 彼(かれ)[01] は 一週間 休む[01]{休みます}",
+    "vocabIds": [
+      "1553170",
+      "1483070",
+      "1160790",
+      "1163270",
+      "1333500",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 8,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1163270": {
+        "start": 8,
+        "length": 3,
+        "reading": "いちしゅうかん"
+      },
+      "1227500": {
+        "start": 11,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 11,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1333500": {
+        "start": 9,
+        "length": 2,
+        "reading": "しゅうかん"
+      },
+      "1483070": {
+        "start": 6,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1553170": {
+        "start": 0,
+        "length": 2,
+        "reading": "りょこう"
+      }
+    }
+  },
+  {
+    "id": "80134",
+    "original": "木の下でちょっと休もうよ。",
+    "en": [
+      {
+        "id": "323585",
+        "text": "Let's take a little rest under the tree."
+      }
+    ],
+    "indices": "木(き) の 下(した)[01] で(#2028980) 一寸(ちょっと){ちょっと} 休む{休もう} よ[01]",
+    "vocabIds": [
+      "1869560",
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすも"
+      },
+      "1869560": {
+        "start": 0,
+        "length": 3,
+        "reading": "このした"
+      }
+    }
+  },
+  {
+    "id": "80439",
+    "original": "明日は休みます。",
+    "en": [
+      {
+        "id": "323279",
+        "text": "I'll be absent tomorrow."
+      },
+      {
+        "id": "7842299",
+        "text": "I will be absent tomorrow."
+      },
+      {
+        "id": "12602286",
+        "text": "I'll be off tomorrow."
+      },
+      {
+        "id": "12602288",
+        "text": "I'll take tomorrow off."
+      }
+    ],
+    "indices": "明日 は 休む[01]{休みます}",
+    "vocabIds": [
+      "1584660",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      }
+    }
+  },
+  {
+    "id": "80639",
+    "original": "明日１日休ませてください。",
+    "en": [
+      {
+        "id": "323076",
+        "text": "Will you let me have a holiday tomorrow?"
+      },
+      {
+        "id": "432957",
+        "text": "Please let me take a day off tomorrow."
+      }
+    ],
+    "indices": "明日 一日(いちにち){１日} 休む[01]{休ませて} 下さい{ください}",
+    "vocabIds": [
+      "1584660",
+      "2225040",
+      "1463770",
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      },
+      "2225040": {
+        "start": 2,
+        "length": 2,
+        "reading": "いちにち"
       }
     }
   },
@@ -178,19 +382,23 @@
     "matches": {
       "1227560": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1304970": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1428280": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あさ"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -218,23 +426,28 @@
     "matches": {
       "1206730": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1490230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       }
     }
   },
@@ -266,23 +479,28 @@
     "matches": {
       "1169250": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       },
       "1206730": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1583720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
       }
     }
   },
@@ -297,22 +515,25 @@
     ],
     "indices": "風邪をひく{風邪をひいていた} ので 学校 を 休む[01]{休んだ}",
     "vocabIds": [
-      "1499880",
+      "1583720",
       "1206730",
       "1227560"
     ],
     "matches": {
       "1206730": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
-      "1499880": {
+      "1583720": {
         "start": 0,
-        "length": 6
+        "length": 2,
+        "reading": "かぜ"
       }
     }
   },
@@ -343,19 +564,23 @@
     "matches": {
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1304970": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1579260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -376,11 +601,13 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       }
     }
   },
@@ -400,21 +627,30 @@
     "indices": "疲れる[01]{疲れてる} ので 休む[02]{休んだ} 方が良い{ほうが良い}",
     "vocabIds": [
       "1483740",
+      "1483730",
       "1227560",
       "1605820"
     ],
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1483730": {
+        "start": 0,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "つかれ"
       },
       "1605820": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -430,16 +666,24 @@
     "indices": "疲れる[01]{疲れている} ので 休む[02]{休んだ}",
     "vocabIds": [
       "1483740",
+      "1483730",
       "1227560"
     ],
     "matches": {
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1483730": {
+        "start": 0,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "つかれ"
       }
     }
   },
@@ -461,15 +705,18 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1583720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
       }
     }
   },
@@ -485,26 +732,30 @@
     "indices": "彼女[01] は 風邪をひく{風邪をひいて} 学校 を 休む[01]{休んでいる}",
     "vocabIds": [
       "1483150",
-      "1499880",
+      "1583720",
       "1206730",
       "1227560"
     ],
     "matches": {
       "1206730": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
-      "1499880": {
+      "1583720": {
         "start": 3,
-        "length": 6
+        "length": 2,
+        "reading": "かぜ"
       }
     }
   },
@@ -527,19 +778,23 @@
     "matches": {
       "1206730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1583720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
       }
     }
   },
@@ -561,15 +816,18 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1622100": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ぶかつ"
       }
     }
   },
@@ -596,19 +854,23 @@
     "matches": {
       "1206730": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1490230": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -634,15 +896,18 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1490230": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -664,15 +929,18 @@
     "matches": {
       "1227560": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1348870": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -698,15 +966,18 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1330290": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -725,33 +996,51 @@
       "1600720",
       "1483780",
       "1304970",
+      "1160790",
       "1163270",
+      "1333500",
       "1227560"
     ],
     "matches": {
+      "1160790": {
+        "start": 17,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163270": {
         "start": 17,
-        "length": 3
+        "length": 3,
+        "reading": "いちしゅうかん"
       },
       "1227560": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1304970": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1333500": {
+        "start": 18,
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483780": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひろう"
       },
       "1600720": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "はげしい"
       }
     }
   },
@@ -773,15 +1062,51 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1250990": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいこ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "92109",
+    "original": "彼女はちょっとの間も休まない。",
+    "en": [
+      {
+        "id": "311602",
+        "text": "She does not take a rest for an instant."
+      }
+    ],
+    "indices": "彼女[01] は 一寸(ちょっと){ちょっと} の 間(あいだ) も 休む[02]{休まない}",
+    "vocabIds": [
+      "1483150",
+      "1215230",
+      "1227560"
+    ],
+    "matches": {
+      "1215230": {
+        "start": 8,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1227560": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -803,15 +1128,18 @@
     "matches": {
       "1206730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -828,25 +1156,35 @@
     "vocabIds": [
       "1483150",
       "2216900",
+      "1392580",
       "1372190",
       "1227560"
     ],
     "matches": {
       "1227560": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1372190": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "すいようび"
+      },
+      "1392580": {
+        "start": 5,
+        "length": 1,
+        "reading": "まえ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2216900": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "このまえ"
       }
     }
   },
@@ -867,6 +1205,7 @@
     "vocabIds": [
       "1483150",
       "1268570",
+      "1463770",
       "1392580",
       "1206730",
       "1227560"
@@ -874,23 +1213,33 @@
     "matches": {
       "1206730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1268570": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごにち"
       },
       "1392580": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -907,6 +1256,8 @@
     "vocabIds": [
       "1483150",
       "1483740",
+      "1483730",
+      "1311110",
       "1311300",
       "1227560",
       "1516930"
@@ -914,23 +1265,38 @@
     "matches": {
       "1227560": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1311110": {
+        "start": 11,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483730": {
+        "start": 3,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "つかれ"
       },
       "1516930": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       }
     }
   },
@@ -954,23 +1320,79 @@
     "matches": {
       "1206730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1510640": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "へん"
       },
       "1589350": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
+      }
+    }
+  },
+  {
+    "id": "98304",
+    "original": "彼らは１０マイル歩いて１０分間休み、また再び歩いた。",
+    "en": [
+      {
+        "id": "305398",
+        "text": "They walked for ten miles, rested for ten minutes, then walked again."
+      }
+    ],
+    "indices": "彼ら(かれら) は 哩{マイル} 歩く{歩いて} 分間 休む[02]{休み} 又{また} 再び 歩く{歩いた}",
+    "vocabIds": [
+      "1483090",
+      "1514320",
+      "2386360",
+      "1227560",
+      "1227500",
+      "1292300"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 15,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 15,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1292300": {
+        "start": 20,
+        "length": 2,
+        "reading": "ふたたび"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1514320": {
+        "start": 8,
+        "length": 2,
+        "reading": "あるい"
+      },
+      "2386360": {
+        "start": 13,
+        "length": 2,
+        "reading": "ふんかん"
       }
     }
   },
@@ -997,19 +1419,23 @@
     "matches": {
       "1206730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -1031,15 +1457,18 @@
     "matches": {
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -1065,15 +1494,18 @@
     "matches": {
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -1096,19 +1528,74 @@
     "matches": {
       "1206730": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
+      }
+    }
+  },
+  {
+    "id": "100761",
+    "original": "彼は疲れた手足を休ませた。",
+    "en": [
+      {
+        "id": "302936",
+        "text": "He rested his tired limbs."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 疲れる[01]{疲れた} 手足 を 休む[02]{休ませた}",
+    "vocabIds": [
+      "1483070",
+      "1483740",
+      "1483730",
+      "1647590",
+      "1328080",
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1328080": {
+        "start": 5,
+        "length": 2,
+        "reading": "てあし"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483730": {
+        "start": 2,
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1483740": {
+        "start": 2,
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1647590": {
+        "start": 2,
+        "length": 3,
+        "reading": "つかれた"
       }
     }
   },
@@ -1133,27 +1620,115 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1269320": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
       },
       "1304970": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1348870": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1405800": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "つづけ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "104097",
+    "original": "彼は少し休もうといった。",
+    "en": [
+      {
+        "id": "299594",
+        "text": "He said, \"Let's take a short rest.\""
+      }
+    ],
+    "indices": "彼(かれ)[01] は 少し 休む{休もう} と 言う{いった}",
+    "vocabIds": [
+      "1483070",
+      "1348870",
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすも"
+      },
+      "1348870": {
+        "start": 2,
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "104098",
+    "original": "彼は少し休みましょうと提案した。",
+    "en": [
+      {
+        "id": "299594",
+        "text": "He said, \"Let's take a short rest.\""
+      },
+      {
+        "id": "970143",
+        "text": "He suggested that we take a short rest."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 少し 休む[02]{休みましょう} と 提案 為る(する){した}",
+    "vocabIds": [
+      "1483070",
+      "1348870",
+      "1227560",
+      "1227500",
+      "1436320"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1348870": {
+        "start": 2,
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1436320": {
+        "start": 11,
+        "length": 2,
+        "reading": "ていあん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1175,15 +1750,18 @@
     "matches": {
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1330290": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1201,24 +1779,34 @@
       "1483070",
       "1330290",
       "1227560",
+      "1227500",
       "1589350"
     ],
     "matches": {
+      "1227500": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1227560": {
         "start": 5,
-        "length": 4
+        "length": 2,
+        "reading": "やすみ"
       },
       "1330290": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1589350": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -1243,27 +1831,78 @@
     "matches": {
       "1227560": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1304970": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1377660": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せいとう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1550140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
       },
       "1598680": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ときどき"
+      }
+    }
+  },
+  {
+    "id": "105289",
+    "original": "彼は時々学校を休みます。",
+    "en": [
+      {
+        "id": "298399",
+        "text": "He is sometimes absent from school."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 時々 学校 を 休む[01]{休みます}",
+    "vocabIds": [
+      "1483070",
+      "1598680",
+      "1206730",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 4,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1598680": {
+        "start": 2,
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -1291,23 +1930,28 @@
     "matches": {
       "1206730": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       },
       "1579260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -1330,19 +1974,23 @@
     "matches": {
       "1206730": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -1365,19 +2013,23 @@
     "matches": {
       "1206730": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579110": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -1399,15 +2051,18 @@
     "matches": {
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1227610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうか"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1429,15 +2084,18 @@
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1487660": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       }
     }
   },
@@ -1459,15 +2117,18 @@
     "matches": {
       "1206730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1497,15 +2158,18 @@
     "matches": {
       "1206730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1521,36 +2185,60 @@
     "indices": "彼(かれ)[01] は 一日(いちにち) 休む[01]{休み} たい[01] と言う{という} 彼女[01]{彼女の} 要請 を 拒否 為る(する){した}",
     "vocabIds": [
       "1483070",
+      "1160790",
       "1576260",
+      "1463770",
       "1227560",
+      "1227500",
       "1483150",
       "1546780",
       "1232410"
     ],
     "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1227500": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1227560": {
         "start": 4,
-        "length": 4
+        "length": 2,
+        "reading": "やすみ"
       },
       "1232410": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "きょひ"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1546780": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ようせい"
       },
       "1576260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       }
     }
   },
@@ -1570,26 +2258,42 @@
     "indices": "彼(かれ)[01] は 一週間 学校 を 休む[01]{休んだ}",
     "vocabIds": [
       "1483070",
+      "1160790",
       "1163270",
+      "1333500",
       "1206730",
       "1227560"
     ],
     "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163270": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "いちしゅうかん"
       },
       "1206730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1333500": {
+        "start": 3,
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1611,15 +2315,18 @@
     "matches": {
       "1198530": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かいごう"
       },
       "1227560": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1643,23 +2350,28 @@
     "matches": {
       "1194480": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かげつ"
       },
       "1215230": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かん"
       },
       "1227560": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -1680,11 +2392,13 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1705,11 +2419,13 @@
     "matches": {
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1726,20 +2442,152 @@
     "vocabIds": [
       "1483070",
       "2182800",
+      "1215230",
+      "1227560"
+    ],
+    "matches": {
+      "1215230": {
+        "start": 7,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1227560": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2182800": {
+        "start": 2,
+        "length": 6,
+        "reading": "しばらくのま"
+      }
+    }
+  },
+  {
+    "id": "113579",
+    "original": "彼はしばしば学校を休みます。",
+    "en": [
+      {
+        "id": "290094",
+        "text": "He is often absent from school."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 屡々{しばしば} 学校 を 休む[01]{休みます}",
+    "vocabIds": [
+      "1483070",
+      "1206730",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 6,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "113581",
+    "original": "彼はしばしば何時間も休まずに働いたものだった。",
+    "en": [
+      {
+        "id": "290092",
+        "text": "He would often work for hours without stopping."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 屡々{しばしば} 何時間 も 休む[02]{休まず} に 働く[01]{働いた} 物(もの)[02]{もの} だ{だった}",
+    "vocabIds": [
+      "1483070",
+      "1577100",
+      "1188950",
+      "1315920",
+      "1227560",
+      "1451150"
+    ],
+    "matches": {
+      "1188950": {
+        "start": 6,
+        "length": 3,
+        "reading": "なんじかん"
+      },
+      "1227560": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1315920": {
+        "start": 7,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1451150": {
+        "start": 14,
+        "length": 2,
+        "reading": "はたらい"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1577100": {
+        "start": 6,
+        "length": 1,
+        "reading": "なん"
+      }
+    }
+  },
+  {
+    "id": "114144",
+    "original": "彼はかぜをひいて仕事を休まなければならなかった。",
+    "en": [
+      {
+        "id": "289528",
+        "text": "He came down with a cold and had to be away from work."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 風邪をひく{かぜをひいて} 仕事[01] を 休む[01]{休ま} ねばならない{なければならなかった}",
+    "vocabIds": [
+      "1483070",
+      "1304970",
       "1227560"
     ],
     "matches": {
       "1227560": {
+        "start": 11,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1304970": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "しごと"
       },
       "1483070": {
         "start": 0,
-        "length": 1
-      },
-      "2182800": {
-        "start": 2,
-        "length": 6
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1761,15 +2609,18 @@
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1426140": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうこく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1792,19 +2643,23 @@
     "matches": {
       "1206730": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579110": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -1823,28 +2678,39 @@
       "1579110",
       "1227560",
       "1550140",
+      "1420470",
       "1420420"
     ],
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1420420": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "しらない"
+      },
+      "1420470": {
+        "start": 12,
+        "length": 2,
+        "reading": "しら"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1550140": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
       },
       "1579110": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -1862,29 +2728,28 @@
       "1483070",
       "1227560",
       "1311110",
-      "1000420",
-      "1982860"
+      "1000420"
     ],
     "matches": {
       "1000420": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
-      },
-      "1982860": {
-        "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1907,19 +2772,23 @@
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1450890": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ずつう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1550140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
       }
     }
   },
@@ -1941,15 +2810,18 @@
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -1969,26 +2841,87 @@
     "indices": "頭痛 が 為る(する){する} ので 今日 は 休む[01]{休み} たい[01] と 思う{思います}",
     "vocabIds": [
       "1450890",
+      "1579110",
       "1289400",
       "1227560",
+      "1227500",
+      "1589350",
       "1589320"
     ],
     "matches": {
+      "1227500": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1227560": {
         "start": 10,
-        "length": 4
+        "length": 2,
+        "reading": "やすみ"
       },
       "1289400": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1450890": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ずつう"
+      },
+      "1579110": {
+        "start": 7,
+        "length": 2,
+        "reading": "きょう"
       },
       "1589320": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 15,
+        "length": 2,
+        "reading": "おもい"
+      }
+    }
+  },
+  {
+    "id": "124575",
+    "original": "途中で少し休みました。",
+    "en": [
+      {
+        "id": "279419",
+        "text": "We took a short rest on the way."
+      }
+    ],
+    "indices": "途中 で(#2028980) 少し 休む[02]{休みました}",
+    "vocabIds": [
+      "1582200",
+      "1348870",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1348870": {
+        "start": 3,
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1582200": {
+        "start": 0,
+        "length": 2,
+        "reading": "とちゅう"
       }
     }
   },
@@ -2003,22 +2936,37 @@
     ],
     "indices": "中国語 の 授業 を 休む[01]{休んで} も 宜しい{よろしい} ですか",
     "vocabIds": [
+      "1424270",
       "1424290",
+      "1270910",
       "1330290",
       "1227560"
     ],
     "matches": {
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1270910": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
       },
       "1330290": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
+      },
+      "1424270": {
+        "start": 0,
+        "length": 2,
+        "reading": "ちゅうごく"
       },
       "1424290": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうごくご"
       }
     }
   },
@@ -2051,27 +2999,33 @@
     "matches": {
       "1191730": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1206730": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1409140": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "からだ"
       },
       "1483070": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1592500": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぐあい"
       }
     }
   },
@@ -2086,22 +3040,106 @@
     ],
     "indices": "他に{ほかに} 誰か{だれか} 休む{休んでいた} か",
     "vocabIds": [
+      "1203260",
       "1203280",
+      "1416830",
       "1416840",
       "1227560"
     ],
     "matches": {
+      "1203260": {
+        "start": 0,
+        "length": 1,
+        "reading": "た"
+      },
       "1203280": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たに"
       },
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1416830": {
+        "start": 2,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416840": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
+      }
+    }
+  },
+  {
+    "id": "141532",
+    "original": "先生は禎子の手からそっと折り紙を取り、「もう休みなさい」と言った。",
+    "en": [
+      {
+        "id": "273038",
+        "text": "He gently took the paper out of her hands and said, \"It's time to rest.\""
+      }
+    ],
+    "indices": "先生(せんせい)[01] は の 手 から そっと 折り紙 を 取る[01]{取り} もう 休む{休み} 為さい{なさい} と 言う{言った}",
+    "vocabIds": [
+      "1387990",
+      "1327190",
+      "1589450",
+      "1326980",
+      "2451270",
+      "1227560",
+      "1227500",
+      "2540200",
+      "1587040"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 22,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 22,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1326980": {
+        "start": 16,
+        "length": 2,
+        "reading": "とり"
+      },
+      "1327190": {
+        "start": 6,
+        "length": 1,
+        "reading": "て"
+      },
+      "1387990": {
+        "start": 0,
+        "length": 2,
+        "reading": "せんせい"
+      },
+      "1587040": {
+        "start": 29,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1589450": {
+        "start": 12,
+        "length": 3,
+        "reading": "おりがみ"
+      },
+      "2451270": {
+        "start": 16,
+        "length": 2,
+        "reading": "とり"
+      },
+      "2540200": {
+        "start": 28,
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -2117,7 +3155,9 @@
     "indices": "先週 人(にん)[01] の 生徒 が 授業 を 休む[01]{休んだ}",
     "vocabIds": [
       "1387870",
+      "1268060",
       "2862879",
+      "1580640",
       "1379380",
       "1330290",
       "1227560"
@@ -2125,23 +3165,38 @@
     "matches": {
       "1227560": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1268060": {
+        "start": 3,
+        "length": 1,
+        "reading": "ご"
       },
       "1330290": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1379380": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1387870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんしゅう"
+      },
+      "1580640": {
+        "start": 4,
+        "length": 1,
+        "reading": "にん"
       },
       "2862879": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごにん"
       }
     }
   },
@@ -2164,19 +3219,23 @@
     "matches": {
       "1206730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1387870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんしゅう"
       },
       "1416830": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       }
     }
   },
@@ -2191,7 +3250,9 @@
     ],
     "indices": "数人 の 生徒 が 風邪 で(#2028980) 学校 を 休む[01]{休んだ}",
     "vocabIds": [
+      "1580820",
       "1373090",
+      "1580640",
       "1379380",
       "1583720",
       "1206730",
@@ -2200,23 +3261,107 @@
     "matches": {
       "1206730": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1373090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すうにん"
       },
       "1379380": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1580820": {
+        "start": 0,
+        "length": 1,
+        "reading": "すう"
       },
       "1583720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
+      }
+    }
+  },
+  {
+    "id": "145059",
+    "original": "深く腰をかけて休みなさい、そうすればずっと気分が良くなるでしょう。",
+    "en": [
+      {
+        "id": "269504",
+        "text": "Sit back and rest, and you will feel much better."
+      }
+    ],
+    "indices": "深い{深く} 腰をかける{腰をかけて} 休む{休み} 為さい{なさい} 然うすれば{そうすれば} ずっと 気分が良い{気分が良く} 成る[01]{なる} でしょう[01]",
+    "vocabIds": [
+      "1362640",
+      "2843268",
+      "1288340",
+      "1227560",
+      "1227500",
+      "1222590",
+      "1605820",
+      "1605870",
+      "2029460"
+    ],
+    "matches": {
+      "1222590": {
+        "start": 21,
+        "length": 2,
+        "reading": "きぶん"
+      },
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1288340": {
+        "start": 2,
+        "length": 1,
+        "reading": "こし"
+      },
+      "1362640": {
+        "start": 0,
+        "length": 2,
+        "reading": "ふかく"
+      },
+      "1605820": {
+        "start": 24,
+        "length": 2,
+        "reading": "よく"
+      },
+      "1605870": {
+        "start": 24,
+        "length": 2,
+        "reading": "よく"
+      },
+      "2029460": {
+        "start": 24,
+        "length": 4,
+        "reading": "よくなる"
+      },
+      "2843268": {
+        "start": 0,
+        "length": 2,
+        "reading": "ふかく"
       }
     }
   },
@@ -2234,24 +3379,34 @@
       "1348870",
       "1227560",
       "1222590",
-      "2029460"
+      "1605820",
+      "1605870"
     ],
     "matches": {
       "1222590": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きぶん"
       },
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1348870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
-      "2029460": {
+      "1605820": {
         "start": 9,
-        "length": 5
+        "length": 2,
+        "reading": "よく"
+      },
+      "1605870": {
+        "start": 9,
+        "length": 2,
+        "reading": "よく"
       }
     }
   },
@@ -2272,11 +3427,91 @@
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1348870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
+      }
+    }
+  },
+  {
+    "id": "146816",
+    "original": "少し休めば元気になるでしょう。",
+    "en": [
+      {
+        "id": "267745",
+        "text": "I'll be fine if I take a little rest."
+      }
+    ],
+    "indices": "少し 休む[02]{休めば} 元気 になる[01] でしょう[01]",
+    "vocabIds": [
+      "1348870",
+      "1227560",
+      "1221830",
+      "1260720"
+    ],
+    "matches": {
+      "1221830": {
+        "start": 2,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1227560": {
+        "start": 2,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1260720": {
+        "start": 5,
+        "length": 2,
+        "reading": "げんき"
+      },
+      "1348870": {
+        "start": 0,
+        "length": 2,
+        "reading": "すこし"
+      }
+    }
+  },
+  {
+    "id": "146817",
+    "original": "少し休ませてください。",
+    "en": [
+      {
+        "id": "267744",
+        "text": "I want to take a rest."
+      },
+      {
+        "id": "4111380",
+        "text": "Let me take a break, please."
+      },
+      {
+        "id": "10548093",
+        "text": "Let me take a little break, please."
+      },
+      {
+        "id": "10548216",
+        "text": "Please let me take a short break."
+      }
+    ],
+    "indices": "少し 休む[02]{休ませて} 下さい{ください}",
+    "vocabIds": [
+      "1348870",
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 2,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1348870": {
+        "start": 0,
+        "length": 2,
+        "reading": "すこし"
       }
     }
   },
@@ -2310,15 +3545,57 @@
     "matches": {
       "1215230": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1348870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
+      }
+    }
+  },
+  {
+    "id": "148030",
+    "original": "十分休みなさい、そうすれば君はすぐによくなるだろう。",
+    "en": [
+      {
+        "id": "266529",
+        "text": "Take a good rest, and you will soon get well."
+      }
+    ],
+    "indices": "十分(じゅうぶん)[03] 休み[01] 為さい{なさい} 然うすれば{そうすれば} 君(きみ)[01] は 直ぐに{すぐに} 良くなる{よくなる} だろう",
+    "vocabIds": [
+      "1335080",
+      "1227560",
+      "1227500",
+      "1247250"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 2,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 2,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1247250": {
+        "start": 13,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1335080": {
+        "start": 0,
+        "length": 2,
+        "reading": "じゅうぶん"
       }
     }
   },
@@ -2339,25 +3616,35 @@
     "vocabIds": [
       "1323080",
       "1310670",
+      "1310660",
       "1348870",
       "1227560"
     ],
     "matches": {
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1310660": {
+        "start": 2,
+        "length": 2,
+        "reading": "とめ"
       },
       "1310670": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "とめ"
       },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1348870": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       }
     }
   },
@@ -2384,19 +3671,23 @@
     "matches": {
       "1206730": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1490230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -2413,25 +3704,35 @@
     "vocabIds": [
       "1311110",
       "1483740",
+      "1483730",
       "1348870",
       "1227560"
     ],
     "matches": {
       "1227560": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1348870": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1483730": {
+        "start": 2,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "つかれ"
       }
     }
   },
@@ -2450,28 +3751,90 @@
       "1483070",
       "1227560",
       "1550140",
+      "1420470",
       "1420420"
     ],
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1420420": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "しらない"
+      },
+      "1420470": {
+        "start": 10,
+        "length": 2,
+        "reading": "しら"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1550140": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
+      }
+    }
+  },
+  {
+    "id": "154849",
+    "original": "私は当分の間、学校を休まねばならない。",
+    "en": [
+      {
+        "id": "259690",
+        "text": "I have to be absent from school for the moment."
+      }
+    ],
+    "indices": "私(わたし)[01] は 当分の間 学校 を 休む[01]{休ま} ねばならない",
+    "vocabIds": [
+      "1311110",
+      "1449230",
+      "2135470",
+      "1215230",
+      "1206730",
+      "1227560"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 7,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1215230": {
+        "start": 5,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1227560": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1449230": {
+        "start": 2,
+        "length": 2,
+        "reading": "とうぶん"
+      },
+      "2135470": {
+        "start": 2,
+        "length": 4,
+        "reading": "とうぶんのま"
       }
     }
   },
@@ -2493,15 +3856,18 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1304970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -2518,20 +3884,29 @@
     "vocabIds": [
       "1311110",
       "1227560",
-      "2179510"
+      "1180570",
+      "1632900"
     ],
     "matches": {
+      "1180570": {
+        "start": 7,
+        "length": 1,
+        "reading": "よこ"
+      },
       "1227560": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "2179510": {
+      "1632900": {
         "start": 7,
-        "length": 5
+        "length": 2,
+        "reading": "よこに"
       }
     }
   },
@@ -2547,21 +3922,30 @@
     "indices": "私(わたし)[01] は 横になる{横になって} 休む[02]{休んだ}",
     "vocabIds": [
       "1311110",
-      "2179510",
+      "1180570",
+      "1632900",
       "1227560"
     ],
     "matches": {
+      "1180570": {
+        "start": 2,
+        "length": 1,
+        "reading": "よこ"
+      },
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "2179510": {
+      "1632900": {
         "start": 2,
-        "length": 5
+        "length": 2,
+        "reading": "よこに"
       }
     }
   },
@@ -2582,11 +3966,13 @@
     "matches": {
       "1227560": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -2616,15 +4002,18 @@
     "matches": {
       "1206730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -2640,6 +4029,8 @@
     "indices": "私(わたし)[01] は 大変{たいへん} 疲れる[01]{疲れた} ので 立ち止まる{立ち止まって} 休む[02]{休んだ}",
     "vocabIds": [
       "1311110",
+      "1483740",
+      "1483730",
       "1647590",
       "1551350",
       "1227560"
@@ -2647,19 +4038,88 @@
     "matches": {
       "1227560": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483730": {
+        "start": 6,
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1483740": {
+        "start": 6,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1551350": {
         "start": 12,
-        "length": 6
+        "length": 5,
+        "reading": "たちどまっ"
       },
       "1647590": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "つかれた"
+      }
+    }
+  },
+  {
+    "id": "161858",
+    "original": "私は明日の午後仕事を休みます。",
+    "en": [
+      {
+        "id": "252658",
+        "text": "I am taking tomorrow afternoon off."
+      },
+      {
+        "id": "1300827",
+        "text": "I'm taking tomorrow afternoon off."
+      }
+    ],
+    "indices": "私(わたし)[01] は 明日 の 午後 仕事[01] を 休む[01]{休みます}",
+    "vocabIds": [
+      "1311110",
+      "1584660",
+      "1268990",
+      "1304970",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1268990": {
+        "start": 5,
+        "length": 2,
+        "reading": "ごご"
+      },
+      "1304970": {
+        "start": 7,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1584660": {
+        "start": 2,
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -2684,25 +4144,35 @@
     "vocabIds": [
       "1311110",
       "1301330",
+      "1463770",
       "1304970",
       "1227560"
     ],
     "matches": {
       "1227560": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1301330": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんにち"
       },
       "1304970": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1463770": {
+        "start": 5,
+        "length": 1,
+        "reading": "にち"
       }
     }
   },
@@ -2725,19 +4195,23 @@
     "matches": {
       "1199330": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かい"
       },
       "1206730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -2760,19 +4234,23 @@
     "matches": {
       "1198550": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1497610": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       }
     }
   },
@@ -2787,6 +4265,7 @@
     ],
     "indices": "私たち は 其処(そこ){そこ} で(#2028980) 一週間{１週間} 休む[02]{休んだ}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1333500",
       "1227560"
@@ -2794,15 +4273,23 @@
     "matches": {
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1333500": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       }
     }
   },
@@ -2817,17 +4304,70 @@
     ],
     "indices": "私たち は 暫く{しばらく} 休む[02]{休んだ}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1227560"
     ],
     "matches": {
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      }
+    }
+  },
+  {
+    "id": "166758",
+    "original": "私たちは学校を休みました。",
+    "en": [
+      {
+        "id": "247744",
+        "text": "We absented ourselves from school."
+      }
+    ],
+    "indices": "私たち は 学校 を 休む[01]{休みました}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1206730",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 4,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
       }
     }
   },
@@ -2850,19 +4390,56 @@
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1490230": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       },
       "1550140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
+      }
+    }
+  },
+  {
+    "id": "169064",
+    "original": "仕事をやめてしばらく休みましょう。",
+    "en": [
+      {
+        "id": "245423",
+        "text": "Let's stop working and relax for a while."
+      }
+    ],
+    "indices": "仕事 を 止める(やめる){やめて} 暫く{しばらく} 休む[02]{休みましょう}",
+    "vocabIds": [
+      "1304970",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1304970": {
+        "start": 0,
+        "length": 2,
+        "reading": "しごと"
       }
     }
   },
@@ -2884,15 +4461,18 @@
     "matches": {
       "1227560": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1450890": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ずつう"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -2923,19 +4503,23 @@
     "matches": {
       "1206730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1550140": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -2956,11 +4540,46 @@
     "matches": {
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
+      }
+    }
+  },
+  {
+    "id": "170853",
+    "original": "座ってしばらく休みなさい。",
+    "en": [
+      {
+        "id": "243627",
+        "text": "Sit down and rest for a while."
+      }
+    ],
+    "indices": "座る[01]{座って} 暫く{しばらく} 休む{休み} 為さい{なさい}",
+    "vocabIds": [
+      "1291800",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1291800": {
+        "start": 0,
+        "length": 2,
+        "reading": "すわっ"
       }
     }
   },
@@ -2976,26 +4595,42 @@
     "indices": "今日 一日(いちにち) は 仕事[01] を 休む[01]{休んだら}",
     "vocabIds": [
       "1579110",
+      "1160790",
       "1576260",
+      "1463770",
       "1304970",
       "1227560"
     ],
     "matches": {
+      "1160790": {
+        "start": 2,
+        "length": 1,
+        "reading": "いち"
+      },
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1304970": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1576260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -3010,27 +4645,43 @@
     ],
     "indices": "今日 は 病気 なので 会社[01] を 休む[01]{休み} たい[01] です",
     "vocabIds": [
+      "1579110",
       "1289400",
       "1490230",
       "1198550",
-      "1227560"
+      "1227560",
+      "1227500"
     ],
     "matches": {
       "1198550": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
+      },
+      "1227500": {
+        "start": 12,
+        "length": 2,
+        "reading": "やすみ"
       },
       "1227560": {
         "start": 12,
-        "length": 4
+        "length": 2,
+        "reading": "やすみ"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1490230": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -3045,32 +4696,67 @@
     ],
     "indices": "今日 は 二人 の 男 生徒 が 学校 を 休む[01]{休んでいる}",
     "vocabIds": [
+      "1579110",
       "1289400",
+      "1461140",
       "1582670",
+      "1580640",
+      "1419990",
       "2104300",
+      "1379380",
       "1206730",
       "1227560"
     ],
     "matches": {
       "1206730": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1379380": {
+        "start": 7,
+        "length": 2,
+        "reading": "せいと"
+      },
+      "1419990": {
+        "start": 6,
+        "length": 1,
+        "reading": "おとこ"
+      },
+      "1461140": {
+        "start": 3,
+        "length": 1,
+        "reading": "に"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1580640": {
+        "start": 4,
+        "length": 1,
+        "reading": "にん"
       },
       "1582670": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ににん"
       },
       "2104300": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おとこせいと"
       }
     }
   },
@@ -3085,22 +4771,37 @@
     ],
     "indices": "今日 は 誰か 休む[01]{休んでいます} か",
     "vocabIds": [
+      "1579110",
       "1289400",
+      "1416830",
       "1416840",
       "1227560"
     ],
     "matches": {
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1416830": {
+        "start": 3,
+        "length": 1,
+        "reading": "だれ"
       },
       "1416840": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -3115,6 +4816,7 @@
     ],
     "indices": "今日 は 多数[02]{多数の} 生徒 が 休む[01]{休んでいる}",
     "vocabIds": [
+      "1579110",
       "1289400",
       "1407860",
       "1379380",
@@ -3123,19 +4825,28 @@
     "matches": {
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1379380": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1407860": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たすう"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -3150,6 +4861,7 @@
     ],
     "indices": "今日 は 仕事[01] を 休む[01]{休んで} 良い{よい}",
     "vocabIds": [
+      "1579110",
       "1289400",
       "1304970",
       "1227560"
@@ -3157,15 +4869,23 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1304970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -3184,6 +4904,7 @@
     ],
     "indices": "今日 は 君(きみ)[01]{君の} 仕事[01] を 休む[01]{休んだ} 方が良い{ほうがよい}",
     "vocabIds": [
+      "1579110",
       "1289400",
       "1247250",
       "1304970",
@@ -3192,19 +4913,73 @@
     "matches": {
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1247250": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1304970": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      }
+    }
+  },
+  {
+    "id": "171648",
+    "original": "今日は休めと言われたんだけど。",
+    "en": [
+      {
+        "id": "242827",
+        "text": "He said that I shouldn't even be coming in today."
+      }
+    ],
+    "indices": "今日 は 休める{休め} と 言う{言われた} ん[04] だ けど",
+    "vocabIds": [
+      "1579110",
+      "1289400",
+      "1227560",
+      "1221830",
+      "1587040"
+    ],
+    "matches": {
+      "1221830": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1227560": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1289400": {
+        "start": 0,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1587040": {
+        "start": 6,
+        "length": 2,
+        "reading": "いわ"
       }
     }
   },
@@ -3228,23 +5003,28 @@
     "matches": {
       "1211490": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "かんせい"
       },
       "1218150": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "きかく"
       },
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1289220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんしゅう"
       },
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -3261,40 +5041,41 @@
     "vocabIds": [
       "1255890",
       "1228040",
-      "1008870",
+      "1587040",
       "1311110",
       "1227560",
-      "1483090",
-      "1160790"
+      "1483090"
     ],
     "matches": {
-      "1008870": {
-        "start": 7,
-        "length": 5
-      },
-      "1160790": {
-        "start": 26,
-        "length": 1
-      },
       "1227560": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1228040": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうじつ"
       },
       "1255890": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "げつようび"
       },
       "1311110": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483090": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1587040": {
+        "start": 8,
+        "length": 2,
+        "reading": "いわ"
       }
     }
   },
@@ -3310,7 +5091,9 @@
     "indices": "警察 が 墜落事故 の 原因 を 昼夜~ 休む[04] 事無く[02]{ことなく} 調査 為る(する){している}",
     "vocabIds": [
       "1252390",
+      "1432240",
       "1713670",
+      "1313850",
       "1261190",
       "1426430",
       "1227560",
@@ -3319,27 +5102,43 @@
     "matches": {
       "1227560": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1252390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいさつ"
       },
       "1261190": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "げんいん"
+      },
+      "1313850": {
+        "start": 5,
+        "length": 2,
+        "reading": "じこ"
       },
       "1426430": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうや"
       },
       "1429120": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうさ"
+      },
+      "1432240": {
+        "start": 3,
+        "length": 2,
+        "reading": "ついらく"
       },
       "1713670": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "ついらくじこ"
       }
     }
   },
@@ -3356,25 +5155,35 @@
     "vocabIds": [
       "1247250",
       "1483740",
+      "1483730",
       "1227560",
       "1516930"
     ],
     "matches": {
       "1227560": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1483730": {
+        "start": 2,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "つかれ"
       },
       "1516930": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       }
     }
   },
@@ -3391,25 +5200,35 @@
     "vocabIds": [
       "1247250",
       "1483740",
+      "1483730",
       "1227560",
       "1516930"
     ],
     "matches": {
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1483730": {
+        "start": 2,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "つかれ"
       },
       "1516930": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       }
     }
   },
@@ -3431,15 +5250,18 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1348870": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       }
     }
   },
@@ -3462,28 +5284,45 @@
       "1348870",
       "1227560",
       "1589350",
-      "2261340"
+      "1217820",
+      "2261340",
+      "1151260"
     ],
     "matches": {
+      "1151260": {
+        "start": 20,
+        "length": 2,
+        "reading": "わるい"
+      },
+      "1217820": {
+        "start": 17,
+        "length": 2,
+        "reading": "かおいろ"
+      },
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1348870": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1589350": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "2261340": {
         "start": 17,
-        "length": 5
+        "length": 5,
+        "reading": "かおいろがわるい"
       }
     }
   },
@@ -3505,15 +5344,18 @@
     "matches": {
       "1206730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       }
     }
   },
@@ -3537,7 +5379,8 @@
     "matches": {
       "1227560": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -3558,11 +5401,13 @@
     "matches": {
       "1227560": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1416830": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       }
     }
   },
@@ -3581,12 +5426,19 @@
     ],
     "indices": "休む[02]{休み} たい[01] ですか",
     "vocabIds": [
-      "1227560"
+      "1227560",
+      "1227500"
     ],
     "matches": {
+      "1227500": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1227560": {
         "start": 0,
-        "length": 4
+        "length": 2,
+        "reading": "やすみ"
       }
     }
   },
@@ -3601,22 +5453,104 @@
     ],
     "indices": "顔色が悪い ぞ 一日(いちにち) 休む[01]{休んだ} 方がいい{ほうがいい} よ[01]",
     "vocabIds": [
+      "1217820",
       "2261340",
+      "1151260",
+      "1160790",
       "1576260",
+      "1463770",
       "1227560"
     ],
     "matches": {
+      "1151260": {
+        "start": 3,
+        "length": 2,
+        "reading": "わるい"
+      },
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1217820": {
+        "start": 0,
+        "length": 2,
+        "reading": "かおいろ"
+      },
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
       },
       "1576260": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "2261340": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "かおいろがわるい"
+      }
+    }
+  },
+  {
+    "id": "183920",
+    "original": "感謝祭のお休み、楽しんでね。",
+    "en": [
+      {
+        "id": "21044",
+        "text": "Have a nice Thanksgiving!"
+      },
+      {
+        "id": "7774287",
+        "text": "Have a nice Thanksgiving."
+      }
+    ],
+    "indices": "感謝祭~ の お休み[01]~ 楽しむ{楽しんで} ね(#2029080)[01]",
+    "vocabIds": [
+      "1212380",
+      "1683250",
+      "1612680",
+      "1227560",
+      "1227500",
+      "1207270"
+    ],
+    "matches": {
+      "1207270": {
+        "start": 8,
+        "length": 3,
+        "reading": "たのしん"
+      },
+      "1212380": {
+        "start": 0,
+        "length": 2,
+        "reading": "かんしゃ"
+      },
+      "1227500": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1612680": {
+        "start": 4,
+        "length": 3,
+        "reading": "おやすみ"
+      },
+      "1683250": {
+        "start": 0,
+        "length": 3,
+        "reading": "かんしゃさい"
       }
     }
   },
@@ -3638,15 +5572,79 @@
     "matches": {
       "1206900": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1479530": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はんすう"
+      }
+    }
+  },
+  {
+    "id": "184360",
+    "original": "学校をずる休みして、映画を見に行こう。",
+    "en": [
+      {
+        "id": "21488",
+        "text": "Let's skip school and go see the movie."
+      },
+      {
+        "id": "4101358",
+        "text": "Let's play hookey and go see that movie."
+      }
+    ],
+    "indices": "学校 を ズル休み{ずる休み} 為る(する){して} 映画 を 見に行く{見に行こう}",
+    "vocabIds": [
+      "1206730",
+      "1227560",
+      "1227500",
+      "1173720",
+      "1259290",
+      "2256270",
+      "1578850"
+    ],
+    "matches": {
+      "1173720": {
+        "start": 10,
+        "length": 2,
+        "reading": "えいが"
+      },
+      "1206730": {
+        "start": 0,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1259290": {
+        "start": 13,
+        "length": 1,
+        "reading": "み"
+      },
+      "1578850": {
+        "start": 15,
+        "length": 2,
+        "reading": "いこ"
+      },
+      "2256270": {
+        "start": 13,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -3671,11 +5669,13 @@
     "matches": {
       "1206730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -3692,6 +5692,7 @@
     "vocabIds": [
       "1607050",
       "1426250",
+      "1451150",
       "1451040",
       "1536350",
       "1227560"
@@ -3699,23 +5700,33 @@
     "matches": {
       "1227560": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1426250": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひる"
       },
       "1451040": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はたらき"
+      },
+      "1451150": {
+        "start": 6,
+        "length": 2,
+        "reading": "はたらき"
       },
       "1536350": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "よる"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -3736,20 +5747,29 @@
     "vocabIds": [
       "1191730",
       "1227560",
+      "1203800",
       "2062710"
     ],
     "matches": {
       "1191730": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1203800": {
+        "start": 12,
+        "length": 2,
+        "reading": "がいしゅつ"
       },
       "1227560": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "2062710": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "がいしゅつし"
       }
     }
   },
@@ -3770,11 +5790,13 @@
     "matches": {
       "1191420": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "なつやすみ"
       },
       "1227560": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       }
     }
   },
@@ -3797,19 +5819,68 @@
     "matches": {
       "1187300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かりに"
       },
       "1221430": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "きたく"
       },
       "1227560": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      }
+    }
+  },
+  {
+    "id": "188523",
+    "original": "横になって少し休みなさい。",
+    "en": [
+      {
+        "id": "25667",
+        "text": "Lie down and rest for a while."
+      }
+    ],
+    "indices": "横になる{横になって} 少し 休む{休み} 為さい{なさい}",
+    "vocabIds": [
+      "1180570",
+      "1632900",
+      "1348870",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1180570": {
+        "start": 0,
+        "length": 1,
+        "reading": "よこ"
+      },
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1348870": {
+        "start": 5,
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1632900": {
+        "start": 0,
+        "length": 2,
+        "reading": "よこに"
       }
     }
   },
@@ -3824,22 +5895,43 @@
     ],
     "indices": "運転手 は 休む[02]{休み} たい[01] 気がする{気がした}",
     "vocabIds": [
+      "1172830",
       "1172870",
+      "1327190",
       "1227560",
+      "1227500",
       "1221520"
     ],
     "matches": {
+      "1172830": {
+        "start": 0,
+        "length": 2,
+        "reading": "うんてん"
+      },
       "1172870": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "うんてんしゅ"
       },
       "1221520": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "き"
+      },
+      "1227500": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
       },
       "1227560": {
         "start": 4,
-        "length": 4
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1327190": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゅ"
       }
     }
   },
@@ -3854,7 +5946,9 @@
     ],
     "indices": "一日(いちにち) 風邪 で(#2028980) 休む[01]{休んだ} 丈(だけ){だけ} だ{な} のに 机 の 上(うえ)[03] に 書類 が 山積み になる[01]{になっている}",
     "vocabIds": [
+      "1160790",
       "1576260",
+      "1463770",
       "1583720",
       "1227560",
       "1220210",
@@ -3863,33 +5957,99 @@
       "1755720"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1220210": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
       },
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1344200": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "しょるい"
       },
       "1352130": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1576260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "1583720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
       },
       "1755720": {
         "start": 21,
-        "length": 3
+        "length": 3,
+        "reading": "やまづみ"
+      }
+    }
+  },
+  {
+    "id": "190260",
+    "original": "一日休みとれるの？",
+    "en": [
+      {
+        "id": "27418",
+        "text": "Can you get a day off?"
+      },
+      {
+        "id": "501862",
+        "text": "Can I take a day off?"
+      }
+    ],
+    "indices": "一日(いちにち) 休む[01]{休み} 取れる{とれる} の",
+    "vocabIds": [
+      "1160790",
+      "1576260",
+      "1463770",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1227500": {
+        "start": 2,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 2,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1576260": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちにち"
       }
     }
   },
@@ -3904,32 +6064,55 @@
     ],
     "indices": "一日(いちにち) せっせと 働く[01]{働いた} 後(あと)[02] は 静か{静かに} 休む[02]{休んでい} たい のだ{んだ} よ",
     "vocabIds": [
+      "1160790",
       "1576260",
+      "1463770",
       "1451150",
       "1269320",
+      "1381820",
       "2119870",
       "1227560"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1227560": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1269320": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
+      },
+      "1381820": {
+        "start": 11,
+        "length": 2,
+        "reading": "しずか"
       },
       "1451150": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1576260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "2119870": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "しずかに"
       }
     }
   },
@@ -3948,27 +6131,43 @@
     ],
     "indices": "一人 の 老人 が 木陰 で(#2028980) 休む[02]{休んでいた}",
     "vocabIds": [
+      "1160790",
       "1576150",
+      "1580640",
       "1561090",
       "1534570",
       "1227560"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1534570": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こかげ"
       },
       "1561090": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ろうじん"
       },
       "1576150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 1,
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -3987,17 +6186,31 @@
     ],
     "indices": "一週間 休む[01]{休んでいました}",
     "vocabIds": [
+      "1160790",
       "1163270",
+      "1333500",
       "1227560"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163270": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いちしゅうかん"
       },
       "1227560": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1333500": {
+        "start": 1,
+        "length": 2,
+        "reading": "しゅうかん"
       }
     }
   },
@@ -4020,19 +6233,23 @@
     "matches": {
       "1206730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1576050": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おととい"
       }
     }
   },
@@ -4047,32 +6264,106 @@
     ],
     "indices": "一回 授業 を 休む[01] と クラスメイト{クラスメート} に 追いつく の は 大変 です",
     "vocabIds": [
+      "1160790",
       "1161310",
+      "1199330",
       "1330290",
       "1227560",
       "1588810",
       "1415000"
     ],
     "matches": {
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
       "1161310": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いちかい"
+      },
+      "1199330": {
+        "start": 1,
+        "length": 1,
+        "reading": "かい"
       },
       "1227560": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1330290": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1415000": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1588810": {
         "start": 16,
-        "length": 4
+        "length": 4,
+        "reading": "おいつく"
+      }
+    }
+  },
+  {
+    "id": "192952",
+    "original": "ゆったり座って休みなさい。そうすればずっと気分が良くなるでしょう。",
+    "en": [
+      {
+        "id": "30118",
+        "text": "If you sit back and rest, you will feel much better."
+      }
+    ],
+    "indices": "ゆったり[01] 座る[01]{座って} 休む{休み} 為さい{なさい} 然うすれば{そうすれば} ずっと 気分が良い{気分が良く} 成る[01]{なる} でしょう[01]",
+    "vocabIds": [
+      "1291800",
+      "1227560",
+      "1227500",
+      "1222590",
+      "1605820",
+      "1605870",
+      "2029460"
+    ],
+    "matches": {
+      "1222590": {
+        "start": 21,
+        "length": 2,
+        "reading": "きぶん"
+      },
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1291800": {
+        "start": 4,
+        "length": 2,
+        "reading": "すわっ"
+      },
+      "1605820": {
+        "start": 24,
+        "length": 2,
+        "reading": "よく"
+      },
+      "1605870": {
+        "start": 24,
+        "length": 2,
+        "reading": "よく"
+      },
+      "2029460": {
+        "start": 24,
+        "length": 4,
+        "reading": "よくなる"
       }
     }
   },
@@ -4094,15 +6385,18 @@
     "matches": {
       "1174420": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -4122,6 +6416,7 @@
     "indices": "酷い(ひどい){ひどい} 風邪をひく{風邪をひいた} ので 彼(かれ)[01] は 今日 学校 を 休む[01]{休んだ}",
     "vocabIds": [
       "2827561",
+      "1583720",
       "1483070",
       "1579110",
       "1206730",
@@ -4130,23 +6425,33 @@
     "matches": {
       "1206730": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1579110": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1583720": {
+        "start": 3,
+        "length": 2,
+        "reading": "かぜ"
       },
       "2827561": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ひどいかぜ"
       }
     }
   },
@@ -4162,6 +6467,7 @@
     "indices": "酷い(ひどい){ひどい} 風邪 で(#2028980) 彼の(あの){あの} 娘(むすめ) は 授業 を 休む[01]{休んだ}",
     "vocabIds": [
       "2827561",
+      "1583720",
       "1531190",
       "1330290",
       "1227560"
@@ -4169,19 +6475,55 @@
     "matches": {
       "1227560": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1330290": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1531190": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "むすめ"
+      },
+      "1583720": {
+        "start": 3,
+        "length": 2,
+        "reading": "かぜ"
       },
       "2827561": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ひどいかぜ"
+      }
+    }
+  },
+  {
+    "id": "198397",
+    "original": "はい、あしたは休みます。",
+    "en": [
+      {
+        "id": "35588",
+        "text": "Yeah, I'm going to take tomorrow off."
+      }
+    ],
+    "indices": "はい[01] 明日{あした} は 休む[01]{休みます}",
+    "vocabIds": [
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
       }
     }
   },
@@ -4203,15 +6545,18 @@
     "matches": {
       "1206730": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1554010": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "りょうほう"
       }
     }
   },
@@ -4238,19 +6583,23 @@
     "matches": {
       "1206730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1386460": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "せつめい"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -4273,19 +6622,23 @@
     "matches": {
       "1206730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1247250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1579260": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -4305,7 +6658,8 @@
     "matches": {
       "1227560": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -4320,7 +6674,7 @@
     ],
     "indices": "迚も{とても} 暑い{暑かった} ので 日陰 に 入る(はいる){入って} 休む[02]{休んだ}",
     "vocabIds": [
-      "2656110",
+      "1343460",
       "1463840",
       "1465590",
       "1227560"
@@ -4328,19 +6682,23 @@
     "matches": {
       "1227560": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1343460": {
+        "start": 3,
+        "length": 3,
+        "reading": "あつかっ"
       },
       "1463840": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひかげ"
       },
       "1465590": {
         "start": 12,
-        "length": 3
-      },
-      "2656110": {
-        "start": 3,
-        "length": 1
+        "length": 2,
+        "reading": "はいっ"
       }
     }
   },
@@ -4364,7 +6722,47 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      }
+    }
+  },
+  {
+    "id": "202792",
+    "original": "ちょっと休みましょう。",
+    "en": [
+      {
+        "id": "40027",
+        "text": "Let's take a rest for a while."
+      },
+      {
+        "id": "3415220",
+        "text": "We should rest for a minute."
+      },
+      {
+        "id": "4073904",
+        "text": "Let's rest a little bit."
+      },
+      {
+        "id": "5178404",
+        "text": "Let's rest a little."
+      }
+    ],
+    "indices": "一寸(ちょっと){ちょっと} 休む[02]{休みましょう}",
+    "vocabIds": [
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
       }
     }
   },
@@ -4383,12 +6781,19 @@
     ],
     "indices": "一寸(ちょっと){ちょっと} 休む{休み} たい",
     "vocabIds": [
-      "1227560"
+      "1227560",
+      "1227500"
     ],
     "matches": {
+      "1227500": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1227560": {
         "start": 4,
-        "length": 4
+        "length": 2,
+        "reading": "やすみ"
       }
     }
   },
@@ -4404,6 +6809,7 @@
     "indices": "偶々[01]{たまたま} 其の[01]{その} 日(ひ)[01] 彼(かれ)[01] は 学校 を 休む[01]{休んでいた}",
     "vocabIds": [
       "2002320",
+      "1463770",
       "1483070",
       "1206730",
       "1227560"
@@ -4411,19 +6817,28 @@
     "matches": {
       "1206730": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1463770": {
+        "start": 6,
+        "length": 1,
+        "reading": "ひ"
       },
       "1483070": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "2002320": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "そのひ"
       }
     }
   },
@@ -4446,19 +6861,23 @@
     "matches": {
       "1206730": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1579260": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -4473,10 +6892,13 @@
     ],
     "indices": "其の[01]{その} 痩せる[01]{痩せた} 男 は 膝 を[01] 曲げる{曲げて} 日陰 で(#2028980) 少し 休む[02]{休んだ}",
     "vocabIds": [
+      "1605510",
+      "2796230",
       "2272950",
       "1419990",
       "1487320",
       "1239740",
+      "1909390",
       "1463840",
       "1348870",
       "1227560"
@@ -4484,31 +6906,53 @@
     "matches": {
       "1227560": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1239740": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "まげ"
       },
       "1348870": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1419990": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1463840": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ひかげ"
       },
       "1487320": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひざ"
+      },
+      "1605510": {
+        "start": 2,
+        "length": 2,
+        "reading": "やせ"
+      },
+      "1909390": {
+        "start": 9,
+        "length": 2,
+        "reading": "まげ"
       },
       "2272950": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "やせた"
+      },
+      "2796230": {
+        "start": 2,
+        "length": 2,
+        "reading": "やせ"
       }
     }
   },
@@ -4523,6 +6967,8 @@
     ],
     "indices": "其の[01]{その} 痩せる[01]{痩せた} 男 は 神社 の 影 で(#2028980) 少し 休む[02]{休んだ}",
     "vocabIds": [
+      "1605510",
+      "2796230",
       "2272950",
       "1419990",
       "1364670",
@@ -4533,27 +6979,43 @@
     "matches": {
       "1227560": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1348870": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1364670": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "じんじゃ"
       },
       "1419990": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1590145": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "かげ"
+      },
+      "1605510": {
+        "start": 2,
+        "length": 2,
+        "reading": "やせ"
       },
       "2272950": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "やせた"
+      },
+      "2796230": {
+        "start": 2,
+        "length": 2,
+        "reading": "やせ"
       }
     }
   },
@@ -4574,11 +7036,13 @@
     "matches": {
       "1222590": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きぶん"
       },
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -4598,7 +7062,8 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -4620,15 +7085,18 @@
     "matches": {
       "1206730": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1579110": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -4658,31 +7126,189 @@
     "matches": {
       "1164010": {
         "start": 26,
-        "length": 4
+        "length": 4,
+        "reading": "いっしょうけんめい"
       },
       "1206730": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1330290": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
       },
       "1333500": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1512670": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1588810": {
         "start": 19,
-        "length": 4
+        "length": 4,
+        "reading": "おいつく"
+      }
+    }
+  },
+  {
+    "id": "222997",
+    "original": "このレポートを終えたら休もうと思う。",
+    "en": [
+      {
+        "id": "60328",
+        "text": "On finishing this report, I will rest."
+      }
+    ],
+    "indices": "此の{この} レポート を 終える{終えたら} 休む{休もう} と 思う",
+    "vocabIds": [
+      "1332760",
+      "1227560",
+      "1589350"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 11,
+        "length": 2,
+        "reading": "やすも"
+      },
+      "1332760": {
+        "start": 7,
+        "length": 2,
+        "reading": "おえ"
+      },
+      "1589350": {
+        "start": 15,
+        "length": 2,
+        "reading": "おもう"
+      }
+    }
+  },
+  {
+    "id": "224547",
+    "original": "ここで少し休もう。",
+    "en": [
+      {
+        "id": "61882",
+        "text": "Let's rest here."
+      }
+    ],
+    "indices": "此処[01]{ここ} で(#2028980) 少し 休む{休もう}",
+    "vocabIds": [
+      "1348870",
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすも"
+      },
+      "1348870": {
+        "start": 3,
+        "length": 2,
+        "reading": "すこし"
+      }
+    }
+  },
+  {
+    "id": "224571",
+    "original": "ここで休みましょう。",
+    "en": [
+      {
+        "id": "61906",
+        "text": "Let's take a rest here."
+      },
+      {
+        "id": "61882",
+        "text": "Let's rest here."
+      }
+    ],
+    "indices": "此処[01]{ここ} で(#2028980) 休む[02]{休みましょう}",
+    "vocabIds": [
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすみ"
+      }
+    }
+  },
+  {
+    "id": "224675",
+    "original": "ここで、休もう。",
+    "en": [
+      {
+        "id": "61882",
+        "text": "Let's rest here."
+      }
+    ],
+    "indices": "此処[01]{ここ} で(#2028980) 休む{休もう}",
+    "vocabIds": [
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすも"
+      }
+    }
+  },
+  {
+    "id": "225661",
+    "original": "ぐっすりお休みなさい、ショーン。",
+    "en": [
+      {
+        "id": "62997",
+        "text": "Sleep tight, Sean."
+      }
+    ],
+    "indices": "ぐっすり お休みなさい NI{ショーン}",
+    "vocabIds": [
+      "1612680",
+      "1001780",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1001780": {
+        "start": 4,
+        "length": 6,
+        "reading": "おやすみなさい"
+      },
+      "1227500": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1612680": {
+        "start": 4,
+        "length": 3,
+        "reading": "おやすみ"
       }
     }
   },
@@ -4712,15 +7338,18 @@
     "matches": {
       "1206730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -4746,31 +7375,89 @@
     "matches": {
       "1002590": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "おとうさん"
       },
       "1227560": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1315920": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1436130": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       },
       "1451150": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1483070": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1487660": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
+      }
+    }
+  },
+  {
+    "id": "227302",
+    "original": "お休み、いい夢たくさん見てね。",
+    "en": [
+      {
+        "id": "64653",
+        "text": "Good night and sweet dreams."
+      }
+    ],
+    "indices": "お休み[03]~ いい(#2820690)[01] 夢 沢山{たくさん} 見る{見て} ね(#2029080)[01]",
+    "vocabIds": [
+      "1612680",
+      "1227560",
+      "1227500",
+      "1529410",
+      "1259290",
+      "2256270"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 1,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 1,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1259290": {
+        "start": 11,
+        "length": 1,
+        "reading": "み"
+      },
+      "1529410": {
+        "start": 6,
+        "length": 1,
+        "reading": "ゆめ"
+      },
+      "1612680": {
+        "start": 0,
+        "length": 3,
+        "reading": "おやすみ"
+      },
+      "2256270": {
+        "start": 11,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -4786,21 +7473,69 @@
     "indices": "貴方(あなた)[01]{あなた} は 疲れる[01]{疲れている} ので 休む[02]{休んだ} 方が良い{方がよい}",
     "vocabIds": [
       "1483740",
+      "1483730",
       "1227560",
       "1516930"
     ],
     "matches": {
       "1227560": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1483730": {
+        "start": 4,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "つかれ"
       },
       "1516930": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
+      }
+    }
+  },
+  {
+    "id": "232021",
+    "original": "あなたは昨日学校を休みました。",
+    "en": [
+      {
+        "id": "69388",
+        "text": "You were absent from school yesterday."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} は 昨日 学校 を 休む[01]{休みました}",
+    "vocabIds": [
+      "1579260",
+      "1206730",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 6,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1579260": {
+        "start": 4,
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -4823,19 +7558,23 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1313580": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1386460": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "せつめい"
       },
       "1550140": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
       }
     }
   },
@@ -4856,11 +7595,76 @@
     "matches": {
       "1227560": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1487660": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
+      }
+    }
+  },
+  {
+    "id": "234952",
+    "original": "８月１０日から３１日までドイツでセミナーに出席するために休みます。",
+    "en": [
+      {
+        "id": "72328",
+        "text": "I'm taking a leave of absence from Aug. 10 till 31 to attend a seminar in Germany."
+      }
+    ],
+    "indices": "八月{８月} 十日[01]{１０日} から[01] 日(にち)[02] 迄{まで} 独逸{ドイツ} で(#2028980) セミナー~ に 出席 為る(する){する} 為に{ために} 休む[01]{休みます}",
+    "vocabIds": [
+      "1476730",
+      "1335000",
+      "1463770",
+      "2738480",
+      "2225040",
+      "1339460",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 28,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 28,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1335000": {
+        "start": 2,
+        "length": 3,
+        "reading": "いちぜろにち"
+      },
+      "1339460": {
+        "start": 21,
+        "length": 2,
+        "reading": "しゅっせき"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1476730": {
+        "start": 0,
+        "length": 2,
+        "reading": "はちがつ"
+      },
+      "2225040": {
+        "start": 8,
+        "length": 2,
+        "reading": "いちにち"
+      },
+      "2738480": {
+        "start": 7,
+        "length": 3,
+        "reading": "さんいちにち"
       }
     }
   },
@@ -4883,19 +7687,149 @@
     "matches": {
       "1206730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1333500": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1580640": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      }
+    }
+  },
+  {
+    "id": "235805",
+    "original": "１月３０日、３１日は葬式のため休みます。",
+    "en": [
+      {
+        "id": "73185",
+        "text": "I'm taking bereavement leave on Jan. 30 and 31."
+      }
+    ],
+    "indices": "一月(いちがつ){１月} 日(にち)[02] 日(にち)[02] は 葬式~ の 為(ため)[02]{ため}~ 休む[01]{休みます}",
+    "vocabIds": [
+      "1162120",
+      "1300670",
+      "1463770",
+      "2738480",
+      "2225040",
+      "1402160",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1162120": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちがつ"
+      },
+      "1227500": {
+        "start": 15,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 15,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1300670": {
+        "start": 2,
+        "length": 3,
+        "reading": "さんぜろにち"
+      },
+      "1402160": {
+        "start": 10,
+        "length": 2,
+        "reading": "そうしき"
+      },
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "にち"
+      },
+      "2225040": {
+        "start": 7,
+        "length": 2,
+        "reading": "いちにち"
+      },
+      "2738480": {
+        "start": 6,
+        "length": 3,
+        "reading": "さんいちにち"
+      }
+    }
+  },
+  {
+    "id": "236056",
+    "original": "１０時４０分から１１時まで休み時間です。",
+    "en": [
+      {
+        "id": "73436",
+        "text": "We have a break from 10:40 to 11:00."
+      }
+    ],
+    "indices": "時(じ)[01] 分(ふん)~ から[01] 時(じ)[01] 迄{まで} 休み[01]~ 時間 です",
+    "vocabIds": [
+      "2845369",
+      "1315840",
+      "1502860",
+      "2845370",
+      "1227560",
+      "1227500",
+      "2654070",
+      "1315920"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 13,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 13,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1315840": {
+        "start": 2,
+        "length": 1,
+        "reading": "じ"
+      },
+      "1315920": {
+        "start": 15,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1502860": {
+        "start": 5,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "2654070": {
+        "start": 13,
+        "length": 4,
+        "reading": "やすみじかん"
+      },
+      "2845369": {
+        "start": 0,
+        "length": 3,
+        "reading": "いちぜろじ"
+      },
+      "2845370": {
+        "start": 8,
+        "length": 3,
+        "reading": "いちいちじ"
       }
     }
   },
@@ -4910,27 +7844,82 @@
     ],
     "indices": "一寸(ちょっと)[02]{ちょっと} 目眩{目まい}~ が 為る(する){する} わ 顔色が悪い ぞ 一日(いちにち) 休む[01]{休んだ} 方がいい{ほうがいい} よ",
     "vocabIds": [
-      "1604890",
+      "1217820",
       "2261340",
+      "1151260",
+      "1160790",
       "1576260",
+      "1463770",
       "1227560"
     ],
     "matches": {
+      "1151260": {
+        "start": 17,
+        "length": 2,
+        "reading": "わるい"
+      },
+      "1160790": {
+        "start": 21,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1217820": {
+        "start": 14,
+        "length": 2,
+        "reading": "かおいろ"
+      },
       "1227560": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1463770": {
+        "start": 22,
+        "length": 1,
+        "reading": "にち"
       },
       "1576260": {
         "start": 21,
-        "length": 2
-      },
-      "1604890": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "いちにち"
       },
       "2261340": {
         "start": 14,
-        "length": 5
+        "length": 5,
+        "reading": "かおいろがわるい"
+      }
+    }
+  },
+  {
+    "id": "236809",
+    "original": "あと１、２週間も休めば、すっかりよくなりますよ。",
+    "en": [
+      {
+        "id": "71700",
+        "text": "Just stay off your feet for the next couple of weeks, and you'll be just fine."
+      }
+    ],
+    "indices": "後(あと){あと} 二週間{２週間}~ も 休む[01]{休めば} すっかり 良い{よく} 成る[01]{なります} よ[01]",
+    "vocabIds": [
+      "1333500",
+      "1227560",
+      "1221830"
+    ],
+    "matches": {
+      "1221830": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1227560": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1333500": {
+        "start": 5,
+        "length": 2,
+        "reading": "しゅうかん"
       }
     }
   },
@@ -4951,11 +7940,13 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -4976,11 +7967,13 @@
     "matches": {
       "1206730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -4997,25 +7990,41 @@
     "vocabIds": [
       "1269870",
       "1547720",
+      "1547710",
       "1227560",
-      "1215230"
+      "1215230",
+      "1588810"
     ],
     "matches": {
       "1215230": {
         "start": 30,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1227560": {
         "start": 26,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1269870": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こうぞく"
+      },
+      "1547710": {
+        "start": 12,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 12,
-        "length": 2
+        "length": 1,
+        "reading": "き"
+      },
+      "1588810": {
+        "start": 32,
+        "length": 4,
+        "reading": "おいつか"
       }
     }
   },
@@ -5041,19 +8050,23 @@
     "matches": {
       "1191730": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1221270": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "かえっ"
       },
       "1227560": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -5079,19 +8092,23 @@
     "matches": {
       "1206730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1490230": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -5111,11 +8128,13 @@
     "matches": {
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1534570": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こかげ"
       }
     }
   },
@@ -5129,6 +8148,7 @@
       }
     ],
     "vocabIds": [
+      "1579110",
       "1289400",
       "1420070",
       "1531330",
@@ -5138,23 +8158,33 @@
     "matches": {
       "1206730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1420070": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "だんし"
       },
       "1531330": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "めい"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -5175,15 +8205,18 @@
     "matches": {
       "1206730": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1580640": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -5198,71 +8231,84 @@
     ],
     "vocabIds": [
       "1579110",
-      "1442730",
-      "1423310",
       "1247250",
       "1227560",
       "1550140",
       "1518540",
       "1596930",
       "1387500",
+      "1387230",
       "1596200",
-      "1394680",
+      "1255430",
+      "1587040",
       "1227500",
       "2005870"
     ],
     "matches": {
       "1227500": {
         "start": 50,
-        "length": 2
+        "length": 2,
+        "reading": "やすみ"
       },
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1247250": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "くん"
+      },
+      "1255430": {
+        "start": 35,
+        "length": 1,
+        "reading": "つき"
+      },
+      "1387230": {
+        "start": 33,
+        "length": 2,
+        "reading": "さきざき"
       },
       "1387500": {
         "start": 30,
-        "length": 2
-      },
-      "1394680": {
-        "start": 37,
-        "length": 5
-      },
-      "1423310": {
-        "start": 4,
-        "length": 1
-      },
-      "1442730": {
-        "start": 3,
-        "length": 1
+        "length": 2,
+        "reading": "せんげつ"
       },
       "1518540": {
         "start": 20,
-        "length": 5
+        "length": 4,
+        "reading": "なくなっ"
       },
       "1550140": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1587040": {
+        "start": 39,
+        "length": 2,
+        "reading": "いっ"
       },
       "1596200": {
         "start": 33,
-        "length": 3
+        "length": 3,
+        "reading": "さきざきつき"
       },
       "1596930": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "たしか"
       },
       "2005870": {
         "start": 59,
-        "length": 4
+        "length": 4,
+        "reading": "もうすこし"
       }
     }
   },
@@ -5283,15 +8329,18 @@
     "matches": {
       "1227560": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1550140": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
       }
     }
   },
@@ -5311,11 +8360,13 @@
     "matches": {
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -5329,8 +8380,11 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "1188490",
       "1340450",
+      "1340430",
+      "1289470",
       "1289480",
       "1311110",
       "1191730",
@@ -5339,27 +8393,68 @@
     "matches": {
       "1188490": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
       },
       "1191730": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1227560": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1289470": {
+        "start": 12,
+        "length": 2,
+        "reading": "こんばん"
       },
       "1289480": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "こんばんは"
       },
       "1311110": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1340430": {
+        "start": 6,
+        "length": 2,
+        "reading": "でき"
       },
       "1340450": {
         "start": 6,
-        "length": 5
+        "length": 2,
+        "reading": "でき"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
+      }
+    }
+  },
+  {
+    "id": "1558860",
+    "original": "クラスを休まないでください。",
+    "en": [
+      {
+        "id": "1558866",
+        "text": "Please! Please don't skip class."
+      }
+    ],
+    "vocabIds": [
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすま"
       }
     }
   },
@@ -5382,7 +8477,52 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      }
+    }
+  },
+  {
+    "id": "2068062",
+    "original": "私は明日仕事を休みます。",
+    "en": [
+      {
+        "id": "2068059",
+        "text": "I am taking tomorrow off."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1584660",
+      "1304970",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1304970": {
+        "start": 4,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1584660": {
+        "start": 2,
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -5403,15 +8543,18 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1443840": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1490230": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "びょうき"
       }
     }
   },
@@ -5426,16 +8569,24 @@
     ],
     "vocabIds": [
       "1348870",
-      "1227560"
+      "1227560",
+      "1227500"
     ],
     "matches": {
+      "1227500": {
+        "start": 2,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1227560": {
         "start": 2,
-        "length": 4
+        "length": 2,
+        "reading": "やすみ"
       },
       "1348870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       }
     }
   },
@@ -5450,6 +8601,7 @@
     ],
     "vocabIds": [
       "1191730",
+      "1221270",
       "1221250",
       "1348870",
       "1227560"
@@ -5457,19 +8609,28 @@
     "matches": {
       "1191730": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1221250": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かえり"
+      },
+      "1221270": {
+        "start": 2,
+        "length": 2,
+        "reading": "かえり"
       },
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1348870": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       }
     }
   },
@@ -5495,19 +8656,61 @@
     "matches": {
       "1191730": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1221270": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "かえっ"
       },
       "1227560": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
+      }
+    }
+  },
+  {
+    "id": "2265696",
+    "original": "ちょっと休みませんか？",
+    "en": [
+      {
+        "id": "27831",
+        "text": "How about taking a rest?"
+      },
+      {
+        "id": "10676045",
+        "text": "How about a short break?"
+      },
+      {
+        "id": "10676044",
+        "text": "Shall we have a short break?"
+      },
+      {
+        "id": "2210905",
+        "text": "Why don't you take a break?"
+      }
+    ],
+    "vocabIds": [
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
       }
     }
   },
@@ -5533,19 +8736,23 @@
     "matches": {
       "1191730": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1221270": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "かえっ"
       },
       "1227560": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -5561,20 +8768,29 @@
     "vocabIds": [
       "2005870",
       "1227560",
+      "1516930",
       "2160680"
     ],
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1516930": {
+        "start": 7,
+        "length": 1,
+        "reading": "ほう"
       },
       "2005870": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "もうすこし"
       },
       "2160680": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -5602,11 +8818,13 @@
     "matches": {
       "1206730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       }
     }
   },
@@ -5630,11 +8848,13 @@
     "matches": {
       "1206730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -5655,15 +8875,18 @@
     "matches": {
       "1206730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1420470": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       }
     }
   },
@@ -5683,11 +8906,57 @@
     "matches": {
       "1227560": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1579110": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
+      }
+    }
+  },
+  {
+    "id": "3045271",
+    "original": "休み取らないと倒れちゃうよ。",
+    "en": [
+      {
+        "id": "19789",
+        "text": "If you don't take a vacation, you'll collapse."
+      }
+    ],
+    "vocabIds": [
+      "1227560",
+      "1227500",
+      "1326980",
+      "1445790",
+      "1445780"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1326980": {
+        "start": 2,
+        "length": 2,
+        "reading": "とら"
+      },
+      "1445780": {
+        "start": 7,
+        "length": 2,
+        "reading": "たおれ"
+      },
+      "1445790": {
+        "start": 7,
+        "length": 2,
+        "reading": "たおれ"
       }
     }
   },
@@ -5715,11 +8984,53 @@
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1348870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
+      }
+    }
+  },
+  {
+    "id": "3506617",
+    "original": "トムを休ませてやりなさい。",
+    "en": [
+      {
+        "id": "2235858",
+        "text": "Let Tom rest."
+      }
+    ],
+    "vocabIds": [
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすま"
+      }
+    }
+  },
+  {
+    "id": "3551988",
+    "original": "休まなくては。",
+    "en": [
+      {
+        "id": "2387712",
+        "text": "I need to rest."
+      }
+    ],
+    "vocabIds": [
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすま"
       }
     }
   },
@@ -5733,12 +9044,19 @@
       }
     ],
     "vocabIds": [
-      "1227560"
+      "1227560",
+      "1227500"
     ],
     "matches": {
+      "1227500": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすみ"
+      },
       "1227560": {
         "start": 0,
-        "length": 4
+        "length": 2,
+        "reading": "やすみ"
       }
     }
   },
@@ -5761,7 +9079,8 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -5783,19 +9102,61 @@
     "matches": {
       "1227560": {
         "start": 26,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1259290": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "みる"
       },
       "1304970": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "2080730": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "せん"
+      }
+    }
+  },
+  {
+    "id": "2392268",
+    "original": "今日は熱があるので休ませてください。",
+    "en": [
+      {
+        "id": "5150031",
+        "text": "May I take a sick day today as I have a fever?"
+      }
+    ],
+    "vocabIds": [
+      "1579110",
+      "1289400",
+      "1467710",
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1289400": {
+        "start": 0,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1467710": {
+        "start": 3,
+        "length": 1,
+        "reading": "ねつ"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -5816,15 +9177,18 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1316380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "つぎ"
       },
       "1464900": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       }
     }
   },
@@ -5845,15 +9209,92 @@
     "matches": {
       "1184140": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "した"
       },
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1415090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいぼく"
+      }
+    }
+  },
+  {
+    "id": "6695635",
+    "original": "お父さんは病気でも何でもない。ただずる休みしたいだけに違いない。",
+    "en": [
+      {
+        "id": "6695640",
+        "text": "Dad isn't sick or anything like that. I'm sure he just wants to laze around."
+      }
+    ],
+    "vocabIds": [
+      "1002590",
+      "1490230",
+      "1577100",
+      "1611020",
+      "1611030",
+      "1188400",
+      "1227560",
+      "1227500",
+      "1158870",
+      "1610740"
+    ],
+    "matches": {
+      "1002590": {
+        "start": 0,
+        "length": 4,
+        "reading": "おとうさん"
+      },
+      "1158870": {
+        "start": 27,
+        "length": 2,
+        "reading": "ちがい"
+      },
+      "1188400": {
+        "start": 9,
+        "length": 5,
+        "reading": "なにでもない"
+      },
+      "1227500": {
+        "start": 19,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 19,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1490230": {
+        "start": 5,
+        "length": 2,
+        "reading": "びょうき"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1610740": {
+        "start": 27,
+        "length": 4,
+        "reading": "ちがいない"
+      },
+      "1611020": {
+        "start": 9,
+        "length": 2,
+        "reading": "なにで"
+      },
+      "1611030": {
+        "start": 9,
+        "length": 3,
+        "reading": "なにでも"
       }
     }
   },
@@ -5868,6 +9309,7 @@
     ],
     "vocabIds": [
       "1227560",
+      "1516930",
       "2160680",
       "1217820",
       "1151260"
@@ -5875,19 +9317,28 @@
     "matches": {
       "1151260": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1217820": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "かおいろ"
       },
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1516930": {
+        "start": 7,
+        "length": 1,
+        "reading": "ほう"
       },
       "2160680": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -5911,11 +9362,13 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1589350": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -5936,15 +9389,18 @@
     "matches": {
       "1206730": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1579110": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -5967,7 +9423,8 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -5987,41 +9444,55 @@
       "1184140",
       "1232090",
       "1360010",
+      "1642760",
       "1421440",
       "1227560"
     ],
     "matches": {
       "1184140": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "した"
       },
       "1217270": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いわ"
       },
       "1227560": {
         "start": 30,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1232090": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "きょじん"
       },
       "1302780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さんがく"
       },
       "1360010": {
         "start": 14,
-        "length": 2
+        "length": 1,
+        "reading": "ね"
       },
       "1421440": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "ちへいせん"
       },
       "1533950": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "もうふ"
+      },
+      "1642760": {
+        "start": 14,
+        "length": 1,
+        "reading": "ね"
       }
     }
   },
@@ -6049,11 +9520,13 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1579110": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -6074,15 +9547,18 @@
     "matches": {
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1412890": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おおきな"
       },
       "1869560": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "このした"
       }
     }
   },
@@ -6103,15 +9579,18 @@
     "matches": {
       "1206730": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -6143,11 +9622,13 @@
     "matches": {
       "1227560": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1589350": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -6169,19 +9650,81 @@
     "matches": {
       "1206730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1420470": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1550140": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "りゆう"
+      }
+    }
+  },
+  {
+    "id": "8952177",
+    "original": "ちょっと休みなよ。",
+    "en": [
+      {
+        "id": "2885437",
+        "text": "Try to get some rest."
+      }
+    ],
+    "vocabIds": [
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
+      }
+    }
+  },
+  {
+    "id": "9025890",
+    "original": "ちょっと休めば大丈夫です。",
+    "en": [
+      {
+        "id": "267745",
+        "text": "I'll be fine if I take a little rest."
+      }
+    ],
+    "vocabIds": [
+      "1227560",
+      "1221830",
+      "1414150"
+    ],
+    "matches": {
+      "1221830": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1414150": {
+        "start": 7,
+        "length": 3,
+        "reading": "だいじょうぶ"
       }
     }
   },
@@ -6197,25 +9740,41 @@
     "vocabIds": [
       "1579110",
       "2225040",
+      "1463770",
       "1227560",
+      "1279680",
       "1866610"
     ],
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1279680": {
+        "start": 8,
+        "length": 2,
+        "reading": "かまわ"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1866610": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "かまわない"
       },
       "2225040": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       }
     }
   },
@@ -6237,19 +9796,23 @@
     "matches": {
       "1169250": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "ひい"
       },
       "1227560": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1315840": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1583720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
       }
     }
   },
@@ -6270,15 +9833,18 @@
     "matches": {
       "1227560": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1304970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1582200": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "とちゅう"
       }
     }
   },
@@ -6299,15 +9865,18 @@
     "matches": {
       "1227560": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1450890": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ずつう"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       }
     }
   },
@@ -6331,20 +9900,29 @@
     "vocabIds": [
       "1348870",
       "1227560",
+      "1516930",
       "2160680"
     ],
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1348870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1516930": {
+        "start": 5,
+        "length": 1,
+        "reading": "ほう"
       },
       "2160680": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -6364,11 +9942,13 @@
     "matches": {
       "1227560": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -6383,36 +9963,42 @@
     ],
     "vocabIds": [
       "1483740",
+      "1483730",
       "1315920",
-      "2612170",
-      "1215230",
       "1227560",
+      "1516930",
       "2160680"
     ],
     "matches": {
-      "1215230": {
-        "start": 16,
-        "length": 1
-      },
       "1227560": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1315920": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1483730": {
+        "start": 0,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1516930": {
+        "start": 21,
+        "length": 1,
+        "reading": "ほう"
       },
       "2160680": {
         "start": 21,
-        "length": 4
-      },
-      "2612170": {
-        "start": 14,
-        "length": 2
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -6443,21 +10029,30 @@
     ],
     "vocabIds": [
       "1227560",
+      "1516930",
       "2160680",
       "1589350"
     ],
     "matches": {
       "1227560": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1516930": {
+        "start": 3,
+        "length": 1,
+        "reading": "ほう"
       },
       "1589350": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "2160680": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -6476,7 +10071,8 @@
     "matches": {
       "1227560": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       }
     }
   },
@@ -6496,11 +10092,473 @@
     "matches": {
       "1227560": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1291800": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
+      }
+    }
+  },
+  {
+    "id": "10227914",
+    "original": "明日は学校をお休みした方がいいですね。",
+    "en": [
+      {
+        "id": "237607",
+        "text": "You'd better not go to school tomorrow."
+      }
+    ],
+    "vocabIds": [
+      "1584660",
+      "1206730",
+      "1612680",
+      "1227560",
+      "1227500",
+      "2002660",
+      "1516930",
+      "2160680"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 3,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1516930": {
+        "start": 11,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      },
+      "1612680": {
+        "start": 6,
+        "length": 3,
+        "reading": "おやすみ"
+      },
+      "2002660": {
+        "start": 9,
+        "length": 6,
+        "reading": "したほうがいい"
+      },
+      "2160680": {
+        "start": 11,
+        "length": 4,
+        "reading": "ほうがいい"
+      }
+    }
+  },
+  {
+    "id": "10559425",
+    "original": "トムは、学校をズル休みした。",
+    "en": [
+      {
+        "id": "2237764",
+        "text": "Tom skipped school."
+      },
+      {
+        "id": "10559435",
+        "text": "Tom played hooky from school."
+      }
+    ],
+    "vocabIds": [
+      "1206730",
+      "1595950",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 4,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1595950": {
+        "start": 7,
+        "length": 4,
+        "reading": "やすみ"
+      }
+    }
+  },
+  {
+    "id": "10559438",
+    "original": "学校をズル休みしたことって、ある？",
+    "en": [
+      {
+        "id": "3583290",
+        "text": "Have you ever played hooky?"
+      }
+    ],
+    "vocabIds": [
+      "1206730",
+      "1595950",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 0,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1595950": {
+        "start": 3,
+        "length": 4,
+        "reading": "やすみ"
+      }
+    }
+  },
+  {
+    "id": "10559441",
+    "original": "学校、ズル休みしようぜ！",
+    "en": [
+      {
+        "id": "9960885",
+        "text": "Let's play hooky."
+      }
+    ],
+    "vocabIds": [
+      "1206730",
+      "1595950",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 0,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1595950": {
+        "start": 3,
+        "length": 4,
+        "reading": "やすみ"
+      }
+    }
+  },
+  {
+    "id": "10559443",
+    "original": "今日、学校をズル休みしようぜ！",
+    "en": [
+      {
+        "id": "8043654",
+        "text": "Let's play hooky today."
+      }
+    ],
+    "vocabIds": [
+      "1579110",
+      "1206730",
+      "1595950",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 3,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
+      },
+      "1595950": {
+        "start": 6,
+        "length": 4,
+        "reading": "やすみ"
+      }
+    }
+  },
+  {
+    "id": "10559445",
+    "original": "昨日、学校をズル休みしてた？",
+    "en": [
+      {
+        "id": "7849034",
+        "text": "Did you play hooky yesterday?"
+      }
+    ],
+    "vocabIds": [
+      "1579260",
+      "1206730",
+      "1595950",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 3,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1579260": {
+        "start": 0,
+        "length": 2,
+        "reading": "きのう"
+      },
+      "1595950": {
+        "start": 6,
+        "length": 4,
+        "reading": "やすみ"
+      }
+    }
+  },
+  {
+    "id": "10559447",
+    "original": "明日、学校をズル休みしないかい？",
+    "en": [
+      {
+        "id": "7733469",
+        "text": "Let's play hooky tomorrow."
+      }
+    ],
+    "vocabIds": [
+      "1584660",
+      "1206730",
+      "1595950",
+      "1227560",
+      "1227500",
+      "1473740"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 3,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 8,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1473740": {
+        "start": 13,
+        "length": 2,
+        "reading": "かい"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      },
+      "1595950": {
+        "start": 6,
+        "length": 4,
+        "reading": "やすみ"
+      }
+    }
+  },
+  {
+    "id": "10585340",
+    "original": "お腹の調子が悪かったので、学校を休みました。",
+    "en": [
+      {
+        "id": "10259153",
+        "text": "Because my stomach was upset, I took a day off school."
+      }
+    ],
+    "vocabIds": [
+      "1002610",
+      "1429170",
+      "1151260",
+      "1206730",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1002610": {
+        "start": 0,
+        "length": 2,
+        "reading": "おなか"
+      },
+      "1151260": {
+        "start": 6,
+        "length": 3,
+        "reading": "わるかっ"
+      },
+      "1206730": {
+        "start": 13,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 16,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 16,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1429170": {
+        "start": 3,
+        "length": 2,
+        "reading": "ちょうし"
+      }
+    }
+  },
+  {
+    "id": "10587764",
+    "original": "お腹が痛いので今日は休みます。",
+    "en": [
+      {
+        "id": "10587777",
+        "text": "I have a stomachache, so I'll take the day off."
+      }
+    ],
+    "vocabIds": [
+      "1002610",
+      "1432680",
+      "1579110",
+      "1289400",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1002610": {
+        "start": 0,
+        "length": 2,
+        "reading": "おなか"
+      },
+      "1227500": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 10,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1289400": {
+        "start": 7,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1432680": {
+        "start": 3,
+        "length": 2,
+        "reading": "いたい"
+      },
+      "1579110": {
+        "start": 7,
+        "length": 2,
+        "reading": "きょう"
+      }
+    }
+  },
+  {
+    "id": "10771188",
+    "original": "たまには休まないと、体調を崩すよ。",
+    "en": [
+      {
+        "id": "10780318",
+        "text": "If you don't rest once in a while, you'll get sick."
+      },
+      {
+        "id": "10780319",
+        "text": "If you don't take a break once in a while, you'll get sick."
+      }
+    ],
+    "vocabIds": [
+      "1227560",
+      "1409610",
+      "2840370",
+      "1516260"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1409610": {
+        "start": 10,
+        "length": 2,
+        "reading": "たいちょう"
+      },
+      "1516260": {
+        "start": 13,
+        "length": 2,
+        "reading": "くずす"
+      },
+      "2840370": {
+        "start": 10,
+        "length": 5,
+        "reading": "たいちょうをくずす"
       }
     }
   },
@@ -6516,20 +10574,29 @@
     "vocabIds": [
       "1611020",
       "1227560",
+      "1420470",
       "1420420"
     ],
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1420420": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "しらない"
+      },
+      "1420470": {
+        "start": 7,
+        "length": 2,
+        "reading": "しら"
       },
       "1611020": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なんで"
       }
     }
   },
@@ -6547,58 +10614,209 @@
       "1182920",
       "1358280",
       "1002610",
+      "1432680",
       "1369990",
       "1536350",
       "2858781",
+      "1540170",
       "1414150",
       "1579110",
       "1227560",
+      "1441870",
       "1441860"
     ],
     "matches": {
       "1002610": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おなか"
       },
       "1182920": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かき"
       },
       "1227560": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
       },
       "1358280": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1369990": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "いたく"
       },
       "1414150": {
         "start": 35,
-        "length": 3
+        "length": 3,
+        "reading": "だいじょうぶ"
+      },
+      "1432680": {
+        "start": 13,
+        "length": 2,
+        "reading": "いたく"
       },
       "1441860": {
         "start": 64,
-        "length": 2
+        "length": 2,
+        "reading": "つたえ"
+      },
+      "1441870": {
+        "start": 64,
+        "length": 2,
+        "reading": "つたえ"
       },
       "1536350": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "よる"
+      },
+      "1540170": {
+        "start": 29,
+        "length": 2,
+        "reading": "ともだち"
       },
       "1542640": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "さくや"
       },
       "1579110": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "2858781": {
         "start": 28,
-        "length": 3
+        "length": 3,
+        "reading": "おともだち"
+      }
+    }
+  },
+  {
+    "id": "10899663",
+    "original": "きょうかぜで学校を休みました。",
+    "en": [
+      {
+        "id": "10899664",
+        "text": "I didn't go to school today because I had a cold."
+      }
+    ],
+    "vocabIds": [
+      "1206730",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 6,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      }
+    }
+  },
+  {
+    "id": "10901517",
+    "original": "病気で学校を休みました。",
+    "en": [
+      {
+        "id": "4664037",
+        "text": "I was sick, so I didn't go to school."
+      },
+      {
+        "id": "10921752",
+        "text": "I was off school because I was ill."
+      }
+    ],
+    "vocabIds": [
+      "1490230",
+      "1206730",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 3,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 6,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 6,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1490230": {
+        "start": 0,
+        "length": 2,
+        "reading": "びょうき"
+      }
+    }
+  },
+  {
+    "id": "10918592",
+    "original": "熱があるので今日は休みます。",
+    "en": [
+      {
+        "id": "10918593",
+        "text": "I have a fever, so I'm taking today off."
+      },
+      {
+        "id": "10918594",
+        "text": "I have a fever, so I'll take today off."
+      }
+    ],
+    "vocabIds": [
+      "1467710",
+      "1579110",
+      "1289400",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1289400": {
+        "start": 6,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1467710": {
+        "start": 0,
+        "length": 1,
+        "reading": "ねつ"
+      },
+      "1579110": {
+        "start": 6,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -6630,11 +10848,115 @@
     "matches": {
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1330290": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "じゅぎょう"
+      }
+    }
+  },
+  {
+    "id": "11021419",
+    "original": "熱があるので、今日は学校を休みます。",
+    "en": [
+      {
+        "id": "11021475",
+        "text": "I have a fever, so I'll be absent from school today."
+      },
+      {
+        "id": "11021473",
+        "text": "I have a fever, so I won't go to school today."
+      },
+      {
+        "id": "11021476",
+        "text": "I have a fever, so I won't be at school today."
+      }
+    ],
+    "vocabIds": [
+      "1467710",
+      "1579110",
+      "1289400",
+      "1206730",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 10,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 13,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 13,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1289400": {
+        "start": 7,
+        "length": 3,
+        "reading": "きょうは"
+      },
+      "1467710": {
+        "start": 0,
+        "length": 1,
+        "reading": "ねつ"
+      },
+      "1579110": {
+        "start": 7,
+        "length": 2,
+        "reading": "きょう"
+      }
+    }
+  },
+  {
+    "id": "11025628",
+    "original": "この辺で少し休みましょう。",
+    "en": [
+      {
+        "id": "11026184",
+        "text": "Let's take a short break here."
+      }
+    ],
+    "vocabIds": [
+      "1004750",
+      "1512070",
+      "1348870",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1004750": {
+        "start": 0,
+        "length": 3,
+        "reading": "このあたり"
+      },
+      "1227500": {
+        "start": 6,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 6,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1348870": {
+        "start": 4,
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1512070": {
+        "start": 2,
+        "length": 1,
+        "reading": "あたり"
       }
     }
   },
@@ -6649,21 +10971,273 @@
     ],
     "vocabIds": [
       "1409140",
+      "1429170",
       "2788310",
+      "1151260",
+      "1227560"
+    ],
+    "matches": {
+      "1151260": {
+        "start": 5,
+        "length": 2,
+        "reading": "わるい"
+      },
+      "1227560": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすん"
+      },
+      "1409140": {
+        "start": 0,
+        "length": 1,
+        "reading": "からだ"
+      },
+      "1429170": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちょうし"
+      },
+      "2788310": {
+        "start": 2,
+        "length": 5,
+        "reading": "ちょうしがわるい"
+      }
+    }
+  },
+  {
+    "id": "11064153",
+    "original": "休め。ボロボロになるぞ。",
+    "en": [
+      {
+        "id": "3968214",
+        "text": "Take a break, or you'll fall apart."
+      }
+    ],
+    "vocabIds": [
+      "1227560",
+      "1221830"
+    ],
+    "matches": {
+      "1221830": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすめ"
+      },
+      "1227560": {
+        "start": 0,
+        "length": 2,
+        "reading": "やすめ"
+      }
+    }
+  },
+  {
+    "id": "11064154",
+    "original": "休まないと、ボロボロになるよ。",
+    "en": [
+      {
+        "id": "3968214",
+        "text": "Take a break, or you'll fall apart."
+      }
+    ],
+    "vocabIds": [
       "1227560"
     ],
     "matches": {
       "1227560": {
-        "start": 9,
-        "length": 3
-      },
-      "1409140": {
         "start": 0,
-        "length": 1
+        "length": 2,
+        "reading": "やすま"
+      }
+    }
+  },
+  {
+    "id": "10917223",
+    "original": "毎日昼は一時間休みます。",
+    "en": [
+      {
+        "id": "11468874",
+        "text": "Every day at noon I have a one hour break."
+      }
+    ],
+    "vocabIds": [
+      "1524720",
+      "1426250",
+      "1160790",
+      "1162940",
+      "1315920",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 4,
+        "length": 1,
+        "reading": "いち"
       },
-      "2788310": {
+      "1162940": {
+        "start": 4,
+        "length": 3,
+        "reading": "いちじかん"
+      },
+      "1227500": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1315920": {
+        "start": 5,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1426250": {
         "start": 2,
-        "length": 5
+        "length": 1,
+        "reading": "ひる"
+      },
+      "1524720": {
+        "start": 0,
+        "length": 2,
+        "reading": "まいにち"
+      }
+    }
+  },
+  {
+    "id": "176854",
+    "original": "この治療のため、息子はしばらく学校を休まなければならないだろう。",
+    "en": [
+      {
+        "id": "11494638",
+        "text": "Because of this treatment, I think my son will have to miss school for a while."
+      }
+    ],
+    "indices": "君(きみ)[01] は 明日 学校 を 休む[01]{休ま} ねばならない{なければならない} だろう",
+    "vocabIds": [
+      "1316890",
+      "1404390",
+      "1206730",
+      "1227560"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 15,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227560": {
+        "start": 18,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1316890": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちりょう"
+      },
+      "1404390": {
+        "start": 8,
+        "length": 2,
+        "reading": "むすこ"
+      }
+    }
+  },
+  {
+    "id": "11527034",
+    "original": "明日仕事は休まないよ。",
+    "en": [
+      {
+        "id": "8412516",
+        "text": "I won't take tomorrow off."
+      }
+    ],
+    "vocabIds": [
+      "1584660",
+      "1304970",
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 5,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1304970": {
+        "start": 2,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1584660": {
+        "start": 0,
+        "length": 2,
+        "reading": "あした"
+      }
+    }
+  },
+  {
+    "id": "11545975",
+    "original": "今着いたばっかりなのよ。少し休ませて。",
+    "en": [
+      {
+        "id": "11295063",
+        "text": "I just got here, let me rest a bit."
+      }
+    ],
+    "vocabIds": [
+      "1288850",
+      "1422970",
+      "1348870",
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 14,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1348870": {
+        "start": 12,
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1422970": {
+        "start": 1,
+        "length": 2,
+        "reading": "つい"
+      }
+    }
+  },
+  {
+    "id": "11563125",
+    "original": "よくずる休みするよ。",
+    "en": [
+      {
+        "id": "10804136",
+        "text": "I often play truant."
+      }
+    ],
+    "vocabIds": [
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすみ"
       }
     }
   },
@@ -6681,28 +11255,33 @@
       "1579110",
       "1227560",
       "1580640",
-      "1407450"
+      "1407460"
     ],
     "matches": {
       "1198550": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
-      "1407450": {
+      "1407460": {
         "start": 14,
-        "length": 1
+        "length": 3,
+        "reading": "おおかっ"
       },
       "1579110": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1580640": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -6730,20 +11309,105 @@
     "vocabIds": [
       "1348870",
       "1227560",
+      "1516930",
       "2160680"
     ],
     "matches": {
       "1227560": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1348870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
+      },
+      "1516930": {
+        "start": 5,
+        "length": 1,
+        "reading": "ほう"
       },
       "2160680": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "ほうがいい"
+      }
+    }
+  },
+  {
+    "id": "10763960",
+    "original": "年中休まず営業中！",
+    "en": [
+      {
+        "id": "11786998",
+        "text": "Open all year round!"
+      }
+    ],
+    "vocabIds": [
+      "1469000",
+      "1227560",
+      "1173430",
+      "1173470",
+      "1423310"
+    ],
+    "matches": {
+      "1173430": {
+        "start": 5,
+        "length": 2,
+        "reading": "えいぎょう"
+      },
+      "1173470": {
+        "start": 5,
+        "length": 3,
+        "reading": "えいぎょうちゅう"
+      },
+      "1227560": {
+        "start": 2,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1423310": {
+        "start": 7,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1469000": {
+        "start": 0,
+        "length": 2,
+        "reading": "ねんじゅう"
+      }
+    }
+  },
+  {
+    "id": "11891601",
+    "original": "10分休みましょう。",
+    "en": [
+      {
+        "id": "10209430",
+        "text": "Let's have a 10-minute break."
+      }
+    ],
+    "vocabIds": [
+      "1502860",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1227500": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1502860": {
+        "start": 2,
+        "length": 1,
+        "reading": "ふん"
       }
     }
   },
@@ -6764,15 +11428,50 @@
     "matches": {
       "1227560": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1348870": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1857290": {
         "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "あるきつかれ"
+      }
+    }
+  },
+  {
+    "id": "10911432",
+    "original": "学校を休みます。",
+    "en": [
+      {
+        "id": "12237904",
+        "text": "I won't be going to school today."
+      }
+    ],
+    "vocabIds": [
+      "1206730",
+      "1227560",
+      "1227500"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 0,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1227500": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすみ"
+      },
+      "1227560": {
+        "start": 3,
+        "length": 2,
+        "reading": "やすみ"
       }
     }
   },
@@ -6793,15 +11492,18 @@
     "matches": {
       "1227560": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1304970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -6822,15 +11524,18 @@
     "matches": {
       "1227560": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1304970": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1584660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -6852,28 +11557,59 @@
       "1198550",
       "1227560",
       "1490220",
+      "1578850",
       "1578790"
     ],
     "matches": {
       "1198550": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1227560": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "やすん"
       },
       "1490220": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "びょういん"
       },
       "1578790": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 13,
+        "length": 2,
+        "reading": "いき"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
+      }
+    }
+  },
+  {
+    "id": "10022354",
+    "original": "ちょっと休ませてくれませんか。",
+    "en": [
+      {
+        "id": "12589368",
+        "text": "Could you please let me rest for a while?"
+      }
+    ],
+    "vocabIds": [
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすま"
       }
     }
   },
@@ -6887,6 +11623,8 @@
       }
     ],
     "vocabIds": [
+      "1483740",
+      "1483730",
       "1647590",
       "1530970",
       "1227560",
@@ -6895,19 +11633,71 @@
     "matches": {
       "1227560": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
+      },
+      "1483730": {
+        "start": 0,
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1483740": {
+        "start": 0,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1487660": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1530970": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "むり"
       },
       "1647590": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "つかれた"
+      }
+    }
+  },
+  {
+    "id": "13266223",
+    "original": "そなんに無理しなくてもいいんじゃない？ちゃんと休まないと、体を壊しちゃうよ。",
+    "en": [
+      {
+        "id": "13266225",
+        "text": "You don't have to push yourself so hard, you know? If you don't rest properly, you'll end up harming your health."
+      }
+    ],
+    "vocabIds": [
+      "1530970",
+      "1227560",
+      "1409140",
+      "1199890"
+    ],
+    "matches": {
+      "1199890": {
+        "start": 31,
+        "length": 2,
+        "reading": "こわし"
+      },
+      "1227560": {
+        "start": 23,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1409140": {
+        "start": 29,
+        "length": 1,
+        "reading": "からだ"
+      },
+      "1530970": {
+        "start": 4,
+        "length": 2,
+        "reading": "むり"
       }
     }
   },
@@ -6927,11 +11717,73 @@
     "matches": {
       "1191730": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1227560": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "やすむ"
+      }
+    }
+  },
+  {
+    "id": "10763962",
+    "original": "365日休まず営業してます。",
+    "en": [
+      {
+        "id": "13722014",
+        "text": "Business operating 365 days a year, 24 hours a day."
+      },
+      {
+        "id": "13722024",
+        "text": "Business open 365 24/7."
+      }
+    ],
+    "vocabIds": [
+      "1463770",
+      "1227560",
+      "1173430"
+    ],
+    "matches": {
+      "1173430": {
+        "start": 7,
+        "length": 2,
+        "reading": "えいぎょう"
+      },
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすま"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      }
+    }
+  },
+  {
+    "id": "10588017",
+    "original": "ちょっと休ませてくれ。",
+    "en": [
+      {
+        "id": "13756245",
+        "text": "Let me rest for a bit."
+      },
+      {
+        "id": "11195031",
+        "text": "Let me take a break."
+      }
+    ],
+    "vocabIds": [
+      "1227560"
+    ],
+    "matches": {
+      "1227560": {
+        "start": 4,
+        "length": 2,
+        "reading": "やすま"
       }
     }
   }

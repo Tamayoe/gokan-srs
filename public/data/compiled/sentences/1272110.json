@@ -12,20 +12,29 @@
     "vocabIds": [
       "1666700",
       "1272110",
-      "1254180"
+      "1254180",
+      "1630630"
     ],
     "matches": {
       "1254180": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "きめ"
       },
       "1272110": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1630630": {
+        "start": 19,
+        "length": 2,
+        "reading": "きめ"
       },
       "1666700": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "わぎ"
       }
     }
   },
@@ -52,19 +61,72 @@
     "matches": {
       "1272110": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1327190": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "て"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580640": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "じん"
+      }
+    }
+  },
+  {
+    "id": "77205",
+    "original": "和平交渉がすでに秘密裡に開始されたとのことです。",
+    "en": [
+      {
+        "id": "326514",
+        "text": "It is rumored that secret peace talks have already begun."
+      },
+      {
+        "id": "9056089",
+        "text": "It's rumored that secret peace talks have already begun."
+      }
+    ],
+    "indices": "和平交渉 が 既に(すでに)[01]{すでに} 秘密裡~ に 開始 為れる{された} との事{とのこと} です",
+    "vocabIds": [
+      "1562210",
+      "1562240",
+      "1272110",
+      "1484150",
+      "1202760"
+    ],
+    "matches": {
+      "1202760": {
+        "start": 12,
+        "length": 2,
+        "reading": "かいし"
+      },
+      "1272110": {
+        "start": 2,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1484150": {
+        "start": 8,
+        "length": 2,
+        "reading": "ひみつ"
+      },
+      "1562210": {
+        "start": 0,
+        "length": 2,
+        "reading": "わへい"
+      },
+      "1562240": {
+        "start": 0,
+        "length": 4,
+        "reading": "わへいこうしょう"
       }
     }
   },
@@ -79,22 +141,130 @@
     ],
     "indices": "労働組合 は 経営陣 と 交渉[01]~ 為る(する){している}",
     "vocabIds": [
+      "1606450",
       "1560510",
+      "1397620",
+      "1251130",
       "1251210",
+      "1956490",
       "1272110"
     ],
     "matches": {
+      "1251130": {
+        "start": 5,
+        "length": 2,
+        "reading": "けいえい"
+      },
       "1251210": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "けいえいじん"
       },
       "1272110": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1397620": {
+        "start": 2,
+        "length": 2,
+        "reading": "くみあい"
       },
       "1560510": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "ろうどうくみあい"
+      },
+      "1606450": {
+        "start": 0,
+        "length": 2,
+        "reading": "ろうどう"
+      },
+      "1956490": {
+        "start": 7,
+        "length": 1,
+        "reading": "じん"
+      }
+    }
+  },
+  {
+    "id": "77382",
+    "original": "労働交渉では組合の指導者が重要な役割を果たす。",
+    "en": [
+      {
+        "id": "326337",
+        "text": "In labor negotiation union leaders play an important role."
+      }
+    ],
+    "indices": "労働交渉~ で(#2028980) は 組合 の 指導者 が 重要{重要な} 役割を果たす",
+    "vocabIds": [
+      "1606450",
+      "2001990",
+      "1272110",
+      "1397620",
+      "1309950",
+      "1309960",
+      "1322990",
+      "1336820",
+      "1538000",
+      "2806030",
+      "1192850"
+    ],
+    "matches": {
+      "1192850": {
+        "start": 19,
+        "length": 3,
+        "reading": "はたす"
+      },
+      "1272110": {
+        "start": 2,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1309950": {
+        "start": 9,
+        "length": 2,
+        "reading": "しどう"
+      },
+      "1309960": {
+        "start": 9,
+        "length": 3,
+        "reading": "しどうしゃ"
+      },
+      "1322990": {
+        "start": 11,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1336820": {
+        "start": 13,
+        "length": 2,
+        "reading": "じゅうよう"
+      },
+      "1397620": {
+        "start": 6,
+        "length": 2,
+        "reading": "くみあい"
+      },
+      "1538000": {
+        "start": 16,
+        "length": 2,
+        "reading": "やくわり"
+      },
+      "1606450": {
+        "start": 0,
+        "length": 2,
+        "reading": "ろうどう"
+      },
+      "2001990": {
+        "start": 0,
+        "length": 4,
+        "reading": "ろうどうこうしょう"
+      },
+      "2806030": {
+        "start": 16,
+        "length": 6,
+        "reading": "やくわりをはたす"
       }
     }
   },
@@ -117,19 +287,23 @@
     "matches": {
       "1202760": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かいし"
       },
       "1272110": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1508070": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "へいわ"
       },
       "1553590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "りょうこく"
       }
     }
   },
@@ -148,28 +322,45 @@
       "1218450",
       "1198960",
       "2644330",
+      "1277100",
+      "1277090",
       "1272110"
     ],
     "matches": {
       "1198960": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かいけつ"
       },
       "1218450": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きき"
       },
       "1272110": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1277090": {
+        "start": 8,
+        "length": 2,
+        "reading": "むけ"
+      },
+      "1277100": {
+        "start": 8,
+        "length": 2,
+        "reading": "むけ"
       },
       "1553590": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "りょうこく"
       },
       "2644330": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "にむけて"
       }
     }
   },
@@ -188,38 +379,57 @@
       "1606820",
       "1554640",
       "1985240",
+      "1215230",
       "1520120",
       "1272110",
-      "2089170"
+      "1154580",
+      "1354950"
     ],
     "matches": {
+      "1154580": {
+        "start": 20,
+        "length": 2,
+        "reading": "あんしょう"
+      },
+      "1215230": {
+        "start": 14,
+        "length": 1,
+        "reading": "かん"
+      },
       "1272110": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1354950": {
+        "start": 23,
+        "length": 4,
+        "reading": "のりあげ"
       },
       "1520120": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうえき"
       },
       "1538870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ゆにゅう"
       },
       "1554640": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "りょう"
       },
       "1606820": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "わりあて"
       },
       "1985240": {
         "start": 12,
-        "length": 3
-      },
-      "2089170": {
-        "start": 20,
-        "length": 8
+        "length": 3,
+        "reading": "たこくかん"
       }
     }
   },
@@ -241,15 +451,18 @@
     "matches": {
       "1272110": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1416730": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "たなあげ"
       },
       "1520120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうえき"
       }
     }
   },
@@ -266,20 +479,29 @@
     "vocabIds": [
       "1515760",
       "1272110",
-      "1519120"
+      "1519120",
+      "1519110"
     ],
     "matches": {
       "1272110": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1515760": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ほうふく"
+      },
+      "1519110": {
+        "start": 11,
+        "length": 2,
+        "reading": "さまたげ"
       },
       "1519120": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "さまたげ"
       }
     }
   },
@@ -303,23 +525,28 @@
     "matches": {
       "1272110": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1408510": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "だきょう"
       },
       "1416230": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "たっする"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1526860": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まんぞく"
       }
     }
   },
@@ -342,19 +569,23 @@
     "matches": {
       "1272110": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1431990": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちんぎん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1605560": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "やといぬし"
       }
     }
   },
@@ -374,32 +605,44 @@
       "1432460",
       "1473030",
       "1272110",
-      "1254180"
+      "1254180",
+      "1630630"
     ],
     "matches": {
       "1231590": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぎゅうにゅう"
       },
       "1254180": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "きめ"
       },
       "1272110": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1432460": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ついか"
       },
       "1473030": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はいきゅう"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1630630": {
+        "start": 17,
+        "length": 2,
+        "reading": "きめ"
       }
     }
   },
@@ -421,15 +664,18 @@
     "matches": {
       "1272110": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1375690": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -445,7 +691,9 @@
     "indices": "彼(かれ)[01] は 不動産屋 に もう少し 値引き 為る(する){する} 様(よう){よう} 交渉[01] 為る(する){した}",
     "vocabIds": [
       "1483070",
+      "1494220",
       "1494230",
+      "2082160",
       "2005870",
       "1600190",
       "1272110"
@@ -453,23 +701,38 @@
     "matches": {
       "1272110": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1494220": {
+        "start": 2,
+        "length": 3,
+        "reading": "ふどうさん"
       },
       "1494230": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "ふどうさんや"
       },
       "1600190": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "ねびき"
       },
       "2005870": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "もうすこし"
+      },
+      "2082160": {
+        "start": 5,
+        "length": 1,
+        "reading": "や"
       }
     }
   },
@@ -492,19 +755,23 @@
     "matches": {
       "1272110": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1327465": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "てづよい"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580640": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -521,20 +788,29 @@
     "vocabIds": [
       "1483070",
       "1272110",
-      "1908600"
+      "1288550",
+      "1385910"
     ],
     "matches": {
       "1272110": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1288550": {
+        "start": 11,
+        "length": 1,
+        "reading": "ほね"
+      },
+      "1385910": {
+        "start": 13,
+        "length": 2,
+        "reading": "おっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
-      },
-      "1908600": {
-        "start": 11,
-        "length": 5
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -552,24 +828,34 @@
       "1483070",
       "1272110",
       "1415000",
-      "1908600"
+      "1288550",
+      "1385910"
     ],
     "matches": {
       "1272110": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1288550": {
+        "start": 12,
+        "length": 1,
+        "reading": "ぼね"
+      },
+      "1385910": {
+        "start": 14,
+        "length": 2,
+        "reading": "おっ"
       },
       "1415000": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
-      },
-      "1908600": {
-        "start": 12,
-        "length": 5
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -584,6 +870,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 仕事[01] は 外国 の 買い手 と 交渉[01] 為る(する){する} 事(こと){こと} だ",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1304970",
       "1203620",
@@ -593,23 +880,33 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1203620": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がいこく"
       },
       "1272110": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1304970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1589700": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "かいて"
       }
     }
   },
@@ -627,24 +924,34 @@
       "1582710",
       "1272110",
       "1165670",
-      "1212260"
+      "1212260",
+      "1212250"
     ],
     "matches": {
       "1165670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いっぱい"
+      },
+      "1212250": {
+        "start": 16,
+        "length": 2,
+        "reading": "かんじ"
       },
       "1212260": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1272110": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1582710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
       }
     }
   },
@@ -659,7 +966,9 @@
     ],
     "indices": "哲学者 は 世間 と 余り{あまり} 交渉[02]~ を 持つ{持たない} 傾向 が[01] 有る{ある}",
     "vocabIds": [
+      "1437610",
       "1437620",
+      "1322990",
       "1373970",
       "1272110",
       "1315720",
@@ -668,23 +977,113 @@
     "matches": {
       "1249470": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "けいこう"
       },
       "1272110": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1315720": {
         "start": 13,
-        "length": 4
+        "length": 2,
+        "reading": "もた"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1373970": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せけん"
+      },
+      "1437610": {
+        "start": 0,
+        "length": 2,
+        "reading": "てつがく"
       },
       "1437620": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "てつがくしゃ"
+      }
+    }
+  },
+  {
+    "id": "125296",
+    "original": "敵対勢力間の和平交渉再開だけに、関係は危うい。",
+    "en": [
+      {
+        "id": "278697",
+        "text": "Relations are tenuous as peace talks resume between warring factions."
+      }
+    ],
+    "indices": "敵対 勢力 間(かん) の 和平交渉 再開 丈に{だけに}~ 関係 は 危うい[02]~",
+    "vocabIds": [
+      "1437160",
+      "2830451",
+      "1375150",
+      "1215230",
+      "1562210",
+      "1562240",
+      "1272110",
+      "1292400",
+      "1215810",
+      "1218360"
+    ],
+    "matches": {
+      "1215230": {
+        "start": 4,
+        "length": 1,
+        "reading": "かん"
+      },
+      "1215810": {
+        "start": 16,
+        "length": 2,
+        "reading": "かんけい"
+      },
+      "1218360": {
+        "start": 19,
+        "length": 3,
+        "reading": "あやうい"
+      },
+      "1272110": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1292400": {
+        "start": 10,
+        "length": 2,
+        "reading": "さいかい"
+      },
+      "1375150": {
+        "start": 2,
+        "length": 2,
+        "reading": "せいりょく"
+      },
+      "1437160": {
+        "start": 0,
+        "length": 2,
+        "reading": "てきたい"
+      },
+      "1562210": {
+        "start": 6,
+        "length": 2,
+        "reading": "わへい"
+      },
+      "1562240": {
+        "start": 6,
+        "length": 4,
+        "reading": "わへいこうしょう"
+      },
+      "2830451": {
+        "start": 0,
+        "length": 4,
+        "reading": "てきたいせいりょく"
       }
     }
   },
@@ -699,37 +1098,136 @@
     ],
     "indices": "超大国 が 激しい 国境 紛争 を 解決 為る(する){する} 為に{ために} 本格的[02]{本格的に} 交渉[01] 為る(する){した}",
     "vocabIds": [
+      "1429340",
       "1429500",
+      "1413710",
       "1600720",
+      "1286320",
       "2146960",
+      "1505060",
       "1198960",
+      "1522310",
       "1522330",
+      "1437260",
       "1272110"
     ],
     "matches": {
       "1198960": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かいけつ"
       },
       "1272110": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1286320": {
+        "start": 7,
+        "length": 2,
+        "reading": "こっきょう"
+      },
+      "1413710": {
+        "start": 1,
+        "length": 2,
+        "reading": "たいこく"
+      },
+      "1429340": {
+        "start": 0,
+        "length": 1,
+        "reading": "ちょう"
       },
       "1429500": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ちょうたいこく"
+      },
+      "1437260": {
+        "start": 21,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1505060": {
+        "start": 9,
+        "length": 2,
+        "reading": "ふんそう"
+      },
+      "1522310": {
+        "start": 19,
+        "length": 2,
+        "reading": "ほんかく"
       },
       "1522330": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "ほんかくてき"
       },
       "1600720": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "はげしい"
       },
       "2146960": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "こっきょうふんそう"
+      }
+    }
+  },
+  {
+    "id": "127137",
+    "original": "値引き交渉に必要な条件を教えてください。",
+    "en": [
+      {
+        "id": "276952",
+        "text": "Please let us know your conditions for making the concession."
+      }
+    ],
+    "indices": "値引き 交渉[01] に 必要[01]{必要な} 条件 を 教える{教えて} 下さい{ください}",
+    "vocabIds": [
+      "1600190",
+      "2682580",
+      "1272110",
+      "1487660",
+      "1356510",
+      "1236900",
+      "1236890"
+    ],
+    "matches": {
+      "1236890": {
+        "start": 12,
+        "length": 2,
+        "reading": "おしえ"
+      },
+      "1236900": {
+        "start": 12,
+        "length": 2,
+        "reading": "おしえ"
+      },
+      "1272110": {
+        "start": 3,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1356510": {
+        "start": 9,
+        "length": 2,
+        "reading": "じょうけん"
+      },
+      "1487660": {
+        "start": 6,
+        "length": 2,
+        "reading": "ひつよう"
+      },
+      "1600190": {
+        "start": 0,
+        "length": 3,
+        "reading": "ねびき"
+      },
+      "2682580": {
+        "start": 0,
+        "length": 5,
+        "reading": "ねびきこうしょう"
       }
     }
   },
@@ -744,32 +1242,118 @@
     ],
     "indices": "代表団~ は 貿易 交渉[01] を 大きく 前進 為せる{させました}",
     "vocabIds": [
+      "1412170",
       "1412210",
+      "1956650",
       "1520120",
       "1272110",
+      "1588880",
       "2039990",
       "1393350"
     ],
     "matches": {
       "1272110": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1393350": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんしん"
+      },
+      "1412170": {
+        "start": 0,
+        "length": 2,
+        "reading": "だいひょう"
       },
       "1412210": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "だいひょうだん"
       },
       "1520120": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうえき"
+      },
+      "1588880": {
+        "start": 9,
+        "length": 3,
+        "reading": "おおきく"
+      },
+      "1956650": {
+        "start": 2,
+        "length": 1,
+        "reading": "だん"
       },
       "2039990": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "おおきく"
+      }
+    }
+  },
+  {
+    "id": "140612",
+    "original": "組合は経営者側と賃金交渉をした。",
+    "en": [
+      {
+        "id": "273961",
+        "text": "The union bargained with the management."
+      }
+    ],
+    "indices": "組合 は 経営者 側(がわ)[01] と 賃金交渉~ を 為る(する){した}",
+    "vocabIds": [
+      "1397620",
+      "1251130",
+      "1251200",
+      "1322990",
+      "1581310",
+      "1431990",
+      "1998480",
+      "1272110"
+    ],
+    "matches": {
+      "1251130": {
+        "start": 3,
+        "length": 2,
+        "reading": "けいえい"
+      },
+      "1251200": {
+        "start": 3,
+        "length": 3,
+        "reading": "けいえいしゃ"
+      },
+      "1272110": {
+        "start": 10,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1322990": {
+        "start": 5,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1397620": {
+        "start": 0,
+        "length": 2,
+        "reading": "くみあい"
+      },
+      "1431990": {
+        "start": 8,
+        "length": 2,
+        "reading": "ちんぎん"
+      },
+      "1581310": {
+        "start": 6,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1998480": {
+        "start": 8,
+        "length": 4,
+        "reading": "ちんぎんこうしょう"
       }
     }
   },
@@ -792,19 +1376,23 @@
     "matches": {
       "1173030": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "うんめい"
       },
       "1254690": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "けっか"
       },
       "1272110": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1367960": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひとじち"
       }
     }
   },
@@ -820,7 +1408,11 @@
     "indices": "私(わたし)[01] は 旅行代理店 の 人(ひと) と チケット の 値段 を 交渉[01] 為る(する){した}",
     "vocabIds": [
       "1311110",
+      "1553170",
       "1553190",
+      "1412400",
+      "1412490",
+      "1582120",
       "1580640",
       "1600160",
       "1272110"
@@ -828,23 +1420,48 @@
     "matches": {
       "1272110": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1412400": {
+        "start": 4,
+        "length": 2,
+        "reading": "だいり"
+      },
+      "1412490": {
+        "start": 4,
+        "length": 3,
+        "reading": "だいりてん"
+      },
+      "1553170": {
+        "start": 2,
+        "length": 2,
+        "reading": "りょこう"
       },
       "1553190": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "りょこうだいりてん"
       },
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1582120": {
+        "start": 6,
+        "length": 1,
+        "reading": "てん"
       },
       "1600160": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ねだん"
       }
     }
   },
@@ -859,6 +1476,7 @@
     ],
     "indices": "私たち は 多く の 交渉[01] 毎(ごと){ごと} を 為る(する){した} が 全く{まったく} 無駄{むだ} になる[01]{になった}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1861770",
       "1272110"
@@ -866,15 +1484,23 @@
     "matches": {
       "1272110": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1861770": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -893,6 +1519,7 @@
     ],
     "indices": "私たち は 皆さん の 交渉[01] を ずっと 見守る{見守って} 参る{まいりました}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1202170",
       "1272110",
@@ -901,19 +1528,28 @@
     "matches": {
       "1202170": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "みなさん"
       },
       "1259680": {
         "start": 14,
-        "length": 4
+        "length": 3,
+        "reading": "みまもっ"
       },
       "1272110": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       }
     }
   },
@@ -932,6 +1568,7 @@
     ],
     "indices": "私たち は 其の[01]{その} 会社[01] と 交渉[01] を 続行 為る(する){した}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1198550",
       "1272110",
@@ -940,19 +1577,28 @@
     "matches": {
       "1198550": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1272110": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1405810": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ぞっこう"
       }
     }
   },
@@ -967,17 +1613,31 @@
     ],
     "indices": "子供の使い~ じゃ(#2851029) 有る{ある} まい し もう 一寸(ちょっと){ちょいと} 真面[02]{まともな} 交渉 為る(する){して} 呉れる{くれ} ん[03] か ね(#2029080)[01]",
     "vocabIds": [
+      "1307850",
       "2620780",
+      "1305720",
       "1272110"
     ],
     "matches": {
       "1272110": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1305720": {
+        "start": 3,
+        "length": 2,
+        "reading": "つかい"
+      },
+      "1307850": {
+        "start": 0,
+        "length": 2,
+        "reading": "こども"
       },
       "2620780": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "こどものつかい"
       }
     }
   },
@@ -997,37 +1657,56 @@
       "1272110",
       "1452570",
       "1580640",
+      "1418160",
       "1418180",
+      "1322990",
       "1189960"
     ],
     "matches": {
       "1006900": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "そのた"
       },
       "1189960": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "くわえ"
       },
       "1272110": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1322990": {
+        "start": 21,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1418160": {
+        "start": 19,
+        "length": 2,
+        "reading": "たんとう"
       },
       "1418180": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "たんとうしゃ"
       },
       "1452570": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "どうしゃ"
       },
       "1578970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がっぺい"
       },
       "1580640": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -1049,15 +1728,18 @@
     "matches": {
       "1251810": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けいぞく"
       },
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1284550": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ごうい"
       }
     }
   },
@@ -1078,11 +1760,13 @@
     "matches": {
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1424410": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうし"
       }
     }
   },
@@ -1100,24 +1784,34 @@
       "1272110",
       "1413940",
       "1239680",
-      "1253190"
+      "1253190",
+      "1253180"
     ],
     "matches": {
       "1239680": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょくめん"
+      },
+      "1253180": {
+        "start": 9,
+        "length": 2,
+        "reading": "むかえ"
       },
       "1253190": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "むかえ"
       },
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1413940": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "だいじ"
       }
     }
   },
@@ -1133,21 +1827,36 @@
     "indices": "交渉[01] は 新(しん)[01] 局面 に 入る(はいる)[09]{入った}~",
     "vocabIds": [
       "1272110",
+      "1361480",
       "2628380",
+      "1239680",
       "1465590"
     ],
     "matches": {
+      "1239680": {
+        "start": 4,
+        "length": 2,
+        "reading": "きょくめん"
+      },
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1361480": {
+        "start": 3,
+        "length": 1,
+        "reading": "しん"
       },
       "1465590": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "2628380": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "しんきょくめん"
       }
     }
   },
@@ -1169,15 +1878,18 @@
     "matches": {
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1320140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1589600": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "おわっ"
       }
     }
   },
@@ -1201,23 +1913,28 @@
     "matches": {
       "1239680": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きょくめん"
       },
       "1240200": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "きわめて"
       },
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1336500": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうだい"
       },
       "1465590": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       }
     }
   },
@@ -1238,11 +1955,13 @@
     "matches": {
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1366160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しんてん"
       }
     }
   },
@@ -1264,15 +1983,18 @@
     "matches": {
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1419950": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "だんかい"
       },
       "1486170": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "びみょう"
       }
     }
   },
@@ -1290,24 +2012,34 @@
       "1272110",
       "1401030",
       "1419990",
+      "1588730",
       "2785990"
     ],
     "matches": {
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1401030": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "あいてがた"
       },
       "1419990": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
+      },
+      "1588730": {
+        "start": 15,
+        "length": 2,
+        "reading": "えらび"
       },
       "2785990": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "えらび"
       }
     }
   },
@@ -1329,15 +2061,18 @@
     "matches": {
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1355790": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ば"
       },
       "1386060": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "せってい"
       }
     }
   },
@@ -1360,19 +2095,23 @@
     "matches": {
       "1168880": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "ひきおこす"
       },
       "1254430": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けつれつ"
       },
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1390360": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せんそう"
       }
     }
   },
@@ -1397,27 +2136,33 @@
     "matches": {
       "1164660": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いったん"
       },
       "1247250": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1320140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1383180": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "せきにん"
       },
       "1589350": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -1434,20 +2179,29 @@
     "vocabIds": [
       "1272110",
       "1320140",
+      "1483070",
       "1000420"
     ],
     "matches": {
       "1000420": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1320140": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
+      },
+      "1483070": {
+        "start": 9,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1468,11 +2222,133 @@
     "matches": {
       "1207310": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "らっかん"
       },
       "1272110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      }
+    }
+  },
+  {
+    "id": "176555",
+    "original": "契約の内容について弁護士が交渉団に助言を与えた。",
+    "en": [
+      {
+        "id": "237909",
+        "text": "The lawyer counseled the negotiation team on the contents of the contract."
+      }
+    ],
+    "indices": "契約 の 内容 に就いて{について} 弁護士 が 交渉団~ に 助言 を 与える[01]{与えた}",
+    "vocabIds": [
+      "1250190",
+      "1459400",
+      "1512850",
+      "1272110",
+      "2570050",
+      "1956650",
+      "1580230",
+      "1544730",
+      "1544720"
+    ],
+    "matches": {
+      "1250190": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいやく"
+      },
+      "1272110": {
+        "start": 13,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1459400": {
+        "start": 3,
+        "length": 2,
+        "reading": "ないよう"
+      },
+      "1512850": {
+        "start": 9,
+        "length": 3,
+        "reading": "べんごし"
+      },
+      "1544720": {
+        "start": 20,
+        "length": 2,
+        "reading": "あたえ"
+      },
+      "1544730": {
+        "start": 20,
+        "length": 2,
+        "reading": "あたえ"
+      },
+      "1580230": {
+        "start": 17,
+        "length": 2,
+        "reading": "じょげん"
+      },
+      "1956650": {
+        "start": 15,
+        "length": 1,
+        "reading": "だん"
+      },
+      "2570050": {
+        "start": 13,
+        "length": 3,
+        "reading": "こうしょうだん"
+      }
+    }
+  },
+  {
+    "id": "183060",
+    "original": "貴社が、この価格交渉に見通しをつけてくださることを信じています。",
+    "en": [
+      {
+        "id": "20183",
+        "text": "We believe that you will be able to make a price concession."
+      }
+    ],
+    "indices": "貴社 が 此の{この} 価格 交渉[01] に 見通し を 付ける{つけて} 下さる{くださる} 事(こと){こと} を 信じる{信じています}",
+    "vocabIds": [
+      "1223510",
+      "1189500",
+      "2116950",
+      "1272110",
+      "1604610",
+      "1359040"
+    ],
+    "matches": {
+      "1189500": {
+        "start": 6,
+        "length": 2,
+        "reading": "かかく"
+      },
+      "1223510": {
+        "start": 0,
+        "length": 2,
+        "reading": "きしゃ"
+      },
+      "1272110": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1359040": {
+        "start": 25,
+        "length": 2,
+        "reading": "しんじ"
+      },
+      "1604610": {
+        "start": 11,
+        "length": 3,
+        "reading": "みとおし"
+      },
+      "2116950": {
+        "start": 6,
+        "length": 4,
+        "reading": "かかくこうしょう"
       }
     }
   },
@@ -1496,23 +2372,28 @@
     "matches": {
       "1272110": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1412170": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "だいひょう"
       },
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483090": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -1528,26 +2409,42 @@
     "indices": "我々 は 就労 時間 に就いて{について} 社長 と 交渉[01] 為る(する){した}",
     "vocabIds": [
       "1607050",
+      "1331830",
       "2845437",
+      "1315920",
       "1322920",
       "1272110"
     ],
     "matches": {
       "1272110": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1315920": {
+        "start": 5,
+        "length": 2,
+        "reading": "じかん"
       },
       "1322920": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しゃちょう"
+      },
+      "1331830": {
+        "start": 3,
+        "length": 2,
+        "reading": "しゅうろう"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       },
       "2845437": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "しゅうろうじかん"
       }
     }
   },
@@ -1564,25 +2461,53 @@
     "vocabIds": [
       "1607050",
       "1272110",
+      "1609930",
       "2146550",
+      "1462900",
+      "1463770",
+      "1374620",
       "1235730"
     ],
     "matches": {
       "1235730": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "きょうてい"
       },
       "1272110": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1374620": {
+        "start": 11,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1462900": {
+        "start": 9,
+        "length": 2,
+        "reading": "ににち"
+      },
+      "1463770": {
+        "start": 10,
+        "length": 1,
+        "reading": "にち"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "1609930": {
+        "start": 7,
+        "length": 2,
+        "reading": "しゅうきゅう"
       },
       "2146550": {
         "start": 7,
-        "length": 5
+        "length": 5,
+        "reading": "しゅうきゅうににちせい"
       }
     }
   },
@@ -1599,20 +2524,29 @@
     "vocabIds": [
       "1607050",
       "1272110",
-      "1598690"
+      "1598690",
+      "2639800"
     ],
     "matches": {
       "1272110": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1598690": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "とぎれ"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "2639800": {
+        "start": 6,
+        "length": 3,
+        "reading": "とぎれ"
       }
     }
   },
@@ -1630,24 +2564,40 @@
       "1607050",
       "1272110",
       "1320140",
-      "1414240"
+      "2082450",
+      "1414240",
+      "1375690"
     ],
     "matches": {
       "1272110": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1320140": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
+      },
+      "1375690": {
+        "start": 14,
+        "length": 2,
+        "reading": "せいこう"
       },
       "1414240": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "だいせいこう"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "2082450": {
+        "start": 13,
+        "length": 1,
+        "reading": "だい"
       }
     }
   },
@@ -1662,12 +2612,14 @@
     ],
     "indices": "一般的{一般的に} は 覇権 的(てき) 秩序 と言う{という} モデル[05]~ は 成功 為る(する){した} と[04] 認める(みとめる){認められる} 交渉[01] ストラテジー 全て{すべて} に対する 説明 を 与える[01] 事が出来る{ことはできない}",
     "vocabIds": [
+      "1165790",
       "1165880",
-      "1470950",
       "1437260",
+      "1470950",
       "1422520",
       "1375690",
       "1467530",
+      "1611790",
       "1272110",
       "1009810",
       "1386460",
@@ -1676,43 +2628,63 @@
     "matches": {
       "1009810": {
         "start": 39,
-        "length": 4
+        "length": 4,
+        "reading": "にたいする"
+      },
+      "1165790": {
+        "start": 0,
+        "length": 2,
+        "reading": "いっぱん"
       },
       "1165880": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いっぱんてき"
       },
       "1272110": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1375690": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1386460": {
         "start": 43,
-        "length": 2
+        "length": 2,
+        "reading": "せつめい"
       },
       "1422520": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちつじょ"
       },
       "1437260": {
-        "start": 8,
-        "length": 1
+        "start": 2,
+        "length": 1,
+        "reading": "てき"
       },
       "1467530": {
         "start": 23,
-        "length": 5
+        "length": 2,
+        "reading": "みとめ"
       },
       "1470950": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はけん"
       },
       "1544730": {
         "start": 46,
-        "length": 3
+        "length": 3,
+        "reading": "あたえる"
+      },
+      "1611790": {
+        "start": 23,
+        "length": 2,
+        "reading": "みとめ"
       }
     }
   },
@@ -1728,8 +2700,13 @@
     "indices": "諾威{ノルウェー} 人(じん)[01] 外交官 が 歴史的[01] 文書 を 生む{生んだ} 秘密 交渉[01] を 取り持つ{取り持った}~",
     "vocabIds": [
       "2850955",
+      "1580640",
+      "1203540",
       "1203560",
+      "1983700",
+      "1558050",
       "1558160",
+      "1437260",
       "1583840",
       "1588410",
       "1484150",
@@ -1737,37 +2714,70 @@
       "1326750"
     ],
     "matches": {
+      "1203540": {
+        "start": 6,
+        "length": 2,
+        "reading": "がいこう"
+      },
       "1203560": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "がいこうかん"
       },
       "1272110": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1326750": {
         "start": 25,
-        "length": 5
+        "length": 4,
+        "reading": "とりもっ"
+      },
+      "1437260": {
+        "start": 13,
+        "length": 1,
+        "reading": "てき"
       },
       "1484150": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ひみつ"
+      },
+      "1558050": {
+        "start": 11,
+        "length": 2,
+        "reading": "れきし"
       },
       "1558160": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "れきしてき"
+      },
+      "1580640": {
+        "start": 5,
+        "length": 1,
+        "reading": "じん"
       },
       "1583840": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ぶんしょ"
       },
       "1588410": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "うん"
+      },
+      "1983700": {
+        "start": 8,
+        "length": 1,
+        "reading": "かん"
       },
       "2850955": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "のるうぇーじん"
       }
     }
   },
@@ -1790,19 +2800,56 @@
     "matches": {
       "1243490": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぎんこう"
       },
       "1272110": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1405800": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "つづけ"
       },
       "1483150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      }
+    }
+  },
+  {
+    "id": "214680",
+    "original": "スタッフに交渉事がうまいのがいます。",
+    "en": [
+      {
+        "id": "51973",
+        "text": "We have a good negotiator on the staff."
+      }
+    ],
+    "indices": "スタッフ(#1069720) に 交渉[01] 事(こと) が 上手い[01]{うまい} の が 居る(いる)[01]{います}",
+    "vocabIds": [
+      "1272110",
+      "2860690",
+      "1313580"
+    ],
+    "matches": {
+      "1272110": {
+        "start": 5,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1313580": {
+        "start": 7,
+        "length": 1,
+        "reading": "ごと"
+      },
+      "2860690": {
+        "start": 5,
+        "length": 3,
+        "reading": "こうしょうごと"
       }
     }
   },
@@ -1819,50 +2866,71 @@
     "vocabIds": [
       "1561840",
       "1272110",
+      "1425750",
       "1425760",
+      "1322990",
       "1551710",
-      "1215790",
       "1289620",
       "1007860",
-      "1189280",
+      "1577100",
+      "1188270",
       "1536010"
     ],
     "matches": {
       "1007860": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "てん"
       },
-      "1189280": {
+      "1188270": {
         "start": 26,
-        "length": 3
-      },
-      "1215790": {
-        "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "なにか"
       },
       "1272110": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1289620": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "こんなん"
+      },
+      "1322990": {
+        "start": 14,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1425750": {
+        "start": 12,
+        "length": 2,
+        "reading": "ちゅうかい"
       },
       "1425760": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうかいしゃ"
       },
       "1536010": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       },
       "1551710": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "たちば"
       },
       "1561840": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ろんぶん"
+      },
+      "1577100": {
+        "start": 26,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -1878,16 +2946,24 @@
     "indices": "此の{この} 交渉[01] を 打ち切る{打ち切り}~ たい",
     "vocabIds": [
       "1272110",
-      "1408720"
+      "1408720",
+      "1633630"
     ],
     "matches": {
       "1272110": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1408720": {
         "start": 5,
-        "length": 6
+        "length": 4,
+        "reading": "うちきり"
+      },
+      "1633630": {
+        "start": 5,
+        "length": 4,
+        "reading": "うちきり"
       }
     }
   },
@@ -1907,42 +2983,229 @@
       "1272110",
       "1322990",
       "1236170",
-      "1605720",
-      "2451270",
-      "2026830"
+      "1605720"
     ],
     "matches": {
       "1165970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "いちばん"
       },
       "1236170": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ごういん"
       },
       "1272110": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1322990": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "しゃ"
       },
       "1562920": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "うできき"
       },
       "1605720": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうり"
+      }
+    }
+  },
+  {
+    "id": "229122",
+    "original": "イスラエル側の心変わりのために、中東和平交渉の構成国に変更があるかもしれません。",
+    "en": [
+      {
+        "id": "66480",
+        "text": "The makeup of Mideast peace talks may change due to a change of heart on the part of Israel."
+      }
+    ],
+    "indices": "以色列{イスラエル} 側(そば)[01] の 心変わり~ の 為に{ために} 中東~ 和平交渉~ の 構成 国[01] に 変更 が[01] 有る{ある} かも知れない{かもしれません}",
+    "vocabIds": [
+      "1581310",
+      "1360980",
+      "1425080",
+      "1562210",
+      "1562240",
+      "1272110",
+      "1279730",
+      "2858904",
+      "1592250",
+      "1511040"
+    ],
+    "matches": {
+      "1272110": {
+        "start": 20,
+        "length": 2,
+        "reading": "こうしょう"
       },
-      "2026830": {
-        "start": 24,
-        "length": 2
+      "1279730": {
+        "start": 23,
+        "length": 2,
+        "reading": "こうせい"
       },
-      "2451270": {
-        "start": 22,
-        "length": 2
+      "1360980": {
+        "start": 7,
+        "length": 4,
+        "reading": "こころがわり"
+      },
+      "1425080": {
+        "start": 16,
+        "length": 2,
+        "reading": "ちゅうとう"
+      },
+      "1511040": {
+        "start": 27,
+        "length": 2,
+        "reading": "へんこう"
+      },
+      "1562210": {
+        "start": 18,
+        "length": 2,
+        "reading": "わへい"
+      },
+      "1562240": {
+        "start": 18,
+        "length": 4,
+        "reading": "わへいこうしょう"
+      },
+      "1581310": {
+        "start": 5,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1592250": {
+        "start": 25,
+        "length": 1,
+        "reading": "こく"
+      },
+      "2858904": {
+        "start": 23,
+        "length": 3,
+        "reading": "こうせいこく"
+      }
+    }
+  },
+  {
+    "id": "1635935",
+    "original": "長い和平交渉を経て、現在の平和がある。",
+    "en": [
+      {
+        "id": "1636126",
+        "text": "The peace we have today is the result of lengthy peace talks."
+      }
+    ],
+    "vocabIds": [
+      "1429750",
+      "1562210",
+      "1562240",
+      "1272110",
+      "1251110",
+      "1956170",
+      "2648360",
+      "1263650",
+      "1508070"
+    ],
+    "matches": {
+      "1251110": {
+        "start": 7,
+        "length": 1,
+        "reading": "へ"
+      },
+      "1263650": {
+        "start": 10,
+        "length": 2,
+        "reading": "げんざい"
+      },
+      "1272110": {
+        "start": 4,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1429750": {
+        "start": 0,
+        "length": 2,
+        "reading": "ながい"
+      },
+      "1508070": {
+        "start": 13,
+        "length": 2,
+        "reading": "へいわ"
+      },
+      "1562210": {
+        "start": 2,
+        "length": 2,
+        "reading": "わへい"
+      },
+      "1562240": {
+        "start": 2,
+        "length": 4,
+        "reading": "わへいこうしょう"
+      },
+      "1956170": {
+        "start": 7,
+        "length": 1,
+        "reading": "へ"
+      },
+      "2648360": {
+        "start": 7,
+        "length": 2,
+        "reading": "へて"
+      }
+    }
+  },
+  {
+    "id": "1705675",
+    "original": "和平交渉がすでに秘密裡に開始されたそうです。",
+    "en": [
+      {
+        "id": "326514",
+        "text": "It is rumored that secret peace talks have already begun."
+      },
+      {
+        "id": "9056089",
+        "text": "It's rumored that secret peace talks have already begun."
+      }
+    ],
+    "vocabIds": [
+      "1562210",
+      "1562240",
+      "1272110",
+      "1484150",
+      "1202760"
+    ],
+    "matches": {
+      "1202760": {
+        "start": 12,
+        "length": 2,
+        "reading": "かいし"
+      },
+      "1272110": {
+        "start": 2,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1484150": {
+        "start": 8,
+        "length": 2,
+        "reading": "ひみつ"
+      },
+      "1562210": {
+        "start": 0,
+        "length": 2,
+        "reading": "わへい"
+      },
+      "1562240": {
+        "start": 0,
+        "length": 4,
+        "reading": "わへいこうしょう"
       }
     }
   },
@@ -1960,7 +3223,9 @@
       "1286980",
       "1548200",
       "2037700",
+      "1463770",
       "1464380",
+      "1508750",
       "1433240",
       "1418160",
       "1283330",
@@ -1968,65 +3233,101 @@
       "1532300",
       "1429990",
       "1272110",
+      "1419710",
       "1704990",
-      "1589060"
+      "1437260",
+      "1578850"
     ],
     "matches": {
       "1272110": {
         "start": 49,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1283330": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "こうかん"
       },
       "1286980": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こくひん"
       },
       "1362810": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "しんや"
       },
       "1414650": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "だいとうりょう"
       },
       "1418160": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "たんとう"
+      },
+      "1419710": {
+        "start": 52,
+        "length": 2,
+        "reading": "だんぞく"
       },
       "1429990": {
         "start": 42,
-        "length": 3
+        "length": 3,
+        "reading": "ちょうじかん"
       },
       "1433240": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "つうしょう"
+      },
+      "1437260": {
+        "start": 54,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1463770": {
+        "start": 21,
+        "length": 1,
+        "reading": "にち"
       },
       "1464380": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "にちべい"
+      },
+      "1508750": {
+        "start": 22,
+        "length": 1,
+        "reading": "べい"
       },
       "1532300": {
         "start": 35,
-        "length": 3
+        "length": 3,
+        "reading": "あけがた"
       },
       "1548200": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "らいにち"
       },
-      "1589060": {
+      "1578850": {
         "start": 56,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
       "1704990": {
         "start": 52,
-        "length": 3
+        "length": 3,
+        "reading": "だんぞくてき"
       },
       "2037700": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -2040,7 +3341,9 @@
       }
     ],
     "vocabIds": [
+      "1515730",
       "1515750",
+      "1220870",
       "1272110",
       "1375650",
       "1366160",
@@ -2050,37 +3353,55 @@
       "1515650"
     ],
     "matches": {
+      "1220870": {
+        "start": 7,
+        "length": 2,
+        "reading": "きかん"
+      },
       "1272110": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1316000": {
         "start": 29,
-        "length": 4
+        "length": 4,
+        "reading": "じかんぎれ"
       },
       "1366160": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "しんてん"
       },
       "1375650": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "せいか"
       },
       "1515650": {
         "start": 43,
-        "length": 3
+        "length": 2,
+        "reading": "ほうじ"
+      },
+      "1515730": {
+        "start": 5,
+        "length": 2,
+        "reading": "ほうどう"
       },
       "1515750": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "ほうどうきかん"
       },
       "1589600": {
         "start": 38,
-        "length": 4
+        "length": 3,
+        "reading": "おわっ"
       },
       "1722520": {
         "start": 34,
-        "length": 3
+        "length": 3,
+        "reading": "ものわかれ"
       }
     }
   },
@@ -2095,11 +3416,15 @@
     ],
     "vocabIds": [
       "1166510",
+      "1581180",
       "1941210",
+      "1311530",
       "1160790",
       "2015400",
       "1542690",
+      "1463770",
       "1464380",
+      "1508750",
       "1272110",
       "1321170",
       "1284550",
@@ -2107,79 +3432,322 @@
       "1259710",
       "1250600",
       "1376070",
+      "1215810",
       "1215850",
+      "1322990",
+      "1216890",
       "1861770",
       "1580640",
-      "2629050"
+      "1238680"
     ],
     "matches": {
       "1160790": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "いち"
       },
       "1166510": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いっぽう"
+      },
+      "1215810": {
+        "start": 41,
+        "length": 2,
+        "reading": "かんけい"
       },
       "1215850": {
         "start": 41,
-        "length": 3
+        "length": 3,
+        "reading": "かんけいしゃ"
+      },
+      "1216890": {
+        "start": 45,
+        "length": 2,
+        "reading": "ふくめ"
+      },
+      "1238680": {
+        "start": 52,
+        "length": 2,
+        "reading": "おどろか"
       },
       "1250600": {
         "start": 35,
-        "length": 3
+        "length": 2,
+        "reading": "かかげ"
       },
       "1259710": {
         "start": 31,
-        "length": 3
+        "length": 3,
+        "reading": "みだし"
       },
       "1272110": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "こうしょう"
       },
       "1284550": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ごうい"
+      },
+      "1311530": {
+        "start": 5,
+        "length": 1,
+        "reading": "し"
       },
       "1311870": {
         "start": 25,
-        "length": 3
+        "length": 2,
+        "reading": "いたっ"
       },
       "1321170": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "じっしつ"
+      },
+      "1322990": {
+        "start": 43,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1376070": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "せいふ"
+      },
+      "1463770": {
+        "start": 15,
+        "length": 1,
+        "reading": "にち"
       },
       "1464380": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "にちべい"
+      },
+      "1508750": {
+        "start": 16,
+        "length": 1,
+        "reading": "べい"
       },
       "1542690": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうかん"
       },
       "1580640": {
         "start": 50,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1581180": {
+        "start": 3,
+        "length": 2,
+        "reading": "ぜんこく"
       },
       "1861770": {
         "start": 47,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       },
       "1941210": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ぜんこくし"
       },
       "2015400": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "しゃ"
+      }
+    }
+  },
+  {
+    "id": "3927474",
+    "original": "FBI交渉人のダンは、リンダに話そうと試みた。",
+    "en": [
+      {
+        "id": "3927471",
+        "text": "Dan, an FBI negotiator, tried to talk to Linda."
+      }
+    ],
+    "vocabIds": [
+      "1272110",
+      "2079320",
+      "1580640",
+      "1562350",
+      "1312280",
+      "1312270"
+    ],
+    "matches": {
+      "1272110": {
+        "start": 3,
+        "length": 2,
+        "reading": "こうしょう"
       },
-      "2629050": {
-        "start": 52,
-        "length": 4
+      "1312270": {
+        "start": 19,
+        "length": 2,
+        "reading": "こころみ"
+      },
+      "1312280": {
+        "start": 19,
+        "length": 2,
+        "reading": "こころみ"
+      },
+      "1562350": {
+        "start": 15,
+        "length": 2,
+        "reading": "はなそ"
+      },
+      "1580640": {
+        "start": 5,
+        "length": 1,
+        "reading": "じん"
+      },
+      "2079320": {
+        "start": 3,
+        "length": 3,
+        "reading": "こうしょうじん"
+      }
+    }
+  },
+  {
+    "id": "12167599",
+    "original": "結婚前の性交渉についてどう思いますか？",
+    "en": [
+      {
+        "id": "6051888",
+        "text": "How do you feel about sex before marriage?"
+      }
+    ],
+    "vocabIds": [
+      "1254790",
+      "1392580",
+      "1375260",
+      "2551740",
+      "1272110",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1254790": {
+        "start": 0,
+        "length": 2,
+        "reading": "けっこん"
+      },
+      "1272110": {
+        "start": 5,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1375260": {
+        "start": 4,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1392580": {
+        "start": 2,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1589320": {
+        "start": 13,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 13,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "2551740": {
+        "start": 4,
+        "length": 3,
+        "reading": "せいこうしょう"
+      }
+    }
+  },
+  {
+    "id": "12167601",
+    "original": "婚前交渉についてどう思いますか？",
+    "en": [
+      {
+        "id": "6051888",
+        "text": "How do you feel about sex before marriage?"
+      }
+    ],
+    "vocabIds": [
+      "2414830",
+      "1935710",
+      "1272110",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1272110": {
+        "start": 2,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1589320": {
+        "start": 10,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 10,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1935710": {
+        "start": 0,
+        "length": 4,
+        "reading": "こんぜんこうしょう"
+      },
+      "2414830": {
+        "start": 0,
+        "length": 2,
+        "reading": "こんぜん"
+      }
+    }
+  },
+  {
+    "id": "13254647",
+    "original": "和平交渉はまた失敗しました。",
+    "en": [
+      {
+        "id": "326512",
+        "text": "The peace talks failed again."
+      }
+    ],
+    "vocabIds": [
+      "1562210",
+      "1562240",
+      "1272110",
+      "1320140"
+    ],
+    "matches": {
+      "1272110": {
+        "start": 2,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1320140": {
+        "start": 7,
+        "length": 2,
+        "reading": "しっぱい"
+      },
+      "1562210": {
+        "start": 0,
+        "length": 2,
+        "reading": "わへい"
+      },
+      "1562240": {
+        "start": 0,
+        "length": 4,
+        "reading": "わへいこうしょう"
       }
     }
   }

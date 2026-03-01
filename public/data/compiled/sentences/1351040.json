@@ -1,5 +1,38 @@
 [
   {
+    "id": "79565",
+    "original": "役に立たないものは省きなさい。",
+    "en": [
+      {
+        "id": "324153",
+        "text": "Leave out anything that is useless."
+      }
+    ],
+    "indices": "役に立たない 物(もの){もの} は 省く{省き} 為さい{なさい}",
+    "vocabIds": [
+      "1537980",
+      "1912970",
+      "1351040"
+    ],
+    "matches": {
+      "1351040": {
+        "start": 9,
+        "length": 2,
+        "reading": "はぶき"
+      },
+      "1537980": {
+        "start": 0,
+        "length": 4,
+        "reading": "やくにたた"
+      },
+      "1912970": {
+        "start": 0,
+        "length": 6,
+        "reading": "やくにたたない"
+      }
+    }
+  },
+  {
     "id": "81660",
     "original": "本のリストが長すぎるようだったら、外国の本は省いてください。",
     "en": [
@@ -10,32 +43,49 @@
     ],
     "indices": "本(ほん)[01] の リスト(#1141500) が 長い{長} 過ぎる(すぎる){すぎる} 様だ{ようだ} ったら[01] 外国 の 本(ほん)[01] は 省く{省いて} 下さい{ください}",
     "vocabIds": [
+      "1522150",
       "1011740",
+      "1429750",
+      "1429740",
       "1429800",
       "1203620",
-      "1522150",
       "1351040"
     ],
     "matches": {
       "1011740": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ほんの"
       },
       "1203620": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "がいこく"
       },
       "1351040": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "はぶい"
+      },
+      "1429740": {
+        "start": 6,
+        "length": 1,
+        "reading": "なが"
+      },
+      "1429750": {
+        "start": 6,
+        "length": 1,
+        "reading": "なが"
       },
       "1429800": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "ながすぎる"
       },
       "1522150": {
-        "start": 20,
-        "length": 1
+        "start": 0,
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -51,26 +101,87 @@
     "indices": "先生(せんせい)[01] は 本(ほん)[01] の 頁(ページ)[02]{ページ} の 練習問題 を 省く{省いた}",
     "vocabIds": [
       "1387990",
+      "1522150",
       "1011740",
+      "1559160",
       "1948810",
+      "1536010",
       "1351040"
     ],
     "matches": {
       "1011740": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ほんの"
       },
       "1351040": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "はぶい"
       },
       "1387990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
+      },
+      "1522150": {
+        "start": 3,
+        "length": 1,
+        "reading": "ほん"
+      },
+      "1536010": {
+        "start": 13,
+        "length": 2,
+        "reading": "もんだい"
+      },
+      "1559160": {
+        "start": 11,
+        "length": 2,
+        "reading": "れんしゅう"
       },
       "1948810": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "れんしゅうもんだい"
+      }
+    }
+  },
+  {
+    "id": "150619",
+    "original": "時間が短いので、プログラムからスピーチの一部を省かなければならない。",
+    "en": [
+      {
+        "id": "263938",
+        "text": "Time is short and we must omit some of the speeches from the program."
+      }
+    ],
+    "indices": "時間 が 短い ので プログラム から スピーチ 之(の)[01]{の} 一部[01] を 省く{省か} ねばならない{なければならない}",
+    "vocabIds": [
+      "1315920",
+      "1418620",
+      "1166180",
+      "1351040"
+    ],
+    "matches": {
+      "1166180": {
+        "start": 20,
+        "length": 2,
+        "reading": "いちぶ"
+      },
+      "1315920": {
+        "start": 0,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1351040": {
+        "start": 23,
+        "length": 2,
+        "reading": "はぶか"
+      },
+      "1418620": {
+        "start": 3,
+        "length": 2,
+        "reading": "みじかい"
       }
     }
   },
@@ -85,7 +196,10 @@
     ],
     "indices": "時を得た 一(いち) 針[07] は 九 針[07] 之(の)[01]{の} 手間 を 省く",
     "vocabIds": [
+      "1315840",
       "2402940",
+      "1588760",
+      "1454490",
       "1160790",
       "1366210",
       "1578150",
@@ -95,27 +209,87 @@
     "matches": {
       "1160790": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いち"
+      },
+      "1315840": {
+        "start": 0,
+        "length": 1,
+        "reading": "とき"
       },
       "1327410": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1351040": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "はぶく"
       },
       "1366210": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はり"
+      },
+      "1454490": {
+        "start": 2,
+        "length": 1,
+        "reading": "え"
       },
       "1578150": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "きゅう"
+      },
+      "1588760": {
+        "start": 2,
+        "length": 1,
+        "reading": "え"
       },
       "2402940": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "ときをえた"
+      }
+    }
+  },
+  {
+    "id": "151194",
+    "original": "紙面が足りなくてこの問題を省かなければならなかった。",
+    "en": [
+      {
+        "id": "263362",
+        "text": "I had to leave out this problem for lack of space."
+      }
+    ],
+    "indices": "紙面 が 足りる[01]{足りなくて} 此の{この} 問題 を 省く{省か} ねばならない{なければならなかった}",
+    "vocabIds": [
+      "1311620",
+      "1404740",
+      "1536010",
+      "1351040"
+    ],
+    "matches": {
+      "1311620": {
+        "start": 0,
+        "length": 2,
+        "reading": "しめん"
+      },
+      "1351040": {
+        "start": 13,
+        "length": 2,
+        "reading": "はぶか"
+      },
+      "1404740": {
+        "start": 3,
+        "length": 2,
+        "reading": "たり"
+      },
+      "1536010": {
+        "start": 10,
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -133,24 +307,34 @@
       "1295530",
       "1343100",
       "1351040",
+      "1279680",
       "1866610"
     ],
     "matches": {
+      "1279680": {
+        "start": 8,
+        "length": 2,
+        "reading": "かまわ"
+      },
       "1295530": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "こまかい"
       },
       "1343100": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ところ"
       },
       "1351040": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はぶい"
       },
       "1866610": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "かまわない"
       }
     }
   },
@@ -173,19 +357,23 @@
     "matches": {
       "1220810": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1351040": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はぶく"
       },
       "1861770": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       },
       "2825953": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひとで"
       }
     }
   },
@@ -209,23 +397,28 @@
     "matches": {
       "1315920": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1327410": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1351040": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "はぶい"
       },
       "1366770": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1861770": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -249,23 +442,28 @@
     "matches": {
       "1315920": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じかん"
       },
       "1327410": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1351040": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "はぶい"
       },
       "1607050": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       },
       "1861770": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -289,23 +487,94 @@
     "matches": {
       "1218920": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きぐ"
       },
       "1326160": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅふ"
       },
       "1327410": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "てま"
       },
       "1351040": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はぶく"
       },
       "1512610": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "べんり"
+      }
+    }
+  },
+  {
+    "id": "220635",
+    "original": "この単語を省きなさい。",
+    "en": [
+      {
+        "id": "57957",
+        "text": "Leave out this word."
+      }
+    ],
+    "indices": "此の{この} 単語 を 省く{省き} 為さい{なさい}",
+    "vocabIds": [
+      "1417330",
+      "1351040"
+    ],
+    "matches": {
+      "1351040": {
+        "start": 5,
+        "length": 2,
+        "reading": "はぶき"
+      },
+      "1417330": {
+        "start": 2,
+        "length": 2,
+        "reading": "たんご"
+      }
+    }
+  },
+  {
+    "id": "222461",
+    "original": "この機械は多くの労力を省いてくれる。",
+    "en": [
+      {
+        "id": "59789",
+        "text": "This machine saves us a lot of labor."
+      }
+    ],
+    "indices": "此の{この} 機械 は 多く の 労力 を 省く{省いて} 呉れる{くれる}",
+    "vocabIds": [
+      "1220810",
+      "1861770",
+      "1560650",
+      "1351040"
+    ],
+    "matches": {
+      "1220810": {
+        "start": 2,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1351040": {
+        "start": 11,
+        "length": 2,
+        "reading": "はぶい"
+      },
+      "1560650": {
+        "start": 8,
+        "length": 2,
+        "reading": "ろうりょく"
+      },
+      "1861770": {
+        "start": 5,
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -327,15 +596,18 @@
     "matches": {
       "1351040": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "はぶく"
       },
       "1861770": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おおく"
       },
       "2825953": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ひとで"
       }
     }
   },
@@ -356,11 +628,13 @@
     "matches": {
       "1351040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "はぶく"
       },
       "2270390": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "こう"
       }
     }
   },
@@ -380,20 +654,29 @@
     "vocabIds": [
       "1221130",
       "1351040",
+      "1153670",
       "1913180"
     ],
     "matches": {
+      "1153670": {
+        "start": 9,
+        "length": 2,
+        "reading": "やすく"
+      },
       "1221130": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       },
       "1351040": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "はぶい"
       },
       "1913180": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "やすく"
       }
     }
   }

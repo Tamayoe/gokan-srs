@@ -1,5 +1,38 @@
 [
   {
+    "id": "76050",
+    "original": "実はこれで４度目の質問になります。",
+    "en": [
+      {
+        "id": "327668",
+        "text": "Actually this will be my fourth question."
+      }
+    ],
+    "indices": "実は 此れ[01]{これ} で(#2028980) 度目~ 之(の)[01]{の} 質問 になる[01]{になります}",
+    "vocabIds": [
+      "1320830",
+      "2120810",
+      "1320760"
+    ],
+    "matches": {
+      "1320760": {
+        "start": 9,
+        "length": 2,
+        "reading": "しつもん"
+      },
+      "1320830": {
+        "start": 0,
+        "length": 2,
+        "reading": "じつは"
+      },
+      "2120810": {
+        "start": 6,
+        "length": 2,
+        "reading": "どめ"
+      }
+    }
+  },
+  {
     "id": "85701",
     "original": "飛行機に乗るのはこれが２度目です。",
     "en": [
@@ -17,15 +50,18 @@
     "matches": {
       "1355120": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "のる"
       },
       "1485470": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
       },
       "2120810": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "どめ"
       }
     }
   },
@@ -42,20 +78,29 @@
     "vocabIds": [
       "1483150",
       "2120810",
-      "1312280"
+      "1312280",
+      "1312270"
     ],
     "matches": {
+      "1312270": {
+        "start": 7,
+        "length": 2,
+        "reading": "こころみ"
+      },
       "1312280": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "こころみ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2120810": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "どめ"
       }
     }
   },
@@ -77,15 +122,18 @@
     "matches": {
       "1375690": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "2120810": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "どめ"
       }
     }
   },
@@ -107,15 +155,57 @@
     "matches": {
       "1198180": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "2120810": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "どめ"
+      }
+    }
+  },
+  {
+    "id": "121812",
+    "original": "年寄りは二度目の子ども。",
+    "en": [
+      {
+        "id": "282193",
+        "text": "Once a man, twice a child."
+      }
+    ],
+    "indices": "年寄り[01] は 二度目 の 子供{子ども}",
+    "vocabIds": [
+      "1598750",
+      "1461140",
+      "1729830",
+      "2120810"
+    ],
+    "matches": {
+      "1461140": {
+        "start": 4,
+        "length": 1,
+        "reading": "に"
+      },
+      "1598750": {
+        "start": 0,
+        "length": 3,
+        "reading": "としより"
+      },
+      "1729830": {
+        "start": 4,
+        "length": 3,
+        "reading": "にどめ"
+      },
+      "2120810": {
+        "start": 5,
+        "length": 2,
+        "reading": "どめ"
       }
     }
   },
@@ -142,19 +232,23 @@
     "matches": {
       "1206070": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "さめ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1536930": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やちゅう"
       },
       "2120810": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "どめ"
       }
     }
   },
@@ -173,28 +267,102 @@
       "1312350",
       "2120810",
       "1428240",
-      "1172900"
+      "1172900",
+      "1533130"
     ],
     "matches": {
       "1172830": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "うんてん"
       },
       "1172900": {
         "start": 12,
-        "length": 4
+        "length": 4,
+        "reading": "うんてんめんきょ"
       },
       "1312350": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1428240": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうせん"
+      },
+      "1533130": {
+        "start": 14,
+        "length": 2,
+        "reading": "めんきょ"
       },
       "2120810": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "どめ"
+      }
+    }
+  },
+  {
+    "id": "192328",
+    "original": "レポートを提出する前に必ずもう一度目を通しなさい。",
+    "en": [
+      {
+        "id": "29491",
+        "text": "Be sure to look over your paper again before you hand it in."
+      }
+    ],
+    "indices": "レポート を 提出[01] 為る(する){する} 前(まえ) に 必ず もう一度 目を通す{目を通し} 為さい{なさい}",
+    "vocabIds": [
+      "1436410",
+      "1392580",
+      "1392590",
+      "1487400",
+      "1160790",
+      "2120810",
+      "1432900",
+      "1896920"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 15,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1392580": {
+        "start": 9,
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1392590": {
+        "start": 9,
+        "length": 2,
+        "reading": "まえに"
+      },
+      "1432900": {
+        "start": 19,
+        "length": 2,
+        "reading": "とおし"
+      },
+      "1436410": {
+        "start": 5,
+        "length": 2,
+        "reading": "ていしゅつ"
+      },
+      "1487400": {
+        "start": 11,
+        "length": 2,
+        "reading": "かならず"
+      },
+      "1896920": {
+        "start": 19,
+        "length": 2,
+        "reading": "とおし"
+      },
+      "2120810": {
+        "start": 16,
+        "length": 2,
+        "reading": "どめ"
       }
     }
   },
@@ -218,23 +386,28 @@
     "matches": {
       "1241490": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きんえん"
       },
       "1312270": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "こころみ"
       },
       "1320140": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1419990": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "2120810": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "どめ"
       }
     }
   },
@@ -249,7 +422,9 @@
     ],
     "indices": "其の[01]{その} 指揮者 は 此の{この} 二度目{２度目} の 延期 に因って{によって} 本当に 不安 になる[01]{になった}",
     "vocabIds": [
+      "1309700",
       "1309720",
+      "1322990",
       "2120810",
       "1176430",
       "1611580",
@@ -258,23 +433,38 @@
     "matches": {
       "1176430": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "えんき"
+      },
+      "1309700": {
+        "start": 2,
+        "length": 2,
+        "reading": "しき"
       },
       "1309720": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "しきしゃ"
+      },
+      "1322990": {
+        "start": 4,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1491150": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "ふあん"
       },
       "1611580": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "ほんとうに"
       },
       "2120810": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "どめ"
       }
     }
   },
@@ -296,15 +486,68 @@
     "matches": {
       "1229840": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "ない"
       },
       "1351510": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しょうげき"
       },
       "2120810": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "どめ"
+      }
+    }
+  },
+  {
+    "id": "10540400",
+    "original": "「三度目の正直になるか？ならないか？」「ブブー。外れ。なりませんでした。悪しからず」",
+    "en": [
+      {
+        "id": "11282108",
+        "text": "\"Third time's the charm? No?\" \"Err err. Wrong. Guess not. Sorry.\""
+      }
+    ],
+    "vocabIds": [
+      "1579350",
+      "2140160",
+      "2120810",
+      "1377590",
+      "1203300",
+      "1151300"
+    ],
+    "matches": {
+      "1151300": {
+        "start": 36,
+        "length": 5,
+        "reading": "あしからず"
+      },
+      "1203300": {
+        "start": 24,
+        "length": 2,
+        "reading": "はずれ"
+      },
+      "1377590": {
+        "start": 5,
+        "length": 2,
+        "reading": "しょうじき"
+      },
+      "1579350": {
+        "start": 1,
+        "length": 1,
+        "reading": "さん"
+      },
+      "2120810": {
+        "start": 2,
+        "length": 2,
+        "reading": "どめ"
+      },
+      "2140160": {
+        "start": 1,
+        "length": 6,
+        "reading": "さんどめのしょうじき"
       }
     }
   }

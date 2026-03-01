@@ -12,70 +12,74 @@
     "vocabIds": [
       "1483150",
       "1237820",
-      "1597320",
-      "1207500",
-      "1275640",
-      "1495750"
+      "1584090",
+      "1219560",
+      "1219550",
+      "1207500"
     ],
     "matches": {
       "1207500": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "がく"
+      },
+      "1219550": {
+        "start": 7,
+        "length": 2,
+        "reading": "よせ"
+      },
+      "1219560": {
+        "start": 7,
+        "length": 2,
+        "reading": "よせ"
       },
       "1237820": {
         "start": 3,
-        "length": 1
-      },
-      "1275640": {
-        "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
-      "1495750": {
-        "start": 14,
-        "length": 2
-      },
-      "1597320": {
+      "1584090": {
         "start": 5,
-        "length": 5
+        "length": 2,
+        "reading": "いだき"
       }
     }
   },
   {
-    "id": "75472",
-    "original": "なによ！出来ないの？この度胸なし！腰抜けッ！",
+    "id": "76837",
+    "original": "えっへんと大いばりでアリスは胸を張った。",
     "en": [
       {
-        "id": "328246",
-        "text": "What? You can't do it? You coward! Chicken!"
+        "id": "326883",
+        "text": "\"A-hem!\" Alice boasted, puffing up with pride."
       }
     ],
-    "indices": "何(なに)[06]{なに}~ よ 出来る{出来ない} の 此の{この} 度胸 無し{なし} 腰抜け{腰抜けッ}~",
+    "indices": "えっへん~ と 大威張り{大いばり}~ で(#2028980) は 胸を張る{胸を張った}~",
     "vocabIds": [
-      "1340450",
-      "1004740",
+      "2082450",
       "1237820",
-      "1288450"
+      "1427900"
     ],
     "matches": {
-      "1004740": {
-        "start": 10,
-        "length": 3
-      },
       "1237820": {
-        "start": 13,
-        "length": 1
+        "start": 14,
+        "length": 1,
+        "reading": "むね"
       },
-      "1288450": {
-        "start": 17,
-        "length": 3
+      "1427900": {
+        "start": 16,
+        "length": 2,
+        "reading": "はっ"
       },
-      "1340450": {
-        "start": 4,
-        "length": 4
+      "2082450": {
+        "start": 5,
+        "length": 1,
+        "reading": "だい"
       }
     }
   },
@@ -91,21 +95,24 @@
     "indices": "名前 を 呼ぶ{呼ばれて} 胸 が ドキドキ{どきどき} 為る(する){した}",
     "vocabIds": [
       "1531710",
-      "1631030",
+      "1266440",
       "1237820"
     ],
     "matches": {
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1266440": {
+        "start": 3,
+        "length": 2,
+        "reading": "よば"
       },
       "1531710": {
         "start": 0,
-        "length": 2
-      },
-      "1631030": {
-        "start": 3,
-        "length": 4
+        "length": 2,
+        "reading": "なまえ"
       }
     }
   },
@@ -120,32 +127,106 @@
     ],
     "indices": "亡き母 の 写真 を 見る 度に{たびに} 胸 に 熱い 物(もの){もの} が 込み上げる[01]{込み上げて} 来る(くる){くる}",
     "vocabIds": [
+      "1518460",
       "1898960",
+      "1514990",
       "1321900",
       "1259290",
       "1237820",
-      "2606980"
+      "1467720"
     ],
     "matches": {
       "1237820": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1259290": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "みる"
       },
       "1321900": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しゃしん"
+      },
+      "1467720": {
+        "start": 15,
+        "length": 2,
+        "reading": "あつい"
+      },
+      "1514990": {
+        "start": 2,
+        "length": 1,
+        "reading": "はは"
+      },
+      "1518460": {
+        "start": 0,
+        "length": 2,
+        "reading": "なき"
       },
       "1898960": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "なきはは"
+      }
+    }
+  },
+  {
+    "id": "82786",
+    "original": "母親は赤ん坊を左胸に抱く傾向がある。",
+    "en": [
+      {
+        "id": "320930",
+        "text": "A mother tends to hold her baby on the left."
+      }
+    ],
+    "indices": "母親 は 赤ん坊 を 左(ひだり)[01] 胸 に 抱く(#1584090) 傾向 が[01] 有る{ある}",
+    "vocabIds": [
+      "1515120",
+      "1383310",
+      "1290800",
+      "2660330",
+      "1237820",
+      "1584090",
+      "1249470"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 8,
+        "length": 1,
+        "reading": "むね"
       },
-      "2606980": {
-        "start": 15,
-        "length": 10
+      "1249470": {
+        "start": 12,
+        "length": 2,
+        "reading": "けいこう"
+      },
+      "1290800": {
+        "start": 7,
+        "length": 1,
+        "reading": "ひだり"
+      },
+      "1383310": {
+        "start": 3,
+        "length": 3,
+        "reading": "あかんぼう"
+      },
+      "1515120": {
+        "start": 0,
+        "length": 2,
+        "reading": "ははおや"
+      },
+      "1584090": {
+        "start": 10,
+        "length": 2,
+        "reading": "いだく"
+      },
+      "2660330": {
+        "start": 7,
+        "length": 2,
+        "reading": "ひだりむね"
       }
     }
   },
@@ -168,19 +249,23 @@
     "matches": {
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1307770": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1515120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
       },
       "1516320": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "だきしめ"
       }
     }
   },
@@ -203,19 +288,23 @@
     "matches": {
       "1204300": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "せき"
       },
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1450890": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ずつう"
       },
       "1583720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かぜ"
       }
     }
   },
@@ -234,28 +323,102 @@
       "1348050",
       "1311110",
       "1237820",
-      "2002300"
+      "2002300",
+      "1315840"
     ],
     "matches": {
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1315840": {
+        "start": 22,
+        "length": 1,
+        "reading": "とき"
       },
       "1348050": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こごと"
       },
       "1497610": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "2002300": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "そのとき"
+      }
+    }
+  },
+  {
+    "id": "85533",
+    "original": "美代子は随分長い間片想いを続けていた。さぞかし胸を痛めていたことだろう。",
+    "en": [
+      {
+        "id": "318180",
+        "text": "Miyoko carried a torch so long, I think it gave her heartburn."
+      }
+    ],
+    "indices": "は 随分[01] 長い間 片思い{片想い} を 続ける{続けていた} 嘸かし{さぞかし} 胸 を 痛める(いためる){痛めていた} 事(こと){こと} だろう",
+    "vocabIds": [
+      "1372800",
+      "1429750",
+      "1429760",
+      "1215230",
+      "1405800",
+      "2768100",
+      "1237820",
+      "1432720"
+    ],
+    "matches": {
+      "1215230": {
+        "start": 8,
+        "length": 1,
+        "reading": "ま"
+      },
+      "1237820": {
+        "start": 23,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1372800": {
+        "start": 4,
+        "length": 2,
+        "reading": "ずいぶん"
+      },
+      "1405800": {
+        "start": 13,
+        "length": 2,
+        "reading": "つづけ"
+      },
+      "1429750": {
+        "start": 6,
+        "length": 2,
+        "reading": "ながい"
+      },
+      "1429760": {
+        "start": 6,
+        "length": 3,
+        "reading": "ながいま"
+      },
+      "1432720": {
+        "start": 25,
+        "length": 2,
+        "reading": "いため"
+      },
+      "2768100": {
+        "start": 13,
+        "length": 3,
+        "reading": "つづけて"
       }
     }
   },
@@ -276,11 +439,13 @@
     "matches": {
       "1237820": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1590550": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしみ"
       }
     }
   },
@@ -296,6 +461,7 @@
     "indices": "悲しみ が 彼(かれ)[01]{彼の} 胸 に 貫く{貫いた}",
     "vocabIds": [
       "1590550",
+      "1483070",
       "1000420",
       "1237820",
       "1215070"
@@ -303,19 +469,28 @@
     "matches": {
       "1000420": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1215070": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "つらぬい"
       },
       "1237820": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
       },
       "1590550": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしみ"
       }
     }
   },
@@ -335,32 +510,50 @@
       "1600720",
       "1591430",
       "1237820",
-      "1165670"
+      "1160790",
+      "1165670",
+      "2019640"
     ],
     "matches": {
+      "1160790": {
+        "start": 14,
+        "length": 1,
+        "reading": "いち"
+      },
       "1165670": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いちはい"
       },
       "1237820": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589350": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "1591430": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "きもち"
       },
       "1600720": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "はげしい"
+      },
+      "2019640": {
+        "start": 15,
+        "length": 1,
+        "reading": "はい"
       }
     }
   },
@@ -378,6 +571,7 @@
       "1483150",
       "1496480",
       "1589340",
+      "1414340",
       "2018350",
       "1237820",
       "1483980"
@@ -385,27 +579,38 @@
     "matches": {
       "1237820": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1414340": {
+        "start": 9,
+        "length": 2,
+        "reading": "たいせつ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483980": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "ひめ"
       },
       "1496480": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "おっと"
       },
       "1589340": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "おもいで"
       },
       "2018350": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "たいせつに"
       }
     }
   },
@@ -428,19 +633,23 @@
     "matches": {
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483980": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "ひめ"
       },
       "1590550": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしみ"
       }
     }
   },
@@ -465,27 +674,33 @@
     "matches": {
       "1237820": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1310730": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "しん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483980": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "ひめ"
       },
       "1496480": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "おっと"
       },
       "1589340": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "おもいで"
       }
     }
   },
@@ -510,27 +725,33 @@
     "matches": {
       "1237820": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1307630": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "あね"
       },
       "1310730": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "しん"
       },
       "1420400": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1590550": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "かなしみ"
       }
     }
   },
@@ -547,25 +768,23 @@
     "vocabIds": [
       "1483150",
       "1237820",
-      "1470970",
-      "1076650"
+      "1471040"
     ],
     "matches": {
-      "1076650": {
-        "start": 6,
-        "length": 1
-      },
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
-      "1470970": {
+      "1471040": {
         "start": 5,
-        "length": 1
+        "length": 3,
+        "reading": "なみうた"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -582,30 +801,29 @@
     "vocabIds": [
       "1483150",
       "1237820",
-      "2829760",
-      "1311530",
+      "1327720",
       "1456360"
     ],
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
-      "1311530": {
-        "start": 16,
-        "length": 1
+      "1327720": {
+        "start": 15,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1456360": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "よん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
-      },
-      "2829760": {
-        "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -630,27 +848,33 @@
     "matches": {
       "1169320": {
         "start": 10,
-        "length": 6
+        "length": 6,
+        "reading": "ひっくりかえる"
       },
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1360770": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しんぞう"
       },
       "1423310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1589320": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "おもい"
       }
     }
   },
@@ -673,19 +897,56 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1307850": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1516320": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "だきしめ"
+      }
+    }
+  },
+  {
+    "id": "90615",
+    "original": "彼女は喜びで胸がいっぱいになった。",
+    "en": [
+      {
+        "id": "313097",
+        "text": "Her heart was filled with joy."
+      }
+    ],
+    "indices": "彼女[01] は 喜び で(#2028980) 胸がいっぱい{胸がいっぱいになった}",
+    "vocabIds": [
+      "1483150",
+      "1606140",
+      "1237820"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 6,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1606140": {
+        "start": 3,
+        "length": 2,
+        "reading": "よろこび"
       }
     }
   },
@@ -709,23 +970,28 @@
     "matches": {
       "1237820": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1318610": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483980": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "ひめ"
       },
       "1484150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひみつ"
       }
     }
   },
@@ -748,19 +1014,23 @@
     "matches": {
       "1237820": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483980": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "ひめ"
       },
       "1484150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひみつ"
       }
     }
   },
@@ -779,33 +1049,39 @@
       "1420400",
       "1591110",
       "1237820",
-      "1427760",
+      "1427890",
       "1229840"
     ],
     "matches": {
       "1229840": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "ない"
       },
       "1237820": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1420400": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
-      "1427760": {
+      "1427890": {
         "start": 15,
-        "length": 2
+        "length": 5,
+        "reading": "はりさけん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1591110": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -828,19 +1104,23 @@
     "matches": {
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1307770": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1516320": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "だきしめ"
       }
     }
   },
@@ -863,19 +1143,68 @@
     "matches": {
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1307770": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1584090": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "だい"
+      }
+    }
+  },
+  {
+    "id": "93816",
+    "original": "彼女の話を聞いて胸が痛んだ。",
+    "en": [
+      {
+        "id": "309891",
+        "text": "I felt sorry for her when I heard her story."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 話(はなし)[01] を 聞く{聞いて} 胸 が 痛む[01]{痛んだ}",
+    "vocabIds": [
+      "1483150",
+      "1600900",
+      "1591110",
+      "1237820",
+      "1432710"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 8,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1432710": {
+        "start": 10,
+        "length": 2,
+        "reading": "いたん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1591110": {
+        "start": 5,
+        "length": 2,
+        "reading": "きい"
+      },
+      "1600900": {
+        "start": 3,
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -892,20 +1221,35 @@
     "vocabIds": [
       "1483150",
       "1237820",
-      "2402460"
+      "1844780",
+      "2402460",
+      "1408810"
     ],
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1408810": {
+        "start": 8,
+        "length": 2,
+        "reading": "うつ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1844780": {
+        "start": 5,
+        "length": 2,
+        "reading": "はやがね"
       },
       "2402460": {
         "start": 5,
-        "length": 5
+        "length": 5,
+        "reading": "はやがねをうつ"
       }
     }
   },
@@ -928,19 +1272,23 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1538445": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おどっ"
       },
       "1606140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "よろこび"
       }
     }
   },
@@ -962,15 +1310,18 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1606140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "よろこび"
       }
     }
   },
@@ -988,24 +1339,91 @@
       "1483150",
       "1237820",
       "1606140",
-      "1167610"
+      "1167610",
+      "1167600"
     ],
     "matches": {
+      "1167600": {
+        "start": 8,
+        "length": 2,
+        "reading": "あふれ"
+      },
       "1167610": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "あふれ"
       },
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1606140": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "よろこび"
+      }
+    }
+  },
+  {
+    "id": "94513",
+    "original": "彼女の胸の内に野心の火がめらめらと燃えていた。",
+    "en": [
+      {
+        "id": "309193",
+        "text": "The fire of ambition burned within her."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 胸 の 内(うち) に 野心 の 火(ひ) が めらめら{めらめらと} 燃える{燃えていた}",
+    "vocabIds": [
+      "1483150",
+      "1237820",
+      "2840953",
+      "2098290",
+      "1537430",
+      "1193610",
+      "1469570"
+    ],
+    "matches": {
+      "1193610": {
+        "start": 10,
+        "length": 1,
+        "reading": "ひ"
+      },
+      "1237820": {
+        "start": 3,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1469570": {
+        "start": 17,
+        "length": 2,
+        "reading": "もえ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1537430": {
+        "start": 7,
+        "length": 2,
+        "reading": "やしん"
+      },
+      "2098290": {
+        "start": 5,
+        "length": 1,
+        "reading": "うち"
+      },
+      "2840953": {
+        "start": 3,
+        "length": 3,
+        "reading": "むねのうち"
       }
     }
   },
@@ -1022,20 +1440,68 @@
     "vocabIds": [
       "1483150",
       "1237820",
-      "1867480"
+      "1212380",
+      "1867480",
+      "1469320"
     ],
     "matches": {
+      "1212380": {
+        "start": 5,
+        "length": 2,
+        "reading": "かんしゃ"
+      },
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1469320": {
+        "start": 8,
+        "length": 1,
+        "reading": "ねん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1867480": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "かんしゃのねん"
+      }
+    }
+  },
+  {
+    "id": "94643",
+    "original": "彼女の愛情がしみじみ胸にこたえた。",
+    "en": [
+      {
+        "id": "309062",
+        "text": "Her love touched my heart deeply."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 愛情 が 泌み泌み[01]{しみじみ} 胸 に 応える{こたえた}",
+    "vocabIds": [
+      "1483150",
+      "1150860",
+      "1237820"
+    ],
+    "matches": {
+      "1150860": {
+        "start": 3,
+        "length": 2,
+        "reading": "あいじょう"
+      },
+      "1237820": {
+        "start": 10,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -1053,24 +1519,40 @@
       "1483150",
       "1365250",
       "1237820",
-      "1165670"
+      "1160790",
+      "1165670",
+      "2019640"
     ],
     "matches": {
+      "1160790": {
+        "start": 11,
+        "length": 1,
+        "reading": "いち"
+      },
       "1165670": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いちはい"
       },
       "1237820": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1365250": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しんせつ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "2019640": {
+        "start": 12,
+        "length": 1,
+        "reading": "はい"
       }
     }
   },
@@ -1092,15 +1574,18 @@
     "matches": {
       "1198180": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あう"
       },
       "1237820": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -1125,27 +1610,33 @@
     "matches": {
       "1219910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きぼう"
       },
       "1237820": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1313670": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "じぎょう"
       },
       "1354940": {
         "start": 22,
-        "length": 5
+        "length": 4,
+        "reading": "のりだし"
       },
       "1361490": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -1169,23 +1660,28 @@
     "matches": {
       "1237820": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1318610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483980": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "ひめ"
       },
       "1484150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひみつ"
       }
     }
   },
@@ -1207,24 +1703,34 @@
       "1483070",
       "1457040",
       "1237820",
-      "1587300"
+      "1587300",
+      "1333330"
     ],
     "matches": {
       "1237820": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1333330": {
+        "start": 9,
+        "length": 2,
+        "reading": "おそわ"
       },
       "1457040": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とつぜん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1587300": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       }
     }
   },
@@ -1243,28 +1749,39 @@
       "1237820",
       "1580260",
       "1333500",
+      "1269320",
       "2640160"
     ],
     "matches": {
       "1237820": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1269320": {
+        "start": 12,
+        "length": 1,
+        "reading": "ご"
       },
       "1333500": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1580260": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "きず"
       },
       "2640160": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ごに"
       }
     }
   },
@@ -1282,24 +1799,34 @@
       "1483070",
       "1237820",
       "1592760",
-      "1206050"
+      "1206050",
+      "1206040"
     ],
     "matches": {
+      "1206040": {
+        "start": 7,
+        "length": 2,
+        "reading": "おぼえ"
+      },
       "1206050": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "おぼえ"
       },
       "1237820": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1592760": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "げきつう"
       }
     }
   },
@@ -1323,23 +1850,28 @@
     "matches": {
       "1237820": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1318610": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1420400": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1420470": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1354,6 +1886,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 話(はなし) は 胸 に 泌み泌み[01]{しみじみ} 応える{こたえた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1600900",
       "1237820"
@@ -1361,15 +1894,215 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1237820": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1600900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
+      }
+    }
+  },
+  {
+    "id": "116527",
+    "original": "彼の忠告が私の胸にこたえた。",
+    "en": [
+      {
+        "id": "287142",
+        "text": "His advice came home to me."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 忠告 が 私(わたし)[01]{私の} 胸 に 応える{こたえた}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1426140",
+      "1311110",
+      "1237820"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1237820": {
+        "start": 7,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1311110": {
+        "start": 5,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1426140": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちゅうこく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "116880",
+    "original": "彼の食べ方といったら、胸が悪くなるね。",
+    "en": [
+      {
+        "id": "286788",
+        "text": "Speaking of his eating habits, they're revolting aren't they?"
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 食べ方~ と 言う{いったら} 胸が悪くなる ね(#2029080)[01]",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1358280",
+      "1358370",
+      "1516930",
+      "1237820",
+      "2013140",
+      "1151260",
+      "2691760"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1151260": {
+        "start": 13,
+        "length": 2,
+        "reading": "わるく"
+      },
+      "1237820": {
+        "start": 11,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1358280": {
+        "start": 2,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1358370": {
+        "start": 2,
+        "length": 3,
+        "reading": "たべかた"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1516930": {
+        "start": 4,
+        "length": 1,
+        "reading": "かた"
+      },
+      "2013140": {
+        "start": 11,
+        "length": 6,
+        "reading": "むねがわるくなる"
+      },
+      "2691760": {
+        "start": 13,
+        "length": 4,
+        "reading": "わるくなる"
+      }
+    }
+  },
+  {
+    "id": "117510",
+    "original": "彼の言葉はぼくの胸にこたえた。",
+    "en": [
+      {
+        "id": "286153",
+        "text": "His words went to my heart."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 言葉[02] は 僕(ぼく)[01]{ぼく} の 胸 に 応える{こたえた}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1264540",
+      "1237820"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1237820": {
+        "start": 8,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1264540": {
+        "start": 2,
+        "length": 2,
+        "reading": "ことば"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "117534",
+    "original": "彼の言葉が胸にこたえた。",
+    "en": [
+      {
+        "id": "286130",
+        "text": "His remarks came home to me."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 言葉[02] が 胸 に 応える{こたえた}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1264540",
+      "1237820"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1237820": {
+        "start": 5,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1264540": {
+        "start": 2,
+        "length": 2,
+        "reading": "ことば"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1384,6 +2117,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 胸 は 期待 に 弾む[02]{弾んだ}~",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1237820",
       "1220570",
@@ -1392,19 +2126,77 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1220570": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きたい"
       },
       "1237820": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1419400": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "はずん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "124711",
+    "original": "電話で良の声を聞いたら胸がいっぱいになった。",
+    "en": [
+      {
+        "id": "279282",
+        "text": "I got all choked up when I heard the voice of Ryo over the telephone."
+      },
+      {
+        "id": "525764",
+        "text": "I got all choked up when I heard Ryo's voice on the telephone."
+      }
+    ],
+    "indices": "電話 で(#2028980) 良 の 声 を 聞く{聞いたら} 胸がいっぱいになる{胸がいっぱいになった}~",
+    "vocabIds": [
+      "1443840",
+      "1957070",
+      "1380440",
+      "1591110",
+      "1237820"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 11,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1380440": {
+        "start": 5,
+        "length": 1,
+        "reading": "こえ"
+      },
+      "1443840": {
+        "start": 0,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1591110": {
+        "start": 7,
+        "length": 2,
+        "reading": "きい"
+      },
+      "1957070": {
+        "start": 3,
+        "length": 1,
+        "reading": "りょう"
       }
     }
   },
@@ -1423,6 +2215,8 @@
       "1303280",
       "1514930",
       "1259290",
+      "2256270",
+      "1483070",
       "1000420",
       "1237820",
       "1432710"
@@ -1430,31 +2224,105 @@
     "matches": {
       "1000420": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1237820": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1259290": {
         "start": 10,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1303280": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "みじめ"
       },
       "1404390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "むすこ"
       },
       "1432710": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "いたん"
+      },
+      "1483070": {
+        "start": 12,
+        "length": 1,
+        "reading": "かれ"
       },
       "1514930": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "くらし"
+      },
+      "2256270": {
+        "start": 10,
+        "length": 1,
+        "reading": "み"
+      }
+    }
+  },
+  {
+    "id": "141292",
+    "original": "戦争で死んでいった人のことを思うと胸が痛む。",
+    "en": [
+      {
+        "id": "273280",
+        "text": "I feel sad when I think about all the people who die in wars."
+      }
+    ],
+    "indices": "戦争 で(#2028980) 死ぬ{死んで} 行く{いった} 人(ひと) の 事(こと){こと} を 思う と 胸 が 痛む",
+    "vocabIds": [
+      "1390360",
+      "1310730",
+      "1580640",
+      "1589350",
+      "1237820",
+      "2786110",
+      "1432710"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 17,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1310730": {
+        "start": 3,
+        "length": 2,
+        "reading": "しん"
+      },
+      "1390360": {
+        "start": 0,
+        "length": 2,
+        "reading": "せんそう"
+      },
+      "1432710": {
+        "start": 19,
+        "length": 2,
+        "reading": "いたむ"
+      },
+      "1580640": {
+        "start": 9,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1589350": {
+        "start": 14,
+        "length": 2,
+        "reading": "おもう"
+      },
+      "2786110": {
+        "start": 17,
+        "length": 4,
+        "reading": "むねがいたむ"
       }
     }
   },
@@ -1479,27 +2347,33 @@
     "matches": {
       "1200490": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "なつかしい"
       },
       "1237820": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1311110": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1382370": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むかし"
       },
       "1589340": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おもいで"
       },
       "1597850": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "つぎつぎ"
       }
     }
   },
@@ -1517,29 +2391,79 @@
       "1366770",
       "1237820",
       "1219910",
-      "1174070",
-      "1338240"
+      "1174070"
     ],
     "matches": {
       "1174070": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "えいえん"
       },
       "1219910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きぼう"
       },
       "1237820": {
         "start": 3,
-        "length": 1
-      },
-      "1338240": {
-        "start": 13,
-        "length": 2
+        "length": 1,
+        "reading": "むね"
       },
       "1366770": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
+      }
+    }
+  },
+  {
+    "id": "145212",
+    "original": "新入生は希望に胸を膨らませて会場に入った。",
+    "en": [
+      {
+        "id": "269351",
+        "text": "The new students entered the hall full of hope."
+      }
+    ],
+    "indices": "新入生 は 希望 に 胸を膨らませる{胸を膨らませて} 会場 に 入る(はいる){入った}",
+    "vocabIds": [
+      "1362270",
+      "1219910",
+      "1237820",
+      "1519990",
+      "1198660",
+      "1465590"
+    ],
+    "matches": {
+      "1198660": {
+        "start": 14,
+        "length": 2,
+        "reading": "かいじょう"
+      },
+      "1219910": {
+        "start": 4,
+        "length": 2,
+        "reading": "きぼう"
+      },
+      "1237820": {
+        "start": 7,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1362270": {
+        "start": 0,
+        "length": 3,
+        "reading": "しんにゅうせい"
+      },
+      "1465590": {
+        "start": 17,
+        "length": 2,
+        "reading": "はいっ"
+      },
+      "1519990": {
+        "start": 9,
+        "length": 3,
+        "reading": "ふくらま"
       }
     }
   },
@@ -1555,31 +2479,18 @@
     "indices": "少年[01] は 子犬{小犬} を 胸 に 抱きしめる{抱き締めた}",
     "vocabIds": [
       "1349170",
-      "2083540",
-      "1258330",
-      "1237820",
-      "1436570"
+      "1237820"
     ],
     "matches": {
       "1237820": {
         "start": 6,
-        "length": 1
-      },
-      "1258330": {
-        "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1349170": {
         "start": 0,
-        "length": 2
-      },
-      "1436570": {
-        "start": 10,
-        "length": 3
-      },
-      "2083540": {
-        "start": 3,
-        "length": 1
+        "length": 2,
+        "reading": "しょうねん"
       }
     }
   },
@@ -1601,15 +2512,18 @@
     "matches": {
       "1237820": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1348870": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "すこし"
       },
       "1402540": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "はしっ"
       }
     }
   },
@@ -1628,33 +2542,51 @@
       "1237820",
       "1215080",
       "1483070",
+      "1218680",
       "1990270",
+      "1356730",
       "1216120"
     ],
     "matches": {
       "1215080": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かんつう"
       },
       "1216120": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "おちいっ"
+      },
+      "1218680": {
+        "start": 11,
+        "length": 2,
+        "reading": "きとく"
       },
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1337080": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうだん"
+      },
+      "1356730": {
+        "start": 13,
+        "length": 2,
+        "reading": "じょうたい"
       },
       "1483070": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1990270": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "きとくじょうたい"
       }
     }
   },
@@ -1673,38 +2605,57 @@
       "1483150",
       "1255940",
       "1484150",
+      "1160790",
       "1576150",
+      "1580640",
       "1237820",
       "1483980"
     ],
     "matches": {
+      "1160790": {
+        "start": 28,
+        "length": 1,
+        "reading": "いち"
+      },
       "1237820": {
         "start": 31,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1255940": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "けん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483980": {
         "start": 33,
-        "length": 3
+        "length": 2,
+        "reading": "ひめ"
       },
       "1484150": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひみつ"
       },
       "1576150": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 29,
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -1721,35 +2672,59 @@
     "vocabIds": [
       "1311110",
       "1436130",
-      "1902150",
+      "1194500",
+      "1589820",
       "1237820",
+      "1160790",
       "1165670",
+      "2019640",
       "1228230"
     ],
     "matches": {
+      "1160790": {
+        "start": 10,
+        "length": 1,
+        "reading": "いち"
+      },
       "1165670": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いちはい"
+      },
+      "1194500": {
+        "start": 4,
+        "length": 1,
+        "reading": "はな"
       },
       "1228230": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "すいこん"
       },
       "1237820": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1436130": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       },
-      "1902150": {
-        "start": 4,
-        "length": 3
+      "1589820": {
+        "start": 6,
+        "length": 2,
+        "reading": "かおり"
+      },
+      "2019640": {
+        "start": 11,
+        "length": 1,
+        "reading": "はい"
       }
     }
   },
@@ -1766,30 +2741,47 @@
     "vocabIds": [
       "1311110",
       "1327190",
+      "1366310",
       "1366300",
       "1237820",
-      "1212260"
+      "1212260",
+      "1212250"
     ],
     "matches": {
+      "1212250": {
+        "start": 19,
+        "length": 2,
+        "reading": "かんじ"
+      },
       "1212260": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1327190": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "て"
       },
       "1366300": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ふるえ"
+      },
+      "1366310": {
+        "start": 4,
+        "length": 2,
+        "reading": "ふるえ"
       }
     }
   },
@@ -1812,19 +2804,23 @@
     "matches": {
       "1237820": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1242170": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ちかづく"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "2022640": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ばん"
       }
     }
   },
@@ -1846,15 +2842,18 @@
     "matches": {
       "1220570": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きたい"
       },
       "1237820": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -1869,6 +2868,7 @@
     ],
     "indices": "私たち は 期待 に 胸 を 膨らます{ふくらませて} 旅立つ{旅立った}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1220570",
       "1237820",
@@ -1877,19 +2877,28 @@
     "matches": {
       "1220570": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きたい"
       },
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1553270": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "たびだっ"
       }
     }
   },
@@ -1904,7 +2913,9 @@
     ],
     "indices": "子供の頃 遠足 の 前(まえ) の 日(ひ)[01] には 胸 が わくわく{ワクワク} 為る(する){して} 眠る[01]{眠れなかった}",
     "vocabIds": [
+      "1307850",
       "2827554",
+      "1579080",
       "1178260",
       "1392580",
       "1463770",
@@ -1914,27 +2925,43 @@
     "matches": {
       "1178260": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "えんそく"
       },
       "1237820": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1307850": {
+        "start": 0,
+        "length": 2,
+        "reading": "こども"
       },
       "1392580": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
       },
       "1463770": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
+      },
+      "1579080": {
+        "start": 3,
+        "length": 1,
+        "reading": "ころ"
       },
       "2827554": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "こどものころ"
       },
       "2866713": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "ねむれ"
       }
     }
   },
@@ -1956,15 +2983,18 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
       },
       "1587300": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       }
     }
   },
@@ -1979,32 +3009,82 @@
     ],
     "indices": "言う{言い} たい{たかった} 事(こと) を 全部 言う{言ったら} 胸[01] が すかっと~ 為る(する){した}",
     "vocabIds": [
-      "1956230",
+      "1587040",
       "1313580",
       "1396130",
-      "1587040",
       "1237820"
     ],
     "matches": {
       "1237820": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1313580": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1396130": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       },
       "1587040": {
-        "start": 10,
-        "length": 3
-      },
-      "1956230": {
         "start": 0,
-        "length": 1
+        "length": 2,
+        "reading": "いい"
+      }
+    }
+  },
+  {
+    "id": "175706",
+    "original": "血を見て彼は胸が悪くなった。",
+    "en": [
+      {
+        "id": "238760",
+        "text": "The sight of blood turned his stomach."
+      }
+    ],
+    "indices": "血 を 見る{見て} 彼(かれ)[01] は 胸が悪くなる{胸が悪くなった}~",
+    "vocabIds": [
+      "1255060",
+      "1259290",
+      "2256270",
+      "1483070",
+      "1237820",
+      "1151260"
+    ],
+    "matches": {
+      "1151260": {
+        "start": 8,
+        "length": 2,
+        "reading": "わるく"
+      },
+      "1237820": {
+        "start": 6,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1255060": {
+        "start": 0,
+        "length": 1,
+        "reading": "ち"
+      },
+      "1259290": {
+        "start": 2,
+        "length": 1,
+        "reading": "み"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2256270": {
+        "start": 2,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -2022,34 +3102,46 @@
       "1252330",
       "1237820",
       "1392580",
-      "2260360",
+      "1562850",
+      "1397590",
       "1428090",
       "1597040"
     ],
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1252330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいかん"
       },
       "1392580": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "まえ"
+      },
+      "1397590": {
+        "start": 9,
+        "length": 2,
+        "reading": "くん"
       },
       "1428090": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうぞう"
+      },
+      "1562850": {
+        "start": 7,
+        "length": 1,
+        "reading": "うで"
       },
       "1597040": {
         "start": 19,
-        "length": 3
-      },
-      "2260360": {
-        "start": 7,
-        "length": 5
+        "length": 2,
+        "reading": "たっ"
       }
     }
   },
@@ -2066,20 +3158,29 @@
     "vocabIds": [
       "1237820",
       "1483150",
-      "1202450"
+      "1202450",
+      "2810010"
     ],
     "matches": {
       "1202450": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "あけ"
       },
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "2810010": {
+        "start": 17,
+        "length": 2,
+        "reading": "あけ"
       }
     }
   },
@@ -2096,20 +3197,29 @@
     "vocabIds": [
       "1237820",
       "1202530",
+      "1410590",
       "2021970"
     ],
     "matches": {
       "1202530": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かいえん"
       },
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1410590": {
+        "start": 12,
+        "length": 2,
+        "reading": "まっ"
       },
       "2021970": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "まった"
       }
     }
   },
@@ -2129,7 +3239,8 @@
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       }
     }
   },
@@ -2151,15 +3262,18 @@
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1427890": {
         "start": 2,
-        "length": 5
+        "length": 5,
+        "reading": "はりさける"
       },
       "1600900": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -2179,7 +3293,8 @@
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       }
     }
   },
@@ -2195,16 +3310,24 @@
     "indices": "胸 が 酷い(ひどい){ひどく} 痛む[01]{痛みます}",
     "vocabIds": [
       "1237820",
+      "1432710",
       "1587300"
     ],
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1432710": {
+        "start": 5,
+        "length": 2,
+        "reading": "いたみ"
       },
       "1587300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       }
     }
   },
@@ -2224,7 +3347,8 @@
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       }
     }
   },
@@ -2241,20 +3365,62 @@
     "vocabIds": [
       "1237820",
       "1264540",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1264540": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1338240": {
         "start": 10,
-        "length": 2
+        "length": 1,
+        "reading": "で"
+      },
+      "1896380": {
+        "start": 10,
+        "length": 1,
+        "reading": "で"
+      }
+    }
+  },
+  {
+    "id": "183389",
+    "original": "期待に胸を膨らませていた。",
+    "en": [
+      {
+        "id": "20511",
+        "text": "We were filled with joyful expectation."
+      }
+    ],
+    "indices": "期待 に 胸を膨らませる{胸を膨らませていた}~",
+    "vocabIds": [
+      "1220570",
+      "1237820",
+      "1519990"
+    ],
+    "matches": {
+      "1220570": {
+        "start": 0,
+        "length": 2,
+        "reading": "きたい"
+      },
+      "1237820": {
+        "start": 3,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1519990": {
+        "start": 5,
+        "length": 3,
+        "reading": "ふくらま"
       }
     }
   },
@@ -2270,36 +3436,66 @@
     "indices": "我々 は 殺人者 に対する 怒り で(#2028980) 胸いっぱい[01]{胸一杯}~ になる[01]{になった}",
     "vocabIds": [
       "1607050",
+      "1299100",
       "1299120",
+      "1322990",
       "1009810",
       "1445670",
       "1237820",
-      "1165670"
+      "1160790",
+      "1165670",
+      "2019640"
     ],
     "matches": {
       "1009810": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "にたいする"
+      },
+      "1160790": {
+        "start": 14,
+        "length": 1,
+        "reading": "いち"
       },
       "1165670": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いちはい"
       },
       "1237820": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1299100": {
+        "start": 3,
+        "length": 2,
+        "reading": "さつじん"
       },
       "1299120": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "さつじんしゃ"
+      },
+      "1322990": {
+        "start": 5,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1445670": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いかり"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "2019640": {
+        "start": 15,
+        "length": 1,
+        "reading": "はい"
       }
     }
   },
@@ -2322,19 +3518,23 @@
     "matches": {
       "1220570": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きたい"
       },
       "1237820": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1553270": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "たびだっ"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -2350,26 +3550,81 @@
     "indices": "音楽 は 野蛮人 の 胸 を 宥め賺す{なだめすかす}~ 魅力 が[01] 有る{ある}",
     "vocabIds": [
       "1183720",
+      "1537590",
       "1537600",
+      "1580640",
       "1237820",
       "1528150"
     ],
     "matches": {
       "1183720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おんがく"
       },
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1528150": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "みりょく"
+      },
+      "1537590": {
+        "start": 3,
+        "length": 2,
+        "reading": "やばん"
       },
       "1537600": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "やばんじん"
+      },
+      "1580640": {
+        "start": 5,
+        "length": 1,
+        "reading": "じん"
+      }
+    }
+  },
+  {
+    "id": "188414",
+    "original": "乙女たちは彼に胸をときめかす。",
+    "en": [
+      {
+        "id": "25557",
+        "text": "He makes young girls' hearts flutter."
+      }
+    ],
+    "indices": "少女{乙女} 達{たち} は 彼(かれ)[01] に 胸をときめかす{胸をときめかす}~",
+    "vocabIds": [
+      "2855480",
+      "1483070",
+      "1237820",
+      "2401860"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 7,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1483070": {
+        "start": 5,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2401860": {
+        "start": 7,
+        "length": 7,
+        "reading": "むねをときめかす"
+      },
+      "2855480": {
+        "start": 0,
+        "length": 2,
+        "reading": "おとめ"
       }
     }
   },
@@ -2387,29 +3642,52 @@
       "1159980",
       "1212210",
       "1237820",
+      "1800560",
       "1428920",
-      "1448860"
+      "1218880",
+      "1448860",
+      "1448820"
     ],
     "matches": {
       "1159980": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いしゃ"
       },
       "1212210": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かんじゃ"
+      },
+      "1218880": {
+        "start": 10,
+        "length": 1,
+        "reading": "き"
       },
       "1237820": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1428920": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ちょうしんき"
+      },
+      "1448820": {
+        "start": 12,
+        "length": 2,
+        "reading": "あて"
       },
       "1448860": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "あて"
+      },
+      "1800560": {
+        "start": 8,
+        "length": 2,
+        "reading": "ちょうしん"
       }
     }
   },
@@ -2424,7 +3702,6 @@
     ],
     "indices": "は 叔母さん が 訪ねる{訪ねて} 来る(くる) と 言う{いう} の を 知る{知って} 胸 が わくわく 為る(する){した}",
     "vocabIds": [
-      "1607100",
       "1518070",
       "1547720",
       "1420470",
@@ -2433,23 +3710,98 @@
     "matches": {
       "1237820": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1420470": {
         "start": 23,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1518070": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "たずね"
       },
       "1547720": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
+      }
+    }
+  },
+  {
+    "id": "201188",
+    "original": "どうも君は未だ胸に一物もっているような気がする。文句があればはっきり言ってよ。",
+    "en": [
+      {
+        "id": "38395",
+        "text": "I get the feeling you still have an axe to grind. If you've got something to say come on out and say it."
+      }
+    ],
+    "indices": "どうも 君(きみ)[01] は 未だ[01] 胸 に 一物(いちもつ)[02]~ 持つ{もっている} ような気がする~ 文句[01] が[01] 有る{あれば} はっきり言う{はっきり言って} よ[01]",
+    "vocabIds": [
+      "1247250",
+      "1527110",
+      "1237820",
+      "2153160",
+      "1576300",
+      "2839008",
+      "1221520",
+      "1221540",
+      "1505260",
+      "1587040"
+    ],
+    "matches": {
+      "1221520": {
+        "start": 19,
+        "length": 1,
+        "reading": "き"
       },
-      "1607100": {
-        "start": 8,
-        "length": 2
+      "1221540": {
+        "start": 19,
+        "length": 4,
+        "reading": "きがする"
+      },
+      "1237820": {
+        "start": 7,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1247250": {
+        "start": 3,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1505260": {
+        "start": 24,
+        "length": 2,
+        "reading": "もんく"
+      },
+      "1527110": {
+        "start": 5,
+        "length": 2,
+        "reading": "いまだ"
+      },
+      "1576300": {
+        "start": 9,
+        "length": 2,
+        "reading": "いちもつ"
+      },
+      "1587040": {
+        "start": 34,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "2153160": {
+        "start": 7,
+        "length": 4,
+        "reading": "むねにいちもつ"
+      },
+      "2839008": {
+        "start": 16,
+        "length": 7,
+        "reading": "ようなきがする"
       }
     }
   },
@@ -2464,7 +3816,9 @@
     ],
     "indices": "其の[01]{その} 話(はなし) を 為る(する)[01]{する} 時(とき){とき} 彼(かれ)[01] の 胸 は 高鳴る{高鳴っていた}~",
     "vocabIds": [
+      "1600900",
       "2078760",
+      "1483070",
       "1000420",
       "1237820",
       "1661210"
@@ -2472,19 +3826,96 @@
     "matches": {
       "1000420": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1237820": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1483070": {
+        "start": 8,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1600900": {
+        "start": 2,
+        "length": 1,
+        "reading": "はなし"
       },
       "1661210": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "たかなっ"
       },
       "2078760": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "はなしをする"
+      }
+    }
+  },
+  {
+    "id": "206741",
+    "original": "その亡命者は故国への思いに胸を焦がした。",
+    "en": [
+      {
+        "id": "43989",
+        "text": "The exile yearned for his home."
+      }
+    ],
+    "indices": "其の[01]{その} 亡命者~ は 故国~ へ の 思い に 胸~ を[01] 焦がす{焦がした}~",
+    "vocabIds": [
+      "1518730",
+      "1518740",
+      "1322990",
+      "1267160",
+      "1589320",
+      "1237820",
+      "1350710",
+      "2590120"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 13,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1267160": {
+        "start": 6,
+        "length": 2,
+        "reading": "ここく"
+      },
+      "1322990": {
+        "start": 4,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1350710": {
+        "start": 15,
+        "length": 3,
+        "reading": "こがし"
+      },
+      "1518730": {
+        "start": 2,
+        "length": 2,
+        "reading": "ぼうめい"
+      },
+      "1518740": {
+        "start": 2,
+        "length": 3,
+        "reading": "ぼうめいしゃ"
+      },
+      "1589320": {
+        "start": 10,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "2590120": {
+        "start": 15,
+        "length": 3,
+        "reading": "こがし"
       }
     }
   },
@@ -2503,28 +3934,33 @@
       "1502480",
       "1311110",
       "1237820",
-      "2248980"
+      "1432710"
     ],
     "matches": {
       "1237820": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1432710": {
+        "start": 12,
+        "length": 2,
+        "reading": "いたま"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1502480": {
         "start": 5,
-        "length": 2
-      },
-      "2248980": {
-        "start": 12,
-        "length": 1
+        "length": 2,
+        "reading": "ものがたり"
       }
     }
   },
@@ -2542,6 +3978,7 @@
       "1580290",
       "1590550",
       "1237820",
+      "1483070",
       "1000420",
       "1604890",
       "1604580"
@@ -2549,27 +3986,38 @@
     "matches": {
       "1000420": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1237820": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1483070": {
+        "start": 19,
+        "length": 1,
+        "reading": "かれ"
       },
       "1580290": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじょ"
       },
       "1590550": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしみ"
       },
       "1604580": {
         "start": 23,
-        "length": 4
+        "length": 3,
+        "reading": "みつめ"
       },
       "1604890": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "め"
       }
     }
   },
@@ -2585,16 +4033,24 @@
     "indices": "其の[01]{その} ニュース は 胸 が 張り裂ける{張りさけん} 許り{ばかり} だ{だった}",
     "vocabIds": [
       "1237820",
+      "1427900",
       "1427760"
     ],
     "matches": {
       "1237820": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1427760": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はり"
+      },
+      "1427900": {
+        "start": 9,
+        "length": 2,
+        "reading": "はり"
       }
     }
   },
@@ -2615,11 +4071,13 @@
     "matches": {
       "1237820": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1311110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -2640,46 +4098,13 @@
     "matches": {
       "1234080": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "きょうぎ"
       },
       "1237820": {
         "start": 5,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "229532",
-    "original": "あんな男見ても胸くそが悪い。",
-    "en": [
-      {
-        "id": "66892",
-        "text": "I can't bear the sight of him."
-      }
-    ],
-    "indices": "あんな~ 男(おとこ)[02]~ 見る{見て} も 胸糞{胸くそ}~ が 悪い(わるい)",
-    "vocabIds": [
-      "1419990",
-      "1259290",
-      "1237820",
-      "1151260"
-    ],
-    "matches": {
-      "1151260": {
-        "start": 11,
-        "length": 2
-      },
-      "1237820": {
-        "start": 7,
-        "length": 1
-      },
-      "1259290": {
-        "start": 4,
-        "length": 2
-      },
-      "1419990": {
-        "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       }
     }
   },
@@ -2694,32 +4119,55 @@
     ],
     "indices": "阿弗利加{アフリカ} の 飢え に 苦しむ 子供たち の 事(こと) を 思う と 胸 が 痛む[01]{いたむ}",
     "vocabIds": [
+      "1224070",
       "2082250",
+      "1244350",
+      "1307850",
       "1307870",
       "1313580",
       "1589350",
       "1237820"
     ],
     "matches": {
+      "1224070": {
+        "start": 5,
+        "length": 2,
+        "reading": "うえ"
+      },
       "1237820": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1244350": {
+        "start": 8,
+        "length": 3,
+        "reading": "くるしむ"
+      },
+      "1307850": {
+        "start": 11,
+        "length": 2,
+        "reading": "こども"
       },
       "1307870": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "こどもたち"
       },
       "1313580": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "こと"
       },
       "1589350": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "2082250": {
         "start": 5,
-        "length": 6
+        "length": 6,
+        "reading": "うえにくるしむ"
       }
     }
   },
@@ -2743,23 +4191,28 @@
     "matches": {
       "1236470": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "きょうちょう"
       },
       "1237820": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1373990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せいき"
       },
       "1499490": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ぶぶん"
       },
       "1585110": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "りゅうこう"
       }
     }
   },
@@ -2777,24 +4230,34 @@
       "1483070",
       "1237820",
       "1327190",
-      "1448860"
+      "1448860",
+      "1448820"
     ],
     "matches": {
       "1237820": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1327190": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "て"
+      },
+      "1448820": {
+        "start": 6,
+        "length": 2,
+        "reading": "あて"
       },
       "1448860": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "あて"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2817,19 +4280,23 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1383310": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "あかんぼう"
       },
       "1464980": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "2549330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "わこ"
       }
     }
   },
@@ -2843,47 +4310,55 @@
       }
     ],
     "vocabIds": [
+      "1288850",
       "1587590",
       "1237820",
       "1284430",
       "1408370",
       "1272780",
-      "2081170",
       "1531110",
       "1350040"
     ],
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1272780": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "ひかり"
       },
       "1284430": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
       },
       "1350040": {
         "start": 35,
-        "length": 3
+        "length": 2,
+        "reading": "きえ"
       },
       "1408370": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "たいよう"
       },
       "1531110": {
         "start": 33,
-        "length": 1
+        "length": 1,
+        "reading": "きり"
       },
       "1587590": {
         "start": 0,
-        "length": 3
-      },
-      "2081170": {
-        "start": 30,
-        "length": 1
+        "length": 3,
+        "reading": "いままで"
       }
     }
   },
@@ -2906,23 +4381,28 @@
     "matches": {
       "1237820": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1320800": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "み"
       },
       "1360480": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "こころ"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1546550": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "は"
       }
     }
   },
@@ -2937,31 +4417,74 @@
     ],
     "vocabIds": [
       "1349170",
-      "2788170",
-      "1258330",
       "1237820",
       "1584090"
     ],
     "matches": {
       "1237820": {
         "start": 6,
-        "length": 1
-      },
-      "1258330": {
-        "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1349170": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうねん"
       },
       "1584090": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "だい"
+      }
+    }
+  },
+  {
+    "id": "745795",
+    "original": "胸筋を鍛えるのに30回腕立て伏せをやってみて。",
+    "en": [
+      {
+        "id": "745796",
+        "text": "To work your pectoral muscles try doing thirty push-ups."
+      }
+    ],
+    "vocabIds": [
+      "1237820",
+      "1950940",
+      "1241750",
+      "1419120",
+      "1199330",
+      "1562940"
+    ],
+    "matches": {
+      "1199330": {
+        "start": 10,
+        "length": 1,
+        "reading": "かい"
       },
-      "2788170": {
+      "1237820": {
+        "start": 0,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1241750": {
+        "start": 1,
+        "length": 1,
+        "reading": "すじ"
+      },
+      "1419120": {
         "start": 3,
-        "length": 1
+        "length": 3,
+        "reading": "きたえる"
+      },
+      "1562940": {
+        "start": 11,
+        "length": 5,
+        "reading": "うでたてふせ"
+      },
+      "1950940": {
+        "start": 0,
+        "length": 2,
+        "reading": "むねすじ"
       }
     }
   },
@@ -2977,20 +4500,23 @@
     "vocabIds": [
       "1250870",
       "1237820",
-      "1285810"
+      "1285890"
     ],
     "matches": {
       "1237820": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1250870": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けしき"
       },
-      "1285810": {
+      "1285890": {
         "start": 14,
-        "length": 1
+        "length": 2,
+        "reading": "きざま"
       }
     }
   },
@@ -3011,15 +4537,18 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1360770": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しんぞう"
       },
       "1423310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       }
     }
   },
@@ -3035,16 +4564,24 @@
     "indices": "は 胸 を 発 撃たれる{撃たれた}",
     "vocabIds": [
       "1237820",
-      "1477120"
+      "1477120",
+      "1253570"
     ],
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1253570": {
+        "start": 7,
+        "length": 2,
+        "reading": "うた"
       },
       "1477120": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "はつ"
       }
     }
   },
@@ -3067,32 +4604,38 @@
       "1259860",
       "1419990",
       "1237820",
-      "2762610"
+      "1357980"
     ],
     "matches": {
       "1221430": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きたく"
       },
       "1237820": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1259860": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "みしらぬ"
+      },
+      "1357980": {
+        "start": 17,
+        "length": 2,
+        "reading": "さわら"
       },
       "1419990": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1423310": {
         "start": 7,
-        "length": 1
-      },
-      "2762610": {
-        "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       }
     }
   },
@@ -3111,7 +4654,8 @@
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       }
     }
   },
@@ -3134,23 +4678,66 @@
     "matches": {
       "1221430": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きたく"
       },
       "1237820": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1259860": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "みしらぬ"
       },
       "1419990": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1423310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
+      }
+    }
+  },
+  {
+    "id": "2669323",
+    "original": "トムの声って超かっこいい！もうマジで胸キュンしまくり！",
+    "en": [
+      {
+        "id": "2668542",
+        "text": "Tom's voice is so sexy! It really makes my chest tight!"
+      }
+    ],
+    "vocabIds": [
+      "1380440",
+      "1429340",
+      "1237820",
+      "2831793"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 18,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1380440": {
+        "start": 3,
+        "length": 1,
+        "reading": "こえ"
+      },
+      "1429340": {
+        "start": 6,
+        "length": 1,
+        "reading": "ちょう"
+      },
+      "2831793": {
+        "start": 18,
+        "length": 4,
+        "reading": "むね"
       }
     }
   },
@@ -3170,11 +4757,13 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1590550": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしみ"
       }
     }
   },
@@ -3194,11 +4783,13 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -3222,11 +4813,63 @@
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1357980": {
         "start": 1,
-        "length": 3
+        "length": 2,
+        "reading": "さわっ"
+      }
+    }
+  },
+  {
+    "id": "4307810",
+    "original": "「ここじゃ雪が降らない」国に帰れずにいるトムがぽつんと言うと、胸にこたえた。",
+    "en": [
+      {
+        "id": "4354005",
+        "text": "I felt for Tom, who was away from home, when he said in a lonely voice, \"It doesn't snow here.\""
+      }
+    ],
+    "vocabIds": [
+      "1386500",
+      "1282790",
+      "1592250",
+      "1864170",
+      "1587040",
+      "1237820"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 31,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1282790": {
+        "start": 7,
+        "length": 2,
+        "reading": "ふら"
+      },
+      "1386500": {
+        "start": 5,
+        "length": 1,
+        "reading": "ゆき"
+      },
+      "1587040": {
+        "start": 27,
+        "length": 2,
+        "reading": "いう"
+      },
+      "1592250": {
+        "start": 12,
+        "length": 1,
+        "reading": "こく"
+      },
+      "1864170": {
+        "start": 14,
+        "length": 2,
+        "reading": "かえれ"
       }
     }
   },
@@ -3244,63 +4887,144 @@
       "1267340",
       "1360930",
       "1519060",
+      "1221270",
       "1864140",
+      "1288850",
       "1288870",
       "1410590",
       "1547720",
       "1586420",
       "1237820",
       "1516320",
+      "1229840",
       "1229650"
     ],
     "matches": {
       "1002650": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "おかあさん"
+      },
+      "1221270": {
+        "start": 19,
+        "length": 2,
+        "reading": "かえっ"
       },
       "1229650": {
         "start": 65,
-        "length": 2
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 65,
+        "length": 2,
+        "reading": "なき"
       },
       "1237820": {
         "start": 58,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1267340": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "きつね"
+      },
+      "1288850": {
+        "start": 27,
+        "length": 1,
+        "reading": "いま"
       },
       "1288870": {
         "start": 27,
-        "length": 4
+        "length": 4,
+        "reading": "いまかいまか"
       },
       "1360930": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しんぱい"
       },
       "1410590": {
         "start": 38,
-        "length": 3
+        "length": 2,
+        "reading": "まっ"
       },
       "1516320": {
         "start": 60,
-        "length": 5
+        "length": 4,
+        "reading": "だきしめ"
       },
       "1519060": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうや"
       },
       "1547720": {
         "start": 51,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       },
       "1586420": {
         "start": 55,
-        "length": 3
+        "length": 3,
+        "reading": "あたたかい"
       },
       "1864140": {
         "start": 19,
-        "length": 5
+        "length": 5,
+        "reading": "かえってくる"
+      }
+    }
+  },
+  {
+    "id": "7047598",
+    "original": "彼女が胸がすくような啖呵を切りました。",
+    "en": [
+      {
+        "id": "7047599",
+        "text": "She got it off her chest in no uncertain terms."
+      }
+    ],
+    "indices": "彼女 が 胸がすく~ 様な{ような} 啖呵を切る{啖呵を切りました}",
+    "vocabIds": [
+      "1483150",
+      "1237820",
+      "2786120",
+      "1565280",
+      "1384830",
+      "1383800"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 3,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1383800": {
+        "start": 13,
+        "length": 2,
+        "reading": "きり"
+      },
+      "1384830": {
+        "start": 13,
+        "length": 2,
+        "reading": "きり"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1565280": {
+        "start": 10,
+        "length": 2,
+        "reading": "たんか"
+      },
+      "2786120": {
+        "start": 3,
+        "length": 4,
+        "reading": "むねがすく"
       }
     }
   },
@@ -3320,11 +5044,13 @@
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1587300": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       }
     }
   },
@@ -3342,6 +5068,7 @@
       }
     ],
     "vocabIds": [
+      "1288850",
       "2851484",
       "1237820",
       "1587300"
@@ -3349,15 +5076,23 @@
     "matches": {
       "1237820": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
       },
       "1587300": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       },
       "2851484": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いまも"
       }
     }
   },
@@ -3374,24 +5109,28 @@
       "1237820",
       "1587300",
       "1490220",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1490220": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "びょういん"
+      },
+      "1578850": {
+        "start": 17,
+        "length": 2,
+        "reading": "いっ"
       },
       "1587300": {
         "start": 5,
-        "length": 2
-      },
-      "1589060": {
-        "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "いたみ"
       }
     }
   },
@@ -3409,28 +5148,39 @@
       "2010870",
       "1237820",
       "1327190",
-      "1448860"
+      "1448860",
+      "1448820"
     ],
     "matches": {
       "1002290": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "おまえ"
       },
       "1237820": {
         "start": 30,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1327190": {
         "start": 32,
-        "length": 1
+        "length": 1,
+        "reading": "て"
+      },
+      "1448820": {
+        "start": 34,
+        "length": 2,
+        "reading": "あて"
       },
       "1448860": {
         "start": 34,
-        "length": 3
+        "length": 2,
+        "reading": "あて"
       },
       "2010870": {
         "start": 25,
-        "length": 4
+        "length": 4,
+        "reading": "ほこらしげ"
       }
     }
   },
@@ -3447,29 +5197,40 @@
       "1455210",
       "1358340",
       "1358280",
+      "1269320",
       "2640160",
       "1237820"
     ],
     "matches": {
       "1237820": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      },
+      "1269320": {
+        "start": 10,
+        "length": 1,
+        "reading": "のち"
       },
       "1358280": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1358340": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "たべもの"
       },
       "1455210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とくてい"
       },
       "2640160": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "のちに"
       }
     }
   },
@@ -3490,15 +5251,18 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1293780": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さいきん"
       },
       "1587300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       }
     }
   },
@@ -3514,20 +5278,29 @@
     "vocabIds": [
       "1237820",
       "1587300",
-      "1212260"
+      "1212260",
+      "1212250"
     ],
     "matches": {
+      "1212250": {
+        "start": 5,
+        "length": 2,
+        "reading": "かんじ"
+      },
       "1212260": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1587300": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
       }
     }
   },
@@ -3546,7 +5319,8 @@
     "matches": {
       "1237820": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       }
     }
   },
@@ -3565,7 +5339,52 @@
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
+      }
+    }
+  },
+  {
+    "id": "10531346",
+    "original": "私が今言ったことを胸に刻んでおきなさい。",
+    "en": [
+      {
+        "id": "242002",
+        "text": "You must bear in mind what I've just said to you."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1288850",
+      "1587040",
+      "1237820",
+      "1285890"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 9,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1285890": {
+        "start": 11,
+        "length": 2,
+        "reading": "きざん"
+      },
+      "1288850": {
+        "start": 2,
+        "length": 1,
+        "reading": "いま"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1587040": {
+        "start": 3,
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -3587,19 +5406,23 @@
     "matches": {
       "1237820": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1483150": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1604890": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "め"
       },
       "1606560": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "わかる"
       }
     }
   },
@@ -3619,11 +5442,253 @@
     "matches": {
       "1237820": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1538160": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "くすり"
+      }
+    }
+  },
+  {
+    "id": "10921862",
+    "original": "胸躍る日が終わりに近づいている。",
+    "en": [
+      {
+        "id": "10921856",
+        "text": "An exciting day is drawing to a close."
+      }
+    ],
+    "vocabIds": [
+      "1237820",
+      "2437680",
+      "1538445",
+      "1463770",
+      "1589600",
+      "1589590",
+      "1242170"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 0,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1242170": {
+        "start": 9,
+        "length": 3,
+        "reading": "ちかづい"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "ひ"
+      },
+      "1538445": {
+        "start": 1,
+        "length": 2,
+        "reading": "おどる"
+      },
+      "1589590": {
+        "start": 5,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 5,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "2437680": {
+        "start": 0,
+        "length": 3,
+        "reading": "むねおどる"
+      }
+    }
+  },
+  {
+    "id": "11263437",
+    "original": "魚の臭いを嗅ぐと胸が悪くなる。",
+    "en": [
+      {
+        "id": "7766986",
+        "text": "The smell of raw fish nauseates me."
+      }
+    ],
+    "vocabIds": [
+      "1578010",
+      "1333150",
+      "1565480",
+      "1237820",
+      "2013140",
+      "1151260",
+      "2691760"
+    ],
+    "matches": {
+      "1151260": {
+        "start": 10,
+        "length": 2,
+        "reading": "わるく"
+      },
+      "1237820": {
+        "start": 8,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1333150": {
+        "start": 2,
+        "length": 2,
+        "reading": "におい"
+      },
+      "1565480": {
+        "start": 5,
+        "length": 2,
+        "reading": "かぐ"
+      },
+      "1578010": {
+        "start": 0,
+        "length": 1,
+        "reading": "さかな"
+      },
+      "2013140": {
+        "start": 8,
+        "length": 6,
+        "reading": "むねがわるくなる"
+      },
+      "2691760": {
+        "start": 10,
+        "length": 4,
+        "reading": "わるくなる"
+      }
+    }
+  },
+  {
+    "id": "10637331",
+    "original": "優太は、お店の高価な皿を割ってしまたのが亨ではなく葵だと知っていたが、葵をかばって名乗り出た亨の気持ちを察し、本当の事は言わず、ただ自分の胸の内に納めておくことにした。",
+    "en": [
+      {
+        "id": "11564560",
+        "text": "Yuta knew that it was Aoi, not Toru, who had broken the expensive plate at the store, but he understood why Toru had covered for Aoi, and so he decided not to say anything on the matter and keep it to himself."
+      }
+    ],
+    "vocabIds": [
+      "2842661",
+      "1582120",
+      "1283300",
+      "1299680",
+      "1208000",
+      "1151180",
+      "1420470",
+      "1531640",
+      "1591430",
+      "2409970",
+      "1298730",
+      "1523060",
+      "1313580",
+      "1587040",
+      "1318610",
+      "1237820",
+      "2840953",
+      "2098290",
+      "2060670"
+    ],
+    "matches": {
+      "1151180": {
+        "start": 25,
+        "length": 1,
+        "reading": "あおい"
+      },
+      "1208000": {
+        "start": 12,
+        "length": 2,
+        "reading": "わっ"
+      },
+      "1237820": {
+        "start": 69,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1283300": {
+        "start": 7,
+        "length": 2,
+        "reading": "こうか"
+      },
+      "1298730": {
+        "start": 52,
+        "length": 2,
+        "reading": "さっし"
+      },
+      "1299680": {
+        "start": 10,
+        "length": 1,
+        "reading": "さら"
+      },
+      "1313580": {
+        "start": 58,
+        "length": 1,
+        "reading": "こと"
+      },
+      "1318610": {
+        "start": 66,
+        "length": 2,
+        "reading": "じぶん"
+      },
+      "1420470": {
+        "start": 28,
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1523060": {
+        "start": 55,
+        "length": 2,
+        "reading": "ほんとう"
+      },
+      "1531640": {
+        "start": 41,
+        "length": 4,
+        "reading": "なのりで"
+      },
+      "1582120": {
+        "start": 5,
+        "length": 1,
+        "reading": "みせ"
+      },
+      "1587040": {
+        "start": 60,
+        "length": 2,
+        "reading": "いわ"
+      },
+      "1591430": {
+        "start": 48,
+        "length": 3,
+        "reading": "きもち"
+      },
+      "2060670": {
+        "start": 73,
+        "length": 2,
+        "reading": "おさめ"
+      },
+      "2098290": {
+        "start": 71,
+        "length": 1,
+        "reading": "うち"
+      },
+      "2409970": {
+        "start": 52,
+        "length": 2,
+        "reading": "さっし"
+      },
+      "2840953": {
+        "start": 69,
+        "length": 3,
+        "reading": "むねのうち"
+      },
+      "2842661": {
+        "start": 4,
+        "length": 2,
+        "reading": "おみせ"
       }
     }
   },
@@ -3643,11 +5708,149 @@
     "matches": {
       "1237820": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1587300": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いたみ"
+      }
+    }
+  },
+  {
+    "id": "11584972",
+    "original": "トムは上司に胸の内を話した。",
+    "en": [
+      {
+        "id": "7542426",
+        "text": "Tom told his boss what he had in mind."
+      }
+    ],
+    "vocabIds": [
+      "1353260",
+      "1237820",
+      "2840953",
+      "2098290",
+      "1562350"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 6,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1353260": {
+        "start": 3,
+        "length": 2,
+        "reading": "じょうし"
+      },
+      "1562350": {
+        "start": 10,
+        "length": 2,
+        "reading": "はなし"
+      },
+      "2098290": {
+        "start": 8,
+        "length": 1,
+        "reading": "うち"
+      },
+      "2840953": {
+        "start": 6,
+        "length": 3,
+        "reading": "むねのうち"
+      }
+    }
+  },
+  {
+    "id": "11741491",
+    "original": "胸の内を全部ぶちまけてごらん。",
+    "en": [
+      {
+        "id": "322134",
+        "text": "Open your heart and tell me everything."
+      }
+    ],
+    "vocabIds": [
+      "1237820",
+      "2840953",
+      "2098290",
+      "1396130"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 0,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1396130": {
+        "start": 4,
+        "length": 2,
+        "reading": "ぜんぶ"
+      },
+      "2098290": {
+        "start": 2,
+        "length": 1,
+        "reading": "うち"
+      },
+      "2840953": {
+        "start": 0,
+        "length": 3,
+        "reading": "むねのうち"
+      }
+    }
+  },
+  {
+    "id": "10637332",
+    "original": "トムは真相を知っていましたが、胸の内に納めておくことにしました。",
+    "en": [
+      {
+        "id": "11827725",
+        "text": "Even though Tom knew the truth, he decided to keep it to himself."
+      },
+      {
+        "id": "12279918",
+        "text": "Tom knew the truth, but decided to keep it to himself."
+      }
+    ],
+    "vocabIds": [
+      "1364110",
+      "1420470",
+      "1237820",
+      "2840953",
+      "2098290",
+      "2060670"
+    ],
+    "matches": {
+      "1237820": {
+        "start": 15,
+        "length": 1,
+        "reading": "むね"
+      },
+      "1364110": {
+        "start": 3,
+        "length": 2,
+        "reading": "しんそう"
+      },
+      "1420470": {
+        "start": 6,
+        "length": 2,
+        "reading": "しっ"
+      },
+      "2060670": {
+        "start": 19,
+        "length": 2,
+        "reading": "おさめ"
+      },
+      "2098290": {
+        "start": 17,
+        "length": 1,
+        "reading": "うち"
+      },
+      "2840953": {
+        "start": 15,
+        "length": 3,
+        "reading": "むねのうち"
       }
     }
   }

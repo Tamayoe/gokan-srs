@@ -10,6 +10,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 辞職 で(#2028980) 官僚~ の 席(せき) に 空き[02] が[01] 出来る{できた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1318980",
       "1211860",
@@ -19,23 +20,33 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1211860": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かんりょう"
       },
       "1318980": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じしょく"
       },
       "1382250": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "せき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1609010": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       }
     }
   },
@@ -56,11 +67,13 @@
     "matches": {
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
       },
       "1609010": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       }
     }
   },
@@ -76,21 +89,54 @@
     "indices": "車 には 一人分 の 空き[01] が[01] 有る{あった}",
     "vocabIds": [
       "1323080",
+      "1160790",
+      "1576150",
       "2080190",
+      "1580640",
+      "1502860",
+      "2145670",
       "1609010"
     ],
     "matches": {
+      "1160790": {
+        "start": 3,
+        "length": 1,
+        "reading": "いち"
+      },
       "1323080": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "くるま"
+      },
+      "1502860": {
+        "start": 5,
+        "length": 1,
+        "reading": "ぶん"
+      },
+      "1576150": {
+        "start": 3,
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 4,
+        "length": 1,
+        "reading": "にん"
       },
       "1609010": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       },
       "2080190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "いちにんぶん"
+      },
+      "2145670": {
+        "start": 5,
+        "length": 2,
+        "reading": "ぶんの"
       }
     }
   },
@@ -108,24 +154,34 @@
       "1315130",
       "1215230",
       "1609010",
+      "1278410",
       "1951480"
     ],
     "matches": {
       "1215230": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
+      },
+      "1278410": {
+        "start": 12,
+        "length": 2,
+        "reading": "ひろく"
       },
       "1315130": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "じ"
       },
       "1609010": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       },
       "1951480": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ひろく"
       }
     }
   },
@@ -150,11 +206,93 @@
     "matches": {
       "1289470": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんばん"
       },
       "1609010": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
+      }
+    }
+  },
+  {
+    "id": "179476",
+    "original": "空き部屋はありますか。",
+    "en": [
+      {
+        "id": "434550",
+        "text": "Do you have a vacancy?"
+      },
+      {
+        "id": "10871516",
+        "text": "Are there any rooms available?"
+      },
+      {
+        "id": "18354",
+        "text": "Do you have any vacancies?"
+      }
+    ],
+    "indices": "空き部屋 は 有る{あります} か",
+    "vocabIds": [
+      "1609010",
+      "1245350",
+      "1499320"
+    ],
+    "matches": {
+      "1245350": {
+        "start": 0,
+        "length": 4,
+        "reading": "あきへや"
+      },
+      "1499320": {
+        "start": 2,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1609010": {
+        "start": 0,
+        "length": 2,
+        "reading": "あき"
+      }
+    }
+  },
+  {
+    "id": "179477",
+    "original": "空き部屋が３つあるが、そのうちのどれも使えない。",
+    "en": [
+      {
+        "id": "18335",
+        "text": "We have three spare rooms, none of which can be used."
+      }
+    ],
+    "indices": "空き部屋 が 三つ(みっつ){３つ} 有る{ある} が[03] 其の[01]{その} 内(うち){うちの} 何れ(どれ)[01]{どれ} も 使える{使えない}",
+    "vocabIds": [
+      "1609010",
+      "1245350",
+      "1499320",
+      "1607180"
+    ],
+    "matches": {
+      "1245350": {
+        "start": 0,
+        "length": 4,
+        "reading": "あきへや"
+      },
+      "1499320": {
+        "start": 2,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1607180": {
+        "start": 19,
+        "length": 2,
+        "reading": "つかえ"
+      },
+      "1609010": {
+        "start": 0,
+        "length": 2,
+        "reading": "あき"
       }
     }
   },
@@ -169,37 +307,61 @@
     ],
     "indices": "空きっ腹 に お酒 を 飲む[01] の は 体(からだ)[02] に 良い{良くない}",
     "vocabIds": [
+      "1586265",
       "1609010",
       "1501110",
       "1329015",
+      "1329010",
       "1169870",
       "1409140",
+      "1605820",
       "1605870"
     ],
     "matches": {
       "1169870": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のむ"
+      },
+      "1329010": {
+        "start": 6,
+        "length": 1,
+        "reading": "さけ"
       },
       "1329015": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "おさけ"
       },
       "1409140": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "からだ"
       },
       "1501110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "はら"
+      },
+      "1586265": {
+        "start": 0,
+        "length": 2,
+        "reading": "あき"
+      },
+      "1605820": {
+        "start": 14,
+        "length": 2,
+        "reading": "よく"
       },
       "1605870": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "よく"
       },
       "1609010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       }
     }
   },
@@ -221,15 +383,18 @@
     "matches": {
       "1220810": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1402730": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "おくる"
       },
       "1609010": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       }
     }
   },
@@ -261,21 +426,67 @@
     "indices": "もう 一人分{１人分}~ の 空き[01] は 有る{あります} か",
     "vocabIds": [
       "1580640",
+      "1502860",
       "2145670",
       "1609010"
     ],
     "matches": {
+      "1502860": {
+        "start": 4,
+        "length": 1,
+        "reading": "ぶん"
+      },
       "1580640": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "1609010": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       },
       "2145670": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ぶんの"
+      }
+    }
+  },
+  {
+    "id": "195451",
+    "original": "まだ空き部屋がいくつかあった。",
+    "en": [
+      {
+        "id": "32625",
+        "text": "There were several rooms still vacant."
+      },
+      {
+        "id": "12805503",
+        "text": "There were still a few rooms available."
+      }
+    ],
+    "indices": "未だ[01]{まだ} 空き部屋~ が 幾つか{いくつか} 有る{あった}",
+    "vocabIds": [
+      "1609010",
+      "1245350",
+      "1499320"
+    ],
+    "matches": {
+      "1245350": {
+        "start": 2,
+        "length": 4,
+        "reading": "あきへや"
+      },
+      "1499320": {
+        "start": 4,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1609010": {
+        "start": 2,
+        "length": 2,
+        "reading": "あき"
       }
     }
   },
@@ -291,16 +502,104 @@
     "indices": "うちの会社[01]~ には 空き[02]~ が 無い{ない}",
     "vocabIds": [
       "1860270",
+      "1198550",
       "1609010"
     ],
     "matches": {
+      "1198550": {
+        "start": 3,
+        "length": 2,
+        "reading": "かいしゃ"
+      },
       "1609010": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       },
       "1860270": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "うちのかいしゃ"
+      }
+    }
+  },
+  {
+    "id": "1568240",
+    "original": "空き部屋は三つありますが、どれも使用できません。",
+    "en": [
+      {
+        "id": "18335",
+        "text": "We have three spare rooms, none of which can be used."
+      },
+      {
+        "id": "2512953",
+        "text": "There are three empty rooms. However, we can't use any of them."
+      }
+    ],
+    "vocabIds": [
+      "1609010",
+      "1245350",
+      "1499320",
+      "1299740",
+      "1306200"
+    ],
+    "matches": {
+      "1245350": {
+        "start": 0,
+        "length": 4,
+        "reading": "あきへや"
+      },
+      "1299740": {
+        "start": 5,
+        "length": 2,
+        "reading": "みっつ"
+      },
+      "1306200": {
+        "start": 16,
+        "length": 2,
+        "reading": "しよう"
+      },
+      "1499320": {
+        "start": 2,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1609010": {
+        "start": 0,
+        "length": 2,
+        "reading": "あき"
+      }
+    }
+  },
+  {
+    "id": "3088120",
+    "original": "このホテルには空き部屋がありますか？",
+    "en": [
+      {
+        "id": "3085374",
+        "text": "Do you have an empty room in this hotel?"
+      }
+    ],
+    "vocabIds": [
+      "1609010",
+      "1245350",
+      "1499320"
+    ],
+    "matches": {
+      "1245350": {
+        "start": 7,
+        "length": 4,
+        "reading": "あきへや"
+      },
+      "1499320": {
+        "start": 9,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1609010": {
+        "start": 7,
+        "length": 2,
+        "reading": "あき"
       }
     }
   },
@@ -315,16 +614,68 @@
     ],
     "vocabIds": [
       "1002610",
+      "1586265",
       "1609010"
     ],
     "matches": {
       "1002610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おなか"
+      },
+      "1586265": {
+        "start": 3,
+        "length": 2,
+        "reading": "あき"
       },
       "1609010": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
+      }
+    }
+  },
+  {
+    "id": "9682027",
+    "original": "普段、空き時間って何してるの？",
+    "en": [
+      {
+        "id": "6863289",
+        "text": "What do you usually do in your spare time?"
+      }
+    ],
+    "vocabIds": [
+      "1497180",
+      "1609010",
+      "1675900",
+      "1315920",
+      "1577100"
+    ],
+    "matches": {
+      "1315920": {
+        "start": 5,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1497180": {
+        "start": 0,
+        "length": 2,
+        "reading": "ふだん"
+      },
+      "1577100": {
+        "start": 9,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1609010": {
+        "start": 3,
+        "length": 2,
+        "reading": "あき"
+      },
+      "1675900": {
+        "start": 3,
+        "length": 4,
+        "reading": "あきじかん"
       }
     }
   },
@@ -340,25 +691,152 @@
     "vocabIds": [
       "1243310",
       "2845367",
+      "1315840",
       "1195960",
       "1609010"
     ],
     "matches": {
       "1195960": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "すぎ"
       },
       "1243310": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きんよう"
+      },
+      "1315840": {
+        "start": 4,
+        "length": 1,
+        "reading": "じ"
       },
       "1609010": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       },
       "2845367": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ごじ"
+      }
+    }
+  },
+  {
+    "id": "12092963",
+    "original": "彼は居空きとして知られ、日中でも家に忍び込んで貴重品を盗むことで評判となっていた。",
+    "en": [
+      {
+        "id": "12092966",
+        "text": "He was known as a burglar of houses where occupants are present and had a reputation for sneaking in and stealing valuables even during the day."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼} は 居空き~ として[01] 知られる{知られ}~ 日中(にっちゅう)[01] でも[02] 家(いえ)[01] に 忍び込む{忍び込んで} 貴重品 を 盗む[01] 事(こと)[06]{こと}~ で 評判[03] となる{となっていた}",
+    "vocabIds": [
+      "1483070",
+      "1577980",
+      "2258160",
+      "2858953",
+      "1609010",
+      "1420470",
+      "1463770",
+      "1464250",
+      "1423310",
+      "2009290",
+      "1191730",
+      "1467430",
+      "1223520",
+      "1223530",
+      "2648780",
+      "1448440",
+      "1490070"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 16,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1223520": {
+        "start": 23,
+        "length": 2,
+        "reading": "きちょう"
+      },
+      "1223530": {
+        "start": 23,
+        "length": 3,
+        "reading": "きちょうひん"
+      },
+      "1420470": {
+        "start": 8,
+        "length": 2,
+        "reading": "しら"
+      },
+      "1423310": {
+        "start": 13,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1448440": {
+        "start": 27,
+        "length": 2,
+        "reading": "ぬすむ"
+      },
+      "1463770": {
+        "start": 12,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1464250": {
+        "start": 12,
+        "length": 2,
+        "reading": "にちちゅう"
+      },
+      "1467430": {
+        "start": 18,
+        "length": 4,
+        "reading": "しのびこん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1490070": {
+        "start": 32,
+        "length": 2,
+        "reading": "ひょうばん"
+      },
+      "1577980": {
+        "start": 2,
+        "length": 1,
+        "reading": "い"
+      },
+      "1609010": {
+        "start": 3,
+        "length": 2,
+        "reading": "あき"
+      },
+      "2009290": {
+        "start": 13,
+        "length": 3,
+        "reading": "ちゅうでも"
+      },
+      "2258160": {
+        "start": 2,
+        "length": 1,
+        "reading": "い"
+      },
+      "2648780": {
+        "start": 25,
+        "length": 1,
+        "reading": "ひん"
+      },
+      "2858953": {
+        "start": 2,
+        "length": 3,
+        "reading": "いあき"
       }
     }
   },
@@ -382,11 +860,13 @@
     "matches": {
       "1585650": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ばこ"
       },
       "1609010": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
       }
     }
   },
@@ -401,16 +881,64 @@
     ],
     "vocabIds": [
       "1002610",
+      "1586265",
       "1609010"
     ],
     "matches": {
       "1002610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "おなか"
+      },
+      "1586265": {
+        "start": 3,
+        "length": 2,
+        "reading": "あき"
       },
       "1609010": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あき"
+      }
+    }
+  },
+  {
+    "id": "10991743",
+    "original": "あれだけ空き容量があったのに、もうなくなっている。",
+    "en": [
+      {
+        "id": "12614584",
+        "text": "There was so much free space, but it's all used up now."
+      },
+      {
+        "id": "12614585",
+        "text": "All of that free space that was there is gone now."
+      },
+      {
+        "id": "12614586",
+        "text": "It was such an empty space and now it's all gone."
+      }
+    ],
+    "vocabIds": [
+      "1609010",
+      "2351830",
+      "1545450"
+    ],
+    "matches": {
+      "1545450": {
+        "start": 6,
+        "length": 2,
+        "reading": "ようりょう"
+      },
+      "1609010": {
+        "start": 4,
+        "length": 2,
+        "reading": "あき"
+      },
+      "2351830": {
+        "start": 4,
+        "length": 4,
+        "reading": "あきようりょう"
       }
     }
   }

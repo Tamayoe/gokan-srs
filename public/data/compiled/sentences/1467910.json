@@ -12,7 +12,6 @@
     "vocabIds": [
       "1009800",
       "1557840",
-      "1215790",
       "1467910",
       "1198880",
       "1366190",
@@ -22,35 +21,38 @@
     "matches": {
       "1009800": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "にたいして"
       },
       "1198880": {
         "start": 20,
-        "length": 2
-      },
-      "1215790": {
-        "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "かいわ"
       },
       "1231930": {
         "start": 30,
-        "length": 4
+        "length": 4,
+        "reading": "おおいなる"
       },
       "1344390": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "たすけ"
       },
       "1366190": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "しんぽ"
       },
       "1467910": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1557840": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "れいてき"
       }
     }
   },
@@ -67,20 +69,35 @@
     "vocabIds": [
       "1483070",
       "1467910",
-      "1151000"
+      "1150990",
+      "1151000",
+      "1322990"
     ],
     "matches": {
+      "1150990": {
+        "start": 16,
+        "length": 2,
+        "reading": "あいどく"
+      },
       "1151000": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "あいどくしゃ"
+      },
+      "1322990": {
+        "start": 18,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1467910": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -95,27 +112,19 @@
     ],
     "indices": "は 編み物 に 大変{たいへん} 熱心 です",
     "vocabIds": [
-      "1957070",
-      "1307770",
       "1586670",
       "1467910"
     ],
     "matches": {
-      "1307770": {
-        "start": 1,
-        "length": 1
-      },
       "1467910": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1586670": {
         "start": 3,
-        "length": 3
-      },
-      "1957070": {
-        "start": 0,
-        "length": 1
+        "length": 3,
+        "reading": "あみもの"
       }
     }
   },
@@ -139,23 +148,28 @@
     "matches": {
       "1288850": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1467910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1587040": {
         "start": 28,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -178,19 +192,23 @@
     "matches": {
       "1467910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1477910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はつめい"
       },
       "1512610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "べんり"
       },
       "1580640": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -207,30 +225,86 @@
     "vocabIds": [
       "2397090",
       "1467910",
-      "1720400",
-      "1298260",
+      "1361480",
+      "1375950",
       "1310150"
     ],
     "matches": {
-      "1298260": {
-        "start": 8,
-        "length": 1
-      },
       "1310150": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しじ"
+      },
+      "1361480": {
+        "start": 6,
+        "length": 1,
+        "reading": "しん"
+      },
+      "1375950": {
+        "start": 7,
+        "length": 2,
+        "reading": "せいさく"
       },
       "1467910": {
         "start": 3,
-        "length": 2
-      },
-      "1720400": {
-        "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "2397090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
+      }
+    }
+  },
+  {
+    "id": "87128",
+    "original": "彼女は非常に研究熱心だった。",
+    "en": [
+      {
+        "id": "316579",
+        "text": "She was quite eager in her studies."
+      }
+    ],
+    "indices": "彼女[01] は 非常に 研究 熱心 だ{だった}",
+    "vocabIds": [
+      "1483150",
+      "1484920",
+      "1484930",
+      "1258520",
+      "2153260",
+      "1467910"
+    ],
+    "matches": {
+      "1258520": {
+        "start": 6,
+        "length": 2,
+        "reading": "けんきゅう"
+      },
+      "1467910": {
+        "start": 8,
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1484920": {
+        "start": 3,
+        "length": 2,
+        "reading": "ひじょう"
+      },
+      "1484930": {
+        "start": 3,
+        "length": 3,
+        "reading": "ひじょうに"
+      },
+      "2153260": {
+        "start": 6,
+        "length": 4,
+        "reading": "けんきゅうねっしん"
       }
     }
   },
@@ -252,15 +326,18 @@
     "matches": {
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512670": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -282,15 +359,18 @@
     "matches": {
       "1348530": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ことり"
       },
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -308,24 +388,34 @@
       "1483150",
       "1467910",
       "1198880",
-      "1307550"
+      "1307550",
+      "1342540"
     ],
     "matches": {
       "1198880": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かいわ"
       },
       "1307550": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1342540": {
+        "start": 9,
+        "length": 2,
+        "reading": "はじめ"
       },
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -346,11 +436,13 @@
     "matches": {
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -370,32 +462,50 @@
       "1258200",
       "1605850",
       "1467910",
-      "1310160"
+      "1310150",
+      "1310160",
+      "1322990"
     ],
     "matches": {
       "1258200": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "けんり"
+      },
+      "1310150": {
+        "start": 14,
+        "length": 2,
+        "reading": "しじ"
       },
       "1310160": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "しじしゃ"
+      },
+      "1322990": {
+        "start": 16,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1345250": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
       },
       "1467910": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1605850": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ようご"
       }
     }
   },
@@ -411,31 +521,97 @@
     "indices": "彼女[01] は 若い{若} さ[01] と 熱心{熱心さ} の お陰で{おかげで} 仕事[01] を 得る(える)[01]{得た}",
     "vocabIds": [
       "1483150",
+      "1324300",
+      "2193250",
       "1324310",
       "1467910",
       "1304970",
-      "1588760"
+      "1588760",
+      "1454490"
     ],
     "matches": {
       "1304970": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1324300": {
+        "start": 3,
+        "length": 1,
+        "reading": "わか"
       },
       "1324310": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "わかさ"
+      },
+      "1454490": {
+        "start": 17,
+        "length": 1,
+        "reading": "え"
       },
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1588760": {
         "start": 17,
-        "length": 2
+        "length": 1,
+        "reading": "え"
+      },
+      "2193250": {
+        "start": 3,
+        "length": 1,
+        "reading": "わか"
+      }
+    }
+  },
+  {
+    "id": "91907",
+    "original": "彼女はとても勉強熱心です。",
+    "en": [
+      {
+        "id": "311805",
+        "text": "She is very hardworking."
+      },
+      {
+        "id": "10585987",
+        "text": "She's very hardworking."
+      }
+    ],
+    "indices": "彼女[01] は 迚も[01]{とても} 勉強 熱心 です",
+    "vocabIds": [
+      "1483150",
+      "1512670",
+      "2620280",
+      "1467910"
+    ],
+    "matches": {
+      "1467910": {
+        "start": 8,
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1512670": {
+        "start": 6,
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "2620280": {
+        "start": 6,
+        "length": 4,
+        "reading": "べんきょうねっしん"
       }
     }
   },
@@ -458,19 +634,23 @@
     "matches": {
       "1206900": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512670": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -492,15 +672,18 @@
     "matches": {
       "1451150": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -522,15 +705,18 @@
     "matches": {
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512670": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -551,36 +737,43 @@
       "1226990",
       "1483070",
       "1203620",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1203620": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "がいこく"
       },
       "1219910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きぼう"
       },
       "1226990": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "さからっ"
       },
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
-      "1589060": {
+      "1578850": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -604,23 +797,28 @@
     "matches": {
       "1375690": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1394800": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "まったく"
       },
       "1445130": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "どりょく"
       },
       "1467910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -636,6 +834,7 @@
     "indices": "彼ら(かれら) は 彼(かれ)[01]{彼の} 一言 一言 を 熱心 に 聞く{聞いた}",
     "vocabIds": [
       "1483090",
+      "1483070",
       "1000420",
       "1575990",
       "1467910",
@@ -644,23 +843,33 @@
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1575990": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひとこと"
       },
       "1591110": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -683,19 +892,23 @@
     "matches": {
       "1236950": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きょういく"
       },
       "1307850": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1467910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -717,15 +930,18 @@
     "matches": {
       "1182680": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "おくがい"
       },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -747,15 +963,18 @@
     "matches": {
       "1451150": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "はたらく"
       },
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -776,11 +995,13 @@
     "matches": {
       "1467910": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -798,34 +1019,64 @@
       "1483090",
       "1334910",
       "1629300",
+      "1307320",
+      "1463770",
       "1482110",
       "1467910",
-      "2839871"
+      "1222760",
+      "2839871",
+      "1516430"
     ],
     "matches": {
+      "1222760": {
+        "start": 15,
+        "length": 2,
+        "reading": "いのり"
+      },
+      "1307320": {
+        "start": 7,
+        "length": 2,
+        "reading": "よんにち"
+      },
       "1334910": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "じゅうにがつ"
+      },
+      "1463770": {
+        "start": 8,
+        "length": 1,
+        "reading": "にち"
       },
       "1467910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1482110": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ばん"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1516430": {
+        "start": 18,
+        "length": 3,
+        "reading": "ささげる"
       },
       "1629300": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "によんにち"
       },
       "2839871": {
         "start": 15,
-        "length": 6
+        "length": 6,
+        "reading": "いのりをささげる"
       }
     }
   },
@@ -841,26 +1092,42 @@
     "indices": "彼(かれ)[01] は 来る日も来る日も 熱心 に 勉強[01]{勉強した}",
     "vocabIds": [
       "1483070",
-      "1547740",
+      "1547720",
+      "1547730",
+      "1463770",
       "1467910",
       "1512670"
     ],
     "matches": {
+      "1463770": {
+        "start": 4,
+        "length": 1,
+        "reading": "ひ"
+      },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
-      "1547740": {
+      "1547720": {
         "start": 2,
-        "length": 8
+        "length": 2,
+        "reading": "くる"
+      },
+      "1547730": {
+        "start": 2,
+        "length": 3,
+        "reading": "くるひ"
       }
     }
   },
@@ -883,19 +1150,62 @@
     "matches": {
       "1451150": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1537430": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "やしん"
+      }
+    }
+  },
+  {
+    "id": "100112",
+    "original": "彼は勉強熱心である。",
+    "en": [
+      {
+        "id": "303585",
+        "text": "He is diligent in his studies."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 勉強[01] 熱心 である",
+    "vocabIds": [
+      "1483070",
+      "1512670",
+      "2620280",
+      "1467910"
+    ],
+    "matches": {
+      "1467910": {
+        "start": 4,
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1512670": {
+        "start": 2,
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "2620280": {
+        "start": 2,
+        "length": 4,
+        "reading": "べんきょうねっしん"
       }
     }
   },
@@ -911,6 +1221,7 @@
     "indices": "彼(かれ)[01] は 非常に 熱心 に 働く[01]{働いた} ので 成功 為る(する){した}",
     "vocabIds": [
       "1483070",
+      "1484920",
       "1484930",
       "1467910",
       "1451150",
@@ -919,23 +1230,33 @@
     "matches": {
       "1375690": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1451150": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1484920": {
+        "start": 2,
+        "length": 2,
+        "reading": "ひじょう"
       },
       "1484930": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ひじょうに"
       }
     }
   },
@@ -957,15 +1278,18 @@
     "matches": {
       "1467910": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -983,34 +1307,46 @@
       "1483070",
       "1467910",
       "1512670",
+      "1001640",
       "1270210",
       "1312350",
       "1284600"
     ],
     "matches": {
+      "1001640": {
+        "start": 9,
+        "length": 2,
+        "reading": "おかげ"
+      },
       "1270210": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "おかげで"
       },
       "1284600": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ごうかく"
       },
       "1312350": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1467910": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1032,15 +1368,18 @@
     "matches": {
       "1304970": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1467910": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1063,19 +1402,23 @@
     "matches": {
       "1464530": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "にほんご"
       },
       "1467910": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1096,11 +1439,13 @@
     "matches": {
       "1467910": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1128,23 +1473,28 @@
     "matches": {
       "1284600": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ごうかく"
       },
       "1466200": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "にゅうし"
       },
       "1467910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1162,6 +1512,7 @@
       "1483070",
       "1203260",
       "1206900",
+      "1558400",
       "2038150",
       "1467910",
       "1512670"
@@ -1169,27 +1520,38 @@
     "matches": {
       "1203260": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "た"
       },
       "1206900": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1467910": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1558400": {
+        "start": 10,
+        "length": 2,
+        "reading": "おとら"
       },
       "2038150": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "おとらず"
       }
     }
   },
@@ -1206,25 +1568,35 @@
     "vocabIds": [
       "1483070",
       "1387990",
+      "1603550",
       "1467910",
       "1512670"
     ],
     "matches": {
       "1387990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1467910": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1603550": {
+        "start": 5,
+        "length": 2,
+        "reading": "ほめ"
       }
     }
   },
@@ -1248,23 +1620,28 @@
     "matches": {
       "1164340": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いっそう"
       },
       "1387990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1467910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1287,19 +1664,23 @@
     "matches": {
       "1375690": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1467910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1325,31 +1706,38 @@
     "matches": {
       "1192150": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "かぞく"
       },
       "1355850": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ばしょ"
       },
       "1361490": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1451150": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1467910": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1547090": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "やしなう"
       }
     }
   },
@@ -1369,32 +1757,44 @@
       "1577980",
       "1315840",
       "1467910",
+      "1361130",
       "2272580"
     ],
     "matches": {
       "1315840": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1353260": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じょうし"
+      },
+      "1361130": {
+        "start": 15,
+        "length": 2,
+        "reading": "ふり"
       },
       "1467910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1577980": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いる"
       },
       "2272580": {
         "start": 15,
-        "length": 5
+        "length": 5,
+        "reading": "ふりをする"
       }
     }
   },
@@ -1417,19 +1817,23 @@
     "matches": {
       "1320140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1467910": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1452,19 +1856,23 @@
     "matches": {
       "1320140": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1480,21 +1888,36 @@
     "indices": "彼(かれ)[01] は 自己宣伝~ に 熱心 だ",
     "vocabIds": [
       "1483070",
+      "1317580",
       "1725800",
+      "1389730",
       "1467910"
     ],
     "matches": {
+      "1317580": {
+        "start": 2,
+        "length": 2,
+        "reading": "じこ"
+      },
+      "1389730": {
+        "start": 4,
+        "length": 2,
+        "reading": "せんでん"
+      },
       "1467910": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1725800": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "じこせんでん"
       }
     }
   },
@@ -1518,23 +1941,28 @@
     "matches": {
       "1284600": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ごうかく"
       },
       "1312350": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1467910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1556,15 +1984,18 @@
     "matches": {
       "1192700": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かがく"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1582,29 +2013,40 @@
       "1483070",
       "1174420",
       "1512670",
+      "1484920",
       "1484930",
       "1467910"
     ],
     "matches": {
       "1174420": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1467910": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1484920": {
+        "start": 8,
+        "length": 2,
+        "reading": "ひじょう"
       },
       "1484930": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ひじょうに"
       },
       "1512670": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1623,28 +2065,39 @@
       "1467910",
       "1174420",
       "1512670",
-      "1632140"
+      "1632140",
+      "1587040"
     ],
     "matches": {
       "1174420": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1587040": {
+        "start": 20,
+        "length": 2,
+        "reading": "いっ"
       },
       "1632140": {
         "start": 19,
-        "length": 4
+        "length": 4,
+        "reading": "といって"
       }
     }
   },
@@ -1661,6 +2114,7 @@
     "vocabIds": [
       "1483070",
       "1379380",
+      "1558400",
       "2038150",
       "1467910",
       "1512670"
@@ -1668,23 +2122,33 @@
     "matches": {
       "1379380": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1467910": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1558400": {
+        "start": 8,
+        "length": 2,
+        "reading": "おとら"
       },
       "2038150": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "おとらず"
       }
     }
   },
@@ -1706,15 +2170,18 @@
     "matches": {
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1731,25 +2198,41 @@
     "vocabIds": [
       "1483070",
       "1467910",
+      "1379430",
       "1379450",
+      "1955900",
       "1258520"
     ],
     "matches": {
       "1258520": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
+      },
+      "1379430": {
+        "start": 8,
+        "length": 2,
+        "reading": "せいぶつ"
       },
       "1379450": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "せいぶつがく"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1955900": {
+        "start": 10,
+        "length": 1,
+        "reading": "がく"
       }
     }
   },
@@ -1770,11 +2253,13 @@
     "matches": {
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1795,11 +2280,13 @@
     "matches": {
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1823,23 +2310,28 @@
     "matches": {
       "1284600": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ごうかく"
       },
       "1312350": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1467910": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -1860,11 +2352,13 @@
     "matches": {
       "1467910": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1886,15 +2380,18 @@
     "matches": {
       "1451150": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1467910": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -1909,6 +2406,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 話(はなし) の 間(あいだ) 生徒 は 熱心{熱心に} 聞く{聞いていた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1600900",
       "1215230",
@@ -1919,27 +2417,38 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1215230": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1379380": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1467910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1591110": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       },
       "1600900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -1954,6 +2463,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 講演 の 間(あいだ) 彼女[01] は 熱心{熱心に} 聞く{聞いていた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1282240",
       "1215230",
@@ -1964,27 +2474,38 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1215230": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1282240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうえん"
       },
       "1467910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1591110": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2001,30 +2522,47 @@
     "vocabIds": [
       "1483070",
       "1420400",
+      "1922760",
       "2136030",
+      "1587040",
       "1467910",
       "1505870"
     ],
     "matches": {
       "1420400": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1467910": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1505870": {
         "start": 19,
-        "length": 5
+        "length": 4,
+        "reading": "ききいっ"
+      },
+      "1587040": {
+        "start": 11,
+        "length": 2,
+        "reading": "いう"
+      },
+      "1922760": {
+        "start": 10,
+        "length": 3,
+        "reading": "という"
       },
       "2136030": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "というと"
       }
     }
   },
@@ -2047,19 +2585,23 @@
     "matches": {
       "1312350": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -2083,23 +2625,28 @@
     "matches": {
       "1174420": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "2084840": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -2118,6 +2665,7 @@
       "1467910",
       "1264000",
       "2714980",
+      "1482110",
       "1000420",
       "1401000",
       "1345250",
@@ -2126,35 +2674,48 @@
     "matches": {
       "1000420": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1264000": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "いいよっ"
       },
       "1302070": {
         "start": 37,
-        "length": 3
+        "length": 2,
+        "reading": "まいっ"
       },
       "1345250": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "じょせい"
       },
       "1401000": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "あいて"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1482110": {
+        "start": 20,
+        "length": 1,
+        "reading": "ばん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "2714980": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "そのばん"
       }
     }
   },
@@ -2178,23 +2739,28 @@
     "matches": {
       "1247250": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1379380": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1467910": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1551790": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "りっぱ"
       }
     }
   },
@@ -2217,19 +2783,23 @@
     "matches": {
       "1312350": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1320140": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1467910": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -2248,28 +2818,39 @@
       "1512670",
       "1483090",
       "1483730",
-      "1212260"
+      "1212260",
+      "1212250"
     ],
     "matches": {
+      "1212250": {
+        "start": 13,
+        "length": 2,
+        "reading": "かんじ"
+      },
       "1212260": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1467910": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483090": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1483730": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "つかれ"
       },
       "1512670": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -2290,36 +2871,49 @@
       "1293940",
       "1312350",
       "1375760",
-      "1588760"
+      "1588760",
+      "1454490"
     ],
     "matches": {
       "1293940": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "さいしゅう"
       },
       "1312350": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1375760": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "せいせき"
+      },
+      "1454490": {
+        "start": 25,
+        "length": 1,
+        "reading": "え"
       },
       "1467910": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1588760": {
         "start": 25,
-        "length": 2
+        "length": 1,
+        "reading": "え"
       }
     }
   },
@@ -2341,15 +2935,18 @@
     "matches": {
       "1336820": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうよう"
       },
       "1402540": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "はしる"
       },
       "1467910": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -2370,11 +2967,13 @@
     "matches": {
       "1467910": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1591110": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2397,19 +2996,23 @@
     "matches": {
       "1375690": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1467910": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -2436,35 +3039,43 @@
     "matches": {
       "1215230": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1410930": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たいざい"
       },
       "1464530": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "にほんご"
       },
       "1467910": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1582710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
       },
       "2084840": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       }
     }
   },
@@ -2487,19 +3098,23 @@
     "matches": {
       "1311110": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1387990": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんせい"
       },
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -2521,15 +3136,18 @@
     "matches": {
       "1375690": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1467910": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1470370": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "のうりょく"
       }
     }
   },
@@ -2552,19 +3170,23 @@
     "matches": {
       "1247250": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1375690": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1467910": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -2580,31 +3202,48 @@
     "indices": " 人々(ひとびと) は 彼(かれ) の 話(はなし) に 熱心{熱心に} 耳を傾ける{耳を傾けた}",
     "vocabIds": [
       "1580650",
+      "1483070",
       "1000420",
       "1600900",
       "1467910",
-      "2069560"
+      "1317170",
+      "1249420"
     ],
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1249420": {
+        "start": 12,
+        "length": 2,
+        "reading": "かたむけ"
+      },
+      "1317170": {
+        "start": 10,
+        "length": 1,
+        "reading": "みみ"
       },
       "1467910": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       },
       "1580650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
       },
       "1600900": {
         "start": 5,
-        "length": 1
-      },
-      "2069560": {
-        "start": 10,
-        "length": 5
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -2627,19 +3266,23 @@
     "matches": {
       "1200780": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かいかく"
       },
       "1322990": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "しゃ"
       },
       "1362280": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しんにん"
       },
       "1467910": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -2655,26 +3298,24 @@
     "indices": "心(こころ) を 入れ替える{入れ換えて} 出来るだけ{できるだけ} 熱心{熱心に} 勉強 為る(する){し} ねばならない{なければならない}",
     "vocabIds": [
       "1360480",
-      "1465600",
       "1467910",
       "1512670"
     ],
     "matches": {
       "1360480": {
         "start": 0,
-        "length": 1
-      },
-      "1465600": {
-        "start": 2,
-        "length": 2
+        "length": 1,
+        "reading": "こころ"
       },
       "1467910": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -2689,27 +3330,43 @@
     ],
     "indices": "若い 頃(ころ) 彼(かれ)[01] は 迚も[01]{とても} 熱心{熱心に} 働く[01]{働いた}",
     "vocabIds": [
+      "1324300",
       "2420910",
+      "1579080",
       "1483070",
       "1467910",
       "1451150"
     ],
     "matches": {
+      "1324300": {
+        "start": 0,
+        "length": 2,
+        "reading": "わかい"
+      },
       "1451150": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1467910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1579080": {
+        "start": 2,
+        "length": 1,
+        "reading": "ころ"
       },
       "2420910": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わかいころ"
       }
     }
   },
@@ -2733,23 +3390,28 @@
     "matches": {
       "1242170": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ちかづく"
       },
       "1312350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1379380": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1467910": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -2768,33 +3430,51 @@
       "1416220",
       "1312350",
       "2763540",
+      "1244960",
+      "1485630",
       "1467910",
       "1512670"
     ],
     "matches": {
+      "1244960": {
+        "start": 6,
+        "length": 2,
+        "reading": "そなえ"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1312350": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1416220": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1467910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1485630": {
+        "start": 6,
+        "length": 2,
+        "reading": "そなえ"
       },
       "1512670": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "2763540": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "にそなえて"
       }
     }
   },
@@ -2810,6 +3490,7 @@
     "indices": "私(わたし)[01] は 毎日毎日 熱心{熱心に} 働く[01]{働いた}",
     "vocabIds": [
       "1311110",
+      "1524720",
       "2038450",
       "1467910",
       "1451150"
@@ -2817,19 +3498,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451150": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1524720": {
+        "start": 2,
+        "length": 2,
+        "reading": "まいにち"
       },
       "2038450": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "まいにちまいにち"
       }
     }
   },
@@ -2851,24 +3541,34 @@
       "1311110",
       "1483150",
       "1467910",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1259290": {
         "start": 17,
-        "length": 2
+        "length": 1,
+        "reading": "み"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "2256270": {
+        "start": 17,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -2891,19 +3591,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1436130": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       },
       "1451150": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はたらく"
       },
       "1467910": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -2935,23 +3639,28 @@
     "matches": {
       "1174420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1372980": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すうがく"
       },
       "1467910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -2975,23 +3684,28 @@
     "matches": {
       "1174420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1372980": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すうがく"
       },
       "1467910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3016,27 +3730,33 @@
     "matches": {
       "1174420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1372980": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すうがく"
       },
       "1451750": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
       "1467910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3060,23 +3780,28 @@
     "matches": {
       "1247250": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1372980": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すうがく"
       },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3100,23 +3825,28 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1312350": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1329580": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "うかる"
       },
       "1467910": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3132,31 +3862,48 @@
     "indices": "私(わたし)[01] は 午前中 庭 で(#2028980) 熱心{熱心に} 働く[01]",
     "vocabIds": [
       "1311110",
+      "1269060",
       "1269070",
+      "1423310",
       "1436130",
       "1467910",
       "1451150"
     ],
     "matches": {
+      "1269060": {
+        "start": 2,
+        "length": 2,
+        "reading": "ごぜん"
+      },
       "1269070": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ごぜんちゅう"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1423310": {
+        "start": 4,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1436130": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       },
       "1451150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はたらく"
       },
       "1467910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -3175,28 +3922,39 @@
       "1247250",
       "1587040",
       "1467910",
-      "2069560"
+      "1317170",
+      "1249420"
     ],
     "matches": {
       "1247250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1249420": {
+        "start": 15,
+        "length": 2,
+        "reading": "かたむけ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1317170": {
+        "start": 13,
+        "length": 1,
+        "reading": "みみ"
       },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1587040": {
         "start": 4,
-        "length": 2
-      },
-      "2069560": {
-        "start": 13,
-        "length": 5
+        "length": 2,
+        "reading": "いう"
       }
     }
   },
@@ -3219,19 +3977,23 @@
     "matches": {
       "1254340": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "けっしん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1467910": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3249,24 +4011,34 @@
       "1311110",
       "1467910",
       "1512670",
-      "1254180"
+      "1254180",
+      "1630630"
     ],
     "matches": {
       "1254180": {
         "start": 14,
-        "length": 5
+        "length": 2,
+        "reading": "きめ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "1630630": {
+        "start": 14,
+        "length": 2,
+        "reading": "きめ"
       }
     }
   },
@@ -3288,15 +4060,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451150": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1467910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -3316,37 +4091,56 @@
       "1512670",
       "1454670",
       "1467910",
+      "1345140",
       "1761910",
+      "1206900",
       "1591050"
     ],
     "matches": {
+      "1206900": {
+        "start": 20,
+        "length": 2,
+        "reading": "がくせい"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1345140": {
+        "start": 18,
+        "length": 2,
+        "reading": "じょし"
       },
       "1424290": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうごくご"
       },
       "1454670": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "とくに"
       },
       "1467910": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1591050": {
         "start": 23,
-        "length": 5
+        "length": 4,
+        "reading": "きがつい"
       },
       "1761910": {
         "start": 18,
-        "length": 4
+        "length": 4,
+        "reading": "じょしがくせい"
       }
     }
   },
@@ -3370,23 +4164,28 @@
     "matches": {
       "1249900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "あに"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451150": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "はたらい"
       },
       "1467910": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1603090": {
         "start": 16,
-        "length": 5
+        "length": 4,
+        "reading": "ふるまっ"
       }
     }
   },
@@ -3401,37 +4200,61 @@
     ],
     "indices": "私たち は 最初 は 試合 に 備える[02]{備えて} 熱心{熱心に} 練習 為る(する){した}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1293990",
       "1312420",
       "2763540",
+      "1244960",
+      "1485630",
       "1467910",
       "1559160"
     ],
     "matches": {
+      "1244960": {
+        "start": 10,
+        "length": 2,
+        "reading": "そなえ"
+      },
       "1293990": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さいしょ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1312420": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しあい"
       },
       "1467910": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1485630": {
+        "start": 10,
+        "length": 2,
+        "reading": "そなえ"
       },
       "1559160": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "れんしゅう"
       },
       "2763540": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "にそなえて"
       }
     }
   },
@@ -3446,6 +4269,7 @@
     ],
     "indices": "私たち は 其れ[01]{それ} に就いて{について} 熱心{熱心に} 議論 為る(する){した}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1467910",
       "1226160"
@@ -3453,15 +4277,23 @@
     "matches": {
       "1226160": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ぎろん"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -3486,27 +4318,33 @@
     "matches": {
       "1307850": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1467910": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1505870": {
         "start": 17,
-        "length": 5
+        "length": 4,
+        "reading": "ききいっ"
       },
       "1600900": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -3523,20 +4361,35 @@
     "vocabIds": [
       "1282340",
       "1467910",
-      "1180040"
+      "1180030",
+      "1180040",
+      "1322990"
     ],
     "matches": {
+      "1180030": {
+        "start": 6,
+        "length": 2,
+        "reading": "おうぼ"
+      },
       "1180040": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "おうぼしゃ"
       },
       "1282340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こうどう"
+      },
+      "1322990": {
+        "start": 8,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -3558,15 +4411,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1467910": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3588,15 +4444,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1467910": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3618,15 +4477,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1347200": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうばい"
       },
       "1467910": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -3648,15 +4510,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3678,15 +4543,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3708,15 +4576,18 @@
     "matches": {
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3731,32 +4602,37 @@
     ],
     "indices": "さん は 会社[01] で(#2028980) 一番(いちばん)[01] 熱心{熱心に} 働く[01]{働きます}",
     "vocabIds": [
-      "1449910",
       "1198550",
       "1165970",
       "1467910",
+      "1451150",
       "1451040"
     ],
     "matches": {
       "1165970": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いちばん"
       },
       "1198550": {
         "start": 5,
-        "length": 2
-      },
-      "1449910": {
-        "start": 1,
-        "length": 1
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1451040": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "はたらき"
+      },
+      "1451150": {
+        "start": 13,
+        "length": 2,
+        "reading": "はたらき"
       },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -3779,19 +4655,23 @@
     "matches": {
       "1247250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1375690": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "せいこう"
       },
       "1467910": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3814,19 +4694,23 @@
     "matches": {
       "1312350": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1320140": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
       },
       "1467910": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3848,15 +4732,18 @@
     "matches": {
       "1258520": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1328310": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "てじな"
       },
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -3875,43 +4762,63 @@
       "1214810",
       "1467910",
       "1179840",
+      "1423310",
       "1423320",
+      "1609560",
       "1346140",
-      "1354720",
+      "1604890",
       "1349070"
     ],
     "matches": {
       "1179840": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "おうえん"
       },
       "1214810": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かんきゃく"
       },
       "1312420": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しあい"
       },
       "1346140": {
         "start": 45,
-        "length": 3
+        "length": 3,
+        "reading": "かちめ"
       },
       "1349070": {
         "start": 67,
-        "length": 2
+        "length": 2,
+        "reading": "しょうすう"
       },
-      "1354720": {
-        "start": 55,
-        "length": 2
+      "1423310": {
+        "start": 42,
+        "length": 1,
+        "reading": "なか"
       },
       "1423320": {
         "start": 42,
-        "length": 3
+        "length": 3,
+        "reading": "なかには"
       },
       "1467910": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1604890": {
+        "start": 47,
+        "length": 1,
+        "reading": "め"
+      },
+      "1609560": {
+        "start": 45,
+        "length": 2,
+        "reading": "かち"
       }
     }
   },
@@ -3932,11 +4839,13 @@
     "matches": {
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -3959,19 +4868,23 @@
     "matches": {
       "1311110": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1451150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "はたらく"
       },
       "1467910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1587040": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -3993,15 +4906,18 @@
     "matches": {
       "1206900": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1467910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -4017,31 +4933,54 @@
     "indices": "其の[01]{その} 工場 の 労働者 は 製品 を 向上 為せる{させる} 為に{ために} 熱心{熱心に} 働かす{働かされた}",
     "vocabIds": [
       "1578700",
+      "1606450",
       "1560470",
+      "1322990",
       "1380760",
       "1277250",
-      "1467910"
+      "1467910",
+      "2009420"
     ],
     "matches": {
       "1277250": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "こうじょう"
+      },
+      "1322990": {
+        "start": 7,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1380760": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "せいひん"
       },
       "1467910": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1560470": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ろうどうしゃ"
       },
       "1578700": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうじょう"
+      },
+      "1606450": {
+        "start": 5,
+        "length": 2,
+        "reading": "ろうどう"
+      },
+      "2009420": {
+        "start": 23,
+        "length": 3,
+        "reading": "はたらかさ"
       }
     }
   },
@@ -4057,16 +4996,30 @@
     "indices": "は 熱心{熱心な} 勉強家 だ",
     "vocabIds": [
       "1467910",
-      "1512680"
+      "1512670",
+      "1512680",
+      "1191730"
     ],
     "matches": {
+      "1191730": {
+        "start": 9,
+        "length": 1,
+        "reading": "か"
+      },
       "1467910": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1512670": {
+        "start": 7,
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1512680": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "べんきょうか"
       }
     }
   },
@@ -4081,32 +5034,67 @@
     ],
     "indices": "は 彼(かれ)[01] の 会計士~ の 一次試験~ の 為(ため){ため} ノート[02]~ を 熱心{熱心に} 勉強 為る(する){していた} よ[01]",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1198480",
+      "1160790",
+      "1163030",
       "2128510",
+      "1316380",
+      "1312350",
       "1467910",
       "1512670"
     ],
     "matches": {
       "1000420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1160790": {
+        "start": 11,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1163030": {
+        "start": 11,
+        "length": 2,
+        "reading": "いちじ"
       },
       "1198480": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "かいけいし"
+      },
+      "1312350": {
+        "start": 13,
+        "length": 2,
+        "reading": "しけん"
+      },
+      "1316380": {
+        "start": 12,
+        "length": 1,
+        "reading": "じ"
       },
       "1467910": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483070": {
+        "start": 5,
+        "length": 1,
+        "reading": "かれ"
       },
       "1512670": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "2128510": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "いちじしけん"
       }
     }
   },
@@ -4127,11 +5115,13 @@
     "matches": {
       "1304970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -4147,6 +5137,7 @@
     "indices": "此の{この} 本(ほん)[01] は 彼(かれ)[01] の 熱心{熱心な}~ 研究 の 成果 である",
     "vocabIds": [
       "1522150",
+      "1483070",
       "1000420",
       "1467910",
       "1258520",
@@ -4155,23 +5146,33 @@
     "matches": {
       "1000420": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1258520": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1375650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "せいか"
       },
       "1467910": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -4188,30 +5189,53 @@
     "vocabIds": [
       "1349780",
       "1467910",
+      "1320640",
       "2836943",
+      "1283190",
+      "1304970",
       "2207590",
       "1601160"
     ],
     "matches": {
+      "1283190": {
+        "start": 15,
+        "length": 2,
+        "reading": "たかい"
+      },
+      "1304970": {
+        "start": 17,
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1320640": {
+        "start": 13,
+        "length": 1,
+        "reading": "しつ"
+      },
       "1349780": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうしん"
       },
       "1467910": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1601160": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "はんえい"
       },
       "2207590": {
         "start": 17,
-        "length": 4
+        "length": 4,
+        "reading": "しごとぶり"
       },
       "2836943": {
         "start": 13,
-        "length": 4
+        "length": 4,
+        "reading": "しつのたかい"
       }
     }
   },
@@ -4233,15 +5257,18 @@
     "matches": {
       "1312350": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -4262,11 +5289,13 @@
     "matches": {
       "1379380": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -4289,19 +5318,23 @@
     "matches": {
       "1312350": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "しけん"
       },
       "1335080": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -4322,11 +5355,13 @@
     "matches": {
       "1467910": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -4348,15 +5383,18 @@
     "matches": {
       "1464530": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "にほんご"
       },
       "1467910": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -4372,26 +5410,42 @@
     "indices": "貴方(あなた)[01]{あなた} の 話をする{話をして} 下さい[02] 熱心{熱心に} 聞く{聞きます} から",
     "vocabIds": [
       "1600900",
+      "1184280",
       "1184270",
       "1467910",
+      "1591110",
       "2701450"
     ],
     "matches": {
       "1184270": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 8,
+        "length": 3,
+        "reading": "ください"
       },
       "1467910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1591110": {
+        "start": 15,
+        "length": 2,
+        "reading": "きき"
       },
       "1600900": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       },
       "2701450": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "きき"
       }
     }
   },
@@ -4409,24 +5463,46 @@
       "1191730",
       "1589350",
       "1467910",
-      "1852320"
+      "1592100",
+      "2629370",
+      "1852320",
+      "1370090"
     ],
     "matches": {
       "1191730": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1370090": {
+        "start": 18,
+        "length": 3,
+        "reading": "つくす"
       },
       "1467910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1589350": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
+      },
+      "1592100": {
+        "start": 16,
+        "length": 2,
+        "reading": "くい"
       },
       "1852320": {
         "start": 16,
-        "length": 5
+        "length": 5,
+        "reading": "くいつくす"
+      },
+      "2629370": {
+        "start": 16,
+        "length": 2,
+        "reading": "くい"
       }
     }
   },
@@ -4449,19 +5525,23 @@
     "matches": {
       "1304680": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ざんねん"
       },
       "1467910": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1512670": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       },
       "1589350": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -4482,11 +5562,13 @@
     "matches": {
       "1217700": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "がんばる"
       },
       "1467910": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       }
     }
   },
@@ -4502,46 +5584,66 @@
     "indices": "彼(かれ) は 此の{この} 選挙運動~ に於いて[02]{において} 長い{長く} 熱心{熱心に} 戦う{戦い} 愛する 国 の 為に{ために} ずっと 長い{長く} 熱心{熱心に} 戦う{戦った}",
     "vocabIds": [
       "1483070",
+      "1392190",
       "1824520",
-      "1429740",
+      "1172910",
+      "1429750",
       "1467910",
+      "1596960",
       "1596950",
       "1150450",
-      "1592250",
-      "1596960"
+      "1592250"
     ],
     "matches": {
       "1150450": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "あいする"
       },
-      "1429740": {
+      "1172910": {
+        "start": 6,
+        "length": 2,
+        "reading": "うんどう"
+      },
+      "1392190": {
+        "start": 4,
+        "length": 2,
+        "reading": "せんきょ"
+      },
+      "1429750": {
         "start": 12,
-        "length": 1
+        "length": 2,
+        "reading": "ながく"
       },
       "1467910": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1592250": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       },
       "1596950": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "たたかい"
       },
       "1596960": {
-        "start": 37,
-        "length": 3
+        "start": 17,
+        "length": 2,
+        "reading": "たたかい"
       },
       "1824520": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "せんきょうんどう"
       }
     }
   },
@@ -4560,42 +5662,62 @@
       "1597040",
       "1344930",
       "1345430",
+      "1305560",
       "1305550",
       "1467910",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1305550": {
         "start": 21,
-        "length": 3
+        "length": 3,
+        "reading": "したて"
+      },
+      "1305560": {
+        "start": 21,
+        "length": 3,
+        "reading": "したて"
       },
       "1338240": {
         "start": 34,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1344930": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "おんな"
       },
       "1345430": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "じょゆう"
       },
       "1460930": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "なんきょく"
       },
       "1467910": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1597040": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
+      },
+      "1896380": {
+        "start": 34,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -4614,32 +5736,50 @@
       "1467910",
       "1597300",
       "1219560",
-      "1406120"
+      "1219550",
+      "1406120",
+      "2855028"
     ],
     "matches": {
+      "1219550": {
+        "start": 22,
+        "length": 2,
+        "reading": "よせ"
+      },
       "1219560": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "よせ"
       },
       "1297510": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さっか"
       },
       "1406120": {
         "start": 41,
-        "length": 3
+        "length": 2,
+        "reading": "そろえ"
       },
       "1467910": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1597300": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "たんぺん"
+      },
+      "2855028": {
+        "start": 41,
+        "length": 2,
+        "reading": "そろえ"
       }
     }
   },
@@ -4658,32 +5798,44 @@
       "1236950",
       "1467910",
       "1835630",
+      "1580640",
       "1589350"
     ],
     "matches": {
       "1236950": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "きょういく"
       },
       "1467910": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1510790": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "かわっ"
+      },
+      "1580640": {
+        "start": 21,
+        "length": 1,
+        "reading": "ひと"
       },
       "1589350": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       },
       "1835630": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "いいひと"
       }
     }
   },
@@ -4705,15 +5857,18 @@
     "matches": {
       "1186760": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かがく"
       },
       "1467910": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -4735,19 +5890,23 @@
     "matches": {
       "1413240": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "だいがく"
       },
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1512670": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "べんきょう"
       }
     }
   },
@@ -4769,19 +5928,23 @@
     "matches": {
       "1327720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1343950": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "かい"
       },
       "1467910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -4797,25 +5960,79 @@
     "vocabIds": [
       "1415260",
       "1421020",
+      "1213810",
       "1213870",
+      "2268500",
       "1467910"
     ],
     "matches": {
+      "1213810": {
+        "start": 5,
+        "length": 2,
+        "reading": "かんご"
+      },
       "1213870": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かんごふ"
       },
       "1415260": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "だい"
       },
       "1421020": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちく"
       },
       "1467910": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "2268500": {
+        "start": 7,
+        "length": 1,
+        "reading": "ふ"
+      }
+    }
+  },
+  {
+    "id": "10982600",
+    "original": "彼は勉強熱心だ。",
+    "en": [
+      {
+        "id": "303578",
+        "text": "He is diligent in his study."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1512670",
+      "2620280",
+      "1467910"
+    ],
+    "matches": {
+      "1467910": {
+        "start": 4,
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1512670": {
+        "start": 2,
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "2620280": {
+        "start": 2,
+        "length": 4,
+        "reading": "べんきょうねっしん"
       }
     }
   },
@@ -4830,16 +6047,56 @@
     ],
     "vocabIds": [
       "1467910",
-      "2119830"
+      "1404630",
+      "1601900"
+    ],
+    "matches": {
+      "1404630": {
+        "start": 9,
+        "length": 1,
+        "reading": "あし"
+      },
+      "1467910": {
+        "start": 0,
+        "length": 2,
+        "reading": "ねっしん"
+      },
+      "1601900": {
+        "start": 11,
+        "length": 4,
+        "reading": "ひっぱっ"
+      }
+    }
+  },
+  {
+    "id": "11256107",
+    "original": "勉強熱心だね！",
+    "en": [
+      {
+        "id": "11512180",
+        "text": "You really study hard!"
+      }
+    ],
+    "vocabIds": [
+      "1512670",
+      "2620280",
+      "1467910"
     ],
     "matches": {
       "1467910": {
-        "start": 0,
-        "length": 2
+        "start": 2,
+        "length": 2,
+        "reading": "ねっしん"
       },
-      "2119830": {
-        "start": 9,
-        "length": 7
+      "1512670": {
+        "start": 0,
+        "length": 2,
+        "reading": "べんきょう"
+      },
+      "2620280": {
+        "start": 0,
+        "length": 4,
+        "reading": "べんきょうねっしん"
       }
     }
   }

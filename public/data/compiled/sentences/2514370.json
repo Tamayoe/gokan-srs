@@ -1,35 +1,5 @@
 [
   {
-    "id": "80983",
-    "original": "眠ってる犬は眠らせておけ。",
-    "en": [
-      {
-        "id": "322732",
-        "text": "Let a sleeping dog lie."
-      }
-    ],
-    "indices": "眠る[01]{眠ってる} 犬[01] は 眠る[01]{眠らせて} 置く[09]{おけ}",
-    "vocabIds": [
-      "1529390",
-      "1258330",
-      "2514370"
-    ],
-    "matches": {
-      "1258330": {
-        "start": 4,
-        "length": 1
-      },
-      "1529390": {
-        "start": 0,
-        "length": 3
-      },
-      "2514370": {
-        "start": 6,
-        "length": 4
-      }
-    }
-  },
-  {
     "id": "88289",
     "original": "彼女は赤ん坊をあやして眠らせた。",
     "en": [
@@ -47,15 +17,18 @@
     "matches": {
       "1383310": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "あかんぼう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "2514370": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "ねむらせ"
       }
     }
   },
@@ -70,26 +43,54 @@
     ],
     "vocabIds": [
       "1403060",
+      "1160790",
+      "1165960",
       "1611360",
+      "1482110",
+      "1423310",
       "1521400",
       "2514370"
     ],
     "matches": {
+      "1160790": {
+        "start": 5,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1165960": {
+        "start": 5,
+        "length": 2,
+        "reading": "いちばん"
+      },
       "1403060": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "そうおん"
+      },
+      "1423310": {
+        "start": 7,
+        "length": 1,
+        "reading": "ちゅう"
+      },
+      "1482110": {
+        "start": 6,
+        "length": 1,
+        "reading": "ばん"
       },
       "1521400": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1611360": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "いちばんちゅう"
       },
       "2514370": {
         "start": 10,
-        "length": 4
+        "length": 3,
+        "reading": "ねむらせ"
       }
     }
   }

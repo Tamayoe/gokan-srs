@@ -1,5 +1,56 @@
 [
   {
+    "id": "122386",
+    "original": "日本へ指名通話をお願いします。",
+    "en": [
+      {
+        "id": "281618",
+        "text": "I'd like to make a person-to-person call to Japan."
+      }
+    ],
+    "indices": "日本 へ 指名通話 を お願いします",
+    "vocabIds": [
+      "1582710",
+      "1310000",
+      "1936450",
+      "1433610",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 8,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1310000": {
+        "start": 3,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1433610": {
+        "start": 5,
+        "length": 2,
+        "reading": "つうわ"
+      },
+      "1582710": {
+        "start": 0,
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "1936450": {
+        "start": 3,
+        "length": 4,
+        "reading": "しめいつうわ"
+      },
+      "2036870": {
+        "start": 8,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
     "id": "125566",
     "original": "通話の申し込みを取り消しましょうか。",
     "en": [
@@ -12,20 +63,131 @@
     "vocabIds": [
       "1433610",
       "1605140",
+      "1326790",
       "1599050"
     ],
     "matches": {
+      "1326790": {
+        "start": 8,
+        "length": 4,
+        "reading": "とりけし"
+      },
       "1433610": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "つうわ"
       },
       "1599050": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "とりけし"
       },
       "1605140": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "もうしこみ"
+      }
+    }
+  },
+  {
+    "id": "168225",
+    "original": "指名通話で国際電話をかけるといいよ。",
+    "en": [
+      {
+        "id": "246268",
+        "text": "It's best to make international calls person to person."
+      }
+    ],
+    "indices": "指名通話 で(#2028980) 国際電話 を 掛ける[04]{かける} と いい(#2820690)[01] よ[01]",
+    "vocabIds": [
+      "1310000",
+      "1936450",
+      "1433610",
+      "1286400",
+      "1746880",
+      "1443840",
+      "1896610"
+    ],
+    "matches": {
+      "1286400": {
+        "start": 5,
+        "length": 2,
+        "reading": "こくさい"
+      },
+      "1310000": {
+        "start": 0,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1433610": {
+        "start": 2,
+        "length": 2,
+        "reading": "つうわ"
+      },
+      "1443840": {
+        "start": 7,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1746880": {
+        "start": 5,
+        "length": 4,
+        "reading": "こくさいでんわ"
+      },
+      "1896610": {
+        "start": 7,
+        "length": 6,
+        "reading": "でんわをかける"
+      },
+      "1936450": {
+        "start": 0,
+        "length": 4,
+        "reading": "しめいつうわ"
+      }
+    }
+  },
+  {
+    "id": "168226",
+    "original": "指名通話でお願いします。",
+    "en": [
+      {
+        "id": "246267",
+        "text": "Make it a person-to-person call, please."
+      }
+    ],
+    "indices": "指名通話 で(#2028980) お願いします",
+    "vocabIds": [
+      "1310000",
+      "1936450",
+      "1433610",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 5,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1310000": {
+        "start": 0,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1433610": {
+        "start": 2,
+        "length": 2,
+        "reading": "つうわ"
+      },
+      "1936450": {
+        "start": 0,
+        "length": 4,
+        "reading": "しめいつうわ"
+      },
+      "2036870": {
+        "start": 5,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -43,24 +205,85 @@
       "1204860",
       "1433610",
       "2037700",
+      "1326910",
       "1659000"
     ],
     "matches": {
       "1204860": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かく"
+      },
+      "1326910": {
+        "start": 11,
+        "length": 4,
+        "reading": "とりつけ"
       },
       "1433610": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "つうわ"
       },
       "1659000": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "とりつけ"
       },
       "2037700": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "き"
+      }
+    }
+  },
+  {
+    "id": "192520",
+    "original": "リチャーズさんの奥さんに指名通話をお願いします。",
+    "en": [
+      {
+        "id": "29684",
+        "text": "I'd like to make a person-to-person call to Mrs. Richards."
+      }
+    ],
+    "indices": "さん の 奥さん に 指名通話 を お願いします",
+    "vocabIds": [
+      "1179330",
+      "1310000",
+      "1936450",
+      "1433610",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 17,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1179330": {
+        "start": 8,
+        "length": 3,
+        "reading": "おくさん"
+      },
+      "1310000": {
+        "start": 12,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1433610": {
+        "start": 14,
+        "length": 2,
+        "reading": "つうわ"
+      },
+      "1936450": {
+        "start": 12,
+        "length": 4,
+        "reading": "しめいつうわ"
+      },
+      "2036870": {
+        "start": 17,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -81,11 +304,91 @@
     "matches": {
       "1423310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1433610": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "つうわ"
+      }
+    }
+  },
+  {
+    "id": "216367",
+    "original": "シカゴに指名通話をお願いします。",
+    "en": [
+      {
+        "id": "53672",
+        "text": "I'd like to place a person-to-person call to Chicago."
+      }
+    ],
+    "indices": "シカゴ に 指名通話 を お願いします",
+    "vocabIds": [
+      "1310000",
+      "1936450",
+      "1433610",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 9,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1310000": {
+        "start": 4,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1433610": {
+        "start": 6,
+        "length": 2,
+        "reading": "つうわ"
+      },
+      "1936450": {
+        "start": 4,
+        "length": 4,
+        "reading": "しめいつうわ"
+      },
+      "2036870": {
+        "start": 9,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
+    "id": "235569",
+    "original": "２１２ー８３６ー１７２５に指名通話をかけたいんだけど。",
+    "en": [
+      {
+        "id": "72950",
+        "text": "I want to make a person-to person call to 212-836-1725."
+      }
+    ],
+    "indices": "に 指名通話~ を 掛ける[04]{かけ} たい[01] ん[03] だ けど",
+    "vocabIds": [
+      "1310000",
+      "1936450",
+      "1433610"
+    ],
+    "matches": {
+      "1310000": {
+        "start": 13,
+        "length": 2,
+        "reading": "しめい"
+      },
+      "1433610": {
+        "start": 15,
+        "length": 2,
+        "reading": "つうわ"
+      },
+      "1936450": {
+        "start": 13,
+        "length": 4,
+        "reading": "しめいつうわ"
       }
     }
   },
@@ -103,28 +406,33 @@
       "1277250",
       "1561590",
       "1546250",
-      "1611020"
+      "1577100"
     ],
     "matches": {
       "1277250": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こうじょう"
       },
       "1433610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "つうわ"
       },
       "1546250": {
         "start": 46,
-        "length": 2
+        "length": 2,
+        "reading": "ようけん"
       },
       "1561590": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "ろくおん"
       },
-      "1611020": {
+      "1577100": {
         "start": 49,
-        "length": 2
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -144,11 +452,13 @@
     "matches": {
       "1433610": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "つうわ"
       },
       "1531040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "むりょう"
       }
     }
   }

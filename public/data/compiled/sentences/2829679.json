@@ -1,60 +1,5 @@
 [
   {
-    "id": "86541",
-    "original": "彼女は毛布に身を包んだ。",
-    "en": [
-      {
-        "id": "317169",
-        "text": "She wrapped herself in a blanket."
-      }
-    ],
-    "indices": "彼女[01] は 毛布 に 身を包む{身を包んだ}",
-    "vocabIds": [
-      "1483150",
-      "1533950",
-      "2829679"
-    ],
-    "matches": {
-      "1483150": {
-        "start": 0,
-        "length": 2
-      },
-      "1533950": {
-        "start": 3,
-        "length": 2
-      },
-      "2829679": {
-        "start": 6,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "114270",
-    "original": "彼はオーバーに身を包んだ。",
-    "en": [
-      {
-        "id": "289402",
-        "text": "He wrapped himself in his overcoat."
-      }
-    ],
-    "indices": "彼(かれ)[01] は オーバー[01]{オーバーに} 身を包む{身を包んだ}~",
-    "vocabIds": [
-      "1483070",
-      "2829679"
-    ],
-    "matches": {
-      "1483070": {
-        "start": 0,
-        "length": 1
-      },
-      "2829679": {
-        "start": 7,
-        "length": 5
-      }
-    }
-  },
-  {
     "id": "1128574",
     "original": "いつかオートクチュールに身を包むんだという彼女の夢が意外な形で実現した。",
     "en": [
@@ -64,7 +9,9 @@
       }
     ],
     "vocabIds": [
+      "1365520",
       "2829679",
+      "1584060",
       "1483150",
       "1529410",
       "1156410",
@@ -74,56 +21,43 @@
     "matches": {
       "1156410": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "いがい"
       },
       "1250220": {
         "start": 29,
-        "length": 1
+        "length": 1,
+        "reading": "かたち"
       },
       "1321020": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "じつげん"
+      },
+      "1365520": {
+        "start": 12,
+        "length": 1,
+        "reading": "み"
       },
       "1483150": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1529410": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "ゆめ"
+      },
+      "1584060": {
+        "start": 14,
+        "length": 2,
+        "reading": "つつむ"
       },
       "2829679": {
         "start": 12,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "2976534",
-    "original": "新婦は白いウエディングドレスに身を包んでいた。",
-    "en": [
-      {
-        "id": "2301558",
-        "text": "The bride was wearing a white wedding dress."
-      }
-    ],
-    "vocabIds": [
-      "1362340",
-      "1474910",
-      "2829679"
-    ],
-    "matches": {
-      "1362340": {
-        "start": 0,
-        "length": 2
-      },
-      "1474910": {
-        "start": 3,
-        "length": 2
-      },
-      "2829679": {
-        "start": 15,
-        "length": 5
+        "length": 4,
+        "reading": "みをつつむ"
       }
     }
   }

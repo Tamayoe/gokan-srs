@@ -1,5 +1,38 @@
 [
   {
+    "id": "74088",
+    "original": "「ご注文は？」「オレンジジュース」「アイス付きで？」「そう」「まいど」",
+    "en": [
+      {
+        "id": "329632",
+        "text": "\"Your order?\" \"Orange juice.\" \"With ice?\" \"Yes.\" \"Thanks for your business.\""
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] は オレンジジュース アイス[01]~ 付き[01] で(#2028980) 然う{そう} 毎度[02]{まいど}",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "1583630"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1583630": {
+        "start": 21,
+        "length": 2,
+        "reading": "つき"
+      },
+      "1930020": {
+        "start": 1,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      }
+    }
+  },
+  {
     "id": "76894",
     "original": "アマゾン・ドット・コムで本を注文しました。",
     "en": [
@@ -16,11 +49,13 @@
     "matches": {
       "1426650": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -36,26 +71,42 @@
     "indices": "別紙~ の 注文書~ の 通り(とおり) 注文(ちゅうもん)[01] 致す{いたします}",
     "vocabIds": [
       "1509820",
+      "1426520",
       "1942610",
+      "1583840",
       "1432920",
       "1426650"
     ],
     "matches": {
+      "1426520": {
+        "start": 3,
+        "length": 1,
+        "reading": "ちゅう"
+      },
       "1426650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1432920": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "とおり"
       },
       "1509820": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "べっし"
+      },
+      "1583840": {
+        "start": 4,
+        "length": 2,
+        "reading": "ぶんしょ"
       },
       "1942610": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうぶんしょ"
       }
     }
   },
@@ -78,19 +129,23 @@
     "matches": {
       "1396130": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1546020": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ようふく"
       }
     }
   },
@@ -112,15 +167,18 @@
     "matches": {
       "1280770": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こうちゃ"
       },
       "1426650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -142,15 +200,18 @@
     "matches": {
       "1426650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1522150": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -166,31 +227,54 @@
     "indices": "彼女[01] は 珈琲{コーヒー} を 飲む[01]{飲み} 終える と もう[03] 一杯[01] 注文(ちゅうもん)[01] 為る(する){した}",
     "vocabIds": [
       "1483150",
+      "1169870",
       "2151640",
       "1332760",
+      "1160790",
       "1165670",
+      "2019640",
       "1426650"
     ],
     "matches": {
+      "1160790": {
+        "start": 16,
+        "length": 1,
+        "reading": "いち"
+      },
       "1165670": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "いちはい"
+      },
+      "1169870": {
+        "start": 8,
+        "length": 2,
+        "reading": "のみ"
       },
       "1332760": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "おえる"
       },
       "1426650": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "2019640": {
+        "start": 17,
+        "length": 1,
+        "reading": "はい"
       },
       "2151640": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "のみ"
       }
     }
   },
@@ -212,15 +296,18 @@
     "matches": {
       "1426650": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -241,25 +328,41 @@
     "vocabIds": [
       "1483070",
       "1522150",
+      "1340030",
       "1594870",
+      "2015400",
       "1426650"
     ],
     "matches": {
+      "1340030": {
+        "start": 9,
+        "length": 2,
+        "reading": "しゅっぱん"
+      },
       "1426650": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1594870": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "しゅっぱんしゃ"
+      },
+      "2015400": {
+        "start": 11,
+        "length": 1,
+        "reading": "しゃ"
       }
     }
   },
@@ -275,21 +378,30 @@
     "indices": "彼(かれ)[01] は 私たち に ステーキ を 注文(ちゅうもん)[01] 為る(する){して} 呉れる{くれた}",
     "vocabIds": [
       "1483070",
+      "1311110",
       "1311300",
       "1426650"
     ],
     "matches": {
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1426650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -311,15 +423,18 @@
     "matches": {
       "1280770": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こうちゃ"
       },
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -348,11 +463,13 @@
     "matches": {
       "1426650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -376,23 +493,28 @@
     "matches": {
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1451750": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1548370": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "たのん"
       }
     }
   },
@@ -409,25 +531,41 @@
     "vocabIds": [
       "1483070",
       "1169870",
+      "1160790",
       "1165670",
+      "2019640",
       "1426650"
     ],
     "matches": {
+      "1160790": {
+        "start": 17,
+        "length": 1,
+        "reading": "いち"
+      },
       "1165670": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "いちはい"
       },
       "1169870": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "のん"
       },
       "1426650": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2019640": {
+        "start": 18,
+        "length": 1,
+        "reading": "はい"
       }
     }
   },
@@ -449,15 +587,18 @@
     "matches": {
       "1426650": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1506960": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "たいらげ"
       }
     }
   },
@@ -481,23 +622,28 @@
     "matches": {
       "1426650": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1451750": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1547720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       },
       "1554310": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "りょうり"
       }
     }
   },
@@ -519,15 +665,18 @@
     "matches": {
       "1368480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "にんまえ"
       },
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -550,19 +699,23 @@
     "matches": {
       "1205900": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "かくにん"
       },
       "1426650": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1465590": {
         "start": 30,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1473140": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "はいたつ"
       }
     }
   },
@@ -577,7 +730,10 @@
     ],
     "indices": "笛吹き~ に 金(かね) を 払う 者(もの) が 曲(きょく) を 注文(ちゅうもん)[01] 為る(する){する}",
     "vocabIds": [
+      "1437310",
       "1437320",
+      "1370760",
+      "2759690",
       "1242590",
       "1501620",
       "1322990",
@@ -587,27 +743,105 @@
     "matches": {
       "1239700": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "きょく"
       },
       "1242590": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "きん"
       },
       "1322990": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
+      },
+      "1370760": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふき"
       },
       "1426650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1437310": {
+        "start": 0,
+        "length": 1,
+        "reading": "ふえ"
       },
       "1437320": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ふえふき"
       },
       "1501620": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "はらう"
+      },
+      "2759690": {
+        "start": 1,
+        "length": 2,
+        "reading": "ふき"
+      }
+    }
+  },
+  {
+    "id": "125540",
+    "original": "定期的にご注文いただけるのでしたら、５％の特別値引きをいたします。",
+    "en": [
+      {
+        "id": "278452",
+        "text": "We will grant you a special discount of 5% provided that you could guarantee placing regular orders."
+      }
+    ],
+    "indices": "定期的{定期的に} 御(ご){ご} 注文(ちゅうもん)[01] 頂ける[01]{いただける} の です{でしたら} の 特別 値引き を 致す{いたします}",
+    "vocabIds": [
+      "1435490",
+      "1777250",
+      "1437260",
+      "1930020",
+      "1426650",
+      "1455280",
+      "1600190"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1435490": {
+        "start": 0,
+        "length": 2,
+        "reading": "ていき"
+      },
+      "1437260": {
+        "start": 2,
+        "length": 1,
+        "reading": "てき"
+      },
+      "1455280": {
+        "start": 21,
+        "length": 2,
+        "reading": "とくべつ"
+      },
+      "1600190": {
+        "start": 23,
+        "length": 3,
+        "reading": "ねびき"
+      },
+      "1777250": {
+        "start": 0,
+        "length": 3,
+        "reading": "ていきてき"
+      },
+      "1930020": {
+        "start": 4,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -629,15 +863,18 @@
     "matches": {
       "1423310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1426650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1428390": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちょうしょく"
       }
     }
   },
@@ -658,11 +895,13 @@
     "matches": {
       "1205900": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かくにん"
       },
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -678,21 +917,30 @@
     "indices": "注文(ちゅうもん)[01] を キャンセル 為る(する){します} ので キャンセル 確認書 を 送る{お送り} 下さい{ください}",
     "vocabIds": [
       "1426650",
+      "1205900",
       "1205910",
-      "1402630"
+      "2037940"
     ],
     "matches": {
+      "1205900": {
+        "start": 19,
+        "length": 2,
+        "reading": "かくにん"
+      },
       "1205910": {
         "start": 19,
-        "length": 3
-      },
-      "1402630": {
-        "start": 24,
-        "length": 2
+        "length": 3,
+        "reading": "かくにんしょ"
       },
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "2037940": {
+        "start": 21,
+        "length": 1,
+        "reading": "しょ"
       }
     }
   },
@@ -714,15 +962,18 @@
     "matches": {
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1432920": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "どおり"
       },
       "1597890": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "つくる"
       }
     }
   },
@@ -744,15 +995,18 @@
     "matches": {
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1457200": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "とどい"
       },
       "2648780": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "しな"
       }
     }
   },
@@ -775,19 +1029,23 @@
     "matches": {
       "1263550": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "げんきん"
       },
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1453340": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "どうふう"
       },
       "1595730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "すべて"
       }
     }
   },
@@ -808,20 +1066,29 @@
     "vocabIds": [
       "1426650",
       "1490670",
+      "1329650",
       "1329770"
     ],
     "matches": {
+      "1329650": {
+        "start": 10,
+        "length": 4,
+        "reading": "うけとり"
+      },
       "1329770": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "うけとり"
       },
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1490670": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しなもの"
       }
     }
   },
@@ -843,24 +1110,79 @@
       "1602330",
       "1423310",
       "1426650",
+      "1404975",
       "1956580"
     ],
     "matches": {
+      "1404975": {
+        "start": 17,
+        "length": 1,
+        "reading": "はや"
+      },
       "1423310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1426650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1602330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしょく"
       },
       "1956580": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "はや"
+      }
+    }
+  },
+  {
+    "id": "137238",
+    "original": "大量のご注文による値引きは、ご注文の数によります。",
+    "en": [
+      {
+        "id": "275998",
+        "text": "The quantity discounts are according to the size of the order."
+      }
+    ],
+    "indices": "大量 の 御(ご){ご} 注文(ちゅうもん)[01] に依る{による} 値引き は 御(ご){ご} 注文(ちゅうもん)[01] の 数(かず) に依る{によります}",
+    "vocabIds": [
+      "1415190",
+      "1930020",
+      "1426650",
+      "1600190",
+      "1580820"
+    ],
+    "matches": {
+      "1415190": {
+        "start": 0,
+        "length": 2,
+        "reading": "たいりょう"
+      },
+      "1426650": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1580820": {
+        "start": 18,
+        "length": 1,
+        "reading": "かず"
+      },
+      "1600190": {
+        "start": 9,
+        "length": 3,
+        "reading": "ねびき"
+      },
+      "1930020": {
+        "start": 3,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -884,23 +1206,79 @@
     "matches": {
       "1174380": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "えいかいわ"
       },
       "1298520": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
       },
       "1426650": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1577100": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       },
       "2862858": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たろう"
+      }
+    }
+  },
+  {
+    "id": "140480",
+    "original": "直ちにご注文に応じられずまことに申し訳ございません。",
+    "en": [
+      {
+        "id": "274093",
+        "text": "Please accept our apologies for not filling your order sooner."
+      }
+    ],
+    "indices": "直ちに 御(ご){ご} 注文(ちゅうもん)[01] に 応じる{応じられず} 誠に{まことに} 申し訳ございません[01]",
+    "vocabIds": [
+      "1430670",
+      "1930020",
+      "1426650",
+      "1179830",
+      "1363050",
+      "2060820"
+    ],
+    "matches": {
+      "1179830": {
+        "start": 7,
+        "length": 2,
+        "reading": "おうじ"
+      },
+      "1363050": {
+        "start": 16,
+        "length": 3,
+        "reading": "もうしわけ"
+      },
+      "1426650": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1430670": {
+        "start": 0,
+        "length": 3,
+        "reading": "ただちに"
+      },
+      "1930020": {
+        "start": 3,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "2060820": {
+        "start": 16,
+        "length": 9,
+        "reading": "もうしわけございません"
       }
     }
   },
@@ -923,19 +1301,74 @@
     "matches": {
       "1347310": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しょうひん"
       },
       "1387500": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんげつ"
       },
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1457200": {
         "start": 17,
-        "length": 3
+        "length": 2,
+        "reading": "とどい"
+      }
+    }
+  },
+  {
+    "id": "147559",
+    "original": "初めてのご注文の場合には、５％の特別値引きをいたします。",
+    "en": [
+      {
+        "id": "267001",
+        "text": "Your initial order is subject to a special discount of 5%."
+      }
+    ],
+    "indices": "初めて の 御(ご){ご} 注文(ちゅうもん)[01] の 場合 には の 特別 値引き を 致す{いたします}",
+    "vocabIds": [
+      "1342550",
+      "1930020",
+      "1426650",
+      "1355810",
+      "1455280",
+      "1600190"
+    ],
+    "matches": {
+      "1342550": {
+        "start": 0,
+        "length": 3,
+        "reading": "はじめて"
+      },
+      "1355810": {
+        "start": 8,
+        "length": 2,
+        "reading": "ばあい"
+      },
+      "1426650": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1455280": {
+        "start": 16,
+        "length": 2,
+        "reading": "とくべつ"
+      },
+      "1600190": {
+        "start": 18,
+        "length": 3,
+        "reading": "ねびき"
+      },
+      "1930020": {
+        "start": 4,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -950,7 +1383,9 @@
     ],
     "indices": "出版社 へ 其の[01]{その} 本(ほん)[01] 冊(さつ)[02] 注文(ちゅうもん)[01] 為る(する){して} 呉れる{くれません} か",
     "vocabIds": [
+      "1340030",
       "1594870",
+      "2015400",
       "1522150",
       "1298520",
       "1426650"
@@ -958,19 +1393,33 @@
     "matches": {
       "1298520": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
+      },
+      "1340030": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅっぱん"
       },
       "1426650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1594870": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しゅっぱんしゃ"
+      },
+      "2015400": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       }
     }
   },
@@ -993,19 +1442,23 @@
     "matches": {
       "1304510": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "のこっ"
       },
       "1311530": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かみ"
       },
       "1426650": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "2005870": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "もうすこし"
       }
     }
   },
@@ -1027,15 +1480,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1451750": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       }
     }
   },
@@ -1057,15 +1513,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -1083,24 +1542,28 @@
       "1311110",
       "1500940",
       "1426650",
-      "1297240"
+      "1597890"
     ],
     "matches": {
-      "1297240": {
-        "start": 10,
-        "length": 1
-      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1500940": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ふく"
+      },
+      "1597890": {
+        "start": 10,
+        "length": 2,
+        "reading": "つくら"
       }
     }
   },
@@ -1126,15 +1589,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1443840": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       }
     }
   },
@@ -1151,6 +1617,7 @@
     "vocabIds": [
       "1311110",
       "1426650",
+      "1326980",
       "2451270",
       "1611620",
       "1604300"
@@ -1158,23 +1625,33 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1326980": {
+        "start": 5,
+        "length": 2,
+        "reading": "とり"
       },
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1604300": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "まわっ"
       },
       "1611620": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "まちなか"
       },
       "2451270": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "とり"
       }
     }
   },
@@ -1196,15 +1673,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1595650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "すし"
       }
     }
   },
@@ -1221,30 +1701,29 @@
     "vocabIds": [
       "1311110",
       "1186760",
-      "1215790",
       "1522150",
       "1426650"
     ],
     "matches": {
       "1186760": {
         "start": 2,
-        "length": 2
-      },
-      "1215790": {
-        "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "かがく"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -1269,11 +1748,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -1295,15 +1776,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1358280": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "たべ"
       },
       "1426650": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -1325,15 +1809,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -1356,19 +1843,23 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1443840": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1522150": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -1394,15 +1885,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -1427,27 +1921,33 @@
     "matches": {
       "1277450": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1298520": {
         "start": 24,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1540150": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうじん"
       }
     }
   },
@@ -1469,15 +1969,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1371830": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "みずぎ"
       },
       "1426650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -1505,23 +2008,28 @@
     "matches": {
       "1002430": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おちゃ"
       },
       "1299740": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "みっつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1461160": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ふたつ"
       }
     }
   },
@@ -1543,15 +2051,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -1575,23 +2086,28 @@
     "matches": {
       "1298520": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577100": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       }
     }
   },
@@ -1614,19 +2130,23 @@
     "matches": {
       "1191870": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かぐ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1361490": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -1648,24 +2168,28 @@
       "1311110",
       "1500940",
       "1426650",
-      "1297240"
+      "1597890"
     ],
     "matches": {
-      "1297240": {
-        "start": 10,
-        "length": 1
-      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1500940": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ふく"
+      },
+      "1597890": {
+        "start": 10,
+        "length": 2,
+        "reading": "つくら"
       }
     }
   },
@@ -1686,11 +2210,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -1708,24 +2234,34 @@
       "1311110",
       "1426650",
       "1342510",
-      "1429060"
+      "1429060",
+      "1429050"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1342510": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しょり"
       },
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1429050": {
+        "start": 16,
+        "length": 2,
+        "reading": "しらべ"
       },
       "1429060": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "しらべ"
       }
     }
   },
@@ -1747,15 +2283,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1451750": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       }
     }
   },
@@ -1770,6 +2309,7 @@
     ],
     "indices": "私たち は 新しい 本(ほん)[01] を 何(なん)[04] 冊(さつ)[02] か 海外 に 注文(ちゅうもん)[01] 為る(する){した}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1361490",
       "1522150",
@@ -1781,31 +2321,43 @@
     "matches": {
       "1201260": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かいがい"
       },
       "1298520": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1361490": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1426650": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577100": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       }
     }
   },
@@ -1820,17 +2372,64 @@
     ],
     "indices": "私たち の 注文(ちゅうもん)[01] は 如何(どう){どう} 成る{なっている} のです か",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1426650"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1426650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "169233",
+    "original": "残念ながらご注文できません。",
+    "en": [
+      {
+        "id": "245253",
+        "text": "We regret that we cannot place an order."
+      }
+    ],
+    "indices": "残念ながら 御(ご){ご} 注文(ちゅうもん)[01] 出来る{できません}",
+    "vocabIds": [
+      "1304680",
+      "1304700",
+      "1930020",
+      "1426650"
+    ],
+    "matches": {
+      "1304680": {
+        "start": 0,
+        "length": 2,
+        "reading": "ざんねん"
+      },
+      "1304700": {
+        "start": 0,
+        "length": 5,
+        "reading": "ざんねんながら"
+      },
+      "1426650": {
+        "start": 6,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 5,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -1848,34 +2447,46 @@
       "1288850",
       "1347200",
       "1250830",
+      "1605820",
       "1605870",
       "1426650",
-      "1908930"
+      "1603655"
     ],
     "matches": {
       "1250830": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "けいき"
       },
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
       },
       "1347200": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうばい"
       },
       "1426650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1603655": {
+        "start": 15,
+        "length": 2,
+        "reading": "ぼうさつ"
+      },
+      "1605820": {
+        "start": 8,
+        "length": 2,
+        "reading": "よく"
       },
       "1605870": {
         "start": 8,
-        "length": 2
-      },
-      "1908930": {
-        "start": 15,
-        "length": 5
+        "length": 2,
+        "reading": "よく"
       }
     }
   },
@@ -1890,27 +2501,43 @@
     ],
     "indices": "経済学 の 本(ほん)[01] を 冊(さつ)[02] 倫敦{ロンドン} に 注文(ちゅうもん)[01] 為る(する){した}",
     "vocabIds": [
+      "1251320",
       "1251380",
+      "1955900",
       "1522150",
       "1298520",
       "1426650"
     ],
     "matches": {
+      "1251320": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいざい"
+      },
       "1251380": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けいざいがく"
       },
       "1298520": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
       },
       "1426650": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
+      },
+      "1955900": {
+        "start": 2,
+        "length": 1,
+        "reading": "がく"
       }
     }
   },
@@ -1926,8 +2553,8 @@
     "indices": "教授 は 新刊~ 本(ほん)[01] を 何(なん)[04] 冊(さつ)[02] か 紐育{ニューヨーク} に 注文(ちゅうもん)[01] 為る(する){した}",
     "vocabIds": [
       "1237160",
-      "1361580",
-      "1522150",
+      "1361480",
+      "2585940",
       "1577100",
       "1298520",
       "1426650"
@@ -1935,27 +2562,33 @@
     "matches": {
       "1237160": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょうじゅ"
       },
       "1298520": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
       },
-      "1361580": {
+      "1361480": {
         "start": 3,
-        "length": 2
+        "length": 1,
+        "reading": "しん"
       },
       "1426650": {
         "start": 17,
-        "length": 2
-      },
-      "1522150": {
-        "start": 5,
-        "length": 1
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1577100": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
+      },
+      "2585940": {
+        "start": 4,
+        "length": 2,
+        "reading": "かんぽん"
       }
     }
   },
@@ -1976,46 +2609,242 @@
       "1578540",
       "1546680",
       "1284430",
+      "1435490",
       "1777250",
+      "1437260",
       "1426650",
+      "1589350",
       "1589320"
     ],
     "matches": {
       "1223510": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きしゃ"
       },
       "1284430": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "あっ"
       },
       "1380760": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "せいひん"
       },
       "1426650": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1435490": {
+        "start": 20,
+        "length": 2,
+        "reading": "ていき"
+      },
+      "1437260": {
+        "start": 22,
+        "length": 1,
+        "reading": "てき"
       },
       "1490580": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ひんしつ"
       },
       "1546680": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       },
       "1578540": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こきゃく"
       },
       "1589320": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 30,
+        "length": 2,
+        "reading": "おもい"
       },
       "1777250": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "ていきてき"
+      }
+    }
+  },
+  {
+    "id": "183051",
+    "original": "貴社のご提案に対し、私どもはこのご注文について５％の特別値引きをさせていただくことにします。",
+    "en": [
+      {
+        "id": "20173",
+        "text": "In reply to your request, we offer you an extra discount of 5% on this order."
+      }
+    ],
+    "indices": "貴社 の 御(ご){ご} 提案 に対し 私ども は 此の{この} 御(ご){ご} 注文(ちゅうもん)[02]~ に就いて{について} の 特別 値引き を させて頂く{させていただく} 事にする{ことにします}",
+    "vocabIds": [
+      "1223510",
+      "1436320",
+      "2567590",
+      "1311110",
+      "1854980",
+      "1930020",
+      "1426650",
+      "1455280",
+      "1600190"
+    ],
+    "matches": {
+      "1223510": {
+        "start": 0,
+        "length": 2,
+        "reading": "きしゃ"
+      },
+      "1311110": {
+        "start": 10,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1426650": {
+        "start": 17,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1436320": {
+        "start": 4,
+        "length": 2,
+        "reading": "ていあん"
+      },
+      "1455280": {
+        "start": 26,
+        "length": 2,
+        "reading": "とくべつ"
+      },
+      "1600190": {
+        "start": 28,
+        "length": 3,
+        "reading": "ねびき"
+      },
+      "1854980": {
+        "start": 10,
+        "length": 3,
+        "reading": "わたしども"
+      },
+      "1930020": {
+        "start": 16,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "2567590": {
+        "start": 6,
+        "length": 3,
+        "reading": "にたいし"
+      }
+    }
+  },
+  {
+    "id": "183052",
+    "original": "貴社のご注文は最優先させております。",
+    "en": [
+      {
+        "id": "20174",
+        "text": "We have given your order highest priority."
+      },
+      {
+        "id": "7819771",
+        "text": "We've given your order highest priority."
+      }
+    ],
+    "indices": "貴社 の 御(ご){ご} 注文(ちゅうもん)[01] は 最[01] 優先 為る(する){させて} 居る(おる)[02]{おります}",
+    "vocabIds": [
+      "1223510",
+      "1930020",
+      "1426650",
+      "1956280",
+      "2083030",
+      "1539390"
+    ],
+    "matches": {
+      "1223510": {
+        "start": 0,
+        "length": 2,
+        "reading": "きしゃ"
+      },
+      "1426650": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1539390": {
+        "start": 8,
+        "length": 2,
+        "reading": "ゆうせん"
+      },
+      "1930020": {
+        "start": 3,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "1956280": {
+        "start": 7,
+        "length": 1,
+        "reading": "さい"
+      },
+      "2083030": {
+        "start": 7,
+        "length": 3,
+        "reading": "さいゆうせん"
+      }
+    }
+  },
+  {
+    "id": "183058",
+    "original": "貴社からのどんなご注文にも、迅速に対処します。",
+    "en": [
+      {
+        "id": "20179",
+        "text": "Any orders you place with us will be processed promptly."
+      }
+    ],
+    "indices": "貴社 から の どんな 御(ご){ご} 注文(ちゅうもん)[01] にも 迅速{迅速に} 対処 為る(する){します}",
+    "vocabIds": [
+      "1223510",
+      "1930020",
+      "1426650",
+      "1370160",
+      "1410070"
+    ],
+    "matches": {
+      "1223510": {
+        "start": 0,
+        "length": 2,
+        "reading": "きしゃ"
+      },
+      "1370160": {
+        "start": 14,
+        "length": 2,
+        "reading": "じんそく"
+      },
+      "1410070": {
+        "start": 17,
+        "length": 2,
+        "reading": "たいしょ"
+      },
+      "1426650": {
+        "start": 9,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 8,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -2041,31 +2870,95 @@
     "matches": {
       "1174450": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "えいこく"
       },
       "1298520": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
       },
       "1361490": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1426650": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577100": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      }
+    }
+  },
+  {
+    "id": "187290",
+    "original": "価格の折り合えば、大量注文したいと思います。",
+    "en": [
+      {
+        "id": "24427",
+        "text": "If your prices are competitive, we will place a large order."
+      }
+    ],
+    "indices": "価格 の 折り合う{折り合えば} 大量 注文(ちゅうもん)[01] したい と 思う{思います}",
+    "vocabIds": [
+      "1189500",
+      "1385820",
+      "1415190",
+      "2846503",
+      "1426650",
+      "1589350",
+      "1589320"
+    ],
+    "matches": {
+      "1189500": {
+        "start": 0,
+        "length": 2,
+        "reading": "かかく"
+      },
+      "1385820": {
+        "start": 3,
+        "length": 4,
+        "reading": "おりあえ"
+      },
+      "1415190": {
+        "start": 9,
+        "length": 2,
+        "reading": "たいりょう"
+      },
+      "1426650": {
+        "start": 11,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1589320": {
+        "start": 17,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 17,
+        "length": 2,
+        "reading": "おもい"
+      },
+      "2846503": {
+        "start": 9,
+        "length": 4,
+        "reading": "たいりょうちゅうもん"
       }
     }
   },
@@ -2082,25 +2975,41 @@
     "vocabIds": [
       "1577100",
       "1298520",
+      "1361580",
       "1938990",
+      "2037940",
       "1426650"
     ],
     "matches": {
       "1298520": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "さつ"
+      },
+      "1361580": {
+        "start": 4,
+        "length": 2,
+        "reading": "しんかん"
       },
       "1426650": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1577100": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       },
       "1938990": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "しんかんしょ"
+      },
+      "2037940": {
+        "start": 6,
+        "length": 1,
+        "reading": "しょ"
       }
     }
   },
@@ -2129,11 +3038,94 @@
     "matches": {
       "1426650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1600430": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "のみもの"
+      }
+    }
+  },
+  {
+    "id": "190327",
+    "original": "一度に１５以上ご注文いただけるという条件で、ＳＴＬ＃３４５６の特別値引きをいたします。",
+    "en": [
+      {
+        "id": "27485",
+        "text": "We can offer you a special 5% discount on STL#3456, provided that you place an order of more than 15 units at one time."
+      }
+    ],
+    "indices": "一度に 以上[01] 御(ご){ご} 注文(ちゅうもん)[01] 頂ける[01]{いただける} と言う{という} 条件 で(#2028980) の 特別 値引き を 致す{いたします}",
+    "vocabIds": [
+      "1160790",
+      "1576250",
+      "1609210",
+      "1445160",
+      "1007270",
+      "1155120",
+      "1930020",
+      "1426650",
+      "1356510",
+      "1455280",
+      "1600190"
+    ],
+    "matches": {
+      "1007270": {
+        "start": 1,
+        "length": 2,
+        "reading": "どに"
+      },
+      "1155120": {
+        "start": 5,
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1160790": {
+        "start": 0,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1356510": {
+        "start": 18,
+        "length": 2,
+        "reading": "じょうけん"
+      },
+      "1426650": {
+        "start": 8,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1445160": {
+        "start": 1,
+        "length": 1,
+        "reading": "ど"
+      },
+      "1455280": {
+        "start": 31,
+        "length": 2,
+        "reading": "とくべつ"
+      },
+      "1576250": {
+        "start": 0,
+        "length": 2,
+        "reading": "いちど"
+      },
+      "1600190": {
+        "start": 33,
+        "length": 3,
+        "reading": "ねびき"
+      },
+      "1609210": {
+        "start": 0,
+        "length": 3,
+        "reading": "いちどに"
+      },
+      "1930020": {
+        "start": 7,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -2148,17 +3140,31 @@
     ],
     "indices": "以下[03] の 通り(とおり) 注文(ちゅうもん)[01] 致す{いたします}",
     "vocabIds": [
+      "1155060",
       "1155080",
+      "1432920",
       "1426650"
     ],
     "matches": {
+      "1155060": {
+        "start": 0,
+        "length": 2,
+        "reading": "いか"
+      },
       "1155080": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "いかのとおり"
       },
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1432920": {
+        "start": 3,
+        "length": 2,
+        "reading": "とおり"
       }
     }
   },
@@ -2179,11 +3185,13 @@
     "matches": {
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -2205,15 +3213,63 @@
     "matches": {
       "1355810": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ばあい"
       },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1530970": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "むり"
+      }
+    }
+  },
+  {
+    "id": "196440",
+    "original": "ほかに何か追加注文がありますか。",
+    "en": [
+      {
+        "id": "33621",
+        "text": "Do you have anything else to order?"
+      }
+    ],
+    "indices": "他に{ほかに} 何か 追加注文~ が[01] 有る{あります} か",
+    "vocabIds": [
+      "1577100",
+      "1188270",
+      "1432460",
+      "1942890",
+      "1426650"
+    ],
+    "matches": {
+      "1188270": {
+        "start": 3,
+        "length": 2,
+        "reading": "なにか"
+      },
+      "1426650": {
+        "start": 7,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1432460": {
+        "start": 5,
+        "length": 2,
+        "reading": "ついか"
+      },
+      "1577100": {
+        "start": 3,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1942890": {
+        "start": 5,
+        "length": 4,
+        "reading": "ついかちゅうもん"
       }
     }
   },
@@ -2234,11 +3290,13 @@
     "matches": {
       "1426650": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483070": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -2254,16 +3312,24 @@
     "indices": "ピンク を 注文(ちゅうもん)[01] 為る(する){した} のに ブルー[01] を 受け取る{受け取りました}",
     "vocabIds": [
       "1426650",
+      "1329650",
       "1329770"
     ],
     "matches": {
+      "1329650": {
+        "start": 15,
+        "length": 4,
+        "reading": "うけとり"
+      },
       "1329770": {
         "start": 15,
-        "length": 4
+        "length": 4,
+        "reading": "うけとり"
       },
       "1426650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2283,7 +3349,8 @@
     "matches": {
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2304,11 +3371,13 @@
     "matches": {
       "1264740": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2329,11 +3398,13 @@
     "matches": {
       "1426650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1530970": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "むり"
       }
     }
   },
@@ -2354,11 +3425,13 @@
     "matches": {
       "1426650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -2374,21 +3447,36 @@
     "indices": "其の[01]{その} 本(ほん)[01] を 出版社 に 注文(ちゅうもん)[01] 為る(する){して} 貰う[02]{もらえません} か",
     "vocabIds": [
       "1522150",
+      "1340030",
       "1594870",
+      "2015400",
       "1426650"
     ],
     "matches": {
+      "1340030": {
+        "start": 4,
+        "length": 2,
+        "reading": "しゅっぱん"
+      },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1594870": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "しゅっぱんしゃ"
+      },
+      "2015400": {
+        "start": 6,
+        "length": 1,
+        "reading": "しゃ"
       }
     }
   },
@@ -2403,6 +3491,7 @@
     ],
     "indices": "其の[01]{その} 本(ほん)[01] の 注文(ちゅうもん)[01] が 殺到~ 為る(する){した}",
     "vocabIds": [
+      "1522150",
       "1011740",
       "1426650",
       "1299190"
@@ -2410,15 +3499,74 @@
     "matches": {
       "1011740": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ほんの"
       },
       "1299190": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さっとう"
       },
       "1426650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1522150": {
+        "start": 2,
+        "length": 1,
+        "reading": "ほん"
+      }
+    }
+  },
+  {
+    "id": "207049",
+    "original": "その品物は彼女の注文品として記入された。",
+    "en": [
+      {
+        "id": "44299",
+        "text": "The goods were entered to her."
+      }
+    ],
+    "indices": "其の[01]{その} 品物 は 彼女[01]{彼女の} 注文品~ として 記入 為れる{された}",
+    "vocabIds": [
+      "1490670",
+      "1483150",
+      "1426650",
+      "1426660",
+      "2648780",
+      "1223330"
+    ],
+    "matches": {
+      "1223330": {
+        "start": 14,
+        "length": 2,
+        "reading": "きにゅう"
+      },
+      "1426650": {
+        "start": 8,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1426660": {
+        "start": 8,
+        "length": 3,
+        "reading": "ちゅうもんひん"
+      },
+      "1483150": {
+        "start": 5,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1490670": {
+        "start": 2,
+        "length": 2,
+        "reading": "しなもの"
+      },
+      "2648780": {
+        "start": 10,
+        "length": 1,
+        "reading": "ひん"
       }
     }
   },
@@ -2440,15 +3588,18 @@
     "matches": {
       "1206900": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1426650": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -2471,19 +3622,23 @@
     "matches": {
       "1198550": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1591110": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2501,24 +3656,40 @@
       "1198550",
       "1311110",
       "1426650",
-      "1009700"
+      "1009700",
+      "1179830",
+      "1179820"
     ],
     "matches": {
       "1009700": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "におうじて"
+      },
+      "1179820": {
+        "start": 10,
+        "length": 3,
+        "reading": "おうじて"
+      },
+      "1179830": {
+        "start": 10,
+        "length": 2,
+        "reading": "おうじ"
       },
       "1198550": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2538,37 +3709,44 @@
       "1156450",
       "1465590",
       "1464530",
-      "1956230",
+      "1587040",
       "1212250"
     ],
     "matches": {
       "1156450": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "いきごん"
       },
       "1174420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "えいご"
       },
       "1212250": {
         "start": 51,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
       },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1464530": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "にほんご"
       },
       "1465590": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
-      "1956230": {
+      "1587040": {
         "start": 41,
-        "length": 1
+        "length": 2,
+        "reading": "いわ"
       }
     }
   },
@@ -2585,25 +3763,41 @@
     "vocabIds": [
       "1522150",
       "1591010",
+      "1340030",
       "1594870",
+      "2015400",
       "1426650"
     ],
     "matches": {
+      "1340030": {
+        "start": 12,
+        "length": 2,
+        "reading": "しゅっぱん"
+      },
       "1426650": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1591010": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "がっしゅうこく"
       },
       "1594870": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "しゅっぱんしゃ"
+      },
+      "2015400": {
+        "start": 14,
+        "length": 1,
+        "reading": "しゃ"
       }
     }
   },
@@ -2623,7 +3817,8 @@
     "matches": {
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2643,7 +3838,435 @@
     "matches": {
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "217057",
+    "original": "ご注文を承りましょうか。",
+    "en": [
+      {
+        "id": "54364",
+        "text": "May I take your order?"
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] を 承る[02]{承り} ましょうか",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "1349440"
+    ],
+    "matches": {
+      "1349440": {
+        "start": 4,
+        "length": 2,
+        "reading": "うけたまわり"
+      },
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "217058",
+    "original": "ご注文を受け取り次第、製品を貴社にお送りします。",
+    "en": [
+      {
+        "id": "54365",
+        "text": "We will ship the product immediately after receiving your order."
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] を 受け取る{受け取り} 次第[02] 製品 を 貴社 に 送る{お送り} 為る(する)[12]{します}",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "1329650",
+      "1329770",
+      "1316680",
+      "1380760",
+      "1223510"
+    ],
+    "matches": {
+      "1223510": {
+        "start": 14,
+        "length": 2,
+        "reading": "きしゃ"
+      },
+      "1316680": {
+        "start": 8,
+        "length": 2,
+        "reading": "しだい"
+      },
+      "1329650": {
+        "start": 4,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1329770": {
+        "start": 4,
+        "length": 4,
+        "reading": "うけとり"
+      },
+      "1380760": {
+        "start": 11,
+        "length": 2,
+        "reading": "せいひん"
+      },
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "217059",
+    "original": "ご注文を下記の通り確認します。",
+    "en": [
+      {
+        "id": "54366",
+        "text": "We will confirm your order as follows."
+      }
+    ],
+    "indices": "ご注文~ を 下記{下記の} 通り(とおり) 確認 為る(する){します}",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "1184690",
+      "1432920",
+      "1205900"
+    ],
+    "matches": {
+      "1184690": {
+        "start": 4,
+        "length": 2,
+        "reading": "かき"
+      },
+      "1205900": {
+        "start": 9,
+        "length": 2,
+        "reading": "かくにん"
+      },
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1432920": {
+        "start": 7,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "217060",
+    "original": "ご注文をどうぞ。",
+    "en": [
+      {
+        "id": "54367",
+        "text": "May I have your order, please?"
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] を どうぞ[01]",
+    "vocabIds": [
+      "1930020",
+      "1426650"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "217061",
+    "original": "ご注文はよろしいですか。",
+    "en": [
+      {
+        "id": "54368",
+        "text": "Can I take your order now?"
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] は 宜しい{よろしい} ですか",
+    "vocabIds": [
+      "1930020",
+      "1426650"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "217063",
+    "original": "ご注文はこれで終わらせていただきます。",
+    "en": [
+      {
+        "id": "54370",
+        "text": "This is the last order."
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] は 此れ[01]{これ} で(#2028980) 終わる{終わらせて} 頂く[01]{いただきます}",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "1589600"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1589600": {
+        "start": 7,
+        "length": 3,
+        "reading": "おわら"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "217064",
+    "original": "ご注文はお決まりですか？",
+    "en": [
+      {
+        "id": "54369",
+        "text": "Are you ready to order?"
+      },
+      {
+        "id": "54371",
+        "text": "Are you ready to order now?"
+      },
+      {
+        "id": "2462805",
+        "text": "Have you decided what you want to order?"
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] は 決まる{お決まり} ですか",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "2453520"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "2453520": {
+        "start": 4,
+        "length": 4,
+        "reading": "おきまり"
+      }
+    }
+  },
+  {
+    "id": "217065",
+    "original": "ご注文の品が破損していたとのことで、お詫び申し上げます。",
+    "en": [
+      {
+        "id": "54372",
+        "text": "We're very sorry that your order was damaged."
+      },
+      {
+        "id": "7185919",
+        "text": "We're very sorry your order was damaged."
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] の 品[01] が 破損 為る(する){していた} との事{とのこと} で(#2028980) 御(お){お} 詫び 申し上げる[01]{申し上げます}",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "2648780",
+      "1471380",
+      "2087420",
+      "1362950"
+    ],
+    "matches": {
+      "1362950": {
+        "start": 21,
+        "length": 4,
+        "reading": "もうしあげ"
+      },
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1471380": {
+        "start": 6,
+        "length": 2,
+        "reading": "はそん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "2087420": {
+        "start": 18,
+        "length": 3,
+        "reading": "おわび"
+      },
+      "2648780": {
+        "start": 4,
+        "length": 1,
+        "reading": "しな"
+      }
+    }
+  },
+  {
+    "id": "217066",
+    "original": "ご注文なさいますか。",
+    "en": [
+      {
+        "id": "54373",
+        "text": "Would you like to order?"
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] 為さる{なさいます} か",
+    "vocabIds": [
+      "1930020",
+      "1426650"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "217067",
+    "original": "ご注文がお決まりになりましたら、お呼びください。",
+    "en": [
+      {
+        "id": "54374",
+        "text": "Tell me when you'd like to order."
+      },
+      {
+        "id": "784582",
+        "text": "Please let me know when you are ready to order."
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] が 決まる[01]{お決まり} になる[02]{になりましたら} 御(お){お} 呼ぶ{呼び} 下さい{ください}",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "2453520",
+      "2453530"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "2453520": {
+        "start": 4,
+        "length": 4,
+        "reading": "おきまり"
+      },
+      "2453530": {
+        "start": 16,
+        "length": 3,
+        "reading": "および"
+      }
+    }
+  },
+  {
+    "id": "217068",
+    "original": "ご注文いただけると考えてよいでしょうか。",
+    "en": [
+      {
+        "id": "54375",
+        "text": "May we look forward to receiving your order?"
+      }
+    ],
+    "indices": "御(ご){ご} 注文(ちゅうもん)[01] 頂ける[01]{いただける} と 考える{考えて} 良い{よい} でしょうか",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "1281020",
+      "1281000"
+    ],
+    "matches": {
+      "1281000": {
+        "start": 9,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1281020": {
+        "start": 9,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -2664,11 +4287,13 @@
     "matches": {
       "1158880": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "ちがっ"
       },
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2685,20 +4310,29 @@
     "vocabIds": [
       "1311110",
       "1426650",
+      "1158880",
       "1158870"
     ],
     "matches": {
       "1158870": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちがい"
+      },
+      "1158880": {
+        "start": 12,
+        "length": 2,
+        "reading": "ちがい"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2724,15 +4358,18 @@
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1502390": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
       }
     }
   },
@@ -2755,19 +4392,92 @@
     "matches": {
       "1288850": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "こん"
       },
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1443840": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1465590": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
+      }
+    }
+  },
+  {
+    "id": "220904",
+    "original": "この製品は、２月１５日までにご注文いただければ、３月１５日までにお届けすることができます。",
+    "en": [
+      {
+        "id": "58227",
+        "text": "Please order this product by February 15, and we will be able to deliver it before March 15."
+      }
+    ],
+    "indices": "此の{この} 製品 は 二月(にがつ){２月} 日(にち)[02] 迄{まで} に 御(ご){ご} 注文(ちゅうもん)[01] 頂ける[01]{いただければ} 三月(さんがつ){３月} 日(にち)[02] 迄{まで} に お届け 為る(する){する} 事が出来る{ことができます}",
+    "vocabIds": [
+      "1380760",
+      "1461560",
+      "2275300",
+      "1268570",
+      "1463770",
+      "1930020",
+      "1426650",
+      "1300250",
+      "2846962"
+    ],
+    "matches": {
+      "1268570": {
+        "start": 9,
+        "length": 2,
+        "reading": "ごにち"
+      },
+      "1300250": {
+        "start": 24,
+        "length": 2,
+        "reading": "さんがつ"
+      },
+      "1380760": {
+        "start": 2,
+        "length": 2,
+        "reading": "せいひん"
+      },
+      "1426650": {
+        "start": 15,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1461560": {
+        "start": 6,
+        "length": 2,
+        "reading": "にがつ"
+      },
+      "1463770": {
+        "start": 10,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1930020": {
+        "start": 14,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "2275300": {
+        "start": 8,
+        "length": 3,
+        "reading": "いちごにち"
+      },
+      "2846962": {
+        "start": 32,
+        "length": 3,
+        "reading": "おとどけ"
       }
     }
   },
@@ -2789,15 +4499,18 @@
     "matches": {
       "1158880": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちがう"
       },
       "1220210": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
       },
       "1426650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2812,32 +4525,61 @@
     ],
     "indices": "コーヒーメーカー 一台 を 注文(ちゅうもん)[01] 為る(する){します} 貴社 の 注文書 を 同封 為る(する){しました}",
     "vocabIds": [
+      "1160790",
       "1164610",
+      "1412560",
       "1426650",
       "1223510",
+      "1426520",
       "1942610",
+      "1583840",
       "1453340"
     ],
     "matches": {
+      "1160790": {
+        "start": 14,
+        "length": 1,
+        "reading": "いち"
+      },
       "1164610": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "いちだい"
       },
       "1223510": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "きしゃ"
+      },
+      "1412560": {
+        "start": 15,
+        "length": 1,
+        "reading": "だい"
+      },
+      "1426520": {
+        "start": 26,
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1426650": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1453340": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "どうふう"
+      },
+      "1583840": {
+        "start": 27,
+        "length": 2,
+        "reading": "ぶんしょ"
       },
       "1942610": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "ちゅうぶんしょ"
       }
     }
   },
@@ -2857,7 +4599,8 @@
     "matches": {
       "1426650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2872,22 +4615,37 @@
     ],
     "indices": "は 自分[01] 用[02] に 新しい ドレス を 注文(ちゅうもん)[01] 為る(する){した}",
     "vocabIds": [
+      "1318610",
       "2844104",
+      "1546200",
       "1361490",
       "1426650"
     ],
     "matches": {
+      "1318610": {
+        "start": 4,
+        "length": 2,
+        "reading": "じぶん"
+      },
       "1361490": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1426650": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1546200": {
+        "start": 6,
+        "length": 1,
+        "reading": "よう"
       },
       "2844104": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "じぶんよう"
       }
     }
   },
@@ -2903,16 +4661,24 @@
     "indices": "ウェイター{ウエーター} さん[02] 注文(ちゅうもん)[01] お願いします",
     "vocabIds": [
       "1426650",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 10,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "2036870": {
+        "start": 10,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -2928,16 +4694,24 @@
     "indices": "ウェイトレス{ウエイトレス} さん[02] 注文(ちゅうもん)[01] お願いします",
     "vocabIds": [
       "1426650",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 11,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1426650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "2036870": {
+        "start": 11,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -2957,7 +4731,8 @@
     "matches": {
       "1426650": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -2977,7 +4752,47 @@
     "matches": {
       "1426650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "233531",
+    "original": "あなたのご注文なさった商品が届きました。",
+    "en": [
+      {
+        "id": "70901",
+        "text": "Your order is ready."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} の 御(ご){ご} 注文(ちゅうもん)[01] 為さる{なさった} 商品 が 届く[02]{届きました}",
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "1347310",
+      "1457200"
+    ],
+    "matches": {
+      "1347310": {
+        "start": 11,
+        "length": 2,
+        "reading": "しょうひん"
+      },
+      "1426650": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1457200": {
+        "start": 14,
+        "length": 2,
+        "reading": "とどき"
+      },
+      "1930020": {
+        "start": 4,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -2997,7 +4812,8 @@
     "matches": {
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -3013,21 +4829,30 @@
     "indices": "分(ふん) 前(まえ)[02] に 注文(ちゅうもん)[01] 為る(する){した} のです が[03]",
     "vocabIds": [
       "1502860",
+      "1392580",
       "1392590",
       "1426650"
     ],
     "matches": {
+      "1392580": {
+        "start": 3,
+        "length": 1,
+        "reading": "まえ"
+      },
       "1392590": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1502860": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ふん"
       }
     }
   },
@@ -3043,6 +4868,7 @@
     "indices": "分(ふん) も[02] 待つ[01] の なら 後で 注文(ちゅうもん)[01] 為る(する){します}",
     "vocabIds": [
       "2859157",
+      "1502860",
       "1410590",
       "1269350",
       "1426650"
@@ -3050,19 +4876,28 @@
     "matches": {
       "1269350": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "あとで"
       },
       "1410590": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "まつ"
       },
       "1426650": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1502860": {
+        "start": 2,
+        "length": 1,
+        "reading": "ふん"
       },
       "2859157": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "さんぜろふん"
       }
     }
   },
@@ -3079,40 +4914,47 @@
     "vocabIds": [
       "1155120",
       "1426650",
-      "2256270",
-      "1382870",
       "2026830",
+      "1455280",
       "2847661",
+      "1189500",
       "1436360"
     ],
     "matches": {
       "1155120": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
-      "1382870": {
-        "start": 16,
-        "length": 1
+      "1189500": {
+        "start": 28,
+        "length": 2,
+        "reading": "かかく"
       },
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1436360": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "ていきょう"
+      },
+      "1455280": {
+        "start": 26,
+        "length": 2,
+        "reading": "とくべつ"
       },
       "2026830": {
         "start": 23,
-        "length": 2
-      },
-      "2256270": {
-        "start": 15,
-        "length": 1
+        "length": 2,
+        "reading": "びき"
       },
       "2847661": {
         "start": 26,
-        "length": 4
+        "length": 4,
+        "reading": "とくべつかかく"
       }
     }
   },
@@ -3134,15 +4976,18 @@
     "matches": {
       "1155120": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1600190": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "ねびき"
       }
     }
   },
@@ -3171,11 +5016,13 @@
     "matches": {
       "1153670": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "やすい"
       },
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -3196,11 +5043,13 @@
     "matches": {
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1512200": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "へんきん"
       }
     }
   },
@@ -3224,7 +5073,34 @@
     "matches": {
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "889761",
+    "original": "ご注文はお済みですか？",
+    "en": [
+      {
+        "id": "890478",
+        "text": "Have you finished ordering?"
+      }
+    ],
+    "vocabIds": [
+      "1930020",
+      "1426650"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -3239,6 +5115,7 @@
     ],
     "vocabIds": [
       "1483070",
+      "1532980",
       "1612000",
       "1361490",
       "1426650"
@@ -3246,19 +5123,28 @@
     "matches": {
       "1361490": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1426650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1532980": {
+        "start": 2,
+        "length": 2,
+        "reading": "めった"
       },
       "1612000": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "めったに"
       }
     }
   },
@@ -3279,15 +5165,18 @@
     "matches": {
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1508750": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "べい"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -3307,11 +5196,13 @@
     "matches": {
       "1426650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1461160": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ふたつ"
       }
     }
   },
@@ -3332,15 +5223,18 @@
     "matches": {
       "1264740": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1426650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1461140": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "に"
       }
     }
   },
@@ -3361,15 +5255,18 @@
     "matches": {
       "1381390": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "あおい"
       },
       "1426650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1457200": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "とどい"
       }
     }
   },
@@ -3399,19 +5296,23 @@
     "matches": {
       "1153670": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "やすい"
       },
       "1417040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "たんい"
       },
       "1426650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1516930": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       }
     }
   },
@@ -3433,19 +5334,23 @@
     "matches": {
       "1264740": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1461140": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "に"
       },
       "1579840": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "じゅう"
       }
     }
   },
@@ -3464,16 +5369,24 @@
     ],
     "vocabIds": [
       "1426650",
+      "1158880",
       "1158870"
     ],
     "matches": {
       "1158870": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちがい"
+      },
+      "1158880": {
+        "start": 6,
+        "length": 2,
+        "reading": "ちがい"
       },
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -3492,7 +5405,46 @@
     "matches": {
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "3454813",
+    "original": "ご注文がお決まりになりましたらこちらのボタンでお呼びください。",
+    "en": [
+      {
+        "id": "3469329",
+        "text": "When you're ready to order, please call using this button."
+      }
+    ],
+    "vocabIds": [
+      "1930020",
+      "1426650",
+      "2453520",
+      "2453530"
+    ],
+    "matches": {
+      "1426650": {
+        "start": 1,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1930020": {
+        "start": 0,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "2453520": {
+        "start": 4,
+        "length": 4,
+        "reading": "おきまり"
+      },
+      "2453530": {
+        "start": 23,
+        "length": 3,
+        "reading": "および"
       }
     }
   },
@@ -3511,7 +5463,8 @@
     "matches": {
       "1426650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -3529,22 +5482,159 @@
       }
     ],
     "vocabIds": [
+      "1311110",
       "1311300",
+      "1423560",
       "1423600",
+      "1554310",
       "1426650"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1423560": {
+        "start": 4,
+        "length": 2,
+        "reading": "ちゅうか"
       },
       "1423600": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "ちゅうかりょうり"
       },
       "1426650": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1554310": {
+        "start": 6,
+        "length": 2,
+        "reading": "りょうり"
+      }
+    }
+  },
+  {
+    "id": "3313648",
+    "original": "商品の品質には万全を期しておりますが、万一商品が破損・汚損していた場合、またはご注文と異なる場合は、お届け後7日以内にご連絡ください。",
+    "en": [
+      {
+        "id": "4644572",
+        "text": "We strive for perfection in our products. In the rare case that there is breakage, staining or the order is incorrect, please contact us within seven days of the product's arrival."
+      }
+    ],
+    "vocabIds": [
+      "1347310",
+      "1490580",
+      "1584510",
+      "1614440",
+      "1525780",
+      "1471380",
+      "1179080",
+      "1355810",
+      "1930020",
+      "1426650",
+      "1157510",
+      "2846962",
+      "1269320",
+      "1463770",
+      "1155180",
+      "1270820",
+      "1559900"
+    ],
+    "matches": {
+      "1155180": {
+        "start": 56,
+        "length": 2,
+        "reading": "いない"
+      },
+      "1157510": {
+        "start": 43,
+        "length": 3,
+        "reading": "ことなる"
+      },
+      "1179080": {
+        "start": 27,
+        "length": 2,
+        "reading": "おそん"
+      },
+      "1269320": {
+        "start": 53,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1270820": {
+        "start": 59,
+        "length": 3,
+        "reading": "ごれんらく"
+      },
+      "1347310": {
+        "start": 0,
+        "length": 2,
+        "reading": "しょうひん"
+      },
+      "1355810": {
+        "start": 33,
+        "length": 2,
+        "reading": "ばあい"
+      },
+      "1426650": {
+        "start": 40,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1463770": {
+        "start": 55,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1471380": {
+        "start": 24,
+        "length": 2,
+        "reading": "はそん"
+      },
+      "1490580": {
+        "start": 3,
+        "length": 2,
+        "reading": "ひんしつ"
+      },
+      "1525780": {
+        "start": 19,
+        "length": 2,
+        "reading": "まんいち"
+      },
+      "1559900": {
+        "start": 60,
+        "length": 2,
+        "reading": "れんらく"
+      },
+      "1584510": {
+        "start": 7,
+        "length": 2,
+        "reading": "ばんぜん"
+      },
+      "1614440": {
+        "start": 10,
+        "length": 2,
+        "reading": "きし"
+      },
+      "1930020": {
+        "start": 39,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "2846962": {
+        "start": 50,
+        "length": 3,
+        "reading": "おとどけ"
       }
     }
   },
@@ -3562,29 +5652,46 @@
       "1483070",
       "1350490",
       "1435650",
+      "1160790",
       "1163770",
+      "1368480",
       "1426650"
     ],
     "matches": {
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163770": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "いちにんまえ"
       },
       "1350490": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "やきざかな"
+      },
+      "1368480": {
+        "start": 8,
+        "length": 2,
+        "reading": "にんまえ"
       },
       "1426650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1435650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ていしょく"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -3604,11 +5711,13 @@
     "matches": {
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1578010": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "さかな"
       }
     }
   },
@@ -3628,11 +5737,13 @@
     "matches": {
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1578010": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "さかな"
       }
     }
   },
@@ -3652,11 +5763,13 @@
     "matches": {
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1522150": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       }
     }
   },
@@ -3670,22 +5783,31 @@
       }
     ],
     "vocabIds": [
+      "1311110",
       "1311300",
       "1600430",
       "1426650"
     ],
     "matches": {
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1426650": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1600430": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "のみもの"
       }
     }
   },
@@ -3700,36 +5822,60 @@
     ],
     "vocabIds": [
       "1311110",
-      "1382260",
+      "1382250",
+      "1422970",
       "1269320",
       "1426650",
+      "1326980",
       "2451270",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1269320": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "のち"
       },
       "1311110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
-      "1382260": {
+      "1326980": {
+        "start": 24,
+        "length": 2,
+        "reading": "とり"
+      },
+      "1382250": {
         "start": 8,
-        "length": 5
+        "length": 1,
+        "reading": "せき"
+      },
+      "1422970": {
+        "start": 10,
+        "length": 2,
+        "reading": "つい"
       },
       "1426650": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1547710": {
+        "start": 27,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 27,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "2451270": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "とり"
       }
     }
   },
@@ -3746,29 +5892,46 @@
       "1382250",
       "1291800",
       "1426650",
+      "1326980",
       "2451270",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1291800": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
+      },
+      "1326980": {
+        "start": 22,
+        "length": 2,
+        "reading": "とり"
       },
       "1382250": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "せき"
       },
       "1426650": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1547710": {
+        "start": 25,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 25,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "2451270": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "とり"
       }
     }
   },
@@ -3783,16 +5946,24 @@
     ],
     "vocabIds": [
       "1426650",
+      "1254180",
       "1630630"
     ],
     "matches": {
+      "1254180": {
+        "start": 10,
+        "length": 2,
+        "reading": "きめ"
+      },
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1630630": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "きめ"
       }
     }
   },
@@ -3811,7 +5982,8 @@
     "matches": {
       "1426650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -3831,11 +6003,13 @@
     "matches": {
       "1416830": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       },
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -3854,7 +6028,8 @@
     "matches": {
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -3873,7 +6048,58 @@
     "matches": {
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "9414427",
+    "original": "お客様からのご注文を最優先とさせていただいております。",
+    "en": [
+      {
+        "id": "7819771",
+        "text": "We've given your order highest priority."
+      }
+    ],
+    "vocabIds": [
+      "1001770",
+      "1930020",
+      "1426650",
+      "1956280",
+      "2083030",
+      "1539390"
+    ],
+    "matches": {
+      "1001770": {
+        "start": 0,
+        "length": 3,
+        "reading": "おきゃくさま"
+      },
+      "1426650": {
+        "start": 7,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1539390": {
+        "start": 11,
+        "length": 2,
+        "reading": "ゆうせん"
+      },
+      "1930020": {
+        "start": 6,
+        "length": 3,
+        "reading": "ごちゅうもん"
+      },
+      "1956280": {
+        "start": 10,
+        "length": 1,
+        "reading": "さい"
+      },
+      "2083030": {
+        "start": 10,
+        "length": 3,
+        "reading": "さいゆうせん"
       }
     }
   },
@@ -3894,15 +6120,18 @@
     "matches": {
       "1358280": {
         "start": 0,
-        "length": 4
+        "length": 2,
+        "reading": "たべ"
       },
       "1426650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1502390": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
       }
     }
   },
@@ -3919,24 +6148,34 @@
       "1111590",
       "1358340",
       "1426650",
-      "1517090"
+      "1517090",
+      "1333070"
     ],
     "matches": {
       "1111590": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "ふらんすご"
+      },
+      "1333070": {
+        "start": 17,
+        "length": 2,
+        "reading": "ならわ"
       },
       "1358340": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "たべもの"
       },
       "1426650": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1517090": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       }
     }
   },
@@ -3956,11 +6195,13 @@
     "matches": {
       "1396130": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんぶ"
       },
       "1426650": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -3975,21 +6216,30 @@
     ],
     "vocabIds": [
       "2724870",
+      "1770030",
       "1426650",
       "1589350"
     ],
     "matches": {
       "1426650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1589350": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
+      },
+      "1770030": {
+        "start": 1,
+        "length": 4,
+        "reading": "もちかえり"
       },
       "2724870": {
         "start": 0,
-        "length": 5
+        "length": 5,
+        "reading": "おもちかえり"
       }
     }
   },
@@ -4008,7 +6258,8 @@
     "matches": {
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4028,11 +6279,51 @@
     "matches": {
       "1426650": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1465410": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いり"
+      }
+    }
+  },
+  {
+    "id": "8210823",
+    "original": "予約注文承ります。",
+    "en": [
+      {
+        "id": "10208904",
+        "text": "We accept pre-order reservations."
+      }
+    ],
+    "vocabIds": [
+      "1543750",
+      "2844738",
+      "1426650",
+      "1349440"
+    ],
+    "matches": {
+      "1349440": {
+        "start": 4,
+        "length": 2,
+        "reading": "うけたまわり"
+      },
+      "1426650": {
+        "start": 2,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1543750": {
+        "start": 0,
+        "length": 2,
+        "reading": "よやく"
+      },
+      "2844738": {
+        "start": 0,
+        "length": 4,
+        "reading": "よやくちゅうもん"
       }
     }
   },
@@ -4052,11 +6343,13 @@
     "matches": {
       "1311110": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1426650": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4075,7 +6368,8 @@
     "matches": {
       "1426650": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4089,22 +6383,49 @@
       }
     ],
     "vocabIds": [
+      "1214840",
       "1214870",
+      "1226630",
+      "1365720",
       "2038300",
+      "1327950",
       "1426650"
     ],
     "matches": {
+      "1214840": {
+        "start": 0,
+        "length": 2,
+        "reading": "かんこう"
+      },
       "1214870": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かんこうきゃく"
+      },
+      "1226630": {
+        "start": 2,
+        "length": 1,
+        "reading": "きゃく"
+      },
+      "1327950": {
+        "start": 7,
+        "length": 3,
+        "reading": "てぶり"
+      },
+      "1365720": {
+        "start": 4,
+        "length": 3,
+        "reading": "みぶり"
       },
       "1426650": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "2038300": {
         "start": 4,
-        "length": 6
+        "length": 6,
+        "reading": "みぶりてぶり"
       }
     }
   },
@@ -4119,21 +6440,36 @@
     ],
     "vocabIds": [
       "2682420",
+      "1554310",
+      "1554330",
       "1582120",
       "1426650"
     ],
     "matches": {
       "1426650": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1554310": {
+        "start": 2,
+        "length": 2,
+        "reading": "りょうり"
+      },
+      "1554330": {
+        "start": 2,
+        "length": 3,
+        "reading": "りょうりてん"
       },
       "1582120": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "てん"
       },
       "2682420": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "たいりょうり"
       }
     }
   },
@@ -4147,17 +6483,25 @@
       }
     ],
     "vocabIds": [
-      "2255990",
+      "1501110",
+      "1586265",
       "1426650"
     ],
     "matches": {
       "1426650": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
-      "2255990": {
+      "1501110": {
         "start": 0,
-        "length": 5
+        "length": 1,
+        "reading": "はら"
+      },
+      "1586265": {
+        "start": 2,
+        "length": 2,
+        "reading": "あい"
       }
     }
   },
@@ -4178,15 +6522,18 @@
     "matches": {
       "1347310": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しょうひん"
       },
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1457200": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "とどい"
       }
     }
   },
@@ -4201,16 +6548,18 @@
     ],
     "vocabIds": [
       "1426650",
-      "1598810"
+      "1457200"
     ],
     "matches": {
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
-      "1598810": {
+      "1457200": {
         "start": 9,
-        "length": 1
+        "length": 2,
+        "reading": "とどき"
       }
     }
   },
@@ -4227,34 +6576,64 @@
       "1577100",
       "1522150",
       "1426650",
+      "1327700",
       "1327820",
       "1487660",
-      "1473700"
+      "1473740",
+      "1636070",
+      "1473700",
+      "1404700"
     ],
     "matches": {
+      "1327700": {
+        "start": 17,
+        "length": 3,
+        "reading": "てはじめ"
+      },
       "1327820": {
         "start": 17,
-        "length": 4
+        "length": 4,
+        "reading": "てはじめに"
+      },
+      "1404700": {
+        "start": 43,
+        "length": 2,
+        "reading": "たす"
       },
       "1426650": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1473700": {
         "start": 41,
-        "length": 4
+        "length": 4,
+        "reading": "かいたす"
+      },
+      "1473740": {
+        "start": 41,
+        "length": 2,
+        "reading": "かい"
       },
       "1487660": {
         "start": 29,
-        "length": 2
+        "length": 2,
+        "reading": "ひつよう"
       },
       "1522150": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1577100": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
+      },
+      "1636070": {
+        "start": 41,
+        "length": 2,
+        "reading": "かい"
       }
     }
   },
@@ -4273,7 +6652,8 @@
     "matches": {
       "1426650": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4288,16 +6668,24 @@
     ],
     "vocabIds": [
       "1426650",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1547710": {
+        "start": 13,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 13,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       }
     }
   },
@@ -4311,17 +6699,25 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "1188270",
       "1426650"
     ],
     "matches": {
       "1188270": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -4340,7 +6736,8 @@
     "matches": {
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4359,7 +6756,8 @@
     "matches": {
       "1426650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4378,7 +6776,8 @@
     "matches": {
       "1426650": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4397,7 +6796,8 @@
     "matches": {
       "1426650": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4417,11 +6817,105 @@
     "matches": {
       "1426650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
+      }
+    }
+  },
+  {
+    "id": "10077672",
+    "original": "当店では、お弁当の予約注文も承っております。営業時間内であればいつでもお電話ください。お待ちしております。",
+    "en": [
+      {
+        "id": "11755097",
+        "text": "We also accept pre-orders for boxed lunches. Call us anytime during business hours. We look forward to serving you."
+      }
+    ],
+    "vocabIds": [
+      "1449200",
+      "1513065",
+      "1513060",
+      "1543750",
+      "2844738",
+      "1426650",
+      "1349440",
+      "1173430",
+      "1173450",
+      "1315920",
+      "2098290",
+      "2701830",
+      "1443840"
+    ],
+    "matches": {
+      "1173430": {
+        "start": 22,
+        "length": 2,
+        "reading": "えいぎょう"
+      },
+      "1173450": {
+        "start": 22,
+        "length": 4,
+        "reading": "えいぎょうじかん"
+      },
+      "1315920": {
+        "start": 24,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1349440": {
+        "start": 14,
+        "length": 2,
+        "reading": "うけたまわっ"
+      },
+      "1426650": {
+        "start": 11,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1443840": {
+        "start": 36,
+        "length": 2,
+        "reading": "でんわ"
+      },
+      "1449200": {
+        "start": 0,
+        "length": 2,
+        "reading": "とうてん"
+      },
+      "1513060": {
+        "start": 6,
+        "length": 2,
+        "reading": "べんとう"
+      },
+      "1513065": {
+        "start": 5,
+        "length": 3,
+        "reading": "おべんとう"
+      },
+      "1543750": {
+        "start": 9,
+        "length": 2,
+        "reading": "よやく"
+      },
+      "2098290": {
+        "start": 26,
+        "length": 1,
+        "reading": "ない"
+      },
+      "2701830": {
+        "start": 35,
+        "length": 3,
+        "reading": "おでんわ"
+      },
+      "2844738": {
+        "start": 9,
+        "length": 4,
+        "reading": "よやくちゅうもん"
       }
     }
   },
@@ -4439,17 +6933,25 @@
       }
     ],
     "vocabIds": [
+      "1577100",
       "1188270",
       "1426650"
     ],
     "matches": {
       "1188270": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "なにか"
       },
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -4472,23 +6974,28 @@
     "matches": {
       "1347310": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しょうひん"
       },
       "1351430": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しょうかい"
       },
       "1426650": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1443840": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1610870": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "とたん"
       }
     }
   },
@@ -4507,7 +7014,46 @@
     "matches": {
       "1426650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
+      }
+    }
+  },
+  {
+    "id": "12556411",
+    "original": "お客様、ご注文は何になさいますか。",
+    "en": [
+      {
+        "id": "3316425",
+        "text": "What would you like to order?"
+      }
+    ],
+    "vocabIds": [
+      "1001770",
+      "1930020",
+      "1426650",
+      "1577100"
+    ],
+    "matches": {
+      "1001770": {
+        "start": 0,
+        "length": 3,
+        "reading": "おきゃくさま"
+      },
+      "1426650": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちゅうもん"
+      },
+      "1577100": {
+        "start": 8,
+        "length": 1,
+        "reading": "なに"
+      },
+      "1930020": {
+        "start": 4,
+        "length": 3,
+        "reading": "ごちゅうもん"
       }
     }
   },
@@ -4527,11 +7073,13 @@
     "matches": {
       "1269350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "あとで"
       },
       "1426650": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4551,11 +7099,13 @@
     "matches": {
       "1358340": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "たべもの"
       },
       "1426650": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       }
     }
   },
@@ -4570,26 +7120,30 @@
     ],
     "vocabIds": [
       "1429170",
-      "2691760",
+      "1151260",
       "1361490",
       "1426650"
     ],
     "matches": {
+      "1151260": {
+        "start": 12,
+        "length": 2,
+        "reading": "わるく"
+      },
       "1361490": {
         "start": 21,
-        "length": 3
+        "length": 3,
+        "reading": "あたらしい"
       },
       "1426650": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうもん"
       },
       "1429170": {
         "start": 9,
-        "length": 2
-      },
-      "2691760": {
-        "start": 12,
-        "length": 5
+        "length": 2,
+        "reading": "ちょうし"
       }
     }
   }

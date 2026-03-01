@@ -10,32 +10,37 @@
     ],
     "indices": "副大統領 は 大統領 に 代わる{代わって} 式典 に 出席 為る(する){した}",
     "vocabIds": [
+      "1500330",
       "1500600",
       "1414650",
-      "1982860",
       "1319100",
       "1339460"
     ],
     "matches": {
       "1319100": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       },
       "1339460": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっせき"
       },
       "1414650": {
-        "start": 5,
-        "length": 3
+        "start": 1,
+        "length": 3,
+        "reading": "だいとうりょう"
+      },
+      "1500330": {
+        "start": 0,
+        "length": 1,
+        "reading": "ふく"
       },
       "1500600": {
         "start": 0,
-        "length": 4
-      },
-      "1982860": {
-        "start": 9,
-        "length": 1
+        "length": 4,
+        "reading": "ふくだいとうりょう"
       }
     }
   },
@@ -58,19 +63,23 @@
     "matches": {
       "1319100": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1599260": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "どうどう"
       },
       "1603090": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "ふるまっ"
       }
     }
   },
@@ -86,6 +95,7 @@
     "indices": "式典 は 彼(かれ)[01]{彼の} 話(はなし) から 始まる{始まった}",
     "vocabIds": [
       "1319100",
+      "1483070",
       "1000420",
       "1600900",
       "1307500"
@@ -93,19 +103,28 @@
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1307500": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "はじまっ"
       },
       "1319100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       },
       "1600900": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -127,15 +146,18 @@
     "matches": {
       "1302090": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さんか"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1319100": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       }
     }
   },
@@ -152,30 +174,92 @@
     "vocabIds": [
       "1579110",
       "1319100",
-      "2259610",
       "1331240",
       "1223340"
     ],
     "matches": {
       "1223340": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "きねん"
       },
       "1319100": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       },
       "1331240": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうねん"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
+      }
+    }
+  },
+  {
+    "id": "183066",
+    "original": "記念式典は閉会の辞で幕を閉じた。",
+    "en": [
+      {
+        "id": "20188",
+        "text": "The commemorative ceremony ended with the closing address."
+      }
+    ],
+    "indices": "記念式典~ は 閉会の辞~ で(#2028980) 幕を閉じる{幕を閉じた}~",
+    "vocabIds": [
+      "1223340",
+      "1223360",
+      "1319100",
+      "1508600",
+      "2273120",
+      "2082010",
+      "1524750",
+      "1508550"
+    ],
+    "matches": {
+      "1223340": {
+        "start": 0,
+        "length": 2,
+        "reading": "きねん"
       },
-      "2259610": {
-        "start": 9,
-        "length": 1
+      "1223360": {
+        "start": 0,
+        "length": 4,
+        "reading": "きねんしきてん"
+      },
+      "1319100": {
+        "start": 2,
+        "length": 2,
+        "reading": "しきてん"
+      },
+      "1508550": {
+        "start": 12,
+        "length": 2,
+        "reading": "とじ"
+      },
+      "1508600": {
+        "start": 5,
+        "length": 2,
+        "reading": "へいかい"
+      },
+      "1524750": {
+        "start": 10,
+        "length": 1,
+        "reading": "まく"
+      },
+      "2082010": {
+        "start": 8,
+        "length": 1,
+        "reading": "じ"
+      },
+      "2273120": {
+        "start": 5,
+        "length": 4,
+        "reading": "へいかいのじ"
       }
     }
   },
@@ -193,24 +277,28 @@
       "1319100",
       "1424270",
       "1742130",
-      "1643580"
+      "1589060"
     ],
     "matches": {
       "1319100": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       },
       "1424270": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうごく"
       },
-      "1643580": {
+      "1589060": {
         "start": 17,
-        "length": 4
+        "length": 2,
+        "reading": "おこなわ"
       },
       "1742130": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "しょうたいきゃく"
       }
     }
   },
@@ -231,11 +319,13 @@
     "matches": {
       "1214300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かんそ"
       },
       "1319100": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       }
     }
   },
@@ -257,15 +347,18 @@
     "matches": {
       "1319100": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       },
       "1349610": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しょうたい"
       },
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -287,19 +380,23 @@
     "matches": {
       "1319100": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       },
       "1502860": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ふん"
       },
       "1543240": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "よてい"
       },
       "1657760": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さいちょう"
       }
     }
   },
@@ -314,16 +411,24 @@
     ],
     "vocabIds": [
       "1319100",
+      "1589600",
       "1589590"
     ],
     "matches": {
       "1319100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       },
       "1589590": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 3,
+        "length": 3,
+        "reading": "おわり"
       }
     }
   },
@@ -344,15 +449,18 @@
     "matches": {
       "1202710": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かいさい"
       },
       "1319100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       },
       "1584660": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あした"
       }
     }
   },
@@ -372,11 +480,13 @@
     "matches": {
       "1302090": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "さんか"
       },
       "1319100": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しきてん"
       }
     }
   }

@@ -1,5 +1,50 @@
 [
   {
+    "id": "139690",
+    "original": "速達便でお願いします。",
+    "en": [
+      {
+        "id": "274522",
+        "text": "Please send it by special delivery."
+      }
+    ],
+    "indices": "速達便~ で(#2028980) お願いします",
+    "vocabIds": [
+      "1405030",
+      "1610120",
+      "1512360",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 4,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1405030": {
+        "start": 0,
+        "length": 2,
+        "reading": "そくたつ"
+      },
+      "1512360": {
+        "start": 2,
+        "length": 1,
+        "reading": "びん"
+      },
+      "1610120": {
+        "start": 0,
+        "length": 3,
+        "reading": "そくたつびん"
+      },
+      "2036870": {
+        "start": 4,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
     "id": "139691",
     "original": "速達にしてくれませんか。",
     "en": [
@@ -15,7 +60,8 @@
     "matches": {
       "1405030": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そくたつ"
       }
     }
   },
@@ -36,11 +82,13 @@
     "matches": {
       "1402730": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "おくっ"
       },
       "1405030": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そくたつ"
       }
     }
   },
@@ -64,23 +112,28 @@
     "matches": {
       "1402730": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "おくる"
       },
       "1405030": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そくたつ"
       },
       "1554280": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "りょうきん"
       },
       "1593290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こづつみ"
       },
       "1606980": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "わりまし"
       }
     }
   },
@@ -102,15 +155,18 @@
     "matches": {
       "1327720": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "てがみ"
       },
       "1402730": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "おくっ"
       },
       "1405030": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そくたつ"
       }
     }
   },
@@ -127,20 +183,29 @@
     "vocabIds": [
       "1405030",
       "1402730",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 9,
+        "length": 3,
+        "reading": "ください"
       },
       "1402730": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "おくっ"
       },
       "1405030": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そくたつ"
       }
     }
   },
@@ -156,16 +221,24 @@
     "indices": "此れ[01]{これ} を 速達~ で(#2028980) 出す[05]{出して} 下さい{ください}",
     "vocabIds": [
       "1405030",
-      "1338180"
+      "1338180",
+      "1339160"
     ],
     "matches": {
       "1338180": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 6,
+        "length": 2,
+        "reading": "だし"
       },
       "1405030": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そくたつ"
       }
     }
   },
@@ -184,27 +257,117 @@
     ],
     "indices": "此の{この} 手紙 を 速達 で(#2028980) 送る{送って} 頂ける[01]{いただけません} か",
     "vocabIds": [
-      "2407970",
-      "1311530",
+      "1327720",
       "1405030",
       "1402730"
     ],
     "matches": {
-      "1311530": {
-        "start": 3,
-        "length": 1
+      "1327720": {
+        "start": 2,
+        "length": 2,
+        "reading": "てがみ"
       },
       "1402730": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "おくっ"
       },
       "1405030": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "そくたつ"
+      }
+    }
+  },
+  {
+    "id": "910711",
+    "original": "三月三日の午ごろに、一通の速達郵便がわたしの家の玄関に投げ込まれた。",
+    "en": [
+      {
+        "id": "924130",
+        "text": "On the 3rd of March, at around noon, an express letter was thrown into the entrance of my house."
+      }
+    ],
+    "vocabIds": [
+      "1300260",
+      "1579350",
+      "1463770",
+      "1268970",
+      "1160790",
+      "1164900",
+      "1432840",
+      "1405030",
+      "1610130",
+      "1605680",
+      "1191730",
+      "1263400",
+      "1447020"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 10,
+        "length": 1,
+        "reading": "いち"
       },
-      "2407970": {
+      "1164900": {
+        "start": 10,
+        "length": 2,
+        "reading": "いちつう"
+      },
+      "1191730": {
+        "start": 22,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1263400": {
+        "start": 24,
+        "length": 2,
+        "reading": "げんかん"
+      },
+      "1268970": {
+        "start": 5,
+        "length": 1,
+        "reading": "うま"
+      },
+      "1300260": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "さんがつ"
+      },
+      "1405030": {
+        "start": 13,
+        "length": 2,
+        "reading": "そくたつ"
+      },
+      "1432840": {
+        "start": 11,
+        "length": 1,
+        "reading": "つう"
+      },
+      "1447020": {
+        "start": 27,
+        "length": 4,
+        "reading": "なげこま"
+      },
+      "1463770": {
+        "start": 3,
+        "length": 1,
+        "reading": "にち"
+      },
+      "1579350": {
+        "start": 2,
+        "length": 1,
+        "reading": "さん"
+      },
+      "1605680": {
+        "start": 15,
+        "length": 2,
+        "reading": "ゆうびん"
+      },
+      "1610130": {
+        "start": 13,
+        "length": 4,
+        "reading": "そくたつゆうびん"
       }
     }
   },
@@ -219,16 +382,24 @@
     ],
     "vocabIds": [
       "1405030",
+      "2036870",
       "1001720"
     ],
     "matches": {
       "1001720": {
         "start": 3,
-        "length": 6
+        "length": 6,
+        "reading": "おねがいします"
       },
       "1405030": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そくたつ"
+      },
+      "2036870": {
+        "start": 3,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   }

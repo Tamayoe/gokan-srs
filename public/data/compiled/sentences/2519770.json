@@ -1,64 +1,5 @@
 [
   {
-    "id": "79544",
-    "original": "約束の時間に遅れた。",
-    "en": [
-      {
-        "id": "324174",
-        "text": "I was late for the appointment."
-      }
-    ],
-    "indices": "約束[01] の 時間に遅れる{時間に遅れた}~",
-    "vocabIds": [
-      "1538130",
-      "2519770"
-    ],
-    "matches": {
-      "1538130": {
-        "start": 0,
-        "length": 2
-      },
-      "2519770": {
-        "start": 3,
-        "length": 6
-      }
-    }
-  },
-  {
-    "id": "79545",
-    "original": "約束の時間に遅れないようにバスに乗った。",
-    "en": [
-      {
-        "id": "324173",
-        "text": "I took a bus so as not to be late for my appointment."
-      },
-      {
-        "id": "596930",
-        "text": "I took a bus so I wouldn't be late for my appointment."
-      }
-    ],
-    "indices": "約束[01] の 時間に遅れる{時間に遅れない} 様に{ように} バス(#1098390) に 乗る[01]{乗った}",
-    "vocabIds": [
-      "1538130",
-      "2519770",
-      "1355120"
-    ],
-    "matches": {
-      "1355120": {
-        "start": 16,
-        "length": 3
-      },
-      "1538130": {
-        "start": 0,
-        "length": 2
-      },
-      "2519770": {
-        "start": 3,
-        "length": 7
-      }
-    }
-  },
-  {
     "id": "114773",
     "original": "彼はあるとしてもめったに約束の時間に遅れることはない。",
     "en": [
@@ -71,161 +12,35 @@
     "vocabIds": [
       "1483070",
       "1538130",
-      "2519770"
+      "1315920",
+      "2519770",
+      "1589040"
     ],
     "matches": {
+      "1315920": {
+        "start": 15,
+        "length": 2,
+        "reading": "じかん"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1538130": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
+      },
+      "1589040": {
+        "start": 18,
+        "length": 3,
+        "reading": "おくれる"
       },
       "2519770": {
         "start": 15,
-        "length": 6
-      }
-    }
-  },
-  {
-    "id": "150597",
-    "original": "時間に遅れないように急ぎなさい。",
-    "en": [
-      {
-        "id": "263960",
-        "text": "Make haste in case you are late."
-      }
-    ],
-    "indices": "時間に遅れる{時間に遅れない} 様に{ように} 急ぐ{急ぎ} 為さい{なさい}",
-    "vocabIds": [
-      "2519770",
-      "1228630"
-    ],
-    "matches": {
-      "1228630": {
-        "start": 10,
-        "length": 2
-      },
-      "2519770": {
-        "start": 0,
-        "length": 7
-      }
-    }
-  },
-  {
-    "id": "196460",
-    "original": "ポールは約束の時間に遅れないようにしている。",
-    "en": [
-      {
-        "id": "33639",
-        "text": "Paul makes it a rule not to be late for his appointments."
-      },
-      {
-        "id": "1871989",
-        "text": "Paul makes it a rule not to be late for appointments."
-      }
-    ],
-    "indices": "は 約束[01] の 時間に遅れる{時間に遅れない} 様にする{ようにしている}",
-    "vocabIds": [
-      "1538130",
-      "2519770"
-    ],
-    "matches": {
-      "1538130": {
-        "start": 4,
-        "length": 2
-      },
-      "2519770": {
-        "start": 7,
-        "length": 7
-      }
-    }
-  },
-  {
-    "id": "234599",
-    "original": "あいつまた待ち合わせの時間に遅れてくるかもしれないから、集合は７時だって駄目を押しておいてよ。",
-    "en": [
-      {
-        "id": "71976",
-        "text": "He's likely to be late so you'd better tell him again that the meeting time is seven to make double sure."
-      }
-    ],
-    "indices": "彼奴(あいつ)[01]{あいつ} 又{また} 待ち合わせ の 時間に遅れる{時間に遅れて} 来る(くる){くる} かも知れない{かもしれない} から 集合[01] は 時(じ)[01] だ って 駄目を押す{駄目を押して}~ 置く[09]{おいて} よ[01]",
-    "vocabIds": [
-      "1410510",
-      "2519770",
-      "1333680",
-      "2845363",
-      "1892630"
-    ],
-    "matches": {
-      "1333680": {
-        "start": 28,
-        "length": 2
-      },
-      "1410510": {
-        "start": 5,
-        "length": 5
-      },
-      "1892630": {
-        "start": 36,
-        "length": 6
-      },
-      "2519770": {
-        "start": 11,
-        "length": 6
-      },
-      "2845363": {
-        "start": 31,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "3488253",
-    "original": "時間に遅れないで。",
-    "en": [
-      {
-        "id": "2244995",
-        "text": "Be on time."
-      },
-      {
-        "id": "2111959",
-        "text": "Be punctual."
-      }
-    ],
-    "vocabIds": [
-      "2519770"
-    ],
-    "matches": {
-      "2519770": {
-        "start": 0,
-        "length": 7
-      }
-    }
-  },
-  {
-    "id": "3604361",
-    "original": "トムはいつも時間に遅れてくるという、もっぱらの評判だ。",
-    "en": [
-      {
-        "id": "1025462",
-        "text": "Tom has a reputation for always being late."
-      }
-    ],
-    "vocabIds": [
-      "2519770",
-      "1490070"
-    ],
-    "matches": {
-      "1490070": {
-        "start": 23,
-        "length": 2
-      },
-      "2519770": {
-        "start": 6,
-        "length": 6
+        "length": 6,
+        "reading": "じかんにおくれる"
       }
     }
   }

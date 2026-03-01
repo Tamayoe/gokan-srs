@@ -14,53 +14,51 @@
       "1485470",
       "1600460",
       "1587590",
-      "2845368",
-      "1215230",
+      "1315920",
       "1355120",
       "1600470",
-      "1524930",
-      "2612170"
+      "1524930"
     ],
     "matches": {
-      "1215230": {
-        "start": 20,
-        "length": 1
-      },
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
+      },
+      "1315920": {
+        "start": 19,
+        "length": 2,
+        "reading": "じかん"
       },
       "1355120": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "のっ"
       },
       "1485470": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ひこうき"
       },
       "1524930": {
         "start": 34,
-        "length": 1
+        "length": 1,
+        "reading": "また"
       },
       "1587590": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "いままで"
       },
       "1600460": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "のりかえ"
       },
       "1600470": {
         "start": 25,
-        "length": 5
-      },
-      "2612170": {
-        "start": 35,
-        "length": 2
-      },
-      "2845368": {
-        "start": 18,
-        "length": 2
+        "length": 4,
+        "reading": "のりかえ"
       }
     }
   },
@@ -76,21 +74,151 @@
     "indices": "又 来年 会う[01]{会える} と いい(#2820690)[01]~ です ね(#2029080)[01]",
     "vocabIds": [
       "1524930",
-      "1548220",
-      "1198160"
+      "1548220"
     ],
     "matches": {
-      "1198160": {
-        "start": 3,
-        "length": 1
-      },
       "1524930": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "また"
       },
       "1548220": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "らいねん"
+      }
+    }
+  },
+  {
+    "id": "81212",
+    "original": "又しても彼女は遅刻した。",
+    "en": [
+      {
+        "id": "322503",
+        "text": "She was late once again."
+      }
+    ],
+    "indices": "又しても 彼女[01] は 遅刻 為る(する){した}",
+    "vocabIds": [
+      "1524930",
+      "1524940",
+      "1483150",
+      "1422050"
+    ],
+    "matches": {
+      "1422050": {
+        "start": 7,
+        "length": 2,
+        "reading": "ちこく"
+      },
+      "1483150": {
+        "start": 4,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1524930": {
+        "start": 0,
+        "length": 1,
+        "reading": "また"
+      },
+      "1524940": {
+        "start": 0,
+        "length": 4,
+        "reading": "またしても"
+      }
+    }
+  },
+  {
+    "id": "81213",
+    "original": "又しても死を免れることができた。",
+    "en": [
+      {
+        "id": "322502",
+        "text": "Again I was able to escape death."
+      },
+      {
+        "id": "1438079",
+        "text": "Once again, I was able to escape death."
+      }
+    ],
+    "indices": "又しても~ 死[01] を 免れる 事が出来る{ことができた}",
+    "vocabIds": [
+      "1524930",
+      "1524940",
+      "1310720",
+      "1584670"
+    ],
+    "matches": {
+      "1310720": {
+        "start": 4,
+        "length": 1,
+        "reading": "し"
+      },
+      "1524930": {
+        "start": 0,
+        "length": 1,
+        "reading": "また"
+      },
+      "1524940": {
+        "start": 0,
+        "length": 4,
+        "reading": "またしても"
+      },
+      "1584670": {
+        "start": 6,
+        "length": 3,
+        "reading": "まぬかれる"
+      }
+    }
+  },
+  {
+    "id": "81214",
+    "original": "又しても彼は試験に落ちた。",
+    "en": [
+      {
+        "id": "322501",
+        "text": "He failed the examination again."
+      }
+    ],
+    "indices": "又しても 彼(かれ) は 試験 に 落ちる[08]{落ちた}",
+    "vocabIds": [
+      "1524930",
+      "1524940",
+      "1483070",
+      "1312350",
+      "1548550",
+      "1548530"
+    ],
+    "matches": {
+      "1312350": {
+        "start": 6,
+        "length": 2,
+        "reading": "しけん"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1524930": {
+        "start": 0,
+        "length": 1,
+        "reading": "また"
+      },
+      "1524940": {
+        "start": 0,
+        "length": 4,
+        "reading": "またしても"
+      },
+      "1548530": {
+        "start": 9,
+        "length": 2,
+        "reading": "おち"
+      },
+      "1548550": {
+        "start": 9,
+        "length": 2,
+        "reading": "おち"
       }
     }
   },
@@ -106,16 +234,18 @@
     "indices": "又 会う[01]{お会い} 出来る{できて} 嬉しい{うれしい} です",
     "vocabIds": [
       "1524930",
-      "1198160"
+      "1198180"
     ],
     "matches": {
-      "1198160": {
+      "1198180": {
         "start": 2,
-        "length": 1
+        "length": 2,
+        "reading": "あい"
       },
       "1524930": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "また"
       }
     }
   },
@@ -146,19 +276,23 @@
     "matches": {
       "1220800": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きかい"
       },
       "1487400": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かならず"
       },
       "1524930": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "また"
       },
       "1547720": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "くる"
       }
     }
   },
@@ -181,99 +315,86 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1524930": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "また"
       },
       "1553170": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "りょこう"
       },
       "1598550": {
         "start": 6,
-        "length": 6
+        "length": 3,
+        "reading": "でかけ"
       }
     }
   },
   {
-    "id": "103957",
-    "original": "彼は情報をすべて又聞きで得た。",
+    "id": "174603",
+    "original": "古今を通して彼は又とない勇敢な男だ。",
     "en": [
       {
-        "id": "299735",
-        "text": "He got all his information from secondary sources."
+        "id": "239866",
+        "text": "He is as brave a man as ever breathed."
       }
     ],
-    "indices": "彼(かれ)[01] は 情報 を 全て{すべて} 又聞き で(#2028980) 得る(える)[01]{得た}",
+    "indices": "古今 を通して 彼(かれ)[01] は[01] 又と無い{又とない} 勇敢{勇敢な} 男 だ",
     "vocabIds": [
+      "1265380",
+      "2100520",
       "1483070",
-      "1356370",
       "1524930",
-      "2701450",
-      "1588760"
+      "1524950",
+      "1524960",
+      "1539730",
+      "1419990"
     ],
     "matches": {
-      "1356370": {
-        "start": 2,
-        "length": 2
+      "1265380": {
+        "start": 0,
+        "length": 2,
+        "reading": "ここん"
+      },
+      "1419990": {
+        "start": 15,
+        "length": 1,
+        "reading": "おとこ"
       },
       "1483070": {
-        "start": 0,
-        "length": 1
+        "start": 6,
+        "length": 1,
+        "reading": "かれ"
       },
       "1524930": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "また"
       },
-      "1588760": {
+      "1524950": {
+        "start": 8,
+        "length": 2,
+        "reading": "またと"
+      },
+      "1524960": {
+        "start": 8,
+        "length": 4,
+        "reading": "またとない"
+      },
+      "1539730": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうかん"
       },
-      "2701450": {
-        "start": 9,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "160848",
-    "original": "この情報は又聞きで知ったので、間違っているかもしれません。",
-    "en": [
-      {
-        "id": "253670",
-        "text": "I got this information second hand, so I may be wrong."
-      }
-    ],
-    "indices": "此の{この} 情報 は 又聞き で(#2028980) 知る{知った} ので 間違う[01]{間違っている} かも知れない{かもしれません}",
-    "vocabIds": [
-      "1356370",
-      "1524930",
-      "2701450",
-      "1420470",
-      "1611610"
-    ],
-    "matches": {
-      "1356370": {
+      "2100520": {
         "start": 2,
-        "length": 2
-      },
-      "1420470": {
-        "start": 9,
-        "length": 3
-      },
-      "1524930": {
-        "start": 5,
-        "length": 1
-      },
-      "1611610": {
-        "start": 15,
-        "length": 4
-      },
-      "2701450": {
-        "start": 6,
-        "length": 2
+        "length": 4,
+        "reading": "をとおして"
       }
     }
   },
@@ -295,60 +416,18 @@
     "matches": {
       "1176510": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "えんちょう"
       },
       "1198330": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かいき"
       },
       "1524930": {
         "start": 3,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "219134",
-    "original": "この話は又聞きなので、真偽の程は分かりません。",
-    "en": [
-      {
-        "id": "56450",
-        "text": "As I heard the story secondhand, I can't ascertain the truth of it."
-      }
-    ],
-    "indices": "此の{この} 話(はなし)[01] は 又聞き~ なので 真偽のほど{真偽の程} は 分かる{分かりません}",
-    "vocabIds": [
-      "1600900",
-      "1524930",
-      "2701450",
-      "1363520",
-      "1436510",
-      "1502940"
-    ],
-    "matches": {
-      "1363520": {
-        "start": 11,
-        "length": 2
-      },
-      "1436510": {
-        "start": 14,
-        "length": 1
-      },
-      "1502940": {
-        "start": 16,
-        "length": 3
-      },
-      "1524930": {
-        "start": 4,
-        "length": 1
-      },
-      "1600900": {
-        "start": 2,
-        "length": 1
-      },
-      "2701450": {
-        "start": 5,
-        "length": 2
+        "length": 1,
+        "reading": "また"
       }
     }
   },
@@ -363,41 +442,48 @@
     ],
     "vocabIds": [
       "1558670",
-      "1255430",
       "1499720",
+      "1160570",
       "1160550",
       "1524930",
-      "1486350",
+      "1486360",
       "1297210"
     ],
     "matches": {
       "1160550": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "そだて"
       },
-      "1255430": {
-        "start": 7,
-        "length": 1
+      "1160570": {
+        "start": 11,
+        "length": 2,
+        "reading": "そだて"
       },
       "1297210": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "さく"
       },
-      "1486350": {
+      "1486360": {
         "start": 24,
-        "length": 1
+        "length": 4,
+        "reading": "うつくしゅう"
       },
       "1499720": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "かぜ"
       },
       "1524930": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "また"
       },
       "1558670": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "こい"
       }
     }
   }

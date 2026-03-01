@@ -1,5 +1,38 @@
 [
   {
+    "id": "79205",
+    "original": "誘惑に負けてはいけない。",
+    "en": [
+      {
+        "id": "324512",
+        "text": "You must not yield to temptation."
+      }
+    ],
+    "indices": "誘惑に負ける{誘惑に負けて} は 行けない[02]{いけない}",
+    "vocabIds": [
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1497960": {
+        "start": 3,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 3,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 0,
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
     "id": "79206",
     "original": "誘惑に抵抗することは難しい。",
     "en": [
@@ -17,15 +50,18 @@
     "matches": {
       "1436260": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ていこう"
       },
       "1460850": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "むずかしい"
       },
       "1542040": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -44,43 +80,75 @@
       "1542040",
       "1320140",
       "1483070",
+      "1259930",
       "1715580",
+      "1158870",
+      "1461140",
       "1582670",
+      "1580640",
       "1307850",
       "1515120"
     ],
     "matches": {
+      "1158870": {
+        "start": 24,
+        "length": 2,
+        "reading": "ちがい"
+      },
+      "1259930": {
+        "start": 22,
+        "length": 2,
+        "reading": "けんとう"
+      },
       "1307850": {
         "start": 45,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1320140": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しっぱい"
+      },
+      "1461140": {
+        "start": 42,
+        "length": 1,
+        "reading": "に"
       },
       "1483070": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1515120": {
         "start": 48,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
       },
       "1542040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      },
+      "1580640": {
+        "start": 43,
+        "length": 1,
+        "reading": "にん"
       },
       "1582670": {
         "start": 42,
-        "length": 2
+        "length": 2,
+        "reading": "ににん"
       },
       "1715580": {
         "start": 22,
-        "length": 4
+        "length": 4,
+        "reading": "けんとうちがい"
       }
     }
   },
@@ -103,19 +171,23 @@
     "matches": {
       "1217730": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
       },
       "1311110": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1542040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -136,11 +208,103 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1542040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "86403",
+    "original": "彼女は誘惑に負けてその宝石を買ってしまった。",
+    "en": [
+      {
+        "id": "317307",
+        "text": "She gave way to the temptation to buy the jewel."
+      }
+    ],
+    "indices": "彼女[01] は 誘惑に負ける{誘惑に負けて}~ 其の[01]{その} 宝石 を 買う[01]{買って} 仕舞う{しまった}",
+    "vocabIds": [
+      "1483150",
+      "1542040",
+      "1497980",
+      "1497960",
+      "1516220",
+      "1473740"
+    ],
+    "matches": {
+      "1473740": {
+        "start": 14,
+        "length": 2,
+        "reading": "かっ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1497960": {
+        "start": 6,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 6,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1516220": {
+        "start": 11,
+        "length": 2,
+        "reading": "ほうせき"
+      },
+      "1542040": {
+        "start": 3,
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "86407",
+    "original": "彼女は誘惑に負けた。",
+    "en": [
+      {
+        "id": "317306",
+        "text": "She gave way to temptation."
+      }
+    ],
+    "indices": "彼女[01] は 誘惑に負ける{誘惑に負けた}",
+    "vocabIds": [
+      "1483150",
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1497960": {
+        "start": 6,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 6,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 3,
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -163,19 +327,23 @@
     "matches": {
       "1357740": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "いろじかけ"
       },
       "1419990": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1542040": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -192,20 +360,29 @@
     "vocabIds": [
       "1483150",
       "1542040",
-      "1497980"
+      "1497980",
+      "1497960"
     ],
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1497960": {
+        "start": 10,
+        "length": 2,
+        "reading": "まけ"
       },
       "1497980": {
         "start": 10,
-        "length": 4
+        "length": 2,
+        "reading": "まけ"
       },
       "1542040": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -221,21 +398,18 @@
     "indices": "彼女[01]{彼女の} 誘惑 に 勝つ{勝てない}",
     "vocabIds": [
       "1483150",
-      "1542040",
-      "1603910"
+      "1542040"
     ],
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1542040": {
         "start": 3,
-        "length": 2
-      },
-      "1603910": {
-        "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -257,15 +431,96 @@
     "matches": {
       "1169190": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "ひきはなす"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1542040": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "99231",
+    "original": "彼は誘惑に負けない。",
+    "en": [
+      {
+        "id": "304468",
+        "text": "He is proof against temptation."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 誘惑に負ける{誘惑に負けない}",
+    "vocabIds": [
+      "1483070",
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1497960": {
+        "start": 5,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 5,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 2,
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "99232",
+    "original": "彼は誘惑に負けてしまった。",
+    "en": [
+      {
+        "id": "290875",
+        "text": "He gave in to the temptation."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 誘惑に負ける{誘惑に負けて} 仕舞う{しまった}",
+    "vocabIds": [
+      "1483070",
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1497960": {
+        "start": 5,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 5,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 2,
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -282,25 +537,47 @@
     "vocabIds": [
       "1483070",
       "1542040",
+      "2409930",
       "1524440",
-      "1896030"
+      "1327190",
+      "1338180",
+      "1339160"
     ],
     "matches": {
+      "1327190": {
+        "start": 11,
+        "length": 1,
+        "reading": "て"
+      },
+      "1338180": {
+        "start": 13,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 13,
+        "length": 2,
+        "reading": "だし"
+      },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1524440": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "まやく"
       },
       "1542040": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
-      "1896030": {
-        "start": 11,
-        "length": 5
+      "2409930": {
+        "start": 5,
+        "length": 2,
+        "reading": "くっし"
       }
     }
   },
@@ -318,24 +595,124 @@
       "1483070",
       "1519830",
       "1542040",
-      "1212260"
+      "1212260",
+      "1212250"
     ],
     "matches": {
+      "1212250": {
+        "start": 8,
+        "length": 2,
+        "reading": "かんじ"
+      },
       "1212260": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かんじ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1519830": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうけん"
       },
       "1542040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "106989",
+    "original": "彼は再びその誘惑に負けてしまった。",
+    "en": [
+      {
+        "id": "296697",
+        "text": "He gave way to the temptation again."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 再び 其の[01]{その} 誘惑に負ける{誘惑に負けて} 仕舞う{しまった}",
+    "vocabIds": [
+      "1483070",
+      "1292300",
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1292300": {
+        "start": 2,
+        "length": 2,
+        "reading": "ふたたび"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1497960": {
+        "start": 9,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 9,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 6,
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "107827",
+    "original": "彼は決して誘惑に負けなかった。",
+    "en": [
+      {
+        "id": "289793",
+        "text": "He never gave in to temptation."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 決して 誘惑 には 負ける{負けなかった}",
+    "vocabIds": [
+      "1483070",
+      "1254130",
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1254130": {
+        "start": 2,
+        "length": 3,
+        "reading": "けっして"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1497960": {
+        "start": 8,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 8,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 5,
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -353,24 +730,220 @@
       "1483070",
       "1254130",
       "1542040",
-      "2080750"
+      "1355120"
     ],
     "matches": {
       "1254130": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "けっして"
+      },
+      "1355120": {
+        "start": 8,
+        "length": 2,
+        "reading": "のら"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1542040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "110522",
+    "original": "彼はもろくも誘惑に負けた。",
+    "en": [
+      {
+        "id": "293164",
+        "text": "He was weak enough to succumb to temptation."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 脆い[01]{もろく} も 誘惑に負ける{誘惑に負けた}",
+    "vocabIds": [
+      "1483070",
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
-      "2080750": {
-        "start": 8,
-        "length": 1
+      "1497960": {
+        "start": 9,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 9,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 6,
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "110718",
+    "original": "彼はまるで子供だったので、誘惑に負けてしまった。",
+    "en": [
+      {
+        "id": "288808",
+        "text": "He was so childish that he couldn't resist temptation."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 丸で{まるで} 子供 だ{だった} ので 誘惑に負ける{誘惑に負けて} 仕舞う{しまった}",
+    "vocabIds": [
+      "1483070",
+      "1307850",
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1307850": {
+        "start": 5,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1497960": {
+        "start": 16,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 16,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 13,
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "110719",
+    "original": "彼はまるで子供だったので、誘惑に負けた。",
+    "en": [
+      {
+        "id": "292967",
+        "text": "Because he was just like a child, he yielded to temptation."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 丸で{まるで} 子供 だ{だった} ので 誘惑に負ける{誘惑に負けた}",
+    "vocabIds": [
+      "1483070",
+      "1307850",
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1307850": {
+        "start": 5,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1497960": {
+        "start": 16,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 16,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 13,
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "110823",
+    "original": "彼はまた酒を飲みたいという誘惑に負けないように努力した。",
+    "en": [
+      {
+        "id": "292863",
+        "text": "He made every effort to avoid yielding to the temptation to start drinking again."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 又{また} 酒(さけ) を 飲む[01]{飲み} たい[01] と言う{という} 誘惑に負ける{誘惑に負けない} 様に{ように} 努力 為る(する){した}",
+    "vocabIds": [
+      "1483070",
+      "1329010",
+      "1169870",
+      "2151640",
+      "1542040",
+      "1497980",
+      "1497960",
+      "1445130"
+    ],
+    "matches": {
+      "1169870": {
+        "start": 6,
+        "length": 2,
+        "reading": "のみ"
+      },
+      "1329010": {
+        "start": 4,
+        "length": 1,
+        "reading": "さけ"
+      },
+      "1445130": {
+        "start": 23,
+        "length": 2,
+        "reading": "どりょく"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1497960": {
+        "start": 16,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 16,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 13,
+        "length": 2,
+        "reading": "ゆうわく"
+      },
+      "2151640": {
+        "start": 6,
+        "length": 2,
+        "reading": "のみ"
       }
     }
   },
@@ -393,19 +966,23 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1538130": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "やくそく"
       },
       "1542040": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -427,15 +1004,18 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1542040": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "2409930": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "くっし"
       }
     }
   },
@@ -457,15 +1037,18 @@
     "matches": {
       "1307850": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1542040": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -482,25 +1065,23 @@
     "vocabIds": [
       "1476060",
       "1549470",
-      "1542040",
-      "1603910"
+      "1542040"
     ],
     "matches": {
       "1476060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ばくだい"
       },
       "1542040": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "1549470": {
         "start": 3,
-        "length": 2
-      },
-      "1603910": {
-        "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "りえき"
       }
     }
   },
@@ -516,21 +1097,18 @@
     "indices": "男 は 余りに{あまりに} 我が儘[01]{わがまま} だ{だった} ので 誘惑 に 勝つ{勝てなかった}",
     "vocabIds": [
       "1419990",
-      "1542040",
-      "1603910"
+      "1542040"
     ],
     "matches": {
       "1419990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1542040": {
         "start": 15,
-        "length": 2
-      },
-      "1603910": {
-        "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -545,22 +1123,37 @@
     ],
     "indices": "大都会 には 誘惑 が 多い",
     "vocabIds": [
+      "2082450",
       "1414600",
+      "1444970",
       "1542040",
       "1407460"
     ],
     "matches": {
       "1407460": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おおい"
       },
       "1414600": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "だいとかい"
+      },
+      "1444970": {
+        "start": 1,
+        "length": 2,
+        "reading": "とかい"
       },
       "1542040": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      },
+      "2082450": {
+        "start": 0,
+        "length": 1,
+        "reading": "だい"
       }
     }
   },
@@ -575,17 +1168,25 @@
     ],
     "indices": "絶対に 誘惑 には 負ける{まけない} ぞ",
     "vocabIds": [
+      "1386840",
       "1610070",
       "1542040"
     ],
     "matches": {
+      "1386840": {
+        "start": 0,
+        "length": 2,
+        "reading": "ぜったい"
+      },
       "1542040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "1610070": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ぜったいに"
       }
     }
   },
@@ -606,11 +1207,13 @@
     "matches": {
       "1366770": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にんげん"
       },
       "1542040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -631,11 +1234,13 @@
     "matches": {
       "1542040": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -652,20 +1257,29 @@
     "vocabIds": [
       "1324300",
       "1580640",
-      "1542040"
+      "1542040",
+      "1216120"
     ],
     "matches": {
+      "1216120": {
+        "start": 7,
+        "length": 2,
+        "reading": "おちいり"
+      },
       "1324300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "わかい"
       },
       "1542040": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "1580640": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -681,26 +1295,42 @@
     "indices": "若い 人達{人たち} は 誘惑 に 陥る{陥り} 易い{やすい}",
     "vocabIds": [
       "1324300",
+      "1580640",
       "1368740",
       "1542040",
+      "1216120",
       "2739010"
     ],
     "matches": {
+      "1216120": {
+        "start": 9,
+        "length": 2,
+        "reading": "おちいり"
+      },
       "1324300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "わかい"
       },
       "1368740": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ひとたち"
       },
       "1542040": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      },
+      "1580640": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひと"
       },
       "2739010": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "おちいりやすい"
       }
     }
   },
@@ -717,25 +1347,98 @@
     "vocabIds": [
       "1311110",
       "1542040",
+      "1497980",
       "1497960",
       "1254340"
     ],
     "matches": {
       "1254340": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "けっしん"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1497960": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 5,
+        "length": 2,
+        "reading": "まけ"
       },
       "1542040": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "152474",
+    "original": "私は誘惑に負けて煙草を吸い始めた。",
+    "en": [
+      {
+        "id": "262076",
+        "text": "I gave in to temptation and began to smoke a cigarette."
+      }
+    ],
+    "indices": "私(わたし)[01] は 誘惑に負ける{誘惑に負けて} 煙草を吸う{煙草を吸い} 始める[03]{始めた}",
+    "vocabIds": [
+      "1311110",
+      "1542040",
+      "1497980",
+      "1497960",
+      "1597150",
+      "1228260",
+      "1307550",
+      "1342540"
+    ],
+    "matches": {
+      "1228260": {
+        "start": 11,
+        "length": 2,
+        "reading": "すい"
+      },
+      "1307550": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1342540": {
+        "start": 13,
+        "length": 2,
+        "reading": "はじめ"
+      },
+      "1497960": {
+        "start": 5,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 5,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 2,
+        "length": 2,
+        "reading": "ゆうわく"
+      },
+      "1597150": {
+        "start": 8,
+        "length": 2,
+        "reading": "たばこ"
       }
     }
   },
@@ -758,19 +1461,23 @@
     "matches": {
       "1483070": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1542040": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "1577100": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
       }
     }
   },
@@ -791,11 +1498,64 @@
     "matches": {
       "1497980": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "まける"
       },
       "1542040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "202609",
+    "original": "ついに彼女は誘惑に負けてケーキを全部食べた。",
+    "en": [
+      {
+        "id": "39843",
+        "text": "Finally she gave in to temptation and ate the whole cake."
+      }
+    ],
+    "indices": "遂に[01]{ついに} 彼女[01] は 誘惑に負ける{誘惑に負けて} ケーキ を 全部 食べる{食べた}",
+    "vocabIds": [
+      "1483150",
+      "1542040",
+      "1497980",
+      "1497960",
+      "1396130",
+      "1358280"
+    ],
+    "matches": {
+      "1358280": {
+        "start": 18,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1396130": {
+        "start": 16,
+        "length": 2,
+        "reading": "ぜんぶ"
+      },
+      "1483150": {
+        "start": 3,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1497960": {
+        "start": 9,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 9,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 6,
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -816,11 +1576,58 @@
     "matches": {
       "1483150": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1542040": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      }
+    }
+  },
+  {
+    "id": "208088",
+    "original": "その男はまるで子供だったので誘惑に負けてしまった。",
+    "en": [
+      {
+        "id": "45345",
+        "text": "The guy was so childish that he couldn't resist temptation."
+      }
+    ],
+    "indices": "其の[01]{その} 男 は 丸で{まるで} 子供 だ{だった} ので 誘惑に負ける{誘惑に負けて} 仕舞う{しまった}",
+    "vocabIds": [
+      "1419990",
+      "1307850",
+      "1542040",
+      "1497980",
+      "1497960"
+    ],
+    "matches": {
+      "1307850": {
+        "start": 7,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1419990": {
+        "start": 2,
+        "length": 1,
+        "reading": "おとこ"
+      },
+      "1497960": {
+        "start": 17,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 17,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 14,
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -834,6 +1641,7 @@
       }
     ],
     "vocabIds": [
+      "1429750",
       "2669520",
       "1607050",
       "1375970",
@@ -842,6 +1650,7 @@
       "1325260",
       "1237760",
       "1527560",
+      "2010330",
       "2010340",
       "1542040",
       "1436260"
@@ -849,47 +1658,68 @@
     "matches": {
       "1237760": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "きょうりょう"
       },
       "1325260": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "しゅぎ"
       },
       "1375970": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "せいじ"
+      },
+      "1429750": {
+        "start": 0,
+        "length": 2,
+        "reading": "ながき"
       },
       "1436260": {
         "start": 43,
-        "length": 2
+        "length": 2,
+        "reading": "ていこう"
       },
       "1446030": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "とうは"
       },
       "1527560": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "みじゅく"
       },
       "1542040": {
         "start": 40,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "1607050": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "2010330": {
+        "start": 34,
+        "length": 4,
+        "reading": "あとずさり"
       },
       "2010340": {
         "start": 34,
-        "length": 4
+        "length": 4,
+        "reading": "あとずさり"
       },
       "2410180": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "がいし"
       },
       "2669520": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ながき"
       }
     }
   },
@@ -905,12 +1735,15 @@
     "indices": "",
     "vocabIds": [
       "1592250",
+      "1311110",
       "1311300",
       "1287070",
       "1234260",
+      "1173860",
       "1600610",
       "1244350",
       "1375970",
+      "1429750",
       "2038050",
       "1455500",
       "1526670",
@@ -921,85 +1754,131 @@
       "1527560",
       "1292300",
       "1548550",
+      "1548530",
       "1542040",
+      "1596960",
       "1596950"
     ],
     "matches": {
+      "1173860": {
+        "start": 30,
+        "length": 2,
+        "reading": "さかえ"
+      },
       "1234260": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "ともに"
       },
       "1244350": {
         "start": 35,
-        "length": 3
+        "length": 3,
+        "reading": "くるしむ"
       },
       "1287070": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "こくみん"
       },
       "1292300": {
         "start": 90,
-        "length": 2
+        "length": 2,
+        "reading": "ふたたび"
+      },
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1375970": {
         "start": 46,
-        "length": 2
+        "length": 2,
+        "reading": "せいじ"
       },
       "1401310": {
         "start": 67,
-        "length": 5
+        "length": 5,
+        "reading": "あいかわらず"
       },
       "1410290": {
         "start": 75,
-        "length": 2
+        "length": 2,
+        "reading": "たいりつ"
+      },
+      "1429750": {
+        "start": 54,
+        "length": 2,
+        "reading": "ながい"
       },
       "1446030": {
         "start": 73,
-        "length": 2
+        "length": 2,
+        "reading": "とうは"
       },
       "1455500": {
         "start": 58,
-        "length": 1
+        "length": 1,
+        "reading": "どく"
       },
       "1526670": {
         "start": 60,
-        "length": 4
+        "length": 3,
+        "reading": "みたし"
       },
       "1527560": {
         "start": 86,
-        "length": 2
+        "length": 2,
+        "reading": "みじゅく"
       },
       "1542040": {
         "start": 105,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      },
+      "1548530": {
+        "start": 92,
+        "length": 2,
+        "reading": "おち"
       },
       "1548550": {
         "start": 92,
-        "length": 3
+        "length": 2,
+        "reading": "おち"
       },
       "1572770": {
         "start": 83,
-        "length": 2
+        "length": 2,
+        "reading": "いさかい"
       },
       "1592250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       },
       "1596950": {
         "start": 108,
-        "length": 2
+        "length": 2,
+        "reading": "たたかい"
+      },
+      "1596960": {
+        "start": 108,
+        "length": 2,
+        "reading": "たたかい"
       },
       "1600610": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "さかえ"
       },
       "2038050": {
         "start": 54,
-        "length": 4
+        "length": 4,
+        "reading": "ながいこと"
       }
     }
   },
@@ -1021,8 +1900,11 @@
       "1219680",
       "1496480",
       "1453580",
+      "1160790",
       "1576150",
-      "2854943",
+      "1580640",
+      "1327190",
+      "1152720",
       "1198550",
       "1195840",
       "1372650",
@@ -1030,80 +1912,118 @@
       "1365270",
       "1238550",
       "1321820",
-      "1223150"
+      "1223150",
+      "1392480"
     ],
     "matches": {
+      "1152720": {
+        "start": 42,
+        "length": 2,
+        "reading": "にぎっ"
+      },
+      "1160790": {
+        "start": 37,
+        "length": 1,
+        "reading": "いち"
+      },
       "1195840": {
         "start": 48,
-        "length": 2
+        "length": 2,
+        "reading": "かちょう"
       },
       "1198550": {
         "start": 45,
-        "length": 2
+        "length": 2,
+        "reading": "かいしゃ"
       },
       "1219680": {
         "start": 29,
-        "length": 3
+        "length": 2,
+        "reading": "よっ"
       },
       "1223150": {
         "start": 82,
-        "length": 2
+        "length": 2,
+        "reading": "きおく"
       },
       "1238550": {
         "start": 75,
-        "length": 1
+        "length": 1,
+        "reading": "かがみ"
       },
       "1318610": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1321820": {
         "start": 77,
-        "length": 3
+        "length": 2,
+        "reading": "うつっ"
+      },
+      "1327190": {
+        "start": 40,
+        "length": 1,
+        "reading": "て"
       },
       "1365270": {
         "start": 63,
-        "length": 2
+        "length": 2,
+        "reading": "しんぞく"
       },
       "1372650": {
         "start": 51,
-        "length": 3
+        "length": 2,
+        "reading": "よっ"
       },
       "1385680": {
         "start": 54,
-        "length": 2
+        "length": 2,
+        "reading": "せっぷん"
+      },
+      "1392480": {
+        "start": 95,
+        "length": 2,
+        "reading": "ひらめか"
       },
       "1419990": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1453580": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "どうりょう"
       },
       "1496480": {
         "start": 32,
-        "length": 1
+        "length": 1,
+        "reading": "おっと"
       },
       "1542040": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "1576150": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 38,
+        "length": 1,
+        "reading": "にん"
       },
       "2728370": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "だん"
       },
       "2753920": {
         "start": 21,
         "length": 1
-      },
-      "2854943": {
-        "start": 40,
-        "length": 5
       }
     }
   },
@@ -1123,11 +2043,13 @@
     "matches": {
       "1323350": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "へび"
       },
       "1542040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -1142,16 +2064,24 @@
     ],
     "vocabIds": [
       "1324350",
-      "1542040"
+      "1542040",
+      "2409930"
     ],
     "matches": {
       "1324350": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "わかもの"
       },
       "1542040": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
+      },
+      "2409930": {
+        "start": 6,
+        "length": 2,
+        "reading": "くっし"
       }
     }
   },
@@ -1166,26 +2096,80 @@
     ],
     "vocabIds": [
       "1521400",
+      "1213400",
       "2016020",
-      "1542040",
-      "1603910"
+      "1542040"
     ],
     "matches": {
+      "1213400": {
+        "start": 2,
+        "length": 2,
+        "reading": "あまい"
+      },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1542040": {
         "start": 7,
-        "length": 2
-      },
-      "1603910": {
-        "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "2016020": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "あまいもの"
+      }
+    }
+  },
+  {
+    "id": "4795110",
+    "original": "とうとう彼女は誘惑に負けてホールケーキを全部食べてしまった。",
+    "en": [
+      {
+        "id": "39843",
+        "text": "Finally she gave in to temptation and ate the whole cake."
+      }
+    ],
+    "vocabIds": [
+      "1483150",
+      "1542040",
+      "1497980",
+      "1497960",
+      "1396130",
+      "1358280"
+    ],
+    "matches": {
+      "1358280": {
+        "start": 22,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1396130": {
+        "start": 20,
+        "length": 2,
+        "reading": "ぜんぶ"
+      },
+      "1483150": {
+        "start": 4,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1497960": {
+        "start": 10,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 10,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 7,
+        "length": 2,
+        "reading": "ゆうわく"
       }
     }
   },
@@ -1205,101 +2189,207 @@
       "2014450",
       "1592250",
       "1547720",
+      "1547710",
+      "1589060",
       "1643580",
       "1420730",
+      "1463770",
       "1730220",
       "2017850",
       "1579110",
+      "1544730",
       "1544720",
       "1296680",
       "1580640",
       "1542040",
-      "1151230",
+      "1151260",
+      "1229060",
       "1229030",
       "1554820",
       "1173920",
       "1174070"
     ],
     "matches": {
-      "1151230": {
+      "1151260": {
         "start": 144,
-        "length": 1
+        "length": 3,
+        "reading": "わるから"
       },
       "1173920": {
         "start": 160,
-        "length": 2
+        "length": 2,
+        "reading": "えいこう"
       },
       "1174070": {
         "start": 164,
-        "length": 2
+        "length": 2,
+        "reading": "えいえん"
       },
       "1229030": {
         "start": 148,
-        "length": 2
+        "length": 2,
+        "reading": "すくい"
+      },
+      "1229060": {
+        "start": 148,
+        "length": 2,
+        "reading": "すくい"
       },
       "1296680": {
         "start": 100,
-        "length": 1
+        "length": 1,
+        "reading": "つみ"
       },
       "1420730": {
         "start": 56,
-        "length": 1
+        "length": 1,
+        "reading": "ち"
       },
       "1438210": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "てん"
+      },
+      "1463770": {
+        "start": 75,
+        "length": 1,
+        "reading": "にち"
       },
       "1497610": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1531330": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "な"
       },
       "1542040": {
         "start": 133,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "1544720": {
         "start": 86,
-        "length": 2
+        "length": 2,
+        "reading": "あたえ"
+      },
+      "1544730": {
+        "start": 86,
+        "length": 2,
+        "reading": "あたえ"
+      },
+      "1547710": {
+        "start": 33,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 33,
-        "length": 3
+        "length": 1,
+        "reading": "き"
       },
       "1554820": {
         "start": 158,
-        "length": 1
+        "length": 1,
+        "reading": "ちから"
       },
       "1579110": {
         "start": 82,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
       },
       "1580640": {
         "start": 118,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1589060": {
+        "start": 48,
+        "length": 2,
+        "reading": "おこなわ"
       },
       "1592250": {
         "start": 31,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       },
       "1643580": {
         "start": 48,
-        "length": 4
+        "length": 4,
+        "reading": "おこなわれる"
       },
       "1730220": {
         "start": 75,
-        "length": 3
+        "length": 3,
+        "reading": "にちごと"
       },
       "2014450": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "ひじり"
       },
       "2017850": {
         "start": 79,
-        "length": 1
+        "length": 1,
+        "reading": "かて"
+      }
+    }
+  },
+  {
+    "id": "2960824",
+    "original": "間食はしないって決めてるんだけど、ついつい誘惑に負けてアイスとか食べちゃうんだよね。",
+    "en": [
+      {
+        "id": "10123527",
+        "text": "I'd made up my mind to stop snacking, but against my better judgment, I keep giving in to temptation and eating ice cream."
+      }
+    ],
+    "vocabIds": [
+      "1215500",
+      "1254180",
+      "1630630",
+      "1542040",
+      "1497980",
+      "1497960",
+      "1358280"
+    ],
+    "matches": {
+      "1215500": {
+        "start": 0,
+        "length": 2,
+        "reading": "かんしょく"
+      },
+      "1254180": {
+        "start": 8,
+        "length": 2,
+        "reading": "きめ"
+      },
+      "1358280": {
+        "start": 32,
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1497960": {
+        "start": 24,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1497980": {
+        "start": 24,
+        "length": 2,
+        "reading": "まけ"
+      },
+      "1542040": {
+        "start": 21,
+        "length": 2,
+        "reading": "ゆうわく"
+      },
+      "1630630": {
+        "start": 8,
+        "length": 2,
+        "reading": "きめ"
       }
     }
   },
@@ -1320,15 +2410,18 @@
     "matches": {
       "1460850": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "むずかしい"
       },
       "1542040": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうわく"
       },
       "2261110": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あらがう"
       }
     }
   }

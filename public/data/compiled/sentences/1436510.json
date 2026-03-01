@@ -1,75 +1,5 @@
 [
   {
-    "id": "4718",
-    "original": "先程、どういうわけかマイクが入りませんでした。",
-    "en": [
-      {
-        "id": "328546",
-        "text": "For some reason the microphone didn't work earlier."
-      }
-    ],
-    "indices": "先程 どういう訳か{どういうわけか} マイク が 入る(はいる){入りませんでした}",
-    "vocabIds": [
-      "1387210",
-      "1436510",
-      "1465410"
-    ],
-    "matches": {
-      "1387210": {
-        "start": 0,
-        "length": 1
-      },
-      "1436510": {
-        "start": 1,
-        "length": 1
-      },
-      "1465410": {
-        "start": 14,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "75928",
-    "original": "先程のはＰ波でした。Ｓ波が来ます。",
-    "en": [
-      {
-        "id": "327790",
-        "text": "That was the P-wave just now. The S-wave is coming."
-      }
-    ],
-    "indices": "先程 の は Ｐ波~ です{でした} Ｓ波~ が 来る(くる){来ます}",
-    "vocabIds": [
-      "1387210",
-      "1436510",
-      "2148720",
-      "2148730",
-      "1547720"
-    ],
-    "matches": {
-      "1387210": {
-        "start": 0,
-        "length": 1
-      },
-      "1436510": {
-        "start": 1,
-        "length": 1
-      },
-      "1547720": {
-        "start": 13,
-        "length": 3
-      },
-      "2148720": {
-        "start": 4,
-        "length": 2
-      },
-      "2148730": {
-        "start": 10,
-        "length": 2
-      }
-    }
-  },
-  {
     "id": "77920",
     "original": "料理人は彼の信じられない程の食欲にとても驚いた。",
     "en": [
@@ -80,8 +10,12 @@
     ],
     "indices": "料理人 は 彼(かれ)[01]{彼の} 信じる{信じられない} 程 の 食欲 に 迚も{とても}  驚く[01]{驚いた}",
     "vocabIds": [
+      "1554310",
       "1644930",
+      "1580640",
+      "1483070",
       "1000420",
+      "1359040",
       "2827068",
       "1436510",
       "1358660",
@@ -90,27 +24,53 @@
     "matches": {
       "1000420": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1238680": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "おどろい"
       },
       "1358660": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しょくよく"
+      },
+      "1359040": {
+        "start": 6,
+        "length": 2,
+        "reading": "しんじ"
       },
       "1436510": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1554310": {
+        "start": 0,
+        "length": 2,
+        "reading": "りょうり"
+      },
+      "1580640": {
+        "start": 2,
+        "length": 1,
+        "reading": "じん"
       },
       "1644930": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "りょうりじん"
       },
       "2827068": {
         "start": 6,
-        "length": 6
+        "length": 6,
+        "reading": "しんじられない"
       }
     }
   },
@@ -126,31 +86,48 @@
     "indices": "彼女[01] は 今までにない 程 美しい{美しく} 見える(みえる){見えた}",
     "vocabIds": [
       "1483150",
+      "1288850",
+      "1587590",
       "2841807",
       "1436510",
-      "1486350",
+      "1486360",
       "1259140"
     ],
     "matches": {
       "1259140": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "みえ"
+      },
+      "1288850": {
+        "start": 3,
+        "length": 1,
+        "reading": "いま"
       },
       "1436510": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
-      "1486350": {
+      "1486360": {
         "start": 10,
-        "length": 1
+        "length": 3,
+        "reading": "うつくしく"
+      },
+      "1587590": {
+        "start": 3,
+        "length": 3,
+        "reading": "いままで"
       },
       "2841807": {
         "start": 3,
-        "length": 6
+        "length": 6,
+        "reading": "いままでにない"
       }
     }
   },
@@ -173,59 +150,23 @@
     "matches": {
       "1264540": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ことば"
       },
       "1289590": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こまる"
       },
       "1436510": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1483150": {
         "start": 0,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "103031",
-    "original": "彼は先程家に帰ってきた。",
-    "en": [
-      {
-        "id": "300662",
-        "text": "He came back home a while ago."
-      }
-    ],
-    "indices": "彼(かれ)[01] は 先程 家(いえ)[01] に 帰って来る{帰ってきた}",
-    "vocabIds": [
-      "1483070",
-      "1387210",
-      "1436510",
-      "1191730",
-      "1221270"
-    ],
-    "matches": {
-      "1191730": {
-        "start": 4,
-        "length": 1
-      },
-      "1221270": {
-        "start": 6,
-        "length": 3
-      },
-      "1387210": {
-        "start": 2,
-        "length": 1
-      },
-      "1436510": {
-        "start": 3,
-        "length": 1
-      },
-      "1483070": {
-        "start": 0,
-        "length": 1
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -243,24 +184,28 @@
       "1483070",
       "1318290",
       "1436510",
-      "1583480"
+      "1490740"
     ],
     "matches": {
       "1318290": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "じてんしゃ"
       },
       "1436510": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
-      "1583480": {
+      "1490740": {
         "start": 11,
-        "length": 1
+        "length": 3,
+        "reading": "まずしく"
       }
     }
   },
@@ -276,7 +221,10 @@
     "indices": "彼(かれ)[01] は 使い切る{使い切れない} 程 の お金 を 稼ぐ",
     "vocabIds": [
       "1483070",
+      "1305990",
       "1305720",
+      "1384860",
+      "1384840",
       "1384940",
       "1436510",
       "1001820",
@@ -285,27 +233,48 @@
     "matches": {
       "1001820": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1194450": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かせぐ"
       },
       "1305720": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "つかい"
+      },
+      "1305990": {
+        "start": 2,
+        "length": 2,
+        "reading": "つかい"
+      },
+      "1384840": {
+        "start": 4,
+        "length": 2,
+        "reading": "きれ"
+      },
+      "1384860": {
+        "start": 4,
+        "length": 2,
+        "reading": "きれ"
       },
       "1384940": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "きれない"
       },
       "1436510": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -322,7 +291,9 @@
     "vocabIds": [
       "1483070",
       "1299100",
+      "1371220",
       "1713000",
+      "1348430",
       "1157760",
       "1436510",
       "1277520"
@@ -330,27 +301,43 @@
     "matches": {
       "1157760": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "いじょう"
       },
       "1277520": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "このむ"
       },
       "1299100": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "さつじん"
+      },
+      "1348430": {
+        "start": 6,
+        "length": 2,
+        "reading": "しょうせつ"
+      },
+      "1371220": {
+        "start": 4,
+        "length": 2,
+        "reading": "すいり"
       },
       "1436510": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1713000": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "すいりしょうせつ"
       }
     }
   },
@@ -367,30 +354,47 @@
     "vocabIds": [
       "1483070",
       "1275640",
-      "1549460",
       "1436510",
-      "1902600"
+      "1501110",
+      "1551530",
+      "2081610",
+      "2016360"
     ],
     "matches": {
       "1275640": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "くち"
       },
       "1436510": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
-      "1549460": {
-        "start": 4,
-        "length": 1
-      },
-      "1902600": {
+      "1501110": {
         "start": 9,
-        "length": 5
+        "length": 1,
+        "reading": "はら"
+      },
+      "1551530": {
+        "start": 11,
+        "length": 2,
+        "reading": "たて"
+      },
+      "2016360": {
+        "start": 11,
+        "length": 3,
+        "reading": "たてて"
+      },
+      "2081610": {
+        "start": 11,
+        "length": 2,
+        "reading": "たて"
       }
     }
   },
@@ -413,19 +417,23 @@
     "matches": {
       "1221770": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "きのどく"
       },
       "1436510": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1491290": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ふうん"
       }
     }
   },
@@ -449,113 +457,28 @@
     "matches": {
       "1298230": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "さくねん"
       },
       "1378990": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "せいさん"
       },
       "1436510": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1508750": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "こめ"
       },
       "1541050": {
         "start": 3,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "173113",
-    "original": "国の保険業務は、十分には程遠かった。",
-    "en": [
-      {
-        "id": "241359",
-        "text": "The national health service was far from adequate."
-      }
-    ],
-    "indices": "国[01] の 保険 業務 は 十分(じゅうぶん)[01] には 程遠い{程遠かった}",
-    "vocabIds": [
-      "1592250",
-      "2088350",
-      "1335080",
-      "1436510",
-      "1177790"
-    ],
-    "matches": {
-      "1177790": {
-        "start": 13,
-        "length": 1
-      },
-      "1335080": {
-        "start": 8,
-        "length": 2
-      },
-      "1436510": {
-        "start": 12,
-        "length": 1
-      },
-      "1592250": {
-        "start": 0,
-        "length": 1
-      },
-      "2088350": {
-        "start": 2,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "179801",
-    "original": "近代医学の進歩は長い道程を歩んだ。",
-    "en": [
-      {
-        "id": "18660",
-        "text": "The advancement of modern medicine was a long process."
-      }
-    ],
-    "indices": "近代 医学 の 進歩 は 長い 道程[02]~ を 歩む[02]{歩んだ}",
-    "vocabIds": [
-      "1242420",
-      "1159810",
-      "1366190",
-      "1429750",
-      "1454080",
-      "1436510",
-      "1514360"
-    ],
-    "matches": {
-      "1159810": {
-        "start": 2,
-        "length": 2
-      },
-      "1242420": {
-        "start": 0,
-        "length": 2
-      },
-      "1366190": {
-        "start": 5,
-        "length": 2
-      },
-      "1429750": {
-        "start": 8,
-        "length": 2
-      },
-      "1436510": {
-        "start": 11,
-        "length": 1
-      },
-      "1454080": {
-        "start": 10,
-        "length": 1
-      },
-      "1514360": {
-        "start": 13,
-        "length": 3
+        "length": 4,
+        "reading": "ありあまる"
       }
     }
   },
@@ -581,70 +504,18 @@
     "matches": {
       "1191730": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1436510": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1605820": {
         "start": 2,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "196856",
-    "original": "ヘーゲルと同様に、パノフスキーの弁論方の概念は歴史があらかじめ定められた道程をたどるようにさせている。",
-    "en": [
-      {
-        "id": "34035",
-        "text": "In the same way as Hegel, Panovsky's notion of the dialectic makes history follow a predetermined course."
-      }
-    ],
-    "indices": "と 同様に の 弁論 方(かた) の 概念 は 歴史 が 予め{あらかじめ} 定める[01]{定められた}~ 道程[02] を 辿る[03]{たどる} 様(よう){ように} 為せる{させている}",
-    "vocabIds": [
-      "1453560",
-      "1513170",
-      "1516930",
-      "1204480",
-      "1558050",
-      "1633740",
-      "1454080",
-      "1436510"
-    ],
-    "matches": {
-      "1204480": {
-        "start": 20,
-        "length": 2
-      },
-      "1436510": {
-        "start": 37,
-        "length": 1
-      },
-      "1453560": {
-        "start": 5,
-        "length": 3
-      },
-      "1454080": {
-        "start": 36,
-        "length": 1
-      },
-      "1513170": {
-        "start": 16,
-        "length": 2
-      },
-      "1516930": {
-        "start": 18,
-        "length": 1
-      },
-      "1558050": {
-        "start": 23,
-        "length": 2
-      },
-      "1633740": {
-        "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -660,6 +531,7 @@
     "indices": "其の{その} 道(みち) を 百 米突[01]{メートル} 程 行く と 三叉路~ が[01] 有る{あります}",
     "vocabIds": [
       "2002310",
+      "1454080",
       "1488000",
       "1436510",
       "1578850",
@@ -668,23 +540,33 @@
     "matches": {
       "1300460": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "さんさろ"
       },
       "1436510": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
+      },
+      "1454080": {
+        "start": 2,
+        "length": 1,
+        "reading": "みち"
       },
       "1488000": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひゃく"
       },
       "1578850": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いく"
       },
       "2002310": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "そのみち"
       }
     }
   },
@@ -700,36 +582,36 @@
     "indices": "此の{この} 話(はなし)[01] は 又聞き~ なので 真偽のほど{真偽の程} は 分かる{分かりません}",
     "vocabIds": [
       "1600900",
-      "1524930",
-      "2701450",
       "1363520",
       "1436510",
+      "1606560",
       "1502940"
     ],
     "matches": {
       "1363520": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しんぎ"
       },
       "1436510": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1502940": {
         "start": 16,
-        "length": 3
-      },
-      "1524930": {
-        "start": 4,
-        "length": 1
+        "length": 3,
+        "reading": "わかり"
       },
       "1600900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       },
-      "2701450": {
-        "start": 5,
-        "length": 2
+      "1606560": {
+        "start": 16,
+        "length": 3,
+        "reading": "わかり"
       }
     }
   },
@@ -752,19 +634,23 @@
     "matches": {
       "1198910": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "とける"
       },
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1436510": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1536010": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "もんだい"
       }
     }
   },
@@ -779,8 +665,7 @@
     ],
     "indices": "此の{この} 程度 の 捻挫 なら 一週間{１週間} 程 で(#2028980) 治る[01] でしょう[01]",
     "vocabIds": [
-      "1725350",
-      "1445160",
+      "1436540",
       "1469540",
       "1333500",
       "1436510",
@@ -789,27 +674,28 @@
     "matches": {
       "1333500": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しゅうかん"
       },
       "1436510": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
-      "1445160": {
-        "start": 3,
-        "length": 1
+      "1436540": {
+        "start": 2,
+        "length": 2,
+        "reading": "ていど"
       },
       "1469540": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ねんざ"
       },
       "1599400": {
         "start": 15,
-        "length": 2
-      },
-      "1725350": {
-        "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "なおる"
       }
     }
   },
@@ -826,155 +712,41 @@
     "vocabIds": [
       "1345650",
       "2002660",
+      "1516930",
+      "2160680",
       "1376760",
       "1436510"
     ],
     "matches": {
       "1345650": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じょがい"
       },
       "1376760": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "せいかく"
       },
       "1436510": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
+      },
+      "1516930": {
+        "start": 10,
+        "length": 1,
+        "reading": "ほう"
       },
       "2002660": {
         "start": 8,
-        "length": 6
-      }
-    }
-  },
-  {
-    "id": "236967",
-    "original": "重要なのはゴールではなく、そこに至る道程である。",
-    "en": [
-      {
-        "id": "266597",
-        "text": "It is not the goal but the way there that matters."
+        "length": 6,
+        "reading": "したほうがいい"
       },
-      {
-        "id": "1892313",
-        "text": "It's not the final goal, but the process of getting there that matters."
-      },
-      {
-        "id": "1892317",
-        "text": "What's important is not the goal, but the journey."
-      },
-      {
-        "id": "7492987",
-        "text": "What's important isn't the goal, but the journey."
-      }
-    ],
-    "indices": "重要{重要な} の は ゴール(#1054230)[04] だ{ではなく} 其処(そこ){そこ} に 至る[01] 道程[02] である",
-    "vocabIds": [
-      "1336820",
-      "1311870",
-      "1454080",
-      "1436510"
-    ],
-    "matches": {
-      "1311870": {
-        "start": 16,
-        "length": 2
-      },
-      "1336820": {
-        "start": 0,
-        "length": 2
-      },
-      "1436510": {
-        "start": 19,
-        "length": 1
-      },
-      "1454080": {
-        "start": 18,
-        "length": 1
-      }
-    }
-  },
-  {
-    "id": "869791",
-    "original": "つい先程、マケイン上院議員から非常に丁寧な電話を頂きました。",
-    "en": [
-      {
-        "id": "330403",
-        "text": "I just received a very gracious call from Senator McCain."
-      }
-    ],
-    "vocabIds": [
-      "1387210",
-      "1436510",
-      "1352630",
-      "1484930",
-      "1427360",
-      "1443840",
-      "1410800"
-    ],
-    "matches": {
-      "1352630": {
-        "start": 9,
-        "length": 4
-      },
-      "1387210": {
-        "start": 2,
-        "length": 1
-      },
-      "1410800": {
-        "start": 24,
-        "length": 5
-      },
-      "1427360": {
-        "start": 18,
-        "length": 2
-      },
-      "1436510": {
-        "start": 3,
-        "length": 1
-      },
-      "1443840": {
-        "start": 21,
-        "length": 2
-      },
-      "1484930": {
-        "start": 15,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "1009966",
-    "original": "先程言ったように、彼はここにいません。",
-    "en": [
-      {
-        "id": "2659652",
-        "text": "As I told you earlier, he's not here."
-      }
-    ],
-    "vocabIds": [
-      "1387210",
-      "1436510",
-      "1587040",
-      "1483070"
-    ],
-    "matches": {
-      "1387210": {
-        "start": 0,
-        "length": 1
-      },
-      "1436510": {
-        "start": 1,
-        "length": 1
-      },
-      "1483070": {
-        "start": 9,
-        "length": 1
-      },
-      "1587040": {
-        "start": 2,
-        "length": 3
+      "2160680": {
+        "start": 10,
+        "length": 4,
+        "reading": "ほうがいい"
       }
     }
   },
@@ -995,15 +767,18 @@
     "matches": {
       "1435360": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "さだか"
       },
       "1436510": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1662060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "やっこう"
       }
     }
   },
@@ -1023,11 +798,13 @@
     "matches": {
       "1414410": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おおさわぎ"
       },
       "1436510": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       }
     }
   },
@@ -1046,37 +823,56 @@
       "1277450",
       "1593800",
       "1315840",
-      "2035940",
+      "1475470",
+      "1179005",
+      "1612200",
       "1436510"
     ],
     "matches": {
+      "1179005": {
+        "start": 18,
+        "length": 2,
+        "reading": "よごれ"
+      },
       "1258330": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1277450": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1315840": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1436510": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
+      },
+      "1475470": {
+        "start": 17,
+        "length": 1,
+        "reading": "うす"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1593800": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "さばく"
       },
-      "2035940": {
-        "start": 17,
-        "length": 4
+      "1612200": {
+        "start": 18,
+        "length": 2,
+        "reading": "よごれ"
       }
     }
   },
@@ -1097,15 +893,18 @@
     "matches": {
       "1419860": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "だんぼう"
       },
       "1436510": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1583660": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "はださむい"
       }
     }
   },
@@ -1120,26 +919,42 @@
     ],
     "vocabIds": [
       "2859157",
+      "1502860",
       "1436510",
+      "1392580",
       "1392590",
       "1231650"
     ],
     "matches": {
       "1231650": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "さっ"
+      },
+      "1392580": {
+        "start": 7,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1436510": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
+      },
+      "1502860": {
+        "start": 5,
+        "length": 1,
+        "reading": "ふん"
       },
       "2859157": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "さんぜろふん"
       }
     }
   },
@@ -1155,25 +970,99 @@
     "vocabIds": [
       "1502860",
       "1436510",
+      "1392580",
       "1392590",
       "1340000"
     ],
     "matches": {
       "1340000": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっぱつ"
+      },
+      "1392580": {
+        "start": 7,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1436510": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1502860": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ふん"
+      }
+    }
+  },
+  {
+    "id": "10091488",
+    "original": "失礼にも程がある！",
+    "en": [
+      {
+        "id": "16444",
+        "text": "How rude of you!"
+      }
+    ],
+    "vocabIds": [
+      "1320230",
+      "1436510",
+      "2768400"
+    ],
+    "matches": {
+      "1320230": {
+        "start": 0,
+        "length": 2,
+        "reading": "しつれい"
+      },
+      "1436510": {
+        "start": 4,
+        "length": 1,
+        "reading": "ほど"
+      },
+      "2768400": {
+        "start": 4,
+        "length": 4,
+        "reading": "ほどがある"
+      }
+    }
+  },
+  {
+    "id": "10073319",
+    "original": "お人好しにも程がある。",
+    "en": [
+      {
+        "id": "10124104",
+        "text": "You are way too kind-hearted and easily deceived."
+      }
+    ],
+    "vocabIds": [
+      "1648010",
+      "1436510",
+      "2768400"
+    ],
+    "matches": {
+      "1436510": {
+        "start": 6,
+        "length": 1,
+        "reading": "ほど"
+      },
+      "1648010": {
+        "start": 0,
+        "length": 4,
+        "reading": "おひとよし"
+      },
+      "2768400": {
+        "start": 6,
+        "length": 4,
+        "reading": "ほどがある"
       }
     }
   },
@@ -1196,23 +1085,28 @@
     "matches": {
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329590": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "うける"
       },
       "1359620": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しんよう"
       },
       "1401210": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "そうだん"
       },
       "1436510": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       }
     }
   },
@@ -1232,11 +1126,13 @@
     "matches": {
       "1258000": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "けんとう"
       },
       "1436510": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       }
     }
   },
@@ -1258,19 +1154,23 @@
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1282790": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "ふっ"
       },
       "1436510": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1549340": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "あらし"
       }
     }
   },
@@ -1285,8 +1185,10 @@
     ],
     "vocabIds": [
       "1001840",
+      "2275890",
       "1283500",
       "1579080",
+      "1327190",
       "2084650",
       "1436510",
       "1495290"
@@ -1294,66 +1196,43 @@
     "matches": {
       "1001840": {
         "start": 3,
-        "length": 5
+        "length": 5,
+        "reading": "おにいちゃん"
       },
       "1283500": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こうこう"
+      },
+      "1327190": {
+        "start": 14,
+        "length": 1,
+        "reading": "て"
       },
       "1436510": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "ほど"
       },
       "1495290": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "ふりょう"
       },
       "1579080": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ころ"
       },
       "2084650": {
         "start": 14,
-        "length": 6
-      }
-    }
-  },
-  {
-    "id": "12297676",
-    "original": "私のチューターでさえこの方程式は解けなかった。",
-    "en": [
-      {
-        "id": "10008657",
-        "text": "Even my tutor couldn't solve this equation."
-      }
-    ],
-    "vocabIds": [
-      "1311110",
-      "1663210",
-      "1436510",
-      "1319060",
-      "1198910"
-    ],
-    "matches": {
-      "1198910": {
-        "start": 16,
-        "length": 3
+        "length": 6,
+        "reading": "てにおえない"
       },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1319060": {
-        "start": 14,
-        "length": 1
-      },
-      "1436510": {
-        "start": 13,
-        "length": 1
-      },
-      "1663210": {
-        "start": 10,
-        "length": 3
+      "2275890": {
+        "start": 4,
+        "length": 4,
+        "reading": "にいちゃん"
       }
     }
   }

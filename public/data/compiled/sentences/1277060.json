@@ -14,6 +14,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 家(いえ)[01] は 私(わたし)[01]{私の} 家(いえ)[01] と 向き合う{向き合っている}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1191730",
       "1311110",
@@ -22,19 +23,28 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1191730": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1277060": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "むきあっ"
       },
       "1311110": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -60,31 +70,38 @@
     "matches": {
       "1191730": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1277060": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "むきあっ"
       },
       "1454080": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "みち"
       },
       "1461140": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "に"
       },
       "1474910": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しろい"
       },
       "1597040": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
       },
       "2078590": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "けん"
       }
     }
   },
@@ -100,21 +117,30 @@
     "indices": "女の子(おんなのこ) は お互いに 向き合う{向き合っている}~",
     "vocabIds": [
       "1344970",
+      "1979930",
       "2231160",
       "1277060"
     ],
     "matches": {
       "1277060": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "むきあっ"
       },
       "1344970": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おんなのこ"
+      },
+      "1979930": {
+        "start": 4,
+        "length": 3,
+        "reading": "おたがい"
       },
       "2231160": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "おたがいに"
       }
     }
   },
@@ -129,6 +155,7 @@
     ],
     "indices": "私たち は 互いに 向き合う{向き合って} 食事 を 始める[01]{はじめた}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1268780",
       "1277060",
@@ -137,19 +164,54 @@
     "matches": {
       "1268780": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "たがいに"
       },
       "1277060": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "むきあっ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1358490": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しょくじ"
+      }
+    }
+  },
+  {
+    "id": "10977039",
+    "original": "現実と向き合わなきゃ。",
+    "en": [
+      {
+        "id": "16067",
+        "text": "You must face the facts."
+      }
+    ],
+    "vocabIds": [
+      "1263710",
+      "1277060"
+    ],
+    "matches": {
+      "1263710": {
+        "start": 0,
+        "length": 2,
+        "reading": "げんじつ"
+      },
+      "1277060": {
+        "start": 3,
+        "length": 4,
+        "reading": "むきあわ"
       }
     }
   }

@@ -11,21 +11,30 @@
     "indices": "母親 は 子供たち を 寝かしつける{寝かしつけた}",
     "vocabIds": [
       "1515120",
+      "1307850",
       "1307870",
       "1642850"
     ],
     "matches": {
+      "1307850": {
+        "start": 3,
+        "length": 2,
+        "reading": "こども"
+      },
       "1307870": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "こどもたち"
       },
       "1515120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
       },
       "1642850": {
         "start": 8,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
       }
     }
   },
@@ -49,23 +58,28 @@
     "matches": {
       "1307850": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1588120": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "うたっ"
       },
       "1639820": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こごえ"
       },
       "1642850": {
         "start": 12,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
       }
     }
   },
@@ -87,15 +101,45 @@
     "matches": {
       "1307850": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1642850": {
         "start": 6,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
+      }
+    }
+  },
+  {
+    "id": "142150",
+    "original": "赤ん坊を寝かしつけねばならない。",
+    "en": [
+      {
+        "id": "272419",
+        "text": "I have to put the baby to bed."
+      }
+    ],
+    "indices": "赤ん坊 を 寝かしつける{寝かしつけ} ねばならない",
+    "vocabIds": [
+      "1383310",
+      "1642850"
+    ],
+    "matches": {
+      "1383310": {
+        "start": 0,
+        "length": 3,
+        "reading": "あかんぼう"
+      },
+      "1642850": {
+        "start": 4,
+        "length": 5,
+        "reading": "ねかしつけ"
       }
     }
   },
@@ -116,11 +160,13 @@
     "matches": {
       "1383310": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "あかんぼう"
       },
       "1642850": {
         "start": 4,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
       }
     }
   },
@@ -141,11 +187,13 @@
     "matches": {
       "1307850": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1642850": {
         "start": 3,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
       }
     }
   },
@@ -167,15 +215,18 @@
     "matches": {
       "1193180": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "うた"
       },
       "1307850": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1642850": {
         "start": 5,
-        "length": 6
+        "length": 6,
+        "reading": "ねかしつける"
       }
     }
   },
@@ -190,21 +241,50 @@
     ],
     "vocabIds": [
       "1483150",
-      "1307770",
       "1642850"
     ],
     "matches": {
-      "1307770": {
-        "start": 3,
-        "length": 1
-      },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1642850": {
         "start": 9,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
+      }
+    }
+  },
+  {
+    "id": "8959997",
+    "original": "トムはメアリーを寝かしつけようと、歌を歌ってみた。",
+    "en": [
+      {
+        "id": "2712968",
+        "text": "Tom tried to sing Mary to sleep."
+      }
+    ],
+    "vocabIds": [
+      "1642850",
+      "1193180",
+      "1588120"
+    ],
+    "matches": {
+      "1193180": {
+        "start": 17,
+        "length": 1,
+        "reading": "うた"
+      },
+      "1588120": {
+        "start": 19,
+        "length": 2,
+        "reading": "うたっ"
+      },
+      "1642850": {
+        "start": 8,
+        "length": 6,
+        "reading": "ねかしつけよ"
       }
     }
   },
@@ -224,11 +304,13 @@
     "matches": {
       "1383260": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "あかちゃん"
       },
       "1642850": {
         "start": 5,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
       }
     }
   },
@@ -242,22 +324,19 @@
       }
     ],
     "vocabIds": [
-      "1307770",
       "1416220",
       "1642850"
     ],
     "matches": {
-      "1307770": {
-        "start": 0,
-        "length": 1
-      },
       "1416220": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1642850": {
         "start": 5,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
       }
     }
   },
@@ -276,7 +355,8 @@
     "matches": {
       "1642850": {
         "start": 8,
-        "length": 8
+        "length": 5,
+        "reading": "ねかしつけ"
       }
     }
   },
@@ -296,11 +376,45 @@
     "matches": {
       "1383260": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "あかちゃん"
       },
       "1642850": {
         "start": 5,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
+      }
+    }
+  },
+  {
+    "id": "10908954",
+    "original": "赤ちゃんの寝かしつけお願いしていい？",
+    "en": [
+      {
+        "id": "51424",
+        "text": "Will you please put the baby to bed?"
+      }
+    ],
+    "vocabIds": [
+      "1383260",
+      "1642850",
+      "2036870"
+    ],
+    "matches": {
+      "1383260": {
+        "start": 0,
+        "length": 4,
+        "reading": "あかちゃん"
+      },
+      "1642850": {
+        "start": 5,
+        "length": 5,
+        "reading": "ねかしつけ"
+      },
+      "2036870": {
+        "start": 10,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -324,27 +438,33 @@
     "matches": {
       "1223660": {
         "start": 11,
-        "length": 5
+        "length": 3,
+        "reading": "おこさ"
       },
       "1307770": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1359970": {
         "start": 23,
-        "length": 4
+        "length": 4,
+        "reading": "ねかせる"
       },
       "1415000": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1596090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せっかく"
       },
       "1642850": {
         "start": 2,
-        "length": 6
+        "length": 5,
+        "reading": "ねかしつけ"
       }
     }
   }

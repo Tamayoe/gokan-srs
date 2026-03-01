@@ -11,6 +11,7 @@
     "indices": "彼女[01] は 彼(かれ) の 顔(かお) に 平手打ち を 食わせる{食わせた}",
     "vocabIds": [
       "1483150",
+      "1483070",
       "1000420",
       "1217730",
       "1507390",
@@ -19,23 +20,33 @@
     "matches": {
       "1000420": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1217730": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "かお"
+      },
+      "1483070": {
+        "start": 3,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1507390": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "ひらてうち"
       },
       "2007880": {
         "start": 12,
-        "length": 4
+        "length": 3,
+        "reading": "くわせ"
       }
     }
   },
@@ -58,19 +69,23 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1582000": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "てき"
       },
       "1602430": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "ふいうち"
       },
       "2007880": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "くわせ"
       }
     }
   },
@@ -90,7 +105,56 @@
     "matches": {
       "2007880": {
         "start": 14,
-        "length": 4
+        "length": 4,
+        "reading": "くわせる"
+      }
+    }
+  },
+  {
+    "id": "9628648",
+    "original": "玄米はうんざりだ。白飯食わせろ！",
+    "en": [
+      {
+        "id": "10228697",
+        "text": "Brown rice is tedious. Serve white rice!"
+      },
+      {
+        "id": "10228712",
+        "text": "Brown rice is boring. Serve white rice!"
+      }
+    ],
+    "vocabIds": [
+      "1263470",
+      "1474900",
+      "2059690",
+      "1482010",
+      "2007880"
+    ],
+    "matches": {
+      "1263470": {
+        "start": 0,
+        "length": 2,
+        "reading": "げんまい"
+      },
+      "1474900": {
+        "start": 9,
+        "length": 1,
+        "reading": "しろ"
+      },
+      "1482010": {
+        "start": 10,
+        "length": 1,
+        "reading": "めし"
+      },
+      "2007880": {
+        "start": 11,
+        "length": 4,
+        "reading": "くわせろ"
+      },
+      "2059690": {
+        "start": 9,
+        "length": 2,
+        "reading": "しろめし"
       }
     }
   }

@@ -1,5 +1,50 @@
 [
   {
+    "id": "144970",
+    "original": "真相は井戸の底にあり探りにくい。",
+    "en": [
+      {
+        "id": "269593",
+        "text": "Truth is difficult to find at the bottom of a well."
+      }
+    ],
+    "indices": "真相 は 井戸 の 底(そこ) に 有る{あり} 探る{探り} 難い(にくい){にくい}",
+    "vocabIds": [
+      "1364110",
+      "1160330",
+      "1436050",
+      "1418260",
+      "1853050"
+    ],
+    "matches": {
+      "1160330": {
+        "start": 3,
+        "length": 2,
+        "reading": "いど"
+      },
+      "1364110": {
+        "start": 0,
+        "length": 2,
+        "reading": "しんそう"
+      },
+      "1418260": {
+        "start": 10,
+        "length": 2,
+        "reading": "さぐり"
+      },
+      "1436050": {
+        "start": 6,
+        "length": 1,
+        "reading": "そこ"
+      },
+      "1853050": {
+        "start": 10,
+        "length": 2,
+        "reading": "さぐり"
+      }
+    }
+  },
+  {
     "id": "158938",
     "original": "私はポケットを探って財布を探した。",
     "en": [
@@ -22,19 +67,23 @@
     "matches": {
       "1296970": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "さいふ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1418260": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "さぐっ"
       },
       "1593670": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "さがし"
       }
     }
   },
@@ -52,7 +101,8 @@
       "1311110",
       "1377590",
       "1562350",
-      "1613980",
+      "1205780",
+      "1483070",
       "1000420",
       "1604890",
       "1489700",
@@ -61,35 +111,48 @@
     "matches": {
       "1000420": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1205780": {
+        "start": 11,
+        "length": 4,
+        "reading": "たしかめよ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1377590": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじき"
       },
       "1418260": {
         "start": 26,
-        "length": 3
+        "length": 2,
+        "reading": "さぐっ"
+      },
+      "1483070": {
+        "start": 17,
+        "length": 1,
+        "reading": "かれ"
       },
       "1489700": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ひょうじょう"
       },
       "1562350": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "はなし"
       },
       "1604890": {
         "start": 19,
-        "length": 1
-      },
-      "1613980": {
-        "start": 11,
-        "length": 3
+        "length": 1,
+        "reading": "め"
       }
     }
   },
@@ -114,27 +177,33 @@
     "matches": {
       "1191060": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "かのう"
       },
       "1298110": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "さくげん"
       },
       "1310180": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ししゅつ"
       },
       "1418260": {
         "start": 20,
-        "length": 3
+        "length": 2,
+        "reading": "さぐっ"
       },
       "1517090": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ほうほう"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -154,6 +223,7 @@
     "indices": "遠回し{遠まわしに}~ 彼(かれ)[01] の 意見 を 探る{探った}~",
     "vocabIds": [
       "1177920",
+      "1483070",
       "1000420",
       "1156530",
       "1418260"
@@ -161,19 +231,54 @@
     "matches": {
       "1000420": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1156530": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いけん"
       },
       "1177920": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "とおまわし"
       },
       "1418260": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "さぐっ"
+      },
+      "1483070": {
+        "start": 5,
+        "length": 1,
+        "reading": "かれ"
+      }
+    }
+  },
+  {
+    "id": "852274",
+    "original": "あなたの心を探れば、そこにヒーロはいる。",
+    "en": [
+      {
+        "id": "852275",
+        "text": "There's a hero, if you look inside your heart."
+      }
+    ],
+    "vocabIds": [
+      "1360480",
+      "1418260"
+    ],
+    "matches": {
+      "1360480": {
+        "start": 4,
+        "length": 1,
+        "reading": "こころ"
+      },
+      "1418260": {
+        "start": 6,
+        "length": 2,
+        "reading": "さぐれ"
       }
     }
   },
@@ -191,43 +296,81 @@
       "1311950",
       "1532070",
       "1505060",
+      "1332850",
       "2146910",
+      "1408810",
+      "1408510",
       "1941680",
+      "1007860",
       "1418260",
+      "2410410",
       "1658650"
     ],
     "matches": {
+      "1007860": {
+        "start": 38,
+        "length": 1,
+        "reading": "てん"
+      },
       "1311950": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しじょう"
+      },
+      "1332850": {
+        "start": 18,
+        "length": 3,
+        "reading": "しゅうしふ"
+      },
+      "1408510": {
+        "start": 36,
+        "length": 2,
+        "reading": "だきょう"
+      },
+      "1408810": {
+        "start": 22,
+        "length": 2,
+        "reading": "うつ"
       },
       "1418260": {
         "start": 40,
-        "length": 2
+        "length": 2,
+        "reading": "さぐる"
       },
       "1505060": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ふんそう"
       },
       "1532070": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "めいだい"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       },
       "1658650": {
         "start": 45,
-        "length": 4
+        "length": 4,
+        "reading": "じさない"
       },
       "1941680": {
         "start": 36,
-        "length": 3
+        "length": 3,
+        "reading": "だきょうてん"
       },
       "2146910": {
         "start": 18,
-        "length": 6
+        "length": 6,
+        "reading": "しゅうしふをうつ"
+      },
+      "2410410": {
+        "start": 45,
+        "length": 2,
+        "reading": "じさ"
       }
     }
   }

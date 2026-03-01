@@ -18,19 +18,23 @@
     "matches": {
       "1335080": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1501060": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ふくし"
       },
       "1587130": {
         "start": 6,
-        "length": 5
+        "length": 4,
+        "reading": "いきわたっ"
       },
       "1589350": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "おもう"
       }
     }
   },
@@ -45,6 +49,7 @@
     ],
     "indices": "私たち 皆 に 行き渡る 丈(だけ){だけ} の 食料 が[01] 有る{あった}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1202150",
       "1587130",
@@ -53,19 +58,28 @@
     "matches": {
       "1202150": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "みな"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1358670": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しょくりょう"
       },
       "1587130": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "いきわたる"
       }
     }
   },
@@ -80,13 +94,16 @@
     ],
     "indices": "個人 主義 が より[05] 行き渡る{行き渡っている} 国[01] で(#2028980) は 人中(ひとなか) で(#2028980) の 喫煙 に対する 個人的 反対 が 普通 尊重 為れる{される}",
     "vocabIds": [
+      "1264770",
       "1264850",
+      "1325260",
       "1587130",
       "1592250",
       "1368800",
       "1226390",
       "1009810",
       "1264890",
+      "1437260",
       "1480670",
       "1497190",
       "1406460"
@@ -94,43 +111,68 @@
     "matches": {
       "1009810": {
         "start": 24,
-        "length": 4
+        "length": 4,
+        "reading": "にたいする"
       },
       "1226390": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "きつえん"
+      },
+      "1264770": {
+        "start": 0,
+        "length": 2,
+        "reading": "こじん"
       },
       "1264850": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "こじんしゅぎ"
       },
       "1264890": {
         "start": 28,
-        "length": 3
+        "length": 3,
+        "reading": "こじんてき"
+      },
+      "1325260": {
+        "start": 2,
+        "length": 2,
+        "reading": "しゅぎ"
       },
       "1368800": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "ひとなか"
       },
       "1406460": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "そんちょう"
+      },
+      "1437260": {
+        "start": 30,
+        "length": 1,
+        "reading": "てき"
       },
       "1480670": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "はんたい"
       },
       "1497190": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "ふつう"
       },
       "1587130": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "いきわたっ"
       },
       "1592250": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "くに"
       }
     }
   },
@@ -151,11 +193,13 @@
     "matches": {
       "1358670": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しょくりょう"
       },
       "1587130": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "いきわたる"
       }
     }
   },
@@ -176,11 +220,13 @@
     "matches": {
       "1358340": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "たべもの"
       },
       "1587130": {
         "start": 4,
-        "length": 4
+        "length": 4,
+        "reading": "いきわたる"
       }
     }
   },
@@ -202,15 +248,45 @@
     "matches": {
       "1515730": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ほうどう"
       },
       "1581180": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんこく"
       },
       "1587130": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "いきわたっ"
+      }
+    }
+  },
+  {
+    "id": "212767",
+    "original": "そのパーティーでは行き渡るほどの十分なワインがなかった。",
+    "en": [
+      {
+        "id": "50051",
+        "text": "There was not enough wine to go round at the party."
+      }
+    ],
+    "indices": "其の[01]{その} パーティー で(#2028980) は 行き渡る 程{ほど} の 十分(じゅうぶん)[01]{十分な} ワイン が 無い{なかった}",
+    "vocabIds": [
+      "1587130",
+      "1335080"
+    ],
+    "matches": {
+      "1335080": {
+        "start": 16,
+        "length": 2,
+        "reading": "じゅうぶん"
+      },
+      "1587130": {
+        "start": 9,
+        "length": 4,
+        "reading": "いきわたる"
       }
     }
   },
@@ -226,21 +302,30 @@
     "indices": "此の{この} 雑誌 は 広い{広く} 行き渡る{行き渡っている}~",
     "vocabIds": [
       "1299400",
+      "1278410",
       "1951480",
       "1587130"
     ],
     "matches": {
+      "1278410": {
+        "start": 5,
+        "length": 2,
+        "reading": "ひろく"
+      },
       "1299400": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ざっし"
       },
       "1587130": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "いきわたっ"
       },
       "1951480": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひろく"
       }
     }
   }

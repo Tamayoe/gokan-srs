@@ -16,11 +16,13 @@
     "matches": {
       "1345860": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       },
       "1514990": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       }
     }
   },
@@ -42,15 +44,18 @@
     "matches": {
       "1345860": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1603360": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ほうたい"
       }
     }
   },
@@ -65,6 +70,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 傷口 に 彼女[01] は ハンカチ を 宛てがう[03]{あてがった}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1345860",
       "1483150"
@@ -72,15 +78,23 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1345860": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       }
     }
   },
@@ -101,11 +115,13 @@
     "matches": {
       "1345860": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       },
       "1432710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "いたむ"
       }
     }
   },
@@ -130,11 +146,13 @@
     "matches": {
       "1259210": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "みせ"
       },
       "1345860": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       }
     }
   },
@@ -150,16 +168,24 @@
     "indices": "傷口 から 膿{うみ} が 出る{出た}",
     "vocabIds": [
       "1345860",
-      "1338240"
+      "1338240",
+      "1896380"
     ],
     "matches": {
       "1338240": {
         "start": 7,
-        "length": 2
+        "length": 1,
+        "reading": "で"
       },
       "1345860": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
+      },
+      "1896380": {
+        "start": 7,
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -180,11 +206,13 @@
     "matches": {
       "1255060": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ち"
       },
       "1345860": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       }
     }
   },
@@ -204,7 +232,8 @@
     "matches": {
       "1345860": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       }
     }
   },
@@ -220,26 +249,99 @@
     "indices": "血 が 彼(かれ) の 傷口 から 流れる[01]{流れた}",
     "vocabIds": [
       "1255060",
+      "1483070",
       "1000420",
       "1345860",
-      "1552140"
+      "1552140",
+      "1552130"
     ],
     "matches": {
       "1000420": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1255060": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ち"
       },
       "1345860": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
+      },
+      "1483070": {
+        "start": 2,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1552130": {
+        "start": 8,
+        "length": 2,
+        "reading": "ながれ"
       },
       "1552140": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "ながれ"
+      }
+    }
+  },
+  {
+    "id": "194358",
+    "original": "もうやめろよ。これ以上傷口に塩を塗るようなことは可哀想だ。",
+    "en": [
+      {
+        "id": "31531",
+        "text": "Cut that out. You're just rubbing salt in the poor guy's wounds."
+      }
+    ],
+    "indices": "もう 止める(やめる){やめろ} よ 此れ[01]{これ} 以上[02] 傷口 に 塩 を 塗る(ぬる) 様な{ような} 事(こと){こと} は 可哀相{可哀想} だ",
+    "vocabIds": [
+      "2841921",
+      "1155120",
+      "1345860",
+      "2853761",
+      "1576630",
+      "1444270",
+      "1590740"
+    ],
+    "matches": {
+      "1155120": {
+        "start": 9,
+        "length": 2,
+        "reading": "いじょう"
+      },
+      "1345860": {
+        "start": 11,
+        "length": 2,
+        "reading": "きずぐち"
+      },
+      "1444270": {
+        "start": 16,
+        "length": 2,
+        "reading": "ぬる"
+      },
+      "1576630": {
+        "start": 14,
+        "length": 1,
+        "reading": "しお"
+      },
+      "1590740": {
+        "start": 24,
+        "length": 3,
+        "reading": "かわいそう"
+      },
+      "2841921": {
+        "start": 7,
+        "length": 4,
+        "reading": "これいじょう"
+      },
+      "2853761": {
+        "start": 11,
+        "length": 4,
+        "reading": "きずぐちにしお"
       }
     }
   },
@@ -261,15 +363,18 @@
     "matches": {
       "1338750": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっけつ"
       },
       "1345860": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       }
     }
   },
@@ -283,27 +388,37 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1345860",
       "1483150",
-      "1153470"
+      "2006560"
     ],
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
-      },
-      "1153470": {
-        "start": 13,
-        "length": 4
+        "length": 2,
+        "reading": "かれの"
       },
       "1345860": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "2006560": {
+        "start": 13,
+        "length": 1,
+        "reading": "あて"
       }
     }
   },
@@ -317,6 +432,7 @@
       }
     ],
     "vocabIds": [
+      "1483070",
       "1000420",
       "1345860",
       "1255060",
@@ -325,19 +441,28 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1255060": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ち"
       },
       "1345860": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1552180": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "ながれで"
       }
     }
   },
@@ -353,25 +478,23 @@
     "vocabIds": [
       "1609470",
       "1345860",
-      "1570430",
-      "2843452"
+      "1570430"
     ],
     "matches": {
       "1345860": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       },
       "1570430": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ばんそうこう"
       },
       "1609470": {
         "start": 0,
-        "length": 3
-      },
-      "2843452": {
-        "start": 11,
-        "length": 1
+        "length": 3,
+        "reading": "かあさん"
       }
     }
   },
@@ -390,7 +513,8 @@
     "matches": {
       "1345860": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       }
     }
   },
@@ -405,21 +529,42 @@
     ],
     "vocabIds": [
       "1345860",
+      "1517700",
+      "1517640",
       "1729060",
+      "1516930",
       "1420470"
     ],
     "matches": {
       "1345860": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きずぐち"
       },
       "1420470": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1516930": {
+        "start": 5,
+        "length": 1,
+        "reading": "かた"
+      },
+      "1517640": {
+        "start": 3,
+        "length": 2,
+        "reading": "ぬい"
+      },
+      "1517700": {
+        "start": 3,
+        "length": 2,
+        "reading": "ぬい"
       },
       "1729060": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ぬいかた"
       }
     }
   }

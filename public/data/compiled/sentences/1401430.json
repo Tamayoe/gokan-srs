@@ -1,5 +1,83 @@
 [
   {
+    "id": "140326",
+    "original": "窓際の席をお願いします。",
+    "en": [
+      {
+        "id": "274247",
+        "text": "I'd like a table by the window."
+      }
+    ],
+    "indices": "窓際~ の 席(せき) を お願いします",
+    "vocabIds": [
+      "1401430",
+      "1401440",
+      "1382250",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 5,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1382250": {
+        "start": 3,
+        "length": 1,
+        "reading": "せき"
+      },
+      "1401430": {
+        "start": 0,
+        "length": 2,
+        "reading": "まどぎわ"
+      },
+      "1401440": {
+        "start": 0,
+        "length": 4,
+        "reading": "まどぎわのせき"
+      },
+      "2036870": {
+        "start": 5,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
+    "id": "140327",
+    "original": "窓際の席にしてください。",
+    "en": [
+      {
+        "id": "274246",
+        "text": "Make it a window seat please."
+      }
+    ],
+    "indices": "窓際 の 席(せき) に 為る(する){して} 下さい{ください}",
+    "vocabIds": [
+      "1401430",
+      "1401440",
+      "1382250"
+    ],
+    "matches": {
+      "1382250": {
+        "start": 3,
+        "length": 1,
+        "reading": "せき"
+      },
+      "1401430": {
+        "start": 0,
+        "length": 2,
+        "reading": "まどぎわ"
+      },
+      "1401440": {
+        "start": 0,
+        "length": 4,
+        "reading": "まどぎわのせき"
+      }
+    }
+  },
+  {
     "id": "140328",
     "original": "窓際のテーブルがいいのですが。",
     "en": [
@@ -15,7 +93,8 @@
     "matches": {
       "1401430": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まどぎわ"
       }
     }
   },
@@ -36,11 +115,13 @@
     "matches": {
       "1291800": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
       },
       "1401430": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まどぎわ"
       }
     }
   },
@@ -56,21 +137,80 @@
     "indices": "此れ等{これらの} 椅子(いす)[01]{いす} を 窓際 に 並べる[01]{並べて} 下さい",
     "vocabIds": [
       "1401430",
+      "1508390",
       "2569660",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 13,
+        "length": 3,
+        "reading": "ください"
       },
       "1401430": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "まどぎわ"
+      },
+      "1508390": {
+        "start": 10,
+        "length": 2,
+        "reading": "ならべ"
       },
       "2569660": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "ならべて"
+      }
+    }
+  },
+  {
+    "id": "9540499",
+    "original": "窓際の席でお願いします。",
+    "en": [
+      {
+        "id": "274252",
+        "text": "I'd like a window seat, please."
+      }
+    ],
+    "vocabIds": [
+      "1401430",
+      "1401440",
+      "1382250",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 5,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1382250": {
+        "start": 3,
+        "length": 1,
+        "reading": "せき"
+      },
+      "1401430": {
+        "start": 0,
+        "length": 2,
+        "reading": "まどぎわ"
+      },
+      "1401440": {
+        "start": 0,
+        "length": 4,
+        "reading": "まどぎわのせき"
+      },
+      "2036870": {
+        "start": 5,
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -85,26 +225,42 @@
     ],
     "vocabIds": [
       "1401430",
+      "1291800",
       "1657640",
       "1203250",
-      "1428830"
+      "1428830",
+      "1610960"
     ],
     "matches": {
       "1203250": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "そと"
+      },
+      "1291800": {
+        "start": 6,
+        "length": 2,
+        "reading": "すわり"
       },
       "1401430": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "まどぎわ"
       },
       "1428830": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "ながめ"
+      },
+      "1610960": {
+        "start": 11,
+        "length": 2,
+        "reading": "ながめ"
       },
       "1657640": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "すわり"
       }
     }
   },
@@ -119,16 +275,24 @@
     ],
     "vocabIds": [
       "1401430",
-      "1291800"
+      "1291800",
+      "1657640"
     ],
     "matches": {
       "1291800": {
         "start": 3,
-        "length": 4
+        "length": 2,
+        "reading": "すわり"
       },
       "1401430": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まどぎわ"
+      },
+      "1657640": {
+        "start": 3,
+        "length": 2,
+        "reading": "すわり"
       }
     }
   },
@@ -149,15 +313,18 @@
     "matches": {
       "1353260": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "じょうし"
       },
       "1401430": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "まどぎわ"
       },
       "1580640": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       }
     }
   }

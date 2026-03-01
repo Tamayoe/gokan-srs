@@ -281,7 +281,7 @@ export class SRSService {
         // S_new = max(S_min, S_old * (1 + Delta)) -- BUT only strictly enforce floor on failure recovery
         // Enforce safety floor to prevent infinite 0-multiplier loops (e.g. from data corruption or old mastery=0 migrations)
         const rawNewStrength = entry.memoryStrength * (1 + delta);
-        let newStrength = Math.max(F.minMemoryStrength, rawNewStrength);
+        const newStrength = Math.max(F.minMemoryStrength, rawNewStrength);
 
         // 4. Calculate Interval
         // t = S * 0.28768 * intervalModifier (Adaptive Scaling)

@@ -15,20 +15,29 @@
     "vocabIds": [
       "1247250",
       "1581310",
+      "1577100",
       "1188490"
     ],
     "matches": {
       "1188490": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "なにも"
       },
       "1247250": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1577100": {
+        "start": 10,
+        "length": 1,
+        "reading": "なに"
       },
       "1581310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -43,32 +52,31 @@
     ],
     "indices": "四つ{4つ} の レジスタ[03]~ は 呼び出す[02]{呼び出された}~ 関数[02]~ 側(がわ)[01] が 保存 為る(する){する}",
     "vocabIds": [
-      "2453540",
-      "1896380",
+      "1266350",
       "1590880",
       "1581310",
       "1513940"
     ],
     "matches": {
+      "1266350": {
+        "start": 9,
+        "length": 4,
+        "reading": "よびださ"
+      },
       "1513940": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "ほぞん"
       },
       "1581310": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1590880": {
         "start": 15,
-        "length": 2
-      },
-      "1896380": {
-        "start": 11,
-        "length": 1
-      },
-      "2453540": {
-        "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "かんすう"
       }
     }
   },
@@ -89,7 +97,9 @@
       "1244350",
       "1580650",
       "1423310",
+      "1263770",
       "2044680",
+      "1408950",
       "1535720",
       "1375150",
       "1419080"
@@ -97,43 +107,198 @@
     "matches": {
       "1153190": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "あっせい"
       },
       "1244350": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "くるしむ"
+      },
+      "1263770": {
+        "start": 26,
+        "length": 2,
+        "reading": "げんじょう"
       },
       "1375150": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "せいりょく"
+      },
+      "1408950": {
+        "start": 28,
+        "length": 2,
+        "reading": "だは"
       },
       "1419080": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "たんじょう"
       },
       "1420970": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ちきゅう"
       },
       "1423310": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1535720": {
         "start": 31,
-        "length": 3
+        "length": 3,
+        "reading": "もくろむ"
       },
       "1580650": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
       },
       "1581310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "2044680": {
         "start": 26,
-        "length": 4
+        "length": 4,
+        "reading": "げんじょうだは"
+      }
+    }
+  },
+  {
+    "id": "75772",
+    "original": "彼は側転をしました。",
+    "en": [
+      {
+        "id": "327946",
+        "text": "He did a cartwheel."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 側転~ を 為る(する){しました}",
+    "vocabIds": [
+      "1483070",
+      "1581310",
+      "2079130",
+      "2670930"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2079130": {
+        "start": 2,
+        "length": 2,
+        "reading": "がわてん"
+      },
+      "2670930": {
+        "start": 3,
+        "length": 1,
+        "reading": "てん"
+      }
+    }
+  },
+  {
+    "id": "76463",
+    "original": "フェンスの向こう側に片足を振り出した。",
+    "en": [
+      {
+        "id": "327257",
+        "text": "I swung my leg over the fence."
+      }
+    ],
+    "indices": "フェンス~ 之(の)[01]{の} 向こう側 に 片足[01] を 振り出す{振り出した}~",
+    "vocabIds": [
+      "1277140",
+      "1604830",
+      "1581310",
+      "1681050",
+      "1361240",
+      "1602990"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 5,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1361240": {
+        "start": 13,
+        "length": 4,
+        "reading": "ふりだし"
+      },
+      "1581310": {
+        "start": 8,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1602990": {
+        "start": 13,
+        "length": 4,
+        "reading": "ふりだし"
+      },
+      "1604830": {
+        "start": 5,
+        "length": 4,
+        "reading": "むこうがわ"
+      },
+      "1681050": {
+        "start": 10,
+        "length": 2,
+        "reading": "かたあし"
+      }
+    }
+  },
+  {
+    "id": "76681",
+    "original": "しかもメモの下側にあるのは汚れじゃなく・・・け、血判！？",
+    "en": [
+      {
+        "id": "327039",
+        "text": "Moreover, what's on the bottom of the memo isn't dirt but a ... b-blood seal!?"
+      }
+    ],
+    "indices": "然も(しかも){しかも} メモ の 下側~ に 有る{ある} の は 汚れ(よごれ) だ{じゃなく} 血判~",
+    "vocabIds": [
+      "1184140",
+      "1185740",
+      "1581310",
+      "1612200",
+      "1651500"
+    ],
+    "matches": {
+      "1184140": {
+        "start": 6,
+        "length": 1,
+        "reading": "した"
+      },
+      "1185740": {
+        "start": 6,
+        "length": 2,
+        "reading": "したがわ"
+      },
+      "1581310": {
+        "start": 7,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1612200": {
+        "start": 13,
+        "length": 2,
+        "reading": "よごれ"
+      },
+      "1651500": {
+        "start": 24,
+        "length": 2,
+        "reading": "けっぱん"
       }
     }
   },
@@ -152,33 +317,33 @@
       "1581310",
       "1251130",
       "1156530",
-      "1491270",
-      "1578790"
+      "1491270"
     ],
     "matches": {
       "1156530": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いけん"
       },
       "1251130": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "けいえい"
       },
       "1491270": {
         "start": 10,
-        "length": 3
-      },
-      "1578790": {
-        "start": 20,
-        "length": 2
+        "length": 3,
+        "reading": "ふいっち"
       },
       "1581310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1606450": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ろうどう"
       }
     }
   },
@@ -193,32 +358,73 @@
     ],
     "indices": "労働者 側(がわ)[01] の 要求 は 超過勤務手当~ の 事(こと){こと} が 中心(ちゅうしん) となる{となった}",
     "vocabIds": [
+      "1606450",
       "1560470",
+      "1322990",
       "1581310",
       "1546680",
+      "1429410",
+      "1742500",
       "1742510",
-      "2027880"
+      "1241070",
+      "1598240",
+      "1424550"
     ],
     "matches": {
+      "1241070": {
+        "start": 10,
+        "length": 2,
+        "reading": "きんむ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1424550": {
+        "start": 18,
+        "length": 2,
+        "reading": "ちゅうしん"
+      },
+      "1429410": {
+        "start": 8,
+        "length": 2,
+        "reading": "ちょうか"
+      },
       "1546680": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       },
       "1560470": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "ろうどうしゃ"
       },
       "1581310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1598240": {
+        "start": 12,
+        "length": 2,
+        "reading": "てあて"
+      },
+      "1606450": {
+        "start": 0,
+        "length": 2,
+        "reading": "ろうどう"
+      },
+      "1742500": {
+        "start": 8,
+        "length": 4,
+        "reading": "ちょうかきんむ"
       },
       "1742510": {
         "start": 8,
-        "length": 6
-      },
-      "2027880": {
-        "start": 18,
-        "length": 6
+        "length": 6,
+        "reading": "ちょうかきんむてあて"
       }
     }
   },
@@ -234,26 +440,36 @@
     "indices": "列車 が 私たち の 側(そば)[01] を 通り過ぎる{通り過ぎた}",
     "vocabIds": [
       "1558370",
+      "1311110",
       "1311300",
       "1581310",
       "1432980"
     ],
     "matches": {
+      "1311110": {
+        "start": 3,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1432980": {
         "start": 9,
-        "length": 5
+        "length": 4,
+        "reading": "とおりすぎ"
       },
       "1558370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "れっしゃ"
       },
       "1581310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -271,54 +487,85 @@
       "1515120",
       "1383260",
       "1581310",
-      "2179510"
+      "1180570",
+      "1632900"
     ],
     "matches": {
+      "1180570": {
+        "start": 14,
+        "length": 1,
+        "reading": "よこ"
+      },
       "1383260": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "あかちゃん"
       },
       "1515120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
       },
       "1581310": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
-      "2179510": {
+      "1632900": {
         "start": 14,
-        "length": 5
+        "length": 2,
+        "reading": "よこに"
       }
     }
   },
   {
-    "id": "83575",
-    "original": "塀の向う側のりんごは一番おいしい。",
+    "id": "86046",
+    "original": "彼等の家はバス停のちょうど向こう側にあります。",
     "en": [
       {
-        "id": "269983",
-        "text": "The apples on the other side of the wall are the sweetest."
+        "id": "317665",
+        "text": "Their house is just opposite the bus stop."
       }
     ],
-    "indices": "塀 の 向こう側{向う側} の 林檎(りんご){りんご} は 一番(いちばん)[01] 美味しい{おいしい}",
+    "indices": "彼ら(かれら){彼等の} 家(いえ)[01] は バス停 の 丁度{ちょうど} 向こう側 に 有る{あります}",
     "vocabIds": [
-      "1506870",
-      "1581310",
-      "1165970"
+      "2397090",
+      "1191730",
+      "1098580",
+      "1277140",
+      "1604830",
+      "1581310"
     ],
     "matches": {
-      "1165970": {
-        "start": 10,
-        "length": 2
+      "1098580": {
+        "start": 5,
+        "length": 3,
+        "reading": "ばすてい"
       },
-      "1506870": {
-        "start": 0,
-        "length": 1
+      "1191730": {
+        "start": 3,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1277140": {
+        "start": 13,
+        "length": 3,
+        "reading": "むこう"
       },
       "1581310": {
-        "start": 4,
-        "length": 1
+        "start": 16,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 13,
+        "length": 4,
+        "reading": "むこうがわ"
+      },
+      "2397090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
       }
     }
   },
@@ -335,6 +582,7 @@
     "vocabIds": [
       "1483150",
       "1586670",
+      "1519290",
       "2712120",
       "1483070",
       "1193610",
@@ -344,31 +592,43 @@
     "matches": {
       "1193610": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1483070": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1519290": {
+        "start": 7,
+        "length": 4,
+        "reading": "いそがしかっ"
       },
       "1581310": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1586670": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "あみもの"
       },
       "1663100": {
         "start": 23,
-        "length": 4
+        "length": 4,
+        "reading": "うたたね"
       },
       "2712120": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "そのかん"
       }
     }
   },
@@ -392,23 +652,28 @@
     "matches": {
       "1355710": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "しろ"
       },
       "1474850": {
         "start": 14,
-        "length": 4
+        "length": 3,
+        "reading": "とまっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "2136180": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさな"
       }
     }
   },
@@ -427,28 +692,39 @@
       "1311110",
       "1581310",
       "1531710",
-      "1369940"
+      "1369940",
+      "2835838"
     ],
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1369940": {
         "start": 18,
-        "length": 3
+        "length": 2,
+        "reading": "たずね"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1531710": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "なまえ"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2835838": {
+        "start": 18,
+        "length": 2,
+        "reading": "たずね"
       }
     }
   },
@@ -469,36 +745,159 @@
       "1401400",
       "1318610",
       "1591330",
-      "1956180"
+      "1252560"
     ],
     "matches": {
       "1242170": {
         "start": 13,
-        "length": 4
+        "length": 3,
+        "reading": "ちかづい"
+      },
+      "1252560": {
+        "start": 55,
+        "length": 2,
+        "reading": "かるく"
       },
       "1318610": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1401400": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "まど"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1581310": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1591330": {
         "start": 38,
-        "length": 4
+        "length": 3,
+        "reading": "きづい"
+      }
+    }
+  },
+  {
+    "id": "93549",
+    "original": "彼女は３０分で反対側についた。",
+    "en": [
+      {
+        "id": "310158",
+        "text": "She was across in thirty minutes."
       },
-      "1956180": {
-        "start": 55,
-        "length": 1
+      {
+        "id": "388599",
+        "text": "She got to the other side in 30 minutes."
+      }
+    ],
+    "indices": "彼女[01] は 分(ふん) で(#2028980) 反対側~ に 着く(つく){ついた}",
+    "vocabIds": [
+      "1483150",
+      "2859157",
+      "1502860",
+      "1480670",
+      "1480720",
+      "1581310"
+    ],
+    "matches": {
+      "1480670": {
+        "start": 7,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 7,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1502860": {
+        "start": 5,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1581310": {
+        "start": 9,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2859157": {
+        "start": 3,
+        "length": 3,
+        "reading": "さんぜろふん"
+      }
+    }
+  },
+  {
+    "id": "93654",
+    "original": "彼女は１０分で反対側に着いた。",
+    "en": [
+      {
+        "id": "310053",
+        "text": "She was across in ten minutes."
+      },
+      {
+        "id": "388600",
+        "text": "She got to the other side in 10 minutes."
+      }
+    ],
+    "indices": "彼女[01] は 十分(じっぷん){１０分} で(#2028980) 反対側 に 着く(つく){着いた}",
+    "vocabIds": [
+      "1483150",
+      "1335070",
+      "1502860",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1422970"
+    ],
+    "matches": {
+      "1335070": {
+        "start": 3,
+        "length": 3,
+        "reading": "いちぜろふん"
+      },
+      "1422970": {
+        "start": 11,
+        "length": 2,
+        "reading": "つい"
+      },
+      "1480670": {
+        "start": 7,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 7,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1502860": {
+        "start": 5,
+        "length": 1,
+        "reading": "ふん"
+      },
+      "1581310": {
+        "start": 9,
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -521,19 +920,176 @@
     "matches": {
       "1382250": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "せき"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1604750": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "むかい"
+      }
+    }
+  },
+  {
+    "id": "94602",
+    "original": "彼女の家は川の向こう側にある。",
+    "en": [
+      {
+        "id": "309104",
+        "text": "Her house is across the river."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 家(いえ)[01] は 川[01] の 向こう側 に 有る{ある}",
+    "vocabIds": [
+      "1483150",
+      "1191730",
+      "1390020",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 3,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1277140": {
+        "start": 7,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1390020": {
+        "start": 5,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1581310": {
+        "start": 10,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 7,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "96451",
+    "original": "彼らは道の反対側に住んでいる。",
+    "en": [
+      {
+        "id": "307254",
+        "text": "They live on the other side of the road."
+      }
+    ],
+    "indices": "彼ら(かれら) は 道(みち) の 反対側 に 住む{住んでいる}",
+    "vocabIds": [
+      "1483090",
+      "1454080",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1334040"
+    ],
+    "matches": {
+      "1334040": {
+        "start": 9,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1454080": {
+        "start": 3,
+        "length": 1,
+        "reading": "みち"
+      },
+      "1480670": {
+        "start": 5,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 5,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1581310": {
+        "start": 7,
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "96689",
+    "original": "彼らは川の向こう側に住んでいる。",
+    "en": [
+      {
+        "id": "307015",
+        "text": "They live across the river."
+      }
+    ],
+    "indices": "彼ら(かれら) は 川[01] の 向こう側 に 住む{住んでいる}",
+    "vocabIds": [
+      "1483090",
+      "1390020",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1334040"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 5,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1334040": {
+        "start": 10,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1390020": {
+        "start": 3,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1581310": {
+        "start": 8,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 5,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -549,26 +1105,30 @@
     "indices": "彼ら(かれら) は 焚き火[01]{たき火} の 側(そば)[01] に 座る[01]{座りました}",
     "vocabIds": [
       "1483090",
-      "1193610",
       "1581310",
+      "1291800",
       "1657640"
     ],
     "matches": {
-      "1193610": {
-        "start": 5,
-        "length": 1
+      "1291800": {
+        "start": 9,
+        "length": 2,
+        "reading": "すわり"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1581310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1657640": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "すわり"
       }
     }
   },
@@ -586,6 +1146,8 @@
       "1483090",
       "1546780",
       "1009700",
+      "1179830",
+      "1179820",
       "1206730",
       "1581310",
       "2012540"
@@ -593,27 +1155,43 @@
     "matches": {
       "1009700": {
         "start": 5,
-        "length": 4
+        "length": 4,
+        "reading": "におうじて"
+      },
+      "1179820": {
+        "start": 6,
+        "length": 3,
+        "reading": "おうじて"
+      },
+      "1179830": {
+        "start": 6,
+        "length": 2,
+        "reading": "おうじ"
       },
       "1206730": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1483090": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1546780": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ようせい"
       },
       "1581310": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "2012540": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "うごきだし"
       }
     }
   },
@@ -629,26 +1207,264 @@
     "indices": "彼(かれ)[01] は 郵便局 の 側(そば)[01] を 通り過ぎる{通り過ぎた}",
     "vocabIds": [
       "1483070",
+      "1605680",
       "1542430",
+      "1239560",
       "1581310",
       "1432980"
     ],
     "matches": {
+      "1239560": {
+        "start": 4,
+        "length": 1,
+        "reading": "きょく"
+      },
       "1432980": {
         "start": 8,
-        "length": 5
+        "length": 4,
+        "reading": "とおりすぎ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1542430": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ゆうびんきょく"
       },
       "1581310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1605680": {
+        "start": 2,
+        "length": 2,
+        "reading": "ゆうびん"
+      }
+    }
+  },
+  {
+    "id": "100179",
+    "original": "彼は塀の向こう側にボールを投げた。",
+    "en": [
+      {
+        "id": "303518",
+        "text": "He threw a ball over the fence."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 塀 の 向こう側 に ボール(#1123550)[01] を 投げる[01]{投げた}",
+    "vocabIds": [
+      "1483070",
+      "1506870",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1447000",
+      "1628640"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 4,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1447000": {
+        "start": 13,
+        "length": 2,
+        "reading": "なげ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1506870": {
+        "start": 2,
+        "length": 1,
+        "reading": "へい"
+      },
+      "1581310": {
+        "start": 7,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 4,
+        "length": 4,
+        "reading": "むこうがわ"
+      },
+      "1628640": {
+        "start": 13,
+        "length": 2,
+        "reading": "なげ"
+      }
+    }
+  },
+  {
+    "id": "101631",
+    "original": "彼は道の反対側に住んでいる。",
+    "en": [
+      {
+        "id": "302062",
+        "text": "He lives just across the road."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 道(みち) の 反対側 に 住む{住んでいる}",
+    "vocabIds": [
+      "1483070",
+      "1454080",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1334040"
+    ],
+    "matches": {
+      "1334040": {
+        "start": 8,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1454080": {
+        "start": 2,
+        "length": 1,
+        "reading": "みち"
+      },
+      "1480670": {
+        "start": 4,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 4,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1581310": {
+        "start": 6,
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "102213",
+    "original": "彼は池の向こう側から私を呼んだ。",
+    "en": [
+      {
+        "id": "301481",
+        "text": "He called me from across the pond."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 池 の 向こう側 から 私(わたし)[01] を 呼ぶ{呼んだ}",
+    "vocabIds": [
+      "1483070",
+      "1421700",
+      "1277140",
+      "1604830",
+      "1581310",
+      "2128130",
+      "1311110",
+      "1266440"
+    ],
+    "matches": {
+      "1266440": {
+        "start": 12,
+        "length": 2,
+        "reading": "よん"
+      },
+      "1277140": {
+        "start": 4,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1311110": {
+        "start": 10,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1421700": {
+        "start": 2,
+        "length": 1,
+        "reading": "いけ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1581310": {
+        "start": 7,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 4,
+        "length": 4,
+        "reading": "むこうがわ"
+      },
+      "2128130": {
+        "start": 7,
+        "length": 3,
+        "reading": "がわから"
+      }
+    }
+  },
+  {
+    "id": "103017",
+    "original": "彼は川の向こう側に住んでいる。",
+    "en": [
+      {
+        "id": "300676",
+        "text": "He lives across the river."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 川[01] の 向こう側 に 住む{住んでいる}",
+    "vocabIds": [
+      "1483070",
+      "1390020",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1334040"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 4,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1334040": {
+        "start": 9,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1390020": {
+        "start": 2,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1581310": {
+        "start": 7,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 4,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -675,19 +1491,98 @@
     "matches": {
       "1291800": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
       },
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1581310": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "106353",
+    "original": "彼は私たちと道を隔てた反対側に住んでいます。",
+    "en": [
+      {
+        "id": "297333",
+        "text": "He lives across the street from us."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 私たち と 道(みち) を 隔てる{隔てた} 反対側 に 住む{住んでいます}",
+    "vocabIds": [
+      "1483070",
+      "1311110",
+      "1311300",
+      "1454080",
+      "1206360",
+      "1206350",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1334040"
+    ],
+    "matches": {
+      "1206350": {
+        "start": 8,
+        "length": 2,
+        "reading": "へだて"
+      },
+      "1206360": {
+        "start": 8,
+        "length": 2,
+        "reading": "へだて"
+      },
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 2,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1334040": {
+        "start": 15,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1454080": {
+        "start": 6,
+        "length": 1,
+        "reading": "みち"
+      },
+      "1480670": {
+        "start": 11,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 11,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1581310": {
+        "start": 13,
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -714,35 +1609,43 @@
     "matches": {
       "1291800": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
       },
       "1294330": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "つま"
       },
       "1296200": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "さいほう"
       },
       "1419900": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "だんろ"
       },
       "1456360": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "よん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1522150": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1581310": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -758,26 +1661,99 @@
     "indices": "彼(かれ)[01] は 一言も言わず に 私(わたし)[01]{私の} 側(そば)[01] を[05] 過ぎる(すぎる){すぎて} 行く{いった}",
     "vocabIds": [
       "1483070",
+      "1575990",
       "1904110",
+      "1587040",
       "1311110",
       "1581310"
     ],
     "matches": {
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1575990": {
+        "start": 2,
+        "length": 2,
+        "reading": "ひとこと"
       },
       "1581310": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1587040": {
+        "start": 5,
+        "length": 2,
+        "reading": "いわ"
       },
       "1904110": {
         "start": 2,
-        "length": 6
+        "length": 6,
+        "reading": "ひとこともいわず"
+      }
+    }
+  },
+  {
+    "id": "117963",
+    "original": "彼の家は通りの向こう側にあります。",
+    "en": [
+      {
+        "id": "285701",
+        "text": "His house is across the street."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 家(いえ)[01] は 通り(とおり) の 向こう側 に 有る{あります}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1191730",
+      "1432920",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1191730": {
+        "start": 2,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1277140": {
+        "start": 7,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1432920": {
+        "start": 4,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1581310": {
+        "start": 10,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 7,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -799,40 +1775,54 @@
       "1000420",
       "1258330",
       "1581310",
-      "2179510"
+      "1180570",
+      "1632900"
     ],
     "matches": {
       "1000420": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1180570": {
+        "start": 18,
+        "length": 1,
+        "reading": "よこ"
       },
       "1215230": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ま"
       },
       "1258330": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1362360": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しんぶん"
       },
       "1456360": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "よん"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1581310": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
-      "2179510": {
+      "1632900": {
         "start": 18,
-        "length": 5
+        "length": 2,
+        "reading": "よこに"
       }
     }
   },
@@ -848,31 +1838,48 @@
     "indices": "日本 は 国連総会 で(#2028980) 米国 側(がわ)[01] に 立つ{立った}",
     "vocabIds": [
       "1582710",
+      "1287210",
       "1287240",
+      "1401490",
       "1508900",
       "1581310",
       "1597040"
     ],
     "matches": {
+      "1287210": {
+        "start": 3,
+        "length": 2,
+        "reading": "こくれん"
+      },
       "1287240": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "こくれんそうかい"
+      },
+      "1401490": {
+        "start": 5,
+        "length": 2,
+        "reading": "そうかい"
       },
       "1508900": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "べいこく"
       },
       "1581310": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1582710": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "にっぽん"
       },
       "1597040": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
       }
     }
   },
@@ -896,58 +1903,326 @@
     "matches": {
       "1277450": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1419900": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "だんろ"
       },
       "1456420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "どくしょ"
       },
       "1516350": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "だきあう"
       },
       "1581310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
   {
-    "id": "123601",
-    "original": "道の向う側にセクシーな女の子が歩いている。",
+    "id": "123600",
+    "original": "道の向こう側の店出聞いてみて下さい。",
     "en": [
       {
-        "id": "280396",
-        "text": "There goes a hot little number across the street."
+        "id": "280397",
+        "text": "You'll have to try the store across the street."
       }
     ],
-    "indices": "道(みち) の 向こう側{向う側} に セクシー{セクシーな}~ 女の子(おんなのこ) が 歩く{歩いている}",
+    "indices": "道(みち) の 向こう側 の 店(みせ) 出る{出} 聞く{聞いて} 見る[05]{みて} 下さい",
     "vocabIds": [
       "1454080",
+      "1277140",
+      "1604830",
       "1581310",
-      "1344970",
-      "1514320"
+      "1582120",
+      "1896380",
+      "1591110",
+      "1184280",
+      "1184270"
     ],
     "matches": {
-      "1344970": {
-        "start": 11,
-        "length": 3
+      "1184270": {
+        "start": 14,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 14,
+        "length": 3,
+        "reading": "ください"
+      },
+      "1277140": {
+        "start": 2,
+        "length": 3,
+        "reading": "むこう"
       },
       "1454080": {
         "start": 0,
-        "length": 1
-      },
-      "1514320": {
-        "start": 15,
-        "length": 3
+        "length": 1,
+        "reading": "みち"
       },
       "1581310": {
+        "start": 5,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1582120": {
+        "start": 7,
+        "length": 1,
+        "reading": "みせ"
+      },
+      "1591110": {
+        "start": 9,
+        "length": 2,
+        "reading": "きい"
+      },
+      "1604830": {
+        "start": 2,
+        "length": 4,
+        "reading": "むこうがわ"
+      },
+      "1896380": {
+        "start": 8,
+        "length": 1,
+        "reading": "で"
+      }
+    }
+  },
+  {
+    "id": "125567",
+    "original": "通路側をお願いします。",
+    "en": [
+      {
+        "id": "278425",
+        "text": "I'd like one on the aisle, please."
+      }
+    ],
+    "indices": "通路側 を お願いします",
+    "vocabIds": [
+      "1433600",
+      "2020690",
+      "1581310",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
         "start": 4,
-        "length": 1
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1433600": {
+        "start": 0,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2020690": {
+        "start": 0,
+        "length": 3,
+        "reading": "つうろがわ"
+      },
+      "2036870": {
+        "start": 4,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
+    "id": "125568",
+    "original": "通路側の席をお願いします。",
+    "en": [
+      {
+        "id": "278424",
+        "text": "I'd like an aisle seat, please."
+      }
+    ],
+    "indices": "通路側{通路側の}~ 席(せき) を お願いします",
+    "vocabIds": [
+      "1433600",
+      "2020690",
+      "1581310",
+      "1382250",
+      "2036870",
+      "1001720"
+    ],
+    "matches": {
+      "1001720": {
+        "start": 6,
+        "length": 6,
+        "reading": "おねがいします"
+      },
+      "1382250": {
+        "start": 4,
+        "length": 1,
+        "reading": "せき"
+      },
+      "1433600": {
+        "start": 0,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2020690": {
+        "start": 0,
+        "length": 3,
+        "reading": "つうろがわ"
+      },
+      "2036870": {
+        "start": 6,
+        "length": 3,
+        "reading": "おねがい"
+      }
+    }
+  },
+  {
+    "id": "125608",
+    "original": "通りを渡って向こう側です。",
+    "en": [
+      {
+        "id": "278384",
+        "text": "It's across the street."
+      }
+    ],
+    "indices": "通り(とおり) を[03] 渡る{渡って} 向こう側 です",
+    "vocabIds": [
+      "1432920",
+      "1444680",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 6,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1432920": {
+        "start": 0,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1444680": {
+        "start": 3,
+        "length": 2,
+        "reading": "わたっ"
+      },
+      "1581310": {
+        "start": 9,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 6,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "125635",
+    "original": "通りの向こう側に教会がある。",
+    "en": [
+      {
+        "id": "278357",
+        "text": "There is a church across the street."
+      },
+      {
+        "id": "9611412",
+        "text": "There's a church across the street."
+      }
+    ],
+    "indices": "通り(とおり) の 向こう側 に 教会 が[01] 有る{ある}",
+    "vocabIds": [
+      "1432920",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1237030"
+    ],
+    "matches": {
+      "1237030": {
+        "start": 8,
+        "length": 2,
+        "reading": "きょうかい"
+      },
+      "1277140": {
+        "start": 3,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1432920": {
+        "start": 0,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1581310": {
+        "start": 6,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 3,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "125636",
+    "original": "通りの向こう側にホテルがある。",
+    "en": [
+      {
+        "id": "44989",
+        "text": "There's a hotel across the street."
+      }
+    ],
+    "indices": "通り(とおり) の 向こう側 に ホテル が[01] 有る{ある}",
+    "vocabIds": [
+      "1432920",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 3,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1432920": {
+        "start": 0,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1581310": {
+        "start": 6,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 3,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -969,15 +2244,18 @@
     "matches": {
       "1426910": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうしゃ"
       },
       "1432920": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "とおり"
       },
       "1581310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -993,26 +2271,67 @@
     "indices": "大変{大変な} 事がある{ことがあったり} 落ち込む[01]{落ちこんだり} 為る(する){した} 時(とき){とき} は 何時でも{いつでも} 私(わたし)[01] が 貴方(あなた)[01]{あなた} の 側(そば)[01] に 居る(いる)[01]{いる} わ",
     "vocabIds": [
       "1415000",
-      "1548530",
       "1311110",
       "1581310"
     ],
     "matches": {
       "1311110": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1415000": {
         "start": 0,
-        "length": 2
-      },
-      "1548530": {
-        "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1581310": {
         "start": 32,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "140325",
+    "original": "窓側か通路側どちらになさいますか。",
+    "en": [
+      {
+        "id": "448965",
+        "text": "Would you like a window seat or a seat on the aisle?"
+      },
+      {
+        "id": "516633",
+        "text": "Window or aisle?"
+      }
+    ],
+    "indices": "窓側 か 通路側 何方(どちら){どちら} に 為さる{なさいます} か",
+    "vocabIds": [
+      "2011970",
+      "1433600",
+      "2020690",
+      "1581310"
+    ],
+    "matches": {
+      "1433600": {
+        "start": 3,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 5,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2011970": {
+        "start": 0,
+        "length": 2,
+        "reading": "まどがわ"
+      },
+      "2020690": {
+        "start": 3,
+        "length": 3,
+        "reading": "つうろがわ"
       }
     }
   },
@@ -1034,15 +2353,18 @@
     "matches": {
       "1220210": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
       },
       "1401400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "まど"
       },
       "1581310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -1060,24 +2382,103 @@
       "1401400",
       "1581310",
       "1419990",
-      "2809670"
+      "1217730",
+      "1259140"
     ],
     "matches": {
+      "1217730": {
+        "start": 8,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1259140": {
+        "start": 10,
+        "length": 2,
+        "reading": "みえ"
+      },
       "1401400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "まど"
       },
       "1419990": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "おとこ"
       },
       "1581310": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "140455",
+    "original": "相手チームのベースラインの向こう側にボールを持って行こうとするためには、選手から選手へとボールを投げなければならなかったのです。",
+    "en": [
+      {
+        "id": "274118",
+        "text": "The players had to throw the ball from one to another to try to get the ball over the other team's baseline."
+      }
+    ],
+    "indices": "相手 チーム の ベースライン~ の 向こう側 に ボール(#1123550)[01] を 持っていく{持って行こう} とする[01] 為に{ために} は 選手 から 選手 へと ボール(#1123550)[01] を 投げる[01]{投げ} ねばならない{なければならなかった} のです",
+    "vocabIds": [
+      "1401000",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1315720",
+      "1578850",
+      "1392250",
+      "1447000",
+      "1628640"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 13,
+        "length": 3,
+        "reading": "むこう"
       },
-      "2809670": {
-        "start": 8,
-        "length": 5
+      "1315720": {
+        "start": 22,
+        "length": 2,
+        "reading": "もっ"
+      },
+      "1392250": {
+        "start": 36,
+        "length": 2,
+        "reading": "せんしゅ"
+      },
+      "1401000": {
+        "start": 0,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1447000": {
+        "start": 48,
+        "length": 2,
+        "reading": "なげ"
+      },
+      "1578850": {
+        "start": 25,
+        "length": 2,
+        "reading": "いこ"
+      },
+      "1581310": {
+        "start": 16,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 13,
+        "length": 4,
+        "reading": "むこうがわ"
+      },
+      "1628640": {
+        "start": 48,
+        "length": 2,
+        "reading": "なげ"
       }
     }
   },
@@ -1093,26 +2494,156 @@
     "indices": "組合 は 経営者 側(がわ)[01] と 賃金交渉~ を 為る(する){した}",
     "vocabIds": [
       "1397620",
+      "1251130",
       "1251200",
+      "1322990",
       "1581310",
-      "1998480"
+      "1431990",
+      "1998480",
+      "1272110"
     ],
     "matches": {
+      "1251130": {
+        "start": 3,
+        "length": 2,
+        "reading": "けいえい"
+      },
       "1251200": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "けいえいしゃ"
+      },
+      "1272110": {
+        "start": 10,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1322990": {
+        "start": 5,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1397620": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くみあい"
+      },
+      "1431990": {
+        "start": 8,
+        "length": 2,
+        "reading": "ちんぎん"
       },
       "1581310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1998480": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "ちんぎんこうしょう"
+      }
+    }
+  },
+  {
+    "id": "141376",
+    "original": "川の向こう側の土手にたくさんのごみがある。",
+    "en": [
+      {
+        "id": "273194",
+        "text": "There's a lot of trash on the far bank of the river."
+      }
+    ],
+    "indices": "川[01] の 向こう側 の 土手 に 沢山{たくさん} の 塵(ごみ){ごみ} が[01] 有る{ある}",
+    "vocabIds": [
+      "1390020",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1445370"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 2,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1390020": {
+        "start": 0,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1445370": {
+        "start": 7,
+        "length": 2,
+        "reading": "どて"
+      },
+      "1581310": {
+        "start": 5,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 2,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "141380",
+    "original": "川の向こう側には広大な平原が広がっている。",
+    "en": [
+      {
+        "id": "273193",
+        "text": "A vast plain extends beyond the river."
+      }
+    ],
+    "indices": "川[01] の 向こう側 には 広大{広大な} 平原 が 広がる{広がっている}",
+    "vocabIds": [
+      "1390020",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1278600",
+      "1507260",
+      "1602360"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 2,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1278600": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうだい"
+      },
+      "1390020": {
+        "start": 0,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1507260": {
+        "start": 11,
+        "length": 2,
+        "reading": "へいげん"
+      },
+      "1581310": {
+        "start": 5,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1602360": {
+        "start": 14,
+        "length": 3,
+        "reading": "ひろがっ"
+      },
+      "1604830": {
+        "start": 2,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -1129,70 +2660,149 @@
     "vocabIds": [
       "1387930",
       "1344270",
+      "1580050",
       "1580100",
+      "1551200",
       "1353450",
       "1600660",
       "1166510",
+      "1477720",
+      "2620490",
       "1477740",
+      "1444870",
+      "1444880",
+      "1592250",
       "1547290",
+      "1235910",
       "1387940",
+      "2004620",
       "1581310",
+      "1284550",
       "2804410",
+      "1250360",
       "1240200",
       "1460850"
     ],
     "matches": {
       "1166510": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "いっぽう"
+      },
+      "1235910": {
+        "start": 35,
+        "length": 2,
+        "reading": "さけば"
       },
       "1240200": {
         "start": 70,
-        "length": 3
+        "length": 3,
+        "reading": "きわめて"
+      },
+      "1250360": {
+        "start": 67,
+        "length": 2,
+        "reading": "けいせい"
+      },
+      "1284550": {
+        "start": 65,
+        "length": 2,
+        "reading": "ごうい"
       },
       "1344270": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょこく"
       },
       "1353450": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じょうしょう"
       },
       "1387930": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せんしん"
       },
       "1387940": {
         "start": 43,
-        "length": 3
+        "length": 3,
+        "reading": "せんしんこく"
+      },
+      "1444870": {
+        "start": 23,
+        "length": 2,
+        "reading": "とじょう"
+      },
+      "1444880": {
+        "start": 23,
+        "length": 3,
+        "reading": "とじょうこく"
       },
       "1460850": {
         "start": 73,
-        "length": 3
+        "length": 3,
+        "reading": "むずかしい"
+      },
+      "1477720": {
+        "start": 21,
+        "length": 2,
+        "reading": "はってん"
       },
       "1477740": {
         "start": 21,
-        "length": 5
+        "length": 5,
+        "reading": "はってんとじょうこく"
       },
       "1547290": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "よくせい"
+      },
+      "1551200": {
+        "start": 8,
+        "length": 1,
+        "reading": "りつ"
+      },
+      "1580050": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅっしょう"
       },
       "1580100": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "しゅっしょうりつ"
       },
       "1581310": {
         "start": 46,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1592250": {
+        "start": 25,
+        "length": 1,
+        "reading": "こく"
       },
       "1600660": {
         "start": 13,
-        "length": 4
+        "length": 2,
+        "reading": "はから"
+      },
+      "2004620": {
+        "start": 45,
+        "length": 2,
+        "reading": "こくがわ"
+      },
+      "2620490": {
+        "start": 21,
+        "length": 4,
+        "reading": "はってんとじょう"
       },
       "2804410": {
         "start": 65,
-        "length": 4
+        "length": 4,
+        "reading": "ごういけいせい"
       }
     }
   },
@@ -1210,44 +2820,70 @@
       "1580640",
       "1502390",
       "1544970",
-      "1956960",
+      "1529530",
+      "1295030",
+      "1605680",
       "1542430",
+      "1239560",
       "1581310",
       "1364520",
       "1549910"
     ],
     "matches": {
+      "1239560": {
+        "start": 36,
+        "length": 1,
+        "reading": "きょく"
+      },
+      "1295030": {
+        "start": 27,
+        "length": 3,
+        "reading": "すまそ"
+      },
       "1364520": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "しんけい"
       },
       "1502390": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "もの"
+      },
+      "1529530": {
+        "start": 13,
+        "length": 3,
+        "reading": "なくし"
       },
       "1542430": {
         "start": 34,
-        "length": 3
+        "length": 3,
+        "reading": "ゆうびんきょく"
       },
       "1544970": {
         "start": 4,
-        "length": 4
+        "length": 3,
+        "reading": "あずかっ"
       },
       "1549910": {
         "start": 42,
-        "length": 2
+        "length": 2,
+        "reading": "りかい"
       },
       "1580640": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1581310": {
         "start": 37,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
-      "1956960": {
-        "start": 13,
-        "length": 1
+      "1605680": {
+        "start": 34,
+        "length": 2,
+        "reading": "ゆうびん"
       }
     }
   },
@@ -1269,15 +2905,75 @@
     "matches": {
       "1310150": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しじ"
       },
       "1360410": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しんぱん"
       },
       "1581310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "145717",
+    "original": "信号が赤いうちに彼らは向こう側へ渡った。",
+    "en": [
+      {
+        "id": "268845",
+        "text": "They crossed to the other side while the light was red."
+      }
+    ],
+    "indices": "信号 が 赤い[01] 内(うち){うち} に 彼ら(かれら) は 向こう側 へ 渡る{渡った}",
+    "vocabIds": [
+      "1359240",
+      "1383240",
+      "1483090",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1444680"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 11,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1359240": {
+        "start": 0,
+        "length": 2,
+        "reading": "しんごう"
+      },
+      "1383240": {
+        "start": 3,
+        "length": 2,
+        "reading": "あかい"
+      },
+      "1444680": {
+        "start": 16,
+        "length": 2,
+        "reading": "わたっ"
+      },
+      "1483090": {
+        "start": 8,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1581310": {
+        "start": 14,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 11,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -1299,15 +2995,18 @@
     "matches": {
       "1580490": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じょうきゃく"
       },
       "1580640": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       },
       "1581310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -1322,22 +3021,37 @@
     ],
     "indices": "所有者 の 側(そば)[01] には 異存 は 無い{なかった}",
     "vocabIds": [
+      "1343390",
       "1343410",
+      "1322990",
       "1581310",
       "1157900"
     ],
     "matches": {
       "1157900": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いぞん"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1343390": {
+        "start": 0,
+        "length": 2,
+        "reading": "しょゆう"
       },
       "1343410": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しょゆうしゃ"
       },
       "1581310": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -1352,22 +3066,37 @@
     ],
     "indices": "出席者 の 側(そば)[01] には 異議 は 無い{なかった}",
     "vocabIds": [
+      "1339460",
       "1339470",
+      "1322990",
       "1581310",
       "1157580"
     ],
     "matches": {
       "1157580": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "いぎ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1339460": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅっせき"
       },
       "1339470": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "しゅっせきしゃ"
       },
       "1581310": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -1382,37 +3111,124 @@
     ],
     "indices": "従業員 達{たち} は 力を合わせる{力を合わせて} 経営 側(がわ)[01] に 昇給 を 要求 為る(する){した}",
     "vocabIds": [
+      "1335240",
       "1335250",
-      "2395070",
+      "1168610",
+      "1554820",
+      "1284480",
+      "1284470",
+      "1506010",
       "1251130",
       "1581310",
       "1349760",
       "1546680"
     ],
     "matches": {
+      "1168610": {
+        "start": 2,
+        "length": 1,
+        "reading": "いん"
+      },
       "1251130": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "けいえい"
+      },
+      "1284470": {
+        "start": 8,
+        "length": 3,
+        "reading": "あわせ"
+      },
+      "1284480": {
+        "start": 8,
+        "length": 3,
+        "reading": "あわせ"
+      },
+      "1335240": {
+        "start": 0,
+        "length": 2,
+        "reading": "じゅうぎょう"
       },
       "1335250": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "じゅうぎょういん"
       },
       "1349760": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "しょうきゅう"
+      },
+      "1506010": {
+        "start": 8,
+        "length": 4,
+        "reading": "あわせて"
       },
       "1546680": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
+      },
+      "1554820": {
+        "start": 6,
+        "length": 1,
+        "reading": "ちから"
       },
       "1581310": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "148917",
+    "original": "車道の向こう側にあるバリケードは、「入れない」ということである。",
+    "en": [
+      {
+        "id": "265641",
+        "text": "Barricades across driveways say \"Keep Out.\""
+      }
+    ],
+    "indices": "車道~ の 向こう側 に 有る{ある} バリケード は 入る(はいる){入れない} と 言う{いう} 事(こと){こと} である",
+    "vocabIds": [
+      "1323210",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1465610",
+      "1465600"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 3,
+        "length": 3,
+        "reading": "むこう"
       },
-      "2395070": {
+      "1323210": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゃどう"
+      },
+      "1465600": {
+        "start": 18,
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1465610": {
+        "start": 18,
+        "length": 2,
+        "reading": "いれ"
+      },
+      "1581310": {
         "start": 6,
-        "length": 6
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 3,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -1428,31 +3244,48 @@
     "indices": "事故 は 運転手 の 側(そば)[01] の 過ち から 起こる{起こった}",
     "vocabIds": [
       "1313850",
+      "1172830",
       "1172870",
+      "1327190",
       "1581310",
       "1196010",
       "1223680"
     ],
     "matches": {
+      "1172830": {
+        "start": 3,
+        "length": 2,
+        "reading": "うんてん"
+      },
       "1172870": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "うんてんしゅ"
       },
       "1196010": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "あやまち"
       },
       "1223680": {
         "start": 13,
-        "length": 4
+        "length": 3,
+        "reading": "おこっ"
       },
       "1313850": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じこ"
+      },
+      "1327190": {
+        "start": 5,
+        "length": 1,
+        "reading": "しゅ"
       },
       "1581310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -1479,19 +3312,23 @@
     "matches": {
       "1291800": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -1514,19 +3351,131 @@
     "matches": {
       "1201190": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "うみ"
       },
       "1204570": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "まち"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1581310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "163952",
+    "original": "私の家は通りの向こう側にあります。",
+    "en": [
+      {
+        "id": "250530",
+        "text": "My house is just across the street."
+      }
+    ],
+    "indices": "私(わたし)[01]{私の} 家(いえ)[01] は 通り(とおり) の 向こう側 に 有る{あります}",
+    "vocabIds": [
+      "1311110",
+      "1191730",
+      "1432920",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1191730": {
+        "start": 2,
+        "length": 1,
+        "reading": "いえ"
+      },
+      "1277140": {
+        "start": 7,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1432920": {
+        "start": 4,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1581310": {
+        "start": 10,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 7,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "165416",
+    "original": "私たちは通りのちょうど向こう側のあのアパートに住んでいます。",
+    "en": [
+      {
+        "id": "249089",
+        "text": "We live in that apartment just over the street."
+      }
+    ],
+    "indices": "私たち は 通り(とおり) の 丁度{ちょうど} 向こう側 の 彼の(あの){あの} アパート[02] に 住む{住んでいます}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1432920",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1334040"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 11,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1334040": {
+        "start": 23,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1432920": {
+        "start": 4,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1581310": {
+        "start": 14,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 11,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -1541,6 +3490,7 @@
     ],
     "indices": "私たち は 其の[01]{その} 机 を 彼の(あの){あの} 窓 の 側(そば)[01] に 置く[01]{置いた}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1220210",
       "1401400",
@@ -1550,23 +3500,108 @@
     "matches": {
       "1220210": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1401400": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "まど"
       },
       "1421850": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "おい"
       },
       "1581310": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "166912",
+    "original": "私たちの声のこだまが谷の反対側から聞こえた。",
+    "en": [
+      {
+        "id": "247590",
+        "text": "We heard the echo of our voices from the other side of the valley."
+      }
+    ],
+    "indices": "私たち の 声 の 木霊[01]{こだま} が 谷 の 反対側 から 聞こえる[01]{聞こえた}",
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1380440",
+      "1581590",
+      "1480670",
+      "1480720",
+      "1581310",
+      "2128130",
+      "1591150",
+      "1954660"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1380440": {
+        "start": 4,
+        "length": 1,
+        "reading": "こえ"
+      },
+      "1480670": {
+        "start": 12,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 12,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1581310": {
+        "start": 14,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1581590": {
+        "start": 10,
+        "length": 1,
+        "reading": "たに"
+      },
+      "1591150": {
+        "start": 17,
+        "length": 3,
+        "reading": "きこえ"
+      },
+      "1954660": {
+        "start": 17,
+        "length": 3,
+        "reading": "きこえ"
+      },
+      "2128130": {
+        "start": 14,
+        "length": 3,
+        "reading": "がわから"
       }
     }
   },
@@ -1584,24 +3619,28 @@
       "1282220",
       "1206730",
       "1581310",
-      "1432850"
+      "1433030"
     ],
     "matches": {
       "1206730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1282220": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ぎょうれつ"
       },
-      "1432850": {
+      "1433030": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "とおっ"
       },
       "1581310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -1616,27 +3655,37 @@
     ],
     "indices": "行く[01]{行った} 事(こと){こと} は 有る{ありません} が 彼の(あの){あの} 信号 の 向こう側{むこう側} だ と 思う{思います} よ[01]",
     "vocabIds": [
-      "1589060",
+      "1578850",
       "1359240",
       "1581310",
+      "1589350",
       "1589320"
     ],
     "matches": {
       "1359240": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しんごう"
+      },
+      "1578850": {
+        "start": 0,
+        "length": 2,
+        "reading": "いっ"
       },
       "1581310": {
         "start": 21,
-        "length": 1
-      },
-      "1589060": {
-        "start": 0,
-        "length": 3
+        "length": 1,
+        "reading": "がわ"
       },
       "1589320": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "おもい"
+      },
+      "1589350": {
+        "start": 24,
+        "length": 2,
+        "reading": "おもい"
       }
     }
   },
@@ -1653,55 +3702,152 @@
     "vocabIds": [
       "1263650",
       "1330430",
+      "1341340",
       "2837477",
+      "1437260",
       "1263750",
       "1330450",
       "1581310",
+      "1279790",
       "2783260",
       "1510890",
       "1601160",
-      "1008880"
+      "1281020",
+      "1281000"
     ],
     "matches": {
-      "1008880": {
-        "start": 41,
-        "length": 6
-      },
       "1263650": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "げんざい"
       },
       "1263750": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "げんしょう"
+      },
+      "1279790": {
+        "start": 29,
+        "length": 2,
+        "reading": "こうぞう"
+      },
+      "1281000": {
+        "start": 42,
+        "length": 2,
+        "reading": "かんがえ"
+      },
+      "1281020": {
+        "start": 42,
+        "length": 2,
+        "reading": "かんがえ"
       },
       "1330430": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "じゅきゅう"
       },
       "1330450": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "じゅよう"
+      },
+      "1341340": {
+        "start": 13,
+        "length": 2,
+        "reading": "じゅんかん"
+      },
+      "1437260": {
+        "start": 15,
+        "length": 1,
+        "reading": "てき"
       },
       "1510890": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "へんか"
       },
       "1581310": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1601160": {
         "start": 35,
-        "length": 2
+        "length": 2,
+        "reading": "はんえい"
       },
       "2783260": {
         "start": 29,
-        "length": 3
+        "length": 3,
+        "reading": "こうぞうてき"
       },
       "2837477": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "じゅんかんてき"
+      }
+    }
+  },
+  {
+    "id": "175379",
+    "original": "検察側は被告が子供を誘拐したと激しく非難した。",
+    "en": [
+      {
+        "id": "239087",
+        "text": "The prosecution condemned the defendant for kidnapping a child."
+      }
+    ],
+    "indices": "検察~ 側(がわ)[01] は 被告 が 子供 を 誘拐 為る(する){した} と[04] 激しい{激しく} 非難 為る(する){した}",
+    "vocabIds": [
+      "1257910",
+      "2803550",
+      "1581310",
+      "1484410",
+      "1307850",
+      "1541930",
+      "1600720",
+      "1483410"
+    ],
+    "matches": {
+      "1257910": {
+        "start": 0,
+        "length": 2,
+        "reading": "けんさつ"
+      },
+      "1307850": {
+        "start": 7,
+        "length": 2,
+        "reading": "こども"
+      },
+      "1483410": {
+        "start": 18,
+        "length": 2,
+        "reading": "ひなん"
+      },
+      "1484410": {
+        "start": 4,
+        "length": 2,
+        "reading": "ひこく"
+      },
+      "1541930": {
+        "start": 10,
+        "length": 2,
+        "reading": "ゆうかい"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1600720": {
+        "start": 15,
+        "length": 3,
+        "reading": "はげしく"
+      },
+      "2803550": {
+        "start": 0,
+        "length": 3,
+        "reading": "けんさつがわ"
       }
     }
   },
@@ -1723,45 +3869,78 @@
       "1511040",
       "1007860",
       "1329670",
+      "1329660",
+      "1578700",
       "2583920",
-      "1238070"
+      "1508670",
+      "1238070",
+      "1630260"
     ],
     "matches": {
       "1007860": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "てん"
       },
       "1238070": {
         "start": 35,
-        "length": 3
+        "length": 2,
+        "reading": "おどし"
       },
       "1251130": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいえい"
+      },
+      "1329660": {
+        "start": 19,
+        "length": 4,
+        "reading": "うけいれ"
       },
       "1329670": {
         "start": 19,
-        "length": 6
+        "length": 4,
+        "reading": "うけいれ"
       },
       "1436320": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ていあん"
+      },
+      "1508670": {
+        "start": 29,
+        "length": 2,
+        "reading": "へいさ"
       },
       "1511040": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "へんこう"
+      },
+      "1578700": {
+        "start": 27,
+        "length": 2,
+        "reading": "こうじょう"
       },
       "1581310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1606450": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ろうどう"
+      },
+      "1630260": {
+        "start": 35,
+        "length": 2,
+        "reading": "おどし"
       },
       "2583920": {
         "start": 27,
-        "length": 4
+        "length": 4,
+        "reading": "こうじょうへいさ"
       }
     }
   },
@@ -1778,25 +3957,41 @@
     "vocabIds": [
       "1251130",
       "1581310",
+      "1606450",
       "1560470",
+      "1322990",
       "1410000"
     ],
     "matches": {
       "1251130": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けいえい"
+      },
+      "1322990": {
+        "start": 6,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1410000": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "たいけつ"
       },
       "1560470": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "ろうどうしゃ"
       },
       "1581310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1606450": {
+        "start": 4,
+        "length": 2,
+        "reading": "ろうどう"
       }
     }
   },
@@ -1811,37 +4006,79 @@
     ],
     "indices": "経営陣 は 遂に[01]{ついに} 労働者 側(がわ)[01] の 要求 に 屈する{屈し} 昇給 を 認める(みとめる){認めた}",
     "vocabIds": [
+      "1251130",
       "1251210",
+      "1956490",
+      "1606450",
       "1560470",
+      "1322990",
       "1581310",
       "1546680",
+      "2409930",
       "1349760",
-      "1467530"
+      "1467530",
+      "1611790"
     ],
     "matches": {
+      "1251130": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいえい"
+      },
       "1251210": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けいえいじん"
+      },
+      "1322990": {
+        "start": 9,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1349760": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "しょうきゅう"
       },
       "1467530": {
         "start": 21,
-        "length": 3
+        "length": 2,
+        "reading": "みとめ"
       },
       "1546680": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "ようきゅう"
       },
       "1560470": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ろうどうしゃ"
       },
       "1581310": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1606450": {
+        "start": 7,
+        "length": 2,
+        "reading": "ろうどう"
+      },
+      "1611790": {
+        "start": 21,
+        "length": 2,
+        "reading": "みとめ"
+      },
+      "1956490": {
+        "start": 2,
+        "length": 1,
+        "reading": "じん"
+      },
+      "2409930": {
+        "start": 15,
+        "length": 2,
+        "reading": "くっし"
       }
     }
   },
@@ -1856,37 +4093,67 @@
     ],
     "indices": "経営者 側(がわ)[01] は 労働者 側(がわ)[01] に ボーナス を 出す と 言う{言って} 譲歩 しようとする{しようとした}",
     "vocabIds": [
+      "1251130",
       "1251200",
+      "1322990",
       "1581310",
+      "1606450",
       "1560470",
       "1338180",
       "1632140",
+      "1587040",
       "1357050"
     ],
     "matches": {
+      "1251130": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいえい"
+      },
       "1251200": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けいえいしゃ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1338180": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "だす"
       },
       "1357050": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "じょうほ"
       },
       "1560470": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "ろうどうしゃ"
       },
       "1581310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1587040": {
+        "start": 18,
+        "length": 2,
+        "reading": "いっ"
+      },
+      "1606450": {
+        "start": 5,
+        "length": 2,
+        "reading": "ろうどう"
       },
       "1632140": {
         "start": 17,
-        "length": 4
+        "length": 4,
+        "reading": "といって"
       }
     }
   },
@@ -1901,37 +4168,61 @@
     ],
     "indices": "経営者 側(がわ)[01] は 賃金 を 増やす 事(こと){こと} は 不可能 だ と 言う{言った}",
     "vocabIds": [
+      "1251130",
       "1251200",
+      "1322990",
       "1581310",
       "1431990",
       "1602880",
       "1491520",
-      "2540200"
+      "2540200",
+      "1587040"
     ],
     "matches": {
+      "1251130": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいえい"
+      },
       "1251200": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けいえいしゃ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1431990": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ちんぎん"
       },
       "1491520": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "ふかのう"
       },
       "1581310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1587040": {
+        "start": 19,
+        "length": 2,
+        "reading": "いっ"
       },
       "1602880": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "ふやす"
       },
       "2540200": {
         "start": 18,
-        "length": 4
+        "length": 4,
+        "reading": "といった"
       }
     }
   },
@@ -1946,27 +4237,196 @@
     ],
     "indices": "経営者 側(がわ)[01] と 組合 は 和解[01] 為る(する){した}",
     "vocabIds": [
+      "1251130",
       "1251200",
+      "1322990",
       "1581310",
       "1397620",
       "1562030"
     ],
     "matches": {
+      "1251130": {
+        "start": 0,
+        "length": 2,
+        "reading": "けいえい"
+      },
       "1251200": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "けいえいしゃ"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1397620": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "くみあい"
       },
       "1562030": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "わかい"
       },
       "1581310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "180292",
+    "original": "教会はちょうど通りの向こう側にある。",
+    "en": [
+      {
+        "id": "19087",
+        "text": "The church is just across the street."
+      }
+    ],
+    "indices": "教会 は 丁度{ちょうど} 通り(とおり) の 向こう側 に 有る{ある}",
+    "vocabIds": [
+      "1237030",
+      "1432920",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1237030": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょうかい"
+      },
+      "1277140": {
+        "start": 10,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1432920": {
+        "start": 7,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1581310": {
+        "start": 13,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 10,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "182760",
+    "original": "丘の向こう側に美しい谷がある。",
+    "en": [
+      {
+        "id": "19880",
+        "text": "A beautiful valley lies behind the hill."
+      }
+    ],
+    "indices": "丘(おか) の 向こう側 に 美しい 谷 が[01] 有る{ある}",
+    "vocabIds": [
+      "1588920",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1486360",
+      "1581590"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 2,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1486360": {
+        "start": 7,
+        "length": 3,
+        "reading": "うつくしい"
+      },
+      "1581310": {
+        "start": 5,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1581590": {
+        "start": 10,
+        "length": 1,
+        "reading": "たに"
+      },
+      "1588920": {
+        "start": 0,
+        "length": 1,
+        "reading": "おか"
+      },
+      "1604830": {
+        "start": 2,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "183340",
+    "original": "機内での彼の席は通路側だった。",
+    "en": [
+      {
+        "id": "20463",
+        "text": "His seat in the plane was on the aisle."
+      }
+    ],
+    "indices": "機内 で(#2028980) の 彼(かれ)[01] の 席(せき) は 通路側 だ{だった}",
+    "vocabIds": [
+      "1221120",
+      "1483070",
+      "1000420",
+      "1382250",
+      "1433600",
+      "2020690",
+      "1581310"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 4,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1221120": {
+        "start": 0,
+        "length": 2,
+        "reading": "きない"
+      },
+      "1382250": {
+        "start": 6,
+        "length": 1,
+        "reading": "せき"
+      },
+      "1433600": {
+        "start": 8,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1483070": {
+        "start": 4,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1581310": {
+        "start": 10,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2020690": {
+        "start": 8,
+        "length": 3,
+        "reading": "つうろがわ"
       }
     }
   },
@@ -1981,32 +4441,98 @@
     ],
     "indices": "機(き) が 熟す(じゅくす){熟したら} 大胆{大胆に} 突き進む 可き{べき} だ 僕(ぼく)[01] が 側(そば)[01] に 居る(いる)[01]{いる}",
     "vocabIds": [
-      "2789210",
+      "2037700",
+      "1337800",
+      "1659340",
       "1414500",
       "1456730",
       "1521400",
       "1581310"
     ],
     "matches": {
+      "1337800": {
+        "start": 2,
+        "length": 2,
+        "reading": "じゅくし"
+      },
       "1414500": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "だいたん"
       },
       "1456730": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "つきすすむ"
       },
       "1521400": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1581310": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
-      "2789210": {
+      "1659340": {
+        "start": 2,
+        "length": 2,
+        "reading": "じゅくし"
+      },
+      "2037700": {
         "start": 0,
-        "length": 5
+        "length": 1,
+        "reading": "き"
+      }
+    }
+  },
+  {
+    "id": "183809",
+    "original": "観客側から相手チームをわらってやることは、その士気をくじくことになろう。",
+    "en": [
+      {
+        "id": "20932",
+        "text": "It would demoralize the opposing team to give it the razz from the spectators' side."
+      },
+      {
+        "id": "1307479",
+        "text": "If the spectators made fun of the other team, then it would weaken their morale."
+      }
+    ],
+    "indices": "観客 側(がわ)[01] から 相手 チーム を 笑う{わらって} 遣る[01]{やる} 事(こと){こと} は 其の[01]{その} 士気~ を 挫く{くじく}~ 事(こと){こと} になる{になろう}",
+    "vocabIds": [
+      "1214810",
+      "1581310",
+      "2128130",
+      "1401000",
+      "1307450"
+    ],
+    "matches": {
+      "1214810": {
+        "start": 0,
+        "length": 2,
+        "reading": "かんきゃく"
+      },
+      "1307450": {
+        "start": 23,
+        "length": 2,
+        "reading": "しき"
+      },
+      "1401000": {
+        "start": 5,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2128130": {
+        "start": 2,
+        "length": 3,
+        "reading": "がわから"
       }
     }
   },
@@ -2028,15 +4554,18 @@
     "matches": {
       "1158150": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いろん"
       },
       "1206900": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がくせい"
       },
       "1581310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2058,15 +4587,165 @@
     "matches": {
       "1206730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1390020": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かわ"
       },
       "1581310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "184633",
+    "original": "垣根の向こう側の芝生はいつも緑が濃い。",
+    "en": [
+      {
+        "id": "494222",
+        "text": "The grass is always greener on the other side of the fence."
+      }
+    ],
+    "indices": "垣根 の 向こう側 の 芝生 は 何時も[01]{いつも} 緑[01] が 濃い[01]",
+    "vocabIds": [
+      "1204800",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1321650",
+      "1555300",
+      "1469890"
+    ],
+    "matches": {
+      "1204800": {
+        "start": 0,
+        "length": 2,
+        "reading": "かきね"
+      },
+      "1277140": {
+        "start": 3,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1321650": {
+        "start": 8,
+        "length": 2,
+        "reading": "しばふ"
+      },
+      "1469890": {
+        "start": 16,
+        "length": 2,
+        "reading": "こい"
+      },
+      "1555300": {
+        "start": 14,
+        "length": 1,
+        "reading": "みどり"
+      },
+      "1581310": {
+        "start": 6,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 3,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "186600",
+    "original": "花屋は公園の反対側にある。",
+    "en": [
+      {
+        "id": "23736",
+        "text": "The flower shop is opposite the park."
+      }
+    ],
+    "indices": "花屋 は 公園 の 反対側 に 有る{ある}",
+    "vocabIds": [
+      "1194560",
+      "1273270",
+      "1480670",
+      "1480720",
+      "1581310"
+    ],
+    "matches": {
+      "1194560": {
+        "start": 0,
+        "length": 2,
+        "reading": "はなや"
+      },
+      "1273270": {
+        "start": 3,
+        "length": 2,
+        "reading": "こうえん"
+      },
+      "1480670": {
+        "start": 6,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 6,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1581310": {
+        "start": 8,
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "186601",
+    "original": "花屋はちょうど通りの向こう側だ。",
+    "en": [
+      {
+        "id": "23737",
+        "text": "The flower shop is just across the street."
+      }
+    ],
+    "indices": "花屋 は 丁度{ちょうど} 通り(とおり) の 向こう側 だ",
+    "vocabIds": [
+      "1194560",
+      "1432920",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1194560": {
+        "start": 0,
+        "length": 2,
+        "reading": "はなや"
+      },
+      "1277140": {
+        "start": 10,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1432920": {
+        "start": 7,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1581310": {
+        "start": 13,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 10,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -2081,52 +4760,103 @@
     ],
     "indices": "科学的 研究 は 機械的{機械的な}~ 決まりきった 仕事[01] だ{ではなく} 科学者 の 側(そば)[01] の 継続的{継続的な}~ 努力 である",
     "vocabIds": [
+      "1192700",
       "1192760",
+      "1437260",
       "1258520",
+      "1220810",
       "1780150",
+      "1591420",
+      "1609660",
       "1254150",
       "1304970",
       "1192750",
+      "1322990",
       "1581310",
+      "1251810",
       "1769740",
       "1445130"
     ],
     "matches": {
+      "1192700": {
+        "start": 0,
+        "length": 2,
+        "reading": "かがく"
+      },
       "1192750": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "かがくしゃ"
       },
       "1192760": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かがくてき"
+      },
+      "1220810": {
+        "start": 6,
+        "length": 2,
+        "reading": "きかい"
+      },
+      "1251810": {
+        "start": 29,
+        "length": 2,
+        "reading": "けいぞく"
       },
       "1254150": {
         "start": 10,
-        "length": 6
+        "length": 6,
+        "reading": "きまりきった"
       },
       "1258520": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けんきゅう"
       },
       "1304970": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "しごと"
+      },
+      "1322990": {
+        "start": 25,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1437260": {
+        "start": 2,
+        "length": 1,
+        "reading": "てき"
       },
       "1445130": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "どりょく"
       },
       "1581310": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1591420": {
+        "start": 10,
+        "length": 3,
+        "reading": "きまり"
+      },
+      "1609660": {
+        "start": 10,
+        "length": 3,
+        "reading": "きまり"
       },
       "1769740": {
         "start": 29,
-        "length": 3
+        "length": 3,
+        "reading": "けいぞくてき"
       },
       "1780150": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "きかいてき"
       }
     }
   },
@@ -2145,6 +4875,7 @@
       "1423310",
       "1257040",
       "1153610",
+      "1315840",
       "1311110",
       "1496480",
       "1318610",
@@ -2154,39 +4885,53 @@
     "matches": {
       "1153610": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "あるとき"
       },
       "1191730": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1257040": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "けんか"
       },
       "1311110": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1315840": {
+        "start": 9,
+        "length": 1,
+        "reading": "とき"
       },
       "1318610": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1423310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1496480": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "おっと"
       },
       "1514990": {
         "start": 29,
-        "length": 1
+        "length": 1,
+        "reading": "はは"
       },
       "1581310": {
         "start": 31,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2208,15 +4953,155 @@
     "matches": {
       "1191730": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1428500": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "あさひ"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "191764",
+    "original": "わたしを向こう側へわたしてください。",
+    "en": [
+      {
+        "id": "28925",
+        "text": "Please take me across the river."
+      },
+      {
+        "id": "28926",
+        "text": "Please take me over to the other side."
+      }
+    ],
+    "indices": "私(わたし)[01]{わたし} を 向こう側 へ 渡す[01]{わたして}~ 下さい{ください}",
+    "vocabIds": [
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 4,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1581310": {
+        "start": 7,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 4,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "191943",
+    "original": "わたしたちの学校は川の向こう側にあります。",
+    "en": [
+      {
+        "id": "29104",
+        "text": "Our school is across the river."
+      },
+      {
+        "id": "12261429",
+        "text": "Our school is on the other side of the river."
+      }
+    ],
+    "indices": "私たち{わたしたち} の 学校 は 川[01] の 向こう側~ に 有る{あります}",
+    "vocabIds": [
+      "1206730",
+      "1390020",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1206730": {
+        "start": 6,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1277140": {
+        "start": 11,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1390020": {
+        "start": 9,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1581310": {
+        "start": 14,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 11,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "192359",
+    "original": "レコードが終わりました。反対側にひっくり返しなさい。",
+    "en": [
+      {
+        "id": "29523",
+        "text": "The record is finished. Turn it over to the other side."
+      }
+    ],
+    "indices": "レコード[01] が 終わる{終わりました} 反対側 に ひっくり返す{ひっくり返し} 為さい{なさい}",
+    "vocabIds": [
+      "1589600",
+      "1589590",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1601870"
+    ],
+    "matches": {
+      "1480670": {
+        "start": 12,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 12,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1581310": {
+        "start": 14,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1589590": {
+        "start": 5,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1589600": {
+        "start": 5,
+        "length": 3,
+        "reading": "おわり"
+      },
+      "1601870": {
+        "start": 16,
+        "length": 6,
+        "reading": "ひっくりかえし"
       }
     }
   },
@@ -2233,20 +5118,164 @@
     "vocabIds": [
       "1311110",
       "1581310",
-      "1547720"
+      "1547720",
+      "1547710"
     ],
     "matches": {
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1547710": {
+        "start": 7,
+        "length": 1,
+        "reading": "き"
       },
       "1547720": {
         "start": 7,
-        "length": 2
+        "length": 1,
+        "reading": "き"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "196504",
+    "original": "ボールは道の向こう側に転がった。",
+    "en": [
+      {
+        "id": "33682",
+        "text": "The ball rolled across the road."
+      }
+    ],
+    "indices": "ボール(#1123550)[01] は 道(みち) の 向こう側 に 転がる{転がった}",
+    "vocabIds": [
+      "1454080",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1441000"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 6,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1441000": {
+        "start": 11,
+        "length": 3,
+        "reading": "ころがっ"
+      },
+      "1454080": {
+        "start": 4,
+        "length": 1,
+        "reading": "みち"
+      },
+      "1581310": {
+        "start": 9,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 6,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "198042",
+    "original": "バス停は道路の向こう側にあります。",
+    "en": [
+      {
+        "id": "35231",
+        "text": "The bus stop is across the street."
+      }
+    ],
+    "indices": "バス停 は 道路 の 向こう側 に 有る{あります}",
+    "vocabIds": [
+      "1098580",
+      "1454290",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1098580": {
+        "start": 0,
+        "length": 3,
+        "reading": "ばすてい"
+      },
+      "1277140": {
+        "start": 7,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1454290": {
+        "start": 4,
+        "length": 2,
+        "reading": "どうろ"
+      },
+      "1581310": {
+        "start": 10,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 7,
+        "length": 4,
+        "reading": "むこうがわ"
+      }
+    }
+  },
+  {
+    "id": "198325",
+    "original": "パイプ屋は通りの向こう側です。",
+    "en": [
+      {
+        "id": "35517",
+        "text": "The pipe shop is across the street."
+      }
+    ],
+    "indices": "パイプ[02] 屋[01] は 通り(とおり) の 向こう側 です",
+    "vocabIds": [
+      "2082160",
+      "1432920",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 8,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1432920": {
+        "start": 5,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1581310": {
+        "start": 11,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 8,
+        "length": 4,
+        "reading": "むこうがわ"
+      },
+      "2082160": {
+        "start": 3,
+        "length": 1,
+        "reading": "や"
       }
     }
   },
@@ -2262,66 +5291,90 @@
     "indices": "NI{ニコラス} 嬢[02] は 時間[02] 分(ふん) 掛ける[04]{かけて} 英国 側(がわ)[01] の から 仏蘭西{フランス} に 向かう{向かって} 泳ぐ{泳ぎ} 次(つぎ)[01] に 向き を 変える{変えて} 英国 へ 戻って来る{戻ってきた}",
     "vocabIds": [
       "1355930",
-      "2845368",
-      "1215230",
+      "1315920",
       "2038580",
+      "1502860",
       "1174450",
       "1581310",
       "1604800",
+      "1174340",
       "1613570",
       "2600340",
       "1277040",
       "1510650",
+      "1864130",
       "1535880"
     ],
     "matches": {
+      "1174340": {
+        "start": 34,
+        "length": 2,
+        "reading": "およぎ"
+      },
       "1174450": {
         "start": 15,
-        "length": 2
-      },
-      "1215230": {
-        "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "えいこく"
       },
       "1277040": {
         "start": 39,
-        "length": 2
+        "length": 2,
+        "reading": "むき"
+      },
+      "1315920": {
+        "start": 7,
+        "length": 2,
+        "reading": "じかん"
       },
       "1355930": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "じょう"
+      },
+      "1502860": {
+        "start": 11,
+        "length": 1,
+        "reading": "ふん"
       },
       "1510650": {
         "start": 42,
-        "length": 3
+        "length": 2,
+        "reading": "かえ"
       },
       "1535880": {
         "start": 48,
-        "length": 3
+        "length": 2,
+        "reading": "もどっ"
       },
       "1581310": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1604800": {
         "start": 30,
-        "length": 4
+        "length": 3,
+        "reading": "むかっ"
       },
       "1613570": {
         "start": 34,
-        "length": 2
+        "length": 2,
+        "reading": "およぎ"
+      },
+      "1864130": {
+        "start": 42,
+        "length": 2,
+        "reading": "かえ"
       },
       "2038580": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "はちふん"
       },
       "2600340": {
         "start": 37,
-        "length": 2
-      },
-      "2845368": {
-        "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "つぎに"
       }
     }
   },
@@ -2342,11 +5395,13 @@
     "matches": {
       "1220210": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "つくえ"
       },
       "1581310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2367,11 +5422,13 @@
     "matches": {
       "1279170": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こうげき"
       },
       "1581310": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2392,11 +5449,13 @@
     "matches": {
       "1258330": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "いぬ"
       },
       "1581310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2414,29 +5473,34 @@
       "1281180",
       "1581310",
       "1482990",
-      "2837865",
+      "1590750",
       "1420650"
     ],
     "matches": {
       "1281180": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こうてい"
       },
       "1420650": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "ちてき"
       },
       "1482990": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ひてい"
       },
       "1581310": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
-      "2837865": {
+      "1590750": {
         "start": 15,
-        "length": 1
+        "length": 3,
+        "reading": "かわさ"
       }
     }
   },
@@ -2458,15 +5522,18 @@
     "matches": {
       "1215320": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "まちがい"
       },
       "1483090": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2488,15 +5555,18 @@
     "matches": {
       "1215320": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "まちがい"
       },
       "1483090": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1581310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2520,23 +5590,73 @@
     "matches": {
       "1155090": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "いがい"
       },
       "1335080": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1444990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "とし"
       },
       "1520580": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ぼうび"
       },
       "1581310": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "207735",
+    "original": "その通りの向こう側にホテルがある。",
+    "en": [
+      {
+        "id": "44989",
+        "text": "There's a hotel across the street."
+      }
+    ],
+    "indices": "その通り[02] の 向こう側 に ホテル が[01] 有る{ある}",
+    "vocabIds": [
+      "2057830",
+      "1432920",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 5,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1432920": {
+        "start": 2,
+        "length": 2,
+        "reading": "とおり"
+      },
+      "1581310": {
+        "start": 8,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 5,
+        "length": 4,
+        "reading": "むこうがわ"
+      },
+      "2057830": {
+        "start": 0,
+        "length": 4,
+        "reading": "そのとおり"
       }
     }
   },
@@ -2552,21 +5672,30 @@
     "indices": "その通り[02] の 何方(どちら){どちら} 側(がわ)[01] にも 沢山{たくさん} の 店(みせ) が[01] 有る{ある}",
     "vocabIds": [
       "2057830",
+      "1432920",
       "1581310",
       "1582120"
     ],
     "matches": {
+      "1432920": {
+        "start": 2,
+        "length": 2,
+        "reading": "とおり"
+      },
       "1581310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1582120": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "みせ"
       },
       "2057830": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "そのとおり"
       }
     }
   },
@@ -2589,19 +5718,23 @@
     "matches": {
       "1311110": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1432980": {
         "start": 12,
-        "length": 5
+        "length": 4,
+        "reading": "とおりすぎ"
       },
       "1580290": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじょ"
       },
       "1581310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2616,37 +5749,106 @@
     ],
     "indices": "其の[01]{その} 事故 は 運転手 の 側(そば)[01] の 過ち から 起こる{起こった}",
     "vocabIds": [
-      "2665570",
-      "1267120",
+      "1313850",
+      "1172830",
       "1172870",
+      "1327190",
       "1581310",
       "1196010",
       "1223680"
     ],
     "matches": {
+      "1172830": {
+        "start": 5,
+        "length": 2,
+        "reading": "うんてん"
+      },
       "1172870": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "うんてんしゅ"
       },
       "1196010": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "あやまち"
       },
       "1223680": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "おこっ"
       },
-      "1267120": {
-        "start": 3,
-        "length": 1
+      "1313850": {
+        "start": 2,
+        "length": 2,
+        "reading": "じこ"
+      },
+      "1327190": {
+        "start": 7,
+        "length": 1,
+        "reading": "しゅ"
       },
       "1581310": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "211026",
+    "original": "その建物は部屋の反対側からよく見える。",
+    "en": [
+      {
+        "id": "48297",
+        "text": "That building can easily be seen from the other side of the room."
+      }
+    ],
+    "indices": "其の[01]{その} 建物 は 部屋[01] の 反対側 から 良く[01]{よく} 見える(みえる)",
+    "vocabIds": [
+      "1257540",
+      "1499320",
+      "1480670",
+      "1480720",
+      "1581310",
+      "2128130",
+      "1259140"
+    ],
+    "matches": {
+      "1257540": {
+        "start": 2,
+        "length": 2,
+        "reading": "たてもの"
       },
-      "2665570": {
-        "start": 0,
-        "length": 3
+      "1259140": {
+        "start": 15,
+        "length": 3,
+        "reading": "みえる"
+      },
+      "1480670": {
+        "start": 8,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 8,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1499320": {
+        "start": 5,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1581310": {
+        "start": 10,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2128130": {
+        "start": 10,
+        "length": 3,
+        "reading": "がわから"
       }
     }
   },
@@ -2670,23 +5872,28 @@
     "matches": {
       "1198360": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かいぎ"
       },
       "1424410": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうし"
       },
       "1451850": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "どうい"
       },
       "1581310": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1604480": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "みこみ"
       }
     }
   },
@@ -2708,15 +5915,18 @@
     "matches": {
       "1191730": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1390020": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かわ"
       },
       "1581310": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2737,11 +5947,13 @@
     "matches": {
       "1291800": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "すわる"
       },
       "1581310": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2761,7 +5973,77 @@
     "matches": {
       "1581310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "225770",
+    "original": "ギリシャのフットボールの試合では、一方のチームの選手は相手チームの陣地のラインの向こう側にボールを持ち込もうとしたのです。",
+    "en": [
+      {
+        "id": "63108",
+        "text": "In the Greek football game, the players on one team tried to carry a ball across a line in the other team's territory."
+      }
+    ],
+    "indices": "希臘{ギリシャ} の フットボール の 試合 で(#2028980) は 一方(いっぽう)[01] の チーム の 選手 は 相手 チーム の 陣地 の ライン の 向こう側 に ボール(#1123550)[01] を 持ち込む[01]{持ち込もう} とする{とした} のです",
+    "vocabIds": [
+      "1312420",
+      "1166510",
+      "1392250",
+      "1401000",
+      "1370210",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1315590"
+    ],
+    "matches": {
+      "1166510": {
+        "start": 17,
+        "length": 2,
+        "reading": "いっぽう"
+      },
+      "1277140": {
+        "start": 40,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1312420": {
+        "start": 12,
+        "length": 2,
+        "reading": "しあい"
+      },
+      "1315590": {
+        "start": 49,
+        "length": 4,
+        "reading": "もちこも"
+      },
+      "1370210": {
+        "start": 33,
+        "length": 2,
+        "reading": "じんち"
+      },
+      "1392250": {
+        "start": 24,
+        "length": 2,
+        "reading": "せんしゅ"
+      },
+      "1401000": {
+        "start": 27,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1581310": {
+        "start": 43,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 40,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -2786,27 +6068,33 @@
     "matches": {
       "1153760": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "あんらく"
       },
       "1157070": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "いす"
       },
       "1193610": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1259140": {
         "start": 25,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
       },
       "1291800": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "すわっ"
       },
       "1581310": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -2822,31 +6110,42 @@
     "indices": "何時(いつ){いつ} 側(そば)[01] を 通る{通って} も 富士山 は 雲 に 隠れる[02]{隠れている}",
     "vocabIds": [
       "1581310",
-      "1432850",
+      "1433030",
       "1496800",
       "1173100",
-      "1170660"
+      "1170660",
+      "1613470"
     ],
     "matches": {
       "1170660": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "かくれ"
       },
       "1173100": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "くも"
       },
-      "1432850": {
+      "1433030": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "とおっ"
       },
       "1496800": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "ふじさん"
       },
       "1581310": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1613470": {
+        "start": 15,
+        "length": 2,
+        "reading": "かくれ"
       }
     }
   },
@@ -2864,34 +6163,349 @@
       "1581310",
       "1360980",
       "1425080",
+      "1562210",
       "1562240",
+      "1272110",
+      "1279730",
       "2858904",
+      "1592250",
       "1511040"
     ],
     "matches": {
+      "1272110": {
+        "start": 20,
+        "length": 2,
+        "reading": "こうしょう"
+      },
+      "1279730": {
+        "start": 23,
+        "length": 2,
+        "reading": "こうせい"
+      },
       "1360980": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "こころがわり"
       },
       "1425080": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうとう"
       },
       "1511040": {
         "start": 27,
-        "length": 2
+        "length": 2,
+        "reading": "へんこう"
+      },
+      "1562210": {
+        "start": 18,
+        "length": 2,
+        "reading": "わへい"
       },
       "1562240": {
         "start": 18,
-        "length": 4
+        "length": 4,
+        "reading": "わへいこうしょう"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1592250": {
+        "start": 25,
+        "length": 1,
+        "reading": "こく"
       },
       "2858904": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "こうせいこく"
+      }
+    }
+  },
+  {
+    "id": "236531",
+    "original": "「それに、地球の反対側だと考えればそんなに高くはないわよ」と言う。",
+    "en": [
+      {
+        "id": "73865",
+        "text": "\"Besides,\" she says, \"it doesn't cost much when you think it's the other side of the world.\""
+      }
+    ],
+    "indices": "其れ[01]{それ} に 地球{地球の} 反対側 だ と 考える{考えれば} そんなに 高い[02]{高く} は 無い{ない} わ よ と 言う",
+    "vocabIds": [
+      "1420970",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1281020",
+      "1283190",
+      "1922760",
+      "1587040"
+    ],
+    "matches": {
+      "1281020": {
+        "start": 13,
+        "length": 3,
+        "reading": "かんがえれ"
+      },
+      "1283190": {
+        "start": 21,
+        "length": 2,
+        "reading": "たかく"
+      },
+      "1420970": {
+        "start": 5,
+        "length": 2,
+        "reading": "ちきゅう"
+      },
+      "1480670": {
+        "start": 8,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 8,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1581310": {
+        "start": 10,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1587040": {
+        "start": 30,
+        "length": 2,
+        "reading": "いう"
+      },
+      "1922760": {
+        "start": 29,
+        "length": 3,
+        "reading": "という"
+      }
+    }
+  },
+  {
+    "id": "237219",
+    "original": "我々の最優先事項はこの論争にきっぱりと決着を付ける事だ。そのためには相手側との妥協も覚悟している。",
+    "en": [
+      {
+        "id": "23408",
+        "text": "Our top priority is to settle this dispute once and for all, so we are ready to meet them halfway."
+      }
+    ],
+    "indices": "我々 の 最[01] 優先事項~ は 此の{この} 論争 に きっぱり{きっぱりと} 決着を付ける 事(こと) だ 其の[01]{その} 為に{ために} は 相手 側(がわ)[01] と の 妥協 も 覚悟[01] 為る(する){している}",
+    "vocabIds": [
+      "1607050",
+      "1956280",
+      "2083030",
+      "2641390",
+      "1539390",
+      "1947870",
+      "1313910",
+      "1561760",
+      "1592630",
+      "1495770",
+      "1313580",
+      "1401000",
+      "2810610",
+      "1581310",
+      "1408510",
+      "1206080"
+    ],
+    "matches": {
+      "1206080": {
+        "start": 42,
+        "length": 2,
+        "reading": "かくご"
+      },
+      "1313580": {
+        "start": 25,
+        "length": 1,
+        "reading": "こと"
+      },
+      "1313910": {
+        "start": 6,
+        "length": 2,
+        "reading": "じこう"
+      },
+      "1401000": {
+        "start": 34,
+        "length": 2,
+        "reading": "あいて"
+      },
+      "1408510": {
+        "start": 39,
+        "length": 2,
+        "reading": "だきょう"
+      },
+      "1495770": {
+        "start": 22,
+        "length": 3,
+        "reading": "つける"
+      },
+      "1539390": {
+        "start": 4,
+        "length": 2,
+        "reading": "ゆうせん"
+      },
+      "1561760": {
+        "start": 11,
+        "length": 2,
+        "reading": "ろんそう"
+      },
+      "1581310": {
+        "start": 36,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1592630": {
+        "start": 19,
+        "length": 2,
+        "reading": "けっちゃく"
+      },
+      "1607050": {
+        "start": 0,
+        "length": 2,
+        "reading": "われわれ"
+      },
+      "1947870": {
+        "start": 4,
+        "length": 4,
+        "reading": "ゆうせんじこう"
+      },
+      "1956280": {
+        "start": 3,
+        "length": 1,
+        "reading": "さい"
+      },
+      "2083030": {
+        "start": 3,
+        "length": 3,
+        "reading": "さいゆうせん"
+      },
+      "2641390": {
+        "start": 3,
+        "length": 5,
+        "reading": "さいゆうせんじこう"
+      },
+      "2810610": {
+        "start": 34,
+        "length": 3,
+        "reading": "あいてがわ"
+      }
+    }
+  },
+  {
+    "id": "393889",
+    "original": "もちろん、実際に「はやぶさ」が太陽に近づいているわけではなく、図のように地球から見て太陽の反対側に位置するだけですが、このような現象を「合」と呼びます。",
+    "en": [
+      {
+        "id": "393890",
+        "text": "Of course \"Hayabusa\" is not actually closing in on the Sun, it is just positioned as in the figure so that, seen from the Earth, it is on the opposite side of the Sun; this is called 'conjunction'."
+      }
+    ],
+    "indices": "勿論{もちろん} 実際に が 太陽 に 近づく{近づいている} 訳ではない{わけではなく} 図 の 様(よう){よう} に 地球 から 見る{見て} 太陽 の 反対側 に 位置[01] 為る(する){する} 丈(だけ){だけ} です が この様{このような} 現象 を 合(ごう)[04]~ と 呼ぶ{呼びます}",
+    "vocabIds": [
+      "1321110",
+      "1321120",
+      "1408370",
+      "1242170",
+      "1370320",
+      "1420970",
+      "1259290",
+      "2256270",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1587310",
+      "1263750",
+      "1956260",
+      "1266440",
+      "2453540"
+    ],
+    "matches": {
+      "1242170": {
+        "start": 18,
+        "length": 3,
+        "reading": "ちかづい"
+      },
+      "1259290": {
+        "start": 40,
+        "length": 1,
+        "reading": "み"
+      },
+      "1263750": {
+        "start": 64,
+        "length": 2,
+        "reading": "げんしょう"
+      },
+      "1266440": {
+        "start": 71,
+        "length": 2,
+        "reading": "よび"
+      },
+      "1321110": {
+        "start": 5,
+        "length": 2,
+        "reading": "じっさい"
+      },
+      "1321120": {
+        "start": 5,
+        "length": 3,
+        "reading": "じっさいに"
+      },
+      "1370320": {
+        "start": 31,
+        "length": 1,
+        "reading": "ず"
+      },
+      "1408370": {
+        "start": 15,
+        "length": 2,
+        "reading": "たいよう"
+      },
+      "1420970": {
+        "start": 36,
+        "length": 2,
+        "reading": "ちきゅう"
+      },
+      "1480670": {
+        "start": 45,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 45,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1581310": {
+        "start": 47,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1587310": {
+        "start": 49,
+        "length": 2,
+        "reading": "いち"
+      },
+      "1956260": {
+        "start": 68,
+        "length": 1,
+        "reading": "ごう"
+      },
+      "2256270": {
+        "start": 40,
+        "length": 1,
+        "reading": "み"
+      },
+      "2453540": {
+        "start": 71,
+        "length": 2,
+        "reading": "よび"
       }
     }
   },
@@ -2909,53 +6523,171 @@
       "1284940",
       "1368670",
       "1476450",
+      "1451750",
       "1451770",
       "1278340",
       "1444340",
+      "1310370",
       "1528300",
       "1547670",
-      "1457180"
+      "1597040"
     ],
     "matches": {
       "1278340": {
         "start": 38,
-        "length": 2
+        "length": 2,
+        "reading": "こうみょう"
       },
       "1284940": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "ごうせい"
+      },
+      "1310370": {
+        "start": 44,
+        "length": 2,
+        "reading": "ほどこさ"
       },
       "1368670": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "じんたい"
       },
       "1444340": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "とりょう"
+      },
+      "1451750": {
+        "start": 33,
+        "length": 2,
+        "reading": "おなじ"
       },
       "1451770": {
         "start": 33,
-        "length": 4
-      },
-      "1457180": {
-        "start": 61,
-        "length": 2
+        "length": 4,
+        "reading": "おなじよう"
       },
       "1476450": {
         "start": 30,
-        "length": 1
+        "length": 1,
+        "reading": "はだ"
       },
       "1528300": {
         "start": 51,
-        "length": 2
+        "length": 2,
+        "reading": "みっちゃく"
       },
       "1547670": {
         "start": 56,
-        "length": 2
+        "length": 2,
+        "reading": "らたい"
       },
       "1581310": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1597040": {
+        "start": 62,
+        "length": 2,
+        "reading": "たっ"
+      }
+    }
+  },
+  {
+    "id": "774439",
+    "original": "席は窓側、通路側のどちらがよろしいですか？",
+    "en": [
+      {
+        "id": "1008012",
+        "text": "Would you prefer a window or an aisle seat?"
+      }
+    ],
+    "vocabIds": [
+      "1382250",
+      "2011970",
+      "1433600",
+      "2020690",
+      "1581310"
+    ],
+    "matches": {
+      "1382250": {
+        "start": 0,
+        "length": 1,
+        "reading": "せき"
+      },
+      "1433600": {
+        "start": 5,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 7,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2011970": {
+        "start": 2,
+        "length": 2,
+        "reading": "まどがわ"
+      },
+      "2020690": {
+        "start": 5,
+        "length": 3,
+        "reading": "つうろがわ"
+      }
+    }
+  },
+  {
+    "id": "880385",
+    "original": "公園の向こう側にきれいな川がある。",
+    "en": [
+      {
+        "id": "456559",
+        "text": "Opposite the park there is a beautiful river."
+      },
+      {
+        "id": "9840148",
+        "text": "There's a beautiful river on the other side of the park."
+      },
+      {
+        "id": "9840149",
+        "text": "On the other side of the park, there's a beautiful river."
+      }
+    ],
+    "vocabIds": [
+      "1273270",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1390020"
+    ],
+    "matches": {
+      "1273270": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうえん"
+      },
+      "1277140": {
+        "start": 3,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1390020": {
+        "start": 12,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1581310": {
+        "start": 6,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 3,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -2986,55 +6718,68 @@
     "matches": {
       "1157510": {
         "start": 58,
-        "length": 4
+        "length": 3,
+        "reading": "ことなっ"
       },
       "1214900": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "かんさつ"
       },
       "1314230": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "じぶつ"
       },
       "1320640": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "しつ"
       },
       "1379950": {
         "start": 37,
-        "length": 2
+        "length": 2,
+        "reading": "せいしん"
       },
       "1406150": {
         "start": 40,
-        "length": 2
+        "length": 2,
+        "reading": "そんざい"
       },
       "1410120": {
         "start": 28,
-        "length": 2
+        "length": 2,
+        "reading": "たいしょう"
       },
       "1417030": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "たんに"
       },
       "1458270": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "ないざい"
       },
       "1486350": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "び"
       },
       "1581310": {
         "start": 35,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1631010": {
         "start": 51,
-        "length": 3
+        "length": 3,
+        "reading": "ここじん"
       },
       "1683070": {
         "start": 64,
-        "length": 2
+        "length": 2,
+        "reading": "かんじゅ"
       }
     }
   },
@@ -3060,35 +6805,43 @@
     "matches": {
       "1151260": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "わるい"
       },
       "1281170": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "こうりょ"
       },
       "1355970": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "つねに"
       },
       "1375230": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "せいふく"
       },
       "1472610": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "はいぼく"
       },
       "1483090": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "かれら"
       },
       "1558050": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "れきし"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -3110,19 +6863,61 @@
     "matches": {
       "1516930": {
         "start": 18,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       },
       "1576870": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
       },
       "1581310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1597040": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
+      }
+    }
+  },
+  {
+    "id": "1266398",
+    "original": "通路側に座ってもいいですか。",
+    "en": [
+      {
+        "id": "278423",
+        "text": "Could I sit on the aisle?"
+      }
+    ],
+    "vocabIds": [
+      "1433600",
+      "2020690",
+      "1581310",
+      "1291800"
+    ],
+    "matches": {
+      "1291800": {
+        "start": 4,
+        "length": 2,
+        "reading": "すわっ"
+      },
+      "1433600": {
+        "start": 0,
+        "length": 2,
+        "reading": "つうろ"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2020690": {
+        "start": 0,
+        "length": 3,
+        "reading": "つうろがわ"
       }
     }
   },
@@ -3142,11 +6937,13 @@
     "matches": {
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1581310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -3160,27 +6957,43 @@
       }
     ],
     "vocabIds": [
+      "1324300",
       "2420910",
+      "1579080",
       "1390020",
       "1581310",
       "1542160"
     ],
     "matches": {
+      "1324300": {
+        "start": 0,
+        "length": 2,
+        "reading": "わかい"
+      },
       "1390020": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "かわ"
       },
       "1542160": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "あそん"
+      },
+      "1579080": {
+        "start": 2,
+        "length": 1,
+        "reading": "ころ"
       },
       "1581310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "2420910": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わかいころ"
       }
     }
   },
@@ -3194,7 +7007,10 @@
       }
     ],
     "vocabIds": [
-      "1358300",
+      "1358280",
+      "1358290",
+      "1195970",
+      "1195960",
       "1259140",
       "1501110",
       "1604890",
@@ -3202,29 +7018,50 @@
       "1581310"
     ],
     "matches": {
+      "1195960": {
+        "start": 6,
+        "length": 2,
+        "reading": "すぎ"
+      },
+      "1195970": {
+        "start": 6,
+        "length": 2,
+        "reading": "すぎ"
+      },
       "1259140": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "みえる"
       },
-      "1358300": {
+      "1358280": {
         "start": 4,
-        "length": 5
+        "length": 2,
+        "reading": "たべ"
+      },
+      "1358290": {
+        "start": 4,
+        "length": 4,
+        "reading": "たべすぎ"
       },
       "1451750": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "おなじ"
       },
       "1501110": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "はら"
       },
       "1581310": {
         "start": 25,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1604890": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "め"
       }
     }
   },
@@ -3245,15 +7082,18 @@
     "matches": {
       "1299680": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "さら"
       },
       "1421850": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "おい"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -3267,27 +7107,63 @@
       }
     ],
     "vocabIds": [
-      "2248360",
-      "1275640",
       "1581310",
       "1597040"
     ],
     "matches": {
-      "1275640": {
-        "start": 1,
-        "length": 1
-      },
       "1581310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1597040": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
+      }
+    }
+  },
+  {
+    "id": "4700198",
+    "original": "トムは川の向こう側に住んでいる。",
+    "en": [
+      {
+        "id": "3410730",
+        "text": "Tom lives across the river."
+      }
+    ],
+    "vocabIds": [
+      "1390020",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1334040"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 5,
+        "length": 3,
+        "reading": "むこう"
       },
-      "2248360": {
-        "start": 0,
-        "length": 1
+      "1334040": {
+        "start": 10,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1390020": {
+        "start": 3,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1581310": {
+        "start": 8,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 5,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -3311,27 +7187,33 @@
     "matches": {
       "1247250": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1311110": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1416830": {
         "start": 27,
-        "length": 1
+        "length": 1,
+        "reading": "だれ"
       },
       "1509480": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "べつに"
       },
       "1581310": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1597040": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "たつ"
       }
     }
   },
@@ -3353,19 +7235,23 @@
     "matches": {
       "1241750": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "すじ"
       },
       "1340820": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "のべ"
       },
       "1483150": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1581310": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -3394,15 +7280,74 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "9201970",
+    "original": "自らの意志で還俗する場合と、教団側から還俗させられる場合がある。",
+    "en": [
+      {
+        "id": "9201984",
+        "text": "There are situations where you return to secular life of your own volition, and there are situations where the religious sect forces you to return to secular life."
+      }
+    ],
+    "vocabIds": [
+      "1317340",
+      "1156560",
+      "1215140",
+      "1355810",
+      "1237260",
+      "1581310",
+      "2128130"
+    ],
+    "matches": {
+      "1156560": {
+        "start": 3,
+        "length": 2,
+        "reading": "いし"
+      },
+      "1215140": {
+        "start": 6,
+        "length": 2,
+        "reading": "げんぞく"
+      },
+      "1237260": {
+        "start": 14,
+        "length": 2,
+        "reading": "きょうだん"
+      },
+      "1317340": {
+        "start": 0,
+        "length": 2,
+        "reading": "みずから"
+      },
+      "1355810": {
+        "start": 10,
+        "length": 2,
+        "reading": "ばあい"
+      },
+      "1581310": {
+        "start": 16,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "2128130": {
+        "start": 16,
+        "length": 3,
+        "reading": "がわから"
       }
     }
   },
@@ -3417,41 +7362,66 @@
     ],
     "vocabIds": [
       "1521400",
+      "1359240",
       "1359260",
+      "2037700",
       "1247250",
       "1581310",
       "1433030",
-      "2013900",
-      "1259290"
+      "1383240",
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1247250": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "きみ"
       },
       "1259290": {
         "start": 33,
-        "length": 2
+        "length": 1,
+        "reading": "み"
+      },
+      "1359240": {
+        "start": 2,
+        "length": 2,
+        "reading": "しんごう"
       },
       "1359260": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "しんごうき"
+      },
+      "1383240": {
+        "start": 18,
+        "length": 2,
+        "reading": "あかく"
       },
       "1433030": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "とおる"
       },
       "1521400": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1581310": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
-      "2013900": {
-        "start": 18,
-        "length": 1
+      "2037700": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
+      },
+      "2256270": {
+        "start": 33,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -3466,41 +7436,186 @@
     ],
     "vocabIds": [
       "1311110",
+      "1359240",
       "1359260",
+      "2037700",
       "1581310",
       "1433030",
-      "2013900",
+      "1383240",
       "2005870",
-      "1428830"
+      "1428830",
+      "1610960"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1359240": {
+        "start": 2,
+        "length": 2,
+        "reading": "しんごう"
       },
       "1359260": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "しんごうき"
+      },
+      "1383240": {
+        "start": 21,
+        "length": 2,
+        "reading": "あかく"
       },
       "1428830": {
         "start": 41,
-        "length": 3
+        "length": 2,
+        "reading": "ながめ"
       },
       "1433030": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "とおる"
       },
       "1581310": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1610960": {
+        "start": 41,
+        "length": 2,
+        "reading": "ながめ"
       },
       "2005870": {
         "start": 37,
-        "length": 4
+        "length": 4,
+        "reading": "もうすこし"
       },
-      "2013900": {
-        "start": 21,
-        "length": 1
+      "2037700": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
+      }
+    }
+  },
+  {
+    "id": "9840157",
+    "original": "公園の反対側にはきれいな川が流れています。",
+    "en": [
+      {
+        "id": "9840148",
+        "text": "There's a beautiful river on the other side of the park."
+      }
+    ],
+    "vocabIds": [
+      "1273270",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1390020",
+      "1552140",
+      "1552130"
+    ],
+    "matches": {
+      "1273270": {
+        "start": 0,
+        "length": 2,
+        "reading": "こうえん"
+      },
+      "1390020": {
+        "start": 12,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1480670": {
+        "start": 3,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 3,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1552130": {
+        "start": 14,
+        "length": 2,
+        "reading": "ながれ"
+      },
+      "1552140": {
+        "start": 14,
+        "length": 2,
+        "reading": "ながれ"
+      },
+      "1581310": {
+        "start": 5,
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "9963943",
+    "original": "反対側にはモスクがあります。",
+    "en": [
+      {
+        "id": "9361266",
+        "text": "There's a mosque on the other side."
+      }
+    ],
+    "vocabIds": [
+      "1480670",
+      "1480720",
+      "1581310"
+    ],
+    "matches": {
+      "1480670": {
+        "start": 0,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 0,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1581310": {
+        "start": 2,
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "9963944",
+    "original": "向こう側にモスクがあるよ。",
+    "en": [
+      {
+        "id": "9361266",
+        "text": "There's a mosque on the other side."
+      }
+    ],
+    "vocabIds": [
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 0,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1581310": {
+        "start": 3,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 0,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -3514,82 +7629,115 @@
       }
     ],
     "vocabIds": [
+      "1750010",
       "2787190",
+      "1263750",
       "1420470",
+      "1577100",
       "2840504",
       "1522240",
       "1465590",
+      "1578850",
       "1578790",
       "2757880",
+      "1587040",
       "1447180",
       "1580640",
       "1531710",
-      "1587040",
       "1581310",
       "1581180",
-      "1750010",
       "1589350"
     ],
     "matches": {
+      "1263750": {
+        "start": 7,
+        "length": 2,
+        "reading": "げんしょう"
+      },
       "1420470": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "しっ"
       },
       "1447180": {
         "start": 54,
-        "length": 2
+        "length": 2,
+        "reading": "とうこう"
       },
       "1465590": {
         "start": 30,
-        "length": 3
+        "length": 2,
+        "reading": "はいっ"
       },
       "1522240": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "ほんや"
       },
       "1531710": {
         "start": 60,
-        "length": 2
+        "length": 2,
+        "reading": "なまえ"
+      },
+      "1577100": {
+        "start": 19,
+        "length": 1,
+        "reading": "なに"
       },
       "1578790": {
         "start": 38,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 38,
+        "length": 2,
+        "reading": "いき"
       },
       "1580640": {
         "start": 58,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1581180": {
         "start": 113,
-        "length": 2
+        "length": 2,
+        "reading": "ぜんこく"
       },
       "1581310": {
         "start": 95,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1587040": {
-        "start": 93,
-        "length": 2
+        "start": 46,
+        "length": 2,
+        "reading": "いう"
       },
       "1589350": {
         "start": 128,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       },
       "1750010": {
-        "start": 117,
-        "length": 2
+        "start": 2,
+        "length": 2,
+        "reading": "あおき"
       },
       "2757880": {
         "start": 44,
-        "length": 4
+        "length": 4,
+        "reading": "っていう"
       },
       "2787190": {
         "start": 2,
-        "length": 7
+        "length": 7,
+        "reading": "あおきまりこげんしょう"
       },
       "2840504": {
         "start": 19,
-        "length": 3
+        "length": 3,
+        "reading": "なにそれ"
       }
     }
   },
@@ -3603,6 +7751,7 @@
       }
     ],
     "vocabIds": [
+      "1416830",
       "2864173",
       "1343100",
       "1590500",
@@ -3617,43 +7766,58 @@
     "matches": {
       "1158210": {
         "start": 55,
-        "length": 3
+        "length": 2,
+        "reading": "うつっ"
       },
       "1193610": {
         "start": 53,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
       },
       "1193950": {
         "start": 59,
-        "length": 2
+        "length": 2,
+        "reading": "かじ"
       },
       "1343100": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ところ"
+      },
+      "1416830": {
+        "start": 1,
+        "length": 1,
+        "reading": "だれ"
       },
       "1421850": {
         "start": 13,
-        "length": 3
+        "length": 2,
+        "reading": "おい"
       },
       "1499720": {
         "start": 46,
-        "length": 1
+        "length": 1,
+        "reading": "かぜ"
       },
       "1521400": {
         "start": 20,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1581310": {
         "start": 30,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       },
       "1590500": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "かとりせんこう"
       },
       "2864173": {
         "start": 1,
-        "length": 2
+        "length": 2,
+        "reading": "だれが"
       }
     }
   },
@@ -3675,19 +7839,229 @@
     "matches": {
       "1184450": {
         "start": 4,
-        "length": 3
+        "length": 2,
+        "reading": "くだっ"
       },
       "1290800": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ひだり"
       },
       "1454080": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "みち"
       },
       "1581310": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "10742817",
+    "original": "アメリカもイギリスも日本の反対側だし、うまく時間合わせられるかなぁ。",
+    "en": [
+      {
+        "id": "10742820",
+        "text": "Both the U.S. and the U.K. are across the world from Japan, so I wonder if I'll be able to adjust to the time difference well."
+      }
+    ],
+    "vocabIds": [
+      "1582710",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1315920",
+      "1284480",
+      "1284470"
+    ],
+    "matches": {
+      "1284470": {
+        "start": 24,
+        "length": 3,
+        "reading": "あわせ"
+      },
+      "1284480": {
+        "start": 24,
+        "length": 3,
+        "reading": "あわせ"
+      },
+      "1315920": {
+        "start": 22,
+        "length": 2,
+        "reading": "じかん"
+      },
+      "1480670": {
+        "start": 13,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 13,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1581310": {
+        "start": 15,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1582710": {
+        "start": 10,
+        "length": 2,
+        "reading": "にっぽん"
+      }
+    }
+  },
+  {
+    "id": "10752480",
+    "original": "テーブルの反対側に座っている方はどなたですか？",
+    "en": [
+      {
+        "id": "1276066",
+        "text": "Who's the person sitting at the other end of the table?"
+      }
+    ],
+    "vocabIds": [
+      "1480670",
+      "1480720",
+      "1581310",
+      "1291800",
+      "1516930"
+    ],
+    "matches": {
+      "1291800": {
+        "start": 9,
+        "length": 2,
+        "reading": "すわっ"
+      },
+      "1480670": {
+        "start": 5,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 5,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1516930": {
+        "start": 14,
+        "length": 1,
+        "reading": "ほう"
+      },
+      "1581310": {
+        "start": 7,
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "10919728",
+    "original": "トムは水に飛び込んで反対側まで泳いだ。",
+    "en": [
+      {
+        "id": "9331161",
+        "text": "Tom dove into the water and swam to the other side."
+      }
+    ],
+    "vocabIds": [
+      "1371260",
+      "1598890",
+      "1480670",
+      "1480720",
+      "1581310",
+      "1174340"
+    ],
+    "matches": {
+      "1174340": {
+        "start": 15,
+        "length": 2,
+        "reading": "およい"
+      },
+      "1371260": {
+        "start": 3,
+        "length": 1,
+        "reading": "みず"
+      },
+      "1480670": {
+        "start": 10,
+        "length": 2,
+        "reading": "はんたい"
+      },
+      "1480720": {
+        "start": 10,
+        "length": 3,
+        "reading": "はんたいがわ"
+      },
+      "1581310": {
+        "start": 12,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1598890": {
+        "start": 5,
+        "length": 4,
+        "reading": "とびこん"
+      }
+    }
+  },
+  {
+    "id": "11095670",
+    "original": "私たちの学校は、駅の向こう側です。",
+    "en": [
+      {
+        "id": "4368258",
+        "text": "Our school is on the other side of the station."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1311300",
+      "1206730",
+      "1175140",
+      "1277140",
+      "1604830",
+      "1581310"
+    ],
+    "matches": {
+      "1175140": {
+        "start": 8,
+        "length": 1,
+        "reading": "えき"
+      },
+      "1206730": {
+        "start": 4,
+        "length": 2,
+        "reading": "がっこう"
+      },
+      "1277140": {
+        "start": 10,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1311300": {
+        "start": 0,
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1581310": {
+        "start": 13,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 10,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -3713,19 +8087,23 @@
     "matches": {
       "1171900": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
       },
       "1282790": {
         "start": 14,
-        "length": 4
+        "length": 2,
+        "reading": "ふら"
       },
       "1302680": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "やま"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -3746,15 +8124,70 @@
     "matches": {
       "1334040": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "すん"
       },
       "1390020": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "かわ"
       },
       "1581310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "11178887",
+    "original": "トムは川の向こう側に住んでます。",
+    "en": [
+      {
+        "id": "9579303",
+        "text": "Tom lives on that side of the river."
+      },
+      {
+        "id": "3410730",
+        "text": "Tom lives across the river."
+      },
+      {
+        "id": "7731868",
+        "text": "Tom lives on the other side of the river."
+      }
+    ],
+    "vocabIds": [
+      "1390020",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1334040"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 5,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1334040": {
+        "start": 10,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1390020": {
+        "start": 3,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1581310": {
+        "start": 8,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 5,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -3776,19 +8209,73 @@
     "matches": {
       "1206730": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1334040": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "すん"
       },
       "1430610": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "すぐ"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      }
+    }
+  },
+  {
+    "id": "11505790",
+    "original": "山の向こう側にも人が住んでます。",
+    "en": [
+      {
+        "id": "2746959",
+        "text": "People also live behind the mountain."
+      }
+    ],
+    "vocabIds": [
+      "1302680",
+      "1277140",
+      "1604830",
+      "1581310",
+      "1580640",
+      "1334040"
+    ],
+    "matches": {
+      "1277140": {
+        "start": 2,
+        "length": 3,
+        "reading": "むこう"
+      },
+      "1302680": {
+        "start": 0,
+        "length": 1,
+        "reading": "やま"
+      },
+      "1334040": {
+        "start": 10,
+        "length": 2,
+        "reading": "すん"
+      },
+      "1580640": {
+        "start": 8,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1581310": {
+        "start": 5,
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1604830": {
+        "start": 2,
+        "length": 4,
+        "reading": "むこうがわ"
       }
     }
   },
@@ -3810,19 +8297,23 @@
     "matches": {
       "1180570": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "よこ"
       },
       "1387010": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "した"
       },
       "1432680": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いたい"
       },
       "1581310": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -3839,24 +8330,34 @@
       "1191730",
       "1581310",
       "1428500",
+      "1448810",
       "1448780"
     ],
     "matches": {
       "1191730": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1428500": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "あさひ"
       },
       "1448780": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "あたり"
+      },
+      "1448810": {
+        "start": 11,
+        "length": 3,
+        "reading": "あたり"
       },
       "1581310": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
       }
     }
   },
@@ -3871,17 +8372,24 @@
     ],
     "vocabIds": [
       "1206730",
+      "2082450",
       "2124800",
+      "1585110",
       "1206700",
       "1310190",
       "1338240",
+      "1896380",
       "1241850",
+      "1357490",
       "1832740",
-      "2764520",
+      "1198360",
+      "1202440",
       "1379380",
       "1556590",
       "1447180",
+      "1160790",
       "1576260",
+      "1463770",
       "1505090",
       "1396530",
       "1326980",
@@ -3891,81 +8399,135 @@
       "1460950"
     ],
     "matches": {
+      "1160790": {
+        "start": 52,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1198360": {
+        "start": 35,
+        "length": 2,
+        "reading": "かいぎ"
+      },
+      "1202440": {
+        "start": 38,
+        "length": 2,
+        "reading": "ひらか"
+      },
       "1206700": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "がくぎょう"
       },
       "1206730": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "がっこう"
       },
       "1241850": {
         "start": 31,
-        "length": 2
+        "length": 2,
+        "reading": "きんきゅう"
       },
       "1310190": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "ししょう"
       },
       "1326980": {
         "start": 65,
-        "length": 4
+        "length": 2,
+        "reading": "とら"
       },
       "1338240": {
         "start": 24,
-        "length": 2
+        "length": 1,
+        "reading": "で"
+      },
+      "1357490": {
+        "start": 33,
+        "length": 2,
+        "reading": "しょくいん"
       },
       "1379380": {
         "start": 43,
-        "length": 2
+        "length": 2,
+        "reading": "せいと"
       },
       "1396530": {
         "start": 62,
-        "length": 2
+        "length": 2,
+        "reading": "そち"
       },
       "1410050": {
         "start": 105,
-        "length": 2
+        "length": 2,
+        "reading": "たいさく"
       },
       "1447180": {
         "start": 49,
-        "length": 2
+        "length": 2,
+        "reading": "とうこう"
       },
       "1460950": {
         "start": 108,
-        "length": 2
+        "length": 2,
+        "reading": "なんこう"
+      },
+      "1463770": {
+        "start": 53,
+        "length": 1,
+        "reading": "にち"
       },
       "1470910": {
         "start": 90,
-        "length": 2
+        "length": 2,
+        "reading": "はあく"
       },
       "1505090": {
         "start": 56,
-        "length": 1
+        "length": 1,
+        "reading": "ぶん"
       },
       "1556590": {
         "start": 46,
-        "length": 2
+        "length": 2,
+        "reading": "れいぶん"
       },
       "1576260": {
         "start": 52,
-        "length": 2
+        "length": 2,
+        "reading": "いちにち"
       },
       "1581310": {
         "start": 79,
-        "length": 1
+        "length": 1,
+        "reading": "がわ"
+      },
+      "1585110": {
+        "start": 14,
+        "length": 2,
+        "reading": "りゅうこう"
       },
       "1832740": {
         "start": 33,
-        "length": 4
+        "length": 4,
+        "reading": "しょくいんかいぎ"
+      },
+      "1896380": {
+        "start": 24,
+        "length": 1,
+        "reading": "で"
+      },
+      "2082450": {
+        "start": 13,
+        "length": 1,
+        "reading": "だい"
       },
       "2124800": {
         "start": 13,
-        "length": 3
-      },
-      "2764520": {
-        "start": 38,
-        "length": 4
+        "length": 3,
+        "reading": "だいりゅうこう"
       }
     }
   }

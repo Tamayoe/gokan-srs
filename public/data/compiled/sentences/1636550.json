@@ -11,7 +11,9 @@
     "indices": "彼女[01] は 肩が凝る[03]~ 本(ほん)[01] を 読む 気(き)[03] には 成る{なれなかった}",
     "vocabIds": [
       "1483150",
+      "1258950",
       "1636550",
+      "1239070",
       "1522150",
       "1456360",
       "1221520"
@@ -19,111 +21,38 @@
     "matches": {
       "1221520": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "き"
+      },
+      "1239070": {
+        "start": 5,
+        "length": 2,
+        "reading": "こる"
+      },
+      "1258950": {
+        "start": 3,
+        "length": 1,
+        "reading": "かた"
       },
       "1456360": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "よむ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1522150": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1636550": {
         "start": 3,
-        "length": 4
-      }
-    }
-  },
-  {
-    "id": "157278",
-    "original": "肩が凝った。",
-    "en": [
-      {
-        "id": "257255",
-        "text": "I have a stiff shoulder."
-      }
-    ],
-    "indices": "肩が凝る[01]{肩が凝った}",
-    "vocabIds": [
-      "1636550"
-    ],
-    "matches": {
-      "1636550": {
-        "start": 0,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "175203",
-    "original": "肩が凝ってるんです。",
-    "en": [
-      {
-        "id": "239263",
-        "text": "My shoulders feel stiff."
-      }
-    ],
-    "indices": "肩が凝る[01]{肩が凝ってる}~ のです{んです}",
-    "vocabIds": [
-      "1636550"
-    ],
-    "matches": {
-      "1636550": {
-        "start": 0,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "894625",
-    "original": "一日中パソコンに向かってると、肩が凝ってしょうがない。",
-    "en": [
-      {
-        "id": "9531615",
-        "text": "I've been on the computer all day, and my shoulders are really stiff."
-      }
-    ],
-    "vocabIds": [
-      "1165500",
-      "1604800",
-      "1636550"
-    ],
-    "matches": {
-      "1165500": {
-        "start": 0,
-        "length": 3
-      },
-      "1604800": {
-        "start": 8,
-        "length": 4
-      },
-      "1636550": {
-        "start": 15,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "12700649",
-    "original": "肩が凝っている。",
-    "en": [
-      {
-        "id": "5774432",
-        "text": "My shoulders are stiff."
-      }
-    ],
-    "vocabIds": [
-      "1636550"
-    ],
-    "matches": {
-      "1636550": {
-        "start": 0,
-        "length": 5
+        "length": 4,
+        "reading": "かたがこる"
       }
     }
   }

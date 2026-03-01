@@ -19,23 +19,28 @@
     "matches": {
       "1218810": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きげき"
       },
       "1277450": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483280": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ひげき"
       },
       "1516930": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       }
     }
   },
@@ -59,23 +64,28 @@
     "matches": {
       "1218810": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きげき"
       },
       "1253410": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "げきじょう"
       },
       "1259290": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "みる"
       },
       "1277450": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       }
     }
   },
@@ -90,27 +100,43 @@
     ],
     "indices": "私たち は 倫敦{ロンドン} に 喜劇~ を 見に行く{見に行った}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1218810",
+      "1259290",
       "2256270",
-      "1589060"
+      "1578850"
     ],
     "matches": {
       "1218810": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "きげき"
+      },
+      "1259290": {
+        "start": 12,
+        "length": 1,
+        "reading": "み"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
-      "1589060": {
+      "1578850": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "いっ"
       },
       "2256270": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -134,23 +160,28 @@
     "matches": {
       "1204400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "がいして"
       },
       "1218810": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "きげき"
       },
       "1277450": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483280": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひげき"
       }
     }
   },
@@ -173,19 +204,23 @@
     "matches": {
       "1202150": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "みな"
       },
       "1207270": {
         "start": 9,
-        "length": 4
+        "length": 3,
+        "reading": "たのしん"
       },
       "1218810": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きげき"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -207,15 +242,114 @@
     "matches": {
       "1218810": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きげき"
       },
       "1343950": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "かい"
       },
       "1483280": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ひげき"
+      }
+    }
+  },
+  {
+    "id": "231104",
+    "original": "あの喜劇役者は大変こっけいだ。",
+    "en": [
+      {
+        "id": "68471",
+        "text": "That comedian is very funny."
+      }
+    ],
+    "indices": "彼の(あの){あの} 喜劇 役者 は 大変[01] 滑稽{こっけい} だ",
+    "vocabIds": [
+      "1218810",
+      "2861745",
+      "1538010",
+      "1415000"
+    ],
+    "matches": {
+      "1218810": {
+        "start": 2,
+        "length": 2,
+        "reading": "きげき"
+      },
+      "1415000": {
+        "start": 7,
+        "length": 2,
+        "reading": "たいへん"
+      },
+      "1538010": {
+        "start": 4,
+        "length": 2,
+        "reading": "やくしゃ"
+      },
+      "2861745": {
+        "start": 2,
+        "length": 4,
+        "reading": "きげきやくしゃ"
+      }
+    }
+  },
+  {
+    "id": "231105",
+    "original": "あの喜劇役者のジョークときたら、どれもこれも古くて、以前に聞いたことのあるものばかりだ。",
+    "en": [
+      {
+        "id": "68472",
+        "text": "That comic's jokes are all old hat and we've heard them before."
+      }
+    ],
+    "indices": "彼の(あの){あの} 喜劇 役者 の ジョーク と来たら{ときたら} 何れも此れも{どれもこれも}~ 古い{古くて} 以前[02] に 聞く{聞いた} 事(こと){こと} 之(の)[03]{の} 有る{ある} 物(もの){もの} 許り{ばかり} だ",
+    "vocabIds": [
+      "1218810",
+      "2861745",
+      "1538010",
+      "1265070",
+      "1265080",
+      "1155150",
+      "1591110"
+    ],
+    "matches": {
+      "1155150": {
+        "start": 26,
+        "length": 2,
+        "reading": "いぜん"
+      },
+      "1218810": {
+        "start": 2,
+        "length": 2,
+        "reading": "きげき"
+      },
+      "1265070": {
+        "start": 22,
+        "length": 2,
+        "reading": "ふるく"
+      },
+      "1265080": {
+        "start": 22,
+        "length": 2,
+        "reading": "ふるく"
+      },
+      "1538010": {
+        "start": 4,
+        "length": 2,
+        "reading": "やくしゃ"
+      },
+      "1591110": {
+        "start": 29,
+        "length": 2,
+        "reading": "きい"
+      },
+      "2861745": {
+        "start": 2,
+        "length": 4,
+        "reading": "きげきやくしゃ"
       }
     }
   },
@@ -238,23 +372,28 @@
     "matches": {
       "1150410": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あい"
       },
       "1174450": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "えいこく"
       },
       "1193260": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "かげき"
       },
       "1218810": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きげき"
       },
       "1483280": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ひげき"
       }
     }
   }

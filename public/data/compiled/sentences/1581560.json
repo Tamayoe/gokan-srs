@@ -1,5 +1,68 @@
 [
   {
+    "id": "81254",
+    "original": "毎年、浜松で凧揚げ大会が開かれる。",
+    "en": [
+      {
+        "id": "322461",
+        "text": "Each year Hamamatsu has a kite festival."
+      }
+    ],
+    "indices": "毎年 で(#2028980) 凧上げ{凧揚げ} 大会 が 開く(ひらく){開かれる}",
+    "vocabIds": [
+      "1584360",
+      "2164740",
+      "1581560",
+      "1416030",
+      "1545490",
+      "1413180",
+      "1202440",
+      "2764520"
+    ],
+    "matches": {
+      "1202440": {
+        "start": 12,
+        "length": 2,
+        "reading": "ひらか"
+      },
+      "1413180": {
+        "start": 9,
+        "length": 2,
+        "reading": "たいかい"
+      },
+      "1416030": {
+        "start": 6,
+        "length": 3,
+        "reading": "たこあげ"
+      },
+      "1545490": {
+        "start": 7,
+        "length": 2,
+        "reading": "あげ"
+      },
+      "1581560": {
+        "start": 6,
+        "length": 1,
+        "reading": "たこ"
+      },
+      "1584360": {
+        "start": 0,
+        "length": 2,
+        "reading": "まいとし"
+      },
+      "2164740": {
+        "start": 3,
+        "length": 2,
+        "reading": "はままつ"
+      },
+      "2764520": {
+        "start": 12,
+        "length": 4,
+        "reading": "ひらかれる"
+      }
+    }
+  },
+  {
     "id": "102326",
     "original": "彼は凧上げがうまい。",
     "en": [
@@ -17,15 +80,55 @@
     "matches": {
       "1352300": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "あげ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1581560": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
+      }
+    }
+  },
+  {
+    "id": "137161",
+    "original": "凧揚げをしよう。",
+    "en": [
+      {
+        "id": "276074",
+        "text": "Let's fly kites."
+      },
+      {
+        "id": "449022",
+        "text": "Let's fly a kite."
+      }
+    ],
+    "indices": "凧揚げ を 為る(する){しよう}",
+    "vocabIds": [
+      "1581560",
+      "1416030",
+      "1545490"
+    ],
+    "matches": {
+      "1416030": {
+        "start": 0,
+        "length": 3,
+        "reading": "たこあげ"
+      },
+      "1545490": {
+        "start": 1,
+        "length": 2,
+        "reading": "あげ"
+      },
+      "1581560": {
+        "start": 0,
+        "length": 1,
+        "reading": "たこ"
       }
     }
   },
@@ -47,15 +150,18 @@
     "matches": {
       "1218560": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きけん"
       },
       "1485230": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "とばす"
       },
       "1581560": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       }
     }
   },
@@ -72,6 +178,7 @@
     "vocabIds": [
       "1581560",
       "1430250",
+      "2093400",
       "1404990",
       "1245290",
       "1499080"
@@ -79,23 +186,33 @@
     "matches": {
       "1245290": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "そら"
       },
       "1404990": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "はやさ"
       },
       "1430250": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "とり"
       },
       "1499080": {
         "start": 12,
-        "length": 6
+        "length": 5,
+        "reading": "まいあがっ"
       },
       "1581560": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
+      },
+      "2093400": {
+        "start": 7,
+        "length": 1,
+        "reading": "はや"
       }
     }
   },
@@ -117,15 +234,18 @@
     "matches": {
       "1352130": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1534520": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "き"
       },
       "1581560": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       }
     }
   },
@@ -148,19 +268,23 @@
     "matches": {
       "1307850": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こども"
       },
       "1352300": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "あげ"
       },
       "1416220": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1581560": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       }
     }
   },
@@ -177,20 +301,29 @@
     "vocabIds": [
       "1581560",
       "1311450",
-      "1495770"
+      "1495770",
+      "1495750"
     ],
     "matches": {
       "1311450": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "いと"
+      },
+      "1495750": {
+        "start": 7,
+        "length": 2,
+        "reading": "つけ"
       },
       "1495770": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "つけ"
       },
       "1581560": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       }
     }
   },
@@ -212,15 +345,18 @@
     "matches": {
       "1169350": {
         "start": 4,
-        "length": 6
+        "length": 5,
+        "reading": "ひっかかっ"
       },
       "1534520": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "き"
       },
       "1581560": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       }
     }
   },
@@ -235,31 +371,48 @@
     ],
     "vocabIds": [
       "1464900",
+      "1311110",
       "1311300",
       "1490720",
       "1581560",
-      "1485230"
+      "1485230",
+      "1637130"
     ],
     "matches": {
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1464900": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "にちようび"
       },
       "1485230": {
         "start": 13,
-        "length": 4
+        "length": 3,
+        "reading": "とばし"
       },
       "1490720": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "はまべ"
       },
       "1581560": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
+      },
+      "1637130": {
+        "start": 13,
+        "length": 3,
+        "reading": "とばし"
       }
     }
   },
@@ -278,16 +431,24 @@
     ],
     "vocabIds": [
       "1581560",
+      "1473740",
       "1636070"
     ],
     "matches": {
+      "1473740": {
+        "start": 6,
+        "length": 2,
+        "reading": "かい"
+      },
       "1581560": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       },
       "1636070": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かい"
       }
     }
   },
@@ -303,20 +464,29 @@
     "vocabIds": [
       "1537360",
       "1581560",
+      "1578850",
       "1578790"
     ],
     "matches": {
       "1537360": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "のはら"
       },
       "1578790": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "いき"
+      },
+      "1578850": {
+        "start": 8,
+        "length": 2,
+        "reading": "いき"
       },
       "1581560": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       }
     }
   },
@@ -337,15 +507,18 @@
     "matches": {
       "1218560": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "きけん"
       },
       "1581560": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       },
       "2864817": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "あげる"
       }
     }
   },
@@ -365,11 +538,13 @@
     "matches": {
       "1473740": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "かっ"
       },
       "1581560": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       }
     }
   },
@@ -389,11 +564,75 @@
     "matches": {
       "1581560": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       },
       "1597890": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
+      }
+    }
+  },
+  {
+    "id": "10126634",
+    "original": "凧揚げは危険を伴う可能性があります。",
+    "en": [
+      {
+        "id": "276073",
+        "text": "Flying kites can be dangerous."
+      }
+    ],
+    "vocabIds": [
+      "1581560",
+      "1416030",
+      "1545490",
+      "1218560",
+      "1478370",
+      "1191060",
+      "1191080",
+      "1375260"
+    ],
+    "matches": {
+      "1191060": {
+        "start": 9,
+        "length": 2,
+        "reading": "かのう"
+      },
+      "1191080": {
+        "start": 9,
+        "length": 3,
+        "reading": "かのうせい"
+      },
+      "1218560": {
+        "start": 4,
+        "length": 2,
+        "reading": "きけん"
+      },
+      "1375260": {
+        "start": 11,
+        "length": 1,
+        "reading": "せい"
+      },
+      "1416030": {
+        "start": 0,
+        "length": 3,
+        "reading": "たこあげ"
+      },
+      "1478370": {
+        "start": 7,
+        "length": 2,
+        "reading": "ともなう"
+      },
+      "1545490": {
+        "start": 1,
+        "length": 2,
+        "reading": "あげ"
+      },
+      "1581560": {
+        "start": 0,
+        "length": 1,
+        "reading": "たこ"
       }
     }
   },
@@ -419,19 +658,23 @@
     "matches": {
       "1311640": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "むらさき"
       },
       "1357600": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "しょく"
       },
       "1581560": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "たこ"
       },
       "2013900": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "あか"
       }
     }
   }

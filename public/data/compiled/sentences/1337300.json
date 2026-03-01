@@ -18,19 +18,23 @@
     "matches": {
       "1337300": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1443840": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "でんわ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1548370": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "たのん"
       }
     }
   },
@@ -48,24 +52,91 @@
       "2081170",
       "1270190",
       "1337300",
+      "1207270",
       "1207250"
     ],
     "matches": {
       "1207250": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "たのしみ"
+      },
+      "1207270": {
+        "start": 16,
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1270190": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ご"
       },
       "1337300": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "2081170": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "とう"
+      }
+    }
+  },
+  {
+    "id": "124152",
+    "original": "東洋ホテルは空港からホテルまで、宿泊客の無料送迎をしています。",
+    "en": [
+      {
+        "id": "279843",
+        "text": "The Toyo Hotel has a free transportation service from the airport to the hotel for their guests."
+      }
+    ],
+    "indices": "東洋 ホテル は 空港 から ホテル 迄{まで} 宿泊 客[01] の 無料 送迎 を 為る(する){しています}",
+    "vocabIds": [
+      "1448230",
+      "1245570",
+      "1337300",
+      "2406810",
+      "1226630",
+      "1531040",
+      "1402770"
+    ],
+    "matches": {
+      "1226630": {
+        "start": 18,
+        "length": 1,
+        "reading": "きゃく"
+      },
+      "1245570": {
+        "start": 6,
+        "length": 2,
+        "reading": "くうこう"
+      },
+      "1337300": {
+        "start": 16,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1402770": {
+        "start": 22,
+        "length": 2,
+        "reading": "そうげい"
+      },
+      "1448230": {
+        "start": 0,
+        "length": 2,
+        "reading": "とうよう"
+      },
+      "1531040": {
+        "start": 20,
+        "length": 2,
+        "reading": "むりょう"
+      },
+      "2406810": {
+        "start": 16,
+        "length": 3,
+        "reading": "しゅくはくきゃく"
       }
     }
   },
@@ -86,15 +157,153 @@
     "matches": {
       "1190710": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "か"
       },
       "1337300": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1420110": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "だんじょ"
+      }
+    }
+  },
+  {
+    "id": "147832",
+    "original": "宿泊費込みの値段ですか。",
+    "en": [
+      {
+        "id": "266728",
+        "text": "Does the price include accommodation?"
+      }
+    ],
+    "indices": "宿泊 費(ひ) 込み[01] の 値段 ですか",
+    "vocabIds": [
+      "1337300",
+      "2609280",
+      "1484590",
+      "2078750",
+      "1600160"
+    ],
+    "matches": {
+      "1337300": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1484590": {
+        "start": 2,
+        "length": 1,
+        "reading": "ひ"
+      },
+      "1600160": {
+        "start": 6,
+        "length": 2,
+        "reading": "ねだん"
+      },
+      "2078750": {
+        "start": 3,
+        "length": 2,
+        "reading": "こみ"
+      },
+      "2609280": {
+        "start": 0,
+        "length": 3,
+        "reading": "しゅくはくひ"
+      }
+    }
+  },
+  {
+    "id": "147833",
+    "original": "宿泊先を教えてください。",
+    "en": [
+      {
+        "id": "266727",
+        "text": "Let me know where you're staying."
+      }
+    ],
+    "indices": "宿泊先~ を 教える{教えて} 下さい{ください}",
+    "vocabIds": [
+      "1337300",
+      "1337310",
+      "1387210",
+      "1236900",
+      "1236890"
+    ],
+    "matches": {
+      "1236890": {
+        "start": 4,
+        "length": 2,
+        "reading": "おしえ"
+      },
+      "1236900": {
+        "start": 4,
+        "length": 2,
+        "reading": "おしえ"
+      },
+      "1337300": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1337310": {
+        "start": 0,
+        "length": 3,
+        "reading": "しゅくはくさき"
+      },
+      "1387210": {
+        "start": 2,
+        "length": 1,
+        "reading": "さき"
+      }
+    }
+  },
+  {
+    "id": "147834",
+    "original": "宿泊者名簿に記入していただけますか。",
+    "en": [
+      {
+        "id": "266726",
+        "text": "Could you please sign the register?"
+      }
+    ],
+    "indices": "宿泊 者(しゃ) 名簿(めいぼ) に 記入 為る(する){して} 頂ける[01]{いただけます} か",
+    "vocabIds": [
+      "1337300",
+      "2406820",
+      "1322990",
+      "1531830",
+      "1223330"
+    ],
+    "matches": {
+      "1223330": {
+        "start": 6,
+        "length": 2,
+        "reading": "きにゅう"
+      },
+      "1322990": {
+        "start": 2,
+        "length": 1,
+        "reading": "しゃ"
+      },
+      "1337300": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1531830": {
+        "start": 3,
+        "length": 2,
+        "reading": "めいぼ"
+      },
+      "2406820": {
+        "start": 0,
+        "length": 3,
+        "reading": "しゅくはくしゃ"
       }
     }
   },
@@ -110,21 +319,36 @@
     "indices": "宿泊 を もう[03] 一晩 延長[01]~ 出来る{できます} か",
     "vocabIds": [
       "1337300",
+      "1160790",
       "1165960",
+      "1482110",
       "1176510"
     ],
     "matches": {
+      "1160790": {
+        "start": 5,
+        "length": 1,
+        "reading": "いち"
+      },
       "1165960": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いちばん"
       },
       "1176510": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "えんちょう"
       },
       "1337300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1482110": {
+        "start": 6,
+        "length": 1,
+        "reading": "ばん"
       }
     }
   },
@@ -148,7 +372,8 @@
     "matches": {
       "1337300": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       }
     }
   },
@@ -163,22 +388,31 @@
     ],
     "indices": "私たち が 宿泊 為る(する){した} ホテル の 部屋[01] は 見窄らしい{みすぼらしかった}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1337300",
       "1499320"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1337300": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1499320": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       }
     }
   },
@@ -201,19 +435,164 @@
     "matches": {
       "1267320": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "こはん"
       },
       "1337300": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1536350": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "よる"
       },
       "1607050": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "われわれ"
+      }
+    }
+  },
+  {
+    "id": "195911",
+    "original": "ホワイト氏は彼らに「お部屋の宿泊料は30ドルですから、お一人様10ドルとなります」と言いました。男性達はそれぞれ10ドルずつ支払い、部屋に上がりました。",
+    "en": [
+      {
+        "id": "33086",
+        "text": "Mr. White said to them, \"The room will be $30. $10 for each man.\" Each man gave him $10 and went up to the room."
+      }
+    ],
+    "indices": "氏(し)[01] は 彼ら(かれら) に お部屋[01] の 宿泊料 は 弗[01]{ドル} ですから 御(お){お} 一人 様(さま)[01] ドル と 成る{なります} と 言う{言いました} 男性[01] 達 は 夫れ夫れ{それぞれ} 弗[01]{ドル} ずつ 支払い 部屋[01] に 上がる{上がりました}",
+    "vocabIds": [
+      "2101130",
+      "1483090",
+      "2453580",
+      "1499320",
+      "1337300",
+      "1734300",
+      "1554270",
+      "2106010",
+      "1160790",
+      "1576150",
+      "1580640",
+      "1953400",
+      "1545790",
+      "2844736",
+      "1587040",
+      "1420160",
+      "1416220",
+      "1310300",
+      "1594480",
+      "1352290",
+      "1352190"
+    ],
+    "matches": {
+      "1160790": {
+        "start": 28,
+        "length": 1,
+        "reading": "いち"
+      },
+      "1310300": {
+        "start": 62,
+        "length": 3,
+        "reading": "しはらい"
+      },
+      "1337300": {
+        "start": 14,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1352190": {
+        "start": 69,
+        "length": 3,
+        "reading": "あがり"
+      },
+      "1352290": {
+        "start": 69,
+        "length": 3,
+        "reading": "あがり"
+      },
+      "1416220": {
+        "start": 50,
+        "length": 1,
+        "reading": "たち"
+      },
+      "1420160": {
+        "start": 48,
+        "length": 2,
+        "reading": "だんせい"
+      },
+      "1483090": {
+        "start": 6,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1499320": {
+        "start": 11,
+        "length": 2,
+        "reading": "へや"
+      },
+      "1545790": {
+        "start": 30,
+        "length": 1,
+        "reading": "さま"
+      },
+      "1554270": {
+        "start": 16,
+        "length": 1,
+        "reading": "りょう"
+      },
+      "1576150": {
+        "start": 28,
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 29,
+        "length": 1,
+        "reading": "にん"
+      },
+      "1587040": {
+        "start": 42,
+        "length": 2,
+        "reading": "いい"
+      },
+      "1594480": {
+        "start": 62,
+        "length": 3,
+        "reading": "しはらい"
+      },
+      "1734300": {
+        "start": 14,
+        "length": 3,
+        "reading": "しゅくはくりょう"
+      },
+      "1953400": {
+        "start": 29,
+        "length": 2,
+        "reading": "にんさま"
+      },
+      "2101130": {
+        "start": 4,
+        "length": 1,
+        "reading": "し"
+      },
+      "2106010": {
+        "start": 27,
+        "length": 4,
+        "reading": "おいちにんさま"
+      },
+      "2453580": {
+        "start": 10,
+        "length": 3,
+        "reading": "おへや"
+      },
+      "2844736": {
+        "start": 41,
+        "length": 3,
+        "reading": "といい"
       }
     }
   },
@@ -230,30 +609,80 @@
     "vocabIds": [
       "2101130",
       "1413180",
-      "2764520",
+      "1202440",
       "1337300",
       "1499320"
     ],
     "matches": {
+      "1202440": {
+        "start": 9,
+        "length": 2,
+        "reading": "ひらか"
+      },
       "1337300": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1413180": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "たいかい"
       },
       "1499320": {
         "start": 22,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "2101130": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "し"
+      }
+    }
+  },
+  {
+    "id": "212559",
+    "original": "そのモーテルは４００人もの宿泊客を泊められる。",
+    "en": [
+      {
+        "id": "49843",
+        "text": "The motel can accommodate as many as 400 guests."
+      }
+    ],
+    "indices": "其の[01]{その} モーテル[01] は 人(にん)[01] も の 宿泊 客[01] を 泊める{泊められる}",
+    "vocabIds": [
+      "1580640",
+      "1337300",
+      "2406810",
+      "1226630",
+      "1474860"
+    ],
+    "matches": {
+      "1226630": {
+        "start": 15,
+        "length": 1,
+        "reading": "きゃく"
       },
-      "2764520": {
-        "start": 9,
-        "length": 4
+      "1337300": {
+        "start": 13,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1474860": {
+        "start": 17,
+        "length": 2,
+        "reading": "とめ"
+      },
+      "1580640": {
+        "start": 10,
+        "length": 1,
+        "reading": "にん"
+      },
+      "2406810": {
+        "start": 13,
+        "length": 3,
+        "reading": "しゅくはくきゃく"
       }
     }
   },
@@ -275,15 +704,18 @@
     "matches": {
       "1226630": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "きゃく"
       },
       "1337300": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1580640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -304,11 +736,76 @@
     "matches": {
       "1337300": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1580640": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
+      }
+    }
+  },
+  {
+    "id": "212613",
+    "original": "そのホテルの宿泊料金は三食付きの値段です。",
+    "en": [
+      {
+        "id": "49896",
+        "text": "The rates cover all the meals at the hotel."
+      }
+    ],
+    "indices": "其の[01]{その} ホテル の 宿泊 料金 は 三食~ 付き[01] の 値段 です",
+    "vocabIds": [
+      "1337300",
+      "2147900",
+      "1554280",
+      "1579350",
+      "1300970",
+      "1956480",
+      "1583630",
+      "1600160"
+    ],
+    "matches": {
+      "1300970": {
+        "start": 11,
+        "length": 2,
+        "reading": "さんしょく"
+      },
+      "1337300": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1554280": {
+        "start": 8,
+        "length": 2,
+        "reading": "りょうきん"
+      },
+      "1579350": {
+        "start": 11,
+        "length": 1,
+        "reading": "さん"
+      },
+      "1583630": {
+        "start": 13,
+        "length": 2,
+        "reading": "つき"
+      },
+      "1600160": {
+        "start": 16,
+        "length": 2,
+        "reading": "ねだん"
+      },
+      "1956480": {
+        "start": 12,
+        "length": 1,
+        "reading": "しょく"
+      },
+      "2147900": {
+        "start": 6,
+        "length": 4,
+        "reading": "しゅくはくりょうきん"
       }
     }
   },
@@ -329,11 +826,13 @@
     "matches": {
       "1337300": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1598350": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "てつづき"
       }
     }
   },
@@ -350,20 +849,29 @@
     "vocabIds": [
       "1337300",
       "1223330",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 12,
+        "length": 3,
+        "reading": "ください"
       },
       "1223330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きにゅう"
       },
       "1337300": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       }
     }
   },
@@ -388,52 +896,141 @@
       "1408100",
       "1528150",
       "2453510",
+      "1207270",
+      "1207250",
       "1219910"
     ],
     "matches": {
       "1198360": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かいぎ"
+      },
+      "1207250": {
+        "start": 40,
+        "length": 3,
+        "reading": "たのしみ"
+      },
+      "1207270": {
+        "start": 40,
+        "length": 3,
+        "reading": "たのしみ"
       },
       "1219910": {
         "start": 49,
-        "length": 2
+        "length": 2,
+        "reading": "きぼう"
       },
       "1319280": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "しちがつ"
       },
       "1336820": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうよう"
       },
       "1337300": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1339460": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しゅっせき"
       },
       "1408100": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "たよう"
       },
       "1423310": {
         "start": 28,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1447690": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "とうきょう"
       },
       "1528150": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "みりょく"
       },
       "2453510": {
         "start": 39,
-        "length": 4
+        "length": 4,
+        "reading": "おたのしみ"
+      }
+    }
+  },
+  {
+    "id": "223158",
+    "original": "このホテルの宿泊料金はいくらですか。",
+    "en": [
+      {
+        "id": "60487",
+        "text": "What are the charges in this hotel?"
+      }
+    ],
+    "indices": "此の{この} ホテル の 宿泊 料金 は 幾ら{いくら} ですか",
+    "vocabIds": [
+      "1337300",
+      "2147900",
+      "1554280"
+    ],
+    "matches": {
+      "1337300": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1554280": {
+        "start": 8,
+        "length": 2,
+        "reading": "りょうきん"
+      },
+      "2147900": {
+        "start": 6,
+        "length": 4,
+        "reading": "しゅくはくりょうきん"
+      }
+    }
+  },
+  {
+    "id": "223159",
+    "original": "このホテルの宿泊料はいくらですか。",
+    "en": [
+      {
+        "id": "60487",
+        "text": "What are the charges in this hotel?"
+      }
+    ],
+    "indices": "此の{この} ホテル の 宿泊料~ は 幾ら{いくら} ですか",
+    "vocabIds": [
+      "1337300",
+      "1734300",
+      "1554270"
+    ],
+    "matches": {
+      "1337300": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1554270": {
+        "start": 8,
+        "length": 1,
+        "reading": "りょう"
+      },
+      "1734300": {
+        "start": 6,
+        "length": 3,
+        "reading": "しゅくはくりょう"
       }
     }
   },
@@ -455,15 +1052,18 @@
     "matches": {
       "1337300": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1580640": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1600900": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -479,56 +1079,102 @@
     "indices": "総会 の 出席者 は 特別料金 で(#2028980) 宿泊 出来る{できる} ので ホテル を 予約[01] 為る(する){する} 際(さい) は 私(わたし)[01] が 会議 出席者 だ と 伝える{伝えて} 下さい[02]",
     "vocabIds": [
       "1401490",
+      "1339460",
       "1339470",
+      "1322990",
+      "1455280",
       "1944490",
+      "1554280",
       "1337300",
       "1543750",
       "1296300",
       "1311110",
       "1198360",
       "1441870",
+      "1441860",
+      "1184280",
       "1184270"
     ],
     "matches": {
       "1184270": {
         "start": 51,
-        "length": 3
+        "length": 3,
+        "reading": "ください"
+      },
+      "1184280": {
+        "start": 51,
+        "length": 3,
+        "reading": "ください"
       },
       "1198360": {
         "start": 41,
-        "length": 2
+        "length": 2,
+        "reading": "かいぎ"
       },
       "1296300": {
         "start": 36,
-        "length": 1
+        "length": 1,
+        "reading": "さい"
       },
       "1311110": {
         "start": 39,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1322990": {
+        "start": 8,
+        "length": 1,
+        "reading": "しゃ"
       },
       "1337300": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1339460": {
+        "start": 6,
+        "length": 2,
+        "reading": "しゅっせき"
       },
       "1339470": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "しゅっせきしゃ"
       },
       "1401490": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "そうかい"
+      },
+      "1441860": {
+        "start": 48,
+        "length": 2,
+        "reading": "つたえ"
       },
       "1441870": {
         "start": 48,
-        "length": 3
+        "length": 2,
+        "reading": "つたえ"
+      },
+      "1455280": {
+        "start": 10,
+        "length": 2,
+        "reading": "とくべつ"
       },
       "1543750": {
         "start": 32,
-        "length": 2
+        "length": 2,
+        "reading": "よやく"
+      },
+      "1554280": {
+        "start": 12,
+        "length": 2,
+        "reading": "りょうきん"
       },
       "1944490": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "とくべつりょうきん"
       }
     }
   },
@@ -550,15 +1196,18 @@
     "matches": {
       "1337300": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1547330": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ほしい"
       },
       "1580640": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -573,31 +1222,54 @@
     ],
     "vocabIds": [
       "1422020",
+      "1311110",
       "1311300",
+      "1283400",
       "2851640",
       "1337300",
-      "2831242"
+      "1855120",
+      "1957300"
     ],
     "matches": {
+      "1283400": {
+        "start": 9,
+        "length": 2,
+        "reading": "こうきゅう"
+      },
+      "1311110": {
+        "start": 5,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1337300": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "1422020": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "おくれ"
       },
-      "2831242": {
+      "1855120": {
         "start": 19,
-        "length": 7
+        "length": 4,
+        "reading": "よぎなく"
+      },
+      "1957300": {
+        "start": 19,
+        "length": 4,
+        "reading": "よぎなく"
       },
       "2851640": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "こうきゅうほてる"
       }
     }
   },
@@ -615,17 +1287,89 @@
       }
     ],
     "vocabIds": [
+      "1283400",
       "2851640",
       "1337300"
     ],
     "matches": {
+      "1283400": {
+        "start": 8,
+        "length": 2,
+        "reading": "こうきゅう"
+      },
       "1337300": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "しゅくはく"
       },
       "2851640": {
         "start": 8,
-        "length": 5
+        "length": 5,
+        "reading": "こうきゅうほてる"
+      }
+    }
+  },
+  {
+    "id": "774461",
+    "original": "宿泊施設を捜しています。",
+    "en": [
+      {
+        "id": "6200430",
+        "text": "We are looking for lodging accommodations."
+      }
+    ],
+    "vocabIds": [
+      "1337300",
+      "2795570",
+      "1310410"
+    ],
+    "matches": {
+      "1310410": {
+        "start": 2,
+        "length": 2,
+        "reading": "しせつ"
+      },
+      "1337300": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "2795570": {
+        "start": 0,
+        "length": 4,
+        "reading": "しゅくはくしせつ"
+      }
+    }
+  },
+  {
+    "id": "12754558",
+    "original": "宿泊先はどうでしたか？",
+    "en": [
+      {
+        "id": "12754528",
+        "text": "How was the hotel you stayed at?"
+      }
+    ],
+    "vocabIds": [
+      "1337300",
+      "1337310",
+      "1387210"
+    ],
+    "matches": {
+      "1337300": {
+        "start": 0,
+        "length": 2,
+        "reading": "しゅくはく"
+      },
+      "1337310": {
+        "start": 0,
+        "length": 3,
+        "reading": "しゅくはくさき"
+      },
+      "1387210": {
+        "start": 2,
+        "length": 1,
+        "reading": "さき"
       }
     }
   }

@@ -1,5 +1,43 @@
 [
   {
+    "id": "4784",
+    "original": "起きた時私は悲しかった。",
+    "en": [
+      {
+        "id": "1361",
+        "text": "When I woke up, I was sad."
+      }
+    ],
+    "vocabIds": [
+      "1223640",
+      "1315840",
+      "1311110",
+      "1483190"
+    ],
+    "matches": {
+      "1223640": {
+        "start": 0,
+        "length": 2,
+        "reading": "おき"
+      },
+      "1311110": {
+        "start": 4,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1315840": {
+        "start": 3,
+        "length": 1,
+        "reading": "とき"
+      },
+      "1483190": {
+        "start": 6,
+        "length": 4,
+        "reading": "かなしかっ"
+      }
+    }
+  },
+  {
     "id": "4976",
     "original": "誰かが亡くなったときは悲しいものだよ。",
     "en": [
@@ -9,22 +47,70 @@
       }
     ],
     "vocabIds": [
+      "1416830",
       "1416840",
       "1518540",
       "1483190"
     ],
     "matches": {
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
+      },
       "1416840": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
       },
       "1483190": {
         "start": 11,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1518540": {
         "start": 3,
-        "length": 5
+        "length": 4,
+        "reading": "なくなっ"
+      }
+    }
+  },
+  {
+    "id": "74675",
+    "original": "失敗してあれほど悲しそうな顔をする奴が、いるかな？",
+    "en": [
+      {
+        "id": "329044",
+        "text": "Is there really any guy who has such a sad face when they mess up?"
+      }
+    ],
+    "indices": "失敗 為る(する){して} あれ程{あれほど} 悲しい{悲し} そう{そうな} 顔(かお) を 為る(する)[04]{する} 奴(やつ) が 居る(いる){いる} かな",
+    "vocabIds": [
+      "1320140",
+      "1483190",
+      "1217730",
+      "1445640"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 13,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1320140": {
+        "start": 0,
+        "length": 2,
+        "reading": "しっぱい"
+      },
+      "1445640": {
+        "start": 17,
+        "length": 1,
+        "reading": "やつ"
+      },
+      "1483190": {
+        "start": 8,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -40,31 +126,99 @@
     "indices": "ちゃん[01] よ{よー} お姉ちゃん[01] は 凄い[02]{スゴク} 悲しい よ{よー} こんな 事(こと){こと} で(#2028980) 人生 初体験[01]~ だ よ え 夜逃げ{夜・逃・げ}",
     "vocabIds": [
       "2222580",
+      "2190820",
       "1483190",
+      "1368370",
       "2802540",
+      "1342530",
+      "1342880",
       "1409420",
       "1536350"
     ],
     "matches": {
+      "1342530": {
+        "start": 32,
+        "length": 1,
+        "reading": "はつ"
+      },
+      "1342880": {
+        "start": 32,
+        "length": 3,
+        "reading": "はつたいけん"
+      },
+      "1368370": {
+        "start": 30,
+        "length": 2,
+        "reading": "じんせい"
+      },
       "1409420": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "たいけん"
       },
       "1483190": {
         "start": 18,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1536350": {
         "start": 43,
-        "length": 1
+        "length": 1,
+        "reading": "よる"
+      },
+      "2190820": {
+        "start": 10,
+        "length": 4,
+        "reading": "ねえちゃん"
       },
       "2222580": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "おねえちゃん"
       },
       "2802540": {
         "start": 30,
-        "length": 3
+        "length": 3,
+        "reading": "じんせいはつ"
+      }
+    }
+  },
+  {
+    "id": "81965",
+    "original": "僕は急に悲しくなった。",
+    "en": [
+      {
+        "id": "321752",
+        "text": "I suddenly became very sad."
+      }
+    ],
+    "indices": "僕(ぼく)[01] は 急に[02] 悲しい{悲しく} 成る[01]{なった}",
+    "vocabIds": [
+      "1521400",
+      "1228560",
+      "2269050",
+      "1483190"
+    ],
+    "matches": {
+      "1228560": {
+        "start": 2,
+        "length": 1,
+        "reading": "きゅう"
+      },
+      "1483190": {
+        "start": 4,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1521400": {
+        "start": 0,
+        "length": 1,
+        "reading": "ぼく"
+      },
+      "2269050": {
+        "start": 2,
+        "length": 2,
+        "reading": "きゅうに"
       }
     }
   },
@@ -82,29 +236,259 @@
       "1515120",
       "1265070",
       "1191870",
-      "1854880",
+      "1473920",
       "1483190"
     ],
     "matches": {
       "1191870": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "かぐ"
       },
       "1265070": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ふるい"
+      },
+      "1473920": {
+        "start": 8,
+        "length": 4,
+        "reading": "うりはらわ"
       },
       "1483190": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1515120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
+      }
+    }
+  },
+  {
+    "id": "83466",
+    "original": "壁に映った彼の影は悲しそうだった。",
+    "en": [
+      {
+        "id": "320250",
+        "text": "His shadow on the wall looked sad."
+      }
+    ],
+    "indices": "壁 に 映る{映った} 彼(かれ)[01]{彼の} 影[01] は 悲しい{悲しそう} だ{だった}",
+    "vocabIds": [
+      "1509290",
+      "1173710",
+      "1483070",
+      "1000420",
+      "1590145",
+      "1483190"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 5,
+        "length": 2,
+        "reading": "かれの"
       },
-      "1854880": {
-        "start": 8,
-        "length": 2
+      "1173710": {
+        "start": 2,
+        "length": 2,
+        "reading": "うつっ"
+      },
+      "1483070": {
+        "start": 5,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483190": {
+        "start": 9,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1509290": {
+        "start": 0,
+        "length": 1,
+        "reading": "かべ"
+      },
+      "1590145": {
+        "start": 7,
+        "length": 1,
+        "reading": "かげ"
+      }
+    }
+  },
+  {
+    "id": "85956",
+    "original": "悲しそうな顔をする。",
+    "en": [
+      {
+        "id": "317754",
+        "text": "I wear a sad look."
+      }
+    ],
+    "indices": "悲しい{悲しそうな} 顔(かお) を 為る(する)[04]{する}",
+    "vocabIds": [
+      "1483190",
+      "1217730"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 5,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1483190": {
+        "start": 0,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "85957",
+    "original": "悲しそうに微笑みながら、彼女は話しはじめた。",
+    "en": [
+      {
+        "id": "317755",
+        "text": "Smiling sadly, she began to talk."
+      }
+    ],
+    "indices": "悲しい{悲し} そう[01] に 微笑む{微笑み} 乍ら[01]{ながら} 彼女[01] は 話す{話し} 始める[03]{はじめた}",
+    "vocabIds": [
+      "1483190",
+      "1486030",
+      "1486010",
+      "1483150",
+      "1562350"
+    ],
+    "matches": {
+      "1483150": {
+        "start": 12,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 0,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1486010": {
+        "start": 5,
+        "length": 3,
+        "reading": "ほほえみ"
+      },
+      "1486030": {
+        "start": 5,
+        "length": 3,
+        "reading": "ほほえみ"
+      },
+      "1562350": {
+        "start": 15,
+        "length": 2,
+        "reading": "はなし"
+      }
+    }
+  },
+  {
+    "id": "85958",
+    "original": "悲しくて彼女は突然泣き出した。",
+    "en": [
+      {
+        "id": "317753",
+        "text": "In her grief, she burst into tears."
+      }
+    ],
+    "indices": "悲しい{悲しくて} 彼女[01] は 突然 泣き出す{泣き出した}",
+    "vocabIds": [
+      "1483190",
+      "1483150",
+      "1457040",
+      "1229840",
+      "1229650",
+      "1338180",
+      "1339160"
+    ],
+    "matches": {
+      "1229650": {
+        "start": 9,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 9,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1338180": {
+        "start": 11,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1339160": {
+        "start": 11,
+        "length": 2,
+        "reading": "だし"
+      },
+      "1457040": {
+        "start": 7,
+        "length": 2,
+        "reading": "とつぜん"
+      },
+      "1483150": {
+        "start": 4,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 0,
+        "length": 3,
+        "reading": "かなしく"
+      }
+    }
+  },
+  {
+    "id": "85959",
+    "original": "悲しかったけれど、彼女はにっこり笑って彼にさようならを言った。",
+    "en": [
+      {
+        "id": "317752",
+        "text": "Sad as she was, she said good-bye to him with a smile."
+      }
+    ],
+    "indices": "悲しい{悲しかった} けど{けれど} 彼女[01] は にっこり 笑う[02]{笑って} 彼(かれ) に 左様なら{さようなら} を 言う{言った}",
+    "vocabIds": [
+      "1483190",
+      "1483150",
+      "1351360",
+      "1483070",
+      "1587040"
+    ],
+    "matches": {
+      "1351360": {
+        "start": 16,
+        "length": 2,
+        "reading": "わらっ"
+      },
+      "1483070": {
+        "start": 19,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483150": {
+        "start": 9,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 0,
+        "length": 4,
+        "reading": "かなしかっ"
+      },
+      "1587040": {
+        "start": 27,
+        "length": 2,
+        "reading": "いっ"
       }
     }
   },
@@ -121,20 +505,35 @@
     "vocabIds": [
       "1483190",
       "1502480",
-      "1899320"
+      "1555930",
+      "1292160",
+      "1292140"
     ],
     "matches": {
+      "1292140": {
+        "start": 8,
+        "length": 2,
+        "reading": "もよおし"
+      },
+      "1292160": {
+        "start": 8,
+        "length": 2,
+        "reading": "もよおし"
+      },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1502480": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ものがたり"
       },
-      "1899320": {
+      "1555930": {
         "start": 6,
-        "length": 5
+        "length": 1,
+        "reading": "なみだ"
       }
     }
   },
@@ -151,20 +550,29 @@
     "vocabIds": [
       "1483190",
       "1420400",
+      "1591110",
       "2701450"
     ],
     "matches": {
       "1420400": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "1591110": {
+        "start": 8,
+        "length": 2,
+        "reading": "きき"
       },
       "2701450": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きき"
       }
     }
   },
@@ -186,15 +594,18 @@
     "matches": {
       "1420400": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1555930": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "なみだ"
       }
     }
   },
@@ -217,19 +628,23 @@
     "matches": {
       "1358660": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しょくよく"
       },
       "1420400": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483070": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -251,15 +666,18 @@
     "matches": {
       "1340570": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "できごと"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1519210": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "わすれ"
       }
     }
   },
@@ -277,24 +695,34 @@
       "1483190",
       "1315840",
       "1540170",
-      "1557350"
+      "1557350",
+      "1901610"
     ],
     "matches": {
       "1315840": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "とき"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1540170": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       },
       "1557350": {
         "start": 8,
-        "length": 4
+        "length": 3,
+        "reading": "はげまし"
+      },
+      "1901610": {
+        "start": 8,
+        "length": 3,
+        "reading": "はげまし"
       }
     }
   },
@@ -316,15 +744,18 @@
     "matches": {
       "1307770": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "こ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1589340": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "おもいで"
       }
     }
   },
@@ -346,15 +777,18 @@
     "matches": {
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1491150": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ふあん"
       },
       "1591430": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "きもち"
       }
     }
   },
@@ -374,7 +808,8 @@
     "matches": {
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -396,15 +831,18 @@
     "matches": {
       "1360010": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ねる"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1519210": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "わすれる"
       }
     }
   },
@@ -420,6 +858,7 @@
     "indices": "悲しい 事(こと){こと} に 彼(かれ)[01]{彼の} 夢 は 実現 為る(する){しなかった}",
     "vocabIds": [
       "1483190",
+      "1483070",
       "1000420",
       "1529410",
       "1321020"
@@ -427,19 +866,28 @@
     "matches": {
       "1000420": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1321020": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じつげん"
+      },
+      "1483070": {
+        "start": 6,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1529410": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ゆめ"
       }
     }
   },
@@ -461,15 +909,18 @@
     "matches": {
       "1311110": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1467640": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ねこ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -487,24 +938,34 @@
       "1483190",
       "1497610",
       "1198530",
+      "1338240",
       "1896380"
     ],
     "matches": {
       "1198530": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かいごう"
+      },
+      "1338240": {
+        "start": 15,
+        "length": 1,
+        "reading": "で"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1497610": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1896380": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "で"
       }
     }
   },
@@ -527,19 +988,23 @@
     "matches": {
       "1324340": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "わかじに"
       },
       "1404390": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "むすこ"
       },
       "1483150": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -556,30 +1021,35 @@
     "vocabIds": [
       "1483190",
       "1483150",
-      "1597200",
       "1580640",
+      "1416830",
       "1416860"
     ],
     "matches": {
+      "1416830": {
+        "start": 16,
+        "length": 1,
+        "reading": "だれ"
+      },
       "1416860": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "だれも"
       },
       "1483150": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1580640": {
         "start": 14,
-        "length": 1
-      },
-      "1597200": {
-        "start": 11,
-        "length": 3
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -595,26 +1065,54 @@
     "indices": "悲しい 事(こと){こと} に 一人息子 は 彼女 を 捨てる{捨てて} 仕舞う{しまった}",
     "vocabIds": [
       "1483190",
+      "1160790",
+      "1576150",
       "1163790",
+      "1580640",
+      "1404390",
       "1483150",
       "1322320"
     ],
     "matches": {
+      "1160790": {
+        "start": 7,
+        "length": 1,
+        "reading": "いち"
+      },
       "1163790": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "いちにんむすこ"
       },
       "1322320": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "すて"
+      },
+      "1404390": {
+        "start": 9,
+        "length": 2,
+        "reading": "むすこ"
       },
       "1483150": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "1576150": {
+        "start": 7,
+        "length": 2,
+        "reading": "いちにん"
+      },
+      "1580640": {
+        "start": 8,
+        "length": 1,
+        "reading": "にん"
       }
     }
   },
@@ -636,15 +1134,297 @@
     "matches": {
       "1312220": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しじん"
       },
       "1324340": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "わかじに"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "87164",
+    "original": "彼女は悲しそうに私を見た。",
+    "en": [
+      {
+        "id": "316544",
+        "text": "She looked sadly at me."
+      }
+    ],
+    "indices": "彼女[01] は 悲しい{悲し} そう[01] に 私(わたし)[01] を 見る{見た}",
+    "vocabIds": [
+      "1483150",
+      "1483190",
+      "1311110",
+      "1259290",
+      "2256270"
+    ],
+    "matches": {
+      "1259290": {
+        "start": 10,
+        "length": 1,
+        "reading": "み"
+      },
+      "1311110": {
+        "start": 8,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "2256270": {
+        "start": 10,
+        "length": 1,
+        "reading": "み"
+      }
+    }
+  },
+  {
+    "id": "87165",
+    "original": "彼女は悲しそうに見えた。",
+    "en": [
+      {
+        "id": "316541",
+        "text": "She looked sad."
+      }
+    ],
+    "indices": "彼女[01] は 悲しい{悲し} そう[01] に 見える(みえる){見えた}",
+    "vocabIds": [
+      "1483150",
+      "1483190",
+      "1259140"
+    ],
+    "matches": {
+      "1259140": {
+        "start": 8,
+        "length": 2,
+        "reading": "みえ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "87166",
+    "original": "彼女は悲しそうな表情をしていた。",
+    "en": [
+      {
+        "id": "316542",
+        "text": "She wore a sad expression."
+      }
+    ],
+    "indices": "彼女[01] は 悲しい{悲しそうな} 表情 を 為る(する){していた}",
+    "vocabIds": [
+      "1483150",
+      "1483190",
+      "1489700"
+    ],
+    "matches": {
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1489700": {
+        "start": 8,
+        "length": 2,
+        "reading": "ひょうじょう"
+      }
+    }
+  },
+  {
+    "id": "87167",
+    "original": "彼女は悲しそうな顔をしていた。",
+    "en": [
+      {
+        "id": "316541",
+        "text": "She looked sad."
+      }
+    ],
+    "indices": "彼女[01] は 悲しい{悲しそうな} 顔(かお) を 為る(する){していた}",
+    "vocabIds": [
+      "1483150",
+      "1483190",
+      "1217730"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 8,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "87168",
+    "original": "彼女は悲しそうだ。",
+    "en": [
+      {
+        "id": "316540",
+        "text": "She looks sad."
+      }
+    ],
+    "indices": "彼女[01] は 悲しい{悲し} そう[01] だ",
+    "vocabIds": [
+      "1483150",
+      "1483190"
+    ],
+    "matches": {
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "87169",
+    "original": "彼女は悲しさのあまり涙も出なかった。",
+    "en": [
+      {
+        "id": "309645",
+        "text": "Her grief was too acute for tears."
+      }
+    ],
+    "indices": "彼女[01] は 悲しい{悲し} さ[01] の余り{のあまり} 涙[01] も 出る{出なかった}",
+    "vocabIds": [
+      "1483150",
+      "1483190",
+      "1954460",
+      "1555930",
+      "1338240",
+      "1896380"
+    ],
+    "matches": {
+      "1338240": {
+        "start": 12,
+        "length": 1,
+        "reading": "で"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1555930": {
+        "start": 10,
+        "length": 1,
+        "reading": "なみだ"
+      },
+      "1896380": {
+        "start": 12,
+        "length": 1,
+        "reading": "で"
+      },
+      "1954460": {
+        "start": 3,
+        "length": 3,
+        "reading": "かなしさ"
+      }
+    }
+  },
+  {
+    "id": "87170",
+    "original": "彼女は悲しさがあまりにも痛切で涙も出なかった。",
+    "en": [
+      {
+        "id": "309645",
+        "text": "Her grief was too acute for tears."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 悲しい{悲し} さ[01] は 余りに{あまりに} 適切 で(#2028980) 涙[01] も 出る{出なかった}",
+    "vocabIds": [
+      "1483150",
+      "1483190",
+      "1954460",
+      "1432790",
+      "1555930",
+      "1338240",
+      "1896380"
+    ],
+    "matches": {
+      "1338240": {
+        "start": 17,
+        "length": 1,
+        "reading": "で"
+      },
+      "1432790": {
+        "start": 12,
+        "length": 2,
+        "reading": "つうせつ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1555930": {
+        "start": 15,
+        "length": 1,
+        "reading": "なみだ"
+      },
+      "1896380": {
+        "start": 17,
+        "length": 1,
+        "reading": "で"
+      },
+      "1954460": {
+        "start": 3,
+        "length": 3,
+        "reading": "かなしさ"
       }
     }
   },
@@ -672,23 +1452,85 @@
     "matches": {
       "1193180": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "うた"
       },
       "1257240": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "きらい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1588120": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "うたう"
+      }
+    }
+  },
+  {
+    "id": "88428",
+    "original": "彼女は数ヶ月来はじめて悲しく思った。",
+    "en": [
+      {
+        "id": "315279",
+        "text": "She was sad for the first time in months."
+      }
+    ],
+    "indices": "彼女[01] は 数ヶ月 来 初めて{はじめて} 悲しい{悲しく} 思う{思った}",
+    "vocabIds": [
+      "1483150",
+      "1580820",
+      "1595540",
+      "1194480",
+      "2013490",
+      "1483190",
+      "1589350"
+    ],
+    "matches": {
+      "1194480": {
+        "start": 4,
+        "length": 2,
+        "reading": "かげつ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 11,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1580820": {
+        "start": 3,
+        "length": 1,
+        "reading": "すう"
+      },
+      "1589350": {
+        "start": 14,
+        "length": 2,
+        "reading": "おもっ"
+      },
+      "1595540": {
+        "start": 3,
+        "length": 3,
+        "reading": "すうかげつ"
+      },
+      "2013490": {
+        "start": 6,
+        "length": 4,
+        "reading": "きはじめ"
       }
     }
   },
@@ -710,15 +1552,63 @@
     "matches": {
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1577100": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
+      }
+    }
+  },
+  {
+    "id": "91913",
+    "original": "彼女はとても悲しかったので、誰にも話しかけたくなかった。",
+    "en": [
+      {
+        "id": "311799",
+        "text": "She was so sad that she did not want to speak to anyone."
+      }
+    ],
+    "indices": "彼女[01] は 迚も{とても} 悲しい{悲しかった} ので 誰にも 話しかける{話しかけ} たい{たくなかった}",
+    "vocabIds": [
+      "1483150",
+      "1483190",
+      "1416830",
+      "2038160",
+      "1562300"
+    ],
+    "matches": {
+      "1416830": {
+        "start": 14,
+        "length": 1,
+        "reading": "だれ"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 6,
+        "length": 4,
+        "reading": "かなしかっ"
+      },
+      "1562300": {
+        "start": 17,
+        "length": 4,
+        "reading": "はなしかけ"
+      },
+      "2038160": {
+        "start": 14,
+        "length": 3,
+        "reading": "だれにも"
       }
     }
   },
@@ -736,24 +1626,28 @@
       "1483150",
       "1483190",
       "1420400",
-      "2859852"
+      "1581430"
     ],
     "matches": {
       "1420400": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
-      "2859852": {
+      "1581430": {
         "start": 12,
-        "length": 2
+        "length": 5,
+        "reading": "うちのめさ"
       }
     }
   },
@@ -772,28 +1666,246 @@
       "1483190",
       "1239700",
       "1591110",
+      "1519210",
       "2791880"
     ],
     "matches": {
       "1239700": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "きょく"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "1519210": {
+        "start": 16,
+        "length": 2,
+        "reading": "わすれ"
       },
       "1591110": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       },
       "2791880": {
         "start": 16,
-        "length": 6
+        "length": 6,
+        "reading": "わすれられない"
+      }
+    }
+  },
+  {
+    "id": "92419",
+    "original": "彼女はその手紙を読んで悲しそうだった。",
+    "en": [
+      {
+        "id": "311286",
+        "text": "When she was reading the letter, she looked sad."
+      }
+    ],
+    "indices": "彼女[01] は 其の[01]{その} 手紙 を 読む{読んで} 悲しい{悲し} そう[01] だ{だった}",
+    "vocabIds": [
+      "1483150",
+      "1327720",
+      "1456360",
+      "1483190"
+    ],
+    "matches": {
+      "1327720": {
+        "start": 5,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1456360": {
+        "start": 8,
+        "length": 2,
+        "reading": "よん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 11,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "92421",
+    "original": "彼女はその手紙を読んでいたとき悲しそうな顔だった。",
+    "en": [
+      {
+        "id": "311286",
+        "text": "When she was reading the letter, she looked sad."
+      }
+    ],
+    "indices": "彼女[01] は 其の[01]{その} 手紙 を 読む{読んでいた} 時(とき){とき} 悲しい{悲しそうな} 顔(かお) だ{だった}",
+    "vocabIds": [
+      "1483150",
+      "1327720",
+      "1456360",
+      "1483190",
+      "1217730"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 20,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1327720": {
+        "start": 5,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1456360": {
+        "start": 8,
+        "length": 2,
+        "reading": "よん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 15,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "92425",
+    "original": "彼女はその手紙を読んでいたとき悲しそうな顔をしていた。",
+    "en": [
+      {
+        "id": "311286",
+        "text": "When she was reading the letter, she looked sad."
+      }
+    ],
+    "indices": "彼女[01] は 其の[01]{その} 手紙 を 読む{読んでいた} 時(とき){とき} 悲しい{悲しそうな} 顔(かお) を 為る(する){していた}",
+    "vocabIds": [
+      "1483150",
+      "1327720",
+      "1456360",
+      "1483190",
+      "1217730"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 20,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1327720": {
+        "start": 5,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1456360": {
+        "start": 8,
+        "length": 2,
+        "reading": "よん"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 15,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "93156",
+    "original": "彼女はうれしくもあったが、同時に悲しくもあった。",
+    "en": [
+      {
+        "id": "310553",
+        "text": "She was happy and sad all at once."
+      }
+    ],
+    "indices": "彼女[01] は 嬉しい{うれしく} も 有る{あった} が 同時に[03] 悲しい{悲しく} も 有る{あった}",
+    "vocabIds": [
+      "1483150",
+      "1452510",
+      "1483190"
+    ],
+    "matches": {
+      "1452510": {
+        "start": 13,
+        "length": 3,
+        "reading": "どうじに"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 16,
+        "length": 3,
+        "reading": "かなしく"
+      }
+    }
+  },
+  {
+    "id": "94060",
+    "original": "彼女の悲しそうな顔には哀願の様子がうかがえる。",
+    "en": [
+      {
+        "id": "309646",
+        "text": "There is a look of appeal on her sad face."
+      }
+    ],
+    "indices": "彼女[01]{彼女の} 悲しい{悲しそうな} 顔(かお) には 哀願 の 様子 が 窺う[01]{うかがえる}~",
+    "vocabIds": [
+      "1483150",
+      "1483190",
+      "1217730",
+      "1150210",
+      "1545820"
+    ],
+    "matches": {
+      "1150210": {
+        "start": 11,
+        "length": 2,
+        "reading": "あいがん"
+      },
+      "1217730": {
+        "start": 8,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1545820": {
+        "start": 14,
+        "length": 2,
+        "reading": "ようす"
       }
     }
   },
@@ -810,8 +1922,7 @@
     "vocabIds": [
       "1483070",
       "1546990",
-      "1361330",
-      "1956920",
+      "1603090",
       "1311110",
       "1416220",
       "1483190",
@@ -820,35 +1931,38 @@
     "matches": {
       "1311110": {
         "start": 15,
-        "length": 1
-      },
-      "1361330": {
-        "start": 5,
-        "length": 2
+        "length": 1,
+        "reading": "わたし"
       },
       "1416220": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "たち"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483190": {
         "start": 27,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1546990": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ようき"
       },
       "1589320": {
         "start": 30,
-        "length": 2
+        "length": 2,
+        "reading": "おもい"
       },
-      "1956920": {
-        "start": 7,
-        "length": 1
+      "1603090": {
+        "start": 5,
+        "length": 4,
+        "reading": "ふるまお"
       }
     }
   },
@@ -870,15 +1984,174 @@
     "matches": {
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483190": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1611580": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ほんとうに"
+      }
+    }
+  },
+  {
+    "id": "100381",
+    "original": "彼は父を亡くしたので悲しかった。",
+    "en": [
+      {
+        "id": "303317",
+        "text": "He felt sad because he lost his father."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 父 を 亡くす{亡くした} ので 悲しい{悲しかった}",
+    "vocabIds": [
+      "1483070",
+      "1497610",
+      "2835808",
+      "1483190"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483190": {
+        "start": 10,
+        "length": 4,
+        "reading": "かなしかっ"
+      },
+      "1497610": {
+        "start": 2,
+        "length": 1,
+        "reading": "ちち"
+      },
+      "2835808": {
+        "start": 4,
+        "length": 3,
+        "reading": "なくし"
+      }
+    }
+  },
+  {
+    "id": "100777",
+    "original": "彼は悲しそうな様子で答えた。",
+    "en": [
+      {
+        "id": "302920",
+        "text": "He answered with a sad air."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 悲しい{悲しそうな} 様子 で(#2028980) 答える{答えた}",
+    "vocabIds": [
+      "1483070",
+      "1483190",
+      "1545820",
+      "1449540",
+      "1449530"
+    ],
+    "matches": {
+      "1449530": {
+        "start": 10,
+        "length": 2,
+        "reading": "こたえ"
+      },
+      "1449540": {
+        "start": 10,
+        "length": 2,
+        "reading": "こたえ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483190": {
+        "start": 2,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1545820": {
+        "start": 7,
+        "length": 2,
+        "reading": "ようす"
+      }
+    }
+  },
+  {
+    "id": "100778",
+    "original": "彼は悲しそうな顔つきをして立ち去っていった。",
+    "en": [
+      {
+        "id": "302919",
+        "text": "He walked away with a sad look on his face."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 悲しい{悲しそうな} 顔つき を 為る(する){して} 立ち去る{立ち去って} 行く{いった}",
+    "vocabIds": [
+      "1483070",
+      "1483190",
+      "1217850",
+      "1551310"
+    ],
+    "matches": {
+      "1217850": {
+        "start": 7,
+        "length": 3,
+        "reading": "かおつき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483190": {
+        "start": 2,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1551310": {
+        "start": 13,
+        "length": 4,
+        "reading": "たちさっ"
+      }
+    }
+  },
+  {
+    "id": "100779",
+    "original": "彼は悲しそうな顔つきをしている。",
+    "en": [
+      {
+        "id": "302918",
+        "text": "He has a wistful look on his face."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 悲しい{悲しそうな} 顔つき を 為る(する){している}",
+    "vocabIds": [
+      "1483070",
+      "1483190",
+      "1217850"
+    ],
+    "matches": {
+      "1217850": {
+        "start": 7,
+        "length": 3,
+        "reading": "かおつき"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483190": {
+        "start": 2,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -900,15 +2173,18 @@
     "matches": {
       "1310720": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "し"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -932,23 +2208,73 @@
     "matches": {
       "1311110": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483190": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1502480": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ものがたり"
       },
       "1562350": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "はなし"
+      }
+    }
+  },
+  {
+    "id": "106232",
+    "original": "彼は私に、悲しそうな顔をしているが、どうしたのか聞いた。",
+    "en": [
+      {
+        "id": "297454",
+        "text": "He said to me, \"You look sad. What is the matter with you?\""
+      }
+    ],
+    "indices": "彼(かれ)[01] は 私(わたし)[01] に 悲しい{悲しそうな} 顔(かお) を 為る(する){している} が[03] どうしたの[01] か 聞く{聞いた}",
+    "vocabIds": [
+      "1483070",
+      "1311110",
+      "1483190",
+      "1217730",
+      "1591110"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 10,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483190": {
+        "start": 5,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1591110": {
+        "start": 24,
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -964,26 +2290,36 @@
     "indices": "彼(かれ)[01] は 私たち に 悲しい 知らせ を 齎す[01]{もたらした}~",
     "vocabIds": [
       "1483070",
+      "1311110",
       "1311300",
       "1483190",
       "1420400"
     ],
     "matches": {
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1420400": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -1000,30 +2336,35 @@
     "vocabIds": [
       "1483070",
       "1483190",
-      "2020300",
+      "1236070",
       "1360480",
-      "1982070"
+      "1408810"
     ],
     "matches": {
+      "1236070": {
+        "start": 12,
+        "length": 2,
+        "reading": "つよく"
+      },
       "1360480": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "こころ"
+      },
+      "1408810": {
+        "start": 16,
+        "length": 2,
+        "reading": "うた"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483190": {
         "start": 4,
-        "length": 3
-      },
-      "1982070": {
-        "start": 16,
-        "length": 4
-      },
-      "2020300": {
-        "start": 12,
-        "length": 1
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -1038,6 +2379,7 @@
     ],
     "indices": "彼(かれ)[01]{彼の} 悲しい 話(はなし)[01] は 私(わたし)[01]{私の} 心(こころ) を 感動 為せる{させた}",
     "vocabIds": [
+      "1483070",
       "1000420",
       "1483190",
       "1600900",
@@ -1048,27 +2390,128 @@
     "matches": {
       "1000420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かれの"
       },
       "1212570": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かんどう"
       },
       "1311110": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1360480": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "こころ"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1600900": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
+      }
+    }
+  },
+  {
+    "id": "117169",
+    "original": "彼の死を考えると私は悲しくなる。",
+    "en": [
+      {
+        "id": "286496",
+        "text": "It makes me sad to think of his death."
+      }
+    ],
+    "indices": "彼(かれ)[01]{彼の} 死[01] を 考える と 私(わたし)[01] は 悲しい{悲しく} 成る[01]{なる}",
+    "vocabIds": [
+      "1483070",
+      "1000420",
+      "1310720",
+      "1281020",
+      "1311110",
+      "1483190"
+    ],
+    "matches": {
+      "1000420": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれの"
+      },
+      "1281020": {
+        "start": 4,
+        "length": 3,
+        "reading": "かんがえる"
+      },
+      "1310720": {
+        "start": 2,
+        "length": 1,
+        "reading": "し"
+      },
+      "1311110": {
+        "start": 8,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483190": {
+        "start": 10,
+        "length": 3,
+        "reading": "かなしく"
+      }
+    }
+  },
+  {
+    "id": "123291",
+    "original": "突然小さな黒いウサギはすわりこんで、とても悲しそうにみえた。",
+    "en": [
+      {
+        "id": "280707",
+        "text": "Suddenly the little black rabbit sat down, and looked very sad."
+      }
+    ],
+    "indices": "突然 小さな 黒い[01] 兎{ウサギ} は 座り込む{すわりこんで} 迚も[01]{とても} 悲しい{悲し} そう[01] に 見える(みえる){みえた}",
+    "vocabIds": [
+      "1457040",
+      "2136180",
+      "1287420",
+      "1483190"
+    ],
+    "matches": {
+      "1287420": {
+        "start": 5,
+        "length": 2,
+        "reading": "くろい"
+      },
+      "1457040": {
+        "start": 0,
+        "length": 2,
+        "reading": "とつぜん"
+      },
+      "1483190": {
+        "start": 21,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "2136180": {
+        "start": 2,
+        "length": 3,
+        "reading": "ちいさな"
       }
     }
   },
@@ -1083,6 +2526,7 @@
     ],
     "indices": "誰か が 其の[01]{その} 悲しい 知らせ を 彼女[01]{彼女の} 母親 に 知らせる{知らせ} ねばならない{なければならない}",
     "vocabIds": [
+      "1416830",
       "1416840",
       "1483190",
       "1420400",
@@ -1091,29 +2535,40 @@
       "1420410"
     ],
     "matches": {
+      "1416830": {
+        "start": 0,
+        "length": 1,
+        "reading": "だれ"
+      },
       "1416840": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "だれか"
       },
       "1420400": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1420410": {
         "start": 18,
-        "length": 4
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483150": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1515120": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
       }
     }
   },
@@ -1131,29 +2586,40 @@
       "1415000",
       "1483190",
       "1497610",
+      "1324300",
       "2011100",
       "1518540"
     ],
     "matches": {
+      "1324300": {
+        "start": 10,
+        "length": 2,
+        "reading": "わかく"
+      },
       "1415000": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいへん"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1497610": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       },
       "1518540": {
         "start": 14,
-        "length": 5
+        "length": 4,
+        "reading": "なくなっ"
       },
       "2011100": {
         "start": 10,
-        "length": 4
+        "length": 4,
+        "reading": "わかくして"
       }
     }
   },
@@ -1168,32 +2634,267 @@
     ],
     "indices": "数日後 になって初めて 其の[01]{その} 悲しい 知らせ を 聞く{聞いた}",
     "vocabIds": [
+      "1580820",
+      "1373200",
       "1373220",
+      "1463770",
+      "1269320",
+      "2640160",
+      "2839813",
       "2252340",
+      "1342550",
       "1483190",
       "1420400",
       "1591110"
     ],
     "matches": {
+      "1269320": {
+        "start": 2,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1342550": {
+        "start": 7,
+        "length": 3,
+        "reading": "はじめて"
+      },
+      "1373200": {
+        "start": 0,
+        "length": 2,
+        "reading": "すうにち"
+      },
       "1373220": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "すうにちご"
       },
       "1420400": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
+      },
+      "1463770": {
+        "start": 1,
+        "length": 1,
+        "reading": "にち"
       },
       "1483190": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "1580820": {
+        "start": 0,
+        "length": 1,
+        "reading": "すう"
       },
       "1591110": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       },
       "2252340": {
         "start": 3,
-        "length": 7
+        "length": 7,
+        "reading": "になってはじめて"
+      },
+      "2640160": {
+        "start": 2,
+        "length": 2,
+        "reading": "ごに"
+      },
+      "2839813": {
+        "start": 2,
+        "length": 5,
+        "reading": "ごになって"
+      }
+    }
+  },
+  {
+    "id": "150414",
+    "original": "時折私は悲しくなる。",
+    "en": [
+      {
+        "id": "264142",
+        "text": "At times I feel sad."
+      }
+    ],
+    "indices": "時折 私(わたし)[01] は 悲しい{悲しく} 成る[01]{なる}",
+    "vocabIds": [
+      "1598670",
+      "1311110",
+      "1483190"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 2,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483190": {
+        "start": 4,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1598670": {
+        "start": 0,
+        "length": 2,
+        "reading": "ときおり"
+      }
+    }
+  },
+  {
+    "id": "152522",
+    "original": "私は訳もなく悲しくなった。",
+    "en": [
+      {
+        "id": "262028",
+        "text": "I felt sad for no reason."
+      }
+    ],
+    "indices": "私(わたし)[01] は 訳(わけ)[01] も 無い{なく} 悲しい{悲しく} 成る[01]{なった}",
+    "vocabIds": [
+      "1311110",
+      "1538330",
+      "1917430",
+      "1483190"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483190": {
+        "start": 6,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1538330": {
+        "start": 2,
+        "length": 1,
+        "reading": "わけ"
+      },
+      "1917430": {
+        "start": 2,
+        "length": 4,
+        "reading": "わけもなく"
+      }
+    }
+  },
+  {
+    "id": "153154",
+    "original": "私は悲しく感じることが好きである。私はたいていの人は、いかなる悲しみの感情も避けようとすることを知っている。しかし、私はそれは間違っていると思う。",
+    "en": [
+      {
+        "id": "261390",
+        "text": "I like to feel sad. I know that most people try to avoid any kind of sad feeling. But I think that is wrong."
+      }
+    ],
+    "indices": "私(わたし)[01] は 悲しい{悲しく} 感じる 事(こと){こと} が 好き(すき) である 私(わたし)[01] は 大抵[03]{たいていの} 人(ひと) は 如何なる{いかなる} 悲しみ の 感情 も 避ける[02]{避けよう} とする[01] 事(こと){こと} を 知る{知っている} 然し{しかし} 私(わたし)[01] は 其れ[01]{それ} は 間違う[01]{間違っている} と 思う",
+    "vocabIds": [
+      "1311110",
+      "1483190",
+      "1212260",
+      "1277450",
+      "1580640",
+      "1590550",
+      "1212410",
+      "1583260",
+      "1420470",
+      "1611610",
+      "1589350"
+    ],
+    "matches": {
+      "1212260": {
+        "start": 5,
+        "length": 3,
+        "reading": "かんじる"
+      },
+      "1212410": {
+        "start": 35,
+        "length": 2,
+        "reading": "かんじょう"
+      },
+      "1277450": {
+        "start": 11,
+        "length": 2,
+        "reading": "すき"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1420470": {
+        "start": 48,
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1483190": {
+        "start": 2,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1580640": {
+        "start": 24,
+        "length": 1,
+        "reading": "ひと"
+      },
+      "1583260": {
+        "start": 38,
+        "length": 3,
+        "reading": "さけよ"
+      },
+      "1589350": {
+        "start": 70,
+        "length": 2,
+        "reading": "おもう"
+      },
+      "1590550": {
+        "start": 31,
+        "length": 3,
+        "reading": "かなしみ"
+      },
+      "1611610": {
+        "start": 63,
+        "length": 3,
+        "reading": "まちがっ"
+      }
+    }
+  },
+  {
+    "id": "153155",
+    "original": "私は悲しくありません。",
+    "en": [
+      {
+        "id": "261389",
+        "text": "I do not feel sad."
+      },
+      {
+        "id": "7492534",
+        "text": "I don't feel sad."
+      },
+      {
+        "id": "2248175",
+        "text": "I'm not sad."
+      }
+    ],
+    "indices": "私(わたし)[01] は 悲しい{悲しく} 有る{ありません}",
+    "vocabIds": [
+      "1311110",
+      "1483190"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483190": {
+        "start": 2,
+        "length": 3,
+        "reading": "かなしく"
       }
     }
   },
@@ -1216,19 +2917,23 @@
     "matches": {
       "1255010": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "けつまつ"
       },
       "1277450": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1502480": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ものがたり"
       }
     }
   },
@@ -1251,19 +2956,23 @@
     "matches": {
       "1173720": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "えいが"
       },
       "1257240": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きらい"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -1284,20 +2993,128 @@
     "vocabIds": [
       "1311110",
       "1483190",
-      "1626220"
+      "1501110",
+      "1597040"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
-      "1626220": {
+      "1501110": {
         "start": 11,
-        "length": 5
+        "length": 1,
+        "reading": "はら"
+      },
+      "1597040": {
+        "start": 13,
+        "length": 2,
+        "reading": "たっ"
+      }
+    }
+  },
+  {
+    "id": "156373",
+    "original": "私は時々悲しくなることがある。",
+    "en": [
+      {
+        "id": "255203",
+        "text": "I feel sad every now and then."
+      }
+    ],
+    "indices": "私(わたし)[01] は 時々 悲しい{悲しく} 成る[01]{なる} 事がある{ことがある}",
+    "vocabIds": [
+      "1311110",
+      "1598680",
+      "1483190"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483190": {
+        "start": 4,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1598680": {
+        "start": 2,
+        "length": 2,
+        "reading": "ときどき"
+      }
+    }
+  },
+  {
+    "id": "157584",
+    "original": "私は驚いてそして悲しくなった。",
+    "en": [
+      {
+        "id": "256947",
+        "text": "I was surprised and became sad."
+      }
+    ],
+    "indices": "私(わたし)[01] は  驚く[01]{驚いて} 而して{そして} 悲しい{悲しく} 成る[01]{なった}",
+    "vocabIds": [
+      "1311110",
+      "1238680",
+      "1483190"
+    ],
+    "matches": {
+      "1238680": {
+        "start": 2,
+        "length": 2,
+        "reading": "おどろい"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483190": {
+        "start": 8,
+        "length": 3,
+        "reading": "かなしく"
+      }
+    }
+  },
+  {
+    "id": "159320",
+    "original": "私はときどき悲しく感じる。",
+    "en": [
+      {
+        "id": "255203",
+        "text": "I feel sad every now and then."
+      }
+    ],
+    "indices": "私(わたし)[01] は 時々{ときどき} 悲しい{悲しく} 感じる~",
+    "vocabIds": [
+      "1311110",
+      "1483190",
+      "1212260"
+    ],
+    "matches": {
+      "1212260": {
+        "start": 9,
+        "length": 3,
+        "reading": "かんじる"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483190": {
+        "start": 6,
+        "length": 3,
+        "reading": "かなしく"
       }
     }
   },
@@ -1318,11 +3135,46 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483190": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "159677",
+    "original": "私はそれを聞いていっそう悲しくなった。",
+    "en": [
+      {
+        "id": "254846",
+        "text": "I felt all the more sad to hear that."
+      }
+    ],
+    "indices": "私(わたし)[01] は 其れ[01]{それ} を 聞く{聞いて} 一層[01]{いっそう} 悲しい{悲しく} 成る[01]{なった}",
+    "vocabIds": [
+      "1311110",
+      "1591110",
+      "1483190"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1483190": {
+        "start": 12,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1591110": {
+        "start": 5,
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -1340,24 +3192,34 @@
       "1311110",
       "1483190",
       "1420400",
-      "1591110"
+      "1591110",
+      "1229840"
     ],
     "matches": {
+      "1229840": {
+        "start": 14,
+        "length": 2,
+        "reading": "なか"
+      },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1420400": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483190": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1591110": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -1376,28 +3238,39 @@
       "1483190",
       "1420400",
       "1591110",
-      "1329590"
+      "1329590",
+      "1659120"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329590": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "うけ"
       },
       "1420400": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483190": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1591110": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
+      },
+      "1659120": {
+        "start": 19,
+        "length": 2,
+        "reading": "うけ"
       }
     }
   },
@@ -1416,28 +3289,39 @@
       "1483190",
       "1420400",
       "1329590",
+      "1659120",
       "1483200"
     ],
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1329590": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "うけ"
       },
       "1420400": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483190": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1483200": {
         "start": 17,
-        "length": 4
+        "length": 3,
+        "reading": "かなしん"
+      },
+      "1659120": {
+        "start": 11,
+        "length": 2,
+        "reading": "うけ"
       }
     }
   },
@@ -1462,27 +3346,33 @@
     "matches": {
       "1285990": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "つげる"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1420400": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1539740": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうき"
       }
     }
   },
@@ -1501,78 +3391,39 @@
       "1483190",
       "1420400",
       "1451630",
-      "1206050"
+      "1206050",
+      "1206040"
     ],
     "matches": {
+      "1206040": {
+        "start": 14,
+        "length": 2,
+        "reading": "おぼえ"
+      },
       "1206050": {
         "start": 14,
-        "length": 3
+        "length": 2,
+        "reading": "おぼえ"
       },
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1420400": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1451630": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "どうよう"
       },
       "1483190": {
         "start": 4,
-        "length": 3
-      }
-    }
-  },
-  {
-    "id": "160284",
-    "original": "私はその演奏家にフルートで何かもの悲しい曲を吹いて欲しいとおもった。",
-    "en": [
-      {
-        "id": "254237",
-        "text": "I wanted the musician to play some sad tune on his flute."
-      }
-    ],
-    "indices": "私(わたし)[01] は 其の[01]{その} 演奏家~ に フルート で(#2028980) 何か 物悲しい{もの悲しい}~ 曲(きょく) を 吹く[01]{吹いて} 欲しい[02] と 思う{おもった}",
-    "vocabIds": [
-      "1311110",
-      "1930740",
-      "1188270",
-      "1483190",
-      "1239700",
-      "1370760",
-      "1547330"
-    ],
-    "matches": {
-      "1188270": {
-        "start": 13,
-        "length": 2
-      },
-      "1239700": {
-        "start": 20,
-        "length": 1
-      },
-      "1311110": {
-        "start": 0,
-        "length": 1
-      },
-      "1370760": {
-        "start": 22,
-        "length": 3
-      },
-      "1483190": {
-        "start": 17,
-        "length": 3
-      },
-      "1547330": {
-        "start": 25,
-        "length": 3
-      },
-      "1930740": {
-        "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -1587,22 +3438,37 @@
     ],
     "indices": "私たち は 非常に{ひじょうに} 悲しい 時(とき){とき} に 泣く{泣きます}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1483190",
+      "1229840",
       "1229650"
     ],
     "matches": {
       "1229650": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "なき"
+      },
+      "1229840": {
+        "start": 15,
+        "length": 2,
+        "reading": "なき"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1483190": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -1617,37 +3483,49 @@
     ],
     "indices": "私たち は 悲しい 知らせ を 聞く{聞いて} 涙を流す{涙を流さ} ざるを得ない{ざるをえなかった}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1483190",
       "1420400",
       "1591110",
       "1555930",
-      "1552090"
+      "1552120"
     ],
     "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
       },
       "1420400": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483190": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
-      "1552090": {
+      "1552120": {
         "start": 17,
-        "length": 1
+        "length": 2,
+        "reading": "ながさ"
       },
       "1555930": {
         "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "なみだ"
       },
       "1591110": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -1668,11 +3546,52 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "167540",
+    "original": "私が怒っていたので彼女は悲しそうだった。",
+    "en": [
+      {
+        "id": "246960",
+        "text": "She looked sad because I was angry."
+      }
+    ],
+    "indices": "私(わたし)[01] が 怒る(おこる){怒っていた} ので 彼女[01] は 悲しい{悲し} そう[01] だ{だった}",
+    "vocabIds": [
+      "1311110",
+      "1445690",
+      "1483150",
+      "1483190"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1445690": {
+        "start": 2,
+        "length": 2,
+        "reading": "おこっ"
+      },
+      "1483150": {
+        "start": 9,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 12,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -1694,15 +3613,57 @@
     "matches": {
       "1340570": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "できごと"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1579260": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きのう"
+      }
+    }
+  },
+  {
+    "id": "179130",
+    "original": "君がそんなに悲しそうに泣くのは聞いていられない。",
+    "en": [
+      {
+        "id": "17986",
+        "text": "I can't abide hearing you cry so bitterly."
+      }
+    ],
+    "indices": "君(きみ)[01] が そんなに 悲しい{悲し} そう[01]{そうに} 泣く の は 聞く{聞いていられない}",
+    "vocabIds": [
+      "1247250",
+      "1483190",
+      "1229840",
+      "1591110"
+    ],
+    "matches": {
+      "1229840": {
+        "start": 11,
+        "length": 2,
+        "reading": "なく"
+      },
+      "1247250": {
+        "start": 0,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1483190": {
+        "start": 6,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1591110": {
+        "start": 15,
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -1718,6 +3679,7 @@
     "indices": "飢える{飢えている} 人々(ひとびと) に 援助 の お金 を 出す[01] 人(ひと) が 迚も{とても} 少ない の は 悲しい 事(こと){こと} だ",
     "vocabIds": [
       "1224080",
+      "1224070",
       "1580650",
       "1176660",
       "1001820",
@@ -1729,35 +3691,75 @@
     "matches": {
       "1001820": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "おかね"
       },
       "1176660": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "えんじょ"
+      },
+      "1224070": {
+        "start": 0,
+        "length": 2,
+        "reading": "うえ"
       },
       "1224080": {
         "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "うえ"
       },
       "1338180": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "だす"
       },
       "1348910": {
         "start": 21,
-        "length": 3
+        "length": 3,
+        "reading": "すくない"
       },
       "1483190": {
         "start": 26,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1580640": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1580650": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "ひとびと"
+      }
+    }
+  },
+  {
+    "id": "183293",
+    "original": "気がくるいそうなほど悲しかった。",
+    "en": [
+      {
+        "id": "20416",
+        "text": "He was so sad that he almost went mad."
+      }
+    ],
+    "indices": "気(き) が 狂う{くるいそうな} 程{ほど} 悲しい{悲しかった}",
+    "vocabIds": [
+      "1221520",
+      "1483190"
+    ],
+    "matches": {
+      "1221520": {
+        "start": 0,
+        "length": 1,
+        "reading": "き"
+      },
+      "1483190": {
+        "start": 10,
+        "length": 4,
+        "reading": "かなしかっ"
       }
     }
   },
@@ -1781,23 +3783,118 @@
     "matches": {
       "1207240": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "たのしい"
       },
       "1212410": {
         "start": 16,
-        "length": 2
+        "length": 2,
+        "reading": "かんじょう"
       },
       "1263490": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "あらわす"
       },
       "1318610": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "189313",
+    "original": "映画はとても悲しくて、だれもが泣いた。",
+    "en": [
+      {
+        "id": "26461",
+        "text": "The movie was so sad that everybody cried."
+      }
+    ],
+    "indices": "映画 は 迚も[01]{とても} 悲しい{悲しくて} 誰も{だれも} が 泣く{泣いた}",
+    "vocabIds": [
+      "1173720",
+      "1483190",
+      "1229840"
+    ],
+    "matches": {
+      "1173720": {
+        "start": 0,
+        "length": 2,
+        "reading": "えいが"
+      },
+      "1229840": {
+        "start": 15,
+        "length": 2,
+        "reading": "ない"
+      },
+      "1483190": {
+        "start": 6,
+        "length": 3,
+        "reading": "かなしく"
+      }
+    }
+  },
+  {
+    "id": "191172",
+    "original": "以前は愛してくれたのだけれど。と彼女は悲しそうに答えた。",
+    "en": [
+      {
+        "id": "28332",
+        "text": "\"He used to love me,\" she answered sadly."
+      }
+    ],
+    "indices": "以前[02] は 愛する{愛して} 呉れる{くれた} のだ けど{けれど} と 彼女[01] は 悲しい{悲し} そう[01]{そうに} 答える{答えた}",
+    "vocabIds": [
+      "1155150",
+      "2408840",
+      "2757660",
+      "1483150",
+      "1483190",
+      "1449540",
+      "1449530"
+    ],
+    "matches": {
+      "1155150": {
+        "start": 0,
+        "length": 2,
+        "reading": "いぜん"
+      },
+      "1449530": {
+        "start": 24,
+        "length": 2,
+        "reading": "こたえ"
+      },
+      "1449540": {
+        "start": 24,
+        "length": 2,
+        "reading": "こたえ"
+      },
+      "1483150": {
+        "start": 16,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 19,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "2408840": {
+        "start": 3,
+        "length": 2,
+        "reading": "あいし"
+      },
+      "2757660": {
+        "start": 3,
+        "length": 2,
+        "reading": "あいし"
       }
     }
   },
@@ -1812,27 +3909,37 @@
     ],
     "indices": "愛する{愛されない} の は 悲しい 事(こと){こと} だ が[03] 愛する 事が出来る{ことが出来ない} の は もっと 悲しい 事(こと){こと} である",
     "vocabIds": [
-      "1150410",
+      "2408840",
       "1483190",
       "1150450",
-      "1004550"
+      "1340450",
+      "1340430"
     ],
     "matches": {
-      "1004550": {
-        "start": 18,
-        "length": 7
-      },
-      "1150410": {
-        "start": 0,
-        "length": 1
-      },
       "1150450": {
         "start": 15,
-        "length": 3
+        "length": 3,
+        "reading": "あいする"
+      },
+      "1340430": {
+        "start": 21,
+        "length": 2,
+        "reading": "でき"
+      },
+      "1340450": {
+        "start": 21,
+        "length": 2,
+        "reading": "でき"
       },
       "1483190": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "2408840": {
+        "start": 0,
+        "length": 2,
+        "reading": "あいさ"
       }
     }
   },
@@ -1847,22 +3954,31 @@
     ],
     "indices": "もう 若い{若くない} と 思う と 悲しい です",
     "vocabIds": [
-      "2193250",
+      "1324300",
       "2863875",
+      "1589350",
       "1483190"
     ],
     "matches": {
+      "1324300": {
+        "start": 2,
+        "length": 2,
+        "reading": "わかく"
+      },
       "1483190": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
-      "2193250": {
-        "start": 2,
-        "length": 1
+      "1589350": {
+        "start": 7,
+        "length": 2,
+        "reading": "おもう"
       },
       "2863875": {
         "start": 6,
-        "length": 4
+        "length": 4,
+        "reading": "とおもうと"
       }
     }
   },
@@ -1883,11 +3999,13 @@
     "matches": {
       "1272950": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "こうけい"
       },
       "1483190": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -1908,11 +4026,13 @@
     "matches": {
       "1483190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1600900": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -1933,11 +4053,77 @@
     "matches": {
       "1173720": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "えいが"
       },
       "1483190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "199132",
+    "original": "なぜ彼女はあんなに悲しそうなのだろう。",
+    "en": [
+      {
+        "id": "36330",
+        "text": "Why is it that she looks so sad?"
+      },
+      {
+        "id": "1449785",
+        "text": "Why does she look so sad?"
+      }
+    ],
+    "indices": "何故(なぜ){なぜ} 彼女[01] は あんなに 悲しい{悲し} そう[01] だ{な} の だろう",
+    "vocabIds": [
+      "1483150",
+      "1483190"
+    ],
+    "matches": {
+      "1483150": {
+        "start": 2,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 9,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "199193",
+    "original": "なぜ君はそんなに悲しそうな顔をしているのか。",
+    "en": [
+      {
+        "id": "36393",
+        "text": "Why are you looking so sad?"
+      }
+    ],
+    "indices": "何故(なぜ){なぜ} 君(きみ)[01] は そんなに 悲しい{悲しそうな} 顔(かお) を 為る(する){している} の か",
+    "vocabIds": [
+      "1247250",
+      "1483190",
+      "1217730"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 13,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1247250": {
+        "start": 2,
+        "length": 1,
+        "reading": "きみ"
+      },
+      "1483190": {
+        "start": 8,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -1957,7 +4143,8 @@
     "matches": {
       "1483190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -1972,7 +4159,7 @@
     ],
     "indices": "迚も[01]{とても} 楽しい{楽しく} 過ごす{過ごしていた} すると[01] 其の[01]{その} 時(とき){とき} 悲しい 知らせ が 届く{届いた}",
     "vocabIds": [
-      "1207230",
+      "1207240",
       "1196000",
       "1483190",
       "1420400",
@@ -1981,23 +4168,28 @@
     "matches": {
       "1196000": {
         "start": 6,
-        "length": 4
+        "length": 3,
+        "reading": "すごし"
       },
-      "1207230": {
+      "1207240": {
         "start": 3,
-        "length": 1
+        "length": 3,
+        "reading": "たのしく"
       },
       "1420400": {
         "start": 23,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1457200": {
         "start": 27,
-        "length": 3
+        "length": 2,
+        "reading": "とどい"
       },
       "1483190": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -2018,20 +4210,29 @@
     "vocabIds": [
       "1483190",
       "1604890",
-      "1259290"
+      "1259290",
+      "2256270"
     ],
     "matches": {
       "1259290": {
         "start": 8,
-        "length": 3
+        "length": 1,
+        "reading": "み"
       },
       "1483190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1604890": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "め"
+      },
+      "2256270": {
+        "start": 8,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -2052,11 +4253,13 @@
     "matches": {
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1591110": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2076,7 +4279,8 @@
     "matches": {
       "1483190": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -2101,27 +4305,33 @@
     "matches": {
       "1293700": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1311110": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1316040": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "じき"
       },
       "1368370": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "じんせい"
       },
       "1423310": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "なか"
       },
       "1483190": {
         "start": 12,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -2140,28 +4350,60 @@
       "1293700",
       "1483190",
       "1499490",
-      "1270910"
+      "1270990"
     ],
     "matches": {
-      "1270910": {
+      "1270990": {
         "start": 14,
-        "length": 1
+        "length": 2,
+        "reading": "かたら"
       },
       "1293700": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1499490": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ぶぶん"
       },
       "1600900": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
+      }
+    }
+  },
+  {
+    "id": "206098",
+    "original": "その老人は悲しそうである。",
+    "en": [
+      {
+        "id": "43344",
+        "text": "The old man looks sad."
+      }
+    ],
+    "indices": "其の[01]{その} 老人 は 悲しい{悲し} そう[01] である",
+    "vocabIds": [
+      "1561090",
+      "1483190"
+    ],
+    "matches": {
+      "1483190": {
+        "start": 5,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1561090": {
+        "start": 2,
+        "length": 2,
+        "reading": "ろうじん"
       }
     }
   },
@@ -2176,32 +4418,31 @@
     ],
     "indices": "其の[01]{その} 物語 の 最も 悲しい 所(ところ){ところ} は 未だ[02]{まだ} 話す{話されていない}",
     "vocabIds": [
-      "1612700",
-      "1270910",
+      "1502480",
       "1293700",
       "1483190",
-      "1600900"
+      "1562350"
     ],
     "matches": {
-      "1270910": {
-        "start": 3,
-        "length": 1
-      },
       "1293700": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "もっとも"
       },
       "1483190": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
-      "1600900": {
+      "1502480": {
+        "start": 2,
+        "length": 2,
+        "reading": "ものがたり"
+      },
+      "1562350": {
         "start": 16,
-        "length": 1
-      },
-      "1612700": {
-        "start": 0,
-        "length": 3
+        "length": 2,
+        "reading": "はなさ"
       }
     }
   },
@@ -2219,24 +4460,34 @@
       "1483190",
       "1600900",
       "1483150",
+      "1212260",
       "1212250"
     ],
     "matches": {
       "1212250": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "かんじ"
+      },
+      "1212260": {
+        "start": 15,
+        "length": 2,
+        "reading": "かんじ"
       },
       "1483150": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1600900": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -2255,28 +4506,33 @@
       "1502480",
       "1311110",
       "1237820",
-      "2248980"
+      "1432710"
     ],
     "matches": {
       "1237820": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "むね"
       },
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1432710": {
+        "start": 12,
+        "length": 2,
+        "reading": "いたま"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1502480": {
         "start": 5,
-        "length": 2
-      },
-      "2248980": {
-        "start": 12,
-        "length": 1
+        "length": 2,
+        "reading": "ものがたり"
       }
     }
   },
@@ -2299,19 +4555,23 @@
     "matches": {
       "1420400": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483150": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1591110": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2329,39 +4589,58 @@
       "1483190",
       "1420400",
       "1311110",
+      "1383180",
       "2103390",
+      "1315720",
       "1487400",
       "1483150",
-      "1441860"
+      "1441870"
     ],
     "matches": {
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1315720": {
+        "start": 14,
+        "length": 2,
+        "reading": "もっ"
+      },
+      "1383180": {
+        "start": 11,
+        "length": 2,
+        "reading": "せきにん"
       },
       "1420400": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
-      "1441860": {
+      "1441870": {
         "start": 22,
-        "length": 2
+        "length": 3,
+        "reading": "つたえよ"
       },
       "1483150": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1487400": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "かならず"
       },
       "2103390": {
         "start": 11,
-        "length": 6
+        "length": 6,
+        "reading": "せきにんをもって"
       }
     }
   },
@@ -2386,27 +4665,33 @@
     "matches": {
       "1311110": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1340570": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "できごと"
       },
       "1360480": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "こころ"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1580260": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "きず"
       },
       "1600260": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "のこし"
       }
     }
   },
@@ -2431,27 +4716,234 @@
     "matches": {
       "1272950": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "こうけい"
       },
       "1483150": {
         "start": 13,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1555930": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "なみだ"
       },
       "1604890": {
         "start": 16,
-        "length": 1
+        "length": 1,
+        "reading": "め"
       },
       "1643640": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "おもいえがく"
+      }
+    }
+  },
+  {
+    "id": "207902",
+    "original": "その知らせを聞くと彼女は悲しくなった。",
+    "en": [
+      {
+        "id": "45158",
+        "text": "The news made her sad."
+      }
+    ],
+    "indices": "其の[01]{その} 知らせ を 聞く と 彼女[01] は 悲しい{悲しく} 成る[01]{なった}",
+    "vocabIds": [
+      "1420400",
+      "1591110",
+      "1483150",
+      "1483190"
+    ],
+    "matches": {
+      "1420400": {
+        "start": 2,
+        "length": 3,
+        "reading": "しらせ"
+      },
+      "1483150": {
+        "start": 9,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 12,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1591110": {
+        "start": 6,
+        "length": 2,
+        "reading": "きく"
+      }
+    }
+  },
+  {
+    "id": "209336",
+    "original": "その女性は悲しげで、その上疲れているようだった。",
+    "en": [
+      {
+        "id": "46597",
+        "text": "The lady looked sad, also tired."
+      }
+    ],
+    "indices": "其の[01]{その} 女性[01] は 悲しい{悲し} 気(げ){げ}~ で(#2028980) その上(そのうえ)[01] 疲れる[01]{疲れている} 様(よう){よう} だ{だった}",
+    "vocabIds": [
+      "1345250",
+      "1483190",
+      "1866140",
+      "1006880",
+      "1352130",
+      "1483740",
+      "1483730"
+    ],
+    "matches": {
+      "1006880": {
+        "start": 10,
+        "length": 3,
+        "reading": "そのうえ"
+      },
+      "1345250": {
+        "start": 2,
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1352130": {
+        "start": 12,
+        "length": 1,
+        "reading": "うえ"
+      },
+      "1483190": {
+        "start": 5,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1483730": {
+        "start": 13,
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1483740": {
+        "start": 13,
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "1866140": {
+        "start": 5,
+        "length": 3,
+        "reading": "かなしげ"
+      }
+    }
+  },
+  {
+    "id": "209491",
+    "original": "その手紙は彼女を悲しくさせた。",
+    "en": [
+      {
+        "id": "46754",
+        "text": "The letter made her sad."
+      }
+    ],
+    "indices": "其の[01]{その} 手紙 は 彼女 を 悲しい{悲しく} 為せる{させた}",
+    "vocabIds": [
+      "1327720",
+      "1483150",
+      "1483190"
+    ],
+    "matches": {
+      "1327720": {
+        "start": 2,
+        "length": 2,
+        "reading": "てがみ"
+      },
+      "1483150": {
+        "start": 5,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1483190": {
+        "start": 8,
+        "length": 3,
+        "reading": "かなしく"
+      }
+    }
+  },
+  {
+    "id": "211997",
+    "original": "その歌は悲しくまた美しい。",
+    "en": [
+      {
+        "id": "49275",
+        "text": "The song is at once sad and beautiful."
+      }
+    ],
+    "indices": "其の[01]{その} 歌 は 悲しい{悲しく} 又{また} 美しい",
+    "vocabIds": [
+      "1193180",
+      "1483190",
+      "1486360"
+    ],
+    "matches": {
+      "1193180": {
+        "start": 2,
+        "length": 1,
+        "reading": "うた"
+      },
+      "1483190": {
+        "start": 4,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1486360": {
+        "start": 9,
+        "length": 3,
+        "reading": "うつくしい"
+      }
+    }
+  },
+  {
+    "id": "212802",
+    "original": "そのニュースを聞いたとき、とても悲しく感じた。",
+    "en": [
+      {
+        "id": "50086",
+        "text": "I felt very sad when I heard the news."
+      }
+    ],
+    "indices": "其の[01]{その} ニュース を 聞く{聞いた} 時(とき){とき} 迚も[01]{とても} 悲しい{悲しく} 感じる{感じた}",
+    "vocabIds": [
+      "1591110",
+      "1483190",
+      "1212260",
+      "1212250"
+    ],
+    "matches": {
+      "1212250": {
+        "start": 19,
+        "length": 2,
+        "reading": "かんじ"
+      },
+      "1212260": {
+        "start": 19,
+        "length": 2,
+        "reading": "かんじ"
+      },
+      "1483190": {
+        "start": 16,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1591110": {
+        "start": 7,
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2473,15 +4965,198 @@
     "matches": {
       "1311110": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1483190": {
         "start": 13,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1591110": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
+      }
+    }
+  },
+  {
+    "id": "213493",
+    "original": "そして小さい黒いウサギは二度と悲しくは見えませんでした。",
+    "en": [
+      {
+        "id": "50779",
+        "text": "And the little black rabbit never looked sad again."
+      }
+    ],
+    "indices": "而して{そして} 小さい 黒い[01] 兎{ウサギ} は 二度と 悲しい{悲しく} は 見える(みえる){見えませんでした}",
+    "vocabIds": [
+      "1347750",
+      "1287420",
+      "2110850",
+      "1483190",
+      "1259140"
+    ],
+    "matches": {
+      "1259140": {
+        "start": 19,
+        "length": 2,
+        "reading": "みえ"
+      },
+      "1287420": {
+        "start": 6,
+        "length": 2,
+        "reading": "くろい"
+      },
+      "1347750": {
+        "start": 3,
+        "length": 3,
+        "reading": "ちいさい"
+      },
+      "1483190": {
+        "start": 15,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "2110850": {
+        "start": 12,
+        "length": 3,
+        "reading": "にどと"
+      }
+    }
+  },
+  {
+    "id": "215607",
+    "original": "ジョーは昨日悲しそうに見えた？",
+    "en": [
+      {
+        "id": "52909",
+        "text": "Joe looked sad yesterday?"
+      }
+    ],
+    "indices": "は 昨日(きのう) 悲しい{悲し} そう[01] に 見える(みえる){見えた}",
+    "vocabIds": [
+      "1579260",
+      "1483190",
+      "1259140"
+    ],
+    "matches": {
+      "1259140": {
+        "start": 11,
+        "length": 2,
+        "reading": "みえ"
+      },
+      "1483190": {
+        "start": 6,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1579260": {
+        "start": 4,
+        "length": 2,
+        "reading": "きのう"
+      }
+    }
+  },
+  {
+    "id": "216122",
+    "original": "しばらくして小さい黒いウサギが座り込んでしまいました。そしてとても悲しそうに見えました。",
+    "en": [
+      {
+        "id": "53424",
+        "text": "After a while, the little black rabbit sat down, and looked very sad."
+      }
+    ],
+    "indices": "暫くして{しばらくして} 小さい 黒い[01] 兎{ウサギ} が 座り込む{座り込んで} 仕舞う{しまいました} 而して{そして} 迚も[01]{とても} 悲しい{悲し} そう[01] に 見える(みえる){見えました}",
+    "vocabIds": [
+      "1347750",
+      "1287420",
+      "1291790",
+      "1483190",
+      "1259140"
+    ],
+    "matches": {
+      "1259140": {
+        "start": 38,
+        "length": 2,
+        "reading": "みえ"
+      },
+      "1287420": {
+        "start": 9,
+        "length": 2,
+        "reading": "くろい"
+      },
+      "1291790": {
+        "start": 15,
+        "length": 4,
+        "reading": "すわりこん"
+      },
+      "1347750": {
+        "start": 6,
+        "length": 3,
+        "reading": "ちいさい"
+      },
+      "1483190": {
+        "start": 33,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "216529",
+    "original": "ジェーンのお別れの挨拶を聞いて、私達はとても悲しくなりました。",
+    "en": [
+      {
+        "id": "53833",
+        "text": "Jane's farewell speech made us very sad."
+      }
+    ],
+    "indices": "の お別れ の 挨拶[02] を 聞く{聞いて} 私たち{私達} は 迚も[01]{とても} 悲しい{悲しく} 成る[01]{なりました}",
+    "vocabIds": [
+      "1002630",
+      "1509490",
+      "1151120",
+      "1591110",
+      "1311110",
+      "1416220",
+      "1483190"
+    ],
+    "matches": {
+      "1002630": {
+        "start": 5,
+        "length": 3,
+        "reading": "おわかれ"
+      },
+      "1151120": {
+        "start": 9,
+        "length": 2,
+        "reading": "あいさつ"
+      },
+      "1311110": {
+        "start": 16,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1416220": {
+        "start": 17,
+        "length": 1,
+        "reading": "たち"
+      },
+      "1483190": {
+        "start": 22,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1509490": {
+        "start": 6,
+        "length": 2,
+        "reading": "わかれ"
+      },
+      "1591110": {
+        "start": 12,
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2503,15 +5178,18 @@
     "matches": {
       "1285990": {
         "start": 22,
-        "length": 3
+        "length": 2,
+        "reading": "つげ"
       },
       "1313960": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "じじつ"
       },
       "1483190": {
         "start": 16,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -2532,11 +5210,13 @@
     "matches": {
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1600900": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "はなし"
       }
     }
   },
@@ -2560,23 +5240,184 @@
     "matches": {
       "1191730": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1414300": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "おおごえ"
       },
       "1483190": {
         "start": 21,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1516930": {
         "start": 12,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       },
       "1532870": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "なく"
+      }
+    }
+  },
+  {
+    "id": "230434",
+    "original": "あの木の下にいる若い女性は悲しそうな顔をしている。",
+    "en": [
+      {
+        "id": "67801",
+        "text": "The young woman under that tree looks sad."
+      }
+    ],
+    "indices": "彼の(あの){あの} 木(き) の 下(した) に 居る(いる)[01]{いる} 若い 女性[01] は 悲しい{悲しそうな} 顔(かお) を 為る(する){している}",
+    "vocabIds": [
+      "1869560",
+      "1324300",
+      "1345250",
+      "1483190",
+      "1217730"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 18,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1324300": {
+        "start": 8,
+        "length": 2,
+        "reading": "わかい"
+      },
+      "1345250": {
+        "start": 10,
+        "length": 2,
+        "reading": "じょせい"
+      },
+      "1483190": {
+        "start": 13,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1869560": {
+        "start": 2,
+        "length": 3,
+        "reading": "このした"
+      }
+    }
+  },
+  {
+    "id": "230889",
+    "original": "あの女の子はなんて悲しそうなんだろう。",
+    "en": [
+      {
+        "id": "68255",
+        "text": "How sad that girl looks!"
+      }
+    ],
+    "indices": "彼の(あの){あの} 女の子(おんなのこ) は 何て{なんて} 悲しい{悲し} そう[01] だ{な} ん[04] だろう",
+    "vocabIds": [
+      "1344970",
+      "1483190"
+    ],
+    "matches": {
+      "1344970": {
+        "start": 2,
+        "length": 3,
+        "reading": "おんなのこ"
+      },
+      "1483190": {
+        "start": 9,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "231248",
+    "original": "あのボスに俺たちの生殺与奪の権を握られているとはね。悲しくなっちゃうよ。",
+    "en": [
+      {
+        "id": "68615",
+        "text": "I get depressed thinking that a guy like our boss can have ultimate power over us."
+      }
+    ],
+    "indices": "彼の(あの){あの} ボス に 俺(おれ) 達{たち} の 生殺与奪~ の 権 を 握る{握られている} とは ね(#2029080)[01] 悲しい{悲しく} 成る[01]{なっ} じゃう{ちゃう} よ[01]",
+    "vocabIds": [
+      "1576870",
+      "1863230",
+      "1378980",
+      "1258080",
+      "1152720",
+      "1483190"
+    ],
+    "matches": {
+      "1152720": {
+        "start": 16,
+        "length": 2,
+        "reading": "にぎら"
+      },
+      "1258080": {
+        "start": 14,
+        "length": 1,
+        "reading": "けん"
+      },
+      "1378980": {
+        "start": 9,
+        "length": 4,
+        "reading": "せいさつよだつ"
+      },
+      "1483190": {
+        "start": 26,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1576870": {
+        "start": 5,
+        "length": 1,
+        "reading": "おれ"
+      },
+      "1863230": {
+        "start": 5,
+        "length": 3,
+        "reading": "おれたち"
+      }
+    }
+  },
+  {
+    "id": "234193",
+    "original": "あなたがそんなに悲しそうに泣くのは聞いていられない。",
+    "en": [
+      {
+        "id": "71567",
+        "text": "I cannot abide hearing you cry so bitterly."
+      }
+    ],
+    "indices": "貴方(あなた)[01]{あなた} が そんなに 悲しい{悲し} そう[01]{そうに} 泣く の は 聞く{聞いていられない}",
+    "vocabIds": [
+      "1483190",
+      "1229840",
+      "1591110"
+    ],
+    "matches": {
+      "1229840": {
+        "start": 13,
+        "length": 2,
+        "reading": "なく"
+      },
+      "1483190": {
+        "start": 8,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1591110": {
+        "start": 17,
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2596,7 +5437,40 @@
     "matches": {
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "460325",
+    "original": "子犬が死んで、悲しくてたまりません。",
+    "en": [
+      {
+        "id": "460326",
+        "text": "My puppy died, and I'm terribly upset."
+      }
+    ],
+    "vocabIds": [
+      "1592900",
+      "1310730",
+      "1483190"
+    ],
+    "matches": {
+      "1310730": {
+        "start": 3,
+        "length": 2,
+        "reading": "しん"
+      },
+      "1483190": {
+        "start": 7,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1592900": {
+        "start": 0,
+        "length": 2,
+        "reading": "こいぬ"
       }
     }
   },
@@ -2624,11 +5498,13 @@
     "matches": {
       "1483190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1502480": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ものがたり"
       }
     }
   },
@@ -2645,24 +5521,28 @@
       "1483190",
       "1861770",
       "1464700",
-      "2843908"
+      "1518540"
     ],
     "matches": {
       "1464700": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "にっぽんじん"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "1518540": {
+        "start": 13,
+        "length": 4,
+        "reading": "なくなり"
       },
       "1861770": {
         "start": 6,
-        "length": 2
-      },
-      "2843908": {
-        "start": 13,
-        "length": 1
+        "length": 2,
+        "reading": "おおく"
       }
     }
   },
@@ -2683,15 +5563,18 @@
     "matches": {
       "1245290": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "そら"
       },
       "1259740": {
         "start": 15,
-        "length": 4
+        "length": 3,
+        "reading": "みあげ"
       },
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -2718,23 +5601,28 @@
     "matches": {
       "1229800": {
         "start": 14,
-        "length": 7
+        "length": 4,
+        "reading": "なきくずれ"
       },
       "1420400": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483150": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1591110": {
         "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "きい"
       }
     }
   },
@@ -2754,11 +5642,13 @@
     "matches": {
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1611580": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ほんとうに"
       }
     }
   },
@@ -2780,19 +5670,111 @@
     "matches": {
       "1002650": {
         "start": 0,
-        "length": 4
+        "length": 4,
+        "reading": "おかあさん"
       },
       "1229840": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "ない"
       },
       "1239700": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "きょく"
       },
       "1483190": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "1650084",
+    "original": "さよなら！さよなら！ああ、別れというものは悲し懐かしいものじゃ。夜が明くるまで、こうしてさよならを言うていたい。",
+    "en": [
+      {
+        "id": "1650103",
+        "text": "Good night, good night! Parting is such sweet sorrow, that I shall say good night till it be morrow."
+      }
+    ],
+    "vocabIds": [
+      "1509490",
+      "1483190",
+      "1200490",
+      "1536350",
+      "1532250",
+      "1587040",
+      "2850552"
+    ],
+    "matches": {
+      "1200490": {
+        "start": 23,
+        "length": 4,
+        "reading": "なつかしい"
+      },
+      "1483190": {
+        "start": 21,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1509490": {
+        "start": 13,
+        "length": 2,
+        "reading": "わかれ"
+      },
+      "1532250": {
+        "start": 34,
+        "length": 3,
+        "reading": "あかくる"
+      },
+      "1536350": {
+        "start": 32,
+        "length": 1,
+        "reading": "よる"
+      },
+      "1587040": {
+        "start": 49,
+        "length": 2,
+        "reading": "ゆう"
+      },
+      "2850552": {
+        "start": 49,
+        "length": 3,
+        "reading": "ゆうて"
+      }
+    }
+  },
+  {
+    "id": "1681190",
+    "original": "私の猫は悲しそう。",
+    "en": [
+      {
+        "id": "1333956",
+        "text": "My cat looks sad."
+      }
+    ],
+    "vocabIds": [
+      "1311110",
+      "1467640",
+      "1483190"
+    ],
+    "matches": {
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1467640": {
+        "start": 2,
+        "length": 1,
+        "reading": "ねこ"
+      },
+      "1483190": {
+        "start": 4,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -2813,15 +5795,18 @@
     "matches": {
       "1188690": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "なんとも"
       },
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1502480": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ものがたり"
       }
     }
   },
@@ -2840,7 +5825,8 @@
     "matches": {
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -2859,7 +5845,28 @@
     "matches": {
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "2121094",
+    "original": "あれで悲しくなるの？",
+    "en": [
+      {
+        "id": "1886027",
+        "text": "Does that make you sad?"
+      }
+    ],
+    "vocabIds": [
+      "1483190"
+    ],
+    "matches": {
+      "1483190": {
+        "start": 3,
+        "length": 3,
+        "reading": "かなしく"
       }
     }
   },
@@ -2880,11 +5887,39 @@
     "matches": {
       "1363780": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "しんじつ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "2708182",
+    "original": "どうしてそんな悲しそうな顔してるの？",
+    "en": [
+      {
+        "id": "36393",
+        "text": "Why are you looking so sad?"
+      }
+    ],
+    "vocabIds": [
+      "1483190",
+      "1217730"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 12,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1483190": {
+        "start": 7,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -2904,11 +5939,63 @@
     "matches": {
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1577100": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
+      }
+    }
+  },
+  {
+    "id": "3507379",
+    "original": "悲しくなんかない。",
+    "en": [
+      {
+        "id": "2248175",
+        "text": "I'm not sad."
+      }
+    ],
+    "vocabIds": [
+      "1483190"
+    ],
+    "matches": {
+      "1483190": {
+        "start": 0,
+        "length": 3,
+        "reading": "かなしく"
+      }
+    }
+  },
+  {
+    "id": "3597411",
+    "original": "そんな悲しそうな顔するなよ。",
+    "en": [
+      {
+        "id": "3598936",
+        "text": "Quit making such a sad face."
+      },
+      {
+        "id": "3598969",
+        "text": "Don't look so sad."
+      }
+    ],
+    "vocabIds": [
+      "1483190",
+      "1217730"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 8,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -2943,7 +6030,8 @@
     "matches": {
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -2963,11 +6051,13 @@
     "matches": {
       "1002420": {
         "start": 3,
-        "length": 4
+        "length": 4,
+        "reading": "おしらせ"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -2982,16 +6072,18 @@
     ],
     "vocabIds": [
       "1483190",
-      "1922760"
+      "1587040"
     ],
     "matches": {
       "1483190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
-      "1922760": {
-        "start": 7,
-        "length": 3
+      "1587040": {
+        "start": 8,
+        "length": 2,
+        "reading": "いう"
       }
     }
   },
@@ -3011,11 +6103,53 @@
     "matches": {
       "1483190": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1577100": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "なに"
+      }
+    }
+  },
+  {
+    "id": "7704443",
+    "original": "なんでトムはそんなに悲しそうなんですか？",
+    "en": [
+      {
+        "id": "7702573",
+        "text": "Why does Tom look so sad?"
+      }
+    ],
+    "vocabIds": [
+      "1483190"
+    ],
+    "matches": {
+      "1483190": {
+        "start": 10,
+        "length": 2,
+        "reading": "かなし"
+      }
+    }
+  },
+  {
+    "id": "8056968",
+    "original": "悲しくないの？",
+    "en": [
+      {
+        "id": "6091169",
+        "text": "Aren't you sad?"
+      }
+    ],
+    "vocabIds": [
+      "1483190"
+    ],
+    "matches": {
+      "1483190": {
+        "start": 0,
+        "length": 3,
+        "reading": "かなしく"
       }
     }
   },
@@ -3036,15 +6170,18 @@
     "matches": {
       "1343310": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "しょぞく"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1497610": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ちち"
       }
     }
   },
@@ -3059,16 +6196,36 @@
     ],
     "vocabIds": [
       "1483190",
-      "1315860"
+      "1315840",
+      "2021540",
+      "1315860",
+      "1229840"
     ],
     "matches": {
+      "1229840": {
+        "start": 6,
+        "length": 2,
+        "reading": "なけ"
+      },
+      "1315840": {
+        "start": 3,
+        "length": 1,
+        "reading": "とき"
+      },
       "1315860": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ときには"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "2021540": {
+        "start": 3,
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -3083,21 +6240,36 @@
     ],
     "vocabIds": [
       "1483190",
+      "1315840",
+      "2021540",
       "1315860",
       "1229840"
     ],
     "matches": {
       "1229840": {
         "start": 6,
-        "length": 3
+        "length": 2,
+        "reading": "ない"
+      },
+      "1315840": {
+        "start": 3,
+        "length": 1,
+        "reading": "とき"
       },
       "1315860": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "ときには"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "2021540": {
+        "start": 3,
+        "length": 2,
+        "reading": "ときに"
       }
     }
   },
@@ -3117,11 +6289,13 @@
     "matches": {
       "1193180": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "うた"
       },
       "1483190": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -3136,11 +6310,12 @@
     ],
     "vocabIds": [
       "1414340",
+      "1589350",
       "1540170",
       "1268770",
       "1577100",
       "1473230",
-      "2020300",
+      "1236070",
       "1529880",
       "1290210",
       "1606685",
@@ -3150,92 +6325,167 @@
       "1318610",
       "1413660",
       "1580640",
+      "1189170",
       "1189190",
+      "1445160",
       "1551370",
       "1539800",
       "1386840",
-      "1497980"
+      "1497980",
+      "1497960"
     ],
     "matches": {
+      "1189170": {
+        "start": 138,
+        "length": 2,
+        "reading": "なんど"
+      },
       "1189190": {
         "start": 138,
-        "length": 4
+        "length": 4,
+        "reading": "なんどでも"
+      },
+      "1236070": {
+        "start": 26,
+        "length": 2,
+        "reading": "つよく"
       },
       "1268770": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "たがい"
       },
       "1290210": {
         "start": 36,
-        "length": 2
+        "length": 2,
+        "reading": "こんじょう"
       },
       "1318610": {
         "start": 64,
-        "length": 2
+        "length": 2,
+        "reading": "じぶん"
       },
       "1373860": {
         "start": 46,
-        "length": 2
+        "length": 2,
+        "reading": "せかい"
       },
       "1386840": {
         "start": 156,
-        "length": 2
+        "length": 2,
+        "reading": "ぜったい"
       },
       "1413660": {
         "start": 93,
-        "length": 3
+        "length": 3,
+        "reading": "だいすき"
       },
       "1414340": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "たいせつ"
+      },
+      "1445160": {
+        "start": 139,
+        "length": 1,
+        "reading": "ど"
       },
       "1473230": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "ばい"
       },
       "1483190": {
         "start": 56,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "1497960": {
+        "start": 159,
+        "length": 2,
+        "reading": "まけ"
       },
       "1497980": {
         "start": 159,
-        "length": 4
+        "length": 2,
+        "reading": "まけ"
       },
       "1529880": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "むげん"
       },
       "1539800": {
         "start": 153,
-        "length": 2
+        "length": 2,
+        "reading": "ゆうしゃ"
       },
       "1540170": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ともだち"
       },
       "1551370": {
         "start": 142,
-        "length": 5
+        "length": 5,
+        "reading": "たちあがる"
       },
       "1577100": {
         "start": 22,
-        "length": 1
+        "length": 1,
+        "reading": "なん"
       },
       "1580640": {
         "start": 97,
-        "length": 1
+        "length": 1,
+        "reading": "ひと"
       },
       "1587610": {
         "start": 50,
-        "length": 1
+        "length": 1,
+        "reading": "いや"
+      },
+      "1589350": {
+        "start": 4,
+        "length": 2,
+        "reading": "おもえ"
       },
       "1606685": {
         "start": 39,
-        "length": 3
+        "length": 2,
+        "reading": "わい"
+      }
+    }
+  },
+  {
+    "id": "2117383",
+    "original": "君は悲しそうに見えますよ。",
+    "en": [
+      {
+        "id": "2255202",
+        "text": "You seem sad."
+      }
+    ],
+    "vocabIds": [
+      "1247250",
+      "1483190",
+      "1259140"
+    ],
+    "matches": {
+      "1247250": {
+        "start": 0,
+        "length": 1,
+        "reading": "きみ"
       },
-      "2020300": {
-        "start": 26,
-        "length": 1
+      "1259140": {
+        "start": 7,
+        "length": 2,
+        "reading": "みえ"
+      },
+      "1483190": {
+        "start": 2,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -3249,17 +6499,25 @@
       }
     ],
     "vocabIds": [
+      "1288850",
       "1288920",
       "1483190"
     ],
     "matches": {
+      "1288850": {
+        "start": 0,
+        "length": 1,
+        "reading": "いま"
+      },
       "1288920": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "いまでも"
       },
       "1483190": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -3283,11 +6541,43 @@
     "matches": {
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1523060": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "ほんとう"
+      }
+    }
+  },
+  {
+    "id": "9458433",
+    "original": "時々悲しくなるんだ。",
+    "en": [
+      {
+        "id": "9288967",
+        "text": "Sometimes I feel sad."
+      },
+      {
+        "id": "9288966",
+        "text": "I feel sad sometimes."
+      }
+    ],
+    "vocabIds": [
+      "1598680",
+      "1483190"
+    ],
+    "matches": {
+      "1483190": {
+        "start": 2,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1598680": {
+        "start": 0,
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -3306,7 +6596,8 @@
     "matches": {
       "1483190": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -3325,7 +6616,8 @@
     "matches": {
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -3344,7 +6636,8 @@
     "matches": {
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -3360,30 +6653,35 @@
     "vocabIds": [
       "1515120",
       "1191730",
-      "1324470",
+      "1579720",
       "1483190",
       "1355850"
     ],
     "matches": {
       "1191730": {
         "start": 6,
-        "length": 1
-      },
-      "1324470": {
-        "start": 15,
-        "length": 1
+        "length": 1,
+        "reading": "いえ"
       },
       "1355850": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "ばしょ"
       },
       "1483190": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1515120": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ははおや"
+      },
+      "1579720": {
+        "start": 15,
+        "length": 3,
+        "reading": "さびしく"
       }
     }
   },
@@ -3398,10 +6696,12 @@
     ],
     "vocabIds": [
       "1125950",
+      "1270910",
       "1533580",
       "1589350",
       "1505090",
       "1343950",
+      "1203620",
       "1203640",
       "1523400",
       "1483190",
@@ -3412,47 +6712,68 @@
     "matches": {
       "1125950": {
         "start": 0,
-        "length": 6
+        "length": 6,
+        "reading": "ぽるとがるご"
+      },
+      "1203620": {
+        "start": 20,
+        "length": 2,
+        "reading": "がいこく"
       },
       "1203640": {
         "start": 20,
-        "length": 3
+        "length": 3,
+        "reading": "がいこくご"
+      },
+      "1270910": {
+        "start": 5,
+        "length": 1,
+        "reading": "ご"
       },
       "1335080": {
         "start": 56,
-        "length": 2
+        "length": 2,
+        "reading": "じゅうぶん"
       },
       "1343950": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "かい"
       },
       "1420590": {
         "start": 48,
-        "length": 2
+        "length": 2,
+        "reading": "ちしき"
       },
       "1483190": {
         "start": 35,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1505090": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ぶん"
       },
       "1521400": {
         "start": 42,
-        "length": 1
+        "length": 1,
+        "reading": "ぼく"
       },
       "1523400": {
         "start": 24,
-        "length": 2
+        "length": 2,
+        "reading": "ほんやく"
       },
       "1533580": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "おもしろい"
       },
       "1589350": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "おもっ"
       }
     }
   },
@@ -3472,11 +6793,13 @@
     "matches": {
       "1193180": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "うた"
       },
       "1483190": {
         "start": 5,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -3497,15 +6820,70 @@
     "matches": {
       "1173720": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "えいが"
       },
       "1277450": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "すき"
       },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "10839775",
+    "original": "何が悲しかったの？",
+    "en": [
+      {
+        "id": "2892604",
+        "text": "What made you sad?"
+      }
+    ],
+    "vocabIds": [
+      "1577100",
+      "1483190"
+    ],
+    "matches": {
+      "1483190": {
+        "start": 2,
+        "length": 4,
+        "reading": "かなしかっ"
+      },
+      "1577100": {
+        "start": 0,
+        "length": 1,
+        "reading": "なに"
+      }
+    }
+  },
+  {
+    "id": "9665534",
+    "original": "彼は悲しそうだった。",
+    "en": [
+      {
+        "id": "8477061",
+        "text": "He seemed sad."
+      }
+    ],
+    "vocabIds": [
+      "1483070",
+      "1483190"
+    ],
+    "matches": {
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483190": {
+        "start": 2,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -3526,15 +6904,18 @@
     "matches": {
       "1483190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1591430": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "きもち"
       },
       "1598680": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -3553,7 +6934,8 @@
     "matches": {
       "1483190": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       }
     }
   },
@@ -3578,15 +6960,128 @@
     "matches": {
       "1420400": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "しらせ"
       },
       "1483190": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1579110": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きょう"
+      }
+    }
+  },
+  {
+    "id": "11240686",
+    "original": "心惹かれる言語は五万とあるんだけどね。悲しいかな、それ全部を嗜むには人生があまりにも短すぎる。ただそれだけだよ。",
+    "en": [
+      {
+        "id": "11241811",
+        "text": "Yet there are so many fascinating languages that it's sad, isn't it? Life's too short to learn them all. Anyway, that's all I'm saying."
+      }
+    ],
+    "vocabIds": [
+      "1360480",
+      "2402830",
+      "1982820",
+      "1168800",
+      "1264420",
+      "1268060",
+      "2423350",
+      "1584460",
+      "1483190",
+      "1636300",
+      "1396130",
+      "2008820",
+      "1368370",
+      "1418620",
+      "2647180",
+      "1910080"
+    ],
+    "matches": {
+      "1168800": {
+        "start": 1,
+        "length": 4,
+        "reading": "ひかれる"
+      },
+      "1264420": {
+        "start": 5,
+        "length": 2,
+        "reading": "げんご"
+      },
+      "1268060": {
+        "start": 8,
+        "length": 1,
+        "reading": "ご"
+      },
+      "1360480": {
+        "start": 0,
+        "length": 1,
+        "reading": "こころ"
+      },
+      "1368370": {
+        "start": 34,
+        "length": 2,
+        "reading": "じんせい"
+      },
+      "1396130": {
+        "start": 27,
+        "length": 2,
+        "reading": "ぜんぶ"
+      },
+      "1418620": {
+        "start": 42,
+        "length": 1,
+        "reading": "みじか"
+      },
+      "1483190": {
+        "start": 19,
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "1584460": {
+        "start": 9,
+        "length": 1,
+        "reading": "まん"
+      },
+      "1636300": {
+        "start": 19,
+        "length": 5,
+        "reading": "かなしいかな"
+      },
+      "1910080": {
+        "start": 42,
+        "length": 4,
+        "reading": "みじかすぎる"
+      },
+      "1982820": {
+        "start": 1,
+        "length": 2,
+        "reading": "ひか"
+      },
+      "2008820": {
+        "start": 30,
+        "length": 2,
+        "reading": "たしなむ"
+      },
+      "2402830": {
+        "start": 0,
+        "length": 5,
+        "reading": "こころひかれる"
+      },
+      "2423350": {
+        "start": 8,
+        "length": 3,
+        "reading": "ごまんと"
+      },
+      "2647180": {
+        "start": 42,
+        "length": 1,
+        "reading": "みじか"
       }
     }
   },
@@ -3601,16 +7096,30 @@
     ],
     "vocabIds": [
       "1483190",
-      "1529430"
+      "1529410",
+      "1259290",
+      "2256270"
     ],
     "matches": {
+      "1259290": {
+        "start": 5,
+        "length": 1,
+        "reading": "み"
+      },
       "1483190": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
-      "1529430": {
+      "1529410": {
         "start": 3,
-        "length": 4
+        "length": 1,
+        "reading": "ゆめ"
+      },
+      "2256270": {
+        "start": 5,
+        "length": 1,
+        "reading": "み"
       }
     }
   },
@@ -3626,20 +7135,111 @@
     "vocabIds": [
       "1589340",
       "2842661",
+      "1582120",
       "1483190"
     ],
     "matches": {
       "1483190": {
         "start": 32,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      },
+      "1582120": {
+        "start": 9,
+        "length": 1,
+        "reading": "みせ"
       },
       "1589340": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "おもいで"
       },
       "2842661": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "おみせ"
+      }
+    }
+  },
+  {
+    "id": "11574805",
+    "original": "おばあさんは、割れた花瓶を見て、悲しそうにため息をついた。",
+    "en": [
+      {
+        "id": "10827724",
+        "text": "The old lady looked at the broken vase and sighed sadly."
+      }
+    ],
+    "vocabIds": [
+      "1208020",
+      "1208010",
+      "1194870",
+      "1259290",
+      "2256270",
+      "1483190",
+      "1597190"
+    ],
+    "matches": {
+      "1194870": {
+        "start": 10,
+        "length": 2,
+        "reading": "かびん"
+      },
+      "1208010": {
+        "start": 7,
+        "length": 2,
+        "reading": "われ"
+      },
+      "1208020": {
+        "start": 7,
+        "length": 2,
+        "reading": "われ"
+      },
+      "1259290": {
+        "start": 13,
+        "length": 1,
+        "reading": "み"
+      },
+      "1483190": {
+        "start": 16,
+        "length": 2,
+        "reading": "かなし"
+      },
+      "1597190": {
+        "start": 21,
+        "length": 3,
+        "reading": "ためいき"
+      },
+      "2256270": {
+        "start": 13,
+        "length": 1,
+        "reading": "み"
+      }
+    }
+  },
+  {
+    "id": "11637422",
+    "original": "どうしたの？悲しそうな顔して。",
+    "en": [
+      {
+        "id": "2701495",
+        "text": "What's the matter? You look sad."
+      }
+    ],
+    "vocabIds": [
+      "1483190",
+      "1217730"
+    ],
+    "matches": {
+      "1217730": {
+        "start": 11,
+        "length": 1,
+        "reading": "かお"
+      },
+      "1483190": {
+        "start": 6,
+        "length": 2,
+        "reading": "かなし"
       }
     }
   },
@@ -3655,55 +7255,115 @@
     "vocabIds": [
       "1576870",
       "1378520",
+      "1378500",
+      "1420970",
       "1420980",
+      "1183480",
+      "2658470",
+      "2056760",
       "1282410",
       "1483190",
-      "1922760",
+      "1587040",
       "1311110",
       "1594060",
-      "1529610",
-      "2757880"
+      "1529610"
     ],
     "matches": {
+      "1183480": {
+        "start": 13,
+        "length": 2,
+        "reading": "おんだん"
+      },
       "1282410": {
         "start": 19,
-        "length": 2
+        "length": 2,
+        "reading": "こうけん"
       },
       "1311110": {
         "start": 46,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1378500": {
+        "start": 5,
+        "length": 2,
+        "reading": "いき"
       },
       "1378520": {
         "start": 5,
-        "length": 3
+        "length": 2,
+        "reading": "いき"
+      },
+      "1420970": {
+        "start": 11,
+        "length": 2,
+        "reading": "ちきゅう"
       },
       "1420980": {
         "start": 11,
-        "length": 5
+        "length": 5,
+        "reading": "ちきゅうおんだんか"
       },
       "1483190": {
         "start": 32,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
       "1529610": {
         "start": 60,
-        "length": 3
+        "length": 3,
+        "reading": "むいみ"
       },
       "1576870": {
         "start": 1,
-        "length": 1
+        "length": 1,
+        "reading": "おれ"
+      },
+      "1587040": {
+        "start": 37,
+        "length": 2,
+        "reading": "いわ"
       },
       "1594060": {
         "start": 48,
-        "length": 2
+        "length": 2,
+        "reading": "しあわせ"
       },
-      "1922760": {
-        "start": 36,
-        "length": 5
+      "2056760": {
+        "start": 15,
+        "length": 1,
+        "reading": "か"
       },
-      "2757880": {
-        "start": 64,
-        "length": 4
+      "2658470": {
+        "start": 13,
+        "length": 3,
+        "reading": "おんだんか"
+      }
+    }
+  },
+  {
+    "id": "12022856",
+    "original": "時々、悲しくなるの。",
+    "en": [
+      {
+        "id": "12022852",
+        "text": "Sometimes I get sad."
+      }
+    ],
+    "vocabIds": [
+      "1598680",
+      "1483190"
+    ],
+    "matches": {
+      "1483190": {
+        "start": 3,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1598680": {
+        "start": 0,
+        "length": 2,
+        "reading": "ときどき"
       }
     }
   },
@@ -3719,20 +7379,23 @@
     "vocabIds": [
       "1310730",
       "1483190",
-      "1951150"
+      "1591420"
     ],
     "matches": {
       "1310730": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "しん"
       },
       "1483190": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
       },
-      "1951150": {
+      "1591420": {
         "start": 11,
-        "length": 4
+        "length": 3,
+        "reading": "きまっ"
       }
     }
   },
@@ -3752,11 +7415,51 @@
     "matches": {
       "1289520": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こんや"
       },
       "1483190": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "かなしい"
+      }
+    }
+  },
+  {
+    "id": "13056167",
+    "original": "とても悲しくて、ただ愕然としたことを覚えている。",
+    "en": [
+      {
+        "id": "13056169",
+        "text": "I remember feeling very sad and just shocked."
+      }
+    ],
+    "vocabIds": [
+      "1483190",
+      "1693200",
+      "1206050",
+      "1206040"
+    ],
+    "matches": {
+      "1206040": {
+        "start": 18,
+        "length": 2,
+        "reading": "おぼえ"
+      },
+      "1206050": {
+        "start": 18,
+        "length": 2,
+        "reading": "おぼえ"
+      },
+      "1483190": {
+        "start": 3,
+        "length": 3,
+        "reading": "かなしく"
+      },
+      "1693200": {
+        "start": 10,
+        "length": 2,
+        "reading": "がくぜん"
       }
     }
   }

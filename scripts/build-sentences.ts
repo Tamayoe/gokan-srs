@@ -3,7 +3,7 @@ import path from 'path';
 import readline from 'readline';
 import type { Vocabulary } from '../src/models/vocabulary.model';
 import type { Sentence } from '../src/models/sentence.model';
-import kuromoji from 'kuromoji';
+import type kuromoji from 'kuromoji';
 
 // --- Configuration ---
 const INPUT_SENTENCES_FILE = './data/raw/Sentence pairs in Japanese-English - 2026-02-15.tsv';
@@ -159,6 +159,7 @@ async function main() {
     console.log('✅ Kuromoji ready!');
 
     const sentenceTokenizer = new SentenceTokenizer(tokenizer as any);
+    const vocabSetToMatch = new Set(vocabMap.keys());
 
     for (const [_, sentence] of sentencesMap) {
         sentenceCount++;
@@ -176,10 +177,9 @@ async function main() {
         // If a word appears twice, we'll just store the FIRST one (or best one).
         // For learning purposes, highlighting the first occurrence is sufficient.
         // Extract matches using our tested SentenceTokenizer logic against known vocab keys
-        const vocabKeys = Array.from(vocabMap.keys());
-        const extractedMatches = sentenceTokenizer.extractMatches(text, vocabKeys);
+        const extractedMatches = sentenceTokenizer.extractMatches(text, vocabSetToMatch);
 
-        const matches: Record<string, { start: number, length: number }> = {};
+        const matches: Record<string, { start: number, length: number, reading?: string }> = {};
         const matchedVocabIds: string[] = [];
 
         for (const [matchedTerm, matchInfo] of Object.entries(extractedMatches)) {

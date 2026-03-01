@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
 import type { Sentence } from "../models/sentence.model";
-import { VocabularyService } from "../services/vocabulary.service";
 
 interface InteractiveSentenceProps {
     sentence: Sentence;
@@ -33,6 +31,7 @@ export function InteractiveSentence({
         vocabId?: string;
         start: number;
         end: number;
+        reading?: string;
     }
 
     const sortedMatchKeys = Object.keys(matches).sort((a, b) => {
@@ -67,7 +66,8 @@ export function InteractiveSentence({
             content: text.substring(match.start, end),
             vocabId: vocabId,
             start: match.start,
-            end: end
+            end: end,
+            reading: match.reading
         });
 
         currentIndex = end;
@@ -83,39 +83,6 @@ export function InteractiveSentence({
         });
     }
 
-    // Load readings for all matched vocabs
-    const [readings, setReadings] = useState<Record<string, string>>({});
-
-    useEffect(() => {
-        if (!showFurigana) return;
-
-        let mounted = true;
-        const loadReadings = async () => {
-            const newReadings: Record<string, string> = {};
-            // Gather unique vocabIds from matches
-            const vocabIds = Object.keys(matches);
-
-            for (const id of vocabIds) {
-                try {
-                    const vocab = await VocabularyService.loadVocab(id);
-                    if (vocab && mounted) {
-                        newReadings[id] = vocab.reading.primary;
-                    }
-                } catch (e) {
-                    // Ignore errors for individual vocabs
-                }
-            }
-            if (mounted) {
-                setReadings(newReadings);
-            }
-        };
-        loadReadings();
-
-        return () => {
-            mounted = false;
-        };
-    }, [showFurigana, sentence.id]);
-
     // 2. Render
     return (
         <span className={`font-mincho leading-relaxed break-words ${className}`}>
@@ -126,7 +93,10 @@ export function InteractiveSentence({
 
                 const isTarget = segment.vocabId === targetVocabId;
                 const isClickable = onVocabClick && (!isTarget || allowTargetClickable);
-                const reading = showFurigana && segment.vocabId ? readings[segment.vocabId] : null;
+
+                const rawReading = showFurigana && segment.type === 'match' ? segment.reading : null;
+                const isKanaOnly = /^[\u3040-\u309F\u30A0-\u30FF]+$/.test(segment.content);
+                const reading = rawReading && rawReading !== segment.content && !isKanaOnly ? rawReading : null;
 
                 const renderContent = () => {
                     if (reading) {

@@ -12,20 +12,29 @@
     "vocabIds": [
       "1483070",
       "1425030",
-      "1169140"
+      "1169140",
+      "2520520"
     ],
     "matches": {
       "1169140": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "ひきかえし"
       },
       "1425030": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "ちゅうと"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "2520520": {
+        "start": 5,
+        "length": 4,
+        "reading": "ひきかえし"
       }
     }
   },
@@ -42,30 +51,53 @@
     "vocabIds": [
       "1483070",
       "1169140",
+      "2520520",
       "1483150",
+      "1203090",
       "1863880",
+      "1352570",
       "1328190"
     ],
     "matches": {
       "1169140": {
         "start": 2,
-        "length": 5
+        "length": 4,
+        "reading": "ひきかえし"
+      },
+      "1203090": {
+        "start": 10,
+        "length": 2,
+        "reading": "かいだん"
       },
       "1328190": {
         "start": 17,
-        "length": 4
+        "length": 3,
+        "reading": "てつだっ"
+      },
+      "1352570": {
+        "start": 13,
+        "length": 2,
+        "reading": "のぼる"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1483150": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1863880": {
         "start": 10,
-        "length": 5
+        "length": 5,
+        "reading": "かいだんをのぼる"
+      },
+      "2520520": {
+        "start": 2,
+        "length": 4,
+        "reading": "ひきかえし"
       }
     }
   },
@@ -82,20 +114,29 @@
     "vocabIds": [
       "1483070",
       "1587120",
-      "1169140"
+      "1169140",
+      "2520520"
     ],
     "matches": {
       "1169140": {
         "start": 7,
-        "length": 5
+        "length": 4,
+        "reading": "ひきかえし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1587120": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "いきようよう"
+      },
+      "2520520": {
+        "start": 7,
+        "length": 4,
+        "reading": "ひきかえし"
       }
     }
   },
@@ -112,20 +153,35 @@
     "vocabIds": [
       "1483070",
       "1483740",
-      "1169140"
+      "1483730",
+      "1169140",
+      "2520520"
     ],
     "matches": {
       "1169140": {
         "start": 5,
-        "length": 5
+        "length": 4,
+        "reading": "ひきかえし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1483730": {
+        "start": 2,
+        "length": 2,
+        "reading": "つかれ"
       },
       "1483740": {
         "start": 2,
-        "length": 3
+        "length": 2,
+        "reading": "つかれ"
+      },
+      "2520520": {
+        "start": 5,
+        "length": 4,
+        "reading": "ひきかえし"
       }
     }
   },
@@ -147,15 +203,18 @@
     "matches": {
       "1169140": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "ひきかえす"
       },
       "1368370": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "じんせい"
       },
       "1454080": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "みち"
       }
     }
   },
@@ -172,20 +231,77 @@
     "vocabIds": [
       "1288850",
       "1169140",
+      "1421970",
       "2555410"
     ],
     "matches": {
       "1169140": {
         "start": 2,
-        "length": 4
+        "length": 4,
+        "reading": "ひきかえす"
       },
       "1288850": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いま"
+      },
+      "1421970": {
+        "start": 8,
+        "length": 1,
+        "reading": "おそ"
       },
       "2555410": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "おそすぎる"
+      }
+    }
+  },
+  {
+    "id": "189988",
+    "original": "引き返そう。",
+    "en": [
+      {
+        "id": "27144",
+        "text": "Let's turn back."
+      }
+    ],
+    "indices": "引き返す{引き返そう}",
+    "vocabIds": [
+      "1169140"
+    ],
+    "matches": {
+      "1169140": {
+        "start": 0,
+        "length": 4,
+        "reading": "ひきかえそ"
+      }
+    }
+  },
+  {
+    "id": "194261",
+    "original": "もう引き返しましょう。",
+    "en": [
+      {
+        "id": "31434",
+        "text": "Let's turn and go back now."
+      }
+    ],
+    "indices": "もう 引き返す{引き返しましょう}",
+    "vocabIds": [
+      "1169140",
+      "2520520"
+    ],
+    "matches": {
+      "1169140": {
+        "start": 2,
+        "length": 4,
+        "reading": "ひきかえし"
+      },
+      "2520520": {
+        "start": 2,
+        "length": 4,
+        "reading": "ひきかえし"
       }
     }
   },
@@ -200,21 +316,30 @@
     ],
     "vocabIds": [
       "1484660",
+      "1386840",
       "1610070",
       "1169140"
     ],
     "matches": {
       "1169140": {
         "start": 9,
-        "length": 6
+        "length": 4,
+        "reading": "ひきかえさ"
+      },
+      "1386840": {
+        "start": 6,
+        "length": 2,
+        "reading": "ぜったい"
       },
       "1484660": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "ひなん"
       },
       "1610070": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "ぜったいに"
       }
     }
   }

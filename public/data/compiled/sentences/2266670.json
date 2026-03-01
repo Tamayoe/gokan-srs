@@ -1,34 +1,5 @@
 [
   {
-    "id": "168280",
-    "original": "思い出したら気が滅入った。",
-    "en": [
-      {
-        "id": "246213",
-        "text": "My heart was in my boots when I thought of it."
-      },
-      {
-        "id": "2765391",
-        "text": "Remembering it depressed me."
-      }
-    ],
-    "indices": "思い出す{思い出したら} 気が滅入る{気が滅入った}",
-    "vocabIds": [
-      "1309260",
-      "2266670"
-    ],
-    "matches": {
-      "1309260": {
-        "start": 0,
-        "length": 5
-      },
-      "2266670": {
-        "start": 6,
-        "length": 6
-      }
-    }
-  },
-  {
     "id": "189565",
     "original": "雨の日は気が滅入るよ。",
     "en": [
@@ -41,20 +12,35 @@
     "vocabIds": [
       "1171900",
       "1463770",
-      "2266670"
+      "1221520",
+      "2266670",
+      "1533010"
     ],
     "matches": {
       "1171900": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "あめ"
+      },
+      "1221520": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
       },
       "1463770": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ひ"
+      },
+      "1533010": {
+        "start": 6,
+        "length": 3,
+        "reading": "めいる"
       },
       "2266670": {
         "start": 4,
-        "length": 5
+        "length": 5,
+        "reading": "きがめいる"
       }
     }
   },
@@ -68,55 +54,25 @@
       }
     ],
     "vocabIds": [
-      "2266670"
-    ],
-    "matches": {
-      "2266670": {
-        "start": 4,
-        "length": 5
-      }
-    }
-  },
-  {
-    "id": "9674785",
-    "original": "トムは気が滅入ってしまった。",
-    "en": [
-      {
-        "id": "1093972",
-        "text": "Tom got depressed."
-      }
-    ],
-    "vocabIds": [
-      "2266670"
-    ],
-    "matches": {
-      "2266670": {
-        "start": 3,
-        "length": 6
-      }
-    }
-  },
-  {
-    "id": "9678072",
-    "original": "トムは気が滅入ってると思うんだ。",
-    "en": [
-      {
-        "id": "6231723",
-        "text": "I think Tom is depressed."
-      }
-    ],
-    "vocabIds": [
+      "1221520",
       "2266670",
-      "1589350"
+      "1533010"
     ],
     "matches": {
-      "1589350": {
-        "start": 11,
-        "length": 2
+      "1221520": {
+        "start": 4,
+        "length": 1,
+        "reading": "き"
+      },
+      "1533010": {
+        "start": 6,
+        "length": 3,
+        "reading": "めいる"
       },
       "2266670": {
-        "start": 3,
-        "length": 6
+        "start": 4,
+        "length": 5,
+        "reading": "きがめいる"
       }
     }
   }

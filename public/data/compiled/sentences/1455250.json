@@ -17,15 +17,18 @@
     "matches": {
       "1423310": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1455250": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "とくばい"
       },
       "1533930": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "けがわ"
       }
     }
   },
@@ -40,17 +43,25 @@
     ],
     "indices": "今日 は 林檎(りんご){りんご} が 特売 だ{だった}",
     "vocabIds": [
+      "1579110",
       "1289400",
       "1455250"
     ],
     "matches": {
       "1289400": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "きょうは"
       },
       "1455250": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "とくばい"
+      },
+      "1579110": {
+        "start": 0,
+        "length": 2,
+        "reading": "きょう"
       }
     }
   },
@@ -71,11 +82,13 @@
     "matches": {
       "1455250": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "とくばい"
       },
       "1562060": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "わぎゅう"
       }
     }
   },
@@ -91,31 +104,36 @@
     "indices": "彼の(あの){あの} 店(みせ) で(#2028980) は 今夏~ 物(もの)[01] の 特売 中(ちゅう)[04] です",
     "vocabIds": [
       "1582120",
-      "1289060",
-      "2272520",
+      "1288850",
+      "1191610",
       "1455250",
       "1423310"
     ],
     "matches": {
-      "1289060": {
+      "1191610": {
+        "start": 6,
+        "length": 2,
+        "reading": "なつもの"
+      },
+      "1288850": {
         "start": 5,
-        "length": 2
+        "length": 1,
+        "reading": "こん"
       },
       "1423310": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ちゅう"
       },
       "1455250": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "とくばい"
       },
       "1582120": {
         "start": 2,
-        "length": 1
-      },
-      "2272520": {
-        "start": 7,
-        "length": 2
+        "length": 1,
+        "reading": "みせ"
       }
     }
   },
@@ -131,9 +149,13 @@
     "vocabIds": [
       "1579100",
       "1589730",
-      "1589060",
+      "1578850",
+      "1410270",
       "2558600",
+      "1481800",
+      "1578010",
       "1233100",
+      "2082160",
       "1598850",
       "1362100",
       "1455250"
@@ -141,35 +163,119 @@
     "matches": {
       "1233100": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "さかなや"
       },
       "1362100": {
         "start": 26,
-        "length": 2
+        "length": 2,
+        "reading": "しんせん"
+      },
+      "1410270": {
+        "start": 11,
+        "length": 2,
+        "reading": "たいめん"
       },
       "1455250": {
         "start": 33,
-        "length": 2
+        "length": 2,
+        "reading": "とくばい"
+      },
+      "1481800": {
+        "start": 13,
+        "length": 2,
+        "reading": "はんばい"
+      },
+      "1578010": {
+        "start": 17,
+        "length": 1,
+        "reading": "さかな"
+      },
+      "1578850": {
+        "start": 7,
+        "length": 2,
+        "reading": "いっ"
       },
       "1579100": {
         "start": 0,
-        "length": 2
-      },
-      "1589060": {
-        "start": 7,
-        "length": 3
+        "length": 2,
+        "reading": "けさ"
       },
       "1589730": {
         "start": 3,
-        "length": 3
+        "length": 3,
+        "reading": "かいもの"
       },
       "1598850": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "とびうお"
+      },
+      "2082160": {
+        "start": 18,
+        "length": 1,
+        "reading": "や"
       },
       "2558600": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "たいめんはんばい"
+      }
+    }
+  },
+  {
+    "id": "8652502",
+    "original": "赤い色の値札がついた商品は特売品です。",
+    "en": [
+      {
+        "id": "3147964",
+        "text": "Items with a red price tag are on sale."
+      }
+    ],
+    "vocabIds": [
+      "1383240",
+      "1357600",
+      "1642810",
+      "1347310",
+      "1455250",
+      "1788940",
+      "2648780"
+    ],
+    "matches": {
+      "1347310": {
+        "start": 10,
+        "length": 2,
+        "reading": "しょうひん"
+      },
+      "1357600": {
+        "start": 2,
+        "length": 1,
+        "reading": "いろ"
+      },
+      "1383240": {
+        "start": 0,
+        "length": 2,
+        "reading": "あかい"
+      },
+      "1455250": {
+        "start": 13,
+        "length": 2,
+        "reading": "とくばい"
+      },
+      "1642810": {
+        "start": 4,
+        "length": 2,
+        "reading": "ねふだ"
+      },
+      "1788940": {
+        "start": 13,
+        "length": 3,
+        "reading": "とくばいひん"
+      },
+      "2648780": {
+        "start": 15,
+        "length": 1,
+        "reading": "ひん"
       }
     }
   },
@@ -191,19 +297,23 @@
     "matches": {
       "1455250": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "とくばい"
       },
       "1463770": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "び"
       },
       "1473740": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "かっ"
       },
       "1555480": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "りんご"
       }
     }
   }

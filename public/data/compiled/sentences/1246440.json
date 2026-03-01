@@ -1,5 +1,44 @@
 [
   {
+    "id": "75747",
+    "original": "彼女は妻？あなたも隅に置けないわねえ。",
+    "en": [
+      {
+        "id": "327971",
+        "text": "She's your wife? There's more to you than meets the eye."
+      }
+    ],
+    "indices": "彼女[01] は 妻(#1294330)[01] 貴方(あなた)[01]{あなた} も 隅に置けない~ わね{わねえ}",
+    "vocabIds": [
+      "1483150",
+      "1294330",
+      "1246440",
+      "1854200"
+    ],
+    "matches": {
+      "1246440": {
+        "start": 9,
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1294330": {
+        "start": 3,
+        "length": 1,
+        "reading": "つま"
+      },
+      "1483150": {
+        "start": 0,
+        "length": 2,
+        "reading": "かのじょ"
+      },
+      "1854200": {
+        "start": 9,
+        "length": 6,
+        "reading": "すみにおけない"
+      }
+    }
+  },
+  {
     "id": "84189",
     "original": "部屋の隅に本がきちんと積み重ねられていた。",
     "en": [
@@ -13,24 +52,34 @@
       "1499320",
       "1246440",
       "1522150",
+      "1382910",
       "1777550"
     ],
     "matches": {
       "1246440": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1382910": {
+        "start": 11,
+        "length": 4,
+        "reading": "つみかさね"
       },
       "1499320": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1522150": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ほん"
       },
       "1777550": {
         "start": 11,
-        "length": 4
+        "length": 4,
+        "reading": "つみかさね"
       }
     }
   },
@@ -50,32 +99,89 @@
       "1179320",
       "1154330",
       "1246440",
-      "1307720"
+      "1307710",
+      "1350110"
     ],
     "matches": {
       "1154330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "くらい"
       },
       "1179320": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "おく"
       },
       "1246440": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       },
-      "1307720": {
+      "1307710": {
         "start": 10,
-        "length": 5
+        "length": 1,
+        "reading": "すがた"
+      },
+      "1350110": {
+        "start": 12,
+        "length": 2,
+        "reading": "けし"
       },
       "1483070": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "かれ"
       },
       "1582120": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "みせ"
+      }
+    }
+  },
+  {
+    "id": "113726",
+    "original": "彼はこの町を隅から隅まで知りつくしている。",
+    "en": [
+      {
+        "id": "289947",
+        "text": "He knows this town inside out."
+      }
+    ],
+    "indices": "彼(かれ)[01] は 此の{この} 町(まち) を 隅から隅まで 知る{知り} 尽くす{つくしている}",
+    "vocabIds": [
+      "1483070",
+      "1603990",
+      "1246440",
+      "1887170",
+      "1420470"
+    ],
+    "matches": {
+      "1246440": {
+        "start": 6,
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1420470": {
+        "start": 12,
+        "length": 2,
+        "reading": "しり"
+      },
+      "1483070": {
+        "start": 0,
+        "length": 1,
+        "reading": "かれ"
+      },
+      "1603990": {
+        "start": 4,
+        "length": 1,
+        "reading": "まち"
+      },
+      "1887170": {
+        "start": 6,
+        "length": 6,
+        "reading": "すみからすみまで"
       }
     }
   },
@@ -100,27 +206,33 @@
     "matches": {
       "1158400": {
         "start": 25,
-        "length": 2
+        "length": 2,
+        "reading": "いどう"
       },
       "1246440": {
         "start": 21,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       },
       "1349380": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ゆか"
       },
       "1399790": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "そうじ"
       },
       "1516930": {
         "start": 23,
-        "length": 1
+        "length": 1,
+        "reading": "ほう"
       },
       "2036870": {
         "start": 9,
-        "length": 3
+        "length": 3,
+        "reading": "おねがい"
       }
     }
   },
@@ -143,19 +255,107 @@
     "matches": {
       "1006080": {
         "start": 8,
-        "length": 6
+        "length": 5,
+        "reading": "すすりない"
       },
       "1237150": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "きょうしつ"
       },
       "1246440": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       },
       "1580290": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじょ"
+      }
+    }
+  },
+  {
+    "id": "159183",
+    "original": "私はニューヨークは隅から隅まで知っている。",
+    "en": [
+      {
+        "id": "255342",
+        "text": "I know every inch of New York."
+      }
+    ],
+    "indices": "私(わたし)[01] は 紐育{ニューヨーク} は 隅から隅まで 知る{知っている}",
+    "vocabIds": [
+      "1311110",
+      "1246440",
+      "1887170",
+      "1420470"
+    ],
+    "matches": {
+      "1246440": {
+        "start": 9,
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1420470": {
+        "start": 15,
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1887170": {
+        "start": 9,
+        "length": 6,
+        "reading": "すみからすみまで"
+      }
+    }
+  },
+  {
+    "id": "159946",
+    "original": "私はその町の隅から隅まで知っている。",
+    "en": [
+      {
+        "id": "254576",
+        "text": "I know every inch of the town."
+      }
+    ],
+    "indices": "私(わたし)[01] は 其の[01]{その} 町(まち) の 隅から隅まで~ 知る{知っている}",
+    "vocabIds": [
+      "1311110",
+      "1603990",
+      "1246440",
+      "1887170",
+      "1420470"
+    ],
+    "matches": {
+      "1246440": {
+        "start": 6,
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
+      },
+      "1420470": {
+        "start": 12,
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1603990": {
+        "start": 4,
+        "length": 1,
+        "reading": "まち"
+      },
+      "1887170": {
+        "start": 6,
+        "length": 6,
+        "reading": "すみからすみまで"
       }
     }
   },
@@ -170,8 +370,10 @@
     ],
     "indices": "私たち は 夫れ夫れ{それぞれ} テーブル の 端(はし) を 持つ{持ち} テーブル を 部屋[01] の 隅 へ 運ぶ[01]{運んだ}",
     "vocabIds": [
+      "1311110",
       "1311300",
       "1581610",
+      "1315720",
       "1612060",
       "1499320",
       "1246440",
@@ -180,67 +382,43 @@
     "matches": {
       "1172660": {
         "start": 28,
-        "length": 3
+        "length": 2,
+        "reading": "はこん"
       },
       "1246440": {
         "start": 26,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1311110": {
+        "start": 0,
+        "length": 1,
+        "reading": "わたし"
       },
       "1311300": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "わたしたち"
+      },
+      "1315720": {
+        "start": 15,
+        "length": 2,
+        "reading": "もち"
       },
       "1499320": {
         "start": 23,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1581610": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "はじ"
       },
       "1612060": {
         "start": 15,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "179265",
-    "original": "隅田川はもはや泳ぐのに適した川ではありません。",
-    "en": [
-      {
-        "id": "18122",
-        "text": "The Sumida is not a good river for us to swim in any more."
-      }
-    ],
-    "indices": "川[02] は 最早{もはや} 泳ぐ のに 適する{適した} 川[01] です{ではありません}",
-    "vocabIds": [
-      "1246440",
-      "1442730",
-      "1390020",
-      "1174340",
-      "2107900"
-    ],
-    "matches": {
-      "1174340": {
-        "start": 7,
-        "length": 2
-      },
-      "1246440": {
-        "start": 0,
-        "length": 1
-      },
-      "1390020": {
-        "start": 2,
-        "length": 1
-      },
-      "1442730": {
-        "start": 1,
-        "length": 1
-      },
-      "2107900": {
-        "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "もち"
       }
     }
   },
@@ -260,7 +438,8 @@
     "matches": {
       "1246440": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       }
     }
   },
@@ -276,26 +455,42 @@
     "indices": "隅 に 居る(いる)[01]{いた} 男の人 が 夫(おっと) に 話しかける{話しかけた}",
     "vocabIds": [
       "1246440",
+      "1419990",
       "1420020",
+      "1580640",
       "1496480",
       "1562300"
     ],
     "matches": {
       "1246440": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1419990": {
+        "start": 4,
+        "length": 1,
+        "reading": "おとこ"
       },
       "1420020": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "おとこのひと"
       },
       "1496480": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "おっと"
       },
       "1562300": {
         "start": 10,
-        "length": 5
+        "length": 4,
+        "reading": "はなしかけ"
+      },
+      "1580640": {
+        "start": 6,
+        "length": 1,
+        "reading": "ひと"
       }
     }
   },
@@ -318,19 +513,23 @@
     "matches": {
       "1246440": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       },
       "1436130": {
         "start": 3,
-        "length": 1
+        "length": 1,
+        "reading": "にわ"
       },
       "1499320": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "2136180": {
         "start": 7,
-        "length": 3
+        "length": 3,
+        "reading": "ちいさな"
       }
     }
   },
@@ -345,8 +544,7 @@
     ],
     "indices": "其の[01]{その} 人形(にんぎょう) は 埃(ほこり){ほこり} を[01] 被る(かぶる)[02]{かぶって} 部屋[01] の 隅 に 立つ{立っていた}",
     "vocabIds": [
-      "2832864",
-      "1250220",
+      "1367120",
       "1499320",
       "1246440",
       "1597040"
@@ -354,23 +552,68 @@
     "matches": {
       "1246440": {
         "start": 17,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       },
-      "1250220": {
-        "start": 3,
-        "length": 1
+      "1367120": {
+        "start": 2,
+        "length": 2,
+        "reading": "にんぎょう"
       },
       "1499320": {
         "start": 14,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1597040": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
+      }
+    }
+  },
+  {
+    "id": "215337",
+    "original": "ジョンは英国史を隅から隅まで知っている。",
+    "en": [
+      {
+        "id": "52638",
+        "text": "John knows English history from A to Z."
+      }
+    ],
+    "indices": "は 英国 史(し) を 隅から隅まで 知る{知っている}",
+    "vocabIds": [
+      "1174450",
+      "2080900",
+      "1246440",
+      "1887170",
+      "1420470"
+    ],
+    "matches": {
+      "1174450": {
+        "start": 4,
+        "length": 2,
+        "reading": "えいこく"
       },
-      "2832864": {
-        "start": 0,
-        "length": 3
+      "1246440": {
+        "start": 8,
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1420470": {
+        "start": 14,
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1887170": {
+        "start": 8,
+        "length": 6,
+        "reading": "すみからすみまで"
+      },
+      "2080900": {
+        "start": 6,
+        "length": 1,
+        "reading": "し"
       }
     }
   },
@@ -387,25 +630,117 @@
     "vocabIds": [
       "1499320",
       "1246440",
+      "1214940",
       "1782820",
+      "1357300",
+      "1421850",
       "2854117"
     ],
     "matches": {
+      "1214940": {
+        "start": 7,
+        "length": 2,
+        "reading": "かんしょう"
+      },
       "1246440": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1357300": {
+        "start": 9,
+        "length": 2,
+        "reading": "しょくぶつ"
+      },
+      "1421850": {
+        "start": 12,
+        "length": 2,
+        "reading": "おき"
       },
       "1499320": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1782820": {
         "start": 7,
-        "length": 4
+        "length": 4,
+        "reading": "かんしょうしょくぶつ"
       },
       "2854117": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "おき"
+      }
+    }
+  },
+  {
+    "id": "1442144",
+    "original": "あなただってなかなか隅に置けないって噂があるけど。",
+    "en": [
+      {
+        "id": "1487430",
+        "text": "I hear that you yourself are quite the smooth operator."
+      }
+    ],
+    "vocabIds": [
+      "1246440",
+      "1854200",
+      "1172590"
+    ],
+    "matches": {
+      "1172590": {
+        "start": 18,
+        "length": 1,
+        "reading": "うわさ"
+      },
+      "1246440": {
+        "start": 10,
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1854200": {
+        "start": 10,
+        "length": 6,
+        "reading": "すみにおけない"
+      }
+    }
+  },
+  {
+    "id": "1510200",
+    "original": "彼らのことは隅から隅まで知っている。",
+    "en": [
+      {
+        "id": "1510198",
+        "text": "I know them inside out."
+      }
+    ],
+    "vocabIds": [
+      "1483090",
+      "1246440",
+      "1887170",
+      "1420470"
+    ],
+    "matches": {
+      "1246440": {
+        "start": 6,
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1420470": {
+        "start": 12,
+        "length": 2,
+        "reading": "しっ"
+      },
+      "1483090": {
+        "start": 0,
+        "length": 2,
+        "reading": "かれら"
+      },
+      "1887170": {
+        "start": 6,
+        "length": 6,
+        "reading": "すみからすみまで"
       }
     }
   },
@@ -426,15 +761,18 @@
     "matches": {
       "1246440": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       },
       "1499320": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "へや"
       },
       "1597040": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "たっ"
       }
     }
   },
@@ -449,16 +787,24 @@
     ],
     "vocabIds": [
       "1246440",
+      "2036870",
       "2221720"
     ],
     "matches": {
       "1246440": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
+      },
+      "2036870": {
+        "start": 7,
+        "length": 3,
+        "reading": "おねがい"
       },
       "2221720": {
         "start": 7,
-        "length": 8
+        "length": 8,
+        "reading": "おねがいできますか"
       }
     }
   },
@@ -477,32 +823,122 @@
       "1273270",
       "1246440",
       "1366310",
+      "1366300",
       "1532870"
     ],
     "matches": {
       "1246440": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       },
       "1273270": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "こうえん"
       },
       "1332570": {
         "start": 3,
-        "length": 3
+        "length": 2,
+        "reading": "ひろっ"
+      },
+      "1366300": {
+        "start": 19,
+        "length": 2,
+        "reading": "ふるえ"
       },
       "1366310": {
         "start": 19,
-        "length": 3
+        "length": 2,
+        "reading": "ふるえ"
       },
       "1532870": {
         "start": 24,
-        "length": 3
+        "length": 2,
+        "reading": "ない"
       },
       "1593380": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "こねこ"
+      }
+    }
+  },
+  {
+    "id": "10919748",
+    "original": "重箱の隅をつつくようなことはやめて。",
+    "en": [
+      {
+        "id": "11755154",
+        "text": "Stop your nitpicking."
+      },
+      {
+        "id": "12925629",
+        "text": "Stop nitpicking."
+      }
+    ],
+    "vocabIds": [
+      "1336650",
+      "2859275",
+      "2398920",
+      "1246440"
+    ],
+    "matches": {
+      "1246440": {
+        "start": 3,
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1336650": {
+        "start": 0,
+        "length": 2,
+        "reading": "じゅうばこ"
+      },
+      "2398920": {
+        "start": 0,
+        "length": 8,
+        "reading": "じゅうばこのすみをつつく"
+      },
+      "2859275": {
+        "start": 0,
+        "length": 4,
+        "reading": "じゅうばこのすみ"
+      }
+    }
+  },
+  {
+    "id": "12167578",
+    "original": "隅から隅まで探したの？",
+    "en": [
+      {
+        "id": "12167543",
+        "text": "Have you searched everywhere?"
+      },
+      {
+        "id": "13294091",
+        "text": "Did you search every nook and cranny?"
+      }
+    ],
+    "vocabIds": [
+      "1246440",
+      "1887170",
+      "1593670"
+    ],
+    "matches": {
+      "1246440": {
+        "start": 0,
+        "length": 1,
+        "reading": "すみ"
+      },
+      "1593670": {
+        "start": 6,
+        "length": 2,
+        "reading": "さがし"
+      },
+      "1887170": {
+        "start": 0,
+        "length": 6,
+        "reading": "すみからすみまで"
       }
     }
   },
@@ -519,24 +955,34 @@
       "1197610",
       "1246440",
       "1170660",
+      "1613470",
       "1477310"
     ],
     "matches": {
       "1170660": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かくれ"
       },
       "1197610": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "がめん"
       },
       "1246440": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       },
       "1477310": {
         "start": 18,
-        "length": 2
+        "length": 2,
+        "reading": "はっけん"
+      },
+      "1613470": {
+        "start": 10,
+        "length": 2,
+        "reading": "かくれ"
       }
     }
   },
@@ -550,32 +996,61 @@
       }
     ],
     "vocabIds": [
+      "1370410",
       "1370440",
+      "1320300",
       "1246440",
       "1265070",
+      "1522150",
       "2849135",
-      "1863390"
+      "1360480",
+      "1416340"
     ],
     "matches": {
       "1246440": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "すみ"
       },
       "1265070": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ふるい"
+      },
+      "1320300": {
+        "start": 2,
+        "length": 1,
+        "reading": "しつ"
+      },
+      "1360480": {
+        "start": 13,
+        "length": 1,
+        "reading": "こころ"
+      },
+      "1370410": {
+        "start": 0,
+        "length": 2,
+        "reading": "としょ"
       },
       "1370440": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "としょしつ"
       },
-      "1863390": {
-        "start": 13,
-        "length": 6
+      "1416340": {
+        "start": 15,
+        "length": 2,
+        "reading": "うばわ"
+      },
+      "1522150": {
+        "start": 11,
+        "length": 1,
+        "reading": "ほん"
       },
       "2849135": {
         "start": 11,
-        "length": 2
+        "length": 2,
+        "reading": "ほんに"
       }
     }
   }

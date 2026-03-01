@@ -1,5 +1,50 @@
 [
   {
+    "id": "74556",
+    "original": "革張りのソファにするか？布張りのソファにするか？",
+    "en": [
+      {
+        "id": "329163",
+        "text": "Shall we go for a leather-covered sofa? A cloth-covered sofa?"
+      }
+    ],
+    "indices": "革張り{革張りの}~ ソファ に 為る(する){する} か 布張り{布張りの}~ ソファ に 為る(する){する} か",
+    "vocabIds": [
+      "1483805",
+      "1760390",
+      "1427760",
+      "1496840",
+      "2396120"
+    ],
+    "matches": {
+      "1427760": {
+        "start": 1,
+        "length": 2,
+        "reading": "ばり"
+      },
+      "1483805": {
+        "start": 0,
+        "length": 1,
+        "reading": "かわ"
+      },
+      "1496840": {
+        "start": 12,
+        "length": 1,
+        "reading": "ぬの"
+      },
+      "1760390": {
+        "start": 0,
+        "length": 3,
+        "reading": "かわばり"
+      },
+      "2396120": {
+        "start": 12,
+        "length": 3,
+        "reading": "ぬのばり"
+      }
+    }
+  },
+  {
     "id": "76899",
     "original": "あの赤い布は「袱紗」茶道具を清めるために使う必需品なの。",
     "en": [
@@ -16,36 +61,55 @@
       "1422790",
       "1378170",
       "1305990",
-      "1487500"
+      "1487490",
+      "1487500",
+      "2648780"
     ],
     "matches": {
       "1010990": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ふくさ"
       },
       "1305990": {
         "start": 20,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
       },
       "1378170": {
         "start": 14,
-        "length": 3
+        "length": 3,
+        "reading": "きよめる"
       },
       "1383240": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "あかい"
       },
       "1422790": {
         "start": 10,
-        "length": 3
+        "length": 3,
+        "reading": "ちゃどうぐ"
+      },
+      "1487490": {
+        "start": 22,
+        "length": 2,
+        "reading": "ひつじゅ"
       },
       "1487500": {
         "start": 22,
-        "length": 3
+        "length": 3,
+        "reading": "ひつじゅひん"
       },
       "1496840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
+      },
+      "2648780": {
+        "start": 24,
+        "length": 1,
+        "reading": "ひん"
       }
     }
   },
@@ -67,15 +131,18 @@
     "matches": {
       "1473740": {
         "start": 8,
-        "length": 3
+        "length": 2,
+        "reading": "かっ"
       },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1524590": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "いもうと"
       }
     }
   },
@@ -95,21 +162,36 @@
     "indices": "布 を 斜め に 裁つ{裁ち} 為さい{なさい}",
     "vocabIds": [
       "1496840",
+      "1322400",
       "1322410",
+      "1296050",
       "1295950"
     ],
     "matches": {
       "1295950": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "たち"
+      },
+      "1296050": {
+        "start": 5,
+        "length": 2,
+        "reading": "たち"
+      },
+      "1322400": {
+        "start": 2,
+        "length": 2,
+        "reading": "ななめ"
       },
       "1322410": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ななめに"
       },
       "1496840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -127,24 +209,34 @@
       "1496840",
       "1392500",
       "1580940",
+      "1391160",
       "1854060"
     ],
     "matches": {
+      "1391160": {
+        "start": 9,
+        "length": 2,
+        "reading": "そめ"
+      },
       "1392500": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "あざやか"
       },
       "1496840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1580940": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "あかいろ"
       },
       "1854060": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "そめ"
       }
     }
   },
@@ -161,25 +253,41 @@
     "vocabIds": [
       "1496840",
       "1009700",
+      "1179830",
+      "1179820",
       "1500940",
       "1296100"
     ],
     "matches": {
       "1009700": {
         "start": 1,
-        "length": 4
+        "length": 4,
+        "reading": "におうじて"
+      },
+      "1179820": {
+        "start": 2,
+        "length": 3,
+        "reading": "おうじて"
+      },
+      "1179830": {
+        "start": 2,
+        "length": 2,
+        "reading": "おうじ"
       },
       "1296100": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "さいだん"
       },
       "1496840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1500940": {
         "start": 5,
-        "length": 1
+        "length": 1,
+        "reading": "ふく"
       }
     }
   },
@@ -196,25 +304,41 @@
     "vocabIds": [
       "1496840",
       "1009700",
+      "1179830",
+      "1179820",
       "1158810",
-      "1295910"
+      "1296050"
     ],
     "matches": {
       "1009700": {
         "start": 1,
-        "length": 4
+        "length": 4,
+        "reading": "におうじて"
       },
       "1158810": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "いふく"
       },
-      "1295910": {
+      "1179820": {
+        "start": 2,
+        "length": 3,
+        "reading": "おうじて"
+      },
+      "1179830": {
+        "start": 2,
+        "length": 2,
+        "reading": "おうじ"
+      },
+      "1296050": {
         "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "たて"
       },
       "1496840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -238,23 +362,28 @@
     "matches": {
       "1384820": {
         "start": 13,
-        "length": 5
+        "length": 4,
+        "reading": "きりさい"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1496840": {
         "start": 11,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1597890": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "つくる"
       },
       "1603360": {
         "start": 3,
-        "length": 2
+        "length": 2,
+        "reading": "ほうたい"
       }
     }
   },
@@ -278,23 +407,28 @@
     "matches": {
       "1305990": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "つかっ"
       },
       "1320390": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "しめっ"
       },
       "1357220": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "ぬぐう"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1496840": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -317,19 +451,23 @@
     "matches": {
       "1473740": {
         "start": 15,
-        "length": 3
+        "length": 2,
+        "reading": "かっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1496840": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1597890": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "つくる"
       }
     }
   },
@@ -352,19 +490,23 @@
     "matches": {
       "1352130": {
         "start": 14,
-        "length": 1
+        "length": 1,
+        "reading": "うえ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1496840": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1602370": {
         "start": 16,
-        "length": 3
+        "length": 2,
+        "reading": "ひろげ"
       }
     }
   },
@@ -386,15 +528,18 @@
     "matches": {
       "1473740": {
         "start": 10,
-        "length": 3
+        "length": 2,
+        "reading": "かっ"
       },
       "1483150": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "かのじょ"
       },
       "1496840": {
         "start": 8,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -418,53 +563,28 @@
     "matches": {
       "1305990": {
         "start": 15,
-        "length": 2
+        "length": 2,
+        "reading": "つかう"
       },
       "1423000": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "きる"
       },
       "1496840": {
         "start": 13,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1597890": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "つくる"
       },
       "1607050": {
         "start": 9,
-        "length": 2
-      }
-    }
-  },
-  {
-    "id": "140806",
-    "original": "全市に夜間外出禁止令が布かれた。",
-    "en": [
-      {
-        "id": "273766",
-        "text": "A curfew was imposed on the city."
-      }
-    ],
-    "indices": "全市~ に 夜間外出禁止令~ が 敷く[06]{布かれた}",
-    "vocabIds": [
-      "1395280",
-      "2275980",
-      "1496840"
-    ],
-    "matches": {
-      "1395280": {
-        "start": 0,
-        "length": 2
-      },
-      "1496840": {
-        "start": 11,
-        "length": 1
-      },
-      "2275980": {
-        "start": 3,
-        "length": 7
+        "length": 2,
+        "reading": "われわれ"
       }
     }
   },
@@ -490,15 +610,18 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1473740": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "かっ"
       },
       "1496840": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -519,11 +642,13 @@
     "matches": {
       "1311110": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "わたし"
       },
       "1496840": {
         "start": 10,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -539,10 +664,15 @@
     "indices": "ボール(#1123550)[01] は 何 で(#2028980) 出来る{できていた} の でしょう[01] 何千 年(ねん) も 前(まえ)[02] には エジプト人 は ボール(#1123550)[01] を 柔らかい[01] 革 か 布[01] で(#2028980) 作る[01]{作っていました}",
     "vocabIds": [
       "1611020",
+      "1577100",
       "1189120",
+      "1388740",
+      "1389120",
       "2084840",
+      "1392580",
       "1392590",
       "2404770",
+      "1580640",
       "1605630",
       "1483805",
       "1496840",
@@ -551,39 +681,73 @@
     "matches": {
       "1189120": {
         "start": 17,
-        "length": 2
+        "length": 2,
+        "reading": "なんせん"
+      },
+      "1388740": {
+        "start": 18,
+        "length": 1,
+        "reading": "せん"
+      },
+      "1389120": {
+        "start": 18,
+        "length": 2,
+        "reading": "せんねん"
+      },
+      "1392580": {
+        "start": 21,
+        "length": 1,
+        "reading": "まえ"
       },
       "1392590": {
         "start": 21,
-        "length": 2
+        "length": 2,
+        "reading": "まえに"
       },
       "1483805": {
         "start": 39,
-        "length": 1
+        "length": 1,
+        "reading": "かわ"
       },
       "1496840": {
         "start": 41,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
+      },
+      "1577100": {
+        "start": 17,
+        "length": 1,
+        "reading": "なん"
+      },
+      "1580640": {
+        "start": 29,
+        "length": 1,
+        "reading": "じん"
       },
       "1597890": {
         "start": 43,
-        "length": 3
+        "length": 2,
+        "reading": "つくっ"
       },
       "1605630": {
         "start": 35,
-        "length": 4
+        "length": 4,
+        "reading": "やわらかい"
       },
       "1611020": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "なんで"
       },
       "2084840": {
         "start": 19,
-        "length": 1
+        "length": 1,
+        "reading": "ねん"
       },
       "2404770": {
         "start": 25,
-        "length": 5
+        "length": 5,
+        "reading": "えじぷとじん"
       }
     }
   },
@@ -599,21 +763,24 @@
     "indices": "何故(なぜ){なぜ} 鋏(はさみ){はさみ} で(#2028980) 布[01] を 切る[01]{切らず} に 裂く[01]{裂いた} の",
     "vocabIds": [
       "1496840",
-      "1383750",
+      "1384830",
       "1207730"
     ],
     "matches": {
       "1207730": {
         "start": 12,
-        "length": 3
+        "length": 2,
+        "reading": "さい"
       },
-      "1383750": {
+      "1384830": {
         "start": 8,
-        "length": 1
+        "length": 2,
+        "reading": "きら"
       },
       "1496840": {
         "start": 6,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -635,15 +802,18 @@
     "matches": {
       "1207730": {
         "start": 9,
-        "length": 3
+        "length": 2,
+        "reading": "さい"
       },
       "1496840": {
         "start": 7,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1580290": {
         "start": 2,
-        "length": 2
+        "length": 2,
+        "reading": "しょうじょ"
       }
     }
   },
@@ -659,16 +829,24 @@
     "indices": "此の{この} 布[01]~ は 裂ける{裂け}~ 易い{やすい}",
     "vocabIds": [
       "1496840",
+      "1558610",
       "2755210"
     ],
     "matches": {
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
+      },
+      "1558610": {
+        "start": 4,
+        "length": 2,
+        "reading": "さけ"
       },
       "2755210": {
         "start": 4,
-        "length": 5
+        "length": 5,
+        "reading": "さけやすい"
       }
     }
   },
@@ -689,11 +867,13 @@
     "matches": {
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1511160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "へんしょく"
       }
     }
   },
@@ -715,15 +895,18 @@
     "matches": {
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1600800": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "はだざわり"
       },
       "1605820": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       }
     }
   },
@@ -748,11 +931,13 @@
     "matches": {
       "1476450": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "はだ"
       },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -776,23 +961,28 @@
     "matches": {
       "1490580": {
         "start": 9,
-        "length": 2
+        "length": 2,
+        "reading": "ひんしつ"
       },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1600160": {
         "start": 4,
-        "length": 2
+        "length": 2,
+        "reading": "ねだん"
       },
       "1605820": {
         "start": 12,
-        "length": 2
+        "length": 2,
+        "reading": "よい"
       },
       "1606930": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "わりに"
       }
     }
   },
@@ -814,15 +1004,18 @@
     "matches": {
       "1228330": {
         "start": 8,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうしゅう"
       },
       "1371260": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "みず"
       },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -844,15 +1037,18 @@
     "matches": {
       "1327920": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "てざわり"
       },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1605630": {
         "start": 8,
-        "length": 4
+        "length": 4,
+        "reading": "やわらかい"
       }
     }
   },
@@ -874,15 +1070,18 @@
     "matches": {
       "1208560": {
         "start": 4,
-        "length": 3
+        "length": 3,
+        "reading": "なめらか"
       },
       "1327920": {
         "start": 8,
-        "length": 3
+        "length": 3,
+        "reading": "てざわり"
       },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -902,7 +1101,8 @@
     "matches": {
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -917,17 +1117,13 @@
     ],
     "indices": "此の{この} 布[01] は 天鵞絨{ビロード} 之(の)[01]{の} 様な{ような} 手触り{手ざわり} が 為る(する){する}",
     "vocabIds": [
-      "1496840",
-      "1327190"
+      "1496840"
     ],
     "matches": {
-      "1327190": {
-        "start": 12,
-        "length": 1
-      },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -951,7 +1147,8 @@
     "matches": {
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -972,11 +1169,13 @@
     "matches": {
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1633860": {
         "start": 6,
-        "length": 3
+        "length": 3,
+        "reading": "やぶける"
       }
     }
   },
@@ -992,21 +1191,36 @@
     "indices": "此の{この} 布[01] で(#2028980) 靴を磨く{靴を磨いて} ご覧なさい[03]",
     "vocabIds": [
       "1496840",
-      "2185440",
+      "1246700",
+      "1523940",
+      "1270760",
       "1270770"
     ],
     "matches": {
+      "1246700": {
+        "start": 4,
+        "length": 1,
+        "reading": "くつ"
+      },
+      "1270760": {
+        "start": 9,
+        "length": 2,
+        "reading": "ごらん"
+      },
       "1270770": {
         "start": 9,
-        "length": 5
+        "length": 5,
+        "reading": "ごらんなさい"
       },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
-      "2185440": {
-        "start": 4,
-        "length": 5
+      "1523940": {
+        "start": 6,
+        "length": 2,
+        "reading": "みがい"
       }
     }
   },
@@ -1027,11 +1241,13 @@
     "matches": {
       "1496840": {
         "start": 9,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1602370": {
         "start": 11,
-        "length": 3
+        "length": 2,
+        "reading": "ひろげ"
       }
     }
   },
@@ -1054,19 +1270,23 @@
     "matches": {
       "1228330": {
         "start": 6,
-        "length": 2
+        "length": 2,
+        "reading": "きゅうしゅう"
       },
       "1272780": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ひかり"
       },
       "1287420": {
         "start": 0,
-        "length": 2
+        "length": 2,
+        "reading": "くろい"
       },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -1081,16 +1301,24 @@
     ],
     "vocabIds": [
       "1496840",
+      "1322400",
       "1322410"
     ],
     "matches": {
+      "1322400": {
+        "start": 2,
+        "length": 2,
+        "reading": "ななめ"
+      },
       "1322410": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ななめに"
       },
       "1496840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -1105,21 +1333,36 @@
     ],
     "vocabIds": [
       "1496840",
+      "1322400",
       "1322410",
+      "1384830",
       "1383800"
     ],
     "matches": {
+      "1322400": {
+        "start": 2,
+        "length": 2,
+        "reading": "ななめ"
+      },
       "1322410": {
         "start": 2,
-        "length": 3
+        "length": 3,
+        "reading": "ななめに"
       },
       "1383800": {
         "start": 5,
-        "length": 2
+        "length": 2,
+        "reading": "きり"
+      },
+      "1384830": {
+        "start": 5,
+        "length": 2,
+        "reading": "きり"
       },
       "1496840": {
         "start": 0,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       }
     }
   },
@@ -1134,16 +1377,62 @@
     ],
     "vocabIds": [
       "1496840",
+      "1320640",
       "2837105"
     ],
     "matches": {
+      "1320640": {
+        "start": 9,
+        "length": 1,
+        "reading": "しつ"
+      },
       "1496840": {
         "start": 2,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "2837105": {
         "start": 9,
-        "length": 4
+        "length": 4,
+        "reading": "しつがいい"
+      }
+    }
+  },
+  {
+    "id": "8888505",
+    "original": "どうして日本は布マスクを配るのに3か月もかかったのでしょうか。",
+    "en": [
+      {
+        "id": "10074466",
+        "text": "I wonder why it took Japan 3 months to distribute cloth masks?"
+      }
+    ],
+    "vocabIds": [
+      "1582710",
+      "1496840",
+      "2843995",
+      "1472990"
+    ],
+    "matches": {
+      "1472990": {
+        "start": 12,
+        "length": 2,
+        "reading": "くばる"
+      },
+      "1496840": {
+        "start": 7,
+        "length": 1,
+        "reading": "ぬの"
+      },
+      "1582710": {
+        "start": 4,
+        "length": 2,
+        "reading": "にっぽん"
+      },
+      "2843995": {
+        "start": 7,
+        "length": 4,
+        "reading": "ぬのますく"
       }
     }
   },
@@ -1158,26 +1447,42 @@
     ],
     "vocabIds": [
       "2407970",
+      "1327190",
       "1496840",
+      "1153670",
       "1913180",
       "1580480"
     ],
     "matches": {
+      "1153670": {
+        "start": 7,
+        "length": 2,
+        "reading": "やすく"
+      },
+      "1327190": {
+        "start": 2,
+        "length": 1,
+        "reading": "て"
+      },
       "1496840": {
         "start": 4,
-        "length": 1
+        "length": 1,
+        "reading": "ぬの"
       },
       "1580480": {
         "start": 10,
-        "length": 2
+        "length": 2,
+        "reading": "じょうぶ"
       },
       "1913180": {
         "start": 7,
-        "length": 2
+        "length": 2,
+        "reading": "やすく"
       },
       "2407970": {
         "start": 0,
-        "length": 3
+        "length": 3,
+        "reading": "このて"
       }
     }
   }
