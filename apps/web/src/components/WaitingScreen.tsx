@@ -1,7 +1,8 @@
-
 import React from "react";
-import { Sparkles } from "lucide-react";
+import { View, Text } from "react-native";
 import { CenteredCard } from "./CenteredCard";
+import { Button } from "./ui/Button";
+import { styles } from "@gokan-srs/ui";
 
 interface WaitingScreenProps {
     nextReviewAt: Date;
@@ -19,27 +20,24 @@ export const WaitingScreen: React.FC<WaitingScreenProps> = ({
 
     return (
         <CenteredCard>
-            <h2 className="text-xl mb-4 text-primary font-serif flex items-center justify-center gap-2">
-                You’re done for now <Sparkles size={20} className="text-accent" />
-            </h2>
+            <Text style={[styles.textXl, styles.mb4, styles.textPrimary, styles.fontSerif]}>
+                You’re done for now ✨
+            </Text>
 
-            <p className="text-sm mb-6 text-secondary font-serif">
+            <Text style={[styles.textSm, styles.mb6, styles.textSecondary, styles.fontSerif]}>
                 Your next review will be available in{' '}
-                <strong>{minutes} minute{minutes > 1 ? 's' : ''}</strong>.
-            </p>
+                <Text style={styles.fontBold}>{minutes} minute{minutes > 1 ? 's' : ''}</Text>.
+            </Text>
 
-            <div className="flex flex-col gap-3">
-                <button
-                    onClick={onLearnMore}
-                    className="py-2 px-6 rounded transition-colors bg-accent text-surface font-serif hover:bg-accent-hover"
-                >
+            <View style={[styles.flexCol, styles.gap3]}>
+                <Button variant="primary" onPress={onLearnMore}>
                     Learn more words
-                </button>
+                </Button>
 
-                <p className="text-xs text-center text-secondary">
+                <Text style={[styles.textXs, styles.textCenter, styles.textSecondary, styles.mt3]}>
                     Recommended daily limit reached
-                </p>
-            </div>
+                </Text>
+            </View>
         </CenteredCard>
     );
 };

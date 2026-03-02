@@ -1,6 +1,7 @@
-import { THEME } from "../../../commons/theme";
+import { THEME, styles } from "@gokan-srs/ui";
 import type { UserProgress } from "@gokan-srs/core/models/user.model";
 import { useMemo } from "react";
+import { View, Text } from "react-native";
 
 interface ReviewForecastProps {
     progress: UserProgress;
@@ -63,21 +64,19 @@ export function ReviewForecast({ progress }: ReviewForecastProps) {
             }
         });
 
-        // Calculate max for scaling (min 10)
-        // Sum of reading + meaning for total height
         const maxCount = Math.max(10, ...buckets.map(b => b.readingCount + b.meaningCount));
 
         return { buckets, maxCount };
     }, [progress]);
 
     return (
-        <div className="w-full flex justify-between items-end h-[200px] gap-2 py-4 relative">
+        <View style={[styles.wFull, styles.flexRow, styles.justifyBetween, styles.alignEnd, styles.gap2, styles.py4, styles.relative, { height: 200 }]}>
             {/* Background Grid */}
-            <div className="absolute inset-0 w-full h-full pointer-events-none z-0 flex flex-col justify-between py-4 pl-4">
-                <div className="w-full h-px border-t border-dashed border-divider/50"></div>
-                <div className="w-full h-px border-t border-dashed border-divider/50"></div>
-                <div className="w-full h-px border-t border-dashed border-divider/50"></div>
-            </div>
+            <View style={[styles.absolute, styles.wFull, styles.hFull, styles.flexCol, styles.justifyBetween, styles.py4, styles.pl4, { top: 0, bottom: 0, left: 0, right: 0, zIndex: 0 }]} pointerEvents="none">
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
+            </View>
 
             {forecast.buckets.map((bucket, i) => {
                 const total = bucket.readingCount + bucket.meaningCount;
@@ -85,50 +84,61 @@ export function ReviewForecast({ progress }: ReviewForecastProps) {
                 const meaningHeight = (bucket.meaningCount / forecast.maxCount) * 100;
 
                 return (
-                    <div key={i} className="flex flex-col items-center flex-1 min-w-0 h-full justify-end group z-10">
-                        <div className="relative w-full flex flex-col justify-end items-center flex-1 mb-2 max-w-[28px]">
+                    <View key={i} style={[styles.flexCol, styles.alignCenter, styles.flex1, styles.hFull, styles.justifyEnd, { zIndex: 10 }]}>
+                        <View style={[styles.relative, styles.wFull, styles.flexCol, styles.justifyEnd, styles.alignCenter, styles.flex1, styles.mb2, { maxWidth: 28 }]}>
                             {/* Stacked Bars Container */}
-                            <div className="w-full flex flex-col-reverse items-center justify-end h-full">
+                            <View style={[styles.wFull, { flexDirection: 'column-reverse' }, styles.alignCenter, styles.justifyEnd, styles.hFull]}>
 
                                 {/* Reading Bar (Bottom) */}
-                                <div
-                                    className={`w-full transition-all duration-300 relative rounded-b-sm ${bucket.meaningCount === 0 ? 'rounded-t-sm' : ''}`}
-                                    style={{
-                                        height: `${readingHeight}%`,
-                                        backgroundColor: THEME.mastery.reading.loop1
-                                    }}
-                                >
-                                </div>
+                                <View
+                                    style={[
+                                        styles.wFull,
+                                        styles.relative,
+                                        {
+                                            height: `${readingHeight}%`,
+                                            backgroundColor: THEME.mastery.reading.loop1,
+                                            borderBottomLeftRadius: 2,
+                                            borderBottomRightRadius: 2,
+                                            ...(bucket.meaningCount === 0 ? { borderTopLeftRadius: 2, borderTopRightRadius: 2 } : {})
+                                        }
+                                    ]}
+                                />
 
                                 {/* Meaning Bar (Top) */}
-                                <div
-                                    className={`w-full transition-all duration-300 relative rounded-t-sm ${bucket.readingCount === 0 ? 'rounded-b-sm' : ''}`}
-                                    style={{
-                                        height: `${meaningHeight}%`,
-                                        backgroundColor: THEME.mastery.meaning.loop1
-                                    }}
-                                >
-                                </div>
-                            </div>
+                                <View
+                                    style={[
+                                        styles.wFull,
+                                        styles.relative,
+                                        {
+                                            height: `${meaningHeight}%`,
+                                            backgroundColor: THEME.mastery.meaning.loop1,
+                                            borderTopLeftRadius: 2,
+                                            borderTopRightRadius: 2,
+                                            ...(bucket.readingCount === 0 ? { borderBottomLeftRadius: 2, borderBottomRightRadius: 2 } : {})
+                                        }
+                                    ]}
+                                />
+                            </View>
 
-                            {/* Total Label (Top) */}
-                            <span className="text-xs font-bold mb-1 opacity-0 group-hover:opacity-100 transition-opacity absolute -top-6 text-gray-600 dark:text-gray-400">
-                                {total}
-                            </span>
-                        </div>
+                            {/* Total Label (Top) - In RN we simulate hover by just showing it, or omitting hover logic for mobile */}
+                            <Text style={[styles.textXs, styles.fontBold, styles.mb1, styles.absolute, styles.textSecondary, { top: -24 }]}>
+                                {total > 0 ? total : ''}
+                            </Text>
+                        </View>
 
-                        <span className="text-[10px] sm:text-xs text-secondary font-medium mt-2 w-full text-center truncate px-0.5">
-                            <span className="sm:hidden">{bucket.label.charAt(0)}</span>
-                            <span className="hidden sm:inline">{bucket.label}</span>
-                        </span>
+                        <Text style={[styles.textXs, styles.textSecondary, styles.fontMedium, styles.mt2]}>
+                            {bucket.label}
+                        </Text>
 
                         {/* Legend/Total Text at bottom */}
-                        <div className="flex flex-col items-center w-full text-[10px] text-tertiary mt-1 leading-none truncate overflow-hidden">
-                            <span>{i === 0 && total > 0 ? '(Due)' : total > 0 ? total : '-'}</span>
-                        </div>
-                    </div>
+                        <View style={[styles.flexCol, styles.alignCenter, styles.mt1]}>
+                            <Text style={[{ fontSize: 10 }, styles.textTertiary]}>
+                                {i === 0 && total > 0 ? '(Due)' : total > 0 ? total : '-'}
+                            </Text>
+                        </View>
+                    </View>
                 );
             })}
-        </div>
+        </View>
     );
 }

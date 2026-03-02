@@ -1,44 +1,51 @@
 import React from "react";
+import { View, Text } from "react-native";
+import type { StyleProp, ViewStyle } from "react-native";
+import Svg, { Rect, Circle, Text as SvgText } from "react-native-svg";
+import { styles, THEME } from "@gokan-srs/ui";
 import { useResponsive } from "../context/Responsive/useResponsive";
 
 export const LogoMark: React.FC<{ size?: number }> = ({ size = 48 }) => (
-    <svg
+    <Svg
         width={size}
         height={size}
         viewBox="0 0 100 100"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
         role="img"
         aria-label="Gokan SRS Logo"
     >
         <title>Gokan SRS - Japanese Vocabulary Learning</title>
         {/* Thin circle ring — same seal as the loader */}
-        <circle cx="50" cy="50" r="46" className="stroke-primary" strokeWidth="3" fill="none" />
-        <text
+        <Circle cx="50" cy="50" r="46" stroke={THEME.colors.primary} strokeWidth="3" fill="none" />
+        <SvgText
             x="50"
             y="50"
             fontSize="34"
-            fontFamily="'Noto Serif JP', serif"
+            fontFamily={THEME.fonts.mincho}
             textAnchor="middle"
-            dominantBaseline="central"
-            className="fill-primary"
+            alignmentBaseline="central"
+            fill={THEME.colors.primary}
             fontWeight="400"
             letterSpacing="2"
         >
             語感
-        </text>
-    </svg>
+        </SvgText>
+    </Svg>
 );
 
-export const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
-    const { isMobile } = useResponsive()
+export type LogoProps = {
+    style?: StyleProp<ViewStyle>;
+};
+
+export const Logo: React.FC<LogoProps> = ({ style }) => {
+    const { isMobile } = useResponsive();
 
     return (
-        <div className={`flex items-center gap-3 ${className}`}>
+        <View style={[styles.flexRow, styles.alignCenter, styles.gap3, style]}>
             <LogoMark size={isMobile ? 24 : 48} />
-            <span className="md:text-2xl tracking-wide font-serif text-primary">
+            <Text style={[styles.fontSerif, styles.textPrimary, isMobile ? styles.textBase : styles.text2xl, { letterSpacing: 0.5 }]}>
                 Gokan SRS
-            </span>
-        </div>
-    )
+            </Text>
+        </View>
+    );
 };

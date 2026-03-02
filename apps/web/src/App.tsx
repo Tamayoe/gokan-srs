@@ -1,23 +1,25 @@
 import React, { Suspense, lazy } from 'react';
+import { View, Text, Pressable, Platform, ScrollView } from 'react-native';
 import './App.css';
 import { OnboardingFlow } from './pages/setup/OnboardingFlow';
 import { Logo } from './components/Logo';
 import { Settings, Cloud, RefreshCw, BarChart2 } from 'lucide-react';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useQuiz } from "./context/useQuiz";
 import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
 import { Loader } from "./components/Loader";
 import { ResponsiveProvider } from "./context/Responsive/ResponsiveProvider";
 import { Routes, Route, useNavigate, useLocation, Navigate, Link } from 'react-router-dom';
+import { THEME, styles } from '@gokan-srs/ui';
 
 // Lazy Load Pages
-// Note: Adapting named exports to default exports for lazy loading where necessary
 const QuizScreen = lazy(() => import('./pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));
 const SettingsScreen = lazy(() => import('./pages/settings/Settings').then(module => ({ default: module.SettingsScreen })));
 const UserProfileScreen = lazy(() => import('./pages/profile/UserProfileScreen').then(module => ({ default: module.UserProfileScreen })));
-const StatsScreen = lazy(() => import('./pages/stats/StatsScreen').then(module => ({ default: module.StatsScreen }))); // START_ADD (conceptually)
+const StatsScreen = lazy(() => import('./pages/stats/StatsScreen').then(module => ({ default: module.StatsScreen })));
 const AboutScreen = lazy(() => import('./pages/about/AboutScreen').then(module => ({ default: module.AboutScreen })));
-const VocabDetailScreen = lazy(() => import('./pages/vocab/VocabDetailScreen'));
+const VocabDetailScreen = lazy(() => import('./pages/vocab/VocabDetailScreen').then(module => ({ default: module.default })));
 
 function SyncStatusIndicator() {
     const { isUploading, isDownloading, isAuthenticated } = useGoogleDrive();
@@ -25,13 +27,13 @@ function SyncStatusIndicator() {
     if (!isAuthenticated) return null;
 
     if (isUploading || isDownloading) {
-        return <RefreshCw size={18} className="animate-spin text-gray-400" />;
+        return <MaterialCommunityIcons name="loading" size={18} color={THEME.colors.tertiary} style={{ opacity: 0.5 }} />;
     }
 
     return (
-        <div className="text-green-500" title="Synced with Google Drive">
-            <Cloud size={18} />
-        </div>
+        <View style={{ flex: 1, alignItems: 'center' }}>
+            <MaterialCommunityIcons name="cloud-check" size={18} color="#22c55e" /> {/* green-500 equivalent */}
+        </View>
     );
 }
 
@@ -49,17 +51,19 @@ export const App: React.FC = () => {
     // Fatal Error Gate
     if (state.fatalError) {
         return (
-            <div className="h-screen w-full flex flex-col items-center justify-center bg-red-50 p-8 text-center text-red-900">
-                <div className="text-4xl mb-4">⚠️</div>
-                <h1 className="text-2xl font-bold mb-2">System Error</h1>
-                <p className="max-w-md mb-6">{state.fatalError}</p>
-                <button
-                    onClick={() => window.location.reload()}
-                    className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition"
+            <View style={[styles.flex1, styles.flexCol, styles.alignCenter, styles.justifyCenter, styles.p8, { backgroundColor: '#fef2f2' }]}>
+                <Text style={[{ fontSize: 40 }, styles.mb4]}>⚠️</Text>
+                <Text style={[styles.text2xl, styles.fontBold, styles.mb2, { color: '#7f1d1d' }]}>System Error</Text>
+                <Text style={[styles.textCenter, styles.mb6, { color: '#7f1d1d', maxWidth: 440 }]}>{state.fatalError}</Text>
+                <Pressable
+                    onPress={() => window.location.reload()}
+                    style={({ pressed }: any) => [
+                        styles.px4, styles.py2, { borderRadius: 4, backgroundColor: pressed ? '#b91c1c' : '#dc2626' }
+                    ] as any}
                 >
-                    Reload Application
-                </button>
-            </div>
+                    <Text style={[styles.textWhite]}>Reload Application</Text>
+                </Pressable>
+            </View>
         );
     }
 
@@ -73,89 +77,91 @@ export const App: React.FC = () => {
     const isQuizScreen = location.pathname === '/';
 
     return (
-        <div className="min-h-screen flex flex-col relative bg-background transition-colors duration-200">
+        <View style={[styles.flex1, styles.flexCol, styles.relative, styles.bgBackground]}>
             {/* Top bar */}
-            <header className={'flex flex-row gap-3 p-4 md:p-8'}>
-                <Link to="/" className="cursor-pointer">
+            <View style={[styles.flexRow, styles.p4, { paddingHorizontal: 32 }]}>
+                <Pressable onPress={() => navigate('/')}>
                     <Logo />
-                </Link>
-                <div className={'grow'}></div>
+                </Pressable>
 
-                <div className="flex gap-4 items-center">
+                <View style={styles.flexGrow} />
+
+                <View style={[styles.flexRow, styles.alignCenter, styles.gap4]}>
                     <SyncStatusIndicator />
-                    <button onClick={() => navigate("/stats")} title="Statistics" className="cursor-pointer text-secondary hover:text-primary transition-colors">
-                        <BarChart2 size={18} />
-                    </button>
-                    <button onClick={() => navigate("/profile")} title="Kanji Configuration" className="cursor-pointer text-secondary hover:text-primary transition-colors flex items-center justify-center">
-                        <span className="font-mincho font-bold text-[18px] leading-none">漢</span>
-                    </button>
-                    <button onClick={() => navigate("/settings")} title="Settings" className="cursor-pointer text-secondary hover:text-primary transition-colors">
-                        <Settings size={18} />
-                    </button>
-                </div>
-            </header>
+                    <Pressable onPress={() => navigate("/stats")} style={({ pressed, hovered }: any) => [{ opacity: pressed || hovered ? 1 : 0.7 }] as any}>
+                        <MaterialCommunityIcons name="chart-bar" size={24} color={THEME.colors.primary} />
+                    </Pressable>
+                    <Pressable onPress={() => navigate("/profile")} style={({ pressed, hovered }: any) => [{ opacity: pressed || hovered ? 1 : 0.7, justifyContent: 'center', alignItems: 'center' }] as any}>
+                        <Text style={{ fontFamily: 'Noto Serif JP', fontWeight: 'bold', fontSize: 18, color: THEME.colors.primary, lineHeight: 24 }}>漢</Text>
+                    </Pressable>
+                    <Pressable onPress={() => navigate("/settings")} style={({ pressed, hovered }: any) => [{ opacity: pressed || hovered ? 1 : 0.7 }] as any}>
+                        <MaterialCommunityIcons name="cog" size={24} color={THEME.colors.primary} />
+                    </Pressable>
+                </View>
+            </View>
 
-            {/* Screen content */}
-            <div className={`flex-1 flex flex-col items-center p-4 md:p-0 ${isQuizScreen ? 'justify-center' : 'justify-start'}`}>
-                <Suspense fallback={<Loader title="Loading..." />}>
-                    <Routes>
-                        <Route path="/" element={
-                            <ResponsiveProvider>
-                                <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
-                            </ResponsiveProvider>
-                        } />
-                        <Route path="/stats" element={
-                            <StatsScreen
-                                onBack={() => navigate('/')}
-                                onVocabClick={(id) => navigate(`/vocab/${id}`)}
-                            />
-                        } />
-                        <Route path="/about" element={
-                            <ResponsiveProvider>
-                                <AboutScreen onBack={() => navigate('/')} />
-                            </ResponsiveProvider>
-                        } />
-                        <Route path="/settings" element={
-                            <SettingsScreen
-                                settings={state.settings!}
-                                onUpdateSettings={actions.saveSettings}
-                                onReset={actions.reset}
-                                onBack={() => navigate('/')}
-                            />
-                        } />
-                        <Route path="/profile" element={
-                            <KanjiFormProvider initialState={{
-                                kanjiCount: state.progress!.kanjiKnowledge.step,
-                                kanjiMethod: state.progress!.kanjiKnowledge.method,
-                                knownKanji: state.progress!.kanjiKnowledge.kanjiSet
-                            }}>
-                                <UserProfileScreen
-                                    onBack={() => navigate('/')}
-                                    onVocabClick={(id) => navigate(`/vocab/${id}`)}
-                                />
-                            </KanjiFormProvider>
-                        } />
-                        <Route path="/vocab/:vocabId" element={
-                            <ResponsiveProvider>
-                                <VocabDetailScreen />
-                            </ResponsiveProvider>
-                        } />
-                        <Route path="*" element={<Navigate to="/" replace />} />
-                    </Routes>
-                </Suspense>
-            </div>
+    {/* Screen content */ }
+    < View style = { [styles.flex1, styles.flexCol, styles.alignCenter, styles.p0, isQuizScreen ? styles.justifyCenter : styles.justifyStart]} >
+        <Suspense fallback={<Loader title="Loading..." />}>
+            <Routes>
+                <Route path="/" element={
+                    <ResponsiveProvider>
+                        <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
+                    </ResponsiveProvider>
+                } />
+                <Route path="/stats" element={
+                    <StatsScreen
+                        onBack={() => navigate('/')}
+                        onVocabClick={(id) => navigate(`/vocab/${id}`)}
+                    />
+                } />
+                <Route path="/about" element={
+                    <ResponsiveProvider>
+                        <AboutScreen onBack={() => navigate('/')} />
+                    </ResponsiveProvider>
+                } />
+                <Route path="/settings" element={
+                    <SettingsScreen
+                        settings={state.settings!}
+                        onUpdateSettings={actions.saveSettings}
+                        onReset={actions.reset}
+                        onBack={() => navigate('/')}
+                    />
+                } />
+                <Route path="/profile" element={
+                    <KanjiFormProvider initialState={{
+                        kanjiCount: state.progress!.kanjiKnowledge.step,
+                        kanjiMethod: state.progress!.kanjiKnowledge.method,
+                        knownKanji: state.progress!.kanjiKnowledge.kanjiSet
+                    }}>
+                        <UserProfileScreen
+                            onBack={() => navigate('/')}
+                            onVocabClick={(id) => navigate(`/vocab/${id}`)}
+                        />
+                    </KanjiFormProvider>
+                } />
+                <Route path="/vocab/:vocabId" element={
+                    <ResponsiveProvider>
+                        <VocabDetailScreen />
+                    </ResponsiveProvider>
+                } />
+                <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+        </Suspense>
+            </View >
 
-            {/* Footer with About link - only shown on Quiz Screen */}
-            {isQuizScreen && (
-                <footer className="p-4 text-center">
-                    <Link
-                        to="/about"
-                        className="text-xs text-secondary hover:text-primary transition-colors block"
-                    >
-                        About Gokan SRS
-                    </Link>
-                </footer>
-            )}
-        </div>
+    {/* Footer with About link - only shown on Quiz Screen */ }
+{
+    isQuizScreen && (
+                <View style={[styles.p4, styles.alignCenter]}>
+                    <Pressable onPress={() => navigate("/about")} style={({ pressed, hovered }: any) => [{ opacity: pressed || hovered ? 1 : 0.7 }] as any}>
+                        <Text style={[styles.textXs, styles.textSecondary]}>
+                            About Gokan SRS
+                        </Text>
+                    </Pressable>
+                </View>
+    )
+}
+        </View >
     );
 };

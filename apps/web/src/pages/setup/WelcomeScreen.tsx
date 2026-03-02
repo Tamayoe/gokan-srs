@@ -1,25 +1,24 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { View, Text, Pressable, ScrollView } from "react-native";
 import { useGoogleDrive } from "../../context/GoogleDriveContext";
 import { StorageService } from "@gokan-srs/core/services/storage.service";
 import { Button } from "../../components/ui/Button";
-import { Cloud, Loader2, LogIn, BookOpen, GraduationCap, ChevronRight } from "lucide-react";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { styles, THEME } from "@gokan-srs/ui";
 
-export function GoogleLoginButton({ onSyncComplete, className }: { onSyncComplete: () => void, className?: string }) {
+export function GoogleLoginButton({ onSyncComplete, style }: { onSyncComplete: () => void, style?: any }) {
     const { login, isDownloading, isAuthenticated, downloadProgress } = useGoogleDrive();
     const [hasAttemptedAutoRestore, setHasAttemptedAutoRestore] = useState(false);
 
-    // Auto-restore effect:
     useEffect(() => {
         let mounted = true;
         const tryRestore = async () => {
             if (isAuthenticated && !isDownloading) {
-                // 1. Check if we already have progress (e.g. from login download)
                 if (StorageService.loadProgress()) {
                     onSyncComplete();
                     return;
                 }
 
-                // 2. If not, and we haven't tried yet (e.g. page reload), try explicit download
                 if (!hasAttemptedAutoRestore) {
                     setHasAttemptedAutoRestore(true);
                     await downloadProgress();
@@ -35,26 +34,25 @@ export function GoogleLoginButton({ onSyncComplete, className }: { onSyncComplet
 
     if (isDownloading) {
         return (
-            <div className={`flex items-center gap-2 px-4 py-2 text-sm text-green-600 ${className}`}>
-                <Loader2 size={16} className="animate-spin" />
-                <span>Restoring your progress...</span>
-            </div>
+            <View style={[styles.flexRow, styles.alignCenter, styles.justifyCenter, styles.gap2, styles.px4, styles.py2, style]}>
+                <MaterialCommunityIcons name="loading" size={16} color={THEME.colors.primary} style={{ opacity: 0.5 }} />
+                <Text style={[styles.textSm, { color: THEME.colors.primary, opacity: 0.8 }]}>Restoring your progress...</Text>
+            </View>
         );
     }
 
     if (isAuthenticated) {
-        // If authenticated but we are still here (and auto-restore finished/failed),
-        // show a Manual Retry button just in case.
         return (
             <Button
                 variant="ghost"
-                onClick={async () => {
+                onPress={async () => {
                     await downloadProgress();
                     onSyncComplete();
                 }}
-                className={`text-sm font-medium hover:bg-black/5 text-primary ${className}`}
+                style={[styles.wFull, style]}
+                textStyle={[styles.textSm, styles.fontMedium]}
             >
-                <Cloud size={16} className="mr-2" />
+                <MaterialCommunityIcons name="cloud" size={16} color={THEME.colors.primary} style={styles.mr2} />
                 Retry Restore
             </Button>
         )
@@ -63,10 +61,11 @@ export function GoogleLoginButton({ onSyncComplete, className }: { onSyncComplet
     return (
         <Button
             variant="secondary"
-            onClick={() => login()}
-            className={`w-full text-sm font-medium ${className}`}
+            onPress={() => login()}
+            style={[styles.wFull, style]}
+            textStyle={[styles.textSm, styles.fontMedium]}
         >
-            <LogIn size={16} className="mr-2" />
+            <MaterialCommunityIcons name="login" size={16} color={THEME.colors.primary} style={styles.mr2} />
             Already have an account? Log in to restore
         </Button>
     );
@@ -79,96 +78,113 @@ interface WelcomeScreenProps {
 
 export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScreenProps) {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 bg-background relative overflow-hidden transition-colors duration-200">
-            {/* Subtle floating background elements (optional flair) */}
-            <div className="absolute bottom-0 right-0 opacity-[0.04] pointer-events-none select-none text-[30vw] font-mincho text-primary leading-none translate-x-1/4 translate-y-1/4">
-                語感
-            </div>
+        <View style={[styles.flex1, styles.bgBackground, styles.overflowHidden, styles.relative]}>
+            {/* Subtle floating background elements */}
+            <View style={[styles.absolute, { top: -50, right: -50, zIndex: 0, opacity: 0.05 }]} pointerEvents="none">
+                <Text style={[styles.fontMincho, styles.textPrimary, { fontSize: 200 }]}>語感</Text>
+            </View>
 
-            <main className="w-full max-w-2xl mx-auto space-y-12 animate-fade-in z-10">
-                {/* Header & Philosophy */}
-                <div className="text-center space-y-6">
-                    <h1 className="text-4xl md:text-5xl font-mincho text-primary mx-auto">
-                        Gokan <span className="text-2xl md:text-3xl text-tertiary font-light">語感</span>
-                    </h1>
-                    <div className="space-y-4 text-secondary leading-relaxed font-serif max-w-xl mx-auto">
-                        <p>
-                            Gokan is a vocabulary SRS for Japanese learners who are actively studying kanji. It introduces words that use the kanji you already know — keeping your reading queue grounded in real, learnable material.
-                        </p>
-                        <p className="text-sm text-tertiary">
-                            It is a companion tool, not a complete learning system. It works best alongside a kanji method like KKLC or RTK, and becomes more valuable once you start reading native Japanese.
-                        </p>
-                    </div>
+            <ScrollView contentContainerStyle={[styles.flexGrow, styles.alignCenter, styles.justifyCenter, styles.p4, { zIndex: 10, paddingVertical: 48 }]}>
+                <View style={[styles.wFull, styles.flexCol, styles.gap12, { maxWidth: 672 }]}>
+                    {/* Header & Philosophy */}
+                    <View style={[styles.flexCol, styles.alignCenter, styles.gap6]}>
+                        <Text style={[styles.text4xl, styles.fontMincho, styles.textPrimary, styles.textCenter, { lineHeight: 48 }]}>
+                            Welcome to Gokan
+                        </Text>
+                        <View style={[styles.flexCol, styles.alignCenter, styles.gap4, { maxWidth: 576 }]}>
+                            <Text style={[styles.textSecondary, styles.fontSerif, styles.textCenter, { lineHeight: 24 }]}>
+                                <Text style={styles.fontBold}>Gokan</Text> (語感) means "sense of language". This application is a serious study instrument designed to help you truly acquire Japanese vocabulary, not just memorize flashcards.
+                            </Text>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 text-sm text-center max-w-xl mx-auto">
-                        <div className="space-y-1 p-3 rounded-lg bg-surface border border-divider">
-                            <div className="mx-auto w-8 h-8 rounded-full bg-background border border-divider flex items-center justify-center text-primary">
-                                <BookOpen size={14} />
-                            </div>
-                            <h3 className="font-bold text-primary text-xs">Kanji-aware</h3>
-                            <p className="text-tertiary text-xs">Only shows words your kanji knowledge can support.</p>
-                        </div>
-                        <div className="space-y-1 p-3 rounded-lg bg-surface border border-divider">
-                            <div className="mx-auto w-8 h-8 rounded-full bg-background border border-divider flex items-center justify-center text-primary">
-                                <GraduationCap size={14} />
-                            </div>
-                            <h3 className="font-bold text-primary text-xs">SRS-based</h3>
-                            <p className="text-tertiary text-xs">Spaced reviews for reading and meaning, paced to your rhythm.</p>
-                        </div>
-                        <div className="space-y-1 p-3 rounded-lg bg-surface border border-divider">
-                            <div className="mx-auto w-8 h-8 rounded-full bg-background border border-divider flex items-center justify-center text-primary">
-                                <Cloud size={14} />
-                            </div>
-                            <h3 className="font-bold text-primary text-xs">Synced</h3>
-                            <p className="text-tertiary text-xs">Progress synced across devices via Google Drive.</p>
-                        </div>
-                    </div>
-                </div>
+                            <View style={[styles.flexRow, styles.flexWrap, styles.justifyCenter, styles.gap6, styles.pt6, styles.wFull]}>
+                                <View style={[styles.flexCol, styles.alignCenter, styles.gap2, { flex: 1, minWidth: 150 }]}>
+                                    <View style={[styles.flexCenter, styles.w10, styles.h10, styles.bgSurface, styles.border, { borderRadius: 20, borderColor: THEME.colors.divider }]}>
+                                        <MaterialCommunityIcons name="cloud" size={18} color={THEME.colors.primary} />
+                                    </View>
+                                    <Text style={[styles.fontBold, styles.textPrimary, styles.textCenter]}>Daily SRS</Text>
+                                    <Text style={[styles.textXs, styles.textTertiary, styles.textCenter]}>A custom Spaced Repetition System optimized for long-term retention.</Text>
+                                </View>
+                                <View style={[styles.flexCol, styles.alignCenter, styles.gap2, { flex: 1, minWidth: 150 }]}>
+                                    <View style={[styles.flexCenter, styles.w10, styles.h10, styles.bgSurface, styles.border, { borderRadius: 20, borderColor: THEME.colors.divider }]}>
+                                        <MaterialCommunityIcons name="school" size={18} color={THEME.colors.primary} />
+                                    </View>
+                                    <Text style={[styles.fontBold, styles.textPrimary, styles.textCenter]}>Contextual Meaning</Text>
+                                    <Text style={[styles.textXs, styles.textTertiary, styles.textCenter]}>Learn nuance by translating vocabulary within real Japanese sentences.</Text>
+                                </View>
+                                <View style={[styles.flexCol, styles.alignCenter, styles.gap2, { flex: 1, minWidth: 150 }]}>
+                                    <View style={[styles.flexCenter, styles.w10, styles.h10, styles.bgSurface, styles.border, { borderRadius: 20, borderColor: THEME.colors.divider }]}>
+                                        <MaterialCommunityIcons name="book-open-variant" size={18} color={THEME.colors.primary} />
+                                    </View>
+                                    <Text style={[styles.fontBold, styles.textPrimary, styles.textCenter]}>Read Native Material</Text>
+                                    <Text style={[styles.textXs, styles.textTertiary, styles.textCenter]}>The bridge between textbook kanji and reading actual Japanese media.</Text>
+                                </View>
+                            </View>
+                        </View>
+                    </View>
 
-                {/* Path Selection */}
-                <div className="space-y-4 pt-4">
-                    <h2 className="text-sm uppercase tracking-widest font-gothic text-tertiary text-center mb-6">
-                        Where are you in your journey?
-                    </h2>
+                    {/* Path Selection */}
+                    <View style={[styles.flexCol, styles.gap4, styles.pt4]}>
+                        <Text style={[styles.textSm, styles.fontGothic, styles.textTertiary, styles.textCenter, styles.mb2, { textTransform: 'uppercase', letterSpacing: 1 }]}>
+                            Choose your path
+                        </Text>
 
-                    <div className="grid gap-4">
-                        <button
-                            onClick={onSelectBeginner}
-                            className="group flex items-center justify-between p-6 bg-surface border border-divider hover:border-accent/40 rounded-xl transition-all shadow-sm hover:shadow-md text-left"
-                        >
-                            <div className="pr-4">
-                                <h3 className="font-bold text-lg text-primary font-gothic flex items-center gap-2 mb-1">
-                                    Just starting out
-                                </h3>
-                                <p className="text-sm text-secondary font-serif">
-                                    I'm beginning my kanji journey. Start me from the very beginning in KKLC order.
-                                </p>
-                            </div>
-                            <ChevronRight className="text-tertiary group-hover:text-accent transition-colors flex-shrink-0" />
-                        </button>
+                        <View style={[styles.flexCol, styles.gap4]}>
+                            <Pressable
+                                onPress={onSelectBeginner}
+                                style={({ pressed, hovered }: any) => [
+                                    styles.flexRow, styles.alignCenter, styles.justifyBetween, styles.p6, styles.bgSurface, styles.border,
+                                    {
+                                        borderRadius: 12,
+                                        borderColor: pressed || hovered ? THEME.colors.accent + '66' : THEME.colors.divider,
+                                        backgroundColor: pressed ? THEME.colors.surfaceHover : THEME.colors.surface,
+                                        shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.05, shadowRadius: 2
+                                    }
+                                ] as any}
+                            >
+                                <View style={[styles.flex1, styles.pr4]}>
+                                    <Text style={[styles.fontBold, styles.textLg, styles.textPrimary, styles.fontGothic, styles.mb1]}>
+                                        Complete Beginner
+                                    </Text>
+                                    <Text style={[styles.textSm, styles.textSecondary, styles.fontSerif, { lineHeight: 20 }]}>
+                                        I don't know any Kanji yet. Start me from the very beginning with the Kodansha (KKLC) order.
+                                    </Text>
+                                </View>
+                                <MaterialCommunityIcons name="chevron-right" size={24} color={THEME.colors.tertiary} />
+                            </Pressable>
 
-                        <button
-                            onClick={onSelectLearner}
-                            className="group flex items-center justify-between p-6 bg-surface border border-divider hover:border-accent/40 rounded-xl transition-all shadow-sm hover:shadow-md text-left"
-                        >
-                            <div className="pr-4">
-                                <h3 className="font-bold text-lg text-primary font-gothic flex items-center gap-2 mb-1">
-                                    I already know some kanji
-                                </h3>
-                                <p className="text-sm text-secondary font-serif">
-                                    Set my current level so vocabulary matches my kanji knowledge.
-                                </p>
-                            </div>
-                            <ChevronRight className="text-tertiary group-hover:text-accent transition-colors flex-shrink-0" />
-                        </button>
-                    </div>
-                </div>
+                            <Pressable
+                                onPress={onSelectLearner}
+                                style={({ pressed, hovered }: any) => [
+                                    styles.flexRow, styles.alignCenter, styles.justifyBetween, styles.p6, styles.bgSurface, styles.border,
+                                    {
+                                        borderRadius: 12,
+                                        borderColor: pressed || hovered ? THEME.colors.accent + '66' : THEME.colors.divider,
+                                        backgroundColor: pressed ? THEME.colors.surfaceHover : THEME.colors.surface,
+                                        shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.05, shadowRadius: 2
+                                    }
+                                ] as any}
+                            >
+                                <View style={[styles.flex1, styles.pr4]}>
+                                    <Text style={[styles.fontBold, styles.textLg, styles.textPrimary, styles.fontGothic, styles.mb1]}>
+                                        Kanji Learner
+                                    </Text>
+                                    <Text style={[styles.textSm, styles.textSecondary, styles.fontSerif, { lineHeight: 20 }]}>
+                                        I already know some Kanji. Let me tailor my vocabulary queue to strictly introduce words using my known Kanji.
+                                    </Text>
+                                </View>
+                                <MaterialCommunityIcons name="chevron-right" size={24} color={THEME.colors.tertiary} />
+                            </Pressable>
+                        </View>
+                    </View>
 
-                {/* Load Existing */}
-                <div className="pt-8 border-t border-divider w-full max-w-sm mx-auto">
-                    <GoogleLoginButton onSyncComplete={() => window.location.reload()} />
-                </div>
-            </main>
-        </div>
+                    {/* Load Existing */}
+                    <View style={[styles.pt8, styles.border, styles.wFull, styles.alignCenter, { borderTopWidth: 1, borderColor: THEME.colors.divider }]}>
+                        <View style={{ width: '100%', maxWidth: 384 }}>
+                            <GoogleLoginButton onSyncComplete={() => window.location.reload()} />
+                        </View>
+                    </View>
+                </View>
+            </ScrollView>
+        </View>
     );
 }

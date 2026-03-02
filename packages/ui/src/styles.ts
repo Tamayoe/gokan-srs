@@ -1,19 +1,23 @@
 import { StyleSheet } from 'react-native';
 import { THEME } from '@gokan-srs/core/commons/theme';
+import type { DimensionValue } from 'react-native';
 
 export const styles = StyleSheet.create({
     // Layout
     flex1: { flex: 1 },
+    flexGrow: { flexGrow: 1 },
     flexRow: { flexDirection: 'row' },
     flexCol: { flexDirection: 'column' },
     flexWrap: { flexWrap: 'wrap' },
     flexCenter: { justifyContent: 'center', alignItems: 'center' },
     justifyBetween: { justifyContent: 'space-between' },
     justifyCenter: { justifyContent: 'center' },
+    justifyStart: { justifyContent: 'flex-start' },
     justifyEnd: { justifyContent: 'flex-end' },
     alignCenter: { alignItems: 'center' },
     alignStart: { alignItems: 'flex-start' },
     alignEnd: { alignItems: 'flex-end' },
+    overflowHidden: { overflow: 'hidden' },
 
     // Gaps
     gap1: { gap: 4 },
@@ -23,10 +27,12 @@ export const styles = StyleSheet.create({
     gap5: { gap: 20 },
     gap6: { gap: 24 },
     gap8: { gap: 32 },
+    gap12: { gap: 48 },
 
     // Backgrounds
     bgBackground: { backgroundColor: THEME.colors.background },
     bgSurface: { backgroundColor: THEME.colors.surface },
+    bgFeedbackBackground: { backgroundColor: THEME.colors.feedbackBackground },
     bgFeedback: { backgroundColor: THEME.colors.feedbackBackground },
     bgAccent: { backgroundColor: THEME.colors.accent },
     bgError: { backgroundColor: THEME.colors.error },
@@ -39,6 +45,7 @@ export const styles = StyleSheet.create({
     textError: { color: THEME.colors.error },
     textWhite: { color: '#FFFFFF' },
     textMuted: { color: THEME.colors.muted },
+    textDivider: { color: THEME.colors.divider },
 
     // Typography - Fonts
     fontSerif: { fontFamily: THEME.fonts.serif },
@@ -61,6 +68,7 @@ export const styles = StyleSheet.create({
     fontNormal: { fontWeight: '400' },
     fontMedium: { fontWeight: '500' },
     fontSemibold: { fontWeight: '600' },
+    fontSemiBold: { fontWeight: '600' }, // alias for typo
     fontBold: { fontWeight: '700' },
 
     // Text Alignment
@@ -79,11 +87,14 @@ export const styles = StyleSheet.create({
     border: { borderWidth: 1, borderColor: THEME.colors.divider },
     borderBottom: { borderBottomWidth: 1, borderBottomColor: THEME.colors.divider },
     borderTop: { borderTopWidth: 1, borderTopColor: THEME.colors.divider },
+    borderLeft: { borderLeftWidth: 1, borderLeftColor: THEME.colors.divider },
+    borderRight: { borderRightWidth: 1, borderRightColor: THEME.colors.divider },
     borderAccent: { borderColor: THEME.colors.accent },
     borderError: { borderColor: THEME.colors.error },
 
     // Margins
     m4: { margin: 16 },
+    mb0: { marginBottom: 0 },
     mt1: { marginTop: 4 },
     mt2: { marginTop: 8 },
     mt3: { marginTop: 12 },
@@ -96,34 +107,66 @@ export const styles = StyleSheet.create({
     mb4: { marginBottom: 16 },
     mb6: { marginBottom: 24 },
     mb8: { marginBottom: 32 },
+    mb12: { marginBottom: 48 },
+    mb16: { marginBottom: 64 },
     ml1: { marginLeft: 4 },
     ml2: { marginLeft: 8 },
+    ml3: { marginLeft: 12 },
     ml4: { marginLeft: 16 },
     mr2: { marginRight: 8 },
     mr4: { marginRight: 16 },
+    mx1: { marginHorizontal: 4 },
+    mx2: { marginHorizontal: 8 },
+    my1: { marginVertical: 4 },
+    my2: { marginVertical: 8 },
     my4: { marginVertical: 16 },
     my8: { marginVertical: 32 },
     mxAuto: { marginHorizontal: 'auto' },
 
     // Paddings
+    p0: { padding: 0 },
     p2: { padding: 8 },
     p3: { padding: 12 },
     p4: { padding: 16 },
+    p5: { padding: 20 },
     p6: { padding: 24 },
+    p8: { padding: 32 },
+    pt2: { paddingTop: 8 },
+    pt3: { paddingTop: 12 },
+    pt4: { paddingTop: 16 },
+    pt6: { paddingTop: 24 },
+    pt8: { paddingTop: 32 },
+    pb4: { paddingBottom: 16 },
+    pb6: { paddingBottom: 24 },
+    pb12: { paddingBottom: 48 },
+    pl3: { paddingLeft: 12 },
+    pl4: { paddingLeft: 16 },
+    pr4: { paddingRight: 16 },
+    px1: { paddingHorizontal: 4 },
+    px1_5: { paddingHorizontal: 6 },
     px2: { paddingHorizontal: 8 },
+    px3: { paddingHorizontal: 12 },
     px4: { paddingHorizontal: 16 },
     px6: { paddingHorizontal: 24 },
     px8: { paddingHorizontal: 32 },
+    py0_5: { paddingVertical: 2 },
+    py1: { paddingVertical: 4 },
     py2: { paddingVertical: 8 },
     py3: { paddingVertical: 12 },
     py4: { paddingVertical: 16 },
+    py6: { paddingVertical: 24 },
     py8: { paddingVertical: 32 },
+    py12: { paddingVertical: 48 },
 
     // Layout Utility
     wFull: { width: '100%' },
     hFull: { height: '100%' },
-    wScreen: { width: '100vw' },
-    hScreen: { height: '100vh' },
+    wScreen: { width: '100%' as DimensionValue },
+    hScreen: { height: '100%' as DimensionValue },
+    w10: { width: 40 },
+    h10: { height: 40 },
+    h12: { height: 48 },
+    h14: { height: 56 },
 
     absolute: { position: 'absolute' },
     relative: { position: 'relative' },

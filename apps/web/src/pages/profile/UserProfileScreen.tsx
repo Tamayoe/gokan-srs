@@ -1,37 +1,39 @@
+import React from 'react';
+import { View, Text, ScrollView } from 'react-native';
 import { Button } from "../../components/ui/Button";
 import { KanjiKnowledgeEditor } from "../../components/KanjiKnowledgeEditor";
 import { useQuiz } from "../../context/useQuiz";
+import { styles } from "@gokan-srs/ui";
 
 export function UserProfileScreen({ onBack }: { onBack: () => void; onVocabClick?: (vocabId: string) => void }) {
     const { actions } = useQuiz();
 
     return (
-        <div className="w-full max-w-2xl md:max-w-3xl flex flex-col gap-2 animate-fade-in">
-            {/* ... header ... */}
-            <header className="w-full mb-6 flex items-center justify-center relative h-12">
-                <Button
-                    variant="ghost"
-                    onClick={onBack}
-                    className="absolute left-0"
-                >
-                    ← Back
-                </Button>
+        <ScrollView style={[styles.flex1, styles.wFull, styles.bgBackground]} contentContainerStyle={[styles.alignCenter, styles.px4, styles.py6]}>
+            <View style={[styles.wFull, styles.flexCol, styles.gap2, { maxWidth: 768 }]}>
+                {/* Header */}
+                <View style={[styles.wFull, styles.mb6, styles.flexRow, styles.alignCenter, styles.justifyCenter, styles.relative, { height: 48 }]}>
+                    <Button
+                        variant="ghost"
+                        onPress={onBack}
+                        style={[styles.absolute, { left: 0, zIndex: 10 }]}
+                    >
+                        ← Back
+                    </Button>
 
-                <h1 className="text-xl font-serif text-primary">
-                    Your learning
-                </h1>
-            </header>
+                    <Text style={[styles.textXl, styles.fontSerif, styles.textPrimary]}>
+                        Your learning
+                    </Text>
+                </View>
 
-            <section className="w-full mt-8">
-                <h2 className="text-lg mb-4 text-primary font-serif">
-                    Kanji
-                </h2>
+                <View style={[styles.wFull, styles.mt8]}>
+                    <Text style={[styles.textLg, styles.mb4, styles.textPrimary, styles.fontSerif]}>
+                        Kanji
+                    </Text>
 
-                <KanjiKnowledgeEditor onKanjiKnowledgeChange={actions.updateKanjiKnowledge} />
-
-            </section>
-
-
-        </div>
+                    <KanjiKnowledgeEditor onKanjiKnowledgeChange={actions.updateKanjiKnowledge} />
+                </View>
+            </View>
+        </ScrollView>
     );
 }

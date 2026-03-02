@@ -1,5 +1,8 @@
+import React from "react";
+import { View, Text } from "react-native";
+import Svg, { Circle, Defs, LinearGradient, Stop } from "react-native-svg";
 import { CONSTANTS } from "@gokan-srs/core/commons/constants";
-import { THEME } from "../commons/theme";
+import { THEME, styles } from "@gokan-srs/ui";
 
 interface MasteryRingProps {
     memoryStrength: number; // SRS Memory Strength
@@ -51,6 +54,7 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size =
     const offset1 = circumference - (p1 / 100) * circumference;
     const offset2 = circumference - (p2 / 100) * circumference;
 
+
     // Text Visibility logic
     const shouldShowText = showText && size >= 30;
     // Increased font size matching body weight
@@ -73,27 +77,23 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size =
     }
 
     return (
-        <div className="relative flex items-center justify-center shrink-0" style={{ width: size, height: size }}>
-            <svg
-                className="w-full h-full"
-                style={{ transform: 'rotate(-90deg) translateZ(0)' }}
+        <View style={[styles.relative, styles.flexCenter, { width: size, height: size }]}>
+            <Svg
+                style={[{ width: size, height: size }, { transform: [{ rotate: '-90deg' }] }]}
                 viewBox={`0 0 ${size} ${size}`}
             >
                 {/* Background Track */}
-                <circle
-                    className="text-divider"
-                    stroke="currentColor"
+                <Circle
+                    stroke={THEME.mastery.track}
                     strokeWidth={strokeWidth}
                     fill="transparent"
                     r={radius}
                     cx={size / 2}
                     cy={size / 2}
-                    shapeRendering="geometricPrecision"
                 />
 
                 {/* Loop 1 (Learning Progress) */}
-                <circle
-                    className="transition-all duration-700 ease-out"
+                <Circle
                     strokeWidth={strokeWidth}
                     strokeDasharray={circumference}
                     strokeDashoffset={offset1}
@@ -103,13 +103,11 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size =
                     r={radius}
                     cx={size / 2}
                     cy={size / 2}
-                    shapeRendering="geometricPrecision"
                 />
 
                 {/* Loop 2 (Refining / Diamond / Shiny) */}
                 {p2 > 0 && (
-                    <circle
-                        className="transition-all duration-700 ease-out"
+                    <Circle
                         strokeWidth={strokeWidth}
                         strokeDasharray={circumference}
                         strokeDashoffset={offset2}
@@ -119,21 +117,22 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size =
                         r={radius}
                         cx={size / 2}
                         cy={size / 2}
-                        shapeRendering="geometricPrecision"
                     />
                 )}
-            </svg>
+            </Svg>
 
             {shouldShowText && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <span
-                        className="font-bold leading-none text-slate-600 select-none"
-                        style={{ fontSize: fontSize }}
+                <View style={[styles.absolute, styles.inset0, styles.flexCenter]}>
+                    <Text
+                        style={[
+                            styles.fontBold,
+                            { fontSize: fontSize, color: '#475569' }
+                        ]}
                     >
                         {displayPercentage}
-                    </span>
-                </div>
+                    </Text>
+                </View>
             )}
-        </div>
+        </View>
     );
 };

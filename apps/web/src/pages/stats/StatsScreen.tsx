@@ -1,9 +1,12 @@
+import React from 'react';
+import { View, Text, ScrollView } from 'react-native';
 import { Button } from "../../components/ui/Button";
 import { useQuiz } from "../../context/useQuiz";
 import { StatsOverview } from "./components/StatsOverview";
 import { ReviewForecast } from "./components/ReviewForecast";
 import { DailyProgressionChart } from "./components/DailyProgressionChart";
 import { SmartVocabList } from "./components/SmartVocabList";
+import { styles, THEME } from "@gokan-srs/ui";
 
 export function StatsScreen({ onBack, onVocabClick }: { onBack: () => void; onVocabClick?: (vocabId: string) => void }) {
     const { state } = useQuiz();
@@ -12,34 +15,38 @@ export function StatsScreen({ onBack, onVocabClick }: { onBack: () => void; onVo
     if (!state.progress) return null;
 
     return (
-        <div className="w-full max-w-4xl flex flex-col gap-6 animate-fade-in pb-12">
-            <header className="w-full flex items-center justify-center relative h-12">
-                <Button variant="ghost" onClick={onBack} className="absolute left-0">
-                    ← Back
-                </Button>
-                <h1 className="text-xl font-serif text-primary">Statistics</h1>
-            </header>
+        <ScrollView style={[styles.flex1, styles.wFull, styles.bgBackground]} contentContainerStyle={[styles.alignCenter, styles.px4, styles.py6, styles.pb12]}>
+            <View style={[styles.wFull, styles.flexCol, styles.gap6, { maxWidth: 896 }]}>
+                {/* Header */}
+                <View style={[styles.wFull, styles.flexRow, styles.alignCenter, styles.justifyCenter, styles.relative, { height: 48 }]}>
+                    <Button variant="ghost" onPress={onBack} style={[styles.absolute, { left: 0, zIndex: 10 }]}>
+                        ← Back
+                    </Button>
+                    <Text style={[styles.textXl, styles.fontSerif, styles.textPrimary]}>
+                        Statistics
+                    </Text>
+                </View>
 
-            <StatsOverview progress={state.progress} />
+                <StatsOverview progress={state.progress} />
 
-            <section className="w-full p-6 bg-surface rounded-lg shadow-sm border border-divider">
-                <h2 className="text-lg mb-4 text-primary font-serif">Daily Progression</h2>
-                <DailyProgressionChart progress={state.progress} />
-            </section>
+                <View style={[styles.wFull, styles.p6, styles.bgSurface, styles.border, styles.mb6, { borderRadius: 8, borderColor: THEME.colors.divider }]}>
+                    <Text style={[styles.textLg, styles.mb4, styles.textPrimary, styles.fontSerif]}>Daily Progression</Text>
+                    <DailyProgressionChart progress={state.progress} />
+                </View>
 
-            <section className="w-full p-6 bg-surface rounded-lg shadow-sm border border-divider">
-                <h2 className="text-lg mb-4 text-primary font-serif">Review Forecast</h2>
-                <ReviewForecast progress={state.progress} />
-            </section>
+                <View style={[styles.wFull, styles.p6, styles.bgSurface, styles.border, { borderRadius: 8, borderColor: THEME.colors.divider }]}>
+                    <Text style={[styles.textLg, styles.mb4, styles.textPrimary, styles.fontSerif]}>Review Forecast</Text>
+                    <ReviewForecast progress={state.progress} />
+                </View>
 
-
-            <section className="w-full">
-                <h2 className="text-lg mb-4 text-primary font-serif">Vocabulary</h2>
-                <SmartVocabList
-                    progress={state.progress.learningQueue}
-                    onVocabClick={onVocabClick}
-                />
-            </section>
-        </div>
+                <View style={[styles.wFull]}>
+                    <Text style={[styles.textLg, styles.mb4, styles.textPrimary, styles.fontSerif]}>Vocabulary</Text>
+                    <SmartVocabList
+                        progress={state.progress.learningQueue}
+                        onVocabClick={onVocabClick}
+                    />
+                </View>
+            </View>
+        </ScrollView>
     );
 }

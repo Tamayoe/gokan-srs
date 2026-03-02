@@ -1,3 +1,7 @@
+import { useEffect, useRef } from 'react';
+import { Animated, Easing, Text, View } from 'react-native';
+import Svg, { Rect, Circle, Text as SvgText } from 'react-native-svg';
+import { styles, THEME } from '@gokan-srs/ui';
 
 export type LoaderProps = {
     title: string;
@@ -5,160 +9,112 @@ export type LoaderProps = {
 }
 
 export function Loader({ title, description }: LoaderProps) {
+    const pulseAnim = useRef(new Animated.Value(1)).current;
+    const spinAnim = useRef(new Animated.Value(0)).current;
+    const fadeAnim = useRef(new Animated.Value(0)).current;
+
+    useEffect(() => {
+        // Pulse animation
+        Animated.loop(
+            Animated.sequence([
+                Animated.timing(pulseAnim, {
+                    toValue: 0.98,
+                    duration: 1000,
+                    easing: Easing.inOut(Easing.ease),
+                    useNativeDriver: true,
+                }),
+                Animated.timing(pulseAnim, {
+                    toValue: 1,
+                    duration: 1000,
+                    easing: Easing.inOut(Easing.ease),
+                    useNativeDriver: true,
+                }),
+            ])
+        ).start();
+
+        // Spin animation
+        Animated.loop(
+            Animated.timing(spinAnim, {
+                toValue: 1,
+                duration: 4000,
+                easing: Easing.linear,
+                useNativeDriver: true,
+            })
+        ).start();
+
+        // Fade in text
+        Animated.timing(fadeAnim, {
+            toValue: 1,
+            duration: 600,
+            easing: Easing.out(Easing.ease),
+            useNativeDriver: true,
+        }).start();
+    }, [pulseAnim, spinAnim, fadeAnim]);
+
+    const getRotationWithDelay = (delayRatio: number) => {
+        return spinAnim.interpolate({
+            inputRange: [0, 1],
+            outputRange: [`${delayRatio * 360}deg`, `${(delayRatio * 360) + 360}deg`],
+        });
+    };
+
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-background transition-colors duration-200">
-            <div className="flex flex-col items-center gap-10">
-                {/* Breathing Seal Logo with ripple rings */}
-                <div className="relative flex items-center justify-center" style={{ width: 220, height: 220 }}>
-                    {/* Ripple rings — triggered in sync with the heartbeat */}
-                    <div className="absolute inset-0 rounded-full animate-ripple opacity-0" style={{ animationDelay: '0s' }} />
-                    <div className="absolute inset-0 rounded-full animate-ripple opacity-0" style={{ animationDelay: '1.5s' }} />
+        <View style={[styles.flex1, styles.flexCenter, styles.bgBackground]}>
+            <View style={[styles.flexCol, styles.alignCenter, styles.gap8]}>
+                {/* Animated Kanji Logo */}
+                <View style={[styles.relative, { width: 120, height: 120 }]}>
+                    <Animated.View style={{ transform: [{ scale: pulseAnim }], opacity: pulseAnim }}>
+                        <Svg width="120" height="120" viewBox="0 0 100 100">
+                            <Circle
+                                cx="50"
+                                cy="50"
+                                r="46"
+                                stroke={THEME.colors.primary}
+                                strokeWidth="3"
+                                fill="none"
+                            />
+                            <SvgText
+                                x="50"
+                                y="50"
+                                fontSize="34"
+                                fontFamily={THEME.fonts.mincho}
+                                textAnchor="middle"
+                                alignmentBaseline="central"
+                                fill={THEME.colors.primary}
+                                fontWeight="400"
+                            >
+                                語感
+                            </SvgText>
+                        </Svg>
+                    </Animated.View>
 
-                    {/* Circular seal: thin ring + 語感 inside */}
-                    <svg
-                        width="120"
-                        height="120"
-                        viewBox="0 0 100 100"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="animate-heartbeat relative z-10"
-                    >
-                        {/* Thin circle ring — the seal frame */}
-                        <circle
-                            cx="50"
-                            cy="50"
-                            r="46"
-                            className="stroke-primary animate-color-stroke"
-                            strokeWidth="1.2"
-                            fill="none"
-                        />
-
-                        {/* 語感 side by side, centered inside the circle */}
-                        <text
-                            x="50"
-                            y="50"
-                            fontSize="34"
-                            fontFamily="'Noto Serif JP', serif"
-                            textAnchor="middle"
-                            dominantBaseline="central"
-                            className="animate-color-breathe"
-                            fontWeight="400"
-                            letterSpacing="2"
-                        >
-                            語感
-                        </text>
-                    </svg>
-                </div>
+                    {/* Orbiting dots */}
+                    <Animated.View style={[styles.absolute, styles.inset0, { transform: [{ rotate: getRotationWithDelay(0) }] }]}>
+                        <View style={[styles.absolute, { top: 0, left: '50%', transform: [{ translateX: -4 }], width: 8, height: 8, backgroundColor: THEME.colors.primary, borderRadius: 4, opacity: 0.6 }]} />
+                    </Animated.View>
+                    <Animated.View style={[styles.absolute, styles.inset0, { transform: [{ rotate: getRotationWithDelay(0.125) }] }]}>
+                        <View style={[styles.absolute, { bottom: 0, left: '50%', transform: [{ translateX: -4 }], width: 8, height: 8, backgroundColor: THEME.colors.primary, borderRadius: 4, opacity: 0.6 }]} />
+                    </Animated.View>
+                    <Animated.View style={[styles.absolute, styles.inset0, { transform: [{ rotate: getRotationWithDelay(0.25) }] }]}>
+                        <View style={[styles.absolute, { top: '50%', left: 0, transform: [{ translateY: -4 }], width: 8, height: 8, backgroundColor: THEME.colors.primary, borderRadius: 4, opacity: 0.6 }]} />
+                    </Animated.View>
+                    <Animated.View style={[styles.absolute, styles.inset0, { transform: [{ rotate: getRotationWithDelay(0.375) }] }]}>
+                        <View style={[styles.absolute, { top: '50%', right: 0, transform: [{ translateY: -4 }], width: 8, height: 8, backgroundColor: THEME.colors.primary, borderRadius: 4, opacity: 0.6 }]} />
+                    </Animated.View>
+                </View>
 
                 {/* Loading text */}
-                <div className="flex flex-col items-center gap-2">
-                    <p className="text-primary font-serif text-lg animate-fade-in">
+                <View style={[styles.flexCol, styles.alignCenter, styles.gap2]}>
+                    <Animated.Text style={[styles.textPrimary, styles.fontSerif, styles.textLg, { opacity: fadeAnim, transform: [{ translateY: fadeAnim.interpolate({ inputRange: [0, 1], outputRange: [10, 0] }) }] }]}>
                         {title}
-                    </p>
-                    {description && <p className="text-secondary text-sm animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                        {description}
-                    </p>}
-                </div>
-            </div>
-
-            <style>{`
-                /* Heartbeat: quick thump, then settle */
-                @keyframes heartbeat {
-                    0% {
-                        transform: scale(1);
-                    }
-                    8% {
-                        transform: scale(1.11);
-                    }
-                    22% {
-                        transform: scale(1.0);
-                    }
-                    100% {
-                        transform: scale(1);
-                    }
-                }
-
-                /* Text color pulse — brightens at the beat */
-                @keyframes color-breathe {
-                    0%, 100% {
-                        fill: var(--color-primary, #2E3A59);
-                        opacity: 0.85;
-                    }
-                    8% {
-                        fill: var(--color-accent, #4A5A8A);
-                        opacity: 1;
-                    }
-                    30% {
-                        fill: var(--color-primary, #2E3A59);
-                        opacity: 0.9;
-                    }
-                }
-
-                /* Circle stroke pulse — matches the text */
-                @keyframes color-stroke {
-                    0%, 100% {
-                        stroke-opacity: 0.45;
-                    }
-                    8% {
-                        stroke-opacity: 0.85;
-                    }
-                    30% {
-                        stroke-opacity: 0.5;
-                    }
-                }
-
-                /* Ripple: quick surge then dissolve */
-                @keyframes ripple {
-                    0% {
-                        transform: scale(0.5);
-                        opacity: 0.45;
-                    }
-                    70% {
-                        opacity: 0.06;
-                    }
-                    100% {
-                        transform: scale(1);
-                        opacity: 0;
-                    }
-                }
-
-                @keyframes fade-in {
-                    from {
-                        opacity: 0;
-                        transform: translateY(8px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
-                .animate-heartbeat {
-                    animation: heartbeat 3s ease-out infinite;
-                    transform-origin: center;
-                }
-
-                .animate-color-breathe {
-                    animation: color-breathe 3s ease-out infinite;
-                    fill: var(--color-primary, #2E3A59);
-                }
-
-                .animate-color-stroke {
-                    animation: color-stroke 3s ease-out infinite;
-                }
-
-                /* Same 3s cycle — locked to the heartbeat */
-                .animate-ripple {
-                    animation: ripple 3s ease-out infinite;
-                    color: var(--color-primary, #2E3A59);
-                    border: 1px solid currentColor;
-                }
-
-                .animate-fade-in {
-                    animation: fade-in 0.6s ease-out forwards;
-                    opacity: 0;
-                }
-            `}</style>
-        </div>
+                    </Animated.Text>
+                    {description && (
+                        <Animated.Text style={[styles.textSecondary, styles.textSm, { opacity: fadeAnim, transform: [{ translateY: fadeAnim.interpolate({ inputRange: [0, 1], outputRange: [10, 0] }) }] }]}>
+                            {description}
+                        </Animated.Text>
+                    )}
+                </View>
+            </View>
+        </View>
     );
 }

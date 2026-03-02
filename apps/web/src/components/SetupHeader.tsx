@@ -1,12 +1,16 @@
+import { View, Text } from "react-native";
+import { styles } from "@gokan-srs/ui";
 import { Logo } from "./Logo";
 
 export function SetupHeader() {
     return (
-        <div className="text-center mb-16">
-            <Logo className="justify-center mb-6" />
-            <p className="text-sm text-secondary font-serif">
+        <View style={[styles.flexCol, styles.alignCenter, styles.mb16]}>
+            <View style={[styles.flexRow, styles.justifyCenter, styles.mb6]}>
+                <Logo />
+            </View>
+            <Text style={[styles.textSm, styles.textSecondary, styles.fontSerif, styles.textCenter]}>
                 A focused vocabulary learning system
-            </p>
-        </div>
+            </Text>
+        </View>
     );
 }

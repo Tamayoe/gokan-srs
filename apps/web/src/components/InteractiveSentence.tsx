@@ -1,10 +1,15 @@
+import React from 'react';
+import { View, Text, Pressable } from 'react-native';
+import type { StyleProp, ViewStyle, TextStyle } from "react-native";
 import type { Sentence } from "@gokan-srs/core/models/sentence.model";
+import { styles, THEME } from '@gokan-srs/ui';
 
 interface InteractiveSentenceProps {
     sentence: Sentence;
-    targetVocabId?: string; // The specific vocab we are currently studying/viewing
+    targetVocabId?: string;
     onVocabClick?: (vocabId: string) => void;
-    className?: string;
+    style?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
     showFurigana?: boolean;
     allowTargetClickable?: boolean;
 }
@@ -13,17 +18,13 @@ export function InteractiveSentence({
     sentence,
     targetVocabId,
     onVocabClick,
-    className = "",
+    style,
+    textStyle,
     showFurigana = false,
     allowTargetClickable = false
 }: InteractiveSentenceProps) {
     const text = sentence.original;
     const matches = sentence.matches || {};
-
-    // 1. Flatten matches into a list of segments
-    // We need to handle potential overlaps, though our builder tries to avoid them.
-    // If overlaps exist, we prioritize the one that starts earlier, or is longer.
-    // For simplicity and speed, let's assume non-overlapping or just take valid ones.
 
     interface Segment {
         type: 'text' | 'match';
@@ -56,7 +57,6 @@ export function InteractiveSentence({
         // Skip if this match starts before current index (overlap handling: strict skip)
         if (match.start < currentIndex) continue;
 
-        // Add pre-match text
         if (match.start > currentIndex) {
             segments.push({
                 type: 'text',
@@ -66,7 +66,6 @@ export function InteractiveSentence({
             });
         }
 
-        // Add match
         const end = match.start + match.length;
         segments.push({
             type: 'match',
@@ -76,11 +75,9 @@ export function InteractiveSentence({
             end: end,
             reading: match.reading
         });
-
         currentIndex = end;
     }
 
-    // Add remaining text
     if (currentIndex < text.length) {
         segments.push({
             type: 'text',
@@ -90,67 +87,75 @@ export function InteractiveSentence({
         });
     }
 
-    // 2. Render
+    const renderBlocks: React.ReactNode[] = [];
+
+    segments.forEach((segment, i) => {
+        if (segment.type === 'text') {
+            Array.from(segment.content).forEach((char, charIdx) => {
+                renderBlocks.push(
+                    <View key={`text-${i}-${charIdx}`} style={[styles.flexCol, styles.justifyEnd]}>
+                        <Text style={[styles.fontMincho, styles.textBase, textStyle, { lineHeight: 28 }]}>{char}</Text>
+                    </View>
+                );
+            });
+            return;
+        }
+
+        const isTarget = segment.vocabId === targetVocabId;
+        const isClickable = !!onVocabClick && (!isTarget || allowTargetClickable);
+        const rawReading = showFurigana && segment.type === 'match' ? segment.reading : null;
+        const isKanaOnly = /^[\u3040-\u309F\u30A0-\u30FF]+$/.test(segment.content);
+        const reading = rawReading && rawReading !== segment.content && !isKanaOnly ? rawReading : null;
+
+        const renderWord = (isHovered: boolean = false) => (
+            <View style={[styles.flexCol, styles.alignCenter, styles.justifyEnd]}>
+                {reading ? (
+                    <Text style={[styles.textTertiary, { fontSize: 10, marginBottom: -6, marginTop: 2 }]}>{reading}</Text>
+                ) : (
+                    <View style={{ height: 14 }} />
+                )}
+                <View style={[
+                    isTarget ? { borderBottomWidth: 2, borderBottomColor: THEME.colors.accent + '40', marginHorizontal: 2, paddingHorizontal: 2 } : {},
+                    isTarget && isClickable && isHovered ? { borderBottomColor: THEME.colors.accent } : {},
+                    !isTarget && isClickable ? { borderBottomWidth: 1, borderBottomColor: THEME.colors.tertiary + '80', borderStyle: 'dashed', marginHorizontal: 2 } : {},
+                    !isTarget && isClickable && isHovered ? { borderBottomColor: THEME.colors.accent } : {}
+                ]}>
+                    <Text style={[
+                        styles.fontMincho,
+                        styles.textBase,
+                        { lineHeight: 28 },
+                        isTarget ? [styles.textAccent, styles.fontBold] : {},
+                        !isTarget && isClickable ? styles.textPrimary : {},
+                        !isTarget && isClickable && isHovered ? styles.textAccent : {},
+                        textStyle
+                    ]}>
+                        {segment.content}
+                    </Text>
+                </View>
+            </View>
+        );
+
+        if (isClickable) {
+            renderBlocks.push(
+                <Pressable
+                    key={`match-${i}`}
+                    onPress={() => onVocabClick?.(segment.vocabId!)}
+                >
+                    {({ hovered }: any) => renderWord(hovered)}
+                </Pressable>
+            );
+        } else {
+            renderBlocks.push(
+                <React.Fragment key={`match-${i}`}>
+                    {renderWord(false)}
+                </React.Fragment>
+            );
+        }
+    });
+
     return (
-        <span className={`font-mincho leading-loose md:leading-relaxed break-words ${className}`}>
-            {segments.map((segment, i) => {
-                if (segment.type === 'text') {
-                    return <span key={i}>{segment.content}</span>;
-                }
-
-                const isTarget = segment.vocabId === targetVocabId;
-                const isClickable = onVocabClick && (!isTarget || allowTargetClickable);
-
-                const rawReading = showFurigana && segment.type === 'match' ? segment.reading : null;
-                const isKanaOnly = /^[\u3040-\u309F\u30A0-\u30FF]+$/.test(segment.content);
-                const reading = rawReading && rawReading !== segment.content && !isKanaOnly ? rawReading : null;
-
-                const renderContent = () => {
-                    if (reading) {
-                        return (
-                            <ruby>
-                                {segment.content}
-                                <rt className="text-[0.6em] select-none opacity-80" style={{ transform: "translateY(-10%)" }}>{reading}</rt>
-                            </ruby>
-                        );
-                    }
-                    return segment.content;
-                };
-
-                if (isTarget) {
-                    return (
-                        <span
-                            key={i}
-                            onClick={isClickable ? (e) => {
-                                e.stopPropagation();
-                                onVocabClick?.(segment.vocabId!);
-                            } : undefined}
-                            className={`text-accent font-bold border-b-2 border-accent/30 mx-0.5 px-0.5 ${isClickable ? 'cursor-pointer hover:border-accent transition-colors' : ''}`}
-                            title={isClickable ? "Click to view details" : undefined}
-                        >
-                            {renderContent()}
-                        </span>
-                    );
-                }
-
-                if (isClickable) {
-                    return (
-                        <span
-                            key={i}
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                onVocabClick?.(segment.vocabId!);
-                            }}
-                            className="cursor-pointer text-primary border-b border-dashed border-tertiary/50 hover:text-accent hover:border-accent transition-colors mx-0.5"
-                            title="Click to view details"
-                        >
-                            {renderContent()}
-                        </span>
-                    );
-                }
-
-                return <span key={i}>{renderContent()}</span>;
-            })}
-        </span>
+        <View style={[styles.flexRow, styles.flexWrap, styles.alignEnd, style]}>
+            {renderBlocks}
+        </View>
     );
 }

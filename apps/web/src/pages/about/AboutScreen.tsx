@@ -1,4 +1,7 @@
+import React from 'react';
+import { View, Text, ScrollView, Linking } from 'react-native';
 import { Button } from "../../components/ui/Button";
+import { styles } from "@gokan-srs/ui";
 
 interface AboutScreenProps {
     onBack: () => void;
@@ -6,78 +9,73 @@ interface AboutScreenProps {
 
 export function AboutScreen({ onBack }: AboutScreenProps) {
     return (
-        <div className="w-full max-w-2xl md:max-w-3xl flex flex-col animate-fade-in">
-            {/* Header */}
-            <div className="w-full flex items-center mb-8 relative">
-                <Button
-                    variant="ghost"
-                    onClick={onBack}
-                    className="absolute left-0"
-                >
-                    ← Back
-                </Button>
+        <ScrollView style={[styles.flex1, styles.wFull, styles.bgBackground]} contentContainerStyle={[styles.alignCenter, styles.px4, styles.py6]}>
+            <View style={[styles.wFull, { maxWidth: 768 }]}>
+                {/* Header */}
+                <View style={[styles.wFull, styles.flexRow, styles.alignCenter, styles.mb8, styles.relative, { height: 44 }]}>
+                    <Button
+                        variant="ghost"
+                        onPress={onBack}
+                        style={[styles.absolute, { left: 0, zIndex: 10 }]}
+                    >
+                        ← Back
+                    </Button>
 
-                <h1 className="flex-1 text-center text-xl font-serif text-primary">
-                    About Gokan SRS
-                </h1>
-            </div>
+                    <Text style={[styles.flex1, styles.textCenter, styles.textXl, styles.fontSerif, styles.textPrimary]}>
+                        About Gokan SRS
+                    </Text>
+                </View>
 
-            {/* Content */}
-            <article className="w-full space-y-8">
-                {/* Introduction */}
-                <section className="animate-slide-up">
-                    <h2 className="text-lg font-serif text-primary mb-3">
-                        Why I Built This
-                    </h2>
-                    <p className="text-secondary leading-relaxed mb-3">
-                        I'm learning Japanese, and I kept running into the same frustrating problem: I'd be reading something, understand the kanji, but completely blank on the vocabulary. I knew the individual characters, but the words themselves? Gone.
-                    </p>
-                    <p className="text-secondary leading-relaxed">
-                        I'm too lazy to manually track all these words in a notebook or spreadsheet. I just wanted something simple that would help me remember the vocabulary I encounter while reading. So I built Gokan.
-                    </p>
-                </section>
+                {/* Content */}
+                <View style={[styles.wFull, styles.gap8]}>
+                    <View>
+                        <Text style={[styles.textLg, styles.fontSerif, styles.textPrimary, styles.mb3]}>
+                            Why I Built This
+                        </Text>
+                        <Text style={[styles.textSecondary, styles.mb3, { lineHeight: 24 }]}>
+                            I'm learning Japanese, and I kept running into the same frustrating problem: I'd be reading something, understand the kanji, but completely blank on the vocabulary. I knew the individual characters, but the words themselves? Gone.
+                        </Text>
+                        <Text style={[styles.textSecondary, { lineHeight: 24 }]}>
+                            I'm too lazy to manually track all these words in a notebook or spreadsheet. I just wanted something simple that would help me remember the vocabulary I encounter while reading. So I built Gokan.
+                        </Text>
+                    </View>
 
-                {/* What It Does */}
-                <section className="animate-slide-up" style={{ animationDelay: "100ms" }}>
-                    <h2 className="text-lg font-serif text-primary mb-3">
-                        What It Does
-                    </h2>
-                    <p className="text-secondary leading-relaxed mb-3">
-                        Gokan uses spaced repetition to help you learn Japanese vocabulary based on the kanji you already know. You set your kanji level, and it shows you words you can actually read. Review them when they're due, and the app handles the rest.
-                    </p>
-                    <p className="text-secondary leading-relaxed">
-                        I use it every day myself. It's free, no ads, no premium tiers. Just a tool I made to solve my own problem, and I'm sharing it in case it helps you too.
-                    </p>
-                </section>
+                    <View>
+                        <Text style={[styles.textLg, styles.fontSerif, styles.textPrimary, styles.mb3]}>
+                            What It Does
+                        </Text>
+                        <Text style={[styles.textSecondary, styles.mb3, { lineHeight: 24 }]}>
+                            Gokan uses spaced repetition to help you learn Japanese vocabulary based on the kanji you already know. You set your kanji level, and it shows you words you can actually read. Review them when they're due, and the app handles the rest.
+                        </Text>
+                        <Text style={[styles.textSecondary, { lineHeight: 24 }]}>
+                            I use it every day myself. It's free, no ads, no premium tiers. Just a tool I made to solve my own problem, and I'm sharing it in case it helps you too.
+                        </Text>
+                    </View>
 
-                {/* Data Sources */}
-                <section className="animate-slide-up" style={{ animationDelay: "150ms" }}>
-                    <h2 className="text-lg font-serif text-primary mb-3">
-                        Data Sources
-                    </h2>
-                    <p className="text-secondary leading-relaxed">
-                        Vocabulary data comes from{" "}
-                        <a
-                            href="https://jpdb.io"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary underline hover:no-underline"
-                        >
-                            JPDB
-                        </a>
-                        {" "}and definitions from{" "}
-                        <a
-                            href="https://www.edrdg.org/jmdict/j_jmdict.html"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary underline hover:no-underline"
-                        >
-                            JMDict
-                        </a>
-                        . Both are open-source and widely trusted in the Japanese learning community.
-                    </p>
-                </section>
-            </article>
-        </div>
+                    <View>
+                        <Text style={[styles.textLg, styles.fontSerif, styles.textPrimary, styles.mb3]}>
+                            Data Sources
+                        </Text>
+                        <Text style={[styles.textSecondary, { lineHeight: 24 }]}>
+                            Vocabulary data comes from{" "}
+                            <Text
+                                onPress={() => Linking.openURL('https://jpdb.io')}
+                                style={[styles.textPrimary, { textDecorationLine: 'underline' }]}
+                            >
+                                JPDB
+                            </Text>
+                            {" "}and definitions from{" "}
+                            <Text
+                                onPress={() => Linking.openURL('https://www.edrdg.org/jmdict/j_jmdict.html')}
+                                style={[styles.textPrimary, { textDecorationLine: 'underline' }]}
+                            >
+                                JMDict
+                            </Text>
+                            . Both are open-source and widely trusted in the Japanese learning community.
+                        </Text>
+                    </View>
+                </View>
+            </View>
+        </ScrollView>
     );
 }

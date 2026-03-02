@@ -1,7 +1,10 @@
+import React from "react";
+import { View, Text } from "react-native";
 import { Card } from "./ui/Card";
 import { CardSection } from "./ui/CardSection";
 import { Button } from "./ui/Button";
-import { LockOpen } from "lucide-react";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { styles } from "@gokan-srs/ui";
 
 interface LearnKanjiCardProps {
     nextKanji: { step: number; kanjis: string[] };
@@ -10,40 +13,40 @@ interface LearnKanjiCardProps {
 
 export function LearnKanjiCard({ nextKanji, onUnlock }: LearnKanjiCardProps) {
     return (
-        <Card size="lg" className="animate-fade-in-up">
+        <Card size="lg">
             <CardSection>
-                <div className="text-center space-y-4">
-                    <h2 className="text-sm font-gothic tracking-widest text-secondary uppercase">
+                <View style={[styles.flexCol, styles.alignCenter, styles.gap4]}>
+                    <Text style={[styles.textSm, styles.fontGothic, styles.textSecondary, { textTransform: 'uppercase', letterSpacing: 1 }]}>
                         New Kanji Unlocked
-                    </h2>
+                    </Text>
 
-                    <div className="flex flex-row justify-center items-center gap-4">
+                    <View style={[styles.flexRow, styles.justifyCenter, styles.alignCenter, styles.gap4]}>
                         {nextKanji.kanjis.map((k, idx) => (
-                            <span
+                            <Text
                                 key={idx}
-                                className="text-primary font-mincho text-8xl md:text-9xl leading-none"
+                                style={[styles.textPrimary, styles.fontMincho, { fontSize: 96, lineHeight: 110 }]}
                             >
                                 {k}
-                            </span>
+                            </Text>
                         ))}
-                    </div>
+                    </View>
 
-                    <p className="text-tertiary font-gothic text-sm pt-4">
+                    <Text style={[styles.textTertiary, styles.fontGothic, styles.textSm, styles.pt4]}>
                         Step {nextKanji.step}
-                    </p>
-                </div>
+                    </Text>
+                </View>
             </CardSection>
 
-            <div className="px-6 pb-6 pt-2">
+            <View style={[styles.px6, styles.pb6, styles.pt2]}>
                 <Button
                     variant="primary"
-                    className="w-full flex justify-center items-center gap-2 py-4 text-base"
-                    onClick={onUnlock}
+                    style={[styles.wFull]}
+                    onPress={onUnlock}
                 >
-                    <LockOpen size={20} />
-                    Unlock and Learn Vocab
+                    <MaterialCommunityIcons name="lock-open" size={20} color="#FFFFFF" />
+                    {' '}Unlock and Learn Vocab
                 </Button>
-            </div>
+            </View>
         </Card>
     );
 }

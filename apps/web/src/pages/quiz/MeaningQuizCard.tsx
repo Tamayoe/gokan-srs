@@ -1,14 +1,15 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import { View, Text, Pressable } from "react-native";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { MasteryRing } from "../../components/MasteryRing";
 import { TagsLookup } from "@gokan-srs/core/models/data.model";
-import { Combine } from "lucide-react";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import type { Tags } from "@gokan-srs/core/models/data.model";
 
 import { BaseQuizCard } from "./BaseQuizCard";
 import { InteractiveSentence } from "../../components/InteractiveSentence";
+import { styles, THEME } from "@gokan-srs/ui";
 
 interface MeaningQuizCardProps {
     onKanjiClick?: () => void;
@@ -40,77 +41,94 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
             inputLabel="Meaning (English)"
             inputPlaceholder="Type the meaning..."
             renderCorrectAnswer={() => (
-                <div className="text-center text-xl mb-1 text-primary font-gothic">
+                <Text style={[styles.textCenter, styles.textXl, styles.mb1, styles.textPrimary, styles.fontGothic]}>
                     {feedback?.matchedAnswer || currentVocab.senses.flatMap(s => s.glosses)[0] || "No meaning found"}
-                </div>
+                </Text>
             )}
         >
             {/* Header: Meaning Quiz Label + Mastery */}
-            <div className="flex flex-col items-center mb-8">
-                <div className="flex justify-end w-full mb-4">
+            <View style={[styles.flexCol, styles.alignCenter, styles.mb8]}>
+                <View style={[styles.flexRow, styles.justifyEnd, styles.wFull, styles.mb4]}>
                     {!isMobile && (
-                        <div className="flex flex-col items-center gap-1 mt-4 opacity-50 hover:opacity-100 transition-opacity">
-                            <MasteryRing memoryStrength={currentProgress?.meaning.memoryStrength ?? 0} size={50} />
-                        </div>
+                        <View style={[styles.flexCol, styles.alignCenter, styles.gap1, styles.mt4, { opacity: 0.5 }]}>
+                            <MasteryRing memoryStrength={currentProgress?.meaning.memoryStrength ?? 0} size={50} variant="meaning" />
+                            <Text style={[styles.textTertiary, styles.fontGothic, styles.fontSemiBold, { fontSize: 10, textTransform: 'uppercase', letterSpacing: 1 }]}>
+                                Mastery
+                            </Text>
+                        </View>
                     )}
-                </div>
+                </View>
 
-                <h2 className="text-xl md:text-2xl font-serif text-secondary text-center leading-relaxed max-w-2xl mx-auto">
+                <View style={[styles.flexRow, styles.flexWrap, styles.justifyCenter, styles.alignCenter, { maxWidth: 672, marginHorizontal: 'auto' }]}>
                     {sentence ? (
                         <>
-                            What is the original meaning of <span className="text-primary font-bold mx-1">{currentVocab.writtenForm.kanji}</span> in this sentence?
+                            <Text style={[isMobile ? styles.textXl : styles.text2xl, styles.fontSerif, styles.textSecondary, styles.textCenter, { lineHeight: 32 }]}>
+                                What is the original meaning of
+                            </Text>
+                            <Text style={[isMobile ? styles.textXl : styles.text2xl, styles.fontSerif, styles.textPrimary, styles.fontBold, styles.mx1, { lineHeight: 32 }]}>
+                                {currentVocab.writtenForm.kanji}
+                            </Text>
+                            <Text style={[isMobile ? styles.textXl : styles.text2xl, styles.fontSerif, styles.textSecondary, styles.textCenter, { lineHeight: 32 }]}>
+                                in this sentence?
+                            </Text>
                         </>
                     ) : (
-                        <>
+                        <Text style={[isMobile ? styles.textXl : styles.text2xl, styles.fontSerif, styles.textSecondary, styles.textCenter, { lineHeight: 32 }]}>
                             What is the meaning of this word?
-                        </>
+                        </Text>
                     )}
-                </h2>
-            </div>
+                </View>
+            </View>
 
             {/* Content: Sentence OR Kanji */}
-            <div className="text-center mb-6">
+            <View style={[styles.flexCol, styles.alignCenter, styles.mb6]}>
                 {sentence ? (
-                    <div className="mb-4">
-                        <div className="text-2xl font-serif text-primary mb-2 leading-relaxed">
-                            <InteractiveSentence
-                                sentence={sentence}
-                                targetVocabId={currentVocab.id}
-                                onVocabClick={onVocabClick}
-                                showFurigana={feedback?.show}
-                                allowTargetClickable={feedback?.show}
-                            />
-                        </div>
-                    </div>
+                    <View style={[styles.wFull, styles.mb4]}>
+                        <InteractiveSentence
+                            sentence={sentence}
+                            targetVocabId={currentVocab.id}
+                            onVocabClick={onVocabClick}
+                            showFurigana={feedback?.show}
+                            allowTargetClickable={feedback?.show}
+                            textStyle={[{ fontSize: 24, lineHeight: 36, textAlign: 'center' }]}
+                        />
+                    </View>
                 ) : (
                     // Fallback to minimal Kanji display if no sentence
-                    <div className="flex justify-center mb-4">
-                        <div
-                            className={`relative inline-flex items-start text-5xl leading-none text-primary font-mincho ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
-                            onClick={() => feedback?.show && onKanjiClick?.()}
-                            title={currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
+                    <View style={[styles.flexRow, styles.justifyCenter, styles.mb4]}>
+                        <Pressable
+                            disabled={!(onKanjiClick && feedback?.show)}
+                            onPress={() => feedback?.show && onKanjiClick?.()}
+                            style={({ pressed }: any) => [
+                                styles.relative, styles.flexRow, styles.alignStart,
+                                { opacity: pressed && feedback?.show ? 0.8 : 1 }
+                            ] as any}
                         >
                             {feedback?.show ? (
-                                <ruby className="ruby-text">
-                                    {currentVocab.writtenForm.kanji}
-                                    <rt className="text-sm font-sans text-secondary not-italic">{currentVocab.reading.primary}</rt>
-                                </ruby>
+                                <View style={[styles.flexCol, styles.alignCenter]}>
+                                    <Text style={[styles.textSm, styles.fontSans, styles.textSecondary, { marginBottom: -8, zIndex: 1 }]}>{currentVocab.reading.primary}</Text>
+                                    <Text style={[styles.textPrimary, styles.fontMincho, styles.text5xl, { lineHeight: 56 }]}>
+                                        {currentVocab.writtenForm.kanji}
+                                    </Text>
+                                </View>
                             ) : (
-                                <span>{currentVocab.writtenForm.kanji}</span>
+                                <Text style={[styles.textPrimary, styles.fontMincho, styles.text5xl, { lineHeight: 56 }]}>
+                                    {currentVocab.writtenForm.kanji}
+                                </Text>
                             )}
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
-                                <span className="absolute -right-6 top-0">
-                                    <Combine size={18} className="text-divider opacity-40" />
-                                </span>
+                                <View style={[styles.absolute, { right: -24, top: 0 }]}>
+                                    <MaterialCommunityIcons name="call-merge" size={18} color={THEME.colors.tertiary + '66'} />
+                                </View>
                             )}
-                        </div>
-                    </div>
+                        </Pressable>
+                    </View>
                 )}
 
                 {/* POS Tags */}
                 {currentVocab.senses.length > 0 && (
-                    <div className="flex flex-wrap justify-center gap-2 mt-2">
+                    <View style={[styles.flexRow, styles.flexWrap, styles.justifyCenter, styles.gap2, styles.mt2]}>
                         {Array.from(
                             new Set(
                                 currentVocab.senses.flatMap(sense => [
@@ -118,54 +136,54 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                                 ])
                             )
                         ).map(rawTag => (
-                            <span
+                            <View
                                 key={rawTag}
-                                className="px-2 py-0.5 text-xs rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15"
+                                style={[styles.px2, styles.py0_5, styles.bgFeedbackBackground, { borderRadius: 4 }]}
                             >
-                                {TagsLookup[rawTag as Tags]}
-                            </span>
+                                <Text style={[styles.textXs, styles.textSecondary, styles.fontGothic]}>
+                                    {TagsLookup[rawTag as Tags]}
+                                </Text>
+                            </View>
                         ))}
-                    </div>
+                    </View>
                 )}
 
-            </div>
+            </View>
 
             {/* Glosses — feedback only */}
             {feedback?.show && (
-                <motion.div
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-center text-sm space-y-2 text-meaning-muted font-serif"
-                >
-                    <p className="font-bold text-primary mb-1">Meanings:</p>
+                <View style={[styles.flexCol, styles.alignCenter, styles.gap2]}>
+                    <Text style={[styles.fontBold, styles.textPrimary, styles.textSm, styles.fontSerif, styles.mb1]}>Meanings:</Text>
                     {displayedSenses.map((sense, index) => (
-                        <p key={index}>
+                        <View key={index} style={[styles.flexRow, styles.flexWrap, styles.justifyCenter, styles.alignCenter]}>
                             {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
-                                <span className="text-xs text-tertiary mr-2 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
+                                <Text style={[styles.textXs, styles.textTertiary, styles.fontGothic, styles.mr2]}>
+                                    [{sense.appliesToReadings.join(', ')}]
+                                </Text>
                             )}
-                            {sense.glosses.join(', ')}
-                        </p>
+                            <Text style={[styles.textSm, styles.fontSerif, styles.textCenter, { color: THEME.colors.meaningMuted }]}>
+                                {sense.glosses.join(', ')}
+                            </Text>
+                        </View>
                     ))}
                     
                     {hasMoreDefs && (
-                        <button
-                            type="button"
-                            onClick={() => setIsExpanded(!isExpanded)}
-                            className="text-xs text-secondary hover:text-primary transition-colors py-1 cursor-pointer font-gothic"
-                        >
-                            {isExpanded ? "Show less" : `+${currentVocab.senses.length - maxDefs} more definitions`}
-                        </button>
+                        <Pressable onPress={() => setIsExpanded(!isExpanded)} style={({ pressed, hovered }: any) => [{ paddingVertical: 4, opacity: pressed || hovered ? 0.7 : 1 }] as any}>
+                            <Text style={[styles.textXs, styles.textSecondary, styles.fontGothic]}>
+                                {isExpanded ? "Show less" : `+${currentVocab.senses.length - maxDefs} more definitions`}
+                            </Text>
+                        </Pressable>
                     )}
 
                     {sentence && sentence.en && (
-                        <div className="mt-4 pt-4 border-t border-divider">
-                            <p className="font-bold text-primary mb-1">Translation:</p>
-                            <p className="italic text-secondary">
-                                {sentence.en[0].text /* Just show first translation */}
-                            </p>
-                        </div>
+                        <View style={[styles.mt4, styles.pt4, styles.border, styles.wFull, { borderTopWidth: 1, borderColor: THEME.colors.divider }]}>
+                            <Text style={[styles.fontBold, styles.textPrimary, styles.textSm, styles.fontSerif, styles.mb1, styles.textCenter]}>Translation:</Text>
+                            <Text style={[styles.textSm, styles.fontSerif, styles.textSecondary, styles.textCenter, { fontStyle: 'italic' }]}>
+                                {sentence.en[0].text}
+                            </Text>
+                        </View>
                     )}
-                </motion.div>
+                </View>
             )}
         </BaseQuizCard>
     );

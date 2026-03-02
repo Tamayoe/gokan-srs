@@ -1,8 +1,11 @@
+import React from "react";
+import { View, Text } from "react-native";
 import type { VocabProgress, Vocabulary } from "@gokan-srs/core/models/vocabulary.model";
 
 import { MasteryRing } from "./MasteryRing";
 import { Card } from "./ui/Card";
 import { CardContent } from "./ui/CardContent";
+import { styles } from "@gokan-srs/ui";
 
 export function VocabCard({
   vocab,
@@ -34,47 +37,44 @@ export function VocabCard({
   }
 
   return (
-    <div
-      onClick={onClick}
-      className={`h-full transition-transform hover:scale-[1.02] active:scale-[0.98] ${onClick ? 'cursor-pointer' : ''}`}
-    >
-      <Card className="h-full flex flex-col justify-between">
-        <CardContent className="space-y-3">
-          <div className="flex justify-between items-start">
-            <div>
-              <div className="text-lg text-primary font-serif">
+    <View style={[{ height: '100%' }]}>
+      <Card onPress={onClick} interactive={!!onClick} style={[styles.hFull, styles.flexCol, styles.justifyBetween]}>
+        <CardContent style={[styles.flexCol, styles.gap3]}>
+          <View style={[styles.flexRow, styles.justifyBetween, styles.alignStart]}>
+            <View>
+              <Text style={[styles.textLg, styles.textPrimary, styles.fontSerif]}>
                 {vocab.writtenForm.kanji}
-              </div>
+              </Text>
 
-              <div className="text-sm text-secondary">
+              <Text style={[styles.textSm, styles.textSecondary]}>
                 {[vocab.reading.primary, ...vocab.reading.alternatives].join(" ・ ")}
-              </div>
-            </div>
+              </Text>
+            </View>
 
-            <div className="flex gap-1">
-              <div className="flex flex-col items-center" title="Reading Mastery">
+            <View style={[styles.flexRow, styles.gap1]}>
+              <View style={[styles.flexCol, styles.alignCenter]}>
                 <MasteryRing memoryStrength={progress.reading.memoryStrength} size={20} variant="reading" />
-              </div>
-              <div className="flex flex-col items-center" title="Meaning Mastery">
+              </View>
+              <View style={[styles.flexCol, styles.alignCenter]}>
                 <MasteryRing memoryStrength={progress.meaning.memoryStrength} size={20} variant="meaning" />
-              </div>
-            </div>
-          </div>
+              </View>
+            </View>
+          </View>
 
-          <div className="text-sm text-secondary">
+          <Text style={[styles.textSm, styles.textSecondary]}>
             {vocab.senses[0]?.glosses.map(g => g).slice(0, 3).join(", ")}
-          </div>
+          </Text>
 
-          <div className="flex justify-between text-xs text-muted">
-            <span>
+          <View style={[styles.flexRow, styles.justifyBetween]}>
+            <Text style={[styles.textXs, styles.textMuted]}>
               {progress.stage === "graduated"
                 ? "Mastered"
                 : `Reviews: ${progress.totalReviews}`}
-            </span>
-            <span>{formatNextReview(progress.nextReviewAt)}</span>
-          </div>
+            </Text>
+            <Text style={[styles.textXs, styles.textMuted]}>{formatNextReview(progress.nextReviewAt)}</Text>
+          </View>
         </CardContent>
       </Card>
-    </div>
+    </View>
   );
 }

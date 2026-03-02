@@ -1,4 +1,6 @@
-
+import React from "react";
+import { View, Text, Pressable } from "react-native";
+import { styles, THEME } from "@gokan-srs/ui";
 
 import type { ReactNode } from "react";
 
@@ -9,36 +11,37 @@ export const OptionGrid = <T extends string>(props: {
     onChange?: (v: T) => void;
 }) => {
     return (
-        <div className="space-y-3">
-            <h3 className="text-sm uppercase tracking-wide font-gothic text-secondary">
+        <View style={styles.gap3}>
+            <Text style={[styles.textSm, styles.fontGothic, styles.textSecondary, { textTransform: 'uppercase', letterSpacing: 0.5 }]}>
                 {props.title}
-            </h3>
-            <div className="grid grid-cols-2 gap-4">
+            </Text>
+            <View style={[styles.flexRow, styles.flexWrap, { gap: 16 }]}>
                 {props.options.map((opt) => {
                     const selected = opt.value === props.value;
                     return (
-                        <button
+                        <Pressable
                             key={opt.value}
-                            type="button"
-                            onClick={() => props.onChange?.(opt.value)}
-                            className={`
-                                border rounded-xl p-5 text-left transition-all
-                                ${selected
-                                    ? "border-accent bg-accent/10 dark:bg-accent/20"
-                                    : "border-divider bg-surface hover:bg-surface-hover"
-                                }
-                            `}
+                            onPress={() => props.onChange?.(opt.value)}
+                            style={({ pressed, hovered }: any) => [
+                                styles.flexCol,
+                                styles.p5,
+                                styles.border,
+                                { borderRadius: 12, flex: 1, minWidth: 150 },
+                                selected
+                                    ? { borderColor: THEME.colors.accent, backgroundColor: THEME.colors.accent + '1A' }
+                                    : { borderColor: THEME.colors.divider, backgroundColor: pressed || hovered ? THEME.colors.surfaceHover : THEME.colors.surface }
+                            ] as any}
                         >
-                            <div className="text-lg mb-1 font-serif text-primary">
+                            <Text style={[styles.textLg, styles.fontSerif, styles.textPrimary, styles.mb1]}>
                                 {opt.label}
-                            </div>
-                            <div className="text-xs font-serif text-secondary flex items-start">
+                            </Text>
+                            <Text style={[styles.textXs, styles.fontSerif, styles.textSecondary]}>
                                 {opt.description}
-                            </div>
-                        </button>
+                            </Text>
+                        </Pressable>
                     );
                 })}
-            </div>
-        </div>
+            </View>
+        </View>
     );
 };

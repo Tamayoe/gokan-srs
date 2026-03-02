@@ -1,181 +1,102 @@
 import React, { useMemo } from 'react';
+import { View, Text } from 'react-native';
 import { useQuiz } from '../context/useQuiz';
 import { useResponsive } from '../context/Responsive/useResponsive';
 import { CONSTANTS } from '@gokan-srs/core/commons/constants';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, XCircle, AlertCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { styles, THEME } from '@gokan-srs/ui';
+import { useNavigate } from 'react-router-dom';
 
 export const SessionProgress: React.FC = () => {
     const { state, sessionState } = useQuiz();
     const { isMobile } = useResponsive();
 
-    // Calculate session progress
-    // "Total" for this session is roughly:
-    // - Reviews due at start (we don't track "at start", but we can estimate: currently due + reviewed today if they were due)
-    // - New words limit (if learning)
-
-    // Simplification for V1:
-    // Reviews Done: state.progress?.stats.totalReviews (session based? No, that's lifetime or daily?)
-    // Actually stats.totalReviews is lifetime.
-    // We need SESSION based stats.
-    // We can use state.sessionHistory.length as "Items reviewed this session".
-
-    // Remaining Reviews: 
-    // state.progress?.learningQueue.filter(v => v.nextReviewAt <= now)
-
-    // Remaining New:
-    // Limit - NewLearnedToday (if > 0)
-
     const stats = useMemo(() => {
         if (!state.progress) return { done: 0, remaining: 0, total: 0 };
-
         const now = new Date();
-
-        // "Done" should only count successful attempts or final failures?
-        // If we count every history item, "Total" grows when we fail (because remaining stays 1, but done +1).
-        // To stabilize "Total", we should only count "completed" items in Done.
-        // A failure -> item stays in "remaining". So failure shouldn't count as "done".
-        // But history has the failure. 
-        // Let's filter history for non-wrong answers? 
-        // Or better: `state.sessionHistory` contains all attempts.
-        // `Done` = Unique Vocab IDs in history that resulted in success? 
-        // Actually simpler: 
-        // Total = Items to Do + Items Done.
-        // If I fail an item, it's still "Items to Do". It shouldn't be "Items Done".
-        // So "Done" should be the count of *Successful* reviews in this session (or graduated/passed).
-        // Let's rely on `state.progress.stats.newLearnedToday` + count of review successes?
-
-        // Let's try: Done = History count where result != 'wrong'
         const done = state.sessionHistory.filter(h => h.result !== 'wrong').length;
-
         const dueReviews = state.progress.learningQueue.filter(
             v => v.nextReviewAt && v.nextReviewAt <= now
         ).length;
-
         const dailyLeft = Math.max(0, CONSTANTS.srs.dailyNewLimit - state.progress.stats.newLearnedToday);
-
         let remaining = dueReviews;
-
-        // Only add daily limit if we are in learn mode OR if queue is empty (will trigger learn mode)
-        // But for consistency:
         if (sessionState === 'learn' || dueReviews === 0) {
             remaining += dailyLeft;
         }
-
-        return {
-            done,
-            remaining,
-            total: done + remaining
-        };
+        return { done, remaining, total: done + remaining };
     }, [state.progress, state.sessionHistory, sessionState]);
 
     const progressPercent = stats.total > 0 ? (stats.done / stats.total) * 100 : 0;
 
     return (
-        <div className="w-full max-w-4xl mx-auto mb-6">
-            {/* Desktop View */}
+        <View style={[styles.wFull, styles.mxAuto, styles.mb6, { maxWidth: 896 }]}>
             {!isMobile && (
-                <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-2">
-                        <div className="flex justify-between items-end mb-1">
-                            <div className="text-secondary-400 text-sm font-medium">Session Progress</div>
-                            <div className="text-secondary-400 text-sm font-medium">
+                <View style={[styles.flexCol, styles.gap4]}>
+                    <View style={[styles.flexCol, styles.gap2]}>
+                        <View style={[styles.flexRow, styles.justifyBetween, styles.alignEnd, styles.mb1]}>
+                            <Text style={[styles.textSm, styles.fontMedium, { color: '#94a3b8' }]}>Session Progress</Text>
+                            <Text style={[styles.textSm, styles.fontMedium, { color: '#94a3b8' }]}>
                                 {stats.done} / {stats.total}
-                            </div>
-                        </div>
-
-                        <div className="h-2 bg-secondary-200/50 rounded-full overflow-hidden flex">
-                            {/* Progress Segment */}
-                            <div
-                                className="h-full bg-primary-600 transition-all duration-500 ease-out"
-                                style={{ width: `${progressPercent}%` }}
-                            />
-                        </div>
-                    </div>
-
-                    {/* Moved History Ticker Below */}
+                            </Text>
+                        </View>
+                        <View style={[{ height: 8, backgroundColor: 'rgba(226, 232, 240, 0.5)', borderRadius: 9999, overflow: 'hidden' }, styles.flexRow]}>
+                            <View style={[{ height: '100%', backgroundColor: THEME.colors.primary, width: `${progressPercent}%` }]} />
+                        </View>
+                    </View>
                     <HistoryTicker />
-                </div>
+                </View>
             )}
-
-            {/* Mobile View */}
             {isMobile && (
-                <>
-                    <div className="flex items-center justify-between px-1">
-                        <div className="text-xs font-medium text-secondary-500 uppercase tracking-wider">Session Progress</div>
-                        <div className="text-sm font-bold text-primary-700">
-                            {stats.done} <span className="text-secondary-400 font-normal">/ {stats.total}</span>
-                        </div>
-                    </div>
-                    {/* Mobile Thin Line */}
-                    <div className="h-1 w-full bg-secondary-200 mt-2 rounded-full overflow-hidden">
-                        <div
-                            className="h-full bg-primary-600 transition-all duration-500 ease-out"
-                            style={{ width: `${progressPercent}%` }}
-                        />
-                    </div>
-                </>
+                <View style={styles.flexCol}>
+                    <View style={[styles.flexRow, styles.alignCenter, styles.justifyBetween, styles.px1]}>
+                        <Text style={[styles.textXs, styles.fontMedium, { color: '#64748b', textTransform: 'uppercase', letterSpacing: 0.5 }]}>Session Progress</Text>
+                        <Text style={[styles.textSm, styles.fontBold, { color: THEME.colors.primary }]}>
+                            {stats.done} <Text style={{ color: '#94a3b8', fontWeight: '400' }}>/ {stats.total}</Text>
+                        </Text>
+                    </View>
+                    <View style={[{ height: 4, width: '100%', backgroundColor: '#e2e8f0', marginTop: 8, borderRadius: 9999, overflow: 'hidden' }]}>
+                        <View style={[{ height: '100%', backgroundColor: THEME.colors.primary, width: `${progressPercent}%` }]} />
+                    </View>
+                </View>
             )}
-        </div>
+        </View>
     );
 };
 
 const HistoryTicker: React.FC = () => {
     const { state } = useQuiz();
-    const history = state.sessionHistory; // Most recent is at index 0
-
-    // Take top 5 recent items
+    const navigate = useNavigate();
+    const history = state.sessionHistory;
     const recentItems = history.slice(0, 5);
 
     return (
-        <div className="flex-1 flex items-center gap-3 overflow-hidden h-8">
-            <AnimatePresence initial={false}>
-                {recentItems.map((item, index) => (
-                    <motion.div
-                        key={`${item.vocabId}-${index}`} // Unique key even if same item appears twice (retry) - actually index helps uniqueness in mapping but strict key better if we had unique ID for history item. 
-                        // Using combination of ID and index in history array ensures stability.
-                        initial={{ opacity: 0, y: 10, x: -10 }}
-                        animate={{ opacity: 1 - (index * 0.2), y: 0, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex items-center gap-2 text-sm whitespace-nowrap"
+        <View style={[styles.flex1, styles.flexRow, styles.alignCenter, styles.gap3, { overflow: 'hidden', height: 32 }]}>
+            {recentItems.map((item, index) => (
+                <View key={`${item.vocabId}-${index}`} style={[styles.flexRow, styles.alignCenter, styles.gap2]}>
+                    <Text 
+                        onPress={() => navigate(`/vocab/${item.vocabId}`)}
+                        style={[styles.fontSerif, styles.textSm, { color: item.result === 'correct' ? '#059669' : item.result === 'minor_error' ? '#d97706' : '#dc2626' }]}
                     >
-                        <Link
-                            to={`/vocab/${item.vocabId}`}
-                            className={`font-serif hover:underline cursor-pointer ${item.result === 'correct' ? 'text-emerald-600' :
-                                item.result === 'minor_error' ? 'text-amber-600' :
-                                    'text-desaturated-red-600'
-                                }`}
-                            onClick={(e) => {
-                                // Since it's within a ticker, stop propagation isn't strictly necessary but safe
-                                e.stopPropagation();
-                            }}
-                        >
-                            {item.writtenForm}
-                        </Link>
+                        {item.writtenForm}
+                    </Text>
 
-                        {/* Result Icon/Indicator */}
-                        {item.result === 'correct' && <CheckCircle className="w-3 h-3 text-emerald-500" />}
-                        {item.result === 'minor_error' && <AlertCircle className="w-3 h-3 text-amber-500" />}
-                        {item.result === 'wrong' && <XCircle className="w-3 h-3 text-desaturated-red-500" />}
+                    {item.result === 'correct' && <MaterialCommunityIcons name="check-circle" size={12} color="#10b981" />}
+                    {item.result === 'minor_error' && <MaterialCommunityIcons name="alert-circle" size={12} color="#f59e0b" />}
+                    {item.result === 'wrong' && <MaterialCommunityIcons name="close-circle" size={12} color="#ef4444" />}
 
-                        {/* Delta */}
-                        <span className="text-xs text-secondary-400 tabular-nums">
-                            {item.delta > 0 ? '+' : ''}{Math.round(item.delta)}%
-                        </span>
+                    <Text style={[styles.textXs, { color: '#94a3b8' }]}>
+                        {item.delta > 0 ? '+' : ''}{Math.round(item.delta)}%
+                    </Text>
 
-                        {/* Separator for all but last visible */}
-                        {index < recentItems.length - 1 && (
-                            <span className="text-secondary-300 mx-1">•</span>
-                        )}
-                    </motion.div>
-                ))}
-            </AnimatePresence>
+                    {index < recentItems.length - 1 && (
+                        <Text style={[styles.textBase, styles.mx1, { color: '#cbd5e1' }]}>•</Text>
+                    )}
+                </View>
+            ))}
 
             {history.length === 0 && (
-                <span className="text-secondary-400 text-sm italic">Session started...</span>
+                <Text style={[styles.textSm, { color: '#94a3b8', fontStyle: 'italic' }]}>Session started...</Text>
             )}
-        </div>
+        </View>
     );
 };

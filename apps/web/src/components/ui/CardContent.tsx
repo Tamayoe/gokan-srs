@@ -1,19 +1,16 @@
-import type { PropsWithChildren } from "react";
+import React from "react";
+import { View } from "react-native";
+import type { StyleProp, ViewStyle } from 'react-native';
 
-interface CardContentProps extends PropsWithChildren {
-    className?: string;
+interface CardContentProps {
+    children?: React.ReactNode;
+    style?: StyleProp<ViewStyle>;
 }
 
-
-/**
- * CardContent
- * - Enforces consistent internal padding
- * - Keeps spacing decisions explicit per card
- */
-export function CardContent({ children, className = "" }: CardContentProps) {
+export function CardContent({ children, style }: CardContentProps) {
     return (
-        <div className={`px-6 py-5 ${className}`}>
+        <View style={[{ paddingHorizontal: 24, paddingVertical: 20 }, style]}>
             {children}
-        </div>
+        </View>
     );
 }

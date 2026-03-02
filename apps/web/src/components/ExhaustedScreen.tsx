@@ -1,17 +1,18 @@
 import React from "react";
-
+import { Text } from "react-native";
 import { CenteredCard } from "./CenteredCard";
+import { styles } from "@gokan-srs/ui";
 
 export const ExhaustedScreen: React.FC = () => {
     return (
         <CenteredCard>
-            <h2 className="text-xl mb-4 text-primary font-serif">
+            <Text style={[styles.textXl, styles.mb4, styles.textPrimary, styles.fontSerif]}>
                 All caught up 🎉
-            </h2>
+            </Text>
 
-            <p className="text-sm text-secondary font-serif">
+            <Text style={[styles.textSm, styles.textSecondary, styles.fontSerif]}>
                 Come back tomorrow.
-            </p>
+            </Text>
         </CenteredCard>
     );
 };

@@ -1,4 +1,7 @@
+import React from "react";
+import { View, Text, Pressable, ScrollView } from "react-native";
 import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
+import { styles, THEME } from "@gokan-srs/ui";
 
 type KanjiReferencePanelProps = {
     allKanji: string[];
@@ -9,44 +12,47 @@ export function KanjiField({
 }: KanjiReferencePanelProps) {
     const { state, toggleKanji } = useKanjiForm();
     return (
-        <div className="w-full max-w-5xl mt-8">
-            <div className="mb-4 text-xs uppercase tracking-wide text-secondary font-gothic text-[0.6875rem]">
+        <View style={[styles.wFull, styles.mt8, { maxWidth: 1024 }]}>
+            <Text style={[styles.mb4, styles.fontGothic, styles.textSecondary, { fontSize: 11, textTransform: 'uppercase', letterSpacing: 0.5 }]}>
                 Known kanji (KKLC order)
-            </div>
+            </Text>
 
-            <div
-                className="relative max-h-[320px] overflow-y-auto py-2"
-                style={{
-                    maskImage:
-                        'linear-gradient(to bottom, transparent, black 24px, black calc(100% - 24px), transparent)',
-                }}
+            <ScrollView
+                style={{ maxHeight: 320 }}
+                contentContainerStyle={{ paddingVertical: 8 }}
             >
-                <div className="grid grid-cols-8 sm:grid-cols-10 md:grid-cols-12 gap-x-4 gap-y-3">
+                <View style={[styles.flexRow, styles.flexWrap, { gap: 16, justifyContent: 'flex-start' }]}>
                     {allKanji.map((kanji) => {
                         const isKnown = state.knownKanji.has(kanji);
 
                         return (
-                            <div
+                            <Pressable
                                 key={kanji}
-                                className={`
-                                    text-center transition-all font-mincho text-lg py-1 rounded-md cursor-pointer
-                                    ${isKnown
-                                        ? "text-primary bg-feedback-background"
-                                        : "text-tertiary bg-transparent"
-                                    }
-                                `.trim().replace(/\s+/g, ' ')}
-                                onClick={() => toggleKanji(kanji)}
+                                onPress={() => toggleKanji(kanji)}
+                                style={({ pressed, hovered }: any) => [
+                                    styles.flexCenter,
+                                    { width: 40, height: 40, borderRadius: 6 },
+                                    isKnown
+                                        ? { backgroundColor: THEME.colors.feedbackBackground }
+                                        : { backgroundColor: pressed || hovered ? THEME.colors.surfaceHover : 'transparent' }
+                                ] as any}
                             >
-                                {kanji}
-                            </div>
+                                <Text style={[
+                                    styles.fontMincho,
+                                    styles.textLg,
+                                    isKnown ? styles.textPrimary : styles.textTertiary
+                                ]}>
+                                    {kanji}
+                                </Text>
+                            </Pressable>
                         );
                     })}
-                </div>
-            </div>
+                </View>
+            </ScrollView>
 
-            <div className="mt-3 text-xs text-secondary font-serif">
+            <Text style={[styles.mt3, styles.textXs, styles.textSecondary, styles.fontSerif]}>
                 Known kanji are softly highlighted. They are editable after you started learning
-            </div>
-        </div>
+            </Text>
+        </View>
     );
 }

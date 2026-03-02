@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import { View, Text, Pressable } from "react-native";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { CONSTANTS } from "@gokan-srs/core/commons/constants";
 import { MasteryRing } from "../../components/MasteryRing";
-import { Combine } from "lucide-react";
-import { TagsLookup } from "@gokan-srs/core/models/data.model";
-import type { Tags } from "@gokan-srs/core/models/data.model";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { TagsLookup, type Tags } from "@gokan-srs/core/models/data.model";
 import { BaseQuizCard } from "./BaseQuizCard";
+import { styles, THEME } from "@gokan-srs/ui";
 
 interface QuizCardProps {
     onKanjiClick?: () => void;
@@ -34,33 +34,39 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
             inputLabel="Reading (hiragana)"
             inputPlaceholder={CONSTANTS.quiz.hiraganaAnswerPlaceholder}
             renderCorrectAnswer={() => (
-                <div className="text-center text-2xl mb-1 text-primary font-gothic">
+                <Text style={[styles.textCenter, styles.text2xl, styles.mb1, styles.textPrimary, styles.fontGothic]}>
                     {feedback?.type === 'minor_error'
                         ? feedback.matchedAnswer
                         : [currentVocab.reading.primary, ...currentVocab.reading.alternatives].join(', ')}
-                </div>
+                </Text>
             )}
         >
             {isMobile ? (
                 // Horizontal layout for all mobile views
-                <div className="mb-4">
+                <View style={[styles.mb4]}>
                     {/* Kanji and info */}
-                    <div className="flex-1">
-                        <div
-                            className={`relative inline-flex items-center justify-center text-5xl leading-none text-primary font-mincho mb-2 ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
-                            onClick={() => feedback?.show && onKanjiClick?.()}
+                    <View style={[styles.flex1]}>
+                        <Pressable
+                            disabled={!(onKanjiClick && feedback?.show)}
+                            onPress={() => feedback?.show && onKanjiClick?.()}
+                            style={({ pressed }: any) => [
+                                styles.relative, styles.flexRow, styles.alignCenter, styles.justifyCenter, styles.mb2,
+                                { opacity: pressed && feedback?.show ? 0.8 : 1 }
+                            ] as any}
                         >
-                            <span>{currentVocab.writtenForm.kanji}</span>
+                            <Text style={[styles.text5xl, styles.textPrimary, styles.fontMincho, { lineHeight: 56 }]}>
+                                {currentVocab.writtenForm.kanji}
+                            </Text>
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
-                                <span className="absolute -right-6 -top-1">
-                                    <Combine size={18} className="text-divider opacity-40" />
-                                </span>
+                                <View style={[styles.absolute, { right: -24, top: -4 }]}>
+                                    <MaterialCommunityIcons name="call-merge" size={18} color={THEME.colors.tertiary + '66'} />
+                                </View>
                             )}
-                        </div>
+                        </Pressable>
                         {/* POS tags */}
                         {currentVocab.senses.length > 0 && (
-                            <div className="flex flex-wrap gap-1">
+                            <View style={[styles.flexRow, styles.flexWrap, styles.gap1]}>
                                 {Array.from(
                                     new Set(
                                         currentVocab.senses.flatMap(sense => [
@@ -69,50 +75,60 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                         ])
                                     )
                                 ).slice(0, 3).map(rawTag => (
-                                    <span
+                                    <View
                                         key={rawTag}
-                                        className="px-1.5 py-0.5 text-[9px] rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15 whitespace-nowrap"
+                                        style={[styles.px1_5, styles.py0_5, styles.bgFeedbackBackground, { borderRadius: 4 }]}
                                     >
-                                        {TagsLookup[rawTag as Tags]}
-                                    </span>
+                                        <Text style={[styles.textSecondary, styles.fontGothic, { fontSize: 9 }]}>
+                                            {TagsLookup[rawTag as Tags]}
+                                        </Text>
+                                    </View>
                                 ))}
-                            </div>
+                            </View>
                         )}
-                    </div>
-                </div>
+                    </View>
+                </View>
             ) : (
                 // Desktop vertical layout
-                <>
+                <View>
                     {/* Top-right mastery */}
-                    <div className="flex justify-end mb-4">
-                        <div className="flex flex-col items-center gap-1">
-                            <MasteryRing memoryStrength={currentProgress?.reading.memoryStrength ?? 0} size={50} />
-                        </div>
-                    </div>
+                    <View style={[styles.flexRow, styles.justifyEnd, styles.mb4]}>
+                        <View style={[styles.flexCol, styles.alignCenter, styles.gap1]}>
+                            <MasteryRing memoryStrength={currentProgress?.reading.memoryStrength ?? 0} size={50} variant="reading" />
+                            <Text style={[styles.textTertiary, styles.fontGothic, styles.fontSemiBold, { fontSize: 10, textTransform: 'uppercase', letterSpacing: 1 }]}>
+                                Mastery
+                            </Text>
+                        </View>
+                    </View>
 
                     {/* Kanji Display */}
-                    <div className="text-center mb-8">
-                        <div className="flex justify-center mb-4">
-                            <div
-                                className={`relative inline-flex items-start leading-none text-primary text-kanji font-mincho ${onKanjiClick && feedback?.show ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
-                                onClick={() => feedback?.show && onKanjiClick?.()}
-                                title={currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
+                    <View style={[styles.flexCol, styles.alignCenter, styles.mb8]}>
+                        <View style={[styles.flexRow, styles.justifyCenter, styles.mb4]}>
+                            <Pressable
+                                disabled={!(onKanjiClick && feedback?.show)}
+                                onPress={() => feedback?.show && onKanjiClick?.()}
+                                style={({ pressed }: any) => [
+                                    styles.relative, styles.flexRow, styles.alignStart,
+                                    { opacity: pressed && feedback?.show ? 0.8 : 1 }
+                                ] as any}
                             >
-                                <span>{currentVocab.writtenForm.kanji}</span>
+                                <Text style={[styles.textPrimary, styles.fontMincho, { fontSize: 80, lineHeight: 88 }]}>
+                                    {currentVocab.writtenForm.kanji}
+                                </Text>
                                 {/* Merged Entry Icon */}
                                 {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
-                                    <span className="absolute -right-8 top-0">
-                                        <Combine size={24} className="text-divider opacity-30" />
-                                    </span>
+                                    <View style={[styles.absolute, { right: -32, top: 0 }]}>
+                                        <MaterialCommunityIcons name="call-merge" size={24} color={THEME.colors.tertiary + '4D'} />
+                                    </View>
                                 )}
-                            </div>
-                        </div>
+                            </Pressable>
+                        </View>
 
                         {/* Disambiguation helpers */}
-                        <div className="flex flex-col items-center py-1 gap-3">
+                        <View style={[styles.flexCol, styles.alignCenter, styles.py1, styles.gap3]}>
                             {/* POS + misc tags */}
                             {currentVocab.senses.length > 0 && (
-                                <div className="flex flex-wrap justify-center gap-2">
+                                <View style={[styles.flexRow, styles.flexWrap, styles.justifyCenter, styles.gap2]}>
                                     {Array.from(
                                         new Set(
                                             currentVocab.senses.flatMap(sense => [
@@ -121,14 +137,16 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                             ])
                                         )
                                     ).map(rawTag => (
-                                        <span
+                                        <View
                                             key={rawTag}
-                                            className="px-2 py-0.5 text-xs rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15"
+                                            style={[styles.px2, styles.py0_5, styles.bgFeedbackBackground, { borderRadius: 4 }]}
                                         >
-                                            {TagsLookup[rawTag as Tags]}
-                                        </span>
+                                            <Text style={[styles.textXs, styles.textSecondary, styles.fontGothic]}>
+                                                {TagsLookup[rawTag as Tags]}
+                                            </Text>
+                                        </View>
                                     ))}
-                                </div>
+                                </View>
                             )}
 
                             {/* Related compounds */}
@@ -139,7 +157,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                     )
                                 )
                             ).length > 0 && (
-                                    <div className="text-sm text-meaning-muted font-serif">
+                                    <Text style={[styles.textSm, styles.fontSerif, { color: THEME.colors.meaningMuted }]}>
                                         {Array.from(
                                             new Set(
                                                 currentVocab.senses.flatMap(
@@ -147,50 +165,37 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                                 )
                                             )
                                         ).slice(0, 4).join(' ・ ')}
-                                    </div>
+                                    </Text>
                                 )}
-                        </div>
-                    </div>
-                </>
+                        </View>
+                    </View>
+                </View>
             )}
 
             {/* Glosses — feedback only, all senses */}
             {feedback?.show && (
-                <motion.div
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-center text-sm space-y-2 text-meaning-muted font-serif"
-                >
-                    {isMobile ? (
-                        displayedSenses.map((sense, index) => (
-                            <p key={index}>
-                                {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
-                                    <span className="text-xs text-tertiary mr-1 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
-                                )}
+                <View style={[styles.flexCol, styles.alignCenter, styles.gap2]}>
+                    {displayedSenses.map((sense, index) => (
+                        <View key={index} style={[styles.flexRow, styles.flexWrap, styles.justifyCenter, styles.alignCenter]}>
+                            {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
+                                <Text style={[styles.textXs, styles.textTertiary, styles.fontGothic, styles.mr2]}>
+                                    [{sense.appliesToReadings.join(', ')}]
+                                </Text>
+                            )}
+                            <Text style={[styles.textSm, styles.fontSerif, styles.textCenter, { color: THEME.colors.meaningMuted }]}>
                                 {sense.glosses.join(', ')}
-                            </p>
-                        ))
-                    ) : (
-                        displayedSenses.map((sense, index) => (
-                            <p key={index}>
-                                {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
-                                    <span className="text-xs text-tertiary mr-2 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
-                                )}
-                                {sense.glosses.join(', ')}
-                            </p>
-                        ))
-                    )}
+                            </Text>
+                        </View>
+                    ))}
                     
                     {hasMoreDefs && (
-                        <button
-                            type="button"
-                            onClick={() => setIsExpanded(!isExpanded)}
-                            className="text-xs text-secondary hover:text-primary transition-colors py-1 cursor-pointer font-gothic"
-                        >
-                            {isExpanded ? "Show less" : `+${currentVocab.senses.length - currentMaxDefs} more definitions`}
-                        </button>
+                        <Pressable onPress={() => setIsExpanded(!isExpanded)} style={({ pressed, hovered }: any) => [{ paddingVertical: 4, opacity: pressed || hovered ? 0.7 : 1 }] as any}>
+                            <Text style={[styles.textXs, styles.textSecondary, styles.fontGothic]}>
+                                {isExpanded ? "Show less" : `+${currentVocab.senses.length - currentMaxDefs} more definitions`}
+                            </Text>
+                        </Pressable>
                     )}
-                </motion.div>
+                </View>
             )}
         </BaseQuizCard>
     );

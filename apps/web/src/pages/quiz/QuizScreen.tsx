@@ -1,3 +1,5 @@
+import React from "react";
+import { View } from "react-native";
 import { WaitingScreen } from "../../components/WaitingScreen";
 import { ExhaustedScreen } from "../../components/ExhaustedScreen";
 import { SessionProgress } from "../../components/SessionProgress";
@@ -7,6 +9,7 @@ import { LoadingScreen } from "../../components/LoadingScreen";
 import { useQuiz } from "../../context/useQuiz";
 import VocabIntroCard from "../../components/VocabIntroCard";
 import { LearnKanjiCard } from "../../components/LearnKanjiCard";
+import { styles } from "@gokan-srs/ui";
 
 interface QuizScreenProps {
     onVocabClick: (vocabId: string) => void;
@@ -14,7 +17,6 @@ interface QuizScreenProps {
 
 export function QuizScreen({ onVocabClick }: QuizScreenProps) {
     const { state, currentProgress, sessionState, nextReviewAt, actions } = useQuiz();
-
 
     if (sessionState === "waiting") {
         return (
@@ -31,12 +33,12 @@ export function QuizScreen({ onVocabClick }: QuizScreenProps) {
 
     if (sessionState === "learn-kanji" && state.nextKanjiToLearn) {
         return (
-            <div className="flex flex-col flex-1 items-center justify-center p-4">
+            <View style={[styles.flex1, styles.flexCol, styles.alignCenter, styles.justifyCenter, styles.p4]}>
                 <LearnKanjiCard
                     nextKanji={state.nextKanjiToLearn}
                     onUnlock={() => actions.learnNextKanji()}
                 />
-            </div>
+            </View>
         );
     }
 
@@ -44,27 +46,24 @@ export function QuizScreen({ onVocabClick }: QuizScreenProps) {
         return <LoadingScreen />;
     }
 
-    // Show Intro Card for new candidates (no progress) or existing items in 'learn' stage (no introductionAt)
     if (state.currentVocab && (!currentProgress || !currentProgress.introductionAt)) {
-        return <VocabIntroCard vocab={state.currentVocab} onLearn={() => actions.saveVocabIntroChoice(state.currentVocab!, 'learn')} onSkip={() => actions.saveVocabIntroChoice(state.currentVocab!, 'skip')}></VocabIntroCard>
+        return <VocabIntroCard vocab={state.currentVocab} onLearn={() => actions.saveVocabIntroChoice(state.currentVocab!, 'learn')} onSkip={() => actions.saveVocabIntroChoice(state.currentVocab!, 'skip')} />;
     }
 
     return (
-        <>
-            <div className="flex flex-col flex-1 items-center">
-                <SessionProgress />
+        <View style={[styles.flex1, styles.flexCol, styles.alignCenter]}>
+            <SessionProgress />
 
-                <div className="flex-1 flex items-center justify-center py-6 w-full">
-                    {state.currentQuizItem?.quizType === 'meaning' ? (
-                        <MeaningQuizCard
-                            onKanjiClick={() => onVocabClick(state.currentVocab!.id)}
-                            onVocabClick={onVocabClick}
-                        />
-                    ) : (
-                        <QuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
-                    )}
-                </div>
-            </div>
-        </>
+            <View style={[styles.flex1, styles.wFull, styles.flexCol, styles.alignCenter, styles.justifyCenter, styles.py6]}>
+                {state.currentQuizItem?.quizType === 'meaning' ? (
+                    <MeaningQuizCard
+                        onKanjiClick={() => onVocabClick(state.currentVocab!.id)}
+                        onVocabClick={onVocabClick}
+                    />
+                ) : (
+                    <QuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
+                )}
+            </View>
+        </View>
     );
 }

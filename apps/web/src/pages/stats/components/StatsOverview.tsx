@@ -1,6 +1,8 @@
 import type { UserProgress } from "@gokan-srs/core/models/user.model";
 import { useMemo, useState, useEffect } from "react";
 import type { ReviewLog } from "@gokan-srs/core/models/vocabulary.model";
+import { View, Text } from "react-native";
+import { styles, THEME } from "@gokan-srs/ui";
 
 interface StatsOverviewProps {
     progress: UserProgress;
@@ -83,7 +85,7 @@ export function StatsOverview({ progress }: StatsOverviewProps) {
     }, [progress]);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 animate-slide-up">
+        <View style={[styles.wFull, styles.flexRow, styles.flexWrap, styles.gap4]}>
             <StatCard title="Global Win Rate" value={`${stats.winrate}%`} subtitle={`${stats.totalAnswers} reviews`} />
             <StatCard
                 title="Kanji Coverage"
@@ -93,7 +95,7 @@ export function StatsOverview({ progress }: StatsOverviewProps) {
             <StatCard title="Total Vocab" value={stats.totalLearned} subtitle="Introduced" />
             <StatCard title="Learning" value={stats.learning} subtitle="In progress" />
             <StatCard title="Graduated" value={stats.graduated} subtitle="Mastered" />
-        </div>
+        </View>
     );
 }
 
@@ -102,10 +104,10 @@ function StatCard({ title, value, subtitle }: { title: string, value: string | n
     const valueSizeClass = stringValue.length > 5 ? "text-2xl" : "text-3xl";
 
     return (
-        <div className="p-4 bg-surface rounded-xl shadow-sm border border-divider flex flex-col items-center justify-center h-28 transform transition-transform hover:scale-105 duration-200 text-center">
-            <span className="text-sm text-secondary font-medium mb-1 truncate w-full">{title}</span>
-            <span className={`${valueSizeClass} font-bold text-primary truncate w-full`}>{value}</span>
-            {subtitle && <span className="text-xs text-tertiary mt-1 truncate w-full">{subtitle}</span>}
-        </div>
+        <View style={[styles.flex1, styles.p4, styles.bgSurface, styles.border, styles.flexCol, styles.alignCenter, styles.justifyCenter, { borderRadius: 12, minWidth: 150, height: 112, borderColor: THEME.colors.divider }]}>
+            <Text style={[styles.textSm, styles.textSecondary, styles.fontMedium, styles.mb1]}>{title}</Text>
+            <Text style={[styles.text3xl, styles.fontBold, styles.textPrimary]}>{value}</Text>
+            {subtitle && <Text style={[styles.textXs, styles.textTertiary, styles.mt1]}>{subtitle}</Text>}
+        </View>
     );
 }

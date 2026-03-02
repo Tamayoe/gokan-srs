@@ -1,16 +1,14 @@
-
 import type { ReactNode } from "react";
+import { View, Text } from "react-native";
+import { styles } from "@gokan-srs/ui";
 
 export const Stat = ({ value, label, color }: { value: ReactNode, label: string, color: string }) => (
-    <div>
-        <p
-            className="text-2xl font-serif mb-1"
-            style={{ color }}
-        >
+    <View style={[styles.flexCol, styles.alignCenter]}>
+        <Text style={[styles.text2xl, styles.fontSerif, styles.mb1, { color }]}>
             {value}
-        </p>
-        <p className="text-xs uppercase tracking-wide text-secondary">
+        </Text>
+        <Text style={[styles.textXs, styles.textSecondary, { textTransform: 'uppercase', letterSpacing: 0.5 }]}>
             {label}
-        </p>
-    </div>
+        </Text>
+    </View>
 );

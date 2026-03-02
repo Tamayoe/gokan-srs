@@ -88,9 +88,10 @@ Respond ONLY with valid JSON in the following schema:
                 throw new Error(`Gemini API Error (${response.status}): ${errorText}`);
             }
 
-            const data = await response.json();
+            const data = await response.json() as any;
 
-            if (data.candidates && data.candidates.length > 0 && data.candidates[0].content.parts.length > 0) {
+            // Extract the result from the Gemini response structure
+            if (data?.candidates && data.candidates.length > 0 && data.candidates[0].content.parts.length > 0) {
                 const textResult = data.candidates[0].content.parts[0].text;
 
                 // We requested JSON, so it should parse safely

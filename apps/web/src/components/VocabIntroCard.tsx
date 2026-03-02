@@ -1,12 +1,12 @@
+import React from "react";
+import { View, Text } from "react-native";
 import type { Vocabulary } from "@gokan-srs/core/models/vocabulary.model";
 import { Card } from "./ui/Card";
-
 import { CardDivider, CardSection } from "./ui/CardSection";
 import { Button } from "./ui/Button";
-import { useEffect, useRef } from "react";
 import { useResponsive } from "../context/Responsive/useResponsive";
-import { Combine } from "lucide-react";
-
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { styles, THEME } from "@gokan-srs/ui";
 
 interface IntroVocabCardProps {
     vocab: Vocabulary;
@@ -15,75 +15,67 @@ interface IntroVocabCardProps {
 }
 
 export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCardProps) {
-    const formRef = useRef<HTMLFormElement | null>(null);
-    const { isMobile } = useResponsive()
-
-    useEffect(() => {
-        if (formRef) {
-            const lastChild = formRef.current?.lastElementChild as HTMLElement
-            lastChild.focus()
-        }
-    }, []);
+    const { isMobile } = useResponsive();
 
     return (
         <Card size="lg">
             {/* Kanji */}
             <CardSection>
-                <div className="text-center">
-                    <div
-                        className="text-primary font-mincho leading-none text-kanji flex items-center justify-center gap-3"
-                        title={vocab.mergedVocabs && vocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
+                <View style={[styles.flexCol, styles.alignCenter]}>
+                    <View
+                        style={[styles.flexRow, styles.alignCenter, styles.justifyCenter, styles.gap3]}
+                        accessibilityLabel={vocab.mergedVocabs && vocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
                     >
-                        {vocab.writtenForm.kanji}
+                        <Text style={[styles.textPrimary, styles.fontMincho, styles.textKanji, { lineHeight: 105.6 }]}>
+                            {vocab.writtenForm.kanji}
+                        </Text>
                         {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
-                            <Combine size={40} className="text-divider" />
+                            <MaterialCommunityIcons name="call-merge" size={40} color={THEME.colors.tertiary} />
                         )}
-                    </div>
+                    </View>
 
-                    <div className="flex flex-row justify-center items-center gap-1 mt-4 text-base font-gothic text-secondary/90 opacity-90">
-                        {[vocab.reading.primary, ...vocab.reading.alternatives].join(', ')}
-                    </div>
-                </div>
+                    <View style={[styles.flexRow, styles.justifyCenter, styles.alignCenter, styles.gap1, styles.mt4]}>
+                        <Text style={[styles.textBase, styles.fontGothic, styles.textSecondary]}>
+                            {[vocab.reading.primary, ...vocab.reading.alternatives].join(', ')}
+                        </Text>
+                    </View>
+                </View>
             </CardSection>
 
             {/* Meanings */}
             <CardSection>
-                <div className="text-center font-serif text-base text-meaning-muted leading-relaxed">
-                    {vocab.senses.map((sense, i) => (
-                        <span key={i}>
-                            {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
-                                <span className="text-xs px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary mr-1 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
-                            )}
-                            {sense.glosses.join(', ')}
-                            {i !== vocab.senses.length - 1 ? ', ' : ''}
-                        </span>
-                    ))}
-                </div>
+                <View style={[styles.flexRow, styles.flexWrap, styles.justifyCenter]}>
+                    <Text style={[styles.textCenter, styles.fontSerif, styles.textBase, { color: THEME.colors.meaningMuted, lineHeight: 24 }]}>
+                        {vocab.senses.map((sense, i) => (
+                            <React.Fragment key={i}>
+                                {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
+                                    <Text style={[styles.textXs, styles.textTertiary, styles.mr2, styles.fontGothic]}>
+                                        [{sense.appliesToReadings.join(', ')}]
+                                    </Text>
+                                )}
+                                {sense.glosses.join(', ')}
+                                {i !== vocab.senses.length - 1 ? ', ' : ''}
+                            </React.Fragment>
+                        ))}
+                    </Text>
+                </View>
             </CardSection>
 
             <CardDivider />
 
-            <form
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    onLearn();
-                }}
-                className="flex gap-4"
-                ref={formRef}
-            >
+            <View style={[styles.flexRow, styles.gap4]}>
                 <Button
                     variant="secondary"
-                    className="flex-1"
-                    onClick={onSkip}
-                    type="button"
+                    style={[styles.flex1]}
+                    onPress={onSkip}
                 >
                     {isMobile ? 'Skip' : 'I already know this'}
                 </Button>
 
-                <Button variant="primary" className="flex-1" type="submit">
+                <Button variant="primary" style={[styles.flex1]} onPress={onLearn}>
                     {isMobile ? 'Learn' : 'Learn this word'}
                 </Button>
-            </form>
+            </View>
         </Card>
     );
 }

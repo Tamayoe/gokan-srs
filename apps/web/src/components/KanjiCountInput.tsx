@@ -1,20 +1,37 @@
+import React from "react";
+import { View, Text, TextInput } from "react-native";
 import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
+import { styles, THEME } from "@gokan-srs/ui";
 
 export function KanjiCountInput() {
     const { state, setKanjiCount } = useKanjiForm();
 
     return (
-        <section className="mt-8 space-y-3">
-            <label className="block text-sm uppercase tracking-wide font-gothic text-secondary">
+        <View style={[styles.mt8, styles.gap3]}>
+            <Text style={[styles.textSm, styles.fontGothic, styles.textSecondary, { textTransform: 'uppercase', letterSpacing: 0.5 }]}>
                 Known Kanji Count
-            </label>
-            <input
-                type="number"
-                min={1}
-                value={state.kanjiCount}
-                onChange={e => setKanjiCount(+e.target.value)}
-                className="w-full border rounded px-4 py-3 text-lg border-divider bg-surface text-primary font-gothic"
+            </Text>
+            <TextInput
+                keyboardType="numeric"
+                value={state.kanjiCount.toString()}
+                onChangeText={text => {
+                    const parsed = parseInt(text, 10);
+                    if (!isNaN(parsed) && parsed > 0) {
+                        setKanjiCount(parsed);
+                    } else if (text === '') {
+                        setKanjiCount(0);
+                    }
+                }}
+                style={[
+                    styles.wFull,
+                    styles.border,
+                    styles.bgSurface,
+                    styles.textPrimary,
+                    styles.fontGothic,
+                    { borderRadius: 8, paddingHorizontal: 16, paddingVertical: 12, fontSize: 18, borderColor: THEME.colors.divider }
+                ]}
+                placeholderTextColor={THEME.colors.tertiary}
             />
-        </section>
+        </View>
     );
 }
