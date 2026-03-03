@@ -25,16 +25,7 @@ export function getNextVocabToStudy(
 ): QuizItem | null {
     if (!queue || queue.length === 0) return null;
 
-    // 1. Priority: Retries
-    // TODO: Phase 2.5 - Split needsRetry into { reading: bool, meaning: bool } for precision.
-    // For now, if needsRetry is true, we default to Reading (legacy behavior compatible).
-    const retries = queue.filter(v => v.needsRetry === true);
-    if (retries.length > 0) {
-        const vocab = pickRandom(retries)!;
-        return { vocab, quizType: 'reading' };
-    }
-
-    // 2. Priority: ALL Readings (First Reviews + Due Readings)
+    // 1. Priority: ALL Readings (First Reviews + Due Readings + Retries)
     // We want to clear all reading quizzes before moving to meanings.
     const allReadings = queue.filter(v => {
         // Condition A: First Review (newly learned)
@@ -51,7 +42,7 @@ export function getNextVocabToStudy(
             v.reading.dueDate !== null &&
             v.reading.dueDate <= now;
 
-        return isFirstReview || isDueReading;
+        return isFirstReview || isDueReading || v.needsRetry === true;
     });
 
     if (allReadings.length > 0) {

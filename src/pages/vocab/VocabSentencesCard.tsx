@@ -48,7 +48,7 @@ export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
                 <Virtuoso
                     useWindowScroll
                     data={sentences}
-                    itemContent={(index, sentence) => (
+                    itemContent={(index: number, sentence: Sentence) => (
                         <div key={sentence.id} className={`pb-4 ${index === sentences.length - 1 ? '' : 'border-b border-divider mb-4'}`}>
                             <div className="text-xl leading-relaxed text-primary mb-1">
                                 <InteractiveSentence

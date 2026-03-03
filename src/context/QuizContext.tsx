@@ -551,7 +551,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                                 matchedAnswer = state.userAnswer;
                                 message = result === 'correct'
                                     ? `Correct. (AI Validated: ${aiEvaluation.reason})`
-                                    : `Close. (AI Validated: ${aiEvaluation.reason})`;
+                                    : `Close. ${aiEvaluation.reason}`;
                             } else {
                                 // If AI still says it's wrong, keep the original strict failure or append the AI reason
                                 if (aiEvaluation.reason) {
@@ -567,7 +567,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             }
 
             if (result === 'correct' && !message.includes('AI Validated')) message = 'Correct.';
-            else if (result === 'minor_error') message = 'Close.';
+            else if (result === 'minor_error' && !message.includes('Close.')) message = 'Close.';
 
             dispatch({
                 type: 'SUBMIT_ANSWER',
