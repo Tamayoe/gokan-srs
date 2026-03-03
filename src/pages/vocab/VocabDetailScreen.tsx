@@ -13,6 +13,7 @@ import { Combine } from "lucide-react";
 import { VocabSentencesCard } from "./VocabSentencesCard";
 import { VocabHistoryGraph } from "../../components/VocabHistoryGraph";
 import { ReviewTimeline } from "../../components/ReviewTimeline";
+import { VocabRelationshipsCard } from "./VocabRelationshipsCard";
 
 export default function VocabDetailScreen() {
     const { vocabId } = useParams<{ vocabId: string }>();
@@ -234,6 +235,9 @@ export default function VocabDetailScreen() {
                                 <ReviewTimeline readingEntry={progress.reading} meaningEntry={progress.meaning} />
                             </>
                         )}
+
+                        {/* Relationships Card (Moved from right column) */}
+                        <VocabRelationshipsCard vocab={vocab} />
                     </div>
 
                     {/* Right Column */}

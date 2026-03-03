@@ -1,68 +1,5 @@
 [
   {
-    "id": "141195",
-    "original": "洗面所の栓を抜くと、水がガバガバ流れ出した。",
-    "en": [
-      {
-        "id": "273377",
-        "text": "When I unplugged the bathroom sink, the water gushed down the drain."
-      }
-    ],
-    "indices": "洗面所~ の 栓 を 抜く[01] と 水(みず) が がばがば[02]{ガバガバ}~ 流れ出す{流れ出した}",
-    "vocabIds": [
-      "1391050",
-      "1391070",
-      "1343100",
-      "1956550",
-      "1889130",
-      "1478190",
-      "1371260",
-      "1552170"
-    ],
-    "matches": {
-      "1343100": {
-        "start": 2,
-        "length": 1,
-        "reading": "しょ"
-      },
-      "1371260": {
-        "start": 10,
-        "length": 1,
-        "reading": "みず"
-      },
-      "1391050": {
-        "start": 0,
-        "length": 2,
-        "reading": "せんめん"
-      },
-      "1391070": {
-        "start": 0,
-        "length": 3,
-        "reading": "せんめんしょ"
-      },
-      "1478190": {
-        "start": 6,
-        "length": 2,
-        "reading": "ぬく"
-      },
-      "1552170": {
-        "start": 16,
-        "length": 4,
-        "reading": "ながれだし"
-      },
-      "1889130": {
-        "start": 4,
-        "length": 4,
-        "reading": "せんをぬく"
-      },
-      "1956550": {
-        "start": 4,
-        "length": 1,
-        "reading": "せん"
-      }
-    }
-  },
-  {
     "id": "198628",
     "original": "ネコがひっくり返すといけないから、ビンに栓をしなさい。",
     "en": [
@@ -77,16 +14,20 @@
       "1956550"
     ],
     "matches": {
-      "1601870": {
-        "start": 3,
-        "length": 6,
-        "reading": "ひっくりかえす"
-      },
-      "1956550": {
-        "start": 20,
-        "length": 1,
-        "reading": "せん"
-      }
+      "1601870": [
+        {
+          "start": 3,
+          "length": 13,
+          "reading": "ひっくりかえすといけないから"
+        }
+      ],
+      "1956550": [
+        {
+          "start": 20,
+          "length": 1,
+          "reading": "せん"
+        }
+      ]
     }
   },
   {
@@ -100,38 +41,32 @@
     ],
     "indices": "三鞭酒{シャンパン} の 栓~ が ぽんと[02]~ 音を立てる{音を立てて}~ 飛ぶ[07]{とんだ}",
     "vocabIds": [
-      "1956550",
-      "1576900",
       "1551530",
-      "2081610",
-      "2016360"
+      "1956550",
+      "1576900"
     ],
     "matches": {
-      "1551530": {
-        "start": 13,
-        "length": 2,
-        "reading": "たて"
-      },
-      "1576900": {
-        "start": 11,
-        "length": 1,
-        "reading": "おと"
-      },
-      "1956550": {
-        "start": 6,
-        "length": 1,
-        "reading": "せん"
-      },
-      "2016360": {
-        "start": 13,
-        "length": 3,
-        "reading": "たてて"
-      },
-      "2081610": {
-        "start": 13,
-        "length": 2,
-        "reading": "たて"
-      }
+      "1551530": [
+        {
+          "start": 13,
+          "length": 3,
+          "reading": "たてて"
+        }
+      ],
+      "1576900": [
+        {
+          "start": 11,
+          "length": 1,
+          "reading": "おと"
+        }
+      ],
+      "1956550": [
+        {
+          "start": 6,
+          "length": 1,
+          "reading": "せん"
+        }
+      ]
     }
   },
   {
@@ -145,26 +80,24 @@
     ],
     "indices": "コルク~ の 栓 が 如何しても{どうしても} 抜ける[01]{抜けなかった}",
     "vocabIds": [
-      "1956550",
       "1478200",
-      "2841555"
+      "1956550"
     ],
     "matches": {
-      "1478200": {
-        "start": 11,
-        "length": 2,
-        "reading": "ぬけ"
-      },
-      "1956550": {
-        "start": 4,
-        "length": 1,
-        "reading": "せん"
-      },
-      "2841555": {
-        "start": 11,
-        "length": 2,
-        "reading": "ぬけ"
-      }
+      "1478200": [
+        {
+          "start": 11,
+          "length": 6,
+          "reading": "ぬけなかった"
+        }
+      ],
+      "1956550": [
+        {
+          "start": 4,
+          "length": 1,
+          "reading": "せん"
+        }
+      ]
     }
   },
   {
@@ -178,20 +111,24 @@
     ],
     "indices": "此の{この} 栓 は 瓶(びん){びん} に 合う{合わない}",
     "vocabIds": [
-      "1956550",
-      "1284430"
+      "1284430",
+      "1956550"
     ],
     "matches": {
-      "1284430": {
-        "start": 7,
-        "length": 2,
-        "reading": "あわ"
-      },
-      "1956550": {
-        "start": 2,
-        "length": 1,
-        "reading": "せん"
-      }
+      "1284430": [
+        {
+          "start": 7,
+          "length": 4,
+          "reading": "あわない"
+        }
+      ],
+      "1956550": [
+        {
+          "start": 2,
+          "length": 1,
+          "reading": "せん"
+        }
+      ]
     }
   },
   {
@@ -212,87 +149,13 @@
       "1956550"
     ],
     "matches": {
-      "1956550": {
-        "start": 6,
-        "length": 1,
-        "reading": "せん"
-      }
-    }
-  },
-  {
-    "id": "2110062",
-    "original": "耳栓を買いたいのですが。",
-    "en": [
-      {
-        "id": "1936512",
-        "text": "I'd like to buy some earplugs."
-      }
-    ],
-    "vocabIds": [
-      "1317170",
-      "1317270",
-      "1956550",
-      "1473740",
-      "1636070"
-    ],
-    "matches": {
-      "1317170": {
-        "start": 0,
-        "length": 1,
-        "reading": "みみ"
-      },
-      "1317270": {
-        "start": 0,
-        "length": 2,
-        "reading": "みみせん"
-      },
-      "1473740": {
-        "start": 3,
-        "length": 2,
-        "reading": "かい"
-      },
-      "1636070": {
-        "start": 3,
-        "length": 2,
-        "reading": "かい"
-      },
-      "1956550": {
-        "start": 1,
-        "length": 1,
-        "reading": "せん"
-      }
-    }
-  },
-  {
-    "id": "8782796",
-    "original": "それって栓抜きなの？",
-    "en": [
-      {
-        "id": "3396442",
-        "text": "Is that a bottle opener?"
-      }
-    ],
-    "vocabIds": [
-      "1956550",
-      "1390770",
-      "2009330"
-    ],
-    "matches": {
-      "1390770": {
-        "start": 4,
-        "length": 3,
-        "reading": "せんぬき"
-      },
-      "1956550": {
-        "start": 4,
-        "length": 1,
-        "reading": "せん"
-      },
-      "2009330": {
-        "start": 5,
-        "length": 2,
-        "reading": "ぬき"
-      }
+      "1956550": [
+        {
+          "start": 6,
+          "length": 1,
+          "reading": "せん"
+        }
+      ]
     }
   },
   {
@@ -305,230 +168,24 @@
       }
     ],
     "vocabIds": [
-      "1956550",
-      "1478190"
-    ],
-    "matches": {
-      "1478190": {
-        "start": 9,
-        "length": 2,
-        "reading": "ぬい"
-      },
-      "1956550": {
-        "start": 7,
-        "length": 1,
-        "reading": "せん"
-      }
-    }
-  },
-  {
-    "id": "9444463",
-    "original": "百円玉ではなくて、瓶の栓でした。",
-    "en": [
-      {
-        "id": "327978",
-        "text": "It wasn't a 100 yen coin, it was a bottle cap."
-      }
-    ],
-    "vocabIds": [
-      "1488000",
-      "1175570",
-      "1240530",
-      "1491120",
-      "1905410",
+      "1478190",
       "1956550"
     ],
     "matches": {
-      "1175570": {
-        "start": 1,
-        "length": 1,
-        "reading": "えん"
-      },
-      "1240530": {
-        "start": 2,
-        "length": 1,
-        "reading": "だま"
-      },
-      "1488000": {
-        "start": 0,
-        "length": 1,
-        "reading": "ひゃく"
-      },
-      "1491120": {
-        "start": 9,
-        "length": 1,
-        "reading": "びん"
-      },
-      "1905410": {
-        "start": 9,
-        "length": 3,
-        "reading": "びんのせん"
-      },
-      "1956550": {
-        "start": 11,
-        "length": 1,
-        "reading": "せん"
-      }
-    }
-  },
-  {
-    "id": "10201371",
-    "original": "栓抜きって、持ってる？",
-    "en": [
-      {
-        "id": "8248168",
-        "text": "Do you have a corkscrew?"
-      },
-      {
-        "id": "11859582",
-        "text": "Do you have a bottle opener?"
-      }
-    ],
-    "vocabIds": [
-      "1956550",
-      "1390770",
-      "2009330",
-      "1315720"
-    ],
-    "matches": {
-      "1315720": {
-        "start": 6,
-        "length": 2,
-        "reading": "もっ"
-      },
-      "1390770": {
-        "start": 0,
-        "length": 3,
-        "reading": "せんぬき"
-      },
-      "1956550": {
-        "start": 0,
-        "length": 1,
-        "reading": "せん"
-      },
-      "2009330": {
-        "start": 1,
-        "length": 2,
-        "reading": "ぬき"
-      }
-    }
-  },
-  {
-    "id": "10201372",
-    "original": "栓抜きがいるね。",
-    "en": [
-      {
-        "id": "6780555",
-        "text": "I need a corkscrew."
-      },
-      {
-        "id": "6532089",
-        "text": "I need a bottle opener."
-      }
-    ],
-    "vocabIds": [
-      "1956550",
-      "1390770",
-      "2009330"
-    ],
-    "matches": {
-      "1390770": {
-        "start": 0,
-        "length": 3,
-        "reading": "せんぬき"
-      },
-      "1956550": {
-        "start": 0,
-        "length": 1,
-        "reading": "せん"
-      },
-      "2009330": {
-        "start": 1,
-        "length": 2,
-        "reading": "ぬき"
-      }
-    }
-  },
-  {
-    "id": "10201373",
-    "original": "栓抜きどこだろう？",
-    "en": [
-      {
-        "id": "4013964",
-        "text": "Where's the bottle opener?"
-      },
-      {
-        "id": "10201378",
-        "text": "Where's the corkscrew?"
-      },
-      {
-        "id": "10201379",
-        "text": "I wonder where the corkscrew is."
-      }
-    ],
-    "vocabIds": [
-      "1956550",
-      "1390770",
-      "1478190",
-      "2009330"
-    ],
-    "matches": {
-      "1390770": {
-        "start": 0,
-        "length": 3,
-        "reading": "せんぬき"
-      },
-      "1478190": {
-        "start": 1,
-        "length": 2,
-        "reading": "ぬき"
-      },
-      "1956550": {
-        "start": 0,
-        "length": 1,
-        "reading": "せん"
-      },
-      "2009330": {
-        "start": 1,
-        "length": 2,
-        "reading": "ぬき"
-      }
-    }
-  },
-  {
-    "id": "9444476",
-    "original": "栓抜きってどこやった？",
-    "en": [
-      {
-        "id": "10201792",
-        "text": "Where did you put the bottle opener?"
-      },
-      {
-        "id": "10201793",
-        "text": "Where did you put the corkscrew?"
-      }
-    ],
-    "vocabIds": [
-      "1956550",
-      "1390770",
-      "2009330"
-    ],
-    "matches": {
-      "1390770": {
-        "start": 0,
-        "length": 3,
-        "reading": "せんぬき"
-      },
-      "1956550": {
-        "start": 0,
-        "length": 1,
-        "reading": "せん"
-      },
-      "2009330": {
-        "start": 1,
-        "length": 2,
-        "reading": "ぬき"
-      }
+      "1478190": [
+        {
+          "start": 9,
+          "length": 3,
+          "reading": "ぬいた"
+        }
+      ],
+      "1956550": [
+        {
+          "start": 7,
+          "length": 1,
+          "reading": "せん"
+        }
+      ]
     }
   },
   {
@@ -541,100 +198,56 @@
       }
     ],
     "vocabIds": [
+      "1478190",
+      "1263120",
       "1002290",
       "1547480",
       "1956550",
-      "1478190",
-      "1371260",
-      "1263120"
+      "1371260"
     ],
     "matches": {
-      "1002290": {
-        "start": 0,
-        "length": 2,
-        "reading": "おまえ"
-      },
-      "1263120": {
-        "start": 16,
-        "length": 2,
-        "reading": "へっ"
-      },
-      "1371260": {
-        "start": 14,
-        "length": 1,
-        "reading": "みず"
-      },
-      "1478190": {
-        "start": 8,
-        "length": 2,
-        "reading": "ぬい"
-      },
-      "1547480": {
-        "start": 3,
-        "length": 2,
-        "reading": "よくそう"
-      },
-      "1956550": {
-        "start": 6,
-        "length": 1,
-        "reading": "せん"
-      }
-    }
-  },
-  {
-    "id": "10512993",
-    "original": "お風呂の栓を抜くから、お湯が減ったでしょ。",
-    "en": [
-      {
-        "id": "10512944",
-        "text": "You opened the bathtub drain, so some of the water went away."
-      }
-    ],
-    "vocabIds": [
-      "2220600",
-      "1500100",
-      "1956550",
-      "1889130",
-      "1478190",
-      "1002510",
-      "1263120"
-    ],
-    "matches": {
-      "1002510": {
-        "start": 11,
-        "length": 2,
-        "reading": "おゆ"
-      },
-      "1263120": {
-        "start": 14,
-        "length": 2,
-        "reading": "へっ"
-      },
-      "1478190": {
-        "start": 6,
-        "length": 2,
-        "reading": "ぬく"
-      },
-      "1500100": {
-        "start": 1,
-        "length": 2,
-        "reading": "ふろ"
-      },
-      "1889130": {
-        "start": 4,
-        "length": 4,
-        "reading": "せんをぬく"
-      },
-      "1956550": {
-        "start": 4,
-        "length": 1,
-        "reading": "せん"
-      },
-      "2220600": {
-        "start": 0,
-        "length": 3,
-        "reading": "おふろ"
-      }
+      "1002290": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "おまえ"
+        }
+      ],
+      "1263120": [
+        {
+          "start": 16,
+          "length": 3,
+          "reading": "へった"
+        }
+      ],
+      "1371260": [
+        {
+          "start": 14,
+          "length": 1,
+          "reading": "みず"
+        }
+      ],
+      "1478190": [
+        {
+          "start": 8,
+          "length": 5,
+          "reading": "ぬいたから"
+        }
+      ],
+      "1547480": [
+        {
+          "start": 3,
+          "length": 2,
+          "reading": "よくそう"
+        }
+      ],
+      "1956550": [
+        {
+          "start": 6,
+          "length": 1,
+          "reading": "せん"
+        }
+      ]
     }
   },
   {
@@ -647,26 +260,24 @@
       }
     ],
     "vocabIds": [
-      "1956550",
       "1326830",
-      "1599020"
+      "1956550"
     ],
     "matches": {
-      "1326830": {
-        "start": 4,
-        "length": 4,
-        "reading": "とりかえ"
-      },
-      "1599020": {
-        "start": 4,
-        "length": 4,
-        "reading": "とりかえ"
-      },
-      "1956550": {
-        "start": 2,
-        "length": 1,
-        "reading": "せん"
-      }
+      "1326830": [
+        {
+          "start": 4,
+          "length": 7,
+          "reading": "とりかえないと"
+        }
+      ],
+      "1956550": [
+        {
+          "start": 2,
+          "length": 1,
+          "reading": "せん"
+        }
+      ]
     }
   }
 ]

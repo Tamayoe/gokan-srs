@@ -388,21 +388,42 @@ async function main() {
         }
 
         const text = sentence.original;
-        const coveredIndices = new Array(text.length).fill(false);
-        const matches: Record<string, { start: number, length: number, reading?: string }> = {};
-        const matchedVocabIds: string[] = [];
 
         const extractedMatches = sentenceTokenizer.extractMatches(text, vocabSet);
 
-        for (const [matchedTerm, matchInfo] of Object.entries(extractedMatches)) {
-            const vocabIds = writtenToVocabId.get(matchedTerm);
+        const flatMatches: { term: string, match: any }[] = [];
+        for (const [term, matchArray] of Object.entries(extractedMatches)) {
+            for (const match of matchArray as any[]) {
+                flatMatches.push({ term, match });
+            }
+        }
+
+        flatMatches.sort((a, b) => b.match.length - a.match.length);
+        const acceptedMatches: typeof flatMatches = [];
+
+        for (const entry of flatMatches) {
+            const { match } = entry;
+            const isFullyEnclosed = acceptedMatches.some(accepted => {
+                const acceptedEnd = accepted.match.start + accepted.match.length;
+                const matchEnd = match.start + match.length;
+                return match.start >= accepted.match.start && matchEnd <= acceptedEnd;
+            });
+            if (!isFullyEnclosed) acceptedMatches.push(entry);
+        }
+
+        const matches: Record<string, { start: number, length: number, reading?: string }[]> = {};
+        const matchedVocabIds: string[] = [];
+
+        for (const { term, match } of acceptedMatches) {
+            const vocabIds = writtenToVocabId.get(term);
             if (!vocabIds) continue;
 
             for (const vId of vocabIds) {
                 if (!matches[vId]) {
-                    matches[vId] = matchInfo;
+                    matches[vId] = [];
                     matchedVocabIds.push(vId);
                 }
+                matches[vId].push(match);
             }
         }
 
@@ -493,6 +514,78 @@ async function main() {
     console.log(`   - Dropped ${dropped} words.`);
     console.log(`   - Final Dataset Size: ${FINAL_VOCAB.length} words.`);
 
+    // 4.5 Compute components and parents
+    console.log('🧩 Computing components and parents...');
+
+    const finalVocabMap = new Map<string, string[]>();
+    for (const v of FINAL_VOCAB) {
+        const k = v.writtenForm.kanji;
+        if (!finalVocabMap.has(k)) finalVocabMap.set(k, []);
+        finalVocabMap.get(k)!.push(v.id);
+    }
+    const finalVocabSetToMatch = new Set(finalVocabMap.keys());
+
+    // Optimize components matching: Map each kanji character to the vocabulary candidates that start with it.
+    console.log('   - Indexing for component match...');
+    const candidateIndex = new Map<string, typeof FINAL_VOCAB>();
+    for (const vocab of FINAL_VOCAB) {
+        if (vocab.writtenForm.containedKanji.length === 0) continue;
+        const firstChar = vocab.writtenForm.kanji[0];
+        if (!candidateIndex.has(firstChar)) candidateIndex.set(firstChar, []);
+        candidateIndex.get(firstChar)!.push(vocab);
+    }
+
+    let componentProgress = 0;
+    for (const vocab of FINAL_VOCAB) {
+        componentProgress++;
+        if (componentProgress % 5000 === 0) {
+            process.stdout.write(`   - Components: ${componentProgress}/${FINAL_VOCAB.length} processed...\r`);
+        }
+
+        const targetWord = vocab.writtenForm.kanji;
+        const components = new Set<string>();
+
+        // We only need to check candidates that start with a character present in the targetWord.
+        const checkedCandidates = new Set<string>(); // avoid checking same candidate twice if it appears in multiple start positions (rare, but possible if index structured differently)
+
+        for (const char of targetWord) {
+            const possibleCandidates = candidateIndex.get(char);
+            if (!possibleCandidates) continue;
+
+            for (const candidate of possibleCandidates) {
+                if (checkedCandidates.has(candidate.id)) continue;
+                checkedCandidates.add(candidate.id);
+
+                if (candidate.id === vocab.id) continue;
+                const candidateWord = candidate.writtenForm.kanji;
+
+                if (targetWord.includes(candidateWord)) {
+                    components.add(candidate.id);
+                }
+            }
+        }
+
+        if (components.size > 0) {
+            vocab.components = Array.from(components);
+        }
+    }
+    console.log(`\n   - Done computing components.`);
+
+    // Pass 2: compute parents
+    const finalSelectedVocabMap = new Map(FINAL_VOCAB.map(v => [v.id, v]));
+    for (const vocab of FINAL_VOCAB) {
+        if (vocab.components) {
+            for (const componentId of vocab.components) {
+                const componentVocab = finalSelectedVocabMap.get(componentId);
+                if (componentVocab) {
+                    if (!componentVocab.parents) {
+                        componentVocab.parents = [];
+                    }
+                    componentVocab.parents.push(vocab.id);
+                }
+            }
+        }
+    }
 
     // 5. Write Outputs
     console.log('💾 Writing compiled data...');

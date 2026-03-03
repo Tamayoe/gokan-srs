@@ -10,44 +10,24 @@
     ],
     "indices": "一度に 一事 を 為る(する){せよ}",
     "vocabIds": [
-      "1160790",
-      "1576250",
       "1609210",
-      "1445160",
-      "1007270",
       "1162890"
     ],
     "matches": {
-      "1007270": {
-        "start": 1,
-        "length": 2,
-        "reading": "どに"
-      },
-      "1160790": {
-        "start": 0,
-        "length": 1,
-        "reading": "いち"
-      },
-      "1162890": {
-        "start": 3,
-        "length": 2,
-        "reading": "いちじ"
-      },
-      "1445160": {
-        "start": 1,
-        "length": 1,
-        "reading": "ど"
-      },
-      "1576250": {
-        "start": 0,
-        "length": 2,
-        "reading": "いちど"
-      },
-      "1609210": {
-        "start": 0,
-        "length": 3,
-        "reading": "いちどに"
-      }
+      "1162890": [
+        {
+          "start": 3,
+          "length": 2,
+          "reading": "いちじ"
+        }
+      ],
+      "1609210": [
+        {
+          "start": 0,
+          "length": 3,
+          "reading": "いちどに"
+        }
+      ]
     }
   },
   {
@@ -61,59 +41,37 @@
     ],
     "indices": "一事~ 成る{成れば} 万事~ 成る",
     "vocabIds": [
-      "1162890",
       "1375610",
-      "1526080"
-    ],
-    "matches": {
-      "1162890": {
-        "start": 0,
-        "length": 2,
-        "reading": "いちじ"
-      },
-      "1375610": {
-        "start": 2,
-        "length": 2,
-        "reading": "なれ"
-      },
-      "1526080": {
-        "start": 5,
-        "length": 2,
-        "reading": "ばんじ"
-      }
-    }
-  },
-  {
-    "id": "190599",
-    "original": "一事が万事。",
-    "en": [
-      {
-        "id": "27757",
-        "text": "He who steals a pin will steal an ox."
-      }
-    ],
-    "indices": "一事 が 万事",
-    "vocabIds": [
       "1162890",
-      "2539840",
       "1526080"
     ],
     "matches": {
-      "1162890": {
-        "start": 0,
-        "length": 2,
-        "reading": "いちじ"
-      },
-      "1526080": {
-        "start": 3,
-        "length": 2,
-        "reading": "ばんじ"
-      },
-      "2539840": {
-        "start": 0,
-        "length": 5,
-        "reading": "いちじがばんじ"
-      }
+      "1162890": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "いちじ"
+        }
+      ],
+      "1375610": [
+        {
+          "start": 2,
+          "length": 3,
+          "reading": "なれば"
+        },
+        {
+          "start": 7,
+          "length": 2,
+          "reading": "なる"
+        }
+      ],
+      "1526080": [
+        {
+          "start": 5,
+          "length": 2,
+          "reading": "ばんじ"
+        }
+      ]
     }
   }
 ]

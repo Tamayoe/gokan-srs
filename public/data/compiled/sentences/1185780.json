@@ -1,56 +1,5 @@
 [
   {
-    "id": "222963",
-    "original": "この案件をどう処理するか、彼に下駄を預けるよ。",
-    "en": [
-      {
-        "id": "60294",
-        "text": "I'm just going to leave it up to him to figure out how to clean up this mess."
-      }
-    ],
-    "indices": "此の{この} 案件~ を 如何(どう){どう} 処理 為る(する){する} か 彼(かれ)[01] に 下駄を預ける~ よ[01]",
-    "vocabIds": [
-      "1154830",
-      "1342510",
-      "1483070",
-      "1185780",
-      "1185790",
-      "1544990"
-    ],
-    "matches": {
-      "1154830": {
-        "start": 2,
-        "length": 2,
-        "reading": "あんけん"
-      },
-      "1185780": {
-        "start": 15,
-        "length": 2,
-        "reading": "げた"
-      },
-      "1185790": {
-        "start": 15,
-        "length": 6,
-        "reading": "げたをあづける"
-      },
-      "1342510": {
-        "start": 7,
-        "length": 2,
-        "reading": "しょり"
-      },
-      "1483070": {
-        "start": 13,
-        "length": 1,
-        "reading": "かれ"
-      },
-      "1544990": {
-        "start": 18,
-        "length": 3,
-        "reading": "あづける"
-      }
-    }
-  },
-  {
     "id": "2217324",
     "original": "下駄を突っかけて表に飛び出した。",
     "en": [
@@ -61,98 +10,40 @@
     ],
     "indices": "下駄(げた)~ を 突っ掛ける{突っかけて}~ 表(おもて)[04] に 飛び出す(とびだす)[01]{飛び出した}",
     "vocabIds": [
-      "1185780",
-      "1779370",
-      "1489340",
       "1485350",
-      "2005420"
-    ],
-    "matches": {
-      "1185780": {
-        "start": 0,
-        "length": 2,
-        "reading": "げた"
-      },
-      "1485350": {
-        "start": 10,
-        "length": 4,
-        "reading": "とびだし"
-      },
-      "1489340": {
-        "start": 8,
-        "length": 1,
-        "reading": "ひょう"
-      },
-      "1779370": {
-        "start": 3,
-        "length": 4,
-        "reading": "つっかけ"
-      },
-      "2005420": {
-        "start": 10,
-        "length": 4,
-        "reading": "とびだし"
-      }
-    }
-  },
-  {
-    "id": "2217395",
-    "original": "脱いだ靴は下駄箱にお入れください。",
-    "en": [
-      {
-        "id": "2595711",
-        "text": "Please put your shoes in the getabako when you take them off."
-      },
-      {
-        "id": "2595816",
-        "text": "Please put your shoes in the shoebox when you take them off."
-      }
-    ],
-    "vocabIds": [
-      "1416400",
-      "1246700",
+      "1779370",
       "1185780",
-      "1185830",
-      "1585650",
-      "1465610",
-      "1465600"
+      "1489340"
     ],
     "matches": {
-      "1185780": {
-        "start": 5,
-        "length": 2,
-        "reading": "げた"
-      },
-      "1185830": {
-        "start": 5,
-        "length": 3,
-        "reading": "げたばこ"
-      },
-      "1246700": {
-        "start": 3,
-        "length": 1,
-        "reading": "くつ"
-      },
-      "1416400": {
-        "start": 0,
-        "length": 2,
-        "reading": "ぬい"
-      },
-      "1465600": {
-        "start": 10,
-        "length": 2,
-        "reading": "いれ"
-      },
-      "1465610": {
-        "start": 10,
-        "length": 2,
-        "reading": "いれ"
-      },
-      "1585650": {
-        "start": 7,
-        "length": 1,
-        "reading": "ばこ"
-      }
+      "1185780": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "げた"
+        }
+      ],
+      "1485350": [
+        {
+          "start": 10,
+          "length": 5,
+          "reading": "とびだした"
+        }
+      ],
+      "1489340": [
+        {
+          "start": 8,
+          "length": 1,
+          "reading": "ひょう"
+        }
+      ],
+      "1779370": [
+        {
+          "start": 3,
+          "length": 4,
+          "reading": "つっかけ"
+        }
+      ]
     }
   },
   {
@@ -165,32 +56,32 @@
       }
     ],
     "vocabIds": [
-      "1185780",
-      "1487040",
       "1384860",
-      "1384840"
+      "1185780",
+      "1487040"
     ],
     "matches": {
-      "1185780": {
-        "start": 6,
-        "length": 2,
-        "reading": "げた"
-      },
-      "1384840": {
-        "start": 12,
-        "length": 2,
-        "reading": "きれ"
-      },
-      "1384860": {
-        "start": 12,
-        "length": 2,
-        "reading": "きれ"
-      },
-      "1487040": {
-        "start": 9,
-        "length": 2,
-        "reading": "はなお"
-      }
+      "1185780": [
+        {
+          "start": 6,
+          "length": 2,
+          "reading": "げた"
+        }
+      ],
+      "1384860": [
+        {
+          "start": 12,
+          "length": 6,
+          "reading": "きれちゃった"
+        }
+      ],
+      "1487040": [
+        {
+          "start": 9,
+          "length": 2,
+          "reading": "はなお"
+        }
+      ]
     }
   },
   {
@@ -207,32 +98,32 @@
       }
     ],
     "vocabIds": [
-      "1185780",
       "1315720",
-      "1315710",
-      "1519210"
+      "1519210",
+      "1185780"
     ],
     "matches": {
-      "1185780": {
-        "start": 0,
-        "length": 2,
-        "reading": "げた"
-      },
-      "1315710": {
-        "start": 2,
-        "length": 5,
-        "reading": "もってくる"
-      },
-      "1315720": {
-        "start": 2,
-        "length": 2,
-        "reading": "もっ"
-      },
-      "1519210": {
-        "start": 8,
-        "length": 2,
-        "reading": "わすれ"
-      }
+      "1185780": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "げた"
+        }
+      ],
+      "1315720": [
+        {
+          "start": 2,
+          "length": 5,
+          "reading": "もってくる"
+        }
+      ],
+      "1519210": [
+        {
+          "start": 8,
+          "length": 3,
+          "reading": "わすれた"
+        }
+      ]
     }
   }
 ]

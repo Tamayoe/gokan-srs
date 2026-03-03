@@ -56,8 +56,11 @@ export function ReviewForecast({ progress }: ReviewForecastProps) {
                 }
             };
 
-            if (v.reading.dueDate) placeInBucket(new Date(v.reading.dueDate), true);
-            if (v.meaning.dueDate) placeInBucket(new Date(v.meaning.dueDate), false);
+            // [BUGFIX] Ignore items that are already graduated, in case they have a legacy buggy dueDate
+            if (v.stage !== 'graduated') {
+                if (v.reading.dueDate) placeInBucket(new Date(v.reading.dueDate), true);
+                if (v.meaning.dueDate) placeInBucket(new Date(v.meaning.dueDate), false);
+            }
         });
 
         // Calculate max for scaling (min 10)

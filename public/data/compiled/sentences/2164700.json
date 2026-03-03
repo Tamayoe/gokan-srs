@@ -10,26 +10,32 @@
     ],
     "indices": "私(わたし)[01] は の 出身[01] です",
     "vocabIds": [
-      "1311110",
       "2164700",
-      "1339260"
+      "1339260",
+      "1311110"
     ],
     "matches": {
-      "1311110": {
-        "start": 0,
-        "length": 1,
-        "reading": "わたし"
-      },
-      "1339260": {
-        "start": 5,
-        "length": 2,
-        "reading": "しゅっしん"
-      },
-      "2164700": {
-        "start": 2,
-        "length": 2,
-        "reading": "さいたま"
-      }
+      "1311110": [
+        {
+          "start": 0,
+          "length": 1,
+          "reading": "わたし"
+        }
+      ],
+      "1339260": [
+        {
+          "start": 5,
+          "length": 2,
+          "reading": "しゅっしん"
+        }
+      ],
+      "2164700": [
+        {
+          "start": 2,
+          "length": 2,
+          "reading": "さいたま"
+        }
+      ]
     }
   },
   {
@@ -49,151 +55,34 @@
       "1390020"
     ],
     "matches": {
-      "1215230": {
-        "start": 6,
-        "length": 1,
-        "reading": "ま"
-      },
-      "1390020": {
-        "start": 8,
-        "length": 1,
-        "reading": "かわ"
-      },
-      "2164690": {
-        "start": 3,
-        "length": 2,
-        "reading": "ちば"
-      },
-      "2164700": {
-        "start": 0,
-        "length": 2,
-        "reading": "さいたま"
-      }
-    }
-  },
-  {
-    "id": "236004",
-    "original": "１０年前に協和銀行と埼玉銀行は合併してあさひ銀行になった。",
-    "en": [
-      {
-        "id": "73385",
-        "text": "Kyowa Bank and Saitama Bank merged into Asahi Bank ten years ago."
-      }
-    ],
-    "indices": "年(ねん) 前(まえ)[02] に 銀行 と[02] 銀行 は 合併 為る(する){して} 銀行 になる[01]{になった}",
-    "vocabIds": [
-      "2084840",
-      "1392580",
-      "1392590",
-      "1235840",
-      "1243490",
-      "2164700",
-      "5741685",
-      "1578970",
-      "5000328"
-    ],
-    "matches": {
-      "1235840": {
-        "start": 5,
-        "length": 2,
-        "reading": "きょうわ"
-      },
-      "1243490": {
-        "start": 7,
-        "length": 2,
-        "reading": "ぎんこう"
-      },
-      "1392580": {
-        "start": 3,
-        "length": 1,
-        "reading": "まえ"
-      },
-      "1392590": {
-        "start": 3,
-        "length": 2,
-        "reading": "まえに"
-      },
-      "1578970": {
-        "start": 15,
-        "length": 2,
-        "reading": "がっぺい"
-      },
-      "2084840": {
-        "start": 2,
-        "length": 1,
-        "reading": "ねん"
-      },
-      "2164700": {
-        "start": 10,
-        "length": 2,
-        "reading": "さいたま"
-      },
-      "5000328": {
-        "start": 19,
-        "length": 5,
-        "reading": "あさひぎんこう"
-      },
-      "5741685": {
-        "start": 10,
-        "length": 4,
-        "reading": "さいたまぎんこう"
-      }
-    }
-  },
-  {
-    "id": "10999413",
-    "original": "埼玉県の県庁所在地はさいたま市です。",
-    "en": [
-      {
-        "id": "10999414",
-        "text": "Saitama Prefecture's capital is Saitama City."
-      }
-    ],
-    "vocabIds": [
-      "2164700",
-      "1297230",
-      "1258810",
-      "1258880",
-      "1258890",
-      "1343220",
-      "1308090"
-    ],
-    "matches": {
-      "1258810": {
-        "start": 2,
-        "length": 1,
-        "reading": "けん"
-      },
-      "1258880": {
-        "start": 4,
-        "length": 2,
-        "reading": "けんちょう"
-      },
-      "1258890": {
-        "start": 4,
-        "length": 5,
-        "reading": "けんちょうしょざいち"
-      },
-      "1297230": {
-        "start": 0,
-        "length": 3,
-        "reading": "さいたまけん"
-      },
-      "1308090": {
-        "start": 14,
-        "length": 1,
-        "reading": "し"
-      },
-      "1343220": {
-        "start": 6,
-        "length": 3,
-        "reading": "しょざいち"
-      },
-      "2164700": {
-        "start": 0,
-        "length": 2,
-        "reading": "さいたま"
-      }
+      "1215230": [
+        {
+          "start": 6,
+          "length": 1,
+          "reading": "ま"
+        }
+      ],
+      "1390020": [
+        {
+          "start": 8,
+          "length": 1,
+          "reading": "かわ"
+        }
+      ],
+      "2164690": [
+        {
+          "start": 3,
+          "length": 2,
+          "reading": "ちば"
+        }
+      ],
+      "2164700": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "さいたま"
+        }
+      ]
     }
   }
 ]

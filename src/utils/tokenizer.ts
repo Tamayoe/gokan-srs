@@ -25,8 +25,8 @@ export class SentenceTokenizer {
      * @param vocabularies An array or Set of known vocabulary words to search for
      * @returns A map of vocab words to their match positions in the sentence
      */
-    public extractMatches(text: string, vocabularies: string[] | Set<string>): Record<string, TokenMatch> {
-        const matches: Record<string, TokenMatch> = {};
+    public extractMatches(text: string, vocabularies: string[] | Set<string>): Record<string, TokenMatch[]> {
+        const matches: Record<string, TokenMatch[]> = {};
         const vocabSet = vocabularies instanceof Set ? vocabularies : new Set(vocabularies);
         const tokens = this.tokenizer.tokenize(text);
 
@@ -37,12 +37,36 @@ export class SentenceTokenizer {
             const targetTerm = token.basic_form && token.basic_form !== '*' ? token.basic_form : token.surface_form;
 
             if (vocabSet.has(targetTerm)) {
-                if (!matches[targetTerm]) {
-                    matches[targetTerm] = {
-                        start: token.word_position - 1,
-                        length: token.surface_form.length,
-                        reading: token.reading ? katakanaToHiragana(token.reading) : undefined
-                    };
+                if (!matches[targetTerm]) matches[targetTerm] = [];
+                const startPos = token.word_position - 1;
+
+                let extendedLength = token.surface_form.length;
+                let extendedReading = token.reading || "";
+
+                // Look ahead for verb/adjective conjugations (auxiliary verbs, non-independent verbs, connection particles)
+                if (token.pos === '動詞' || token.pos === '形容詞') {
+                    for (let k = i + 1; k < tokens.length; k++) {
+                        const nextToken = tokens[k];
+                        const isAux = nextToken.pos === '助動詞';
+                        const isNonIndepVerb = nextToken.pos === '動詞' && nextToken.pos_detail_1 === '非自立'; // e.g., て[いる], て[おく], て[みる]
+                        const isConjParticle = nextToken.pos === '助詞' && nextToken.pos_detail_1 === '接続助詞'; // e.g., [出]て, [食べ]れば
+                        const isSuffix = nextToken.pos === '名詞' && nextToken.pos_detail_1 === '接尾'; // e.g., 楽し[さ]
+
+                        if (isAux || isNonIndepVerb || isConjParticle || isSuffix) {
+                            extendedLength += nextToken.surface_form.length;
+                            extendedReading += nextToken.reading || "";
+                        } else {
+                            break;
+                        }
+                    }
+                }
+
+                if (!matches[targetTerm].some(m => m.start === startPos)) {
+                    matches[targetTerm].push({
+                        start: startPos,
+                        length: extendedLength,
+                        reading: extendedReading ? katakanaToHiragana(extendedReading) : undefined
+                    });
                 }
             }
 
@@ -58,40 +82,38 @@ export class SentenceTokenizer {
                 const readingHiragana = readingWindow ? katakanaToHiragana(readingWindow) : undefined;
 
                 if (vocabSet.has(surfaceWindow)) {
-                    if (!matches[surfaceWindow]) {
-                        matches[surfaceWindow] = {
+                    if (!matches[surfaceWindow]) matches[surfaceWindow] = [];
+                    if (!matches[surfaceWindow].some(m => m.start === startPos && m.length === surfaceWindow.length)) {
+                        matches[surfaceWindow].push({
                             start: startPos,
                             length: surfaceWindow.length,
                             reading: readingHiragana
-                        };
+                        });
                     }
                 }
 
                 if (surfaceWindow.endsWith("かい")) {
-                    // Try basic hiragana deinflection ("をかう")
                     const deinflectedHiragana = surfaceWindow.slice(0, -2) + "かう";
-                    // For reading, "かい" -> "カイ" -> "かう", actually Kuromoji reading might be "ヲカイ", so we'd fix it.
-                    // But Kuromoji's reading for the conjugated word is typically exactly what we want for Furigana!
-                    // e.g. "ヲカイ" -> "をかい". 
                     if (vocabSet.has(deinflectedHiragana)) {
-                        if (!matches[deinflectedHiragana]) {
-                            matches[deinflectedHiragana] = {
+                        if (!matches[deinflectedHiragana]) matches[deinflectedHiragana] = [];
+                        if (!matches[deinflectedHiragana].some(m => m.start === startPos && m.length === surfaceWindow.length)) {
+                            matches[deinflectedHiragana].push({
                                 start: startPos,
                                 length: surfaceWindow.length,
                                 reading: readingHiragana
-                            };
+                            });
                         }
                     }
 
-                    // Try Kanji deinflection ("を買う" - typical for JMDict expressions)
                     const deinflectedKanji = surfaceWindow.slice(0, -2) + "買う";
                     if (vocabSet.has(deinflectedKanji)) {
-                        if (!matches[deinflectedKanji]) {
-                            matches[deinflectedKanji] = {
+                        if (!matches[deinflectedKanji]) matches[deinflectedKanji] = [];
+                        if (!matches[deinflectedKanji].some(m => m.start === startPos && m.length === surfaceWindow.length)) {
+                            matches[deinflectedKanji].push({
                                 start: startPos,
                                 length: surfaceWindow.length,
                                 reading: readingHiragana
-                            };
+                            });
                         }
                     }
                 }

@@ -1,99 +1,5 @@
 [
   {
-    "id": "127166",
-    "original": "男心と秋の空。",
-    "en": [
-      {
-        "id": "276923",
-        "text": "Man is as fickle as autumn weather."
-      }
-    ],
-    "indices": "男心~ と 秋(あき) の 空(そら)",
-    "vocabIds": [
-      "1792540",
-      "2520160",
-      "1332650",
-      "2709640",
-      "1245290"
-    ],
-    "matches": {
-      "1245290": {
-        "start": 5,
-        "length": 1,
-        "reading": "そら"
-      },
-      "1332650": {
-        "start": 3,
-        "length": 1,
-        "reading": "あき"
-      },
-      "1792540": {
-        "start": 0,
-        "length": 2,
-        "reading": "おとこごころ"
-      },
-      "2520160": {
-        "start": 0,
-        "length": 6,
-        "reading": "おとこごころとあきのそら"
-      },
-      "2709640": {
-        "start": 3,
-        "length": 3,
-        "reading": "あきのそら"
-      }
-    }
-  },
-  {
-    "id": "147279",
-    "original": "女心と秋の空。",
-    "en": [
-      {
-        "id": "267243",
-        "text": "A woman's mind and winter wind change often."
-      },
-      {
-        "id": "267281",
-        "text": "A woman is a weathercock."
-      }
-    ],
-    "indices": "女心 と 秋(あき) の 空(そら)",
-    "vocabIds": [
-      "1761950",
-      "1852730",
-      "1332650",
-      "2709640",
-      "1245290"
-    ],
-    "matches": {
-      "1245290": {
-        "start": 5,
-        "length": 1,
-        "reading": "そら"
-      },
-      "1332650": {
-        "start": 3,
-        "length": 1,
-        "reading": "あき"
-      },
-      "1761950": {
-        "start": 0,
-        "length": 2,
-        "reading": "おんなごころ"
-      },
-      "1852730": {
-        "start": 0,
-        "length": 6,
-        "reading": "おんなごころとあきのそら"
-      },
-      "2709640": {
-        "start": 3,
-        "length": 3,
-        "reading": "あきのそら"
-      }
-    }
-  },
-  {
     "id": "148201",
     "original": "秋の空は澄み渡っている。",
     "en": [
@@ -104,32 +10,24 @@
     ],
     "indices": "秋(あき) の 空(そら) は 澄み渡る{澄み渡っている}~",
     "vocabIds": [
-      "1332650",
-      "2709640",
-      "1245290",
-      "1373670"
+      "1373670",
+      "2709640"
     ],
     "matches": {
-      "1245290": {
-        "start": 2,
-        "length": 1,
-        "reading": "そら"
-      },
-      "1332650": {
-        "start": 0,
-        "length": 1,
-        "reading": "あき"
-      },
-      "1373670": {
-        "start": 4,
-        "length": 4,
-        "reading": "すみわたっ"
-      },
-      "2709640": {
-        "start": 0,
-        "length": 3,
-        "reading": "あきのそら"
-      }
+      "1373670": [
+        {
+          "start": 4,
+          "length": 7,
+          "reading": "すみわたっている"
+        }
+      ],
+      "2709640": [
+        {
+          "start": 0,
+          "length": 3,
+          "reading": "あきのそら"
+        }
+      ]
     }
   }
 ]

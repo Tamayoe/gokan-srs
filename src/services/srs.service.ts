@@ -491,7 +491,7 @@ export class SRSService {
        QUEUE REFILL
        ======================= */
 
-    
+
     /**
      * Finds the next batch of vocabulary IDs eligible for learning.
      * Does NOT create VocabProgress objects or modify the queue.
@@ -640,6 +640,7 @@ export class SRSService {
 
             updated.meaning.memoryStrength = maxS;
             updated.meaning.interval = maxIntervalDays;
+            updated.meaning.dueDate = null; // [BUGFIX] Ensure it is cleared so chart ignores it
 
             updated.nextReviewAt = null; // No review calculation needed
             updated.stage = 'graduated';
