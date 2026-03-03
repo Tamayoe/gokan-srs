@@ -28,6 +28,9 @@ export interface Vocabulary {
     /** IDs of other vocabularies contained within this one (for inheritance) */
     components?: string[];
 
+    /** IDs of other vocabularies this word is a component of */
+    parents?: string[];
+
     /** Linguistic senses (kept separate, structured) */
     senses: Sense[];
 

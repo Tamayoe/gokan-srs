@@ -14,11 +14,12 @@ export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
     const navigate = useNavigate();
     const [sentences, setSentences] = useState<Sentence[]>([]);
     const [loading, setLoading] = useState(true);
+    const [isExpanded, setIsExpanded] = useState(false);
 
-    // 1. Load Sentences
     useEffect(() => {
         let mounted = true;
         setLoading(true);
+        setIsExpanded(false); // Reset expansion state on vocab change
         VocabularyService.loadSentences(vocabId).then(data => {
             if (mounted && data) {
                 setSentences(data);
@@ -28,16 +29,30 @@ export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
         return () => { mounted = false; };
     }, [vocabId]);
 
-    // Note: We no longer need to load referenced vocabs because InteractiveSentence
-    // uses the pre-calculated 'matches' from the sentence data.
+    if (loading) return null;
+    if (sentences.length === 0) return null;
 
-    if (loading) {
-        return null;
-    }
+    const INITIAL_COUNT = 5;
+    const isExpandable = sentences.length > INITIAL_COUNT;
+    const displayedSentences = isExpanded ? sentences : sentences.slice(0, INITIAL_COUNT);
 
-    if (sentences.length === 0) {
-        return null; // Don't show card if no sentences
-    }
+    const SentenceItem = ({ sentence, isLast }: { sentence: Sentence, isLast: boolean }) => (
+        <div key={sentence.id} className={`pb-4 ${isLast && !isExpandable ? '' : 'border-b border-divider mb-4'}`}>
+            <div className="text-xl leading-relaxed text-primary mb-1">
+                <InteractiveSentence
+                    sentence={sentence}
+                    targetVocabId={vocabId}
+                    onVocabClick={(vid) => navigate(`/vocab/${vid}`)}
+                    showFurigana={true}
+                />
+            </div>
+            {sentence.en && sentence.en.length > 0 && (
+                <div className="text-sm text-secondary font-serif">
+                    {sentence.en[0].text}
+                </div>
+            )}
+        </div>
+    );
 
     return (
         <Card>
@@ -45,27 +60,44 @@ export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
                 Example Sentences <span className="text-sm font-normal text-tertiary ml-2">({sentences.length})</span>
             </h2>
             <div className="w-full">
-                <Virtuoso
-                    useWindowScroll
-                    data={sentences}
-                    itemContent={(index: number, sentence: Sentence) => (
-                        <div key={sentence.id} className={`pb-4 ${index === sentences.length - 1 ? '' : 'border-b border-divider mb-4'}`}>
-                            <div className="text-xl leading-relaxed text-primary mb-1">
-                                <InteractiveSentence
-                                    sentence={sentence}
-                                    targetVocabId={vocabId}
-                                    onVocabClick={(vid) => navigate(`/vocab/${vid}`)}
-                                    showFurigana={true}
-                                />
-                            </div>
-                            {sentence.en && sentence.en.length > 0 && (
-                                <div className="text-sm text-secondary font-serif">
-                                    {sentence.en[0].text}
+                {isExpanded ? (
+                    <Virtuoso
+                        useWindowScroll
+                        data={sentences}
+                        itemContent={(index, sentence) => (
+                            <SentenceItem sentence={sentence} isLast={index === sentences.length - 1} />
+                        )}
+                        components={{
+                            Footer: () => (
+                                <div className="mt-4 text-center">
+                                    <button
+                                        onClick={() => setIsExpanded(false)}
+                                        className="text-sm font-gothic text-accent hover:text-accent/80 transition-colors py-2 px-4 rounded-md border border-accent/20 hover:bg-accent/5 w-full md:w-auto"
+                                    >
+                                        Show less
+                                    </button>
                                 </div>
-                            )}
-                        </div>
-                    )}
-                />
+                            )
+                        }}
+                    />
+                ) : (
+                    <div>
+                        {displayedSentences.map((sentence, index) => (
+                            <SentenceItem key={sentence.id} sentence={sentence} isLast={index === displayedSentences.length - 1} />
+                        ))}
+                    </div>
+                )}
+
+                {!isExpanded && isExpandable && (
+                    <div className="mt-4 text-center">
+                        <button
+                            onClick={() => setIsExpanded(true)}
+                            className="text-sm font-gothic text-accent hover:text-accent/80 transition-colors py-2 px-4 rounded-md border border-accent/20 hover:bg-accent/5 w-full md:w-auto"
+                        >
+                            Show all {sentences.length} sentences
+                        </button>
+                    </div>
+                )}
             </div>
         </Card>
     );

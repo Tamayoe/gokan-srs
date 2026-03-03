@@ -16,7 +16,6 @@ type SortDirection = 'asc' | 'desc';
 
 export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) {
     const [vocabCache, setVocabCache] = useState<Record<string, Vocabulary>>({});
-    const [isLoadingVocabs, setIsLoadingVocabs] = useState(false);
 
     const [searchQuery, setSearchQuery] = useState("");
     const [sortField, setSortField] = useState<SortField>('added_date');
@@ -102,27 +101,23 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
     // Reset page on filter change
     useEffect(() => { setPage(1); }, [searchQuery, sortField, sortDir]);
 
-    // Fetch missing Vocab JSON files for the displayed page ONLY
+    // Fetch all Vocab JSON files at once so search filters instantly
     useEffect(() => {
         let isCancelled = false;
 
         const loadMissing = async () => {
-            const missingIds = displayedItems
+            const missingIds = progress
                 .map(p => p.vocabId)
                 .filter(id => !vocabCache[id]);
 
             if (missingIds.length === 0) return;
 
-            setIsLoadingVocabs(true);
-
-            const promises = missingIds.map(async (id) => {
-                try {
-                    return await VocabularyService.loadVocab(id);
-                } catch (e) {
-                    console.error(`Failed to load vocab ${id}`, e);
-                    return null;
-                }
-            });
+            // Fetch in larger chunks or all at once to avoid overloading network? 
+            // 2000 local JSONs usually resolve in ~50ms in Vite
+            const promises = missingIds.map(id => VocabularyService.loadVocab(id).catch(e => {
+                console.error(`Failed to load vocab ${id}`, e);
+                return null;
+            }));
 
             const results = await Promise.all(promises);
 
@@ -138,40 +133,19 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                     }
                     return changed ? next : prev;
                 });
-                setIsLoadingVocabs(false);
             }
         };
 
         loadMissing();
 
         return () => { isCancelled = true; };
-    }, [displayedItems, vocabCache]);
+    }, [progress, vocabCache]);
 
     // Reset page on filter change
     useEffect(() => { setPage(1); }, [searchQuery, sortField, sortDir]);
 
-
-    if (progress.length > 0 && isLoadingVocabs && displayedItems.some(p => !vocabCache[p.vocabId])) {
-        return (
-            <div className="flex flex-col gap-4 animate-fade-in">
-                {/* Skeleton Controls */}
-                <div className="flex flex-col md:flex-row gap-4 p-4 bg-surface rounded-lg shadow-sm border border-divider items-center justify-between opacity-50 pointer-events-none">
-                    <div className="w-full md:w-64 h-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse" />
-                    <div className="flex gap-2 w-full md:w-auto">
-                        <div className="w-32 h-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse" />
-                        <div className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse" />
-                    </div>
-                </div>
-
-                {/* Skeleton Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {Array.from({ length: 12 }).map((_, i) => (
-                        <VocabCardSkeleton key={i} />
-                    ))}
-                </div>
-            </div>
-        );
-    }
+    // Remove the full-screen skeleton block so the search input stays usable immediately,
+    // and let the grid render individual VocabCardSkeletons instead.
 
     return (
         <div className="flex flex-col gap-4 animate-fade-in">

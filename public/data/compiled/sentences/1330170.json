@@ -1,41 +1,5 @@
 [
   {
-    "id": "12508868",
-    "original": "寿退社しました。",
-    "en": [
-      {
-        "id": "12516978",
-        "text": "I retired when I got married."
-      },
-      {
-        "id": "12516979",
-        "text": "I stopped working once I got married."
-      }
-    ],
-    "vocabIds": [
-      "1330170",
-      "2414290",
-      "1411400"
-    ],
-    "matches": {
-      "1330170": {
-        "start": 0,
-        "length": 1,
-        "reading": "ことぶき"
-      },
-      "1411400": {
-        "start": 1,
-        "length": 2,
-        "reading": "たいしゃ"
-      },
-      "2414290": {
-        "start": 0,
-        "length": 3,
-        "reading": "ことぶきたいしゃ"
-      }
-    }
-  },
-  {
     "id": "12508869",
     "original": "寿退職しました。",
     "en": [
@@ -45,20 +9,24 @@
       }
     ],
     "vocabIds": [
-      "1330170",
-      "1411420"
+      "1411420",
+      "1330170"
     ],
     "matches": {
-      "1330170": {
-        "start": 0,
-        "length": 1,
-        "reading": "ことぶき"
-      },
-      "1411420": {
-        "start": 1,
-        "length": 2,
-        "reading": "たいしょく"
-      }
+      "1330170": [
+        {
+          "start": 0,
+          "length": 1,
+          "reading": "ことぶき"
+        }
+      ],
+      "1411420": [
+        {
+          "start": 1,
+          "length": 2,
+          "reading": "たいしょく"
+        }
+      ]
     }
   },
   {
@@ -71,76 +39,32 @@
       }
     ],
     "vocabIds": [
-      "1330170",
       "1411420",
+      "1330170",
       "1580640"
     ],
     "matches": {
-      "1330170": {
-        "start": 4,
-        "length": 1,
-        "reading": "ことぶき"
-      },
-      "1411420": {
-        "start": 5,
-        "length": 2,
-        "reading": "たいしょく"
-      },
-      "1580640": {
-        "start": 9,
-        "length": 1,
-        "reading": "ひと"
-      }
-    }
-  },
-  {
-    "id": "13155299",
-    "original": "日本で百寿者がたくさんいますね。",
-    "en": [
-      {
-        "id": "13155298",
-        "text": "There are a lot of centenarians living in Japan."
-      }
-    ],
-    "vocabIds": [
-      "1582710",
-      "1488000",
-      "2833920",
-      "2854119",
-      "1330170",
-      "1322990"
-    ],
-    "matches": {
-      "1322990": {
-        "start": 5,
-        "length": 1,
-        "reading": "しゃ"
-      },
-      "1330170": {
-        "start": 4,
-        "length": 1,
-        "reading": "ことぶき"
-      },
-      "1488000": {
-        "start": 3,
-        "length": 1,
-        "reading": "ひゃく"
-      },
-      "1582710": {
-        "start": 0,
-        "length": 2,
-        "reading": "にっぽん"
-      },
-      "2833920": {
-        "start": 3,
-        "length": 2,
-        "reading": "ひゃくことぶき"
-      },
-      "2854119": {
-        "start": 3,
-        "length": 3,
-        "reading": "ひゃくことぶきしゃ"
-      }
+      "1330170": [
+        {
+          "start": 4,
+          "length": 1,
+          "reading": "ことぶき"
+        }
+      ],
+      "1411420": [
+        {
+          "start": 5,
+          "length": 2,
+          "reading": "たいしょく"
+        }
+      ],
+      "1580640": [
+        {
+          "start": 9,
+          "length": 1,
+          "reading": "ひと"
+        }
+      ]
     }
   }
 ]

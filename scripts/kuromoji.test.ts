@@ -34,4 +34,15 @@ describe('Kuromoji Sentence Parsing & Compound Logic', () => {
     it('should properly match the compound 顰蹙を買う when conjugated to かい', () => {
         expect(testMatch('文句を言って顰蹙をかいまくる。', '顰蹙を買う')).toBe(true);
     });
+
+    it('should extend the highlighted length to include subsequent auxiliary verbs and verb suffixes', () => {
+        const parser = new SentenceTokenizer(tokenizer);
+        const matches = parser.extractMatches('先日便に回虫が出ました。', ['出る']);
+        const matchArray = matches['出る'];
+
+        expect(matchArray).toBeDefined();
+        // The original sentence is 12 chars: '先', '日', '便', 'に', '回', '虫', 'が', '出', 'ま', 'し', 'た', '。'
+        // '出' is length 1. But '出ました' is length 4.
+        expect(matchArray[0].length).toBe(4);
+    });
 });

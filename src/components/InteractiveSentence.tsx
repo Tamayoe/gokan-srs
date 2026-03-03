@@ -34,18 +34,25 @@ export function InteractiveSentence({
         reading?: string;
     }
 
-    const sortedMatchKeys = Object.keys(matches).sort((a, b) => {
-        const mA = matches[a];
-        const mB = matches[b];
-        return mA.start - mB.start;
-    });
+    const flatMatches: { vocabId: string, start: number, length: number, reading?: string }[] = [];
+    for (const vocabId in matches) {
+        const matchArray = matches[vocabId];
+        if (Array.isArray(matchArray)) {
+            for (const m of matchArray) {
+                flatMatches.push({ vocabId, ...m });
+            }
+        } else if (matchArray) {
+            // Fallback for old data format
+            flatMatches.push({ vocabId, ...(matchArray as any) });
+        }
+    }
+
+    flatMatches.sort((a, b) => a.start - b.start);
 
     const segments: Segment[] = [];
     let currentIndex = 0;
 
-    for (const vocabId of sortedMatchKeys) {
-        const match = matches[vocabId];
-
+    for (const match of flatMatches) {
         // Skip if this match starts before current index (overlap handling: strict skip)
         if (match.start < currentIndex) continue;
 
@@ -64,7 +71,7 @@ export function InteractiveSentence({
         segments.push({
             type: 'match',
             content: text.substring(match.start, end),
-            vocabId: vocabId,
+            vocabId: match.vocabId,
             start: match.start,
             end: end,
             reading: match.reading
