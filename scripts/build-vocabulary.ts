@@ -5,6 +5,8 @@ import { buildMiscFlags, parseJPDBEntry } from './build-common';
 import { BUILD_LIMITS } from './build-constants';
 import type { Kanji } from '../src/models/kanji.model';
 import { JMDict } from "../src/models/data.model";
+import { SentenceTokenizer } from '../src/utils/tokenizer';
+import kuromoji from 'kuromoji';
 
 // Type definitions for new JPDB format
 interface JPDBEntry {
@@ -266,6 +268,25 @@ for (const indexFile of indicesToClean) {
     }
 }
 
+// Initialize tokenizer for component extraction
+console.log('⏳ Initializing tokenizer for component extraction...');
+const tokenizer = await new Promise<kuromoji.Tokenizer<kuromoji.IpadicFeatures>>((resolve, reject) => {
+    kuromoji.builder({ dicPath: 'node_modules/kuromoji/dict' }).build((err, t) => {
+        if (err) reject(err);
+        else resolve(t);
+    });
+});
+const sentenceTokenizer = new SentenceTokenizer(tokenizer);
+console.log('✅ Tokenizer ready!');
+
+const vocabMap = new Map<string, string[]>();
+for (const v of selected) {
+    const k = v.writtenForm.kanji;
+    if (!vocabMap.has(k)) vocabMap.set(k, []);
+    vocabMap.get(k)!.push(v.id);
+}
+const vocabSetToMatch = new Set(vocabMap.keys());
+
 // Build KKLC index (step-by-step mode)
 const kklcIndex: Record<number, string[]> = {};
 
@@ -277,6 +298,33 @@ interface FrequencyIndexEntry {
 const frequencyIndex: FrequencyIndexEntry[] = [];
 
 for (const vocab of selected) {
+    const targetWord = vocab.writtenForm.kanji;
+    const components = new Set<string>();
+
+    // 1. Kuromoji extraction
+    const extracted = sentenceTokenizer.extractMatches(targetWord, vocabSetToMatch);
+    for (const word of Object.keys(extracted)) {
+        if (word !== targetWord) {
+            const vIds = vocabMap.get(word);
+            if (vIds) vIds.forEach(id => components.add(id));
+        }
+    }
+
+    // 2. Substring matching for kanji-containing words
+    for (const candidate of selected) {
+        if (candidate.id === vocab.id) continue;
+        const candidateWord = candidate.writtenForm.kanji;
+
+        // Only consider candidates that actually contain kanji, to avoid false positive kana matches
+        if (candidate.writtenForm.containedKanji.length > 0 && targetWord.includes(candidateWord)) {
+            components.add(candidate.id);
+        }
+    }
+
+    if (components.size > 0) {
+        vocab.components = Array.from(components);
+    }
+
     const { kklcStep, ...clean } = vocab;
 
     // Write individual vocab file

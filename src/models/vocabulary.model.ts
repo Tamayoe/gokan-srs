@@ -25,6 +25,9 @@ export interface Vocabulary {
         kklcStep: number;
     };
 
+    /** IDs of other vocabularies contained within this one (for inheritance) */
+    components?: string[];
+
     /** Linguistic senses (kept separate, structured) */
     senses: Sense[];
 

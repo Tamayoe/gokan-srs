@@ -179,10 +179,32 @@ async function main() {
         // Extract matches using our tested SentenceTokenizer logic against known vocab keys
         const extractedMatches = sentenceTokenizer.extractMatches(text, vocabSetToMatch);
 
+        // Filter extracted matches to implement greedy selection
+        // Sort matches by length descending
+        const sortedMatchEntries = Object.entries(extractedMatches)
+            .sort((a, b) => b[1].length - a[1].length);
+
+        const acceptedMatchEntries: typeof sortedMatchEntries = [];
+
+        for (const entry of sortedMatchEntries) {
+            const [term, match] = entry;
+
+            // Check if this match is fully enclosed by any already accepted (longer) match
+            const isFullyEnclosed = acceptedMatchEntries.some(([_, acceptedMatch]) => {
+                const acceptedEnd = acceptedMatch.start + acceptedMatch.length;
+                const matchEnd = match.start + match.length;
+                return match.start >= acceptedMatch.start && matchEnd <= acceptedEnd;
+            });
+
+            if (!isFullyEnclosed) {
+                acceptedMatchEntries.push(entry);
+            }
+        }
+
         const matches: Record<string, { start: number, length: number, reading?: string }> = {};
         const matchedVocabIds: string[] = [];
 
-        for (const [matchedTerm, matchInfo] of Object.entries(extractedMatches)) {
+        for (const [matchedTerm, matchInfo] of acceptedMatchEntries) {
             const vocabIds = vocabMap.get(matchedTerm);
             if (!vocabIds) continue;
 
