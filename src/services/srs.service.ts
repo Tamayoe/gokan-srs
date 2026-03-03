@@ -155,14 +155,14 @@ export class SRSService {
     ): { updated: VocabProgress; result: AnswerResult, interval: number } {
         const result = forcedResult ?? this.analyzeError(userAnswer, correctAnswer);
 
-        // [NEW] Retry Logic: 
+        // [NEW] Retry Logic:
         // If this exact quiz type is in retry mode, separate handling?
         // Actually, needsRetry is currently a boolean on the whole vocab.
         // We should PROBABLY treat needsRetry as specific to the quiz type eventually,
         // but for now, if 'needsRetry' is true, we assume it applies to the active question.
         // *Correction*: The user wants successive batches. If I fail Reading, I retry Reading.
         // If I fail Meaning, I retry Meaning.
-        // The current model has a single `needsRetry` flag. 
+        // The current model has a single `needsRetry` flag.
         // Decision: Let's assume `needsRetry` applies to the CURRENT quiz type being presented.
         // (A safer refactor later would be `needsRetry: { reading: boolean, meaning: boolean }`)
         // For Phase 1, we keep single flag but check it.
@@ -186,9 +186,9 @@ export class SRSService {
 
         // Check for Graduation (Mastery)
         // A word is graduated if BOTH are mastered? Or if the specific one is mastered?
-        // The design says: "Remains 'learning' until BOTH...". 
+        // The design says: "Remains 'learning' until BOTH...".
         // Actually, let's keep it simple: If memoryStrength >= MAX => 'graduated' logic per entry?
-        // No, 'stage' is top-level. 
+        // No, 'stage' is top-level.
         // Let's use the aggregation logic decided:
         // isMastered = reading.memory >= MAX && meaning.memory >= MAX
 
@@ -360,7 +360,7 @@ export class SRSService {
 
         // Minor error check
         // Rule: Levenshtein distance <= 1 AND length relative check
-        // User Examples: 
+        // User Examples:
         // こたへ (subs) -> minor
         // こたぇ (subs) -> minor
         // こたええ (insert) -> minor
@@ -491,42 +491,7 @@ export class SRSService {
        QUEUE REFILL
        ======================= */
 
-
-    static async refillQueue(
-        currentQueue: VocabProgress[],
-        kanjiKnowledge: KanjiKnowledge,
-        settings: UserSettings,
-        maxToAdd: number,
-        ignoredIds: Set<string> = new Set()
-    ): Promise<VocabProgress[]> {
-        if (maxToAdd <= 0) return currentQueue;
-
-        const queue = [...currentQueue];
-        const activeIds = new Set(queue.map(v => v.vocabId));
-
-        // Get candidates using the new method
-        const candidates = await this.getNextCandidates(
-            currentQueue,
-            kanjiKnowledge,
-            settings,
-            maxToAdd,
-            ignoredIds
-        );
-
-        // Convert to VocabProgress and add to queue
-        const winRate = this.calculateRecentWinRate(queue);
-        let difficultyOffset = 0;
-        if (winRate > 0.80) difficultyOffset = 0.1;
-        else if (winRate < 0.70) difficultyOffset = -0.1;
-
-        for (const vocabId of candidates) {
-            queue.push(this.createVocabProgress(vocabId, difficultyOffset));
-            activeIds.add(vocabId);
-        }
-
-        return queue;
-    }
-
+    
     /**
      * Finds the next batch of vocabulary IDs eligible for learning.
      * Does NOT create VocabProgress objects or modify the queue.
@@ -561,7 +526,7 @@ export class SRSService {
     /**
      * Creates a new VocabProgress object for a given vocab ID.
      * Use this when the user explicitly accepts a new vocabulary item.
-     * 
+     *
      * @param vocabId ID of the vocabulary to learn
      * @param difficultyOffset Optional difficulty adjustment based on user performance
      */

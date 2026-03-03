@@ -128,6 +128,7 @@ gokan-srs/
 - `reading`: Primary reading + alternatives
 - `frequency`: Kanji rank + optional kana rank
 - `progression.kklcStep`: KKLC step requirement
+- `components[]`: IDs of other vocabularies contained within this one
 - `senses[]`: Array of meanings with POS, glosses, misc tags
 - `usageHints`: Optional context hints
 
