@@ -109,3 +109,29 @@ function pickRandom<T>(items: T[]): T | null {
     const index = Math.floor(Math.random() * items.length);
     return items[index];
 }
+
+export function calculateMasteryPercentage(strength: number): number {
+    const sMin = CONSTANTS.srs.formula.minMemoryStrength;
+    const sSoft = CONSTANTS.srs.formula.mastery.visualSoftCap;
+    const sMax = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
+
+    if (strength <= sMin) return 0;
+
+    let p1 = 0;
+    if (strength >= sSoft) {
+        p1 = 100;
+    } else {
+        const numer = Math.log(strength / sMin);
+        const denom = Math.log(sSoft / sMin);
+        p1 = (numer / denom) * 100;
+    }
+
+    let p2 = 0;
+    if (strength > sSoft) {
+        const numer = Math.log(strength / sSoft);
+        const denom = Math.log(sMax / sSoft);
+        p2 = (numer / denom) * 100;
+    }
+
+    return Math.min(Math.max(p1 + p2, 0), 200);
+}

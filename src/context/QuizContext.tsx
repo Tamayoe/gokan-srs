@@ -27,7 +27,7 @@ import { CONSTANTS } from '../commons/constants';
 import { DEFAULT_SETTINGS } from '../models/user.model';
 import { computeSessionView } from '../utils/quiz.utils';
 import type { SetupCompleteValues, SetupValues } from "../models/state.model";
-import { getNextVocabToStudy } from "../utils/srs.utils";
+import { getNextVocabToStudy, calculateMasteryPercentage } from "../utils/srs.utils";
 import type { QuizItem, QuizType } from "../utils/srs.utils";
 import { QuizContext } from "./useQuiz";
 import { useGoogleDrive } from "./GoogleDriveContext";
@@ -708,7 +708,9 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     ? updated.reading.memoryStrength
                     : updated.meaning.memoryStrength;
 
-                const delta = newStrength - oldStrength;
+                const oldMastery = calculateMasteryPercentage(oldStrength);
+                const newMastery = calculateMasteryPercentage(newStrength);
+                const delta = newMastery - oldMastery;
 
                 historyItem = {
                     vocabId: id,

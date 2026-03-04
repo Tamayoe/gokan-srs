@@ -4,6 +4,7 @@ import { useResponsive } from '../context/Responsive/useResponsive';
 import { CONSTANTS } from '../commons/constants';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, AlertCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const SessionProgress: React.FC = () => {
     const { state, sessionState } = useQuiz();
@@ -140,12 +141,19 @@ const HistoryTicker: React.FC = () => {
                         transition={{ duration: 0.3 }}
                         className="flex items-center gap-2 text-sm whitespace-nowrap"
                     >
-                        <span className={`font-serif ${item.result === 'correct' ? 'text-emerald-600' :
-                            item.result === 'minor_error' ? 'text-amber-600' :
-                                'text-desaturated-red-600'
-                            }`}>
+                        <Link
+                            to={`/vocab/${item.vocabId}`}
+                            className={`font-serif hover:underline cursor-pointer ${item.result === 'correct' ? 'text-emerald-600' :
+                                item.result === 'minor_error' ? 'text-amber-600' :
+                                    'text-desaturated-red-600'
+                                }`}
+                            onClick={(e) => {
+                                // Since it's within a ticker, stop propagation isn't strictly necessary but safe
+                                e.stopPropagation();
+                            }}
+                        >
                             {item.writtenForm}
-                        </span>
+                        </Link>
 
                         {/* Result Icon/Indicator */}
                         {item.result === 'correct' && <CheckCircle className="w-3 h-3 text-emerald-500" />}
@@ -154,7 +162,7 @@ const HistoryTicker: React.FC = () => {
 
                         {/* Delta */}
                         <span className="text-xs text-secondary-400 tabular-nums">
-                            {item.delta > 0 ? '+' : ''}{item.delta.toFixed(1)}
+                            {item.delta > 0 ? '+' : ''}{Math.round(item.delta)}%
                         </span>
 
                         {/* Separator for all but last visible */}
