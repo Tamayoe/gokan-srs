@@ -45,7 +45,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                 <span className="absolute -right-6 -top-1">
-                                    <Combine size={18} className="text-tertiary opacity-40" />
+                                    <Combine size={18} className="text-divider opacity-40" />
                                 </span>
                             )}
                         </div>
@@ -62,7 +62,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                 ).slice(0, 3).map(rawTag => (
                                     <span
                                         key={rawTag}
-                                        className="px-1.5 py-0.5 text-[9px] rounded bg-feedback-background text-secondary font-gothic whitespace-nowrap"
+                                        className="px-1.5 py-0.5 text-[9px] rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15 whitespace-nowrap"
                                     >
                                         {TagsLookup[rawTag as Tags]}
                                     </span>
@@ -78,9 +78,6 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                     <div className="flex justify-end mb-4">
                         <div className="flex flex-col items-center gap-1">
                             <MasteryRing memoryStrength={currentProgress?.reading.memoryStrength ?? 0} size={50} />
-                            <span className="text-[10px] text-tertiary uppercase tracking-widest font-gothic font-semibold">
-                                Mastery
-                            </span>
                         </div>
                     </div>
 
@@ -96,7 +93,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                 {/* Merged Entry Icon */}
                                 {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                     <span className="absolute -right-8 top-0">
-                                        <Combine size={24} className="text-tertiary opacity-30" />
+                                        <Combine size={24} className="text-divider opacity-30" />
                                     </span>
                                 )}
                             </div>
@@ -117,7 +114,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                     ).map(rawTag => (
                                         <span
                                             key={rawTag}
-                                            className="px-2 py-0.5 text-xs rounded bg-feedback-background text-secondary font-gothic"
+                                            className="px-2 py-0.5 text-xs rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15"
                                         >
                                             {TagsLookup[rawTag as Tags]}
                                         </span>

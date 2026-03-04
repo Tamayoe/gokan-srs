@@ -36,11 +36,11 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
                     >
                         {vocab.writtenForm.kanji}
                         {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
-                            <Combine size={40} className="text-tertiary" />
+                            <Combine size={40} className="text-divider" />
                         )}
                     </div>
 
-                    <div className="flex flex-row justify-center items-center gap-1 mt-4 text-base font-gothic text-secondary">
+                    <div className="flex flex-row justify-center items-center gap-1 mt-4 text-base font-gothic text-secondary/90 opacity-90">
                         {[vocab.reading.primary, ...vocab.reading.alternatives].join(', ')}
                     </div>
                 </div>
@@ -52,7 +52,7 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
                     {vocab.senses.map((sense, i) => (
                         <span key={i}>
                             {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
-                                <span className="text-xs text-tertiary mr-1 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
+                                <span className="text-xs px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary mr-1 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
                             )}
                             {sense.glosses.join(', ')}
                             {i !== vocab.senses.length - 1 ? ', ' : ''}

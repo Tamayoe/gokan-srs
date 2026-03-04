@@ -1,46 +1,31 @@
 export const THEME = {
     colors: {
-        background: '#F6F4EF',
+        background: '#F5F0E8',
         feedbackBackground: '#F0EEE8',
         surface: '#FFFFFF',
-        surfaceHover: '#DDDDDD',
-        primary: '#1F2328',
-        secondary: '#5F6368',
-        tertiary: '#8B8E93',
-        divider: '#D8D6D0',
-        accent: '#2E3A59',
-        accentHover: '#3D4A6B',
+        surfaceHover: '#E8E0D0',
+        primary: '#1a1a2e',
+        secondary: '#3D5A80',
+        tertiary: '#7D7466',
+        divider: '#E8E0D0',
+        accent: '#3D5A80',
+        accentHover: '#2A405D',
         error: '#8A3A2E',
         errorAccent: 'rgba(138, 58, 46, 0.45)', // 45% opacity
         inputPlaceholder: '#9AA0A6',
-        meaningMuted: 'rgba(31, 35, 40, 0.6)', // primary with 60% opacity
+        meaningMuted: 'rgba(26, 26, 46, 0.6)', // primary with 60% opacity
         labelNeutral: '#8B8E93',
-        muted: '#9ca3af',        // ← ADD THIS
-        subtle: '#6b7280',      // optional, useful later
+        muted: '#9ca3af',
+        subtle: '#6b7280',
     },
     mastery: {
-        track: '#e2e8f0', // Slate 200
-        loop1: '#4f46e5', // Indigo 600
-        loop2: {
-            background: '#818cf8', // Indigo 400
-            gradientStart: '#06b6d4', // Cyan 500 (Shiny)
-            gradientEnd: '#3b82f6',   // Blue 500 (Deep)
-        },
+        track: '#E8E0D0',
+        loop1: '#3D5A80',
         reading: {
-            loop1: '#6366f1', // Indigo 500
-            loop2: {
-                background: '#e0e7ff', // Indigo 100
-                gradientStart: '#818cf8', // Indigo 400
-                gradientEnd: '#4338ca', // Indigo 700
-            }
+            loop1: '#3D5A80',
         },
         meaning: {
-            loop1: '#14b8a6', // Teal 500
-            loop2: {
-                background: '#ccfbf1', // Teal 100
-                gradientStart: '#2dd4bf', // Teal 400
-                gradientEnd: '#0f766e', // Teal 700
-            }
+            loop1: 'rgba(61, 90, 128, 0.6)', // Accent at 60% opacity
         }
     },
     fonts: {

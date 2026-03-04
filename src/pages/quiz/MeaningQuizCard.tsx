@@ -44,9 +44,6 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                     {!isMobile && (
                         <div className="flex flex-col items-center gap-1 mt-4 opacity-50 hover:opacity-100 transition-opacity">
                             <MasteryRing memoryStrength={currentProgress?.meaning.memoryStrength ?? 0} size={50} />
-                            <span className="text-[10px] text-tertiary uppercase tracking-widest font-gothic font-semibold">
-                                Mastery
-                            </span>
                         </div>
                     )}
                 </div>
@@ -90,7 +87,7 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                 <span className="absolute -right-6 top-0">
-                                    <Combine size={18} className="text-tertiary opacity-40" />
+                                    <Combine size={18} className="text-divider opacity-40" />
                                 </span>
                             )}
                         </div>
@@ -109,7 +106,7 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                         ).map(rawTag => (
                             <span
                                 key={rawTag}
-                                className="px-2 py-0.5 text-xs rounded bg-feedback-background text-secondary font-gothic"
+                                className="px-2 py-0.5 text-xs rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15"
                             >
                                 {TagsLookup[rawTag as Tags]}
                             </span>

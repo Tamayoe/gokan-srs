@@ -81,12 +81,12 @@ export default function VocabDetailScreen() {
                                         <span>{vocab.writtenForm.kanji}</span>
                                         {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
                                             <span className="absolute -right-10 top-0">
-                                                <Combine size={24} className="text-tertiary opacity-40" />
+                                                <Combine size={24} className="text-divider opacity-40" />
                                             </span>
                                         )}
                                     </div>
                                     <div className="space-y-2">
-                                        <div className="text-3xl font-gothic text-secondary">
+                                        <div className="text-3xl font-gothic text-secondary/90 opacity-90">
                                             {vocab.reading.primary}
                                         </div>
                                         {vocab.reading.alternatives.length > 0 && (
@@ -164,7 +164,7 @@ export default function VocabDetailScreen() {
                                             <div className="flex items-center gap-2 mb-1">
                                                 <span className="font-gothic font-bold text-primary">{mv.originalPrimaryReading}</span>
                                                 <span className="text-xs text-tertiary font-mono">ID: {mv.id}</span>
-                                                {mv.isBase && <span className="text-[10px] bg-accent/10 text-accent px-1.5 py-0.5 rounded font-gothic">BASE</span>}
+                                                {mv.isBase && <span className="text-[10px] bg-accent/15 text-accent px-1.5 py-0.5 rounded font-gothic">BASE</span>}
                                             </div>
                                             <div className="text-sm text-meaning-muted font-serif">
                                                 {mv.originalGlosses.join(', ')}
@@ -253,7 +253,7 @@ export default function VocabDetailScreen() {
                                             {Array.from(new Set([...sense.pos, ...sense.misc.rawTags])).map(tag => (
                                                 <span
                                                     key={tag}
-                                                    className="px-2 py-1 text-xs rounded bg-feedback-background text-secondary font-gothic"
+                                                    className="px-2 py-1 text-xs rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15"
                                                 >
                                                     {TagsLookup[tag as Tags]}
                                                 </span>
