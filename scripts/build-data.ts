@@ -398,17 +398,17 @@ async function main() {
             }
         }
 
-        flatMatches.sort((a, b) => b.match.length - a.match.length);
+        flatMatches.sort((a, b) => b.match.length - a.match.length || b.term.length - a.term.length);
         const acceptedMatches: typeof flatMatches = [];
 
         for (const entry of flatMatches) {
             const { match } = entry;
-            const isFullyEnclosed = acceptedMatches.some(accepted => {
+            const isOverlapping = acceptedMatches.some(accepted => {
                 const acceptedEnd = accepted.match.start + accepted.match.length;
                 const matchEnd = match.start + match.length;
-                return match.start >= accepted.match.start && matchEnd <= acceptedEnd;
+                return match.start < acceptedEnd && matchEnd > accepted.match.start;
             });
-            if (!isFullyEnclosed) acceptedMatches.push(entry);
+            if (!isOverlapping) acceptedMatches.push(entry);
         }
 
         const matches: Record<string, { start: number, length: number, reading?: string }[]> = {};
