@@ -1,7 +1,15 @@
-<svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="0" width="100" height="100" fill="#F6F4EF"/>
-    <rect x="2" y="2" width="96" height="96" stroke="#1F2328" stroke-width="2" fill="none"/>
-    <text x="8" y="62" fontFamily="'Noto Serif JP', serif" font-size="42" fill="#1F2328" >
-        語感
-    </text>
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Circular seal ring -->
+    <circle cx="50" cy="50" r="44" stroke="#2E3A59" stroke-width="2.5" fill="none"/>
+    <!-- 語感 centered inside the ring -->
+    <text
+        x="50"
+        y="50"
+        font-family="'Noto Serif JP', serif"
+        font-size="34"
+        text-anchor="middle"
+        dominant-baseline="central"
+        fill="#2E3A59"
+        letter-spacing="2"
+    >語感</text>
 </svg>

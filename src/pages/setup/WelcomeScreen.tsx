@@ -81,7 +81,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 bg-background relative overflow-hidden transition-colors duration-200">
             {/* Subtle floating background elements (optional flair) */}
-            <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none select-none text-[20vw] font-mincho text-primary/10 overflow-hidden leading-none translate-x-1/4 -translate-y-1/4">
+            <div className="absolute bottom-0 right-0 opacity-[0.04] pointer-events-none select-none text-[30vw] font-mincho text-primary leading-none translate-x-1/4 translate-y-1/4">
                 語感
             </div>
 
@@ -89,35 +89,38 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                 {/* Header & Philosophy */}
                 <div className="text-center space-y-6">
                     <h1 className="text-4xl md:text-5xl font-mincho text-primary mx-auto">
-                        Welcome to Gokan
+                        Gokan <span className="text-2xl md:text-3xl text-tertiary font-light">語感</span>
                     </h1>
                     <div className="space-y-4 text-secondary leading-relaxed font-serif max-w-xl mx-auto">
                         <p>
-                            <strong>Gokan</strong> (語感) means "sense of language". This application is a serious study instrument designed to help you truly acquire Japanese vocabulary, not just memorize flashcards.
+                            Gokan is a vocabulary SRS for Japanese learners who are actively studying kanji. It introduces words that use the kanji you already know — keeping your reading queue grounded in real, learnable material.
                         </p>
+                        <p className="text-sm text-tertiary">
+                            It is a companion tool, not a complete learning system. It works best alongside a kanji method like KKLC or RTK, and becomes more valuable once you start reading native Japanese.
+                        </p>
+                    </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-sm text-center">
-                            <div className="space-y-2">
-                                <div className="mx-auto w-10 h-10 rounded-full bg-surface border border-divider flex items-center justify-center text-primary">
-                                    <Cloud size={18} />
-                                </div>
-                                <h3 className="font-bold text-primary">Daily SRS</h3>
-                                <p className="text-tertiary text-xs">A custom Spaced Repetition System optimized for long-term retention.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 text-sm text-center max-w-xl mx-auto">
+                        <div className="space-y-1 p-3 rounded-lg bg-surface border border-divider">
+                            <div className="mx-auto w-8 h-8 rounded-full bg-background border border-divider flex items-center justify-center text-primary">
+                                <BookOpen size={14} />
                             </div>
-                            <div className="space-y-2">
-                                <div className="mx-auto w-10 h-10 rounded-full bg-surface border border-divider flex items-center justify-center text-primary">
-                                    <GraduationCap size={18} />
-                                </div>
-                                <h3 className="font-bold text-primary">Contextual Meaning</h3>
-                                <p className="text-tertiary text-xs">Learn nuance by translating vocabulary within real Japanese sentences.</p>
+                            <h3 className="font-bold text-primary text-xs">Kanji-aware</h3>
+                            <p className="text-tertiary text-xs">Only shows words your kanji knowledge can support.</p>
+                        </div>
+                        <div className="space-y-1 p-3 rounded-lg bg-surface border border-divider">
+                            <div className="mx-auto w-8 h-8 rounded-full bg-background border border-divider flex items-center justify-center text-primary">
+                                <GraduationCap size={14} />
                             </div>
-                            <div className="space-y-2">
-                                <div className="mx-auto w-10 h-10 rounded-full bg-surface border border-divider flex items-center justify-center text-primary">
-                                    <BookOpen size={18} />
-                                </div>
-                                <h3 className="font-bold text-primary">Read Native Material</h3>
-                                <p className="text-tertiary text-xs">The bridge between textbook kanji and reading actual Japanese media.</p>
+                            <h3 className="font-bold text-primary text-xs">SRS-based</h3>
+                            <p className="text-tertiary text-xs">Spaced reviews for reading and meaning, paced to your rhythm.</p>
+                        </div>
+                        <div className="space-y-1 p-3 rounded-lg bg-surface border border-divider">
+                            <div className="mx-auto w-8 h-8 rounded-full bg-background border border-divider flex items-center justify-center text-primary">
+                                <Cloud size={14} />
                             </div>
+                            <h3 className="font-bold text-primary text-xs">Synced</h3>
+                            <p className="text-tertiary text-xs">Progress synced across devices via Google Drive.</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +128,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                 {/* Path Selection */}
                 <div className="space-y-4 pt-4">
                     <h2 className="text-sm uppercase tracking-widest font-gothic text-tertiary text-center mb-6">
-                        Choose your path
+                        Where are you in your journey?
                     </h2>
 
                     <div className="grid gap-4">
@@ -135,10 +138,10 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                         >
                             <div className="pr-4">
                                 <h3 className="font-bold text-lg text-primary font-gothic flex items-center gap-2 mb-1">
-                                    Complete Beginner
+                                    Just starting out
                                 </h3>
                                 <p className="text-sm text-secondary font-serif">
-                                    I don't know any Kanji yet. Start me from the very beginning with the Kodansha (KKLC) order.
+                                    I'm beginning my kanji journey. Start me from the very beginning in KKLC order.
                                 </p>
                             </div>
                             <ChevronRight className="text-tertiary group-hover:text-accent transition-colors flex-shrink-0" />
@@ -150,10 +153,10 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                         >
                             <div className="pr-4">
                                 <h3 className="font-bold text-lg text-primary font-gothic flex items-center gap-2 mb-1">
-                                    Kanji Learner
+                                    I already know some kanji
                                 </h3>
                                 <p className="text-sm text-secondary font-serif">
-                                    I already know some Kanji. Let me tailor my vocabulary queue to strictly introduce words using my known Kanji.
+                                    Set my current level so vocabulary matches my kanji knowledge.
                                 </p>
                             </div>
                             <ChevronRight className="text-tertiary group-hover:text-accent transition-colors flex-shrink-0" />

@@ -22,6 +22,13 @@ provider "aws" {
   profile = "terraform-deploy"
 }
 
+# Provide an AWS provider specifically for the us-east-1 region (Required for CloudFront certs)
+provider "aws" {
+  alias   = "us_east_1"
+  region  = "us-east-1"
+  profile = "terraform-deploy"
+}
+
 # Variables
 variable "aws_region" {
   description = "AWS region"
@@ -32,7 +39,7 @@ variable "aws_region" {
 variable "domain_name" {
   description = "Domain name for the website (optional)"
   type        = string
-  default     = ""
+  default     = "gokan-srs.com"
 }
 
 variable "project_name" {
@@ -79,65 +86,13 @@ resource "aws_cloudfront_origin_access_control" "website" {
   signing_protocol                  = "sigv4"
 }
 
-# CloudFront Response Headers Policy for security and CORS
-resource "aws_cloudfront_response_headers_policy" "security_headers" {
-  name    = "${var.project_name}-security-headers"
-  comment = "Security headers for ${var.project_name}"
-
-  cors_config {
-    access_control_allow_credentials = false
-
-    access_control_allow_headers {
-      items = ["*"]
-    }
-
-    access_control_allow_methods {
-      items = ["GET", "HEAD", "OPTIONS"]
-    }
-
-    access_control_allow_origins {
-      items = ["*"]
-    }
-
-    origin_override = true
-  }
-
-  security_headers_config {
-    strict_transport_security {
-      access_control_max_age_sec = 31536000
-      include_subdomains         = true
-      preload                    = true
-      override                   = true
-    }
-
-    content_type_options {
-      override = true
-    }
-
-    frame_options {
-      frame_option = "DENY"
-      override     = true
-    }
-
-    xss_protection {
-      mode_block = true
-      protection = true
-      override   = true
-    }
-
-    referrer_policy {
-      referrer_policy = "strict-origin-when-cross-origin"
-      override        = true
-    }
-  }
-}
-
 # CloudFront Distribution
 resource "aws_cloudfront_distribution" "website" {
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
-  price_class         = "PriceClass_100" # Use only North America and Europe (cheapest)
+  
+  # Removed price_class = "PriceClass_100" to allow Flat Tier enrollment
 
   # Use domain if provided, otherwise use CloudFront domain
   aliases = var.domain_name != "" ? [var.domain_name] : []
@@ -153,23 +108,11 @@ resource "aws_cloudfront_distribution" "website" {
     cached_methods   = ["GET", "HEAD", "OPTIONS"]
     target_origin_id = "S3-${aws_s3_bucket.website.id}"
 
-    forwarded_values {
-      query_string = false
-      headers      = ["Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"]
-
-      cookies {
-        forward = "none"
-      }
-    }
+    # Use AWS Managed Cache Policy required for Flat Tier (replaces legacy forwarded_values & TTLs)
+    cache_policy_id = "658327ea-f89d-4fab-a63d-7e88639e58f6" # Managed-CachingOptimized
 
     viewer_protocol_policy = "redirect-to-https"
-    min_ttl                = 0
-    default_ttl            = 3600    # 1 hour
-    max_ttl                = 86400   # 24 hours
     compress               = true
-
-    # Enable CORS
-    response_headers_policy_id = aws_cloudfront_response_headers_policy.security_headers.id
   }
 
   # Custom error response for SPA routing (CloudFront handles this, not S3)
@@ -196,10 +139,10 @@ resource "aws_cloudfront_distribution" "website" {
   viewer_certificate {
     cloudfront_default_certificate = var.domain_name == "" ? true : false
 
-    # If you have a custom domain, uncomment and configure ACM certificate
-    # acm_certificate_arn      = aws_acm_certificate.website.arn
-    # ssl_support_method       = "sni-only"
-    # minimum_protocol_version = "TLSv1.2_2021"
+    # Custom domain ACM certificate
+    acm_certificate_arn      = aws_acm_certificate.website.arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
 
   tags = {
@@ -233,6 +176,61 @@ resource "aws_s3_bucket_policy" "website" {
   })
 }
 
+# Look up the existing Route 53 Hosted Zone
+data "aws_route53_zone" "main" {
+  name         = var.domain_name
+  private_zone = false
+}
+
+# Request an SSL/TLS Certificate in us-east-1
+resource "aws_acm_certificate" "website" {
+  provider                  = aws.us_east_1
+  domain_name               = data.aws_route53_zone.main.name
+  validation_method         = "DNS"
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+# Automatically create the DNS records required to validate the Certificate
+resource "aws_route53_record" "cert_validation" {
+  for_each = {
+    for dvo in aws_acm_certificate.website.domain_validation_options : dvo.domain_name => {
+      name   = dvo.resource_record_name
+      record = dvo.resource_record_value
+      type   = dvo.resource_record_type
+    }
+  }
+
+  allow_overwrite = true
+  name            = each.value.name
+  records         = [each.value.record]
+  ttl             = 60
+  type            = each.value.type
+  zone_id         = data.aws_route53_zone.main.zone_id
+}
+
+# Wait for the Certificate to be fully validated before proceeding
+resource "aws_acm_certificate_validation" "website" {
+  provider                = aws.us_east_1
+  certificate_arn         = aws_acm_certificate.website.arn
+  validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
+}
+
+# Create the DNS A-Record pointing your domain to the CloudFront distribution
+resource "aws_route53_record" "website_a_record" {
+  zone_id = data.aws_route53_zone.main.zone_id
+  name    = data.aws_route53_zone.main.name
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.website.domain_name
+    zone_id                = aws_cloudfront_distribution.website.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
 # Get current AWS account ID
 data "aws_caller_identity" "current" {}
 
@@ -254,5 +252,5 @@ output "cloudfront_distribution_id" {
 
 output "website_url" {
   description = "Website URL"
-  value       = "https://${aws_cloudfront_distribution.website.domain_name}"
+  value       = "https://${var.domain_name}"
 }

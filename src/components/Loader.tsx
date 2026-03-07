@@ -7,53 +7,47 @@ export type LoaderProps = {
 export function Loader({ title, description }: LoaderProps) {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-background transition-colors duration-200">
-            <div className="flex flex-col items-center gap-8">
-                {/* Animated Kanji Logo */}
-                <div className="relative">
+            <div className="flex flex-col items-center gap-10">
+                {/* Breathing Seal Logo with ripple rings */}
+                <div className="relative flex items-center justify-center" style={{ width: 220, height: 220 }}>
+                    {/* Ripple rings — triggered in sync with the heartbeat */}
+                    <div className="absolute inset-0 rounded-full animate-ripple opacity-0" style={{ animationDelay: '0s' }} />
+                    <div className="absolute inset-0 rounded-full animate-ripple opacity-0" style={{ animationDelay: '1.5s' }} />
+
+                    {/* Circular seal: thin ring + 語感 inside */}
                     <svg
                         width="120"
                         height="120"
                         viewBox="0 0 100 100"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="animate-pulse-slow"
+                        className="animate-heartbeat relative z-10"
                     >
-                        <rect
-                            x="2"
-                            y="2"
-                            width="96"
-                            height="96"
-                            className="stroke-primary"
-                            strokeWidth="3"
+                        {/* Thin circle ring — the seal frame */}
+                        <circle
+                            cx="50"
+                            cy="50"
+                            r="46"
+                            className="stroke-primary animate-color-stroke"
+                            strokeWidth="1.2"
                             fill="none"
                         />
+
+                        {/* 語感 side by side, centered inside the circle */}
                         <text
                             x="50"
                             y="50"
-                            fontSize="42"
+                            fontSize="34"
                             fontFamily="'Noto Serif JP', serif"
                             textAnchor="middle"
                             dominantBaseline="central"
-                            className="fill-primary"
+                            className="animate-color-breathe"
                             fontWeight="400"
+                            letterSpacing="2"
                         >
                             語感
                         </text>
                     </svg>
-
-                    {/* Orbiting dots */}
-                    <div className="absolute inset-0 animate-spin-slow">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rounded-full opacity-60"></div>
-                    </div>
-                    <div className="absolute inset-0 animate-spin-slow" style={{ animationDelay: '0.5s' }}>
-                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rounded-full opacity-60"></div>
-                    </div>
-                    <div className="absolute inset-0 animate-spin-slow" style={{ animationDelay: '1s' }}>
-                        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-2 h-2 bg-primary rounded-full opacity-60"></div>
-                    </div>
-                    <div className="absolute inset-0 animate-spin-slow" style={{ animationDelay: '1.5s' }}>
-                        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-2 h-2 bg-primary rounded-full opacity-60"></div>
-                    </div>
                 </div>
 
                 {/* Loading text */}
@@ -68,30 +62,70 @@ export function Loader({ title, description }: LoaderProps) {
             </div>
 
             <style>{`
-                @keyframes pulse-slow {
-                    0%, 100% {
-                        opacity: 1;
+                /* Heartbeat: quick thump, then settle */
+                @keyframes heartbeat {
+                    0% {
                         transform: scale(1);
                     }
-                    50% {
-                        opacity: 0.7;
-                        transform: scale(0.98);
+                    8% {
+                        transform: scale(1.11);
+                    }
+                    22% {
+                        transform: scale(1.0);
+                    }
+                    100% {
+                        transform: scale(1);
                     }
                 }
 
-                @keyframes spin-slow {
-                    from {
-                        transform: rotate(0deg);
+                /* Text color pulse — brightens at the beat */
+                @keyframes color-breathe {
+                    0%, 100% {
+                        fill: var(--color-primary, #2E3A59);
+                        opacity: 0.85;
                     }
-                    to {
-                        transform: rotate(360deg);
+                    8% {
+                        fill: var(--color-accent, #4A5A8A);
+                        opacity: 1;
+                    }
+                    30% {
+                        fill: var(--color-primary, #2E3A59);
+                        opacity: 0.9;
+                    }
+                }
+
+                /* Circle stroke pulse — matches the text */
+                @keyframes color-stroke {
+                    0%, 100% {
+                        stroke-opacity: 0.45;
+                    }
+                    8% {
+                        stroke-opacity: 0.85;
+                    }
+                    30% {
+                        stroke-opacity: 0.5;
+                    }
+                }
+
+                /* Ripple: quick surge then dissolve */
+                @keyframes ripple {
+                    0% {
+                        transform: scale(0.5);
+                        opacity: 0.45;
+                    }
+                    70% {
+                        opacity: 0.06;
+                    }
+                    100% {
+                        transform: scale(1);
+                        opacity: 0;
                     }
                 }
 
                 @keyframes fade-in {
                     from {
                         opacity: 0;
-                        transform: translateY(10px);
+                        transform: translateY(8px);
                     }
                     to {
                         opacity: 1;
@@ -99,12 +133,25 @@ export function Loader({ title, description }: LoaderProps) {
                     }
                 }
 
-                .animate-pulse-slow {
-                    animation: pulse-slow 2s ease-in-out infinite;
+                .animate-heartbeat {
+                    animation: heartbeat 3s ease-out infinite;
+                    transform-origin: center;
                 }
 
-                .animate-spin-slow {
-                    animation: spin-slow 4s linear infinite;
+                .animate-color-breathe {
+                    animation: color-breathe 3s ease-out infinite;
+                    fill: var(--color-primary, #2E3A59);
+                }
+
+                .animate-color-stroke {
+                    animation: color-stroke 3s ease-out infinite;
+                }
+
+                /* Same 3s cycle — locked to the heartbeat */
+                .animate-ripple {
+                    animation: ripple 3s ease-out infinite;
+                    color: var(--color-primary, #2E3A59);
+                    border: 1px solid currentColor;
                 }
 
                 .animate-fade-in {
