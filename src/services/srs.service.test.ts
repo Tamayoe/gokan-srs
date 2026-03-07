@@ -132,6 +132,24 @@ describe('SRSService Formula Tests', () => {
         closeTo(updated.reading.memoryStrength, 1.00000);
     });
 
+    describe('Frequency Modifier', () => {
+        it('should scale interval by 1.5x on medium frequency', () => {
+            const vocab = createVocab(10.0, 0.6);
+            // Default high freq: { S: 14.05000, I: 4.04190 }
+            const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 900, mockNow, undefined, 1.0, 1.5);
+
+            closeTo(updated.reading.memoryStrength, 14.05000); // Strength shouldn't scale
+            closeTo(interval, 4.04190 * 1.5);
+        });
+
+        it('should scale interval by 2.0x on low frequency', () => {
+            const vocab = createVocab(10.0, 0.6);
+            const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'kotae', 'kotae', 900, mockNow, undefined, 1.0, 2.0);
+
+            closeTo(updated.reading.memoryStrength, 14.05000);
+            closeTo(interval, 4.04190 * 2.0);
+        });
+    });
 
     describe('Minor Error Logic (User Examples)', () => {
         // Correct: こたえ (kotae)

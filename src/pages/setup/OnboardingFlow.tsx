@@ -21,6 +21,7 @@ export function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
             settings: {
                 preferredLearningOrder: 'kklc', // Start with words using kanji they learn
                 enableMeaningQuiz: true,
+                learningFrequency: 'medium',
                 enableGeminiContext: false, // Default standard validations
             },
         };

@@ -7,7 +7,7 @@ import { DEFAULT_SRS_ENTRY, DEFAULT_VOCABULARY_PROGRESS } from '../models/vocabu
  * Current data format version
  * Increment this when making breaking changes to the data structure
  */
-const CURRENT_FORMAT_VERSION = 6;
+const CURRENT_FORMAT_VERSION = 7;
 
 /**
  * Migration service to handle data format upgrades
@@ -106,13 +106,39 @@ export class MigrationService {
             });
         }
 
-        // Return V3 (V4 requires async fetch, handled by QuizContext)
-        // If it's already V4, we just return it as is.
+        // V7 Migration: Fix skipped vocabularies that have high reading strength but stuck meaning schedules
+        if (currentVersion < 7) {
+            migratedQueue = migratedQueue.map((item: VocabProgress) => {
+                // Identify items skipped before Meaning Quiz was fully integrated
+                // Characteristic: High reading memory, but meaning is 0/1, and stage is learning but no nextReviewAt
+                if (
+                    item.stage === 'learning' &&
+                    item.nextReviewAt === null &&
+                    item.introductionAt !== null &&
+                    item.reading.memoryStrength >= CONSTANTS.srs.formula.mastery.maxMemoryStrength &&
+                    item.meaning.memoryStrength <= 1
+                ) {
+                    return {
+                        ...item,
+                        stage: 'graduated',
+                        meaning: {
+                            ...item.meaning,
+                            memoryStrength: CONSTANTS.srs.formula.mastery.maxMemoryStrength,
+                            interval: CONSTANTS.srs.formula.maxInterval,
+                            dueDate: null
+                        }
+                    };
+                }
+                return item;
+            });
+        }
+
+        // Return current max sync version (we now bump to V6 locally)
         return {
             ...progress,
             learningQueue: migratedQueue,
             adaptive: progress.adaptive ?? { level: 1.0, history: [] },
-            _formatVersion: currentVersion < CURRENT_FORMAT_VERSION ? 3 : currentVersion // Max sync version is 3
+            _formatVersion: currentVersion < CURRENT_FORMAT_VERSION ? CURRENT_FORMAT_VERSION : currentVersion
         };
     }
 

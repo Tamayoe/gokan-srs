@@ -68,6 +68,7 @@ export type LearningOrder =
 export interface UserSettings {
     preferredLearningOrder: LearningOrder;
     enableMeaningQuiz: boolean;
+    learningFrequency: 'high' | 'medium' | 'low';
     geminiApiKey?: string;
     enableGeminiContext?: boolean;
 }
@@ -75,6 +76,7 @@ export interface UserSettings {
 export const DEFAULT_SETTINGS: UserSettings = {
     preferredLearningOrder: 'frequency',
     enableMeaningQuiz: true,
+    learningFrequency: 'medium',
     enableGeminiContext: false,
 };
 

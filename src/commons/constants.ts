@@ -20,6 +20,12 @@ export const CONSTANTS = {
         /** Maximum number of reviews per day (Limit removed) */
         maxReviewsPerDay: 999999,
 
+        frequencyMultipliers: {
+            high: 1.0,
+            medium: 1.5,
+            low: 2.0
+        },
+
         /** Formula Constants */
         formula: {
             targetRecall: 0.75,

@@ -28,6 +28,7 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
                 settings: {
                     preferredLearningOrder: learningOrder,
                     enableMeaningQuiz: true, // Default to true
+                    learningFrequency: 'medium',
                 },
             }
             onComplete(values).then();

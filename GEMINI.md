@@ -178,6 +178,7 @@ gokan-srs/
 
 **`UserSettings`**
 - `preferredLearningOrder`: `'frequency'` | `'kklc'`
+- `learningFrequency`: `'high'` | `'medium'` | `'low'`
 
 ### Session State (`state.model.ts`)
 
@@ -595,6 +596,12 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-03-06]**:
+  - **Learning Frequency Setting**:
+    - Added a `learningFrequency` option (`high`, `medium`, `low`) to `UserSettings` to allow users to scale their review rhythm.
+    - Updated `SRSService` interval calculation to apply a `frequencyModifier` (`1.0`, `1.5`, or `2.0`), which directly scales the computed Spaced Repetition interval.
+    - Added UI controls in the Settings screen to allow the user to select their desired frequency.
 
 - **[2026-03-05]**:
   - **Sentence Tokenizer Overlap Fix**:
