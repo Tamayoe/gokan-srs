@@ -195,7 +195,7 @@ describe('MigrationService', () => {
             const migrated = MigrationService.migrateUserProgress(oldProgress);
 
             // Should have format version
-            expect(migrated._formatVersion).toBe(3);
+            expect(migrated._formatVersion).toBe(7);
 
             // Should migrate all items
             expect(migrated.learningQueue).toHaveLength(2);
@@ -226,8 +226,8 @@ describe('MigrationService', () => {
             // Cast to solve type issues in test
             const result = MigrationService.migrateUserProgress(alreadyMigrated as any);
 
-            // Should return as-is (sync cap is 3)
-            expect(result._formatVersion).toBe(3);
+            // Should return as-is (sync cap is 7)
+            expect(result._formatVersion).toBe(7);
         });
 
         it('should migrate version 2 to version 3 (add adaptive stats AND init meaning)', () => {
@@ -248,7 +248,7 @@ describe('MigrationService', () => {
 
             const result = MigrationService.migrateUserProgress(v2Progress);
 
-            expect(result._formatVersion).toBe(3);
+            expect(result._formatVersion).toBe(7);
 
             // Adaptive check
             expect(result.adaptive).toBeDefined();
@@ -269,9 +269,9 @@ describe('MigrationService', () => {
             expect(MigrationService.needsMigration(oldProgress)).toBe(true);
         });
 
-        it('should return false for current version (6)', () => {
+        it('should return false for current version (7)', () => {
             const currentProgress = {
-                _formatVersion: 6,
+                _formatVersion: 7,
                 learningQueue: []
             };
 
@@ -380,7 +380,7 @@ describe('MigrationService', () => {
 
             const migrated = await MigrationService.migrateMergedVocabsAsync(duplicateProgress);
 
-            expect(migrated._formatVersion).toBe(6);
+            expect(migrated._formatVersion).toBe(7);
             expect(migrated.learningQueue).toHaveLength(1); // Properly merged
 
             const mergedItem = migrated.learningQueue[0];

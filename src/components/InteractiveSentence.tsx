@@ -92,7 +92,7 @@ export function InteractiveSentence({
 
     // 2. Render
     return (
-        <span className={`font-mincho leading-relaxed break-words ${className}`}>
+        <span className={`font-mincho leading-loose md:leading-relaxed break-words ${className}`}>
             {segments.map((segment, i) => {
                 if (segment.type === 'text') {
                     return <span key={i}>{segment.content}</span>;

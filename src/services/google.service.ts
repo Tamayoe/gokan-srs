@@ -349,7 +349,7 @@ export class GoogleDriveSync {
 
         return {
             progress: this.deserializeProgress(data.progress),
-            settings: data.settings
+            settings: { ...DEFAULT_SETTINGS, ...(data.settings as Partial<UserSettings> || {}) }
         };
     }
 
@@ -406,7 +406,9 @@ export class GoogleDriveSync {
     private getLocalSettings(): UserSettings | null {
         const stored = localStorage.getItem(CONSTANTS.storage.settingsStorageKey);
         if (!stored) return null;
-        return JSON.parse(stored) as UserSettings;
+
+        const parsed = JSON.parse(stored) as Partial<UserSettings>;
+        return { ...DEFAULT_SETTINGS, ...parsed };
     }
 
     private saveLocalEnvelope(envelope: SyncEnvelope): void {

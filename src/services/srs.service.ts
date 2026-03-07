@@ -151,7 +151,8 @@ export class SRSService {
         latencyMs: number,
         now: Date,
         forcedResult?: AnswerResult, // Optional override
-        intervalModifier: number = 1.0 // Adaptive modifier
+        intervalModifier: number = 1.0, // Adaptive modifier
+        frequencyModifier: number = 1.0 // User preference modifier
     ): { updated: VocabProgress; result: AnswerResult, interval: number } {
         const result = forcedResult ?? this.analyzeError(userAnswer, correctAnswer);
 
@@ -182,7 +183,7 @@ export class SRSService {
         // Select the correct entry to update
         const currentEntry = quizType === 'reading' ? { ...vocab.reading } : { ...vocab.meaning };
 
-        const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now, intervalModifier);
+        const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now, intervalModifier, frequencyModifier);
 
         // Check for Graduation (Mastery)
         // A word is graduated if BOTH are mastered? Or if the specific one is mastered?
@@ -260,7 +261,8 @@ export class SRSService {
         result: AnswerResult,
         latencyMs: number,
         now: Date,
-        intervalModifier: number = 1.0
+        intervalModifier: number = 1.0,
+        frequencyModifier: number = 1.0
     ): { newEntry: SRSEntry; interval: number } {
 
         // 1. Calculate Multipliers
@@ -292,7 +294,7 @@ export class SRSService {
         // Harder = Longer Interval? Yes, push them further.
         // So modifier > 1.0 is correct for "Hard Mode".
         // t = S * C * Mod
-        let newInterval = newStrength * F.lnTarget * intervalModifier;
+        let newInterval = newStrength * F.lnTarget * intervalModifier * frequencyModifier;
 
         // 5. Apply Post-processing Overrides
         if (result === 'wrong') {

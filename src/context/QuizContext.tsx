@@ -687,6 +687,10 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             const newAdaptive = SRSService.updateAdaptiveStats(currentAdaptive, state.feedback!.type);
             const adaptiveLevel = newAdaptive.level;
 
+            // [NEW] Frequency Modifier
+            const frequencySetting = state.settings!.learningFrequency;
+            const frequencyModifier = CONSTANTS.srs.frequencyMultipliers[frequencySetting];
+
             if (target) {
                 const { updated } = SRSService.applyAnswer(
                     target,
@@ -696,7 +700,8 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     latency,
                     now,
                     state.feedback!.type,
-                    adaptiveLevel // [NEW] Pass adaptive level
+                    adaptiveLevel, // [NEW] Pass adaptive level
+                    frequencyModifier // [NEW] Pass frequency modifier
                 );
 
                 // Delta calculation depends on type
@@ -731,7 +736,8 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     latency,
                     now,
                     state.feedback!.type, // Pass the already calculated result
-                    adaptiveLevel // [NEW] Pass adaptive level
+                    adaptiveLevel, // [NEW] Pass adaptive level
+                    frequencyModifier // [NEW] Pass frequency modifier
                 );
 
                 return updated;

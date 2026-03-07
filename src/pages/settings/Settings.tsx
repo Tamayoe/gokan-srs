@@ -176,6 +176,36 @@ export function SettingsScreen({
                     ]}
                 />
 
+                <div className="mt-8">
+                    <OptionGrid
+                        title="Learning frequency"
+                        value={settings.learningFrequency}
+                        onChange={(value) =>
+                            onUpdateSettings({
+                                ...settings,
+                                learningFrequency: value,
+                            })
+                        }
+                        options={[
+                            {
+                                value: 'high',
+                                label: 'High',
+                                description: 'Faster pace (more frequent)',
+                            },
+                            {
+                                value: 'medium',
+                                label: 'Medium (Default)',
+                                description: 'Balanced SRS intervals',
+                            },
+                            {
+                                value: 'low',
+                                label: 'Low',
+                                description: 'Relaxed pace (less frequent)',
+                            },
+                        ]}
+                    />
+                </div>
+
                 <div className="mt-8 flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider">
                     <div className="flex flex-col gap-1">
                         <span className="font-medium text-primary">Enable Meaning Quizzes</span>
