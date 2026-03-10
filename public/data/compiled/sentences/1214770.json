@@ -1,52 +1,5 @@
 [
   {
-    "id": "90065",
-    "original": "彼女は今、歌舞伎を観ているところだ。",
-    "en": [
-      {
-        "id": "313649",
-        "text": "She is seeing a Kabuki play now."
-      }
-    ],
-    "indices": "彼女[01] は 今(いま) 歌舞伎 を 見る[04]{観ている} 所(ところ){ところ} だ",
-    "vocabIds": [
-      "1193420",
-      "1483150",
-      "1288850",
-      "1214770"
-    ],
-    "matches": {
-      "1193420": [
-        {
-          "start": 5,
-          "length": 3,
-          "reading": "かぶき"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 9,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1288850": [
-        {
-          "start": 3,
-          "length": 1,
-          "reading": "いま"
-        }
-      ],
-      "1483150": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "かのじょ"
-        }
-      ]
-    }
-  },
-  {
     "id": "120482",
     "original": "彼が帰宅したらみんなで映画を観に行こうか、と私は彼女に提案した。",
     "en": [
@@ -62,11 +15,21 @@
       "1173720",
       "1483150",
       "1436320",
+      "1000420",
       "1483070",
       "1214770",
-      "1311110"
+      "1311110",
+      "1347580",
+      "2015370"
     ],
     "matches": {
+      "1000420": [
+        {
+          "start": 0,
+          "length": 1,
+          "reading": "かれ"
+        }
+      ],
       "1173720": [
         {
           "start": 11,
@@ -89,6 +52,13 @@
         }
       ],
       "1311110": [
+        {
+          "start": 22,
+          "length": 1,
+          "reading": "わたし"
+        }
+      ],
+      "1347580": [
         {
           "start": 22,
           "length": 1,
@@ -121,6 +91,13 @@
           "start": 16,
           "length": 3,
           "reading": "いこう"
+        }
+      ],
+      "2015370": [
+        {
+          "start": 22,
+          "length": 1,
+          "reading": "わたし"
         }
       ]
     }
@@ -230,6 +207,8 @@
       "1533580",
       "1000420",
       "1311110",
+      "1347580",
+      "2015370",
       "1214770"
     ],
     "matches": {
@@ -254,11 +233,25 @@
           "reading": "わたし"
         }
       ],
+      "1347580": [
+        {
+          "start": 0,
+          "length": 1,
+          "reading": "わたし"
+        }
+      ],
       "1533580": [
         {
           "start": 11,
           "length": 3,
           "reading": "おもしろい"
+        }
+      ],
+      "2015370": [
+        {
+          "start": 0,
+          "length": 1,
+          "reading": "わたし"
         }
       ]
     }
@@ -298,139 +291,6 @@
           "start": 5,
           "length": 4,
           "reading": "いかない"
-        }
-      ]
-    }
-  },
-  {
-    "id": "191783",
-    "original": "わたしは彼が逃げていくのを観た。",
-    "en": [
-      {
-        "id": "28945",
-        "text": "I saw him run away."
-      }
-    ],
-    "indices": "私(わたし)[01]{わたし} は 彼(かれ)[01] が 逃げる[01]{逃げて} 行く{いく} の を 見る[04]{観た}",
-    "vocabIds": [
-      "1450330",
-      "1483070",
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 13,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1450330": [
-        {
-          "start": 6,
-          "length": 5,
-          "reading": "にげていく"
-        }
-      ],
-      "1483070": [
-        {
-          "start": 4,
-          "length": 1,
-          "reading": "かれ"
-        }
-      ]
-    }
-  },
-  {
-    "id": "199886",
-    "original": "トムは新しい劇場で劇を観た。",
-    "en": [
-      {
-        "id": "37088",
-        "text": "Tom saw a play in the new theater."
-      }
-    ],
-    "indices": "は 新しい 劇場 で(#2028980) 劇 を 見る[04]{観た}",
-    "vocabIds": [
-      "1361490",
-      "1253410",
-      "1253310",
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 11,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1253310": [
-        {
-          "start": 9,
-          "length": 1,
-          "reading": "げき"
-        }
-      ],
-      "1253410": [
-        {
-          "start": 6,
-          "length": 2,
-          "reading": "げきじょう"
-        }
-      ],
-      "1361490": [
-        {
-          "start": 3,
-          "length": 3,
-          "reading": "あたらしい"
-        }
-      ]
-    }
-  },
-  {
-    "id": "212664",
-    "original": "プログラムは今頃もう始まっているはずです。だから、前半はたぶん観られないでしょう。",
-    "en": [
-      {
-        "id": "49948",
-        "text": "The program should have started by now, so we'll probably miss the first half."
-      }
-    ],
-    "indices": "プログラム[01]~ は 今ごろ{今頃} もう 始まる{始まっている} 筈[01]{はず} です だから 前半~ は 多分[01]{たぶん} 見る{観られない} でしょう[01]",
-    "vocabIds": [
-      "1307500",
-      "1289160",
-      "1581140",
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 31,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1289160": [
-        {
-          "start": 6,
-          "length": 2,
-          "reading": "いまごろ"
-        }
-      ],
-      "1307500": [
-        {
-          "start": 10,
-          "length": 6,
-          "reading": "はじまっている"
-        }
-      ],
-      "1581140": [
-        {
-          "start": 25,
-          "length": 2,
-          "reading": "ぜんはん"
         }
       ]
     }
@@ -483,131 +343,6 @@
     }
   },
   {
-    "id": "398127",
-    "original": "私たちにとっては耳の痛い「真実」でしたが、この映画を観て地球の危機を改めて感じました。",
-    "en": [
-      {
-        "id": "398128",
-        "text": "It's a painful 'truth' for us, but watching this movie brought home to me again the danger facing Earth."
-      }
-    ],
-    "indices": "私たち に取って{にとって} は 耳の痛い 真実{「真実」}~ です{でした} が 此の{この} 映画 を 見る{観て} 地球 の 危機 を 改めて 感じる{感じました}",
-    "vocabIds": [
-      "1212260",
-      "2556750",
-      "1311300",
-      "1200740",
-      "1363780",
-      "1173720",
-      "1420970",
-      "1218450",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 23,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1200740": [
-        {
-          "start": 34,
-          "length": 3,
-          "reading": "あらためて"
-        }
-      ],
-      "1212260": [
-        {
-          "start": 37,
-          "length": 5,
-          "reading": "かんじました"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 26,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1218450": [
-        {
-          "start": 31,
-          "length": 2,
-          "reading": "きき"
-        }
-      ],
-      "1311300": [
-        {
-          "start": 0,
-          "length": 3,
-          "reading": "わたしたち"
-        }
-      ],
-      "1363780": [
-        {
-          "start": 13,
-          "length": 2,
-          "reading": "しんじつ"
-        }
-      ],
-      "1420970": [
-        {
-          "start": 28,
-          "length": 2,
-          "reading": "ちきゅう"
-        }
-      ],
-      "2556750": [
-        {
-          "start": 8,
-          "length": 4,
-          "reading": "みみのいたい"
-        }
-      ]
-    }
-  },
-  {
-    "id": "536783",
-    "original": "実は、この映画を観たことがある。",
-    "en": [
-      {
-        "id": "532632",
-        "text": "Actually, I've seen this movie before."
-      }
-    ],
-    "vocabIds": [
-      "1320830",
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 5,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 8,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1320830": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "じつは"
-        }
-      ]
-    }
-  },
-  {
     "id": "543744",
     "original": "外国人の片寄った日本観が好きだ。忍者、変態アニメ、武士道などが出てくると本当幸せになる。",
     "en": [
@@ -618,6 +353,7 @@
     ],
     "vocabIds": [
       "1338240",
+      "1590420",
       "1203650",
       "1498620",
       "1582710",
@@ -692,6 +428,13 @@
           "reading": "にっぽん"
         }
       ],
+      "1590420": [
+        {
+          "start": 4,
+          "length": 4,
+          "reading": "かたよった"
+        }
+      ],
       "1594060": [
         {
           "start": 38,
@@ -748,544 +491,6 @@
     }
   },
   {
-    "id": "992277",
-    "original": "この映画を観てください。",
-    "en": [
-      {
-        "id": "2661873",
-        "text": "Please watch this movie."
-      }
-    ],
-    "vocabIds": [
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 2,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 5,
-          "length": 1,
-          "reading": "み"
-        }
-      ]
-    }
-  },
-  {
-    "id": "1079920",
-    "original": "テレビが観たい。",
-    "en": [
-      {
-        "id": "255117",
-        "text": "I'd like to watch TV."
-      },
-      {
-        "id": "2765407",
-        "text": "I want to watch TV."
-      }
-    ],
-    "vocabIds": [
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 4,
-          "length": 1,
-          "reading": "み"
-        }
-      ]
-    }
-  },
-  {
-    "id": "1836398",
-    "original": "この映画はずいぶん昔に観ました。",
-    "en": [
-      {
-        "id": "1837022",
-        "text": "I saw this movie a very long time ago."
-      }
-    ],
-    "vocabIds": [
-      "1173720",
-      "1382370",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 2,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 11,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1382370": [
-        {
-          "start": 9,
-          "length": 1,
-          "reading": "むかし"
-        }
-      ]
-    }
-  },
-  {
-    "id": "2421298",
-    "original": "今日は友人が脚本を書いた演劇を観てきました。",
-    "en": [
-      {
-        "id": "2422044",
-        "text": "Today I watched a play of a script written by a friend."
-      },
-      {
-        "id": "2422608",
-        "text": "Today, I watched a play written by a friend of mine."
-      }
-    ],
-    "vocabIds": [
-      "1289400",
-      "1343950",
-      "1540150",
-      "1226880",
-      "1176860",
-      "1214770"
-    ],
-    "matches": {
-      "1176860": [
-        {
-          "start": 12,
-          "length": 2,
-          "reading": "えんげき"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 15,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1226880": [
-        {
-          "start": 6,
-          "length": 2,
-          "reading": "きゃくほん"
-        }
-      ],
-      "1289400": [
-        {
-          "start": 0,
-          "length": 3,
-          "reading": "きょうは"
-        }
-      ],
-      "1343950": [
-        {
-          "start": 9,
-          "length": 3,
-          "reading": "かいた"
-        }
-      ],
-      "1540150": [
-        {
-          "start": 3,
-          "length": 2,
-          "reading": "ゆうじん"
-        }
-      ]
-    }
-  },
-  {
-    "id": "3697603",
-    "original": "彼らはモールまで歩いて、そこで食事をし映画を観ました。",
-    "en": [
-      {
-        "id": "3696716",
-        "text": "They walked to the mall, where they ate and watched a movie."
-      }
-    ],
-    "vocabIds": [
-      "1514320",
-      "1483090",
-      "1358490",
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 19,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 22,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1358490": [
-        {
-          "start": 15,
-          "length": 2,
-          "reading": "しょくじ"
-        }
-      ],
-      "1483090": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "かれら"
-        }
-      ],
-      "1514320": [
-        {
-          "start": 8,
-          "length": 3,
-          "reading": "あるいて"
-        }
-      ]
-    }
-  },
-  {
-    "id": "2137336",
-    "original": "大人は毎日どのくらいの時間をテレビを観ながら過ごしますか。",
-    "en": [
-      {
-        "id": "4368134",
-        "text": "How much time do adults spend watching television every day?"
-      }
-    ],
-    "vocabIds": [
-      "1196000",
-      "1414170",
-      "1524720",
-      "1315920",
-      "1214770"
-    ],
-    "matches": {
-      "1196000": [
-        {
-          "start": 22,
-          "length": 5,
-          "reading": "すごします"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 18,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1315920": [
-        {
-          "start": 11,
-          "length": 2,
-          "reading": "じかん"
-        }
-      ],
-      "1414170": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "おとな"
-        }
-      ],
-      "1524720": [
-        {
-          "start": 3,
-          "length": 2,
-          "reading": "まいにち"
-        }
-      ]
-    }
-  },
-  {
-    "id": "4715157",
-    "original": "英語を勉強しているべきなのだが、映画が観たい。",
-    "en": [
-      {
-        "id": "896176",
-        "text": "I should be studying English, but I want to watch a movie."
-      }
-    ],
-    "vocabIds": [
-      "1174420",
-      "1512670",
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 16,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1174420": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "えいご"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 19,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1512670": [
-        {
-          "start": 3,
-          "length": 2,
-          "reading": "べんきょう"
-        }
-      ]
-    }
-  },
-  {
-    "id": "6655321",
-    "original": "彼らは映画を観ている。",
-    "en": [
-      {
-        "id": "463168",
-        "text": "They are watching a movie."
-      },
-      {
-        "id": "9955770",
-        "text": "They're watching a movie."
-      }
-    ],
-    "vocabIds": [
-      "1483090",
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 3,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 6,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1483090": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "かれら"
-        }
-      ]
-    }
-  },
-  {
-    "id": "6961454",
-    "original": "ディズニー動画を観たことがある？",
-    "en": [
-      {
-        "id": "6964784",
-        "text": "Have you ever seen a Disney movie?"
-      },
-      {
-        "id": "6979812",
-        "text": "Have you watched Disney movies before?"
-      }
-    ],
-    "vocabIds": [
-      "1451290",
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 8,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1451290": [
-        {
-          "start": 5,
-          "length": 2,
-          "reading": "どうが"
-        }
-      ]
-    }
-  },
-  {
-    "id": "7577248",
-    "original": "トムは何を観ていますか？",
-    "en": [
-      {
-        "id": "6351347",
-        "text": "What's Tom watching?"
-      }
-    ],
-    "vocabIds": [
-      "2851233",
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 5,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "2851233": [
-        {
-          "start": 3,
-          "length": 2,
-          "reading": "なにを"
-        }
-      ]
-    }
-  },
-  {
-    "id": "8838516",
-    "original": "映画観に行くの？",
-    "en": [
-      {
-        "id": "2890949",
-        "text": "Are you going to the movies?"
-      }
-    ],
-    "vocabIds": [
-      "1173720",
-      "1578850",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 2,
-          "length": 1,
-          "reading": "かん"
-        }
-      ],
-      "1578850": [
-        {
-          "start": 4,
-          "length": 2,
-          "reading": "いく"
-        }
-      ]
-    }
-  },
-  {
-    "id": "8875197",
-    "original": "トムって、この映画観たことあるかなあ。",
-    "en": [
-      {
-        "id": "6336990",
-        "text": "I wonder if Tom has seen this movie."
-      },
-      {
-        "id": "6336989",
-        "text": "I wonder whether Tom has seen this movie."
-      },
-      {
-        "id": "6524328",
-        "text": "I wonder whether Tom has seen this movie or not."
-      },
-      {
-        "id": "6524327",
-        "text": "I wonder whether or not Tom has seen this movie."
-      }
-    ],
-    "vocabIds": [
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 7,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 9,
-          "length": 1,
-          "reading": "み"
-        }
-      ]
-    }
-  },
-  {
-    "id": "9240200",
-    "original": "前にその映画、観たことあるよ。",
-    "en": [
-      {
-        "id": "553849",
-        "text": "I've seen that movie before."
-      }
-    ],
-    "vocabIds": [
-      "1392590",
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 4,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 7,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1392590": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "まえに"
-        }
-      ]
-    }
-  },
-  {
     "id": "9641142",
     "original": "一緒に映画を観に行きたいな。",
     "en": [
@@ -1331,66 +536,6 @@
           "start": 8,
           "length": 4,
           "reading": "いきたい"
-        }
-      ]
-    }
-  },
-  {
-    "id": "9930260",
-    "original": "サミは、ミュージカル『レ・ミゼラブル』を観ました。",
-    "en": [
-      {
-        "id": "6709536",
-        "text": "Sami watched the musical Les Miserables."
-      }
-    ],
-    "vocabIds": [
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 20,
-          "length": 1,
-          "reading": "み"
-        }
-      ]
-    }
-  },
-  {
-    "id": "10013097",
-    "original": "ほんと言うと、その映画もう観ちゃった。",
-    "en": [
-      {
-        "id": "1500430",
-        "text": "To tell the truth, I've already seen that movie."
-      }
-    ],
-    "vocabIds": [
-      "2136030",
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 9,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 13,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "2136030": [
-        {
-          "start": 2,
-          "length": 4,
-          "reading": "というと"
         }
       ]
     }
@@ -1446,56 +591,6 @@
     }
   },
   {
-    "id": "10335039",
-    "original": "時間があれば、映画を観に行くんだけどな。",
-    "en": [
-      {
-        "id": "10335035",
-        "text": "If I had time, I'd go to the movies."
-      },
-      {
-        "id": "1988220",
-        "text": "If I had time, I would go to the movies."
-      }
-    ],
-    "vocabIds": [
-      "1315920",
-      "1173720",
-      "1578850",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 7,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 10,
-          "length": 1,
-          "reading": "かん"
-        }
-      ],
-      "1315920": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "じかん"
-        }
-      ],
-      "1578850": [
-        {
-          "start": 12,
-          "length": 2,
-          "reading": "いく"
-        }
-      ]
-    }
-  },
-  {
     "id": "10593523",
     "original": "「今日さぁ、転校していった友達と偶然会ったんだ」「そうなんだ」「うん。そしたら、映画の話になってさ、『今度一緒に観に行こう！』って言われたんだけど、行ってきていい？」「まぁ、いいけど、その友達って、男の子なの？女の子なの？」「......」",
     "en": [
@@ -1507,6 +602,7 @@
     "vocabIds": [
       "1578850",
       "1163420",
+      "1419990",
       "1420010",
       "1344970",
       "1198180",
@@ -1568,6 +664,13 @@
           "start": 105,
           "length": 3,
           "reading": "おんなのこ"
+        }
+      ],
+      "1419990": [
+        {
+          "start": 99,
+          "length": 3,
+          "reading": "おとこのこ"
         }
       ],
       "1420010": [
@@ -1682,52 +785,6 @@
     }
   },
   {
-    "id": "10617575",
-    "original": "トムは、邦画をフランス語の字幕付きで観たんだよ。",
-    "en": [
-      {
-        "id": "2426710",
-        "text": "Tom watched a Japanese movie with French subtitles."
-      }
-    ],
-    "vocabIds": [
-      "1111590",
-      "2152160",
-      "1518220",
-      "1214770"
-    ],
-    "matches": {
-      "1111590": [
-        {
-          "start": 7,
-          "length": 5,
-          "reading": "ふらんすご"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 18,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1518220": [
-        {
-          "start": 4,
-          "length": 2,
-          "reading": "ほうが"
-        }
-      ],
-      "2152160": [
-        {
-          "start": 13,
-          "length": 4,
-          "reading": "じまくつき"
-        }
-      ]
-    }
-  },
-  {
     "id": "10630219",
     "original": "「週末にさ、映画、観に行かない？」「折角なんだけど、ダメなの。誘ってくれてありがとう」",
     "en": [
@@ -1790,318 +847,6 @@
     }
   },
   {
-    "id": "10679068",
-    "original": "また、あの映画が観たいな。",
-    "en": [
-      {
-        "id": "7585293",
-        "text": "I want to watch that movie again."
-      }
-    ],
-    "vocabIds": [
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 5,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 8,
-          "length": 1,
-          "reading": "み"
-        }
-      ]
-    }
-  },
-  {
-    "id": "10679069",
-    "original": "もう一度、あの映画を観たい。",
-    "en": [
-      {
-        "id": "7585293",
-        "text": "I want to watch that movie again."
-      }
-    ],
-    "vocabIds": [
-      "2005860",
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 7,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 10,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "2005860": [
-        {
-          "start": 0,
-          "length": 4,
-          "reading": "もういちど"
-        }
-      ]
-    }
-  },
-  {
-    "id": "10735521",
-    "original": "この映画は何回も観たわ。",
-    "en": [
-      {
-        "id": "10489856",
-        "text": "I have watched this film several times."
-      }
-    ],
-    "vocabIds": [
-      "1188660",
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 2,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1188660": [
-        {
-          "start": 5,
-          "length": 3,
-          "reading": "なんかいも"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 8,
-          "length": 1,
-          "reading": "み"
-        }
-      ]
-    }
-  },
-  {
-    "id": "10901556",
-    "original": "映画を観たんだ。",
-    "en": [
-      {
-        "id": "3822215",
-        "text": "I watched a movie."
-      }
-    ],
-    "vocabIds": [
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 3,
-          "length": 1,
-          "reading": "み"
-        }
-      ]
-    }
-  },
-  {
-    "id": "11038407",
-    "original": "明日の夜は、テレビで観たい映画があるんだ。",
-    "en": [
-      {
-        "id": "2034589",
-        "text": "There's a movie I want to watch on TV tomorrow night."
-      }
-    ],
-    "vocabIds": [
-      "1584660",
-      "1173720",
-      "1536350",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 13,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 10,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1536350": [
-        {
-          "start": 3,
-          "length": 1,
-          "reading": "よる"
-        }
-      ],
-      "1584660": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "あした"
-        }
-      ]
-    }
-  },
-  {
-    "id": "11065697",
-    "original": "今日、トムのお兄ちゃんと映画観に行くんだ。",
-    "en": [
-      {
-        "id": "3121768",
-        "text": "Today I'll go to the cinema with Tom's brother."
-      }
-    ],
-    "vocabIds": [
-      "1001840",
-      "1579110",
-      "1173720",
-      "1578850",
-      "1214770"
-    ],
-    "matches": {
-      "1001840": [
-        {
-          "start": 6,
-          "length": 5,
-          "reading": "おにいちゃん"
-        }
-      ],
-      "1173720": [
-        {
-          "start": 12,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 14,
-          "length": 1,
-          "reading": "かん"
-        }
-      ],
-      "1578850": [
-        {
-          "start": 16,
-          "length": 2,
-          "reading": "いく"
-        }
-      ],
-      "1579110": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "きょう"
-        }
-      ]
-    }
-  },
-  {
-    "id": "11491196",
-    "original": "この夏は、何の映画が観たい？",
-    "en": [
-      {
-        "id": "6940666",
-        "text": "What movies do you want to see this summer?"
-      }
-    ],
-    "vocabIds": [
-      "1920245",
-      "1173720",
-      "1191320",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 7,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1191320": [
-        {
-          "start": 2,
-          "length": 1,
-          "reading": "なつ"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 10,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1920245": [
-        {
-          "start": 5,
-          "length": 2,
-          "reading": "なにの"
-        }
-      ]
-    }
-  },
-  {
-    "id": "11508112",
-    "original": "今日「ゴースト・イン・ザ・シェル」を観たよ。",
-    "en": [
-      {
-        "id": "11507919",
-        "text": "I watched Ghost in the Shell today."
-      }
-    ],
-    "vocabIds": [
-      "1579110",
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 18,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1579110": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "きょう"
-        }
-      ]
-    }
-  },
-  {
     "id": "11605098",
     "original": "雨だったら、映画を観に行きます。",
     "en": [
@@ -2143,148 +888,6 @@
           "start": 11,
           "length": 4,
           "reading": "いきます"
-        }
-      ]
-    }
-  },
-  {
-    "id": "11624941",
-    "original": "『ハリーポッター』の6作目が観たいな。",
-    "en": [
-      {
-        "id": "9336049",
-        "text": "I'd like to see the sixth \"Harry Potter\" movie."
-      }
-    ],
-    "vocabIds": [
-      "1297240",
-      "1604890",
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 14,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1297240": [
-        {
-          "start": 11,
-          "length": 1,
-          "reading": "さく"
-        }
-      ],
-      "1604890": [
-        {
-          "start": 12,
-          "length": 1,
-          "reading": "め"
-        }
-      ]
-    }
-  },
-  {
-    "id": "11825852",
-    "original": "自分のパソコンで映画は観ないよ。",
-    "en": [
-      {
-        "id": "10092373",
-        "text": "I don't watch movies on my computer."
-      }
-    ],
-    "vocabIds": [
-      "1318610",
-      "1173720",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 8,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 11,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1318610": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "じぶん"
-        }
-      ]
-    }
-  },
-  {
-    "id": "11859248",
-    "original": "昨日の夜観た映画さ、めちゃめちゃ怖かったんだ。",
-    "en": [
-      {
-        "id": "7796829",
-        "text": "The movie that we watched last night was really scary."
-      },
-      {
-        "id": "7796828",
-        "text": "The movie we watched last night was really scary."
-      },
-      {
-        "id": "12342088",
-        "text": "The movie I watched last night was really scary."
-      },
-      {
-        "id": "12342089",
-        "text": "The movie that I watched last night was really scary."
-      }
-    ],
-    "vocabIds": [
-      "1593480",
-      "1579260",
-      "1173720",
-      "1536350",
-      "1214770"
-    ],
-    "matches": {
-      "1173720": [
-        {
-          "start": 6,
-          "length": 2,
-          "reading": "えいが"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 4,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1536350": [
-        {
-          "start": 3,
-          "length": 1,
-          "reading": "よる"
-        }
-      ],
-      "1579260": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "きのう"
-        }
-      ],
-      "1593480": [
-        {
-          "start": 16,
-          "length": 4,
-          "reading": "こわかった"
         }
       ]
     }
@@ -2436,36 +1039,6 @@
     }
   },
   {
-    "id": "11018157",
-    "original": "録画しても、どうせ観ないんだろうなあ。",
-    "en": [
-      {
-        "id": "12488383",
-        "text": "Even if I videotaped it, I probably wouldn't watch it anyway."
-      }
-    ],
-    "vocabIds": [
-      "1561610",
-      "1214770"
-    ],
-    "matches": {
-      "1214770": [
-        {
-          "start": 9,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1561610": [
-        {
-          "start": 0,
-          "length": 2,
-          "reading": "ろくが"
-        }
-      ]
-    }
-  },
-  {
     "id": "12574469",
     "original": "私も一緒に映画観に行っていい？",
     "en": [
@@ -2479,6 +1052,8 @@
       "1578850",
       "1173720",
       "1311110",
+      "1347580",
+      "2015370",
       "1214770"
     ],
     "matches": {
@@ -2510,11 +1085,25 @@
           "reading": "わたし"
         }
       ],
+      "1347580": [
+        {
+          "start": 0,
+          "length": 1,
+          "reading": "わたし"
+        }
+      ],
       "1578850": [
         {
           "start": 9,
           "length": 3,
           "reading": "いって"
+        }
+      ],
+      "2015370": [
+        {
+          "start": 0,
+          "length": 1,
+          "reading": "わたし"
         }
       ]
     }
@@ -2603,60 +1192,6 @@
           "start": 31,
           "length": 2,
           "reading": "あした"
-        }
-      ]
-    }
-  },
-  {
-    "id": "2277323",
-    "original": "いつも世の中の有様を揶揄するような感じで観ている。",
-    "en": [
-      {
-        "id": "13614687",
-        "text": "I watch it with a feeling of mocking the continual state of the world."
-      }
-    ],
-    "vocabIds": [
-      "1373850",
-      "1541060",
-      "1567640",
-      "1212250",
-      "1214770"
-    ],
-    "matches": {
-      "1212250": [
-        {
-          "start": 17,
-          "length": 2,
-          "reading": "かんじ"
-        }
-      ],
-      "1214770": [
-        {
-          "start": 20,
-          "length": 1,
-          "reading": "み"
-        }
-      ],
-      "1373850": [
-        {
-          "start": 3,
-          "length": 3,
-          "reading": "よのなか"
-        }
-      ],
-      "1541060": [
-        {
-          "start": 7,
-          "length": 2,
-          "reading": "ありさま"
-        }
-      ],
-      "1567640": [
-        {
-          "start": 10,
-          "length": 2,
-          "reading": "やゆ"
         }
       ]
     }

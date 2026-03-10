@@ -1,5 +1,91 @@
 [
   {
+    "id": "123967",
+    "original": "当店のパイは、夜のうちに焼き上げて、次ぎ日にお出しする焼き立てです。",
+    "en": [
+      {
+        "id": "280028",
+        "text": "All our pies are baked fresh during the night for your dining pleasure the next day."
+      }
+    ],
+    "indices": "当店 の パイ は 夜 の 内(うち){うち} に 焼き上げる{焼き上げて} 次ぐ{次ぎ} 日(ひ)[01] に 出す{お出し} 為る(する)[12]{する} 焼き立て です",
+    "vocabIds": [
+      "1847610",
+      "1350590",
+      "2850781",
+      "1316400",
+      "1449200",
+      "1536350"
+    ],
+    "matches": {
+      "1316400": [
+        {
+          "start": 18,
+          "length": 3,
+          "reading": "つぎび"
+        }
+      ],
+      "1350590": [
+        {
+          "start": 27,
+          "length": 4,
+          "reading": "やきたて"
+        }
+      ],
+      "1449200": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "とうてん"
+        }
+      ],
+      "1536350": [
+        {
+          "start": 7,
+          "length": 1,
+          "reading": "よる"
+        }
+      ],
+      "1847610": [
+        {
+          "start": 12,
+          "length": 5,
+          "reading": "やきあげて"
+        }
+      ],
+      "2850781": [
+        {
+          "start": 22,
+          "length": 3,
+          "reading": "おだし"
+        }
+      ]
+    }
+  },
+  {
+    "id": "146383",
+    "original": "焼き立てのパンはいかがですか。",
+    "en": [
+      {
+        "id": "268179",
+        "text": "Won't you have some bread hot from the oven?"
+      }
+    ],
+    "indices": "焼き立て{焼き立ての} パン(#1103090)[01] は 如何(いかが){いかが} ですか",
+    "vocabIds": [
+      "1350590"
+    ],
+    "matches": {
+      "1350590": [
+        {
+          "start": 0,
+          "length": 4,
+          "reading": "やきたて"
+        }
+      ]
+    }
+  },
+  {
     "id": "146386",
     "original": "焼きたてのケーキは容易に切れない。",
     "en": [
@@ -34,6 +120,29 @@
           "start": 9,
           "length": 2,
           "reading": "ようい"
+        }
+      ]
+    }
+  },
+  {
+    "id": "223298",
+    "original": "このパンは焼き立てです。",
+    "en": [
+      {
+        "id": "60630",
+        "text": "This bread is fresh from the oven."
+      }
+    ],
+    "indices": "此の{この} パン(#1103090)[01] は 焼き立て~ です",
+    "vocabIds": [
+      "1350590"
+    ],
+    "matches": {
+      "1350590": [
+        {
+          "start": 5,
+          "length": 4,
+          "reading": "やきたて"
         }
       ]
     }
@@ -338,6 +447,122 @@
           "start": 7,
           "length": 4,
           "reading": "やきたて"
+        }
+      ]
+    }
+  },
+  {
+    "id": "11583606",
+    "original": "このクッキー、焼き立てなのよ。",
+    "en": [
+      {
+        "id": "6673067",
+        "text": "These cookies are fresh from the oven."
+      },
+      {
+        "id": "12418122",
+        "text": "These are freshly baked cookies."
+      }
+    ],
+    "vocabIds": [
+      "1350590"
+    ],
+    "matches": {
+      "1350590": [
+        {
+          "start": 7,
+          "length": 4,
+          "reading": "やきたて"
+        }
+      ]
+    }
+  },
+  {
+    "id": "11588378",
+    "original": "このパンは、焼き立てです。",
+    "en": [
+      {
+        "id": "10687286",
+        "text": "This bread is freshly baked."
+      }
+    ],
+    "vocabIds": [
+      "1350590"
+    ],
+    "matches": {
+      "1350590": [
+        {
+          "start": 6,
+          "length": 4,
+          "reading": "やきたて"
+        }
+      ]
+    }
+  },
+  {
+    "id": "12508345",
+    "original": "キッチンは、焼き立てパンの香りがした。",
+    "en": [
+      {
+        "id": "11101880",
+        "text": "The kitchen smelled of freshly baked bread."
+      }
+    ],
+    "vocabIds": [
+      "1350590",
+      "1589820"
+    ],
+    "matches": {
+      "1350590": [
+        {
+          "start": 6,
+          "length": 4,
+          "reading": "やきたて"
+        }
+      ],
+      "1589820": [
+        {
+          "start": 13,
+          "length": 2,
+          "reading": "かおり"
+        }
+      ]
+    }
+  },
+  {
+    "id": "12508346",
+    "original": "台所は、焼き立てパンの匂いがした。",
+    "en": [
+      {
+        "id": "11101880",
+        "text": "The kitchen smelled of freshly baked bread."
+      }
+    ],
+    "vocabIds": [
+      "1350590",
+      "1412640",
+      "1599760"
+    ],
+    "matches": {
+      "1350590": [
+        {
+          "start": 4,
+          "length": 4,
+          "reading": "やきたて"
+        }
+      ],
+      "1412640": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "だいどころ"
+        }
+      ],
+      "1599760": [
+        {
+          "start": 11,
+          "length": 2,
+          "reading": "におい"
         }
       ]
     }

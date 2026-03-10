@@ -55,6 +55,83 @@
     }
   },
   {
+    "id": "75694",
+    "original": "明日は朝イチで大事なミッションがあるのだ。こんなことしてる場合じゃない。",
+    "en": [
+      {
+        "id": "328024",
+        "text": "Tomorrow, I've got an important mission first thing in the morning. I shouldn't be wasting my time with this."
+      }
+    ],
+    "indices": "明日 は 朝一{朝イチ}~ で(#2028980) 大事(だいじ)[01]{大事な} ミッション[01]~ が[01] 有る{ある} のだ こんな 事(こと){こと} 為る(する){してる} 場合 だ{じゃない}",
+    "vocabIds": [
+      "2140240",
+      "1584660",
+      "1413940",
+      "1355810"
+    ],
+    "matches": {
+      "1355810": [
+        {
+          "start": 29,
+          "length": 2,
+          "reading": "ばあい"
+        }
+      ],
+      "1413940": [
+        {
+          "start": 7,
+          "length": 2,
+          "reading": "だいじ"
+        }
+      ],
+      "1584660": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "あした"
+        }
+      ],
+      "2140240": [
+        {
+          "start": 3,
+          "length": 3,
+          "reading": "あさいち"
+        }
+      ]
+    }
+  },
+  {
+    "id": "9124411",
+    "original": "朝イチで電話するよ。",
+    "en": [
+      {
+        "id": "2649650",
+        "text": "I'll call you first thing in the morning."
+      }
+    ],
+    "vocabIds": [
+      "2140240",
+      "1443840"
+    ],
+    "matches": {
+      "1443840": [
+        {
+          "start": 4,
+          "length": 2,
+          "reading": "でんわ"
+        }
+      ],
+      "2140240": [
+        {
+          "start": 0,
+          "length": 3,
+          "reading": "あさいち"
+        }
+      ]
+    }
+  },
+  {
     "id": "9576137",
     "original": "明日、朝一で彼に電話かけよっと。",
     "en": [
@@ -67,9 +144,17 @@
       "1584660",
       "2140240",
       "1443840",
+      "1000420",
       "1483070"
     ],
     "matches": {
+      "1000420": [
+        {
+          "start": 6,
+          "length": 1,
+          "reading": "かれ"
+        }
+      ],
       "1443840": [
         {
           "start": 8,

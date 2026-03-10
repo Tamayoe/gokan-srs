@@ -1,5 +1,67 @@
 [
   {
+    "id": "94784",
+    "original": "彼女に電話をかけたのですが、お話し中でした。",
+    "en": [
+      {
+        "id": "308922",
+        "text": "I called her, but the line was busy."
+      }
+    ],
+    "indices": "彼女 に 電話をかける{電話をかけた} のです が[03] お話し中 です{でした}",
+    "vocabIds": [
+      "1002750",
+      "1483150",
+      "1443840"
+    ],
+    "matches": {
+      "1002750": [
+        {
+          "start": 14,
+          "length": 4,
+          "reading": "おはなしちゅう"
+        }
+      ],
+      "1443840": [
+        {
+          "start": 3,
+          "length": 2,
+          "reading": "でんわ"
+        }
+      ],
+      "1483150": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "かのじょ"
+        }
+      ]
+    }
+  },
+  {
+    "id": "195501",
+    "original": "まだお話し中です。",
+    "en": [
+      {
+        "id": "32675",
+        "text": "The line is still busy."
+      }
+    ],
+    "indices": "未だ[01]{まだ} 話し中{お話し中} です",
+    "vocabIds": [
+      "1002750"
+    ],
+    "matches": {
+      "1002750": [
+        {
+          "start": 2,
+          "length": 4,
+          "reading": "おはなしちゅう"
+        }
+      ]
+    }
+  },
+  {
     "id": "203659",
     "original": "ただいまお話中です。",
     "en": [
@@ -187,6 +249,60 @@
     }
   },
   {
+    "id": "226503",
+    "original": "お話し中すみません。",
+    "en": [
+      {
+        "id": "63848",
+        "text": "May I cut in?"
+      },
+      {
+        "id": "434012",
+        "text": "I'm sorry to interrupt you while you're talking."
+      },
+      {
+        "id": "434013",
+        "text": "I'm sorry to disturb you while you're talking."
+      }
+    ],
+    "indices": "お話し中 済みません{すみません}",
+    "vocabIds": [
+      "1002750"
+    ],
+    "matches": {
+      "1002750": [
+        {
+          "start": 0,
+          "length": 4,
+          "reading": "おはなしちゅう"
+        }
+      ]
+    }
+  },
+  {
+    "id": "226510",
+    "original": "お話し中、ごめんなさい。",
+    "en": [
+      {
+        "id": "63851",
+        "text": "Excuse me for interrupting you."
+      }
+    ],
+    "indices": "お話し中~ ご免なさい{ごめんなさい}~",
+    "vocabIds": [
+      "1002750"
+    ],
+    "matches": {
+      "1002750": [
+        {
+          "start": 0,
+          "length": 4,
+          "reading": "おはなしちゅう"
+        }
+      ]
+    }
+  },
+  {
     "id": "234580",
     "original": "あいにく、お話中です。",
     "en": [
@@ -205,6 +321,66 @@
           "start": 5,
           "length": 3,
           "reading": "おはなしちゅう"
+        }
+      ]
+    }
+  },
+  {
+    "id": "1191421",
+    "original": "お話し中失礼します。",
+    "en": [
+      {
+        "id": "434013",
+        "text": "I'm sorry to disturb you while you're talking."
+      }
+    ],
+    "vocabIds": [
+      "2276200",
+      "1002750"
+    ],
+    "matches": {
+      "1002750": [
+        {
+          "start": 0,
+          "length": 4,
+          "reading": "おはなしちゅう"
+        }
+      ],
+      "2276200": [
+        {
+          "start": 4,
+          "length": 5,
+          "reading": "しつれいします"
+        }
+      ]
+    }
+  },
+  {
+    "id": "1191427",
+    "original": "お話し中、申し訳ありません。",
+    "en": [
+      {
+        "id": "434013",
+        "text": "I'm sorry to disturb you while you're talking."
+      }
+    ],
+    "vocabIds": [
+      "1612030",
+      "1002750"
+    ],
+    "matches": {
+      "1002750": [
+        {
+          "start": 0,
+          "length": 4,
+          "reading": "おはなしちゅう"
+        }
+      ],
+      "1612030": [
+        {
+          "start": 5,
+          "length": 8,
+          "reading": "もうしわけありません"
         }
       ]
     }

@@ -5,6 +5,7 @@ export interface Vocabulary {
     /** Primary written form (common kanji form) */
     writtenForm: {
         kanji: string;
+        alternatives: string[]; // alternative kanji writings
         containedKanji: string[];
     };
 

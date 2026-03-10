@@ -1,5 +1,75 @@
 [
   {
+    "id": "127136",
+    "original": "値札を取りはずしていただけますか。",
+    "en": [
+      {
+        "id": "276953",
+        "text": "Could you take off the price tag for me?"
+      }
+    ],
+    "indices": "値札 を 取り外す{取りはずして} 頂ける[01]{いただけます} か",
+    "vocabIds": [
+      "1326590",
+      "1642810"
+    ],
+    "matches": {
+      "1326590": [
+        {
+          "start": 3,
+          "length": 6,
+          "reading": "とりはずして"
+        }
+      ],
+      "1642810": [
+        {
+          "start": 0,
+          "length": 2,
+          "reading": "ねふだ"
+        }
+      ]
+    }
+  },
+  {
+    "id": "226476",
+    "original": "カーテンを取りはずして洗濯に出しなさい。",
+    "en": [
+      {
+        "id": "63821",
+        "text": "Take down those curtains and send them to be cleaned."
+      }
+    ],
+    "indices": "カーテン を 取り外す{取りはずして}~ 洗濯 に 出す[05]{出し} 為さい{なさい}",
+    "vocabIds": [
+      "1326590",
+      "1338180",
+      "1390980"
+    ],
+    "matches": {
+      "1326590": [
+        {
+          "start": 5,
+          "length": 6,
+          "reading": "とりはずして"
+        }
+      ],
+      "1338180": [
+        {
+          "start": 14,
+          "length": 5,
+          "reading": "だしなさい"
+        }
+      ],
+      "1390980": [
+        {
+          "start": 11,
+          "length": 2,
+          "reading": "せんたく"
+        }
+      ]
+    }
+  },
+  {
     "id": "226482",
     "original": "カーテンは取り外された。",
     "en": [
@@ -85,6 +155,7 @@
     ],
     "vocabIds": [
       "1326590",
+      "1326910",
       "1323080"
     ],
     "matches": {
@@ -100,6 +171,13 @@
           "start": 9,
           "length": 5,
           "reading": "とりはずして"
+        }
+      ],
+      "1326910": [
+        {
+          "start": 21,
+          "length": 3,
+          "reading": "とりつけ"
         }
       ]
     }

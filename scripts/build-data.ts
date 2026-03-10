@@ -106,6 +106,11 @@ async function main() {
         const containedKanji = extractKanji(kanjiText);
         if (!containedKanji.length) continue;
 
+        // Collect alternative written forms
+        const alternativeKanji = entry.kanji
+            .map(k => k.text)
+            .filter(text => text !== kanjiText);
+
         // Calculate primary reading
         const primaryReading =
             entry.kana.find(k => k.common && k.appliesToKanji.includes("*"))?.text
@@ -175,6 +180,7 @@ async function main() {
             id: entry.id,
             writtenForm: {
                 kanji: kanjiText,
+                alternatives: alternativeKanji,
                 containedKanji,
             },
             reading: {
@@ -274,6 +280,22 @@ async function main() {
                 base.senses.push(sense);
             }
 
+            // Merge alternative kanji writings
+            const allKanji = new Set<string>();
+            allKanji.add(base.writtenForm.kanji);
+            base.writtenForm.alternatives.forEach(k => allKanji.add(k));
+
+            if (!allKanji.has(other.writtenForm.kanji)) {
+                base.writtenForm.alternatives.push(other.writtenForm.kanji);
+                allKanji.add(other.writtenForm.kanji);
+            }
+            for (const alt of other.writtenForm.alternatives) {
+                if (!allKanji.has(alt)) {
+                    base.writtenForm.alternatives.push(alt);
+                    allKanji.add(alt);
+                }
+            }
+
             // Take the MIN KKLC step (earliest intro) if different
             if (other.kklcStep > 0 && other.kklcStep < base.kklcStep) {
                 base.kklcStep = other.kklcStep;
@@ -308,6 +330,13 @@ async function main() {
             writtenToVocabId.set(kanjiText, []);
         }
         writtenToVocabId.get(kanjiText)!.push(vocab.id);
+
+        for (const altKanji of vocab.writtenForm.alternatives) {
+            if (!writtenToVocabId.has(altKanji)) {
+                writtenToVocabId.set(altKanji, []);
+            }
+            writtenToVocabId.get(altKanji)!.push(vocab.id);
+        }
 
         if (vocab.mergedVocabs && vocab.mergedVocabs.length > 1) {
             for (const mv of vocab.mergedVocabs) {
