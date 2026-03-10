@@ -1,6 +1,18 @@
 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .stroke-color { stroke: #2E3A59; }
+        .fill-color { fill: #2E3A59; }
+        .bg-color { fill: transparent; }
+        @media (prefers-color-scheme: dark) {
+            .stroke-color { stroke: #E2E8F0; }
+            .fill-color { fill: #E2E8F0; }
+            .bg-color { fill: #000000; }
+        }
+    </style>
+    <!-- Background circle (transparent in light mode, black in dark mode) -->
+    <circle cx="50" cy="50" r="42.5" class="bg-color" />
     <!-- Circular seal ring -->
-    <circle cx="50" cy="50" r="44" stroke="#2E3A59" stroke-width="2.5" fill="none"/>
+    <circle cx="50" cy="50" r="44" class="stroke-color" stroke-width="2.5" fill="none"/>
     <!-- 語感 centered inside the ring -->
     <text
         x="50"
@@ -9,7 +21,7 @@
         font-size="34"
         text-anchor="middle"
         dominant-baseline="central"
-        fill="#2E3A59"
+        class="fill-color"
         letter-spacing="2"
     >語感</text>
 </svg>

@@ -15,6 +15,7 @@
     content="Japanese vocabulary, SRS, spaced repetition, kanji, JLPT, Japanese learning, vocab app, Japanese SRS, kanji vocabulary" />
   <meta name="author" content="Gokan SRS" />
   <meta name="robots" content="index, follow" />
+  <meta name="google-signin-client_id" content="1088130501377-pe580cj85dt179hltgba6v153m12esmh.apps.googleusercontent.com" />
   <link rel="canonical" href="https://gokan-srs.com" />
 
   <!-- Open Graph / Facebook -->
@@ -37,6 +38,7 @@
 
   <!-- Web App Manifest -->
   <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#000000" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -46,29 +48,55 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Gokan SRS",
-      "description": "Spaced repetition system for learning Japanese vocabulary efficiently. Perfect for kanji learners and JLPT preparation.",
-      "url": "https://gokan-srs.com",
-      "applicationCategory": "EducationalApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "operatingSystem": "Web",
-      "inLanguage": ["en", "ja"],
-      "educationalUse": "Language Learning",
-      "audience": {
-        "@type": "EducationalAudience",
-        "educationalRole": "student"
-      },
-      "featureList": [
-        "Spaced Repetition System",
-        "Japanese Vocabulary Learning",
-        "Kanji-based Vocabulary",
-        "JLPT Preparation",
-        "Google Drive Sync"
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://gokan-srs.com/#webapp",
+          "name": "Gokan SRS",
+          "description": "Spaced repetition system for learning Japanese vocabulary efficiently. Perfect for kanji learners and JLPT preparation.",
+          "url": "https://gokan-srs.com",
+          "applicationCategory": "EducationalApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "operatingSystem": "Web",
+          "inLanguage": ["en", "ja"],
+          "educationalUse": "Language Learning",
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "student"
+          },
+          "featureList": [
+            "Spaced Repetition System",
+            "Japanese Vocabulary Learning",
+            "Kanji-based Vocabulary",
+            "JLPT Preparation",
+            "Google Drive Sync"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://gokan-srs.com/#organization",
+          "name": "Gokan SRS",
+          "url": "https://gokan-srs.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://gokan-srs.com/gokan.svg",
+            "width": "100",
+            "height": "100"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://gokan-srs.com/#website",
+          "url": "https://gokan-srs.com/",
+          "name": "Gokan SRS",
+          "publisher": {
+            "@id": "https://gokan-srs.com/#organization"
+          }
+        }
       ]
     }
     </script>

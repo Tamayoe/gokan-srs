@@ -8,7 +8,7 @@ import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
 import { Loader } from "./components/Loader";
 import { ResponsiveProvider } from "./context/Responsive/ResponsiveProvider";
-import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation, Navigate, Link } from 'react-router-dom';
 
 // Lazy Load Pages
 // Note: Adapting named exports to default exports for lazy loading where necessary
@@ -76,9 +76,9 @@ export const App: React.FC = () => {
         <div className="min-h-screen flex flex-col relative bg-background transition-colors duration-200">
             {/* Top bar */}
             <header className={'flex flex-row gap-3 p-4 md:p-8'}>
-                <div onClick={() => navigate('/')} className="cursor-pointer">
+                <Link to="/" className="cursor-pointer">
                     <Logo />
-                </div>
+                </Link>
                 <div className={'grow'}></div>
 
                 <div className="flex gap-4 items-center">
@@ -148,12 +148,12 @@ export const App: React.FC = () => {
             {/* Footer with About link - only shown on Quiz Screen */}
             {isQuizScreen && (
                 <footer className="p-4 text-center">
-                    <button
-                        onClick={() => navigate("/about")}
-                        className="text-xs text-secondary hover:text-primary transition-colors"
+                    <Link
+                        to="/about"
+                        className="text-xs text-secondary hover:text-primary transition-colors block"
                     >
                         About Gokan SRS
-                    </button>
+                    </Link>
                 </footer>
             )}
         </div>
