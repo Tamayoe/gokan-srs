@@ -41,10 +41,12 @@ Context:
 
 The user has submitted this meaning for the vocabulary word: "${userAnswer}"
 
-Evaluate the user's answer against the vocabulary word *as it is used in the given sentence*.
-- Return "correct" if it is a perfectly valid contextual translation (allow synonyms).
-- Return "minor_error" if the user clearly understands the general concept or root meaning, but the phrasing is imprecise, grammatically slightly off for the context, or they missed a nuance (e.g. answering "to see" instead of "to be seen", or "decide" instead of "decision").
-- Return "wrong" if the answer means something fundamentally different, is completely unrelated, or misses the core concept.
+Evaluate the user's English answer to see if they understand the meaning of the Japanese vocabulary word *in the context of the given sentence*.
+Be lenient and focus on comprehension rather than exact wording.
+
+- Return "correct" if the user's answer captures the core idea of the word as it is used in the context. Even if they don't use the exact words from the English translation, if their answer shows they understand what the word means in this situation, mark it correct.
+- Return "minor_error" if the user's answer is a valid dictionary translation of the word but doesn't quite fit this specific context, OR if they understand the general concept but the phrasing is imprecise or misses a nuance (e.g., wrong part of speech like "decide" vs "decision").
+- Return "wrong" if the answer means something fundamentally different, is completely unrelated, or shows they don't understand the word.
 
 Respond ONLY with valid JSON in the following schema:
 {

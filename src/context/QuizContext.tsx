@@ -28,7 +28,7 @@ import { DEFAULT_SETTINGS } from '../models/user.model';
 import { computeSessionView } from '../utils/quiz.utils';
 import type { SetupCompleteValues, SetupValues } from "../models/state.model";
 import { getNextVocabToStudy, calculateMasteryPercentage } from "../utils/srs.utils";
-import type { QuizItem, QuizType } from "../utils/srs.utils";
+import type { QuizItem, QuizType, QuizMode } from "../utils/srs.utils";
 import { QuizContext } from "./useQuiz";
 import { useGoogleDrive } from "./GoogleDriveContext";
 
@@ -37,7 +37,7 @@ import { useGoogleDrive } from "./GoogleDriveContext";
    ========================= */
 
 // Union type for items we are about to study (Queue Item OR Intro Candidate)
-type PendingQuizItem = QuizItem | { vocabId: string; quizType: QuizType; vocab?: undefined };
+type PendingQuizItem = QuizItem | { vocabId: string; quizType: QuizType; quizMode: QuizMode; vocab?: undefined };
 
 interface QuizState {
     progress: UserProgress | null;
@@ -424,9 +424,9 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             `);
 
             if (!dailyLimitReached && state.introCandidates.length > 0) {
-                // Intros default to Reading quiz, with explicit vocabId
+                // Intros default to Reading quiz ('base' mode), with explicit vocabId
                 console.log(`[QuizContext] nextDue -> Priority 1: Intro ${state.introCandidates[0].id}`);
-                return { vocabId: state.introCandidates[0].id, quizType: 'reading' };
+                return { vocabId: state.introCandidates[0].id, quizType: 'reading', quizMode: 'base' };
             }
 
             // Priority 2: Due Reviews & Retries from Queue
@@ -525,42 +525,50 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 matchedAnswer = evaluation.matchedAnswer;
 
                 // [NEW] Gemini API Contextual Validation
-                // Only trigger if user got it wrong based on strict dictionary check, and has everything configured
-                if ((result === 'wrong' || result === 'minor_error') &&
-                    state.settings?.enableGeminiContext &&
+                // Trigger AI evaluation ONLY if the mode is 'context'
+                if (quizType === 'meaning' && state.currentQuizItem.quizMode === 'context' &&
                     state.settings?.geminiApiKey &&
                     state.currentSentenceId &&
                     state.currentSentences &&
                     state.userAnswer.trim().length > 0) {
-                    const sentence = state.currentSentences.find(s => s.id === state.currentSentenceId);
+                    
+                    // If alwaysUseAiForMeaningContext is TRUE, we evaluate ALL answers, even if strict check says correct.
+                    // If FALSE, we only evaluate if the strict check says wrong or minor_error (original behavior).
+                    const shouldEvaluate = state.settings.alwaysUseAiForMeaningContext || 
+                                           (result === 'wrong' || result === 'minor_error');
 
-                    if (sentence) {
-                        try {
-                            dispatch({ type: 'EVALUATING_AI_START' });
+                    if (shouldEvaluate) {
+                        const sentence = state.currentSentences.find(s => s.id === state.currentSentenceId);
 
-                            const aiEvaluation = await LLMService.validateMeaningContext(
-                                state.settings.geminiApiKey,
-                                state.currentVocab,
-                                sentence,
-                                state.userAnswer
-                            );
+                        if (sentence) {
+                            try {
+                                dispatch({ type: 'EVALUATING_AI_START' });
 
-                            if (aiEvaluation.result === 'correct' || aiEvaluation.result === 'minor_error') {
-                                result = aiEvaluation.result;
-                                // We overwrite the matched answer internally so SRSService stores the user's explicit accepted answer
-                                matchedAnswer = state.userAnswer;
-                                message = result === 'correct'
-                                    ? `Correct. (AI Validated: ${aiEvaluation.reason})`
-                                    : `Close. ${aiEvaluation.reason}`;
-                            } else {
-                                // If AI still says it's wrong, keep the original strict failure or append the AI reason
-                                if (aiEvaluation.reason) {
-                                    message = `Incorrect. (AI: ${aiEvaluation.reason})`;
+                                const aiEvaluation = await LLMService.validateMeaningContext(
+                                    state.settings.geminiApiKey,
+                                    state.currentVocab,
+                                    sentence,
+                                    state.userAnswer
+                                );
+
+                                if (aiEvaluation.result === 'correct' || aiEvaluation.result === 'minor_error') {
+                                    result = aiEvaluation.result;
+                                    // We overwrite the matched answer internally so SRSService stores the user's explicit accepted answer
+                                    matchedAnswer = state.userAnswer;
+                                    message = result === 'correct'
+                                        ? `Correct. (AI Validated: ${aiEvaluation.reason})`
+                                        : `Close. ${aiEvaluation.reason}`;
+                                } else {
+                                    // If AI says it's wrong:
+                                    result = 'wrong';
+                                    if (aiEvaluation.reason) {
+                                        message = `Incorrect. (AI: ${aiEvaluation.reason})`;
+                                    }
                                 }
+                            } catch (e) {
+                                console.error("[QuizContext] AI Evaluation failed, falling back to strict result.", e);
+                                // Fallback to strict evaluation already computed
                             }
-                        } catch (e) {
-                            console.error("[QuizContext] AI Evaluation failed, falling back to strict result.", e);
-                            // Fallback to strict evaluation already computed
                         }
                     }
                 }
@@ -695,6 +703,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 const { updated } = SRSService.applyAnswer(
                     target,
                     state.currentQuizItem.quizType, // [UPDATED] Use real type
+                    state.currentQuizItem.quizMode, // [NEW] Pass quiz mode
                     state.userAnswer,
                     state.feedback!.matchedAnswer,
                     latency,
@@ -731,6 +740,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 const { updated } = SRSService.applyAnswer(
                     v,
                     state.currentQuizItem!.quizType, // [UPDATED] Use real type
+                    state.currentQuizItem!.quizMode, // [NEW] Pass quiz mode
                     state.userAnswer,
                     state.feedback!.matchedAnswer, // Use the matched answer we found during submit
                     latency,
@@ -908,10 +918,10 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         const vid = 'vocabId' in nextDue ? nextDue.vocabId : nextDue.vocab.vocabId;
         const quizType = nextDue.quizType;
 
-        // Load vocab and sentences (if meaning quiz) in parallel
+        // Load vocab and sentences (if meaning_context quiz) in parallel
         Promise.all([
             VocabularyService.loadVocab(vid),
-            quizType === 'meaning' ? VocabularyService.loadSentences(vid) : Promise.resolve(null)
+            (quizType === 'meaning' && nextDue.quizMode === 'context') ? VocabularyService.loadSentences(vid) : Promise.resolve(null)
         ]).then(([vocab, sentences]) => {
             if (alive) {
                 // Select a random sentence if we have sentences

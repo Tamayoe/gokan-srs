@@ -71,6 +71,7 @@ export interface UserSettings {
     learningFrequency: 'high' | 'medium' | 'low';
     geminiApiKey?: string;
     enableGeminiContext?: boolean;
+    alwaysUseAiForMeaningContext?: boolean;
 }
 
 export const DEFAULT_SETTINGS: UserSettings = {
@@ -78,6 +79,7 @@ export const DEFAULT_SETTINGS: UserSettings = {
     enableMeaningQuiz: true,
     learningFrequency: 'medium',
     enableGeminiContext: false,
+    alwaysUseAiForMeaningContext: true,
 };
 
 export const DEFAULT_PROGRESS: Omit<UserProgress, 'kanjiKnowledge'> = {

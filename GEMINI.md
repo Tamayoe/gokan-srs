@@ -532,15 +532,17 @@ return 'exhausted'
 
 1. User types answer (hiragana for reading, english for meaning)
 2. `submitAnswer()` called in `QuizContext`
-3. Base Evaluation:
-   - For Reading: `SRSService.evaluateAnswer()` checks against all readings
-   - For Meaning: `SRSService.evaluateMeaning()` checks against all dictionary glosses
-4. **AI Context Validation (Optional)**: If Meaning is evaluated as incorrect, but `enableGeminiContext` is ON, a Valid API Key is present, and there is a sentence context:
-   - Sets `isEvaluatingAi` to true (shows loading UI).
-   - Calls `LLMService.validateMeaningContext()` to query Gemini Flash asynchronously.
-   - If AI validates the answer in context, overrides result to `correct`.
+3. Determine `quizType` (`'reading'` | `'meaning'`) and `quizMode` (`'base'` | `'context'`) from `currentQuizItem`
+4. Base Evaluation:
+   - For **Reading**: `SRSService.evaluateAnswer()` checks against all readings (always `base` mode)
+   - For **Meaning (`base` mode)**: `SRSService.evaluateMeaning()` checks strictly against all dictionary glosses
+   - For **Meaning (`context` mode)**: First evaluates strictly with `evaluateMeaning()`, then:
+     - If `geminiApiKey` is configured and a sentence is available:
+       - If `alwaysUseAiForMeaningContext` is `true` (default), AI validates ALL answers (including strict-correct ones)
+       - If `alwaysUseAiForMeaningContext` is `false`, AI only validates answers that were strict-wrong or strict-minor_error
+       - On AI network error (400, 500, etc.): silently falls back to the strict evaluation result
 5. Feedback shown (correct/incorrect + matched answer + optional AI note)
-6. `continueToNext()` applies SRS update via `SRSService.applyAnswer()` and loads next vocab
+6. `continueToNext()` applies SRS update via `SRSService.applyAnswer()` passing both `quizType` and `quizMode`. Both `meaning_base` and `meaning_context` update the same `vocab.meaning` SRSEntry internally, but use different `expectedLatency` values (10s vs 15s) for the latency multiplier calculation.
 
 ### Daily Reset Logic
 
@@ -596,6 +598,17 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-03-11]**:
+  - **Meaning Quiz Mode Split (`QuizMode`)**:
+    - Introduced `QuizMode` type (`'base' | 'context'`) in `srs.utils.ts`. `QuizType` (reading/meaning) is preserved as-is; `QuizMode` is a supplementary modifier.
+    - Added `quizMode` field to `QuizItem` and `PendingQuizItem` in `QuizContext.tsx`. Reading quizzes always use `'base'`. Meaning quizzes dynamically compute the mode in `getNextVocabToStudy` based on the item's current mastery percentage:
+      - **`base` mode**: Word-alone quiz using strict definition list evaluation. Used while `meaning.memoryStrength` visual mastery is below **30%**.
+      - **`context` mode**: Sentence quiz using AI evaluation first (when API key is configured). Unlocked once mastery ≥ 30%. Falls back to strict evaluation on AI network errors.
+    - Added `alwaysUseAiForMeaningContext` to `UserSettings` (default `true`). When `true`, the AI validates all answers in context mode — not just incorrect ones. When `false`, reverts to the previous behavior (only validates wrong/minor_error answers).
+    - Updated `SRSService.applyAnswer` to take `quizMode` and dynamically set `expectedLatency` for the SRS latency multiplier: `reading` = 10s, `meaning_base` = 10s, `meaning_context` = 15s (extra reading time for sentences).
+    - Added `quizProperties` map and `sentenceQuizMasteryThreshold: 30` constant to `CONSTANTS.srs`.
+    - Updated all `SRSService.applyAnswer` call sites in tests to pass the new `quizMode` argument.
 
 - **[2026-03-10]**:
   - **Alternative Vocabulary Writings**:
