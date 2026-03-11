@@ -146,6 +146,7 @@ export class SRSService {
     static applyAnswer(
         vocab: VocabProgress,
         quizType: 'reading' | 'meaning',
+        quizMode: 'base' | 'context' | undefined, // [NEW] Mode
         userAnswer: string,
         correctAnswer: string, // The specific reading/meaning matched
         latencyMs: number,
@@ -183,7 +184,14 @@ export class SRSService {
         // Select the correct entry to update
         const currentEntry = quizType === 'reading' ? { ...vocab.reading } : { ...vocab.meaning };
 
-        const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now, intervalModifier, frequencyModifier);
+        // [NEW] Dynamically determine latency limit based on mode and type
+        let expectedLatencyKey: keyof typeof CONSTANTS.srs.quizProperties = quizType === 'reading' ? 'reading' : 'meaning_base';
+        if (quizType === 'meaning' && quizMode === 'context') {
+            expectedLatencyKey = 'meaning_context';
+        }
+        const expectedLatency = CONSTANTS.srs.quizProperties[expectedLatencyKey].expectedLatency;
+
+        const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now, expectedLatency, intervalModifier, frequencyModifier);
 
         // Check for Graduation (Mastery)
         // A word is graduated if BOTH are mastered? Or if the specific one is mastered?
@@ -261,13 +269,14 @@ export class SRSService {
         result: AnswerResult,
         latencyMs: number,
         now: Date,
+        expectedLatency: number, // [NEW] dynamic expected latency parameter
         intervalModifier: number = 1.0,
         frequencyModifier: number = 1.0
     ): { newEntry: SRSEntry; interval: number } {
 
         // 1. Calculate Multipliers
-        // Latency Multiplier L = clamp(1500 / latency, 0.5, 1.5)
-        const latencyRatio = F.expectedLatency / latencyMs;
+        // Latency Multiplier L = clamp(expectedLatency / latency, 0.5, 1.5)
+        const latencyRatio = expectedLatency / latencyMs;
         const L = Math.min(Math.max(latencyRatio, F.latency.min), F.latency.max);
 
         // Difficulty Multiplier D = 0.6 + 0.8 * difficulty
@@ -323,7 +332,7 @@ export class SRSService {
         let newDifficulty = entry.difficulty;
         if (result === 'wrong') {
             newDifficulty -= 0.02;
-        } else if (result === 'correct' && latencyMs < F.expectedLatency) {
+        } else if (result === 'correct' && latencyMs < expectedLatency) {
             newDifficulty += 0.01;
         }
         newDifficulty = Math.min(Math.max(newDifficulty, 0), 1); // Clamp 0-1

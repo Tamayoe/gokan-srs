@@ -3,10 +3,12 @@ import type { UserProgress, UserSettings } from "../models/user.model";
 import { CONSTANTS } from "../commons/constants";
 
 export type QuizType = 'reading' | 'meaning';
+export type QuizMode = 'base' | 'context';
 
 export interface QuizItem {
     vocab: VocabProgress;
     quizType: QuizType;
+    quizMode: QuizMode;
 }
 
 /**
@@ -46,7 +48,7 @@ export function getNextVocabToStudy(
     });
 
     if (allReadings.length > 0) {
-        return { vocab: pickRandom(allReadings)!, quizType: 'reading' };
+        return { vocab: pickRandom(allReadings)!, quizType: 'reading', quizMode: 'base' };
     }
 
     // 3. Priority: Due Meanings (IF ENABLED)
@@ -57,7 +59,11 @@ export function getNextVocabToStudy(
             v.meaning.dueDate <= now
         );
         if (dueMeanings.length > 0) {
-            return { vocab: pickRandom(dueMeanings)!, quizType: 'meaning' };
+            const vocab = pickRandom(dueMeanings)!;
+            const mastery = calculateMasteryPercentage(vocab.meaning.memoryStrength);
+            // Default to 'base'; use 'context' if mastery threshold is reached
+            const mode: QuizMode = mastery >= CONSTANTS.srs.sentenceQuizMasteryThreshold ? 'context' : 'base';
+            return { vocab, quizType: 'meaning', quizMode: mode };
         }
     }
 
@@ -72,7 +78,7 @@ export function getNextVocabToStudy(
     if (newIntros.length > 0) {
         // Intros are type-agnostic until "Learn" is clicked, but we need a type.
         // We default to 'reading' as the primary entry point.
-        return { vocab: pickRandom(newIntros)!, quizType: 'reading' };
+        return { vocab: pickRandom(newIntros)!, quizType: 'reading', quizMode: 'base' };
     }
 
     return null;

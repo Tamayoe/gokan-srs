@@ -26,6 +26,14 @@ export const CONSTANTS = {
             low: 2.0
         },
 
+        quizProperties: {
+            reading: { expectedLatency: 10000 },
+            meaning_base: { expectedLatency: 10000 },
+            meaning_context: { expectedLatency: 15000 }
+        },
+
+        sentenceQuizMasteryThreshold: 30, // threshold at which meaningful context begins (30% mastery)
+
         /** Formula Constants */
         formula: {
             targetRecall: 0.75,

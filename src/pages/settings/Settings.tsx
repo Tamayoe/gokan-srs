@@ -245,11 +245,11 @@ export function SettingsScreen({
 
                 <div className="space-y-4">
                     {/* Enable Toggle */}
-                    <div className="flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider">
+                    <div className={`flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider ${settings.enableMeaningQuiz === false ? 'opacity-50 pointer-events-none' : ''}`}>
                         <div className="flex flex-col gap-1 pr-4">
                             <span className="font-medium text-primary">Enable Context-Aware Validation</span>
                             <span className="text-secondary text-xs sm:text-sm">
-                                AI is only called if your answer is initially marked wrong on a meaning quiz that has a sentence context.
+                                Use AI during meaning quizzes that have a sentence context. Required for sentence quizzes.
                             </span>
                         </div>
                         <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
@@ -295,6 +295,33 @@ export function SettingsScreen({
                                     Your key is stored locally in your browser and is never sent to our servers. Get a free key from <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Google AI Studio</a>.
                                 </span>
                             </div>
+                        </div>
+                    )}
+
+                    {/* Validate All Correct Answers Toggle */}
+                    {settings.enableGeminiContext && (
+                        <div className={`flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider animate-fade-in-up ${settings.enableMeaningQuiz === false ? 'opacity-50 pointer-events-none' : ''}`} style={{ animationDelay: "100ms" }}>
+                            <div className="flex flex-col gap-1 pr-4">
+                                <span className="font-medium text-primary">AI Validation on All Answers</span>
+                                <span className="text-secondary text-xs sm:text-sm">
+                                    When enabled, AI validates every answer in sentence quizzes. When disabled, AI only validates answers initially marked wrong or imprecise.
+                                </span>
+                            </div>
+                            <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
+                                <input
+                                    type="checkbox"
+                                    className="sr-only peer"
+                                    checked={settings.alwaysUseAiForMeaningContext !== false}
+                                    disabled={settings.enableMeaningQuiz === false}
+                                    onChange={(e) =>
+                                        onUpdateSettings({
+                                            ...settings,
+                                            alwaysUseAiForMeaningContext: e.target.checked,
+                                        })
+                                    }
+                                />
+                                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent/20 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent"></div>
+                            </label>
                         </div>
                     )}
                 </div>
