@@ -164,6 +164,16 @@ export function SettingsScreen({
                     }
                     options={[
                         {
+                            value: 'kanji_coverage',
+                            label: 'Kanji Coverage Priority',
+                            description: (
+                                <span className="flex items-center gap-1.5 text-accent font-medium">
+                                    <Sparkles size={14} className="flex-shrink-0" />
+                                    Recommended: Efficiently covers known kanji
+                                </span>
+                            ),
+                        },
+                        {
                             value: 'frequency',
                             label: 'Frequency',
                             description: 'Most common words first',
@@ -175,6 +185,36 @@ export function SettingsScreen({
                         },
                     ]}
                 />
+
+                {settings.preferredLearningOrder === 'kanji_coverage' && (
+                    <div className="mt-6 p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider">
+                        <div className="flex flex-col gap-1 mb-4">
+                            <span className="font-medium text-primary">Target vocab per Kanji</span>
+                            <span className="text-secondary text-sm">
+                                How many words to learn for each kanji before prioritizing new kanji (1-5).
+                            </span>
+                        </div>
+                        <div className="flex items-center gap-4">
+                            <input
+                                type="range"
+                                min="1"
+                                max="5"
+                                step="1"
+                                value={settings.kanjiCoverageTarget || 1}
+                                onChange={(e) =>
+                                    onUpdateSettings({
+                                        ...settings,
+                                        kanjiCoverageTarget: parseInt(e.target.value, 10),
+                                    })
+                                }
+                                className="flex-1 h-2 bg-divider rounded-lg appearance-none cursor-pointer accent-accent"
+                            />
+                            <span className="w-8 text-center font-bold text-primary">
+                                {settings.kanjiCoverageTarget || 1}
+                            </span>
+                        </div>
+                    </div>
+                )}
 
                 <div className="mt-8">
                     <OptionGrid

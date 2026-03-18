@@ -475,6 +475,7 @@ export class SRSService {
                 break;
             }
 
+            case 'kanji_coverage':
             case 'frequency': {
                 const index = await VocabularyService.loadFrequencyIndex();
                 if (!index) return 0;
@@ -528,6 +529,9 @@ export class SRSService {
                     );
                 }
                 return this.findCandidatesKKLC(activeIds, kanjiKnowledge.step, maxToFind);
+
+            case "kanji_coverage":
+                return this.findCandidatesKanjiCoverage(activeIds, kanjiKnowledge, maxToFind, settings.kanjiCoverageTarget || 1);
 
             case "frequency":
                 return this.findCandidatesFrequency(activeIds, kanjiKnowledge, maxToFind);
@@ -620,6 +624,108 @@ export class SRSService {
 
             if (allKanjiKnown) {
                 candidates.push(entry.id);
+            }
+        }
+
+        return candidates;
+    }
+
+    private static async findCandidatesKanjiCoverage(
+        activeIds: Set<string>,
+        kanjiKnowledge: KanjiKnowledge,
+        maxToFind: number,
+        targetCoverage: number
+    ): Promise<string[]> {
+        const index = await VocabularyService.loadFrequencyIndex();
+        if (!index) return [];
+
+        const candidates: string[] = [];
+
+        // 1. Calculate how many times each kanji is covered in the active vocabulary
+        const coveredKanjiCount = new Map<string, number>();
+        for (const k of kanjiKnowledge.kanjiSet) {
+            coveredKanjiCount.set(k, 0);
+        }
+
+        // We need a fast lookup for kanji by vocab ID
+        const idToKanji = new Map<string, string[]>();
+        for (const entry of index) {
+            idToKanji.set(entry.id, entry.containedKanji);
+        }
+
+        for (const id of activeIds) {
+            const kanjis = idToKanji.get(id) || [];
+            for (const k of kanjis) {
+                if (coveredKanjiCount.has(k)) {
+                    coveredKanjiCount.set(k, coveredKanjiCount.get(k)! + 1);
+                }
+            }
+        }
+
+        // 2. Identify kanji that haven't met the target coverage yet
+        const uncoveredKanji = new Set<string>();
+        for (const [k, count] of coveredKanjiCount.entries()) {
+            if (count < targetCoverage) {
+                uncoveredKanji.add(k);
+            }
+        }
+
+        // 3. Pre-filter words that are learnable and not already active
+        const learnableUnusedWords = [];
+        for (const entry of index) {
+            if (activeIds.has(entry.id)) continue;
+
+            const allKanjiKnown = entry.containedKanji.every(k => kanjiKnowledge.kanjiSet.has(k));
+            if (allKanjiKnown) {
+                learnableUnusedWords.push(entry);
+            }
+        }
+
+        // 4. Greedily find words that cover the most "uncovered" kanji
+        while (candidates.length < maxToFind && uncoveredKanji.size > 0) {
+            let bestEntry = null;
+            let maxScore = 0;
+
+            for (const entry of learnableUnusedWords) {
+                if (candidates.includes(entry.id)) continue;
+
+                let score = 0;
+                for (const k of entry.containedKanji) {
+                    if (uncoveredKanji.has(k)) score++;
+                }
+
+                if (score > maxScore) {
+                    maxScore = score;
+                    bestEntry = entry;
+                }
+            }
+
+            if (maxScore === 0 || !bestEntry) {
+                // No remaining words cover any uncovered kanji
+                break;
+            }
+
+            candidates.push(bestEntry.id);
+            // We just added ONE coverage to each of those kanji. 
+            // We check if it hit the target, and if so, remove from uncoveredKanji
+            for (const k of bestEntry.containedKanji) {
+                if (uncoveredKanji.has(k)) {
+                    const newCount = (coveredKanjiCount.get(k) || 0) + 1;
+                    coveredKanjiCount.set(k, newCount);
+                    if (newCount >= targetCoverage) {
+                        uncoveredKanji.delete(k);
+                    }
+                }
+            }
+        }
+
+        // 5. Fallback: Fill remaining slots by pure frequency
+        if (candidates.length < maxToFind) {
+            for (const entry of learnableUnusedWords) {
+                if (candidates.length >= maxToFind) break;
+                if (!candidates.includes(entry.id)) {
+                    candidates.push(entry.id);
+                }
             }
         }
 

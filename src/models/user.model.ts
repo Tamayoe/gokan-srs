@@ -62,11 +62,13 @@ export interface KanjiKnowledge {
 }
 
 export type LearningOrder =
+    | 'kanji_coverage'
     | 'frequency'
     | 'kklc';
 
 export interface UserSettings {
     preferredLearningOrder: LearningOrder;
+    kanjiCoverageTarget?: number;
     enableMeaningQuiz: boolean;
     learningFrequency: 'high' | 'medium' | 'low';
     geminiApiKey?: string;
@@ -76,6 +78,7 @@ export interface UserSettings {
 
 export const DEFAULT_SETTINGS: UserSettings = {
     preferredLearningOrder: 'frequency',
+    kanjiCoverageTarget: 1,
     enableMeaningQuiz: true,
     learningFrequency: 'medium',
     enableGeminiContext: false,

@@ -177,7 +177,8 @@ gokan-srs/
 - `kanjiSet`: Set<string> of known kanji characters
 
 **`UserSettings`**
-- `preferredLearningOrder`: `'frequency'` | `'kklc'`
+- `preferredLearningOrder`: `'kanji_coverage'` | `'frequency'` | `'kklc'`
+- `kanjiCoverageTarget`: 1 to 5 (how many words to learn per known kanji before prioritizing new words, default 1)
 - `learningFrequency`: `'high'` | `'medium'` | `'low'`
 
 ### Session State (`state.model.ts`)
@@ -598,6 +599,12 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-03-18]**:
+  - **New Learning Order (`kanji_coverage`)**:
+    - Introduced a new optimal vocabulary learning order based on the Set Cover problem. It dynamically prioritizes learning words that cover known kanji that don't yet have any associated learned vocabulary.
+    - Added `kanjiCoverageTarget` to `UserSettings` to control how many words per kanji to target before falling back to frequency.
+    - Promoted to the default setup order as it is the fastest, most efficient learning path.
 
 - **[2026-03-11]**:
   - **Meaning Quiz Mode Split (`QuizMode`)**:

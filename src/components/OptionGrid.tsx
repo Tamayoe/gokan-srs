@@ -1,8 +1,10 @@
 
 
+import type { ReactNode } from "react";
+
 export const OptionGrid = <T extends string>(props: {
     title: string;
-    options: { value: T; label: string; description: string }[];
+    options: { value: T; label: string; description: ReactNode }[];
     value: T;
     onChange?: (v: T) => void;
 }) => {
@@ -30,9 +32,9 @@ export const OptionGrid = <T extends string>(props: {
                             <div className="text-lg mb-1 font-serif text-primary">
                                 {opt.label}
                             </div>
-                            <p className="text-xs font-serif text-secondary">
+                            <div className="text-xs font-serif text-secondary flex items-start">
                                 {opt.description}
-                            </p>
+                            </div>
                         </button>
                     );
                 })}

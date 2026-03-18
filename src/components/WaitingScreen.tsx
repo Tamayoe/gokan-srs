@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Sparkles } from "lucide-react";
 import { CenteredCard } from "./CenteredCard";
 
 interface WaitingScreenProps {
@@ -18,8 +19,8 @@ export const WaitingScreen: React.FC<WaitingScreenProps> = ({
 
     return (
         <CenteredCard>
-            <h2 className="text-xl mb-4 text-primary font-serif">
-                You’re done for now ✨
+            <h2 className="text-xl mb-4 text-primary font-serif flex items-center justify-center gap-2">
+                You’re done for now <Sparkles size={20} className="text-accent" />
             </h2>
 
             <p className="text-sm mb-6 text-secondary font-serif">

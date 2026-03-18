@@ -1,5 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { SRSService } from './srs.service';
+import { VocabularyService } from './vocabulary.service';
 import { DEFAULT_VOCABULARY_PROGRESS } from '../models/vocabulary.model';
 import type { VocabProgress } from '../models/vocabulary.model';
 
@@ -528,6 +529,81 @@ describe('SRSService Formula Tests', () => {
             expect(updated.stage).toBe('graduated');
             expect(updated.nextReviewAt).toBeNull();
             expect(updated.reading.memoryStrength).toBeGreaterThan(100);
+        });
+    });
+
+    describe('Learning Order: Kanji Coverage', () => {
+        const mockIndex = [
+            { id: 'w1', containedKanji: ['A'] }, 
+            { id: 'w2', containedKanji: ['B'] }, 
+            { id: 'w3', containedKanji: ['A', 'B'] }, 
+            { id: 'w4', containedKanji: ['C'] }, 
+            { id: 'w5', containedKanji: ['D'] }, // Unlearnable
+            { id: 'w6', containedKanji: ['C'] }, 
+        ];
+
+        it('should prioritize words covering the most unassigned kanji', async () => {
+            vi.spyOn(VocabularyService, 'loadFrequencyIndex').mockResolvedValue(mockIndex);
+
+            const kanjiKnowledge = {
+                method: 'kklc', step: 10,
+                kanjiSet: new Set(['A', 'B', 'C'])
+            } as any;
+
+            const settings = {
+                preferredLearningOrder: 'kanji_coverage',
+                kanjiCoverageTarget: 1
+            } as any;
+
+            const candidates = await SRSService.getNextCandidates([], kanjiKnowledge, settings, 2);
+
+            // w3 covers A and B (score 2)
+            // w4 covers C (score 1)
+            expect(candidates).toEqual(['w3', 'w4']);
+        });
+
+        it('should fallback to frequency if target coverage is met', async () => {
+            vi.spyOn(VocabularyService, 'loadFrequencyIndex').mockResolvedValue(mockIndex);
+
+            const kanjiKnowledge = {
+                method: 'kklc', step: 10,
+                kanjiSet: new Set(['A', 'B'])
+            } as any;
+
+            const settings = {
+                preferredLearningOrder: 'kanji_coverage',
+                kanjiCoverageTarget: 1
+            } as any;
+
+            // 'w3' is already in active queue! target = 1, so coverage is met.
+            // Should fallback to purely frequency -> w1, w2.
+            const currentQueue = [{ vocabId: 'w3' }] as any[];
+            const candidates = await SRSService.getNextCandidates(currentQueue, kanjiKnowledge, settings, 2);
+
+            expect(candidates).toEqual(['w1', 'w2']);
+        });
+
+        it('should respect kanjiCoverageTarget > 1', async () => {
+            vi.spyOn(VocabularyService, 'loadFrequencyIndex').mockResolvedValue(mockIndex);
+
+            const kanjiKnowledge = {
+                method: 'kklc', step: 10,
+                kanjiSet: new Set(['A', 'B'])
+            } as any;
+
+            const settings = {
+                preferredLearningOrder: 'kanji_coverage',
+                kanjiCoverageTarget: 2
+            } as any;
+
+            // 'w3' is active. A=1, B=1. 
+            // Target is 2, so A and B are STILL uncovered.
+            const currentQueue = [{ vocabId: 'w3' }] as any[];
+            const candidates = await SRSService.getNextCandidates(currentQueue, kanjiKnowledge, settings, 2);
+
+            expect(candidates.includes('w1')).toBe(true);
+            expect(candidates.includes('w2')).toBe(true);
+            expect(candidates.length).toBe(2);
         });
     });
 });

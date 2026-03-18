@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Sparkles } from "lucide-react";
 import { CONSTANTS } from "../../commons/constants";
 import type { LearningOrder } from "../../models/user.model";
 import { OptionGrid } from "../../components/OptionGrid";
@@ -12,7 +13,7 @@ import { Loader } from "../../components/Loader";
 export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) => Promise<void> }) {
     const { state } = useKanjiForm();
 
-    const [learningOrder, setLearningOrder] = useState<LearningOrder>('frequency');
+    const [learningOrder, setLearningOrder] = useState<LearningOrder>('kanji_coverage');
 
     const handleSubmit = () => {
         if (
@@ -27,6 +28,7 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
                 },
                 settings: {
                     preferredLearningOrder: learningOrder,
+                    kanjiCoverageTarget: 1,
                     enableMeaningQuiz: true, // Default to true
                     learningFrequency: 'medium',
                 },
@@ -51,6 +53,16 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
                     value={learningOrder}
                     onChange={setLearningOrder}
                     options={[
+                        {
+                            value: 'kanji_coverage',
+                            label: 'Kanji Coverage Priority',
+                            description: (
+                                <span className="flex items-center gap-1.5 text-accent font-medium">
+                                    <Sparkles size={14} className="flex-shrink-0" />
+                                    Recommended: Efficiently covers known kanji
+                                </span>
+                            ),
+                        },
                         {
                             value: 'frequency',
                             label: 'Frequency',
