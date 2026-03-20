@@ -592,6 +592,13 @@ return 'exhausted'
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
+- **[2026-03-20]**:
+  - **Refined Kanji Coverage Algorithm**:
+    - Introduced a frequency penalty to the Kanji Coverage scoring mechanism to prevent the selection of obscure or overly complex compound words.
+    - New Scoring Formula: `Score = (Coverage * 2500) - Frequency Rank`.
+    - This ensures common, useful words are prioritized even if they cover fewer new kanji than a very rare compound.
+    - Updated unit tests to verify the balance between coverage and frequency.
+
 - **[2026-03-18]**:
   - **New Learning Order (`kanji_coverage`)**:
     - Introduced a new optimal vocabulary learning order based on the Set Cover problem. It dynamically prioritizes learning words that cover known kanji that don't yet have any associated learned vocabulary.

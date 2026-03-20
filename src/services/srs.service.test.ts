@@ -534,15 +534,53 @@ describe('SRSService Formula Tests', () => {
 
     describe('Learning Order: Kanji Coverage', () => {
         const mockIndex = [
-            { id: 'w1', containedKanji: ['A'] }, 
-            { id: 'w2', containedKanji: ['B'] }, 
-            { id: 'w3', containedKanji: ['A', 'B'] }, 
-            { id: 'w4', containedKanji: ['C'] }, 
-            { id: 'w5', containedKanji: ['D'] }, // Unlearnable
-            { id: 'w6', containedKanji: ['C'] }, 
+            { id: 'w1', containedKanji: ['A'] },  // Rank 0
+            { id: 'w2', containedKanji: ['B'] },  // Rank 1
+            { id: 'w3', containedKanji: ['C'] },  // Rank 2
+            { id: 'w_obsoc', containedKanji: ['A', 'B', 'C', 'D'] }, // Rank 3, but unlearnable (D)
+            { id: 'w_multi', containedKanji: ['A', 'B'] }, // Rank 4
+            { id: 'w_obs_multi', containedKanji: ['A', 'B'] }, // Rank 5
+            { id: 'w_super_obs_multi', containedKanji: ['A', 'B', 'C'] }, // Rank 6
         ];
 
-        it('should prioritize words covering the most unassigned kanji', async () => {
+        it('should prioritize frequency penalty over pure coverage count for obscure compounds', async () => {
+            // Create a specialized index where a compound monster is very far away
+            const expandedMockIndex = [...mockIndex];
+            for (let i = expandedMockIndex.length; i < 6000; i++) {
+                expandedMockIndex.push({ id: `filler-${i}`, containedKanji: [] });
+            }
+            expandedMockIndex[6000] = { id: 'w_compound_monster', containedKanji: ['A', 'B', 'C'] };
+            // monster score: 3 * 2500 - 6000 = 1500
+            // w1 score: 1 * 2500 - 0 = 2500
+
+            vi.spyOn(VocabularyService, 'loadFrequencyIndex').mockResolvedValue(expandedMockIndex);
+
+            const kanjiKnowledge = {
+                method: 'kklc', step: 10,
+                kanjiSet: new Set(['A', 'B', 'C'])
+            } as any;
+
+            const settings = {
+                preferredLearningOrder: 'kanji_coverage',
+                kanjiCoverageTarget: 1
+            } as any;
+
+            // 1. super_obs_multi (rank 6) covers 3 -> score 7494. Should win.
+            const c1 = await SRSService.getNextCandidates([], kanjiKnowledge, settings, 1);
+            expect(c1).toEqual(['w_super_obs_multi']);
+
+            // 2. Clear out the multi-cover words around the top
+            expandedMockIndex[6] = { id: 'f6', containedKanji: [] };
+            expandedMockIndex[4] = { id: 'f4', containedKanji: [] };
+            expandedMockIndex[5] = { id: 'f5', containedKanji: [] };
+
+            // Now only w_compound_monster covers 3 (score 1500)
+            // But w1 covers 1 at rank 0 (score 2500). w1 should win.
+            const c2 = await SRSService.getNextCandidates([], kanjiKnowledge, settings, 1);
+            expect(c2).toEqual(['w1']);
+        });
+
+        it('should fallback to frequency if target coverage is met', async () => {
             vi.spyOn(VocabularyService, 'loadFrequencyIndex').mockResolvedValue(mockIndex);
 
             const kanjiKnowledge = {
@@ -555,31 +593,11 @@ describe('SRSService Formula Tests', () => {
                 kanjiCoverageTarget: 1
             } as any;
 
-            const candidates = await SRSService.getNextCandidates([], kanjiKnowledge, settings, 2);
-
-            // w3 covers A and B (score 2)
-            // w4 covers C (score 1)
-            expect(candidates).toEqual(['w3', 'w4']);
-        });
-
-        it('should fallback to frequency if target coverage is met', async () => {
-            vi.spyOn(VocabularyService, 'loadFrequencyIndex').mockResolvedValue(mockIndex);
-
-            const kanjiKnowledge = {
-                method: 'kklc', step: 10,
-                kanjiSet: new Set(['A', 'B'])
-            } as any;
-
-            const settings = {
-                preferredLearningOrder: 'kanji_coverage',
-                kanjiCoverageTarget: 1
-            } as any;
-
-            // 'w3' is already in active queue! target = 1, so coverage is met.
-            // Should fallback to purely frequency -> w1, w2.
-            const currentQueue = [{ vocabId: 'w3' }] as any[];
+            // 'w_super_obs_multi' is active (covers A, B, C). Target=1 -> coverage is met.
+            const currentQueue = [{ vocabId: 'w_super_obs_multi' }] as any[];
             const candidates = await SRSService.getNextCandidates(currentQueue, kanjiKnowledge, settings, 2);
 
+            // Falls back to pure frequency -> w1, w2
             expect(candidates).toEqual(['w1', 'w2']);
         });
 
@@ -588,7 +606,7 @@ describe('SRSService Formula Tests', () => {
 
             const kanjiKnowledge = {
                 method: 'kklc', step: 10,
-                kanjiSet: new Set(['A', 'B'])
+                kanjiSet: new Set(['A', 'B', 'C'])
             } as any;
 
             const settings = {
@@ -596,14 +614,21 @@ describe('SRSService Formula Tests', () => {
                 kanjiCoverageTarget: 2
             } as any;
 
-            // 'w3' is active. A=1, B=1. 
-            // Target is 2, so A and B are STILL uncovered.
-            const currentQueue = [{ vocabId: 'w3' }] as any[];
+            // 'w_super_obs_multi' active. A=1, B=1, C=1. Target=2. Everything is UNCOVERED (once more).
+            const currentQueue = [{ vocabId: 'w_super_obs_multi' }] as any[];
             const candidates = await SRSService.getNextCandidates(currentQueue, kanjiKnowledge, settings, 2);
 
-            expect(candidates.includes('w1')).toBe(true);
-            expect(candidates.includes('w2')).toBe(true);
-            expect(candidates.length).toBe(2);
+            // Best coverage available is still w_multi or w_obs_multi for A,B (coverage 2)
+            // rank 4 wins vs rank 5.
+            // w_multi score: 2 * 2500 - 4 = 4996.
+            // w1 score: 1 * 2500 - 0 = 2500.
+            // So it picks w_multi. 
+            // Now A=2, B=2, C=1. Target for C is still not met.
+            // Next best for C is w1? No, w3 covers C at rank 2. Score = 1*2500 - 2 = 2498.
+            // w1 covers A (score 0 coverage because A target met? No, the loop re-evaluates).
+            // A target IS met. So w1 coverage is 0.
+            // So w3 (covers C) wins.
+            expect(candidates).toEqual(['w_multi', 'w3']);
         });
     });
 });

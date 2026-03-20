@@ -672,42 +672,44 @@ export class SRSService {
 
         // 3. Pre-filter words that are learnable and not already active
         const learnableUnusedWords = [];
-        for (const entry of index) {
+        for (let rank = 0; rank < index.length; rank++) {
+            const entry = index[rank];
             if (activeIds.has(entry.id)) continue;
 
-            const allKanjiKnown = entry.containedKanji.every(k => kanjiKnowledge.kanjiSet.has(k));
+            const allKanjiKnown = entry.containedKanji.every((k) => kanjiKnowledge.kanjiSet.has(k));
             if (allKanjiKnown) {
-                learnableUnusedWords.push(entry);
+                learnableUnusedWords.push({ entry, rank });
             }
         }
 
-        // 4. Greedily find words that cover the most "uncovered" kanji
+        const KANJI_COVERAGE_RANK_VALUE = 2500;
+
+        // 4. Find words that maximize a blended score of kanji coverage vs frequency penalty
         while (candidates.length < maxToFind && uncoveredKanji.size > 0) {
             let bestEntry = null;
-            let maxScore = 0;
+            let maxScore = -Infinity;
 
-            for (const entry of learnableUnusedWords) {
+            for (const { entry, rank } of learnableUnusedWords) {
                 if (candidates.includes(entry.id)) continue;
 
-                let score = 0;
+                let coverage = 0;
                 for (const k of entry.containedKanji) {
-                    if (uncoveredKanji.has(k)) score++;
+                    if (uncoveredKanji.has(k)) coverage++;
                 }
 
-                if (score > maxScore) {
-                    maxScore = score;
-                    bestEntry = entry;
+                if (coverage > 0) {
+                    const score = coverage * KANJI_COVERAGE_RANK_VALUE - rank;
+                    if (score > maxScore) {
+                        maxScore = score;
+                        bestEntry = entry;
+                    }
                 }
             }
 
-            if (maxScore === 0 || !bestEntry) {
-                // No remaining words cover any uncovered kanji
-                break;
-            }
+            if (!bestEntry) break;
 
             candidates.push(bestEntry.id);
-            // We just added ONE coverage to each of those kanji. 
-            // We check if it hit the target, and if so, remove from uncoveredKanji
+            // Re-evaluate coverage for the remaining capacity
             for (const k of bestEntry.containedKanji) {
                 if (uncoveredKanji.has(k)) {
                     const newCount = (coveredKanjiCount.get(k) || 0) + 1;
@@ -719,9 +721,9 @@ export class SRSService {
             }
         }
 
-        // 5. Fallback: Fill remaining slots by pure frequency
+        // 5. Fallback: Filling remaining slots by pure frequency
         if (candidates.length < maxToFind) {
-            for (const entry of learnableUnusedWords) {
+            for (const { entry } of learnableUnusedWords) {
                 if (candidates.length >= maxToFind) break;
                 if (!candidates.includes(entry.id)) {
                     candidates.push(entry.id);
