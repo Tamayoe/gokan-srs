@@ -18,7 +18,7 @@ terraform {
 }
 
 provider "aws" {
-  region = var.aws_region
+  region  = var.aws_region
   profile = "terraform-deploy"
 }
 
@@ -77,7 +77,114 @@ resource "aws_s3_bucket_versioning" "website" {
   }
 }
 
-# CloudFront Origin Access Control
+# ── CloudFront Logs ────────────────────────────────────────────────────────────
+
+resource "aws_s3_bucket" "cf_logs" {
+  bucket = "${var.project_name}-cf-logs-${data.aws_caller_identity.current.account_id}"
+
+  tags = {
+    Name        = "${var.project_name}-cf-logs"
+    Environment = "production"
+  }
+}
+
+resource "aws_s3_bucket_public_access_block" "cf_logs" {
+  bucket                  = aws_s3_bucket.cf_logs.id
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+# CloudFront requires ACL support to deliver logs to S3
+resource "aws_s3_bucket_ownership_controls" "cf_logs" {
+  bucket = aws_s3_bucket.cf_logs.id
+  rule { object_ownership = "BucketOwnerPreferred" }
+}
+
+resource "aws_s3_bucket_acl" "cf_logs" {
+  depends_on = [aws_s3_bucket_ownership_controls.cf_logs]
+  bucket     = aws_s3_bucket.cf_logs.id
+  acl        = "log-delivery-write"
+}
+
+# ── Athena ─────────────────────────────────────────────────────────────────────
+
+resource "aws_s3_bucket" "athena_results" {
+  bucket = "${var.project_name}-athena-results-${data.aws_caller_identity.current.account_id}"
+
+  tags = {
+    Name        = "${var.project_name}-athena-results"
+    Environment = "production"
+  }
+}
+
+resource "aws_s3_bucket_public_access_block" "athena_results" {
+  bucket                  = aws_s3_bucket.athena_results.id
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_athena_workgroup" "main" {
+  name = "${var.project_name}-workgroup"
+
+  configuration {
+    result_configuration {
+      output_location = "s3://${aws_s3_bucket.athena_results.bucket}/results/"
+    }
+  }
+}
+
+resource "aws_athena_database" "cf_logs" {
+  name   = replace("${var.project_name}_logs", "-", "_")
+  bucket = aws_s3_bucket.athena_results.bucket
+}
+
+resource "aws_athena_named_query" "create_cf_table" {
+  name      = "create-cloudfront-logs-table"
+  workgroup = aws_athena_workgroup.main.id
+  database  = aws_athena_database.cf_logs.name
+  query     = <<-EOT
+    CREATE EXTERNAL TABLE IF NOT EXISTS cf_access_logs (
+      `date` DATE, time STRING, location STRING, bytes BIGINT,
+      request_ip STRING, method STRING, host STRING, uri STRING,
+      status INT, referrer STRING, user_agent STRING, query_string STRING,
+      cookie STRING, result_type STRING, request_id STRING,
+      host_header STRING, request_protocol STRING, request_bytes BIGINT,
+      time_taken FLOAT, xforwarded_for STRING, ssl_protocol STRING,
+      ssl_cipher STRING, response_result_type STRING, http_version STRING,
+      fle_status STRING, fle_encrypted_fields INT, c_port INT,
+      time_to_first_byte FLOAT, x_edge_detailed_result_type STRING,
+      sc_content_type STRING, sc_content_len BIGINT,
+      sc_range_start BIGINT, sc_range_end BIGINT
+    )
+    ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
+    LOCATION 's3://${aws_s3_bucket.cf_logs.bucket}/cloudfront/'
+    TBLPROPERTIES ('skip.header.line.count'='2');
+  EOT
+}
+
+resource "aws_athena_named_query" "unique_visitors" {
+  name      = "unique-visitors-last-30-days"
+  workgroup = aws_athena_workgroup.main.id
+  database  = aws_athena_database.cf_logs.name
+  query     = <<-EOT
+    SELECT
+      date,
+      COUNT(DISTINCT request_ip) AS unique_visitors,
+      COUNT(*) AS total_requests
+    FROM cf_access_logs
+    WHERE uri = '/index.html'
+      AND date >= CURRENT_DATE - INTERVAL '30' DAY
+    GROUP BY date
+    ORDER BY date DESC;
+  EOT
+}
+
+# ── CloudFront Origin Access Control ──────────────────────────────────────────
+
 resource "aws_cloudfront_origin_access_control" "website" {
   name                              = "${var.project_name}-oac"
   description                       = "OAC for ${var.project_name}"
@@ -91,7 +198,7 @@ resource "aws_cloudfront_distribution" "website" {
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
-  
+
   # Removed price_class = "PriceClass_100" to allow Flat Tier enrollment
 
   # Use domain if provided, otherwise use CloudFront domain
@@ -101,6 +208,12 @@ resource "aws_cloudfront_distribution" "website" {
     domain_name              = aws_s3_bucket.website.bucket_regional_domain_name
     origin_id                = "S3-${aws_s3_bucket.website.id}"
     origin_access_control_id = aws_cloudfront_origin_access_control.website.id
+  }
+
+  logging_config {
+    bucket          = aws_s3_bucket.cf_logs.bucket_domain_name
+    include_cookies = false
+    prefix          = "cloudfront/"
   }
 
   default_cache_behavior {
@@ -253,4 +366,14 @@ output "cloudfront_distribution_id" {
 output "website_url" {
   description = "Website URL"
   value       = "https://${var.domain_name}"
+}
+
+output "cf_logs_bucket" {
+  description = "S3 bucket for CloudFront access logs"
+  value       = aws_s3_bucket.cf_logs.id
+}
+
+output "athena_workgroup" {
+  description = "Athena workgroup name"
+  value       = aws_athena_workgroup.main.id
 }
