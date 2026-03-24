@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
@@ -17,8 +18,16 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
     const { isMobile } = useResponsive();
 
     const { currentVocab, feedback } = state;
+    const [isExpanded, setIsExpanded] = useState(false);
 
     if (!currentVocab) return null;
+
+    const maxMobileDefs = 3;
+    const maxDesktopDefs = 5;
+    const currentMaxDefs = isMobile ? maxMobileDefs : maxDesktopDefs;
+    const hasMoreDefs = currentVocab.senses.length > currentMaxDefs;
+    
+    const displayedSenses = isExpanded ? currentVocab.senses : currentVocab.senses.slice(0, currentMaxDefs);
 
     return (
         <BaseQuizCard
@@ -153,7 +162,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                     className="text-center text-sm space-y-2 text-meaning-muted font-serif"
                 >
                     {isMobile ? (
-                        currentVocab.senses.slice(0, 3).map((sense, index) => (
+                        displayedSenses.map((sense, index) => (
                             <p key={index}>
                                 {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
                                     <span className="text-xs text-tertiary mr-1 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
@@ -162,7 +171,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                             </p>
                         ))
                     ) : (
-                        currentVocab.senses.map((sense, index) => (
+                        displayedSenses.map((sense, index) => (
                             <p key={index}>
                                 {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
                                     <span className="text-xs text-tertiary mr-2 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
@@ -170,6 +179,16 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                 {sense.glosses.join(', ')}
                             </p>
                         ))
+                    )}
+                    
+                    {hasMoreDefs && (
+                        <button
+                            type="button"
+                            onClick={() => setIsExpanded(!isExpanded)}
+                            className="text-xs text-secondary hover:text-primary transition-colors py-1 cursor-pointer font-gothic"
+                        >
+                            {isExpanded ? "Show less" : `+${currentVocab.senses.length - currentMaxDefs} more definitions`}
+                        </button>
                     )}
                 </motion.div>
             )}

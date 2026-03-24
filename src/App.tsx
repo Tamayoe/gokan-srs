@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import './App.css';
 import { OnboardingFlow } from './pages/setup/OnboardingFlow';
 import { Logo } from './components/Logo';
-import { Settings, User, Cloud, RefreshCw, BarChart2 } from 'lucide-react';
+import { Settings, Cloud, RefreshCw, BarChart2 } from 'lucide-react';
 import { useQuiz } from "./context/useQuiz";
 import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
@@ -86,8 +86,8 @@ export const App: React.FC = () => {
                     <button onClick={() => navigate("/stats")} title="Statistics" className="cursor-pointer text-secondary hover:text-primary transition-colors">
                         <BarChart2 size={18} />
                     </button>
-                    <button onClick={() => navigate("/profile")} title="User Profile" className="cursor-pointer text-secondary hover:text-primary transition-colors">
-                        <User size={18} />
+                    <button onClick={() => navigate("/profile")} title="Kanji Configuration" className="cursor-pointer text-secondary hover:text-primary transition-colors flex items-center justify-center">
+                        <span className="font-mincho font-bold text-[18px] leading-none">漢</span>
                     </button>
                     <button onClick={() => navigate("/settings")} title="Settings" className="cursor-pointer text-secondary hover:text-primary transition-colors">
                         <Settings size={18} />

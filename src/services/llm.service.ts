@@ -90,7 +90,6 @@ Respond ONLY with valid JSON in the following schema:
 
             const data = await response.json();
 
-            // Extract the result from the Gemini response structure
             if (data.candidates && data.candidates.length > 0 && data.candidates[0].content.parts.length > 0) {
                 const textResult = data.candidates[0].content.parts[0].text;
 
@@ -103,16 +102,16 @@ Respond ONLY with valid JSON in the following schema:
                     };
                 } catch (parseError) {
                     console.error("[LLMService] Failed to parse Gemini response", parseError);
-                    return { result: 'wrong', reason: "Failed to parse AI response format." };
+                    throw new Error("Failed to parse AI response format.");
                 }
             }
 
-            return { result: 'wrong', reason: "Empty response from AI." };
+            throw new Error("Empty response from AI.");
 
         } catch (error) {
             console.error("[LLMService] API Call Failed:", error);
-            // On catastrophic failure, fail safe (mark wrong, user can read standard feedback)
-            return { result: 'wrong', reason: `API Error: ${error instanceof Error ? error.message : 'Unknown'}` };
+            // On catastrophic failure, throw error to let the caller fallback to strict mode
+            throw error;
         }
     }
 }

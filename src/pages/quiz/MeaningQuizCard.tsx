@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
@@ -26,7 +27,13 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
         ? currentSentences.find(s => s.id === state.currentSentenceId) || null
         : null;
 
+    const [isExpanded, setIsExpanded] = useState(false);
+
     if (!currentVocab || !progress) return null;
+
+    const maxDefs = 5;
+    const hasMoreDefs = currentVocab.senses.length > maxDefs;
+    const displayedSenses = isExpanded ? currentVocab.senses : currentVocab.senses.slice(0, maxDefs);
 
     return (
         <BaseQuizCard
@@ -124,7 +131,7 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                     className="text-center text-sm space-y-2 text-meaning-muted font-serif"
                 >
                     <p className="font-bold text-primary mb-1">Meanings:</p>
-                    {currentVocab.senses.map((sense, index) => (
+                    {displayedSenses.map((sense, index) => (
                         <p key={index}>
                             {sense.appliesToReadings && sense.appliesToReadings.length > 0 && (
                                 <span className="text-xs text-tertiary mr-2 font-gothic">[{sense.appliesToReadings.join(', ')}]</span>
@@ -132,6 +139,16 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                             {sense.glosses.join(', ')}
                         </p>
                     ))}
+                    
+                    {hasMoreDefs && (
+                        <button
+                            type="button"
+                            onClick={() => setIsExpanded(!isExpanded)}
+                            className="text-xs text-secondary hover:text-primary transition-colors py-1 cursor-pointer font-gothic"
+                        >
+                            {isExpanded ? "Show less" : `+${currentVocab.senses.length - maxDefs} more definitions`}
+                        </button>
+                    )}
 
                     {sentence && sentence.en && (
                         <div className="mt-4 pt-4 border-t border-divider">
