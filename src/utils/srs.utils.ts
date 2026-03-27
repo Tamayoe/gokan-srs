@@ -61,8 +61,10 @@ export function getNextVocabToStudy(
         if (dueMeanings.length > 0) {
             const vocab = pickRandom(dueMeanings)!;
             const mastery = calculateMasteryPercentage(vocab.meaning.memoryStrength);
-            // Default to 'base'; use 'context' if mastery threshold is reached
-            const mode: QuizMode = mastery >= CONSTANTS.srs.sentenceQuizMasteryThreshold ? 'context' : 'base';
+            // Resolve the configured threshold level (default 'normal' = 50%)
+            const thresholdKey = settings?.meaningContextThreshold ?? 'normal';
+            const masteryThreshold = CONSTANTS.srs.meaningContextThresholds[thresholdKey];
+            const mode: QuizMode = mastery >= masteryThreshold ? 'context' : 'base';
             return { vocab, quizType: 'meaning', quizMode: mode };
         }
     }

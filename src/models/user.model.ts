@@ -66,6 +66,8 @@ export type LearningOrder =
     | 'frequency'
     | 'kklc';
 
+export type MeaningContextThreshold = 'early' | 'normal' | 'late';
+
 export interface UserSettings {
     preferredLearningOrder: LearningOrder;
     kanjiCoverageTarget?: number;
@@ -74,6 +76,8 @@ export interface UserSettings {
     geminiApiKey?: string;
     enableGeminiContext?: boolean;
     alwaysUseAiForMeaningContext?: boolean;
+    /** Mastery threshold at which meaning quizzes switch to sentence/context mode */
+    meaningContextThreshold?: MeaningContextThreshold;
 }
 
 export const DEFAULT_SETTINGS: UserSettings = {
@@ -83,6 +87,7 @@ export const DEFAULT_SETTINGS: UserSettings = {
     learningFrequency: 'medium',
     enableGeminiContext: false,
     alwaysUseAiForMeaningContext: true,
+    meaningContextThreshold: 'normal',
 };
 
 export const DEFAULT_PROGRESS: Omit<UserProgress, 'kanjiKnowledge'> = {

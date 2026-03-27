@@ -180,6 +180,11 @@ gokan-srs/
 - `preferredLearningOrder`: `'kanji_coverage'` | `'frequency'` | `'kklc'`
 - `kanjiCoverageTarget`: 1 to 5 (how many words to learn per known kanji before prioritizing new words, default 1)
 - `learningFrequency`: `'high'` | `'medium'` | `'low'`
+- `enableMeaningQuiz`: boolean (default true)
+- `geminiApiKey`: optional Gemini API key for AI context validation
+- `enableGeminiContext`: boolean (default false)
+- `alwaysUseAiForMeaningContext`: boolean (default true)
+- `meaningContextThreshold`: `'early'` | `'normal'` | `'late'` (default `'normal'`). Controls the mastery % at which meaning quizzes switch to sentence/context mode (early=30%, normal=50%, late=70%).
 
 ### Session State (`state.model.ts`)
 
@@ -599,6 +604,14 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-03-27]**:
+  - **Configurable Context Quiz Threshold**:
+    - Added `MeaningContextThreshold` type (`'early' | 'normal' | 'late'`) to `user.model.ts` and `UserSettings`.
+    - Replaced the hardcoded `sentenceQuizMasteryThreshold: 30` constant with a `meaningContextThresholds` map (`early: 30, normal: 50, late: 70`) in `constants.ts`.
+    - Updated `getNextVocabToStudy` in `srs.utils.ts` to resolve the active threshold from `settings.meaningContextThreshold` (defaulting to `'normal'`).
+    - Added a 3-option selector (Early / Normal / Late) in `Settings.tsx` under the "Learning preferences" section, only visible when meaning quizzes are enabled.
+    - Default changed from 30% to 50% (normal) — existing users without a saved setting will also use 50%.
 
 - **[2026-03-20]**:
   - **Refined Kanji Coverage Algorithm**:

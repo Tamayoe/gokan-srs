@@ -32,7 +32,12 @@ export const CONSTANTS = {
             meaning_context: { expectedLatency: 15000 }
         },
 
-        sentenceQuizMasteryThreshold: 30, // threshold at which meaningful context begins (30% mastery)
+        /** Mastery % thresholds for switching meaning quizzes to sentence/context mode */
+        meaningContextThresholds: {
+            early: 30,
+            normal: 50,
+            late: 70,
+        },
 
         /** Formula Constants */
         formula: {

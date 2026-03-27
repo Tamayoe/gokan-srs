@@ -1,5 +1,5 @@
 import { OptionGrid } from "../../components/OptionGrid";
-import type { UserSettings } from "../../models/user.model";
+import type { MeaningContextThreshold, UserSettings } from "../../models/user.model";
 import { useGoogleDrive } from "../../context/GoogleDriveContext";
 import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor, Sparkles, KeyRound } from "lucide-react";
 import { Button } from "../../components/ui/Button";
@@ -268,6 +268,38 @@ export function SettingsScreen({
                         <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent/20 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent"></div>
                     </label>
                 </div>
+
+                {settings.enableMeaningQuiz !== false && (
+                    <div className="mt-6">
+                        <OptionGrid
+                            title="Train meaning in context"
+                            value={settings.meaningContextThreshold ?? 'normal'}
+                            onChange={(value) =>
+                                onUpdateSettings({
+                                    ...settings,
+                                    meaningContextThreshold: value as MeaningContextThreshold,
+                                })
+                            }
+                            options={[
+                                {
+                                    value: 'early',
+                                    label: 'Early',
+                                    description: 'Switch at 30% mastery',
+                                },
+                                {
+                                    value: 'normal',
+                                    label: 'Normal (Default)',
+                                    description: 'Switch at 50% mastery',
+                                },
+                                {
+                                    value: 'late',
+                                    label: 'Late',
+                                    description: 'Switch at 70% mastery',
+                                },
+                            ]}
+                        />
+                    </div>
+                )}
             </section>
 
             {/* AI Features */}
