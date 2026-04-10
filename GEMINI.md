@@ -771,3 +771,4 @@ return 'exhausted'
   - Created comprehensive project documentation covering architecture, data models, services, state management, and workflows.
 - **[2026-01-26]**: Documented SRS priority workflow and error handling policy.
 - **[2026-01-22]**: Acknowledged new Design System. Refactoring visual feedback to match "Sober & Serious" tone.
+- **[2026-04-10]**: Added new "Kanji Coverage" statistic to `StatsOverview`, showing the number of unique kanjis present in the user's learning vocabulary out of their total known kanjis.

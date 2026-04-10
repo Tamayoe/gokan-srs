@@ -754,3 +754,4 @@ return 'exhausted'
     - Successful retries now clear the `needsRetry` flag but **do not** update SRS intervals or memory strength.
     - This preserves the scheduling penalty from the initial wrong answer while allowing the user to practice the correct answer immediately.
     - Updated tests to verify SRS state invariance during retries.
+- **[2026-04-10]**: Added new "Kanji Coverage" statistic to `StatsOverview`, showing the number of unique kanjis present in the user's learning vocabulary out of their total known kanjis.

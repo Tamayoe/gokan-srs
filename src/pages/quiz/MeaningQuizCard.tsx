@@ -90,7 +90,14 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                             onClick={() => feedback?.show && onKanjiClick?.()}
                             title={currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 ? "Merged Entry (combines multiple JMDict words)" : undefined}
                         >
-                            <span>{currentVocab.writtenForm.kanji}</span>
+                            {feedback?.show ? (
+                                <ruby className="ruby-text">
+                                    {currentVocab.writtenForm.kanji}
+                                    <rt className="text-sm font-sans text-secondary not-italic">{currentVocab.reading.primary}</rt>
+                                </ruby>
+                            ) : (
+                                <span>{currentVocab.writtenForm.kanji}</span>
+                            )}
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                 <span className="absolute -right-6 top-0">
