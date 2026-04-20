@@ -85,7 +85,7 @@ export function ReviewForecast({ progress }: ReviewForecastProps) {
                 const meaningHeight = (bucket.meaningCount / forecast.maxCount) * 100;
 
                 return (
-                    <div key={i} className="flex flex-col items-center flex-1 h-full justify-end group z-10">
+                    <div key={i} className="flex flex-col items-center flex-1 min-w-0 h-full justify-end group z-10">
                         <div className="relative w-full flex flex-col justify-end items-center flex-1 mb-2 max-w-[28px]">
                             {/* Stacked Bars Container */}
                             <div className="w-full flex flex-col-reverse items-center justify-end h-full">
@@ -117,12 +117,13 @@ export function ReviewForecast({ progress }: ReviewForecastProps) {
                             </span>
                         </div>
 
-                        <span className="text-xs text-secondary font-medium mt-2">
-                            {bucket.label}
+                        <span className="text-[10px] sm:text-xs text-secondary font-medium mt-2 w-full text-center truncate px-0.5">
+                            <span className="sm:hidden">{bucket.label.charAt(0)}</span>
+                            <span className="hidden sm:inline">{bucket.label}</span>
                         </span>
 
                         {/* Legend/Total Text at bottom */}
-                        <div className="flex flex-col items-center text-[10px] text-tertiary mt-1 leading-none">
+                        <div className="flex flex-col items-center w-full text-[10px] text-tertiary mt-1 leading-none truncate overflow-hidden">
                             <span>{i === 0 && total > 0 ? '(Due)' : total > 0 ? total : '-'}</span>
                         </div>
                     </div>
