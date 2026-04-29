@@ -72,12 +72,18 @@ export class SRSService {
         }
 
         for (const meaning of meanings) {
-            // [FIX] pre-strip parentheses so that commas inside them (e.g. "go (to, from)") don't break splitting
-            const cleanMeaning = meaning.replace(/\s*\(.*?\)\s*/g, " ");
+            // [FIX] pre-strip parentheses iteratively so that commas inside them (e.g. "go (to, from)") don't break splitting
+            let cleanMeaning = meaning;
+            let prev;
+            do {
+                prev = cleanMeaning;
+                cleanMeaning = cleanMeaning.replace(/\s*\([^()]*\)\s*/g, " ");
+            } while (cleanMeaning !== prev);
 
             // Split meaning by separators (comma, semicolon)
             // e.g. "answer; reply; solution"
-            const parts = cleanMeaning.split(/[;,]/).map(p => p.trim()).filter(p => p.length > 0);
+            // [FIX] Split by comma only if not followed by a digit to avoid splitting numbers like 10,000
+            const parts = cleanMeaning.split(/;\s*|,(?!\d)\s*/).map(p => p.trim()).filter(p => p.length > 0);
 
             for (const part of parts) {
                 const normalizedExpected = this.normalizeMeaning(part);
@@ -101,9 +107,13 @@ export class SRSService {
         // 1. Lowercase
         let s = text.toLowerCase().trim();
 
-        // 2a. Remove content within parentheses (e.g. "to go (to a place)")
+        // 2a. Remove content within parentheses (iteratively for nested parens)
         // This must be done BEFORE removing punctuation so we can identify the parentheses
-        s = s.replace(/\s*\(.*?\)\s*/g, " ");
+        let prev;
+        do {
+            prev = s;
+            s = s.replace(/\s*\([^()]*\)\s*/g, " ");
+        } while (s !== prev);
 
         // 3. Remove punctuation
         s = s.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "");
@@ -114,7 +124,7 @@ export class SRSService {
         // "to be seen" -> "seen"
         s = s.replace(/^(to\s+be|to|be|a|an|the)\s+/g, "");
 
-        // 4. Collapse spaces
+        // 5. Collapse spaces
         s = s.replace(/\s+/g, " ");
 
         return s.trim();
@@ -122,6 +132,13 @@ export class SRSService {
 
     private static compareMeaning(user: string, expected: string): AnswerResult {
         if (user === expected) return 'correct';
+
+        // Partial match check (e.g., 'pain' for 'painful' or vice-versa)
+        if (user.length >= 3 && (expected.includes(user) || user.includes(expected))) {
+            if (Math.abs(user.length - expected.length) <= 5) {
+                return 'minor_error';
+            }
+        }
 
         // Fuzzy check
         const dist = this.levenshtein(user, expected);

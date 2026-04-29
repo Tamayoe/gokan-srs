@@ -511,6 +511,32 @@ describe('SRSService Formula Tests', () => {
             expect(result).toBe('correct');
             expect(matchedAnswer).toBe('going through');
         });
+
+        it('should ignore nested parenthetical information', () => {
+            const nested = ['dog (Canis (lupus) familiaris)'];
+            const { result, matchedAnswer } = SRSService.evaluateMeaning('dog', nested);
+            expect(result).toBe('correct');
+            expect(matchedAnswer).toBe('dog');
+        });
+
+        it('should not split numbers with commas', () => {
+            const numWithComma = ['10,000'];
+            const { result, matchedAnswer } = SRSService.evaluateMeaning('10,000', numWithComma);
+            expect(result).toBe('correct');
+            expect(matchedAnswer).toBe('10,000');
+        });
+
+        it('should return minor error for partial matches if length diff <= 5', () => {
+            const { result: r1 } = SRSService.evaluateMeaning('pain', ['painful']);
+            expect(r1).toBe('minor_error');
+
+            const { result: r2 } = SRSService.evaluateMeaning('painful', ['pain']);
+            expect(r2).toBe('minor_error');
+
+            // Diff > 5 should be wrong
+            const { result: r3 } = SRSService.evaluateMeaning('able', ['uncomfortable']);
+            expect(r3).toBe('wrong');
+        });
     });
     describe('applyVocabIntroChoice', () => {
         it('should initialize due dates for Learn choice', () => {
