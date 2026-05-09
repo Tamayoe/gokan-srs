@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { View, Text, Pressable } from "react-native";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
@@ -106,7 +106,7 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                         >
                             {feedback?.show ? (
                                 <View style={[styles.flexCol, styles.alignCenter]}>
-                                    <Text style={[styles.textSm, styles.fontSans, styles.textSecondary, { marginBottom: -8, zIndex: 1 }]}>{currentVocab.reading.primary}</Text>
+                                    <Text style={[styles.textSm, styles.fontGothic, styles.textSecondary, { marginBottom: -8, zIndex: 1 }]}>{currentVocab.reading.primary}</Text>
                                     <Text style={[styles.textPrimary, styles.fontMincho, styles.text5xl, { lineHeight: 56 }]}>
                                         {currentVocab.writtenForm.kanji}
                                     </Text>

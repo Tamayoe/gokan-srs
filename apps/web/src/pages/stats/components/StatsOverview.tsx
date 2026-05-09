@@ -53,16 +53,16 @@ export function StatsOverview({ progress }: StatsOverviewProps) {
     useEffect(() => {
         let mounted = true;
         // Load frequency index to get kanji for each vocab
-        import('../../../services/vocabulary.service').then(({ VocabularyService }) => {
+        import('@gokan-srs/core/services/vocabulary.service').then(({ VocabularyService }) => {
             VocabularyService.loadFrequencyIndex().then(idx => {
                 if (!idx || !mounted) return;
 
                 const learnedVocabIds = new Set((progress.learningQueue || []).map(v => v.vocabId));
 
                 const uniqueKanji = new Set<string>();
-                idx.forEach(entry => {
+                idx.forEach((entry: any) => {
                     if (learnedVocabIds.has(entry.id)) {
-                        entry.containedKanji.forEach(k => uniqueKanji.add(k));
+                        entry.containedKanji.forEach((k: string) => uniqueKanji.add(k));
                     }
                 });
 
@@ -100,9 +100,6 @@ export function StatsOverview({ progress }: StatsOverviewProps) {
 }
 
 function StatCard({ title, value, subtitle }: { title: string, value: string | number, subtitle?: string }) {
-    const stringValue = String(value);
-    const valueSizeClass = stringValue.length > 5 ? "text-2xl" : "text-3xl";
-
     return (
         <View style={[styles.flex1, styles.p4, styles.bgSurface, styles.border, styles.flexCol, styles.alignCenter, styles.justifyCenter, { borderRadius: 12, minWidth: 150, height: 112, borderColor: THEME.colors.divider }]}>
             <Text style={[styles.textSm, styles.textSecondary, styles.fontMedium, styles.mb1]}>{title}</Text>

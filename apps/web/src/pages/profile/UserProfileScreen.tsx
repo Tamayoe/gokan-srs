@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { Button } from "../../components/ui/Button";
 import { KanjiKnowledgeEditor } from "../../components/KanjiKnowledgeEditor";

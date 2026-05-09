@@ -1,17 +1,16 @@
 import React, { Suspense, lazy } from 'react';
-import { View, Text, Pressable, Platform, ScrollView } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import './App.css';
 import { OnboardingFlow } from './pages/setup/OnboardingFlow';
 import { Logo } from './components/Logo';
-import { Settings, Cloud, RefreshCw, BarChart2 } from 'lucide-react';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useQuiz } from "./context/useQuiz";
 import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
 import { Loader } from "./components/Loader";
 import { ResponsiveProvider } from "./context/Responsive/ResponsiveProvider";
-import { Routes, Route, useNavigate, useLocation, Navigate, Link } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { THEME, styles } from '@gokan-srs/ui';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 // Lazy Load Pages
 const QuizScreen = lazy(() => import('./pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { View, Text, ScrollView, Switch, TextInput, Pressable, ActivityIndicator, Image, Linking } from "react-native";
 import { OptionGrid } from "../../components/OptionGrid";
 import type { MeaningContextThreshold, UserSettings } from "@gokan-srs/core/models/user.model";
@@ -223,7 +223,7 @@ export function SettingsScreen({
                                         { borderRadius: 6, borderColor: THEME.colors.divider }
                                     ]}
                                 />
-                                <Text style={[styles.w8, styles.textCenter, styles.fontBold, styles.textPrimary]}>
+                                <Text style={[{ width: 32 }, styles.textCenter, styles.fontBold, styles.textPrimary]}>
                                     {settings.kanjiCoverageTarget || 1}
                                 </Text>
                             </View>

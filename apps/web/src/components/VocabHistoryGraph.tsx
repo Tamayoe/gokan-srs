@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { View, Text } from "react-native";
 import Svg, { Line, Path } from "react-native-svg";
 import type { SRSEntry, ReviewLog } from "@gokan-srs/core/models/vocabulary.model";

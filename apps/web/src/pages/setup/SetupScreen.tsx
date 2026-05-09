@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { View, ScrollView, Text } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { CONSTANTS } from "@gokan-srs/core/commons/constants";
@@ -10,7 +10,7 @@ import { KanjiKnowledgeEditor } from "../../components/KanjiKnowledgeEditor";
 import { useKanjiForm } from "../../context/KanjiForm/useKanjiForm";
 import { Button } from "../../components/ui/Button";
 import { Loader } from "../../components/Loader";
-import { styles } from "@gokan-srs/ui";
+import { styles, THEME } from "@gokan-srs/ui";
 
 export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) => Promise<void> }) {
     const { state } = useKanjiForm();

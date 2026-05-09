@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 import type { StyleProp, ViewStyle } from "react-native";
-import Svg, { Rect, Circle, Text as SvgText } from "react-native-svg";
+import Svg, { Circle, Text as SvgText } from "react-native-svg";
 import { styles, THEME } from "@gokan-srs/ui";
 import { useResponsive } from "../context/Responsive/useResponsive";
 

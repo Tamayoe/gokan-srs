@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { useGoogleDrive } from "../../context/GoogleDriveContext";
 import { StorageService } from "@gokan-srs/core/services/storage.service";

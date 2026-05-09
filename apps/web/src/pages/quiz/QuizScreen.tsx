@@ -1,4 +1,3 @@
-import React from "react";
 import { View } from "react-native";
 import { WaitingScreen } from "../../components/WaitingScreen";
 import { ExhaustedScreen } from "../../components/ExhaustedScreen";

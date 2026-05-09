@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, TextInput, Pressable, Animated } from "react-native";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
-import { CONSTANTS } from "@gokan-srs/core/commons/constants";
 import { Card } from "../../components/ui/Card";
 import { CardSection } from "../../components/ui/CardSection";
 import { MaterialCommunityIcons } from "@expo/vector-icons";

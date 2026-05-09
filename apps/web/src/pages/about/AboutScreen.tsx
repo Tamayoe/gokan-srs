@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, Text, ScrollView, Linking } from 'react-native';
 import { Button } from "../../components/ui/Button";
 import { styles } from "@gokan-srs/ui";

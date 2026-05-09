@@ -1,4 +1,3 @@
-import React from "react";
 import { View, Text, TextInput } from "react-native";
 import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
 import { styles, THEME } from "@gokan-srs/ui";

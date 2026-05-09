@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import Svg, { Circle, Defs, LinearGradient, Stop } from "react-native-svg";
+import Svg, { Circle } from 'react-native-svg';
 import { CONSTANTS } from "@gokan-srs/core/commons/constants";
 import { THEME, styles } from "@gokan-srs/ui";
 

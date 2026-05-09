@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { Animated, Easing, Text, View } from 'react-native';
-import Svg, { Rect, Circle, Text as SvgText } from 'react-native-svg';
+import { Animated, Easing, View } from 'react-native';
+import Svg, { Circle, Text as SvgText } from 'react-native-svg';
 import { styles, THEME } from '@gokan-srs/ui';
 
 export type LoaderProps = {

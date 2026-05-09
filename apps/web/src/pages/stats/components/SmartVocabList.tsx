@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { View, Text, TextInput, Pressable, ScrollView, Animated } from "react-native";
+import { useState, useEffect, useMemo } from "react";
+import { View, Text, TextInput, Pressable, ScrollView } from "react-native";
 import type { VocabProgress, Vocabulary } from "@gokan-srs/core/models/vocabulary.model";
 import { VocabularyService } from "@gokan-srs/core/services/vocabulary.service";
 import { VocabCard } from "../../../components/VocabCard";

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 import { Card } from '../../components/ui/Card';
 import { VocabularyService } from '@gokan-srs/core/services/vocabulary.service';
 import type { Sentence } from '@gokan-srs/core/models/sentence.model';
@@ -15,12 +15,10 @@ export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
     const navigate = useNavigate();
     const [sentences, setSentences] = useState<Sentence[]>([]);
     const [loading, setLoading] = useState(true);
-    const [isExpanded, setIsExpanded] = useState(false);
 
     useEffect(() => {
         let mounted = true;
         setLoading(true);
-        setIsExpanded(false); // Reset expansion state on vocab change
         VocabularyService.loadSentences(vocabId).then(data => {
             if (mounted && data) {
                 setSentences(data);
