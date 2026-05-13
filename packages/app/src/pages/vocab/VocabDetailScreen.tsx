@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useAppNavigation } from "../../context/NavigationContext";
 import { View, Text, ScrollView } from "react-native";
 import type { Vocabulary } from "@gokan-srs/core/models/vocabulary.model";
 import { Card } from "../../components/ui/Card";
@@ -31,8 +31,8 @@ function compoundList(compounds: string[]) {
 }
 
 export default function VocabDetailScreen() {
-    const { vocabId } = useParams<{ vocabId: string }>();
-    const navigate = useNavigate();
+    const navigation = useAppNavigation();
+    const vocabId = navigation.getParam('vocabId');
     const { isMobile } = useResponsive();
     const { state } = useQuiz();
     const [vocab, setVocab] = useState<Vocabulary | null>(null);
@@ -57,7 +57,7 @@ export default function VocabDetailScreen() {
                 <View style={[styles.flexCol, styles.alignCenter]}>
                     <Text style={[styles.textXl, styles.fontBold, styles.textError, styles.mb2, styles.textCenter]}>Error</Text>
                     <Text style={[styles.textSecondary, styles.mb4]}>{error}</Text>
-                    <Button variant="primary" onPress={() => navigate(-1)}>Go Back</Button>
+                    <Button variant="primary" onPress={() => navigation.goBack()}>Go Back</Button>
                 </View>
             </View>
         );
@@ -74,7 +74,7 @@ export default function VocabDetailScreen() {
             <View style={[styles.wFull, styles.flexCol, { maxWidth: 1024 }]}>
                 {/* Header */}
                 <View style={[styles.wFull, styles.flexRow, styles.alignCenter, styles.justifyCenter, styles.relative, styles.mb6, { height: 48 }]}>
-                    <Button variant="ghost" onPress={() => navigate(-1)} style={[styles.absolute, { left: 0, zIndex: 10 }]}>
+                    <Button variant="ghost" onPress={() => navigation.goBack()} style={[styles.absolute, { left: 0, zIndex: 10 }]}>
                         ← Back
                     </Button>
                     <Text style={[styles.textXl, styles.fontSerif, styles.textPrimary]}>

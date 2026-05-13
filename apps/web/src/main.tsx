@@ -1,12 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { QuizProvider } from "./context/QuizContext"
+import { QuizProvider } from "@gokan-srs/app/context/QuizContext"
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleDriveProvider } from "./context/GoogleDriveContext";
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider } from "@gokan-srs/app/context/ThemeContext";
 import { App } from './App';
-import { ResponsiveProvider } from "./context/Responsive/ResponsiveProvider";
+import { ResponsiveProvider } from "@gokan-srs/app/context/Responsive/ResponsiveProvider";
 import { BrowserRouter } from "react-router-dom";
 
 

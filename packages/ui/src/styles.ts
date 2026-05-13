@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { THEME } from '@gokan-srs/core/commons/theme';
+import { THEME } from '../../core/src/commons/theme';
 import type { DimensionValue } from 'react-native';
 
 export const styles = StyleSheet.create({

@@ -1,6 +1,6 @@
 
 
-import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useGoogleLogin, googleLogout, type TokenResponse } from '@react-oauth/google';
 import { GoogleDriveSync, GoogleAuthError } from '@gokan-srs/core/services/google.service';
 import { StorageService } from '@gokan-srs/core/services/storage.service';
@@ -8,27 +8,7 @@ import { MigrationService } from '@gokan-srs/core/services/migration.service';
 import { CONSTANTS } from '@gokan-srs/core/commons/constants';
 import { DEFAULT_SETTINGS } from '@gokan-srs/core/models/user.model';
 
-interface GoogleUser {
-    access_token: string;
-    name?: string;
-    email?: string;
-    picture?: string;
-}
-
-interface GoogleDriveContextType {
-    login: () => void;
-    logout: () => void;
-    downloadProgress: () => Promise<void>;
-    uploadProgress: (envelope: { progress: any; settings: any }) => Promise<void>;
-    isDownloading: boolean;
-    isUploading: boolean;
-    user: GoogleUser | null;
-    isAuthenticated: boolean;
-    isInitialLoadComplete: boolean; // Renamed from isInitialSyncComplete
-    lastDownloadTime: number | null; // Renamed from lastSyncTime
-}
-
-const GoogleDriveContext = createContext<GoogleDriveContextType | null>(null);
+import { GoogleDriveContext, type GoogleUser } from '@gokan-srs/app/context/GoogleDriveContext';
 
 export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [lastDownloadTime, setLastDownloadTime] = useState<number | null>(null);
@@ -225,10 +205,4 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
     );
 };
 
-export const useGoogleDrive = () => {
-    const context = useContext(GoogleDriveContext);
-    if (!context) {
-        throw new Error('useGoogleDrive must be used within a GoogleDriveProvider');
-    }
-    return context;
-};
+

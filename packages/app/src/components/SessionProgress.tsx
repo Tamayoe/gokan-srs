@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import { useQuiz } from '../context/useQuiz';
 import { useResponsive } from '../context/Responsive/useResponsive';
 import { CONSTANTS } from '@gokan-srs/core/commons/constants';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { styles, THEME } from '@gokan-srs/ui';
-import { useNavigate } from 'react-router-dom';
+import { useAppNavigation } from '../context/NavigationContext';
 
 export const SessionProgress: React.FC = () => {
     const { state, sessionState } = useQuiz();
@@ -65,7 +65,7 @@ export const SessionProgress: React.FC = () => {
 
 const HistoryTicker: React.FC = () => {
     const { state } = useQuiz();
-    const navigate = useNavigate();
+    const navigation = useAppNavigation();
     const history = state.sessionHistory;
     const recentItems = history.slice(0, 5);
 
@@ -73,12 +73,13 @@ const HistoryTicker: React.FC = () => {
         <View style={[styles.flex1, styles.flexRow, styles.alignCenter, styles.gap3, { overflow: 'hidden', height: 32 }]}>
             {recentItems.map((item, index) => (
                 <View key={`${item.vocabId}-${index}`} style={[styles.flexRow, styles.alignCenter, styles.gap2]}>
-                    <Text 
-                        onPress={() => navigate(`/vocab/${item.vocabId}`)}
-                        style={[styles.fontSerif, styles.textSm, { color: item.result === 'correct' ? '#059669' : item.result === 'minor_error' ? '#d97706' : '#dc2626' }]}
-                    >
-                        {item.writtenForm}
-                    </Text>
+                    <Pressable onPress={() => navigation.navigate(`/vocab/${item.vocabId}`)} style={({ pressed, hovered }: any) => [{ opacity: pressed || hovered ? 1 : 0.7 }] as any}>
+                        <Text 
+                            style={[styles.fontSerif, styles.textSm, { color: item.result === 'correct' ? '#059669' : item.result === 'minor_error' ? '#d97706' : '#dc2626' }]}
+                        >
+                            {item.writtenForm}
+                        </Text>
+                    </Pressable>
 
                     {item.result === 'correct' && <MaterialCommunityIcons name="check-circle" size={12} color="#10b981" />}
                     {item.result === 'minor_error' && <MaterialCommunityIcons name="alert-circle" size={12} color="#f59e0b" />}

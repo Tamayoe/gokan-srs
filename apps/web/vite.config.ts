@@ -10,15 +10,30 @@ const isCI = process.env.NODE_ENV === 'production';
 export default defineConfig({
     plugins: [
         {
+            // Resolve all @gokan-srs/* workspace package imports to their TypeScript source.
+            // Using resolveId (not resolve.alias regex) so that path.resolve works correctly
+            // on Windows (no backslash/forward-slash mixing issues), and it applies to
+            // both Rollup and Vite's esbuild dep-scanner.
+            name: 'workspace-resolver',
+            enforce: 'pre' as const,
+            resolveId(id: string) {
+                if (id === '@gokan-srs/core') return path.resolve(__dirname, '../../packages/core/src/index.ts');
+                if (id === '@gokan-srs/app')  return path.resolve(__dirname, '../../packages/app/src/index.ts');
+                if (id === '@gokan-srs/ui')   return path.resolve(__dirname, '../../packages/ui/src/index.ts');
+                if (id.startsWith('@gokan-srs/core/')) return path.resolve(__dirname, `../../packages/core/src/${id.slice('@gokan-srs/core/'.length)}`);
+                if (id.startsWith('@gokan-srs/app/'))  return path.resolve(__dirname, `../../packages/app/src/${id.slice('@gokan-srs/app/'.length)}`);
+                if (id.startsWith('@gokan-srs/ui/'))   return path.resolve(__dirname, `../../packages/ui/src/${id.slice('@gokan-srs/ui/'.length)}`);
+            }
+        },
+        {
+            // Redirect react-native imports to react-native-web for web builds.
             name: 'react-native-web-fixes',
             enforce: 'pre' as const,
             resolveId(this: any, source: string) {
                 if (source.includes('codegenNativeComponent')) {
-                    // Resolve strictly to our mock file
                     return path.resolve(__dirname, 'src/utils/codegenNativeComponent.ts');
                 }
                 if (source.startsWith('react-native/')) {
-                    // Remap sub-paths
                     return this.resolve(source.replace('react-native/', 'react-native-web/'), '', { skipSelf: true });
                 }
                 if (source === 'react-native') {
@@ -31,22 +46,32 @@ export default defineConfig({
         !isCI && checker({
             typescript: {
                 buildMode: true,
-                tsconfigPath: "./tsconfig.app.json",
+                tsconfigPath: './tsconfig.app.json',
             },
         }),
     ].filter(Boolean),
-    resolve: {
-        alias: [
-            { find: 'react', replacement: path.resolve(__dirname, '../../node_modules/react') },
-            { find: 'react-dom', replacement: path.resolve(__dirname, '../../node_modules/react-dom') },
-            { find: 'react/jsx-runtime', replacement: path.resolve(__dirname, '../../node_modules/react/jsx-runtime') },
-            { find: 'react/jsx-dev-runtime', replacement: path.resolve(__dirname, '../../node_modules/react/jsx-dev-runtime') },
-        ],
-        dedupe: ['react', 'react-dom'],
-    },
+    resolve: {},
     optimizeDeps: {
+        // Pre-bundle RN-web packages so esbuild processes them into a single chunk.
         include: ['react-native-web', '@expo/vector-icons', 'react-native-svg'],
+        // Exclude workspace packages — their TypeScript source may contain cross-package
+        // sub-path imports (@gokan-srs/core/commons/theme) that esbuild can't resolve.
+        // With exclude, esbuild treats them as external; the workspace-resolver plugin
+        // (running in Vite's rollup layer) handles them correctly at serve time.
+        exclude: ['@gokan-srs/core', '@gokan-srs/ui', '@gokan-srs/app'],
         esbuildOptions: {
+            // On Windows with Bun, node_modules symlinks/junctions for react, react-dom,
+            // and react-native resolve to directory paths that esbuild can't open as files.
+            // Marking them external prevents esbuild from bundling them during optimizeDeps;
+            // Vite's module server handles them correctly at serve time.
+            external: [
+                'react',
+                'react-dom',
+                'react/jsx-runtime',
+                'react/jsx-dev-runtime',
+                'react-dom/client',
+                'react-native',
+            ],
             plugins: [
                 {
                     name: 'esbuild-react-native-fixes',

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Card } from "../../components/ui/Card";
 import type { Vocabulary } from "@gokan-srs/core/models/vocabulary.model";
 import { VocabularyService } from '@gokan-srs/core/services/vocabulary.service';
-import { useNavigate } from "react-router-dom";
+import { useAppNavigation } from "../../context/NavigationContext";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 
 export function VocabRelationshipsCard({ vocab }: Props) {
     const { isMobile } = useResponsive();
-    const navigate = useNavigate();
+    const navigation = useAppNavigation();
 
     const [parents, setParents] = useState<Vocabulary[]>([]);
     const [components, setComponents] = useState<Vocabulary[]>([]);
@@ -61,7 +61,7 @@ export function VocabRelationshipsCard({ vocab }: Props) {
                 {vocabs.map((v) => (
                     <div
                         key={v.id}
-                        onClick={() => navigate(`/vocab/${v.id}`)}
+                        onClick={() => navigation.navigate(`/vocab/${v.id}`)}
                         className="border-l-2 border-divider pl-3 cursor-pointer hover:border-accent transition-colors group"
                     >
                         <div className="flex items-center gap-2 mb-1">

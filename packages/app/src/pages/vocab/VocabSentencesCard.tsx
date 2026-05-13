@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useAppNavigation } from '../../context/NavigationContext';
 import { View, Text } from 'react-native';
 import { Card } from '../../components/ui/Card';
 import { VocabularyService } from '@gokan-srs/core/services/vocabulary.service';
@@ -12,7 +12,7 @@ interface VocabSentencesCardProps {
 }
 
 export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
-    const navigate = useNavigate();
+    const navigation = useAppNavigation();
     const [sentences, setSentences] = useState<Sentence[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -52,7 +52,7 @@ export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
                             <InteractiveSentence
                                 sentence={sentence}
                                 targetVocabId={vocabId}
-                                onVocabClick={(vid) => navigate(`/vocab/${vid}`)}
+                                onVocabClick={(vid) => navigation.navigate(`/vocab/${vid}`)}
                                 showFurigana={true}
                                 textStyle={{ fontSize: 20 }}
                             />

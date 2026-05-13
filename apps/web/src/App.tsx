@@ -1,24 +1,25 @@
 import React, { Suspense, lazy } from 'react';
 import { View, Text, Pressable } from 'react-native';
 import './App.css';
-import { OnboardingFlow } from './pages/setup/OnboardingFlow';
-import { Logo } from './components/Logo';
-import { useQuiz } from "./context/useQuiz";
-import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
-import { useGoogleDrive } from "./context/GoogleDriveContext";
-import { Loader } from "./components/Loader";
-import { ResponsiveProvider } from "./context/Responsive/ResponsiveProvider";
+import { OnboardingFlow } from '@gokan-srs/app/pages/setup/OnboardingFlow';
+import { Logo } from '@gokan-srs/app/components/Logo';
+import { useQuiz } from "@gokan-srs/app/context/useQuiz";
+import { KanjiFormProvider } from "@gokan-srs/app/context/KanjiForm/KanjiFormProvider";
+import { useGoogleDrive } from "@gokan-srs/app/context/GoogleDriveContext";
+import { Loader } from "@gokan-srs/app/components/Loader";
+import { ResponsiveProvider } from "@gokan-srs/app/context/Responsive/ResponsiveProvider";
 import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
+import { NavigationContext } from '@gokan-srs/app/context/NavigationContext';
 import { THEME, styles } from '@gokan-srs/ui';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 // Lazy Load Pages
-const QuizScreen = lazy(() => import('./pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));
-const SettingsScreen = lazy(() => import('./pages/settings/Settings').then(module => ({ default: module.SettingsScreen })));
-const UserProfileScreen = lazy(() => import('./pages/profile/UserProfileScreen').then(module => ({ default: module.UserProfileScreen })));
-const StatsScreen = lazy(() => import('./pages/stats/StatsScreen').then(module => ({ default: module.StatsScreen })));
-const AboutScreen = lazy(() => import('./pages/about/AboutScreen').then(module => ({ default: module.AboutScreen })));
-const VocabDetailScreen = lazy(() => import('./pages/vocab/VocabDetailScreen').then(module => ({ default: module.default })));
+const QuizScreen = lazy(() => import('@gokan-srs/app/pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));
+const SettingsScreen = lazy(() => import('@gokan-srs/app/pages/settings/Settings').then(module => ({ default: module.SettingsScreen })));
+const UserProfileScreen = lazy(() => import('@gokan-srs/app/pages/profile/UserProfileScreen').then(module => ({ default: module.UserProfileScreen })));
+const StatsScreen = lazy(() => import('@gokan-srs/app/pages/stats/StatsScreen').then(module => ({ default: module.StatsScreen })));
+const AboutScreen = lazy(() => import('@gokan-srs/app/pages/about/AboutScreen').then(module => ({ default: module.AboutScreen })));
+const VocabDetailScreen = lazy(() => import('@gokan-srs/app/pages/vocab/VocabDetailScreen').then(module => ({ default: module.default })));
 
 function SyncStatusIndicator() {
     const { isUploading, isDownloading, isAuthenticated } = useGoogleDrive();
@@ -73,9 +74,20 @@ export const App: React.FC = () => {
         </KanjiFormProvider>
     }
 
+    // Implement NavigationContext for Web
+    const navigationValue = {
+        navigate: (path: string) => navigate(path),
+        goBack: () => navigate(-1),
+        getParam: (key: string) => {
+            const match = location.pathname.match(/\/vocab\/(.+)/);
+            return key === 'vocabId' && match ? match[1] : undefined;
+        }
+    };
+
     const isQuizScreen = location.pathname === '/';
 
     return (
+        <NavigationContext.Provider value={navigationValue}>
         <View style={[styles.flex1, styles.flexCol, styles.relative, styles.bgBackground]}>
             {/* Top bar */}
             <View style={[styles.flexRow, styles.p4, { paddingHorizontal: 32 }]}>
@@ -99,59 +111,58 @@ export const App: React.FC = () => {
                 </View>
             </View>
 
-    {/* Screen content */ }
-    < View style = { [styles.flex1, styles.flexCol, styles.alignCenter, styles.p0, isQuizScreen ? styles.justifyCenter : styles.justifyStart]} >
-        <Suspense fallback={<Loader title="Loading..." />}>
-            <Routes>
-                <Route path="/" element={
-                    <ResponsiveProvider>
-                        <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
-                    </ResponsiveProvider>
-                } />
-                <Route path="/stats" element={
-                    <StatsScreen
-                        onBack={() => navigate('/')}
-                        onVocabClick={(id) => navigate(`/vocab/${id}`)}
-                    />
-                } />
-                <Route path="/about" element={
-                    <ResponsiveProvider>
-                        <AboutScreen onBack={() => navigate('/')} />
-                    </ResponsiveProvider>
-                } />
-                <Route path="/settings" element={
-                    <SettingsScreen
-                        settings={state.settings!}
-                        onUpdateSettings={actions.saveSettings}
-                        onReset={actions.reset}
-                        onBack={() => navigate('/')}
-                    />
-                } />
-                <Route path="/profile" element={
-                    <KanjiFormProvider initialState={{
-                        kanjiCount: state.progress!.kanjiKnowledge.step,
-                        kanjiMethod: state.progress!.kanjiKnowledge.method,
-                        knownKanji: state.progress!.kanjiKnowledge.kanjiSet
-                    }}>
-                        <UserProfileScreen
-                            onBack={() => navigate('/')}
-                            onVocabClick={(id) => navigate(`/vocab/${id}`)}
-                        />
-                    </KanjiFormProvider>
-                } />
-                <Route path="/vocab/:vocabId" element={
-                    <ResponsiveProvider>
-                        <VocabDetailScreen />
-                    </ResponsiveProvider>
-                } />
-                <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-        </Suspense>
-            </View >
+            {/* Screen content */}
+            <View style={[styles.flex1, styles.flexCol, styles.alignCenter, styles.p0, isQuizScreen ? styles.justifyCenter : styles.justifyStart]}>
+                <Suspense fallback={<Loader title="Loading..." />}>
+                    <Routes>
+                        <Route path="/" element={
+                            <ResponsiveProvider>
+                                <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
+                            </ResponsiveProvider>
+                        } />
+                        <Route path="/stats" element={
+                            <StatsScreen
+                                onBack={() => navigate('/')}
+                                onVocabClick={(id) => navigate(`/vocab/${id}`)}
+                            />
+                        } />
+                        <Route path="/about" element={
+                            <ResponsiveProvider>
+                                <AboutScreen onBack={() => navigate('/')} />
+                            </ResponsiveProvider>
+                        } />
+                        <Route path="/settings" element={
+                            <SettingsScreen
+                                settings={state.settings!}
+                                onUpdateSettings={actions.saveSettings}
+                                onReset={actions.reset}
+                                onBack={() => navigate('/')}
+                            />
+                        } />
+                        <Route path="/profile" element={
+                            <KanjiFormProvider initialState={{
+                                kanjiCount: state.progress!.kanjiKnowledge.step,
+                                kanjiMethod: state.progress!.kanjiKnowledge.method,
+                                knownKanji: state.progress!.kanjiKnowledge.kanjiSet
+                            }}>
+                                <UserProfileScreen
+                                    onBack={() => navigate('/')}
+                                    onVocabClick={(id) => navigate(`/vocab/${id}`)}
+                                />
+                            </KanjiFormProvider>
+                        } />
+                        <Route path="/vocab/:vocabId" element={
+                            <ResponsiveProvider>
+                                <VocabDetailScreen />
+                            </ResponsiveProvider>
+                        } />
+                        <Route path="*" element={<Navigate to="/" replace />} />
+                    </Routes>
+                </Suspense>
+            </View>
 
-    {/* Footer with About link - only shown on Quiz Screen */ }
-{
-    isQuizScreen && (
+            {/* Footer with About link - only shown on Quiz Screen */}
+            {isQuizScreen && (
                 <View style={[styles.p4, styles.alignCenter]}>
                     <Pressable onPress={() => navigate("/about")} style={({ pressed, hovered }: any) => [{ opacity: pressed || hovered ? 1 : 0.7 }] as any}>
                         <Text style={[styles.textXs, styles.textSecondary]}>
@@ -159,8 +170,8 @@ export const App: React.FC = () => {
                         </Text>
                     </Pressable>
                 </View>
-    )
-}
-        </View >
+            )}
+        </View>
+        </NavigationContext.Provider>
     );
 };

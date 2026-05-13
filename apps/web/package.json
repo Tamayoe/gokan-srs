@@ -13,7 +13,8 @@
         "test:watch": "vitest"
     },
     "dependencies": {
-        "@gokan-srs/core": "*",
+        "@gokan-srs/app": "workspace:*",
+        "@gokan-srs/core": "workspace:*",
         "@gokan-srs/ui": "workspace:*",
         "@react-oauth/google": "^0.13.4",
         "framer-motion": "^12.26.2",
@@ -44,6 +45,7 @@
         "vite": "^5.4.11",
         "vite-plugin-checker": "^0.12.0",
         "vite-plugin-react-native-web": "^2.7.1",
+        "vite-tsconfig-paths": "^6.1.1",
         "vitest": "^4.0.17"
     },
     "overrides": {}

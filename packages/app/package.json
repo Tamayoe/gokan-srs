@@ -1,0 +1,19 @@
+{
+    "name": "@gokan-srs/app",
+    "version": "1.0.0",
+    "private": true,
+    "main": "src/index.ts",
+    "exports": {
+        "./*": "./src/*"
+    },
+    "dependencies": {
+        "@gokan-srs/core": "workspace:*",
+        "@gokan-srs/ui": "workspace:*"
+    },
+    "peerDependencies": {
+        "react": "*",
+        "react-native": "*",
+        "react-native-svg": "*",
+        "@expo/vector-icons": "*"
+    }
+}
