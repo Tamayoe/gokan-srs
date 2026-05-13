@@ -37,6 +37,13 @@ interface FrequencyIndexEntry {
     containedKanji: string[];
 }
 
+interface SearchIndexEntry {
+    id: string;
+    w: string; // kanji
+    r: string; // reading
+    m: string; // meaning
+}
+
 // --- Main ---
 
 async function main() {
@@ -635,6 +642,7 @@ async function main() {
     // Indices
     const kklcIndex: Record<number, string[]> = {};
     const frequencyIndex: FrequencyIndexEntry[] = [];
+    const searchIndex: SearchIndexEntry[] = [];
 
     let vocabWritten = 0;
     let sentencesWritten = 0;
@@ -669,9 +677,16 @@ async function main() {
             id: vocab.id,
             containedKanji: vocab.writtenForm.containedKanji,
         });
+
+        // Search
+        searchIndex.push({
+            id: vocab.id,
+            w: vocab.writtenForm.kanji,
+            r: vocab.reading.primary,
+            m: vocab.senses[0]?.glosses.slice(0, 2).join(', ') || ''
+        });
     }
 
-    // Write Indices
     fs.writeFileSync(
         path.join(OUTPUT_INDEX_DIR, 'kklc.json'),
         JSON.stringify(kklcIndex, null, 2)
@@ -679,6 +694,10 @@ async function main() {
     fs.writeFileSync(
         path.join(OUTPUT_INDEX_DIR, 'frequency.json'),
         JSON.stringify(frequencyIndex, null, 2)
+    );
+    fs.writeFileSync(
+        path.join(OUTPUT_INDEX_DIR, 'search.json'),
+        JSON.stringify(searchIndex)
     );
 
     console.log(`✅ Build Complete!`);

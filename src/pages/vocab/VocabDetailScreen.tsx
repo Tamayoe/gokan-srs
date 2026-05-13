@@ -19,7 +19,7 @@ export default function VocabDetailScreen() {
     const { vocabId } = useParams<{ vocabId: string }>();
     const navigate = useNavigate();
     const { isMobile } = useResponsive();
-    const { state } = useQuiz();
+    const { state, actions } = useQuiz();
     const [vocab, setVocab] = useState<Vocabulary | null>(null);
     const [error, setError] = useState<string | null>(null);
 
@@ -131,6 +131,18 @@ export default function VocabDetailScreen() {
                         <div className="text-base text-primary font-mincho">
                             {vocab.usageHints.examplePattern}
                         </div>
+                    </div>
+                )}
+                {!progress && (
+                    <div className="col-span-2 pt-4 border-t border-divider mt-2">
+                        <Button
+                            className="w-full"
+                            onClick={() => {
+                                actions.saveVocabIntroChoice(vocab, 'learn');
+                            }}
+                        >
+                            Add to Learning List
+                        </Button>
                     </div>
                 )}
             </div>

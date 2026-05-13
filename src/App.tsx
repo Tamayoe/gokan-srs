@@ -9,6 +9,7 @@ import { useGoogleDrive } from "./context/GoogleDriveContext";
 import { Loader } from "./components/Loader";
 import { ResponsiveProvider } from "./context/Responsive/ResponsiveProvider";
 import { Routes, Route, useNavigate, useLocation, Navigate, Link } from 'react-router-dom';
+import { SearchBar } from './components/SearchBar';
 
 // Lazy Load Pages
 // Note: Adapting named exports to default exports for lazy loading where necessary
@@ -75,10 +76,12 @@ export const App: React.FC = () => {
     return (
         <div className="min-h-screen flex flex-col relative bg-background transition-colors duration-200">
             {/* Top bar */}
-            <header className={'flex flex-row gap-3 p-4 md:p-8'}>
-                <Link to="/" className="cursor-pointer">
+            <header className={'flex flex-row items-center gap-2 p-4 md:p-8 md:gap-4'}>
+                <Link to="/" className="cursor-pointer shrink-0">
                     <Logo />
                 </Link>
+                
+                <SearchBar />
                 <div className={'grow'}></div>
 
                 <div className="flex gap-4 items-center">
