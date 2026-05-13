@@ -84,7 +84,7 @@ type QuizAction =
     | { type: 'SAVE_SETTINGS'; payload: UserSettings }
     | { type: 'OVERRIDE_DAILY_LIMIT' }
     | { type: 'RESET' }
-    | { type: 'VOCAB_INTRO_CHOICE'; vocabId: string; choice: 'learn' | 'skip'; }
+    | { type: 'VOCAB_INTRO_CHOICE'; vocabId: string; choice: 'learn' | 'skip'; vocabulary?: Vocabulary; }
     | { type: 'SET_NEXT_KANJI'; payload: { step: number; kanjis: string[] } | null; }
     | { type: 'LEARN_NEXT_KANJI'; payload: UserProgress }
     | { type: 'BUILD_SESSION_QUEUE'; payload: { queue: PendingQuizItem[]; builtAt: number } }
@@ -230,6 +230,7 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 userAnswer: '',
                 sessionQueue: state.sessionQueue.slice(1), // Remove the answered item
                 sessionHistory: [action.payload.historyItem, ...state.sessionHistory].slice(0, 50),
+                introCandidates: state.introCandidates.filter(c => c.id !== action.payload.historyItem.vocabId),
             };
 
         case 'ADVANCE_QUEUE':
@@ -244,8 +245,17 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'CLEAR_FEEDBACK':
             return { ...state, feedback: null };
 
-        case 'SAVE_SETTINGS':
-            return { ...state, settings: action.payload };
+        case 'SAVE_SETTINGS': {
+            const orderChanged =
+                state.settings?.preferredLearningOrder !== action.payload.preferredLearningOrder ||
+                state.settings?.kanjiCoverageTarget !== action.payload.kanjiCoverageTarget;
+
+            return {
+                ...state,
+                settings: action.payload,
+                introCandidates: orderChanged ? [] : state.introCandidates,
+            };
+        }
 
         case 'UPDATE_KANJI_KNOWLEDGE':
             console.debug('[QuizContext] Updating Kanji knowledge', action.payload);
@@ -294,6 +304,22 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 updatedQueue = [...state.progress.learningQueue, processedItem];
             }
 
+            // Determine new introCandidates:
+            // - If vocab was already in candidates (intro card flow): remove it normally.
+            // - If vocab was NOT in candidates (detail page "Add to Learning List"):
+            //   insert it at a random position so it appears naturally among other candidates.
+            const wasInCandidates = state.introCandidates.some(c => c.id === action.vocabId);
+            let nextCandidates = state.introCandidates.filter(c => c.id !== action.vocabId);
+
+            if (!wasInCandidates && action.vocabulary) {
+                const insertAt = Math.floor(Math.random() * (nextCandidates.length + 1));
+                nextCandidates = [
+                    ...nextCandidates.slice(0, insertAt),
+                    action.vocabulary,
+                    ...nextCandidates.slice(insertAt),
+                ];
+            }
+
             const newState = {
                 ...state,
                 progress: {
@@ -305,8 +331,7 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
                         totalLearned: state.progress.stats.totalLearned + 1,
                     }
                 },
-                // Remove from candidates
-                introCandidates: state.introCandidates.filter(c => c.id !== action.vocabId),
+                introCandidates: nextCandidates,
             };
             return newState;
         }
@@ -797,7 +822,8 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             dispatch({
                 type: 'VOCAB_INTRO_CHOICE',
                 choice: choice,
-                vocabId: vocabulary.id
+                vocabId: vocabulary.id,
+                vocabulary,
             });
         },
 
