@@ -1,11 +1,12 @@
 // src/services/VocabularyLoader.ts
 import type { Vocabulary } from '../models/vocabulary.model';
-import type { FrequencyIndex, KKLCIndex, KKLCKanjiIndex } from '../models/index.model';
+import type { FrequencyIndex, KKLCIndex, KKLCKanjiIndex, SearchIndex } from '../models/index.model';
 
 export class VocabularyService {
     private static kklcIndex: KKLCIndex | null = null;
     private static kklcKanjiIndex: KKLCKanjiIndex | null = null;
     private static frequencyIndex: FrequencyIndex | null = null;
+    private static searchIndex: SearchIndex | null = null;
     private static vocabCache = new Map<string, Vocabulary>();
 
     private static async fetchJson<T>(path: string): Promise<T> {
@@ -45,6 +46,32 @@ export class VocabularyService {
         const vocab = await this.fetchJson<Vocabulary>(`/data/compiled/vocab/${id}.json`);
         this.vocabCache.set(id, vocab);
         return vocab;
+    }
+
+    static async loadSearchIndex(): Promise<SearchIndex | null> {
+        if (this.searchIndex) return this.searchIndex;
+
+        try {
+            this.searchIndex = await this.fetchJson<SearchIndex>(`/data/compiled/index/search.json?v=${Date.now()}`);
+            return this.searchIndex;
+        } catch (e) {
+            console.error("Failed to load search index", e);
+            return null;
+        }
+    }
+
+    static async searchVocab(query: string): Promise<SearchIndex> {
+        const index = await this.loadSearchIndex();
+        if (!index) return [];
+
+        const q = query.toLowerCase().trim();
+        if (!q) return [];
+
+        return index.filter(entry => 
+            entry.w.includes(q) || 
+            entry.r.toLowerCase().includes(q) || 
+            entry.m.toLowerCase().includes(q)
+        ).slice(0, 50);
     }
 
     static async loadSentences(vocabId: string): Promise<import('../models/sentence.model').Sentence[] | null> {
