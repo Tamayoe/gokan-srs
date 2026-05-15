@@ -80,6 +80,12 @@ body {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
+/* Icon spin animation (used by Icon.tsx for name="loading") */
+@keyframes icon-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 /* Custom Utility Classes */
 .text-kanji {
   font-size: 4rem;

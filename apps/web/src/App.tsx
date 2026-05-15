@@ -11,7 +11,7 @@ import { ResponsiveProvider } from "@gokan-srs/app/context/Responsive/Responsive
 import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { NavigationContext } from '@gokan-srs/app/context/NavigationContext';
 import { THEME, styles } from '@gokan-srs/ui';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@gokan-srs/app/components/Icon';
 
 // Lazy Load Pages
 const QuizScreen = lazy(() => import('@gokan-srs/app/pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));
@@ -27,12 +27,12 @@ function SyncStatusIndicator() {
     if (!isAuthenticated) return null;
 
     if (isUploading || isDownloading) {
-        return <MaterialCommunityIcons name="loading" size={18} color={THEME.colors.tertiary} style={{ opacity: 0.5 }} />;
+        return <Icon name="loading" size={18} color={THEME.colors.tertiary} style={{ opacity: 0.5 }} />;
     }
 
     return (
         <View style={{ flex: 1, alignItems: 'center' }}>
-            <MaterialCommunityIcons name="cloud-check" size={18} color="#22c55e" /> {/* green-500 equivalent */}
+            <Icon name="cloud-check" size={18} color="#22c55e" /> {/* green-500 equivalent */}
         </View>
     );
 }
@@ -100,13 +100,13 @@ export const App: React.FC = () => {
                 <View style={[styles.flexRow, styles.alignCenter, styles.gap4]}>
                     <SyncStatusIndicator />
                     <Pressable onPress={() => navigate("/stats")} style={({ pressed, hovered }: any) => [{ opacity: pressed || hovered ? 1 : 0.7 }] as any}>
-                        <MaterialCommunityIcons name="chart-bar" size={24} color={THEME.colors.primary} />
+                        <Icon name="chart-bar" size={24} color={THEME.colors.primary} />
                     </Pressable>
                     <Pressable onPress={() => navigate("/profile")} style={({ pressed, hovered }: any) => [{ opacity: pressed || hovered ? 1 : 0.7, justifyContent: 'center', alignItems: 'center' }] as any}>
                         <Text style={{ fontFamily: 'Noto Serif JP', fontWeight: 'bold', fontSize: 18, color: THEME.colors.primary, lineHeight: 24 }}>漢</Text>
                     </Pressable>
                     <Pressable onPress={() => navigate("/settings")} style={({ pressed, hovered }: any) => [{ opacity: pressed || hovered ? 1 : 0.7 }] as any}>
-                        <MaterialCommunityIcons name="cog" size={24} color={THEME.colors.primary} />
+                        <Icon name="cog" size={24} color={THEME.colors.primary} />
                     </Pressable>
                 </View>
             </View>

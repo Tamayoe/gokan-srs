@@ -10,7 +10,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { VocabularyService } from "@gokan-srs/core/services/vocabulary.service";
 import { Button } from "../../components/ui/Button";
 import { LoadingScreen } from "../../components/LoadingScreen";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import { VocabSentencesCard } from "./VocabSentencesCard";
 import { VocabHistoryGraph } from "../../components/VocabHistoryGraph";
 import { ReviewTimeline } from "../../components/ReviewTimeline";
@@ -97,7 +97,7 @@ export default function VocabDetailScreen() {
                                         </Text>
                                         {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
                                             <View style={[styles.absolute, { right: -40, top: 0 }]}>
-                                                <MaterialCommunityIcons name="group" size={24} color={THEME.colors.tertiary + '66'} />
+                                            <Icon name="group" size={24} color={THEME.colors.tertiary + '66'} />
                                             </View>
                                         )}
                                     </View>
@@ -168,7 +168,7 @@ export default function VocabDetailScreen() {
                         {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
                             <Card size={isMobile ? "sm" : "md"}>
                                 <View style={[styles.flexRow, styles.alignCenter, styles.gap2, styles.mb4]}>
-                                    <MaterialCommunityIcons name="group" size={18} color={THEME.colors.primary} />
+                                    <Icon name="group" size={18} color={THEME.colors.primary} />
                                     <Text style={[styles.textLg, styles.fontGothic, styles.fontSemiBold, styles.textPrimary]}>
                                         Original Entries
                                     </Text>

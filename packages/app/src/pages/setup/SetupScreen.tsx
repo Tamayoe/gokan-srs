@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { View, ScrollView, Text } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import { CONSTANTS } from "@gokan-srs/core/commons/constants";
 import type { LearningOrder } from "@gokan-srs/core/models/user.model";
 import { OptionGrid } from "../../components/OptionGrid";
@@ -61,7 +61,7 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
                                 label: 'Kanji Coverage Priority',
                                 description: (
                                     <Text style={[styles.fontMedium, { color: THEME.colors.accent }]}>
-                                        <MaterialCommunityIcons name="star-four-points" size={14} color={THEME.colors.accent} />
+                                        <Icon name="star-four-points" size={14} color={THEME.colors.accent} />
                                         {' '}Recommended: Efficiently covers known kanji
                                     </Text>
                                 ),

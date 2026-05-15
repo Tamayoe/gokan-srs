@@ -3,7 +3,7 @@ import { View, Text, ScrollView, Switch, TextInput, Pressable, ActivityIndicator
 import { OptionGrid } from "../../components/OptionGrid";
 import type { MeaningContextThreshold, UserSettings } from "@gokan-srs/core/models/user.model";
 import { useGoogleDrive } from "../../context/GoogleDriveContext";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import { Button } from "../../components/ui/Button";
 import { useTheme } from "../../context/ThemeContext";
 import { styles, THEME } from "@gokan-srs/ui";
@@ -18,7 +18,7 @@ function SyncControls() {
                 onPress={() => login()}
                 style={[styles.wFull, styles.justifyCenter]}
             >
-                <MaterialCommunityIcons name="login" size={18} style={styles.mr2} />
+                <Icon name="login" size={18} style={styles.mr2} />
                 <Text>Sign in with Google</Text>
             </Button>
         );
@@ -36,7 +36,7 @@ function SyncControls() {
                     )}
                     <View style={[styles.flexCol]}>
                         <View style={[styles.flexRow, styles.alignCenter, styles.gap2]}>
-                            <MaterialCommunityIcons name="cloud" size={16} color="#16a34a" />
+                            <Icon name="cloud" size={16} color="#16a34a" />
                             <Text style={[styles.textSm, styles.fontMedium, { color: '#15803d' }]}>
                                 {user?.name || 'Connected to Google Drive'}
                             </Text>
@@ -70,7 +70,7 @@ function SyncControls() {
                     </View>
                 ) : (
                     <View style={[styles.flexRow, styles.alignCenter]}>
-                        <MaterialCommunityIcons name="refresh" size={18} color={THEME.colors.surface} style={styles.mr2} />
+                        <Icon name="refresh" size={18} color={THEME.colors.surface} style={styles.mr2} />
                         <Text style={styles.textWhite}>Sync Now</Text>
                     </View>
                 )}
@@ -126,7 +126,7 @@ export function SettingsScreen({
                             style={[styles.flex1, styles.flexCol, styles.justifyCenter, styles.alignCenter, { height: 80 }]}
                         >
                             <View style={[styles.flexCol, styles.alignCenter, styles.gap2]}>
-                                <MaterialCommunityIcons name="white-balance-sunny" size={20} color={theme === "light" ? THEME.colors.surface : THEME.colors.primary} />
+                                <Icon name="white-balance-sunny" size={20} color={theme === "light" ? THEME.colors.surface : THEME.colors.primary} />
                                 <Text style={[styles.textXs, theme === "light" ? styles.textWhite : styles.textPrimary]}>Light</Text>
                             </View>
                         </Button>
@@ -136,7 +136,7 @@ export function SettingsScreen({
                             style={[styles.flex1, styles.flexCol, styles.justifyCenter, styles.alignCenter, { height: 80 }]}
                         >
                             <View style={[styles.flexCol, styles.alignCenter, styles.gap2]}>
-                                <MaterialCommunityIcons name="moon-waning-crescent" size={20} color={theme === "dark" ? THEME.colors.surface : THEME.colors.primary} />
+                                <Icon name="moon-waning-crescent" size={20} color={theme === "dark" ? THEME.colors.surface : THEME.colors.primary} />
                                 <Text style={[styles.textXs, theme === "dark" ? styles.textWhite : styles.textPrimary]}>Dark</Text>
                             </View>
                         </Button>
@@ -146,7 +146,7 @@ export function SettingsScreen({
                             style={[styles.flex1, styles.flexCol, styles.justifyCenter, styles.alignCenter, { height: 80 }]}
                         >
                             <View style={[styles.flexCol, styles.alignCenter, styles.gap2]}>
-                                <MaterialCommunityIcons name="monitor" size={20} color={theme === "system" ? THEME.colors.surface : THEME.colors.primary} />
+                                <Icon name="monitor" size={20} color={theme === "system" ? THEME.colors.surface : THEME.colors.primary} />
                                 <Text style={[styles.textXs, theme === "system" ? styles.textWhite : styles.textPrimary]}>System</Text>
                             </View>
                         </Button>
@@ -174,7 +174,7 @@ export function SettingsScreen({
                                 label: 'Kanji Coverage Priority',
                                 description: (
                                     <Text style={[styles.fontMedium, { color: THEME.colors.accent }]}>
-                                        <MaterialCommunityIcons name="star-four-points" size={14} color={THEME.colors.accent} />
+                                        <Icon name="star-four-points" size={14} color={THEME.colors.accent} />
                                         {' '}Recommended: Efficiently covers known kanji
                                     </Text>
                                 ),
@@ -316,7 +316,7 @@ export function SettingsScreen({
                 {/* AI Features */}
                 <View style={[styles.wFull, styles.mb16]}>
                     <View style={[styles.flexRow, styles.alignCenter, styles.gap2, styles.mb4]}>
-                        <MaterialCommunityIcons name="star-four-points" size={16} color={THEME.colors.secondary} />
+                        <Icon name="star-four-points" size={16} color={THEME.colors.secondary} />
                         <Text style={[styles.fontGothic, styles.textSecondary, { fontSize: 12, textTransform: 'uppercase', letterSpacing: 0.5 }]}>
                             AI Context Validation
                         </Text>
@@ -351,7 +351,7 @@ export function SettingsScreen({
                         {settings.enableGeminiContext && (
                             <View style={[styles.p4, styles.bgSurface, styles.border, { borderRadius: 8, borderColor: THEME.colors.divider }]}>
                                 <View style={[styles.flexRow, styles.alignCenter, styles.gap2, styles.mb2]}>
-                                    <MaterialCommunityIcons name="key" size={16} color={THEME.colors.tertiary} />
+                                    <Icon name="key" size={16} color={THEME.colors.tertiary} />
                                     <Text style={[styles.fontMedium, styles.textPrimary, styles.textSm, styles.fontGothic]}>
                                         Gemini API Key
                                     </Text>

@@ -5,7 +5,7 @@ import { Card } from "./ui/Card";
 import { CardDivider, CardSection } from "./ui/CardSection";
 import { Button } from "./ui/Button";
 import { useResponsive } from "../context/Responsive/useResponsive";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import { styles, THEME } from "@gokan-srs/ui";
 
 interface IntroVocabCardProps {
@@ -30,7 +30,7 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
                             {vocab.writtenForm.kanji}
                         </Text>
                         {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
-                            <MaterialCommunityIcons name="call-merge" size={40} color={THEME.colors.tertiary} />
+                            <Icon name="call-merge" size={40} color={THEME.colors.tertiary} />
                         )}
                     </View>
 

@@ -1,8 +1,34 @@
 {
-    "extends": "../../tsconfig.json",
     "compilerOptions": {
         "baseUrl": ".",
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
+        "moduleResolution": "bundler",
+        "module": "ESNext",
+        "target": "ES2022",
+        "strict": true,
+        "skipLibCheck": true,
+        "paths": {
+            "@gokan-srs/core": [
+                "../core/src/index.ts"
+            ],
+            "@gokan-srs/core/*": [
+                "../core/src/*"
+            ],
+            "@gokan-srs/ui": [
+                "../ui/src/index.ts"
+            ],
+            "react-native": [
+                "../../node_modules/react-native-web/src/index"
+            ],
+            "react-native/*": [
+                "../../node_modules/react-native-web/src/*"
+            ],
+            "@gokan-srs/app/*": [
+                "./src/*"
+            ]
+        }
     },
-    "include": ["src/**/*"]
+    "include": [
+        "src/**/*"
+    ]
 }

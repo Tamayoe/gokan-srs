@@ -3,7 +3,7 @@ import { View, Text, Pressable } from 'react-native';
 import { useQuiz } from '../context/useQuiz';
 import { useResponsive } from '../context/Responsive/useResponsive';
 import { CONSTANTS } from '@gokan-srs/core/commons/constants';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@gokan-srs/app/components/Icon';
 import { styles, THEME } from '@gokan-srs/ui';
 import { useAppNavigation } from '../context/NavigationContext';
 
@@ -81,9 +81,9 @@ const HistoryTicker: React.FC = () => {
                         </Text>
                     </Pressable>
 
-                    {item.result === 'correct' && <MaterialCommunityIcons name="check-circle" size={12} color="#10b981" />}
-                    {item.result === 'minor_error' && <MaterialCommunityIcons name="alert-circle" size={12} color="#f59e0b" />}
-                    {item.result === 'wrong' && <MaterialCommunityIcons name="close-circle" size={12} color="#ef4444" />}
+                    {item.result === 'correct'      && <Icon name="check-circle" size={12} color="#10b981" />}
+                    {item.result === 'minor_error'   && <Icon name="alert-circle" size={12} color="#f59e0b" />}
+                    {item.result === 'wrong'         && <Icon name="close-circle" size={12} color="#ef4444" />}
 
                     <Text style={[styles.textXs, { color: '#94a3b8' }]}>
                         {item.delta > 0 ? '+' : ''}{Math.round(item.delta)}%

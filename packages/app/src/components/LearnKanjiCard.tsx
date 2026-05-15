@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import { Card } from "./ui/Card";
 import { CardSection } from "./ui/CardSection";
 import { Button } from "./ui/Button";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import { styles } from "@gokan-srs/ui";
 
 interface LearnKanjiCardProps {
@@ -42,7 +42,7 @@ export function LearnKanjiCard({ nextKanji, onUnlock }: LearnKanjiCardProps) {
                     style={[styles.wFull]}
                     onPress={onUnlock}
                 >
-                    <MaterialCommunityIcons name="lock-open" size={20} color="#FFFFFF" />
+                    <Icon name="lock-open" size={20} color="#FFFFFF" />
                     {' '}Unlock and Learn Vocab
                 </Button>
             </View>

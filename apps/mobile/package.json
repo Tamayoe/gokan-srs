@@ -10,6 +10,8 @@
     "build:android": "expo prebuild -p android && node scripts/copy-assets.js && cd android && gradlew.bat assembleRelease"
   },
   "dependencies": {
+    "@expo/vector-icons": "*",
+    "react-native-svg": "*",
     "@expo-google-fonts/noto-sans-jp": "^0.4.3",
     "@expo-google-fonts/noto-serif-jp": "^0.4.3",
     "@expo-google-fonts/sawarabi-gothic": "^0.4.2",

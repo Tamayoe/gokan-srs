@@ -4,7 +4,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { Card } from "../../components/ui/Card";
 import { CardSection } from "../../components/ui/CardSection";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import { styles, THEME } from "@gokan-srs/ui";
 
 interface BaseQuizCardProps {
@@ -159,7 +159,7 @@ export function BaseQuizCard({
                                 styles.bgSurface, styles.border, styles.p4, styles.flexRow, styles.alignCenter, styles.justifyCenter, styles.gap2,
                                 { borderRadius: 4, borderColor: THEME.colors.accent, transform: [{ scale: correctScaleAnim }] }
                             ]}>
-                                <MaterialCommunityIcons name="check-circle-outline" size={20} color={THEME.colors.accent} />
+                                <Icon name="check-circle-outline" size={20} color={THEME.colors.accent} />
                                 <Text style={[styles.textSm, styles.fontMedium, styles.fontGothic, { color: THEME.colors.accent }]}>
                                     {feedback.message}
                                 </Text>
@@ -183,7 +183,7 @@ export function BaseQuizCard({
                                 >
                                     {state.isEvaluatingAi ? (
                                         <>
-                                            <MaterialCommunityIcons name="loading" size={16} color={THEME.colors.surface} style={{ opacity: 0.8 }} />
+                                            <Icon name="loading" size={16} color={THEME.colors.surface} style={{ opacity: 0.8 }} />
                                             <Text style={[styles.fontMedium, styles.fontSerif, { color: THEME.colors.surface }]}>Evaluating...</Text>
                                         </>
                                     ) : (

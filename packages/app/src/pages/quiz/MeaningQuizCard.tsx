@@ -4,7 +4,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { MasteryRing } from "../../components/MasteryRing";
 import { TagsLookup } from "@gokan-srs/core/models/data.model";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import type { Tags } from "@gokan-srs/core/models/data.model";
 
 import { BaseQuizCard } from "./BaseQuizCard";
@@ -119,7 +119,7 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                 <View style={[styles.absolute, { right: -24, top: 0 }]}>
-                                    <MaterialCommunityIcons name="call-merge" size={18} color={THEME.colors.tertiary + '66'} />
+                                    <Icon name="call-merge" size={18} color={THEME.colors.tertiary + '66'} />
                                 </View>
                             )}
                         </Pressable>

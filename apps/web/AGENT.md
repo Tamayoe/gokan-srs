@@ -100,11 +100,34 @@ codegenNativeComponent → src/utils/codegenNativeComponent.ts (stub)
 ```
 
 ### Other config notes
-- `optimizeDeps.include`: pre-bundles `react-native-web`, `@expo/vector-icons`, `react-native-svg`
 - `optimizeDeps.exclude`: excludes all `@gokan-srs/*` packages (handled by workspace-resolver, not esbuild)
+- `resolve.alias['react-native-svg']` → `node_modules/react-native-svg/src/ReactNativeSVG.web.ts`: uses the package's built-in web implementation, avoiding all Fabric/codegenNativeComponent issues
+- `workspace-resolver` has a **web override at the top**: `@gokan-srs/app/components/Icon` → `src/components/Icon.tsx` (the lucide-react web implementation, never imports @expo/vector-icons)
 - `server.watch.ignored`: ignores `public/data/compiled/**` to prevent Vite watching ~50k JSON files
 - Tailwind CSS v4 via `@tailwindcss/vite` plugin
 - Production: `minify: 'terser'`, no sourcemaps
+
+---
+
+## Cross-Platform Architecture (Icons & SVG)
+
+This app uses a **platform-specific component pattern** (same as `StorageAdapter`, `FetchAdapter`, `GoogleDriveContext`) for dependencies that differ between web and native.
+
+### Icons — `@gokan-srs/app/components/Icon`
+
+| Platform | Implementation | Library |
+|---|---|---|
+| Mobile (Expo) | `packages/app/src/components/Icon.tsx` | `@expo/vector-icons` (MaterialCommunityIcons) |
+| Web (Vite) | `apps/web/src/components/Icon.tsx` | `lucide-react` (pure SVG) |
+
+The Vite `workspace-resolver` plugin intercepts `@gokan-srs/app/components/Icon` and redirects to the web file **before** the general `@gokan-srs/app/*` rule runs. Mobile builds are unaffected.
+
+**To add a new icon:** use it in `packages/app` with its MCIcon name, then add the `lucide-react` mapping in `apps/web/src/components/Icon.tsx`.
+
+### SVG — `react-native-svg`
+
+`react-native-svg` ships `src/ReactNativeSVG.web.ts` — a proper DOM-based SVG implementation. The `resolve.alias` in `vite.config.ts` points to it directly. No shims needed.
+
 
 ---
 

@@ -4,7 +4,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { CONSTANTS } from "@gokan-srs/core/commons/constants";
 import { MasteryRing } from "../../components/MasteryRing";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import { TagsLookup, type Tags } from "@gokan-srs/core/models/data.model";
 import { BaseQuizCard } from "./BaseQuizCard";
 import { styles, THEME } from "@gokan-srs/ui";
@@ -60,7 +60,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                 <View style={[styles.absolute, { right: -24, top: -4 }]}>
-                                    <MaterialCommunityIcons name="call-merge" size={18} color={THEME.colors.tertiary + '66'} />
+                                    <Icon name="call-merge" size={18} color={THEME.colors.tertiary + '66'} />
                                 </View>
                             )}
                         </Pressable>
@@ -118,7 +118,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                 {/* Merged Entry Icon */}
                                 {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                     <View style={[styles.absolute, { right: -32, top: 0 }]}>
-                                        <MaterialCommunityIcons name="call-merge" size={24} color={THEME.colors.tertiary + '4D'} />
+                                        <Icon name="call-merge" size={24} color={THEME.colors.tertiary + '4D'} />
                                     </View>
                                 )}
                             </Pressable>

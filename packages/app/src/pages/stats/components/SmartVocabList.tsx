@@ -4,7 +4,7 @@ import type { VocabProgress, Vocabulary } from "@gokan-srs/core/models/vocabular
 import { VocabularyService } from "@gokan-srs/core/services/vocabulary.service";
 import { VocabCard } from "../../../components/VocabCard";
 import { VocabCardSkeleton } from "../../../components/VocabCardLoader";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import { Button } from "../../../components/ui/Button";
 import { styles, THEME } from "@gokan-srs/ui";
 
@@ -154,7 +154,7 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
             {/* Controls */}
             <View style={[styles.flexCol, styles.gap4, styles.p4, styles.bgSurface, styles.border, { borderRadius: 8, borderColor: THEME.colors.divider }]}>
                 <View style={[styles.relative, styles.wFull]}>
-                    <MaterialCommunityIcons name="magnify" size={20} color={THEME.colors.tertiary} style={[styles.absolute, { top: 10, left: 12, zIndex: 1 }]} />
+                    <Icon name="magnify" size={20} color={THEME.colors.tertiary} style={[styles.absolute, { top: 10, left: 12, zIndex: 1 }]} />
                     <TextInput
                         placeholder="Search reading, meaning..."
                         placeholderTextColor={THEME.colors.tertiary}
@@ -192,7 +192,7 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                             { borderRadius: 6, borderColor: THEME.colors.divider, backgroundColor: pressed || hovered ? THEME.colors.surfaceHover : THEME.colors.surface }
                         ] as any}
                     >
-                        <MaterialCommunityIcons name={sortDir === 'asc' ? 'arrow-up' : 'arrow-down'} size={20} color={THEME.colors.primary} />
+                        <Icon name={sortDir === 'asc' ? 'arrow-up' : 'arrow-down'} size={20} color={THEME.colors.primary} />
                     </Pressable>
                 </View>
             </View>

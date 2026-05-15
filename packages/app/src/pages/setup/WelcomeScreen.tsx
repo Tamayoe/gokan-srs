@@ -3,7 +3,7 @@ import { View, Text, Pressable, ScrollView } from "react-native";
 import { useGoogleDrive } from "../../context/GoogleDriveContext";
 import { StorageService } from "@gokan-srs/core/services/storage.service";
 import { Button } from "../../components/ui/Button";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "@gokan-srs/app/components/Icon";
 import { styles, THEME } from "@gokan-srs/ui";
 
 export function GoogleLoginButton({ onSyncComplete, style }: { onSyncComplete: () => void, style?: any }) {
@@ -35,7 +35,7 @@ export function GoogleLoginButton({ onSyncComplete, style }: { onSyncComplete: (
     if (isDownloading) {
         return (
             <View style={[styles.flexRow, styles.alignCenter, styles.justifyCenter, styles.gap2, styles.px4, styles.py2, style]}>
-                <MaterialCommunityIcons name="loading" size={16} color={THEME.colors.primary} style={{ opacity: 0.5 }} />
+                <Icon name="loading" size={16} color={THEME.colors.primary} style={{ opacity: 0.5 }} />
                 <Text style={[styles.textSm, { color: THEME.colors.primary, opacity: 0.8 }]}>Restoring your progress...</Text>
             </View>
         );
@@ -52,7 +52,7 @@ export function GoogleLoginButton({ onSyncComplete, style }: { onSyncComplete: (
                 style={[styles.wFull, style]}
                 textStyle={[styles.textSm, styles.fontMedium]}
             >
-                <MaterialCommunityIcons name="cloud" size={16} color={THEME.colors.primary} style={styles.mr2} />
+                <Icon name="cloud" size={16} color={THEME.colors.primary} style={styles.mr2} />
                 Retry Restore
             </Button>
         )
@@ -65,7 +65,7 @@ export function GoogleLoginButton({ onSyncComplete, style }: { onSyncComplete: (
             style={[styles.wFull, style]}
             textStyle={[styles.textSm, styles.fontMedium]}
         >
-            <MaterialCommunityIcons name="login" size={16} color={THEME.colors.primary} style={styles.mr2} />
+            <Icon name="login" size={16} color={THEME.colors.primary} style={styles.mr2} />
             Already have an account? Log in to restore
         </Button>
     );
@@ -99,21 +99,21 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                             <View style={[styles.flexRow, styles.flexWrap, styles.justifyCenter, styles.gap6, styles.pt6, styles.wFull]}>
                                 <View style={[styles.flexCol, styles.alignCenter, styles.gap2, { flex: 1, minWidth: 150 }]}>
                                     <View style={[styles.flexCenter, styles.w10, styles.h10, styles.bgSurface, styles.border, { borderRadius: 20, borderColor: THEME.colors.divider }]}>
-                                        <MaterialCommunityIcons name="cloud" size={18} color={THEME.colors.primary} />
+                                        <Icon name="cloud" size={18} color={THEME.colors.primary} />
                                     </View>
                                     <Text style={[styles.fontBold, styles.textPrimary, styles.textCenter]}>Daily SRS</Text>
                                     <Text style={[styles.textXs, styles.textTertiary, styles.textCenter]}>A custom Spaced Repetition System optimized for long-term retention.</Text>
                                 </View>
                                 <View style={[styles.flexCol, styles.alignCenter, styles.gap2, { flex: 1, minWidth: 150 }]}>
                                     <View style={[styles.flexCenter, styles.w10, styles.h10, styles.bgSurface, styles.border, { borderRadius: 20, borderColor: THEME.colors.divider }]}>
-                                        <MaterialCommunityIcons name="school" size={18} color={THEME.colors.primary} />
+                                        <Icon name="school" size={18} color={THEME.colors.primary} />
                                     </View>
                                     <Text style={[styles.fontBold, styles.textPrimary, styles.textCenter]}>Contextual Meaning</Text>
                                     <Text style={[styles.textXs, styles.textTertiary, styles.textCenter]}>Learn nuance by translating vocabulary within real Japanese sentences.</Text>
                                 </View>
                                 <View style={[styles.flexCol, styles.alignCenter, styles.gap2, { flex: 1, minWidth: 150 }]}>
                                     <View style={[styles.flexCenter, styles.w10, styles.h10, styles.bgSurface, styles.border, { borderRadius: 20, borderColor: THEME.colors.divider }]}>
-                                        <MaterialCommunityIcons name="book-open-variant" size={18} color={THEME.colors.primary} />
+                                        <Icon name="book-open-variant" size={18} color={THEME.colors.primary} />
                                     </View>
                                     <Text style={[styles.fontBold, styles.textPrimary, styles.textCenter]}>Read Native Material</Text>
                                     <Text style={[styles.textXs, styles.textTertiary, styles.textCenter]}>The bridge between textbook kanji and reading actual Japanese media.</Text>
@@ -149,7 +149,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                                         I don't know any Kanji yet. Start me from the very beginning with the Kodansha (KKLC) order.
                                     </Text>
                                 </View>
-                                <MaterialCommunityIcons name="chevron-right" size={24} color={THEME.colors.tertiary} />
+                                <Icon name="chevron-right" size={24} color={THEME.colors.tertiary} />
                             </Pressable>
 
                             <Pressable
@@ -172,7 +172,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                                         I already know some Kanji. Let me tailor my vocabulary queue to strictly introduce words using my known Kanji.
                                     </Text>
                                 </View>
-                                <MaterialCommunityIcons name="chevron-right" size={24} color={THEME.colors.tertiary} />
+                                <Icon name="chevron-right" size={24} color={THEME.colors.tertiary} />
                             </Pressable>
                         </View>
                     </View>

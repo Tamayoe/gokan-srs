@@ -30,15 +30,26 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-
       "@gokan-srs/core": [
         "../../packages/core/src/index.ts"
       ],
       "@gokan-srs/core/*": [
         "../../packages/core/src/*"
       ],
+      "@gokan-srs/app": [
+        "../../packages/app/src/index.ts"
+      ],
       "@gokan-srs/app/*": [
         "../../packages/app/src/*"
+      ],
+      "@gokan-srs/ui": [
+        "../../packages/ui/src/index.ts"
+      ],
+      "@gokan-srs/ui/*": [
+        "../../packages/ui/src/*"
+      ],
+      "react-native": [
+        "../../node_modules/react-native-web/src/index"
       ]
     }
   },
