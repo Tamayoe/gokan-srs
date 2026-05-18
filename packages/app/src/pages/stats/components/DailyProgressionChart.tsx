@@ -1,6 +1,7 @@
-import { THEME } from "../../../commons/theme";
+import { THEME, styles } from "@gokan-srs/ui";
 import type { UserProgress } from "@gokan-srs/core/models/user.model";
 import { useMemo } from "react";
+import { View, Text } from "react-native";
 
 interface DailyProgressionChartProps {
     progress: UserProgress;
@@ -55,13 +56,13 @@ export function DailyProgressionChart({ progress }: DailyProgressionChartProps) 
     }, [progress]);
 
     return (
-        <div className="w-full flex justify-between items-end h-[200px] gap-1 md:gap-2 py-4 relative">
+        <View style={[styles.wFull, styles.flexRow, styles.justifyBetween, styles.alignEnd, { height: 200, paddingVertical: 16, position: 'relative' }]}>
             {/* Background Grid */}
-            <div className="absolute inset-0 w-full h-full pointer-events-none z-0 flex flex-col justify-between py-4 pl-4">
-                <div className="w-full h-px border-t border-dashed border-divider/50"></div>
-                <div className="w-full h-px border-t border-dashed border-divider/50"></div>
-                <div className="w-full h-px border-t border-dashed border-divider/50"></div>
-            </div>
+            <View pointerEvents="none" style={[styles.absolute, styles.wFull, styles.hFull, styles.flexCol, styles.justifyBetween, { top: 0, left: 0, paddingVertical: 16, paddingLeft: 16, zIndex: 0 }]}>
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
+            </View>
 
             {progression.buckets.map((bucket, i) => {
                 const total = bucket.correct + bucket.incorrect;
@@ -70,49 +71,44 @@ export function DailyProgressionChart({ progress }: DailyProgressionChartProps) 
                 const isWeekend = bucket.date.getDay() === 0 || bucket.date.getDay() === 6;
 
                 return (
-                    <div key={i} className="flex flex-col items-center flex-1 min-w-0 h-full justify-end group z-10">
-                        <div className="relative w-full flex flex-col justify-end items-center flex-1 mb-2 max-w-[28px]">
+                    <View key={i} style={[styles.flexCol, styles.alignCenter, styles.justifyEnd, { flex: 1, minWidth: 0, height: '100%', zIndex: 10 }]}>
+                        <View style={[styles.relative, styles.flexCol, styles.justifyEnd, styles.alignCenter, { flex: 1, width: '100%', marginBottom: 8, maxWidth: 28 }]}>
                             {/* Stacked Bars Container */}
-                            <div className="w-full flex flex-col-reverse items-center justify-end h-full relative">
-
+                            <View style={[styles.wFull, styles.flexCol, styles.alignCenter, styles.justifyEnd, { height: '100%', position: 'relative', flexDirection: 'column-reverse' }]}>
                                 {/* Correct Bar (Bottom) */}
-                                <div
-                                    className={`w-full transition-all duration-300 relative rounded-b-sm ${bucket.incorrect === 0 ? 'rounded-t-sm' : ''}`}
+                                <View
                                     style={{
+                                        width: '100%',
                                         height: `${correctHeight}%`,
-                                        backgroundColor: THEME.colors.secondary
+                                        backgroundColor: THEME.colors.secondary,
+                                        borderBottomLeftRadius: 2,
+                                        borderBottomRightRadius: 2,
+                                        borderTopLeftRadius: bucket.incorrect === 0 ? 2 : 0,
+                                        borderTopRightRadius: bucket.incorrect === 0 ? 2 : 0,
                                     }}
-                                >
-                                </div>
+                                />
 
                                 {/* Incorrect Bar (Top) */}
-                                <div
-                                    className={`w-full transition-all duration-300 relative rounded-t-sm ${bucket.correct === 0 ? 'rounded-b-sm' : ''}`}
+                                <View
                                     style={{
+                                        width: '100%',
                                         height: `${incorrectHeight}%`,
-                                        backgroundColor: THEME.colors.error
+                                        backgroundColor: THEME.colors.error,
+                                        borderTopLeftRadius: 2,
+                                        borderTopRightRadius: 2,
+                                        borderBottomLeftRadius: bucket.correct === 0 ? 2 : 0,
+                                        borderBottomRightRadius: bucket.correct === 0 ? 2 : 0,
                                     }}
-                                >
-                                </div>
-                            </div>
+                                />
+                            </View>
+                        </View>
 
-                            {/* Total Label (Hover Tooltip) */}
-                            {total > 0 && (
-                                <div className="absolute -top-10 opacity-0 group-hover:opacity-100 transition-opacity bg-surface border border-divider shadow-md rounded p-1 flex flex-col items-center text-[10px] w-max z-20 pointer-events-none">
-                                    <span className="font-bold text-primary">{total} reviews</span>
-                                    <span className="text-secondary">{bucket.correct} correct</span>
-                                    <span className="text-error">{bucket.incorrect} wrong</span>
-                                </div>
-                            )}
-                        </div>
-
-                        <span className={`text-[10px] sm:text-xs font-medium mt-2 w-full text-center truncate px-0.5 ${isWeekend ? 'opacity-70' : ''}`}>
-                            <span className="sm:hidden">{bucket.label.charAt(0)}</span>
-                            <span className="hidden sm:inline">{bucket.label}</span>
-                        </span>
-                    </div>
+                        <Text numberOfLines={1} style={[styles.textCenter, styles.wFull, styles.fontMedium, { fontSize: 10, marginTop: 8, paddingHorizontal: 2, opacity: isWeekend ? 0.7 : 1, color: THEME.colors.primary }]}>
+                            {bucket.label.substring(0, 3)}
+                        </Text>
+                    </View>
                 );
             })}
-        </div>
+        </View>
     );
 }

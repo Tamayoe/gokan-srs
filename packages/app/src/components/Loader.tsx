@@ -3,44 +3,80 @@ import { Animated, Easing, View } from 'react-native';
 import Svg, { Circle, Text as SvgText } from 'react-native-svg';
 import { styles, THEME } from '@gokan-srs/ui';
 
+const AnimatedCircle = Animated.createAnimatedComponent(Circle);
+const AnimatedSvgText = Animated.createAnimatedComponent(SvgText);
+
 export type LoaderProps = {
     title: string;
     description?: string;
 }
 
+const RippleRing = ({ anim }: { anim: Animated.Value }) => {
+    const scale = anim.interpolate({
+        inputRange: [0, 1],
+        outputRange: [0.5, 1.0],
+    });
+    const opacity = anim.interpolate({
+        inputRange: [0, 0.7, 1],
+        outputRange: [0.45, 0.06, 0],
+    });
+
+    return (
+        <Animated.View
+            style={[
+                styles.absolute,
+                {
+                    width: 220,
+                    height: 220,
+                    borderRadius: 110,
+                    borderWidth: 1,
+                    borderColor: THEME.colors.primary,
+                    transform: [{ scale }],
+                    opacity,
+                },
+            ]}
+        />
+    );
+};
+
 export function Loader({ title, description }: LoaderProps) {
-    const pulseAnim = useRef(new Animated.Value(1)).current;
-    const spinAnim = useRef(new Animated.Value(0)).current;
+    const heartbeat = useRef(new Animated.Value(0)).current;
+    const ripple1 = useRef(new Animated.Value(0)).current;
+    const ripple2 = useRef(new Animated.Value(0)).current;
     const fadeAnim = useRef(new Animated.Value(0)).current;
 
     useEffect(() => {
-        // Pulse animation
+        // Heartbeat cycle (3s)
         Animated.loop(
-            Animated.sequence([
-                Animated.timing(pulseAnim, {
-                    toValue: 0.98,
-                    duration: 1000,
-                    easing: Easing.inOut(Easing.ease),
-                    useNativeDriver: false,
-                }),
-                Animated.timing(pulseAnim, {
-                    toValue: 1,
-                    duration: 1000,
-                    easing: Easing.inOut(Easing.ease),
-                    useNativeDriver: false,
-                }),
-            ])
-        ).start();
-
-        // Spin animation
-        Animated.loop(
-            Animated.timing(spinAnim, {
+            Animated.timing(heartbeat, {
                 toValue: 1,
-                duration: 4000,
+                duration: 3000,
                 easing: Easing.linear,
                 useNativeDriver: false,
             })
         ).start();
+
+        // Ripple 1 cycle (3s)
+        Animated.loop(
+            Animated.timing(ripple1, {
+                toValue: 1,
+                duration: 3000,
+                easing: Easing.linear,
+                useNativeDriver: false,
+            })
+        ).start();
+
+        // Ripple 2 cycle (3s, delayed by 1.5s)
+        const ripple2Delay = setTimeout(() => {
+            Animated.loop(
+                Animated.timing(ripple2, {
+                    toValue: 1,
+                    duration: 3000,
+                    easing: Easing.linear,
+                    useNativeDriver: false,
+                })
+            ).start();
+        }, 1500);
 
         // Fade in text
         Animated.timing(fadeAnim, {
@@ -49,67 +85,69 @@ export function Loader({ title, description }: LoaderProps) {
             easing: Easing.out(Easing.ease),
             useNativeDriver: false,
         }).start();
-    }, [pulseAnim, spinAnim, fadeAnim]);
 
-    const getRotationWithDelay = (delayRatio: number) => {
-        return spinAnim.interpolate({
-            inputRange: [0, 1],
-            outputRange: [`${delayRatio * 360}deg`, `${(delayRatio * 360) + 360}deg`],
-        });
-    };
+        return () => clearTimeout(ripple2Delay);
+    }, [heartbeat, ripple1, ripple2, fadeAnim]);
+
+    // Interpolations for heartbeat animation
+    const heartbeatScale = heartbeat.interpolate({
+        inputRange: [0, 0.08, 0.22, 1.0],
+        outputRange: [1, 1.11, 1.0, 1],
+    });
+
+    const textColor = heartbeat.interpolate({
+        inputRange: [0, 0.08, 0.3, 1.0],
+        outputRange: [THEME.colors.primary, THEME.colors.accent, THEME.colors.primary, THEME.colors.primary] as string[],
+    });
+
+    const strokeOpacity = heartbeat.interpolate({
+        inputRange: [0, 0.08, 0.3, 1.0],
+        outputRange: [0.45, 0.85, 0.5, 0.45],
+    });
 
     return (
         <View style={[styles.flex1, styles.flexCenter, styles.bgBackground]}>
-            <View style={[styles.flexCol, styles.alignCenter, styles.gap8]}>
-                {/* Animated Kanji Logo */}
-                <View style={[styles.relative, { width: 120, height: 120 }]}>
-                    <Animated.View style={{ transform: [{ scale: pulseAnim }], opacity: pulseAnim }}>
+            <View style={[styles.flexCol, styles.alignCenter, styles.gap10]}>
+                {/* Ripple & Breathing Logo Container */}
+                <View style={[styles.relative, styles.flexCenter, { width: 220, height: 220 }]}>
+                    <RippleRing anim={ripple1} />
+                    <RippleRing anim={ripple2} />
+
+                    <Animated.View style={{ transform: [{ scale: heartbeatScale }], zIndex: 10 }}>
                         <Svg width="120" height="120" viewBox="0 0 100 100">
-                            <Circle
+                            <AnimatedCircle
                                 cx="50"
                                 cy="50"
                                 r="46"
                                 stroke={THEME.colors.primary}
-                                strokeWidth="3"
+                                strokeWidth="1.2"
+                                strokeOpacity={strokeOpacity}
                                 fill="none"
                             />
-                            <SvgText
+                            <AnimatedSvgText
                                 x="50"
                                 y="50"
                                 fontSize="34"
-                                fontFamily={THEME.fonts.mincho}
+                                fontFamily={THEME.fonts.serif || 'Noto Serif JP'}
                                 textAnchor="middle"
                                 alignmentBaseline="central"
-                                fill={THEME.colors.primary}
+                                fill={textColor}
                                 fontWeight="400"
+                                letterSpacing="2"
                             >
                                 語感
-                            </SvgText>
+                            </AnimatedSvgText>
                         </Svg>
-                    </Animated.View>
-
-                    {/* Orbiting dots */}
-                    <Animated.View style={[styles.absolute, styles.inset0, { transform: [{ rotate: getRotationWithDelay(0) }] }]}>
-                        <View style={[styles.absolute, { top: 0, left: '50%', transform: [{ translateX: -4 }], width: 8, height: 8, backgroundColor: THEME.colors.primary, borderRadius: 4, opacity: 0.6 }]} />
-                    </Animated.View>
-                    <Animated.View style={[styles.absolute, styles.inset0, { transform: [{ rotate: getRotationWithDelay(0.125) }] }]}>
-                        <View style={[styles.absolute, { bottom: 0, left: '50%', transform: [{ translateX: -4 }], width: 8, height: 8, backgroundColor: THEME.colors.primary, borderRadius: 4, opacity: 0.6 }]} />
-                    </Animated.View>
-                    <Animated.View style={[styles.absolute, styles.inset0, { transform: [{ rotate: getRotationWithDelay(0.25) }] }]}>
-                        <View style={[styles.absolute, { top: '50%', left: 0, transform: [{ translateY: -4 }], width: 8, height: 8, backgroundColor: THEME.colors.primary, borderRadius: 4, opacity: 0.6 }]} />
-                    </Animated.View>
-                    <Animated.View style={[styles.absolute, styles.inset0, { transform: [{ rotate: getRotationWithDelay(0.375) }] }]}>
-                        <View style={[styles.absolute, { top: '50%', right: 0, transform: [{ translateY: -4 }], width: 8, height: 8, backgroundColor: THEME.colors.primary, borderRadius: 4, opacity: 0.6 }]} />
                     </Animated.View>
                 </View>
 
                 {/* Loading text */}
                 <View style={[styles.flexCol, styles.alignCenter, styles.gap2]}>
-                    <Animated.Text style={[styles.textPrimary, styles.fontSerif, styles.textLg, { opacity: fadeAnim, transform: [{ translateY: fadeAnim.interpolate({ inputRange: [0, 1], outputRange: [10, 0] }) }] }]}>
+                    <Animated.Text style={[styles.textPrimary, styles.fontSerif, styles.textLg, { opacity: fadeAnim, transform: [{ translateY: fadeAnim.interpolate({ inputRange: [0, 1], outputRange: [8, 0] }) }] }]}>
                         {title}
                     </Animated.Text>
                     {description && (
-                        <Animated.Text style={[styles.textSecondary, styles.textSm, { opacity: fadeAnim, transform: [{ translateY: fadeAnim.interpolate({ inputRange: [0, 1], outputRange: [10, 0] }) }] }]}>
+                        <Animated.Text style={[styles.textSecondary, styles.textSm, { opacity: fadeAnim, transform: [{ translateY: fadeAnim.interpolate({ inputRange: [0, 1], outputRange: [8, 0] }) }] }]}>
                             {description}
                         </Animated.Text>
                     )}

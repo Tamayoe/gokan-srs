@@ -182,6 +182,14 @@ bun run build:jpdb     # Convert JPDB TSV to JSON
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
+- **[2026-05-18]**:
+  - **Web UI Regression Fixes & Animation Porting**:
+    - **Daily Progression Chart**: Rewrote `DailyProgressionChart.tsx` completely from Tailwind/HTML into React Native View/Text with native-safe flexbox styles to fix layout collapse.
+    - **Vocab List Heights**: Modified `SmartVocabList.tsx` to style wrapper components with `display: 'flex'` and added proper layout matching to keep vocabulary cards at uniform heights.
+    - **Vocab details Border**: Fixed the "Original Entries" merged cards border issue in `VocabDetailScreen.tsx` by removing the global border styling and replacing it with a neat custom left-accent border.
+    - **Sentences Card Feature Restoration**: Reimplemented the sentence slice/expansion logic in `VocabSentencesCard.tsx` with a beautifully styled "Show all" / "Show less" toggle using the shared `Button` primitive.
+    - **Breathing Seal Loader Porting**: Fully recreated the original high-fidelity "Breathing Seal" SVG animation in `Loader.tsx` using React Native's `Animated` library (ripple effects, heartbeat scaling, and color breathing), and updated `LoadingScreen.tsx` to use this new beautiful custom loader.
+
 - **[2026-05-15]**:
   - **Expo Monorepo Migration**: Refactored from a single Vite-only React webapp into a Bun + Turborepo monorepo.
     - Created `packages/core` (`@gokan-srs/core`): all platform-agnostic business logic (models, services, SRS algorithm, utils, constants, theme). No React dependency.

@@ -178,7 +178,7 @@ export default function VocabDetailScreen() {
                                 </Text>
                                 <View style={styles.gap4}>
                                     {vocab.mergedVocabs.map((mv, idx) => (
-                                        <View key={idx} style={[styles.pl3, styles.border, { borderLeftWidth: 2, borderColor: THEME.colors.divider }]}>
+                                        <View key={idx} style={[styles.pl3, { borderLeftWidth: 2, borderColor: THEME.colors.divider }]}>
                                             <View style={[styles.flexRow, styles.alignCenter, styles.gap2, styles.mb1]}>
                                                 <Text style={[styles.fontGothic, styles.fontBold, styles.textPrimary]}>{mv.originalPrimaryReading}</Text>
                                                 <Text style={[styles.textXs, styles.textTertiary]}>ID: {mv.id}</Text>

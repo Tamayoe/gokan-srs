@@ -202,12 +202,12 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                 {displayedItems.map((p) => {
                     const vocab = vocabCache[p.vocabId];
                     if (!vocab) return (
-                        <View key={p.vocabId} style={[{ width: '31%', minWidth: 280, flexGrow: 1 }]}>
+                        <View key={p.vocabId} style={[{ width: '31%', minWidth: 280, flexGrow: 1, display: 'flex' }]}>
                             <VocabCardSkeleton />
                         </View>
                     );
                     return (
-                        <View key={vocab.id} style={[{ width: '31%', minWidth: 280, flexGrow: 1 }]}>
+                        <View key={vocab.id} style={[{ width: '31%', minWidth: 280, flexGrow: 1, display: 'flex' }]}>
                             <VocabCard
                                 vocab={vocab}
                                 progress={p}
