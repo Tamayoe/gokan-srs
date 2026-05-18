@@ -73,6 +73,13 @@
 }
 
 /* Global Styles based on Theme */
+html, body, #root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 body {
   background-color: var(--background);
   color: var(--primary);

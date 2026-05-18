@@ -129,4 +129,7 @@ export default defineConfig({
         sourcemap: false,
         minify: 'terser',
     },
+    define: {
+        global: 'window',
+    },
 });

@@ -33,13 +33,13 @@ export function Card({
                 toValue: 1,
                 duration: 250,
                 delay: 20,
-                useNativeDriver: true,
+                useNativeDriver: false,
             }),
             Animated.timing(translateY, {
                 toValue: 0,
                 duration: 250,
                 delay: 20,
-                useNativeDriver: true,
+                useNativeDriver: false,
             }),
         ]).start();
     }, [fadeAnim, translateY]);

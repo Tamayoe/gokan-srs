@@ -21,13 +21,13 @@ export function Loader({ title, description }: LoaderProps) {
                     toValue: 0.98,
                     duration: 1000,
                     easing: Easing.inOut(Easing.ease),
-                    useNativeDriver: true,
+                    useNativeDriver: false,
                 }),
                 Animated.timing(pulseAnim, {
                     toValue: 1,
                     duration: 1000,
                     easing: Easing.inOut(Easing.ease),
-                    useNativeDriver: true,
+                    useNativeDriver: false,
                 }),
             ])
         ).start();
@@ -38,7 +38,7 @@ export function Loader({ title, description }: LoaderProps) {
                 toValue: 1,
                 duration: 4000,
                 easing: Easing.linear,
-                useNativeDriver: true,
+                useNativeDriver: false,
             })
         ).start();
 
@@ -47,7 +47,7 @@ export function Loader({ title, description }: LoaderProps) {
             toValue: 1,
             duration: 600,
             easing: Easing.out(Easing.ease),
-            useNativeDriver: true,
+            useNativeDriver: false,
         }).start();
     }, [pulseAnim, spinAnim, fadeAnim]);
 

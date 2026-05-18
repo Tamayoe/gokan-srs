@@ -137,7 +137,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                                         borderRadius: 12,
                                         borderColor: pressed || hovered ? THEME.colors.accent + '66' : THEME.colors.divider,
                                         backgroundColor: pressed ? THEME.colors.surfaceHover : THEME.colors.surface,
-                                        shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.05, shadowRadius: 2
+                                        boxShadow: '0px 1px 2px rgba(0,0,0,0.05)'
                                     }
                                 ] as any}
                             >
@@ -160,7 +160,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                                         borderRadius: 12,
                                         borderColor: pressed || hovered ? THEME.colors.accent + '66' : THEME.colors.divider,
                                         backgroundColor: pressed ? THEME.colors.surfaceHover : THEME.colors.surface,
-                                        shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.05, shadowRadius: 2
+                                        boxShadow: '0px 1px 2px rgba(0,0,0,0.05)'
                                     }
                                 ] as any}
                             >

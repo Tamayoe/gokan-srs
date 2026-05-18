@@ -44,8 +44,8 @@ export function BaseQuizCard({
     // Mount animation
     useEffect(() => {
         Animated.parallel([
-            Animated.timing(fadeAnim, { toValue: 1, duration: 300, useNativeDriver: true }),
-            Animated.timing(translateAnim, { toValue: 0, duration: 300, useNativeDriver: true })
+            Animated.timing(fadeAnim, { toValue: 1, duration: 300, useNativeDriver: false }),
+            Animated.timing(translateAnim, { toValue: 0, duration: 300, useNativeDriver: false })
         ]).start();
     }, [fadeAnim, translateAnim]);
 
@@ -53,18 +53,18 @@ export function BaseQuizCard({
         if (feedback?.show && !feedback.correct) {
             // Shake
             Animated.sequence([
-                Animated.timing(shakeAnim, { toValue: -5, duration: 80, useNativeDriver: true }),
-                Animated.timing(shakeAnim, { toValue: 5, duration: 80, useNativeDriver: true }),
-                Animated.timing(shakeAnim, { toValue: -5, duration: 80, useNativeDriver: true }),
-                Animated.timing(shakeAnim, { toValue: 5, duration: 80, useNativeDriver: true }),
-                Animated.timing(shakeAnim, { toValue: 0, duration: 80, useNativeDriver: true })
+                Animated.timing(shakeAnim, { toValue: -5, duration: 80, useNativeDriver: false }),
+                Animated.timing(shakeAnim, { toValue: 5, duration: 80, useNativeDriver: false }),
+                Animated.timing(shakeAnim, { toValue: -5, duration: 80, useNativeDriver: false }),
+                Animated.timing(shakeAnim, { toValue: 5, duration: 80, useNativeDriver: false }),
+                Animated.timing(shakeAnim, { toValue: 0, duration: 80, useNativeDriver: false })
             ]).start();
 
             // Expand feedback area
             Animated.timing(feedbackHeightAnim, { toValue: 100, duration: 200, useNativeDriver: false }).start();
         } else if (feedback?.show && feedback.correct) {
             // Correct pop
-            Animated.timing(correctScaleAnim, { toValue: 1, duration: 200, useNativeDriver: true }).start();
+            Animated.timing(correctScaleAnim, { toValue: 1, duration: 200, useNativeDriver: false }).start();
         }
     }, [feedback?.show, feedback?.correct]);
 
@@ -177,7 +177,7 @@ export function BaseQuizCard({
                                         isMobile ? [styles.h10, styles.mt4] : [styles.h12, styles.mt6],
                                         { borderRadius: 8 },
                                         computed.canSubmit && !state.isEvaluatingAi
-                                            ? { backgroundColor: pressed ? THEME.colors.accentHover : THEME.colors.accent, shadowColor: '#000', shadowOffset: { width: 0, height: pressed ? 1 : 2 }, shadowOpacity: 0.1, shadowRadius: 4 }
+                                            ? { backgroundColor: pressed ? THEME.colors.accentHover : THEME.colors.accent, boxShadow: pressed ? '0px 1px 4px rgba(0,0,0,0.1)' : '0px 2px 4px rgba(0,0,0,0.1)' }
                                             : { backgroundColor: THEME.colors.accent + '80' }
                                     ] as any}
                                 >
@@ -201,7 +201,7 @@ export function BaseQuizCard({
                                     style={({ pressed }: any) => [
                                         styles.wFull, styles.flexRow, styles.alignCenter, styles.justifyCenter, styles.gap2,
                                         isMobile ? [styles.h10, styles.mt4] : [styles.h12, styles.mt6],
-                                        { borderRadius: 8, backgroundColor: pressed ? THEME.colors.accentHover : THEME.colors.accent, shadowColor: '#000', shadowOffset: { width: 0, height: pressed ? 1 : 2 }, shadowOpacity: 0.1, shadowRadius: 4 }
+                                        { borderRadius: 8, backgroundColor: pressed ? THEME.colors.accentHover : THEME.colors.accent, boxShadow: pressed ? '0px 1px 4px rgba(0,0,0,0.1)' : '0px 2px 4px rgba(0,0,0,0.1)' }
                                     ] as any}
                                 >
                                     <Text style={[styles.fontMedium, styles.fontSerif, { color: THEME.colors.surface }]}>Continue</Text>
