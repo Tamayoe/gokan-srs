@@ -77,7 +77,7 @@ export function VocabSentencesCard({ vocabId }: VocabSentencesCardProps) {
                         <Button
                             variant="secondary"
                             onPress={() => setIsExpanded(!isExpanded)}
-                            style={{ borderColor: THEME.colors.accent + '33', width: '100%', maxWidth: 200 }}
+                            style={{ borderColor: THEME.colors.accentLight, width: '100%', maxWidth: 200 }}
                             textStyle={[styles.textAccent, styles.fontGothic, styles.textSm]}
                         >
                             {isExpanded ? 'Show less' : `Show all ${sentences.length} sentences`}

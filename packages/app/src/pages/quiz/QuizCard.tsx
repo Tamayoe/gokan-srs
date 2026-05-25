@@ -60,7 +60,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                 <View style={[styles.absolute, { right: -24, top: -4 }]}>
-                                    <Icon name="call-merge" size={18} color={THEME.colors.tertiary + '66'} />
+                                    <Icon name="call-merge" size={18} color={THEME.colors.tertiarySoft} />
                                 </View>
                             )}
                         </Pressable>
@@ -118,7 +118,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                 {/* Merged Entry Icon */}
                                 {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                     <View style={[styles.absolute, { right: -32, top: 0 }]}>
-                                        <Icon name="call-merge" size={24} color={THEME.colors.tertiary + '4D'} />
+                                        <Icon name="call-merge" size={24} color={THEME.colors.tertiaryLight} />
                                     </View>
                                 )}
                             </Pressable>

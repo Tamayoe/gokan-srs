@@ -20,7 +20,7 @@ import { styles, THEME } from "@gokan-srs/ui";
 function compoundList(compounds: string[]) {
     return compounds.map((compound, i) => (
         <View key={i} style={[styles.flexRow, styles.alignCenter]}>
-            <Text style={[styles.textLg, styles.fontMincho, { color: 'rgba(255, 255, 255, 0.8)' }]}>
+            <Text style={[styles.textLg, styles.fontMincho, styles.textPrimary]}>
                 {compound}
             </Text>
             {i < compounds.length - 1 && (
@@ -97,7 +97,7 @@ export default function VocabDetailScreen() {
                                         </Text>
                                         {vocab.mergedVocabs && vocab.mergedVocabs.length > 1 && (
                                             <View style={[styles.absolute, { right: -40, top: 0 }]}>
-                                            <Icon name="group" size={24} color={THEME.colors.tertiary + '66'} />
+                                            <Icon name="group" size={24} color={THEME.colors.tertiarySoft} />
                                             </View>
                                         )}
                                     </View>
@@ -113,7 +113,7 @@ export default function VocabDetailScreen() {
                                     </View>
                                 </View>
                                 {progress && (
-                                    <View style={[styles.flexRow, styles.justifyCenter, styles.gap8, styles.pt6, styles.border, { borderTopWidth: 1, borderColor: THEME.colors.divider, width: '100%' }]}>
+                                    <View style={[styles.flexRow, styles.justifyCenter, styles.gap8, styles.pt6, styles.borderTop, { width: '100%' }]}>
                                         <View style={[styles.flexCol, styles.alignCenter, styles.gap2]}>
                                             <MasteryRing memoryStrength={progress.reading.memoryStrength} size={60} variant="reading" />
                                             <Text style={[styles.textXs, styles.textTertiary, styles.fontGothic, styles.fontSemiBold, { textTransform: 'uppercase', letterSpacing: 0.5 }]}>
@@ -152,7 +152,7 @@ export default function VocabDetailScreen() {
                                     </Text>
                                 </View>
                                 {vocab.usageHints?.examplePattern && (
-                                    <View style={[styles.wFull, styles.pt2, styles.border, { borderTopWidth: 1, borderColor: THEME.colors.divider }]}>
+                                    <View style={[styles.wFull, styles.pt2, styles.borderTop]}>
                                         <Text style={[styles.textXs, styles.textTertiary, styles.fontGothic, styles.mb1, { textTransform: 'uppercase', letterSpacing: 0.5 }]}>
                                             Usage Pattern
                                         </Text>
@@ -183,7 +183,7 @@ export default function VocabDetailScreen() {
                                                 <Text style={[styles.fontGothic, styles.fontBold, styles.textPrimary]}>{mv.originalPrimaryReading}</Text>
                                                 <Text style={[styles.textXs, styles.textTertiary]}>ID: {mv.id}</Text>
                                                 {mv.isBase && (
-                                                    <View style={[styles.px1_5, styles.py0_5, { backgroundColor: THEME.colors.accent + '1A', borderRadius: 4 }]}>
+                                                    <View style={[styles.px1_5, styles.py0_5, { backgroundColor: THEME.colors.accentFaint, borderRadius: 4 }]}>
                                                         <Text style={[{ fontSize: 10 }, styles.textAccent, styles.fontGothic]}>BASE</Text>
                                                     </View>
                                                 )}
@@ -221,7 +221,7 @@ export default function VocabDetailScreen() {
                                                 </Text>
                                             </View>
                                         </View>
-                                        <View style={[styles.pt2, styles.border, styles.flexRow, styles.gap4, { borderTopWidth: 1, borderColor: THEME.colors.divider }]}>
+                                        <View style={[styles.pt2, styles.borderTop, styles.flexRow, styles.gap4]}>
                                             <View style={{ flex: 1 }}>
                                                 <Text style={[styles.textXs, styles.textTertiary, styles.fontGothic, styles.mb1, { textTransform: 'uppercase', letterSpacing: 0.5 }]}>
                                                     Introduced
@@ -299,7 +299,7 @@ export default function VocabDetailScreen() {
 
                                         {/* Related Compounds (Specific to Sense) */}
                                         {sense.related?.compounds && sense.related.compounds.length > 0 && (
-                                            <View style={[styles.mt4, styles.pt3, styles.border, { borderTopWidth: 1, borderColor: THEME.colors.divider + '80' }]}>
+                                            <View style={[styles.mt4, styles.pt3, { borderTopWidth: 1, borderTopColor: THEME.colors.dividerFaint }]}>
                                                 <Text style={[styles.textXs, styles.textTertiary, styles.fontGothic, styles.mb2, { textTransform: 'uppercase', letterSpacing: 0.5 }]}>
                                                     Related
                                                 </Text>

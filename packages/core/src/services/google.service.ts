@@ -382,7 +382,7 @@ export class GoogleDriveSync {
         const response = await fetch(url, {
             method: this.fileId ? 'PATCH' : 'POST',
             headers: { Authorization: `Bearer ${this.accessToken}` },
-            body: form
+            body: form as any
         });
 
         if (!response.ok) {

@@ -50,6 +50,23 @@
   --label-neutral: #8B8E93;
   --muted: #9ca3af;
   --subtle: #6b7280;
+
+  --mastery-track: #E8E0D0;
+  --mastery-loop1: #3D5A80;
+  --mastery-reading-loop1: #3D5A80;
+  --mastery-meaning-loop1: rgba(61, 90, 128, 0.6);
+
+  /* Opacity variants — for use instead of hex-suffix appending on CSS vars */
+  --accent-faint:    rgba(61, 90, 128, 0.10);
+  --accent-light:    rgba(61, 90, 128, 0.20);
+  --accent-subtle:   rgba(61, 90, 128, 0.25);
+  --accent-soft:     rgba(61, 90, 128, 0.40);
+  --accent-muted:    rgba(61, 90, 128, 0.50);
+  --divider-faint:   rgba(232, 224, 208, 0.50);
+  --tertiary-light:  rgba(125, 116, 102, 0.30);
+  --tertiary-soft:   rgba(125, 116, 102, 0.40);
+  --tertiary-muted:  rgba(125, 116, 102, 0.50);
+  --surface-muted:   rgba(255, 255, 255, 0.80);
 }
 
 .dark {
@@ -70,6 +87,23 @@
   --label-neutral: #8b949e;
   --muted: #6e7681;
   --subtle: #484f58;
+
+  --mastery-track: #2C2A26;
+  --mastery-loop1: #6B8FA8;
+  --mastery-reading-loop1: #6B8FA8;
+  --mastery-meaning-loop1: rgba(107, 143, 168, 0.6);
+
+  /* Opacity variants */
+  --accent-faint:    rgba(107, 143, 168, 0.10);
+  --accent-light:    rgba(107, 143, 168, 0.20);
+  --accent-subtle:   rgba(107, 143, 168, 0.25);
+  --accent-soft:     rgba(107, 143, 168, 0.40);
+  --accent-muted:    rgba(107, 143, 168, 0.50);
+  --divider-faint:   rgba(44, 42, 38, 0.50);
+  --tertiary-light:  rgba(145, 139, 131, 0.30);
+  --tertiary-soft:   rgba(145, 139, 131, 0.40);
+  --tertiary-muted:  rgba(145, 139, 131, 0.50);
+  --surface-muted:   rgba(28, 27, 24, 0.80);
 }
 
 /* Global Styles based on Theme */

@@ -49,7 +49,7 @@ function SyncControls() {
                     </View>
                 </View>
                 <Pressable onPress={() => logout()}>
-                    {({ pressed }) => (
+                    {({ pressed }: any) => (
                         <Text style={[styles.textXs, styles.fontMedium, { color: pressed ? '#b91c1c' : THEME.colors.error }]}>
                             Disconnect
                         </Text>
@@ -204,7 +204,7 @@ export function SettingsScreen({
                                 <TextInput
                                     keyboardType="numeric"
                                     value={String(settings.kanjiCoverageTarget || 1)}
-                                    onChangeText={(text) => {
+                                    onChangeText={(text: string) => {
                                         const parsed = parseInt(text, 10);
                                         if (!isNaN(parsed) && parsed >= 1 && parsed <= 5) {
                                             onUpdateSettings({
@@ -220,7 +220,7 @@ export function SettingsScreen({
                                         styles.bgBackground,
                                         styles.border,
                                         styles.textPrimary,
-                                        { borderRadius: 6, borderColor: THEME.colors.divider }
+                                        { borderRadius: 6, borderColor: THEME.colors.divider, outlineStyle: 'none' } as any
                                     ]}
                                 />
                                 <Text style={[{ width: 32 }, styles.textCenter, styles.fontBold, styles.textPrimary]}>
@@ -269,7 +269,7 @@ export function SettingsScreen({
                         </View>
                         <Switch
                             value={settings.enableMeaningQuiz !== false}
-                            onValueChange={(checked) =>
+                            onValueChange={(checked: boolean) =>
                                 onUpdateSettings({
                                     ...settings,
                                     enableMeaningQuiz: checked,
@@ -337,7 +337,7 @@ export function SettingsScreen({
                             <Switch
                                 disabled={settings.enableMeaningQuiz === false}
                                 value={settings.enableGeminiContext === true}
-                                onValueChange={(checked) =>
+                                onValueChange={(checked: boolean) =>
                                     onUpdateSettings({
                                         ...settings,
                                         enableGeminiContext: checked,
@@ -356,11 +356,10 @@ export function SettingsScreen({
                                         Gemini API Key
                                     </Text>
                                 </View>
-
-                                <TextInput
+                                 <TextInput
                                     secureTextEntry
                                     value={settings.geminiApiKey || ''}
-                                    onChangeText={(text) =>
+                                    onChangeText={(text: string) =>
                                         onUpdateSettings({
                                             ...settings,
                                             geminiApiKey: text
@@ -375,7 +374,7 @@ export function SettingsScreen({
                                         styles.bgBackground,
                                         styles.border,
                                         styles.textPrimary,
-                                        { borderRadius: 6, fontSize: 14, fontFamily: 'monospace', borderColor: THEME.colors.divider }
+                                        { borderRadius: 6, fontSize: 14, fontFamily: 'monospace', borderColor: THEME.colors.divider, outlineStyle: 'none' } as any
                                     ]}
                                 />
 
@@ -402,7 +401,7 @@ export function SettingsScreen({
                                 <Switch
                                     disabled={settings.enableMeaningQuiz === false}
                                     value={settings.alwaysUseAiForMeaningContext !== false}
-                                    onValueChange={(checked) =>
+                                    onValueChange={(checked: boolean) =>
                                         onUpdateSettings({
                                             ...settings,
                                             alwaysUseAiForMeaningContext: checked,
@@ -414,7 +413,7 @@ export function SettingsScreen({
                             </View>
                         )}
                     </View>
-                </View>e)
+                </View>
 
                 {/* Cloud Sync */}
                 <View style={[styles.wFull, styles.mb16]}>

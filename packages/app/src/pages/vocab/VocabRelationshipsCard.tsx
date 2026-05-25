@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { View, Text, Pressable } from "react-native";
 import { Card } from "../../components/ui/Card";
+import { Button } from "../../components/ui/Button";
 import type { Vocabulary } from "@gokan-srs/core/models/vocabulary.model";
 import { VocabularyService } from '@gokan-srs/core/services/vocabulary.service';
 import { useAppNavigation } from "../../context/NavigationContext";
 import { useResponsive } from "../../context/Responsive/useResponsive";
+import { styles, THEME } from "@gokan-srs/ui";
 
 interface Props {
     vocab: Vocabulary;
@@ -57,65 +60,88 @@ export function VocabRelationshipsCard({ vocab }: Props) {
 
     const renderVocabList = (vocabs: Vocabulary[]) => {
         return (
-            <div className="space-y-3 mt-2">
+            <View style={[{ gap: 12, marginTop: 8 }]}>
                 {vocabs.map((v) => (
-                    <div
+                    <Pressable
                         key={v.id}
-                        onClick={() => navigation.navigate(`/vocab/${v.id}`)}
-                        className="border-l-2 border-divider pl-3 cursor-pointer hover:border-accent transition-colors group"
+                        onPress={() => navigation.navigate(`/vocab/${v.id}`)}
+                        style={({ pressed, hovered }: any) => [
+                            {
+                                borderLeftWidth: 2,
+                                borderLeftColor: pressed || hovered ? THEME.colors.accent : THEME.colors.divider,
+                                paddingLeft: 12,
+                                paddingVertical: 4,
+                            }
+                        ]}
                     >
-                        <div className="flex items-center gap-2 mb-1">
-                            <span className="font-mincho text-xl text-primary group-hover:text-accent transition-colors">
-                                {v.writtenForm.kanji}
-                            </span>
-                            <span className="font-gothic font-bold text-secondary">
-                                {v.reading.primary}
-                            </span>
-                            <span className="text-xs text-tertiary font-mono ml-auto">
-                                ID: {v.id}
-                            </span>
-                        </div>
-                        <div className="text-sm text-meaning-muted font-serif line-clamp-2">
-                            {v.senses && v.senses[0] ? v.senses[0].glosses.join(', ') : 'No definition available'}
-                        </div>
-                    </div>
+                        {({ pressed, hovered }: any) => (
+                            <View>
+                                <View style={[styles.flexRow, styles.alignCenter, styles.gap2, styles.mb1]}>
+                                    <Text style={[
+                                        styles.fontMincho,
+                                        styles.textLg,
+                                        pressed || hovered ? styles.textAccent : styles.textPrimary
+                                    ]}>
+                                        {v.writtenForm.kanji}
+                                    </Text>
+                                    <Text style={[styles.fontGothic, styles.fontBold, styles.textSecondary]}>
+                                        {v.reading.primary}
+                                    </Text>
+                                    <Text style={[styles.textXs, styles.textTertiary, { marginLeft: 'auto' }]}>
+                                        ID: {v.id}
+                                    </Text>
+                                </View>
+                                <Text style={[styles.textSm, styles.textSecondary, styles.fontSerif]} numberOfLines={2}>
+                                    {v.senses && v.senses[0] ? v.senses[0].glosses.join(', ') : 'No definition available'}
+                                </Text>
+                            </View>
+                        )}
+                    </Pressable>
                 ))}
-            </div>
+            </View>
         );
     };
 
     return (
         <Card size={isMobile ? "sm" : "md"}>
-            <h2 className="text-lg font-gothic font-semibold text-primary mb-4">Relationships</h2>
-            <div className="space-y-6">
+            <Text style={[styles.textLg, styles.fontGothic, styles.fontSemiBold, styles.textPrimary, styles.mb4]}>
+                Relationships
+            </Text>
+            <View style={[{ gap: 24 }]}>
                 {componentIds.length > 0 && (
-                    <div>
-                        <div className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-2 flex items-center justify-between">
-                            <span>Consists of ({componentIds.length})</span>
-                        </div>
+                    <View>
+                        <View style={[styles.mb2]}>
+                            <Text style={[styles.textXs, styles.textTertiary, { textTransform: 'uppercase', letterSpacing: 0.5 }, styles.fontGothic]}>
+                                Consists of ({componentIds.length})
+                            </Text>
+                        </View>
                         {renderVocabList(components)}
-                    </div>
+                    </View>
                 )}
 
                 {parentIds.length > 0 && (
-                    <div className={componentIds.length > 0 ? "pt-4 border-t border-divider/50" : ""}>
-                        <div className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-2 flex items-center justify-between">
-                            <span>Used in Derived Words ({parentIds.length})</span>
-                        </div>
+                    <View style={componentIds.length > 0 ? [styles.pt4, styles.borderTop] : []}>
+                        <View style={[styles.mb2]}>
+                            <Text style={[styles.textXs, styles.textTertiary, { textTransform: 'uppercase', letterSpacing: 0.5 }, styles.fontGothic]}>
+                                Used in Derived Words ({parentIds.length})
+                            </Text>
+                        </View>
                         {renderVocabList(parents)}
-                    </div>
+                    </View>
                 )}
-            </div>
+            </View>
 
             {isExpandable && (
-                <div className="mt-6 text-center">
-                    <button
-                        onClick={() => setIsExpanded(!isExpanded)}
-                        className="text-sm font-gothic text-accent hover:text-accent/80 transition-colors py-2 px-4 rounded-md border border-accent/20 hover:bg-accent/5 w-full md:w-auto"
+                <View style={[styles.mt6, styles.flexRow, styles.justifyCenter]}>
+                    <Button
+                        variant="secondary"
+                        onPress={() => setIsExpanded(!isExpanded)}
+                        style={{ borderColor: THEME.colors.accentLight, width: '100%', maxWidth: 220 }}
+                        textStyle={[styles.textAccent, styles.fontGothic, styles.textSm]}
                     >
                         {isExpanded ? "Show fewer relationships" : "Show all relationships"}
-                    </button>
-                </div>
+                    </Button>
+                </View>
             )}
         </Card>
     );

@@ -119,7 +119,7 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                             {/* Merged Entry Icon */}
                             {currentVocab.mergedVocabs && currentVocab.mergedVocabs.length > 1 && (
                                 <View style={[styles.absolute, { right: -24, top: 0 }]}>
-                                    <Icon name="call-merge" size={18} color={THEME.colors.tertiary + '66'} />
+                                    <Icon name="call-merge" size={18} color={THEME.colors.tertiarySoft} />
                                 </View>
                             )}
                         </Pressable>

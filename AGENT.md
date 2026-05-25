@@ -182,6 +182,23 @@ bun run build:jpdb     # Convert JPDB TSV to JSON
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
+- **[2026-05-25]**:
+  - **React Native Web & Mobile Migration Fixes**:
+    - **Theme System & Dark Mode**: Created platform-aware `THEME` in `@gokan-srs/ui` to map colors to CSS variables on Web and static light colors on Mobile, enabling dynamic dark mode on Web without changing component-level styling. Added safety guards around `localStorage` and `window` in `ThemeContext` to prevent crashes on native mobile. Updated text colors inside `MasteryRing` to be theme-aware.
+    - **VocabCard Layout**: Restructured layout to place Kanji and mastery rings on the first row and readings underneath with `flexShrink: 1` to resolve word-wrapping and collision issues.
+    - **SVG Loader Animations**: Optimized loader animations by rendering a GPU-accelerated HTML/CSS version on Web and utilizing `useNativeDriver: true` for layout scale/opacity animations on Mobile, resolving performance lag.
+    - **VocabDetail Page Styling**: Fixed grey borders by replacing `styles.border` with `styles.borderTop` in specific views. Set dynamic text color for related compounds in `compoundList` to make them visible in light mode.
+    - **Relationships Card Port**: Rewrote `VocabRelationshipsCard` from raw HTML/Tailwind to React Native primitives (`View`, `Text`, `Pressable`, `Button`, `Card`), making it compatible with both Web and Mobile platforms.
+    - **Input Focus Outline Dark Mode Fix**: All `TextInput` elements (`BaseQuizCard`, `SmartVocabList`, `Settings`) had the browser's default white focus ring suppressed with `outlineStyle: 'none'` (React Native Web property). The quiz input now also dynamically changes its `borderColor` to `THEME.colors.accent` when focused (instead of showing the default browser ring), matching the production design.
+
+- **[2026-05-22]**:
+  - **TypeScript Configuration & Build Fixes**:
+    - **React Native Imports**: Resolved resolution errors where `react-native` imports in shared packages and web apps resolved to un-typed JS source code of `react-native-web/src/index` by removing the incorrect `react-native` path alias from `packages/ui/tsconfig.json`, `packages/app/tsconfig.json`, and `apps/web/tsconfig.app.json`. TS now correctly resolves to standard React Native types from `node_modules/react-native/index.d.ts` during typechecking.
+    - **FormData Upload Body**: Cast `FormData` upload body to `any` in `google.service.ts` to bypass typecheck mismatch errors in environment-agnostic core libraries.
+    - **Loader Styles**: Fixed inline style type error in `Loader.tsx` by replacing non-existent `styles.gap10` with inline `{ gap: 40 }`.
+    - **Settings Screen Types & Typo**: Fixed implicit `any` parameter types and trailing syntax typo `</View>e)` in `Settings.tsx`.
+    - **Daily Progression Chart**: Removed unused `total` variable declaration in `DailyProgressionChart.tsx`.
+
 - **[2026-05-18]**:
   - **Web UI Regression Fixes & Animation Porting**:
     - **Daily Progression Chart**: Rewrote `DailyProgressionChart.tsx` completely from Tailwind/HTML into React Native View/Text with native-safe flexbox styles to fix layout collapse.

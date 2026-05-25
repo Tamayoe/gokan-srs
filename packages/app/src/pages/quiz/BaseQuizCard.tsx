@@ -113,9 +113,14 @@ export function BaseQuizCard({
                                     isMobile ? [styles.px3, styles.py2, styles.textLg] : [styles.px4, styles.py3, styles.textXl],
                                     {
                                         borderRadius: 8,
-                                        borderColor: feedback?.show && !feedback.correct ? THEME.colors.error : THEME.colors.divider,
-                                        opacity: feedback?.show ? 0.8 : 1
-                                    }
+                                        borderColor: feedback?.show && !feedback.correct 
+                                            ? THEME.colors.error 
+                                            : isInputFocused 
+                                                ? THEME.colors.accent 
+                                                : THEME.colors.divider,
+                                        opacity: feedback?.show ? 0.8 : 1,
+                                        outlineStyle: 'none'
+                                    } as any
                                 ]}
                             />
                         </View>
@@ -178,7 +183,7 @@ export function BaseQuizCard({
                                         { borderRadius: 8 },
                                         computed.canSubmit && !state.isEvaluatingAi
                                             ? { backgroundColor: pressed ? THEME.colors.accentHover : THEME.colors.accent, boxShadow: pressed ? '0px 1px 4px rgba(0,0,0,0.1)' : '0px 2px 4px rgba(0,0,0,0.1)' }
-                                            : { backgroundColor: THEME.colors.accent + '80' }
+                                            : { backgroundColor: THEME.colors.accentMuted }
                                     ] as any}
                                 >
                                     {state.isEvaluatingAi ? (
@@ -188,7 +193,7 @@ export function BaseQuizCard({
                                         </>
                                     ) : (
                                         <>
-                                            <Text style={[styles.fontMedium, styles.fontSerif, { color: computed.canSubmit ? THEME.colors.surface : THEME.colors.surface + 'CC' }]}>Submit</Text>
+                                            <Text style={[styles.fontMedium, styles.fontSerif, { color: computed.canSubmit ? THEME.colors.surface : THEME.colors.surfaceMuted }]}>Submit</Text>
                                             {computed.canSubmit && <Text style={[{ fontSize: 12, opacity: 0.7, color: THEME.colors.surface }]}>⏎</Text>}
                                         </>
                                     )}

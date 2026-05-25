@@ -1,6 +1,6 @@
 {
   "lockfileVersion": 1,
-  "configVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "gokan-srs-monorepo",
@@ -17,6 +17,7 @@
         "@types/node": "^24.10.1",
         "@types/react": "^19.2.5",
         "@types/react-dom": "^19.2.3",
+        "@types/react-native-web": "^0.19.2",
         "@vitejs/plugin-react": "^5.1.1",
         "autoprefixer": "^10.4.23",
         "eslint": "^9.39.1",
@@ -814,6 +815,8 @@
     "@types/react": ["@types/react@19.2.14", "", { "dependencies": { "csstype": "^3.2.2" } }, "sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w=="],
 
     "@types/react-dom": ["@types/react-dom@19.2.3", "", { "peerDependencies": { "@types/react": "^19.2.0" } }, "sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ=="],
+
+    "@types/react-native-web": ["@types/react-native-web@0.19.2", "", { "dependencies": { "@types/react": "*", "react-native": "*" } }, "sha512-TAgyUi1XcYYUM5j3IwBDufPUD0NaOJiz8ftld6oJPtuIT5lc+uRZZmTcTdflpsVzCtiZ6AjSyLFZ/xD0OtCfJA=="],
 
     "@types/stack-utils": ["@types/stack-utils@2.0.3", "", {}, "sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw=="],
 

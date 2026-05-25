@@ -27,7 +27,7 @@ export const OptionGrid = <T extends string>(props: {
                                 styles.border,
                                 { borderRadius: 12, flex: 1, minWidth: 150 },
                                 selected
-                                    ? { borderColor: THEME.colors.accent, backgroundColor: THEME.colors.accent + '1A' }
+                                    ? { borderColor: THEME.colors.accent, backgroundColor: THEME.colors.accentFaint }
                                     : { borderColor: THEME.colors.divider, backgroundColor: pressed || hovered ? THEME.colors.surfaceHover : THEME.colors.surface }
                             ] as any}
                         >

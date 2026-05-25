@@ -135,7 +135,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                                     styles.flexRow, styles.alignCenter, styles.justifyBetween, styles.p6, styles.bgSurface, styles.border,
                                     {
                                         borderRadius: 12,
-                                        borderColor: pressed || hovered ? THEME.colors.accent + '66' : THEME.colors.divider,
+                                        borderColor: pressed || hovered ? THEME.colors.accentSoft : THEME.colors.divider,
                                         backgroundColor: pressed ? THEME.colors.surfaceHover : THEME.colors.surface,
                                         boxShadow: '0px 1px 2px rgba(0,0,0,0.05)'
                                     }
@@ -158,7 +158,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                                     styles.flexRow, styles.alignCenter, styles.justifyBetween, styles.p6, styles.bgSurface, styles.border,
                                     {
                                         borderRadius: 12,
-                                        borderColor: pressed || hovered ? THEME.colors.accent + '66' : THEME.colors.divider,
+                                        borderColor: pressed || hovered ? THEME.colors.accentSoft : THEME.colors.divider,
                                         backgroundColor: pressed ? THEME.colors.surfaceHover : THEME.colors.surface,
                                         boxShadow: '0px 1px 2px rgba(0,0,0,0.05)'
                                     }

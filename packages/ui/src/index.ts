@@ -1,2 +1,2 @@
 export * from './styles';
-export { THEME } from '../../core/src/commons/theme';
+export { THEME } from './theme';

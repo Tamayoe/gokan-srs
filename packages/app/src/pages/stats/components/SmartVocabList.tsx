@@ -160,7 +160,7 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                         placeholderTextColor={THEME.colors.tertiary}
                         value={searchQuery}
                         onChangeText={setSearchQuery}
-                        style={[styles.wFull, styles.border, styles.bgSurface, styles.textPrimary, { paddingLeft: 40, paddingRight: 12, paddingVertical: 8, borderRadius: 6, fontSize: 14, borderColor: THEME.colors.divider }]}
+                        style={[styles.wFull, styles.border, styles.bgSurface, styles.textPrimary, { paddingLeft: 40, paddingRight: 12, paddingVertical: 8, borderRadius: 6, fontSize: 14, borderColor: THEME.colors.divider, outlineStyle: 'none' }] as any}
                     />
                 </View>
 
@@ -174,7 +174,7 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                                     styles.px3,
                                     styles.py2,
                                     styles.border,
-                                    { borderRadius: 6, borderColor: sortField === opt.value ? THEME.colors.accent : THEME.colors.divider, backgroundColor: sortField === opt.value ? THEME.colors.accent + '1A' : (pressed || hovered ? THEME.colors.surfaceHover : THEME.colors.surface) }
+                                    { borderRadius: 6, borderColor: sortField === opt.value ? THEME.colors.accent : THEME.colors.divider, backgroundColor: sortField === opt.value ? THEME.colors.accentFaint : (pressed || hovered ? THEME.colors.surfaceHover : THEME.colors.surface) }
                                 ] as any}
                             >
                                 <Text style={[styles.textSm, { color: sortField === opt.value ? THEME.colors.accent : THEME.colors.primary }]}>

@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { Platform } from "react-native";
 
 type Theme = "dark" | "light" | "system";
 
@@ -25,33 +26,51 @@ export function ThemeProvider({
     defaultTheme = "system",
     storageKey = "vite-ui-theme",
 }: ThemeProviderProps) {
-    const [theme, setTheme] = useState<Theme>(
-        () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-    );
+    const [theme, setTheme] = useState<Theme>(() => {
+        try {
+            if (Platform.OS === 'web' && typeof window !== 'undefined' && window.localStorage) {
+                return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+            }
+        } catch (e) {
+            console.warn("localStorage not available in this environment", e);
+        }
+        return defaultTheme;
+    });
 
     useEffect(() => {
-        const root = window.document.documentElement;
+        if (Platform.OS !== 'web' || typeof window === 'undefined') return;
 
-        root.classList.remove("light", "dark");
+        try {
+            const root = window.document.documentElement;
+            root.classList.remove("light", "dark");
 
-        if (theme === "system") {
-            const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-                .matches
-                ? "dark"
-                : "light";
+            if (theme === "system") {
+                const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+                    .matches
+                    ? "dark"
+                    : "light";
 
-            root.classList.add(systemTheme);
-            return;
+                root.classList.add(systemTheme);
+                return;
+            }
+
+            root.classList.add(theme);
+        } catch (e) {
+            console.error("Failed to update theme classes", e);
         }
-
-        root.classList.add(theme);
     }, [theme]);
 
     const value = {
         theme,
-        setTheme: (theme: Theme) => {
-            localStorage.setItem(storageKey, theme);
-            setTheme(theme);
+        setTheme: (newTheme: Theme) => {
+            try {
+                if (Platform.OS === 'web' && typeof window !== 'undefined' && window.localStorage) {
+                    localStorage.setItem(storageKey, newTheme);
+                }
+            } catch (e) {
+                console.warn("Failed to persist theme", e);
+            }
+            setTheme(newTheme);
         },
     };
 

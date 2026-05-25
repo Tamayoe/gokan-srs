@@ -73,9 +73,9 @@ export function ReviewForecast({ progress }: ReviewForecastProps) {
         <View style={[styles.wFull, styles.flexRow, styles.justifyBetween, styles.alignEnd, styles.gap2, styles.py4, styles.relative, { height: 200 }]}>
             {/* Background Grid */}
             <View style={[styles.absolute, styles.wFull, styles.hFull, styles.flexCol, styles.justifyBetween, styles.py4, styles.pl4, { top: 0, bottom: 0, left: 0, right: 0, zIndex: 0 }]} pointerEvents="none">
-                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
-                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
-                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.dividerFaint }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.dividerFaint }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.dividerFaint }]} />
             </View>
 
             {forecast.buckets.map((bucket, i) => {

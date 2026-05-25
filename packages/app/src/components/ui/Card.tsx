@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Animated, Pressable } from "react-native";
 import type { StyleProp, ViewStyle } from 'react-native';
-import { styles } from "@gokan-srs/ui";
+import { styles, THEME } from "@gokan-srs/ui";
 
 interface CardProps {
     interactive?: boolean;
@@ -73,7 +73,7 @@ export function Card({
                             styles.border,
                             { borderRadius: 16 },
                             SIZE_STYLES[size],
-                            { backgroundColor: pressed || hovered ? '#DDDDDD' : '#FFFFFF' },
+                            { backgroundColor: pressed || hovered ? THEME.colors.surfaceHover : THEME.colors.surface },
                             { opacity: fadeAnim, transform: [{ translateY }] },
                             style,
                         ]}

@@ -126,7 +126,7 @@ export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size =
                     <Text
                         style={[
                             styles.fontBold,
-                            { fontSize: fontSize, color: '#475569' }
+                            { fontSize: fontSize, color: THEME.colors.secondary }
                         ]}
                     >
                         {displayPercentage}

@@ -59,13 +59,12 @@ export function DailyProgressionChart({ progress }: DailyProgressionChartProps) 
         <View style={[styles.wFull, styles.flexRow, styles.justifyBetween, styles.alignEnd, { height: 200, paddingVertical: 16, position: 'relative' }]}>
             {/* Background Grid */}
             <View pointerEvents="none" style={[styles.absolute, styles.wFull, styles.hFull, styles.flexCol, styles.justifyBetween, { top: 0, left: 0, paddingVertical: 16, paddingLeft: 16, zIndex: 0 }]}>
-                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
-                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
-                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.divider + '80' }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.dividerFaint }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.dividerFaint }]} />
+                <View style={[styles.wFull, { height: 1, borderTopWidth: 1, borderStyle: 'dashed', borderColor: THEME.colors.dividerFaint }]} />
             </View>
 
             {progression.buckets.map((bucket, i) => {
-                const total = bucket.correct + bucket.incorrect;
                 const correctHeight = (bucket.correct / progression.maxCount) * 100;
                 const incorrectHeight = (bucket.incorrect / progression.maxCount) * 100;
                 const isWeekend = bucket.date.getDay() === 0 || bucket.date.getDay() === 6;

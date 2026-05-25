@@ -39,16 +39,10 @@ export function VocabCard({
     <View style={[{ height: '100%' }]}>
       <Card onPress={onClick} interactive={!!onClick} style={[styles.hFull, styles.flexCol, styles.justifyBetween]}>
         <CardContent style={[styles.flexCol, styles.gap3]}>
-          <View style={[styles.flexRow, styles.justifyBetween, styles.alignStart]}>
-            <View>
-              <Text style={[styles.textLg, styles.textPrimary, styles.fontSerif]}>
-                {vocab.writtenForm.kanji}
-              </Text>
-
-              <Text style={[styles.textSm, styles.textSecondary]}>
-                {[vocab.reading.primary, ...vocab.reading.alternatives].join(" ・ ")}
-              </Text>
-            </View>
+          <View style={[styles.flexRow, styles.justifyBetween, styles.alignCenter]}>
+            <Text style={[styles.textLg, styles.textPrimary, styles.fontSerif]}>
+              {vocab.writtenForm.kanji}
+            </Text>
 
             <View style={[styles.flexRow, styles.gap1]}>
               <View style={[styles.flexCol, styles.alignCenter]}>
@@ -59,6 +53,10 @@ export function VocabCard({
               </View>
             </View>
           </View>
+
+          <Text style={[styles.textSm, styles.textSecondary, { flexShrink: 1 }]}>
+            {[vocab.reading.primary, ...vocab.reading.alternatives].join(" ・ ")}
+          </Text>
 
           <Text style={[styles.textSm, styles.textSecondary]}>
             {vocab.senses[0]?.glosses.map(g => g).slice(0, 3).join(", ")}

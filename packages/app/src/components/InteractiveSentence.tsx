@@ -94,7 +94,7 @@ export function InteractiveSentence({
             Array.from(segment.content).forEach((char, charIdx) => {
                 renderBlocks.push(
                     <View key={`text-${i}-${charIdx}`} style={[styles.flexCol, styles.justifyEnd]}>
-                        <Text style={[styles.fontMincho, styles.textBase, textStyle, { lineHeight: 28 }]}>{char}</Text>
+                        <Text style={[styles.fontMincho, styles.textBase, styles.textPrimary, textStyle, { lineHeight: 28 }]}>{char}</Text>
                     </View>
                 );
             });
@@ -115,9 +115,9 @@ export function InteractiveSentence({
                     <View style={{ height: 14 }} />
                 )}
                 <View style={[
-                    isTarget ? { borderBottomWidth: 2, borderBottomColor: THEME.colors.accent + '40', marginHorizontal: 2, paddingHorizontal: 2 } : {},
+                    isTarget ? { borderBottomWidth: 2, borderBottomColor: THEME.colors.accentSubtle, marginHorizontal: 2, paddingHorizontal: 2 } : {},
                     isTarget && isClickable && isHovered ? { borderBottomColor: THEME.colors.accent } : {},
-                    !isTarget && isClickable ? { borderBottomWidth: 1, borderBottomColor: THEME.colors.tertiary + '80', borderStyle: 'dashed', marginHorizontal: 2 } : {},
+                    !isTarget && isClickable ? { borderBottomWidth: 1, borderBottomColor: THEME.colors.tertiaryMuted, borderStyle: 'dashed', marginHorizontal: 2 } : {},
                     !isTarget && isClickable && isHovered ? { borderBottomColor: THEME.colors.accent } : {}
                 ]}>
                     <Text style={[
