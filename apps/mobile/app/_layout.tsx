@@ -5,9 +5,14 @@ import { NotoSerifJP_400Regular, NotoSerifJP_700Bold } from '@expo-google-fonts/
 import { SawarabiGothic_400Regular } from '@expo-google-fonts/sawarabi-gothic';
 import { NotoSansJP_400Regular, NotoSansJP_700Bold } from '@expo-google-fonts/noto-sans-jp';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import { useState, useEffect } from 'react';
+import { View } from 'react-native';
 
 import { VocabularyService } from '@gokan-srs/core/services/vocabulary.service';
+import { StorageService } from '@gokan-srs/core/services/storage.service';
 import { createNativeFetchAdapter } from '../src/services/fetch.adapter.native';
+import { mmkvStorageAdapter } from '../src/services/mmkv.adapter';
+import { getDb } from '../src/services/sqlite.service';
 
 GoogleSignin.configure({
     webClientId: '1088130501377-pe580cj85dt179hltgba6v153m12esmh.apps.googleusercontent.com',
@@ -15,13 +20,17 @@ GoogleSignin.configure({
 });
 
 VocabularyService.configure(createNativeFetchAdapter());
+StorageService.configure(mmkvStorageAdapter);
 
 import { QuizProvider } from '@gokan-srs/app/context/QuizContext';
 import { ResponsiveProvider } from '@gokan-srs/app/context/Responsive/ResponsiveProvider';
 import { ThemeProvider } from '@gokan-srs/app/context/ThemeContext';
 import { GoogleDriveProvider } from '../src/context/GoogleDriveContext.native';
 import { NavigationContext } from '@gokan-srs/app/context/NavigationContext';
+import { AppGate } from '@gokan-srs/app/components/AppGate';
+import { Loader } from '@gokan-srs/app/components/Loader';
 import { useRouter, useSegments } from 'expo-router';
+import { THEME } from '@gokan-srs/ui';
 
 export default function Layout() {
     const [fontsLoaded] = useFonts({
@@ -34,16 +43,35 @@ export default function Layout() {
         NotoSansJP_700Bold,
     });
 
+    // Kick off SQLite initialisation immediately. On first launch this migrates
+    // vocab from the bundled JSON into the database (~2-5 s one-time cost).
+    const [dbReady, setDbReady] = useState(false);
+    useEffect(() => {
+        getDb()
+            .then(() => setDbReady(true))
+            .catch((err) => {
+                console.error('SQLite init failed:', err);
+                setDbReady(true); // Don't hard-block the app on DB failure
+            });
+    }, []);
+
     const router = useRouter();
     const segments = useSegments();
 
-    if (!fontsLoaded) {
-        return null;
+    if (!fontsLoaded || !dbReady) {
+        // Show a styled loading screen while fonts load and/or the DB migrates
+        return (
+            <View style={{ flex: 1, backgroundColor: THEME.colors.background }}>
+                <Loader
+                    title="Preparing your study session…"
+                    description="初回起動の準備中…"
+                />
+            </View>
+        );
     }
 
     const navigationValue = {
         navigate: (path: string) => {
-            // Expo router path mapping
             router.push(path as any);
         },
         goBack: () => {
@@ -54,13 +82,11 @@ export default function Layout() {
             }
         },
         getParam: (key: string) => {
-            // Extract from segments or return undefined.
-            // For /vocab/[id], segments = ['vocab', 'id']
             if (key === 'vocabId' && segments[0] === 'vocab') {
                 return segments[1];
             }
             return undefined;
-        }
+        },
     };
 
     return (
@@ -69,14 +95,16 @@ export default function Layout() {
                 <GoogleDriveProvider>
                     <ResponsiveProvider>
                         <QuizProvider>
-                            <Stack screenOptions={{ headerShown: false }}>
-                                <Stack.Screen name="index" />
-                                <Stack.Screen name="stats" />
-                                <Stack.Screen name="profile" />
-                                <Stack.Screen name="settings" />
-                                <Stack.Screen name="about" />
-                                <Stack.Screen name="vocab/[id]" />
-                            </Stack>
+                            <AppGate>
+                                <Stack screenOptions={{ headerShown: false }}>
+                                    <Stack.Screen name="index" />
+                                    <Stack.Screen name="stats" />
+                                    <Stack.Screen name="profile" />
+                                    <Stack.Screen name="settings" />
+                                    <Stack.Screen name="about" />
+                                    <Stack.Screen name="vocab/[id]" />
+                                </Stack>
+                            </AppGate>
                         </QuizProvider>
                     </ResponsiveProvider>
                 </GoogleDriveProvider>

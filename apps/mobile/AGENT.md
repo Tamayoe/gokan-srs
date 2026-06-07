@@ -53,18 +53,37 @@ export const mmkvStorageAdapter: StorageAdapter = {
 };
 ```
 
-### Data Fetch — expo-file-system (`src/services/fetch.adapter.native.ts`)
+### Data Fetch — SQLite + expo-file-system (`src/services/`)
 
-Reads bundled JSON assets instead of making HTTP requests:
+Vocabulary data is stored in a local SQLite database (`gokan.db`, managed by `expo-sqlite`). The `FetchAdapter` interface is preserved — only the implementation changes.
 
-```typescript
-// Android: file:///android_asset/data/compiled/<path>
-// iOS:     <bundleDirectory>/data/compiled/<path>
+**Files:**
+- `src/services/sqlite.service.ts` — DB lifecycle, vocab/sentences queries, sentence cache writes
+- `src/services/fetch.adapter.native.ts` — `FetchAdapter` implementation that routes through SQLite
+
+**Data flow:**
+
+| Request type | Source |
+|---|---|
+| `/vocab/{id}.json` | SQLite `vocab` table |
+| `/sentences/{id}.json` | SQLite `sentences` table → CDN fetch → `[]` fallback |
+| `/index/*.json` | Direct asset file read |
+
+**First-launch migration** — Vocab (~36,457 entries) cannot be stored as individual APK files (Android's 65,535 ZIP-entry limit). Instead, `copy-assets.js` merges them into `vocab-bundle.json` (~22 MB). On first launch, `sqlite.service.ts` reads this bundle and batch-inserts it into SQLite in groups of 200 rows per statement (~2-5 s, one-time). Subsequent launches open the existing DB directly.
+
+**Sentences offline cache** — Sentences (891 MB uncompressed) cannot be bundled in the APK. `fetch.adapter.native.ts` checks the local SQLite `sentences` table first; on a miss it fetches from the CDN (configure `SENTENCES_CDN_BASE_URL` constant in the adapter) and caches the result for future offline use. UI components handle `[]` gracefully when neither cache nor CDN is available.
+
+**APK asset layout** (`android/app/src/main/assets/data/compiled/`):
+```
+index/              ← 4 files, copied as-is
+vocab-bundle.json   ← ~22 MB, source for first-launch SQLite migration
 ```
 
-The vocabulary dataset must be bundled in the app binary:
-- Android: files in `assets/data/compiled/` are packaged in the APK via `scripts/copy-assets.js`
-- iOS: same directory is included in the app bundle
+**SQLite DB** (`gokan.db`, lives in app data directory, never in APK):
+```
+vocab     (id TEXT PRIMARY KEY, data TEXT)      ← 36,457 rows
+sentences (vocab_id TEXT PRIMARY KEY, data TEXT) ← grows as user studies
+```
 
 ---
 
@@ -78,10 +97,12 @@ Performs all initialization before rendering screens:
    - `SawarabiGothic_400Regular`
    - `NotoSansJP_400Regular`, `NotoSansJP_700Bold`
 
-2. **Adapter configuration**:
+2. **SQLite init** — `getDb()` is called in a `useEffect` immediately at mount. On first launch this migrates vocab from `vocab-bundle.json` into `gokan.db` (~2-5 s). A `Loader` is shown until both fonts and the DB are ready (`!fontsLoaded || !dbReady`).
+
+3. **Adapter configuration**:
    ```typescript
    VocabularyService.configure(createNativeFetchAdapter());
-   // StorageService is configured by mmkvAdapter in GoogleDriveProvider
+   StorageService.configure(mmkvStorageAdapter);
    ```
 
 3. **Google Sign-In configuration**:

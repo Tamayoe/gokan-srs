@@ -168,6 +168,18 @@ bun run build:jpdb     # Convert JPDB TSV to JSON
 
 ---
 
+## Cross-Platform Code Sharing Policy
+
+> [!IMPORTANT]
+> **Always maximise shared code between web and mobile.**
+> Implement platform-specific code **only when there is no shared alternative**, and **always ask the user first** before doing so.
+>
+> Platform-specific files (`.native.tsx`, `.web.tsx`, or anything inside `apps/web/` or `apps/mobile/`) should be thin wrappers or adapter bridges — the actual logic and UI belong in `packages/app/` or `packages/core/`.
+>
+> **Shared gate pattern**: `AppGate` (`packages/app/src/components/AppGate.tsx`) handles the Google Drive sync loader and the first-launch onboarding check for both platforms. Any new app-level guard (auth, feature flags, etc.) belongs there, not in each platform's root layout.
+
+---
+
 ## Error Handling Policy
 
 **Fatal Errors**: If a vocabulary file fails to load, the app must **suspend operation** with a visible error screen. Silent skipping is not permitted — it masks data corruption.
@@ -181,6 +193,15 @@ bun run build:jpdb     # Convert JPDB TSV to JSON
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-06-07]**:
+  - **Mobile bundling fixes**:
+    - Added `apps/mobile/metro.config.js` with `watchFolders`, `nodeModulesPaths`, `unstable_enablePackageExports: false`, and `extraNodeModules` mapping `@gokan-srs/*` packages to their `src/` directories, fixing Metro's inability to resolve the wildcard `"./*": "./src/*"` package exports without file extensions.
+    - Updated `mmkv.adapter.ts` to use `createMMKV()` (react-native-mmkv v4 API) instead of the removed `new MMKV()`.
+    - Wired `StorageService.configure(mmkvStorageAdapter)` in `_layout.tsx` — it was defined but never called.
+    - Fixed `GoogleSignin` v16 API: replaced `isSignedIn()` (removed) with synchronous `hasPreviousSignIn()`; updated `signIn()` and `signInSilently()` result access from `.user.*` to `.data.user.*`.
+    - Fixed `ResponsiveProvider` to use React Native `Dimensions` API instead of `window.innerWidth/addEventListener` (browser-only APIs that crash on native).
+    - Created shared `AppGate` component (`packages/app/src/components/AppGate.tsx`) used by both platforms for the Google Drive sync loader and first-launch onboarding gate. Mobile `_layout.tsx` now wraps `<Stack>` with `<AppGate>` — previously the mobile app went straight to `QuizScreen` on first launch, showing the "All caught up" screen instead of onboarding.
 
 - **[2026-05-25]**:
   - **React Native Web & Mobile Migration Fixes**:

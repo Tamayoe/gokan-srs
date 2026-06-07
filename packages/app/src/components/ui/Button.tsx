@@ -1,5 +1,5 @@
 import React from "react";
-import { Pressable, Text } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import type { StyleProp, ViewStyle, TextStyle } from 'react-native';
 import { styles, THEME } from "@gokan-srs/ui";
 
@@ -42,22 +42,29 @@ export function Button({
                 style,
             ]) as any}
         >
-            {({ pressed, hovered }: any) => (
-                <Text
-                    style={[
-                        styles.fontSerif,
-                        styles.textBase,
-                        isPrimary
-                            ? styles.textWhite
-                            : isGhost
-                                ? { color: pressed || hovered ? THEME.colors.primary : THEME.colors.secondary }
-                                : styles.textPrimary,
-                        textStyle,
-                    ]}
-                >
-                    {children}
-                </Text>
-            )}
+            {({ pressed, hovered }: any) => {
+                const resolvedTextStyle = [
+                    styles.fontSerif,
+                    styles.textBase,
+                    isPrimary
+                        ? styles.textWhite
+                        : isGhost
+                            ? { color: pressed || hovered ? THEME.colors.primary : THEME.colors.secondary }
+                            : styles.textPrimary,
+                    textStyle,
+                ];
+                // Wrap bare string/number children in Text; leave other nodes (Icon, etc.) as-is.
+                const content = React.Children.map(children, (child) =>
+                    typeof child === 'string' || typeof child === 'number'
+                        ? <Text style={resolvedTextStyle}>{child}</Text>
+                        : child
+                );
+                return (
+                    <View style={[styles.flexRow, styles.alignCenter, { gap: 4 }]}>
+                        {content}
+                    </View>
+                );
+            }}
         </Pressable>
     );
 }

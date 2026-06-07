@@ -103,15 +103,16 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
     const login = async () => {
         try {
-            await GoogleSignin.hasPlayServices();
-            const userInfo = await GoogleSignin.signIn();
+            await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+            const result = await GoogleSignin.signIn();
+            if (result.type !== 'success') return;
             const tokens = await GoogleSignin.getTokens();
 
             const googleUser: GoogleUser = {
                 access_token: tokens.accessToken,
-                name: userInfo.user.name ?? undefined,
-                email: userInfo.user.email,
-                picture: userInfo.user.photo ?? undefined
+                name: result.data.user.name ?? undefined,
+                email: result.data.user.email,
+                picture: result.data.user.photo ?? undefined
             };
 
             setUser(googleUser);
@@ -128,16 +129,20 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
     useEffect(() => {
         const init = async () => {
             try {
-                const isSignedIn = await GoogleSignin.isSignedIn();
-                if (isSignedIn) {
-                    const userInfo = await GoogleSignin.signInSilently();
+                const hasPreviousSignIn = GoogleSignin.hasPreviousSignIn();
+                if (hasPreviousSignIn) {
+                    const result = await GoogleSignin.signInSilently();
+                    if (result.type !== 'success') {
+                        setIsInitialLoadComplete(true);
+                        return;
+                    }
                     const tokens = await GoogleSignin.getTokens();
 
                     const googleUser: GoogleUser = {
                         access_token: tokens.accessToken,
-                        name: userInfo.user.name ?? undefined,
-                        email: userInfo.user.email,
-                        picture: userInfo.user.photo ?? undefined
+                        name: result.data.user.name ?? undefined,
+                        email: result.data.user.email,
+                        picture: result.data.user.photo ?? undefined
                     };
 
                     setUser(googleUser);

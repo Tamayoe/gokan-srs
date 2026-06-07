@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 import type { StyleProp, ViewStyle } from "react-native";
-import Svg, { Circle, Text as SvgText } from "react-native-svg";
+import Svg, { Circle, Text as SvgText, Title } from "react-native-svg";
 import { styles, THEME } from "@gokan-srs/ui";
 import { useResponsive } from "../context/Responsive/useResponsive";
 
@@ -14,7 +14,7 @@ export const LogoMark: React.FC<{ size?: number }> = ({ size = 48 }) => (
         role="img"
         aria-label="Gokan SRS Logo"
     >
-        <title>Gokan SRS - Japanese Vocabulary Learning</title>
+        <Title>Gokan SRS - Japanese Vocabulary Learning</Title>
         {/* Thin circle ring — same seal as the loader */}
         <Circle cx="50" cy="50" r="46" stroke={THEME.colors.primary} strokeWidth="3" fill="none" />
         <SvgText

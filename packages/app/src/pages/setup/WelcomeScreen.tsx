@@ -137,7 +137,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                                         borderRadius: 12,
                                         borderColor: pressed || hovered ? THEME.colors.accentSoft : THEME.colors.divider,
                                         backgroundColor: pressed ? THEME.colors.surfaceHover : THEME.colors.surface,
-                                        boxShadow: '0px 1px 2px rgba(0,0,0,0.05)'
+                                        elevation: 1
                                     }
                                 ] as any}
                             >
@@ -160,7 +160,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                                         borderRadius: 12,
                                         borderColor: pressed || hovered ? THEME.colors.accentSoft : THEME.colors.divider,
                                         backgroundColor: pressed ? THEME.colors.surfaceHover : THEME.colors.surface,
-                                        boxShadow: '0px 1px 2px rgba(0,0,0,0.05)'
+                                        elevation: 1
                                     }
                                 ] as any}
                             >
@@ -178,9 +178,9 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                     </View>
 
                     {/* Load Existing */}
-                    <View style={[styles.pt8, styles.border, styles.wFull, styles.alignCenter, { borderTopWidth: 1, borderColor: THEME.colors.divider }]}>
+                    <View style={[styles.pt8, styles.wFull, styles.alignCenter, { borderTopWidth: 1, borderColor: THEME.colors.divider }]}>
                         <View style={{ width: '100%', maxWidth: 384 }}>
-                            <GoogleLoginButton onSyncComplete={() => window.location.reload()} />
+                            <GoogleLoginButton onSyncComplete={() => {}} />
                         </View>
                     </View>
                 </View>
