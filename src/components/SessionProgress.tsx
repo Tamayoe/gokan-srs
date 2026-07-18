@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useQuiz } from '../context/useQuiz';
 import { useResponsive } from '../context/Responsive/useResponsive';
-import { CONSTANTS } from '../commons/constants';
+import { selectSessionStats } from '../context/quiz/quizSelectors';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -10,65 +10,10 @@ export const SessionProgress: React.FC = () => {
     const { state, sessionState } = useQuiz();
     const { isMobile } = useResponsive();
 
-    // Calculate session progress
-    // "Total" for this session is roughly:
-    // - Reviews due at start (we don't track "at start", but we can estimate: currently due + reviewed today if they were due)
-    // - New words limit (if learning)
-
-    // Simplification for V1:
-    // Reviews Done: state.progress?.stats.totalReviews (session based? No, that's lifetime or daily?)
-    // Actually stats.totalReviews is lifetime.
-    // We need SESSION based stats.
-    // We can use state.sessionHistory.length as "Items reviewed this session".
-
-    // Remaining Reviews: 
-    // state.progress?.learningQueue.filter(v => v.nextReviewAt <= now)
-
-    // Remaining New:
-    // Limit - NewLearnedToday (if > 0)
-
-    const stats = useMemo(() => {
-        if (!state.progress) return { done: 0, remaining: 0, total: 0 };
-
-        const now = new Date();
-
-        // "Done" should only count successful attempts or final failures?
-        // If we count every history item, "Total" grows when we fail (because remaining stays 1, but done +1).
-        // To stabilize "Total", we should only count "completed" items in Done.
-        // A failure -> item stays in "remaining". So failure shouldn't count as "done".
-        // But history has the failure. 
-        // Let's filter history for non-wrong answers? 
-        // Or better: `state.sessionHistory` contains all attempts.
-        // `Done` = Unique Vocab IDs in history that resulted in success? 
-        // Actually simpler: 
-        // Total = Items to Do + Items Done.
-        // If I fail an item, it's still "Items to Do". It shouldn't be "Items Done".
-        // So "Done" should be the count of *Successful* reviews in this session (or graduated/passed).
-        // Let's rely on `state.progress.stats.newLearnedToday` + count of review successes?
-
-        // Let's try: Done = History count where result != 'wrong'
-        const done = state.sessionHistory.filter(h => h.result !== 'wrong').length;
-
-        const dueReviews = state.progress.learningQueue.filter(
-            v => v.nextReviewAt && v.nextReviewAt <= now
-        ).length;
-
-        const dailyLeft = Math.max(0, CONSTANTS.srs.dailyNewLimit - state.progress.stats.newLearnedToday);
-
-        let remaining = dueReviews;
-
-        // Only add daily limit if we are in learn mode OR if queue is empty (will trigger learn mode)
-        // But for consistency:
-        if (sessionState === 'learn' || dueReviews === 0) {
-            remaining += dailyLeft;
-        }
-
-        return {
-            done,
-            remaining,
-            total: done + remaining
-        };
-    }, [state.progress, state.sessionHistory, sessionState]);
+    const stats = useMemo(
+        () => selectSessionStats(state, sessionState),
+        [state.progress, state.sessionHistory, sessionState]
+    );
 
     const progressPercent = stats.total > 0 ? (stats.done / stats.total) * 100 : 0;
 

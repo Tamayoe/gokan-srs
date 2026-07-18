@@ -1,5 +1,5 @@
 import {createContext, useContext} from "react";
-import type {QuizContextValue} from "./QuizContext";
+import type {QuizContextValue} from "./quiz/QuizProvider";
 
 export const QuizContext = createContext<QuizContextValue | null>(null);
 

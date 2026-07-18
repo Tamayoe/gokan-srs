@@ -1,8 +1,6 @@
-
-
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { useGoogleLogin, googleLogout, type TokenResponse } from '@react-oauth/google';
-import { GoogleDriveSync, GoogleAuthError } from '../services/google.service';
+import { GoogleDriveSync, GoogleAuthError } from '../services/sync/googleDriveSync';
 import { StorageService } from '../services/storage.service';
 import { MigrationService } from '../services/migration.service';
 import { CONSTANTS } from '../commons/constants';
@@ -26,12 +24,21 @@ interface GoogleDriveContextType {
     isAuthenticated: boolean;
     isInitialLoadComplete: boolean; // Renamed from isInitialSyncComplete
     lastDownloadTime: number | null; // Renamed from lastSyncTime
+    /** Bumped after a successful background sync that pulled in remote changes.
+     *  Unlike lastDownloadTime, consumers should MERGE against this (not replace
+     *  state wholesale) so an in-flight action isn't lost. */
+    lastBackgroundMergeTime: number | null;
+    /** True when a background upload failed due to an expired/invalid token.
+     *  Surfaces visibly instead of silently stopping sync. */
+    syncPaused: boolean;
 }
 
 const GoogleDriveContext = createContext<GoogleDriveContextType | null>(null);
 
 export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [lastDownloadTime, setLastDownloadTime] = useState<number | null>(null);
+    const [lastBackgroundMergeTime, setLastBackgroundMergeTime] = useState<number | null>(null);
+    const [syncPaused, setSyncPaused] = useState(false);
     const [user, setUser] = useState<GoogleUser | null>(null);
     const [isDownloading, setIsDownloading] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
@@ -61,10 +68,10 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
         localStorage.removeItem(CONSTANTS.storage.googleDriveTokenKey);
         setUser(null);
         setSyncService(null);
+        setSyncPaused(false);
 
         if (triggerReauth) {
             setTimeout(() => {
-                console.log('Triggering re-authentication...');
                 login();
             }, 100);
         }
@@ -83,37 +90,33 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             // We use the sync method because it handles the logic of "Fetch Remote -> Merge"
             // We want to ensure we have the latest from cloud before we start.
             // If we have local data, we merge. If not, we initialize.
-            let merged;
             if (currentLocal) {
                 // Async migration before syncing to prevent local old IDs from duplicating with remote new IDs
                 if (MigrationService.needsMigration(currentLocal)) {
-                    currentLocal = await MigrationService.migrateMergedVocabsAsync(currentLocal as any);
+                    currentLocal = await MigrationService.migrateMergedVocabsAsync(currentLocal);
                     StorageService.saveProgress(currentLocal);
                 }
 
-                // Ensure we pass a proper fallback if settings are missing
                 const envelopeToSync = {
                     progress: currentLocal,
                     settings: currentSettings ?? DEFAULT_SETTINGS
                 };
 
-                // Even on download, we might have local changes (offline). 
+                // Even on download, we might have local changes (offline).
                 // sync() will upload them. This is technically a "Sync", but treated as a Download event for the UI.
-                await service.sync(envelopeToSync as any);
-                // We reload from storage to see the result
-                merged = { progress: StorageService.loadProgress(), settings: StorageService.loadSettings() };
+                await service.sync(envelopeToSync);
             } else {
-                merged = await service.initialize();
+                const merged = await service.initialize();
                 if (merged) {
                     StorageService.saveProgress(merged.progress);
                     StorageService.saveSettings(merged.settings);
                 }
             }
 
-            console.log("Download/Sync completed");
-            setLastDownloadTime(Date.now()); // Triggers QuizContext reload
+            setSyncPaused(false);
+            setLastDownloadTime(Date.now()); // Triggers a full reload in QuizContext
         } catch (error) {
-            console.error("Download failed:", error);
+            console.error('[GoogleDriveContext] Download failed:', error);
             if (error instanceof GoogleAuthError) {
                 logout(true);
             }
@@ -130,34 +133,29 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
     // Use generic type compatible with browser (number) and Node (object)
     const uploadDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    // BACKGROUND UPLOAD: Pushes local changes to cloud. Does NOT trigger app reload.
+    // BACKGROUND UPLOAD: Pushes local changes to cloud. Does NOT trigger a full app reload -
+    // instead bumps lastBackgroundMergeTime so callers can reconcile (merge) any remote
+    // changes into live state without discarding whatever the user is doing right now.
     const uploadProgress = async (envelope: { progress: any; settings: any }) => {
         if (uploadDebounceRef.current) {
             clearTimeout(uploadDebounceRef.current);
         }
 
         uploadDebounceRef.current = setTimeout(async () => {
-            console.log('[GoogleDriveContext] Executing debounced upload...');
             if (!syncService || isDownloading) return;
 
             setIsUploading(true);
             try {
-                // sync() method does: Fetch Remote -> Merge -> Upload -> Save Local
-                // We trust it to update localStorage with the latest state.
-                const merged = await syncService.sync(envelope as any);
-                console.log("Background upload completed. New version:", merged?.progress?._sync?.version);
-                // NOTE: We do NOT setLastDownloadTime here. 
-                // QuizContext keeps using its current state (which is ahead or equal to what we just uploaded).
-                // LocalStorage is updated in background for next reload.
+                // sync() does: Fetch Remote -> Merge -> Upload -> Save Local.
+                await syncService.sync(envelope);
+                setSyncPaused(false);
+                setLastBackgroundMergeTime(Date.now());
             } catch (error) {
-                console.error("Background upload failed:", error);
-                // Silent fail for background uploads, or maybe a small toast?
-                // If auth error, we might want to prompt, but sticky auth errors are annoying.
-                // For now, let's only logout on critical/download actions or repeated failures?
-                // Actually, if auth is dead, we should probably stop.
+                console.error('[GoogleDriveContext] Background upload failed:', error);
                 if (error instanceof GoogleAuthError) {
-                    // Maybe set a flag "AuthFailed"? For now, aggressive re-auth is safer for data.
-                    // logout(true); 
+                    // Surface visibly rather than silently stopping - the user should know
+                    // their progress isn't being backed up until they reconnect.
+                    setSyncPaused(true);
                 }
             } finally {
                 setIsUploading(false);
@@ -169,12 +167,11 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
     const login = useGoogleLogin({
         scope: 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
         onSuccess: async (tokenResponse: TokenResponse) => {
-            console.log("Google Login Success", tokenResponse);
             localStorage.setItem(CONSTANTS.storage.googleDriveTokenKey, tokenResponse.access_token);
 
-            // Fetch user profile
             const profile = await fetchUserProfile(tokenResponse.access_token);
             setUser({ access_token: tokenResponse.access_token, ...profile });
+            setSyncPaused(false);
 
             const service = new GoogleDriveSync(tokenResponse.access_token);
             setSyncService(service);
@@ -183,7 +180,7 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             await downloadProgress(service);
         },
         onError: error => {
-            console.error('Login Failed:', error);
+            console.error('[GoogleDriveContext] Login failed:', error);
             logout();
         }
     });
@@ -192,7 +189,6 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
     useEffect(() => {
         const storedToken = localStorage.getItem(CONSTANTS.storage.googleDriveTokenKey);
         if (storedToken) {
-            // Fetch user profile and set user state
             fetchUserProfile(storedToken).then(profile => {
                 setUser({ access_token: storedToken, ...profile });
             });
@@ -218,7 +214,9 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             user,
             isAuthenticated: !!user,
             isInitialLoadComplete,
-            lastDownloadTime
+            lastDownloadTime,
+            lastBackgroundMergeTime,
+            syncPaused,
         }}>
             {children}
         </GoogleDriveContext.Provider>

@@ -3,6 +3,7 @@ import { SRSService } from './srs.service';
 import { VocabularyService } from './vocabulary.service';
 import { DEFAULT_VOCABULARY_PROGRESS } from '../models/vocabulary.model';
 import type { VocabProgress } from '../models/vocabulary.model';
+import { CONSTANTS } from '../commons/constants';
 
 // Use floating point tolerance
 const closeTo = (actual: number, expected: number, precision = 4) => {
@@ -266,24 +267,25 @@ describe('SRSService Formula Tests', () => {
         });
     });
 
-    describe('Retry Flag Behavior', () => {
-        it('should set needsRetry on first wrong answer', () => {
+    describe('Retry Flag Behavior (per quiz type)', () => {
+        it('should set needsRetry.reading on first wrong reading answer', () => {
             const vocab = createVocab(5.0, 0.3);
             const { updated } = SRSService.applyAnswer(vocab, 'reading', 'base', 'wrong', 'kotae', 10000, mockNow);
 
-            expect(updated.needsRetry).toBe(true);
+            expect(updated.needsRetry?.reading).toBe(true);
+            expect(updated.needsRetry?.meaning).toBeFalsy();
         });
 
-        it('should clear needsRetry on retry attempt (correct) AND preserve SRS state', () => {
+        it('should clear needsRetry.reading on retry attempt (correct) AND preserve SRS state', () => {
             const initialStrength = 5.0;
             const initialInterval = 0.0;
             const vocab = createVocab(initialStrength, 0.3, initialInterval);
-            vocab.needsRetry = true; // Simulate retry state
+            vocab.needsRetry = { reading: true }; // Simulate retry state
 
             const { updated, interval } = SRSService.applyAnswer(vocab, 'reading', 'base', 'kotae', 'kotae', 10000, mockNow);
 
             // Should clear flag
-            expect(updated.needsRetry).toBe(false);
+            expect(updated.needsRetry?.reading).toBe(false);
 
             // Should PRESREVE SRS state (no boost for retry)
             expect(updated.reading.memoryStrength).toBe(initialStrength);
@@ -291,15 +293,15 @@ describe('SRSService Formula Tests', () => {
             expect(interval).toBe(initialInterval);
         });
 
-        it('should keep needsRetry on retry attempt (wrong again) AND preserve SRS state', () => {
+        it('should keep needsRetry.reading on retry attempt (wrong again) AND preserve SRS state', () => {
             const initialStrength = 5.0;
             const vocab = createVocab(initialStrength, 0.3);
-            vocab.needsRetry = true; // Simulate retry state
+            vocab.needsRetry = { reading: true }; // Simulate retry state
 
             const { updated } = SRSService.applyAnswer(vocab, 'reading', 'base', 'wrong', 'kotae', 10000, mockNow);
 
             // Should REMAIN TRUE (keep in loop until correct)
-            expect(updated.needsRetry).toBe(true);
+            expect(updated.needsRetry?.reading).toBe(true);
 
             // Should PRESERVE SRS state (no double penalty)
             expect(updated.reading.memoryStrength).toBe(initialStrength);
@@ -309,18 +311,64 @@ describe('SRSService Formula Tests', () => {
             const vocab = createVocab(5.0, 0.3);
             const { updated } = SRSService.applyAnswer(vocab, 'reading', 'base', 'こたへ', 'こたえ', 10000, mockNow, 'minor_error');
 
-            expect(updated.needsRetry).toBe(false);
+            expect(updated.needsRetry?.reading).toBeFalsy();
         });
 
-        it('should clear needsRetry on minor_error during retry', () => {
+        it('should clear needsRetry.reading on minor_error during retry', () => {
             const vocab = createVocab(5.0, 0.3);
-            vocab.needsRetry = true;
+            vocab.needsRetry = { reading: true };
 
             const { updated } = SRSService.applyAnswer(vocab, 'reading', 'base', 'こたへ', 'こたえ', 10000, mockNow, 'minor_error');
 
-            expect(updated.needsRetry).toBe(false);
+            expect(updated.needsRetry?.reading).toBe(false);
             // And preserve state
             expect(updated.reading.memoryStrength).toBe(5.0);
+        });
+
+        it('should track meaning retries independently of reading retries', () => {
+            const vocab = createVocab(5.0, 0.3);
+            vocab.needsRetry = { reading: true }; // a pending reading retry must not block meaning
+
+            const { updated } = SRSService.applyAnswer(vocab, 'meaning', 'base', 'wrong', 'answer', 10000, mockNow, 'wrong');
+
+            expect(updated.needsRetry?.reading).toBe(true); // untouched
+            expect(updated.needsRetry?.meaning).toBe(true); // newly set
+
+            // A correct meaning retry clears only the meaning flag
+            const { updated: afterRetry } = SRSService.applyAnswer(updated, 'meaning', 'base', 'answer', 'answer', 10000, mockNow, 'correct');
+            expect(afterRetry.needsRetry?.reading).toBe(true);
+            expect(afterRetry.needsRetry?.meaning).toBe(false);
+        });
+    });
+
+    describe('Meaning-quiz-disabled scheduling', () => {
+        it('graduates a vocab on reading mastery alone when meaning quizzes are disabled', () => {
+            const vocab = createVocab(CONSTANTS.srs.formula.mastery.maxMemoryStrength, 0.5);
+            // meaning is still fresh/unmastered
+            expect(vocab.meaning.memoryStrength).toBeLessThan(CONSTANTS.srs.formula.mastery.maxMemoryStrength);
+
+            const { updated } = SRSService.applyAnswer(
+                vocab, 'reading', 'base', 'kotae', 'kotae', 1000, mockNow, 'correct',
+                1.0, 1.0, /* meaningQuizEnabled */ false
+            );
+
+            expect(updated.stage).toBe('graduated');
+            expect(updated.nextReviewAt).toBeNull();
+        });
+
+        it('does not graduate on reading mastery alone when meaning quizzes are enabled', () => {
+            const vocab = createVocab(CONSTANTS.srs.formula.mastery.maxMemoryStrength, 0.5);
+            // Meaning has a real pending review scheduled (as it always does in practice,
+            // via applyVocabIntroChoice's +12h stagger).
+            vocab.meaning.dueDate = new Date(mockNow.getTime() + 60 * 60 * 1000);
+
+            const { updated } = SRSService.applyAnswer(
+                vocab, 'reading', 'base', 'kotae', 'kotae', 1000, mockNow, 'correct',
+                1.0, 1.0, /* meaningQuizEnabled */ true
+            );
+
+            expect(updated.stage).toBe('learning');
+            expect(updated.nextReviewAt).not.toBeNull();
         });
     });
 

@@ -2,12 +2,22 @@ import { CONSTANTS } from '../commons/constants';
 import type { VocabProgress, SRSEntry } from '../models/vocabulary.model';
 import type { UserProgress } from '../models/user.model';
 import { DEFAULT_SRS_ENTRY, DEFAULT_VOCABULARY_PROGRESS } from '../models/vocabulary.model';
+import { vocabNextReviewAt } from './scheduling';
 
 /**
- * Current data format version
- * Increment this when making breaking changes to the data structure
+ * Two-tier version scheme:
+ * - SYNC_MIGRATION_VERSION is the ceiling the synchronous pass (migrateUserProgress)
+ *   can ever stamp on its own.
+ * - CURRENT_FORMAT_VERSION is the true terminal version, reachable ONLY after the
+ *   async homograph-merge pass (migrateMergedVocabsAsync) has actually run.
+ *
+ * Previously both were the same constant, so the cheap synchronous pass could
+ * stamp the terminal version on its own and pre-empt the async pass entirely -
+ * needsMigration() would report false immediately after the sync pass, and the
+ * homograph-merge migration (which needs a network fetch) would never run.
  */
-const CURRENT_FORMAT_VERSION = 7;
+const SYNC_MIGRATION_VERSION = 7;
+const CURRENT_FORMAT_VERSION = 8;
 
 /**
  * Migration service to handle data format upgrades
@@ -25,12 +35,12 @@ export class MigrationService {
 
         if (!hasOldFormat) {
             // Already migrated (no mastery field), just ensure all fields are present
-            return {
+            return this.normalizeNeedsRetry({
                 ...DEFAULT_VOCABULARY_PROGRESS,
                 ...item,
                 reading: { ...DEFAULT_SRS_ENTRY, ...item.reading },
                 meaning: { ...DEFAULT_SRS_ENTRY, ...item.meaning }
-            };
+            });
         }
 
         // Old format detected - migrate from mastery to memoryStrength
@@ -69,12 +79,26 @@ export class MigrationService {
         // IMPORTANT: We do NOT remove the 'mastery' field anymore.
         // It is preserved for future reference if needed.
 
-        return {
+        return this.normalizeNeedsRetry({
             ...DEFAULT_VOCABULARY_PROGRESS,
             ...item, // Keep all original fields including mastery
             reading: { ...migratedEntry },
             meaning: { ...DEFAULT_SRS_ENTRY } // Meaning starts fresh
-        };
+        });
+    }
+
+    /**
+     * `needsRetry` used to be a single boolean applying to whichever quiz type was
+     * active. It is now per-type ({reading?, meaning?}) so a wrong reading answer
+     * never blocks a due meaning review (and vice versa). Historically the flag
+     * was only ever set for reading quizzes, so an old `true` maps to {reading: true}.
+     */
+    private static normalizeNeedsRetry(item: VocabProgress): VocabProgress {
+        const raw = (item as any).needsRetry;
+        if (typeof raw === 'boolean') {
+            return { ...item, needsRetry: raw ? { reading: true } : undefined };
+        }
+        return item;
     }
 
     /**
@@ -133,12 +157,28 @@ export class MigrationService {
             });
         }
 
-        // Return current max sync version (we now bump to V6 locally)
+        // Normalize needsRetry (boolean -> per-type object) unconditionally, since
+        // this field can exist regardless of format version and isn't covered by
+        // the version-gated passes above.
+        migratedQueue = migratedQueue.map((item: VocabProgress) => this.normalizeNeedsRetry(item));
+
+        // Recompute nextReviewAt unconditionally via scheduling.ts (the single source
+        // of truth introduced to stop it being hand-synced independently). This
+        // retroactively corrects any stale value written before that fix existed.
+        // Settings aren't available here, so this assumes meaning quizzes are
+        // enabled; if a user has them disabled, the next real answer immediately
+        // re-corrects it via the same scheduling logic at runtime.
+        migratedQueue = migratedQueue.map((item: VocabProgress) =>
+            item.stage === 'graduated' ? item : { ...item, nextReviewAt: vocabNextReviewAt(item) }
+        );
+
+        // Cap at SYNC_MIGRATION_VERSION (never CURRENT_FORMAT_VERSION) so
+        // needsMigration() keeps reporting true until the async pass has run.
         return {
             ...progress,
             learningQueue: migratedQueue,
             adaptive: progress.adaptive ?? { level: 1.0, history: [] },
-            _formatVersion: currentVersion < CURRENT_FORMAT_VERSION ? CURRENT_FORMAT_VERSION : currentVersion
+            _formatVersion: currentVersion < SYNC_MIGRATION_VERSION ? SYNC_MIGRATION_VERSION : currentVersion
         };
     }
 

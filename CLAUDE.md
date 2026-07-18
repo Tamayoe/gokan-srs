@@ -81,7 +81,12 @@ gokan-srs/
 │   │   └── constants.ts      # App-wide configuration
 │   ├── components/           # Reusable UI components
 │   ├── context/              # React Context providers
-│   │   ├── QuizContext.tsx   # Main app state
+│   │   ├── quiz/             # Quiz state machine (modular, see State Management)
+│   │   │   ├── quizReducer.ts          # Pure reducer (state + actions, no I/O)
+│   │   │   ├── quizSelectors.ts        # selectNextView + derived selectors
+│   │   │   ├── useQuizOrchestration.ts # All effects + actions (I/O, sync, timers)
+│   │   │   └── QuizProvider.tsx        # Thin assembler exposing QuizContextValue
+│   │   ├── useQuiz.ts        # useQuiz() hook + QuizContext object
 │   │   ├── GoogleDriveContext.tsx
 │   │   ├── ThemeContext.tsx
 │   │   ├── KanjiForm/        # Kanji knowledge form state
@@ -94,16 +99,24 @@ gokan-srs/
 │   │   ├── state.model.ts
 │   │   └── kanji.model.ts
 │   ├── pages/                # Page components
-│   │   ├── quiz/             # Main study screen
+│   │   ├── quiz/             # Main study screen (also hosts quizFormatting.ts helpers)
 │   │   ├── setup/            # Initial setup wizard
 │   │   ├── settings/         # App settings
 │   │   ├── profile/          # User profile
 │   │   └── about/            # About page
 │   ├── services/             # Business logic
-│   │   ├── srs.service.ts    # SRS algorithm
+│   │   ├── srs.service.ts    # SRS algorithm (formula only)
+│   │   ├── scheduling.ts     # Single source of truth for due-date/mastery derivation
 │   │   ├── vocabulary.service.ts
 │   │   ├── storage.service.ts
-│   │   ├── google.service.ts
+│   │   ├── backup.service.ts        # Write-once pre-migration safety snapshots
+│   │   ├── progressSerialization.ts # Shared (de)serialization for storage + Drive
+│   │   ├── migration.service.ts
+│   │   ├── sync/                    # Google Drive sync (see Services & Business Logic)
+│   │   │   ├── driveClient.ts       # Raw Drive REST HTTP calls
+│   │   │   ├── mergeProgress.ts     # Pure per-entry merge logic
+│   │   │   ├── googleDriveSync.ts   # Orchestrator: CAS retry, dedup, backups
+│   │   │   └── types.ts
 │   │   └── quiz.service.ts
 │   ├── utils/                # Helper functions
 │   │   ├── srs.utils.ts
@@ -112,6 +125,7 @@ gokan-srs/
 │   ├── main.tsx              # Entry point
 │   └── index.css             # Global styles
 ├── DESIGN_SYSTEM.md          # Visual design guidelines
+├── ARCHITECTURE_AUDIT.md     # Architecture audit + remediation summary
 ├── CLAUDE.md                 # This file
 └── package.json
 ```
@@ -142,6 +156,8 @@ gokan-srs/
 - `consecutiveFailures`: Consecutive wrong answers
 - `reading`: SRSEntry for reading reviews
 - `meaning`: SRSEntry for meaning reviews
+- `needsRetry`: optional `{ reading?: boolean; meaning?: boolean }` - per-quiz-type immediate-retry flag. A wrong reading answer only forces a reading retry and never blocks a due meaning review (and vice versa).
+- `nextReviewAt` is always **derived**, never hand-set independently - see `scheduling.ts` in Services & Business Logic.
 
 **`SRSEntry`** - Detailed SRS state for reading/meaning
 - `memoryStrength`: Current memory strength (days)
@@ -239,6 +255,18 @@ Core SRS algorithm implementation. **This is the heart of the learning system.**
 - **Learn**: Sets `nextReviewAt = now` (becomes immediately reviewable)
 - **Skip**: Sets stage to `'graduated'`, maxMemoryStrength (never appears again)
 
+### Scheduling Service (`scheduling.ts`)
+
+**Single source of truth** for "when is this vocab due" and "is it fully mastered". Previously this question was answered independently in three places (`VocabProgress.nextReviewAt` hand-synced by `applyAnswer`, `reading.dueDate`, `meaning.dueDate`), which could drift out of agreement - e.g. disabling meaning quizzes left a stale `meaning.dueDate` able to make `nextReviewAt` report "due" while queue-selection had already stopped considering meaning reviews.
+
+**Key functions:**
+- `isEntryMastered(entry)`: `memoryStrength >= maxMemoryStrength`
+- `isVocabFullyMastered(vocab, settings)`: reading mastered AND (meaning quizzes disabled OR meaning mastered)
+- `vocabNextReviewAt(vocab, settings)`: derives the authoritative `nextReviewAt` - the earlier of non-mastered reading/meaning due dates, **excluding meaning entirely when `enableMeaningQuiz` is false**
+- `isVocabDue(vocab, settings, now)`: convenience wrapper (always false for graduated items)
+
+`SRSService.applyAnswer` calls into this module rather than hand-computing `nextReviewAt`/`stage`; `sync/mergeProgress.ts` and the v8+ migration pass do the same, so all three call sites can never disagree.
+
 #### SRS Formula Constants (from `constants.ts`)
 - `targetRecall`: 0.75 (75% target recall rate)
 - `expectedLatency`: 1500ms
@@ -269,24 +297,45 @@ Local storage wrapper for user data persistence.
 - `GOKAN_SRS_PROGRESS`: User progress data
 - `GOKAN_SRS_SETTINGS`: User settings
 
-### Google Service (`google.service.ts`)
+### Google Drive Sync (`services/sync/`)
 
-Google Drive integration for cloud sync.
+Cloud sync, split into three modules by responsibility:
 
-**Features:**
-- OAuth authentication
-- Create/update progress file in Google Drive
-- Automatic sync on changes
-- Conflict resolution (server wins)
-- **Integrated Migration**: Applies migration and proper date hydration to remote files before merging
+**`driveClient.ts`** - Thin wrapper around the Drive v3 REST API (folder/file list, download, upload, trash). No merge/business logic - just HTTP calls and `GoogleAuthError` translation on 401/403, so it can be unit-tested without a network by mocking the class methods it needs.
+
+**`mergeProgress.ts`** (pure, no I/O) - Reconciliation logic:
+- `mergeEntry(local, remote)`: merges one `SRSEntry` (reading OR meaning) - the entry with the more recent `lastReviewedAt` wins scheduling-relevant fields (dueDate, difficulty), while `memoryStrength`/`interval` are each taken as the **max** of both sides as a safety net; `history` is a full union deduped by timestamp.
+- `mergeVocabProgress(local, remote, settings)`: merges reading and meaning **independently** via `mergeEntry` - a device that only reviewed reading can never clobber another device's meaning review (and vice versa). `stage`/`nextReviewAt` are always **re-derived** via `scheduling.ts`, never merged directly.
+- `mergeLearningQueues`: pure union by `vocabId` (never drops a word).
+- `mergeProgress`/`mergeSettings`: top-level merge - kanji knowledge is last-version-wins (local wins on a tie, to preserve un-pushed local edits/deletions), stats are field-wise max, `dailyOverride` is OR'd, and the sync version counter always bumps by 1 past the higher input.
+
+**`googleDriveSync.ts`** (`GoogleDriveSync` class) - Orchestrates the above against Drive:
+- **Optimistic concurrency**: captures the remote file's `modifiedTime` when read, re-verifies it immediately before writing, and retries (re-fetch + re-merge, up to 3 attempts) if it changed - closes the classic read-modify-write lost-update window.
+- **Duplicate-file reconciliation**: if more than one file matches the expected name (two devices creating it concurrently), all copies are downloaded, merged together, written back to one canonical file, and the rest are trashed.
+- **`ensureRemoteBackupOnce()`**: write-once safety net - before this instance's first write, snapshots the current live remote file under `kanji-progress.pre-v8-backup.json`. No-ops if a backup already exists or there's nothing live to back up. Failures are logged but non-fatal (the local backup below is the primary safety net).
+
+**Surfacing background changes to the UI**: `GoogleDriveContext` exposes `lastBackgroundMergeTime` (bumped after a successful background sync) separately from `lastDownloadTime` (bumped only on a full blocking download). `useQuizOrchestration` reconciles (merges) remote changes into live React state via the `RECONCILE_REMOTE` action rather than replacing state wholesale, so an answer submitted mid-sync is never silently overwritten. A `syncPaused` flag surfaces an expired/invalid token visibly (`SyncStatusIndicator` in `App.tsx` shows a reconnect button) instead of silently stopping uploads.
+
+### Data Safety (`backup.service.ts`, `progressSerialization.ts`)
+
+**`BackupService`**: write-once local safety net. `ensureLocalBackupOnce(rawJson)` snapshots the exact raw (un-migrated) localStorage bytes under `GOKAN_SRS_PROGRESS_BACKUP_PREV8` the first time `StorageService.loadProgress()` runs - before any migration logic touches them. Never overwritten once written.
+
+**`progressSerialization.ts`**: single shared (de)serialization module used by both `storage.service.ts` and `sync/googleDriveSync.ts`, so a stored payload always hydrates into the exact same in-memory shape regardless of which channel it came from (fixes a previous divergence where the two channels handled `Date`/`Set` fields slightly differently). Exposes `toPlainProgressJSON`, `hydrateProgress`, and `migrateAndHydrateProgress` (migration + hydration in one call).
 
 ### Migration Service (`migration.service.ts`)
 
 Handles data format upgrades to ensure backward compatibility.
 
+**Two-tier version scheme:**
+- `SYNC_MIGRATION_VERSION` (7): the ceiling the **synchronous** pass (`migrateUserProgress`) can ever stamp on its own.
+- `CURRENT_FORMAT_VERSION` (8): the true terminal version, reachable **only** after the **async** homograph-merge pass (`migrateMergedVocabsAsync`) has actually run.
+
+Previously both were the same constant, so the cheap synchronous pass could stamp the terminal version on its own and pre-empt the async pass entirely - `needsMigration()` would report `false` immediately after a single synchronous load, and the homograph-merge migration (which needs a network fetch) would silently never run. `migrateUserProgress` now caps at `SYNC_MIGRATION_VERSION`, so `needsMigration()` correctly keeps reporting `true` until the async pass has actually completed.
+
 **Features:**
 - Converts old `mastery` (0-100) system to new `memoryStrength`/`interval` system
-- Format version tracking (`_formatVersion` field)
+- Normalizes `needsRetry` (legacy boolean → per-type `{reading?, meaning?}` object) **unconditionally**, regardless of format version, since the field isn't tied to the version-gated passes
+- Recomputes `nextReviewAt` unconditionally via `scheduling.ts` on every load, retroactively correcting any value written before that derivation existed
 - Idempotent migration (already-migrated data not re-migrated)
 - Automatic migration on data load (Storage & Google Drive)
 
@@ -299,9 +348,16 @@ Handles data format upgrades to ensure backward compatibility.
 
 ## State Management
 
-### QuizContext (`context/QuizContext.tsx`)
+### Quiz State (`context/quiz/`)
 
-Main application state using React Context + useReducer pattern.
+The quiz state machine is split into four single-responsibility modules rather than one monolithic provider:
+
+- **`quizReducer.ts`** - Pure `QuizState`/`QuizAction`/reducer. No I/O, no side effects, no `Date.now()` calls - fully unit-testable in isolation (`quizReducer.test.ts`).
+- **`quizSelectors.ts`** - `selectNextView(state, hasMoreLearnable, now)` is the **single source of truth** for "what should the quiz screen show right now". It replaces three previously-independent decision points (a queue-level `nextDue` memo, a `computeSessionView` function, and an ad-hoc `currentProgress.introductionAt` check in `QuizScreen`) that could drift out of agreement. Returns `{ queueItem, sessionState, nextReviewAt, shouldShowIntro }`. Also exposes `selectCurrentProgress`, `selectCurrentSentence`, and `selectSessionStats` (session progress-bar bookkeeping, replacing a duplicated ad-hoc calculation that used the dead `dailyNewLimit` constant).
+- **`useQuizOrchestration.ts`** - Every effect (vocab/sentence loading, auto-advance timing, daily reset, persistence, migration triggering, Drive sync reconciliation) and every action (`submitAnswer`, `continueToNext`, `advanceQueue`, etc.), returning `{ actions, nextView, currentProgress, computed }`. Mount-once effects use a `useRef` guard instead of the previous string-hack dependency array (`[state.progress ? 'loaded' : 'loading']`).
+- **`QuizProvider.tsx`** - Thin assembler: `useReducer(quizReducer, ...)` + `useQuizOrchestration(...)`, wires the result into `QuizContext.Provider`. Owns the public `QuizContextValue` interface.
+
+`useQuiz.ts` (unchanged location) still exposes the `useQuiz()` hook and `QuizContext` object; its type import now points at `./quiz/QuizProvider`.
 
 #### State Shape (`QuizState`)
 ```typescript
@@ -309,29 +365,42 @@ Main application state using React Context + useReducer pattern.
   progress: UserProgress | null,
   settings: UserSettings | null,
   currentVocab: Vocabulary | null,
+  currentSentences: Sentence[] | null,
+  currentSentenceId: string | null,
+  currentQuizItem: PendingQuizItem | null,
   userAnswer: string,
   feedback: { show, correct, type, message, matchedAnswer } | null,
   isLoadingVocab: boolean,
+  isEvaluatingAi: boolean,
+  introCandidates: Vocabulary[],
+  nextKanjiToLearn: { step: number; kanjis: string[] } | null,
+  sessionHistory: Array<{ vocabId, writtenForm, result, delta }>,
   fatalError: string | null
 }
 ```
+
+Note: there is **no `sessionQueue`/`sessionBuiltAt` field**. A prior "frozen session queue" refactor (see historical `[2026-02-28]` log entry) added this subsystem but nothing ever read it to decide what to display - it was deleted as dead code. Retry-on-wrong-answer is handled entirely by the per-type `needsRetry` flag on `VocabProgress`.
 
 #### Actions
 - `SETUP_COMPLETE`: Initialize progress after setup
 - `LOAD_VOCAB_START/SUCCESS/ERROR`: Vocabulary loading states
 - `SET_ANSWER`: Update user input
 - `SUBMIT_ANSWER`: Process answer submission
-- `ADVANCE_QUEUE`: Move to next vocab item
-- `SAVE_SETTINGS`: Update user settings
+- `UPDATE_AFTER_ANSWER`: Apply the (already-computed) SRS update after `continueToNext`
+- `ADVANCE_QUEUE`: Move to next vocab item / fetch intro candidates
+- `SAVE_SETTINGS`: Update user settings (clears `introCandidates` if the learning order changed)
 - `UPDATE_KANJI_KNOWLEDGE`: Update known kanji
-- `OVERRIDE_DAILY_LIMIT`: Bypass daily new vocab limit
+- `OVERRIDE_DAILY_LIMIT`: Bypass daily new vocab limit (legacy - the limit itself is effectively disabled)
 - `VOCAB_INTRO_CHOICE`: Handle Learn/Skip on intro card
+- `SET_NEXT_KANJI` / `LEARN_NEXT_KANJI`: KKLC step-unlock flow
 - `RESET`: Clear all progress
 - `RESET_DAILY_STATS`: Reset daily counters (midnight)
+- `RECONCILE_REMOTE`: Assign an already-merged `{progress, settings}` from a background Drive sync. The merge itself happens in `useQuizOrchestration` (via `sync/mergeProgress.ts`) **before** dispatch, so the reducer just assigns the result - everything else (`currentVocab`, `userAnswer`, `feedback`) is left untouched, so a background sync can never interrupt an answer in progress.
 
 #### Computed Values
 - `isSetupComplete`: Whether initial setup is done
-- `sessionState`: Current session state (review/learn/waiting/exhausted)
+- `sessionState`: Current session state (review/learn/learn-kanji/waiting/exhausted) - derived by `selectNextView`
+- `shouldShowIntro`: Whether the currently-loaded vocab should show the intro card - also derived by `selectNextView`
 - `currentProgress`: VocabProgress for current vocab
 - `nextReviewAt`: Next review timestamp
 
@@ -339,7 +408,7 @@ Main application state using React Context + useReducer pattern.
 - `setupComplete({ kanjiKnowledge, settings })`: Complete initial setup
 - `submitAnswer()`: Evaluate and record answer
 - `advanceQueue({ now, overrideDailyLimit })`: Load next vocab
-- `continueToNext()`: Move to next item after feedback
+- `continueToNext()`: Move to next item after feedback (calls `SRSService.applyAnswer` exactly once per answer - a prior version called it twice, once for the mastery-delta history entry and once for the queue update)
 - `saveVocabIntroChoice(vocab, 'learn'|'skip')`: Handle intro card choice
 
 ---
@@ -348,14 +417,16 @@ Main application state using React Context + useReducer pattern.
 
 ### Quiz Screen (`pages/quiz/QuizScreen.tsx`)
 
-Main study interface. Displays different components based on `sessionState`:
+Main study interface. Switches **exhaustively** on `sessionState` (a TypeScript `never` check at the `default` case fails to compile if a new `SessionState` value is ever added without being handled):
 
-- **`sessionState === 'review'`**: Show `QuizCard` (active review)
-- **`sessionState === 'learn'`**: Show `VocabIntroCard` (new vocab introduction)
-- **`sessionState === 'waiting'`**: Show `WaitingScreen` (next review time)
-- **`sessionState === 'exhausted'`**: Show `ExhaustedScreen` (no more content)
+- **`'waiting'`**: Show `WaitingScreen` (next review time)
+- **`'exhausted'`**: Show `ExhaustedScreen` (no more content)
+- **`'learn-kanji'`**: Show `LearnKanjiCard` (KKLC step unlock)
+- **`'review'` / `'learn'`**: Loading gate, then `shouldShowIntro` (from `selectNextView`) decides `VocabIntroCard` vs. the active quiz card (`QuizCard` for reading, `MeaningQuizCard` for meaning, keyed on `currentQuizItem.quizType`)
 
-**Auto-advance logic**: If queue has no valid items but can introduce new vocab, automatically calls `advanceQueue()`.
+**Auto-advance logic**: Owned by `useQuizOrchestration`. If the queue has no valid items but can introduce new vocab, automatically calls `advanceQueue()`.
+
+**Shared formatting** (`pages/quiz/quizFormatting.ts`): `formatReadingList`, `getUniquePosTags`, `getUniqueRelatedCompounds`, and the `useExpandableDefinitions` hook are shared across `QuizCard`, `MeaningQuizCard`, and `VocabIntroCard` rather than being reimplemented in each.
 
 ### Setup Screen (`pages/setup/SetupScreen.tsx`)
 
@@ -445,12 +516,22 @@ bun run build:jpdb   # Convert JPDB TSV to JSON
   - Formula verification tests (8 test cases covering different scenarios)
   - Minor error classification tests (Levenshtein distance validation)
   - Alternative reading matching tests
-  - Retry flag behavior tests
+  - Per-quiz-type retry flag behavior tests
+  - Meaning-quiz-disabled scheduling tests (graduation on reading mastery alone)
+- `src/services/scheduling.test.ts` - `vocabNextReviewAt`/`isVocabFullyMastered`/`isVocabDue` unit tests
 - `src/services/migration.service.test.ts` - Data migration tests
   - Old format (mastery) to new format (memoryStrength/interval) conversion
   - Edge cases (mastery 0, mastery 100)
   - Idempotency (already-migrated data not re-migrated)
   - Real production data samples
+  - `needsRetry` boolean→object normalization
+  - Two-tier version regression guards (sync pass never pre-empts the async pass)
+- `src/services/migration.roundtrip.test.ts` - Golden round-trip test: a realistic snapshot spanning old/mixed/current-format items pushed through the full migrate→hydrate→serialize→reparse pipeline, asserting zero data loss (no vocab dropped, no history lost, no due date nulled)
+- `src/context/quiz/quizReducer.test.ts` - Reducer unit tests (every action, including `RECONCILE_REMOTE`)
+- `src/context/quiz/quizSelectors.test.ts` - `selectNextView` across all session states + the meaning-disabled edge case, `selectCurrentProgress`, `selectCurrentSentence`, `selectSessionStats`
+- `src/services/sync/mergeProgress.test.ts` - Per-entry merge tests, including the core fix: a device that only reviewed reading can never clobber another device's meaning review
+- `src/services/sync/driveClient.test.ts` - Drive REST wrapper tests (auth-error translation)
+- `src/services/sync/googleDriveSync.test.ts` - CAS retry-on-conflict, duplicate-file reconciliation, write-once remote backup
 - `scripts/build-vocabulary.test.ts` - Data integrity tests
   - Validates all vocab IDs in KKLC index have corresponding files
   - Validates all vocab IDs in frequency index have corresponding files
@@ -492,15 +573,16 @@ The SRS study session follows a **stateless** priority system with natural buffe
    - **Mastery**: If `memoryStrength >= maxMemoryStrength` after a review, item graduates. `nextReviewAt` is cleared
 
 5. **Retry Mechanism (Wrong Answers)**:
-   - When user gives wrong answer: `needsRetry = true` is set. Item review schedule is updated based on the failure.
+   - `needsRetry` is **per quiz type** (`{ reading?: boolean; meaning?: boolean }`): a wrong reading answer sets `needsRetry.reading` and never blocks a due meaning review (and vice versa).
+   - When user gives wrong answer: `needsRetry.<type> = true` is set. Item review schedule is updated based on the failure.
    - Item appears in current session (mixed with old reviews)
    - On retry attempt:
-     - If Correct: `needsRetry = false`. **SRS state is NOT updated** (training only). Original failure scheduling stands.
-     - If Wrong: `needsRetry = true` (loop until correct). SRS state is NOT updated (prevent double penalty).
+     - If Correct: `needsRetry.<type> = false`. **SRS state is NOT updated** (training only). Original failure scheduling stands.
+     - If Wrong: `needsRetry.<type> = true` (loop until correct). SRS state is NOT updated (prevent double penalty).
    - This ensures retries help user learn correct answer without artificially inflating memory strength after a failure.
 
 6. **Queue Refill**:
-   - Triggered automatically in `QuizContext` when `nextDue` is null and session state is 'learn'
+   - Triggered automatically in `useQuizOrchestration` when `selectNextView`'s `queueItem` is null and `sessionState` is 'learn'
    - Adds 3 new vocab at once (batch size = 3)
    - Respects daily limits and kanji knowledge constraints
 
@@ -517,11 +599,12 @@ The SRS study session follows a **stateless** priority system with natural buffe
 
 ### Session State Computation
 
-Implemented in `QuizContext` via `computeSessionView()`:
+Implemented in `quizSelectors.ts` via `selectNextView()` - the single function that also decides the queue item to load and whether to show the intro card (see State Management above):
 
 ```typescript
 if (hasDueReviews) return 'review'
 if (canIntroduceNew && hasLearnableVocab) return 'learn'
+if (hasUnlockedKanjiPending) return 'learn-kanji'
 if (hasUpcomingReviews) return 'waiting'
 return 'exhausted'
 ```
@@ -535,10 +618,11 @@ return 'exhausted'
    - For **Reading**: `SRSService.evaluateAnswer()` checks against all readings (always `base` mode)
    - For **Meaning (`base` mode)**: `SRSService.evaluateMeaning()` checks strictly against all dictionary glosses
    - For **Meaning (`context` mode)**: First evaluates strictly with `evaluateMeaning()`, then:
-     - If `geminiApiKey` is configured and a sentence is available:
+     - If `enableGeminiContext` is enabled (the Settings master toggle) AND `geminiApiKey` is configured AND a sentence is available:
        - If `alwaysUseAiForMeaningContext` is `true` (default), AI validates ALL answers (including strict-correct ones)
        - If `alwaysUseAiForMeaningContext` is `false`, AI only validates answers that were strict-wrong or strict-minor_error
        - On AI network error (400, 500, etc.): silently falls back to the strict evaluation result
+     - Note: `enableGeminiContext` gating was previously missing from this check - a `geminiApiKey` left over from before the user disabled the feature would silently keep triggering AI calls. Fixed so the toggle is actually authoritative.
 5. Feedback shown (correct/incorrect + matched answer + optional AI note)
 6. `continueToNext()` applies SRS update via `SRSService.applyAnswer()` passing both `quizType` and `quizMode`. Both `meaning_base` and `meaning_context` update the same `vocab.meaning` SRSEntry internally, but use different `expectedLatency` values (10s vs 15s) for the latency multiplier calculation.
 
@@ -596,6 +680,17 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-07-18]**:
+  - **Architecture Remediation** (full audit in `ARCHITECTURE_AUDIT.md`): The orchestration layer around the SRS formula (state management, sync, migration) had accumulated three uncoordinated sources of truth for scheduling/session-state, a dead subsystem, and real data-loss vectors in the Drive sync path. Fixed end-to-end in phases:
+    - **Repo hygiene**: Deleted abandoned `apps/` monorepo scaffolding and the duplicate `vite.config.js` (Vite silently prioritized the untracked `.js` over `.ts`, so `.ts` edits were being ignored).
+    - **Data safety** (`backup.service.ts`, `progressSerialization.ts`): Added a write-once local backup snapshot before any new migration touches stored data, and unified `storage.service.ts`/Drive sync onto one shared (de)serialization module.
+    - **Scheduling unification** (`scheduling.ts`): `nextReviewAt`/`stage` are now always **derived**, never hand-synced independently, fixing a latent bug where disabling meaning quizzes could leave a vocab stuck unable to graduate. `needsRetry` became per-quiz-type (`{reading?, meaning?}`) instead of one shared boolean. Removed a redundant double-call to `SRSService.applyAnswer` per answer.
+    - **State layer modular split**: `QuizContext.tsx` (1017 lines, one file) split into `quizReducer.ts` (pure), `quizSelectors.ts` (`selectNextView` - one function replacing three previously-independent decision points), `useQuizOrchestration.ts` (effects + actions), and a thin `QuizProvider.tsx`. Deleted the entire dead `sessionQueue`/`sessionBuiltAt`/`BUILD_SESSION_QUEUE`/`SHIFT_SESSION_QUEUE`/`APPEND_TO_SESSION_QUEUE` subsystem - nothing ever read it.
+    - **Sync redesign** (`services/sync/`): Split into `driveClient.ts` (HTTP), `mergeProgress.ts` (pure per-entry merge - reading/meaning merge independently so one device's reading review can't clobber another's meaning review), and `googleDriveSync.ts` (orchestrator adding optimistic-concurrency retry, duplicate-file reconciliation, and a write-once remote backup). Background merges now reconcile into live React state via `RECONCILE_REMOTE` instead of being silently overwritten by the next local action; an expired token now surfaces visibly (`syncPaused`) instead of failing silently.
+    - **Migration correctness**: Introduced a two-tier version scheme (`SYNC_MIGRATION_VERSION` vs `CURRENT_FORMAT_VERSION`) - the synchronous pass previously stamped the terminal version directly, pre-empting the async homograph-merge migration forever after a single load.
+    - **UI cleanup**: `QuizScreen` now switches exhaustively (compile-time-checked) on `sessionState`; the mastery-percentage formula (`MasteryRing` vs `srs.utils.ts`), reading-list formatting, POS-tag dedup, and "+N more definitions" logic were each de-duplicated into shared helpers; `MeaningQuizCard` reads `quizMode` from state instead of guessing it from sentence presence; `BaseQuizCard`'s four uncoordinated (mostly uncancelled) focus timers were consolidated into one effect; the redundant double-mounted `ResponsiveProvider` was removed; a real settings bug was found and fixed where `enableGeminiContext` (the master AI toggle) was never actually checked by the AI-triggering code.
+    - **Tests**: Added coverage for the previously-untested orchestration layer (reducer, selectors, scheduling, merge, migration golden round-trip) - this layer had zero tests before this work despite being where the bugs lived.
 
 - **[2026-03-27]**:
   - **Configurable Context Quiz Threshold**:

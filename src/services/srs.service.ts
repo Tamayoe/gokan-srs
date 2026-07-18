@@ -3,6 +3,7 @@ import type { ReviewLog, SRSEntry, VocabProgress } from '../models/vocabulary.mo
 import { CONSTANTS } from '../commons/constants';
 import { VocabularyService } from './vocabulary.service';
 import type { KanjiKnowledge, UserProgress, UserSettings } from '../models/user.model';
+import { isVocabFullyMastered, vocabNextReviewAt } from './scheduling';
 
 
 export type AnswerResult = 'correct' | 'minor_error' | 'wrong' | 'pass';
@@ -10,12 +11,6 @@ export type AnswerResult = 'correct' | 'minor_error' | 'wrong' | 'pass';
 const F = CONSTANTS.srs.formula;
 
 export class SRSService {
-
-    /* =======================
-       CONSTANTS & THRESHOLDS
-       ======================= */
-
-    private static readonly MAX_MEMORY_STRENGTH = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
 
     /* =======================
        ANSWER EVALUATION
@@ -170,28 +165,19 @@ export class SRSService {
         now: Date,
         forcedResult?: AnswerResult, // Optional override
         intervalModifier: number = 1.0, // Adaptive modifier
-        frequencyModifier: number = 1.0 // User preference modifier
+        frequencyModifier: number = 1.0, // User preference modifier
+        meaningQuizEnabled: boolean = true // Whether meaning quizzes are active for this user
     ): { updated: VocabProgress; result: AnswerResult, interval: number } {
         const result = forcedResult ?? this.analyzeError(userAnswer, correctAnswer);
 
-        // [NEW] Retry Logic:
-        // If this exact quiz type is in retry mode, separate handling?
-        // Actually, needsRetry is currently a boolean on the whole vocab.
-        // We should PROBABLY treat needsRetry as specific to the quiz type eventually,
-        // but for now, if 'needsRetry' is true, we assume it applies to the active question.
-        // *Correction*: The user wants successive batches. If I fail Reading, I retry Reading.
-        // If I fail Meaning, I retry Meaning.
-        // The current model has a single `needsRetry` flag.
-        // Decision: Let's assume `needsRetry` applies to the CURRENT quiz type being presented.
-        // (A safer refactor later would be `needsRetry: { reading: boolean, meaning: boolean }`)
-        // For Phase 1, we keep single flag but check it.
-
-        if (vocab.needsRetry) {
+        // Retry is tracked per quiz type: a wrong reading answer only forces a
+        // reading retry and never blocks meaning reviews (and vice versa).
+        if (vocab.needsRetry?.[quizType]) {
             const isSuccess = result === 'correct' || result === 'minor_error';
             return {
                 updated: {
                     ...vocab,
-                    needsRetry: !isSuccess // Clear if success, otherwise keep true
+                    needsRetry: { ...vocab.needsRetry, [quizType]: !isSuccess }
                 },
                 result,
                 interval: quizType === 'reading' ? vocab.reading.interval : vocab.meaning.interval
@@ -210,14 +196,6 @@ export class SRSService {
 
         const { newEntry, interval } = this.calculateNextState(currentEntry, result, latencyMs, now, expectedLatency, intervalModifier, frequencyModifier);
 
-        // Check for Graduation (Mastery)
-        // A word is graduated if BOTH are mastered? Or if the specific one is mastered?
-        // The design says: "Remains 'learning' until BOTH...".
-        // Actually, let's keep it simple: If memoryStrength >= MAX => 'graduated' logic per entry?
-        // No, 'stage' is top-level.
-        // Let's use the aggregation logic decided:
-        // isMastered = reading.memory >= MAX && meaning.memory >= MAX
-
         // We update the specific entry first
         const updatedReading = quizType === 'reading' ? newEntry : vocab.reading;
         const updatedMeaning = quizType === 'meaning' ? newEntry : vocab.meaning;
@@ -231,33 +209,20 @@ export class SRSService {
             }
         }
 
-        const isReadingMastered = updatedReading.memoryStrength >= SRSService.MAX_MEMORY_STRENGTH;
-        const isMeaningMastered = updatedMeaning.memoryStrength >= SRSService.MAX_MEMORY_STRENGTH;
+        // Graduation and next-review-at are always DERIVED (never hand-synced) via
+        // scheduling.ts, which also correctly excludes meaning entirely when the
+        // user has meaning quizzes disabled - so a word can graduate on reading
+        // mastery alone instead of being stuck forever waiting on an untested meaning entry.
+        const settingsSlice = { enableMeaningQuiz: meaningQuizEnabled };
+        const candidateVocab = { reading: updatedReading, meaning: updatedMeaning };
+        const finalStage = isVocabFullyMastered(candidateVocab, settingsSlice) ? 'graduated' : vocab.stage;
+        const finalNextReviewAt = finalStage === 'graduated' ? null : vocabNextReviewAt(candidateVocab, settingsSlice);
 
-        let finalStage = vocab.stage;
-        let finalNextReviewAt: Date | null = null;
-
-        if (isReadingMastered && isMeaningMastered) {
-            finalStage = 'graduated';
-            finalNextReviewAt = null; // Done forever
-        } else {
-            // Aggregation: min(reading.due, meaning.due)
-            // Be careful: if one is mastered (due=null), use the other.
-            // If both null? (Shouldn't happen if not graduated, unless new)
-
-            const rDue = isReadingMastered ? null : updatedReading.dueDate;
-            const mDue = isMeaningMastered ? null : updatedMeaning.dueDate;
-
-            if (rDue && mDue) {
-                finalNextReviewAt = rDue < mDue ? rDue : mDue;
-            } else {
-                finalNextReviewAt = rDue ?? mDue;
-            }
-        }
-
-        // Set retry flag only on first wrong answer AND only for Reading quizzes
-        // Meaning quizzes do not trigger retries for now
-        const needsRetry = result === 'wrong' && !vocab.needsRetry && quizType === 'reading';
+        // Set retry flag on first wrong answer, scoped to the quiz type just answered.
+        const needsRetry: VocabProgress['needsRetry'] = {
+            ...vocab.needsRetry,
+            [quizType]: result === 'wrong' && !vocab.needsRetry?.[quizType],
+        };
 
         return {
             updated: {

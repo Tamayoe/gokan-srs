@@ -40,43 +40,38 @@ export function BaseQuizCard({
     // Compact mode: reduce spacing when keyboard is active on mobile
     const isCompact = isMobile && isInputFocused && !feedback?.show;
 
-    // Clear and focus input when vocabulary changes
+    // Single owner of "what should be focused and when", replacing four
+    // previously-independent effects (new vocab, feedback cleared, incorrect
+    // reveal, correct-meaning focus) that could each schedule an uncancelled
+    // setTimeout - on rapid vocab transitions those stale timers could fire
+    // focus() calls against a card that had already moved on. Only one branch
+    // ever matches per render, and every branch cleans up its own timer.
     useEffect(() => {
         setShowCorrectAnswer(false);
-        // Small timeout to ensure DOM is ready and prevent fighting with other focus events
-        setTimeout(() => inputRef.current?.focus(), 0);
-    }, [currentVocab?.id]);
 
-    // Refocus input when feedback is cleared (e.g. strict mode retry)
-    useEffect(() => {
         if (!feedback?.show) {
-            setTimeout(() => inputRef.current?.focus(), 0);
+            // Fresh question, or feedback just cleared for a retry.
+            const timer = setTimeout(() => inputRef.current?.focus(), 0);
+            return () => clearTimeout(timer);
         }
-    }, [feedback?.show]);
 
-    // Handle incorrect answer reveal animation
-    useEffect(() => {
-        if (feedback?.show && !feedback.correct) {
-            setShowCorrectAnswer(false);
+        if (!feedback.correct) {
+            // Incorrect: reveal the correct answer after a short delay, then focus Continue.
             const timer = setTimeout(() => {
                 setShowCorrectAnswer(true);
                 continueRef.current?.focus();
             }, CONSTANTS.quiz.incorrectAnswerRevealDelay);
             return () => clearTimeout(timer);
-        } else if (!feedback?.show) {
-            setShowCorrectAnswer(false);
         }
-    }, [feedback]);
 
-    // Focus continue button on successful Meaning Quiz (since no auto-advance)
-    useEffect(() => {
-        if (feedback?.show && feedback.correct && state.currentQuizItem?.quizType === 'meaning') {
-            // Small timeout to allow render
-            setTimeout(() => {
-                continueRef.current?.focus();
-            }, 50);
+        if (state.currentQuizItem?.quizType === 'meaning') {
+            // Correct meaning answer: no auto-advance, so focus Continue immediately.
+            const timer = setTimeout(() => continueRef.current?.focus(), 50);
+            return () => clearTimeout(timer);
         }
-    }, [feedback, state.currentQuizItem]);
+
+        // Correct reading answer: auto-advance is owned by useQuizOrchestration - nothing to focus here.
+    }, [currentVocab?.id, feedback, state.currentQuizItem?.quizType]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();

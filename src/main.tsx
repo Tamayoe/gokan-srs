@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { QuizProvider } from "./context/QuizContext"
+import { QuizProvider } from "./context/quiz/QuizProvider"
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleDriveProvider } from "./context/GoogleDriveContext";
 import { ThemeProvider } from "./context/ThemeContext";
