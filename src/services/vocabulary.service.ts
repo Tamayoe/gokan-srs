@@ -1,6 +1,7 @@
 // src/services/VocabularyLoader.ts
 import type { Vocabulary } from '../models/vocabulary.model';
 import type { FrequencyIndex, KKLCIndex, KKLCKanjiIndex, SearchIndex } from '../models/index.model';
+import { romajiToHiragana, looksLikeRomaji } from '../utils/romaji';
 
 export class VocabularyService {
     private static kklcIndex: KKLCIndex | null = null;
@@ -67,10 +68,16 @@ export class VocabularyService {
         const q = query.toLowerCase().trim();
         if (!q) return [];
 
-        return index.filter(entry => 
-            entry.w.includes(q) || 
-            entry.r.toLowerCase().includes(q) || 
-            entry.m.toLowerCase().includes(q)
+        // Also try a romaji->hiragana conversion so "nichi" matches the reading にち.
+        // Only when the query actually contains latin letters, and only if the
+        // conversion changed something (otherwise it's identical to the raw match).
+        const kanaQuery = looksLikeRomaji(q) ? romajiToHiragana(q) : null;
+
+        return index.filter(entry =>
+            entry.w.includes(q) ||
+            entry.r.toLowerCase().includes(q) ||
+            entry.m.toLowerCase().includes(q) ||
+            (kanaQuery !== null && kanaQuery !== q && entry.r.includes(kanaQuery))
         ).slice(0, 50);
     }
 

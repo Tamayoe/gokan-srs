@@ -62,7 +62,7 @@ export const SearchBar: React.FC = () => {
                     }}
                     onFocus={() => setIsOpen(true)}
                     placeholder="Search vocabulary..."
-                    className="w-full bg-card border border-divider rounded-full py-1.5 md:py-2 pl-10 pr-10 text-sm focus:outline-none focus:ring-1 focus:ring-primary text-primary placeholder-tertiary transition-colors"
+                    className="w-full bg-surface border border-divider rounded-full py-1.5 md:py-2 pl-10 pr-10 text-sm focus:outline-none focus:ring-1 focus:ring-primary text-primary placeholder-tertiary transition-colors"
                 />
                 <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary" />
                 {query && (
@@ -76,7 +76,7 @@ export const SearchBar: React.FC = () => {
             </div>
 
             {isOpen && query.trim().length > 0 && (
-                <div className="absolute top-full mt-2 w-full bg-card border border-divider rounded-lg shadow-xl overflow-hidden z-50 max-h-96 overflow-y-auto">
+                <div className="absolute top-full mt-2 w-full bg-surface border border-divider rounded-lg shadow-xl overflow-hidden z-50 max-h-96 overflow-y-auto">
                     {isSearching ? (
                         <div className="p-4 text-center text-sm text-tertiary">Searching...</div>
                     ) : results.length > 0 ? (
@@ -85,7 +85,7 @@ export const SearchBar: React.FC = () => {
                                 <button
                                     key={item.id}
                                     onClick={() => handleSelect(item.id)}
-                                    className="flex flex-col items-start p-3 border-b border-divider/50 hover:bg-hover transition-colors text-left last:border-0"
+                                    className="flex flex-col items-start p-3 border-b border-divider/50 hover:bg-surface-hover transition-colors text-left last:border-0"
                                 >
                                     <div className="flex items-center gap-2">
                                         <span className="font-mincho text-primary text-lg">{item.w}</span>

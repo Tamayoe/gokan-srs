@@ -48,6 +48,10 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
     } = useGoogleDrive();
 
     const startTimeRef = useRef<number | null>(null);
+    // Latency captured at the moment the user SUBMITS their answer, not when they
+    // later click Continue. Otherwise time spent reviewing the revealed correct
+    // answer would inflate the latency and skew the SRS speed multiplier.
+    const submitLatencyRef = useRef<number | null>(null);
     const dayBoundaryCheckedRef = useRef(false);
     const migrationTriggeredRef = useRef(false);
 
@@ -136,6 +140,10 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
 
         async submitAnswer() {
             if (!state.currentVocab || state.feedback?.show || !state.currentQuizItem || state.isEvaluatingAi) return;
+
+            // Freeze the answer latency here (start -> submit), before any AI
+            // evaluation delay and before the user reviews the correct answer.
+            submitLatencyRef.current = startTimeRef.current ? Date.now() - startTimeRef.current : null;
 
             const quizType = state.currentQuizItem.quizType;
             let result: AnswerResult;
@@ -280,7 +288,9 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
 
             const now = new Date();
             const id = state.currentVocab.id;
-            const latency = startTimeRef.current ? now.getTime() - startTimeRef.current : 5000;
+            // Use the latency frozen at submit time, not the time up to this Continue
+            // click (which would also count answer-review time).
+            const latency = submitLatencyRef.current ?? 5000;
 
             const target = state.progress.learningQueue.find(v => v.vocabId === id);
             let historyItem = null;
