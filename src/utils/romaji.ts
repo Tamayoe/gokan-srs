@@ -1,0 +1,110 @@
+/**
+ * Lightweight Hepburn romaji -> hiragana converter, used so the search bar can
+ * match a hiragana reading (e.g. にち) from a romaji query (e.g. "nichi").
+ *
+ * It is intentionally lenient: anything it can't map (English letters left over
+ * from a meaning search, partial syllables) is passed through unchanged, so
+ * feeding it a non-romaji query never breaks the surrounding search.
+ */
+
+// Longest keys are tried first, so 3-char combos win over their prefixes.
+const ROMAJI_MAP: Record<string, string> = {
+    // Y-combos
+    kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ',
+    gya: 'ぎゃ', gyu: 'ぎゅ', gyo: 'ぎょ',
+    sha: 'しゃ', shu: 'しゅ', sho: 'しょ', shi: 'し',
+    sya: 'しゃ', syu: 'しゅ', syo: 'しょ',
+    ja: 'じゃ', ju: 'じゅ', jo: 'じょ', ji: 'じ',
+    jya: 'じゃ', jyu: 'じゅ', jyo: 'じょ',
+    zya: 'じゃ', zyu: 'じゅ', zyo: 'じょ',
+    cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ', chi: 'ち',
+    cya: 'ちゃ', cyu: 'ちゅ', cyo: 'ちょ',
+    tya: 'ちゃ', tyu: 'ちゅ', tyo: 'ちょ', ti: 'ち',
+    dya: 'ぢゃ', dyu: 'ぢゅ', dyo: 'ぢょ', di: 'ぢ', du: 'づ',
+    nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ',
+    hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ',
+    bya: 'びゃ', byu: 'びゅ', byo: 'びょ',
+    pya: 'ぴゃ', pyu: 'ぴゅ', pyo: 'ぴょ',
+    mya: 'みゃ', myu: 'みゅ', myo: 'みょ',
+    rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ',
+    tsu: 'つ', tu: 'つ',
+    fu: 'ふ', hu: 'ふ',
+    // Basic gojuon + voiced/handakuon (2-char)
+    ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ',
+    ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご',
+    sa: 'さ', su: 'す', se: 'せ', so: 'そ', si: 'し',
+    za: 'ざ', zi: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ',
+    ta: 'た', te: 'て', to: 'と',
+    da: 'だ', de: 'で', do: 'ど',
+    na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の',
+    ha: 'は', hi: 'ひ', he: 'へ', ho: 'ほ',
+    ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ',
+    pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ',
+    ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も',
+    ya: 'や', yu: 'ゆ', yo: 'よ',
+    ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ',
+    wa: 'わ', wo: 'を', wi: 'うぃ', we: 'うぇ',
+    va: 'ゔぁ', vi: 'ゔぃ', vu: 'ゔ', ve: 'ゔぇ', vo: 'ゔぉ',
+    // Bare vowels (1-char)
+    a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お',
+};
+
+const VOWELS = new Set(['a', 'i', 'u', 'e', 'o']);
+
+export function romajiToHiragana(input: string): string {
+    const s = input.toLowerCase();
+    let result = '';
+    let i = 0;
+
+    while (i < s.length) {
+        const c = s[i];
+        const next = s[i + 1];
+
+        // Sokuon (っ): a doubled consonant, or the "tch" spelling of っち.
+        if (c === 't' && next === 'c' && s[i + 2] === 'h') {
+            result += 'っ';
+            i += 1;
+            continue;
+        }
+        if (c === next && !VOWELS.has(c) && c !== 'n' && /[a-z]/.test(c)) {
+            result += 'っ';
+            i += 1;
+            continue;
+        }
+
+        // Syllabic ん.
+        if (c === 'n') {
+            if (next === "'") { result += 'ん'; i += 2; continue; }
+            if (next === 'n') { result += 'ん'; i += 1; continue; }
+            let matched = false;
+            for (let len = 3; len >= 2; len--) {
+                const chunk = s.slice(i, i + len);
+                if (ROMAJI_MAP[chunk]) { result += ROMAJI_MAP[chunk]; i += len; matched = true; break; }
+            }
+            if (matched) continue;
+            // 'n' before a consonant or at the end -> ん.
+            result += 'ん';
+            i += 1;
+            continue;
+        }
+
+        // Longest-match against the syllable table.
+        let matched = false;
+        for (let len = 3; len >= 1; len--) {
+            const chunk = s.slice(i, i + len);
+            if (ROMAJI_MAP[chunk]) { result += ROMAJI_MAP[chunk]; i += len; matched = true; break; }
+        }
+        if (matched) continue;
+
+        // Unconvertible character (e.g. a letter from an English meaning search): pass through.
+        result += c;
+        i += 1;
+    }
+
+    return result;
+}
+
+/** True if the string contains any latin letters (i.e. could be a romaji query worth converting). */
+export function looksLikeRomaji(input: string): boolean {
+    return /[a-z]/i.test(input);
+}
