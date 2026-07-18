@@ -105,6 +105,13 @@ export interface SRSEntry {
     history: ReviewLog[];
 }
 
+/** Per-quiz-type immediate-retry flag. A wrong reading answer only forces a reading
+ *  retry; it never blocks meaning reviews (and vice versa). */
+export interface NeedsRetryFlags {
+    reading?: boolean;
+    meaning?: boolean;
+}
+
 export interface VocabProgress {
     vocabId: string;
     stage: 'learning' | 'graduated';
@@ -117,7 +124,7 @@ export interface VocabProgress {
     // Detailed SRS data
     reading: SRSEntry;
     meaning: SRSEntry;
-    needsRetry?: boolean; // Flag for immediate retry after wrong answer
+    needsRetry?: NeedsRetryFlags;
 }
 
 export const DEFAULT_SRS_ENTRY: SRSEntry = {

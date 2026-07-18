@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
@@ -9,6 +8,7 @@ import type { Tags } from "../../models/data.model";
 
 import { BaseQuizCard } from "./BaseQuizCard";
 import { InteractiveSentence } from "../../components/InteractiveSentence";
+import { getUniquePosTags, useExpandableDefinitions } from "./quizFormatting";
 
 interface MeaningQuizCardProps {
     onKanjiClick?: () => void;
@@ -27,13 +27,16 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
         ? currentSentences.find(s => s.id === state.currentSentenceId) || null
         : null;
 
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    if (!currentVocab || !progress) return null;
+    // quizMode is authoritative - read from state rather than inferred from
+    // sentence presence, so a failed sentence load is surfaced explicitly
+    // instead of silently downgrading a context quiz to base.
+    const isContextMode = state.currentQuizItem?.quizMode === 'context';
+    const contextSentenceMissing = isContextMode && !sentence;
 
     const maxDefs = 5;
-    const hasMoreDefs = currentVocab.senses.length > maxDefs;
-    const displayedSenses = isExpanded ? currentVocab.senses : currentVocab.senses.slice(0, maxDefs);
+    const { displayedSenses, hasMoreDefs, isExpanded, toggleExpanded } = useExpandableDefinitions(currentVocab?.senses ?? [], maxDefs);
+
+    if (!currentVocab || !progress) return null;
 
     return (
         <BaseQuizCard
@@ -66,6 +69,11 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                         </>
                     )}
                 </h2>
+                {contextSentenceMissing && (
+                    <p className="text-xs text-secondary/70 mt-2 font-gothic italic">
+                        Context sentence unavailable — showing the standard quiz instead.
+                    </p>
+                )}
             </div>
 
             {/* Content: Sentence OR Kanji */}
@@ -111,13 +119,7 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                 {/* POS Tags */}
                 {currentVocab.senses.length > 0 && (
                     <div className="flex flex-wrap justify-center gap-2 mt-2">
-                        {Array.from(
-                            new Set(
-                                currentVocab.senses.flatMap(sense => [
-                                    ...sense.pos,
-                                ])
-                            )
-                        ).map(rawTag => (
+                        {getUniquePosTags(currentVocab.senses).map(rawTag => (
                             <span
                                 key={rawTag}
                                 className="px-2 py-0.5 text-xs rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15"
@@ -150,7 +152,7 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                     {hasMoreDefs && (
                         <button
                             type="button"
-                            onClick={() => setIsExpanded(!isExpanded)}
+                            onClick={toggleExpanded}
                             className="text-xs text-secondary hover:text-primary transition-colors py-1 cursor-pointer font-gothic"
                         >
                             {isExpanded ? "Show less" : `+${currentVocab.senses.length - maxDefs} more definitions`}

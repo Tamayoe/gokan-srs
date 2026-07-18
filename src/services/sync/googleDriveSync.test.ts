@@ -1,0 +1,207 @@
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { GoogleDriveSync } from './googleDriveSync';
+import type { SyncEnvelope } from './types';
+
+function jsonResponse(body: unknown, ok = true, status = 200): Response {
+    return { ok, status, json: async () => body } as Response;
+}
+
+function makeEnvelope(version: number, overrides: Partial<SyncEnvelope['progress']> = {}): SyncEnvelope {
+    return {
+        progress: {
+            kanjiKnowledge: { method: 'kklc', step: 10, kanjiSet: ['A'] },
+            learningQueue: [],
+            stats: { totalReviews: 0, totalLearned: 0, newLearnedToday: 0 },
+            dailyOverride: false,
+            adaptive: { level: 1.0, history: [] },
+            _sync: { lastModified: 0, version },
+            // Already at the terminal migration version so these sync-focused tests
+            // don't also need to mock the async homograph-merge-map fetch.
+            _formatVersion: 8,
+            ...overrides,
+        } as any,
+        settings: { preferredLearningOrder: 'frequency', enableMeaningQuiz: true, learningFrequency: 'medium' } as any,
+    };
+}
+
+/**
+ * Routes a mocked fetch call by URL/method pattern. Each handler receives the
+ * call count for its own pattern so tests can vary responses across retries
+ * (e.g. simulating a file's modifiedTime changing between reads).
+ */
+function createFetchRouter(handlers: Array<{
+    match: (url: string, method: string) => boolean;
+    respond: (callIndex: number, url: string, init?: RequestInit) => Response | Promise<Response>;
+}>) {
+    const counts = new Map<number, number>();
+    return vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+        const url = String(input);
+        const method = init?.method ?? 'GET';
+        for (let i = 0; i < handlers.length; i++) {
+            if (handlers[i].match(url, method)) {
+                const count = counts.get(i) ?? 0;
+                counts.set(i, count + 1);
+                return handlers[i].respond(count, url, init);
+            }
+        }
+        throw new Error(`Unmocked fetch call: ${method} ${url}`);
+    });
+}
+
+const isFolderSearch = (url: string) => url.includes("mimeType='application/vnd.google-apps.folder'");
+const isFileList = (url: string, name: string) => url.includes(`name='${name}'`) && url.includes('files?q=');
+const isMetadata = (url: string) => url.includes('fields=modifiedTime');
+const isContent = (url: string) => url.includes('alt=media');
+const isUpload = (url: string, method: string) => url.includes('/upload/drive/v3/files') && (method === 'POST' || method === 'PATCH');
+const isTrash = (url: string, method: string) => method === 'PATCH' && !url.includes('/upload/');
+
+/** Minimal in-memory localStorage polyfill - this suite runs under Node, which has no DOM storage. */
+function installLocalStorageStub() {
+    const store = new Map<string, string>();
+    (globalThis as any).localStorage = {
+        getItem: (key: string) => store.get(key) ?? null,
+        setItem: (key: string, value: string) => { store.set(key, value); },
+        removeItem: (key: string) => { store.delete(key); },
+        clear: () => { store.clear(); },
+    };
+}
+
+describe('GoogleDriveSync', () => {
+    beforeEach(() => {
+        vi.restoreAllMocks();
+        installLocalStorageStub();
+    });
+
+    it('creates a new remote file when none exists yet', async () => {
+        globalThis.fetch = createFetchRouter([
+            { match: isFolderSearch, respond: () => jsonResponse({ files: [{ id: 'folder-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.pre-v8-backup.json'), respond: () => jsonResponse({ files: [] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.json'), respond: () => jsonResponse({ files: [] }) },
+            { match: isUpload, respond: () => jsonResponse({ id: 'new-file-id' }) },
+        ]);
+
+        const sync = new GoogleDriveSync('token');
+        const local = makeEnvelope(1);
+        const result = await sync.sync(local);
+
+        expect(result).not.toBeNull();
+        expect(result!.progress._sync?.version).toBe(2); // addSyncMetadata bump from mergeProgress(local, null)
+    });
+
+    it('retries with fresh data when the remote file changed between read and write (CAS)', async () => {
+        const remoteEnvelope = makeEnvelope(5);
+
+        globalThis.fetch = createFetchRouter([
+            { match: isFolderSearch, respond: () => jsonResponse({ files: [{ id: 'folder-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.pre-v8-backup.json'), respond: () => jsonResponse({ files: [{ id: 'backup-1', modifiedTime: 'T0' }] }) },
+            {
+                match: (url) => isFileList(url, 'kanji-progress.json'),
+                respond: (count) => jsonResponse({
+                    files: [{ id: 'file-1', name: 'kanji-progress.json', modifiedTime: count === 0 ? 'T1' : 'T2' }],
+                }),
+            },
+            { match: isContent, respond: () => jsonResponse({ progress: remoteEnvelope.progress, settings: remoteEnvelope.settings }) },
+            {
+                match: isMetadata,
+                respond: (count) => jsonResponse({ modifiedTime: count === 0 ? 'T2' : 'T2' }), // differs from first list's T1, matches second list's T2
+            },
+            { match: isUpload, respond: () => jsonResponse({ id: 'file-1' }) },
+        ]);
+
+        const sync = new GoogleDriveSync('token');
+        const local = makeEnvelope(1);
+        const result = await sync.sync(local);
+
+        expect(result).not.toBeNull();
+        // Confirms the retry happened and the final write succeeded rather than
+        // throwing or silently clobbering - the CAS mismatch triggered a re-fetch.
+        const listCallsForFile = (globalThis.fetch as any).mock.calls.filter(
+            ([url]: [string]) => isFileList(url, 'kanji-progress.json')
+        );
+        expect(listCallsForFile.length).toBeGreaterThanOrEqual(2);
+    });
+
+    it('reconciles duplicate remote files: merges all copies, trashes the non-canonical ones', async () => {
+        const fileA = makeEnvelope(1, { stats: { totalReviews: 10, totalLearned: 1, newLearnedToday: 0 } } as any);
+        const fileB = makeEnvelope(1, { stats: { totalReviews: 3, totalLearned: 5, newLearnedToday: 0 } } as any);
+
+        const trashedIds: string[] = [];
+
+        globalThis.fetch = createFetchRouter([
+            { match: isFolderSearch, respond: () => jsonResponse({ files: [{ id: 'folder-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.pre-v8-backup.json'), respond: () => jsonResponse({ files: [{ id: 'backup-1' }] }) }, // already backed up
+            {
+                match: (url) => isFileList(url, 'kanji-progress.json'),
+                respond: () => jsonResponse({
+                    files: [
+                        { id: 'dup-A', name: 'kanji-progress.json', modifiedTime: 'T1' },
+                        { id: 'dup-B', name: 'kanji-progress.json', modifiedTime: 'T2' },
+                    ],
+                }),
+            },
+            {
+                match: isContent,
+                respond: (_count, url) => {
+                    // downloadFileContent is called per-fileId; route by presence of the id in the URL.
+                    if (url.includes('dup-A')) return jsonResponse({ progress: fileA.progress, settings: fileA.settings });
+                    return jsonResponse({ progress: fileB.progress, settings: fileB.settings });
+                },
+            },
+            {
+                match: (url, method) => isTrash(url, method),
+                respond: (_count, url) => {
+                    const id = url.split('/files/')[1];
+                    trashedIds.push(id);
+                    return jsonResponse({});
+                },
+            },
+            { match: isUpload, respond: () => jsonResponse({}) },
+            { match: isMetadata, respond: () => jsonResponse({ modifiedTime: 'T-final' }) },
+        ]);
+
+        const sync = new GoogleDriveSync('token');
+        const local = makeEnvelope(1);
+        const result = await sync.sync(local);
+
+        expect(result).not.toBeNull();
+        // dup-A is the canonical (files[0]) - dup-B must be trashed, not dup-A.
+        expect(trashedIds).toContain('dup-B');
+        expect(trashedIds).not.toContain('dup-A');
+        // Both duplicates' stats must survive the reconciliation (max-merged).
+        expect(result!.progress.stats.totalReviews).toBeGreaterThanOrEqual(10);
+        expect(result!.progress.stats.totalLearned).toBeGreaterThanOrEqual(5);
+    });
+
+    it('ensureRemoteBackupOnce uploads exactly once even if called multiple times', async () => {
+        let backupListCallCount = 0;
+        let backupUploadCount = 0;
+
+        globalThis.fetch = createFetchRouter([
+            { match: isFolderSearch, respond: () => jsonResponse({ files: [{ id: 'folder-1' }] }) },
+            {
+                match: (url) => isFileList(url, 'kanji-progress.pre-v8-backup.json'),
+                respond: () => {
+                    backupListCallCount++;
+                    // First call: no backup exists. After the first upload, pretend one now exists.
+                    return jsonResponse({ files: backupUploadCount > 0 ? [{ id: 'backup-1' }] : [] });
+                },
+            },
+            { match: (url) => isFileList(url, 'kanji-progress.json'), respond: () => jsonResponse({ files: [{ id: 'live-1', modifiedTime: 'T1' }] }) },
+            { match: isContent, respond: () => jsonResponse({ progress: makeEnvelope(1).progress, settings: makeEnvelope(1).settings }) },
+            {
+                match: isUpload,
+                respond: (_count, _url, init) => {
+                    if (init?.method === 'POST') backupUploadCount++;
+                    return jsonResponse({ id: 'backup-1' });
+                },
+            },
+        ]);
+
+        const sync = new GoogleDriveSync('token');
+        await sync.ensureRemoteBackupOnce();
+        await sync.ensureRemoteBackupOnce(); // second call should be a pure no-op (instance-level guard)
+
+        expect(backupUploadCount).toBe(1);
+        expect(backupListCallCount).toBe(1); // the instance-level `remoteBackupChecked` flag short-circuits the second call entirely
+    });
+});

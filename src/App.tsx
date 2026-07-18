@@ -2,12 +2,11 @@ import React, { Suspense, lazy } from 'react';
 import './App.css';
 import { OnboardingFlow } from './pages/setup/OnboardingFlow';
 import { Logo } from './components/Logo';
-import { Settings, Cloud, RefreshCw, BarChart2 } from 'lucide-react';
+import { Settings, Cloud, CloudOff, RefreshCw, BarChart2 } from 'lucide-react';
 import { useQuiz } from "./context/useQuiz";
 import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
 import { Loader } from "./components/Loader";
-import { ResponsiveProvider } from "./context/Responsive/ResponsiveProvider";
 import { Routes, Route, useNavigate, useLocation, Navigate, Link } from 'react-router-dom';
 import { SearchBar } from './components/SearchBar';
 
@@ -21,9 +20,21 @@ const AboutScreen = lazy(() => import('./pages/about/AboutScreen').then(module =
 const VocabDetailScreen = lazy(() => import('./pages/vocab/VocabDetailScreen'));
 
 function SyncStatusIndicator() {
-    const { isUploading, isDownloading, isAuthenticated } = useGoogleDrive();
+    const { isUploading, isDownloading, isAuthenticated, syncPaused, login } = useGoogleDrive();
 
     if (!isAuthenticated) return null;
+
+    if (syncPaused) {
+        return (
+            <button
+                onClick={() => login()}
+                title="Sync paused: your Google session expired. Click to reconnect."
+                className="text-secondary hover:text-primary transition-colors cursor-pointer"
+            >
+                <CloudOff size={18} />
+            </button>
+        );
+    }
 
     if (isUploading || isDownloading) {
         return <RefreshCw size={18} className="animate-spin text-gray-400" />;
@@ -103,9 +114,7 @@ export const App: React.FC = () => {
                 <Suspense fallback={<Loader title="Loading..." />}>
                     <Routes>
                         <Route path="/" element={
-                            <ResponsiveProvider>
-                                <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
-                            </ResponsiveProvider>
+                            <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
                         } />
                         <Route path="/stats" element={
                             <StatsScreen
@@ -114,9 +123,7 @@ export const App: React.FC = () => {
                             />
                         } />
                         <Route path="/about" element={
-                            <ResponsiveProvider>
-                                <AboutScreen onBack={() => navigate('/')} />
-                            </ResponsiveProvider>
+                            <AboutScreen onBack={() => navigate('/')} />
                         } />
                         <Route path="/settings" element={
                             <SettingsScreen
@@ -139,9 +146,7 @@ export const App: React.FC = () => {
                             </KanjiFormProvider>
                         } />
                         <Route path="/vocab/:vocabId" element={
-                            <ResponsiveProvider>
-                                <VocabDetailScreen />
-                            </ResponsiveProvider>
+                            <VocabDetailScreen />
                         } />
                         <Route path="*" element={<Navigate to="/" replace />} />
                     </Routes>

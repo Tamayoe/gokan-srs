@@ -260,6 +260,52 @@ describe('MigrationService', () => {
         });
     });
 
+    describe('needsRetry normalization (boolean -> per-type object)', () => {
+        it('converts a legacy true boolean to {reading: true}', () => {
+            const item: any = { vocabId: 'v1', totalReviews: 1, consecutiveFailures: 0, needsRetry: true };
+            const migrated = MigrationService.migrateVocabProgress(item);
+            expect(migrated.needsRetry).toEqual({ reading: true });
+        });
+
+        it('converts a legacy false boolean to undefined', () => {
+            const item: any = { vocabId: 'v1', totalReviews: 1, consecutiveFailures: 0, needsRetry: false };
+            const migrated = MigrationService.migrateVocabProgress(item);
+            expect(migrated.needsRetry).toBeUndefined();
+        });
+
+        it('leaves an already-migrated per-type object untouched', () => {
+            const item: any = { vocabId: 'v1', totalReviews: 1, consecutiveFailures: 0, needsRetry: { meaning: true } };
+            const migrated = MigrationService.migrateVocabProgress(item);
+            expect(migrated.needsRetry).toEqual({ meaning: true });
+        });
+
+        it('normalizes needsRetry at the whole-progress level regardless of format version', () => {
+            // Simulates an already-current-version user (V7) whose stored data still
+            // has the legacy boolean shape - migrateVocabProgress's V1-V3 gate would
+            // never touch this item, so migrateUserProgress must normalize unconditionally.
+            const progress: any = {
+                _formatVersion: 7,
+                kanjiKnowledge: { method: 'kklc', step: 10, kanjiSet: [] },
+                learningQueue: [
+                    {
+                        vocabId: 'already-current',
+                        stage: 'learning',
+                        totalReviews: 5,
+                        consecutiveFailures: 0,
+                        needsRetry: true,
+                        reading: { memoryStrength: 50, interval: 10, difficulty: 0.3, lastReviewedAt: null, dueDate: null, history: [] },
+                        meaning: { memoryStrength: 20, interval: 5, difficulty: 0.3, lastReviewedAt: null, dueDate: null, history: [] },
+                    },
+                ],
+                stats: { newLearnedToday: 0, totalLearned: 0, totalReviews: 0 },
+                dailyOverride: false,
+            };
+
+            const migrated = MigrationService.migrateUserProgress(progress);
+            expect(migrated.learningQueue[0].needsRetry).toEqual({ reading: true });
+        });
+    });
+
     describe('needsMigration', () => {
         it('should return true for old format (no version)', () => {
             const oldProgress = {
@@ -269,13 +315,38 @@ describe('MigrationService', () => {
             expect(MigrationService.needsMigration(oldProgress)).toBe(true);
         });
 
-        it('should return false for current version (7)', () => {
+        it('should return true at the sync-pass ceiling (7) - only the async pass reaches the terminal version', () => {
+            // Regression guard: version 7 is SYNC_MIGRATION_VERSION, not the terminal
+            // version. Previously both were the same constant, so the sync pass could
+            // stamp the terminal version on its own and pre-empt the async
+            // homograph-merge pass. needsMigration() must keep reporting true until
+            // migrateMergedVocabsAsync has actually run.
             const currentProgress = {
                 _formatVersion: 7,
                 learningQueue: []
             };
 
+            expect(MigrationService.needsMigration(currentProgress)).toBe(true);
+        });
+
+        it('should return false only at the true terminal version (8)', () => {
+            const currentProgress = {
+                _formatVersion: 8,
+                learningQueue: []
+            };
+
             expect(MigrationService.needsMigration(currentProgress)).toBe(false);
+        });
+
+        it('migrateUserProgress alone (the sync pass) never reaches a version where needsMigration reports false', () => {
+            // The core regression test: previously migrateUserProgress jumped straight
+            // to CURRENT_FORMAT_VERSION, so a single synchronous load would silently
+            // skip the async merge forever. It must now always leave needsMigration() true.
+            const oldProgress: any = { learningQueue: [], stats: { newLearnedToday: 0, totalLearned: 0, totalReviews: 0 }, dailyOverride: false };
+            const migratedSync = MigrationService.migrateUserProgress(oldProgress);
+
+            expect(migratedSync._formatVersion).toBe(7);
+            expect(MigrationService.needsMigration(migratedSync)).toBe(true);
         });
 
         it('should return true for V3 version needing V5', () => {
@@ -380,7 +451,7 @@ describe('MigrationService', () => {
 
             const migrated = await MigrationService.migrateMergedVocabsAsync(duplicateProgress);
 
-            expect(migrated._formatVersion).toBe(7);
+            expect(migrated._formatVersion).toBe(8); // terminal version - only the async pass reaches it
             expect(migrated.learningQueue).toHaveLength(1); // Properly merged
 
             const mergedItem = migrated.learningQueue[0];

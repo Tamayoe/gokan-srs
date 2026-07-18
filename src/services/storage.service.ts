@@ -1,63 +1,24 @@
 import type { UserProgress, UserSettings } from "../models/user.model";
 import { CONSTANTS } from "../commons/constants";
-import type { VocabProgress } from "../models/vocabulary.model";
-import { DEFAULT_VOCABULARY_PROGRESS } from "../models/vocabulary.model";
-import { DEFAULT_PROGRESS, DEFAULT_SETTINGS } from "../models/user.model";
-import { MigrationService } from "./migration.service";
+import { DEFAULT_SETTINGS } from "../models/user.model";
+import { BackupService } from "./backup.service";
+import { toPlainProgressJSON, migrateAndHydrateProgress } from "./progressSerialization";
 
 export class StorageService {
     static saveProgress(progress: UserProgress): void {
-        const serialized = {
-            ...progress,
-        };
-        localStorage.setItem(CONSTANTS.storage.progressStorageKey, JSON.stringify(serialized, (_, value) => value instanceof Set ? [...value] : value));
+        localStorage.setItem(CONSTANTS.storage.progressStorageKey, JSON.stringify(toPlainProgressJSON(progress)));
     }
 
     static loadProgress(): UserProgress | null {
         const stored = localStorage.getItem(CONSTANTS.storage.progressStorageKey);
         if (!stored) return null;
 
+        // Snapshot the raw pre-migration bytes exactly once, before anything (including
+        // this load) has a chance to rewrite them. No-op after the first successful call.
+        BackupService.ensureLocalBackupOnce(stored);
+
         const parsed: any = JSON.parse(stored);
-
-        // Apply migration if needed
-        const migrated = MigrationService.migrateUserProgress(parsed);
-
-        // Convert date strings to Date objects
-        const learningQueue: VocabProgress[] = migrated.learningQueue.map((elem: any) => ({
-            ...DEFAULT_VOCABULARY_PROGRESS,
-            ...elem,
-            nextReviewAt: typeof elem.nextReviewAt === 'string' ? new Date(elem.nextReviewAt) : elem.nextReviewAt,
-            lastReviewedAt: typeof elem.lastReviewedAt === 'string' ? new Date(elem.lastReviewedAt) : elem.lastReviewedAt,
-            introductionAt: typeof elem.introductionAt === 'string' ? new Date(elem.introductionAt) : elem.introductionAt,
-            reading: {
-                ...elem.reading,
-                lastReviewedAt: elem.reading?.lastReviewedAt && typeof elem.reading.lastReviewedAt === 'string'
-                    ? new Date(elem.reading.lastReviewedAt)
-                    : elem.reading?.lastReviewedAt,
-                dueDate: elem.reading?.dueDate && typeof elem.reading.dueDate === 'string'
-                    ? new Date(elem.reading.dueDate)
-                    : elem.reading?.dueDate
-            },
-            meaning: {
-                ...elem.meaning,
-                lastReviewedAt: elem.meaning?.lastReviewedAt && typeof elem.meaning.lastReviewedAt === 'string'
-                    ? new Date(elem.meaning.lastReviewedAt)
-                    : elem.meaning?.lastReviewedAt,
-                dueDate: elem.meaning?.dueDate && typeof elem.meaning.dueDate === 'string'
-                    ? new Date(elem.meaning.dueDate)
-                    : elem.meaning?.dueDate
-            }
-        }));
-
-        return {
-            ...DEFAULT_PROGRESS,
-            ...migrated,
-            kanjiKnowledge: {
-                ...migrated.kanjiKnowledge,
-                kanjiSet: new Set(migrated.kanjiKnowledge.kanjiSet)
-            },
-            learningQueue
-        };
+        return migrateAndHydrateProgress(parsed);
     }
 
     static clearProgress(): void {
@@ -74,6 +35,8 @@ export class StorageService {
     static loadSettings(): UserSettings | null {
         const stored = localStorage.getItem(CONSTANTS.storage.settingsStorageKey);
         if (!stored) return null;
+
+        BackupService.ensureLocalSettingsBackupOnce(stored);
 
         return {
             ...DEFAULT_SETTINGS,

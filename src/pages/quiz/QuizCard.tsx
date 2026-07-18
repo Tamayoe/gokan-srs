@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
@@ -8,6 +7,7 @@ import { Combine } from "lucide-react";
 import { TagsLookup } from "../../models/data.model";
 import type { Tags } from "../../models/data.model";
 import { BaseQuizCard } from "./BaseQuizCard";
+import { formatReadingList, getUniquePosTags, getUniqueRelatedCompounds, useExpandableDefinitions } from "./quizFormatting";
 
 interface QuizCardProps {
     onKanjiClick?: () => void;
@@ -18,16 +18,11 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
     const { isMobile } = useResponsive();
 
     const { currentVocab, feedback } = state;
-    const [isExpanded, setIsExpanded] = useState(false);
+
+    const currentMaxDefs = isMobile ? 3 : 5;
+    const { displayedSenses, hasMoreDefs, isExpanded, toggleExpanded } = useExpandableDefinitions(currentVocab?.senses ?? [], currentMaxDefs);
 
     if (!currentVocab) return null;
-
-    const maxMobileDefs = 3;
-    const maxDesktopDefs = 5;
-    const currentMaxDefs = isMobile ? maxMobileDefs : maxDesktopDefs;
-    const hasMoreDefs = currentVocab.senses.length > currentMaxDefs;
-    
-    const displayedSenses = isExpanded ? currentVocab.senses : currentVocab.senses.slice(0, currentMaxDefs);
 
     return (
         <BaseQuizCard
@@ -37,7 +32,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                 <div className="text-center text-2xl mb-1 text-primary font-gothic">
                     {feedback?.type === 'minor_error'
                         ? feedback.matchedAnswer
-                        : [currentVocab.reading.primary, ...currentVocab.reading.alternatives].join(', ')}
+                        : formatReadingList(currentVocab.reading)}
                 </div>
             )}
         >
@@ -61,14 +56,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                         {/* POS tags */}
                         {currentVocab.senses.length > 0 && (
                             <div className="flex flex-wrap gap-1">
-                                {Array.from(
-                                    new Set(
-                                        currentVocab.senses.flatMap(sense => [
-                                            ...sense.pos,
-                                            ...(sense.misc?.rawTags ?? []),
-                                        ])
-                                    )
-                                ).slice(0, 3).map(rawTag => (
+                                {getUniquePosTags(currentVocab.senses, true).slice(0, 3).map(rawTag => (
                                     <span
                                         key={rawTag}
                                         className="px-1.5 py-0.5 text-[9px] rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15 whitespace-nowrap"
@@ -113,14 +101,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                             {/* POS + misc tags */}
                             {currentVocab.senses.length > 0 && (
                                 <div className="flex flex-wrap justify-center gap-2">
-                                    {Array.from(
-                                        new Set(
-                                            currentVocab.senses.flatMap(sense => [
-                                                ...sense.pos,
-                                                ...(sense.misc?.rawTags ?? []),
-                                            ])
-                                        )
-                                    ).map(rawTag => (
+                                    {getUniquePosTags(currentVocab.senses, true).map(rawTag => (
                                         <span
                                             key={rawTag}
                                             className="px-2 py-0.5 text-xs rounded bg-accent/10 text-accent font-gothic font-medium dark:bg-accent/15"
@@ -132,23 +113,11 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                             )}
 
                             {/* Related compounds */}
-                            {Array.from(
-                                new Set(
-                                    currentVocab.senses.flatMap(
-                                        sense => sense.related?.compounds ?? []
-                                    )
-                                )
-                            ).length > 0 && (
-                                    <div className="text-sm text-meaning-muted font-serif">
-                                        {Array.from(
-                                            new Set(
-                                                currentVocab.senses.flatMap(
-                                                    sense => sense.related?.compounds ?? []
-                                                )
-                                            )
-                                        ).slice(0, 4).join(' ・ ')}
-                                    </div>
-                                )}
+                            {getUniqueRelatedCompounds(currentVocab.senses).length > 0 && (
+                                <div className="text-sm text-meaning-muted font-serif">
+                                    {getUniqueRelatedCompounds(currentVocab.senses).slice(0, 4).join(' ・ ')}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </>
@@ -184,7 +153,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                     {hasMoreDefs && (
                         <button
                             type="button"
-                            onClick={() => setIsExpanded(!isExpanded)}
+                            onClick={toggleExpanded}
                             className="text-xs text-secondary hover:text-primary transition-colors py-1 cursor-pointer font-gothic"
                         >
                             {isExpanded ? "Show less" : `+${currentVocab.senses.length - currentMaxDefs} more definitions`}

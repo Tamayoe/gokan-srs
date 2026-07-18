@@ -1,6 +1,7 @@
 import type { VocabProgress } from "../models/vocabulary.model";
-import type { UserProgress, UserSettings } from "../models/user.model";
+import type { UserSettings } from "../models/user.model";
 import { CONSTANTS } from "../commons/constants";
+import { isMeaningQuizEnabled } from "../services/scheduling";
 
 export type QuizType = 'reading' | 'meaning';
 export type QuizMode = 'base' | 'context';
@@ -44,7 +45,7 @@ export function getNextVocabToStudy(
             v.reading.dueDate !== null &&
             v.reading.dueDate <= now;
 
-        return isFirstReview || isDueReading || v.needsRetry === true;
+        return isFirstReview || isDueReading || v.needsRetry?.reading === true;
     });
 
     if (allReadings.length > 0) {
@@ -52,11 +53,12 @@ export function getNextVocabToStudy(
     }
 
     // 3. Priority: Due Meanings (IF ENABLED)
-    if (settings?.enableMeaningQuiz !== false) { // Default true
+    if (isMeaningQuizEnabled(settings)) {
         const dueMeanings = queue.filter(v =>
-            v.totalReviews > 0 &&
-            v.meaning.dueDate !== null &&
-            v.meaning.dueDate <= now
+            (v.totalReviews > 0 &&
+                v.meaning.dueDate !== null &&
+                v.meaning.dueDate <= now) ||
+            v.needsRetry?.meaning === true
         );
         if (dueMeanings.length > 0) {
             const vocab = pickRandom(dueMeanings)!;
@@ -88,42 +90,25 @@ export function getNextVocabToStudy(
 
 
 
-export function hasDueVocab(queue: VocabProgress[], now: Date): boolean {
-    return queue.some(
-        v => v.nextReviewAt !== null && v.nextReviewAt <= now
-    );
-}
-
-export function canIntroduceNew(
-    progress: UserProgress,
-    now: Date
-): boolean {
-    const dueCount = progress.learningQueue.filter(
-        v => v.nextReviewAt !== null && v.nextReviewAt <= now
-    ).length;
-
-    const dailyLimitReached =
-        progress.stats.newLearnedToday >= CONSTANTS.srs.dailyNewLimit &&
-        !progress.dailyOverride;
-
-    return (
-        dueCount === 0 &&
-        !dailyLimitReached
-    );
-}
-
 function pickRandom<T>(items: T[]): T | null {
     if (items.length === 0) return null;
     const index = Math.floor(Math.random() * items.length);
     return items[index];
 }
 
-export function calculateMasteryPercentage(strength: number): number {
+/**
+ * The two-loop mastery curve: p1 is progress through the "learning" loop
+ * (0 -> visualSoftCap), p2 is progress through the "refining" loop
+ * (visualSoftCap -> maxMemoryStrength). Exposed separately so MasteryRing can
+ * render its two rings without reimplementing this math - the single source
+ * of truth for the mastery curve lives here.
+ */
+export function calculateMasteryLoops(strength: number): { p1: number; p2: number } {
     const sMin = CONSTANTS.srs.formula.minMemoryStrength;
     const sSoft = CONSTANTS.srs.formula.mastery.visualSoftCap;
     const sMax = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
 
-    if (strength <= sMin) return 0;
+    if (strength <= sMin) return { p1: 0, p2: 0 };
 
     let p1 = 0;
     if (strength >= sSoft) {
@@ -141,5 +126,13 @@ export function calculateMasteryPercentage(strength: number): number {
         p2 = (numer / denom) * 100;
     }
 
+    return {
+        p1: Math.min(Math.max(p1, 0), 100),
+        p2: Math.min(Math.max(p2, 0), 100),
+    };
+}
+
+export function calculateMasteryPercentage(strength: number): number {
+    const { p1, p2 } = calculateMasteryLoops(strength);
     return Math.min(Math.max(p1 + p2, 0), 200);
 }

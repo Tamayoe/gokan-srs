@@ -1,5 +1,5 @@
-import { CONSTANTS } from "../commons/constants";
 import { THEME } from "../commons/theme";
+import { calculateMasteryLoops } from "../utils/srs.utils";
 
 interface MasteryRingProps {
     memoryStrength: number; // SRS Memory Strength
@@ -9,38 +9,7 @@ interface MasteryRingProps {
 }
 
 export const MasteryRing: React.FC<MasteryRingProps> = ({ memoryStrength, size = 30, showText = true, variant = 'default' }) => {
-    const getPercentages = (strength: number) => {
-        const sMin = CONSTANTS.srs.formula.minMemoryStrength;
-        const sSoft = CONSTANTS.srs.formula.mastery.visualSoftCap;
-        const sMax = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
-
-        if (strength <= sMin) return { p1: 0, p2: 0 };
-
-        // Loop 1: 0 -> Soft Cap (User Mastery)
-        let p1 = 0;
-        if (strength >= sSoft) {
-            p1 = 100;
-        } else {
-            const numer = Math.log(strength / sMin);
-            const denom = Math.log(sSoft / sMin);
-            p1 = (numer / denom) * 100;
-        }
-
-        // Loop 2: Soft Cap -> Max Cap (Diamond Mastery)
-        let p2 = 0;
-        if (strength > sSoft) {
-            const numer = Math.log(strength / sSoft);
-            const denom = Math.log(sMax / sSoft);
-            p2 = (numer / denom) * 100;
-        }
-
-        return {
-            p1: Math.min(Math.max(p1, 0), 100),
-            p2: Math.min(Math.max(p2, 0), 100)
-        };
-    };
-
-    const { p1, p2 } = getPercentages(memoryStrength);
+    const { p1, p2 } = calculateMasteryLoops(memoryStrength);
 
     // Stroke width relative to size
     const strokeWidth = Math.max(1.5, size / 16);
