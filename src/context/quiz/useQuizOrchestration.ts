@@ -502,11 +502,25 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
             return;
         }
 
+        const vid = 'vocabId' in queueItem ? queueItem.vocabId : queueItem.vocab.vocabId;
+        const quizType = queueItem.quizType;
+
+        // Exactly this card is already loaded (selectNextView returns a fresh
+        // queueItem object on every recompute, so the dep alone can't tell).
+        // Restarting the load would blank the card, reset the latency timer,
+        // and re-render for nothing - e.g. on a retry re-pick of the same vocab.
+        if (
+            !state.isLoadingVocab &&
+            state.currentVocab?.id === vid &&
+            state.currentQuizItem?.quizType === quizType &&
+            state.currentQuizItem?.quizMode === queueItem.quizMode
+        ) {
+            return;
+        }
+
         dispatch({ type: 'LOAD_VOCAB_START', payload: queueItem });
 
         let alive = true;
-        const vid = 'vocabId' in queueItem ? queueItem.vocabId : queueItem.vocab.vocabId;
-        const quizType = queueItem.quizType;
 
         Promise.all([
             VocabularyService.loadVocab(vid),

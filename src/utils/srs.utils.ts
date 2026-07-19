@@ -49,7 +49,7 @@ export function getNextVocabToStudy(
     });
 
     if (allReadings.length > 0) {
-        return { vocab: pickRandom(allReadings)!, quizType: 'reading', quizMode: 'base' };
+        return { vocab: pickStable(allReadings)!, quizType: 'reading', quizMode: 'base' };
     }
 
     // 3. Priority: Due Meanings (IF ENABLED)
@@ -61,7 +61,7 @@ export function getNextVocabToStudy(
             v.needsRetry?.meaning === true
         );
         if (dueMeanings.length > 0) {
-            const vocab = pickRandom(dueMeanings)!;
+            const vocab = pickStable(dueMeanings)!;
             const mastery = calculateMasteryPercentage(vocab.meaning.memoryStrength);
             // Resolve the configured threshold level (default 'normal' = 50%)
             const thresholdKey = settings?.meaningContextThreshold ?? 'normal';
@@ -82,7 +82,7 @@ export function getNextVocabToStudy(
     if (newIntros.length > 0) {
         // Intros are type-agnostic until "Learn" is clicked, but we need a type.
         // We default to 'reading' as the primary entry point.
-        return { vocab: pickRandom(newIntros)!, quizType: 'reading', quizMode: 'base' };
+        return { vocab: pickStable(newIntros)!, quizType: 'reading', quizMode: 'base' };
     }
 
     return null;
@@ -90,10 +90,35 @@ export function getNextVocabToStudy(
 
 
 
-function pickRandom<T>(items: T[]): T | null {
+function hashString(str: string): number {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = (hash * 31 + str.charCodeAt(i)) | 0;
+    }
+    return hash >>> 0;
+}
+
+/**
+ * Deterministic "shuffled" pick: a pseudo-random choice seeded by the pool's
+ * own state, so the same pool always yields the same pick. Randomizing which
+ * due item comes next is intentional (prevents interference effects), but this
+ * function runs inside selectNextView, which is recomputed on every state
+ * change - a Math.random() pick returned a DIFFERENT card per recomputation,
+ * and since loading that card changes state (currentVocab), each pick triggered
+ * the next: a visible cascade of flashing cards until two consecutive rolls
+ * happened to agree. The seed includes per-item review state, so every answer
+ * (including retry-flag flips) naturally reshuffles the order.
+ */
+function pickStable(items: VocabProgress[]): VocabProgress | null {
     if (items.length === 0) return null;
-    const index = Math.floor(Math.random() * items.length);
-    return items[index];
+    const seed = items
+        .map(v => {
+            const reviewedAt = v.lastReviewedAt instanceof Date ? v.lastReviewedAt.getTime() : 0;
+            const retry = `${v.needsRetry?.reading ? 1 : 0}${v.needsRetry?.meaning ? 1 : 0}`;
+            return `${v.vocabId}:${v.totalReviews}:${reviewedAt}:${retry}`;
+        })
+        .join('|');
+    return items[hashString(seed) % items.length];
 }
 
 /**
