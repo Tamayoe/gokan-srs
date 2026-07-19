@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { GoogleDriveSync } from './googleDriveSync';
+import { toPlainProgressJSON } from '../progressSerialization';
 import type { SyncEnvelope } from './types';
 
 function jsonResponse(body: unknown, ok = true, status = 200): Response {
@@ -85,7 +86,8 @@ describe('GoogleDriveSync', () => {
         const result = await sync.sync(local);
 
         expect(result).not.toBeNull();
-        expect(result!.progress._sync?.version).toBe(2); // addSyncMetadata bump from mergeProgress(local, null)
+        expect(result!.envelope.progress._sync?.version).toBe(2); // addSyncMetadata bump from mergeProgress(local, null)
+        expect(result!.pulledRemoteChanges).toBe(false); // no remote existed, nothing was pulled in
     });
 
     it('retries with fresh data when the remote file changed between read and write (CAS)', async () => {
@@ -168,8 +170,49 @@ describe('GoogleDriveSync', () => {
         expect(trashedIds).toContain('dup-B');
         expect(trashedIds).not.toContain('dup-A');
         // Both duplicates' stats must survive the reconciliation (max-merged).
-        expect(result!.progress.stats.totalReviews).toBeGreaterThanOrEqual(10);
-        expect(result!.progress.stats.totalLearned).toBeGreaterThanOrEqual(5);
+        expect(result!.envelope.progress.stats.totalReviews).toBeGreaterThanOrEqual(10);
+        expect(result!.envelope.progress.stats.totalLearned).toBeGreaterThanOrEqual(5);
+    });
+
+    it('fast-forwards when remote is its own last write: no merge, no reconcile signal', async () => {
+        const remoteEnvelope = makeEnvelope(5, { stats: { totalReviews: 10, totalLearned: 0, newLearnedToday: 0 } } as any);
+        // Serialized content of whatever the previous sync uploaded; null until then.
+        let uploadedBody: any = null;
+
+        globalThis.fetch = createFetchRouter([
+            { match: isFolderSearch, respond: () => jsonResponse({ files: [{ id: 'folder-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.pre-v8-backup.json'), respond: () => jsonResponse({ files: [{ id: 'backup-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.json'), respond: () => jsonResponse({ files: [{ id: 'file-1', name: 'kanji-progress.json', modifiedTime: 'T1' }] }) },
+            { match: isContent, respond: () => jsonResponse(uploadedBody ?? { progress: remoteEnvelope.progress, settings: remoteEnvelope.settings }) },
+            { match: isMetadata, respond: () => jsonResponse({ modifiedTime: 'T1' }) },
+            { match: isUpload, respond: () => jsonResponse({ id: 'file-1' }) },
+        ]);
+
+        const sync = new GoogleDriveSync('token');
+
+        // First sync: remote has diverged content (totalReviews 10) -> full merge.
+        const first = await sync.sync(makeEnvelope(1));
+        expect(first!.pulledRemoteChanges).toBe(true);
+        expect(first!.envelope.progress.stats.totalReviews).toBe(10);
+
+        // Remote now serves back exactly what the first sync wrote.
+        uploadedBody = { progress: toPlainProgressJSON(first!.envelope.progress), settings: first!.envelope.settings };
+
+        // Second sync: a local-only change on top of the first result. Remote is
+        // recognized as this client's own last write -> fast-forward, no merge.
+        const localNext: SyncEnvelope = {
+            progress: {
+                ...first!.envelope.progress,
+                stats: { ...first!.envelope.progress.stats, totalReviews: 11 },
+            } as any,
+            settings: first!.envelope.settings,
+        };
+        const second = await sync.sync(localNext);
+
+        expect(second!.pulledRemoteChanges).toBe(false);
+        // Local content passed through untouched (no merge artifacts), version bumped.
+        expect(second!.envelope.progress.stats.totalReviews).toBe(11);
+        expect(second!.envelope.progress._sync!.version).toBeGreaterThan(first!.envelope.progress._sync!.version);
     });
 
     it('ensureRemoteBackupOnce uploads exactly once even if called multiple times', async () => {

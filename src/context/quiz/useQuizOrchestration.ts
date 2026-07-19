@@ -17,6 +17,7 @@ import type { ProgressWithMetadata } from '../../services/sync/types';
 import { useGoogleDrive } from '../GoogleDriveContext';
 import type { QuizState, QuizAction } from './quizReducer';
 import { selectNextView, selectCurrentProgress } from './quizSelectors';
+import { progressUploadSignature, stableStringify } from "../../services/progressSerialization";
 
 export interface QuizActions {
     setupComplete(values: SetupValues): Promise<void>;
@@ -54,6 +55,15 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
     const submitLatencyRef = useRef<number | null>(null);
     const dayBoundaryCheckedRef = useRef(false);
     const migrationTriggeredRef = useRef(false);
+
+    const progressSignature = useMemo(() => progressUploadSignature(state.progress), [state.progress]);
+    // Content signature for settings, for the same reason as progressSignature:
+    // reconciles produce fresh (but content-identical) settings objects, and a raw
+    // reference dependency would re-fire the auto-upload effect on every sync.
+    const settingsSignature = useMemo(
+        () => (state.settings ? stableStringify(state.settings) : null),
+        [state.settings]
+    );
 
     /* ---------- One-time startup checks ---------- */
 
@@ -420,14 +430,16 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
 
     /* ---------- Auto-sync & reactivity ---------- */
 
-    // Auto-upload: whenever progress or settings change, push to Drive in the background.
+    // Auto-upload: whenever progress or settings CONTENT changes, push to Drive in
+    // the background. Deps are content signatures (not object references) so the
+    // fresh-but-identical objects produced by each reconcile don't re-trigger it.
     useEffect(() => {
-        if (state.progress && state.settings && !isDownloading) {
-            uploadProgress({ progress: state.progress, settings: state.settings }).catch(err => {
-                console.error('[useQuizOrchestration] Auto-upload failed', err);
-            });
-        }
-    }, [state.progress, state.settings]);
+        if (!progressSignature || !state.progress || !state.settings || isDownloading) return;
+        uploadProgress({ progress: state.progress, settings: state.settings }).catch(err => {
+            console.error('[useQuizOrchestration] Auto-upload failed', err);
+        });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [progressSignature, settingsSignature, isDownloading, uploadProgress]);
 
     // React to a completed download: reload data when lastDownloadTime changes.
     useEffect(() => {
@@ -446,10 +458,10 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         }
     }, [lastDownloadTime]);
 
-    // React to a completed BACKGROUND sync: reconcile (merge) any remote changes it
-    // pulled in, rather than wholesale-replacing state. This is what prevents an
-    // in-flight answer (submitted while the background sync round-trip was in
-    // progress) from being silently overwritten by data that predates it.
+    // React to a background sync that PULLED IN REMOTE CHANGES (routine uploads of
+    // local-only changes never bump lastBackgroundMergeTime - see GoogleDriveContext).
+    // Reconcile (merge) those changes into live state rather than wholesale-replacing
+    // it, so an in-flight answer submitted during the sync round-trip is never lost.
     useEffect(() => {
         if (!lastBackgroundMergeTime || !state.progress || !state.settings) return;
 
@@ -470,9 +482,9 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         );
         const reconciledSettings = mergeSettings(state.settings, settingsFromDisk, liveVersion, diskVersion);
 
-        if (reconciledProgress) {
-            dispatch({ type: 'RECONCILE_REMOTE', payload: { progress: reconciledProgress, settings: reconciledSettings } });
-        }
+        if (!reconciledProgress) return;
+
+        dispatch({ type: 'RECONCILE_REMOTE', payload: { progress: reconciledProgress, settings: reconciledSettings } });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [lastBackgroundMergeTime]);
 

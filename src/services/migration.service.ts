@@ -1,6 +1,6 @@
 import { CONSTANTS } from '../commons/constants';
 import type { VocabProgress, SRSEntry } from '../models/vocabulary.model';
-import type { UserProgress } from '../models/user.model';
+import type { UserProgress, UserSettings } from '../models/user.model';
 import { DEFAULT_SRS_ENTRY, DEFAULT_VOCABULARY_PROGRESS } from '../models/vocabulary.model';
 import { vocabNextReviewAt } from './scheduling';
 
@@ -108,7 +108,7 @@ export class MigrationService {
     /**
      * Migrates base progress
      */
-    static migrateUserProgress(progress: any): UserProgress {
+    static migrateUserProgress(progress: any, settings?: Pick<UserSettings, 'enableMeaningQuiz'>): UserProgress {
         const currentVersion = progress._formatVersion ?? 0;
 
         // V1 to V3 Migrations
@@ -165,11 +165,12 @@ export class MigrationService {
         // Recompute nextReviewAt unconditionally via scheduling.ts (the single source
         // of truth introduced to stop it being hand-synced independently). This
         // retroactively corrects any stale value written before that fix existed.
-        // Settings aren't available here, so this assumes meaning quizzes are
-        // enabled; if a user has them disabled, the next real answer immediately
-        // re-corrects it via the same scheduling logic at runtime.
+        // Settings MUST be threaded through here: recomputing without them treats
+        // meaning quizzes as enabled, which disagrees with the settings-aware
+        // derivation in mergeVocabProgress and makes nextReviewAt flip on every
+        // load->merge round trip (the infinite auto-upload loop).
         migratedQueue = migratedQueue.map((item: VocabProgress) =>
-            item.stage === 'graduated' ? item : { ...item, nextReviewAt: vocabNextReviewAt(item) }
+            item.stage === 'graduated' ? item : { ...item, nextReviewAt: vocabNextReviewAt(item, settings) }
         );
 
         // Cap at SYNC_MIGRATION_VERSION (never CURRENT_FORMAT_VERSION) so
