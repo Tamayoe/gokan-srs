@@ -18,7 +18,9 @@ export class StorageService {
         BackupService.ensureLocalBackupOnce(stored);
 
         const parsed: any = JSON.parse(stored);
-        return migrateAndHydrateProgress(parsed);
+        // Settings must inform the migration pass's nextReviewAt re-derivation,
+        // or a disabled meaning quiz makes every load disagree with every merge.
+        return migrateAndHydrateProgress(parsed, this.loadSettings() ?? undefined);
     }
 
     static clearProgress(): void {

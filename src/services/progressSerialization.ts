@@ -1,8 +1,9 @@
-import type { UserProgress } from "../models/user.model";
+import type { UserProgress, UserSettings } from "../models/user.model";
 import type { VocabProgress } from "../models/vocabulary.model";
 import { DEFAULT_VOCABULARY_PROGRESS } from "../models/vocabulary.model";
 import { DEFAULT_PROGRESS } from "../models/user.model";
 import { MigrationService } from "./migration.service";
+import type {ProgressWithMetadata} from "./sync/types";
 
 /**
  * Single source of truth for progress (de)serialization, shared by localStorage
@@ -46,9 +47,12 @@ export function hydrateProgress(migrated: any): UserProgress {
     };
 }
 
-/** Runs migration then hydration - the full raw-JSON -> UserProgress pipeline. */
-export function migrateAndHydrateProgress(parsed: any): UserProgress {
-    const migrated = MigrationService.migrateUserProgress(parsed);
+/** Runs migration then hydration - the full raw-JSON -> UserProgress pipeline.
+ *  Settings must be passed whenever they are known: the migration pass re-derives
+ *  nextReviewAt, and doing so without settings assumes meaning quizzes are enabled,
+ *  which diverges from the settings-aware derivation used everywhere else. */
+export function migrateAndHydrateProgress(parsed: any, settings?: Pick<UserSettings, 'enableMeaningQuiz'>): UserProgress {
+    const migrated = MigrationService.migrateUserProgress(parsed, settings);
     return hydrateProgress(migrated);
 }
 
@@ -62,4 +66,37 @@ function hydrateDate(value: unknown): Date | null {
     if (value instanceof Date) return value;
     if (typeof value === 'string') return new Date(value);
     return null;
+}
+
+/**
+ * Canonical JSON stringification: object keys are sorted recursively, Dates
+ * become ISO strings, Sets become sorted arrays. Two structurally-equal values
+ * always produce the same string, regardless of key insertion order - which
+ * differs between hydrated-from-storage objects and merge-produced objects.
+ */
+export function stableStringify(value: unknown): string {
+    return JSON.stringify(sortDeep(value));
+}
+
+function sortDeep(value: any): any {
+    if (value instanceof Date) return value.toISOString();
+    if (value instanceof Set) return [...value].sort();
+    if (Array.isArray(value)) return value.map(sortDeep);
+    if (value && typeof value === 'object') {
+        const sorted: Record<string, any> = {};
+        for (const key of Object.keys(value).sort()) sorted[key] = sortDeep(value[key]);
+        return sorted;
+    }
+    return value;
+}
+
+/**
+ * Derive a stable content signature from the progress object, ignoring the
+ * _sync metadata (which bumps on every merge even when nothing changed).
+ */
+export function progressUploadSignature(p: UserProgress | null): string | null {
+    if (!p) return null;
+    const { _sync, ...rest } = p as ProgressWithMetadata;
+    void _sync;
+    return stableStringify(rest);
 }

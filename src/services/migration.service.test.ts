@@ -209,6 +209,40 @@ describe('MigrationService', () => {
             expect(migrated.kanjiKnowledge.step).toBe(100);
         });
 
+        it('recomputes nextReviewAt respecting enableMeaningQuiz (regression: sync-loop oscillation)', () => {
+            // Root cause of the infinite auto-upload loop: the migration pass
+            // recomputed nextReviewAt WITHOUT settings (=> meaning treated as
+            // enabled), while mergeVocabProgress recomputed WITH settings, so the
+            // derived value flipped on every load->merge round trip.
+            const progress = {
+                _formatVersion: 7,
+                kanjiKnowledge: { method: 'kklc', step: 1, kanjiSet: [] },
+                learningQueue: [
+                    {
+                        vocabId: 'vocab-osc',
+                        stage: 'learning',
+                        introductionAt: '2026-01-01T00:00:00.000Z',
+                        nextReviewAt: null,
+                        totalReviews: 2,
+                        consecutiveFailures: 0,
+                        reading: { memoryStrength: 250, interval: 72, difficulty: 0.31, lastReviewedAt: '2026-01-31T00:00:00.000Z', dueDate: '2026-07-24T00:00:00.000Z', history: [] },
+                        meaning: { memoryStrength: 1, interval: 0, difficulty: 0.3, lastReviewedAt: null, dueDate: '2026-07-19T00:00:00.000Z', history: [] },
+                    },
+                ],
+                stats: { newLearnedToday: 0, totalLearned: 0, totalReviews: 0 },
+                dailyOverride: false,
+                adaptive: { level: 1.0, history: [] },
+            };
+
+            // Meaning quizzes disabled: only the reading due date is authoritative.
+            const disabled = MigrationService.migrateUserProgress(structuredClone(progress) as any, { enableMeaningQuiz: false });
+            expect(disabled.learningQueue[0].nextReviewAt).toBe('2026-07-24T00:00:00.000Z' as any);
+
+            // Meaning quizzes enabled: the earlier meaning due date wins.
+            const enabled = MigrationService.migrateUserProgress(structuredClone(progress) as any, { enableMeaningQuiz: true });
+            expect(enabled.learningQueue[0].nextReviewAt).toBe('2026-07-19T00:00:00.000Z' as any);
+        });
+
         it('should not re-migrate if already at current version or V3 sync cap', () => {
             const alreadyMigrated = {
                 _formatVersion: 3,

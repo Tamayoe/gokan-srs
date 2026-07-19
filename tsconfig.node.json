@@ -11,6 +11,12 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
 
+    /* No emit: without this, `tsc --build` compiles vite.config.ts and drops a
+       vite.config.js at the repo root - which Vite then silently prioritizes
+       over vite.config.ts (the exact duplicate-config trap removed in the
+       2026-07-18 architecture remediation). */
+    "noEmit": true,
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

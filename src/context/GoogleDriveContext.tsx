@@ -1,10 +1,10 @@
-import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
 import { useGoogleLogin, googleLogout, type TokenResponse } from '@react-oauth/google';
 import { GoogleDriveSync, GoogleAuthError } from '../services/sync/googleDriveSync';
 import { StorageService } from '../services/storage.service';
 import { MigrationService } from '../services/migration.service';
 import { CONSTANTS } from '../commons/constants';
-import { DEFAULT_SETTINGS } from '../models/user.model';
+import {DEFAULT_SETTINGS, type UserProgress, type UserSettings} from '../models/user.model';
 
 interface GoogleUser {
     access_token: string;
@@ -17,7 +17,7 @@ interface GoogleDriveContextType {
     login: () => void;
     logout: () => void;
     downloadProgress: () => Promise<void>;
-    uploadProgress: (envelope: { progress: any; settings: any }) => Promise<void>;
+    uploadProgress: (envelope: { progress: UserProgress; settings: UserSettings }) => Promise<void>;
     isDownloading: boolean;
     isUploading: boolean;
     user: GoogleUser | null;
@@ -133,23 +133,40 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
     // Use generic type compatible with browser (number) and Node (object)
     const uploadDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+    // Read by the stable uploadProgress callback below - keeping these in refs
+    // (instead of closing over state) is what lets uploadProgress keep one identity
+    // for the provider's whole lifetime. Every sync toggles isUploading and bumps
+    // lastBackgroundMergeTime, so a per-render uploadProgress would re-fire any
+    // consumer effect that depends on it, on every sync, forever.
+    const syncServiceRef = useRef<GoogleDriveSync | null>(null);
+    syncServiceRef.current = syncService;
+    const isDownloadingRef = useRef(false);
+    isDownloadingRef.current = isDownloading;
+
     // BACKGROUND UPLOAD: Pushes local changes to cloud. Does NOT trigger a full app reload -
     // instead bumps lastBackgroundMergeTime so callers can reconcile (merge) any remote
     // changes into live state without discarding whatever the user is doing right now.
-    const uploadProgress = async (envelope: { progress: any; settings: any }) => {
+    const uploadProgress = useCallback(async (envelope: { progress: any; settings: any }) => {
         if (uploadDebounceRef.current) {
             clearTimeout(uploadDebounceRef.current);
         }
 
         uploadDebounceRef.current = setTimeout(async () => {
-            if (!syncService || isDownloading) return;
+            const service = syncServiceRef.current;
+            if (!service || isDownloadingRef.current) return;
 
             setIsUploading(true);
             try {
-                // sync() does: Fetch Remote -> Merge -> Upload -> Save Local.
-                await syncService.sync(envelope);
+                // sync() does: Fetch Remote -> Merge (or fast-forward) -> Upload -> Save Local.
+                const outcome = await service.sync(envelope);
                 setSyncPaused(false);
-                setLastBackgroundMergeTime(Date.now());
+                // Only signal a reconcile when the sync actually pulled in remote
+                // content this client hadn't written itself. A routine upload of
+                // local-only changes must not bump this - otherwise every answer
+                // would trigger a reconcile pass and reload the active quiz card.
+                if (outcome?.pulledRemoteChanges) {
+                    setLastBackgroundMergeTime(Date.now());
+                }
             } catch (error) {
                 console.error('[GoogleDriveContext] Background upload failed:', error);
                 if (error instanceof GoogleAuthError) {
@@ -162,7 +179,7 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
                 uploadDebounceRef.current = null;
             }
         }, 2000); // 2 second debounce to gather rapid changes (e.g. typing or quick settings toggles)
-    };
+    }, []);
 
     const login = useGoogleLogin({
         scope: 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',

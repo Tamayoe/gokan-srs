@@ -2,7 +2,7 @@ import { CONSTANTS } from '../../commons/constants';
 import { DEFAULT_SETTINGS } from '../../models/user.model';
 import { MigrationService } from '../migration.service';
 import { BackupService } from '../backup.service';
-import { toPlainProgressJSON, migrateAndHydrateProgress } from '../progressSerialization';
+import { toPlainProgressJSON, migrateAndHydrateProgress, progressUploadSignature, stableStringify } from '../progressSerialization';
 import { DriveClient } from './driveClient';
 import { mergeProgress, mergeSettings } from './mergeProgress';
 import type { ProgressWithMetadata, SyncEnvelope } from './types';
@@ -14,6 +14,14 @@ export type { SyncEnvelope, ProgressWithMetadata } from './types';
 const DRIVE_FILE_NAME = CONSTANTS.storage.googleDriveFileName;
 const DRIVE_FOLDER_NAME = CONSTANTS.storage.googleDriveFolderName;
 const MAX_SYNC_RETRIES = 3;
+
+export interface SyncOutcome {
+    envelope: SyncEnvelope;
+    /** True when this sync incorporated remote content this client had not itself
+     *  written - i.e. the caller's live state may now be stale and should reconcile.
+     *  False for routine fast-forward uploads of local-only changes. */
+    pulledRemoteChanges: boolean;
+}
 
 function combineTwoEnvelopes(a: SyncEnvelope, b: SyncEnvelope): SyncEnvelope {
     const localVersion = a.progress._sync?.version ?? 0;
@@ -40,6 +48,11 @@ export class GoogleDriveSync {
     private folderId: string | null = null;
     private latestLocalVersion: number = 0;
     private remoteBackupChecked = false;
+    // Content signatures of the envelope this instance last wrote to Drive. When
+    // the remote file still matches them on the next sync, local state is a strict
+    // descendant of remote and the merge can be skipped (fast-forward).
+    private lastWrittenProgressSignature: string | null = null;
+    private lastWrittenSettingsSignature: string | null = null;
 
     constructor(accessToken: string) {
         this.driveClient = new DriveClient(accessToken);
@@ -89,7 +102,7 @@ export class GoogleDriveSync {
      * immediately before writing. If another device wrote in between, we
      * re-fetch and re-merge instead of clobbering that write.
      */
-    async sync(localEnvelope: SyncEnvelope): Promise<SyncEnvelope | null> {
+    async sync(localEnvelope: SyncEnvelope): Promise<SyncOutcome | null> {
         await this.ensureFolder();
         await this.ensureRemoteBackupOnce();
 
@@ -118,17 +131,53 @@ export class GoogleDriveSync {
 
             const localVersion = effectiveLocalEnvelope.progress._sync?.version ?? 0;
             const remoteVersion = remoteProgress?._sync?.version ?? 0;
-            const mergedSettings = mergeSettings(effectiveLocalEnvelope.settings, remoteSettings, localVersion, remoteVersion);
-            const mergedProgress = mergeProgress(effectiveLocalEnvelope.progress, remoteProgress, mergedSettings);
 
-            if (!mergedProgress) return null;
-            const mergedEnvelope: SyncEnvelope = { progress: mergedProgress, settings: mergedSettings };
+            // FAST-FORWARD: if the remote file's content is exactly what this client
+            // last wrote, local state is a strict descendant of it - there is nothing
+            // to merge; just upload local as-is (with a version bump). Skipping the
+            // merge here matters beyond performance: a self-merge is NOT a no-op
+            // (mergeEntry's max() safety net resurrects a pre-answer memoryStrength
+            // after a failed review, and needsRetry gets re-canonicalized), so it
+            // would make every routine upload look like a remote change and force
+            // the UI to reconcile - and reload the quiz card - after every answer.
+            const remoteIsOwnLastWrite =
+                remoteProgress !== null &&
+                this.lastWrittenProgressSignature !== null &&
+                progressUploadSignature(remoteProgress) === this.lastWrittenProgressSignature &&
+                stableStringify(remoteSettings) === this.lastWrittenSettingsSignature;
+
+            // Diagnostic: after this instance's first write, remote should normally
+            // still be that write (single-device usage). A miss here means either a
+            // genuine other-device write (fine, rare) or a broken serialize->parse
+            // round trip (fast-forward silently degrading to merge-every-upload). If
+            // this line appears after every answer, suspect the round trip.
+            if (!remoteIsOwnLastWrite && remoteProgress !== null && this.lastWrittenProgressSignature !== null) {
+                console.info('[GoogleDriveSync] Remote diverged from this client\'s last write - performing full merge.');
+            }
+
+            let mergedEnvelope: SyncEnvelope;
+            if (remoteIsOwnLastWrite) {
+                mergedEnvelope = {
+                    progress: {
+                        ...effectiveLocalEnvelope.progress,
+                        _sync: { lastModified: Date.now(), version: Math.max(localVersion, remoteVersion) + 1 },
+                    },
+                    settings: effectiveLocalEnvelope.settings,
+                };
+            } else {
+                const mergedSettings = mergeSettings(effectiveLocalEnvelope.settings, remoteSettings, localVersion, remoteVersion);
+                const mergedProgress = mergeProgress(effectiveLocalEnvelope.progress, remoteProgress, mergedSettings);
+                if (!mergedProgress) return null;
+                mergedEnvelope = { progress: mergedProgress, settings: mergedSettings };
+            }
+
+            const pulledRemoteChanges = remoteProgress !== null && !remoteIsOwnLastWrite;
 
             if (!resolved.fileId) {
                 // No remote file exists yet - safe to create unconditionally.
                 await this.driveClient.uploadNewFile(this.folderId!, DRIVE_FILE_NAME, this.serializeEnvelope(mergedEnvelope));
                 this.finishSync(mergedEnvelope);
-                return mergedEnvelope;
+                return { envelope: mergedEnvelope, pulledRemoteChanges };
             }
 
             // Optimistic concurrency check: has the file changed since we just read it?
@@ -139,7 +188,7 @@ export class GoogleDriveSync {
 
             await this.driveClient.updateFile(resolved.fileId, this.serializeEnvelope(mergedEnvelope));
             this.finishSync(mergedEnvelope);
-            return mergedEnvelope;
+            return { envelope: mergedEnvelope, pulledRemoteChanges };
         }
 
         console.error('[GoogleDriveSync] Sync CAS retries exhausted under high write contention; the next auto-upload will retry.');
@@ -148,6 +197,8 @@ export class GoogleDriveSync {
 
     private finishSync(envelope: SyncEnvelope): void {
         this.saveLocalEnvelope(envelope);
+        this.lastWrittenProgressSignature = progressUploadSignature(envelope.progress);
+        this.lastWrittenSettingsSignature = stableStringify(envelope.settings);
         if (envelope.progress._sync?.version) {
             this.latestLocalVersion = envelope.progress._sync.version;
         }
@@ -231,14 +282,16 @@ export class GoogleDriveSync {
     private parseEnvelope(data: any): SyncEnvelope {
         // BACKWARD COMPATIBILITY: raw UserProgress with no {progress, settings} wrapper.
         if (data && !data.settings && data.learningQueue) {
+            const settings = this.getLocalSettings() ?? DEFAULT_SETTINGS;
             return {
-                progress: migrateAndHydrateProgress(data),
-                settings: this.getLocalSettings() ?? DEFAULT_SETTINGS,
+                progress: migrateAndHydrateProgress(data, settings),
+                settings,
             };
         }
+        const settings = { ...DEFAULT_SETTINGS, ...(data.settings as object ?? {}) };
         return {
-            progress: migrateAndHydrateProgress(data.progress),
-            settings: { ...DEFAULT_SETTINGS, ...(data.settings as object ?? {}) },
+            progress: migrateAndHydrateProgress(data.progress, settings),
+            settings,
         };
     }
 
@@ -249,7 +302,7 @@ export class GoogleDriveSync {
     private getLocalProgress(): ProgressWithMetadata | null {
         const stored = localStorage.getItem(CONSTANTS.storage.progressStorageKey);
         if (!stored) return null;
-        return migrateAndHydrateProgress(JSON.parse(stored));
+        return migrateAndHydrateProgress(JSON.parse(stored), this.getLocalSettings() ?? undefined);
     }
 
     private getLocalSettings() {
