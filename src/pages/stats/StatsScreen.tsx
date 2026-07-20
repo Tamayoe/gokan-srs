@@ -3,6 +3,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { StatsOverview } from "./components/StatsOverview";
 import { ReviewForecast } from "./components/ReviewForecast";
 import { DailyProgressionChart } from "./components/DailyProgressionChart";
+import { KnowledgeCurveChart } from "./components/KnowledgeCurveChart";
 import { SmartVocabList } from "./components/SmartVocabList";
 
 export function StatsScreen({ onBack, onVocabClick }: { onBack: () => void; onVocabClick?: (vocabId: string) => void }) {
@@ -23,6 +24,11 @@ export function StatsScreen({ onBack, onVocabClick }: { onBack: () => void; onVo
             <StatsOverview progress={state.progress} />
 
             <section className="w-full p-6 bg-surface rounded-lg shadow-sm border border-divider">
+                <h2 className="text-lg mb-4 text-primary font-serif">Knowledge Curve</h2>
+                <KnowledgeCurveChart progress={state.progress} settings={state.settings ?? undefined} />
+            </section>
+
+            <section className="w-full p-6 bg-surface rounded-lg shadow-sm border border-divider">
                 <h2 className="text-lg mb-4 text-primary font-serif">Daily Progression</h2>
                 <DailyProgressionChart progress={state.progress} />
             </section>
@@ -37,6 +43,7 @@ export function StatsScreen({ onBack, onVocabClick }: { onBack: () => void; onVo
                 <h2 className="text-lg mb-4 text-primary font-serif">Vocabulary</h2>
                 <SmartVocabList
                     progress={state.progress.learningQueue}
+                    settings={state.settings ?? undefined}
                     onVocabClick={onVocabClick}
                 />
             </section>

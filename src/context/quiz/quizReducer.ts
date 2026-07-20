@@ -82,6 +82,18 @@ export const initialState: QuizState = {
     fatalError: null,
 };
 
+function sameKanjiSet(a: Set<string>, b: Set<string>): boolean {
+    if (a === b) return true;
+    if (a.size !== b.size) return false;
+    for (const k of a) if (!b.has(k)) return false;
+    return true;
+}
+
+function sameKanjiKnowledge(a: KanjiKnowledge | undefined, b: KanjiKnowledge): boolean {
+    if (!a) return false;
+    return a.method === b.method && a.step === b.step && sameKanjiSet(a.kanjiSet, b.kanjiSet);
+}
+
 export function quizReducer(state: QuizState, action: QuizAction): QuizState {
     switch (action.type) {
         case 'SETUP_COMPLETE':
@@ -199,14 +211,33 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             };
         }
 
-        case 'UPDATE_KANJI_KNOWLEDGE':
+        case 'UPDATE_KANJI_KNOWLEDGE': {
+            if (!state.progress) return state;
+
+            // Which vocabulary is optimal to learn next depends directly on which
+            // kanji the user knows, so a cached introCandidates buffer computed
+            // under the old kanji set is stale the moment that set changes - the
+            // same invalidation SAVE_SETTINGS does when the learning order changes.
+            // Clearing it makes selectNextView return no queue item, which drives
+            // useQuizOrchestration to re-run advanceQueue against the new knowledge.
+            const changed = !sameKanjiKnowledge(state.progress.kanjiKnowledge, action.payload);
+
+            // KanjiKnowledgeEditor fires its onChange on mount as well as on edit,
+            // so an unchanged payload must not discard a perfectly good buffer.
+            if (!changed) return state;
+
             return {
                 ...state,
                 progress: {
-                    ...state.progress!,
+                    ...state.progress,
                     kanjiKnowledge: action.payload,
                 },
+                introCandidates: [],
+                // A pending "unlock the next KKLC step" prompt was computed from the
+                // old kanji set too; advanceQueue re-derives it.
+                nextKanjiToLearn: null,
             };
+        }
 
         case 'OVERRIDE_DAILY_LIMIT':
             return {

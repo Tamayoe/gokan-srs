@@ -167,6 +167,54 @@ describe('quizReducer', () => {
         expect(next.introCandidates).toBe(candidates);
     });
 
+    it('UPDATE_KANJI_KNOWLEDGE clears introCandidates when the known kanji set changes', () => {
+        const state: QuizState = {
+            ...initialState,
+            progress: makeProgress(),
+            introCandidates: [makeVocab()],
+            nextKanjiToLearn: { step: 11, kanjis: ['月'] },
+        };
+        const next = quizReducer(state, {
+            type: 'UPDATE_KANJI_KNOWLEDGE',
+            payload: { method: 'kklc', step: 10, kanjiSet: new Set(['日', '月']) },
+        });
+
+        expect(next.introCandidates).toEqual([]);
+        expect(next.nextKanjiToLearn).toBeNull();
+        expect(next.progress!.kanjiKnowledge.kanjiSet.has('月')).toBe(true);
+    });
+
+    it('UPDATE_KANJI_KNOWLEDGE clears introCandidates when only the step changes', () => {
+        const state: QuizState = {
+            ...initialState,
+            progress: makeProgress(),
+            introCandidates: [makeVocab()],
+        };
+        const next = quizReducer(state, {
+            type: 'UPDATE_KANJI_KNOWLEDGE',
+            payload: { method: 'kklc', step: 500, kanjiSet: new Set(['日']) },
+        });
+
+        expect(next.introCandidates).toEqual([]);
+        expect(next.progress!.kanjiKnowledge.step).toBe(500);
+    });
+
+    it('UPDATE_KANJI_KNOWLEDGE is a no-op for an unchanged payload (the editor re-fires on mount)', () => {
+        const candidates = [makeVocab()];
+        const state: QuizState = {
+            ...initialState,
+            progress: makeProgress(),
+            introCandidates: candidates,
+        };
+        const next = quizReducer(state, {
+            type: 'UPDATE_KANJI_KNOWLEDGE',
+            payload: { method: 'kklc', step: 10, kanjiSet: new Set(['日']) },
+        });
+
+        expect(next).toBe(state);
+        expect(next.introCandidates).toBe(candidates);
+    });
+
     it('VOCAB_INTRO_CHOICE appends a new item to the learning queue', () => {
         const state: QuizState = { ...initialState, progress: makeProgress(), introCandidates: [makeVocab('v1')] };
         const next = quizReducer(state, { type: 'VOCAB_INTRO_CHOICE', vocabId: 'v1', choice: 'learn' });

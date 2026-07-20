@@ -1,0 +1,251 @@
+import { CONSTANTS } from "../commons/constants";
+import type { UserSettings } from "../models/user.model";
+import type { ReviewLog, SRSEntry, VocabProgress } from "../models/vocabulary.model";
+import { calculateMasteryPercentage } from "./srs.utils";
+
+const F = CONSTANTS.srs.formula;
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+/**
+ * "Knowledge points" are an internal accounting unit, not a user-facing score.
+ * They exist so the knowledge curve can express one number - "how much Japanese
+ * does this user hold right now" - that accumulates smoothly as items mature,
+ * instead of stepping only when a word is first introduced.
+ *
+ * One fully-mastered SRS entry (reading OR meaning) is worth
+ * KNOWLEDGE_POINTS_PER_ENTRY, so a word mastered in both directions is worth 200.
+ */
+export const KNOWLEDGE_POINTS_PER_ENTRY = 100;
+
+/**
+ * Points held by a single SRS entry at a given memory strength. Derived from the
+ * app's existing mastery curve (`calculateMasteryPercentage`, which spans 0..200
+ * across its two visual loops) so mastery and knowledge can never disagree about
+ * how far along an item is - there is one curve, normalised here to 0..100.
+ */
+export function entryKnowledgePoints(memoryStrength: number): number {
+    return (calculateMasteryPercentage(memoryStrength) / 200) * KNOWLEDGE_POINTS_PER_ENTRY;
+}
+
+/**
+ * Reconstruct the memory strength an entry held immediately after a logged review.
+ *
+ * ReviewLog stores `interval`, not `memoryStrength`, so we invert the interval
+ * formula from `SRSService.calculateNextState`:
+ *
+ *     interval = strength * lnTarget * adaptiveModifier * frequencyModifier
+ *
+ * followed by result-specific post-processing (wrong x0.3 with a 0.5d floor,
+ * minor_error x0.7) and a 1-day floor on success.
+ *
+ * The result multiplier is undone exactly, since `result` is logged. Two sources
+ * of approximation remain:
+ *  - the adaptive interval modifier in force at review time is not logged
+ *  - where a floor clamped the interval, the pre-clamp value is unrecoverable, so
+ *    very weak entries come out slightly over-estimated
+ *
+ * Both distort only the bottom of the curve, where an entry is worth a handful of
+ * points; the trend this graph exists to show (steady growth vs. stagnation) is
+ * unaffected.
+ */
+export function strengthFromLog(log: ReviewLog, frequencyModifier = 1): number {
+    let interval = log.interval;
+
+    if (log.result === 'wrong') {
+        interval /= F.postProcessIntervalMultipliers.wrong;
+    } else if (log.result === 'minor_error') {
+        interval /= F.postProcessIntervalMultipliers.minor_error;
+    }
+
+    const strength = interval / (F.lnTarget * (frequencyModifier || 1));
+    return Math.min(Math.max(strength, F.minMemoryStrength), F.mastery.maxMemoryStrength);
+}
+
+interface KnowledgeEvent {
+    /** Epoch ms at which the entry's point value changed. */
+    t: number;
+    /** Points held by the entry from this moment until the next event. */
+    p: number;
+}
+
+/**
+ * The point-value timeline for one SRS entry, oldest first.
+ *
+ * Note that `SRSEntry.history` is capped at the last 20 reviews, so for a heavily
+ * reviewed item the earliest logs are gone. Such an entry's timeline therefore
+ * starts at whatever it was worth 20 reviews ago rather than at zero, which
+ * slightly front-loads knowledge for mature words. It only affects words that are
+ * near mastery anyway, and only in the oldest part of the window.
+ */
+function entryEvents(
+    entry: SRSEntry,
+    introductionAt: Date | null,
+    frequencyModifier: number
+): KnowledgeEvent[] {
+    if (entry.history && entry.history.length > 0) {
+        return entry.history
+            .map(log => ({
+                t: new Date(log.date).getTime(),
+                p: entryKnowledgePoints(strengthFromLog(log, frequencyModifier)),
+            }))
+            .sort((a, b) => a.t - b.t);
+    }
+
+    // No history: either an item skipped at intro ("I already know this", set
+    // straight to max strength) or one introduced but not yet reviewed. Credit it
+    // at its introduction date using its actual strength - the latter is worth 0
+    // points, so only genuine skips move the curve.
+    if (introductionAt) {
+        const points = entryKnowledgePoints(entry.memoryStrength);
+        if (points > 0) return [{ t: new Date(introductionAt).getTime(), p: points }];
+    }
+
+    return [];
+}
+
+function startOfDay(t: number): number {
+    const d = new Date(t);
+    d.setHours(0, 0, 0, 0);
+    return d.getTime();
+}
+
+/** Whole days between two day-starts, DST-safe (a DST day is 23 or 25 hours). */
+function daysBetween(fromDayStart: number, toDayStart: number): number {
+    return Math.round((toDayStart - fromDayStart) / DAY_MS);
+}
+
+export interface KnowledgeCurvePoint {
+    date: Date;
+    /** Total knowledge points held at the end of this day. */
+    points: number;
+    /** Points gained (or lost, after failures) during this day. */
+    gain: number;
+}
+
+export interface KnowledgeCurve {
+    points: KnowledgeCurvePoint[];
+    /** Points held today - the last point on the curve. */
+    currentTotal: number;
+    /** Points gained across the whole window. */
+    gained: number;
+    /** Mean daily gain across the window. */
+    averagePerDay: number;
+    /** Gain on the best single day in the window. */
+    bestDayGain: number;
+    /** Days in the window with no gain at all - the stagnation signal. */
+    flatDays: number;
+}
+
+export type KnowledgeCurveRange = number | 'all';
+
+export interface BuildKnowledgeCurveOptions {
+    /** Window length in days, or 'all' to start at the earliest recorded event. */
+    range: KnowledgeCurveRange;
+    now?: Date;
+    settings?: UserSettings;
+}
+
+/**
+ * Build the cumulative knowledge curve over a time window.
+ *
+ * Rather than evaluating every entry on every day (O(entries x days)), each entry
+ * contributes only the *changes* in its point value to the day they happened on;
+ * a prefix sum over those daily deltas then yields the running total. Events that
+ * predate the window collapse into a single starting baseline.
+ */
+export function buildKnowledgeCurve(
+    queue: VocabProgress[],
+    options: BuildKnowledgeCurveOptions
+): KnowledgeCurve {
+    const nowMs = (options.now ?? new Date()).getTime();
+    const todayStart = startOfDay(nowMs);
+
+    const frequencyModifier = options.settings?.learningFrequency
+        ? CONSTANTS.srs.frequencyMultipliers[options.settings.learningFrequency]
+        : 1;
+
+    const series: KnowledgeEvent[][] = [];
+    let earliest = Infinity;
+
+    for (const vocab of queue) {
+        for (const entry of [vocab.reading, vocab.meaning]) {
+            if (!entry) continue;
+            const events = entryEvents(entry, vocab.introductionAt, frequencyModifier);
+            if (events.length === 0) continue;
+            series.push(events);
+            if (events[0].t < earliest) earliest = events[0].t;
+        }
+    }
+
+    // Step the window start back by calendar days rather than subtracting
+    // N * DAY_MS: across a DST boundary a fixed-millisecond offset lands an hour
+    // into the neighbouring day and would yield a window one day too long.
+    let normalisedStart: number;
+    if (options.range === 'all') {
+        // Clamped to today: if every recorded event is future-dated (clock skew on
+        // another synced device) the window must still be a valid, non-empty range.
+        normalisedStart = earliest === Infinity
+            ? todayStart
+            : Math.min(startOfDay(earliest), todayStart);
+    } else {
+        const start = new Date(todayStart);
+        start.setDate(start.getDate() - (Math.max(1, options.range) - 1));
+        normalisedStart = start.getTime();
+    }
+
+    const dayCount = Math.max(1, daysBetween(normalisedStart, todayStart) + 1);
+
+    let baseline = 0;
+    const deltas = new Array<number>(dayCount).fill(0);
+
+    for (const events of series) {
+        let previousPoints = 0;
+        for (const event of events) {
+            // Defensive: a clock-skewed or synced-from-the-future log must not
+            // extend the curve past today.
+            if (event.t > nowMs) continue;
+
+            const dayIndex = daysBetween(normalisedStart, startOfDay(event.t));
+            const delta = event.p - previousPoints;
+
+            if (dayIndex < 0) baseline += delta;
+            else if (dayIndex < dayCount) deltas[dayIndex] += delta;
+
+            previousPoints = event.p;
+        }
+    }
+
+    // Days before the user had any knowledge at all aren't "stagnation" - they're
+    // days that predate them starting. Only count flat days from the point the
+    // window actually becomes active.
+    const firstActiveDay = baseline > 0 ? 0 : deltas.findIndex(d => d !== 0);
+
+    const points: KnowledgeCurvePoint[] = [];
+    let running = baseline;
+    let bestDayGain = 0;
+    let flatDays = 0;
+
+    for (let i = 0; i < dayCount; i++) {
+        running += deltas[i];
+
+        const date = new Date(normalisedStart);
+        date.setDate(date.getDate() + i);
+
+        points.push({ date, points: Math.max(0, running), gain: deltas[i] });
+
+        if (deltas[i] > bestDayGain) bestDayGain = deltas[i];
+        if (deltas[i] <= 0 && firstActiveDay >= 0 && i >= firstActiveDay) flatDays++;
+    }
+
+    const currentTotal = points[points.length - 1].points;
+    const gained = currentTotal - Math.max(0, baseline);
+
+    return {
+        points,
+        currentTotal,
+        gained,
+        averagePerDay: gained / dayCount,
+        bestDayGain,
+        flatDays,
+    };
+}

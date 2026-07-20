@@ -6,9 +6,12 @@ import { VocabCardSkeleton } from "../../../components/VocabCardLoader";
 import { Search, ArrowDown, ArrowUp } from "lucide-react";
 import { Button } from "../../../components/ui/Button";
 import { romajiToHiragana, looksLikeRomaji } from "../../../utils/romaji";
+import { isVocabFullyMastered } from "../../../services/scheduling";
+import type { UserSettings } from "../../../models/user.model";
 
 interface SmartVocabListProps {
     progress: VocabProgress[];
+    settings?: UserSettings;
     onVocabClick?: (vocabId: string) => void;
 }
 
@@ -24,6 +27,7 @@ interface PersistedListState {
     sortField: SortField;
     sortDir: SortDirection;
     page: number;
+    showMastered: boolean;
 }
 
 function loadPersistedState(): Partial<PersistedListState> {
@@ -35,13 +39,17 @@ function loadPersistedState(): Partial<PersistedListState> {
     }
 }
 
-export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) {
+export function SmartVocabList({ progress, settings, onVocabClick }: SmartVocabListProps) {
     const [vocabCache, setVocabCache] = useState<Record<string, Vocabulary>>({});
 
     const persisted = useRef(loadPersistedState()).current;
     const [searchQuery, setSearchQuery] = useState(persisted.searchQuery ?? "");
     const [sortField, setSortField] = useState<SortField>(persisted.sortField ?? 'added_date');
     const [sortDir, setSortDir] = useState<SortDirection>(persisted.sortDir ?? 'desc');
+    // Mastered items are, by definition, the ones the user is done with - they'd
+    // otherwise dominate the list for anyone with real history. Hidden by default,
+    // but the count stays visible so it never looks like data went missing.
+    const [showMastered, setShowMastered] = useState(persisted.showMastered ?? false);
 
     const [page, setPage] = useState(persisted.page ?? 1);
     const ITEMS_PER_PAGE = 30;
@@ -60,9 +68,19 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
         return () => { mounted = false; };
     }, []);
 
+    const masteredCount = useMemo(
+        () => progress.filter(p => isVocabFullyMastered(p, settings)).length,
+        [progress, settings]
+    );
+
     // Filtering & Sorting
     const processedProgress = useMemo(() => {
         let pArray = [...progress];
+
+        // 0. Hide fully-mastered items unless explicitly asked for.
+        if (!showMastered) {
+            pArray = pArray.filter(p => !isVocabFullyMastered(p, settings));
+        }
 
         // 1. Search (matches kanji, reading, meaning; romaji is converted to kana
         //    so "nichi" matches にち)
@@ -125,7 +143,7 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
         });
 
         return pArray;
-    }, [progress, searchQuery, sortField, sortDir, vocabCache, frequencyRanks]);
+    }, [progress, searchQuery, sortField, sortDir, vocabCache, frequencyRanks, showMastered, settings]);
 
     // Pagination
     const totalPages = Math.ceil(processedProgress.length / ITEMS_PER_PAGE) || 1;
@@ -140,16 +158,16 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
             return;
         }
         setPage(1);
-    }, [searchQuery, sortField, sortDir]);
+    }, [searchQuery, sortField, sortDir, showMastered]);
 
     // Persist the list controls so returning from a vocab detail page restores them.
     useEffect(() => {
         try {
-            sessionStorage.setItem(LIST_STATE_KEY, JSON.stringify({ searchQuery, sortField, sortDir, page }));
+            sessionStorage.setItem(LIST_STATE_KEY, JSON.stringify({ searchQuery, sortField, sortDir, page, showMastered }));
         } catch {
             // sessionStorage unavailable (private mode / quota) - non-fatal.
         }
-    }, [searchQuery, sortField, sortDir, page]);
+    }, [searchQuery, sortField, sortDir, page, showMastered]);
 
     // Fetch all Vocab JSON files at once so search filters instantly
     useEffect(() => {
@@ -234,6 +252,19 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                 </div>
             </div>
 
+            {masteredCount > 0 && (
+                <label className="flex items-center gap-2 text-sm text-secondary cursor-pointer select-none -mt-1">
+                    <input
+                        type="checkbox"
+                        checked={showMastered}
+                        onChange={(e) => setShowMastered(e.target.checked)}
+                        className="accent-accent w-4 h-4"
+                    />
+                    Show mastered
+                    <span className="text-tertiary">({masteredCount})</span>
+                </label>
+            )}
+
             {/* List */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {displayedItems.map((p) => {
@@ -250,7 +281,9 @@ export function SmartVocabList({ progress, onVocabClick }: SmartVocabListProps) 
                 })}
                 {displayedItems.length === 0 && (
                     <div className="col-span-full py-12 text-center text-tertiary">
-                        No vocabulary found.
+                        {!showMastered && masteredCount > 0
+                            ? 'No unmastered vocabulary found. Enable "Show mastered" to include mastered words.'
+                            : 'No vocabulary found.'}
                     </div>
                 )}
             </div>

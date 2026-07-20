@@ -103,6 +103,7 @@ gokan-srs/
 │   │   ├── setup/            # Initial setup wizard
 │   │   ├── settings/         # App settings
 │   │   ├── profile/          # User profile
+│   │   ├── stats/            # Statistics screen + charts (see Application Pages)
 │   │   └── about/            # About page
 │   ├── services/             # Business logic
 │   │   ├── srs.service.ts    # SRS algorithm (formula only)
@@ -120,6 +121,7 @@ gokan-srs/
 │   │   └── quiz.service.ts
 │   ├── utils/                # Helper functions
 │   │   ├── srs.utils.ts
+│   │   ├── knowledge.utils.ts # Knowledge-points model + cumulative curve builder
 │   │   └── quiz.utils.ts
 │   ├── App.tsx               # Root component with routing
 │   ├── main.tsx              # Entry point
@@ -389,7 +391,7 @@ Note: there is **no `sessionQueue`/`sessionBuiltAt` field**. A prior "frozen ses
 - `UPDATE_AFTER_ANSWER`: Apply the (already-computed) SRS update after `continueToNext`
 - `ADVANCE_QUEUE`: Move to next vocab item / fetch intro candidates
 - `SAVE_SETTINGS`: Update user settings (clears `introCandidates` if the learning order changed)
-- `UPDATE_KANJI_KNOWLEDGE`: Update known kanji
+- `UPDATE_KANJI_KNOWLEDGE`: Update known kanji. Clears `introCandidates` and `nextKanjiToLearn` when the knowledge actually changed (method, step, or kanji set), since which vocabulary is optimal to learn next depends directly on the known kanji - the same invalidation `SAVE_SETTINGS` performs on a learning-order change. Returns state **unchanged** for an identical payload, because `KanjiKnowledgeEditor` fires its `onChange` on mount as well as on edit and must not discard a valid buffer (or loop).
 - `OVERRIDE_DAILY_LIMIT`: Bypass daily new vocab limit (legacy - the limit itself is effectively disabled)
 - `VOCAB_INTRO_CHOICE`: Handle Learn/Skip on intro card
 - `SET_NEXT_KANJI` / `LEARN_NEXT_KANJI`: KKLC step-unlock flow
@@ -445,6 +447,14 @@ Calls `actions.setupComplete()` when done.
 
 - View/edit kanji knowledge
 - Update known kanji set
+
+### Statistics Screen (`pages/stats/StatsScreen.tsx`)
+
+- `StatsOverview` - headline counters (including Kanji Coverage)
+- `KnowledgeCurveChart` - cumulative knowledge held over time (steady growth vs. plateau); see `utils/knowledge.utils.ts`
+- `DailyProgressionChart` - per-day review activity (correct/incorrect), last 14 days
+- `ReviewForecast` - upcoming review load
+- `SmartVocabList` - searchable/sortable/paginated vocabulary list. Fully-mastered items are **hidden by default** (via `isVocabFullyMastered`) behind a "Show mastered (N)" checkbox; search/sort/page/showMastered all persist in `sessionStorage` so returning from a vocab detail page restores the list
 
 ---
 
@@ -532,6 +542,7 @@ bun run build:jpdb   # Convert JPDB TSV to JSON
 - `src/services/sync/mergeProgress.test.ts` - Per-entry merge tests, including the core fix: a device that only reviewed reading can never clobber another device's meaning review
 - `src/services/sync/driveClient.test.ts` - Drive REST wrapper tests (auth-error translation)
 - `src/services/sync/googleDriveSync.test.ts` - CAS retry-on-conflict, duplicate-file reconciliation, write-once remote backup
+- `src/utils/knowledge.utils.test.ts` - Knowledge-points model tests: mastery-curve normalisation (a vocab mastered in reading + meaning is worth exactly 200), the interval→strength inversion (including undoing the `wrong`/`minor_error` post-processing multipliers and the frequency modifier), and curve construction (per-day bucketing, pre-window baseline collapsing, skipped-vocab crediting, knowledge loss after a failure, future-dated-log rejection)
 - `scripts/build-vocabulary.test.ts` - Data integrity tests
   - Validates all vocab IDs in KKLC index have corresponding files
   - Validates all vocab IDs in frequency index have corresponding files
@@ -680,6 +691,17 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-07-20]**:
+  - **Knowledge Curve** (`utils/knowledge.utils.ts`, `pages/stats/components/KnowledgeCurveChart.tsx`): New cumulative graph on the Statistics screen answering "am I still climbing or have I plateaued", distinct from the existing Daily Progression chart (which counts review *activity*, not knowledge *held*).
+    - **Knowledge points** are an internal accounting unit, deliberately **not** surfaced as a user-facing score. One SRS entry (reading OR meaning) at full mastery is worth `KNOWLEDGE_POINTS_PER_ENTRY` (100), so a word mastered in both directions is worth 200. `entryKnowledgePoints` derives this from the existing `calculateMasteryPercentage` (which spans 0..200 across its two visual loops) normalised to 0..100 - deliberately reusing the one mastery curve rather than introducing a second, divergent notion of "how far along is this item".
+    - **Historical reconstruction**: `ReviewLog` stores `interval`, not `memoryStrength`, so `strengthFromLog` inverts the interval formula from `calculateNextState` (`interval = strength * lnTarget * modifiers`). The result-specific post-processing (`wrong` x0.3, `minor_error` x0.7) is undone **exactly**, since `result` is logged; the current frequency modifier is divided out. Two approximations remain and are documented in-code: the adaptive interval modifier at review time isn't logged, and where a floor clamped the interval the pre-clamp value is unrecoverable. Both distort only the bottom of the curve.
+    - **Known limitation**: `SRSEntry.history` is capped at the last 20 reviews (`calculateNextState` does `.slice(-20)`), so a heavily-reviewed item's earliest logs no longer exist. Such an entry's timeline starts at whatever it was worth 20 reviews ago rather than at zero, slightly front-loading knowledge for mature words in the oldest part of a long window. Accepted: it affects only near-mastered words, and the trend the graph exists to show is unaffected.
+    - Entries with **no history** (a vocab skipped at intro as "already known", set straight to max strength) are credited in full at their `introductionAt`. An introduced-but-unreviewed item sits at `minMemoryStrength`, which is worth 0 points, so it correctly doesn't move the curve.
+    - **Performance**: the curve is built by accumulating per-entry point *changes* into the day they occurred and prefix-summing, rather than evaluating every entry on every day. Events predating the window collapse into a single starting baseline (so `gained` reports only what was earned *inside* the window, while the curve still starts at the right height). Window starts step back by calendar days, not `N * DAY_MS`, so a DST boundary can't produce a window one day too long.
+    - Chart follows the dataviz method: single cumulative series (no legend needed), solid hairline grid, crosshair + tooltip hover layer, a range filter (30d / 90d / 1y / All) above the plot, a direct endpoint label and hero figure so values are readable without hovering, and a `<details>` table view aggregated to ~8 rows. Colors are the CSS custom properties (`var(--accent)`, `var(--divider)`) rather than the light-mode-only `THEME` hexes, so dark mode works.
+  - **Fix - changing known kanji didn't recalculate the next optimal vocab**: editing the kanji count/set on the Profile screen left the pre-fetched `introCandidates` buffer (3 items) in place, so the quiz kept offering vocabulary chosen for the *old* kanji set. Changing the learning order already invalidated this buffer (`SAVE_SETTINGS`), but `UPDATE_KANJI_KNOWLEDGE` did not - the same bug class as the `[2026-05-13]` intro-candidates entry. Fixed by clearing `introCandidates` (and the stale `nextKanjiToLearn` prompt) when the knowledge actually changed. The reducer compares content (method, step, kanji-set membership) and returns state **unchanged** on an identical payload, because `KanjiKnowledgeEditor` fires `onChange` on mount too.
+  - **Fix - mastered vocabulary now hidden by default in the vocabulary list** (`SmartVocabList`): fully-mastered items are the ones the user is done with, and they dominate the list for anyone with real history. They're now filtered out by default via `isVocabFullyMastered` (from `scheduling.ts`, so the definition matches the scheduler's rather than being reimplemented), with a "Show mastered (N)" checkbox to bring them back. The count stays visible so it never looks like data went missing, the preference persists alongside the other list controls in `sessionStorage`, and the empty state explains itself when everything matching is hidden.
 
 - **[2026-07-19]**:
   - **Infinite auto-upload sync loop fix** (`sync-loop-investigation.md`): When logged into Google Drive, the auto-upload effect fired continuously. Three independent defects each sustained the loop, all fixed:
