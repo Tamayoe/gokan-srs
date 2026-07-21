@@ -1,9 +1,11 @@
 import type { VocabProgress } from '../../models/vocabulary.model';
 import type { Sentence } from '../../models/sentence.model';
 import type { SessionState } from '../../models/state.model';
-import { CONSTANTS } from '../../commons/constants';
-import { getNextVocabToStudy } from '../../utils/srs.utils';
-import type { QuizState, PendingQuizItem } from './quizReducer';
+import type { UserSettings } from '../../models/user.model';
+import { getNextVocabToStudy, isReadingActionable, isMeaningActionable } from '../../utils/srs.utils';
+import type { QuizType } from '../../utils/srs.utils';
+import type { QuizState, PendingQuizItem, TaskKey } from './quizReducer';
+import { taskKey } from './quizReducer';
 
 /**
  * Single source of truth for "what should the quiz screen show right now".
@@ -81,35 +83,94 @@ export function selectCurrentSentence(
     return state.currentSentences.find(s => s.id === state.currentSentenceId) ?? null;
 }
 
+/** Every quiz task actionable right now, as task keys (`vocabId:quizType`). */
+export function collectActionableTaskKeys(
+    queue: VocabProgress[],
+    settings: UserSettings | undefined,
+    now: Date
+): TaskKey[] {
+    const keys: TaskKey[] = [];
+    for (const v of queue) {
+        if (isReadingActionable(v, now)) keys.push(taskKey(v.vocabId, 'reading'));
+        if (isMeaningActionable(v, settings, now)) keys.push(taskKey(v.vocabId, 'meaning'));
+    }
+    return keys;
+}
+
+function parseTaskKey(key: TaskKey): { vocabId: string; quizType: QuizType } {
+    const idx = key.lastIndexOf(':');
+    return { vocabId: key.slice(0, idx), quizType: key.slice(idx + 1) as QuizType };
+}
+
 export interface SessionStats {
+    /** Committed session tasks the user has cleared (answered, deferred, or graduated out). */
     done: number;
-    remaining: number;
+    /** Size of the committed session task set - the stable progress denominator. */
     total: number;
+    /** Committed tasks currently awaiting a retry (a wrong answer this session). Shown highlighted. */
+    retriesPending: number;
+    /** Distinct vocab with tasks due now that are NOT part of this session (came due mid-session). */
+    waiting: number;
+    /** True when brand-new vocab can still be learned beyond this session (the "+" in "n+ waiting"). */
+    moreNew: boolean;
 }
 
 /**
- * Session-progress bookkeeping. There is no daily new-vocab cap anymore
- * (CONSTANTS.srs.dailyNewLimit is effectively infinite), so "remaining new
- * items" isn't a bounded number - when in 'learn' mode with nothing due we
- * surface one batch's worth as a stable estimate instead of a dead limit constant.
+ * Session-progress bookkeeping, computed against the session's frozen committed
+ * task set (see SessionTracking) rather than the live due count.
+ *
+ * The previous implementation derived `total` from `done + liveDueReviews`, which
+ * shrank on every wrong answer: a wrong answer pushes the item's due date ~12h out
+ * (so it leaves `liveDueReviews`) without incrementing `done` (wrong answers were
+ * filtered out), and the pending retry was never re-counted. The denominator
+ * therefore ticked *down* as the user worked. Now `total` is the committed set's
+ * fixed size; `done` counts committed tasks that are no longer actionable; retries
+ * and mid-session arrivals are surfaced separately instead of corrupting the total.
  */
 export function selectSessionStats(
-    state: Pick<QuizState, 'progress' | 'sessionHistory'>,
-    sessionState: SessionState,
+    state: Pick<QuizState, 'progress' | 'settings' | 'session'>,
+    hasMoreLearnable: boolean,
     now: Date = new Date()
 ): SessionStats {
-    if (!state.progress) return { done: 0, remaining: 0, total: 0 };
+    const empty: SessionStats = { done: 0, total: 0, retriesPending: 0, waiting: 0, moreNew: hasMoreLearnable };
+    if (!state.progress) return empty;
 
-    const done = state.sessionHistory.filter(h => h.result !== 'wrong').length;
+    const committed = state.session?.committed ?? [];
+    const committedSet = new Set<TaskKey>(committed);
+    const total = committedSet.size;
 
-    const dueReviews = state.progress.learningQueue.filter(
-        v => v.nextReviewAt && v.nextReviewAt <= now
-    ).length;
+    const queue = state.progress.learningQueue;
+    const byId = new Map(queue.map(v => [v.vocabId, v]));
 
-    let remaining = dueReviews;
-    if (sessionState === 'learn' && dueReviews === 0) {
-        remaining += CONSTANTS.srs.newVocabBatchSize;
+    const actionable = collectActionableTaskKeys(queue, state.settings ?? undefined, now);
+    const actionableSet = new Set<TaskKey>(actionable);
+
+    // A committed task is "done" once it is no longer actionable (answered correctly,
+    // deferred by the reading→meaning stagger, or graduated). Still-actionable
+    // committed tasks are either not yet answered or awaiting a retry.
+    let done = 0;
+    let retriesPending = 0;
+    for (const key of committedSet) {
+        if (!actionableSet.has(key)) {
+            done++;
+            continue;
+        }
+        const { vocabId, quizType } = parseTaskKey(key);
+        if (byId.get(vocabId)?.needsRetry?.[quizType]) retriesPending++;
     }
 
-    return { done, remaining, total: done + remaining };
+    // Reviews that came due AFTER the session started (not committed) don't inflate
+    // the total - they're reported as vocab waiting for a future session.
+    const waitingVocab = new Set<string>();
+    for (const key of actionableSet) {
+        if (!committedSet.has(key)) waitingVocab.add(parseTaskKey(key).vocabId);
+    }
+
+    return {
+        done,
+        total,
+        retriesPending,
+        waiting: waitingVocab.size,
+        moreNew: hasMoreLearnable,
+    };
 }

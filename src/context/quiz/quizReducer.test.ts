@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { quizReducer, initialState } from './quizReducer';
+import { quizReducer, initialState, taskKey } from './quizReducer';
 import type { QuizState } from './quizReducer';
 import type { UserProgress } from '../../models/user.model';
 import type { Vocabulary, VocabProgress } from '../../models/vocabulary.model';
@@ -213,6 +213,55 @@ describe('quizReducer', () => {
 
         expect(next).toBe(state);
         expect(next.introCandidates).toBe(candidates);
+    });
+
+    it('SESSION_START stores the committed task set', () => {
+        const keys = [taskKey('v1', 'reading'), taskKey('v2', 'meaning')];
+        const next = quizReducer(initialState, { type: 'SESSION_START', payload: { taskKeys: keys } });
+        expect(next.session).toEqual({ committed: keys });
+    });
+
+    it('SESSION_END clears an active session', () => {
+        const state: QuizState = { ...initialState, session: { committed: [taskKey('v1', 'reading')] } };
+        expect(quizReducer(state, { type: 'SESSION_END' }).session).toBeNull();
+    });
+
+    it('SESSION_END is a no-op (same reference) when there is no active session', () => {
+        const next = quizReducer(initialState, { type: 'SESSION_END' });
+        expect(next).toBe(initialState);
+    });
+
+    it('VOCAB_INTRO_CHOICE "learn" adds the reading task to the active session', () => {
+        const state: QuizState = {
+            ...initialState,
+            progress: makeProgress(),
+            introCandidates: [makeVocab('v1')],
+            session: { committed: [] },
+        };
+        const next = quizReducer(state, { type: 'VOCAB_INTRO_CHOICE', vocabId: 'v1', choice: 'learn', vocabulary: makeVocab('v1') });
+        expect(next.session?.committed).toEqual([taskKey('v1', 'reading')]);
+    });
+
+    it('VOCAB_INTRO_CHOICE "skip" adds nothing to the session (skips graduate immediately)', () => {
+        const state: QuizState = {
+            ...initialState,
+            progress: makeProgress(),
+            introCandidates: [makeVocab('v1')],
+            session: { committed: [] },
+        };
+        const next = quizReducer(state, { type: 'VOCAB_INTRO_CHOICE', vocabId: 'v1', choice: 'skip', vocabulary: makeVocab('v1') });
+        expect(next.session?.committed).toEqual([]);
+    });
+
+    it('VOCAB_INTRO_CHOICE leaves the session untouched when none is active', () => {
+        const state: QuizState = {
+            ...initialState,
+            progress: makeProgress(),
+            introCandidates: [makeVocab('v1')],
+            session: null,
+        };
+        const next = quizReducer(state, { type: 'VOCAB_INTRO_CHOICE', vocabId: 'v1', choice: 'learn', vocabulary: makeVocab('v1') });
+        expect(next.session).toBeNull();
     });
 
     it('VOCAB_INTRO_CHOICE appends a new item to the learning queue', () => {

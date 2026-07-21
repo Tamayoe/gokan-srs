@@ -21,6 +21,45 @@ export interface QuizItem {
  * 4. New Intros (Batch 3, if allowed)
  * 5. First Reviews (Newly introduced, not yet tested)
  */
+/**
+ * Is this vocab's READING quiz actionable right now (first review, due review, or
+ * a pending reading retry)? Single source of truth shared by queue selection and
+ * the session-progress counter, so the two can never disagree about what counts
+ * as "a quiz the user has to do now".
+ */
+export function isReadingActionable(v: VocabProgress, now: Date = new Date()): boolean {
+    const isFirstReview =
+        v.totalReviews === 0 &&
+        v.introductionAt !== null &&
+        v.nextReviewAt !== null &&
+        v.nextReviewAt <= now &&
+        v.stage !== 'graduated';
+
+    const isDueReading =
+        v.totalReviews > 0 &&
+        v.reading.dueDate !== null &&
+        v.reading.dueDate <= now;
+
+    return isFirstReview || isDueReading || v.needsRetry?.reading === true;
+}
+
+/** Is this vocab's MEANING quiz actionable right now (due review or pending retry)?
+ *  Always false when meaning quizzes are disabled in settings. */
+export function isMeaningActionable(
+    v: VocabProgress,
+    settings: UserSettings | undefined,
+    now: Date = new Date()
+): boolean {
+    if (!isMeaningQuizEnabled(settings)) return false;
+
+    const isDueMeaning =
+        v.totalReviews > 0 &&
+        v.meaning.dueDate !== null &&
+        v.meaning.dueDate <= now;
+
+    return isDueMeaning || v.needsRetry?.meaning === true;
+}
+
 export function getNextVocabToStudy(
     queue?: VocabProgress[],
     settings?: UserSettings,
@@ -30,23 +69,7 @@ export function getNextVocabToStudy(
 
     // 1. Priority: ALL Readings (First Reviews + Due Readings + Retries)
     // We want to clear all reading quizzes before moving to meanings.
-    const allReadings = queue.filter(v => {
-        // Condition A: First Review (newly learned)
-        const isFirstReview =
-            v.totalReviews === 0 &&
-            v.introductionAt !== null &&
-            v.nextReviewAt !== null &&
-            v.nextReviewAt <= now &&
-            v.stage !== 'graduated';
-
-        // Condition B: Due Reading Review
-        const isDueReading =
-            v.totalReviews > 0 &&
-            v.reading.dueDate !== null &&
-            v.reading.dueDate <= now;
-
-        return isFirstReview || isDueReading || v.needsRetry?.reading === true;
-    });
+    const allReadings = queue.filter(v => isReadingActionable(v, now));
 
     if (allReadings.length > 0) {
         return { vocab: pickStable(allReadings)!, quizType: 'reading', quizMode: 'base' };
@@ -54,12 +77,7 @@ export function getNextVocabToStudy(
 
     // 3. Priority: Due Meanings (IF ENABLED)
     if (isMeaningQuizEnabled(settings)) {
-        const dueMeanings = queue.filter(v =>
-            (v.totalReviews > 0 &&
-                v.meaning.dueDate !== null &&
-                v.meaning.dueDate <= now) ||
-            v.needsRetry?.meaning === true
-        );
+        const dueMeanings = queue.filter(v => isMeaningActionable(v, settings, now));
         if (dueMeanings.length > 0) {
             const vocab = pickStable(dueMeanings)!;
             const mastery = calculateMasteryPercentage(vocab.meaning.memoryStrength);
