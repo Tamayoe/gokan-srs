@@ -16,7 +16,7 @@ import { mergeProgress, mergeSettings } from '../../services/sync/mergeProgress'
 import type { ProgressWithMetadata } from '../../services/sync/types';
 import { useGoogleDrive } from '../GoogleDriveContext';
 import type { QuizState, QuizAction } from './quizReducer';
-import { selectNextView, selectCurrentProgress } from './quizSelectors';
+import { selectNextView, selectCurrentProgress, selectSessionStats, collectActionableTaskKeys } from './quizSelectors';
 import { progressUploadSignature, stableStringify } from "../../services/progressSerialization";
 
 export interface QuizActions {
@@ -119,6 +119,30 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
     );
 
     const currentProgress = useMemo(() => selectCurrentProgress(state), [state.currentVocab, state.progress]);
+
+    const sessionStats = useMemo(
+        () => selectSessionStats(state, hasMoreLearnable),
+        [state.progress, state.settings, state.session, hasMoreLearnable]
+    );
+
+    /* ---------- Session lifecycle ---------- */
+
+    // A "session" is the current continuous run of studying. It begins the moment
+    // there is work to do (review/learn) and ends when the user runs out (waiting/
+    // exhausted). On start we snapshot the tasks due right then as the session's
+    // committed workload; SessionProgress counts against that fixed set. Snapshotting
+    // here (rather than in the reducer) keeps the reducer free of Date.now().
+    useEffect(() => {
+        if (!state.progress || !state.settings) return;
+        const active = nextView.sessionState === 'review' || nextView.sessionState === 'learn';
+
+        if (active && !state.session) {
+            const taskKeys = collectActionableTaskKeys(state.progress.learningQueue, state.settings, new Date());
+            dispatch({ type: 'SESSION_START', payload: { taskKeys } });
+        } else if (!active && state.session) {
+            dispatch({ type: 'SESSION_END' });
+        }
+    }, [nextView.sessionState, state.session, state.progress, state.settings]);
 
     /* =========================
        ACTIONS
@@ -575,5 +599,5 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         isReady: !!state.currentVocab && !state.isLoadingVocab && !state.isEvaluatingAi,
     };
 
-    return { actions, nextView, currentProgress, computed };
+    return { actions, nextView, currentProgress, computed, sessionStats };
 }

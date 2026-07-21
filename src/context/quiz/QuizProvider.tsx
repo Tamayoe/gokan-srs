@@ -9,6 +9,7 @@ import type { SessionState } from '../../models/state.model';
 import { QuizContext } from '../useQuiz';
 import { quizReducer, initialState } from './quizReducer';
 import type { QuizState } from './quizReducer';
+import type { SessionStats } from './quizSelectors';
 import { useQuizOrchestration } from './useQuizOrchestration';
 
 export interface QuizContextValue {
@@ -19,6 +20,8 @@ export interface QuizContextValue {
     /** True when the currently-loaded vocab hasn't been introduced yet and should show the intro card. */
     shouldShowIntro: boolean;
     isSetupComplete: boolean;
+    /** Progress counter for the active study session (done/total, retries, waiting). */
+    sessionStats: SessionStats;
 
     actions: {
         setupComplete(values: SetupValues): Promise<void>;
@@ -48,7 +51,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         settings: StorageService.loadSettings() ?? DEFAULT_SETTINGS,
     });
 
-    const { actions, nextView, currentProgress, computed } = useQuizOrchestration(state, dispatch);
+    const { actions, nextView, currentProgress, computed, sessionStats } = useQuizOrchestration(state, dispatch);
 
     return (
         <QuizContext.Provider
@@ -59,6 +62,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 currentProgress,
                 shouldShowIntro: nextView.shouldShowIntro,
                 isSetupComplete: !!state.progress,
+                sessionStats,
                 actions,
                 computed,
             }}

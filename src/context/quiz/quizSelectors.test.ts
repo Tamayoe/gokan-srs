@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { selectNextView, selectCurrentProgress, selectCurrentSentence, selectSessionStats } from './quizSelectors';
-import { initialState } from './quizReducer';
-import type { QuizState } from './quizReducer';
+import { initialState, taskKey } from './quizReducer';
+import type { QuizState, TaskKey } from './quizReducer';
 import type { UserProgress, UserSettings } from '../../models/user.model';
 import type { Vocabulary, VocabProgress } from '../../models/vocabulary.model';
 import { DEFAULT_VOCABULARY_PROGRESS } from '../../models/vocabulary.model';
@@ -187,29 +187,84 @@ describe('selectCurrentSentence', () => {
 });
 
 describe('selectSessionStats', () => {
-    it('counts non-wrong history entries as done, and due items as remaining', () => {
-        const dueItem = makeVocabProgress({ nextReviewAt: past });
-        const state = {
-            progress: makeProgress([dueItem]),
-            sessionHistory: [
-                { vocabId: 'a', writtenForm: 'a', result: 'correct' as const, delta: 1 },
-                { vocabId: 'b', writtenForm: 'b', result: 'wrong' as const, delta: -1 },
-            ],
-        };
-        const stats = selectSessionStats(state, 'review', now);
-        expect(stats.done).toBe(1); // only the 'correct' entry counts
-        expect(stats.remaining).toBe(1); // the due item
-        expect(stats.total).toBe(2);
-    });
+    const settings = makeSettings();
 
-    it('adds a stable batch-size estimate for remaining when in learn mode with nothing due', () => {
-        const state = { progress: makeProgress([]), sessionHistory: [] };
-        const stats = selectSessionStats(state, 'learn', now);
-        expect(stats.remaining).toBe(CONSTANTS.srs.newVocabBatchSize);
-    });
+    // Build vocab with fully explicit reading/meaning entries. Note: DEFAULT_VOCABULARY_PROGRESS
+    // holds SHARED nested reading/meaning objects, and other test files mutate them - so these
+    // helpers must not lean on those defaults for the very fields under test (dueDate).
+    function entry(dueDate: Date | null) {
+        return { memoryStrength: 1, interval: 0, difficulty: 0.3, lastReviewedAt: null, dueDate, history: [] };
+    }
+
+    function vocab(
+        id: string,
+        opts: { readingDue?: Date | null; meaningDue?: Date | null; needsRetry?: VocabProgress['needsRetry']; totalReviews?: number } = {}
+    ): VocabProgress {
+        return {
+            ...DEFAULT_VOCABULARY_PROGRESS,
+            vocabId: id,
+            stage: 'learning',
+            introductionAt: past,
+            totalReviews: opts.totalReviews ?? 1,
+            reading: entry(opts.readingDue ?? null),
+            meaning: entry(opts.meaningDue ?? null),
+            needsRetry: opts.needsRetry,
+        };
+    }
+
+    function stateWith(queue: VocabProgress[], committed: TaskKey[]) {
+        return { progress: makeProgress(queue), settings, session: { committed } };
+    }
 
     it('returns zeros without progress', () => {
-        const stats = selectSessionStats({ progress: null, sessionHistory: [] }, 'exhausted', now);
-        expect(stats).toEqual({ done: 0, remaining: 0, total: 0 });
+        const stats = selectSessionStats({ progress: null, settings, session: null }, false, now);
+        expect(stats).toEqual({ done: 0, total: 0, retriesPending: 0, waiting: 0, moreNew: false });
+    });
+
+    it('total is the committed set size; done counts committed tasks that are no longer actionable', () => {
+        const stillDue = vocab('a', { readingDue: past });
+        // 'b' was answered this session - its reading due date has been pushed to the future.
+        const answered = vocab('b', { readingDue: future });
+        const state = stateWith([stillDue, answered], [taskKey('a', 'reading'), taskKey('b', 'reading')]);
+
+        const stats = selectSessionStats(state, false, now);
+        expect(stats.total).toBe(2);
+        expect(stats.done).toBe(1);
+        expect(stats.retriesPending).toBe(0);
+    });
+
+    it('counts a pending retry without shrinking the total (the core regression)', () => {
+        // A wrong answer pushes the due date ~12h out (so the item is no longer "due")
+        // but sets needsRetry - the task is still actionable and must not leave the total.
+        const retryItem = vocab('a', { readingDue: future, needsRetry: { reading: true } });
+        const state = stateWith([retryItem], [taskKey('a', 'reading')]);
+
+        const stats = selectSessionStats(state, false, now);
+        expect(stats.total).toBe(1);
+        expect(stats.done).toBe(0);
+        expect(stats.retriesPending).toBe(1);
+    });
+
+    it('reviews that came due after the session started are counted as waiting, not in the total', () => {
+        const committedItem = vocab('a', { readingDue: past });
+        const newlyDue = vocab('b', { readingDue: past });
+        const state = stateWith([committedItem, newlyDue], [taskKey('a', 'reading')]);
+
+        const stats = selectSessionStats(state, false, now);
+        expect(stats.total).toBe(1);
+        expect(stats.waiting).toBe(1);
+    });
+
+    it('moreNew mirrors hasMoreLearnable (the "+" in "n+ vocab waiting")', () => {
+        const state = stateWith([], []);
+        expect(selectSessionStats(state, true, now).moreNew).toBe(true);
+        expect(selectSessionStats(state, false, now).moreNew).toBe(false);
+    });
+
+    it('with no active session, total is 0 and live due items surface as waiting', () => {
+        const state = { progress: makeProgress([vocab('a', { readingDue: past })]), settings, session: null };
+        const stats = selectSessionStats(state, false, now);
+        expect(stats.total).toBe(0);
+        expect(stats.waiting).toBe(1);
     });
 });

@@ -16,6 +16,25 @@ import type { QuizItem, QuizType, QuizMode } from '../../utils/srs.utils';
 // Union type for items we are about to study (Queue Item OR Intro Candidate)
 export type PendingQuizItem = QuizItem | { vocabId: string; quizType: QuizType; quizMode: QuizMode; vocab?: undefined };
 
+/** A task key uniquely identifies one quiz to answer: `${vocabId}:${quizType}`. */
+export type TaskKey = `${string}:${QuizType}`;
+
+export function taskKey(vocabId: string, quizType: QuizType): TaskKey {
+    return `${vocabId}:${quizType}`;
+}
+
+/**
+ * The set of quiz tasks committed to the CURRENT study session, captured once when
+ * the session begins (all tasks due at that moment) and extended only by the user's
+ * own "Learn" choices. It never grows from background reviews coming due mid-session
+ * - those are surfaced separately as "waiting after this session". This is what
+ * keeps the session-progress counter's denominator stable instead of tracking the
+ * live, ever-shifting due count (which shrank on every wrong answer).
+ */
+export interface SessionTracking {
+    committed: TaskKey[];
+}
+
 export interface QuizState {
     progress: UserProgress | null;
     settings: UserSettings | null;
@@ -41,6 +60,8 @@ export interface QuizState {
         result: AnswerResult;
         delta: number;
     }>;
+    /** Task set of the active study session (null between sessions). See SessionTracking. */
+    session: SessionTracking | null;
     fatalError: string | null;
 }
 
@@ -63,6 +84,8 @@ export type QuizAction =
     | { type: 'SET_NEXT_KANJI'; payload: { step: number; kanjis: string[] } | null; }
     | { type: 'LEARN_NEXT_KANJI'; payload: UserProgress }
     | { type: 'RESET_DAILY_STATS' }
+    | { type: 'SESSION_START'; payload: { taskKeys: TaskKey[] } }
+    | { type: 'SESSION_END' }
     | { type: 'RECONCILE_REMOTE'; payload: { progress: UserProgress; settings: UserSettings } };
 
 export const initialState: QuizState = {
@@ -79,6 +102,7 @@ export const initialState: QuizState = {
     introCandidates: [],
     nextKanjiToLearn: null,
     sessionHistory: [],
+    session: null,
     fatalError: null,
 };
 
@@ -250,6 +274,14 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'RESET':
             return { ...initialState };
 
+        case 'SESSION_START':
+            // Snapshot the session's committed task set. Computed with `now` in the
+            // orchestration layer (keeping this reducer free of Date.now) and passed in.
+            return { ...state, session: { committed: action.payload.taskKeys } };
+
+        case 'SESSION_END':
+            return state.session ? { ...state, session: null } : state;
+
         case 'RECONCILE_REMOTE':
             // The merge itself (reconciling remote changes against whatever the user
             // is doing right now) already happened in useQuizOrchestration before this
@@ -304,6 +336,19 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 ];
             }
 
+            // A word the user chooses to Learn becomes part of the current session's
+            // committed workload (its reading is now due immediately). Skipped words
+            // graduate straight away and never produce a quiz, so they add nothing.
+            // Meaning is staggered +12h and typically lands after this session, so it
+            // is intentionally left to surface as "waiting" rather than inflating the total.
+            let nextSession = state.session;
+            if (nextSession && action.choice === 'learn') {
+                const key = taskKey(action.vocabId, 'reading');
+                if (!nextSession.committed.includes(key)) {
+                    nextSession = { committed: [...nextSession.committed, key] };
+                }
+            }
+
             return {
                 ...state,
                 progress: {
@@ -316,6 +361,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     }
                 },
                 introCandidates: nextCandidates,
+                session: nextSession,
             };
         }
 

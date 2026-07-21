@@ -1,21 +1,49 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { useQuiz } from '../context/useQuiz';
 import { useResponsive } from '../context/Responsive/useResponsive';
-import { selectSessionStats } from '../context/quiz/quizSelectors';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+/**
+ * The `done / total` counter, with two extra signals the flat count can't show:
+ *  - retries (highlighted, appended to the total): committed tasks the user got
+ *    wrong this session and still has to redo.
+ *  - waiting: reviews that came due AFTER this session started - deliberately kept
+ *    out of the total so the denominator stays stable, surfaced as "n+ waiting".
+ */
+const SessionCounter: React.FC<{
+    done: number;
+    total: number;
+    retriesPending: number;
+}> = ({ done, total, retriesPending }) => (
+    <span className="tabular-nums">
+        {done} <span className="text-secondary-400 font-normal">/ {total}</span>
+        {retriesPending > 0 && (
+            <span className="text-desaturated-red-600 font-normal" title="Answers to redo before this session is complete">
+                {' '}+{retriesPending}
+            </span>
+        )}
+    </span>
+);
+
+const WaitingNote: React.FC<{ waiting: number; moreNew: boolean }> = ({ waiting, moreNew }) => {
+    if (waiting === 0 && !moreNew) return null;
+    const label = waiting > 0
+        ? `${waiting}${moreNew ? '+' : ''} vocab waiting after this session`
+        : 'More vocab available after this session';
+    return <span className="text-secondary-400 text-xs italic">{label}</span>;
+};
+
 export const SessionProgress: React.FC = () => {
-    const { state, sessionState } = useQuiz();
+    const { sessionStats } = useQuiz();
     const { isMobile } = useResponsive();
 
-    const stats = useMemo(
-        () => selectSessionStats(state, sessionState),
-        [state.progress, state.sessionHistory, sessionState]
-    );
+    const { done, total, retriesPending, waiting, moreNew } = sessionStats;
 
-    const progressPercent = stats.total > 0 ? (stats.done / stats.total) * 100 : 0;
+    // Retries extend the denominator so the bar can't read 100% while redos remain.
+    const barTotal = total + retriesPending;
+    const progressPercent = barTotal > 0 ? (done / barTotal) * 100 : 0;
 
     return (
         <div className="w-full max-w-4xl mx-auto mb-6">
@@ -26,7 +54,7 @@ export const SessionProgress: React.FC = () => {
                         <div className="flex justify-between items-end mb-1">
                             <div className="text-secondary-400 text-sm font-medium">Session Progress</div>
                             <div className="text-secondary-400 text-sm font-medium">
-                                {stats.done} / {stats.total}
+                                <SessionCounter done={done} total={total} retriesPending={retriesPending} />
                             </div>
                         </div>
 
@@ -37,6 +65,8 @@ export const SessionProgress: React.FC = () => {
                                 style={{ width: `${progressPercent}%` }}
                             />
                         </div>
+
+                        <WaitingNote waiting={waiting} moreNew={moreNew} />
                     </div>
 
                     {/* Moved History Ticker Below */}
@@ -50,7 +80,7 @@ export const SessionProgress: React.FC = () => {
                     <div className="flex items-center justify-between px-1">
                         <div className="text-xs font-medium text-secondary-500 uppercase tracking-wider">Session Progress</div>
                         <div className="text-sm font-bold text-primary-700">
-                            {stats.done} <span className="text-secondary-400 font-normal">/ {stats.total}</span>
+                            <SessionCounter done={done} total={total} retriesPending={retriesPending} />
                         </div>
                     </div>
                     {/* Mobile Thin Line */}
@@ -59,6 +89,9 @@ export const SessionProgress: React.FC = () => {
                             className="h-full bg-primary-600 transition-all duration-500 ease-out"
                             style={{ width: `${progressPercent}%` }}
                         />
+                    </div>
+                    <div className="px-1 mt-1">
+                        <WaitingNote waiting={waiting} moreNew={moreNew} />
                     </div>
                 </>
             )}
