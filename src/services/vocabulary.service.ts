@@ -1,6 +1,7 @@
 // src/services/VocabularyLoader.ts
 import type { Vocabulary } from '../models/vocabulary.model';
-import type { FrequencyIndex, KKLCIndex, KKLCKanjiIndex, SearchIndex } from '../models/index.model';
+import type { Kanji } from '../models/kanji.model';
+import type { FrequencyIndex, KKLCIndex, KKLCKanjiIndex, KanjiVocabIndex, SearchIndex } from '../models/index.model';
 import { romajiToHiragana, looksLikeRomaji } from '../utils/romaji';
 
 export class VocabularyService {
@@ -9,6 +10,9 @@ export class VocabularyService {
     private static frequencyIndex: FrequencyIndex | null = null;
     private static searchIndex: SearchIndex | null = null;
     private static vocabCache = new Map<string, Vocabulary>();
+    private static kanjiIndex: Kanji[] | null = null;
+    private static kanjiByChar = new Map<string, Kanji>();
+    private static kanjiVocabIndex: KanjiVocabIndex | null = null;
 
     private static async fetchJson<T>(path: string): Promise<T> {
         const response = await fetch(path);
@@ -79,6 +83,26 @@ export class VocabularyService {
             entry.m.toLowerCase().includes(q) ||
             (kanaQuery !== null && kanaQuery !== q && entry.r.includes(kanaQuery))
         ).slice(0, 50);
+    }
+
+    static async loadKanjiIndex(): Promise<Kanji[]> {
+        if (this.kanjiIndex) return this.kanjiIndex;
+
+        this.kanjiIndex = await this.fetchJson<Kanji[]>(`/data/compiled/kanji.json?v=${Date.now()}`);
+        for (const k of this.kanjiIndex) this.kanjiByChar.set(k.character, k);
+        return this.kanjiIndex;
+    }
+
+    static async loadKanji(character: string): Promise<Kanji | null> {
+        await this.loadKanjiIndex();
+        return this.kanjiByChar.get(character) ?? null;
+    }
+
+    static async loadKanjiVocabIndex(): Promise<KanjiVocabIndex> {
+        if (this.kanjiVocabIndex) return this.kanjiVocabIndex;
+
+        this.kanjiVocabIndex = await this.fetchJson<KanjiVocabIndex>(`/data/compiled/index/kanji-vocab.json?v=${Date.now()}`);
+        return this.kanjiVocabIndex;
     }
 
     static async loadSentences(vocabId: string): Promise<import('../models/sentence.model').Sentence[] | null> {

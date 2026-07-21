@@ -42,6 +42,23 @@ export interface ParsedJPDBFrequency {
     hiraganaRank?: number;       // 6099 (if ㋕ marker present)
 }
 
+/**
+ * JLPT Kanji Dataset
+ * Source: https://github.com/Bluskyo/JLPT_Vocabulary/blob/main/data/kanji/results/JLPT_kanji_ALL.json
+ *
+ * Flat map of kanji character -> JLPT N-level (1 = N1 hardest, 5 = N5 easiest)
+ */
+export type JLPTKanjiDatasetDTO = Record<string, number>;
+
+/**
+ * JLPT Vocabulary Dataset
+ * Source: https://github.com/Bluskyo/JLPT_Vocabulary/blob/main/data/vocab/results/JLPT_vocab_ALL.json
+ *
+ * Written form -> one or more reading/level pairs (a word can appear at
+ * different levels depending on its reading).
+ */
+export type JLPTVocabDatasetDTO = Record<string, Array<{ reading: string; level: number }>>;
+
 
 export interface JMDict {
     version: string

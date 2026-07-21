@@ -14,6 +14,7 @@ import { VocabSentencesCard } from "./VocabSentencesCard";
 import { VocabHistoryGraph } from "../../components/VocabHistoryGraph";
 import { ReviewTimeline } from "../../components/ReviewTimeline";
 import { VocabRelationshipsCard } from "./VocabRelationshipsCard";
+import { JlptChip } from "../../components/JlptChip";
 
 export default function VocabDetailScreen() {
     const { vocabId } = useParams<{ vocabId: string }>();
@@ -79,6 +80,11 @@ export default function VocabDetailScreen() {
                         {vocab.reading.alternatives.length > 0 && (
                             <div className="text-sm text-tertiary font-gothic">
                                 Also: {vocab.reading.alternatives.join(', ')}
+                            </div>
+                        )}
+                        {vocab.jlptLevel && (
+                            <div className="flex justify-center">
+                                <JlptChip level={vocab.jlptLevel} />
                             </div>
                         )}
                     </div>
@@ -148,6 +154,23 @@ export default function VocabDetailScreen() {
             </div>
         </Card>
     );
+
+    const kanjiBreakdownCard = vocab.writtenForm.containedKanji.length > 0 ? (
+        <Card size={isMobile ? "sm" : "md"}>
+            <h2 className="text-lg font-gothic font-semibold text-primary mb-4">Kanji</h2>
+            <div className="flex flex-wrap gap-2">
+                {vocab.writtenForm.containedKanji.map(char => (
+                    <span
+                        key={char}
+                        onClick={() => navigate(`/kanji/${char}`)}
+                        className="px-3 py-1.5 text-lg rounded bg-accent/10 text-accent font-mincho font-medium dark:bg-accent/15 cursor-pointer hover:bg-accent/20 transition-colors"
+                    >
+                        {char}
+                    </span>
+                ))}
+            </div>
+        </Card>
+    ) : null;
 
     const mergedCard = vocab.mergedVocabs && vocab.mergedVocabs.length > 1 ? (
         <Card size={isMobile ? "sm" : "md"}>
@@ -298,6 +321,7 @@ export default function VocabDetailScreen() {
                 {isMobile ? (
                     <div className="flex flex-col space-y-6">
                         {kanjiCard}
+                        {kanjiBreakdownCard}
                         {meaningsCard}
                         {metadataCard}
                         {sentencesCard}
@@ -311,6 +335,7 @@ export default function VocabDetailScreen() {
                         {/* Left Column */}
                         <div className="md:col-span-5 space-y-6">
                             {kanjiCard}
+                            {kanjiBreakdownCard}
                             {metadataCard}
                             {mergedCard}
                             {statsCard}

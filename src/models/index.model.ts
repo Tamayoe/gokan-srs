@@ -9,6 +9,8 @@ export type FrequencyIndex = Array<{
 
 export type KKLCKanjiIndex = Record<number, string[]>;
 
+export type KanjiVocabIndex = Record<string, string[]>;
+
 export interface SearchIndexEntry {
     id: string;
     w: string; // kanji

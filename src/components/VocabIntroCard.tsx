@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 import { useResponsive } from "../context/Responsive/useResponsive";
 import { Combine } from "lucide-react";
 import { formatReadingList } from "../pages/quiz/quizFormatting";
+import { JlptChip } from "./JlptChip";
 
 
 interface IntroVocabCardProps {
@@ -44,6 +45,11 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
                     <div className="flex flex-row justify-center items-center gap-1 mt-4 text-base font-gothic text-secondary/90 opacity-90">
                         {formatReadingList(vocab.reading)}
                     </div>
+                    {vocab.jlptLevel && (
+                        <div className="flex justify-center mt-3">
+                            <JlptChip level={vocab.jlptLevel} />
+                        </div>
+                    )}
                 </div>
             </CardSection>
 

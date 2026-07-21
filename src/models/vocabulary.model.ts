@@ -21,6 +21,9 @@ export interface Vocabulary {
         kanaRank?: number;
     };
 
+    /** JLPT level (1=N1 hardest ... 5=N5 easiest), if this word is JLPT-tagged. Descriptive/display-only - not used for learning order. */
+    jlptLevel?: number;
+
     /** Learning order constraints */
     progression: {
         kklcStep: number;

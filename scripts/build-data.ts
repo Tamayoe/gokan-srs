@@ -5,7 +5,7 @@ import type { Sense, Vocabulary } from '../src/models/vocabulary.model';
 import type { Sentence } from '../src/models/sentence.model';
 import type { Kanji } from '../src/models/kanji.model';
 import type kuromoji from 'kuromoji';
-import { JMDict } from "../src/models/data.model";
+import { JMDict, JLPTVocabDatasetDTO } from "../src/models/data.model";
 import { buildMiscFlags } from './build-common';
 import { BUILD_LIMITS } from './build-constants';
 
@@ -15,6 +15,7 @@ const INPUT_JPDB_FILE = './data/raw/jpdb_v2.2_freq_list_2024-10-13.json';
 const INPUT_KANJI_FILE = './public/data/compiled/kanji.json';
 const INPUT_SENTENCES_FILE = './data/raw/Sentence pairs in Japanese-English - 2026-02-15.tsv';
 const INPUT_INDICES_FILE = './data/raw/jpn_indices.csv';
+const INPUT_JLPT_VOCAB_FILE = './data/raw/jlpt-vocab.json';
 
 const OUTPUT_VOCAB_DIR = './public/data/compiled/vocab';
 const OUTPUT_SENTENCES_DIR = './public/data/compiled/sentences';
@@ -82,6 +83,10 @@ async function main() {
     // JPDB
     console.log('   - JPDB...');
     const jpdb: JPDBData = JSON.parse(fs.readFileSync(INPUT_JPDB_FILE, 'utf-8'));
+
+    // JLPT Vocabulary
+    console.log('   - JLPT vocab...');
+    const jlptVocab: JLPTVocabDatasetDTO = JSON.parse(fs.readFileSync(INPUT_JLPT_VOCAB_FILE, 'utf-8'));
 
     // 2. Build Candidate Vocabulary List
     console.log('🔎 Processing vocabulary candidates...');
@@ -183,6 +188,14 @@ async function main() {
         const requiresContext =
             entry.kana.length > 1 || senses.some(s => s.misc.isSuffix);
 
+        // JLPT level: match by written form, preferring the entry whose reading
+        // matches this word's primary reading (a written form can carry different
+        // levels per reading), else falling back to the dataset's first entry.
+        const jlptEntries = jlptVocab[kanjiText];
+        const jlptLevel = jlptEntries?.length
+            ? (jlptEntries.find(e => e.reading === primaryReading) ?? jlptEntries[0]).level
+            : undefined;
+
         const vocabObj: BuildVocabulary = {
             id: entry.id,
             writtenForm: {
@@ -198,6 +211,7 @@ async function main() {
                 kanjiRank: jpdbEntry.kanjiRank!,
                 kanaRank: jpdbEntry.hiraganaRank,
             },
+            jlptLevel,
             progression: {
                 kklcStep,
             },
@@ -643,6 +657,8 @@ async function main() {
     const kklcIndex: Record<number, string[]> = {};
     const frequencyIndex: FrequencyIndexEntry[] = [];
     const searchIndex: SearchIndexEntry[] = [];
+    const kanjiVocabIndex: Record<string, string[]> = {};
+    const kanjiRankById = new Map<string, number>();
 
     let vocabWritten = 0;
     let sentencesWritten = 0;
@@ -685,6 +701,19 @@ async function main() {
             r: vocab.reading.primary,
             m: vocab.senses[0]?.glosses.slice(0, 2).join(', ') || ''
         });
+
+        // Kanji -> Vocab reverse index (for the Kanji Detail Page)
+        kanjiRankById.set(vocab.id, vocab.frequency.kanjiRank);
+        for (const k of vocab.writtenForm.containedKanji) {
+            if (!kanjiVocabIndex[k]) kanjiVocabIndex[k] = [];
+            kanjiVocabIndex[k].push(vocab.id);
+        }
+    }
+
+    // Sort each kanji's vocab list by frequency (most common first) so
+    // capped/expandable UI lists surface common words before rare ones.
+    for (const ids of Object.values(kanjiVocabIndex)) {
+        ids.sort((a, b) => (kanjiRankById.get(a) ?? Infinity) - (kanjiRankById.get(b) ?? Infinity));
     }
 
     fs.writeFileSync(
@@ -698,6 +727,10 @@ async function main() {
     fs.writeFileSync(
         path.join(OUTPUT_INDEX_DIR, 'search.json'),
         JSON.stringify(searchIndex)
+    );
+    fs.writeFileSync(
+        path.join(OUTPUT_INDEX_DIR, 'kanji-vocab.json'),
+        JSON.stringify(kanjiVocabIndex, null, 2)
     );
 
     console.log(`✅ Build Complete!`);

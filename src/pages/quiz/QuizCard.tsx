@@ -6,6 +6,7 @@ import { MasteryRing } from "../../components/MasteryRing";
 import { Combine } from "lucide-react";
 import { TagsLookup } from "../../models/data.model";
 import type { Tags } from "../../models/data.model";
+import { JlptChip } from "../../components/JlptChip";
 import { BaseQuizCard } from "./BaseQuizCard";
 import { formatReadingList, getUniquePosTags, getUniqueRelatedCompounds, useExpandableDefinitions } from "./quizFormatting";
 
@@ -53,9 +54,10 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                                 </span>
                             )}
                         </div>
-                        {/* POS tags */}
-                        {currentVocab.senses.length > 0 && (
-                            <div className="flex flex-wrap gap-1">
+                        {/* POS tags + JLPT chip */}
+                        {(currentVocab.senses.length > 0 || currentVocab.jlptLevel) && (
+                            <div className="flex flex-wrap gap-1 items-center">
+                                {currentVocab.jlptLevel && <JlptChip level={currentVocab.jlptLevel} />}
                                 {getUniquePosTags(currentVocab.senses, true).slice(0, 3).map(rawTag => (
                                     <span
                                         key={rawTag}
@@ -98,9 +100,10 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
 
                         {/* Disambiguation helpers */}
                         <div className="flex flex-col items-center py-1 gap-3">
-                            {/* POS + misc tags */}
-                            {currentVocab.senses.length > 0 && (
-                                <div className="flex flex-wrap justify-center gap-2">
+                            {/* POS + misc tags + JLPT chip */}
+                            {(currentVocab.senses.length > 0 || currentVocab.jlptLevel) && (
+                                <div className="flex flex-wrap justify-center items-center gap-2">
+                                    {currentVocab.jlptLevel && <JlptChip level={currentVocab.jlptLevel} />}
                                     {getUniquePosTags(currentVocab.senses, true).map(rawTag => (
                                         <span
                                             key={rawTag}

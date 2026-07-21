@@ -18,6 +18,7 @@ const UserProfileScreen = lazy(() => import('./pages/profile/UserProfileScreen')
 const StatsScreen = lazy(() => import('./pages/stats/StatsScreen').then(module => ({ default: module.StatsScreen }))); // START_ADD (conceptually)
 const AboutScreen = lazy(() => import('./pages/about/AboutScreen').then(module => ({ default: module.AboutScreen })));
 const VocabDetailScreen = lazy(() => import('./pages/vocab/VocabDetailScreen'));
+const KanjiDetailScreen = lazy(() => import('./pages/kanji/KanjiDetailScreen'));
 
 function SyncStatusIndicator() {
     const { isUploading, isDownloading, isAuthenticated, syncPaused, login } = useGoogleDrive();
@@ -147,6 +148,9 @@ export const App: React.FC = () => {
                         } />
                         <Route path="/vocab/:vocabId" element={
                             <VocabDetailScreen />
+                        } />
+                        <Route path="/kanji/:character" element={
+                            <KanjiDetailScreen />
                         } />
                         <Route path="*" element={<Navigate to="/" replace />} />
                     </Routes>

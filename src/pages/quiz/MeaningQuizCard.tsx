@@ -5,6 +5,7 @@ import { MasteryRing } from "../../components/MasteryRing";
 import { TagsLookup } from "../../models/data.model";
 import { Combine } from "lucide-react";
 import type { Tags } from "../../models/data.model";
+import { JlptChip } from "../../components/JlptChip";
 
 import { BaseQuizCard } from "./BaseQuizCard";
 import { InteractiveSentence } from "../../components/InteractiveSentence";
@@ -116,9 +117,10 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                     </div>
                 )}
 
-                {/* POS Tags */}
-                {currentVocab.senses.length > 0 && (
-                    <div className="flex flex-wrap justify-center gap-2 mt-2">
+                {/* POS Tags + JLPT chip */}
+                {(currentVocab.senses.length > 0 || currentVocab.jlptLevel) && (
+                    <div className="flex flex-wrap justify-center items-center gap-2 mt-2">
+                        {currentVocab.jlptLevel && <JlptChip level={currentVocab.jlptLevel} />}
                         {getUniquePosTags(currentVocab.senses).map(rawTag => (
                             <span
                                 key={rawTag}

@@ -143,10 +143,20 @@ gokan-srs/
 - `writtenForm`: Kanji form + contained kanji characters
 - `reading`: Primary reading + alternatives
 - `frequency`: Kanji rank + optional kana rank
+- `jlptLevel`: optional JLPT level (1=N1 hardest ... 5=N5 easiest). Descriptive/display-only - not used for learning order. Populated at build time by matching JMDict's written form against the [Bluskyo/JLPT_Vocabulary](https://github.com/Bluskyo/JLPT_Vocabulary) dataset; most vocab won't have one (that dataset covers a few thousand words out of JMDict's ~40k+).
 - `progression.kklcStep`: KKLC step requirement
 - `components[]`: IDs of other vocabularies contained within this one
 - `senses[]`: Array of meanings with POS, glosses, misc tags
 - `usageHints`: Optional context hints
+
+### Kanji (`kanji.model.ts`)
+
+**`Kanji`** - A single kanji character and its known step/frequency numbers across different systems
+- `character`: The kanji glyph itself
+- `steps.kklc`: KKLC step number (this app's primary kanji-learning order)
+- `steps.jlpt`: optional JLPT level (1=N1 hardest ... 5=N5 easiest), from the same JLPT dataset as vocab. Only ever set for kanji already in the KKLC-derived kanji set (build-kanji.ts's outer loop iterates KKLC chapters, not the JLPT file) - doesn't expand kanji coverage.
+- `steps.frequency`: optional JPDB kanji frequency rank (currently unused, reserved)
+- `frequency`: JPDB kanji frequency rank
 
 **`VocabProgress`** - User's learning progress for a vocabulary item
 - `vocabId`: Reference to Vocabulary.id
@@ -286,10 +296,14 @@ Handles loading vocabulary data from compiled JSON files.
 - `loadKKLCIndex()`: Load KKLC vocab index (step → vocabIds[])
 - `loadFrequencyIndex()`: Load frequency-sorted vocab index
 - `loadVocab(id)`: Load individual vocabulary by ID (cached)
+- `loadKanjiIndex()`: Load the full compiled `Kanji[]` array (small, whole-file fetch, cached) and index it by character in-memory
+- `loadKanji(character)`: Look up a single `Kanji` by character (used by the Kanji Detail Page)
+- `loadKanjiVocabIndex()`: Load the kanji → vocabIds reverse index (which vocab contain a given kanji, sorted by frequency)
 
 **Data Location**: `data/compiled/`
-- Indexes: `index/kklc.json`, `index/kklc-kanji.json`, `index/frequency.json`
+- Indexes: `index/kklc.json`, `index/kklc-kanji.json`, `index/frequency.json`, `index/kanji-vocab.json` (kanji character → vocab IDs containing it, frequency-sorted)
 - Vocabulary: `vocab/{id}.json` (one file per vocab item)
+- Kanji: `kanji.json` (flat array of all `Kanji` objects)
 
 ### Storage Service (`storage.service.ts`)
 
@@ -452,6 +466,14 @@ Calls `actions.setupComplete()` when done.
 - View/edit kanji knowledge
 - Update known kanji set
 
+### Kanji Detail Screen (`pages/kanji/KanjiDetailScreen.tsx`)
+
+Route: `/kanji/:character`. Mirrors `VocabDetailScreen`'s card-based layout at a smaller scale:
+- Kanji glyph, JLPT chip (`steps.jlpt`, if set), KKLC step, frequency rank, and a "Known" badge if the character is in the user's `kanjiKnowledge.kanjiSet`
+- `KanjiVocabListCard` (`pages/kanji/KanjiVocabListCard.tsx`): capped/expandable list (mirrors `VocabRelationshipsCard`'s pattern) of vocabulary containing this kanji, sourced from the `kanji-vocab.json` reverse index, each row navigating to `/vocab/:id`
+
+`VocabDetailScreen`'s kanji-breakdown card (see Core Data Models → Vocabulary) provides the reverse link: each kanji in a word's `containedKanji` is a clickable chip navigating to `/kanji/:character`, so users can move vocab → kanji → vocab.
+
 ### Statistics Screen (`pages/stats/StatsScreen.tsx`)
 
 - `StatsOverview` - headline counters (including Kanji Coverage)
@@ -496,23 +518,19 @@ bun run build:jpdb   # Convert JPDB TSV to JSON
 ### Data Build Scripts
 
 **`scripts/build-kanji.ts`**
-- Reads KKLC dataset
-- Generates `data/compiled/index/kklc-kanji.json`
+- Reads the KKLC dataset (`data/raw/kklc.json`), JPDB kanji frequency (`data/raw/jpdb_v2.json`), and JLPT kanji levels (`data/raw/jlpt-kanji.json`)
+- Generates `public/data/compiled/kanji.json` (flat `Kanji[]`, `steps.jlpt` populated only for kanji already in the KKLC set) and `data/compiled/index/kklc-kanji.json`
+- Runs before `build-data.ts` in the `build:data` script (which reads the compiled `kanji.json` for KKLC-step lookups)
 
-**`scripts/build-vocabulary.ts`**
-- Reads JMDict data
-- Reads JPDB frequency data
+**`scripts/build-data.ts`** - the unified vocabulary/sentence build (supersedes the formerly-separate `build-vocabulary.ts`/`build-sentences.ts`, ported in here per the `[2026-03-03]` changelog entry)
+- Reads JMDict data, JPDB frequency data, the compiled `kanji.json` (for KKLC step lookups), JLPT vocabulary levels (`data/raw/jlpt-vocab.json`), sentence pairs (TSV), and reading indices (CSV)
+- Matches each word's written form against the JLPT vocab dataset (preferring the entry whose reading matches the word's primary reading) to set `jlptLevel`
+- Performs greedy Kuromoji-based tokenization to associate sentences with vocabulary, discarding sentences where matched vocabulary covers < 50% of the text length
+- Computes `components`/`parents` (inverted index) and the `kanji-vocab.json` reverse index (kanji character → containing vocab IDs, frequency-sorted)
 - Generates:
   - `data/compiled/vocab/{id}.json` (individual vocab files)
-  - `data/compiled/index/kklc.json` (KKLC-ordered index)
-  - `data/compiled/index/frequency.json` (frequency-ordered index)
-
-**`scripts/build-sentences.ts`**
-- Reads Japanese-English sentence pairs (TSV)
-- Reads reading indices (CSV)
-- Performs greedy tokenization to associate sentences with vocabulary
-- **Coverage Filtering**: Discards sentences where matched vocabulary covers < 50% of the text length (removes "mostly unknown" sentences)
-- Generates `data/compiled/sentences/{vocabId}.json` containing arrays of `Sentence` objects with `vocabIds` dependency lists.
+  - `data/compiled/sentences/{vocabId}.json` (arrays of `Sentence` objects, only for vocab with matched sentences)
+  - `data/compiled/index/kklc.json`, `index/frequency.json`, `index/search.json`, `index/kanji-vocab.json`
 
 
 
@@ -697,6 +715,15 @@ return 'exhausted'
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
 
 - **[2026-07-21]**:
+  - **JLPT Levels + Kanji Detail Page**: Added JLPT level (N1-N5) as a descriptive attribute on both kanji and vocabulary, using the [Bluskyo/JLPT_Vocabulary](https://github.com/Bluskyo/JLPT_Vocabulary) dataset, plus a new Kanji Detail Page with bidirectional vocab ↔ kanji navigation.
+    - **Data**: `data/raw/jlpt-kanji.json` (flat character → N-number map) and `data/raw/jlpt-vocab.json` (written form → reading/level pairs, since a word can carry different levels per reading) added as new raw inputs, tracked via the existing `data/raw/**` Git LFS glob.
+    - **Kanji**: `build-kanji.ts` now populates the previously-unused `Kanji.steps.jlpt` field directly from the dataset's N-number. Since the outer loop iterates KKLC chapters (not the JLPT file), a kanji outside the KKLC set never gets a `Kanji` object at all - JLPT levels are only visible for kanji already in the app's KKLC-driven kanji set, by design.
+    - **Vocabulary**: added `Vocabulary.jlptLevel?: number` (top-level, not nested under `progression` - it's purely descriptive/display, not a learning-order input like `kklcStep`). `build-data.ts` matches each word's written form against the JLPT vocab map, preferring the entry whose reading matches the word's primary reading, else falling back to the dataset's first entry, and assigns this before the homograph-merge pass (so a merged entry keeps whichever homograph became the base's own level, if any - a lower-frequency absorbed homograph's level is not inherited). Most vocab (JMDict has ~40k+ entries vs. the JLPT dataset's ~8k) will have no `jlptLevel`, and that's expected.
+    - **Reverse kanji→vocab index**: `build-data.ts` now also emits `data/compiled/index/kanji-vocab.json`, mapping each kanji character to the vocab IDs containing it, sorted by frequency rank so capped/expandable UI lists surface common words first.
+    - **New Kanji Detail Page** (`pages/kanji/KanjiDetailScreen.tsx`, route `/kanji/:character`): kanji glyph, JLPT chip, KKLC step, frequency, and a `KanjiVocabListCard` (mirrors `VocabRelationshipsCard`'s capped/expandable list pattern) of vocabulary containing it, sourced from the new reverse index.
+    - **Cross-linking**: `VocabDetailScreen` gained a small "Kanji" card listing each of a word's `containedKanji` as clickable chips navigating to the new kanji page; the kanji page's vocab list links back to `/vocab/:id` - completing the vocab ↔ kanji loop.
+    - **`JlptChip`** (`components/JlptChip.tsx`): new small presentational component (bordered pill, `N{level}`, reuses the existing accent color rather than a per-level color scheme, per the design system's "minimize colors" rule) - dropped into `QuizCard`, `MeaningQuizCard`, `VocabIntroCard`, `VocabDetailScreen`, and `KanjiDetailScreen` wherever a level is present.
+    - **`VocabularyService`** gained `loadKanjiIndex()`/`loadKanji(character)`/`loadKanjiVocabIndex()`, following the same `fetchJson` + in-memory-cache pattern as the existing index loaders.
   - **Session-progress counter rework** (`components/SessionProgress.tsx`, `context/quiz/quizSelectors.ts`, new `session` slice in `quizReducer.ts`): the `done / total` counter's **total shrank as the user worked**. Root cause: `selectSessionStats` derived `total = done + liveDueReviews`. A wrong answer pushes the item's due date ~12h out, so it drops out of `liveDueReviews`, but `done` only counts non-wrong answers - so the denominator ticked *down* on every wrong answer, and the pending retry (tracked by `needsRetry`, not a due date) was never re-counted.
     - **Fix - a frozen session task set**: added a `session: { committed: TaskKey[] } | null` slice. `TaskKey` is `` `${vocabId}:${quizType}` ``. `committed` is snapshotted once when a study session begins (`collectActionableTaskKeys`, the actionable-now tasks) via a `SESSION_START` effect in `useQuizOrchestration`, and cleared on `SESSION_END` when the user hits waiting/exhausted. `selectSessionStats(state, hasMoreLearnable, now)` now returns `{ done, total, retriesPending, waiting, moreNew }` computed against that fixed set: `total` never moves for the life of the session; `done` = committed tasks no longer actionable; the counter can only climb.
     - **Retries highlighted**: `retriesPending` = committed tasks currently awaiting a redo (wrong this session). Rendered as a highlighted `+N` appended to the total and added to the progress-bar denominator, so the bar can't read 100% while redos remain.
