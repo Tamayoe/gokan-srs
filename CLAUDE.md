@@ -74,6 +74,7 @@ gokan-srs/
 ├── scripts/                   # Build scripts for data compilation
 │   ├── build-kanji.ts        # Compile KKLC kanji data
 │   ├── build-vocabulary.ts   # Compile JMDict vocabulary
+│   ├── build-jlpt-index.ts   # Compile JLPT level → vocab index (post-pass)
 │   └── jpdb-v2.2-tsv-to-json.js
 ├── src/
 │   ├── assets/               # Images, fonts
@@ -205,7 +206,7 @@ gokan-srs/
 - `kanjiSet`: Set<string> of known kanji characters
 
 **`UserSettings`**
-- `preferredLearningOrder`: `'kanji_coverage'` | `'frequency'` | `'kklc'`
+- `preferredLearningOrder`: `'kanji_coverage'` | `'frequency'` | `'kklc'` | `'jlpt'` (`'jlpt'` walks N5→N1 and is the **only** order that does not filter by known kanji - see Services & Business Logic)
 - `kanjiCoverageTarget`: 1 to 5 (how many words to learn per known kanji before prioritizing new words, default 1)
 - `learningFrequency`: `'high'` | `'medium'` | `'low'`
 - `enableMeaningQuiz`: boolean (default true)
@@ -262,6 +263,11 @@ Core SRS algorithm implementation. **This is the heart of the learning system.**
 - Uses either KKLC or frequency ordering
 - Returns updated queue
 
+**`findCandidatesJLPT(activeIds, kanjiKnowledge, maxToFind)`** (private)
+- Backs `preferredLearningOrder: 'jlpt'`. Walks N5 → N1 (`JLPT_LEVELS`), frequency-ordered within each level, off `index/jlpt.json`.
+- **Deliberately does not filter by known kanji** - the only order that doesn't. The mode exists to follow the official level lists exactly (a user studying for a specific sitting covers that level's vocabulary as published), so it can introduce a word whose kanji the user has never studied. Every other order upholds the app's kanji-aware rule.
+- The JLPT lists cover only ~6.4k of ~36k words, so once drained it **falls back to `findCandidatesFrequency`** (kanji-filtered as usual) rather than stranding the user on the "exhausted" screen. `countLearnableVocabulary` mirrors this, delegating to the frequency count only when the JLPT pool hits zero - the two pools overlap heavily and must never be summed.
+
 **`applyVocabIntroChoice(progress, choice)`**
 - Handles "Learn" or "Skip" on intro card
 - **Learn**: Sets `nextReviewAt = now` (becomes immediately reviewable)
@@ -299,9 +305,10 @@ Handles loading vocabulary data from compiled JSON files.
 - `loadKanjiIndex()`: Load the full compiled `Kanji[]` array (small, whole-file fetch, cached) and index it by character in-memory
 - `loadKanji(character)`: Look up a single `Kanji` by character (used by the Kanji Detail Page)
 - `loadKanjiVocabIndex()`: Load the kanji → vocabIds reverse index (which vocab contain a given kanji, sorted by frequency)
+- `loadJlptIndex()`: Load the JLPT level → vocab index (level 1..5 → entries, frequency-sorted within a level)
 
 **Data Location**: `data/compiled/`
-- Indexes: `index/kklc.json`, `index/kklc-kanji.json`, `index/frequency.json`, `index/kanji-vocab.json` (kanji character → vocab IDs containing it, frequency-sorted)
+- Indexes: `index/kklc.json`, `index/kklc-kanji.json`, `index/frequency.json`, `index/kanji-vocab.json` (kanji character → vocab IDs containing it, frequency-sorted), `index/jlpt.json` (JLPT level → `{id, containedKanji}[]`, frequency-sorted within each level; ~6.4k of the ~36k vocab carry a level)
 - Vocabulary: `vocab/{id}.json` (one file per vocab item)
 - Kanji: `kanji.json` (flat array of all `Kanji` objects)
 
@@ -478,6 +485,7 @@ Route: `/kanji/:character`. Mirrors `VocabDetailScreen`'s card-based layout at a
 
 - `StatsOverview` - headline counters (including Kanji Coverage)
 - `KnowledgeCurveChart` - cumulative knowledge held over time (steady growth vs. plateau); see `utils/knowledge.utils.ts`
+- `JlptCoverageChart` - five stacked bars (N5 at top → N1), each showing mastered / in-progress / untouched against that level's total, off `index/jlpt.json`. "Mastered" uses `isVocabFullyMastered` so the split matches the scheduler's definition rather than reimplementing it. One hue in two steps (solid accent + 35% accent) rather than two hues, since the segments are ordinal stages and the design system reserves the secondary accent for errors; a legend and direct `n / total` labels carry the distinction so it never rests on color alone
 - `DailyProgressionChart` - per-day review activity (correct/incorrect), last 14 days
 - `ReviewForecast` - upcoming review load
 - `SmartVocabList` - searchable/sortable/paginated vocabulary list. Fully-mastered items are **hidden by default** (via `isVocabFullyMastered`) behind a "Show mastered (N)" checkbox; search/sort/page/showMastered all persist in `sessionStorage` so returning from a vocab detail page restores the list
@@ -512,6 +520,7 @@ bun test:watch       # Run tests in watch mode
 bun run build:data   # Compile all data (kanji + vocab)
 bun run build:kanji  # Compile KKLC kanji only
 bun run build:vocab  # Compile vocabulary only
+bun run build:jlpt   # Rebuild only index/jlpt.json (fast, reads compiled vocab)
 bun run build:jpdb   # Convert JPDB TSV to JSON
 ```
 
@@ -532,6 +541,11 @@ bun run build:jpdb   # Convert JPDB TSV to JSON
   - `data/compiled/sentences/{vocabId}.json` (arrays of `Sentence` objects, only for vocab with matched sentences)
   - `data/compiled/index/kklc.json`, `index/frequency.json`, `index/search.json`, `index/kanji-vocab.json`
 
+**`scripts/build-jlpt-index.ts`**
+- Reads the **already-compiled** `public/data/compiled/vocab/*.json` and emits `index/jlpt.json` (JLPT level → frequency-sorted vocab entries)
+- Kept as a separate post-pass rather than folded into `build-data.ts` because the main build re-runs Kuromoji tokenization over the whole corpus - far too slow to repeat just to reshape an index. `build:data` chains it after `build-data.ts`, so the two can't drift, and `build:jlpt` regenerates it alone in seconds
+- Sorts by `frequency.kanjiRank` with an id tie-break, since `readdirSync` order is filesystem-dependent and the index must be deterministic across machines
+
 
 
 **Data Sources:**
@@ -550,6 +564,7 @@ bun run build:jpdb   # Convert JPDB TSV to JSON
   - Alternative reading matching tests
   - Per-quiz-type retry flag behavior tests
   - Meaning-quiz-disabled scheduling tests (graduation on reading mastery alone)
+  - JLPT learning-order tests: N5→N1 walk order, no known-kanji filtering (the defining difference from every other order), already-queued exclusion, frequency fallback once the lists run dry (without re-serving a JLPT word), and the unfiltered `countLearnableVocabulary` count
 - `src/services/scheduling.test.ts` - `vocabNextReviewAt`/`isVocabFullyMastered`/`isVocabDue` unit tests
 - `src/services/migration.service.test.ts` - Data migration tests
   - Old format (mastery) to new format (memoryStrength/interval) conversion
@@ -713,6 +728,13 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-07-22]**:
+  - **JLPT Coverage chart + JLPT learning order**: Two features off the `jlptLevel` data added on `[2026-07-21]`, both needing a level→vocab index that didn't exist yet.
+    - **New index** (`scripts/build-jlpt-index.ts` → `public/data/compiled/index/jlpt.json`): JLPT level (1..5) → `{id, containedKanji}[]`, frequency-sorted within each level. Entries mirror `FrequencyIndex`'s shape so candidate-finding can share the same filtering. 6,423 of 35,814 compiled vocab carry a level (N5 461, N4 448, N3 1475, N2 1343, N1 2696). Built as a **separate post-pass over the compiled vocab files**, chained into `build:data` after `build-data.ts` and runnable alone as `build:jlpt` - folding it into `build-data.ts` would mean re-running Kuromoji tokenization over the whole corpus to reshape an index.
+    - **`JlptCoverageChart`** (Statistics screen): five stacked bars, N5 at top, each splitting that level's total into mastered / in-progress / untouched. Mastery is `isVocabFullyMastered` from `scheduling.ts` (same definition the scheduler and `SmartVocabList` use, not a reimplementation). Follows the dataviz method: legend + direct `n / total` labels so identity never rests on color, per-bar hover tooltip, `<details>` table view, hero figure, 2px surface gap between stacked segments, CSS custom properties (`bg-accent`) rather than light-mode-only hexes so dark mode works. Single hue in two steps rather than two hues - the segments are ordinal stages of one thing, and the design system reserves the secondary accent for errors.
+    - **New `'jlpt'` learning order** (`LearningOrder`, `findCandidatesJLPT`): walks N5 → N1, frequency-ordered within a level. **Deliberately not filtered by known kanji** - the only order that isn't. Chosen explicitly: the mode exists so a user studying for a specific sitting covers that level's published list exactly, which means it can introduce a word whose kanji they've never studied. This is a real departure from the app's "Kanji-Aware Learning" goal and is scoped to this one order; the Settings/Setup option is labelled "ignores known kanji" so the trade-off is visible at the point of choice.
+    - **Exhaustion fallback**: the JLPT lists cover ~6.4k of ~36k words, so `findCandidatesJLPT` falls back to `findCandidatesFrequency` (kanji-filtered as normal) once drained, rather than parking the user on the "exhausted" screen after N1. `countLearnableVocabulary` mirrors this but delegates **only when the JLPT count is 0** - the two pools overlap heavily, so summing them would inflate the count.
 
 - **[2026-07-21]**:
   - **JLPT Levels + Kanji Detail Page**: Added JLPT level (N1-N5) as a descriptive attribute on both kanji and vocabulary, using the [Bluskyo/JLPT_Vocabulary](https://github.com/Bluskyo/JLPT_Vocabulary) dataset, plus a new Kanji Detail Page with bidirectional vocab ↔ kanji navigation.

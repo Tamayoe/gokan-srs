@@ -183,6 +183,11 @@ export function SettingsScreen({
                             label: 'By Kanji',
                             description: 'Follow kanji progression',
                         },
+                        {
+                            value: 'jlpt',
+                            label: 'JLPT Level',
+                            description: 'N5 first, up to N1 — ignores known kanji',
+                        },
                     ]}
                 />
 

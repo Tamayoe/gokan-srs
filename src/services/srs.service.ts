@@ -4,6 +4,7 @@ import { CONSTANTS } from '../commons/constants';
 import { VocabularyService } from './vocabulary.service';
 import type { KanjiKnowledge, UserProgress, UserSettings } from '../models/user.model';
 import { isVocabFullyMastered, vocabNextReviewAt } from './scheduling';
+import { JLPT_LEVELS } from '../models/index.model';
 
 
 export type AnswerResult = 'correct' | 'minor_error' | 'wrong' | 'pass';
@@ -457,6 +458,22 @@ export class SRSService {
                 break;
             }
 
+            case 'jlpt': {
+                const index = await VocabularyService.loadJlptIndex();
+                if (!index) return 0;
+
+                // Pure JLPT order: no known-kanji filter (see findCandidatesJLPT).
+                const queuedIds = new Set(progress.learningQueue.map(v => v.vocabId));
+                for (const level of JLPT_LEVELS) {
+                    for (const entry of index[level] ?? []) {
+                        if (queuedIds.has(entry.id)) continue;
+                        count++;
+                        if (count >= limit) return count;
+                    }
+                }
+                break;
+            }
+
             case 'kanji_coverage':
             case 'frequency': {
                 const index = await VocabularyService.loadFrequencyIndex();
@@ -476,6 +493,18 @@ export class SRSService {
                 }
                 break;
             }
+        }
+
+        // The JLPT lists cover ~6.4k of 35k+ words, so they run dry. Once they do,
+        // fall back to the frequency order rather than stranding the user on the
+        // "exhausted" screen. Only when the JLPT pool is fully drained (count 0),
+        // so the two pools - which overlap heavily - are never summed.
+        if (settings.preferredLearningOrder === 'jlpt' && count === 0) {
+            return this.countLearnableVocabulary(
+                progress,
+                { ...settings, preferredLearningOrder: 'frequency' },
+                limit
+            );
         }
 
         return count;
@@ -517,6 +546,9 @@ export class SRSService {
 
             case "frequency":
                 return this.findCandidatesFrequency(activeIds, kanjiKnowledge, maxToFind);
+
+            case "jlpt":
+                return this.findCandidatesJLPT(activeIds, kanjiKnowledge, maxToFind);
         }
     }
 
@@ -607,6 +639,46 @@ export class SRSService {
             if (allKanjiKnown) {
                 candidates.push(entry.id);
             }
+        }
+
+        return candidates;
+    }
+
+    /**
+     * JLPT order: walk N5 -> N1, frequency-ordered within each level.
+     *
+     * Deliberately NOT filtered by known kanji, unlike every other order - the
+     * point of this mode is to follow the official level lists as written, so a
+     * user studying for a specific JLPT sitting covers that level's vocabulary
+     * exactly. The trade-off is that it can introduce a word whose kanji the
+     * user has never studied.
+     */
+    private static async findCandidatesJLPT(
+        activeIds: Set<string>,
+        kanjiKnowledge: KanjiKnowledge,
+        maxToFind: number
+    ): Promise<string[]> {
+        const index = await VocabularyService.loadJlptIndex();
+        if (!index) return [];
+
+        const candidates: string[] = [];
+
+        for (const level of JLPT_LEVELS) {
+            for (const entry of index[level] ?? []) {
+                if (candidates.length >= maxToFind) return candidates;
+                if (!activeIds.has(entry.id)) candidates.push(entry.id);
+            }
+        }
+
+        // JLPT lists exhausted (~6.4k words) - keep the user learning by falling
+        // back to the frequency order for anything beyond N1.
+        if (candidates.length < maxToFind) {
+            const filler = await this.findCandidatesFrequency(
+                new Set([...activeIds, ...candidates]),
+                kanjiKnowledge,
+                maxToFind - candidates.length
+            );
+            candidates.push(...filler);
         }
 
         return candidates;

@@ -1,7 +1,7 @@
 // src/services/VocabularyLoader.ts
 import type { Vocabulary } from '../models/vocabulary.model';
 import type { Kanji } from '../models/kanji.model';
-import type { FrequencyIndex, KKLCIndex, KKLCKanjiIndex, KanjiVocabIndex, SearchIndex } from '../models/index.model';
+import type { FrequencyIndex, JlptIndex, KKLCIndex, KKLCKanjiIndex, KanjiVocabIndex, SearchIndex } from '../models/index.model';
 import { romajiToHiragana, looksLikeRomaji } from '../utils/romaji';
 
 export class VocabularyService {
@@ -13,6 +13,7 @@ export class VocabularyService {
     private static kanjiIndex: Kanji[] | null = null;
     private static kanjiByChar = new Map<string, Kanji>();
     private static kanjiVocabIndex: KanjiVocabIndex | null = null;
+    private static jlptIndex: JlptIndex | null = null;
 
     private static async fetchJson<T>(path: string): Promise<T> {
         const response = await fetch(path);
@@ -41,6 +42,13 @@ export class VocabularyService {
 
         this.frequencyIndex = await this.fetchJson<FrequencyIndex>(`/data/compiled/index/frequency.json?v=${Date.now()}`);
         return this.frequencyIndex;
+    }
+
+    static async loadJlptIndex(): Promise<JlptIndex | null> {
+        if (this.jlptIndex) return this.jlptIndex;
+
+        this.jlptIndex = await this.fetchJson<JlptIndex>(`/data/compiled/index/jlpt.json?v=${Date.now()}`);
+        return this.jlptIndex;
     }
 
     static async loadVocab(id: string): Promise<Vocabulary> {

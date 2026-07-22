@@ -64,7 +64,8 @@ export interface KanjiKnowledge {
 export type LearningOrder =
     | 'kanji_coverage'
     | 'frequency'
-    | 'kklc';
+    | 'kklc'
+    | 'jlpt';
 
 export type MeaningContextThreshold = 'early' | 'normal' | 'late';
 
