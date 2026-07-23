@@ -186,10 +186,35 @@ export function SettingsScreen({
                         {
                             value: 'jlpt',
                             label: 'JLPT Level',
-                            description: 'N5 first, up to N1 — ignores known kanji',
+                            description: 'N5 first, up to N1',
                         },
                     ]}
                 />
+
+                {settings.preferredLearningOrder !== 'kklc' && (
+                    <div className="mt-6 flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider">
+                        <div className="flex flex-col gap-1 pr-4">
+                            <span className="font-medium text-primary">Ignore known kanji requirement</span>
+                            <span className="text-secondary text-sm">
+                                Introduce vocabulary even if you haven't learned all of its kanji yet, applying the trade-off to the order selected above.
+                            </span>
+                        </div>
+                        <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
+                            <input
+                                type="checkbox"
+                                className="sr-only peer"
+                                checked={settings.ignoreKnownKanjiRequirement === true}
+                                onChange={(e) =>
+                                    onUpdateSettings({
+                                        ...settings,
+                                        ignoreKnownKanjiRequirement: e.target.checked,
+                                    })
+                                }
+                            />
+                            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent/20 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent"></div>
+                        </label>
+                    </div>
+                )}
 
                 {settings.preferredLearningOrder === 'kanji_coverage' && (
                     <div className="mt-6 p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider">

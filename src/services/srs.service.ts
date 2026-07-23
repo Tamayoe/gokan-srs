@@ -462,11 +462,19 @@ export class SRSService {
                 const index = await VocabularyService.loadJlptIndex();
                 if (!index) return 0;
 
-                // Pure JLPT order: no known-kanji filter (see findCandidatesJLPT).
+                // Kanji-filtered by default, like every other order (see findCandidatesJLPT) -
+                // only skipped when the user opts into ignoreKnownKanjiRequirement.
+                const ignoreKnownKanji = !!settings.ignoreKnownKanjiRequirement;
                 const queuedIds = new Set(progress.learningQueue.map(v => v.vocabId));
                 for (const level of JLPT_LEVELS) {
                     for (const entry of index[level] ?? []) {
                         if (queuedIds.has(entry.id)) continue;
+
+                        const allKanjiKnown = ignoreKnownKanji || entry.containedKanji.every(k =>
+                            progress.kanjiKnowledge.kanjiSet.has(k)
+                        );
+                        if (!allKanjiKnown) continue;
+
                         count++;
                         if (count >= limit) return count;
                     }
@@ -479,10 +487,12 @@ export class SRSService {
                 const index = await VocabularyService.loadFrequencyIndex();
                 if (!index) return 0;
 
+                const ignoreKnownKanji = !!settings.ignoreKnownKanjiRequirement;
+
                 for (const entry of index) {
                     if (progress.learningQueue.find(vocab => vocab.vocabId === entry.id)) continue;
 
-                    const allKanjiKnown = entry.containedKanji.every(k =>
+                    const allKanjiKnown = ignoreKnownKanji || entry.containedKanji.every(k =>
                         progress.kanjiKnowledge.kanjiSet.has(k)
                     );
 
@@ -532,6 +542,8 @@ export class SRSService {
         // Also exclude ignoredIds
         for (const id of ignoredIds) activeIds.add(id);
 
+        const ignoreKnownKanji = !!settings.ignoreKnownKanjiRequirement;
+
         switch (settings.preferredLearningOrder) {
             case "kklc":
                 if (kanjiKnowledge.method !== "kklc") {
@@ -542,13 +554,13 @@ export class SRSService {
                 return this.findCandidatesKKLC(activeIds, kanjiKnowledge.step, maxToFind);
 
             case "kanji_coverage":
-                return this.findCandidatesKanjiCoverage(activeIds, kanjiKnowledge, maxToFind, settings.kanjiCoverageTarget || 1);
+                return this.findCandidatesKanjiCoverage(activeIds, kanjiKnowledge, maxToFind, settings.kanjiCoverageTarget || 1, ignoreKnownKanji);
 
             case "frequency":
-                return this.findCandidatesFrequency(activeIds, kanjiKnowledge, maxToFind);
+                return this.findCandidatesFrequency(activeIds, kanjiKnowledge, maxToFind, ignoreKnownKanji);
 
             case "jlpt":
-                return this.findCandidatesJLPT(activeIds, kanjiKnowledge, maxToFind);
+                return this.findCandidatesJLPT(activeIds, kanjiKnowledge, maxToFind, ignoreKnownKanji);
         }
     }
 
@@ -621,7 +633,8 @@ export class SRSService {
     private static async findCandidatesFrequency(
         activeIds: Set<string>,
         kanjiKnowledge: KanjiKnowledge,
-        maxToFind: number
+        maxToFind: number,
+        ignoreKnownKanji: boolean = false
     ): Promise<string[]> {
         const index = await VocabularyService.loadFrequencyIndex();
         if (!index) return [];
@@ -632,7 +645,7 @@ export class SRSService {
             if (candidates.length >= maxToFind) break;
             if (activeIds.has(entry.id)) continue;
 
-            const allKanjiKnown = entry.containedKanji.every(k =>
+            const allKanjiKnown = ignoreKnownKanji || entry.containedKanji.every(k =>
                 kanjiKnowledge.kanjiSet.has(k)
             );
 
@@ -647,16 +660,20 @@ export class SRSService {
     /**
      * JLPT order: walk N5 -> N1, frequency-ordered within each level.
      *
-     * Deliberately NOT filtered by known kanji, unlike every other order - the
-     * point of this mode is to follow the official level lists as written, so a
-     * user studying for a specific JLPT sitting covers that level's vocabulary
-     * exactly. The trade-off is that it can introduce a word whose kanji the
-     * user has never studied.
+     * Kanji-filtered by default, same as every other order - only skipped when
+     * `settings.ignoreKnownKanjiRequirement` is on. The mode's defining feature is
+     * following the official level lists exactly (a user studying for a specific
+     * JLPT sitting covers that level's vocabulary as published); enforcing known
+     * kanji by default makes that combine with the app's kanji-aware learning goal
+     * instead of overriding it, while the opt-in toggle still allows the old
+     * unconditional behavior for anyone who wants to cover a level's list exactly
+     * regardless of kanji already studied.
      */
     private static async findCandidatesJLPT(
         activeIds: Set<string>,
         kanjiKnowledge: KanjiKnowledge,
-        maxToFind: number
+        maxToFind: number,
+        ignoreKnownKanji: boolean = false
     ): Promise<string[]> {
         const index = await VocabularyService.loadJlptIndex();
         if (!index) return [];
@@ -666,7 +683,12 @@ export class SRSService {
         for (const level of JLPT_LEVELS) {
             for (const entry of index[level] ?? []) {
                 if (candidates.length >= maxToFind) return candidates;
-                if (!activeIds.has(entry.id)) candidates.push(entry.id);
+                if (activeIds.has(entry.id)) continue;
+
+                const allKanjiKnown = ignoreKnownKanji || entry.containedKanji.every(k =>
+                    kanjiKnowledge.kanjiSet.has(k)
+                );
+                if (allKanjiKnown) candidates.push(entry.id);
             }
         }
 
@@ -676,7 +698,8 @@ export class SRSService {
             const filler = await this.findCandidatesFrequency(
                 new Set([...activeIds, ...candidates]),
                 kanjiKnowledge,
-                maxToFind - candidates.length
+                maxToFind - candidates.length,
+                ignoreKnownKanji
             );
             candidates.push(...filler);
         }
@@ -688,7 +711,8 @@ export class SRSService {
         activeIds: Set<string>,
         kanjiKnowledge: KanjiKnowledge,
         maxToFind: number,
-        targetCoverage: number
+        targetCoverage: number,
+        ignoreKnownKanji: boolean = false
     ): Promise<string[]> {
         const index = await VocabularyService.loadFrequencyIndex();
         if (!index) return [];
@@ -730,7 +754,7 @@ export class SRSService {
             const entry = index[rank];
             if (activeIds.has(entry.id)) continue;
 
-            const allKanjiKnown = entry.containedKanji.every((k) => kanjiKnowledge.kanjiSet.has(k));
+            const allKanjiKnown = ignoreKnownKanji || entry.containedKanji.every((k) => kanjiKnowledge.kanjiSet.has(k));
             if (allKanjiKnown) {
                 learnableUnusedWords.push({ entry, rank });
             }

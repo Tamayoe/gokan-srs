@@ -11,6 +11,12 @@ import { Link } from 'react-router-dom';
  *    wrong this session and still has to redo.
  *  - waiting: reviews that came due AFTER this session started - deliberately kept
  *    out of the total so the denominator stays stable, surfaced as "n+ waiting".
+ *
+ * Note: `moreNew` (whether brand-new vocab remains learnable at all) is deliberately
+ * NOT used on its own to show a fallback "more vocab available" line - given the
+ * dataset's ~36k words, it's true for virtually every user forever, so it would
+ * read as permanent, meaningless noise rather than a signal about what happens
+ * after this session. It's only used as the "+" suffix on a genuine waiting count.
  */
 const SessionCounter: React.FC<{
     done: number;
@@ -28,10 +34,8 @@ const SessionCounter: React.FC<{
 );
 
 const WaitingNote: React.FC<{ waiting: number; moreNew: boolean }> = ({ waiting, moreNew }) => {
-    if (waiting === 0 && !moreNew) return null;
-    const label = waiting > 0
-        ? `${waiting}${moreNew ? '+' : ''} vocab waiting after this session`
-        : 'More vocab available after this session';
+    if (waiting === 0) return null;
+    const label = `${waiting}${moreNew ? '+' : ''} vocab waiting after this session`;
     return <span className="text-secondary-400 text-xs italic">{label}</span>;
 };
 

@@ -619,27 +619,45 @@ describe('SRSService Formula Tests', () => {
             ],
         };
 
-        const kanjiKnowledge = {
+        const allKnownKanjiKnowledge = {
+            method: 'kklc', step: 10,
+            kanjiSet: new Set(['Z', 'Y', 'X', 'W', 'V']),
+        } as any;
+
+        const noKanjiKnowledge = {
             method: 'kklc', step: 10,
             kanjiSet: new Set<string>(),  // deliberately knows NO kanji
         } as any;
 
         const settings = { preferredLearningOrder: 'jlpt' } as any;
+        const settingsIgnoreKanji = { preferredLearningOrder: 'jlpt', ignoreKnownKanjiRequirement: true } as any;
 
         it('serves easiest level first, walking N5 -> N1', async () => {
             vi.spyOn(VocabularyService, 'loadJlptIndex').mockResolvedValue(mockJlptIndex);
 
-            const candidates = await SRSService.getNextCandidates([], kanjiKnowledge, settings, 6);
+            const candidates = await SRSService.getNextCandidates([], allKnownKanjiKnowledge, settings, 6);
 
             expect(candidates).toEqual(['n5-a', 'n5-b', 'n4-a', 'n3-a', 'n2-a', 'n1-a']);
         });
 
-        it('ignores known kanji entirely (pure JLPT order)', async () => {
+        it('filters by known kanji by default, same as every other order', async () => {
+            vi.spyOn(VocabularyService, 'loadJlptIndex').mockResolvedValue(mockJlptIndex);
+            // JLPT pool alone can't fill maxToFind once kanji-filtered, so the
+            // frequency-fallback filler kicks in - keep it empty here to isolate
+            // the JLPT-side filtering behavior under test.
+            vi.spyOn(VocabularyService, 'loadFrequencyIndex').mockResolvedValue([]);
+
+            // kanjiSet is empty, so only the kana-only n5-a (no kanji) can pass -
+            // every kanji-bearing JLPT word is filtered out by default now.
+            const candidates = await SRSService.getNextCandidates([], noKanjiKnowledge, settings, 6);
+
+            expect(candidates).toEqual(['n5-a']);
+        });
+
+        it('ignores known kanji entirely when ignoreKnownKanjiRequirement is set', async () => {
             vi.spyOn(VocabularyService, 'loadJlptIndex').mockResolvedValue(mockJlptIndex);
 
-            // kanjiSet is empty, so every kanji-bearing word would be filtered out
-            // by the frequency/coverage orders. JLPT order must still serve them.
-            const candidates = await SRSService.getNextCandidates([], kanjiKnowledge, settings, 2);
+            const candidates = await SRSService.getNextCandidates([], noKanjiKnowledge, settingsIgnoreKanji, 2);
 
             expect(candidates).toEqual(['n5-a', 'n5-b']);
         });
@@ -648,7 +666,7 @@ describe('SRSService Formula Tests', () => {
             vi.spyOn(VocabularyService, 'loadJlptIndex').mockResolvedValue(mockJlptIndex);
 
             const currentQueue = [{ vocabId: 'n5-a' }, { vocabId: 'n4-a' }] as any[];
-            const candidates = await SRSService.getNextCandidates(currentQueue, kanjiKnowledge, settings, 2);
+            const candidates = await SRSService.getNextCandidates(currentQueue, allKnownKanjiKnowledge, settings, 2);
 
             expect(candidates).toEqual(['n5-b', 'n3-a']);
         });
@@ -663,20 +681,53 @@ describe('SRSService Formula Tests', () => {
                 { id: 'freq-2', containedKanji: ['K'] },  // filtered: K is unknown
             ]);
 
-            const candidates = await SRSService.getNextCandidates([], kanjiKnowledge, settings, 3);
+            const candidates = await SRSService.getNextCandidates([], noKanjiKnowledge, settings, 3);
 
             expect(candidates).toEqual(['n5-a', 'freq-1']);
         });
 
-        it('counts remaining JLPT vocab without the kanji filter', async () => {
+        it('counts remaining JLPT vocab respecting the kanji filter by default', async () => {
             vi.spyOn(VocabularyService, 'loadJlptIndex').mockResolvedValue(mockJlptIndex);
 
             const progress = {
-                kanjiKnowledge,
+                kanjiKnowledge: allKnownKanjiKnowledge,
                 learningQueue: [{ vocabId: 'n5-a' }],
             } as any;
 
             const count = await SRSService.countLearnableVocabulary(progress, settings);
+
+            expect(count).toBe(5);
+        });
+
+        it('falls back to the frequency count once the kanji filter drains the JLPT pool', async () => {
+            vi.spyOn(VocabularyService, 'loadJlptIndex').mockResolvedValue(mockJlptIndex);
+            vi.spyOn(VocabularyService, 'loadFrequencyIndex').mockResolvedValue([
+                { id: 'n5-a', containedKanji: [] },
+                { id: 'freq-1', containedKanji: [] },
+                { id: 'freq-2', containedKanji: ['K'] },  // filtered: K is unknown
+            ]);
+
+            const progress = {
+                kanjiKnowledge: noKanjiKnowledge,
+                learningQueue: [{ vocabId: 'n5-a' }],
+            } as any;
+
+            // Every kanji-bearing JLPT entry is filtered out and n5-a is already
+            // queued, so the JLPT branch counts 0 and falls through to frequency.
+            const count = await SRSService.countLearnableVocabulary(progress, settings);
+
+            expect(count).toBe(1);
+        });
+
+        it('counts without the kanji filter when ignoreKnownKanjiRequirement is set', async () => {
+            vi.spyOn(VocabularyService, 'loadJlptIndex').mockResolvedValue(mockJlptIndex);
+
+            const progress = {
+                kanjiKnowledge: noKanjiKnowledge,
+                learningQueue: [{ vocabId: 'n5-a' }],
+            } as any;
+
+            const count = await SRSService.countLearnableVocabulary(progress, settingsIgnoreKanji);
 
             expect(count).toBe(5);
         });

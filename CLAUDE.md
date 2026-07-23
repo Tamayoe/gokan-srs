@@ -206,7 +206,7 @@ gokan-srs/
 - `kanjiSet`: Set<string> of known kanji characters
 
 **`UserSettings`**
-- `preferredLearningOrder`: `'kanji_coverage'` | `'frequency'` | `'kklc'` | `'jlpt'` (`'jlpt'` walks N5→N1 and is the **only** order that does not filter by known kanji - see Services & Business Logic)
+- `preferredLearningOrder`: `'kanji_coverage'` | `'frequency'` | `'kklc'` | `'jlpt'` (`'jlpt'` walks N5→N1, frequency-ordered within a level; kanji-filtered by default like every other order - see Services & Business Logic)
 - `kanjiCoverageTarget`: 1 to 5 (how many words to learn per known kanji before prioritizing new words, default 1)
 - `learningFrequency`: `'high'` | `'medium'` | `'low'`
 - `enableMeaningQuiz`: boolean (default true)
@@ -214,6 +214,7 @@ gokan-srs/
 - `enableGeminiContext`: boolean (default false)
 - `alwaysUseAiForMeaningContext`: boolean (default true)
 - `meaningContextThreshold`: `'early'` | `'normal'` | `'late'` (default `'normal'`). Controls the mastery % at which meaning quizzes switch to sentence/context mode (early=30%, normal=50%, late=70%).
+- `ignoreKnownKanjiRequirement`: optional boolean (default false). When true, drops the "all contained kanji must already be known" filter for the `frequency`/`kanji_coverage`/`jlpt` orders. Has no effect on `kklc` (gated by step, not by kanji set). Settings UI surfaces it for every order except `kklc`.
 
 ### Session State (`state.model.ts`)
 
@@ -263,10 +264,11 @@ Core SRS algorithm implementation. **This is the heart of the learning system.**
 - Uses either KKLC or frequency ordering
 - Returns updated queue
 
-**`findCandidatesJLPT(activeIds, kanjiKnowledge, maxToFind)`** (private)
+**`findCandidatesJLPT(activeIds, kanjiKnowledge, maxToFind, ignoreKnownKanji?)`** (private)
 - Backs `preferredLearningOrder: 'jlpt'`. Walks N5 → N1 (`JLPT_LEVELS`), frequency-ordered within each level, off `index/jlpt.json`.
-- **Deliberately does not filter by known kanji** - the only order that doesn't. The mode exists to follow the official level lists exactly (a user studying for a specific sitting covers that level's vocabulary as published), so it can introduce a word whose kanji the user has never studied. Every other order upholds the app's kanji-aware rule.
-- The JLPT lists cover only ~6.4k of ~36k words, so once drained it **falls back to `findCandidatesFrequency`** (kanji-filtered as usual) rather than stranding the user on the "exhausted" screen. `countLearnableVocabulary` mirrors this, delegating to the frequency count only when the JLPT pool hits zero - the two pools overlap heavily and must never be summed.
+- **Kanji-filtered by default**, same as every other order - only skipped when `settings.ignoreKnownKanjiRequirement` is on. The mode's defining feature is following the official level lists exactly (a user studying for a specific sitting covers that level's vocabulary as published); enforcing known kanji by default keeps that combined with the app's kanji-aware learning goal instead of overriding it, while the opt-in toggle preserves the old unconditional behavior for anyone who wants a level's list exactly regardless of kanji already studied.
+- The JLPT lists cover only ~6.4k of ~36k words, so once drained it **falls back to `findCandidatesFrequency`** (respecting the same `ignoreKnownKanjiRequirement` flag) rather than stranding the user on the "exhausted" screen. `countLearnableVocabulary` mirrors this, delegating to the frequency count only when the JLPT pool hits zero - the two pools overlap heavily and must never be summed.
+- `kklc` is unaffected by `ignoreKnownKanjiRequirement` either way, since it's gated by step, not by kanji set.
 
 **`applyVocabIntroChoice(progress, choice)`**
 - Handles "Learn" or "Skip" on intro card
@@ -466,6 +468,7 @@ Calls `actions.setupComplete()` when done.
 ### Settings Screen (`pages/settings/Settings.tsx`)
 
 - Change learning order (frequency/KKLC)
+- "Ignore known kanji requirement" toggle (`ignoreKnownKanjiRequirement`), shown for every order except `kklc` (a no-op there, since it's gated by step rather than by kanji set) - including `jlpt`, which is kanji-filtered by default and relies on this toggle to opt back into its old unconditional behavior
 - Reset progress (with confirmation)
 
 ### Profile Screen (`pages/profile/UserProfileScreen.tsx`)
@@ -564,7 +567,7 @@ bun run build:jpdb   # Convert JPDB TSV to JSON
   - Alternative reading matching tests
   - Per-quiz-type retry flag behavior tests
   - Meaning-quiz-disabled scheduling tests (graduation on reading mastery alone)
-  - JLPT learning-order tests: N5→N1 walk order, no known-kanji filtering (the defining difference from every other order), already-queued exclusion, frequency fallback once the lists run dry (without re-serving a JLPT word), and the unfiltered `countLearnableVocabulary` count
+  - JLPT learning-order tests: N5→N1 walk order, kanji filtering on by default (and disabled via `ignoreKnownKanjiRequirement`), already-queued exclusion, frequency fallback once the lists run dry (without re-serving a JLPT word, and respecting the same toggle), and the matching `countLearnableVocabulary` counts
 - `src/services/scheduling.test.ts` - `vocabNextReviewAt`/`isVocabFullyMastered`/`isVocabDue` unit tests
 - `src/services/migration.service.test.ts` - Data migration tests
   - Old format (mastery) to new format (memoryStrength/interval) conversion
@@ -728,6 +731,11 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-07-23]**:
+  - **`ignoreKnownKanjiRequirement` setting**: Generalized the "ignore known kanji" trade-off that `jlpt` order used to make unconditionally into an opt-in toggle (`UserSettings.ignoreKnownKanjiRequirement`, default `false`) shared across `frequency`/`kanji_coverage`/`jlpt`. Threaded through `SRSService.getNextCandidates` → `findCandidatesFrequency`/`findCandidatesKanjiCoverage`/`findCandidatesJLPT` (new `ignoreKnownKanji` param, replacing each hardcoded `entry.containedKanji.every(k => kanjiKnowledge.kanjiSet.has(k))` check with `ignoreKnownKanji || ...`) and `countLearnableVocabulary`'s matching branches, so the "more learnable vocab exists" count and the actual candidate-finder can't disagree. `findCandidatesJLPT`'s frequency-fallback filler (once the ~6.4k-word JLPT lists run dry) also honors it. Has no effect on `kklc` (gated by KKLC step, never checks the kanji set directly). Exposed in Settings for every order except `kklc`, next to the existing "Vocabulary order" picker.
+    - **Follow-up same day**: initially `jlpt` was left always-unfiltered (matching its prior behavior) with the toggle only wired up for `frequency`/`kanji_coverage`. Revisited at the user's request: `jlpt` now defaults to kanji-filtered too, same as every other order, which is what makes the shared toggle actually useful for it - previously enabling it for `jlpt` would have been a no-op since that order already ignored kanji unconditionally. The toggle is now the *only* way to get the old "follow the official level list exactly, regardless of kanji known" behavior. Test coverage (`srs.service.test.ts`) split accordingly: default-filtered walk/count vs. toggle-enabled unfiltered walk/count, using a kanji-complete `allKnownKanjiKnowledge` fixture for tests that aren't about the filter itself.
+  - **Fix - permanent "More vocab available after this session" noise**: `SessionProgress`'s `WaitingNote` showed a fallback message whenever `moreNew` (`hasMoreLearnable`, "does any learnable vocab exist anywhere in the ~36k-word dataset") was true and no reviews were concretely `waiting`. Given the dataset's size, `moreNew` is true for virtually every user indefinitely, so the fallback text was permanent noise rather than a meaningful signal - confirmed with the user rather than assumed. Fixed by dropping the fallback entirely: the note now only renders when `waiting > 0` (a concrete count of vocab due after this session), with `moreNew` still used solely as the "+" suffix on that count (`waiting` items are due for certain; `moreNew` means there could be even more beyond that).
 
 - **[2026-07-22]**:
   - **JLPT Coverage chart + JLPT learning order**: Two features off the `jlptLevel` data added on `[2026-07-21]`, both needing a level→vocab index that didn't exist yet.

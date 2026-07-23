@@ -79,6 +79,15 @@ export interface UserSettings {
     alwaysUseAiForMeaningContext?: boolean;
     /** Mastery threshold at which meaning quizzes switch to sentence/context mode */
     meaningContextThreshold?: MeaningContextThreshold;
+    /**
+     * When true, drops the "all contained kanji must already be known" filter for
+     * the `frequency`/`kanji_coverage`/`jlpt` orders. `jlpt` is kanji-filtered by
+     * default like every other order; this is the opt-in escape hatch for
+     * following the official level lists exactly regardless of known kanji. Has
+     * no effect on `kklc` (gated by step, not by kanji set). Default false
+     * (kanji-aware filtering stays on for every order).
+     */
+    ignoreKnownKanjiRequirement?: boolean;
 }
 
 export const DEFAULT_SETTINGS: UserSettings = {
@@ -89,6 +98,7 @@ export const DEFAULT_SETTINGS: UserSettings = {
     enableGeminiContext: false,
     alwaysUseAiForMeaningContext: true,
     meaningContextThreshold: 'normal',
+    ignoreKnownKanjiRequirement: false,
 };
 
 export const DEFAULT_PROGRESS: Omit<UserProgress, 'kanjiKnowledge'> = {
