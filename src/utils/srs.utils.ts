@@ -63,7 +63,8 @@ export function isMeaningActionable(
 export function getNextVocabToStudy(
     queue?: VocabProgress[],
     settings?: UserSettings,
-    now: Date = new Date()
+    now: Date = new Date(),
+    preferredType?: QuizType
 ): QuizItem | null {
     if (!queue || queue.length === 0) return null;
 
@@ -71,23 +72,34 @@ export function getNextVocabToStudy(
     // We want to clear all reading quizzes before moving to meanings.
     const allReadings = queue.filter(v => isReadingActionable(v, now));
 
-    if (allReadings.length > 0) {
-        return { vocab: pickStable(allReadings)!, quizType: 'reading', quizMode: 'base' };
-    }
+    const dueMeanings = isMeaningQuizEnabled(settings)
+        ? queue.filter(v => isMeaningActionable(v, settings, now))
+        : [];
 
-    // 3. Priority: Due Meanings (IF ENABLED)
-    if (isMeaningQuizEnabled(settings)) {
-        const dueMeanings = queue.filter(v => isMeaningActionable(v, settings, now));
-        if (dueMeanings.length > 0) {
-            const vocab = pickStable(dueMeanings)!;
-            const mastery = calculateMasteryPercentage(vocab.meaning.memoryStrength);
-            // Resolve the configured threshold level (default 'normal' = 50%)
-            const thresholdKey = settings?.meaningContextThreshold ?? 'normal';
-            const masteryThreshold = CONSTANTS.srs.meaningContextThresholds[thresholdKey];
-            const mode: QuizMode = mastery >= masteryThreshold ? 'context' : 'base';
-            return { vocab, quizType: 'meaning', quizMode: mode };
-        }
-    }
+    const pickReading = (): QuizItem => ({ vocab: pickStable(allReadings)!, quizType: 'reading', quizMode: 'base' });
+    const pickMeaning = (): QuizItem => {
+        const vocab = pickStable(dueMeanings)!;
+        const mastery = calculateMasteryPercentage(vocab.meaning.memoryStrength);
+        // Resolve the configured threshold level (default 'normal' = 50%)
+        const thresholdKey = settings?.meaningContextThreshold ?? 'normal';
+        const masteryThreshold = CONSTANTS.srs.meaningContextThresholds[thresholdKey];
+        const mode: QuizMode = mastery >= masteryThreshold ? 'context' : 'base';
+        return { vocab, quizType: 'meaning', quizMode: mode };
+    };
+
+    // Stay on whichever quiz TYPE is currently active (the type of the card the
+    // user is looking at right now) as long as that pool still has work, before
+    // falling back to the reading > meaning priority below. Without this, a
+    // reading item becoming actionable mid-way through a run of meaning quizzes
+    // (a retry flag flipping, or a review simply coming due while the user is
+    // mid-session) would hijack the very next card - interrupting a meaning batch
+    // with a surprise reading quiz the user, mentally still in "meaning mode",
+    // is primed to answer wrong.
+    if (preferredType === 'reading' && allReadings.length > 0) return pickReading();
+    if (preferredType === 'meaning' && dueMeanings.length > 0) return pickMeaning();
+
+    if (allReadings.length > 0) return pickReading();
+    if (dueMeanings.length > 0) return pickMeaning();
 
     // 4. Priority: New Intros (not introduced yet)
     // When introducing, we start with Reading quiz? Or just distinct Intro card?

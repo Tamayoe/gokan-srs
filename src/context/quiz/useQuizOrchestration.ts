@@ -115,7 +115,7 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
 
     const nextView = useMemo(
         () => selectNextView(state, hasMoreLearnable),
-        [state.progress, state.settings, state.introCandidates, state.currentVocab, state.nextKanjiToLearn, hasMoreLearnable]
+        [state.progress, state.settings, state.introCandidates, state.currentVocab, state.currentQuizItem, state.nextKanjiToLearn, hasMoreLearnable]
     );
 
     const currentProgress = useMemo(() => selectCurrentProgress(state), [state.currentVocab, state.progress]);

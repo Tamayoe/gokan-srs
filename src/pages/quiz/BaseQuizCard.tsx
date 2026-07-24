@@ -1,10 +1,32 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
+import { BookOpenText, Languages } from "lucide-react";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { CONSTANTS } from "../../commons/constants";
 import { Card } from "../../components/ui/Card";
 import { CardSection } from "../../components/ui/CardSection";
+
+/**
+ * Always-visible "which phase am I in" indicator. Reading and meaning quizzes
+ * are visually similar enough (especially on a small phone screen, glanced at
+ * quickly) that a switch between them can go unnoticed - leading to a reading
+ * answer typed into a meaning quiz (or vice versa) purely out of autopilot.
+ * Deliberately not colored per the design system's "minimize colors" rule;
+ * the icon + label pairing carries the distinction instead of a hue.
+ */
+const QuizTypeIndicator: React.FC<{ quizType: 'reading' | 'meaning' }> = ({ quizType }) => {
+    const isReading = quizType === 'reading';
+    const Icon = isReading ? BookOpenText : Languages;
+    return (
+        <div className="flex items-center justify-center gap-1.5 mb-3 text-secondary-400">
+            <Icon size={13} strokeWidth={2} />
+            <span className="text-[11px] font-gothic font-medium uppercase tracking-wider">
+                {isReading ? 'Reading' : 'Meaning'}
+            </span>
+        </div>
+    );
+};
 
 interface BaseQuizCardProps {
     children: React.ReactNode;
@@ -118,6 +140,9 @@ export function BaseQuizCard({
 
                 {/* Top Section: Content (Sentences, Kanji, etc.) */}
                 <CardSection className={isCompact ? '!mb-3' : ''}>
+                    {state.currentQuizItem && (
+                        <QuizTypeIndicator quizType={state.currentQuizItem.quizType} />
+                    )}
                     {children}
                 </CardSection>
 

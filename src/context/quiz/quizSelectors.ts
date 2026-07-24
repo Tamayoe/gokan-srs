@@ -24,15 +24,20 @@ export interface NextViewResult {
 }
 
 export function selectNextView(
-    state: Pick<QuizState, 'progress' | 'settings' | 'introCandidates' | 'currentVocab' | 'nextKanjiToLearn'>,
+    state: Pick<QuizState, 'progress' | 'settings' | 'introCandidates' | 'currentVocab' | 'currentQuizItem' | 'nextKanjiToLearn'>,
     hasMoreLearnable: boolean,
     now: Date = new Date()
 ): NextViewResult {
     const { progress, settings, introCandidates } = state;
 
+    // Hint getNextVocabToStudy to stay on whichever quiz type is currently on
+    // screen (see its doc comment) - prevents a reading item becoming actionable
+    // mid-meaning-batch (or vice versa) from hijacking the next card.
+    const preferredType = state.currentQuizItem?.quizType;
+
     const queueItem: PendingQuizItem | null = introCandidates.length > 0
         ? { vocabId: introCandidates[0].id, quizType: 'reading', quizMode: 'base' }
-        : getNextVocabToStudy(progress?.learningQueue, settings ?? undefined, now);
+        : getNextVocabToStudy(progress?.learningQueue, settings ?? undefined, now, preferredType);
 
     let sessionState: SessionState = 'exhausted';
     let nextReviewAt: Date | null = null;

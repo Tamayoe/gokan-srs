@@ -134,6 +134,60 @@ describe('selectNextView', () => {
         expect(result.queueItem).toBeNull();
     });
 
+    it('stays on the meaning quiz when a reading retry becomes actionable mid-meaning-batch', () => {
+        // Regression test: a reading item flips needsRetry.reading (or simply comes
+        // due) WHILE the user is in the middle of a run of meaning quizzes. Without
+        // the "stay on the current phase" hint, getNextVocabToStudy's unconditional
+        // reading-first priority would hijack the very next card with a surprise
+        // reading quiz, even though the user is mid-meaning-batch.
+        const meaningDue = makeVocabProgress({
+            vocabId: 'meaning-item',
+            reading: { ...DEFAULT_VOCABULARY_PROGRESS.reading, dueDate: null },
+            meaning: { ...DEFAULT_VOCABULARY_PROGRESS.meaning, dueDate: past },
+        });
+        const readingRetry = makeVocabProgress({
+            vocabId: 'reading-retry-item',
+            reading: { ...DEFAULT_VOCABULARY_PROGRESS.reading, dueDate: null },
+            // Explicit (not spread from the shared DEFAULT_VOCABULARY_PROGRESS.meaning
+            // object) - other test files mutate that shared nested object, which made
+            // this test flaky depending on run order/suite composition.
+            meaning: { ...DEFAULT_VOCABULARY_PROGRESS.meaning, dueDate: null },
+            needsRetry: { reading: true },
+        });
+        const state: QuizState = {
+            ...initialState,
+            progress: makeProgress([meaningDue, readingRetry]),
+            settings: makeSettings(),
+            // Currently showing a meaning card - this is the "phase" hint.
+            currentQuizItem: { vocab: meaningDue, quizType: 'meaning', quizMode: 'base' },
+        };
+
+        const result = selectNextView(state, false, now);
+        expect(result.queueItem?.quizType).toBe('meaning');
+        expect('vocab' in result.queueItem! ? result.queueItem.vocab.vocabId : undefined).toBe('meaning-item');
+    });
+
+    it('switches to reading once the meaning batch runs dry, even mid-session', () => {
+        const readingRetry = makeVocabProgress({
+            vocabId: 'reading-retry-item',
+            reading: { ...DEFAULT_VOCABULARY_PROGRESS.reading, dueDate: null },
+            // Explicit (not spread from the shared DEFAULT_VOCABULARY_PROGRESS.meaning
+            // object) - other test files mutate that shared nested object, which made
+            // this test flaky depending on run order/suite composition.
+            meaning: { ...DEFAULT_VOCABULARY_PROGRESS.meaning, dueDate: null },
+            needsRetry: { reading: true },
+        });
+        const state: QuizState = {
+            ...initialState,
+            progress: makeProgress([readingRetry]),
+            settings: makeSettings(),
+            currentQuizItem: { vocab: readingRetry, quizType: 'meaning', quizMode: 'base' },
+        };
+
+        const result = selectNextView(state, false, now);
+        expect(result.queueItem?.quizType).toBe('reading');
+    });
+
     it('shouldShowIntro is true when the loaded vocab has no matching queue entry yet', () => {
         const vocab = makeVocab('new-vocab');
         const state: QuizState = { ...initialState, progress: makeProgress([]), settings: makeSettings(), currentVocab: vocab };
