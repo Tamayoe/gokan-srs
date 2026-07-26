@@ -1,56 +1,18 @@
 {
-  "name": "gokan-srs",
+  "name": "gokan",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "typecheck": "tsc --build --pretty false",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "build:data": "rimraf ./public/data/compiled/vocab && rimraf ./public/data/compiled/sentences && bun run build:kanji && bun scripts/build-data.ts && bun run build:jlpt",
-    "build:kanji": "bun scripts/build-kanji.ts",
-    "build:jlpt": "bun scripts/build-jlpt-index.ts",
-    "build:jpdb": "node scripts/jpdb-v2.2-tsv-to-json.js",
-    "test": "vitest run",
-    "test:watch": "vitest"
-  },
-  "dependencies": {
-    "@react-oauth/google": "^0.13.4",
-    "framer-motion": "^12.26.2",
-    "lucide-react": "^0.562.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-router-dom": "^7.13.0",
-    "react-virtuoso": "^4.18.1",
-    "rimraf": "^6.1.2",
-    "terser": "^5.44.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@tailwindcss/vite": "^4.1.18",
-    "@types/kuromoji": "^0.1.3",
-    "@types/node": "^24.10.1",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
-    "autoprefixer": "^10.4.23",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "kuromoji": "^0.1.2",
-    "postcss": "^8.5.6",
-    "sharp": "^0.34.5",
-    "tailwindcss": "^4.1.18",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "npm:rolldown-vite@7.2.5",
-    "vite-plugin-checker": "^0.12.0",
-    "vitest": "^4.0.17"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@7.2.5"
+    "dev": "bun --cwd apps/gokan-srs dev",
+    "build": "bun --cwd apps/gokan-srs build",
+    "typecheck": "bun --cwd apps/gokan-srs typecheck",
+    "lint": "bun --cwd apps/gokan-srs lint",
+    "test": "bun --cwd apps/gokan-srs test",
+    "dictionary:dev": "bun --cwd apps/gokan-dictionary dev",
+    "dictionary:build": "bun --cwd apps/gokan-dictionary build"
   }
 }

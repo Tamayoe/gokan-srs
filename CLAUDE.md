@@ -29,6 +29,8 @@
 
 **Gokan SRS** (語感 - "sense of language") is a Japanese vocabulary learning application using Spaced Repetition System (SRS) algorithms. It's designed as a serious study instrument, not a gamified app.
 
+This repo (`gokan-srs`) is a **monorepo** (Bun workspaces) hosting `apps/gokan-srs` (this app) and `apps/gokan-dictionary` (a companion SEO-crawlable static dictionary site, currently a placeholder skeleton - see [issue #19](https://github.com/gokan-dev/gokan-srs/issues/19)). Both live under the `gokan-dev` GitHub org, alongside the separate `gokan-dataset` repo (the open, CC BY-SA-licensed vocab/kanji/sentence dataset both apps consume). See the root [README.md](README.md) for the full ecosystem layout.
+
 ### Main Goals
 - **Vocabulary Acquisition**: Teach Japanese vocabulary based on user's kanji knowledge
 - **Spaced Repetition**: Optimize review timing using custom SRS algorithm
@@ -52,7 +54,7 @@
 > **Adhere strictly to the design system.**
 > Gokan SRS is a study instrument, not a game. The appearance must be calm, precise, and trustworthy.
 
-Refer to [DESIGN_SYSTEM.md](file:///c:/Programmation/Personnel/gokan-srs/DESIGN_SYSTEM.md) for full details.
+Refer to [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for full details. It's a monorepo-wide doc — both `apps/gokan-srs` and `apps/gokan-dictionary` should follow it.
 
 ### Key Principles
 - **Tone**: Neutral, Direct, Encouraging (no cheerleading)
@@ -64,74 +66,101 @@ Refer to [DESIGN_SYSTEM.md](file:///c:/Programmation/Personnel/gokan-srs/DESIGN_
 
 ## Project Structure
 
+Monorepo root, using Bun workspaces (`package.json`'s `workspaces: ["apps/*"]`). Everything that used to live at repo root (before the `[2026-07-26]` monorepo migration) now lives under `apps/gokan-srs/`, unchanged internally - only the path prefix changed.
+
 ```
-gokan-srs/
-├── data/                      # Vocabulary data (compiled JSON)
-│   └── compiled/
-│       ├── index/            # KKLC & frequency indexes
-│       └── vocab/            # Individual vocabulary files (by ID)
-├── public/                    # Static assets
-├── scripts/                   # Build scripts for data compilation
-│   ├── build-kanji.ts        # Compile KKLC kanji data
-│   ├── build-vocabulary.ts   # Compile JMDict vocabulary
-│   ├── build-jlpt-index.ts   # Compile JLPT level → vocab index (post-pass)
-│   └── jpdb-v2.2-tsv-to-json.js
-├── src/
-│   ├── assets/               # Images, fonts
-│   ├── commons/              # Shared constants
-│   │   └── constants.ts      # App-wide configuration
-│   ├── components/           # Reusable UI components
-│   ├── context/              # React Context providers
-│   │   ├── quiz/             # Quiz state machine (modular, see State Management)
-│   │   │   ├── quizReducer.ts          # Pure reducer (state + actions, no I/O)
-│   │   │   ├── quizSelectors.ts        # selectNextView + derived selectors
-│   │   │   ├── useQuizOrchestration.ts # All effects + actions (I/O, sync, timers)
-│   │   │   └── QuizProvider.tsx        # Thin assembler exposing QuizContextValue
-│   │   ├── useQuiz.ts        # useQuiz() hook + QuizContext object
-│   │   ├── GoogleDriveContext.tsx
-│   │   ├── ThemeContext.tsx
-│   │   ├── KanjiForm/        # Kanji knowledge form state
-│   │   └── Responsive/       # Responsive utilities
-│   ├── models/               # TypeScript interfaces
-│   │   ├── vocabulary.model.ts
-│   │   ├── user.model.ts
-│   │   ├── data.model.ts     # External dataset DTOs
-│   │   ├── index.model.ts
-│   │   ├── state.model.ts
-│   │   └── kanji.model.ts
-│   ├── pages/                # Page components
-│   │   ├── quiz/             # Main study screen (also hosts quizFormatting.ts helpers)
-│   │   ├── setup/            # Initial setup wizard
-│   │   ├── settings/         # App settings
-│   │   ├── profile/          # User profile
-│   │   ├── stats/            # Statistics screen + charts (see Application Pages)
-│   │   └── about/            # About page
-│   ├── services/             # Business logic
-│   │   ├── srs.service.ts    # SRS algorithm (formula only)
-│   │   ├── scheduling.ts     # Single source of truth for due-date/mastery derivation
-│   │   ├── vocabulary.service.ts
-│   │   ├── storage.service.ts
-│   │   ├── backup.service.ts        # Write-once pre-migration safety snapshots
-│   │   ├── progressSerialization.ts # Shared (de)serialization for storage + Drive
-│   │   ├── migration.service.ts
-│   │   ├── sync/                    # Google Drive sync (see Services & Business Logic)
-│   │   │   ├── driveClient.ts       # Raw Drive REST HTTP calls
-│   │   │   ├── mergeProgress.ts     # Pure per-entry merge logic
-│   │   │   ├── googleDriveSync.ts   # Orchestrator: CAS retry, dedup, backups
-│   │   │   └── types.ts
-│   │   └── quiz.service.ts
-│   ├── utils/                # Helper functions
-│   │   ├── srs.utils.ts
-│   │   ├── knowledge.utils.ts # Knowledge-points model + cumulative curve builder
-│   │   └── quiz.utils.ts
-│   ├── App.tsx               # Root component with routing
-│   ├── main.tsx              # Entry point
-│   └── index.css             # Global styles
-├── DESIGN_SYSTEM.md          # Visual design guidelines
-├── ARCHITECTURE_AUDIT.md     # Architecture audit + remediation summary
-├── CLAUDE.md                 # This file
-└── package.json
+gokan-srs/                          # monorepo root
+├── apps/
+│   ├── gokan-srs/                  # the SRS learning app - was the repo root pre-migration
+│   │   ├── data/                      # Vocabulary data (compiled JSON)
+│   │   │   └── compiled/
+│   │   │       ├── index/            # KKLC & frequency indexes
+│   │   │       └── vocab/            # Individual vocabulary files (by ID)
+│   │   ├── public/                    # Static assets
+│   │   ├── scripts/                   # Build scripts for data compilation
+│   │   │   ├── build-kanji.ts        # Compile KKLC kanji data
+│   │   │   ├── build-vocabulary.ts   # Compile JMDict vocabulary
+│   │   │   ├── build-jlpt-index.ts   # Compile JLPT level → vocab index (post-pass)
+│   │   │   └── jpdb-v2.2-tsv-to-json.js
+│   │   ├── src/
+│   │   │   ├── assets/               # Images, fonts
+│   │   │   ├── commons/              # Shared constants
+│   │   │   │   └── constants.ts      # App-wide configuration
+│   │   │   ├── components/           # Reusable UI components
+│   │   │   ├── context/              # React Context providers
+│   │   │   │   ├── quiz/             # Quiz state machine (modular, see State Management)
+│   │   │   │   │   ├── quizReducer.ts          # Pure reducer (state + actions, no I/O)
+│   │   │   │   │   ├── quizSelectors.ts        # selectNextView + derived selectors
+│   │   │   │   │   ├── useQuizOrchestration.ts # All effects + actions (I/O, sync, timers)
+│   │   │   │   │   └── QuizProvider.tsx        # Thin assembler exposing QuizContextValue
+│   │   │   │   ├── useQuiz.ts        # useQuiz() hook + QuizContext object
+│   │   │   │   ├── GoogleDriveContext.tsx
+│   │   │   │   ├── ThemeContext.tsx
+│   │   │   │   ├── KanjiForm/        # Kanji knowledge form state
+│   │   │   │   └── Responsive/       # Responsive utilities
+│   │   │   ├── models/               # TypeScript interfaces
+│   │   │   │   ├── vocabulary.model.ts
+│   │   │   │   ├── user.model.ts
+│   │   │   │   ├── data.model.ts     # External dataset DTOs
+│   │   │   │   ├── index.model.ts
+│   │   │   │   ├── state.model.ts
+│   │   │   │   └── kanji.model.ts
+│   │   │   ├── pages/                # Page components
+│   │   │   │   ├── quiz/             # Main study screen (also hosts quizFormatting.ts helpers)
+│   │   │   │   ├── setup/            # Initial setup wizard
+│   │   │   │   ├── settings/         # App settings
+│   │   │   │   ├── profile/          # User profile
+│   │   │   │   ├── stats/            # Statistics screen + charts (see Application Pages)
+│   │   │   │   └── about/            # About page
+│   │   │   ├── services/             # Business logic
+│   │   │   │   ├── srs.service.ts    # SRS algorithm (formula only)
+│   │   │   │   ├── scheduling.ts     # Single source of truth for due-date/mastery derivation
+│   │   │   │   ├── vocabulary.service.ts
+│   │   │   │   ├── storage.service.ts
+│   │   │   │   ├── backup.service.ts        # Write-once pre-migration safety snapshots
+│   │   │   │   ├── progressSerialization.ts # Shared (de)serialization for storage + Drive
+│   │   │   │   ├── migration.service.ts
+│   │   │   │   ├── sync/                    # Google Drive sync (see Services & Business Logic)
+│   │   │   │   │   ├── driveClient.ts       # Raw Drive REST HTTP calls
+│   │   │   │   │   ├── mergeProgress.ts     # Pure per-entry merge logic
+│   │   │   │   │   ├── googleDriveSync.ts   # Orchestrator: CAS retry, dedup, backups
+│   │   │   │   │   └── types.ts
+│   │   │   │   └── quiz.service.ts
+│   │   │   ├── utils/                # Helper functions
+│   │   │   │   ├── srs.utils.ts
+│   │   │   │   ├── knowledge.utils.ts # Knowledge-points model + cumulative curve builder
+│   │   │   │   └── quiz.utils.ts
+│   │   │   ├── App.tsx               # Root component with routing
+│   │   │   ├── main.tsx              # Entry point
+│   │   │   └── index.css             # Global styles
+│   │   ├── terraform/                 # AWS infra (S3 + CloudFront) - specific to this app's hosting
+│   │   ├── docs/                       # gokan-srs-specific docs
+│   │   │   ├── ARCHITECTURE_AUDIT.md  # Architecture audit + remediation summary
+│   │   │   ├── FUTURE_REFACTORS.md    # Deeper structural follow-ups, not yet scheduled
+│   │   │   └── srs-*.txt              # SRS formula research notes
+│   │   ├── package.json                # App-specific deps/scripts (react, vite, vitest, ...)
+│   │   ├── vite.config.ts, tsconfig*.json, eslint.config.js, index.html
+│   │   └── README.md
+│   └── gokan-dictionary/            # SEO-crawlable static dictionary pages (kanji/vocab/grammar)
+│       ├── src/                        # Svelte + Vite; currently a placeholder skeleton - see issue #19
+│       ├── package.json
+│       └── README.md
+├── docs/                            # Ecosystem-wide docs (not specific to one app)
+│   ├── DESIGN_SYSTEM.md            # Visual design guidelines - both apps should follow it
+│   └── FUTURE_FEATURES.md          # Roadmap spanning gokan-srs, gokan-dictionary, gokan-dataset
+├── .github/workflows/
+│   ├── deploy.yml                   # Test + deploy gokan-srs, path-filtered to apps/gokan-srs/**
+│   └── ci-gokan-dictionary.yml      # Typecheck + build gokan-dictionary, path-filtered
+├── package.json                      # Workspace root manifest (Bun workspaces: "apps/*")
+├── bun.lock                          # Single lockfile for the whole workspace
+├── README.md                         # Monorepo overview, links to each app
+├── CLAUDE.md                         # This file
+└── GEMINI.md
 ```
+
+`gokan-dataset` (the open dataset) and the org they all live under (`gokan-dev`) are separate repos, not part of this monorepo.
+
+**Note**: every other file-path reference in this document (Core Data Models, Services & Business Logic, State Management, Application Pages, Test Infrastructure, etc.) is relative to `apps/gokan-srs/` unless stated otherwise - they predate the monorepo split and were not individually re-prefixed.
 
 ---
 
@@ -457,13 +486,16 @@ Main study interface. Switches **exhaustively** on `sessionState` (a TypeScript 
 
 **Shared formatting** (`pages/quiz/quizFormatting.ts`): `formatReadingList`, `getUniquePosTags`, `getUniqueRelatedCompounds`, and the `useExpandableDefinitions` hook are shared across `QuizCard`, `MeaningQuizCard`, and `VocabIntroCard` rather than being reimplemented in each.
 
-### Setup Screen (`pages/setup/SetupScreen.tsx`)
+### Onboarding Flow (`pages/setup/OnboardingFlow.tsx`)
 
-Initial onboarding wizard. Collects:
-1. Kanji knowledge (method + step/count)
-2. Learning preferences (order)
+Wrapper for new users, replacing a direct `SetupScreen` call. Manages a two-step process:
+1. **Welcome Screen** (`WelcomeScreen.tsx`): Explains the app's philosophy and offers three paths:
+   - *Just starting out (Beginner)*: Skips the wizard entirely - initializes with KKLC step 0, an empty kanji set, and the `kanji_coverage` learning order.
+   - *I already know some kanji (Kanji Learner)*: Proceeds to the Setup Screen wizard.
+   - *Already have an account*: `GoogleLoginButton` - Drive login to restore existing progress (auto-retries the download once authenticated).
+2. **Setup Screen** (`SetupScreen.tsx`): The wizard for the "Kanji Learner" path - collects kanji knowledge (method + step/count) and learning order preferences.
 
-Calls `actions.setupComplete()` when done.
+Calls `actions.setupComplete()` when either path produces a valid `SetupValues` object.
 
 ### Settings Screen (`pages/settings/Settings.tsx`)
 
@@ -497,34 +529,38 @@ Route: `/kanji/:character`. Mirrors `VocabDetailScreen`'s card-based layout at a
 
 ## Build & Development
 
-### Commands (from `package.json`)
+### Commands
+
+Run from the **monorepo root** (`bun install` there installs deps for every workspace app). The root `package.json` proxies the common `gokan-srs` commands directly; anything else runs via `--cwd apps/gokan-srs` (or `--cwd apps/gokan-dictionary`).
 
 **Development:**
 ```bash
-bun run dev          # Start dev server (Vite)
-bun run typecheck    # TypeScript type checking
-bun run lint         # ESLint
+bun run dev                              # Start gokan-srs dev server (Vite)
+bun run typecheck                        # gokan-srs TypeScript type checking
+bun run lint                             # gokan-srs ESLint
+bun run dictionary:dev                   # Start gokan-dictionary dev server
 ```
 
 **Build:**
 ```bash
-bun run build        # Production build
-bun run preview      # Preview production build
+bun run build                            # gokan-srs production build
+bun run --cwd apps/gokan-srs preview     # Preview gokan-srs production build
+bun run dictionary:build                 # gokan-dictionary production build
 ```
 
 **Testing:**
 ```bash
-bun test             # Run all tests (Vitest)
-bun test:watch       # Run tests in watch mode
+bun run test                             # Run all gokan-srs tests (Vitest)
+bun run --cwd apps/gokan-srs test:watch  # Run gokan-srs tests in watch mode
 ```
 
-**Data Compilation:**
+**Data Compilation** (all scoped to `apps/gokan-srs`):
 ```bash
-bun run build:data   # Compile all data (kanji + vocab)
-bun run build:kanji  # Compile KKLC kanji only
-bun run build:vocab  # Compile vocabulary only
-bun run build:jlpt   # Rebuild only index/jlpt.json (fast, reads compiled vocab)
-bun run build:jpdb   # Convert JPDB TSV to JSON
+bun run --cwd apps/gokan-srs build:data   # Compile all data (kanji + vocab)
+bun run --cwd apps/gokan-srs build:kanji  # Compile KKLC kanji only
+bun run --cwd apps/gokan-srs build:vocab  # Compile vocabulary only
+bun run --cwd apps/gokan-srs build:jlpt   # Rebuild only index/jlpt.json (fast, reads compiled vocab)
+bun run --cwd apps/gokan-srs build:jpdb   # Convert JPDB TSV to JSON
 ```
 
 ### Data Build Scripts
@@ -732,6 +768,18 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-07-26]**:
+  - **Monorepo migration**: Converted the repo from a single Vite/React app at the repo root into a Bun-workspaces monorepo, to host a second, unrelated app (`gokan-dictionary`, the SEO static-pages companion planned in [issue #19](https://github.com/gokan-dev/gokan-srs/issues/19)) without duplicating CI/IaC or splitting issue tracking across repos - the alternative considered was a fully separate `gokan-dictionary` repo (which was briefly created, then dissolved back into this one once the pipeline/issue-tracking duplication cost became concrete).
+    - Everything previously at repo root (`src/`, `public/`, `data/`, `scripts/`, `terraform/`, config files, `package.json`) moved as-is into `apps/gokan-srs/` via `git mv` - no internal restructuring, only the path prefix changed. Verified via a side-by-side worktree diff against `main` that `typecheck`/`test`/`build` all produce identical results post-move (two pre-existing `typecheck` failures - an unrelated test-file type-narrowing issue and `vite-plugin-checker`'s optional-peer `.d.ts` errors - were confirmed present on `main` too, not introduced by this migration).
+    - `apps/gokan-dictionary` added as a new Svelte + Vite workspace (build-time pre-rendering planned, not a full SSR framework) - currently a placeholder skeleton, real implementation tracked by issue #19.
+    - Root `package.json` now declares `"workspaces": ["apps/*"]` and proxies the common `gokan-srs` commands; the old single-package `bun.lock` was dropped and regenerated at the workspace root (bun workspaces expect one lockfile covering all member packages, not one per app).
+    - `.gitattributes`'s LFS glob (`data/raw/**`) and `.gitignore`'s anchored `src/**/*.js` pattern were repointed at the new nested path - the latter would have silently stopped working post-move since gitignore patterns containing a mid-string slash are anchored to the location of the `.gitignore` file. Also removed a stale `apps/` entry left over in `.gitignore` from the abandoned `[2026-07-18]` monorepo scaffolding attempt - had it stayed, it would have silently gitignored this entire migration.
+    - `.github/workflows/deploy.yml` gained `paths: ['apps/gokan-srs/**', ...]` filtering and now builds/deploys from `apps/gokan-srs` explicitly (`bun run --cwd apps/gokan-srs ...`, `dist/` → `apps/gokan-srs/dist/` in the S3 sync steps). Also fixed the cache key's `hashFiles('**/bun.lockb')` (stale reference to a filename format this project never used - actual file is `bun.lock`) and added a `pull_request` trigger for the `test` job (previously tests only ran on push to `main`, meaning PRs got no CI signal at all before merge - relevant now that PRs are the intended review surface for autonomous/agent-driven work). The `deploy` job stays gated to `push` on `main` only.
+    - New `.github/workflows/ci-gokan-dictionary.yml`: typecheck + build only, path-filtered to `apps/gokan-dictionary/**`, no deploy job yet (no hosting infra exists for it - out of scope until issue #19 is actually implemented).
+    - `docs/` split: `DESIGN_SYSTEM.md` and `FUTURE_FEATURES.md` stayed at the monorepo root (ecosystem-wide concerns - shared visual language, roadmap spanning multiple repos); `ARCHITECTURE_AUDIT.md`, `FUTURE_REFACTORS.md`, and the `srs-*.txt` formula research notes moved into `apps/gokan-srs/docs/` (gokan-srs-internals-specific). This folded in a pending uncommitted local change (moving these same docs from repo root into a `docs/` folder plus adding `FUTURE_FEATURES.md`) that predated this migration - committed first, separately, so it wouldn't be conflated with the structural move.
+    - Root `README.md` rewritten as a monorepo overview (links to each app + the separate `gokan-dataset` repo); the prior gokan-srs-specific README content moved to `apps/gokan-srs/README.md` near-verbatim (just repointed its "Running locally" commands at the workspace root).
+    - `gokan-dataset` (the dataset repo) and `gokan-dev` (the GitHub org both this repo and `gokan-dataset` now live under) remain **separate repos** - only the static-pages app was folded in here, since it and `gokan-srs` share no code (different stacks even) and the monorepo benefit was purely CI/issue-tracking consolidation, which doesn't apply to the dataset's independent release/licensing cycle.
 
 - **[2026-07-24]**:
   - **Fix - reading quiz interrupting a meaning-quiz batch (and vice versa)**: `getNextVocabToStudy` prioritized ALL actionable readings over meanings unconditionally, recomputed live on every state change (`selectNextView` reruns whenever `state.progress` changes, i.e. after every answer). If a reading item became actionable *while* the user was mid-way through a run of meaning quizzes - most commonly a `needsRetry.reading` flag flipping from an earlier wrong answer, or a review simply coming due - the very next card would silently switch to a reading quiz. Reported as: users, mentally still in "meaning mode" (especially on mobile, where the phase wasn't visually obvious), would type a meaning-style answer into the surprise reading quiz and take an avoidable SRS penalty.
