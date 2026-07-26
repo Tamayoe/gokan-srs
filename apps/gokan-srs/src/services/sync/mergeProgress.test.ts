@@ -123,12 +123,61 @@ describe('mergeVocabProgress (per-entry merge - the core fix)', () => {
         expect(mergeVocabProgress(local, remote).stage).toBe('graduated');
     });
 
-    it('merges needsRetry per-type via OR, never silently dropping a pending retry', () => {
+    it('merges needsRetry per-type via OR when neither side can be ordered (a tie), never silently dropping a pending retry', () => {
         const local = makeVocabProgress({ needsRetry: { reading: true } });
         const remote = makeVocabProgress({ needsRetry: { meaning: true } });
 
         const merged = mergeVocabProgress(local, remote);
         expect(merged.needsRetry).toEqual({ reading: true, meaning: true });
+    });
+
+    it('does not resurrect a needsRetry flag the user already resolved more recently than a stale remote snapshot', () => {
+        // Regression: a successful retry stamps lastReviewedAt on its entry (see
+        // srs.service.ts) without touching scheduling fields. `remote` here models
+        // a copy of progress uploaded BEFORE the retry was answered - if a background
+        // sync merges this in afterwards, the flag must not come back.
+        const local = makeVocabProgress({
+            needsRetry: undefined, // just resolved locally
+            reading: makeEntry({ lastReviewedAt: new Date('2026-04-01T12:00:05Z') }),
+        });
+        const remote = makeVocabProgress({
+            needsRetry: { reading: true }, // stale - predates the retry resolution
+            reading: makeEntry({ lastReviewedAt: new Date('2026-04-01T12:00:00Z') }),
+        });
+
+        const merged = mergeVocabProgress(local, remote);
+        expect(merged.needsRetry?.reading).toBeFalsy();
+    });
+
+    it('mirrors the fix when remote is the side that resolved the retry more recently', () => {
+        const local = makeVocabProgress({
+            needsRetry: { reading: true }, // stale on this side
+            reading: makeEntry({ lastReviewedAt: new Date('2026-04-01T12:00:00Z') }),
+        });
+        const remote = makeVocabProgress({
+            needsRetry: undefined, // resolved on remote, more recently
+            reading: makeEntry({ lastReviewedAt: new Date('2026-04-01T12:00:05Z') }),
+        });
+
+        const merged = mergeVocabProgress(local, remote);
+        expect(merged.needsRetry?.reading).toBeFalsy();
+    });
+
+    it('keeps a needsRetry flag that is still true on the more recent side (genuinely pending, not stale)', () => {
+        // Local's snapshot is older and never saw the retry at all; remote is more
+        // recent and still needs it - this must NOT be cleared just because one
+        // side lacks the flag.
+        const local = makeVocabProgress({
+            needsRetry: undefined,
+            reading: makeEntry({ lastReviewedAt: new Date('2026-04-01T12:00:00Z') }),
+        });
+        const remote = makeVocabProgress({
+            needsRetry: { reading: true },
+            reading: makeEntry({ lastReviewedAt: new Date('2026-04-01T12:00:05Z') }),
+        });
+
+        const merged = mergeVocabProgress(local, remote);
+        expect(merged.needsRetry?.reading).toBe(true);
     });
 
     it('leaves needsRetry undefined when neither side has a pending retry', () => {

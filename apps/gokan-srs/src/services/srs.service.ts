@@ -175,9 +175,18 @@ export class SRSService {
         // reading retry and never blocks meaning reviews (and vice versa).
         if (vocab.needsRetry?.[quizType]) {
             const isSuccess = result === 'correct' || result === 'minor_error';
+            // Stamp lastReviewedAt on the entry even though scheduling fields are
+            // untouched - a retry attempt is still a real interaction, and without
+            // any timestamp trace, mergeVocabProgress has no way to tell "just
+            // resolved locally" apart from a stale remote snapshot still carrying
+            // the flag, and a background sync can resurrect an already-cleared retry.
+            const retryEntry = quizType === 'reading' ? vocab.reading : vocab.meaning;
+            const updatedRetryEntry = { ...retryEntry, lastReviewedAt: now };
             return {
                 updated: {
                     ...vocab,
+                    reading: quizType === 'reading' ? updatedRetryEntry : vocab.reading,
+                    meaning: quizType === 'meaning' ? updatedRetryEntry : vocab.meaning,
                     needsRetry: { ...vocab.needsRetry, [quizType]: !isSuccess }
                 },
                 result,
