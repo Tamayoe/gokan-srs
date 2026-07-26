@@ -293,6 +293,17 @@ describe('SRSService Formula Tests', () => {
             expect(interval).toBe(initialInterval);
         });
 
+        it('should stamp lastReviewedAt on a retry attempt despite preserving SRS state, so a resolved retry can be told apart from a stale sync snapshot', () => {
+            const vocab = createVocab(5.0, 0.3);
+            vocab.needsRetry = { reading: true };
+            vocab.reading.lastReviewedAt = new Date('2020-01-01');
+
+            const { updated } = SRSService.applyAnswer(vocab, 'reading', 'base', 'kotae', 'kotae', 10000, mockNow);
+
+            expect(updated.reading.lastReviewedAt).toEqual(mockNow);
+            expect(updated.meaning.lastReviewedAt).toBe(vocab.meaning.lastReviewedAt); // other type untouched
+        });
+
         it('should keep needsRetry.reading on retry attempt (wrong again) AND preserve SRS state', () => {
             const initialStrength = 5.0;
             const vocab = createVocab(initialStrength, 0.3);

@@ -69,9 +69,27 @@ export function mergeVocabProgress(
     const remoteRecency = Math.max(toTime(remote.reading.lastReviewedAt), toTime(remote.meaning.lastReviewedAt));
     const recencyWinner = remoteRecency > localRecency ? remote : local;
 
+    // needsRetry follows the SAME per-type recency as its entry, rather than a
+    // blanket OR: a retry attempt now stamps lastReviewedAt on its entry (see
+    // srs.service.ts) specifically so this can tell "resolved locally, a moment
+    // ago" apart from a stale snapshot that still carries the flag - a flat OR
+    // would let a delayed background sync resurrect a retry the user already
+    // answered. Falls back to OR only on an exact tie (neither side has ever
+    // recorded a review for that type), so a genuinely-still-pending retry is
+    // never silently dropped just because the two sides can't be ordered.
+    const needsRetryForType = (type: 'reading' | 'meaning'): boolean => {
+        const localTime = toTime(local[type].lastReviewedAt);
+        const remoteTime = toTime(remote[type].lastReviewedAt);
+        if (localTime === remoteTime) {
+            return !!(local.needsRetry?.[type] || remote.needsRetry?.[type]);
+        }
+        const winner = remoteTime > localTime ? remote : local;
+        return !!winner.needsRetry?.[type];
+    };
+
     const mergedNeedsRetryFlags = {
-        reading: !!(local.needsRetry?.reading || remote.needsRetry?.reading),
-        meaning: !!(local.needsRetry?.meaning || remote.needsRetry?.meaning),
+        reading: needsRetryForType('reading'),
+        meaning: needsRetryForType('meaning'),
     };
     const needsRetry = (mergedNeedsRetryFlags.reading || mergedNeedsRetryFlags.meaning) ? mergedNeedsRetryFlags : undefined;
 
