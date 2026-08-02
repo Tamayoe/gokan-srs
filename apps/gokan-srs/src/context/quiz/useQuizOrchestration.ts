@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Dispatch } from 'react';
+import { useLocation } from 'react-router-dom';
 import type { KanjiKnowledge, UserProgress, UserSettings } from '../../models/user.model';
 import type { Vocabulary } from '../../models/vocabulary.model';
 import { StorageService } from '../../services/storage.service';
@@ -31,6 +32,7 @@ export interface QuizActions {
     saveVocabIntroChoice(vocabulary: Vocabulary, choice: 'learn' | 'skip'): void;
     learnNextKanji(): Promise<void>;
     reset(): void;
+    dismissSessionRecap(): void;
 }
 
 /**
@@ -47,6 +49,8 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         lastDownloadTime,
         lastBackgroundMergeTime,
     } = useGoogleDrive();
+
+    const location = useLocation();
 
     const startTimeRef = useRef<number | null>(null);
     // Latency captured at the moment the user SUBMITS their answer, not when they
@@ -135,14 +139,21 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
 
     /* ---------- Session lifecycle ---------- */
 
-    // A "session" is the current continuous run of studying. It begins the moment
-    // there is work to do (review/learn) and ends when the user runs out (waiting/
-    // exhausted). On start we snapshot the tasks due right then as the session's
+    // A "session" is the current continuous run of studying on the /quiz activity
+    // page. It begins the moment there is work to do (review/learn) AND the user is
+    // actually on /quiz, and ends when either stops holding: the queue runs dry
+    // (waiting/exhausted) or the user navigates to another page (Main hub, Settings,
+    // etc.) - leaving early ends the session exactly the same way as running out
+    // naturally, per the Main-hub activity model where quiz sessions are explicit and
+    // boundable. On start we snapshot the tasks due right then as the session's
     // committed workload; SessionProgress counts against that fixed set. Snapshotting
-    // here (rather than in the reducer) keeps the reducer free of Date.now().
+    // here (rather than in the reducer) keeps the reducer free of Date.now(). Resuming
+    // later (navigating back to /quiz) starts a brand new session against whatever is
+    // available then, rather than reopening the old one.
     useEffect(() => {
         if (!state.progress || !state.settings) return;
-        const active = nextView.sessionState === 'review' || nextView.sessionState === 'learn';
+        const onQuizRoute = location.pathname === '/quiz';
+        const active = onQuizRoute && (nextView.sessionState === 'review' || nextView.sessionState === 'learn');
 
         if (active && !state.session) {
             const taskKeys = filterSessionCommit(
@@ -152,7 +163,7 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         } else if (!active && state.session) {
             dispatch({ type: 'SESSION_END' });
         }
-    }, [nextView.sessionState, state.session, state.progress, state.settings]);
+    }, [nextView.sessionState, state.session, state.progress, state.settings, location.pathname]);
 
     /* =========================
        ACTIONS
@@ -450,6 +461,10 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
             }
             dispatch({ type: 'RESET' });
         },
+
+        dismissSessionRecap() {
+            dispatch({ type: 'DISMISS_SESSION_RECAP' });
+        },
     };
 
     /* ---------- Persistence ---------- */
@@ -525,6 +540,13 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
     /* ---------- Load vocab ---------- */
 
     useEffect(() => {
+        // Only load/advance while the quiz activity is actually on screen - otherwise
+        // browsing Settings/Stats/the Main hub would keep fetching vocab JSON and
+        // silently advancing the queue in the background for a card nobody is looking
+        // at (and, worse, doing so before a session has even started for the page the
+        // user is about to land on).
+        if (location.pathname !== '/quiz') return;
+
         const queueItem = nextView.queueItem;
 
         if (!queueItem) {
@@ -599,7 +621,7 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
             dispatch({ type: 'LOAD_VOCAB_ERROR', payload: { vocabId: vid, error: err } });
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [nextView.queueItem, state.progress, state.settings, nextView.sessionState]);
+    }, [nextView.queueItem, state.progress, state.settings, nextView.sessionState, location.pathname]);
 
     useEffect(() => {
         // Meaning quizzes have rich context (sentences) the user might want to read, so they don't auto-advance.

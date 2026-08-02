@@ -12,6 +12,7 @@ import { SearchBar } from './components/SearchBar';
 
 // Lazy Load Pages
 // Note: Adapting named exports to default exports for lazy loading where necessary
+const MainScreen = lazy(() => import('./pages/main/MainScreen').then(module => ({ default: module.MainScreen })));
 const QuizScreen = lazy(() => import('./pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));
 const SettingsScreen = lazy(() => import('./pages/settings/Settings').then(module => ({ default: module.SettingsScreen })));
 const UserProfileScreen = lazy(() => import('./pages/profile/UserProfileScreen').then(module => ({ default: module.UserProfileScreen })));
@@ -83,7 +84,12 @@ export const App: React.FC = () => {
         </KanjiFormProvider>
     }
 
-    const isQuizScreen = location.pathname === '/';
+    // The Main hub ('/') is the landing page - the About link belongs there, mirroring
+    // where it lived when the quiz screen itself was '/'. The quiz session ('/quiz')
+    // keeps the vertically-centered layout its single-card content is designed for;
+    // every other page (including the hub's activity cards) is top-aligned instead.
+    const isMainScreen = location.pathname === '/';
+    const isQuizScreen = location.pathname === '/quiz';
 
     return (
         <div className="min-h-screen flex flex-col relative bg-background transition-colors duration-200">
@@ -115,6 +121,9 @@ export const App: React.FC = () => {
                 <Suspense fallback={<Loader title="Loading..." />}>
                     <Routes>
                         <Route path="/" element={
+                            <MainScreen />
+                        } />
+                        <Route path="/quiz" element={
                             <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
                         } />
                         <Route path="/stats" element={
@@ -157,8 +166,8 @@ export const App: React.FC = () => {
                 </Suspense>
             </div>
 
-            {/* Footer with About link - only shown on Quiz Screen */}
-            {isQuizScreen && (
+            {/* Footer with About link - only shown on the Main hub landing page */}
+            {isMainScreen && (
                 <footer className="p-4 text-center">
                     <Link
                         to="/about"

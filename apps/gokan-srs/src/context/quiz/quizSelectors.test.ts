@@ -267,7 +267,7 @@ describe('selectSessionStats', () => {
     }
 
     function stateWith(queue: VocabProgress[], committed: TaskKey[]) {
-        return { progress: makeProgress(queue), settings, session: { committed } };
+        return { progress: makeProgress(queue), settings, session: { committed, reviewed: 0, correct: 0, incorrect: 0 } };
     }
 
     it('returns zeros without progress', () => {
@@ -333,7 +333,7 @@ describe('selectSessionStats', () => {
         // Simulate having answered the reading: it's no longer due, and its
         // meaning got staggered forward (the real applyAnswer behavior).
         const answered = vocab('a', { readingDue: future, meaningDue: future });
-        const state = { progress: makeProgress([answered]), settings, session: { committed } };
+        const state = { progress: makeProgress([answered]), settings, session: { committed, reviewed: 0, correct: 0, incorrect: 0 } };
 
         const stats = selectSessionStats(state, false, now);
         expect(stats.total).toBe(1); // meaning was never committed

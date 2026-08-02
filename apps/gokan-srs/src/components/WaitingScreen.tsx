@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import { CenteredCard } from "./CenteredCard";
 
 interface WaitingScreenProps {
@@ -39,6 +40,10 @@ export const WaitingScreen: React.FC<WaitingScreenProps> = ({
                 <p className="text-xs text-center text-secondary">
                     Recommended daily limit reached
                 </p>
+
+                <Link to="/" className="text-xs text-center text-secondary hover:text-primary transition-colors">
+                    Back to activities
+                </Link>
             </div>
         </CenteredCard>
     );
