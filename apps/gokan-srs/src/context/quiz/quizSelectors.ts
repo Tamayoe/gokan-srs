@@ -107,6 +107,35 @@ function parseTaskKey(key: TaskKey): { vocabId: string; quizType: QuizType } {
     return { vocabId: key.slice(0, idx), quizType: key.slice(idx + 1) as QuizType };
 }
 
+/**
+ * Drops a vocab's meaning task from a session-commit snapshot when its
+ * reading is committed too. Answering that reading correctly staggers the
+ * meaning's due date forward by 12h (see SRSService.applyAnswer's
+ * reading -> meaning stagger), so committing both counts the meaning as part
+ * of the session's workload even though it's very likely to be silently
+ * cleared without ever actually being answered - the same single answer then
+ * increments `done` by 2 instead of 1. Mirrors how VOCAB_INTRO_CHOICE's
+ * "Learn" path already treats a freshly-learned word (only reading joins the
+ * session; the staggered meaning surfaces later as "waiting" instead). Only
+ * applied at commit time - the live actionable set collectActionableTaskKeys
+ * produces elsewhere (for the done/waiting checks) is left untouched, since a
+ * wrong reading answer does NOT stagger meaning and it must still be
+ * reachable.
+ */
+export function filterSessionCommit(taskKeys: TaskKey[]): TaskKey[] {
+    const readingVocabIds = new Set(
+        taskKeys
+            .map(parseTaskKey)
+            .filter(({ quizType }) => quizType === 'reading')
+            .map(({ vocabId }) => vocabId)
+    );
+
+    return taskKeys.filter(key => {
+        const { vocabId, quizType } = parseTaskKey(key);
+        return !(quizType === 'meaning' && readingVocabIds.has(vocabId));
+    });
+}
+
 export interface SessionStats {
     /** Committed session tasks the user has cleared (answered, deferred, or graduated out). */
     done: number;

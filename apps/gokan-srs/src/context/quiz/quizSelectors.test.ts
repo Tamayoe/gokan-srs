@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { selectNextView, selectCurrentProgress, selectCurrentSentence, selectSessionStats } from './quizSelectors';
+import { selectNextView, selectCurrentProgress, selectCurrentSentence, selectSessionStats, filterSessionCommit } from './quizSelectors';
 import { initialState, taskKey } from './quizReducer';
 import type { QuizState, TaskKey } from './quizReducer';
 import type { UserProgress, UserSettings } from '../../models/user.model';
@@ -320,5 +320,40 @@ describe('selectSessionStats', () => {
         const stats = selectSessionStats(state, false, now);
         expect(stats.total).toBe(0);
         expect(stats.waiting).toBe(1);
+    });
+
+    it('answering a reading whose meaning was due at the same moment only increments done by 1 (via filterSessionCommit)', () => {
+        // Both reading and meaning are due together at session start - without
+        // filterSessionCommit, both would be committed, and answering reading
+        // (which staggers meaning +12h per SRSService.applyAnswer) would
+        // silently count BOTH as "done" from a single answer.
+        const rawCommitted = [taskKey('a', 'reading'), taskKey('a', 'meaning')];
+        const committed = filterSessionCommit(rawCommitted);
+
+        // Simulate having answered the reading: it's no longer due, and its
+        // meaning got staggered forward (the real applyAnswer behavior).
+        const answered = vocab('a', { readingDue: future, meaningDue: future });
+        const state = { progress: makeProgress([answered]), settings, session: { committed } };
+
+        const stats = selectSessionStats(state, false, now);
+        expect(stats.total).toBe(1); // meaning was never committed
+        expect(stats.done).toBe(1); // only reading counts as done
+    });
+});
+
+describe('filterSessionCommit', () => {
+    it("drops a vocab's meaning key when its reading key is also present", () => {
+        const keys: TaskKey[] = [taskKey('a', 'reading'), taskKey('a', 'meaning'), taskKey('b', 'meaning')];
+        expect(filterSessionCommit(keys).sort()).toEqual([taskKey('a', 'reading'), taskKey('b', 'meaning')].sort());
+    });
+
+    it('keeps a meaning key when its reading is not present', () => {
+        const keys: TaskKey[] = [taskKey('a', 'meaning')];
+        expect(filterSessionCommit(keys)).toEqual(keys);
+    });
+
+    it('is a no-op for an all-reading or all-meaning list', () => {
+        const readingOnly: TaskKey[] = [taskKey('a', 'reading'), taskKey('b', 'reading')];
+        expect(filterSessionCommit(readingOnly)).toEqual(readingOnly);
     });
 });
