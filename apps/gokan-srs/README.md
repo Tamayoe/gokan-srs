@@ -50,9 +50,10 @@ bun install
 bun run dev
 ```
 
-To rebuild the vocabulary dataset from raw sources:
+To rebuild the vocabulary dataset from raw sources, the `dataset` submodule needs its own one-time `bun install` first (it's outside the root workspace glob, so the root `bun install` doesn't cover it):
 
 ```bash
+bun install --cwd apps/gokan-srs/dataset
 bun run --cwd apps/gokan-srs build:data
 ```
 
