@@ -55,6 +55,14 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
     const submitLatencyRef = useRef<number | null>(null);
     const dayBoundaryCheckedRef = useRef(false);
     const migrationTriggeredRef = useRef(false);
+    // Identifies the most recently dispatched vocab load ("vid:quizType:quizMode").
+    // A ref (not a per-effect-invocation local) because the load-vocab effect below
+    // re-runs on every render while its own guard keeps returning early for the
+    // same target (loading it doesn't change until the fetch resolves) - a plain
+    // closure-scoped "alive" flag would get reset to false by each of those
+    // no-op re-runs' cleanup, discarding the one fetch that's actually in flight
+    // before it ever gets to dispatch its result.
+    const loadingKeyRef = useRef<string | null>(null);
 
     const progressSignature = useMemo(() => progressUploadSignature(state.progress), [state.progress]);
     // Content signature for settings, for the same reason as progressSignature:
@@ -529,13 +537,23 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         const vid = 'vocabId' in queueItem ? queueItem.vocabId : queueItem.vocab.vocabId;
         const quizType = queueItem.quizType;
 
-        // Exactly this card is already loaded (selectNextView returns a fresh
-        // queueItem object on every recompute, so the dep alone can't tell).
-        // Restarting the load would blank the card, reset the latency timer,
-        // and re-render for nothing - e.g. on a retry re-pick of the same vocab.
+        // Exactly this card is already loaded OR currently being loaded
+        // (selectNextView returns a fresh queueItem object on every recompute, so
+        // the effect dep alone can't tell "same card"). Compare against
+        // currentQuizItem rather than currentVocab: LOAD_VOCAB_START sets
+        // currentQuizItem synchronously, before the async fetch even starts, so
+        // currentVocab (which only updates once loading finishes) can't detect
+        // the in-flight case. Without this, dispatching LOAD_VOCAB_START itself
+        // changes currentQuizItem - a nextView dependency - so a load already in
+        // flight retriggers itself on every render until the fetch resolves: a
+        // real "Maximum update depth exceeded" loop, hammering the same vocab
+        // JSON over and over, not just a hypothetical race.
+        const currentTargetVid = state.currentQuizItem
+            ? ('vocabId' in state.currentQuizItem ? state.currentQuizItem.vocabId : state.currentQuizItem.vocab.vocabId)
+            : null;
+
         if (
-            !state.isLoadingVocab &&
-            state.currentVocab?.id === vid &&
+            currentTargetVid === vid &&
             state.currentQuizItem?.quizType === quizType &&
             state.currentQuizItem?.quizMode === queueItem.quizMode
         ) {
@@ -544,13 +562,26 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
 
         dispatch({ type: 'LOAD_VOCAB_START', payload: queueItem });
 
-        let alive = true;
+        // Identifies THIS fetch, via a ref rather than a closure-scoped boolean.
+        // While this load is in flight, the guard above keeps returning early on
+        // every re-render (the target doesn't change until the fetch resolves) -
+        // an effect *cleanup* still runs on each of those no-op re-runs, though,
+        // since nextView.queueItem gets a fresh object reference every recompute.
+        // A boolean "alive" flag closed over by this specific invocation would be
+        // flipped false by that cleanup, silently discarding this exact fetch's
+        // result before it ever gets to dispatch - which is why the card used to
+        // get stuck on "Loading..." forever despite the network request having
+        // already completed. Comparing against the ref (which only changes when a
+        // *different* target starts loading) correctly lets this fetch's own
+        // callback still fire normally.
+        const loadKey = `${vid}:${quizType}:${queueItem.quizMode}`;
+        loadingKeyRef.current = loadKey;
 
         Promise.all([
             VocabularyService.loadVocab(vid),
             (quizType === 'meaning' && queueItem.quizMode === 'context') ? VocabularyService.loadSentences(vid) : Promise.resolve(null)
         ]).then(([vocab, sentences]) => {
-            if (!alive) return;
+            if (loadingKeyRef.current !== loadKey) return; // superseded by a newer target
 
             let selectedSentenceId: string | null = null;
             if (sentences && sentences.length > 0) {
@@ -561,12 +592,10 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
             dispatch({ type: 'LOAD_VOCAB_SUCCESS', payload: { vocab, sentences, selectedSentenceId } });
             startTimeRef.current = Date.now();
         }).catch(err => {
-            if (!alive) return;
+            if (loadingKeyRef.current !== loadKey) return;
             console.error('[useQuizOrchestration] Failed to load vocab/sentences', err);
             dispatch({ type: 'LOAD_VOCAB_ERROR', payload: { vocabId: vid, error: err } });
         });
-
-        return () => { alive = false; };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [nextView.queueItem, state.progress, state.settings, nextView.sessionState]);
 
