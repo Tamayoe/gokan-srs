@@ -29,3 +29,7 @@ terraform.tfstate
 
 **/src/**/*.js
 **/src/**/*.js.map
+
+# Synced from the gokan-dataset submodule at build/dev time (bun run sync:dataset) -
+# no longer the source of truth, see apps/gokan-srs/scripts/sync-dataset.ts
+apps/gokan-srs/public/data/compiled

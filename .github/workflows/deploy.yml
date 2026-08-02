@@ -63,6 +63,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # gokan-dataset submodule provides the compiled data the build
+          # script's sync:dataset step copies into public/data/compiled -
+          # it's a public repo, so no extra credentials are needed here.
+          submodules: true
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1

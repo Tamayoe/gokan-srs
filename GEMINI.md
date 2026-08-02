@@ -68,20 +68,17 @@ Refer to [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for full details. It's a
 
 Monorepo root, using Bun workspaces (`package.json`'s `workspaces: ["apps/*"]`). Everything that used to live at repo root (before the `[2026-07-26]` monorepo migration) now lives under `apps/gokan-srs/`, unchanged internally - only the path prefix changed.
 
+The compiled dataset itself lives in the separate [`gokan-dataset`](https://github.com/gokan-dev/gokan-dataset) repo, consumed here as a **git submodule** at `apps/gokan-srs/dataset/` - see Build & Development → Dataset Consumption for how the pieces fit together.
+
 ```
 gokan-srs/                          # monorepo root
 ├── apps/
 │   ├── gokan-srs/                  # the SRS learning app - was the repo root pre-migration
-│   │   ├── data/                      # Vocabulary data (compiled JSON)
-│   │   │   └── compiled/
-│   │   │       ├── index/            # KKLC & frequency indexes
-│   │   │       └── vocab/            # Individual vocabulary files (by ID)
+│   │   ├── dataset/                   # git submodule -> gokan-dataset (raw sources, build pipeline, compiled/ output)
 │   │   ├── public/                    # Static assets
-│   │   ├── scripts/                   # Build scripts for data compilation
-│   │   │   ├── build-kanji.ts        # Compile KKLC kanji data
-│   │   │   ├── build-vocabulary.ts   # Compile JMDict vocabulary
-│   │   │   ├── build-jlpt-index.ts   # Compile JLPT level → vocab index (post-pass)
-│   │   │   └── jpdb-v2.2-tsv-to-json.js
+│   │   │   └── data/compiled/         # NOT committed - synced from dataset/compiled/ at dev/build time
+│   │   ├── scripts/
+│   │   │   └── sync-dataset.ts       # Copies dataset/compiled/ -> public/data/compiled/
 │   │   ├── src/
 │   │   │   ├── assets/               # Images, fonts
 │   │   │   ├── commons/              # Shared constants
@@ -554,42 +551,25 @@ bun run test                             # Run all gokan-srs tests (Vitest)
 bun run --cwd apps/gokan-srs test:watch  # Run gokan-srs tests in watch mode
 ```
 
-**Data Compilation** (all scoped to `apps/gokan-srs`):
+**Dataset** (delegates into the `gokan-dataset` submodule - see below):
 ```bash
-bun run --cwd apps/gokan-srs build:data   # Compile all data (kanji + vocab)
-bun run --cwd apps/gokan-srs build:kanji  # Compile KKLC kanji only
-bun run --cwd apps/gokan-srs build:vocab  # Compile vocabulary only
-bun run --cwd apps/gokan-srs build:jlpt   # Rebuild only index/jlpt.json (fast, reads compiled vocab)
-bun run --cwd apps/gokan-srs build:jpdb   # Convert JPDB TSV to JSON
+bun run dataset:sync                      # Copy dataset/compiled/ -> public/data/compiled/ (also runs automatically before dev/build)
+bun run dataset:build                     # Regenerate the dataset from raw sources, then sync (~1-2 min)
+bun run --cwd apps/gokan-srs build:kanji  # Compile KKLC kanji only (delegates into the submodule)
+bun run --cwd apps/gokan-srs build:jlpt   # Rebuild only index/jlpt.json (delegates into the submodule)
 ```
 
-### Data Build Scripts
+### Dataset Consumption
 
-**`scripts/build-kanji.ts`**
-- Reads the KKLC dataset (`data/raw/kklc.json`), JPDB kanji frequency (`data/raw/jpdb_v2.json`), and JLPT kanji levels (`data/raw/jlpt-kanji.json`)
-- Generates `public/data/compiled/kanji.json` (flat `Kanji[]`, `steps.jlpt` populated only for kanji already in the KKLC set) and `data/compiled/index/kklc-kanji.json`
-- Runs before `build-data.ts` in the `build:data` script (which reads the compiled `kanji.json` for KKLC-step lookups)
+The compiled dataset (kanji/vocab/sentences/indexes) is **not owned by this repo**. It lives in the separate [`gokan-dataset`](https://github.com/gokan-dev/gokan-dataset) repo - raw sources, the build pipeline (Kuromoji tokenization, JMDict/KKLC/JPDB/JLPT processing), and the compiled output all live there, documented for third-party consumption independent of this app in that repo's `docs/SCHEMA.md`.
 
-**`scripts/build-data.ts`** - the unified vocabulary/sentence build (supersedes the formerly-separate `build-vocabulary.ts`/`build-sentences.ts`, ported in here per the `[2026-03-03]` changelog entry)
-- Reads JMDict data, JPDB frequency data, the compiled `kanji.json` (for KKLC step lookups), JLPT vocabulary levels (`data/raw/jlpt-vocab.json`), sentence pairs (TSV), and reading indices (CSV)
-- Matches each word's written form against the JLPT vocab dataset (preferring the entry whose reading matches the word's primary reading) to set `jlptLevel`
-- Performs greedy Kuromoji-based tokenization to associate sentences with vocabulary, discarding sentences where matched vocabulary covers < 50% of the text length
-- Computes `components`/`parents` (inverted index) and the `kanji-vocab.json` reverse index (kanji character → containing vocab IDs, frequency-sorted)
-- Generates:
-  - `data/compiled/vocab/{id}.json` (individual vocab files)
-  - `data/compiled/sentences/{vocabId}.json` (arrays of `Sentence` objects, only for vocab with matched sentences)
-  - `data/compiled/index/kklc.json`, `index/frequency.json`, `index/search.json`, `index/kanji-vocab.json`
+`gokan-srs` consumes it as a **git submodule** at `apps/gokan-srs/dataset/` (a public repo, so CI needs no extra credentials to check it out - `submodules: true` on `actions/checkout` is sufficient):
 
-**`scripts/build-jlpt-index.ts`**
-- Reads the **already-compiled** `public/data/compiled/vocab/*.json` and emits `index/jlpt.json` (JLPT level → frequency-sorted vocab entries)
-- Kept as a separate post-pass rather than folded into `build-data.ts` because the main build re-runs Kuromoji tokenization over the whole corpus - far too slow to repeat just to reshape an index. `build:data` chains it after `build-data.ts`, so the two can't drift, and `build:jlpt` regenerates it alone in seconds
-- Sorts by `frequency.kanjiRank` with an id tie-break, since `readdirSync` order is filesystem-dependent and the index must be deterministic across machines
-
-
-**Data Sources:**
-- KKLC: https://github.com/ppasupat/vocab-kanji
-- JMDict: Japanese-English dictionary
-- JPDB: https://jpdb.io frequency data
+- `apps/gokan-srs/scripts/sync-dataset.ts` copies `dataset/compiled/` → `public/data/compiled/` via a plain `fs.cpSync` - no transformation, since both sides agree on the shape. This runs automatically before `dev` and `build` (chained in `package.json`'s scripts), so `public/data/compiled/` is **no longer committed** to this repo (`.gitignore`'d) - it's purely a synced build artifact, regenerated on demand.
+- `apps/gokan-srs/package.json`'s `build:data`/`build:kanji`/`build:jlpt`/`build:jpdb` scripts delegate into the submodule (`bun --cwd dataset run ...`) so the dataset can still be rebuilt from raw sources without leaving the monorepo, then re-sync automatically (`build:data` chains the sync at the end).
+- After cloning fresh, run `git submodule update --init --recursive` (or clone with `--recurse-submodules`) before `bun install`/`bun run dev` - otherwise `sync-dataset.ts` fails fast with a clear error rather than silently serving stale/missing data.
+- Vitest's config (`vite.config.ts`) explicitly excludes `dataset/**` from its test glob, since the submodule has its own independent test suite and CI (would otherwise get picked up and double-run as part of `bun run test` here).
+- Bumping which `gokan-dataset` commit this repo points to is a normal two-step submodule workflow: commit + push inside `apps/gokan-srs/dataset/` first (a separate repo), then commit the resulting pointer change here.
 
 ### Test Infrastructure
 
@@ -618,10 +598,7 @@ bun run --cwd apps/gokan-srs build:jpdb   # Convert JPDB TSV to JSON
 - `src/services/sync/driveClient.test.ts` - Drive REST wrapper tests (auth-error translation)
 - `src/services/sync/googleDriveSync.test.ts` - CAS retry-on-conflict, duplicate-file reconciliation, write-once remote backup
 - `src/utils/knowledge.utils.test.ts` - Knowledge-points model tests: mastery-curve normalisation (a vocab mastered in reading + meaning is worth exactly 200), the interval→strength inversion (including undoing the `wrong`/`minor_error` post-processing multipliers and the frequency modifier), and curve construction (per-day bucketing, pre-window baseline collapsing, skipped-vocab crediting, knowledge loss after a failure, future-dated-log rejection)
-- `scripts/build-vocabulary.test.ts` - Data integrity tests
-  - Validates all vocab IDs in KKLC index have corresponding files
-  - Validates all vocab IDs in frequency index have corresponding files
-  - Validates all vocab files contain valid JSON
+- Data-pipeline tests (tokenizer/Kuromoji integration, data-integrity checks) now live in the `gokan-dataset` submodule's own test suite, not here - `vite.config.ts` explicitly excludes `dataset/**` so they aren't double-run as part of this repo's `bun run test`.
 
 **CI/CD Integration:**
 - GitHub Actions workflow (`.github/workflows/deploy.yml`) includes test stage
@@ -767,6 +744,16 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-08-02]**:
+  - **Dataset split, Phase 2 - gokan-dataset consumed as a git submodule**: Completes the `[2026-07-26]`-era split (Phase 1 had only copied the pipeline/raw data into `gokan-dataset` for validation, leaving `gokan-srs` untouched as a fallback). With the copy validated byte-for-byte, this phase does the actual cutover.
+    - `gokan-dataset` restructured: `public/data/compiled/` → `compiled/` (the "public/" nesting was an app-serving convention that didn't belong in a standalone repo meant for third-party consumption), added `docs/SCHEMA.md` (full compiled-output format documentation, verified field-by-field against real generated files - including `isCommon`, a field present on every vocab file but missing from the shared TS type, a pre-existing gap now at least documented) and a `LICENSE` (CC BY-SA 4.0, matching JMDict's own terms). Re-validated byte-for-byte after the path rename.
+    - `gokan-srs` now consumes it as a **git submodule** at `apps/gokan-srs/dataset/` (HTTPS URL, not the SSH deploy-key alias used for `gokan-srs` itself - deploy keys are per-repo, so the existing one has no access to a different repo). Removed from `gokan-srs` entirely (now living only in the submodule): `data/raw/` (205MB, LFS), the build scripts (`build-kanji.ts`, `build-data.ts`, `build-jlpt-index.ts`, `build-common.ts`, `build-constants.ts`, the JPDB converter), `kuromoji.test.ts`, and `src/utils/tokenizer.ts` (confirmed unused elsewhere in `src/` before removing). The 5 shared model files (`vocabulary.model.ts`, `sentence.model.ts`, `kanji.model.ts`, `data.model.ts`, `index.model.ts`) stay in **both** repos - genuine app dependencies here (e.g. `data.model.ts`'s `TagsLookup`/`Tags` are used directly by `QuizCard`/`MeaningQuizCard`/`VocabDetailScreen`), not just build-time DTOs, so this is an intentional shared-contract duplication, not leftover data.
+    - New `apps/gokan-srs/scripts/sync-dataset.ts`: copies `dataset/compiled/` → `public/data/compiled/` via `fs.cpSync`, fails fast with a clear error if the submodule hasn't been initialized. Wired to run automatically before `dev`/`build` (`package.json`). `public/data/compiled/` is now **gitignored**, not committed - it's a synced build artifact, not source of truth.
+    - `apps/gokan-srs/package.json`'s `build:data`/`build:kanji`/`build:jlpt`/`build:jpdb` now delegate into the submodule (`bun --cwd dataset run ...`) rather than running local scripts, so the dataset can still be rebuilt from raw sources without leaving the monorepo - the explicit goal was "build/edit/deploy everything from the monorepo, but the data lives in its own repo."
+    - `vite.config.ts` gained `test.exclude: [...configDefaults.exclude, 'dataset/**']` - without it, vitest's default glob picked up the submodule's own `kuromoji.test.ts` and double-ran it as part of this repo's test suite (harmless since it passed, but conceptually wrong - that's `gokan-dataset`'s own CI's job).
+    - `.github/workflows/deploy.yml`'s `deploy` job (not `test`, which never touches compiled data) gained `submodules: true` on checkout - `gokan-dataset` is public, so no new credentials were needed.
+    - `.gitattributes`'s LFS tracking line removed entirely (the only path it covered, `data/raw/**`, no longer exists here) and `.gitattributes` deleted (would've been empty).
 
 - **[2026-07-26]**:
   - **Monorepo migration**: Converted the repo from a single Vite/React app at the repo root into a Bun-workspaces monorepo, to host a second, unrelated app (`gokan-dictionary`, the SEO static-pages companion planned in [issue #19](https://github.com/gokan-dev/gokan-srs/issues/19)) without duplicating CI/IaC or splitting issue tracking across repos - the alternative considered was a fully separate `gokan-dictionary` repo (which was briefly created, then dissolved back into this one once the pipeline/issue-tracking duplication cost became concrete).

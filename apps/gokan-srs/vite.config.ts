@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { configDefaults } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import checker from 'vite-plugin-checker';
@@ -26,5 +27,10 @@ export default defineConfig({
         assetsDir: 'assets',
         sourcemap: false,
         minify: 'terser',
+    },
+    test: {
+        // The gokan-dataset submodule has its own test suite and CI - vitest's
+        // default include glob would otherwise pick up dataset/scripts/*.test.ts too.
+        exclude: [...configDefaults.exclude, 'dataset/**'],
     },
 })
