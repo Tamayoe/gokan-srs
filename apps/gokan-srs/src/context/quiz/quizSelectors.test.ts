@@ -164,7 +164,7 @@ describe('selectNextView', () => {
 
         const result = selectNextView(state, false, now);
         expect(result.queueItem?.quizType).toBe('meaning');
-        expect('vocab' in result.queueItem! ? result.queueItem.vocab.vocabId : undefined).toBe('meaning-item');
+        expect(result.queueItem?.vocab?.vocabId).toBe('meaning-item');
     });
 
     it('switches to reading once the meaning batch runs dry, even mid-session', () => {
