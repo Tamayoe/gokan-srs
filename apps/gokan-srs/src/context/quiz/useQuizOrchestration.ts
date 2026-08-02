@@ -16,7 +16,7 @@ import { mergeProgress, mergeSettings } from '../../services/sync/mergeProgress'
 import type { ProgressWithMetadata } from '../../services/sync/types';
 import { useGoogleDrive } from '../GoogleDriveContext';
 import type { QuizState, QuizAction } from './quizReducer';
-import { selectNextView, selectCurrentProgress, selectSessionStats, collectActionableTaskKeys } from './quizSelectors';
+import { selectNextView, selectCurrentProgress, selectSessionStats, collectActionableTaskKeys, filterSessionCommit } from './quizSelectors';
 import { progressUploadSignature, stableStringify } from "../../services/progressSerialization";
 
 export interface QuizActions {
@@ -145,7 +145,9 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         const active = nextView.sessionState === 'review' || nextView.sessionState === 'learn';
 
         if (active && !state.session) {
-            const taskKeys = collectActionableTaskKeys(state.progress.learningQueue, state.settings, new Date());
+            const taskKeys = filterSessionCommit(
+                collectActionableTaskKeys(state.progress.learningQueue, state.settings, new Date())
+            );
             dispatch({ type: 'SESSION_START', payload: { taskKeys } });
         } else if (!active && state.session) {
             dispatch({ type: 'SESSION_END' });
