@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { CenteredCard } from "./CenteredCard";
 
 export const ExhaustedScreen: React.FC = () => {
@@ -9,9 +9,13 @@ export const ExhaustedScreen: React.FC = () => {
                 All caught up 🎉
             </h2>
 
-            <p className="text-sm text-secondary font-serif">
+            <p className="text-sm text-secondary font-serif mb-6">
                 Come back tomorrow.
             </p>
+
+            <Link to="/" className="text-xs text-secondary hover:text-primary transition-colors">
+                Back to activities
+            </Link>
         </CenteredCard>
     );
 };
