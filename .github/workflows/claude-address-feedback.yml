@@ -71,4 +71,4 @@ jobs:
             Push any code changes to the same branch and post a brief comment
             summarising how you addressed the feedback. Do not resolve threads you
             did not actually address.
-          claude_args: "--max-turns 40"
+          claude_args: "--model claude-opus-4-8 --max-turns 40"
