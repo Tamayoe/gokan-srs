@@ -1,0 +1,77 @@
+# Runs Claude to implement an issue the moment it is labeled `ready-for-dev`,
+# opening a normal (non-draft) PR when done. Fully event-driven: this workflow
+# only exists while GitHub is delivering the `issues: labeled` event, so it does
+# no work when there is nothing labeled.
+name: Claude — implement ready-for-dev issue
+
+on:
+  issues:
+    types: [labeled]
+
+# Prevent two runs racing on the same issue (e.g. label removed + re-added).
+concurrency:
+  group: claude-issue-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  implement:
+    # Only react to the one label we care about.
+    if: github.event.label.name == 'ready-for-dev'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # create branch + push commits
+      pull-requests: write  # open the PR
+      issues: write         # comment status back on the issue
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true   # gokan-dataset submodule, per CLAUDE.md
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run Claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          # Claude-side auth. With `/install-github-app` on a Claude subscription this is an
+          # OAuth token; swap to anthropic_api_key if you use a metered API key instead.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          #
+          # GitHub-side auth is intentionally NOT set here: with the Claude GitHub App
+          # installed, the action authenticates git/API ops with the app's installation
+          # token. Unlike the default GITHUB_TOKEN, an app token's pushes/PRs DO trigger
+          # downstream workflows — so the PR this opens gets CI, and a red build reaches
+          # claude-fix-ci.yml. (Verify this on your first end-to-end run.)
+          prompt: |
+            Issue #${{ github.event.issue.number }} was just labeled `ready-for-dev`.
+            You are working autonomously — no human is present. Read CLAUDE.md fully first;
+            it documents the architecture, conventions, and test setup.
+
+            1. If the issue (plus CLAUDE.md and existing conventions) leaves a LOAD-BEARING
+               product/architecture decision genuinely undecided — not just an implementation
+               detail you can reasonably choose — do NOT guess. Remove the `ready-for-dev`
+               label, add `needs-precision`, comment the specific open questions, and stop.
+            2. Otherwise implement it end to end on a branch named
+               `agent/issue-${{ github.event.issue.number }}-<short-slug>`, following existing
+               conventions. Update both CLAUDE.md and GEMINI.md if you make functional changes.
+            3. Write/update tests for what you change. Make these pass before opening the PR:
+               bun run typecheck · bun run lint · bun run test  (don't chase unrelated
+               pre-existing failures noted in CLAUDE.md unless your issue touches that code).
+            4. Open a PULL REQUEST against `main` — NOT a draft — with `Closes
+               #${{ github.event.issue.number }}` in the body, a concise summary of what
+               changed and what you tested. Then remove `ready-for-dev` and add `pr-open`.
+            5. If you genuinely cannot make CI green, comment on the issue explaining the
+               blocker rather than opening a broken PR.
+
+            Hard rules: never push to or merge `main`; never force-push commits you didn't
+            create; never touch `.github/workflows/`, secrets, or deployment config; never
+            close the issue directly (let the merged PR's `Closes #N` do it).
+          claude_args: "--max-turns 60"
