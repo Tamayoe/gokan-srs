@@ -22,6 +22,7 @@ jobs:
       contents: write       # create branch + push commits
       pull-requests: write  # open the PR
       issues: write         # comment status back on the issue
+      id-token: write       # OIDC exchange for the Claude GitHub App installation token
     steps:
       - name: Checkout
         uses: actions/checkout@v4

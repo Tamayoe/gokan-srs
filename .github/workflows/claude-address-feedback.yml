@@ -38,6 +38,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      id-token: write       # OIDC exchange for the Claude GitHub App installation token
     steps:
       - name: Checkout
         uses: actions/checkout@v4
