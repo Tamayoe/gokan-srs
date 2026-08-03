@@ -56,19 +56,30 @@ jobs:
             You are working autonomously — no human is present. Read CLAUDE.md fully first;
             it documents the architecture, conventions, and test setup.
 
+            The branch for this issue is ALWAYS `agent/issue-${{ github.event.issue.number }}`
+            (deterministic — no slug suffix), so an interrupted run can be resumed on it.
+
+            0. Run `git fetch origin`, then check whether `agent/issue-${{ github.event.issue.number }}`
+               already exists on origin. If it does, a previous run was interrupted before finishing:
+               check it out and CONTINUE from where it left off (read its recent commits and any open
+               PR to see what's already done) instead of starting over. If it does not exist, create it
+               from the latest `main`.
             1. If the issue (plus CLAUDE.md and existing conventions) leaves a LOAD-BEARING
                product/architecture decision genuinely undecided — not just an implementation
                detail you can reasonably choose — do NOT guess. Remove the `ready-for-dev`
                label, add `needs-precision`, comment the specific open questions, and stop.
-            2. Otherwise implement it end to end on a branch named
-               `agent/issue-${{ github.event.issue.number }}-<short-slug>`, following existing
-               conventions. Update both CLAUDE.md and GEMINI.md if you make functional changes.
+            2. Otherwise implement it end to end on that branch, following existing conventions.
+               Commit in small, logical increments AS YOU GO and push frequently — never leave all
+               the work uncommitted until the end, so if the run is interrupted (e.g. usage limits)
+               the branch already holds recoverable progress. Update both CLAUDE.md and GEMINI.md if
+               you make functional changes.
             3. Write/update tests for what you change. Make these pass before opening the PR:
                bun run typecheck · bun run lint · bun run test  (don't chase unrelated
                pre-existing failures noted in CLAUDE.md unless your issue touches that code).
             4. Open a PULL REQUEST against `main` — NOT a draft — with `Closes
-               #${{ github.event.issue.number }}` in the body, a concise summary of what
-               changed and what you tested. Then remove `ready-for-dev` and add `pr-open`.
+               #${{ github.event.issue.number }}` in the body (reuse the existing PR if one is
+               already open for this branch), a concise summary of what changed and what you tested.
+               Then remove `ready-for-dev` and add `pr-open`.
             5. If you genuinely cannot make CI green, comment on the issue explaining the
                blocker rather than opening a broken PR.
 
