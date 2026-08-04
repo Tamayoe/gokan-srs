@@ -22,9 +22,10 @@
 5. [Services & Business Logic](#services--business-logic)
 6. [State Management](#state-management)
 7. [Application Pages](#application-pages)
-8. [Build & Development](#build--development)
-9. [Functional Workflows](#functional-workflows)
-10. [Constants & Configuration](#constants--configuration)
+8. [gokan-dictionary App](#gokan-dictionary-app)
+9. [Build & Development](#build--development)
+10. [Functional Workflows](#functional-workflows)
+11. [Constants & Configuration](#constants--configuration)
 
 ---
 
@@ -32,7 +33,7 @@
 
 **Gokan SRS** (語感 - "sense of language") is a Japanese vocabulary learning application using Spaced Repetition System (SRS) algorithms. It's designed as a serious study instrument, not a gamified app.
 
-This repo (`gokan-srs`) is a **monorepo** (Bun workspaces) hosting `apps/gokan-srs` (this app) and `apps/gokan-dictionary` (a companion SEO-crawlable static dictionary site, currently a placeholder skeleton - see [issue #19](https://github.com/gokan-dev/gokan-srs/issues/19)). Both live under the `gokan-dev` GitHub org, alongside the separate `gokan-dataset` repo (the open, CC BY-SA-licensed vocab/kanji/sentence dataset both apps consume). See the root [README.md](README.md) for the full ecosystem layout.
+This repo (`gokan-srs`) is a **monorepo** (Bun workspaces) hosting `apps/gokan-srs` (this app) and `apps/gokan-dictionary` (a companion SEO-crawlable static dictionary site - see [gokan-dictionary App](#gokan-dictionary-app) below and [issue #19](https://github.com/gokan-dev/gokan-srs/issues/19)). Both live under the `gokan-dev` GitHub org, alongside the separate `gokan-dataset` repo (the open, CC BY-SA-licensed vocab/kanji/sentence dataset both apps consume). See the root [README.md](README.md) for the full ecosystem layout.
 
 ### Main Goals
 - **Vocabulary Acquisition**: Teach Japanese vocabulary based on user's kanji knowledge
@@ -154,8 +155,17 @@ gokan-srs/                          # monorepo root
 │   │   ├── package.json                # App-specific deps/scripts (react, vite, vitest, ...)
 │   │   ├── vite.config.ts, tsconfig*.json, eslint.config.js, index.html
 │   │   └── README.md
-│   └── gokan-dictionary/            # SEO-crawlable static dictionary pages (kanji/vocab/grammar)
-│       ├── src/                        # Svelte + Vite; currently a placeholder skeleton - see issue #19
+│   └── gokan-dictionary/            # SEO-crawlable static dictionary pages (kanji/vocab) - see "gokan-dictionary App" below
+│       ├── src/
+│       │   ├── pages/                  # HomePage/VocabPage/KanjiPage.svelte + SiteHeader/SiteFooter (no <style> blocks - see app.css)
+│       │   ├── lib/                    # site.ts, urls.ts, seo.ts, documentShell.ts, vocabSummary.ts, sitemap.ts, dataset.server.ts, types.ts
+│       │   ├── client/                 # search.ts - the only client-side JS on the whole site (progressive-enhancement search box)
+│       │   ├── models/                 # 2nd copy of the shared model files (see Core Data Models)
+│       │   ├── app.css                 # single global stylesheet for all pages
+│       │   └── App.svelte, main.ts     # `vite dev`-only placeholder shell, unused in production
+│       ├── scripts/
+│       │   ├── prerender.ts            # static site generator - writes every dist/vocab, dist/kanji page
+│       │   └── svelte-ssr-loader.ts    # Bun runtime plugin compiling .svelte for prerender.ts (see below)
 │       ├── package.json
 │       └── README.md
 ├── docs/                            # Ecosystem-wide docs (not specific to one app)
@@ -645,6 +655,41 @@ Route: `/grammar/:grammarId` (issue #32 follow-up). Mirrors `VocabDetailScreen`'
 - `ReviewForecast` - upcoming review load
 - `SmartVocabList` - searchable/sortable/paginated vocabulary list. Fully-mastered items are **hidden by default** (via `isVocabFullyMastered`) behind a "Show mastered (N)" checkbox; search/sort/page/showMastered all persist in `sessionStorage` so returning from a vocab detail page restores the list
 - `SmartGrammarList` (`pages/stats/components/SmartGrammarList.tsx`, issue #32 follow-up) - grammar's equivalent, same interaction model (search, sort, paginate, "Show mastered (N)" hidden by default via `isGrammarFullyMastered`, `sessionStorage`-persisted controls under a separate key) driven by `grammarQueue` instead of `learningQueue`. Simpler than `SmartVocabList` since a `GrammarProgress` has one `SRSEntry` (no reading/meaning split) and grammar has no frequency data to sort by (JLPT level stands in for that column instead). Renders `GrammarCard` (`components/GrammarCard.tsx`, mirrors `VocabCard.tsx`) for loaded rows and reuses `VocabCardSkeleton` (`components/VocabCardLoader.tsx`) as the loading placeholder - purely generic gray-bar filler, not vocab-specific despite the name, so not worth a duplicate. Each row navigates to `/grammar/:grammarId`
+
+---
+
+## gokan-dictionary App
+
+`apps/gokan-dictionary` is a separate, standalone Svelte + Vite app (own `package.json`, own tests) implementing [issue #19](https://github.com/gokan-dev/gokan-srs/issues/19): SEO-crawlable static pages for every kanji and vocabulary entry in the compiled dataset, for visitors who just want to look something up without going through gokan-srs's setup flow. It shares no code or runtime with gokan-srs beyond the 5 duplicated model files (see Project Structure) and the dataset submodule both consume - no gokan-srs UI, routing, or quiz logic is reachable from it. Grammar entries (mentioned in the issue title as future work) are not implemented yet - only kanji and vocabulary.
+
+### Static generation model
+
+There is no client-side router or SSR framework (SvelteKit, Next.js, etc.) - the resolved decision on issue #19 was "build-time pre-rendering... kept deliberately lightweight". Every page is a plain static `index.html` file, generated once at build time by `scripts/prerender.ts` and served by any static host with no server runtime.
+
+- `scripts/svelte-ssr-loader.ts` registers a Bun runtime plugin that compiles `.svelte` files with `svelte/compiler`'s `generate: 'server'` mode directly - independent of the Vite build entirely, since Svelte's own `svelte/server` `render()` only turns a component into an HTML *fragment*, and normally you'd reach that via a framework's build integration. This runs standalone via Bun (not `vite build --ssr`) so `bun run scripts/prerender.ts` can directly `import()` the page components after the plugin registers - it must be imported for its side effect *before* any `.svelte` import, so those imports are dynamic (`await import(...)`), never static top-of-file ones.
+- `scripts/prerender.ts` (the actual generator): resolves the compiled dataset (via `dataset.server.ts`, auto-initializing the `gokan-dataset` submodule if this app's own CI hasn't checked it out - see Dataset Consumption below), renders `HomePage`/`VocabPage`/`KanjiPage` (`src/pages/`) per entry with `svelte/server`'s `render()`, wraps each fragment in a full HTML document via `documentShell.ts` (SEO meta, canonical link, JSON-LD, asset links), and writes `dist/vocab/{id}/index.html`, `dist/kanji/{character}/index.html`, `dist/index.html`, `dist/sitemap.xml`, `dist/robots.txt`, and `dist/data/search.json`. Generates all ~35,800 vocab pages + ~2,300 kanji pages in about 10-15 seconds locally.
+  - **Kanji directory names are the raw UTF-8 character, never percent-encoded** - static hosts decode a request URL's percent-escapes before resolving a file on disk, so writing `dist/kanji/%E6%80%9D/` instead of `dist/kanji/思/` would break navigation from a real percent-encoded href like `/kanji/%E6%80%9D/`. `urls.ts`'s `kanjiPath()` percent-encodes for embedding in href/canonical/sitemap strings; the filesystem write path uses the raw character directly. Verified against Vite's own preview server - both URL forms resolve to the identical file.
+  - Cross-page links (a word's kanji breakdown, "used in"/"made of" related words, a kanji's vocab list) are resolved through a one-pass `Map<id, VocabSummary>` built by `vocabSummary.ts` before the main per-page loop, rather than re-reading each referenced vocab file on demand - keeps memory bounded to lightweight summaries instead of every full parsed `Vocabulary` object, while still avoiding N+1 re-reads for popular vocab referenced from many kanji pages. A kanji's vocab list is capped at 50 entries (with a "Showing N of total" note) since some common kanji appear in 100+ words. Components/parents ids that don't resolve to a summary (e.g. stale references) are dropped from the page rather than failing the build, with a single aggregate warning logged - not treated as the kind of fatal data-integrity error gokan-srs's own Error Handling policy describes, since this is a best-effort batch generator over ~38k pages, not an interactive app serving one user's data.
+- `vite.config.ts`'s only production-relevant job is building the two browser-facing assets every static page links to: the global stylesheet (`src/app.css`) and the search script (`src/client/search.ts`), listed as explicit `build.rollupOptions.input` entries so Vite content-hashes and manifests them (`dist/.vite/manifest.json`, read by `prerender.ts`). `index.html`/`App.svelte` are a `vite dev`-only placeholder explaining the static-generation model - there's no production SPA shell for them to belong to.
+- Page components (`src/pages/*.svelte`) deliberately have **no `<style>` blocks** - all styling is one hand-written global stylesheet (`src/app.css`, following [docs/DESIGN_SYSTEM.md](../../docs/DESIGN_SYSTEM.md): calm, Indigo accent, Source Serif 4 + Inter, Noto Serif/Sans JP for Japanese). This sidesteps needing Vite's per-component CSS extraction to work for components that are compiled outside Vite's own module graph (see the SSR loader above) - a global stylesheet built as its own Vite entry is simple and correct for a catalog this shallow (three page shapes total: home, vocab, kanji).
+
+### Client-side interactivity
+
+The only interactive piece on the entire site is the home page's search box (`src/client/search.ts`) - vocab/kanji pages ship zero JS. It's plain DOM/TS progressive enhancement, not a hydrated Svelte island: fetches `/data/search.json` (copied from the compiled dataset's `index/search.json`, ~3MB) lazily on first focus/input, then filters client-side by kanji/reading/meaning substring match, debounced. `matches()`/`filterEntries()` are pure and unit-tested; the DOM wiring (`init()`) is thin glue and untested, consistent with this repo's general pure-logic/thin-glue testing split.
+
+### Dataset consumption
+
+Reads the same `gokan-dataset` submodule as gokan-srs (see gokan-srs's Dataset Consumption section above), but resolved independently: `src/lib/dataset.server.ts`'s `resolveCompiledDir()` walks up to the shared `apps/gokan-srs/dataset/compiled` path and auto-runs `git submodule update --init` if it's missing, since gokan-dictionary's own CI (`ci-gokan-dictionary.yml`) does not check out submodules (`submodules: true` was gokan-srs's own deploy workflow's fix, and editing workflow files is out of scope for automated changes here) - this is the one remaining place that can fetch it before a build needs real data. Node-only (`node:fs`/`node:child_process`) and never imported from a `.svelte` component - see that file's own header comment. `src/models/*.ts` are a second, independent copy of the same 5 shared model files gokan-srs has (see that repo's Project Structure note), trimmed to what this app actually reads (no `VocabProgress`/`SRSEntry`/learning-order fields) plus `isCommon`, a field the compiled dataset always emits that gokan-srs's own copy of `Vocabulary` still omits.
+
+### Tests
+
+Vitest, same as gokan-srs. Pure logic is unit-tested directly; `scripts/prerender.ts` and `scripts/svelte-ssr-loader.ts` themselves are thin I/O orchestration and are not unit-tested - verified instead by actually running `bun run build` against the real dataset and inspecting `dist/` output plus a full in-browser QA pass (search → vocab page → kanji page navigation, screenshots, zero console errors).
+
+- `src/lib/dataset.server.test.ts` - loader tests against small fixture files under `src/lib/__fixtures__/compiled/` (not the real ~1.1GB submodule checkout).
+- `src/lib/urls.test.ts`, `seo.test.ts`, `documentShell.test.ts`, `vocabSummary.test.ts`, `sitemap.test.ts` - pure helper tests.
+- `src/client/search.test.ts` - `matches()`/`filterEntries()` only (DOM wiring untested).
+
+No hosting infra exists for this app yet (deploying it is out of scope here - see the hard rule against touching deployment config/workflows in autonomous runs).
 
 ---
 
