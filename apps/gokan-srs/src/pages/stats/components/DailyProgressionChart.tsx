@@ -1,5 +1,6 @@
 import { THEME } from "../../../commons/theme";
 import type { UserProgress } from "../../../models/user.model";
+import { buildDailyActivity } from "../../../utils/activity.utils";
 import { useMemo } from "react";
 
 interface DailyProgressionChartProps {
@@ -8,44 +9,13 @@ interface DailyProgressionChartProps {
 
 export function DailyProgressionChart({ progress }: DailyProgressionChartProps) {
     const progression = useMemo(() => {
-        const queue = progress.learningQueue || [];
         const daysToShow = 14;
-        const now = new Date();
-        const buckets: { label: string, correct: number, incorrect: number, date: Date, empty: boolean }[] = [];
+        const dailyActivity = buildDailyActivity(progress, daysToShow);
 
-        // Initialize buckets
-        for (let i = daysToShow - 1; i >= 0; i--) {
-            const d = new Date(now);
-            d.setDate(now.getDate() - i);
-            d.setHours(0, 0, 0, 0);
-
-            const label = i === 0 ? 'Today' : (i === 1 ? 'Yesterday' : d.toLocaleDateString('en-US', { weekday: 'short' }));
-            buckets.push({ label, correct: 0, incorrect: 0, date: d, empty: true });
-        }
-
-        // Aggregate history
-        queue.forEach(v => {
-            const allHistory = [
-                ...(v.reading?.history || []),
-                ...(v.meaning?.history || [])
-            ];
-
-            allHistory.forEach(log => {
-                if (log.result === 'pass') return;
-
-                const logDate = new Date(log.date);
-                logDate.setHours(0, 0, 0, 0);
-
-                const bucket = buckets.find(b => b.date.getTime() === logDate.getTime());
-                if (bucket) {
-                    bucket.empty = false;
-                    if (log.result === 'correct' || log.result === 'minor_error') {
-                        bucket.correct++;
-                    } else if (log.result === 'wrong') {
-                        bucket.incorrect++;
-                    }
-                }
-            });
+        const buckets = dailyActivity.map((bucket, idx) => {
+            const i = daysToShow - 1 - idx;
+            const label = i === 0 ? 'Today' : (i === 1 ? 'Yesterday' : bucket.date.toLocaleDateString('en-US', { weekday: 'short' }));
+            return { ...bucket, label };
         });
 
         // Calculate max for expected height scaling
