@@ -1,0 +1,85 @@
+# Deploys the app to the staging environment (staging.gokan-srs.com) on every
+# release-candidate tag push, e.g. `v1.4.0-rc.1`. Staging is a preview target,
+# so this deliberately does NOT gate on the test suite — push an RC to eyeball
+# a change even with work in progress. (Prod deploy.yml keeps its test gate.)
+name: Deploy staging (RC tags)
+
+on:
+  push:
+    tags:
+      - '*-rc*'
+
+env:
+  NODE_ENV: production
+
+jobs:
+  deploy-staging:
+    name: Build and deploy to staging
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # gokan-dataset submodule provides the compiled data the build's
+          # sync:dataset step copies into public/data/compiled.
+          submodules: true
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build application
+        run: bun run --cwd apps/gokan-srs build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Sync build to staging S3
+        run: |
+          # Hashed static assets — long cache, delete stale ones.
+          aws s3 sync apps/gokan-srs/dist/ s3://${{ vars.STAGING_S3_BUCKET_NAME }}/ \
+            --delete \
+            --size-only \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html"
+
+          # HTML entry points — always revalidate.
+          aws s3 sync apps/gokan-srs/dist/ s3://${{ vars.STAGING_S3_BUCKET_NAME }}/ \
+            --cache-control "public, max-age=0, must-revalidate" \
+            --exclude "*" \
+            --include "*.html"
+
+      - name: Invalidate staging CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.STAGING_CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/index.html" "/" "/data/compiled/*"
+
+      - name: Deployment summary
+        run: |
+          echo "## 🧪 Staging deploy — ${GITHUB_REF_NAME}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**URL:** https://staging.gokan-srs.com" >> $GITHUB_STEP_SUMMARY
+          echo "**Tag:** ${GITHUB_REF_NAME}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "_Live in 1–3 minutes after CloudFront invalidation._" >> $GITHUB_STEP_SUMMARY
