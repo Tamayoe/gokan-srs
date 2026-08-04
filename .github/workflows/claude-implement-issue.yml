@@ -63,16 +63,20 @@ jobs:
                already exists on origin. If it does, a previous run was interrupted before finishing:
                check it out and CONTINUE from where it left off (read its recent commits and any open
                PR to see what's already done) instead of starting over. If it does not exist, create it
-               from the latest `main`.
+               from the latest `main`. EITHER WAY, before writing a single line of code, run
+               `git push -u origin agent/issue-${{ github.event.issue.number }}` so the branch exists on
+               origin from the very start — runs get cut off (turn limit, usage limit) with no warning,
+               and only pushed work survives.
             1. If the issue (plus CLAUDE.md and existing conventions) leaves a LOAD-BEARING
                product/architecture decision genuinely undecided — not just an implementation
                detail you can reasonably choose — do NOT guess. Remove the `ready-for-dev`
                label, add `needs-precision`, comment the specific open questions, and stop.
             2. Otherwise implement it end to end on that branch, following existing conventions.
-               Commit in small, logical increments AS YOU GO and push frequently — never leave all
-               the work uncommitted until the end, so if the run is interrupted (e.g. usage limits)
-               the branch already holds recoverable progress. Update both CLAUDE.md and GEMINI.md if
-               you make functional changes.
+               Commit in small, logical increments AS YOU GO and `git push` after EVERY commit —
+               never batch all the work into one commit at the end. Treat each push as a checkpoint:
+               if the run is cut off (turn limit, usage limit), whatever you have already pushed is
+               what the next run resumes from. Update both CLAUDE.md and GEMINI.md if you make
+               functional changes.
             3. Write/update tests for what you change. Make these pass before opening the PR:
                bun run typecheck · bun run lint · bun run test  (don't chase unrelated
                pre-existing failures noted in CLAUDE.md unless your issue touches that code).
@@ -86,4 +90,4 @@ jobs:
             Hard rules: never push to or merge `main`; never force-push commits you didn't
             create; never touch `.github/workflows/`, secrets, or deployment config; never
             close the issue directly (let the merged PR's `Closes #N` do it).
-          claude_args: "--model claude-opus-4-8 --max-turns 60 --allowedTools Bash,Edit,Write,Read,Glob,Grep"
+          claude_args: "--model claude-opus-4-8 --max-turns 100 --allowedTools Bash,Edit,Write,Read,Glob,Grep"
