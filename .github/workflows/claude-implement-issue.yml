@@ -72,11 +72,15 @@ jobs:
                detail you can reasonably choose — do NOT guess. Remove the `ready-for-dev`
                label, add `needs-precision`, comment the specific open questions, and stop.
             2. Otherwise implement it end to end on that branch, following existing conventions.
-               Commit in small, logical increments AS YOU GO and `git push` after EVERY commit —
-               never batch all the work into one commit at the end. Treat each push as a checkpoint:
-               if the run is cut off (turn limit, usage limit), whatever you have already pushed is
-               what the next run resumes from. Update both CLAUDE.md and GEMINI.md if you make
-               functional changes.
+               COMMIT VERY FREQUENTLY in small batches and `git push` after every commit — after each
+               file or small coherent change, NOT just at big milestones. Err deliberately on the side
+               of too many tiny commits: each push is a checkpoint, and if the run is cut off (turn
+               limit, usage limit) the next run can only resume from what you already pushed, so any
+               unpushed work is lost work. Do not worry about a messy commit history while building —
+               once the feature is complete and tests pass, you MAY squash your own checkpoint commits
+               into a clean set before opening the PR if you prefer. Squashing YOUR OWN commits on this
+               branch is allowed; the "never force-push" hard rule only protects commits you did not
+               create. Update both CLAUDE.md and GEMINI.md if you make functional changes.
             3. Write/update tests for what you change. Make these pass before opening the PR:
                bun run typecheck · bun run lint · bun run test  (don't chase unrelated
                pre-existing failures noted in CLAUDE.md unless your issue touches that code).
