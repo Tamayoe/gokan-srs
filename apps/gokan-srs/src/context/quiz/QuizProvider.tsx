@@ -37,7 +37,6 @@ export interface QuizContextValue {
         saveVocabIntroChoice(vocabulary: Vocabulary, choice: 'learn' | 'skip'): void
         learnNextKanji(): Promise<void>;
         reset(): void;
-        dismissSessionRecap(): void;
     };
 
     computed: {
