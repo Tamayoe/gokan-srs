@@ -66,4 +66,4 @@ jobs:
             Follow CLAUDE.md. Leave a short PR comment summarising what was wrong and
             what you changed. If you cannot fix it within a reasonable attempt, comment
             on the PR explaining the blocker instead of pushing a speculative change.
-          claude_args: "--model claude-opus-4-8 --max-turns 40 --allowedTools Bash,Edit,Write,Read,Glob,Grep"
+          claude_args: "--model claude-sonnet-5 --max-turns 40 --allowedTools Bash,Edit,Write,Read,Glob,Grep"
