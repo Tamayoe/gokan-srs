@@ -17,7 +17,7 @@ import { mergeProgress, mergeSettings } from '../../services/sync/mergeProgress'
 import type { ProgressWithMetadata } from '../../services/sync/types';
 import { useGoogleDrive } from '../GoogleDriveContext';
 import type { QuizState, QuizAction } from './quizReducer';
-import { selectNextView, selectCurrentProgress, selectSessionStats, collectActionableTaskKeys, filterSessionCommit } from './quizSelectors';
+import { selectNextView, selectCurrentProgress, selectSessionStats, selectNextSessionPreview, collectActionableTaskKeys, filterSessionCommit } from './quizSelectors';
 import { progressUploadSignature, stableStringify } from "../../services/progressSerialization";
 
 export interface QuizActions {
@@ -135,6 +135,11 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
     const sessionStats = useMemo(
         () => selectSessionStats(state, hasMoreLearnable),
         [state.progress, state.settings, state.session, hasMoreLearnable]
+    );
+
+    const nextSessionPreview = useMemo(
+        () => selectNextSessionPreview(state),
+        [state.progress, state.settings]
     );
 
     /* ---------- Session lifecycle ---------- */
@@ -652,5 +657,5 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         isReady: !!state.currentVocab && !state.isLoadingVocab && !state.isEvaluatingAi,
     };
 
-    return { actions, nextView, currentProgress, computed, sessionStats };
+    return { actions, nextView, currentProgress, computed, sessionStats, nextSessionPreview };
 }
