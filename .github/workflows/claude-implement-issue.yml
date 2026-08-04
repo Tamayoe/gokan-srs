@@ -86,4 +86,4 @@ jobs:
             Hard rules: never push to or merge `main`; never force-push commits you didn't
             create; never touch `.github/workflows/`, secrets, or deployment config; never
             close the issue directly (let the merged PR's `Closes #N` do it).
-          claude_args: "--model claude-opus-4-8 --max-turns 60"
+          claude_args: "--model claude-opus-4-8 --max-turns 60 --allowedTools Bash,Edit,Write,Read,Glob,Grep"
