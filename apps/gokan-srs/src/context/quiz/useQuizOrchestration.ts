@@ -32,7 +32,6 @@ export interface QuizActions {
     saveVocabIntroChoice(vocabulary: Vocabulary, choice: 'learn' | 'skip'): void;
     learnNextKanji(): Promise<void>;
     reset(): void;
-    dismissSessionRecap(): void;
 }
 
 /**
@@ -465,10 +464,6 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
                 console.error('[useQuizOrchestration] Failed to logout during reset', e);
             }
             dispatch({ type: 'RESET' });
-        },
-
-        dismissSessionRecap() {
-            dispatch({ type: 'DISMISS_SESSION_RECAP' });
         },
     };
 

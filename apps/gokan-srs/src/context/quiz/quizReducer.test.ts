@@ -215,29 +215,19 @@ describe('quizReducer', () => {
         expect(next.introCandidates).toBe(candidates);
     });
 
-    it('SESSION_START stores the committed task set with zeroed answer counters', () => {
+    it('SESSION_START stores the committed task set', () => {
         const keys = [taskKey('v1', 'reading'), taskKey('v2', 'meaning')];
         const next = quizReducer(initialState, { type: 'SESSION_START', payload: { taskKeys: keys } });
-        expect(next.session).toEqual({ committed: keys, reviewed: 0, correct: 0, incorrect: 0 });
+        expect(next.session).toEqual({ committed: keys });
     });
 
-    it('SESSION_END clears an active session and records a recap from its counters', () => {
+    it('SESSION_END clears an active session', () => {
         const state: QuizState = {
             ...initialState,
-            session: { committed: [taskKey('v1', 'reading')], reviewed: 3, correct: 2, incorrect: 1 },
+            session: { committed: [taskKey('v1', 'reading')] },
         };
         const next = quizReducer(state, { type: 'SESSION_END' });
         expect(next.session).toBeNull();
-        expect(next.lastSessionRecap).toEqual({ reviewed: 3, correct: 2, incorrect: 1 });
-    });
-
-    it('SESSION_END records a recap even for a session with zero answers (left early)', () => {
-        const state: QuizState = {
-            ...initialState,
-            session: { committed: [taskKey('v1', 'reading')], reviewed: 0, correct: 0, incorrect: 0 },
-        };
-        const next = quizReducer(state, { type: 'SESSION_END' });
-        expect(next.lastSessionRecap).toEqual({ reviewed: 0, correct: 0, incorrect: 0 });
     });
 
     it('SESSION_END is a no-op (same reference) when there is no active session', () => {
@@ -245,36 +235,19 @@ describe('quizReducer', () => {
         expect(next).toBe(initialState);
     });
 
-    it('DISMISS_SESSION_RECAP clears a pending recap', () => {
-        const state: QuizState = { ...initialState, lastSessionRecap: { reviewed: 3, correct: 2, incorrect: 1 } };
-        const next = quizReducer(state, { type: 'DISMISS_SESSION_RECAP' });
-        expect(next.lastSessionRecap).toBeNull();
-    });
-
-    it('DISMISS_SESSION_RECAP is a no-op (same reference) without a pending recap', () => {
-        const next = quizReducer(initialState, { type: 'DISMISS_SESSION_RECAP' });
-        expect(next).toBe(initialState);
-    });
-
-    it('UPDATE_AFTER_ANSWER accumulates reviewed/correct/incorrect on the active session', () => {
+    it('UPDATE_AFTER_ANSWER leaves the committed session task set untouched', () => {
         const progress = makeProgress();
         const state: QuizState = {
             ...initialState,
             progress,
-            session: { committed: [taskKey('v1', 'reading')], reviewed: 1, correct: 1, incorrect: 0 },
+            session: { committed: [taskKey('v1', 'reading')] },
         };
 
-        const correctNext = quizReducer(state, {
+        const next = quizReducer(state, {
             type: 'UPDATE_AFTER_ANSWER',
             payload: { progress, historyItem: { vocabId: 'v1', writtenForm: '日本', result: 'minor_error', delta: 1 } },
         });
-        expect(correctNext.session).toEqual({ committed: [taskKey('v1', 'reading')], reviewed: 2, correct: 2, incorrect: 0 });
-
-        const wrongNext = quizReducer(state, {
-            type: 'UPDATE_AFTER_ANSWER',
-            payload: { progress, historyItem: { vocabId: 'v1', writtenForm: '日本', result: 'wrong', delta: -5 } },
-        });
-        expect(wrongNext.session).toEqual({ committed: [taskKey('v1', 'reading')], reviewed: 2, correct: 1, incorrect: 1 });
+        expect(next.session).toEqual({ committed: [taskKey('v1', 'reading')] });
     });
 
     it('UPDATE_AFTER_ANSWER leaves session untouched (null) when no session is active', () => {
@@ -287,16 +260,15 @@ describe('quizReducer', () => {
         expect(next.session).toBeNull();
     });
 
-    it('VOCAB_INTRO_CHOICE "learn" adds the reading task to the active session, preserving its counters', () => {
+    it('VOCAB_INTRO_CHOICE "learn" adds the reading task to the active session', () => {
         const state: QuizState = {
             ...initialState,
             progress: makeProgress(),
             introCandidates: [makeVocab('v1')],
-            session: { committed: [], reviewed: 2, correct: 1, incorrect: 1 },
+            session: { committed: [] },
         };
         const next = quizReducer(state, { type: 'VOCAB_INTRO_CHOICE', vocabId: 'v1', choice: 'learn', vocabulary: makeVocab('v1') });
         expect(next.session?.committed).toEqual([taskKey('v1', 'reading')]);
-        expect(next.session).toMatchObject({ reviewed: 2, correct: 1, incorrect: 1 });
     });
 
     it('VOCAB_INTRO_CHOICE "skip" adds nothing to the session (skips graduate immediately)', () => {
@@ -304,7 +276,7 @@ describe('quizReducer', () => {
             ...initialState,
             progress: makeProgress(),
             introCandidates: [makeVocab('v1')],
-            session: { committed: [], reviewed: 0, correct: 0, incorrect: 0 },
+            session: { committed: [] },
         };
         const next = quizReducer(state, { type: 'VOCAB_INTRO_CHOICE', vocabId: 'v1', choice: 'skip', vocabulary: makeVocab('v1') });
         expect(next.session?.committed).toEqual([]);

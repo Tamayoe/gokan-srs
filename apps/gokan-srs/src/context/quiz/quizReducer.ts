@@ -30,24 +30,9 @@ export function taskKey(vocabId: string, quizType: QuizType): TaskKey {
  * - those are surfaced separately as "waiting after this session". This is what
  * keeps the session-progress counter's denominator stable instead of tracking the
  * live, ever-shifting due count (which shrank on every wrong answer).
- *
- * `reviewed`/`correct`/`incorrect` accumulate as the user answers (every
- * UPDATE_AFTER_ANSWER while a session is active, including retries) and back the
- * end-of-session recap - `correct` groups 'correct' and 'minor_error' the same way
- * DailyProgressionChart does, `incorrect` covers 'wrong' and 'pass'.
  */
 export interface SessionTracking {
     committed: TaskKey[];
-    reviewed: number;
-    correct: number;
-    incorrect: number;
-}
-
-/** Snapshot of a just-ended session's answer counts, shown as a recap on the Main hub. */
-export interface SessionRecap {
-    reviewed: number;
-    correct: number;
-    incorrect: number;
 }
 
 export interface QuizState {
@@ -77,8 +62,6 @@ export interface QuizState {
     }>;
     /** Task set of the active study session (null between sessions). See SessionTracking. */
     session: SessionTracking | null;
-    /** Recap of the most recently ended session, shown once on the Main hub then dismissed. */
-    lastSessionRecap: SessionRecap | null;
     fatalError: string | null;
 }
 
@@ -103,7 +86,6 @@ export type QuizAction =
     | { type: 'RESET_DAILY_STATS' }
     | { type: 'SESSION_START'; payload: { taskKeys: TaskKey[] } }
     | { type: 'SESSION_END' }
-    | { type: 'DISMISS_SESSION_RECAP' }
     | { type: 'RECONCILE_REMOTE'; payload: { progress: UserProgress; settings: UserSettings } };
 
 export const initialState: QuizState = {
@@ -121,7 +103,6 @@ export const initialState: QuizState = {
     nextKanjiToLearn: null,
     sessionHistory: [],
     session: null,
-    lastSessionRecap: null,
     fatalError: null,
 };
 
@@ -220,18 +201,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 },
             };
 
-        case 'UPDATE_AFTER_ANSWER': {
-            // Groups 'correct'/'minor_error' as correct and 'wrong'/'pass' as incorrect,
-            // matching DailyProgressionChart's convention. Retries count too (a wrong
-            // retry loop still reflects real answering activity for the recap).
-            const isCorrect = action.payload.historyItem.result === 'correct' || action.payload.historyItem.result === 'minor_error';
-            const nextSession = state.session ? {
-                ...state.session,
-                reviewed: state.session.reviewed + 1,
-                correct: state.session.correct + (isCorrect ? 1 : 0),
-                incorrect: state.session.incorrect + (isCorrect ? 0 : 1),
-            } : state.session;
-
+        case 'UPDATE_AFTER_ANSWER':
             return {
                 ...state,
                 progress: action.payload.progress,
@@ -239,9 +209,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 userAnswer: '',
                 sessionHistory: [action.payload.historyItem, ...state.sessionHistory].slice(0, 50),
                 introCandidates: state.introCandidates.filter(c => c.id !== action.payload.historyItem.vocabId),
-                session: nextSession,
             };
-        }
 
         case 'ADVANCE_QUEUE':
             return {
@@ -309,20 +277,10 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'SESSION_START':
             // Snapshot the session's committed task set. Computed with `now` in the
             // orchestration layer (keeping this reducer free of Date.now) and passed in.
-            return { ...state, session: { committed: action.payload.taskKeys, reviewed: 0, correct: 0, incorrect: 0 } };
+            return { ...state, session: { committed: action.payload.taskKeys } };
 
-        case 'SESSION_END': {
-            // Always capture a recap when an active session ends - regardless of
-            // whether it ran to natural completion or the user navigated away early
-            // (see useQuizOrchestration's route-gated lifecycle effect) - so the Main
-            // hub can show "reviewed / correct / incorrect" for the session just closed.
-            if (!state.session) return state;
-            const { reviewed, correct, incorrect } = state.session;
-            return { ...state, session: null, lastSessionRecap: { reviewed, correct, incorrect } };
-        }
-
-        case 'DISMISS_SESSION_RECAP':
-            return state.lastSessionRecap ? { ...state, lastSessionRecap: null } : state;
+        case 'SESSION_END':
+            return state.session ? { ...state, session: null } : state;
 
         case 'RECONCILE_REMOTE':
             // The merge itself (reconciling remote changes against whatever the user
