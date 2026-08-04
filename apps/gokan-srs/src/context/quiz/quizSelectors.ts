@@ -74,6 +74,46 @@ export function selectNextView(
     return { queueItem, sessionState, nextReviewAt, shouldShowIntro };
 }
 
+export interface NextSessionPreview {
+    review: number;
+    new: number;
+    retries: number;
+}
+
+/**
+ * Preview of what the next study session will contain, bucketed per distinct
+ * vocab in `learningQueue` (graduated items excluded). Buckets are mutually
+ * exclusive - first match wins, in this order:
+ *   1. retries - a pending reading or meaning retry from a previous/abandoned session
+ *   2. new     - queued but never reviewed once (totalReviews === 0)
+ *   3. review  - due now (reuses isReadingActionable/isMeaningActionable, which
+ *                by this point can only match their "due" branch since the
+ *                retry and first-review cases were already claimed above)
+ * Counts distinct vocab (words), not individual reading/meaning tasks - see
+ * the issue's rationale for why task-level counting isn't worth the noise.
+ */
+export function selectNextSessionPreview(
+    state: Pick<QuizState, 'progress' | 'settings'>,
+    now: Date = new Date()
+): NextSessionPreview {
+    const preview: NextSessionPreview = { review: 0, new: 0, retries: 0 };
+    if (!state.progress) return preview;
+
+    for (const v of state.progress.learningQueue) {
+        if (v.stage === 'graduated') continue;
+
+        if (v.needsRetry?.reading || v.needsRetry?.meaning) {
+            preview.retries++;
+        } else if (v.totalReviews === 0) {
+            preview.new++;
+        } else if (isReadingActionable(v, now) || isMeaningActionable(v, state.settings ?? undefined, now)) {
+            preview.review++;
+        }
+    }
+
+    return preview;
+}
+
 export function selectCurrentProgress(
     state: Pick<QuizState, 'currentVocab' | 'progress'>
 ): VocabProgress | null {
