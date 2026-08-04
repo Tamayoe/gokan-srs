@@ -279,9 +279,12 @@ main {
 
 .vocab-list-item .jp {
   font-size: 1.125rem;
+  flex-shrink: 0;
 }
 
 .vocab-list-item .gloss {
+  flex: 1 1 auto;
+  min-width: 0;
   color: var(--secondary);
   font-size: 0.875rem;
   overflow: hidden;
