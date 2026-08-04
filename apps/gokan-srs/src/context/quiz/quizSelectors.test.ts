@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { selectNextView, selectCurrentProgress, selectCurrentSentence, selectSessionStats, filterSessionCommit } from './quizSelectors';
+import { selectNextView, selectCurrentProgress, selectCurrentSentence, selectSessionStats, filterSessionCommit, selectNextSessionPreview } from './quizSelectors';
 import { initialState, taskKey } from './quizReducer';
 import type { QuizState, TaskKey } from './quizReducer';
 import type { UserProgress, UserSettings } from '../../models/user.model';
@@ -355,5 +355,108 @@ describe('filterSessionCommit', () => {
     it('is a no-op for an all-reading or all-meaning list', () => {
         const readingOnly: TaskKey[] = [taskKey('a', 'reading'), taskKey('b', 'reading')];
         expect(filterSessionCommit(readingOnly)).toEqual(readingOnly);
+    });
+});
+
+describe('selectNextSessionPreview', () => {
+    const settings = makeSettings();
+
+    // Explicit reading/meaning entries, same rationale as selectSessionStats's local
+    // helpers above: DEFAULT_VOCABULARY_PROGRESS's nested entries are shared/mutated
+    // elsewhere, so dueDate must never be left to fall through to that default.
+    function entry(dueDate: Date | null) {
+        return { memoryStrength: 1, interval: 0, difficulty: 0.3, lastReviewedAt: null, dueDate, history: [] };
+    }
+
+    function vocab(
+        id: string,
+        opts: {
+            stage?: VocabProgress['stage'];
+            totalReviews?: number;
+            readingDue?: Date | null;
+            meaningDue?: Date | null;
+            needsRetry?: VocabProgress['needsRetry'];
+        } = {}
+    ): VocabProgress {
+        return {
+            ...DEFAULT_VOCABULARY_PROGRESS,
+            vocabId: id,
+            stage: opts.stage ?? 'learning',
+            introductionAt: past,
+            totalReviews: opts.totalReviews ?? 1,
+            reading: entry(opts.readingDue ?? null),
+            meaning: entry(opts.meaningDue ?? null),
+            needsRetry: opts.needsRetry,
+        };
+    }
+
+    it('returns all zeros without progress', () => {
+        expect(selectNextSessionPreview({ progress: null, settings }, now)).toEqual({ review: 0, new: 0, retries: 0 });
+    });
+
+    it('buckets a due reading as review', () => {
+        const state = { progress: makeProgress([vocab('a', { readingDue: past })]), settings };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 1, new: 0, retries: 0 });
+    });
+
+    it('buckets a due meaning as review', () => {
+        const state = { progress: makeProgress([vocab('a', { meaningDue: past })]), settings };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 1, new: 0, retries: 0 });
+    });
+
+    it('buckets an unreviewed queued item as new, regardless of due dates', () => {
+        const state = { progress: makeProgress([vocab('a', { totalReviews: 0 })]), settings };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 0, new: 1, retries: 0 });
+    });
+
+    it('buckets a pending reading retry as retries', () => {
+        const state = { progress: makeProgress([vocab('a', { needsRetry: { reading: true } })]), settings };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 0, new: 0, retries: 1 });
+    });
+
+    it('buckets a pending meaning retry as retries', () => {
+        const state = { progress: makeProgress([vocab('a', { needsRetry: { meaning: true } })]), settings };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 0, new: 0, retries: 1 });
+    });
+
+    it('retries take precedence over new and review for the same vocab', () => {
+        // Never reviewed AND has a due date AND flagged for retry - retry wins.
+        const state = {
+            progress: makeProgress([vocab('a', { totalReviews: 0, readingDue: past, needsRetry: { reading: true } })]),
+            settings,
+        };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 0, new: 0, retries: 1 });
+    });
+
+    it('excludes graduated vocab entirely', () => {
+        const state = {
+            progress: makeProgress([vocab('a', { stage: 'graduated', readingDue: past, needsRetry: { reading: true } })]),
+            settings,
+        };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 0, new: 0, retries: 0 });
+    });
+
+    it('ignores a due meaning when meaning quizzes are disabled', () => {
+        const disabled = makeSettings({ enableMeaningQuiz: false });
+        const state = { progress: makeProgress([vocab('a', { meaningDue: past })]), settings: disabled };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 0, new: 0, retries: 0 });
+    });
+
+    it('does not count an item with no due date and no retry in any bucket', () => {
+        const state = { progress: makeProgress([vocab('a', { readingDue: future, meaningDue: future })]), settings };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 0, new: 0, retries: 0 });
+    });
+
+    it('sums mixed buckets across multiple vocab', () => {
+        const state = {
+            progress: makeProgress([
+                vocab('a', { readingDue: past }),
+                vocab('b', { totalReviews: 0 }),
+                vocab('c', { needsRetry: { meaning: true } }),
+                vocab('d', { readingDue: future }),
+            ]),
+            settings,
+        };
+        expect(selectNextSessionPreview(state, now)).toEqual({ review: 1, new: 1, retries: 1 });
     });
 });
