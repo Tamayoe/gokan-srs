@@ -9,7 +9,7 @@ import type { SessionState } from '../../models/state.model';
 import { QuizContext } from '../useQuiz';
 import { quizReducer, initialState } from './quizReducer';
 import type { QuizState } from './quizReducer';
-import type { SessionStats } from './quizSelectors';
+import type { SessionStats, NextSessionPreview } from './quizSelectors';
 import { useQuizOrchestration } from './useQuizOrchestration';
 
 export interface QuizContextValue {
@@ -22,6 +22,8 @@ export interface QuizContextValue {
     isSetupComplete: boolean;
     /** Progress counter for the active study session (done/total, retries, waiting). */
     sessionStats: SessionStats;
+    /** Preview of what the next study session will contain (review/new/retries), shown on the Main hub. */
+    nextSessionPreview: NextSessionPreview;
 
     actions: {
         setupComplete(values: SetupValues): Promise<void>;
@@ -52,7 +54,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         settings: StorageService.loadSettings() ?? DEFAULT_SETTINGS,
     });
 
-    const { actions, nextView, currentProgress, computed, sessionStats } = useQuizOrchestration(state, dispatch);
+    const { actions, nextView, currentProgress, computed, sessionStats, nextSessionPreview } = useQuizOrchestration(state, dispatch);
 
     return (
         <QuizContext.Provider
@@ -64,6 +66,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 shouldShowIntro: nextView.shouldShowIntro,
                 isSetupComplete: !!state.progress,
                 sessionStats,
+                nextSessionPreview,
                 actions,
                 computed,
             }}
