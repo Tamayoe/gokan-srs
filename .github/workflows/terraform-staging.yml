@@ -1,0 +1,81 @@
+# CI-managed Terraform for the staging stack (staging.gokan-srs.com).
+#   - PR touching the staging Terraform  -> `terraform plan` (read-only, posted to the run summary)
+#   - Manual `workflow_dispatch`          -> `terraform apply` (admin-triggered only)
+# State lives in S3 (partial backend: bucket name comes from the TF_STATE_BUCKET
+# variable at init). Credentials are the gokan-terraform-ci user (TF_AWS_* secrets),
+# separate from the narrow deploy user.
+name: Terraform — staging
+
+on:
+  pull_request:
+    paths:
+      - 'apps/gokan-srs/terraform/staging/**'
+      - '.github/workflows/terraform-staging.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: apps/gokan-srs/terraform/staging
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.TF_AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.TF_AWS_SECRET_ACCESS_KEY }}
+  AWS_REGION: ${{ vars.AWS_REGION }}
+
+jobs:
+  plan:
+    name: Plan (PR)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: latest
+      - name: Init
+        run: terraform init -input=false -backend-config="bucket=${{ vars.TF_STATE_BUCKET }}"
+      - name: Validate
+        run: terraform validate
+      - name: Plan
+        id: plan
+        run: |
+          set -o pipefail
+          terraform plan -input=false -no-color | tee plan.txt
+      - name: Publish plan to summary
+        if: always()
+        run: |
+          {
+            echo "## Terraform plan — staging"
+            echo '```'
+            cat plan.txt 2>/dev/null || echo "(no plan output)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  apply:
+    name: Apply (manual)
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    # Optional hardening: create a GitHub Environment named "staging-infra" with
+    # required reviewers and uncomment the next line so an apply needs approval.
+    # environment: staging-infra
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: latest
+      - name: Init
+        run: terraform init -input=false -backend-config="bucket=${{ vars.TF_STATE_BUCKET }}"
+      - name: Apply
+        run: terraform apply -input=false -auto-approve
+      - name: Output summary
+        if: always()
+        run: |
+          {
+            echo "## Terraform apply — staging"
+            echo '```'
+            terraform output 2>/dev/null || echo "(no outputs)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

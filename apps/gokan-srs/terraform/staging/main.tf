@@ -5,7 +5,7 @@
 # Route53 record in the existing gokan-srs.com hosted zone.
 
 terraform {
-  required_version = ">= 1.0"
+  required_version = ">= 1.10" # native S3 state locking (use_lockfile)
 
   required_providers {
     aws = {
@@ -14,8 +14,18 @@ terraform {
     }
   }
 
-  # Local state by default (same as production). Configure an S3 backend here if
-  # you later want shared/remote state.
+  # Remote state in S3 with native locking. Partial config: the `bucket` is
+  # supplied at `terraform init` time via -backend-config, so the account-specific
+  # state-bucket name is never committed to the repo.
+  #   CI:    terraform init -backend-config="bucket=$TF_STATE_BUCKET"
+  #   local: terraform init -backend-config="bucket=<your-state-bucket>"
+  #          (with AWS_PROFILE=terraform-deploy set in the environment)
+  backend "s3" {
+    key          = "staging/terraform.tfstate"
+    region       = "eu-west-3"
+    encrypt      = true
+    use_lockfile = true
+  }
 }
 
 variable "aws_region" {
@@ -42,16 +52,17 @@ variable "project_name" {
   default     = "gokan-srs"
 }
 
+# No hardcoded profile: credentials come from the environment so this works both
+# in CI (AWS_ACCESS_KEY_ID/SECRET from the gokan-terraform-ci user) and locally
+# (export AWS_PROFILE=terraform-deploy before running).
 provider "aws" {
-  region  = var.aws_region
-  profile = "terraform-deploy"
+  region = var.aws_region
 }
 
 # CloudFront ACM certs must live in us-east-1.
 provider "aws" {
-  alias   = "us_east_1"
-  region  = "us-east-1"
-  profile = "terraform-deploy"
+  alias  = "us_east_1"
+  region = "us-east-1"
 }
 
 data "aws_caller_identity" "current" {}

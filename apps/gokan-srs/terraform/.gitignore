@@ -1,0 +1,10 @@
+# Terraform working files — never commit these.
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+# Local partial-backend config (holds your state-bucket name); keep it out of git.
+backend.hcl
+*.auto.tfvars
+# Keep .terraform.lock.hcl committed (dependency lock) — do NOT ignore it.
