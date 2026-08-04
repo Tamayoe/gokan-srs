@@ -8,6 +8,15 @@ on:
   push:
     tags:
       - '*-rc*'
+  # Manual preview of ANY branch/tag/SHA. Dispatch always runs this workflow file
+  # from main, so the target ref doesn't need to contain this workflow itself —
+  # which is how you preview older feature branches on staging.
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Branch, tag, or SHA to build and deploy to staging'
+        required: true
+        default: 'main'
 
 env:
   NODE_ENV: production
@@ -24,6 +33,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # On a tag push this is empty -> falls back to the pushed tag; on a
+          # manual dispatch it's the branch/tag/SHA you entered.
+          ref: ${{ github.event.inputs.ref || github.ref }}
           # gokan-dataset submodule provides the compiled data the build's
           # sync:dataset step copies into public/data/compiled.
           submodules: true
