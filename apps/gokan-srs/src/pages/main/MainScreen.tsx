@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpenText, CheckCircle2, X, XCircle } from 'lucide-react';
+import { BookOpenText } from 'lucide-react';
 import { useQuiz } from '../../context/useQuiz';
+import { DailyActivityCard } from './DailyActivityCard';
 
 /**
  * The activity hub - the app's landing page after setup. Activities (the main
@@ -10,7 +11,7 @@ import { useQuiz } from '../../context/useQuiz';
  * they aren't activities themselves. See issue #16.
  */
 export const MainScreen: React.FC = () => {
-    const { state, actions } = useQuiz();
+    const { state, nextReviewAt, nextSessionPreview } = useQuiz();
     const navigate = useNavigate();
 
     return (
@@ -18,18 +19,12 @@ export const MainScreen: React.FC = () => {
             <h1 className="text-2xl font-serif text-primary mb-1">Study</h1>
             <p className="text-sm text-secondary mb-8">Choose an activity to begin.</p>
 
-            {state.lastSessionRecap && (
-                <SessionRecapCard
-                    recap={state.lastSessionRecap}
-                    onDismiss={() => actions.dismissSessionRecap()}
-                />
-            )}
+            {state.progress && <DailyActivityCard progress={state.progress} />}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <ActivityCard
-                    icon={<BookOpenText size={22} className="text-accent" />}
-                    title="Vocabulary quiz session"
-                    description="Review due words and learn new vocabulary."
+                <QuizActivityCard
+                    preview={nextSessionPreview}
+                    nextReviewAt={nextReviewAt}
                     onClick={() => navigate('/quiz')}
                 />
             </div>
@@ -40,7 +35,7 @@ export const MainScreen: React.FC = () => {
 const ActivityCard: React.FC<{
     icon: React.ReactNode;
     title: string;
-    description: string;
+    description: React.ReactNode;
     onClick: () => void;
 }> = ({ icon, title, description, onClick }) => (
     <button
@@ -55,31 +50,43 @@ const ActivityCard: React.FC<{
     </button>
 );
 
-const SessionRecapCard: React.FC<{
-    recap: { reviewed: number; correct: number; incorrect: number };
-    onDismiss: () => void;
-}> = ({ recap, onDismiss }) => (
-    <div className="mb-8 border border-divider rounded bg-surface p-4 flex items-start justify-between gap-4">
-        <div>
-            <h2 className="text-sm font-medium text-primary mb-2">Session complete</h2>
-            <div className="flex flex-wrap gap-4 text-sm text-secondary">
-                <span>{recap.reviewed} reviewed</span>
-                <span className="flex items-center gap-1">
-                    <CheckCircle2 size={14} className="text-accent" /> {recap.correct} correct
-                </span>
-                {recap.incorrect > 0 && (
-                    <span className="flex items-center gap-1 text-error">
-                        <XCircle size={14} /> {recap.incorrect} incorrect
-                    </span>
-                )}
-            </div>
-        </div>
-        <button
-            onClick={onDismiss}
-            title="Dismiss"
-            className="text-secondary hover:text-primary transition-colors cursor-pointer shrink-0"
-        >
-            <X size={16} />
-        </button>
-    </div>
-);
+/** Minutes-until-next-review, rounded up, matching WaitingScreen's phrasing. */
+function formatNextReview(nextReviewAt: Date): string {
+    const minutes = Math.max(1, Math.ceil((nextReviewAt.getTime() - Date.now()) / 60000));
+    return `Next review in ${minutes} minute${minutes > 1 ? 's' : ''}.`;
+}
+
+const QuizActivityCard: React.FC<{
+    preview: { review: number; new: number; retries: number };
+    nextReviewAt: Date | null;
+    onClick: () => void;
+}> = ({ preview, nextReviewAt, onClick }) => {
+    const { review, new: newCount, retries } = preview;
+    const caughtUp = review === 0 && newCount === 0 && retries === 0;
+
+    let description: React.ReactNode;
+    if (caughtUp) {
+        description = nextReviewAt
+            ? formatNextReview(nextReviewAt)
+            : "You're all caught up.";
+    } else {
+        const parts: React.ReactNode[] = [`${review} review`, `${newCount} new`];
+        if (retries > 0) {
+            parts.push(<span key="retries" className="text-error">{retries} retries</span>);
+        }
+        description = parts.reduce<React.ReactNode[]>((acc, part, i) => {
+            if (i > 0) acc.push(<span key={`sep-${i}`} className="text-tertiary"> · </span>);
+            acc.push(part);
+            return acc;
+        }, []);
+    }
+
+    return (
+        <ActivityCard
+            icon={<BookOpenText size={22} className="text-accent" />}
+            title="Vocabulary quiz session"
+            description={description}
+            onClick={onClick}
+        />
+    );
+};
