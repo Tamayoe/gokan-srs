@@ -4,7 +4,7 @@
 # State lives in S3 (partial backend: bucket name comes from the TF_STATE_BUCKET
 # variable at init). Credentials are the gokan-terraform-ci user (TF_AWS_* secrets),
 # separate from the narrow deploy user.
-name: Terraform — staging
+name: "Terraform: staging"
 
 on:
   pull_request:

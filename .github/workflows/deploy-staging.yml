@@ -2,7 +2,7 @@
 # release-candidate tag push, e.g. `v1.4.0-rc.1`. Staging is a preview target,
 # so this deliberately does NOT gate on the test suite — push an RC to eyeball
 # a change even with work in progress. (Prod deploy.yml keeps its test gate.)
-name: Deploy staging (RC tags)
+name: "Deploy: staging"
 
 on:
   push:

@@ -11,6 +11,9 @@
 > 
 > **WORKFLOW**: After editing one file, IMMEDIATELY edit the other before proceeding with any other work.
 
+> [!IMPORTANT]
+> **No em dashes.** The em dash character (—) is prohibited everywhere in this project: documentation, code, comments, commit messages, PR descriptions, workflow names, and any AI-generated output. Use a colon, parentheses, a comma, or a reworded sentence instead. This applies to every agent and every file, from now on.
+
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Design System](#design-system)

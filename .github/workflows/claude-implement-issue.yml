@@ -2,7 +2,7 @@
 # opening a normal (non-draft) PR when done. Fully event-driven: this workflow
 # only exists while GitHub is delivering the `issues: labeled` event, so it does
 # no work when there is nothing labeled.
-name: Claude — implement ready-for-dev issue
+name: "Agent: implement issue"
 
 on:
   issues:

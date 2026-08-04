@@ -1,15 +1,15 @@
 # Runs Claude to fix a PR whose CI just failed. Triggered by the CI workflows
 # completing with a failure conclusion — no polling, fires only on an actual
 # red build.
-name: Claude — fix failing PR CI
+name: "Agent: fix PR CI"
 
 on:
   workflow_run:
     # Watch the CI workflows that run on pull_request. Names must match the
     # `name:` field of each workflow exactly.
     workflows:
-      - "Deploy to AWS S3 + CloudFront"
-      - "CI - gokan-dictionary"
+      - "Deploy: production"
+      - "CI: gokan-dictionary"
     types: [completed]
 
 concurrency:

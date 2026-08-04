@@ -1,7 +1,7 @@
 # Runs Claude to respond to human feedback on a PR: a submitted review that is
 # not an approval, a PR-level comment, or an inline review comment. Fires only
 # when a person leaves feedback.
-name: Claude — address PR feedback
+name: "Agent: address PR feedback"
 
 on:
   pull_request_review:
