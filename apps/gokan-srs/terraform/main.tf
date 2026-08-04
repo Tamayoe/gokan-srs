@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 1.0"
+  required_version = ">= 1.10" # native S3 state locking (use_lockfile)
 
   required_providers {
     aws = {
@@ -8,25 +8,31 @@ terraform {
     }
   }
 
-  # Optional: Store state in S3 (recommended for team projects)
-  # Uncomment and configure if needed
-  # backend "s3" {
-  #   bucket = "your-terraform-state-bucket"
-  #   key    = "gokan-srs/terraform.tfstate"
-  #   region = "us-east-1"
-  # }
+  # Remote state in S3 with native locking, mirroring the staging stack. Partial
+  # config: the `bucket` is supplied at `terraform init` time via -backend-config,
+  # so the account-specific state-bucket name is never committed to the repo.
+  #   CI:    terraform init -backend-config="bucket=$TF_STATE_BUCKET"
+  #   local: terraform init -backend-config="bucket=<your-state-bucket>"
+  #          (with AWS_PROFILE=terraform-deploy set in the environment)
+  backend "s3" {
+    key          = "production/terraform.tfstate"
+    region       = "eu-west-3"
+    encrypt      = true
+    use_lockfile = true
+  }
 }
 
+# No hardcoded profile: credentials come from the environment so this works both
+# in CI (AWS_ACCESS_KEY_ID/SECRET from the gokan-terraform-ci user) and locally
+# (export AWS_PROFILE=terraform-deploy before running).
 provider "aws" {
   region = var.aws_region
-  profile = "terraform-deploy"
 }
 
 # Provide an AWS provider specifically for the us-east-1 region (Required for CloudFront certs)
 provider "aws" {
-  alias   = "us_east_1"
-  region  = "us-east-1"
-  profile = "terraform-deploy"
+  alias  = "us_east_1"
+  region = "us-east-1"
 }
 
 # Variables
@@ -46,6 +52,15 @@ variable "project_name" {
   description = "Project name"
   type        = string
   default     = "gokan-srs"
+}
+
+# ARN of the console-created WAF WebACL currently attached to the production
+# distribution. Kept as a variable (not hardcoded inline) so it's easy to override
+# or clear. Default reflects the live association at the time state was migrated to CI.
+variable "cloudfront_web_acl_arn" {
+  description = "WAF WebACL ARN attached to the CloudFront distribution (empty to detach)"
+  type        = string
+  default     = "arn:aws:wafv2:us-east-1:413976099932:global/webacl/CreatedByCloudFront-0fb8c740/a68ad563-9024-481f-9f5d-fc949c42012f"
 }
 
 # S3 Bucket for website hosting (standard bucket, not website-enabled)
@@ -86,16 +101,75 @@ resource "aws_cloudfront_origin_access_control" "website" {
   signing_protocol                  = "sigv4"
 }
 
+# Security-headers response policy, created via the console and imported into CI
+# state during the state migration. Currently NOT attached to the distribution
+# (its response_headers_policy_id is unset), so it has no effect on live traffic
+# yet; recorded here so `terraform apply` doesn't delete it. To actually enforce
+# these headers, add `response_headers_policy_id = aws_cloudfront_response_headers_policy.security_headers.id`
+# to the default_cache_behavior below (a deliberate, reviewable change).
+resource "aws_cloudfront_response_headers_policy" "security_headers" {
+  name    = "${var.project_name}-security-headers"
+  comment = "Security headers for gokan-srs"
+
+  cors_config {
+    access_control_allow_credentials = false
+    access_control_max_age_sec       = 0
+    origin_override                  = true
+
+    access_control_allow_headers {
+      items = ["*"]
+    }
+
+    access_control_allow_methods {
+      items = ["GET", "HEAD", "OPTIONS"]
+    }
+
+    access_control_allow_origins {
+      items = ["*"]
+    }
+  }
+
+  security_headers_config {
+    content_type_options {
+      override = true
+    }
+    frame_options {
+      frame_option = "DENY"
+      override     = true
+    }
+    referrer_policy {
+      override        = true
+      referrer_policy = "strict-origin-when-cross-origin"
+    }
+    strict_transport_security {
+      access_control_max_age_sec = 31536000
+      include_subdomains         = true
+      override                   = true
+      preload                    = true
+    }
+    xss_protection {
+      mode_block = true
+      override   = true
+      protection = true
+    }
+  }
+}
+
 # CloudFront Distribution
 resource "aws_cloudfront_distribution" "website" {
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
-  
+
   # Removed price_class = "PriceClass_100" to allow Flat Tier enrollment
 
   # Use domain if provided, otherwise use CloudFront domain
   aliases = var.domain_name != "" ? [var.domain_name] : []
+
+  # WAF WebACL created via the CloudFront console's security-protections integration
+  # (CreatedByCloudFront-*). It lives outside this Terraform (referenced by ARN, not
+  # managed here); recorded so `terraform apply` never silently detaches it from prod.
+  web_acl_id = var.cloudfront_web_acl_arn
 
   origin {
     domain_name              = aws_s3_bucket.website.bucket_regional_domain_name
@@ -184,9 +258,9 @@ data "aws_route53_zone" "main" {
 
 # Request an SSL/TLS Certificate in us-east-1
 resource "aws_acm_certificate" "website" {
-  provider                  = aws.us_east_1
-  domain_name               = data.aws_route53_zone.main.name
-  validation_method         = "DNS"
+  provider          = aws.us_east_1
+  domain_name       = data.aws_route53_zone.main.name
+  validation_method = "DNS"
 
   lifecycle {
     create_before_destroy = true

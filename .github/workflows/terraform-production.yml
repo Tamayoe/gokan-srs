@@ -1,0 +1,87 @@
+# CI-managed Terraform for the production stack (gokan-srs.com).
+#   - PR touching the production Terraform -> `terraform plan` (read-only, posted to the run summary)
+#   - Manual `workflow_dispatch`           -> `terraform apply` (admin-triggered only)
+# State lives in S3 (partial backend: bucket name comes from the TF_STATE_BUCKET
+# variable at init, key = production/terraform.tfstate). Credentials are the
+# gokan-terraform-ci user (TF_AWS_* secrets), separate from the narrow deploy user.
+#
+# Path filter is deliberately the TOP-LEVEL terraform files only
+# (apps/gokan-srs/terraform/*.tf), NOT recursive: the staging stack under
+# terraform/staging/** has its own workflow, so the two never trigger on each other.
+name: "Terraform: production"
+
+on:
+  pull_request:
+    paths:
+      - 'apps/gokan-srs/terraform/*.tf'
+      - 'apps/gokan-srs/terraform/.terraform.lock.hcl'
+      - '.github/workflows/terraform-production.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: apps/gokan-srs/terraform
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.TF_AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.TF_AWS_SECRET_ACCESS_KEY }}
+  AWS_REGION: ${{ vars.AWS_REGION }}
+
+jobs:
+  plan:
+    name: Plan (PR)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: latest
+      - name: Init
+        run: terraform init -input=false -backend-config="bucket=${{ vars.TF_STATE_BUCKET }}"
+      - name: Validate
+        run: terraform validate
+      - name: Plan
+        id: plan
+        run: |
+          set -o pipefail
+          terraform plan -input=false -no-color | tee plan.txt
+      - name: Publish plan to summary
+        if: always()
+        run: |
+          {
+            echo "## Terraform plan - production"
+            echo '```'
+            cat plan.txt 2>/dev/null || echo "(no plan output)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  apply:
+    name: Apply (manual)
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    # Production is the live site. Strongly recommended: create a GitHub Environment
+    # named "production-infra" with required reviewers and uncomment the next line so
+    # an apply needs manual approval before it touches production infrastructure.
+    # environment: production-infra
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: latest
+      - name: Init
+        run: terraform init -input=false -backend-config="bucket=${{ vars.TF_STATE_BUCKET }}"
+      - name: Apply
+        run: terraform apply -input=false -auto-approve
+      - name: Output summary
+        if: always()
+        run: |
+          {
+            echo "## Terraform apply - production"
+            echo '```'
+            terraform output 2>/dev/null || echo "(no outputs)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
