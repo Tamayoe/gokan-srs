@@ -1,6 +1,12 @@
 # Runs Claude to respond to human feedback on a PR: a submitted review that is
 # not an approval, a PR-level comment, or an inline review comment. Fires only
-# when a person leaves feedback.
+# when a person leaves feedback AND explicitly opts that feedback in - either by
+# @claude-mentioning the agent in the comment/review, or by the PR carrying the
+# `agent-feedback` label (an opt-in switch for the whole PR, so every subsequent
+# trusted comment/review triggers the agent without needing @claude every time).
+# Without one of those two, the event is ignored - this used to fire on every
+# trusted comment/review unconditionally, which caused problems when feedback
+# wasn't meant for the agent.
 name: "Agent: address PR feedback"
 
 on:
@@ -18,22 +24,31 @@ concurrency:
 
 jobs:
   respond:
-    # Gate each event type so we only run on real, actionable feedback from a
-    # TRUSTED account. On a public repo anyone can comment/review, so we require
-    # author_association to be a repo owner/member/collaborator — this both keeps
-    # random users from driving the agent (prompt injection / resource abuse) and
-    # excludes the agent's own bot comments (which are never MEMBER), preventing loops.
-    #   - reviews: not an approval (changes requested / commented) + trusted author
-    #   - comments: on a PR (not a plain issue) + trusted author
+    # Gate each event type on TWO independent things:
+    #   1. Trusted author. On a public repo anyone can comment/review, so we require
+    #      author_association to be a repo owner/member/collaborator - this both keeps
+    #      random users from driving the agent (prompt injection / resource abuse) and
+    #      excludes the agent's own bot comments (which are never MEMBER), preventing loops.
+    #   2. Explicit opt-in: the triggering comment/review body contains "@claude", OR
+    #      the PR already carries the `agent-feedback` label. Without this, the workflow
+    #      fired on every trusted comment/review unconditionally - which caused problems
+    #      when a comment wasn't meant for the agent. The label is a per-PR switch (apply
+    #      it once, every later trusted comment/review triggers the agent); "@claude" is
+    #      a one-off invocation on a PR that isn't labeled.
+    #   - reviews: not an approval (changes requested / commented) + trusted author + opt-in
+    #   - comments: on a PR (not a plain issue) + trusted author + opt-in
     if: >
       (github.event_name == 'pull_request_review' &&
         github.event.review.state != 'approved' &&
-        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.review.author_association)) ||
+        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.review.author_association) &&
+        (contains(github.event.review.body, '@claude') || contains(github.event.pull_request.labels.*.name, 'agent-feedback'))) ||
       (github.event_name == 'issue_comment' &&
         github.event.issue.pull_request != null &&
-        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)) ||
+        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association) &&
+        (contains(github.event.comment.body, '@claude') || contains(github.event.issue.labels.*.name, 'agent-feedback'))) ||
       (github.event_name == 'pull_request_review_comment' &&
-        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
+        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association) &&
+        (contains(github.event.comment.body, '@claude') || contains(github.event.pull_request.labels.*.name, 'agent-feedback')))
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -71,4 +86,4 @@ jobs:
             Push any code changes to the same branch and post a brief comment
             summarising how you addressed the feedback. Do not resolve threads you
             did not actually address.
-          claude_args: "--model claude-sonnet-5 --max-turns 200 --allowedTools Bash,Edit,Write,Read,Glob,Grep"
+          claude_args: "--model claude-sonnet-5 --max-turns 500 --allowedTools Bash,Edit,Write,Read,Glob,Grep"
