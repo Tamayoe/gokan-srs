@@ -2,7 +2,10 @@ import { CONSTANTS } from '../commons/constants';
 import type { VocabProgress, SRSEntry } from '../models/vocabulary.model';
 import type { UserProgress, UserSettings } from '../models/user.model';
 import { DEFAULT_SRS_ENTRY, DEFAULT_VOCABULARY_PROGRESS } from '../models/vocabulary.model';
+import type { GrammarProgress } from '../models/grammar.model';
+import { DEFAULT_GRAMMAR_PROGRESS } from '../models/grammar.model';
 import { vocabNextReviewAt } from './scheduling';
+import { grammarNextReviewAt } from './grammarScheduling';
 
 /**
  * Two-tier version scheme:
@@ -173,11 +176,26 @@ export class MigrationService {
             item.stage === 'graduated' ? item : { ...item, nextReviewAt: vocabNextReviewAt(item, settings) }
         );
 
+        // grammarQueue is a purely additive field (issue #17), so it needs no
+        // version-gated migration pass - just defaults filled in and nextReviewAt
+        // derived the same way vocab's is (unconditionally, on every load).
+        const migratedGrammarQueue: GrammarProgress[] = (progress.grammarQueue ?? []).map((item: any) => {
+            const withDefaults: GrammarProgress = {
+                ...DEFAULT_GRAMMAR_PROGRESS,
+                ...item,
+                entry: { ...DEFAULT_SRS_ENTRY, ...item.entry },
+            };
+            return withDefaults.stage === 'graduated'
+                ? withDefaults
+                : { ...withDefaults, nextReviewAt: grammarNextReviewAt(withDefaults) };
+        });
+
         // Cap at SYNC_MIGRATION_VERSION (never CURRENT_FORMAT_VERSION) so
         // needsMigration() keeps reporting true until the async pass has run.
         return {
             ...progress,
             learningQueue: migratedQueue,
+            grammarQueue: migratedGrammarQueue,
             adaptive: progress.adaptive ?? { level: 1.0, history: [] },
             _formatVersion: currentVersion < SYNC_MIGRATION_VERSION ? SYNC_MIGRATION_VERSION : currentVersion
         };

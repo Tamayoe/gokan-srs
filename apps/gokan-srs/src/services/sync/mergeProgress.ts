@@ -1,6 +1,8 @@
 import type { ReviewLog, SRSEntry, VocabProgress } from '../../models/vocabulary.model';
 import type { UserSettings } from '../../models/user.model';
+import type { GrammarProgress } from '../../models/grammar.model';
 import { isVocabFullyMastered, vocabNextReviewAt } from '../scheduling';
+import { isGrammarFullyMastered, grammarNextReviewAt } from '../grammarScheduling';
 import type { ProgressWithMetadata } from './types';
 
 /**
@@ -123,6 +125,53 @@ export function mergeLearningQueues(
     return merged;
 }
 
+/**
+ * Grammar's equivalent of mergeVocabProgress. Simpler - a single SRSEntry
+ * (reused via mergeEntry directly, no per-field-group split needed) and a
+ * single needsRetry boolean instead of a per-quiz-type object.
+ */
+export function mergeGrammarProgress(local: GrammarProgress, remote: GrammarProgress): GrammarProgress {
+    const mergedEntry = mergeEntry(local.entry, remote.entry);
+    const recencyWinner = toTime(remote.lastReviewedAt) > toTime(local.lastReviewedAt) ? remote : local;
+
+    const merged: GrammarProgress = {
+        grammarId: local.grammarId,
+        stage: 'learning',
+        introductionAt: pickEarliestDate(local.introductionAt, remote.introductionAt),
+        lastReviewedAt: recencyWinner.lastReviewedAt,
+        totalReviews: Math.max(local.totalReviews, remote.totalReviews),
+        consecutiveFailures: recencyWinner.consecutiveFailures,
+        entry: mergedEntry,
+        needsRetry: (local.needsRetry || remote.needsRetry) || undefined,
+        nextReviewAt: null,
+    };
+
+    const alreadyGraduated = local.stage === 'graduated' || remote.stage === 'graduated';
+    merged.stage = (alreadyGraduated || isGrammarFullyMastered(merged)) ? 'graduated' : 'learning';
+    merged.nextReviewAt = merged.stage === 'graduated' ? null : grammarNextReviewAt(merged);
+    return merged;
+}
+
+/** Pure union by grammarId, mirroring mergeLearningQueues. */
+export function mergeGrammarQueues(local: GrammarProgress[], remote: GrammarProgress[]): GrammarProgress[] {
+    const localMap = new Map(local.map(item => [item.grammarId, item]));
+    const remoteMap = new Map(remote.map(item => [item.grammarId, item]));
+    const allIds = new Set([...localMap.keys(), ...remoteMap.keys()]);
+
+    const merged: GrammarProgress[] = [];
+    for (const id of allIds) {
+        const localItem = localMap.get(id);
+        const remoteItem = remoteMap.get(id);
+
+        if (localItem && remoteItem) {
+            merged.push(mergeGrammarProgress(localItem, remoteItem));
+        } else {
+            merged.push((localItem ?? remoteItem)!);
+        }
+    }
+    return merged;
+}
+
 export function mergeSettings(
     local: UserSettings,
     remote: UserSettings | null,
@@ -153,6 +202,7 @@ export function mergeProgress(
 
     const mergedKanjiKnowledge = remoteVersion > localVersion ? remote.kanjiKnowledge : local.kanjiKnowledge;
     const mergedQueue = mergeLearningQueues(local.learningQueue, remote.learningQueue, settings);
+    const mergedGrammarQueue = mergeGrammarQueues(local.grammarQueue ?? [], remote.grammarQueue ?? []);
 
     return {
         ...local,
@@ -163,6 +213,7 @@ export function mergeProgress(
         },
         kanjiKnowledge: mergedKanjiKnowledge,
         learningQueue: mergedQueue,
+        grammarQueue: mergedGrammarQueue,
         dailyOverride: local.dailyOverride || remote.dailyOverride,
         _sync: {
             lastModified: Date.now(),
