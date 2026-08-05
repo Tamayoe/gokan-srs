@@ -24,6 +24,7 @@ function makeProgress(overrides: Partial<ProgressWithMetadata> = {}): ProgressWi
     return {
         kanjiKnowledge: { method: 'kklc', step: 100, kanjiSet: new Set(['A']) },
         learningQueue: [],
+        grammarQueue: [],
         stats: { totalReviews: 0, totalLearned: 0, newLearnedToday: 0 },
         dailyOverride: false,
         adaptive: { level: 1.0, history: [] },

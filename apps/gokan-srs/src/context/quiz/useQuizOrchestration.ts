@@ -178,6 +178,7 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
             const progress: UserProgress = {
                 kanjiKnowledge,
                 learningQueue: [],
+                grammarQueue: [],
                 stats: {
                     newLearnedToday: 0,
                     totalLearned: 0,

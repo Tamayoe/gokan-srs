@@ -2,6 +2,8 @@ import type { UserProgress, UserSettings } from "../models/user.model";
 import type { VocabProgress } from "../models/vocabulary.model";
 import { DEFAULT_VOCABULARY_PROGRESS } from "../models/vocabulary.model";
 import { DEFAULT_PROGRESS } from "../models/user.model";
+import type { GrammarProgress } from "../models/grammar.model";
+import { DEFAULT_GRAMMAR_PROGRESS } from "../models/grammar.model";
 import { MigrationService } from "./migration.service";
 import type {ProgressWithMetadata} from "./sync/types";
 
@@ -36,6 +38,19 @@ export function hydrateProgress(migrated: any): UserProgress {
         },
     }));
 
+    const grammarQueue: GrammarProgress[] = (migrated.grammarQueue ?? []).map((elem: any) => ({
+        ...DEFAULT_GRAMMAR_PROGRESS,
+        ...elem,
+        nextReviewAt: hydrateDate(elem.nextReviewAt),
+        lastReviewedAt: hydrateDate(elem.lastReviewedAt),
+        introductionAt: hydrateDate(elem.introductionAt),
+        entry: {
+            ...elem.entry,
+            lastReviewedAt: hydrateDate(elem.entry?.lastReviewedAt),
+            dueDate: hydrateDate(elem.entry?.dueDate),
+        },
+    }));
+
     return {
         ...DEFAULT_PROGRESS,
         ...migrated,
@@ -44,6 +59,7 @@ export function hydrateProgress(migrated: any): UserProgress {
             kanjiSet: new Set(migrated.kanjiKnowledge?.kanjiSet ?? []),
         },
         learningQueue,
+        grammarQueue,
     };
 }
 
