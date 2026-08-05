@@ -32,6 +32,7 @@ function makeProgress(queue: VocabProgress[]): UserProgress {
     return {
         kanjiKnowledge: { method: 'kklc', step: 1, kanjiSet: new Set() },
         learningQueue: queue,
+        grammarQueue: [],
         stats: { newLearnedToday: 0, totalLearned: 0, totalReviews: 0 },
         dailyOverride: false,
         adaptive: { level: 1.0, history: [] },
