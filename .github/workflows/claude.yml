@@ -43,8 +43,9 @@ jobs:
           # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
           # prompt: 'Update the pull request description to include a summary of changes.'
 
-          # Optional: Add claude_args to customize behavior and configuration
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://code.claude.com/docs/en/cli-reference for available options
-          # claude_args: '--allowed-tools Bash(gh pr *)'
+          # Allow Bash (and the file tools) so the agent can run typecheck / lint /
+          # test / build when a comment asks it to verify changes. Without this the
+          # action's default tool set excludes Bash, and every bun/npx invocation is
+          # denied ("requires approval"), so verification silently no-ops.
+          claude_args: "--allowedTools Bash,Edit,Write,Read,Glob,Grep"
 
