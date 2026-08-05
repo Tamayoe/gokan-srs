@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import type { KanjiKnowledge, UserSettings } from '../../models/user.model';
 import { DEFAULT_SETTINGS } from '../../models/user.model';
 import type { VocabProgress, Vocabulary } from '../../models/vocabulary.model';
+import type { GrammarProgress, GrammarPoint } from '../../models/grammar.model';
 import { StorageService } from '../../services/storage.service';
 import type { SetupValues } from '../../models/state.model';
 import type { SessionState } from '../../models/state.model';
@@ -11,6 +12,8 @@ import { quizReducer, initialState } from './quizReducer';
 import type { QuizState } from './quizReducer';
 import type { SessionStats, NextSessionPreview } from './quizSelectors';
 import { useQuizOrchestration } from './useQuizOrchestration';
+import { useGrammarOrchestration } from './useGrammarOrchestration';
+import type { GrammarSessionState, NextGrammarSessionPreview } from './grammarSelectors';
 
 export interface QuizContextValue {
     state: QuizState;
@@ -44,6 +47,25 @@ export interface QuizContextValue {
         canContinue: boolean;
         isReady: boolean;
     };
+
+    /* ---------- Grammar activity (see useGrammarOrchestration.ts) ---------- */
+    grammarSessionState: GrammarSessionState;
+    grammarNextReviewAt: Date | null;
+    currentGrammarProgress: GrammarProgress | null;
+    shouldShowGrammarIntro: boolean;
+    nextGrammarSessionPreview: NextGrammarSessionPreview;
+    grammarActions: {
+        setGrammarAnswer(index: number, value: string): void;
+        submitGrammarAnswer(): Promise<void>;
+        advanceGrammarQueue(): Promise<void>;
+        continueGrammarToNext(): Promise<void>;
+        saveGrammarIntroChoice(grammarPoint: GrammarPoint, choice: 'learn' | 'skip'): void;
+    };
+    grammarComputed: {
+        canSubmitGrammar: boolean;
+        canContinueGrammar: boolean;
+        isGrammarReady: boolean;
+    };
 }
 
 export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
@@ -54,6 +76,13 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     });
 
     const { actions, nextView, currentProgress, computed, sessionStats, nextSessionPreview } = useQuizOrchestration(state, dispatch);
+    const {
+        grammarActions,
+        grammarNextView,
+        currentGrammarProgress,
+        grammarComputed,
+        nextGrammarSessionPreview,
+    } = useGrammarOrchestration(state, dispatch);
 
     return (
         <QuizContext.Provider
@@ -68,6 +97,13 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 nextSessionPreview,
                 actions,
                 computed,
+                grammarSessionState: grammarNextView.sessionState,
+                grammarNextReviewAt: grammarNextView.nextReviewAt,
+                currentGrammarProgress,
+                shouldShowGrammarIntro: grammarNextView.shouldShowIntro,
+                nextGrammarSessionPreview,
+                grammarActions,
+                grammarComputed,
             }}
         >
             {children}
