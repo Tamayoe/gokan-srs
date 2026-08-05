@@ -247,7 +247,12 @@ export class SRSService {
        CORE ALGORITHM (FORMULA)
        ======================= */
 
-    private static calculateNextState(
+    /**
+     * Public so other SRS-driven activities (e.g. GrammarSRSService, which has a
+     * single entry per item rather than reading/meaning) can reuse the same
+     * formula instead of re-deriving it.
+     */
+    static calculateNextState(
         entry: SRSEntry,
         result: AnswerResult,
         latencyMs: number,
