@@ -1,4 +1,5 @@
 import type { VocabProgress } from "./vocabulary.model";
+import type { GrammarProgress } from "./grammar.model";
 
 export interface UserProgress {
     kanjiKnowledge: KanjiKnowledge;
@@ -11,6 +12,9 @@ export interface UserProgress {
      * - mastered vocab (mastery === 100)
      */
     learningQueue: VocabProgress[];
+
+    /** All grammar points ever introduced to the user, independent of learningQueue. */
+    grammarQueue: GrammarProgress[];
 
     /**
      * Counters for progress
@@ -108,6 +112,7 @@ export const DEFAULT_PROGRESS: Omit<UserProgress, 'kanjiKnowledge'> = {
         totalReviews: 0,
     },
     learningQueue: [],
+    grammarQueue: [],
     dailyOverride: false,
     adaptive: {
         level: 1.0,
