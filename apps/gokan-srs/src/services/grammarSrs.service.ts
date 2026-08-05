@@ -110,6 +110,26 @@ export class GrammarSRSService {
         };
     }
 
+    /**
+     * Advances a GrammarProgress past the current turn WITHOUT touching its SRS
+     * state (memoryStrength/interval/difficulty untouched, so this genuinely
+     * grants no credit) - used for the rare grammar point where none of its
+     * examples have a single blankable word (computeBlankPlan's read-only
+     * fallback), where there is nothing to grade. Only reschedules `dueDate`
+     * forward by a fixed cooldown so the same ungradable card doesn't
+     * immediately reappear on the very next queue pick.
+     */
+    static deferWithoutCredit(progress: GrammarProgress, now: Date): GrammarProgress {
+        const deferredDueDate = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+        return {
+            ...progress,
+            entry: { ...progress.entry, dueDate: deferredDueDate },
+            nextReviewAt: deferredDueDate,
+            lastReviewedAt: now,
+            totalReviews: progress.totalReviews + 1,
+        };
+    }
+
     /** Finds the next batch of grammar point IDs eligible for learning, in JLPT order (N5 -> N1). */
     static async getNextCandidates(
         currentQueue: GrammarProgress[],

@@ -8,6 +8,12 @@ import type { QuizState } from './quizReducer';
 export interface GrammarBlankPlan {
     exampleIndex: number;
     blankWordIndices: number[];
+    /** Per-blank list of accepted answer forms (surface, reading, kanji alternatives, ...), same order as blankWordIndices - resolved once at load time so grading stays synchronous. */
+    acceptLists: string[][];
+    /** Per-blank English gloss for the hint control, same order as blankWordIndices. Empty string when unavailable. */
+    glosses: string[];
+    /** True when no word in ANY of the point's examples resolved to a vocab id - nothing gradable, rendered as read-only study material instead of a quiz. */
+    readOnly: boolean;
 }
 
 /** A grammar point has exactly one quiz type, so this is just an id - no quizType/quizMode to track. */
@@ -21,6 +27,8 @@ export interface GrammarQuizState {
     currentGrammarBlankPlan: GrammarBlankPlan | null;
     /** One answer per entry in currentGrammarBlankPlan.blankWordIndices, same order. */
     grammarAnswers: string[];
+    /** Per-blank progressive hint level, same order as blankWordIndices: 0 = none, 1 = gloss shown, 2 = answer revealed (grades as 'pass'). */
+    grammarHintLevels: number[];
     grammarFeedback: {
         show: boolean;
         correct: boolean; // true only when every blank was strictly correct
@@ -39,6 +47,7 @@ export const initialGrammarState: GrammarQuizState = {
     currentGrammarQuizItem: null,
     currentGrammarBlankPlan: null,
     grammarAnswers: [],
+    grammarHintLevels: [],
     grammarFeedback: null,
     isLoadingGrammar: false,
     grammarIntroCandidates: [],
@@ -49,6 +58,7 @@ export type GrammarQuizAction =
     | { type: 'GRAMMAR_LOAD_SUCCESS'; payload: { point: GrammarPoint | null; blankPlan: GrammarBlankPlan | null } }
     | { type: 'GRAMMAR_LOAD_ERROR'; payload: { grammarId: string; error: any } }
     | { type: 'GRAMMAR_SET_ANSWER'; payload: { index: number; value: string } }
+    | { type: 'GRAMMAR_REVEAL_HINT'; payload: { index: number } }
     | { type: 'GRAMMAR_SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswers: string[]; perBlankResults: AnswerResult[] } }
     | { type: 'GRAMMAR_UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress } }
     | { type: 'GRAMMAR_ADVANCE_QUEUE'; payload: { progress: UserProgress; candidates?: GrammarPoint[] } }
@@ -68,6 +78,7 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                 isLoadingGrammar: true,
                 currentGrammarQuizItem: action.payload,
                 grammarAnswers: [],
+                grammarHintLevels: [],
                 grammarFeedback: null,
             };
 
@@ -78,6 +89,7 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                 currentGrammarPoint: action.payload.point,
                 currentGrammarBlankPlan: action.payload.blankPlan,
                 grammarAnswers: new Array(blankCount).fill(''),
+                grammarHintLevels: new Array(blankCount).fill(0),
                 isLoadingGrammar: false,
             };
         }
@@ -94,6 +106,13 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
             const answers = [...state.grammarAnswers];
             answers[action.payload.index] = action.payload.value;
             return { ...state, grammarAnswers: answers };
+        }
+
+        case 'GRAMMAR_REVEAL_HINT': {
+            const levels = [...state.grammarHintLevels];
+            const current = levels[action.payload.index] ?? 0;
+            levels[action.payload.index] = Math.min(2, current + 1);
+            return { ...state, grammarHintLevels: levels };
         }
 
         case 'GRAMMAR_SUBMIT_ANSWER':
@@ -115,6 +134,7 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                 progress: action.payload.progress,
                 grammarFeedback: null,
                 grammarAnswers: [],
+                grammarHintLevels: [],
             };
 
         case 'GRAMMAR_ADVANCE_QUEUE':
@@ -124,6 +144,7 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                 grammarIntroCandidates: action.payload.candidates ?? state.grammarIntroCandidates,
                 grammarFeedback: null,
                 grammarAnswers: [],
+                grammarHintLevels: [],
             };
 
         case 'GRAMMAR_CLEAR_FEEDBACK':

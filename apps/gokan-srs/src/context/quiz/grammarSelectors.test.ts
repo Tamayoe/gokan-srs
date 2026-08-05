@@ -1,7 +1,8 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import {
     selectNextGrammarView,
     computeBlankPlan,
+    gradeGrammarAnswers,
     selectCurrentGrammarProgress,
     selectNextGrammarSessionPreview,
 } from './grammarSelectors';
@@ -11,6 +12,8 @@ import type { GrammarPoint, GrammarProgress } from '../../models/grammar.model';
 import { DEFAULT_GRAMMAR_PROGRESS } from '../../models/grammar.model';
 import type { VocabProgress } from '../../models/vocabulary.model';
 import { DEFAULT_VOCABULARY_PROGRESS } from '../../models/vocabulary.model';
+import type { Vocabulary } from '../../models/vocabulary.model';
+import { VocabularyService } from '../../services/vocabulary.service';
 
 const now = new Date('2026-06-10T00:00:00Z');
 const past = new Date('2026-06-01T00:00:00Z');
@@ -64,6 +67,22 @@ function makeGrammarPoint(overrides: Partial<GrammarPoint> = {}): GrammarPoint {
 function makeVocabProgress(overrides: Partial<VocabProgress> = {}): VocabProgress {
     return { ...DEFAULT_VOCABULARY_PROGRESS, ...overrides };
 }
+
+function makeVocab(overrides: Partial<Vocabulary> = {}): Vocabulary {
+    return {
+        id: 'v-x',
+        writtenForm: { kanji: '', alternatives: [], containedKanji: [] },
+        reading: { primary: '', alternatives: [] },
+        frequency: { kanjiRank: 500 },
+        progression: { kklcStep: 0 },
+        senses: [],
+        ...overrides,
+    };
+}
+
+afterEach(() => {
+    vi.restoreAllMocks();
+});
 
 describe('selectNextGrammarView', () => {
     it('prioritizes grammarIntroCandidates for queueItem over the due pool', () => {
@@ -144,46 +163,151 @@ describe('selectNextGrammarView', () => {
 });
 
 describe('computeBlankPlan', () => {
-    it('blanks only words resolved to a vocab the user already knows (introduced)', () => {
+    it('blanks only words resolved to a vocab the user already knows (introduced)', async () => {
         const point = makeGrammarPoint();
         const progress = makeProgress({
             learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past })],
         });
 
-        const plan = computeBlankPlan(point, progress, 0)!;
+        const plan = (await computeBlankPlan(point, progress, 0))!;
         // Only the word matching vocabId 'v-sushi' (index 4, "寿司") is known.
         expect(plan.blankWordIndices).toEqual([4]);
+        expect(plan.readOnly).toBe(false);
     });
 
-    it('falls back to blanking every content word when none are known yet', () => {
+    it('accept list always includes at least the surface and embedded reading, even if the vocab fetch fails', async () => {
+        vi.spyOn(VocabularyService, 'loadVocab').mockRejectedValue(new Error('network error'));
+        const point = makeGrammarPoint();
+        const progress = makeProgress({
+            learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past })],
+        });
+
+        const plan = (await computeBlankPlan(point, progress, 0))!;
+        expect(plan.acceptLists[0]).toEqual(expect.arrayContaining(['寿司', 'すし']));
+    });
+
+    it('extends the accept list with vocab writtenForm/reading alternatives and merged-vocab readings', async () => {
+        vi.spyOn(VocabularyService, 'loadVocab').mockResolvedValue(makeVocab({
+            id: 'v-sushi',
+            writtenForm: { kanji: '寿司', alternatives: ['鮨', '鮓'], containedKanji: [] },
+            reading: { primary: 'すし', alternatives: ['寿し'] },
+            mergedVocabs: [{ id: 'v-alt', isBase: false, originalPrimaryReading: '壽司', originalGlosses: [] }],
+        }));
+
+        const point = makeGrammarPoint();
+        const progress = makeProgress({
+            learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past })],
+        });
+
+        const plan = (await computeBlankPlan(point, progress, 0))!;
+        expect(new Set(plan.acceptLists[0])).toEqual(new Set(['寿司', 'すし', '鮨', '鮓', '寿し', '壽司']));
+    });
+
+    it('resolves a hint gloss from the vocab senses', async () => {
+        vi.spyOn(VocabularyService, 'loadVocab').mockResolvedValue(makeVocab({
+            id: 'v-sushi',
+            senses: [{ pos: [], misc: { rawTags: [] }, glosses: ['sushi'], related: { compounds: [] } }],
+        }));
+
+        const point = makeGrammarPoint();
+        const progress = makeProgress({
+            learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past })],
+        });
+
+        const plan = (await computeBlankPlan(point, progress, 0))!;
+        expect(plan.glosses[0]).toBe('sushi');
+    });
+
+    it('prefers a different example containing a known word over blanking every word in an example with none known (item 5.1)', async () => {
+        const point = makeGrammarPoint({
+            examples: [
+                {
+                    jp: '中が好きです。', romaji: 'naka ga suki desu', en: 'I like the inside.',
+                    words: [{ surface: '中', vocabId: 'v-naka', reading: 'なか' }, { surface: '好き', vocabId: 'v-suki', reading: 'すき' }],
+                },
+                {
+                    jp: '寿司が好きです。', romaji: 'sushi ga suki desu', en: 'I like sushi.',
+                    words: [{ surface: '寿司', vocabId: 'v-sushi', reading: 'すし' }, { surface: '好き', vocabId: 'v-suki', reading: 'すき' }],
+                },
+            ],
+        });
+        // Only 'v-sushi' (in example index 1) is known - example index 0 has candidates but none known.
+        const progress = makeProgress({
+            learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past })],
+        });
+
+        const plan = (await computeBlankPlan(point, progress, 0))!;
+        expect(plan.exampleIndex).toBe(1);
+        expect(plan.blankWordIndices).toEqual([0]);
+        expect(plan.readOnly).toBe(false);
+    });
+
+    it('falls back to a single most-frequent-word blank when no example has a known word (item 5.2)', async () => {
+        vi.spyOn(VocabularyService, 'loadVocab').mockImplementation(async (id: string) => {
+            const ranks: Record<string, number> = { 'v-naka': 5000, 'v-sushi': 800, 'v-ichiban': 3000, 'v-suki': 1500 };
+            return makeVocab({ id, frequency: { kanjiRank: ranks[id] ?? 999999 } });
+        });
+
         const point = makeGrammarPoint();
         const progress = makeProgress({ learningQueue: [] });
 
-        const plan = computeBlankPlan(point, progress, 0)!;
-        const contentIndices = point.examples[0].words
-            .map((w, i) => (w.vocabId !== null ? i : null))
-            .filter((i): i is number => i !== null);
-
-        expect(plan.blankWordIndices).toEqual(contentIndices);
+        const plan = (await computeBlankPlan(point, progress, 0))!;
+        // 'v-sushi' (index 4) has the lowest (most frequent) kanjiRank among the candidates.
+        expect(plan.blankWordIndices).toEqual([4]);
+        expect(plan.readOnly).toBe(false);
     });
 
-    it('a vocab entry that exists but was never introduced does not count as known', () => {
+    it('a vocab entry that exists but was never introduced does not count as known, so the single-blank fallback still applies', async () => {
+        vi.spyOn(VocabularyService, 'loadVocab').mockResolvedValue(makeVocab());
         const point = makeGrammarPoint();
         const progress = makeProgress({
             learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: null })],
         });
 
-        const plan = computeBlankPlan(point, progress, 0)!;
-        // Falls back to "blank everything" since nothing is actually known.
-        expect(plan.blankWordIndices.length).toBeGreaterThan(1);
+        const plan = (await computeBlankPlan(point, progress, 0))!;
+        expect(plan.blankWordIndices.length).toBe(1);
     });
 
-    it('returns null when the grammar point has no examples', () => {
+    it('skips an example with zero blankable words in favor of another example in the same point (item 6)', async () => {
+        const point = makeGrammarPoint({
+            examples: [
+                { jp: 'どれでもいいですか？', romaji: 'dore demo ii desu ka', en: 'Is any of them fine?', words: [{ surface: 'どれでもいいですか', vocabId: null }] },
+                {
+                    jp: '寿司が好きです。', romaji: 'sushi ga suki desu', en: 'I like sushi.',
+                    words: [{ surface: '寿司', vocabId: 'v-sushi', reading: 'すし' }],
+                },
+            ],
+        });
+        const progress = makeProgress({
+            learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past })],
+        });
+
+        const plan = (await computeBlankPlan(point, progress, 0))!;
+        expect(plan.exampleIndex).toBe(1);
+        expect(plan.blankWordIndices).toEqual([0]);
+        expect(plan.readOnly).toBe(false);
+    });
+
+    it('returns a read-only plan with no blanks when literally no example has a blankable word (item 6)', async () => {
+        const point = makeGrammarPoint({
+            examples: [
+                { jp: 'どれでもいいですか？', romaji: 'dore demo ii desu ka', en: 'Is any of them fine?', words: [{ surface: 'どれでもいいですか', vocabId: null }] },
+                { jp: 'いいですか？', romaji: 'ii desu ka', en: 'Is that fine?', words: [{ surface: 'いいですか', vocabId: null }] },
+            ],
+        });
+
+        const plan = (await computeBlankPlan(point, null, 0))!;
+        expect(plan.readOnly).toBe(true);
+        expect(plan.blankWordIndices).toEqual([]);
+        expect(plan.acceptLists).toEqual([]);
+    });
+
+    it('returns null when the grammar point has no examples', async () => {
         const point = makeGrammarPoint({ examples: [] });
-        expect(computeBlankPlan(point, null, 0)).toBeNull();
+        expect(await computeBlankPlan(point, null, 0)).toBeNull();
     });
 
-    it('picks a deterministic example index for the same point/reviewCount pair', () => {
+    it('picks a deterministic example index for the same point/reviewCount pair', async () => {
         const point = makeGrammarPoint({
             examples: [
                 { jp: 'A', romaji: 'a', en: 'a', words: [] },
@@ -192,9 +316,63 @@ describe('computeBlankPlan', () => {
             ],
         });
 
-        const first = computeBlankPlan(point, null, 3);
-        const second = computeBlankPlan(point, null, 3);
+        const first = await computeBlankPlan(point, null, 3);
+        const second = await computeBlankPlan(point, null, 3);
         expect(first).toEqual(second);
+    });
+});
+
+describe('gradeGrammarAnswers', () => {
+    const blankPlan = { acceptLists: [['すし', '寿司', '鮨', '鮓']] };
+
+    it('grades a kanji-form answer, a variant-spelling answer, and a reading answer all as correct for the same blank', () => {
+        expect(gradeGrammarAnswers(blankPlan, ['寿司'], [0]).overall).toBe('correct');
+        expect(gradeGrammarAnswers(blankPlan, ['鮨'], [0]).overall).toBe('correct');
+        expect(gradeGrammarAnswers(blankPlan, ['すし'], [0]).overall).toBe('correct');
+    });
+
+    it('grades an unrelated answer as wrong', () => {
+        const result = gradeGrammarAnswers(blankPlan, ['ねこ'], [0]);
+        expect(result.overall).toBe('wrong');
+        expect(result.perBlankResults).toEqual(['wrong']);
+    });
+
+    it('a blank with hintLevel >= 2 grades as pass regardless of what was typed', () => {
+        const result = gradeGrammarAnswers(blankPlan, ['garbage'], [2]);
+        expect(result.perBlankResults).toEqual(['pass']);
+        expect(result.matchedAnswers).toEqual(['すし']);
+        expect(result.overall).toBe('pass');
+    });
+
+    it('an empty (untouched) blank at hintLevel 0 grades as wrong, not pass', () => {
+        const result = gradeGrammarAnswers(blankPlan, [''], [0]);
+        expect(result.overall).toBe('wrong');
+    });
+
+    describe('worst-of precedence: wrong > pass > minor_error > correct', () => {
+        const twoBlankPlan = { acceptLists: [['すし'], ['なか']] };
+
+        it('wrong beats pass', () => {
+            const result = gradeGrammarAnswers(twoBlankPlan, ['ねこ', 'anything'], [0, 2]);
+            expect(result.overall).toBe('wrong');
+        });
+
+        it('pass beats minor_error', () => {
+            const result = gradeGrammarAnswers(twoBlankPlan, ['すしぃ', 'anything'], [0, 2]);
+            expect(result.perBlankResults[0]).toBe('minor_error');
+            expect(result.overall).toBe('pass');
+        });
+
+        it('pass beats correct', () => {
+            const result = gradeGrammarAnswers(twoBlankPlan, ['すし', 'anything'], [0, 2]);
+            expect(result.perBlankResults[0]).toBe('correct');
+            expect(result.overall).toBe('pass');
+        });
+
+        it('all correct grades overall correct', () => {
+            const result = gradeGrammarAnswers(twoBlankPlan, ['すし', 'なか'], [0, 0]);
+            expect(result.overall).toBe('correct');
+        });
     });
 });
 

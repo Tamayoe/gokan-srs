@@ -5,6 +5,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { Card } from "../../components/ui/Card";
 import { CardSection } from "../../components/ui/CardSection";
+import { Button } from "../../components/ui/Button";
 import { JlptChip } from "../../components/JlptChip";
 
 /**
@@ -14,6 +15,8 @@ import { JlptChip } from "../../components/JlptChip";
  * activity (see computeBlankPlan in grammarSelectors.ts for the selection
  * rule). Words the user doesn't know yet stay pre-filled as plain text, so an
  * unfamiliar word never blocks practicing the grammar point itself (issue #17).
+ * A plan with no blankable word at all (plan.readOnly) renders as pure study
+ * material instead - see the early return below.
  */
 export function GrammarQuizCard() {
     const { state, grammarActions, grammarComputed } = useQuiz();
@@ -25,7 +28,7 @@ export function GrammarQuizCard() {
     const feedback = state.grammarFeedback;
 
     useEffect(() => {
-        if (!feedback?.show) {
+        if (!feedback?.show && !plan?.readOnly) {
             const timer = setTimeout(() => firstInputRef.current?.focus(), 0);
             return () => clearTimeout(timer);
         }
@@ -34,6 +37,48 @@ export function GrammarQuizCard() {
     if (!point || !plan) return null;
 
     const example = point.examples[plan.exampleIndex];
+
+    if (plan.readOnly) {
+        return (
+            <motion.div
+                initial={{ opacity: 0, scale: 0.98, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+            >
+                <Card size="lg" className={isMobile ? '!p-4' : ''}>
+                    <CardSection>
+                        <div className="flex items-center justify-center gap-2 mb-4">
+                            <JlptChip level={point.jlptLevel} />
+                            <span className="text-xs font-gothic text-secondary">{point.title}</span>
+                        </div>
+
+                        <p className="text-center text-sm text-secondary font-gothic mb-1">
+                            No quizzable words in this example - study it instead
+                        </p>
+                        <p className="text-center text-lg text-primary font-serif mb-6">
+                            {example.en}
+                        </p>
+                        <p className="text-center text-2xl font-gothic leading-loose text-primary">
+                            {example.jp}
+                        </p>
+                    </CardSection>
+
+                    <CardSection>
+                        <Button
+                            variant="primary"
+                            type="button"
+                            className="w-full"
+                            onClick={() => grammarActions.continueGrammarToNext()}
+                        >
+                            Continue
+                        </Button>
+                    </CardSection>
+                </Card>
+            </motion.div>
+        );
+    }
+
     const answerIndexByWordIndex = new Map<number, number>();
     plan.blankWordIndices.forEach((wordIndex, answerIndex) => answerIndexByWordIndex.set(wordIndex, answerIndex));
 
@@ -48,7 +93,7 @@ export function GrammarQuizCard() {
 
     const feedbackBorderClass = feedback?.type === 'wrong'
         ? 'border-l-error-accent'
-        : feedback?.type === 'minor_error'
+        : feedback?.type === 'minor_error' || feedback?.type === 'pass'
             ? 'border-l-secondary'
             : 'border-l-accent';
 
@@ -83,34 +128,57 @@ export function GrammarQuizCard() {
                             }
 
                             const result = feedback?.perBlankResults[answerIndex];
+                            const hintLevel = state.grammarHintLevels[answerIndex] ?? 0;
+                            const revealed = hintLevel >= 2;
+                            const revealedAnswer = plan.acceptLists[answerIndex]?.[0] ?? '';
+                            const liveValue = state.grammarAnswers[answerIndex] ?? '';
+                            const displayValue = revealed ? revealedAnswer : liveValue;
+
                             const borderClass = !feedback?.show
-                                ? 'border-divider focus:border-accent'
+                                ? revealed
+                                    ? 'border-secondary'
+                                    : 'border-divider focus:border-accent'
                                 : result === 'wrong'
                                     ? 'border-error'
-                                    : result === 'minor_error'
+                                    : result === 'minor_error' || result === 'pass'
                                         ? 'border-secondary'
                                         : 'border-accent';
 
-                            const expected = word.reading ?? word.surface;
-
                             return (
                                 <span key={i} className="inline-flex flex-col items-center mx-0.5">
-                                    <input
-                                        ref={answerIndex === 0 ? firstInputRef : undefined}
-                                        type="text"
-                                        value={state.grammarAnswers[answerIndex] ?? ''}
-                                        onChange={(e) => grammarActions.setGrammarAnswer(answerIndex, e.target.value)}
-                                        disabled={feedback?.show}
-                                        autoComplete="off"
-                                        autoCorrect="off"
-                                        autoCapitalize="off"
-                                        spellCheck="false"
-                                        style={{ width: `${Math.max(3, expected.length + 1.5)}ch` }}
-                                        className={`border-b-2 bg-transparent text-center focus:outline-none transition-colors font-gothic caret-accent ${borderClass}`}
-                                    />
+                                    <span className="inline-flex items-center gap-1">
+                                        <input
+                                            ref={answerIndex === 0 ? firstInputRef : undefined}
+                                            type="text"
+                                            value={displayValue}
+                                            onChange={(e) => grammarActions.setGrammarAnswer(answerIndex, e.target.value)}
+                                            disabled={feedback?.show || revealed}
+                                            autoComplete="off"
+                                            autoCorrect="off"
+                                            autoCapitalize="off"
+                                            spellCheck="false"
+                                            style={{ width: `${Math.max(4, displayValue.length + 1)}ch` }}
+                                            className={`border-b-2 bg-transparent text-center focus:outline-none transition-colors font-gothic caret-accent ${borderClass}`}
+                                        />
+                                        {!feedback?.show && !revealed && (
+                                            <button
+                                                type="button"
+                                                onClick={() => grammarActions.revealGrammarHint(answerIndex)}
+                                                className="text-xs text-secondary hover:text-primary transition-colors font-gothic w-4 h-4 rounded-full border border-divider flex items-center justify-center shrink-0"
+                                                aria-label="Show hint"
+                                            >
+                                                ?
+                                            </button>
+                                        )}
+                                    </span>
+                                    {!feedback?.show && hintLevel === 1 && (
+                                        <span className="text-xs text-secondary font-gothic mt-1">
+                                            {plan.glosses[answerIndex] || 'No hint available'}
+                                        </span>
+                                    )}
                                     {feedback?.show && result !== 'correct' && (
                                         <span className="text-xs text-secondary font-gothic mt-1">
-                                            {expected}
+                                            {feedback.matchedAnswers[answerIndex]}
                                         </span>
                                     )}
                                 </span>

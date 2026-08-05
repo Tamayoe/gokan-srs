@@ -4,8 +4,6 @@ import { useLocation } from 'react-router-dom';
 import type { GrammarPoint } from '../../models/grammar.model';
 import { GrammarService } from '../../services/grammar.service';
 import { GrammarSRSService } from '../../services/grammarSrs.service';
-import { SRSService } from '../../services/srs.service';
-import type { AnswerResult } from '../../services/srs.service';
 import { CONSTANTS } from '../../commons/constants';
 import type { QuizState, QuizAction } from './quizReducer';
 import {
@@ -13,10 +11,12 @@ import {
     selectCurrentGrammarProgress,
     selectNextGrammarSessionPreview,
     computeBlankPlan,
+    gradeGrammarAnswers,
 } from './grammarSelectors';
 
 export interface GrammarActions {
     setGrammarAnswer(index: number, value: string): void;
+    revealGrammarHint(index: number): void;
     submitGrammarAnswer(): Promise<void>;
     advanceGrammarQueue(): Promise<void>;
     continueGrammarToNext(): Promise<void>;
@@ -70,34 +70,29 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
             dispatch({ type: 'GRAMMAR_SET_ANSWER', payload: { index, value } });
         },
 
+        revealGrammarHint(index) {
+            dispatch({ type: 'GRAMMAR_REVEAL_HINT', payload: { index } });
+        },
+
         async submitGrammarAnswer() {
             if (!state.currentGrammarPoint || state.grammarFeedback?.show || !state.currentGrammarBlankPlan) return;
+            if (state.currentGrammarBlankPlan.readOnly) return; // nothing to grade - handled by continueGrammarToNext directly
 
             submitLatencyRef.current = startTimeRef.current ? Date.now() - startTimeRef.current : null;
 
-            const { blankWordIndices, exampleIndex } = state.currentGrammarBlankPlan;
-            const example = state.currentGrammarPoint.examples[exampleIndex];
+            const { perBlankResults, matchedAnswers, overall } = gradeGrammarAnswers(
+                state.currentGrammarBlankPlan,
+                state.grammarAnswers,
+                state.grammarHintLevels
+            );
 
-            // Grade every blank independently, then combine worst-of (any wrong ->
-            // wrong; else any minor_error -> minor_error; else correct) into the
-            // single result the SRS entry is updated with - there's one SRSEntry
-            // per grammar point, not one per blank.
-            const perBlankResults: AnswerResult[] = [];
-            const matchedAnswers: string[] = [];
-
-            blankWordIndices.forEach((wordIndex, i) => {
-                const word = example.words[wordIndex];
-                const userInput = state.grammarAnswers[i] ?? '';
-                const expected = word.reading ?? word.surface;
-                perBlankResults.push(SRSService.analyzeError(userInput, expected));
-                matchedAnswers.push(expected);
-            });
-
-            let overall: AnswerResult = 'correct';
-            if (perBlankResults.some(r => r === 'wrong')) overall = 'wrong';
-            else if (perBlankResults.some(r => r === 'minor_error')) overall = 'minor_error';
-
-            const message = overall === 'correct' ? 'Correct.' : overall === 'minor_error' ? 'Close.' : 'Incorrect.';
+            const message = overall === 'correct'
+                ? 'Correct.'
+                : overall === 'pass'
+                    ? 'Revealed - marked as passed.'
+                    : overall === 'minor_error'
+                        ? 'Close.'
+                        : 'Incorrect.';
 
             dispatch({ type: 'GRAMMAR_SUBMIT_ANSWER', payload: { type: overall, message, matchedAnswers, perBlankResults } });
         },
@@ -148,17 +143,29 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
         },
 
         async continueGrammarToNext() {
-            if (!state.progress || !state.grammarFeedback || !state.currentGrammarPoint) return;
+            if (!state.progress || !state.currentGrammarPoint) return;
 
             const now = new Date();
             const id = state.currentGrammarPoint.id;
-            const latency = submitLatencyRef.current ?? 5000;
 
             const target = state.progress.grammarQueue.find(g => g.grammarId === id);
             if (!target) return;
 
-            const { updated } = GrammarSRSService.applyAnswer(target, state.grammarFeedback.type, latency, now);
-            const updatedQueue = state.progress.grammarQueue.map(g => g.grammarId === id ? updated : g);
+            let updatedQueue;
+
+            if (state.currentGrammarBlankPlan?.readOnly) {
+                // No blank-eligible word anywhere in this point's examples - there's
+                // nothing to grade, so this must not touch memoryStrength/interval
+                // (no SRS credit either way). Just defer the due date so the same
+                // ungradable card doesn't reappear on the very next pick.
+                const deferred = GrammarSRSService.deferWithoutCredit(target, now);
+                updatedQueue = state.progress.grammarQueue.map(g => g.grammarId === id ? deferred : g);
+            } else {
+                if (!state.grammarFeedback) return;
+                const latency = submitLatencyRef.current ?? 5000;
+                const { updated } = GrammarSRSService.applyAnswer(target, state.grammarFeedback.type, latency, now);
+                updatedQueue = state.progress.grammarQueue.map(g => g.grammarId === id ? updated : g);
+            }
 
             dispatch({
                 type: 'GRAMMAR_UPDATE_AFTER_ANSWER',
@@ -204,11 +211,12 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
         const loadKey = queueItem.grammarId;
         loadingKeyRef.current = loadKey;
 
-        GrammarService.loadGrammarPoint(queueItem.grammarId).then(point => {
+        GrammarService.loadGrammarPoint(queueItem.grammarId).then(async point => {
             if (loadingKeyRef.current !== loadKey) return; // superseded by a newer target
 
             const existing = state.progress?.grammarQueue.find(g => g.grammarId === point.id);
-            const blankPlan = computeBlankPlan(point, state.progress, existing?.totalReviews ?? 0);
+            const blankPlan = await computeBlankPlan(point, state.progress, existing?.totalReviews ?? 0);
+            if (loadingKeyRef.current !== loadKey) return; // superseded while awaiting the blank plan's vocab fetches
 
             dispatch({ type: 'GRAMMAR_LOAD_SUCCESS', payload: { point, blankPlan } });
             startTimeRef.current = Date.now();
@@ -238,6 +246,9 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
     const grammarComputed = {
         canSubmitGrammar:
             !!state.currentGrammarPoint &&
+            !!state.currentGrammarBlankPlan &&
+            !state.currentGrammarBlankPlan.readOnly &&
+            state.currentGrammarBlankPlan.blankWordIndices.length > 0 &&
             !state.grammarFeedback?.show &&
             !state.isLoadingGrammar &&
             state.grammarAnswers.every(a => a.trim().length > 0),

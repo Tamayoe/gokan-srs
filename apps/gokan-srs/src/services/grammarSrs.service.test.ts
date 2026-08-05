@@ -90,6 +90,36 @@ describe('GrammarSRSService.applyAnswer', () => {
     });
 });
 
+describe('GrammarSRSService.deferWithoutCredit', () => {
+    const now = new Date('2026-06-10T00:00:00Z');
+
+    it('does not touch memoryStrength, interval, or difficulty', () => {
+        const progress = makeProgress({ entry: { ...makeProgress().entry, memoryStrength: 42, interval: 7, difficulty: 0.6 } });
+        const updated = GrammarSRSService.deferWithoutCredit(progress, now);
+
+        expect(updated.entry.memoryStrength).toBe(42);
+        expect(updated.entry.interval).toBe(7);
+        expect(updated.entry.difficulty).toBe(0.6);
+    });
+
+    it('reschedules dueDate/nextReviewAt forward so the same ungradable card is not immediately re-served', () => {
+        const progress = makeProgress({ entry: { ...makeProgress().entry, dueDate: now } });
+        const updated = GrammarSRSService.deferWithoutCredit(progress, now);
+
+        expect(updated.nextReviewAt).not.toBeNull();
+        expect(updated.nextReviewAt!.getTime()).toBeGreaterThan(now.getTime());
+        expect(updated.entry.dueDate!.getTime()).toBeGreaterThan(now.getTime());
+    });
+
+    it('still records lastReviewedAt and increments totalReviews for basic bookkeeping', () => {
+        const progress = makeProgress({ totalReviews: 3 });
+        const updated = GrammarSRSService.deferWithoutCredit(progress, now);
+
+        expect(updated.lastReviewedAt).toEqual(now);
+        expect(updated.totalReviews).toBe(4);
+    });
+});
+
 describe('GrammarSRSService candidate finding (JLPT order)', () => {
     // 1 = N1 (hardest) .. 5 = N5 (easiest). Walk order must be N5 -> N1, mirroring vocab's findCandidatesJLPT.
     const mockIndex = {
