@@ -56,6 +56,7 @@ export interface QuizContextValue {
     nextGrammarSessionPreview: NextGrammarSessionPreview;
     grammarActions: {
         setGrammarAnswer(index: number, value: string): void;
+        revealGrammarHint(index: number): void;
         submitGrammarAnswer(): Promise<void>;
         advanceGrammarQueue(): Promise<void>;
         continueGrammarToNext(): Promise<void>;

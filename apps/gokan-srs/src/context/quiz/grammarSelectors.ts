@@ -1,7 +1,10 @@
-import type { GrammarPoint, GrammarProgress } from '../../models/grammar.model';
+import type { GrammarExample, GrammarPoint, GrammarProgress } from '../../models/grammar.model';
 import type { UserProgress } from '../../models/user.model';
 import type { SessionState } from '../../models/state.model';
 import { isGrammarDue, grammarNextReviewAt } from '../../services/grammarScheduling';
+import { VocabularyService } from '../../services/vocabulary.service';
+import type { AnswerResult } from '../../services/srs.service';
+import { SRSService } from '../../services/srs.service';
 import type { QuizState } from './quizReducer';
 import type { GrammarBlankPlan, PendingGrammarQuizItem } from './grammarReducer';
 
@@ -86,23 +89,102 @@ export function selectNextGrammarView(
     return { queueItem, sessionState, nextReviewAt, shouldShowIntro };
 }
 
+function candidateIndicesOf(example: GrammarExample): number[] {
+    const indices: number[] = [];
+    example.words.forEach((w, i) => {
+        if (w.vocabId !== null) indices.push(i);
+    });
+    return indices;
+}
+
 /**
- * Picks the example sentence for the CURRENT review turn (deterministic per
- * grammar point + review count, so it varies across successive reviews of the
- * same point without re-rolling on every recompute of the same turn) and
- * decides which of its words become blanks: every word resolved to a vocab id
- * the user already knows (introduced in their vocab learningQueue). If NONE of
- * the sentence's words are known yet (a learner very early in vocab, or a
- * sentence whose words are all still new to them), blank every content word
- * instead - the exercise then tests recall of the grammar construction itself
- * (using the `formation` template shown on screen) rather than being trivially
- * all pre-filled text with nothing left to answer.
+ * Resolves the accept-list (surface, embedded reading, plus every writing
+ * variant a full vocab fetch can offer) and the hint gloss for each blank in
+ * `blankIndices`. Fetched once at load time (VocabularyService.loadVocab is
+ * cached in-memory) so grading later stays synchronous. A failed fetch simply
+ * falls back to surface+reading and an empty gloss rather than blocking the
+ * card - the word is still gradable, just without the extra variants.
  */
-export function computeBlankPlan(point: GrammarPoint, progress: UserProgress | null, reviewCount: number): GrammarBlankPlan | null {
+async function buildBlankData(example: GrammarExample, blankIndices: number[]): Promise<{ acceptLists: string[][]; glosses: string[] }> {
+    const acceptLists: string[][] = [];
+    const glosses: string[] = [];
+
+    for (const wordIndex of blankIndices) {
+        const word = example.words[wordIndex];
+        const forms = new Set<string>();
+        forms.add(word.surface);
+        if (word.reading) forms.add(word.reading);
+        let gloss = '';
+
+        if (word.vocabId) {
+            try {
+                const vocab = await VocabularyService.loadVocab(word.vocabId);
+                forms.add(vocab.writtenForm.kanji);
+                vocab.writtenForm.alternatives.forEach(a => forms.add(a));
+                forms.add(vocab.reading.primary);
+                vocab.reading.alternatives.forEach(a => forms.add(a));
+                vocab.mergedVocabs?.forEach(m => forms.add(m.originalPrimaryReading));
+                gloss = vocab.senses.flatMap(s => s.glosses)[0] ?? '';
+            } catch (e) {
+                console.error(`[grammarSelectors] Failed to load vocab ${word.vocabId} for blank ${wordIndex}, falling back to surface/reading only`, e);
+            }
+        }
+
+        acceptLists.push(Array.from(forms));
+        glosses.push(gloss);
+    }
+
+    return { acceptLists, glosses };
+}
+
+/** The single most-frequent (lowest frequency.kanjiRank) candidate word in an example, used for the one-blank fallback (item 5.2). Falls back to the first candidate if every fetch fails. */
+async function pickMostFrequentCandidate(example: GrammarExample, candidateIndices: number[]): Promise<number> {
+    let best = candidateIndices[0];
+    let bestRank = Infinity;
+
+    for (const i of candidateIndices) {
+        const vocabId = example.words[i].vocabId;
+        if (!vocabId) continue;
+        try {
+            const vocab = await VocabularyService.loadVocab(vocabId);
+            if (vocab.frequency.kanjiRank < bestRank) {
+                bestRank = vocab.frequency.kanjiRank;
+                best = i;
+            }
+        } catch (e) {
+            console.error(`[grammarSelectors] Failed to load vocab ${vocabId} while ranking candidates for the single-blank fallback`, e);
+        }
+    }
+
+    return best;
+}
+
+/**
+ * Picks the example sentence for the CURRENT review turn and decides which of
+ * its words become blanks. Three passes, each preferred over the next:
+ *
+ * 1. Walk the examples starting from a deterministic pick (hashed on grammar
+ *    point id + review count, so it varies across successive reviews of the
+ *    same point without re-rolling on every recompute of the same turn,
+ *    wrapping around all examples) and use the first one containing at least
+ *    one word the user already knows (introduced in their vocab
+ *    learningQueue) - blank every known word in it.
+ * 2. If no example has a known word (a learner very early in vocab), use the
+ *    first example (same walk order) that has ANY blankable word at all, and
+ *    blank exactly the single most frequent one - a full blank-every-word
+ *    fallback produced unanswerable cards for anyone without vocab overlap
+ *    yet, and this word is the one most worth knowing.
+ * 3. If literally no example in the whole point has a single word that
+ *    resolved to a vocab id, there is nothing to grade - return a read-only
+ *    plan (blankWordIndices: []) so the card renders as pure study material
+ *    with no Submit step, rather than silently auto-granting SRS credit for
+ *    an empty answer.
+ */
+export async function computeBlankPlan(point: GrammarPoint, progress: UserProgress | null, reviewCount: number): Promise<GrammarBlankPlan | null> {
     if (point.examples.length === 0) return null;
 
-    const exampleIndex = hashString(`${point.id}:${reviewCount}`) % point.examples.length;
-    const example = point.examples[exampleIndex];
+    const startIndex = hashString(`${point.id}:${reviewCount}`) % point.examples.length;
+    const order = Array.from({ length: point.examples.length }, (_, i) => (startIndex + i) % point.examples.length);
 
     const isKnown = (vocabId: string): boolean => {
         if (!progress) return false;
@@ -110,15 +192,80 @@ export function computeBlankPlan(point: GrammarPoint, progress: UserProgress | n
         return !!vp && vp.introductionAt !== null;
     };
 
-    const candidateIndices: number[] = [];
-    example.words.forEach((w, i) => {
-        if (w.vocabId !== null) candidateIndices.push(i);
+    // Pass 1: an example with at least one known word.
+    for (const exampleIndex of order) {
+        const example = point.examples[exampleIndex];
+        const candidateIndices = candidateIndicesOf(example);
+        if (candidateIndices.length === 0) continue;
+
+        const knownIndices = candidateIndices.filter(i => isKnown(example.words[i].vocabId!));
+        if (knownIndices.length > 0) {
+            const { acceptLists, glosses } = await buildBlankData(example, knownIndices);
+            return { exampleIndex, blankWordIndices: knownIndices, acceptLists, glosses, readOnly: false };
+        }
+    }
+
+    // Pass 2: no example has a known word - blank exactly the single most frequent candidate.
+    for (const exampleIndex of order) {
+        const example = point.examples[exampleIndex];
+        const candidateIndices = candidateIndicesOf(example);
+        if (candidateIndices.length === 0) continue;
+
+        const best = await pickMostFrequentCandidate(example, candidateIndices);
+        const { acceptLists, glosses } = await buildBlankData(example, [best]);
+        return { exampleIndex, blankWordIndices: [best], acceptLists, glosses, readOnly: false };
+    }
+
+    // Pass 3: no example has any blankable word at all - read-only study material.
+    return { exampleIndex: startIndex, blankWordIndices: [], acceptLists: [], glosses: [], readOnly: true };
+}
+
+export interface GrammarGradeResult {
+    /** Same order as blankWordIndices - which specific blank(s) were wrong/passed. */
+    perBlankResults: AnswerResult[];
+    /** Same order as blankWordIndices - the accepted form each blank matched (or was revealed to, for a passed blank). */
+    matchedAnswers: string[];
+    /** Worst-of across every blank: wrong > pass > minor_error > correct. There's one SRSEntry per grammar point, not one per blank, so the whole exercise needs a single combined result. */
+    overall: AnswerResult;
+}
+
+/**
+ * Grades every blank in a submitted grammar answer against its accept-list
+ * (built once at load time by computeBlankPlan, so this is pure and
+ * synchronous - no vocab fetch here). A blank whose hint was revealed
+ * (hintLevel >= 2) always grades as 'pass' regardless of what was typed,
+ * since the user already gave up on it rather than answering.
+ */
+export function gradeGrammarAnswers(
+    blankPlan: Pick<GrammarBlankPlan, 'acceptLists'>,
+    answers: string[],
+    hintLevels: number[]
+): GrammarGradeResult {
+    const perBlankResults: AnswerResult[] = [];
+    const matchedAnswers: string[] = [];
+
+    blankPlan.acceptLists.forEach((accepted, i) => {
+        if ((hintLevels[i] ?? 0) >= 2) {
+            perBlankResults.push('pass');
+            matchedAnswers.push(accepted[0] ?? '');
+            return;
+        }
+
+        const userInput = answers[i] ?? '';
+        const { result, matchedAnswer } = SRSService.evaluateAnswer(userInput, {
+            primary: accepted[0] ?? '',
+            alternatives: accepted.slice(1),
+        });
+        perBlankResults.push(result);
+        matchedAnswers.push(matchedAnswer);
     });
 
-    const knownIndices = candidateIndices.filter(i => isKnown(example.words[i].vocabId!));
-    const blankWordIndices = knownIndices.length > 0 ? knownIndices : candidateIndices;
+    let overall: AnswerResult = 'correct';
+    if (perBlankResults.some(r => r === 'wrong')) overall = 'wrong';
+    else if (perBlankResults.some(r => r === 'pass')) overall = 'pass';
+    else if (perBlankResults.some(r => r === 'minor_error')) overall = 'minor_error';
 
-    return { exampleIndex, blankWordIndices };
+    return { perBlankResults, matchedAnswers, overall };
 }
 
 export function selectCurrentGrammarProgress(

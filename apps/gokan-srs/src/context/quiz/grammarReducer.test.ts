@@ -34,10 +34,11 @@ function makeGrammarPoint(id = 'n5-001'): GrammarPoint {
 }
 
 describe('grammarReducer (via quizReducer)', () => {
-    it('GRAMMAR_LOAD_START sets isLoadingGrammar and currentGrammarQuizItem, clears prior answers/feedback', () => {
+    it('GRAMMAR_LOAD_START sets isLoadingGrammar and currentGrammarQuizItem, clears prior answers/hints/feedback', () => {
         const state: QuizState = {
             ...initialState,
             grammarAnswers: ['stale'],
+            grammarHintLevels: [2],
             grammarFeedback: { show: true, correct: true, type: 'correct', message: '', matchedAnswers: [], perBlankResults: [] },
         };
         const next = quizReducer(state, { type: 'GRAMMAR_LOAD_START', payload: { grammarId: 'n5-001' } });
@@ -45,18 +46,29 @@ describe('grammarReducer (via quizReducer)', () => {
         expect(next.isLoadingGrammar).toBe(true);
         expect(next.currentGrammarQuizItem).toEqual({ grammarId: 'n5-001' });
         expect(next.grammarAnswers).toEqual([]);
+        expect(next.grammarHintLevels).toEqual([]);
         expect(next.grammarFeedback).toBeNull();
     });
 
-    it('GRAMMAR_LOAD_SUCCESS sets the point/blankPlan and sizes grammarAnswers to the blank count', () => {
+    it('GRAMMAR_LOAD_SUCCESS sets the point/blankPlan and sizes grammarAnswers/grammarHintLevels to the blank count', () => {
         const point = makeGrammarPoint();
         const next = quizReducer(initialState, {
             type: 'GRAMMAR_LOAD_SUCCESS',
-            payload: { point, blankPlan: { exampleIndex: 0, blankWordIndices: [1, 3] } },
+            payload: {
+                point,
+                blankPlan: {
+                    exampleIndex: 0,
+                    blankWordIndices: [1, 3],
+                    acceptLists: [['なか'], ['すし']],
+                    glosses: ['inside', 'sushi'],
+                    readOnly: false,
+                },
+            },
         });
 
         expect(next.currentGrammarPoint).toBe(point);
         expect(next.grammarAnswers).toEqual(['', '']);
+        expect(next.grammarHintLevels).toEqual([0, 0]);
         expect(next.isLoadingGrammar).toBe(false);
     });
 
@@ -77,6 +89,29 @@ describe('grammarReducer (via quizReducer)', () => {
         expect(next.grammarAnswers).toEqual(['a', 'x', 'c']);
     });
 
+    describe('GRAMMAR_REVEAL_HINT', () => {
+        it('increments only the targeted blank, first activation to 1 (gloss)', () => {
+            const state: QuizState = { ...initialState, grammarHintLevels: [0, 0] };
+            const next = quizReducer(state, { type: 'GRAMMAR_REVEAL_HINT', payload: { index: 0 } });
+
+            expect(next.grammarHintLevels).toEqual([1, 0]);
+        });
+
+        it('second activation reaches 2 (revealed)', () => {
+            const state: QuizState = { ...initialState, grammarHintLevels: [1, 0] };
+            const next = quizReducer(state, { type: 'GRAMMAR_REVEAL_HINT', payload: { index: 0 } });
+
+            expect(next.grammarHintLevels).toEqual([2, 0]);
+        });
+
+        it('caps at 2 - a third activation is a no-op', () => {
+            const state: QuizState = { ...initialState, grammarHintLevels: [2, 0] };
+            const next = quizReducer(state, { type: 'GRAMMAR_REVEAL_HINT', payload: { index: 0 } });
+
+            expect(next.grammarHintLevels).toEqual([2, 0]);
+        });
+    });
+
     it('GRAMMAR_SUBMIT_ANSWER shows feedback with correct=true only for a strict correct result', () => {
         const next = quizReducer(initialState, {
             type: 'GRAMMAR_SUBMIT_ANSWER',
@@ -88,18 +123,20 @@ describe('grammarReducer (via quizReducer)', () => {
         expect(next.grammarFeedback?.perBlankResults).toEqual(['minor_error']);
     });
 
-    it('GRAMMAR_UPDATE_AFTER_ANSWER assigns progress and clears feedback/answers', () => {
+    it('GRAMMAR_UPDATE_AFTER_ANSWER assigns progress and clears feedback/answers/hints', () => {
         const progress = makeProgress({ grammarQueue: [makeGrammarProgress({ totalReviews: 1 })] });
         const state: QuizState = {
             ...initialState,
             grammarFeedback: { show: true, correct: true, type: 'correct', message: '', matchedAnswers: [], perBlankResults: [] },
             grammarAnswers: ['x'],
+            grammarHintLevels: [2],
         };
         const next = quizReducer(state, { type: 'GRAMMAR_UPDATE_AFTER_ANSWER', payload: { progress } });
 
         expect(next.progress).toBe(progress);
         expect(next.grammarFeedback).toBeNull();
         expect(next.grammarAnswers).toEqual([]);
+        expect(next.grammarHintLevels).toEqual([]);
     });
 
     it('GRAMMAR_ADVANCE_QUEUE assigns progress and appends candidates when provided', () => {
