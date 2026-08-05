@@ -8,6 +8,8 @@ import type { Sentence } from '../../models/sentence.model';
 import type { AnswerResult } from '../../services/srs.service';
 import { SRSService } from '../../services/srs.service';
 import type { QuizItem, QuizType, QuizMode } from '../../utils/srs.utils';
+import type { GrammarQuizState, GrammarQuizAction } from './grammarReducer';
+import { initialGrammarState, isGrammarAction, grammarReducer } from './grammarReducer';
 
 /* =========================
    STATE & TYPES
@@ -35,7 +37,7 @@ export interface SessionTracking {
     committed: TaskKey[];
 }
 
-export interface QuizState {
+interface QuizStateBase {
     progress: UserProgress | null;
     settings: UserSettings | null;
     currentVocab: Vocabulary | null;
@@ -65,6 +67,18 @@ export interface QuizState {
     fatalError: string | null;
 }
 
+/**
+ * QuizState also carries the Grammar activity's UI-only fields, defined in
+ * grammarReducer.ts and merged in here (via intersection) rather than owning a
+ * separate provider/reducer. A second provider would need its own read/write
+ * path onto the same persisted UserProgress (grammarQueue lives on the same
+ * object as learningQueue), racing this provider's storage/Drive-sync effects
+ * - which are keyed off `state.progress` reference changes generically, so
+ * dispatching grammar actions through this single reducer gets persistence and
+ * sync for free instead of duplicating that wiring.
+ */
+export type QuizState = QuizStateBase & GrammarQuizState;
+
 export type QuizAction =
     | { type: 'SETUP_COMPLETE'; payload: { progress: UserProgress; settings: UserSettings } }
     | { type: 'LOAD_VOCAB_START'; payload: PendingQuizItem }
@@ -86,9 +100,11 @@ export type QuizAction =
     | { type: 'RESET_DAILY_STATS' }
     | { type: 'SESSION_START'; payload: { taskKeys: TaskKey[] } }
     | { type: 'SESSION_END' }
-    | { type: 'RECONCILE_REMOTE'; payload: { progress: UserProgress; settings: UserSettings } };
+    | { type: 'RECONCILE_REMOTE'; payload: { progress: UserProgress; settings: UserSettings } }
+    | GrammarQuizAction;
 
 export const initialState: QuizState = {
+    ...initialGrammarState,
     progress: null,
     settings: null,
     currentVocab: null,
@@ -119,6 +135,8 @@ function sameKanjiKnowledge(a: KanjiKnowledge | undefined, b: KanjiKnowledge): b
 }
 
 export function quizReducer(state: QuizState, action: QuizAction): QuizState {
+    if (isGrammarAction(action)) return grammarReducer(state, action);
+
     switch (action.type) {
         case 'SETUP_COMPLETE':
             return {
