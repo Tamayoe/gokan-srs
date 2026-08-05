@@ -79,20 +79,26 @@ gokan-srs/                          # monorepo root
 │   ├── gokan-srs/                  # the SRS learning app - was the repo root pre-migration
 │   │   ├── dataset/                   # git submodule -> gokan-dataset (raw sources, build pipeline, compiled/ output)
 │   │   ├── public/                    # Static assets
-│   │   │   └── data/compiled/         # NOT committed - synced from dataset/compiled/ at dev/build time
+│   │   │   ├── data/compiled/         # NOT committed - synced from dataset/compiled/ at dev/build time
+│   │   │   └── data/grammar/          # COMMITTED (unlike data/compiled/) - compiled grammar output, see Grammar Dataset
 │   │   ├── scripts/
-│   │   │   └── sync-dataset.ts       # Copies dataset/compiled/ -> public/data/compiled/
+│   │   │   ├── sync-dataset.ts       # Copies dataset/compiled/ -> public/data/compiled/
+│   │   │   ├── build-grammar.ts      # Compiles scripts/grammar/raw/ -> public/data/grammar/ (see Grammar Dataset)
+│   │   │   └── grammar/raw/          # Vendored hanabira.org-japanese-content snapshot (grammar_ja_{N5..N1}_full_alphabetical_0001.json)
 │   │   ├── src/
 │   │   │   ├── assets/               # Images, fonts
 │   │   │   ├── commons/              # Shared constants
 │   │   │   │   └── constants.ts      # App-wide configuration
 │   │   │   ├── components/           # Reusable UI components
 │   │   │   ├── context/              # React Context providers
-│   │   │   │   ├── quiz/             # Quiz state machine (modular, see State Management)
-│   │   │   │   │   ├── quizReducer.ts          # Pure reducer (state + actions, no I/O)
-│   │   │   │   │   ├── quizSelectors.ts        # selectNextView + derived selectors
-│   │   │   │   │   ├── useQuizOrchestration.ts # All effects + actions (I/O, sync, timers)
-│   │   │   │   │   └── QuizProvider.tsx        # Thin assembler exposing QuizContextValue
+│   │   │   │   ├── quiz/             # Quiz state machine (modular, see State Management) - also hosts the Grammar activity's parallel state
+│   │   │   │   │   ├── quizReducer.ts          # Pure reducer (state + actions, no I/O) - QuizState is Vocab's state intersected with GrammarQuizState
+│   │   │   │   │   ├── quizSelectors.ts        # selectNextView + derived selectors (vocab)
+│   │   │   │   │   ├── useQuizOrchestration.ts # All effects + actions (I/O, sync, timers) - vocab
+│   │   │   │   │   ├── grammarReducer.ts       # Grammar action types + pure reducer logic, delegated to from quizReducer
+│   │   │   │   │   ├── grammarSelectors.ts     # selectNextGrammarView, computeBlankPlan + derived selectors (grammar)
+│   │   │   │   │   ├── useGrammarOrchestration.ts # All effects + actions for the Grammar activity
+│   │   │   │   │   └── QuizProvider.tsx        # Thin assembler exposing QuizContextValue (both activities)
 │   │   │   │   ├── useQuiz.ts        # useQuiz() hook + QuizContext object
 │   │   │   │   ├── GoogleDriveContext.tsx
 │   │   │   │   ├── ThemeContext.tsx
@@ -101,29 +107,34 @@ gokan-srs/                          # monorepo root
 │   │   │   ├── models/               # TypeScript interfaces
 │   │   │   │   ├── vocabulary.model.ts
 │   │   │   │   ├── user.model.ts
+│   │   │   │   ├── grammar.model.ts  # GrammarPoint/GrammarExample/GrammarProgress (see Core Data Models)
 │   │   │   │   ├── data.model.ts     # External dataset DTOs
 │   │   │   │   ├── index.model.ts
 │   │   │   │   ├── state.model.ts
 │   │   │   │   └── kanji.model.ts
 │   │   │   ├── pages/                # Page components
 │   │   │   │   ├── main/             # Activity hub (landing route '/') - activity cards + session recap
-│   │   │   │   ├── quiz/             # Study session screen, route '/quiz' (also hosts quizFormatting.ts helpers)
+│   │   │   │   ├── quiz/             # Vocab study session screen, route '/quiz' (also hosts quizFormatting.ts helpers)
+│   │   │   │   ├── grammar/          # Grammar study session screen, route '/grammar' (see Application Pages)
 │   │   │   │   ├── setup/            # Initial setup wizard
 │   │   │   │   ├── settings/         # App settings
 │   │   │   │   ├── profile/          # User profile
 │   │   │   │   ├── stats/            # Statistics screen + charts (see Application Pages)
 │   │   │   │   └── about/            # About page
 │   │   │   ├── services/             # Business logic
-│   │   │   │   ├── srs.service.ts    # SRS algorithm (formula only)
-│   │   │   │   ├── scheduling.ts     # Single source of truth for due-date/mastery derivation
+│   │   │   │   ├── srs.service.ts    # SRS algorithm (formula only) - also the source of the reusable calculateNextState formula
+│   │   │   │   ├── scheduling.ts     # Single source of truth for due-date/mastery derivation (vocab)
 │   │   │   │   ├── vocabulary.service.ts
+│   │   │   │   ├── grammar.service.ts       # Loads compiled grammar data (public/data/grammar/, see Grammar Dataset)
+│   │   │   │   ├── grammarScheduling.ts     # scheduling.ts's equivalent for GrammarProgress's single SRSEntry
+│   │   │   │   ├── grammarSrs.service.ts    # SRSService's equivalent for grammar: JLPT-order queue refill, applyAnswer, intro choice
 │   │   │   │   ├── storage.service.ts
 │   │   │   │   ├── backup.service.ts        # Write-once pre-migration safety snapshots
 │   │   │   │   ├── progressSerialization.ts # Shared (de)serialization for storage + Drive
 │   │   │   │   ├── migration.service.ts
 │   │   │   │   ├── sync/                    # Google Drive sync (see Services & Business Logic)
 │   │   │   │   │   ├── driveClient.ts       # Raw Drive REST HTTP calls
-│   │   │   │   │   ├── mergeProgress.ts     # Pure per-entry merge logic
+│   │   │   │   │   ├── mergeProgress.ts     # Pure per-entry merge logic (vocab + grammar)
 │   │   │   │   │   ├── googleDriveSync.ts   # Orchestrator: CAS retry, dedup, backups
 │   │   │   │   │   └── types.ts
 │   │   │   │   └── quiz.service.ts
@@ -228,6 +239,7 @@ gokan-srs/                          # monorepo root
 **`UserProgress`**
 - `kanjiKnowledge`: KanjiKnowledge object
 - `learningQueue`: Array of VocabProgress (all vocab ever introduced)
+- `grammarQueue`: Array of GrammarProgress (all grammar points ever introduced) - independent of `learningQueue`, added additively (no format-version migration needed, just a default-to-`[]` at hydration time - see Grammar Activity below)
 - `stats`: Counters for newLearnedToday, totalLearned, totalReviews
 - `dailyOverride`: Allow bypassing daily new vocab limit
 
@@ -246,6 +258,22 @@ gokan-srs/                          # monorepo root
 - `alwaysUseAiForMeaningContext`: boolean (default true)
 - `meaningContextThreshold`: `'early'` | `'normal'` | `'late'` (default `'normal'`). Controls the mastery % at which meaning quizzes switch to sentence/context mode (early=30%, normal=50%, late=70%).
 - `ignoreKnownKanjiRequirement`: optional boolean (default false). When true, drops the "all contained kanji must already be known" filter for the `frequency`/`kanji_coverage`/`jlpt` orders. Has no effect on `kklc` (gated by step, not by kanji set). Settings UI surfaces it for every order except `kklc`.
+
+### Grammar Activity (`grammar.model.ts`)
+
+New SRS-driven activity alongside the vocab quiz (issue #17) - reuses `srs.service.ts`'s formula rather than a new algorithm, per the issue's resolved decision. See Services & Business Logic → Grammar Services and Application Pages → Grammar Screen for the rest of the design; this section only covers the data shapes.
+
+**`GrammarPoint`** - One grammar point, sourced from the hanabira.org-japanese-content dataset (CC license, attribution required - see the About page's credit link)
+- `id`: Stable id assigned at build time from the vendored snapshot (e.g. `"n5-001"`) - the upstream dataset has no ids of its own
+- `title`, `shortExplanation`, `longExplanation`, `formation` (a template like `"Noun + が + いちばん + Adjective/Verb"`, shown to the user and also used as the fallback recall target - see `computeBlankPlan` below)
+- `jlptLevel`: 1 (N1 hardest) .. 5 (N5 easiest) - every grammar point has one, unlike vocab's optional `jlptLevel` (this dataset is itself organized by level)
+- `examples`: Array of `GrammarExample` (3-5 per point)
+
+**`GrammarExample`** - `jp`/`romaji`/`en` plus `words: GrammarExampleWord[]`, a build-time tokenization of `jp` (via kuromoji) where each word is resolved against the compiled vocab dataset. Concatenating every word's `surface` reconstructs `jp` exactly.
+
+**`GrammarExampleWord`** - `{ surface, vocabId, reading? }`. `vocabId` is `null` for particles/symbols/anything unresolved (always shown literally, never blanked); when resolved, `reading` is the matched vocab's primary reading, embedded at build time so grading a blank never needs a runtime vocab fetch.
+
+**`GrammarProgress`** - User's SRS progress for one grammar point, mirroring `VocabProgress` but with a single `entry: SRSEntry` (no reading/meaning split - a grammar quiz has exactly one quiz type) and a single `needsRetry?: boolean` (not per-type).
 
 ### Session State (`state.model.ts`)
 
@@ -345,6 +373,17 @@ Handles loading vocabulary data from compiled JSON files.
 - Vocabulary: `vocab/{id}.json` (one file per vocab item)
 - Kanji: `kanji.json` (flat array of all `Kanji` objects)
 
+### Grammar Service (`grammar.service.ts`) and Grammar SRS (`grammarSrs.service.ts`)
+
+**`GrammarService`** - Loads grammar data from `public/data/grammar/` (see Build & Development → Grammar Dataset for how that directory is produced - it is **not** part of the `gokan-dataset` submodule).
+- `loadJlptIndex()`: Load the JLPT level → grammar point ids index (`index/jlpt.json`)
+- `loadGrammarPoint(id)`: Load an individual `GrammarPoint` by id (cached), from `points/{id}.json`
+
+**`GrammarSRSService`** - `SRSService`'s equivalent for grammar, reusing its formula (`SRSService.calculateNextState`, made `static` non-private specifically so this class can call it) rather than inventing a new one:
+- `createGrammarProgress(grammarId)` / `applyGrammarIntroChoice(progress, choice)`: mirror `SRSService.createVocabProgress`/`applyVocabIntroChoice`, but against a single `entry` instead of `reading`/`meaning`
+- `applyAnswer(progress, result, latencyMs, now, intervalModifier?, frequencyModifier?)`: takes an already-combined `AnswerResult` (the caller - `useGrammarOrchestration`'s `submitGrammarAnswer` - grades every blank independently via `SRSService.analyzeError` and combines worst-of: any wrong blank beats any minor_error beats correct, since there is one SRS entry per grammar point, not one per blank). Retry handling (`needsRetry`, a single boolean here) mirrors vocab's per-quiz-type flag exactly, just without the type dimension.
+- `getNextCandidates(currentQueue, maxToFind, ignoredIds?)` / `countLearnableGrammar` / `hasMoreLearnableGrammar`: walk JLPT order N5 → N1 (`GRAMMAR_JLPT_LEVELS`), source order within a level. **Always** this order - grammar has no frequency data to sort by (unlike vocab), so there's no `preferredLearningOrder` setting for it, and no kanji filtering either (kanji-awareness applies to which *vocab words* are blanked in a quiz sentence, not to which grammar points can be learned - see `computeBlankPlan` in State Management).
+
 ### Storage Service (`storage.service.ts`)
 
 Local storage wrapper for user data persistence.
@@ -363,7 +402,8 @@ Cloud sync, split into three modules by responsibility:
 - `mergeEntry(local, remote)`: merges one `SRSEntry` (reading OR meaning) - the entry with the more recent `lastReviewedAt` wins scheduling-relevant fields (dueDate, difficulty), while `memoryStrength`/`interval` are each taken as the **max** of both sides as a safety net; `history` is a full union deduped by timestamp.
 - `mergeVocabProgress(local, remote, settings)`: merges reading and meaning **independently** via `mergeEntry` - a device that only reviewed reading can never clobber another device's meaning review (and vice versa). `stage`/`nextReviewAt` are always **re-derived** via `scheduling.ts`, never merged directly.
 - `mergeLearningQueues`: pure union by `vocabId` (never drops a word).
-- `mergeProgress`/`mergeSettings`: top-level merge - kanji knowledge is last-version-wins (local wins on a tie, to preserve un-pushed local edits/deletions), stats are field-wise max, `dailyOverride` is OR'd, and the sync version counter always bumps by 1 past the higher input.
+- `mergeGrammarProgress`/`mergeGrammarQueues`: grammar's equivalent - `mergeEntry` reused directly (one entry, no reading/meaning split to merge independently), `needsRetry` OR'd, `stage`/`nextReviewAt` re-derived via `grammarScheduling.ts`. `mergeGrammarQueues` is a pure union by `grammarId`.
+- `mergeProgress`/`mergeSettings`: top-level merge - kanji knowledge is last-version-wins (local wins on a tie, to preserve un-pushed local edits/deletions), stats are field-wise max, `dailyOverride` is OR'd, `grammarQueue` merged via `mergeGrammarQueues`, and the sync version counter always bumps by 1 past the higher input.
 
 **`googleDriveSync.ts`** (`GoogleDriveSync` class) - Orchestrates the above against Drive:
 - **Optimistic concurrency**: captures the remote file's `modifiedTime` when read, re-verifies it immediately before writing, and retries (re-fetch + re-merge, up to 3 attempts) if it changed - closes the classic read-modify-write lost-update window.
@@ -392,6 +432,7 @@ Previously both were the same constant, so the cheap synchronous pass could stam
 - Converts old `mastery` (0-100) system to new `memoryStrength`/`interval` system
 - Normalizes `needsRetry` (legacy boolean → per-type `{reading?, meaning?}` object) **unconditionally**, regardless of format version, since the field isn't tied to the version-gated passes
 - Recomputes `nextReviewAt` unconditionally via `scheduling.ts` on every load, retroactively correcting any value written before that derivation existed
+- `grammarQueue` (issue #17) is a purely additive field, so it needs no version-gated pass at all - `migrateUserProgress` just fills `DEFAULT_GRAMMAR_PROGRESS` defaults into each item and recomputes its `nextReviewAt` via `grammarScheduling.ts`, unconditionally, every load
 - Idempotent migration (already-migrated data not re-migrated)
 - Automatic migration on data load (Storage & Google Drive)
 
@@ -475,15 +516,26 @@ Note: this is **not** the old `sessionQueue`/`sessionBuiltAt` subsystem (a prior
 - `continueToNext()`: Move to next item after feedback (calls `SRSService.applyAnswer` exactly once per answer - a prior version called it twice, once for the mastery-delta history entry and once for the queue update)
 - `saveVocabIntroChoice(vocab, 'learn'|'skip')`: Handle intro card choice
 
+### Grammar Activity State (`context/quiz/grammarReducer.ts`, `grammarSelectors.ts`, `useGrammarOrchestration.ts`)
+
+The Grammar activity (issue #17) is a **parallel concern within the same `QuizState`/`QuizProvider`**, not a second context/provider. `grammarQueue` lives on the same `UserProgress` object as `learningQueue`, and `useQuizOrchestration`'s persistence/Drive-sync effects key off `state.progress` reference changes generically - so a second provider would need its own read/write path onto that same object, racing the first. Instead:
+
+- **`grammarReducer.ts`** - Defines the grammar-only slice of `QuizState` (`GrammarQuizState`, intersected into `QuizState`) and every `GRAMMAR_`-prefixed action, plus the pure `grammarReducer(state, action)` function. `quizReducer.ts`'s top-level `quizReducer` delegates to it via `isGrammarAction()` (a simple `action.type.startsWith('GRAMMAR_')` check) before its own `switch` - so vocab's reducer code needs no awareness of grammar's action shapes.
+- **`grammarSelectors.ts`** - `selectNextGrammarView(state, hasMoreLearnableGrammar, now)` mirrors `selectNextView` (same `{ queueItem, sessionState, nextReviewAt, shouldShowIntro }` shape, `sessionState` typed `GrammarSessionState = Exclude<SessionState, 'learn-kanji'>` since grammar has no kanji-gated step). `computeBlankPlan(point, progress, reviewCount)` is grammar-specific: picks a deterministic example (hashed on `${grammarId}:${reviewCount}`, so repeated reviews of the same point cycle through its examples instead of re-rolling every render) and decides which words become input blanks - **every word resolved to a vocab id the user has already been introduced to** (`learningQueue` entry with `introductionAt !== null`); if none of the sentence's resolved words are known yet, it falls back to blanking **every** content word, so the exercise still tests something (recall of the construction shown in `formation`) instead of arriving fully pre-filled with nothing left to answer. Also exposes `selectCurrentGrammarProgress` and `selectNextGrammarSessionPreview` (mirrors `selectNextSessionPreview`'s `{ review, new, retries }` shape, same mutually-exclusive-bucket logic, for the Main hub's grammar activity card).
+- **`useGrammarOrchestration.ts`** - Grammar's equivalent of `useQuizOrchestration`: loading (route-gated to `/grammar`, same guard-by-comparing-`currentGrammarQuizItem` pattern as vocab's vocab-loading effect), auto-advance on a correct answer, and the actions (`setGrammarAnswer`, `submitGrammarAnswer`, `advanceGrammarQueue`, `continueGrammarToNext`, `saveGrammarIntroChoice`). `submitGrammarAnswer` grades every blank independently via `SRSService.analyzeError` (reusing the same fuzzy-match logic as vocab reading quizzes) and combines results worst-of (any wrong → wrong; else any minor_error → minor_error; else correct) into the single `AnswerResult` `GrammarSRSService.applyAnswer` updates the point's one SRS entry with. Deliberately does **not** duplicate persistence/Drive-sync wiring - dispatching through the shared `quizReducer` gets that for free.
+- Session-progress bar parity (the frozen `session.committed` task-set counter vocab has) was **deliberately not built for grammar in v1** - a smaller, reasonable scope decision. The Grammar screen shows live due/waiting/exhausted states via `selectNextGrammarView` without a fixed-denominator progress bar.
+
+`QuizContextValue` exposes the grammar activity as its own group of fields/actions (`grammarSessionState`, `grammarNextReviewAt`, `currentGrammarProgress`, `shouldShowGrammarIntro`, `nextGrammarSessionPreview`, `grammarActions`, `grammarComputed`) alongside the vocab ones - `useQuiz()` is the single hook both activities read from.
+
 ---
 
 ## Application Pages
 
 ### Main Screen (`pages/main/MainScreen.tsx`)
 
-The activity hub - the landing page (route `/`) after setup, replacing the previous behavior of dropping users straight into the quiz. Activities (the main actions a user can take) are presented as cards; currently just "Vocabulary quiz session", which navigates to `/quiz`. Settings, Stats, and Kanji are **not** activities - they stay in the global header toolbar (`App.tsx`, rendered outside `<Routes>` so it's present on every page), unchanged by this page's introduction.
+The activity hub - the landing page (route `/`) after setup, replacing the previous behavior of dropping users straight into the quiz. Activities (the main actions a user can take) are presented as cards: "Vocabulary quiz session" (`/quiz`) and "Grammar quiz session" (`/grammar`, issue #17). Settings, Stats, and Kanji are **not** activities - they stay in the global header toolbar (`App.tsx`, rendered outside `<Routes>` so it's present on every page), unchanged by this page's introduction.
 
-The quiz activity card shows a preview of what the next session will contain, via `selectNextSessionPreview(state, now)`: `"{review} review · {new} new"`, with `· {retries} retries` appended (in the error color) only when `retries > 0`. When all three counts are 0, it falls back to a caught-up message, showing the next review's ETA (`nextReviewAt` from context) when one is known. See State Management for the selector and Modification Log `[2026-08-04]`.
+Both activity cards render their preview description via a shared `renderSessionPreviewDescription(preview, nextReviewAt)` helper (`MainScreen.tsx`): `"{review} review · {new} new"`, with `· {retries} retries` appended (in the error color) only when `retries > 0`. When all three counts are 0, it falls back to a caught-up message, showing the next review's ETA when one is known. The vocab card sources its preview from `selectNextSessionPreview(state, now)`; the grammar card from `selectNextGrammarSessionPreview(state, now)` - see State Management for both selectors, and Modification Log `[2026-08-04]`/`[2026-08-05]`.
 
 `DailyActivityCard` (`pages/main/DailyActivityCard.tsx`) replaced the old ephemeral end-of-session recap (`[2026-08-02]`-era `lastSessionRecap`, removed `[2026-08-04]`): a **today** rollup (reviewed / correct / incorrect) plus a compact 7-day bar chart, both derived from `buildDailyActivity(progress, 7)` (`utils/activity.utils.ts`) - the same per-day bucketing `DailyProgressionChart` uses on the Stats screen. Reading persisted `reading.history`/`meaning.history` logs instead of session-local state means the card stays accurate across however many small sessions happen in a day, rather than being overwritten by the next session like the old recap was.
 
@@ -501,6 +553,17 @@ Main study interface. Switches **exhaustively** on `sessionState` (a TypeScript 
 **Auto-advance logic**: Owned by `useQuizOrchestration`. If the queue has no valid items but can introduce new vocab, automatically calls `advanceQueue()`.
 
 **Shared formatting** (`pages/quiz/quizFormatting.ts`): `formatReadingList`, `getUniquePosTags`, `getUniqueRelatedCompounds`, and the `useExpandableDefinitions` hook are shared across `QuizCard`, `MeaningQuizCard`, and `VocabIntroCard` rather than being reimplemented in each.
+
+### Grammar Screen (`pages/grammar/GrammarScreen.tsx`)
+
+Route `/grammar` (issue #17). The Grammar activity - a second SRS-driven study session alongside `/quiz`, following the same "explicit and boundable" activity model but with its own, simpler state machine (see State Management → Grammar Activity State). Switches exhaustively on `grammarSessionState` (`GrammarSessionState`, a `never`-checked default case same as `QuizScreen`):
+
+- **`'waiting'` / `'exhausted'`**: Inline `CenteredCard` messages (not `WaitingScreen`/`ExhaustedScreen` - those are vocab-copy-specific, e.g. "Learn more words"), each with a "Back to activities" link.
+- **`'review'` / `'learn'`**: Loading gate, then `shouldShowGrammarIntro` (from `selectNextGrammarView`) decides `GrammarIntroCard` vs. `GrammarQuizCard`.
+
+**`GrammarIntroCard`** (`pages/grammar/GrammarIntroCard.tsx`) - mirrors `VocabIntroCard`'s layout: JLPT chip, title (rendered in `font-mincho`, **not** `font-serif` - the title contains Japanese characters and `font-serif`'s font stack, "Source Serif 4, Georgia, serif", has no CJK fallback at all, unlike `font-mincho`/`font-gothic` which both list a Noto JP fallback; caught via a scripted browser pass, see Modification Log `[2026-08-05]`), short explanation, and the `formation` template in its own bordered box. Learn/Skip buttons, same as vocab.
+
+**`GrammarQuizCard`** (`pages/grammar/GrammarQuizCard.tsx`) - the fill-in-the-blank translation exercise: shows `example.en` as the prompt, then renders `example.words[]` inline as literal `<span>`s interspersed with an `<input>` for every index in `currentGrammarBlankPlan.blankWordIndices` (see `computeBlankPlan`), each sized to its expected reading's length. Does **not** reuse `BaseQuizCard` (single-input-specific) - grammar needs multiple discrete inputs, so it owns its own form/submit/feedback markup instead, reusing only the `Card`/`CardSection` primitives and the same feedback-styling conventions (border colors, `bg-feedback-background`) as vocab's cards. On feedback, each blank's own border color reflects its individual `perBlankResults` entry (not just the combined result), and the expected reading is revealed beneath any non-correct blank.
 
 ### Onboarding Flow (`pages/setup/OnboardingFlow.tsx`)
 
@@ -576,6 +639,7 @@ bun run dataset:sync                      # Copy dataset/compiled/ -> public/dat
 bun run dataset:build                     # Regenerate the dataset from raw sources, then sync (~1-2 min)
 bun run --cwd apps/gokan-srs build:kanji  # Compile KKLC kanji only (delegates into the submodule)
 bun run --cwd apps/gokan-srs build:jlpt   # Rebuild only index/jlpt.json (delegates into the submodule)
+bun run --cwd apps/gokan-srs build:grammar # Rebuild public/data/grammar/ from the vendored hanabira snapshot (see Grammar Dataset below) - NOT part of the submodule
 ```
 
 ### Dataset Consumption
@@ -591,6 +655,14 @@ The compiled dataset (kanji/vocab/sentences/indexes) is **not owned by this repo
 - Vitest's config (`vite.config.ts`) explicitly excludes `dataset/**` from its test glob, since the submodule has its own independent test suite and CI (would otherwise get picked up and double-run as part of `bun run test` here).
 - Bumping which `gokan-dataset` commit this repo points to is a normal two-step submodule workflow: commit + push inside `apps/gokan-srs/dataset/` first (a separate repo), then commit the resulting pointer change here.
 
+### Grammar Dataset
+
+Unlike vocab/kanji/sentences, the grammar dataset (issue #17) lives **entirely inside `gokan-srs` itself**, not the `gokan-dataset` submodule - a deliberate exception to the split described above. Reason: this repo's git credentials (a per-repo GitHub App installation token) have push access only to `gokan-srs`, not `gokan-dataset` (a separate repo under the same `gokan-dev` org) - confirmed by a failed test push during this work. Since the dataset submodule can't be modified from here, the grammar pipeline is scoped to this repo instead of following the vocab convention.
+
+- **Source**: [hanabira.org-japanese-content](https://github.com/tristcoil/hanabira.org-japanese-content) (Creative Commons, attribution required - see the credit link on the About page), vendored as a **frozen snapshot** at `apps/gokan-srs/scripts/grammar/raw/grammar_ja_{N5,N4,N3,N2,N1}_full_alphabetical_0001.json` (828 grammar points total: N5 136, N4 124, N3 132, N2 191, N1 245). "Vendored snapshot vs. periodic re-sync" was the one ingestion detail issue #17 left open at implementation time; re-syncing periodically was ruled out precisely because of the push-access constraint above (there'd be no way to *commit* a refreshed snapshot's provenance back upstream in the usual submodule-pointer-bump workflow) - re-running `build:grammar` against a manually-refreshed `raw/` snapshot is the update path if hanabira's content ever needs a refresh.
+- **`scripts/build-grammar.ts`**: reads the raw JSON, assigns stable ids (`${level}-${index}`, e.g. `"n5-001"` - the upstream dataset has no ids of its own, and since the snapshot is frozen these stay stable across rebuilds), and tokenizes every example sentence with **kuromoji** (added as a `gokan-srs` devDependency - it ships its own bundled dictionary, so this doesn't need anything from the submodule) to resolve each content word (`名詞`/`動詞`/`形容詞`/`副詞` POS tags only; particles/symbols always stay literal) against `dataset/compiled/index/search.json` (read-only - this is the *only* place the grammar pipeline touches the submodule, and only to look up vocab ids/readings by written form or reading, never to write anything there). This is a smaller, purpose-built tokenizer/matcher, not a reuse of the submodule's own `SentenceTokenizer` (which handles conjugation/compound-matching nuance this pipeline doesn't need - see its `[2026-02-28]` log entry).
+- **Output**: `public/data/grammar/points/{id}.json` (one `GrammarPoint` per file, mirroring `vocab/{id}.json`) and `public/data/grammar/index/jlpt.json` (level → ordered id list, mirroring `index/jlpt.json`'s shape). Unlike `public/data/compiled/` (gitignored, resynced from the submodule on every `dev`/`build`), **`public/data/grammar/` is committed** - `gokan-srs` is the sole source of truth for this data, so there's no separate "raw repo" to treat as canonical, and no automatic resync step; regenerate it manually via `build:grammar` when the vendored snapshot changes.
+
 ### Test Infrastructure
 
 **Test Framework**: Vitest
@@ -604,6 +676,8 @@ The compiled dataset (kanji/vocab/sentences/indexes) is **not owned by this repo
   - Meaning-quiz-disabled scheduling tests (graduation on reading mastery alone)
   - JLPT learning-order tests: N5→N1 walk order, kanji filtering on by default (and disabled via `ignoreKnownKanjiRequirement`), already-queued exclusion, frequency fallback once the lists run dry (without re-serving a JLPT word, and respecting the same toggle), and the matching `countLearnableVocabulary` counts
 - `src/services/scheduling.test.ts` - `vocabNextReviewAt`/`isVocabFullyMastered`/`isVocabDue` unit tests
+- `src/services/grammarScheduling.test.ts` - `grammarNextReviewAt`/`isGrammarFullyMastered`/`isGrammarDue` unit tests (grammar's single-entry equivalent)
+- `src/services/grammarSrs.service.test.ts` - `GrammarSRSService` tests: intro choice (learn/skip), `applyAnswer` (correct/wrong/retry/graduation, mirroring vocab's retry-is-training-only invariant), and JLPT-order candidate finding/counting
 - `src/services/migration.service.test.ts` - Data migration tests
   - Old format (mastery) to new format (memoryStrength/interval) conversion
   - Edge cases (mastery 0, mastery 100)
@@ -611,10 +685,13 @@ The compiled dataset (kanji/vocab/sentences/indexes) is **not owned by this repo
   - Real production data samples
   - `needsRetry` boolean→object normalization
   - Two-tier version regression guards (sync pass never pre-empts the async pass)
+  - `grammarQueue` defaulting to `[]` when absent, defaults filled into a partial `GrammarProgress` item, and a graduated item's `nextReviewAt` staying `null` rather than re-deriving from a stale `dueDate`
 - `src/services/migration.roundtrip.test.ts` - Golden round-trip test: a realistic snapshot spanning old/mixed/current-format items pushed through the full migrate→hydrate→serialize→reparse pipeline, asserting zero data loss (no vocab dropped, no history lost, no due date nulled)
 - `src/context/quiz/quizReducer.test.ts` - Reducer unit tests (every action, including `RECONCILE_REMOTE`, `SESSION_START`/`SESSION_END`, and `VOCAB_INTRO_CHOICE` extending the session's committed task set on "Learn")
 - `src/context/quiz/quizSelectors.test.ts` - `selectNextView` across all session states + the meaning-disabled edge case, `selectCurrentProgress`, `selectCurrentSentence`, `selectSessionStats` (stable `total`, `done` on de-actioned tasks, the pending-retry regression that no longer shrinks the total, mid-session arrivals counted as `waiting` not total, `moreNew`, and the reading/meaning-stagger regression - one reading answer must only increment `done` by 1, not 2), `filterSessionCommit` directly, and `selectNextSessionPreview` (mutually exclusive buckets, retries taking precedence over new/review, meaning-disabled ignoring meaning due dates, graduated vocab excluded)
-- `src/services/sync/mergeProgress.test.ts` - Per-entry merge tests, including the core fix: a device that only reviewed reading can never clobber another device's meaning review
+- `src/context/quiz/grammarReducer.test.ts` - Reducer unit tests for every `GRAMMAR_` action (load lifecycle, set/submit answer, update-after-answer, advance queue, intro choice's learn/skip/detail-page-insert paths), dispatched through the shared `quizReducer`
+- `src/context/quiz/grammarSelectors.test.ts` - `selectNextGrammarView` across all session states + `shouldShowIntro`, `computeBlankPlan` (blanks only known vocab, falls back to blanking every content word when nothing is known yet, a queued-but-never-introduced vocab entry does not count as known, deterministic example selection, no-examples edge case), `selectCurrentGrammarProgress`, and `selectNextGrammarSessionPreview`
+- `src/services/sync/mergeProgress.test.ts` - Per-entry merge tests, including the core fix: a device that only reviewed reading can never clobber another device's meaning review; plus `mergeGrammarProgress`/`mergeGrammarQueues` tests and a top-level `mergeProgress` assertion that `grammarQueue` merges as a pure union
 - `src/services/sync/driveClient.test.ts` - Drive REST wrapper tests (auth-error translation)
 - `src/services/sync/googleDriveSync.test.ts` - CAS retry-on-conflict, duplicate-file reconciliation, write-once remote backup
 - `src/utils/knowledge.utils.test.ts` - Knowledge-points model tests: mastery-curve normalisation (a vocab mastered in reading + meaning is worth exactly 200), the interval→strength inversion (including undoing the `wrong`/`minor_error` post-processing multipliers and the frequency modifier), and curve construction (per-day bucketing, pre-window baseline collapsing, skipped-vocab crediting, knowledge loss after a failure, future-dated-log rejection)
@@ -711,6 +788,14 @@ return 'exhausted'
 5. Feedback shown (correct/incorrect + matched answer + optional AI note)
 6. `continueToNext()` applies SRS update via `SRSService.applyAnswer()` passing both `quizType` and `quizMode`. Both `meaning_base` and `meaning_context` update the same `vocab.meaning` SRSEntry internally, but use different `expectedLatency` values (10s vs 15s) for the latency multiplier calculation.
 
+### Grammar Quiz Flow (issue #17)
+
+1. `useGrammarOrchestration`'s load effect resolves a `GrammarPoint` and, via `computeBlankPlan`, a fixed `{ exampleIndex, blankWordIndices }` for this turn - blanks are content words already known from the vocab activity, or every content word if none are known yet (see State Management → Grammar Activity State)
+2. User types into each blank's discrete input (one per `blankWordIndices` entry); non-blank words are shown as plain literal text
+3. `submitGrammarAnswer()` grades each blank independently via `SRSService.analyzeError(userInput, word.reading)` - the same fuzzy/Levenshtein matching reading quizzes use - then combines the per-blank results **worst-of** (any `wrong` → `wrong`; else any `minor_error` → `minor_error`; else `correct`) into one `AnswerResult`
+4. Feedback shown per-blank (each input's border reflects its own result) plus the combined message; wrong/minor blanks reveal their expected reading
+5. `continueGrammarToNext()` applies the combined result to the grammar point's single SRS entry via `GrammarSRSService.applyAnswer()`, then advances to the next queued grammar point
+
 ### Daily Reset Logic
 
 - `stats.newLearnedToday` resets at midnight
@@ -765,6 +850,17 @@ return 'exhausted'
 > [!IMPORTANT]
 > **Update this log when making functional changes.**
 > Document the *result* of investigations and the *reasoning* behind system behavior changes.
+
+- **[2026-08-05]**:
+  - **Add Grammar learning activity (SRS-based)** (issue #17): New second SRS-driven activity alongside the vocab quiz - JLPT-level grammar points with a fill-in-the-blank English→Japanese translation exercise, reusing `srs.service.ts`'s formula rather than a new algorithm, per the issue's resolved decisions.
+    - **Architecture decision (not explicitly resolved by the issue, but flagged there as an implementation-time detail)**: the issue's data section assumed the same ingestion shape as vocab (raw data building via `gokan-dataset`), but this agent's git credentials (a per-repo GitHub App installation token) turned out to have **no push access to the separate `gokan-dataset` repo** (confirmed by a failed test push) - only to `gokan-srs`. Since the grammar pipeline can't live in a submodule this repo can't commit to, it was built entirely inside `gokan-srs` instead: a vendored raw snapshot (`scripts/grammar/raw/`), a local build script (`scripts/build-grammar.ts`), and **committed** compiled output (`public/data/grammar/`, unlike the gitignored `public/data/compiled/`) - see Build & Development → Grammar Dataset for the full reasoning and Modification Log going forward if this ever needs revisiting (e.g. if push access to `gokan-dataset` becomes available).
+    - **Data**: vendored `hanabira.org-japanese-content` (CC license, credited on the About page) - 828 grammar points across N5-N1. `build-grammar.ts` assigns stable ids (`n5-001`, ...) and tokenizes every example sentence with kuromoji (a new `gokan-srs` devDependency, self-contained dictionary), resolving each content word against the vocab dataset's `search.json` (read-only) so the quiz can later decide, per-user, which words are already known. Output mirrors the vocab convention (`points/{id}.json`, `index/jlpt.json`) but isn't synced/regenerated automatically - `bun run build:grammar` to refresh.
+    - **Models** (`grammar.model.ts`): `GrammarPoint`/`GrammarExample`/`GrammarExampleWord` (build-time data) and `GrammarProgress` (user SRS state - a single `entry: SRSEntry` and single `needsRetry?: boolean`, since grammar has exactly one quiz type, unlike vocab's reading/meaning split). `UserProgress` gained `grammarQueue: GrammarProgress[]`, additive and defaulted via `DEFAULT_PROGRESS`/hydration/migration rather than a version-gated migration pass.
+    - **Services**: `grammar.service.ts` (loading, mirrors `vocabulary.service.ts`), `grammarScheduling.ts` (mirrors `scheduling.ts` for the single-entry case), `grammarSrs.service.ts` (mirrors `srs.service.ts`'s orchestration - JLPT-order-only queue refill since grammar has no frequency data, `applyAnswer` taking an already-combined per-blank result). `SRSService.calculateNextState` was made `static` (non-private) specifically so `grammarSrs.service.ts` can reuse the exact same formula instead of re-deriving it.
+    - **Sync/migration**: `mergeProgress.ts` gained `mergeGrammarProgress`/`mergeGrammarQueues` (mirrors the vocab merge functions, reusing `mergeEntry` directly since there's only one entry) wired into the top-level `mergeProgress`. `migration.service.ts` fills `grammarQueue` defaults and re-derives `nextReviewAt` unconditionally, same as vocab, but needs no version gate since the field is purely additive.
+    - **State**: Grammar's state lives in the **same** `QuizState`/`QuizProvider` as vocab rather than a second context - `grammarQueue` lives on the same `UserProgress` object `useQuizOrchestration`'s persistence/Drive-sync effects already key off generically, so a second provider would race it. `grammarReducer.ts`/`grammarSelectors.ts`/`useGrammarOrchestration.ts` hold the grammar-specific logic; `quizReducer.ts`'s top-level reducer delegates to `grammarReducer` for every `GRAMMAR_`-prefixed action via `isGrammarAction()`. `computeBlankPlan` (in `grammarSelectors.ts`) is the key selection rule: blank every word already resolved to a known vocab (introduced in `learningQueue`), or fall back to blanking every content word if none are known yet, so the exercise is never trivially all-pre-filled for a learner early in their vocab journey. Deliberately did **not** build session-progress-bar parity (vocab's frozen `session.committed` counter) for grammar in v1 - a reasonable, explicitly-scoped reduction, not an oversight.
+    - **UI**: new `/grammar` route (`GrammarScreen`, `GrammarIntroCard`, `GrammarQuizCard`), plus a "Grammar quiz session" card on the Main hub (`MainScreen.tsx`'s preview-description logic extracted into a shared `renderSessionPreviewDescription` helper so both activity cards use it instead of duplicating it). `GrammarQuizCard` renders the sentence as literal text interspersed with per-blank `<input>`s sized to the expected answer, doesn't reuse `BaseQuizCard` (single-input-specific), and shows each blank's own correctness on feedback via a `perBlankResults` array threaded through `GRAMMAR_SUBMIT_ANSWER`.
+    - **Verified via a scripted headless-Chromium pass** (playwright-core over CDP against the system Chromium binary, since no project run-skill or downloadable browser was available in this environment - matches the approach used for the `[2026-08-04]` verification): fresh "beginner" onboarding → Main hub shows both "Vocabulary quiz session" and "Grammar quiz session" cards → grammar intro card (title, JLPT chip, formation) → learned through the 3-item intro batch → multi-blank quiz card ("Translate into Japanese" + English prompt + Japanese sentence with 3 blanks, since no vocab was known yet - the blank-everything fallback correctly kicked in) → submitted deliberately-wrong answers → "Incorrect." feedback correctly revealed each blank's expected reading → Continue correctly advanced to the next grammar point's first review. No console errors throughout. This pass caught one real bug before it shipped: the intro card's title used `font-serif` (no CJK glyph fallback at all) instead of `font-mincho`, rendering Japanese characters as tofu boxes - fixed. `bun run typecheck`/`test`/`build` all pass (312 tests, 54 new); `bun run lint` has the same pre-existing failures documented in prior entries (the `dataset/**` submodule + long-standing `no-explicit-any`/`react-hooks/purity` gaps present on `main` before this work), plus a small number of new instances that each directly mirror an adjacent pre-existing instance in the same file for the same reason (e.g. `GRAMMAR_LOAD_ERROR`'s `error: any` mirrors `LOAD_VOCAB_ERROR`'s; `GrammarScreen`'s `Date.now()`-in-render mirrors `WaitingScreen.tsx`'s identical pattern) - not a new category of lint debt.
 
 - **[2026-08-04]**:
   - **Enrich the home page: next-session counter + daily activity card, replacing the session recap** (issue #30): The Main hub (`[2026-08-02]`) was very sparse - one activity card with no sense of how much work was waiting, and a session recap that got clobbered by the next session, so several small sessions a day rarely reflected a full day's work. Three changes, all backed by data already in `progress.learningQueue` - no new persistence, no dataset work.
