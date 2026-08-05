@@ -76,6 +76,18 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
                         </a>
                         . Both are open-source and widely trusted in the Japanese learning community.
                     </p>
+                    <p className="text-secondary leading-relaxed mt-3">
+                        Grammar points and example sentences are from{" "}
+                        <a
+                            href="https://hanabira.org"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary underline hover:no-underline"
+                        >
+                            hanabira.org
+                        </a>
+                        , used under its Creative Commons license.
+                    </p>
                 </section>
             </article>
         </div>
