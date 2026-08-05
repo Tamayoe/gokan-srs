@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpenText } from 'lucide-react';
+import { BookOpenText, Puzzle } from 'lucide-react';
 import { useQuiz } from '../../context/useQuiz';
 import { DailyActivityCard } from './DailyActivityCard';
 
@@ -11,7 +11,7 @@ import { DailyActivityCard } from './DailyActivityCard';
  * they aren't activities themselves. See issue #16.
  */
 export const MainScreen: React.FC = () => {
-    const { state, nextReviewAt, nextSessionPreview } = useQuiz();
+    const { state, nextReviewAt, nextSessionPreview, grammarNextReviewAt, nextGrammarSessionPreview } = useQuiz();
     const navigate = useNavigate();
 
     return (
@@ -26,6 +26,11 @@ export const MainScreen: React.FC = () => {
                     preview={nextSessionPreview}
                     nextReviewAt={nextReviewAt}
                     onClick={() => navigate('/quiz')}
+                />
+                <GrammarActivityCard
+                    preview={nextGrammarSessionPreview}
+                    nextReviewAt={grammarNextReviewAt}
+                    onClick={() => navigate('/grammar')}
                 />
             </div>
         </div>
@@ -56,37 +61,54 @@ function formatNextReview(nextReviewAt: Date): string {
     return `Next review in ${minutes} minute${minutes > 1 ? 's' : ''}.`;
 }
 
-const QuizActivityCard: React.FC<{
-    preview: { review: number; new: number; retries: number };
-    nextReviewAt: Date | null;
-    onClick: () => void;
-}> = ({ preview, nextReviewAt, onClick }) => {
+interface SessionPreview {
+    review: number;
+    new: number;
+    retries: number;
+}
+
+/** Shared by every activity card that previews an upcoming SRS session (vocab, grammar): "{review} review · {new} new", appending retries in the error color, falling back to a caught-up message with an ETA when known. */
+function renderSessionPreviewDescription(preview: SessionPreview, nextReviewAt: Date | null): React.ReactNode {
     const { review, new: newCount, retries } = preview;
     const caughtUp = review === 0 && newCount === 0 && retries === 0;
 
-    let description: React.ReactNode;
     if (caughtUp) {
-        description = nextReviewAt
-            ? formatNextReview(nextReviewAt)
-            : "You're all caught up.";
-    } else {
-        const parts: React.ReactNode[] = [`${review} review`, `${newCount} new`];
-        if (retries > 0) {
-            parts.push(<span key="retries" className="text-error">{retries} retries</span>);
-        }
-        description = parts.reduce<React.ReactNode[]>((acc, part, i) => {
-            if (i > 0) acc.push(<span key={`sep-${i}`} className="text-tertiary"> · </span>);
-            acc.push(part);
-            return acc;
-        }, []);
+        return nextReviewAt ? formatNextReview(nextReviewAt) : "You're all caught up.";
     }
 
-    return (
-        <ActivityCard
-            icon={<BookOpenText size={22} className="text-accent" />}
-            title="Vocabulary quiz session"
-            description={description}
-            onClick={onClick}
-        />
-    );
-};
+    const parts: React.ReactNode[] = [`${review} review`, `${newCount} new`];
+    if (retries > 0) {
+        parts.push(<span key="retries" className="text-error">{retries} retries</span>);
+    }
+    return parts.reduce<React.ReactNode[]>((acc, part, i) => {
+        if (i > 0) acc.push(<span key={`sep-${i}`} className="text-tertiary"> · </span>);
+        acc.push(part);
+        return acc;
+    }, []);
+}
+
+const QuizActivityCard: React.FC<{
+    preview: SessionPreview;
+    nextReviewAt: Date | null;
+    onClick: () => void;
+}> = ({ preview, nextReviewAt, onClick }) => (
+    <ActivityCard
+        icon={<BookOpenText size={22} className="text-accent" />}
+        title="Vocabulary quiz session"
+        description={renderSessionPreviewDescription(preview, nextReviewAt)}
+        onClick={onClick}
+    />
+);
+
+const GrammarActivityCard: React.FC<{
+    preview: SessionPreview;
+    nextReviewAt: Date | null;
+    onClick: () => void;
+}> = ({ preview, nextReviewAt, onClick }) => (
+    <ActivityCard
+        icon={<Puzzle size={22} className="text-accent" />}
+        title="Grammar quiz session"
+        description={renderSessionPreviewDescription(preview, nextReviewAt)}
+        onClick={onClick}
+    />
+);

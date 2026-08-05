@@ -14,6 +14,7 @@ import { SearchBar } from './components/SearchBar';
 // Note: Adapting named exports to default exports for lazy loading where necessary
 const MainScreen = lazy(() => import('./pages/main/MainScreen').then(module => ({ default: module.MainScreen })));
 const QuizScreen = lazy(() => import('./pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));
+const GrammarScreen = lazy(() => import('./pages/grammar/GrammarScreen').then(module => ({ default: module.GrammarScreen })));
 const SettingsScreen = lazy(() => import('./pages/settings/Settings').then(module => ({ default: module.SettingsScreen })));
 const UserProfileScreen = lazy(() => import('./pages/profile/UserProfileScreen').then(module => ({ default: module.UserProfileScreen })));
 const StatsScreen = lazy(() => import('./pages/stats/StatsScreen').then(module => ({ default: module.StatsScreen }))); // START_ADD (conceptually)
@@ -89,7 +90,7 @@ export const App: React.FC = () => {
     // keeps the vertically-centered layout its single-card content is designed for;
     // every other page (including the hub's activity cards) is top-aligned instead.
     const isMainScreen = location.pathname === '/';
-    const isQuizScreen = location.pathname === '/quiz';
+    const isQuizScreen = location.pathname === '/quiz' || location.pathname === '/grammar';
 
     return (
         <div className="min-h-screen flex flex-col relative bg-background transition-colors duration-200">
@@ -125,6 +126,9 @@ export const App: React.FC = () => {
                         } />
                         <Route path="/quiz" element={
                             <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
+                        } />
+                        <Route path="/grammar" element={
+                            <GrammarScreen />
                         } />
                         <Route path="/stats" element={
                             <StatsScreen
