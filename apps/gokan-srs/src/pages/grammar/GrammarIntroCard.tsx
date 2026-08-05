@@ -28,7 +28,7 @@ export function GrammarIntroCard({ grammarPoint, onLearn, onSkip }: GrammarIntro
                     <div className="flex justify-center mb-3">
                         <JlptChip level={grammarPoint.jlptLevel} />
                     </div>
-                    <h2 className="text-primary font-serif text-2xl leading-snug">
+                    <h2 className="text-primary font-mincho text-2xl leading-snug">
                         {grammarPoint.title}
                     </h2>
                 </div>
