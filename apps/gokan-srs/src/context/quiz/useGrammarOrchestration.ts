@@ -99,7 +99,7 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
 
             const message = overall === 'correct' ? 'Correct.' : overall === 'minor_error' ? 'Close.' : 'Incorrect.';
 
-            dispatch({ type: 'GRAMMAR_SUBMIT_ANSWER', payload: { type: overall, message, matchedAnswers } });
+            dispatch({ type: 'GRAMMAR_SUBMIT_ANSWER', payload: { type: overall, message, matchedAnswers, perBlankResults } });
         },
 
         async advanceGrammarQueue() {

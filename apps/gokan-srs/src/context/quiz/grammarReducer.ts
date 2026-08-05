@@ -27,6 +27,7 @@ export interface GrammarQuizState {
         type: AnswerResult; // worst-of across every blank
         message: string;
         matchedAnswers: string[]; // same order as blankWordIndices
+        perBlankResults: AnswerResult[]; // same order as blankWordIndices - which specific blank(s) were wrong
     } | null;
     isLoadingGrammar: boolean;
     /** Potential new grammar points, not yet in grammarQueue - mirrors introCandidates. */
@@ -48,7 +49,7 @@ export type GrammarQuizAction =
     | { type: 'GRAMMAR_LOAD_SUCCESS'; payload: { point: GrammarPoint | null; blankPlan: GrammarBlankPlan | null } }
     | { type: 'GRAMMAR_LOAD_ERROR'; payload: { grammarId: string; error: any } }
     | { type: 'GRAMMAR_SET_ANSWER'; payload: { index: number; value: string } }
-    | { type: 'GRAMMAR_SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswers: string[] } }
+    | { type: 'GRAMMAR_SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswers: string[]; perBlankResults: AnswerResult[] } }
     | { type: 'GRAMMAR_UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress } }
     | { type: 'GRAMMAR_ADVANCE_QUEUE'; payload: { progress: UserProgress; candidates?: GrammarPoint[] } }
     | { type: 'GRAMMAR_INTRO_CHOICE'; grammarId: string; choice: 'learn' | 'skip'; grammarPoint?: GrammarPoint }
@@ -104,6 +105,7 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                     type: action.payload.type,
                     message: action.payload.message,
                     matchedAnswers: action.payload.matchedAnswers,
+                    perBlankResults: action.payload.perBlankResults,
                 },
             };
 
