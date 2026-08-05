@@ -1,8 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import { mergeEntry, mergeVocabProgress, mergeLearningQueues, mergeProgress, mergeSettings } from './mergeProgress';
+import { mergeEntry, mergeVocabProgress, mergeLearningQueues, mergeGrammarProgress, mergeGrammarQueues, mergeProgress, mergeSettings } from './mergeProgress';
 import type { ProgressWithMetadata } from './types';
 import type { SRSEntry, VocabProgress } from '../../models/vocabulary.model';
 import { DEFAULT_VOCABULARY_PROGRESS } from '../../models/vocabulary.model';
+import type { GrammarProgress } from '../../models/grammar.model';
+import { DEFAULT_GRAMMAR_PROGRESS } from '../../models/grammar.model';
 
 function makeEntry(overrides: Partial<SRSEntry> = {}): SRSEntry {
     return {
@@ -18,6 +20,10 @@ function makeEntry(overrides: Partial<SRSEntry> = {}): SRSEntry {
 
 function makeVocabProgress(overrides: Partial<VocabProgress> = {}): VocabProgress {
     return { ...DEFAULT_VOCABULARY_PROGRESS, vocabId: 'v1', ...overrides };
+}
+
+function makeGrammarProgress(overrides: Partial<GrammarProgress> = {}): GrammarProgress {
+    return { ...DEFAULT_GRAMMAR_PROGRESS, grammarId: 'g1', ...overrides };
 }
 
 function makeProgress(overrides: Partial<ProgressWithMetadata> = {}): ProgressWithMetadata {
@@ -169,6 +175,57 @@ describe('mergeLearningQueues', () => {
     });
 });
 
+describe('mergeGrammarProgress', () => {
+    it('takes the max of memoryStrength/interval as a safety net, mirroring mergeEntry', () => {
+        const local = makeGrammarProgress({ entry: makeEntry({ memoryStrength: 5, interval: 2 }) });
+        const remote = makeGrammarProgress({ entry: makeEntry({ memoryStrength: 20, interval: 10 }) });
+
+        const merged = mergeGrammarProgress(local, remote);
+        expect(merged.entry.memoryStrength).toBe(20);
+        expect(merged.entry.interval).toBe(10);
+    });
+
+    it('needsRetry is true if either side has a pending retry', () => {
+        const local = makeGrammarProgress({ needsRetry: false });
+        const remote = makeGrammarProgress({ needsRetry: true });
+        expect(mergeGrammarProgress(local, remote).needsRetry).toBe(true);
+    });
+
+    it('stage/nextReviewAt are re-derived, not merged directly - graduated if either side already was', () => {
+        const local = makeGrammarProgress({ stage: 'learning' });
+        const remote = makeGrammarProgress({ stage: 'graduated' });
+
+        const merged = mergeGrammarProgress(local, remote);
+        expect(merged.stage).toBe('graduated');
+        expect(merged.nextReviewAt).toBeNull();
+    });
+
+    it('totalReviews takes the max of both sides', () => {
+        const local = makeGrammarProgress({ totalReviews: 2 });
+        const remote = makeGrammarProgress({ totalReviews: 9 });
+        expect(mergeGrammarProgress(local, remote).totalReviews).toBe(9);
+    });
+});
+
+describe('mergeGrammarQueues', () => {
+    it('is a pure union - items on only one side are preserved', () => {
+        const local = [makeGrammarProgress({ grammarId: 'only-local' })];
+        const remote = [makeGrammarProgress({ grammarId: 'only-remote' })];
+
+        const merged = mergeGrammarQueues(local, remote);
+        expect(merged.map(g => g.grammarId).sort()).toEqual(['only-local', 'only-remote']);
+    });
+
+    it('merges items present on both sides via mergeGrammarProgress', () => {
+        const local = [makeGrammarProgress({ grammarId: 'shared', totalReviews: 2 })];
+        const remote = [makeGrammarProgress({ grammarId: 'shared', totalReviews: 9 })];
+
+        const merged = mergeGrammarQueues(local, remote);
+        expect(merged).toHaveLength(1);
+        expect(merged[0].totalReviews).toBe(9);
+    });
+});
+
 describe('mergeProgress (top-level)', () => {
     it('returns null when both sides are null', () => {
         expect(mergeProgress(null, null)).toBeNull();
@@ -214,6 +271,14 @@ describe('mergeProgress (top-level)', () => {
         const local = makeProgress({ _sync: { lastModified: 0, version: 3 } });
         const remote = makeProgress({ _sync: { lastModified: 0, version: 7 } });
         expect(mergeProgress(local, remote)!._sync?.version).toBe(8);
+    });
+
+    it('grammarQueue is merged as a pure union, mirroring learningQueue', () => {
+        const local = makeProgress({ grammarQueue: [makeGrammarProgress({ grammarId: 'only-local' })] });
+        const remote = makeProgress({ grammarQueue: [makeGrammarProgress({ grammarId: 'only-remote' })] });
+
+        const merged = mergeProgress(local, remote)!;
+        expect(merged.grammarQueue.map(g => g.grammarId).sort()).toEqual(['only-local', 'only-remote']);
     });
 });
 
