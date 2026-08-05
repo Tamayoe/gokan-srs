@@ -502,4 +502,51 @@ describe('MigrationService', () => {
             expect(mergedItem.meaning.memoryStrength).toBe(CONSTANTS.srs.formula.minMemoryStrength);
         });
     });
+
+    describe('grammarQueue (additive field, no version gate needed)', () => {
+        it('defaults to an empty array when absent from stored data', () => {
+            const progress: any = {
+                kanjiKnowledge: { method: 'kklc', step: 10, kanjiSet: [] },
+                learningQueue: [],
+                stats: { newLearnedToday: 0, totalLearned: 0, totalReviews: 0 },
+                dailyOverride: false,
+            };
+
+            const migrated = MigrationService.migrateUserProgress(progress);
+            expect(migrated.grammarQueue).toEqual([]);
+        });
+
+        it('fills in defaults for a partial GrammarProgress item', () => {
+            const progress: any = {
+                kanjiKnowledge: { method: 'kklc', step: 10, kanjiSet: [] },
+                learningQueue: [],
+                grammarQueue: [{ grammarId: 'n5-001', stage: 'learning', entry: { memoryStrength: 5, interval: 2, dueDate: '2026-06-01T00:00:00.000Z' } }],
+                stats: { newLearnedToday: 0, totalLearned: 0, totalReviews: 0 },
+                dailyOverride: false,
+            };
+
+            const migrated = MigrationService.migrateUserProgress(progress);
+            expect(migrated.grammarQueue).toHaveLength(1);
+            expect(migrated.grammarQueue[0].entry.difficulty).toBeDefined();
+            expect(migrated.grammarQueue[0].nextReviewAt).toEqual('2026-06-01T00:00:00.000Z');
+        });
+
+        it('leaves a graduated grammar item nextReviewAt null rather than re-deriving from a stale dueDate', () => {
+            const progress: any = {
+                kanjiKnowledge: { method: 'kklc', step: 10, kanjiSet: [] },
+                learningQueue: [],
+                grammarQueue: [{
+                    grammarId: 'n5-001',
+                    stage: 'graduated',
+                    nextReviewAt: null,
+                    entry: { memoryStrength: CONSTANTS.srs.formula.mastery.maxMemoryStrength, interval: 3650, dueDate: '2026-01-01T00:00:00.000Z' },
+                }],
+                stats: { newLearnedToday: 0, totalLearned: 0, totalReviews: 0 },
+                dailyOverride: false,
+            };
+
+            const migrated = MigrationService.migrateUserProgress(progress);
+            expect(migrated.grammarQueue[0].nextReviewAt).toBeNull();
+        });
+    });
 });
