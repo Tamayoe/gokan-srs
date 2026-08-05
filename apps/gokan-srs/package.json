@@ -14,7 +14,7 @@
     "build:kanji": "bun --cwd dataset build:kanji",
     "build:jlpt": "bun --cwd dataset build:jlpt",
     "build:jpdb": "bun --cwd dataset build:jpdb",
-    "build:grammar": "bun scripts/build-grammar.ts",
+    "build:grammar": "bun --cwd dataset build:grammar && bun run sync:dataset",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -31,7 +31,6 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@tailwindcss/vite": "^4.1.18",
-    "@types/kuromoji": "^0.1.3",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
@@ -41,7 +40,6 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
-    "kuromoji": "^0.1.2",
     "postcss": "^8.5.6",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
