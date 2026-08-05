@@ -29,7 +29,9 @@ export const CONSTANTS = {
         quizProperties: {
             reading: { expectedLatency: 10000 },
             meaning_base: { expectedLatency: 10000 },
-            meaning_context: { expectedLatency: 15000 }
+            meaning_context: { expectedLatency: 15000 },
+            // Multiple discrete blanks per sentence - more typing than a single vocab answer.
+            grammar: { expectedLatency: 20000 }
         },
 
         /** Mastery % thresholds for switching meaning quizzes to sentence/context mode */
