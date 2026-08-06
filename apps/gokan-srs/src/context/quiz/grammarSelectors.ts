@@ -161,24 +161,38 @@ async function pickMostFrequentCandidate(example: GrammarExample, candidateIndic
 
 /**
  * Picks the example sentence for the CURRENT review turn and decides which of
- * its words become blanks. Three passes, each preferred over the next:
+ * its words become blanks. The grammar CONSTRUCTION is the primary thing this
+ * quiz tests, not vocabulary that happens to sit in the sentence - there is
+ * one SRSEntry per grammar point, so what gets graded has to consistently
+ * reflect grammar-point recall, or the schedule that entry drives doesn't
+ * mean what it claims to. Four passes, each preferred over the next:
  *
- * 1. Walk the examples starting from a deterministic pick (hashed on grammar
- *    point id + review count, so it varies across successive reviews of the
- *    same point without re-rolling on every recompute of the same turn,
- *    wrapping around all examples) and use the first one containing at least
- *    one word the user already knows (introduced in their vocab
- *    learningQueue) - blank every known word in it.
- * 2. If no example has a known word (a learner very early in vocab), use the
- *    first example (same walk order) that has ANY blankable word at all, and
- *    blank exactly the single most frequent one - a full blank-every-word
- *    fallback produced unanswerable cards for anyone without vocab overlap
- *    yet, and this word is the one most worth knowing.
- * 3. If literally no example in the whole point has a single word that
- *    resolved to a vocab id, there is nothing to grade - return a read-only
- *    plan (blankWordIndices: []) so the card renders as pure study material
- *    with no Submit step, rather than silently auto-granting SRS credit for
- *    an empty answer.
+ * 1. PRIMARY - an example whose grammar-pattern markers were located at
+ *    dataset build time (`example.patternWordIndices`, non-empty - see
+ *    docs/SCHEMA.md in gokan-dataset). Blank those markers unconditionally,
+ *    regardless of vocab knowledge - this is what makes review of the point
+ *    actually test the point. Examples are walked in a deterministic-but-
+ *    varying order (hashed on grammar point id + review count) so repeated
+ *    reviews of the same point cycle through different examples without
+ *    re-rolling on every recompute of the same turn. Any OTHER content word
+ *    in that same example the user already knows (introduced in
+ *    learningQueue) is layered in as SECONDARY reinforcement - vocab recall
+ *    stays part of the exercise, just never at the expense of the pattern.
+ * 2. FALLBACK - the pattern isn't locatable in any of the point's examples
+ *    (rare: ~1.9% of points as of the dataset's last build, all conjugation-
+ *    transformation-style points with no literal marker in common across
+ *    their own examples - see the gokan-dataset pattern-location issue).
+ *    An example with at least one known word, blanking every known word in it
+ *    - this is the ORIGINAL vocab-only behavior, demoted to a fallback for
+ *    the residual the primary path can't cover.
+ * 3. FALLBACK - no example has a known word either (a learner very early in
+ *    vocab, on one of these rare pattern-less points): blank exactly the
+ *    single most frequent candidate word, so there is still something to
+ *    answer rather than an unanswerable all-blank card.
+ * 4. No example has any blankable word at all - return a read-only plan
+ *    (blankWordIndices: []) so the card renders as pure study material with
+ *    no Submit step, rather than silently auto-granting SRS credit for an
+ *    empty answer.
  */
 export async function computeBlankPlan(point: GrammarPoint, progress: UserProgress | null, reviewCount: number): Promise<GrammarBlankPlan | null> {
     if (point.examples.length === 0) return null;
@@ -192,7 +206,22 @@ export async function computeBlankPlan(point: GrammarPoint, progress: UserProgre
         return !!vp && vp.introductionAt !== null;
     };
 
-    // Pass 1: an example with at least one known word.
+    // Pass 1: PRIMARY - an example whose grammar-pattern markers are located.
+    for (const exampleIndex of order) {
+        const example = point.examples[exampleIndex];
+        if (example.patternWordIndices.length === 0) continue;
+
+        const candidateIndices = candidateIndicesOf(example);
+        const knownVocabIndices = candidateIndices.filter(
+            i => !example.patternWordIndices.includes(i) && isKnown(example.words[i].vocabId!)
+        );
+        const blankWordIndices = [...example.patternWordIndices, ...knownVocabIndices].sort((a, b) => a - b);
+
+        const { acceptLists, glosses } = await buildBlankData(example, blankWordIndices);
+        return { exampleIndex, blankWordIndices, acceptLists, glosses, readOnly: false };
+    }
+
+    // Pass 2: FALLBACK - pattern not locatable anywhere in this point; an example with a known word.
     for (const exampleIndex of order) {
         const example = point.examples[exampleIndex];
         const candidateIndices = candidateIndicesOf(example);
@@ -205,7 +234,7 @@ export async function computeBlankPlan(point: GrammarPoint, progress: UserProgre
         }
     }
 
-    // Pass 2: no example has a known word - blank exactly the single most frequent candidate.
+    // Pass 3: FALLBACK - no known vocab either; blank the single most frequent candidate.
     for (const exampleIndex of order) {
         const example = point.examples[exampleIndex];
         const candidateIndices = candidateIndicesOf(example);
@@ -216,7 +245,7 @@ export async function computeBlankPlan(point: GrammarPoint, progress: UserProgre
         return { exampleIndex, blankWordIndices: [best], acceptLists, glosses, readOnly: false };
     }
 
-    // Pass 3: no example has any blankable word at all - read-only study material.
+    // Pass 4: no example has any blankable word at all - read-only study material.
     return { exampleIndex: startIndex, blankWordIndices: [], acceptLists: [], glosses: [], readOnly: true };
 }
 
