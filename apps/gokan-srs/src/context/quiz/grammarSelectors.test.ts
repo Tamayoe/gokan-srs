@@ -420,14 +420,14 @@ describe('gradeGrammarAnswers', () => {
         expect(result.perBlankResults).toEqual(['wrong']);
     });
 
-    it('a blank with hintLevel >= 2 grades as pass regardless of what was typed', () => {
+    it('a blank with hintLevel >= 2 grades as minor_error regardless of what was typed', () => {
         const result = gradeGrammarAnswers(blankPlan, ['garbage'], [2]);
-        expect(result.perBlankResults).toEqual(['pass']);
+        expect(result.perBlankResults).toEqual(['minor_error']);
         expect(result.matchedAnswers).toEqual(['すし']);
-        expect(result.overall).toBe('pass');
+        expect(result.overall).toBe('minor_error');
     });
 
-    it('an empty (untouched) blank at hintLevel 0 grades as wrong, not pass', () => {
+    it('an empty (untouched) blank at hintLevel 0 grades as wrong, not minor_error', () => {
         const result = gradeGrammarAnswers(blankPlan, [''], [0]);
         expect(result.overall).toBe('wrong');
     });
@@ -435,21 +435,39 @@ describe('gradeGrammarAnswers', () => {
     describe('worst-of precedence: wrong > pass > minor_error > correct', () => {
         const twoBlankPlan = { acceptLists: [['すし'], ['なか']] };
 
-        it('wrong beats pass', () => {
+        it('wrong beats a revealed (minor_error) blank', () => {
             const result = gradeGrammarAnswers(twoBlankPlan, ['ねこ', 'anything'], [0, 2]);
+            expect(result.perBlankResults[1]).toBe('minor_error');
+            expect(result.overall).toBe('wrong');
+        });
+
+        it('wrong beats pass', () => {
+            // Typing the literal word "pass" grades that blank as 'pass' independently
+            // of the hint system (SRSService.analyzeError) - still reachable even
+            // though a revealed hint no longer forces 'pass' itself.
+            const result = gradeGrammarAnswers(twoBlankPlan, ['ねこ', 'pass'], [0, 0]);
+            expect(result.perBlankResults[1]).toBe('pass');
             expect(result.overall).toBe('wrong');
         });
 
         it('pass beats minor_error', () => {
-            const result = gradeGrammarAnswers(twoBlankPlan, ['すしぃ', 'anything'], [0, 2]);
+            const result = gradeGrammarAnswers(twoBlankPlan, ['すしぃ', 'pass'], [0, 0]);
             expect(result.perBlankResults[0]).toBe('minor_error');
+            expect(result.perBlankResults[1]).toBe('pass');
             expect(result.overall).toBe('pass');
         });
 
         it('pass beats correct', () => {
-            const result = gradeGrammarAnswers(twoBlankPlan, ['すし', 'anything'], [0, 2]);
+            const result = gradeGrammarAnswers(twoBlankPlan, ['すし', 'pass'], [0, 0]);
             expect(result.perBlankResults[0]).toBe('correct');
             expect(result.overall).toBe('pass');
+        });
+
+        it('a revealed (minor_error) blank beats correct', () => {
+            const result = gradeGrammarAnswers(twoBlankPlan, ['すし', 'anything'], [0, 2]);
+            expect(result.perBlankResults[0]).toBe('correct');
+            expect(result.perBlankResults[1]).toBe('minor_error');
+            expect(result.overall).toBe('minor_error');
         });
 
         it('all correct grades overall correct', () => {

@@ -7,6 +7,7 @@ import { Card } from "../../components/ui/Card";
 import { CardSection } from "../../components/ui/CardSection";
 import { Button } from "../../components/ui/Button";
 import { JlptChip } from "../../components/JlptChip";
+import { MasteryRing } from "../../components/MasteryRing";
 
 /**
  * The grammar quiz itself: an English prompt the user translates into
@@ -19,7 +20,7 @@ import { JlptChip } from "../../components/JlptChip";
  * material instead - see the early return below.
  */
 export function GrammarQuizCard() {
-    const { state, grammarActions, grammarComputed } = useQuiz();
+    const { state, grammarActions, grammarComputed, currentGrammarProgress } = useQuiz();
     const { isMobile } = useResponsive();
     const firstInputRef = useRef<HTMLInputElement | null>(null);
 
@@ -48,6 +49,9 @@ export function GrammarQuizCard() {
             >
                 <Card size="lg" className={isMobile ? '!p-4' : ''}>
                     <CardSection>
+                        <div className="flex justify-end mb-2">
+                            <MasteryRing memoryStrength={currentGrammarProgress?.entry.memoryStrength ?? 0} size={40} />
+                        </div>
                         <div className="flex items-center justify-center gap-2 mb-4">
                             <JlptChip level={point.jlptLevel} />
                             <span className="text-xs font-gothic text-secondary">{point.title}</span>
@@ -107,6 +111,9 @@ export function GrammarQuizCard() {
         >
             <Card size="lg" className={isMobile ? '!p-4' : ''}>
                 <CardSection>
+                    <div className="flex justify-end mb-2">
+                        <MasteryRing memoryStrength={currentGrammarProgress?.entry.memoryStrength ?? 0} size={40} />
+                    </div>
                     <div className="flex items-center justify-center gap-2 mb-4">
                         <JlptChip level={point.jlptLevel} />
                         <span className="text-xs font-gothic text-secondary">{point.title}</span>
