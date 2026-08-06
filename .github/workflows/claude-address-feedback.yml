@@ -86,4 +86,17 @@ jobs:
             Push any code changes to the same branch and post a brief comment
             summarising how you addressed the feedback. Do not resolve threads you
             did not actually address.
+
+            After pushing, check whether this branch was already staged before this
+            round of fixes: `git fetch --tags` then `git tag --merged HEAD --list
+            'v*-rc.*' --sort=-v:refname`. If that lists any tag, this branch has
+            been RC-tagged and deployed to staging before - re-tag so staging picks
+            up the fix without a human having to do it manually. Take the highest
+            such tag (e.g. `v1.2.0-rc.4`), bump only the trailing rc number by one
+            (`v1.2.0-rc.5`), and `git tag -a <new-tag> -m "..." && git push origin
+            <new-tag>` on the new HEAD. Only do this once `bun run typecheck`/`test`/
+            `build` all pass on the final commit - never tag a broken build. If the
+            command lists nothing (this branch has never been staged), skip tagging
+            entirely - the first RC tag on a branch is a deliberate human call, not
+            automatic.
           claude_args: "--model claude-sonnet-5 --max-turns 500 --allowedTools Bash,Edit,Write,Read,Glob,Grep"
