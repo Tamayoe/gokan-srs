@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { BookOpenText, Languages } from "lucide-react";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
+import { useQuizFocusManagement } from "../../hooks/useQuizFocusManagement";
 import { CONSTANTS } from "../../commons/constants";
 import { Card } from "../../components/ui/Card";
 import { CardSection } from "../../components/ui/CardSection";
@@ -52,48 +53,34 @@ export function BaseQuizCard({
     const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
     const [isInputFocused, setIsInputFocused] = useState(false);
 
-    // Refs
-    const inputRef = useRef<HTMLInputElement | null>(null);
-    const continueRef = useRef<HTMLButtonElement | null>(null);
-
     // Get data from centralized state
     const { currentVocab, userAnswer, feedback } = state;
 
     // Compact mode: reduce spacing when keyboard is active on mobile
     const isCompact = isMobile && isInputFocused && !feedback?.show;
 
-    // Single owner of "what should be focused and when", replacing four
-    // previously-independent effects (new vocab, feedback cleared, incorrect
-    // reveal, correct-meaning focus) that could each schedule an uncancelled
-    // setTimeout - on rapid vocab transitions those stale timers could fire
-    // focus() calls against a card that had already moved on. Only one branch
-    // ever matches per render, and every branch cleans up its own timer.
+    // Reveals the correct answer a beat after an incorrect submission, giving
+    // the shake animation a moment before the reveal appears. Focus (input on
+    // a fresh question, Continue once feedback is showing) is a separate
+    // concern owned by useQuizFocusManagement, shared with the grammar quiz.
     useEffect(() => {
         setShowCorrectAnswer(false);
 
-        if (!feedback?.show) {
-            // Fresh question, or feedback just cleared for a retry.
-            const timer = setTimeout(() => inputRef.current?.focus(), 0);
+        if (feedback?.show && !feedback.correct) {
+            const timer = setTimeout(() => setShowCorrectAnswer(true), CONSTANTS.quiz.incorrectAnswerRevealDelay);
             return () => clearTimeout(timer);
         }
+    }, [currentVocab?.id, feedback]);
 
-        if (!feedback.correct) {
-            // Incorrect: reveal the correct answer after a short delay, then focus Continue.
-            const timer = setTimeout(() => {
-                setShowCorrectAnswer(true);
-                continueRef.current?.focus();
-            }, CONSTANTS.quiz.incorrectAnswerRevealDelay);
-            return () => clearTimeout(timer);
-        }
-
-        if (state.currentQuizItem?.quizType === 'meaning') {
-            // Correct meaning answer: no auto-advance, so focus Continue immediately.
-            const timer = setTimeout(() => continueRef.current?.focus(), 50);
-            return () => clearTimeout(timer);
-        }
-
-        // Correct reading answer: auto-advance is owned by useQuizOrchestration - nothing to focus here.
-    }, [currentVocab?.id, feedback, state.currentQuizItem?.quizType]);
+    const { firstInputRef: inputRef, continueRef } = useQuizFocusManagement(
+        {
+            feedbackShown: !!feedback?.show,
+            // A correct reading answer auto-advances (owned by useQuizOrchestration) - nothing to focus there.
+            skipContinueFocus: !!feedback?.show && feedback.correct && state.currentQuizItem?.quizType !== 'meaning',
+            continueFocusDelay: feedback?.show && !feedback.correct ? CONSTANTS.quiz.incorrectAnswerRevealDelay : 50,
+        },
+        [currentVocab?.id, feedback, state.currentQuizItem?.quizType]
+    );
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();

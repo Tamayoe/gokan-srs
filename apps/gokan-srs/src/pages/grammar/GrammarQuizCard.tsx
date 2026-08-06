@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
 import type { FormEvent } from "react";
 import { motion } from "framer-motion";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
+import { useQuizFocusManagement } from "../../hooks/useQuizFocusManagement";
 import { Card } from "../../components/ui/Card";
 import { CardSection } from "../../components/ui/CardSection";
 import { Button } from "../../components/ui/Button";
@@ -22,18 +22,20 @@ import { MasteryRing } from "../../components/MasteryRing";
 export function GrammarQuizCard() {
     const { state, grammarActions, grammarComputed, currentGrammarProgress } = useQuiz();
     const { isMobile } = useResponsive();
-    const firstInputRef = useRef<HTMLInputElement | null>(null);
 
     const point = state.currentGrammarPoint;
     const plan = state.currentGrammarBlankPlan;
     const feedback = state.grammarFeedback;
 
-    useEffect(() => {
-        if (!feedback?.show && !plan?.readOnly) {
-            const timer = setTimeout(() => firstInputRef.current?.focus(), 0);
-            return () => clearTimeout(timer);
-        }
-    }, [point?.id, plan, feedback?.show]);
+    const { firstInputRef, continueRef } = useQuizFocusManagement(
+        {
+            feedbackShown: !!feedback?.show,
+            // A fully-correct answer auto-advances (owned by useGrammarOrchestration) - nothing to focus there.
+            skipContinueFocus: !!feedback?.show && feedback.correct,
+            continueFocusDelay: 50,
+        },
+        [point?.id, plan, feedback]
+    );
 
     if (!point || !plan) return null;
 
@@ -54,7 +56,6 @@ export function GrammarQuizCard() {
                         </div>
                         <div className="flex items-center justify-center gap-2 mb-4">
                             <JlptChip level={point.jlptLevel} />
-                            <span className="text-xs font-gothic text-secondary">{point.title}</span>
                         </div>
 
                         <p className="text-center text-sm text-secondary font-gothic mb-1">
@@ -116,7 +117,6 @@ export function GrammarQuizCard() {
                     </div>
                     <div className="flex items-center justify-center gap-2 mb-4">
                         <JlptChip level={point.jlptLevel} />
-                        <span className="text-xs font-gothic text-secondary">{point.title}</span>
                     </div>
 
                     <p className="text-center text-sm text-secondary font-gothic mb-1">
@@ -218,6 +218,7 @@ export function GrammarQuizCard() {
                         </button>
                     ) : (
                         <button
+                            ref={continueRef}
                             type="submit"
                             className="w-full font-medium rounded-lg transition-colors font-serif bg-accent text-surface hover:bg-accent-hover shadow-md flex items-center justify-center gap-2 h-12"
                         >
