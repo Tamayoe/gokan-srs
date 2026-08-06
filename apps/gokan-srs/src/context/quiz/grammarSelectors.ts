@@ -262,8 +262,11 @@ export interface GrammarGradeResult {
  * Grades every blank in a submitted grammar answer against its accept-list
  * (built once at load time by computeBlankPlan, so this is pure and
  * synchronous - no vocab fetch here). A blank whose hint was revealed
- * (hintLevel >= 2) always grades as 'pass' regardless of what was typed,
- * since the user already gave up on it rather than answering.
+ * (hintLevel >= 2) always grades as 'minor_error' regardless of what was
+ * typed - the user gave up on it rather than answering, but reading the
+ * answer still leaves an impression, so it's graded less harshly than a
+ * genuinely wrong guess (matching CONSTANTS.srs.formula.resultFactors:
+ * minor_error +0.10 vs wrong -0.40).
  */
 export function gradeGrammarAnswers(
     blankPlan: Pick<GrammarBlankPlan, 'acceptLists'>,
@@ -275,7 +278,7 @@ export function gradeGrammarAnswers(
 
     blankPlan.acceptLists.forEach((accepted, i) => {
         if ((hintLevels[i] ?? 0) >= 2) {
-            perBlankResults.push('pass');
+            perBlankResults.push('minor_error');
             matchedAnswers.push(accepted[0] ?? '');
             return;
         }

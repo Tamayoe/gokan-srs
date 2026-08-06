@@ -4,7 +4,9 @@ import { Card } from "../../components/ui/Card";
 import { CardDivider, CardSection } from "../../components/ui/CardSection";
 import { Button } from "../../components/ui/Button";
 import { JlptChip } from "../../components/JlptChip";
+import { MasteryRing } from "../../components/MasteryRing";
 import { useResponsive } from "../../context/Responsive/useResponsive";
+import { useQuiz } from "../../context/useQuiz";
 
 interface GrammarIntroCardProps {
     grammarPoint: GrammarPoint;
@@ -15,6 +17,7 @@ interface GrammarIntroCardProps {
 export function GrammarIntroCard({ grammarPoint, onLearn, onSkip }: GrammarIntroCardProps) {
     const formRef = useRef<HTMLFormElement | null>(null);
     const { isMobile } = useResponsive();
+    const { currentGrammarProgress } = useQuiz();
 
     useEffect(() => {
         const lastChild = formRef.current?.lastElementChild as HTMLElement | undefined;
@@ -24,6 +27,9 @@ export function GrammarIntroCard({ grammarPoint, onLearn, onSkip }: GrammarIntro
     return (
         <Card size="lg">
             <CardSection>
+                <div className="flex justify-end mb-2">
+                    <MasteryRing memoryStrength={currentGrammarProgress?.entry.memoryStrength ?? 0} size={40} />
+                </div>
                 <div className="text-center">
                     <div className="flex justify-center mb-3">
                         <JlptChip level={grammarPoint.jlptLevel} />
