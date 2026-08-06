@@ -29,7 +29,7 @@ function makeGrammarPoint(id = 'n5-001'): GrammarPoint {
         shortExplanation: 'superlative',
         longExplanation: 'superlative, in detail',
         formation: 'Noun + が + いちばん',
-        examples: [{ jp: '寿司が一番好きです。', romaji: 'sushi ga ichiban suki desu', en: 'I like sushi the most.', words: [] }],
+        examples: [{ jp: '寿司が一番好きです。', romaji: 'sushi ga ichiban suki desu', en: 'I like sushi the most.', patternWordIndices: [], words: [] }],
     };
 }
 

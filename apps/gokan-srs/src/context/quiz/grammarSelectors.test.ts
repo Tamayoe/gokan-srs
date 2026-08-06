@@ -35,6 +35,12 @@ function makeGrammarProgress(overrides: Partial<GrammarProgress> = {}): GrammarP
     return { ...DEFAULT_GRAMMAR_PROGRESS, grammarId: 'n5-001', ...overrides };
 }
 
+/**
+ * Default fixture has `patternWordIndices: []` (pattern NOT located) so every
+ * existing vocab-fallback test below keeps exercising Passes 2-4 unchanged -
+ * Pass 1 is only reached with a fixture that actually populates it (see the
+ * dedicated "PRIMARY: pattern-word blanking" describe block).
+ */
 function makeGrammarPoint(overrides: Partial<GrammarPoint> = {}): GrammarPoint {
     return {
         id: 'n5-001',
@@ -47,6 +53,7 @@ function makeGrammarPoint(overrides: Partial<GrammarPoint> = {}): GrammarPoint {
             jp: 'この中で、寿司が一番好きです。',
             romaji: 'kono naka de sushi ga ichiban suki desu',
             en: 'Of all these, I like sushi the most.',
+            patternWordIndices: [],
             words: [
                 { surface: 'この', vocabId: null },
                 { surface: '中', vocabId: 'v-naka', reading: 'なか' },
@@ -222,11 +229,11 @@ describe('computeBlankPlan', () => {
         const point = makeGrammarPoint({
             examples: [
                 {
-                    jp: '中が好きです。', romaji: 'naka ga suki desu', en: 'I like the inside.',
+                    jp: '中が好きです。', romaji: 'naka ga suki desu', en: 'I like the inside.', patternWordIndices: [],
                     words: [{ surface: '中', vocabId: 'v-naka', reading: 'なか' }, { surface: '好き', vocabId: 'v-suki', reading: 'すき' }],
                 },
                 {
-                    jp: '寿司が好きです。', romaji: 'sushi ga suki desu', en: 'I like sushi.',
+                    jp: '寿司が好きです。', romaji: 'sushi ga suki desu', en: 'I like sushi.', patternWordIndices: [],
                     words: [{ surface: '寿司', vocabId: 'v-sushi', reading: 'すし' }, { surface: '好き', vocabId: 'v-suki', reading: 'すき' }],
                 },
             ],
@@ -271,9 +278,9 @@ describe('computeBlankPlan', () => {
     it('skips an example with zero blankable words in favor of another example in the same point (item 6)', async () => {
         const point = makeGrammarPoint({
             examples: [
-                { jp: 'どれでもいいですか？', romaji: 'dore demo ii desu ka', en: 'Is any of them fine?', words: [{ surface: 'どれでもいいですか', vocabId: null }] },
+                { jp: 'どれでもいいですか？', romaji: 'dore demo ii desu ka', en: 'Is any of them fine?', patternWordIndices: [], words: [{ surface: 'どれでもいいですか', vocabId: null }] },
                 {
-                    jp: '寿司が好きです。', romaji: 'sushi ga suki desu', en: 'I like sushi.',
+                    jp: '寿司が好きです。', romaji: 'sushi ga suki desu', en: 'I like sushi.', patternWordIndices: [],
                     words: [{ surface: '寿司', vocabId: 'v-sushi', reading: 'すし' }],
                 },
             ],
@@ -291,8 +298,8 @@ describe('computeBlankPlan', () => {
     it('returns a read-only plan with no blanks when literally no example has a blankable word (item 6)', async () => {
         const point = makeGrammarPoint({
             examples: [
-                { jp: 'どれでもいいですか？', romaji: 'dore demo ii desu ka', en: 'Is any of them fine?', words: [{ surface: 'どれでもいいですか', vocabId: null }] },
-                { jp: 'いいですか？', romaji: 'ii desu ka', en: 'Is that fine?', words: [{ surface: 'いいですか', vocabId: null }] },
+                { jp: 'どれでもいいですか？', romaji: 'dore demo ii desu ka', en: 'Is any of them fine?', patternWordIndices: [], words: [{ surface: 'どれでもいいですか', vocabId: null }] },
+                { jp: 'いいですか？', romaji: 'ii desu ka', en: 'Is that fine?', patternWordIndices: [], words: [{ surface: 'いいですか', vocabId: null }] },
             ],
         });
 
@@ -310,15 +317,91 @@ describe('computeBlankPlan', () => {
     it('picks a deterministic example index for the same point/reviewCount pair', async () => {
         const point = makeGrammarPoint({
             examples: [
-                { jp: 'A', romaji: 'a', en: 'a', words: [] },
-                { jp: 'B', romaji: 'b', en: 'b', words: [] },
-                { jp: 'C', romaji: 'c', en: 'c', words: [] },
+                { jp: 'A', romaji: 'a', en: 'a', patternWordIndices: [], words: [] },
+                { jp: 'B', romaji: 'b', en: 'b', patternWordIndices: [], words: [] },
+                { jp: 'C', romaji: 'c', en: 'c', patternWordIndices: [], words: [] },
             ],
         });
 
         const first = await computeBlankPlan(point, null, 3);
         const second = await computeBlankPlan(point, null, 3);
         expect(first).toEqual(second);
+    });
+
+    describe('PRIMARY: pattern-word blanking', () => {
+        // が (index 5) and 一番 (index 6) are this point's precomputed pattern markers.
+        function makePatternPoint(overrides: Partial<GrammarPoint> = {}): GrammarPoint {
+            const point = makeGrammarPoint(overrides);
+            point.examples[0].patternWordIndices = [5, 6];
+            return point;
+        }
+
+        it('blanks the pattern markers unconditionally, even with zero known vocab', async () => {
+            const point = makePatternPoint();
+            const plan = (await computeBlankPlan(point, makeProgress({ learningQueue: [] }), 0))!;
+            expect(plan.blankWordIndices).toEqual([5, 6]);
+            expect(plan.readOnly).toBe(false);
+        });
+
+        it('blanks the pattern markers even with a null progress (unauthenticated/loading state)', async () => {
+            const point = makePatternPoint();
+            const plan = (await computeBlankPlan(point, null, 0))!;
+            expect(plan.blankWordIndices).toEqual([5, 6]);
+        });
+
+        it('takes priority over vocab-only blanking: known vocab does NOT replace the pattern as the primary target', async () => {
+            const point = makePatternPoint();
+            // 'v-sushi' (index 4) is known - under the OLD vocab-primary behavior this
+            // alone would have been the entire blank set. It must now only be a
+            // SECONDARY addition alongside the pattern, never a replacement for it.
+            const progress = makeProgress({
+                learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past })],
+            });
+
+            const plan = (await computeBlankPlan(point, progress, 0))!;
+            expect(plan.blankWordIndices).toContain(5);
+            expect(plan.blankWordIndices).toContain(6);
+        });
+
+        it('layers known vocab on top of the pattern as secondary reinforcement, sorted by position', async () => {
+            const point = makePatternPoint();
+            const progress = makeProgress({
+                learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past })],
+            });
+
+            const plan = (await computeBlankPlan(point, progress, 0))!;
+            expect(plan.blankWordIndices).toEqual([4, 5, 6]); // 寿司 (known vocab) + が, 一番 (pattern)
+        });
+
+        it('does not double-count a pattern word that also resolves to a known vocab id', async () => {
+            const point = makePatternPoint();
+            // 一番 (index 6, part of the pattern) is ALSO a known vocab entry.
+            const progress = makeProgress({
+                learningQueue: [makeVocabProgress({ vocabId: 'v-ichiban', introductionAt: past })],
+            });
+
+            const plan = (await computeBlankPlan(point, progress, 0))!;
+            expect(plan.blankWordIndices).toEqual([5, 6]); // no duplicate index for 一番
+        });
+
+        it('leaves unknown vocab pre-filled as context, not blanked, alongside the pattern', async () => {
+            const point = makePatternPoint();
+            const plan = (await computeBlankPlan(point, makeProgress({ learningQueue: [] }), 0))!;
+            expect(plan.blankWordIndices).not.toContain(4); // 寿司 - not known, stays literal
+            expect(plan.blankWordIndices).not.toContain(7); // 好き - not known, stays literal
+        });
+
+        it('falls back to vocab-based blanking when the pattern is not located in any example of the point', async () => {
+            // Default fixture (no override) has patternWordIndices: [] - Pass 1 must
+            // be skipped entirely, falling through to the existing vocab fallback.
+            const point = makeGrammarPoint();
+            const progress = makeProgress({
+                learningQueue: [makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past })],
+            });
+
+            const plan = (await computeBlankPlan(point, progress, 0))!;
+            expect(plan.blankWordIndices).toEqual([4]);
+        });
     });
 });
 

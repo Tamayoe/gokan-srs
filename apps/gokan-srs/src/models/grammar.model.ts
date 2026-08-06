@@ -14,6 +14,8 @@ export interface GrammarExampleWord {
     vocabId: string | null;
     /** The matched vocab's primary reading (hiragana) - only set when vocabId is set. Used to grade a blank without a runtime vocab fetch. */
     reading?: string;
+    /** Kuromoji's dictionary/base form (e.g. "思う" for the conjugated token "思っ"), only set when it differs from `surface`. Currently unused at runtime - captured for parity with the dataset schema, which uses it for build-time pattern-word matching (see `patternWordIndices` below). */
+    baseForm?: string;
 }
 
 export interface GrammarExample {
@@ -21,6 +23,18 @@ export interface GrammarExample {
     romaji: string;
     en: string;
     words: GrammarExampleWord[];
+    /**
+     * Indices into `words[]` identifying this example's grammar-pattern markers
+     * (the literal, invariant part of the point's `formation` - e.g. が and
+     * いちばん for "Noun + が + いちばん + Adjective/Verb"), precomputed at
+     * dataset build time by matching `formation` against `words[]`. Always
+     * present (possibly empty) - the app never re-derives this. Empty means the
+     * pattern couldn't be confidently located in this specific example (rare -
+     * 98.1% of examples have it non-empty as of the dataset's last build; see
+     * `computeBlankPlan`'s fallback chain in grammarSelectors.ts for what
+     * happens then).
+     */
+    patternWordIndices: number[];
 }
 
 /**
