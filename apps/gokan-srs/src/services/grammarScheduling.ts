@@ -25,3 +25,35 @@ export function isGrammarDue(
     const due = grammarNextReviewAt(progress);
     return due !== null && due <= now;
 }
+
+/**
+ * Grammar's equivalent of srs.utils.ts's clearStaleNeedsRetry (issue #36): a
+ * wrong answer sets `needsRetry` AND pushes `entry.dueDate` forward by the
+ * wrong-answer penalty interval; if the session ends before the user retries,
+ * by the next session both the stale retry flag and the now-elapsed due date
+ * can be true at once. GrammarSRSService.applyAnswer's retry branch (which
+ * `needsRetry` takes priority into) never advances dueDate, so answering it
+ * once as a "retry" leaves the point immediately due again as a "fresh"
+ * review - a second encounter for what the user experiences as one point.
+ *
+ * Called once, at session start, only for points whose regular review is ALSO
+ * due right now - a fresh scheduled review already re-tests the exact recall
+ * the stale retry existed to correct. Deliberately does NOT touch a
+ * same-session retry (a wrong answer's dueDate is pushed well past "now", so
+ * it can't also read as due until long after the session that set it ended) -
+ * only ever called from the session-start effect, never mid-session.
+ */
+export function clearStaleGrammarNeedsRetry(
+    queue: GrammarProgress[],
+    now: Date = new Date()
+): GrammarProgress[] {
+    let changed = false;
+
+    const next = queue.map(g => {
+        if (!g.needsRetry || !isGrammarDue(g, now)) return g;
+        changed = true;
+        return { ...g, needsRetry: false };
+    });
+
+    return changed ? next : queue;
+}
