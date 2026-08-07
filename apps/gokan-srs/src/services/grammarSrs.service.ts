@@ -5,6 +5,8 @@ import { SRSService } from './srs.service';
 import { CONSTANTS } from '../commons/constants';
 import { GrammarService } from './grammar.service';
 import { isGrammarFullyMastered, grammarNextReviewAt } from './grammarScheduling';
+import { newSRSEntry } from './scheduling';
+import { collectJlptCandidates, countJlptCandidates } from './jlptWalk';
 
 /**
  * Grammar's equivalent of SRSService: reuses the same formula
@@ -27,14 +29,7 @@ export class GrammarSRSService {
             lastReviewedAt: null,
             totalReviews: 0,
             consecutiveFailures: 0,
-            entry: {
-                memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
-                interval: 0,
-                difficulty: CONSTANTS.srs.formula.initialDifficulty,
-                lastReviewedAt: null,
-                dueDate: null,
-                history: [],
-            },
+            entry: newSRSEntry(),
         };
     }
 
@@ -144,14 +139,13 @@ export class GrammarSRSService {
         const activeIds = new Set(currentQueue.map(g => g.grammarId));
         for (const id of ignoredIds) activeIds.add(id);
 
-        const candidates: string[] = [];
-        for (const level of GRAMMAR_JLPT_LEVELS) {
-            for (const id of index[level] ?? []) {
-                if (candidates.length >= maxToFind) return candidates;
-                if (!activeIds.has(id)) candidates.push(id);
-            }
-        }
-        return candidates;
+        return collectJlptCandidates<string>(
+            GRAMMAR_JLPT_LEVELS,
+            level => index[level] ?? [],
+            id => id,
+            id => !activeIds.has(id),
+            maxToFind
+        );
     }
 
     static async countLearnableGrammar(currentQueue: GrammarProgress[], limit = Infinity): Promise<number> {
@@ -159,15 +153,12 @@ export class GrammarSRSService {
         if (!index) return 0;
 
         const activeIds = new Set(currentQueue.map(g => g.grammarId));
-        let count = 0;
-        for (const level of GRAMMAR_JLPT_LEVELS) {
-            for (const id of index[level] ?? []) {
-                if (activeIds.has(id)) continue;
-                count++;
-                if (count >= limit) return count;
-            }
-        }
-        return count;
+        return countJlptCandidates<string>(
+            GRAMMAR_JLPT_LEVELS,
+            level => index[level] ?? [],
+            id => !activeIds.has(id),
+            limit
+        );
     }
 
     static async hasMoreLearnableGrammar(currentQueue: GrammarProgress[]): Promise<boolean> {

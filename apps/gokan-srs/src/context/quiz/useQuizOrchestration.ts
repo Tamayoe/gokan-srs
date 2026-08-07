@@ -18,6 +18,8 @@ import type { ProgressWithMetadata } from '../../services/sync/types';
 import { useGoogleDrive } from '../GoogleDriveContext';
 import type { QuizState, QuizAction } from './quizReducer';
 import { selectNextView, selectCurrentProgress, selectSessionStats, selectNextSessionPreview, collectActionableTaskKeys, filterSessionCommit } from './quizSelectors';
+import { useSessionLifecycle } from './useSessionLifecycle';
+import { refillCandidates } from './refillCandidates';
 import { progressUploadSignature, stableStringify } from "../../services/progressSerialization";
 
 export interface QuizActions {
@@ -151,16 +153,19 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
     // naturally, per the Main-hub activity model where quiz sessions are explicit and
     // boundable. On start we snapshot the tasks due right then as the session's
     // committed workload; SessionProgress counts against that fixed set. Snapshotting
-    // here (rather than in the reducer) keeps the reducer free of Date.now(). Resuming
-    // later (navigating back to /quiz) starts a brand new session against whatever is
-    // available then, rather than reopening the old one.
-    useEffect(() => {
-        if (!state.progress || !state.settings) return;
-        const onQuizRoute = location.pathname === '/quiz';
-        const active = onQuizRoute && (nextView.sessionState === 'review' || nextView.sessionState === 'learn');
+    // in onStart (rather than in the reducer) keeps the reducer free of Date.now().
+    // Resuming later (navigating back to /quiz) starts a brand new session against
+    // whatever is available then, rather than reopening the old one. The generic
+    // edge-detection is shared with grammar via useSessionLifecycle.
+    const sessionActive =
+        location.pathname === '/quiz' &&
+        (nextView.sessionState === 'review' || nextView.sessionState === 'learn');
 
-        if (active && !state.session) {
-            const now = new Date();
+    useSessionLifecycle({
+        active: sessionActive,
+        hasSession: !!state.session,
+        onStart: (now) => {
+            if (!state.progress || !state.settings) return;
 
             // Clear any needsRetry flag inherited from a previous session that now
             // collides with that same quiz type's regular due review (issue #36) -
@@ -180,10 +185,9 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
                 type: 'SESSION_START',
                 payload: { taskKeys, progress: progress === state.progress ? undefined : progress },
             });
-        } else if (!active && state.session) {
-            dispatch({ type: 'SESSION_END' });
-        }
-    }, [nextView.sessionState, state.session, state.progress, state.settings, location.pathname]);
+        },
+        onEnd: () => dispatch({ type: 'SESSION_END' }),
+    });
 
     /* =========================
        ACTIONS
@@ -299,38 +303,28 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
             const canAddNew = nowDueCount === 0 && nextView.sessionState !== 'waiting';
             const needsCandidates = canAddNew && state.introCandidates.length === 0;
 
-            const newCandidates: Vocabulary[] = [];
+            let newCandidates: Vocabulary[] = [];
 
             if (needsCandidates) {
-                const currentCandidateIds = new Set(state.introCandidates.map(c => c.id));
-                const maxToFind = CONSTANTS.srs.newVocabBatchSize - state.introCandidates.length;
-
-                const candidateIds = await SRSService.getNextCandidates(
-                    updatedQueue,
-                    state.progress!.kanjiKnowledge,
-                    state.settings!,
-                    maxToFind,
-                    currentCandidateIds
-                );
-
-                for (const id of candidateIds) {
-                    try {
-                        const vocab = await VocabularyService.loadVocab(id);
-                        if (vocab) newCandidates.push(vocab);
-                    } catch (e) {
-                        console.error(`[useQuizOrchestration] Failed to load candidate ${id}`, e);
-                    }
-                }
+                const { newCandidates: loaded, criticalErrorId } = await refillCandidates<Vocabulary>({
+                    existing: state.introCandidates,
+                    batchSize: CONSTANTS.srs.newVocabBatchSize,
+                    getNextIds: (maxToFind, ignored) => SRSService.getNextCandidates(
+                        updatedQueue, state.progress!.kanjiKnowledge, state.settings!, maxToFind, ignored
+                    ),
+                    loadItem: (id) => VocabularyService.loadVocab(id),
+                    logLabel: 'useQuizOrchestration',
+                });
 
                 // Prevent an infinite loading loop if files are missing but listed in the index.
-                if (candidateIds.length > 0 && newCandidates.length === 0) {
-                    console.error('[useQuizOrchestration] CRITICAL: Found candidates in index, but ALL failed to load.', { candidateIds });
+                if (criticalErrorId) {
                     dispatch({
                         type: 'LOAD_VOCAB_ERROR',
-                        payload: { vocabId: candidateIds[0], error: new Error('Candidate vocabulary files could not be loaded. Data might be corrupted or out-of-sync.') }
+                        payload: { vocabId: criticalErrorId, error: new Error('Candidate vocabulary files could not be loaded. Data might be corrupted or out-of-sync.') }
                     });
                     return;
                 }
+                newCandidates = loaded;
             }
 
             // If no candidates found, and we're not exhausted/blocked, prepare next kanji step.

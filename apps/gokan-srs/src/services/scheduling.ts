@@ -17,6 +17,24 @@ export function isEntryMastered(entry: Pick<SRSEntry, 'memoryStrength'>): boolea
     return entry.memoryStrength >= MAX_MEMORY_STRENGTH;
 }
 
+/**
+ * The initial SRSEntry for a freshly-created progress item (before any review):
+ * minimum strength, no interval, no due date, empty history. Shared by
+ * SRSService.createVocabProgress (reading + meaning) and
+ * GrammarSRSService.createGrammarProgress, which differ only in the initial
+ * difficulty (vocab applies a per-user offset, grammar uses the default).
+ */
+export function newSRSEntry(difficulty: number = CONSTANTS.srs.formula.initialDifficulty): SRSEntry {
+    return {
+        memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
+        interval: 0,
+        difficulty,
+        lastReviewedAt: null,
+        dueDate: null,
+        history: [],
+    };
+}
+
 export function isMeaningQuizEnabled(settings?: Pick<UserSettings, 'enableMeaningQuiz'>): boolean {
     return settings?.enableMeaningQuiz !== false;
 }

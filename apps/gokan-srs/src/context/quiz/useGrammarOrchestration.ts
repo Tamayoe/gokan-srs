@@ -18,6 +18,8 @@ import {
     computeBlankPlan,
     gradeGrammarAnswers,
 } from './grammarSelectors';
+import { useSessionLifecycle } from './useSessionLifecycle';
+import { refillCandidates } from './refillCandidates';
 
 export interface GrammarActions {
     setGrammarAnswer(index: number, value: string): void;
@@ -73,17 +75,20 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
 
     /* ---------- Session lifecycle ---------- */
 
-    // Mirrors useQuizOrchestration's vocab session-lifecycle effect (see its doc
-    // comment for the full rationale): a grammar session is active only while the
-    // user is on /grammar AND there is review/learn work, and ends the moment
-    // either condition stops holding.
-    useEffect(() => {
-        if (!state.progress) return;
-        const onGrammarRoute = location.pathname === '/grammar';
-        const active = onGrammarRoute && (grammarNextView.sessionState === 'review' || grammarNextView.sessionState === 'learn');
+    // Mirrors useQuizOrchestration's vocab session lifecycle (see its doc comment
+    // for the full rationale), sharing the generic edge-detection via
+    // useSessionLifecycle: a grammar session is active only while the user is on
+    // /grammar AND there is review/learn work, and ends the moment either
+    // condition stops holding.
+    const grammarSessionActive =
+        location.pathname === '/grammar' &&
+        (grammarNextView.sessionState === 'review' || grammarNextView.sessionState === 'learn');
 
-        if (active && !state.grammarSession) {
-            const now = new Date();
+    useSessionLifecycle({
+        active: grammarSessionActive,
+        hasSession: !!state.grammarSession,
+        onStart: (now) => {
+            if (!state.progress) return;
 
             // Clear a needsRetry flag inherited from a previous session that now
             // collides with this point's regular due review (issue #36) - see
@@ -99,10 +104,9 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
                 type: 'GRAMMAR_SESSION_START',
                 payload: { grammarIds, progress: progress === state.progress ? undefined : progress },
             });
-        } else if (!active && state.grammarSession) {
-            dispatch({ type: 'GRAMMAR_SESSION_END' });
-        }
-    }, [grammarNextView.sessionState, state.grammarSession, state.progress, location.pathname]);
+        },
+        onEnd: () => dispatch({ type: 'GRAMMAR_SESSION_END' }),
+    });
 
     /* =========================
        ACTIONS
@@ -149,31 +153,25 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
             const canAddNew = nowDueCount === 0 && grammarNextView.sessionState !== 'waiting';
             const needsCandidates = canAddNew && state.grammarIntroCandidates.length === 0;
 
-            const newCandidates: GrammarPoint[] = [];
+            let newCandidates: GrammarPoint[] = [];
 
             if (needsCandidates) {
-                const currentCandidateIds = new Set(state.grammarIntroCandidates.map(c => c.id));
-                const maxToFind = CONSTANTS.srs.newVocabBatchSize - state.grammarIntroCandidates.length;
+                const { newCandidates: loaded, criticalErrorId } = await refillCandidates<GrammarPoint>({
+                    existing: state.grammarIntroCandidates,
+                    batchSize: CONSTANTS.srs.newVocabBatchSize,
+                    getNextIds: (maxToFind, ignored) => GrammarSRSService.getNextCandidates(updatedQueue, maxToFind, ignored),
+                    loadItem: (id) => GrammarService.loadGrammarPoint(id),
+                    logLabel: 'useGrammarOrchestration',
+                });
 
-                const candidateIds = await GrammarSRSService.getNextCandidates(updatedQueue, maxToFind, currentCandidateIds);
-
-                for (const id of candidateIds) {
-                    try {
-                        const point = await GrammarService.loadGrammarPoint(id);
-                        if (point) newCandidates.push(point);
-                    } catch (e) {
-                        console.error(`[useGrammarOrchestration] Failed to load candidate ${id}`, e);
-                    }
-                }
-
-                if (candidateIds.length > 0 && newCandidates.length === 0) {
-                    console.error('[useGrammarOrchestration] CRITICAL: Found candidates in index, but ALL failed to load.', { candidateIds });
+                if (criticalErrorId) {
                     dispatch({
                         type: 'GRAMMAR_LOAD_ERROR',
-                        payload: { grammarId: candidateIds[0], error: new Error('Candidate grammar files could not be loaded. Data might be corrupted or out-of-sync.') },
+                        payload: { grammarId: criticalErrorId, error: new Error('Candidate grammar files could not be loaded. Data might be corrupted or out-of-sync.') },
                     });
                     return;
                 }
+                newCandidates = loaded;
             }
 
             dispatch({

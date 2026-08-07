@@ -116,6 +116,35 @@ export function mergeVocabProgress(
 }
 
 /**
+ * Pure union of two queues keyed by `keyOf`. Items present on only one side are
+ * kept as-is (no deletions); items present on both are combined via `mergeOne`.
+ * Shared by mergeLearningQueues (vocab) and mergeGrammarQueues.
+ */
+export function mergeQueuesById<T>(
+    local: T[],
+    remote: T[],
+    keyOf: (item: T) => string,
+    mergeOne: (local: T, remote: T) => T
+): T[] {
+    const localMap = new Map(local.map(item => [keyOf(item), item]));
+    const remoteMap = new Map(remote.map(item => [keyOf(item), item]));
+    const allIds = new Set([...localMap.keys(), ...remoteMap.keys()]);
+
+    const merged: T[] = [];
+    for (const id of allIds) {
+        const localItem = localMap.get(id);
+        const remoteItem = remoteMap.get(id);
+
+        if (localItem && remoteItem) {
+            merged.push(mergeOne(localItem, remoteItem));
+        } else {
+            merged.push((localItem ?? remoteItem)!);
+        }
+    }
+    return merged;
+}
+
+/**
  * Merges two learning queues by vocabId. Present-in-only-one-side items are
  * kept as-is (a pure union - no deletions), items present in both are merged
  * field-by-field via mergeVocabProgress.
@@ -125,22 +154,7 @@ export function mergeLearningQueues(
     remote: VocabProgress[],
     settings?: Pick<UserSettings, 'enableMeaningQuiz'>
 ): VocabProgress[] {
-    const localMap = new Map(local.map(item => [item.vocabId, item]));
-    const remoteMap = new Map(remote.map(item => [item.vocabId, item]));
-    const allIds = new Set([...localMap.keys(), ...remoteMap.keys()]);
-
-    const merged: VocabProgress[] = [];
-    for (const id of allIds) {
-        const localItem = localMap.get(id);
-        const remoteItem = remoteMap.get(id);
-
-        if (localItem && remoteItem) {
-            merged.push(mergeVocabProgress(localItem, remoteItem, settings));
-        } else {
-            merged.push((localItem ?? remoteItem)!);
-        }
-    }
-    return merged;
+    return mergeQueuesById(local, remote, item => item.vocabId, (l, r) => mergeVocabProgress(l, r, settings));
 }
 
 /**
@@ -172,22 +186,7 @@ export function mergeGrammarProgress(local: GrammarProgress, remote: GrammarProg
 
 /** Pure union by grammarId, mirroring mergeLearningQueues. */
 export function mergeGrammarQueues(local: GrammarProgress[], remote: GrammarProgress[]): GrammarProgress[] {
-    const localMap = new Map(local.map(item => [item.grammarId, item]));
-    const remoteMap = new Map(remote.map(item => [item.grammarId, item]));
-    const allIds = new Set([...localMap.keys(), ...remoteMap.keys()]);
-
-    const merged: GrammarProgress[] = [];
-    for (const id of allIds) {
-        const localItem = localMap.get(id);
-        const remoteItem = remoteMap.get(id);
-
-        if (localItem && remoteItem) {
-            merged.push(mergeGrammarProgress(localItem, remoteItem));
-        } else {
-            merged.push((localItem ?? remoteItem)!);
-        }
-    }
-    return merged;
+    return mergeQueuesById(local, remote, item => item.grammarId, mergeGrammarProgress);
 }
 
 export function mergeSettings(

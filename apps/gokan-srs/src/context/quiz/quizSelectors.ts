@@ -6,6 +6,8 @@ import { getNextVocabToStudy, isReadingActionable, isMeaningActionable } from '.
 import type { QuizType } from '../../utils/srs.utils';
 import type { QuizState, PendingQuizItem, TaskKey } from './quizReducer';
 import { taskKey } from './quizReducer';
+import { computeSessionState } from './sessionState';
+import { computeSessionStats, computeSessionPreview } from './sessionStats';
 
 /**
  * Single source of truth for "what should the quiz screen show right now".
@@ -39,31 +41,17 @@ export function selectNextView(
         ? { vocabId: introCandidates[0].id, quizType: 'reading', quizMode: 'base' }
         : getNextVocabToStudy(progress?.learningQueue, settings ?? undefined, now, preferredType);
 
-    let sessionState: SessionState = 'exhausted';
-    let nextReviewAt: Date | null = null;
-
-    if (progress && settings) {
-        const learning = progress.learningQueue.filter(v => v.stage === 'learning');
-        const due = learning.filter(v => v.nextReviewAt && v.nextReviewAt <= now);
-
-        if (due.length > 0) {
-            sessionState = 'review';
-        } else {
-            nextReviewAt = learning
-                .map(v => v.nextReviewAt)
-                .filter((d): d is NonNullable<typeof d> => !!d)
-                .sort((a, b) => a.getTime() - b.getTime())[0] ?? null;
-
-            const canLearn = hasMoreLearnable || introCandidates.length > 0;
-            sessionState = canLearn
-                ? 'learn'
-                : state.nextKanjiToLearn
-                    ? 'learn-kanji'
-                    : learning.length > 0
-                        ? 'waiting'
-                        : 'exhausted';
+    const { sessionState, nextReviewAt } = computeSessionState<VocabProgress, SessionState>(
+        progress && settings ? progress.learningQueue : undefined,
+        {
+            isLearning: v => v.stage === 'learning',
+            isDue: v => !!v.nextReviewAt && v.nextReviewAt <= now,
+            nextReviewAtOf: v => v.nextReviewAt,
+            canLearn: hasMoreLearnable || introCandidates.length > 0,
+            states: { review: 'review', learn: 'learn', waiting: 'waiting', exhausted: 'exhausted' },
+            extraState: state.nextKanjiToLearn ? 'learn-kanji' : null,
         }
-    }
+    );
 
     let shouldShowIntro = false;
     if (state.currentVocab && progress) {
@@ -96,22 +84,14 @@ export function selectNextSessionPreview(
     state: Pick<QuizState, 'progress' | 'settings'>,
     now: Date = new Date()
 ): NextSessionPreview {
-    const preview: NextSessionPreview = { review: 0, new: 0, retries: 0 };
-    if (!state.progress) return preview;
+    if (!state.progress) return { review: 0, new: 0, retries: 0 };
 
-    for (const v of state.progress.learningQueue) {
-        if (v.stage === 'graduated') continue;
-
-        if (v.needsRetry?.reading || v.needsRetry?.meaning) {
-            preview.retries++;
-        } else if (v.totalReviews === 0) {
-            preview.new++;
-        } else if (isReadingActionable(v, now) || isMeaningActionable(v, state.settings ?? undefined, now)) {
-            preview.review++;
-        }
-    }
-
-    return preview;
+    return computeSessionPreview(state.progress.learningQueue, {
+        isGraduated: v => v.stage === 'graduated',
+        isRetry: v => !!(v.needsRetry?.reading || v.needsRetry?.meaning),
+        isNew: v => v.totalReviews === 0,
+        isDue: v => isReadingActionable(v, now) || isMeaningActionable(v, state.settings ?? undefined, now),
+    });
 }
 
 export function selectCurrentProgress(
@@ -142,7 +122,7 @@ export function collectActionableTaskKeys(
     return keys;
 }
 
-function parseTaskKey(key: TaskKey): { vocabId: string; quizType: QuizType } {
+function parseTaskKey(key: string): { vocabId: string; quizType: QuizType } {
     const idx = key.lastIndexOf(':');
     return { vocabId: key.slice(0, idx), quizType: key.slice(idx + 1) as QuizType };
 }
@@ -206,45 +186,23 @@ export function selectSessionStats(
     hasMoreLearnable: boolean,
     now: Date = new Date()
 ): SessionStats {
-    const empty: SessionStats = { done: 0, total: 0, retriesPending: 0, waiting: 0, moreNew: hasMoreLearnable };
-    if (!state.progress) return empty;
-
-    const committed = state.session?.committed ?? [];
-    const committedSet = new Set<TaskKey>(committed);
-    const total = committedSet.size;
+    if (!state.progress) {
+        return { done: 0, total: 0, retriesPending: 0, waiting: 0, moreNew: hasMoreLearnable };
+    }
 
     const queue = state.progress.learningQueue;
     const byId = new Map(queue.map(v => [v.vocabId, v]));
 
-    const actionable = collectActionableTaskKeys(queue, state.settings ?? undefined, now);
-    const actionableSet = new Set<TaskKey>(actionable);
+    const core = computeSessionStats({
+        committed: state.session?.committed ?? [],
+        actionable: collectActionableTaskKeys(queue, state.settings ?? undefined, now),
+        isRetry: key => {
+            const { vocabId, quizType } = parseTaskKey(key);
+            return byId.get(vocabId)?.needsRetry?.[quizType] === true;
+        },
+        // Distinct vocab: a word's reading + meaning both waiting count once.
+        waitingCountOf: keys => new Set(keys.map(k => parseTaskKey(k).vocabId)).size,
+    });
 
-    // A committed task is "done" once it is no longer actionable (answered correctly,
-    // deferred by the reading→meaning stagger, or graduated). Still-actionable
-    // committed tasks are either not yet answered or awaiting a retry.
-    let done = 0;
-    let retriesPending = 0;
-    for (const key of committedSet) {
-        if (!actionableSet.has(key)) {
-            done++;
-            continue;
-        }
-        const { vocabId, quizType } = parseTaskKey(key);
-        if (byId.get(vocabId)?.needsRetry?.[quizType]) retriesPending++;
-    }
-
-    // Reviews that came due AFTER the session started (not committed) don't inflate
-    // the total - they're reported as vocab waiting for a future session.
-    const waitingVocab = new Set<string>();
-    for (const key of actionableSet) {
-        if (!committedSet.has(key)) waitingVocab.add(parseTaskKey(key).vocabId);
-    }
-
-    return {
-        done,
-        total,
-        retriesPending,
-        waiting: waitingVocab.size,
-        moreNew: hasMoreLearnable,
-    };
+    return { ...core, moreNew: hasMoreLearnable };
 }
