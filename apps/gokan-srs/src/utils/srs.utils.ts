@@ -22,12 +22,13 @@ export interface QuizItem {
  * 5. First Reviews (Newly introduced, not yet tested)
  */
 /**
- * Is this vocab's READING quiz actionable right now (first review, due review, or
- * a pending reading retry)? Single source of truth shared by queue selection and
- * the session-progress counter, so the two can never disagree about what counts
- * as "a quiz the user has to do now".
+ * Is this vocab's READING quiz due for a genuine, regularly-scheduled review
+ * (first review or a due review) - independent of any `needsRetry` flag.
+ * Factored out of isReadingActionable so clearStaleNeedsRetry (below) can ask
+ * "is there a real review here" without also matching on the retry flag it's
+ * trying to decide whether to clear.
  */
-export function isReadingActionable(v: VocabProgress, now: Date = new Date()): boolean {
+function isReadingDue(v: VocabProgress, now: Date): boolean {
     const isFirstReview =
         v.totalReviews === 0 &&
         v.introductionAt !== null &&
@@ -40,7 +41,22 @@ export function isReadingActionable(v: VocabProgress, now: Date = new Date()): b
         v.reading.dueDate !== null &&
         v.reading.dueDate <= now;
 
-    return isFirstReview || isDueReading || v.needsRetry?.reading === true;
+    return isFirstReview || isDueReading;
+}
+
+/** Is this vocab's MEANING quiz due for a genuine, regularly-scheduled review - independent of `needsRetry`. See isReadingDue. */
+function isMeaningDue(v: VocabProgress, now: Date): boolean {
+    return v.totalReviews > 0 && v.meaning.dueDate !== null && v.meaning.dueDate <= now;
+}
+
+/**
+ * Is this vocab's READING quiz actionable right now (first review, due review, or
+ * a pending reading retry)? Single source of truth shared by queue selection and
+ * the session-progress counter, so the two can never disagree about what counts
+ * as "a quiz the user has to do now".
+ */
+export function isReadingActionable(v: VocabProgress, now: Date = new Date()): boolean {
+    return isReadingDue(v, now) || v.needsRetry?.reading === true;
 }
 
 /** Is this vocab's MEANING quiz actionable right now (due review or pending retry)?
@@ -51,13 +67,56 @@ export function isMeaningActionable(
     now: Date = new Date()
 ): boolean {
     if (!isMeaningQuizEnabled(settings)) return false;
+    return isMeaningDue(v, now) || v.needsRetry?.meaning === true;
+}
 
-    const isDueMeaning =
-        v.totalReviews > 0 &&
-        v.meaning.dueDate !== null &&
-        v.meaning.dueDate <= now;
+/**
+ * Clears a `needsRetry` flag that has persisted across a session boundary and
+ * has now collided with that same quiz type's regular due review (issue #36):
+ * a wrong answer sets `needsRetry.<type>` AND pushes that entry's `dueDate`
+ * forward by the wrong-answer penalty interval; if the session ends before the
+ * user retries, by the next session both the stale retry flag and the now-
+ * elapsed due date can be true at once. Answering it once then only walks the
+ * SRSService.applyAnswer *retry* branch (needsRetry takes priority there,
+ * intentionally, so a same-session retry never double-dips on SRS credit) -
+ * which does NOT advance dueDate, so the very same item immediately becomes
+ * actionable again as a "fresh" due review, producing a second encounter for
+ * what the user experiences as one item.
+ *
+ * Called once, at session start, only for items whose regular review is ALSO
+ * due right now - a fresh scheduled review already re-tests the exact recall
+ * the stale retry existed to correct, so the retry is redundant. Deliberately
+ * does NOT touch a same-session retry (dueDate for a wrong answer is pushed
+ * well past "now" by calculateNextState, so it can't also read as due until
+ * long after the session that set it has ended) - only ever called from the
+ * session-start effect, never mid-session.
+ */
+export function clearStaleNeedsRetry(
+    queue: VocabProgress[],
+    settings: UserSettings | undefined,
+    now: Date = new Date()
+): VocabProgress[] {
+    let changed = false;
 
-    return isDueMeaning || v.needsRetry?.meaning === true;
+    const next = queue.map(v => {
+        if (!v.needsRetry) return v;
+
+        const clearReading = v.needsRetry.reading === true && isReadingDue(v, now);
+        const clearMeaning = v.needsRetry.meaning === true && isMeaningQuizEnabled(settings) && isMeaningDue(v, now);
+        if (!clearReading && !clearMeaning) return v;
+
+        changed = true;
+        return {
+            ...v,
+            needsRetry: {
+                ...v.needsRetry,
+                ...(clearReading ? { reading: false } : {}),
+                ...(clearMeaning ? { meaning: false } : {}),
+            },
+        };
+    });
+
+    return changed ? next : queue;
 }
 
 export function getNextVocabToStudy(
