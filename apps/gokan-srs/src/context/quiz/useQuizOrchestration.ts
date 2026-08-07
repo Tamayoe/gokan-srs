@@ -12,7 +12,7 @@ import { LLMService } from '../../services/llm.service';
 import { CONSTANTS } from '../../commons/constants';
 import { DEFAULT_SETTINGS } from '../../models/user.model';
 import type { SetupValues } from '../../models/state.model';
-import { calculateMasteryPercentage } from '../../utils/srs.utils';
+import { calculateMasteryPercentage, clearStaleNeedsRetry } from '../../utils/srs.utils';
 import { mergeProgress, mergeSettings } from '../../services/sync/mergeProgress';
 import type { ProgressWithMetadata } from '../../services/sync/types';
 import { useGoogleDrive } from '../GoogleDriveContext';
@@ -160,10 +160,26 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         const active = onQuizRoute && (nextView.sessionState === 'review' || nextView.sessionState === 'learn');
 
         if (active && !state.session) {
+            const now = new Date();
+
+            // Clear any needsRetry flag inherited from a previous session that now
+            // collides with that same quiz type's regular due review (issue #36) -
+            // before it can otherwise slip into the committed set as an actionable
+            // task and, once answered, immediately resurface as a "fresh" due review
+            // (the retry-answer branch never advances dueDate). Only ever run here,
+            // at the session boundary, so a same-session retry is untouched.
+            const clearedQueue = clearStaleNeedsRetry(state.progress.learningQueue, state.settings, now);
+            const progress = clearedQueue === state.progress.learningQueue
+                ? state.progress
+                : { ...state.progress, learningQueue: clearedQueue };
+
             const taskKeys = filterSessionCommit(
-                collectActionableTaskKeys(state.progress.learningQueue, state.settings, new Date())
+                collectActionableTaskKeys(progress.learningQueue, state.settings, now)
             );
-            dispatch({ type: 'SESSION_START', payload: { taskKeys } });
+            dispatch({
+                type: 'SESSION_START',
+                payload: { taskKeys, progress: progress === state.progress ? undefined : progress },
+            });
         } else if (!active && state.session) {
             dispatch({ type: 'SESSION_END' });
         }
