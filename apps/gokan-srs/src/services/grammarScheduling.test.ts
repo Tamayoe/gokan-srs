@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { isGrammarFullyMastered, grammarNextReviewAt, isGrammarDue } from './grammarScheduling';
+import { isGrammarFullyMastered, grammarNextReviewAt, isGrammarDue, clearStaleGrammarNeedsRetry } from './grammarScheduling';
 import { CONSTANTS } from '../commons/constants';
 import type { SRSEntry } from '../models/vocabulary.model';
+import type { GrammarProgress } from '../models/grammar.model';
 
 const MAX = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
 
@@ -13,6 +14,20 @@ function makeEntry(overrides: Partial<SRSEntry> = {}): SRSEntry {
         lastReviewedAt: null,
         dueDate: null,
         history: [],
+        ...overrides,
+    };
+}
+
+function makeGrammarProgress(overrides: Partial<GrammarProgress> = {}): GrammarProgress {
+    return {
+        grammarId: 'n5-001',
+        stage: 'learning',
+        introductionAt: new Date('2026-06-01T00:00:00Z'),
+        nextReviewAt: null,
+        lastReviewedAt: null,
+        totalReviews: 1,
+        consecutiveFailures: 0,
+        entry: makeEntry(),
         ...overrides,
     };
 }
@@ -58,6 +73,47 @@ describe('grammarScheduling', () => {
 
         it('is false when there is no due date at all', () => {
             expect(isGrammarDue({ stage: 'learning', entry: makeEntry({ dueDate: null }) }, now)).toBe(false);
+        });
+    });
+
+    describe('clearStaleGrammarNeedsRetry', () => {
+        const now = new Date('2026-06-10T00:00:00Z');
+        const past = new Date('2026-06-01T00:00:00Z');
+        const future = new Date('2026-07-01T00:00:00Z');
+
+        it('clears needsRetry when the point also has a regular due review (issue #36)', () => {
+            const g = makeGrammarProgress({ needsRetry: true, entry: makeEntry({ dueDate: past }) });
+            const [result] = clearStaleGrammarNeedsRetry([g], now);
+            expect(result.needsRetry).toBe(false);
+        });
+
+        it('leaves needsRetry untouched when the regular review is not yet due (same-session retry)', () => {
+            const g = makeGrammarProgress({ needsRetry: true, entry: makeEntry({ dueDate: future }) });
+            const [result] = clearStaleGrammarNeedsRetry([g], now);
+            expect(result.needsRetry).toBe(true);
+        });
+
+        it('leaves needsRetry untouched when there is no due date at all', () => {
+            const g = makeGrammarProgress({ needsRetry: true, entry: makeEntry({ dueDate: null }) });
+            const [result] = clearStaleGrammarNeedsRetry([g], now);
+            expect(result.needsRetry).toBe(true);
+        });
+
+        it('is a no-op for items without needsRetry', () => {
+            const g = makeGrammarProgress({ needsRetry: undefined, entry: makeEntry({ dueDate: past }) });
+            const [result] = clearStaleGrammarNeedsRetry([g], now);
+            expect(result.needsRetry).toBeUndefined();
+        });
+
+        it('returns the exact same array reference when nothing changed (avoids spurious progress updates)', () => {
+            const queue = [makeGrammarProgress({ needsRetry: true, entry: makeEntry({ dueDate: future }) })];
+            expect(clearStaleGrammarNeedsRetry(queue, now)).toBe(queue);
+        });
+
+        it('respects graduated stage - a graduated item is never "due" so its stale flag is left alone', () => {
+            const g = makeGrammarProgress({ stage: 'graduated', needsRetry: true, entry: makeEntry({ dueDate: past }) });
+            const [result] = clearStaleGrammarNeedsRetry([g], now);
+            expect(result.needsRetry).toBe(true);
         });
     });
 });
