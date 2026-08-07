@@ -1,19 +1,20 @@
 import { WaitingScreen } from "../../components/WaitingScreen";
 import { ExhaustedScreen } from "../../components/ExhaustedScreen";
 import { SessionProgress } from "../../components/SessionProgress";
-import { QuizCard } from "./QuizCard";
-import { MeaningQuizCard } from "./MeaningQuizCard";
+import type { SessionHistoryEntry } from "../../components/SessionProgress";
+import { VocabQuizCard } from "./VocabQuizCard";
+import { VocabMeaningQuizCard } from "./VocabMeaningQuizCard";
 import { LoadingScreen } from "../../components/LoadingScreen";
 import { useQuiz } from "../../context/useQuiz";
 import VocabIntroCard from "../../components/VocabIntroCard";
 import { LearnKanjiCard } from "../../components/LearnKanjiCard";
 
-interface QuizScreenProps {
+interface VocabQuizScreenProps {
     onVocabClick: (vocabId: string) => void;
 }
 
-export function QuizScreen({ onVocabClick }: QuizScreenProps) {
-    const { state, shouldShowIntro, sessionState, nextReviewAt, actions } = useQuiz();
+export function VocabQuizScreen({ onVocabClick }: VocabQuizScreenProps) {
+    const { state, shouldShowIntro, sessionState, nextReviewAt, actions, sessionStats } = useQuiz();
 
     // Exhaustive switch over every SessionState - this is the single place that
     // decides what the quiz screen shows, replacing what used to be three
@@ -59,18 +60,26 @@ export function QuizScreen({ onVocabClick }: QuizScreenProps) {
                 );
             }
 
+            const history: SessionHistoryEntry[] = state.sessionHistory.map((item, index) => ({
+                key: `${item.vocabId}-${index}`,
+                href: `/vocab/${item.vocabId}`,
+                label: item.writtenForm,
+                result: item.result,
+                delta: item.delta,
+            }));
+
             return (
                 <div className="flex flex-col flex-1 items-center">
-                    <SessionProgress />
+                    <SessionProgress stats={sessionStats} history={history} waitingNoun="vocab" />
 
                     <div className="flex-1 flex items-center justify-center py-6 w-full">
                         {state.currentQuizItem?.quizType === 'meaning' ? (
-                            <MeaningQuizCard
+                            <VocabMeaningQuizCard
                                 onKanjiClick={() => onVocabClick(state.currentVocab!.id)}
                                 onVocabClick={onVocabClick}
                             />
                         ) : (
-                            <QuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
+                            <VocabQuizCard onKanjiClick={() => onVocabClick(state.currentVocab!.id)} />
                         )}
                     </div>
                 </div>

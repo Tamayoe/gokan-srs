@@ -29,7 +29,7 @@ const QuizTypeIndicator: React.FC<{ quizType: 'reading' | 'meaning' }> = ({ quiz
     );
 };
 
-interface BaseQuizCardProps {
+interface VocabBaseQuizCardProps {
     children: React.ReactNode;
     inputLabel: string;
     inputPlaceholder: string;
@@ -38,14 +38,15 @@ interface BaseQuizCardProps {
     onInputBlur?: () => void;
 }
 
-export function BaseQuizCard({
+/** Shared shell (input/submit/feedback) for vocab's two quiz cards (VocabQuizCard, VocabMeaningQuizCard). Vocab-only - GrammarQuizCard needs multiple discrete inputs and owns its own markup instead. */
+export function VocabBaseQuizCard({
     children,
     inputLabel,
     inputPlaceholder,
     renderCorrectAnswer,
     onInputFocus,
     onInputBlur
-}: BaseQuizCardProps) {
+}: VocabBaseQuizCardProps) {
     const { state, actions, computed } = useQuiz();
     const { isMobile } = useResponsive();
 

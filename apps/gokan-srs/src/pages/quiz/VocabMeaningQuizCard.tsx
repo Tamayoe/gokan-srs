@@ -7,16 +7,17 @@ import { Combine } from "lucide-react";
 import type { Tags } from "../../models/data.model";
 import { JlptChip } from "../../components/JlptChip";
 
-import { BaseQuizCard } from "./BaseQuizCard";
+import { VocabBaseQuizCard } from "./VocabBaseQuizCard";
 import { InteractiveSentence } from "../../components/InteractiveSentence";
 import { getUniquePosTags, useExpandableDefinitions } from "./quizFormatting";
 
-interface MeaningQuizCardProps {
+interface VocabMeaningQuizCardProps {
     onKanjiClick?: () => void;
     onVocabClick?: (vocabId: string) => void;
 }
 
-export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardProps) {
+/** The vocab meaning quiz - English recall, base (word-alone) or context (sentence) mode. */
+export function VocabMeaningQuizCard({ onKanjiClick, onVocabClick }: VocabMeaningQuizCardProps) {
     const { state, currentProgress } = useQuiz();
     const { isMobile } = useResponsive();
 
@@ -40,7 +41,7 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
     if (!currentVocab || !progress) return null;
 
     return (
-        <BaseQuizCard
+        <VocabBaseQuizCard
             inputLabel="Meaning (English)"
             inputPlaceholder="Type the meaning..."
             renderCorrectAnswer={() => (
@@ -171,6 +172,6 @@ export function MeaningQuizCard({ onKanjiClick, onVocabClick }: MeaningQuizCardP
                     )}
                 </motion.div>
             )}
-        </BaseQuizCard>
+        </VocabBaseQuizCard>
     );
 }

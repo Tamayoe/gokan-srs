@@ -5,6 +5,8 @@ import {
     gradeGrammarAnswers,
     selectCurrentGrammarProgress,
     selectNextGrammarSessionPreview,
+    collectActionableGrammarIds,
+    selectGrammarSessionStats,
 } from './grammarSelectors';
 import type { QuizState } from './quizReducer';
 import type { UserProgress } from '../../models/user.model';
@@ -507,5 +509,58 @@ describe('selectNextGrammarSessionPreview', () => {
 
     it('is all-zero without progress', () => {
         expect(selectNextGrammarSessionPreview({ progress: null }, now)).toEqual({ review: 0, new: 0, retries: 0 });
+    });
+});
+
+describe('collectActionableGrammarIds', () => {
+    it('includes a due point and a needsRetry point, excludes not-yet-due and graduated', () => {
+        const queue: GrammarProgress[] = [
+            makeGrammarProgress({ grammarId: 'due', entry: { ...DEFAULT_GRAMMAR_PROGRESS.entry, dueDate: past } }),
+            makeGrammarProgress({ grammarId: 'retry', needsRetry: true, entry: { ...DEFAULT_GRAMMAR_PROGRESS.entry, dueDate: future } }),
+            makeGrammarProgress({ grammarId: 'not-due', entry: { ...DEFAULT_GRAMMAR_PROGRESS.entry, dueDate: future } }),
+            makeGrammarProgress({ grammarId: 'graduated', stage: 'graduated', needsRetry: true, entry: { ...DEFAULT_GRAMMAR_PROGRESS.entry, dueDate: past } }),
+        ];
+
+        expect(collectActionableGrammarIds(queue, now).sort()).toEqual(['due', 'retry'].sort());
+    });
+});
+
+describe('selectGrammarSessionStats', () => {
+    function stateWith(queue: GrammarProgress[], committed: string[]) {
+        return { progress: makeProgress({ grammarQueue: queue }), grammarSession: { committed } };
+    }
+
+    it('returns zeros without progress', () => {
+        const stats = selectGrammarSessionStats({ progress: null, grammarSession: null }, false, now);
+        expect(stats).toEqual({ done: 0, total: 0, retriesPending: 0, waiting: 0, moreNew: false });
+    });
+
+    it('total is the committed set size; done counts committed points no longer actionable', () => {
+        const stillDue = makeGrammarProgress({ grammarId: 'a', entry: { ...DEFAULT_GRAMMAR_PROGRESS.entry, dueDate: past } });
+        const answered = makeGrammarProgress({ grammarId: 'b', entry: { ...DEFAULT_GRAMMAR_PROGRESS.entry, dueDate: future } });
+        const state = stateWith([stillDue, answered], ['a', 'b']);
+
+        const stats = selectGrammarSessionStats(state, false, now);
+        expect(stats.total).toBe(2);
+        expect(stats.done).toBe(1); // only 'b' (answered) is no longer actionable
+    });
+
+    it('retriesPending counts committed points currently awaiting a retry', () => {
+        const retrying = makeGrammarProgress({ grammarId: 'a', needsRetry: true, entry: { ...DEFAULT_GRAMMAR_PROGRESS.entry, dueDate: past } });
+        const state = stateWith([retrying], ['a']);
+
+        const stats = selectGrammarSessionStats(state, false, now);
+        expect(stats.done).toBe(0);
+        expect(stats.retriesPending).toBe(1);
+    });
+
+    it('waiting counts actionable points that were NOT committed (came due mid-session)', () => {
+        const midSessionArrival = makeGrammarProgress({ grammarId: 'c', entry: { ...DEFAULT_GRAMMAR_PROGRESS.entry, dueDate: past } });
+        const state = stateWith([midSessionArrival], []);
+
+        const stats = selectGrammarSessionStats(state, true, now);
+        expect(stats.total).toBe(0);
+        expect(stats.waiting).toBe(1);
+        expect(stats.moreNew).toBe(true);
     });
 });

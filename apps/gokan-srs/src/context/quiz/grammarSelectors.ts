@@ -307,6 +307,65 @@ export function selectCurrentGrammarProgress(
     return state.progress.grammarQueue.find(g => g.grammarId === state.currentGrammarPoint!.id) ?? null;
 }
 
+/** Every grammar point actionable right now (due, or awaiting a retry), as grammar ids - grammar's equivalent of collectActionableTaskKeys. */
+export function collectActionableGrammarIds(queue: GrammarProgress[], now: Date): string[] {
+    return queue
+        .filter(g => g.stage !== 'graduated' && (isGrammarDue(g, now) || g.needsRetry))
+        .map(g => g.grammarId);
+}
+
+export interface GrammarSessionStats {
+    /** Committed session points the user has cleared (answered, deferred, or graduated out). */
+    done: number;
+    /** Size of the committed session set - the stable progress denominator. */
+    total: number;
+    /** Committed points currently awaiting a retry (a wrong answer this session). */
+    retriesPending: number;
+    /** Grammar points due now that are NOT part of this session (came due mid-session). */
+    waiting: number;
+    /** True when brand-new grammar points can still be learned beyond this session. */
+    moreNew: boolean;
+}
+
+/**
+ * Grammar's equivalent of selectSessionStats - progress bookkeeping computed
+ * against the session's frozen committed set rather than the live due count,
+ * for the same reason vocab's counter needed one (see selectSessionStats's
+ * doc comment). Simpler here: one task per grammar point, no reading/meaning
+ * split, so there's no filterSessionCommit-style staggering to account for.
+ */
+export function selectGrammarSessionStats(
+    state: Pick<QuizState, 'progress' | 'grammarSession'>,
+    hasMoreLearnableGrammar: boolean,
+    now: Date = new Date()
+): GrammarSessionStats {
+    const empty: GrammarSessionStats = { done: 0, total: 0, retriesPending: 0, waiting: 0, moreNew: hasMoreLearnableGrammar };
+    if (!state.progress) return empty;
+
+    const committed = new Set(state.grammarSession?.committed ?? []);
+    const total = committed.size;
+
+    const byId = new Map(state.progress.grammarQueue.map(g => [g.grammarId, g]));
+    const actionable = new Set(collectActionableGrammarIds(state.progress.grammarQueue, now));
+
+    let done = 0;
+    let retriesPending = 0;
+    for (const id of committed) {
+        if (!actionable.has(id)) {
+            done++;
+            continue;
+        }
+        if (byId.get(id)?.needsRetry) retriesPending++;
+    }
+
+    const waiting = new Set<string>();
+    for (const id of actionable) {
+        if (!committed.has(id)) waiting.add(id);
+    }
+
+    return { done, total, retriesPending, waiting: waiting.size, moreNew: hasMoreLearnableGrammar };
+}
+
 export interface NextGrammarSessionPreview {
     review: number;
     new: number;

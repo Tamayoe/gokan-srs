@@ -4,12 +4,16 @@ import { useLocation } from 'react-router-dom';
 import type { GrammarPoint } from '../../models/grammar.model';
 import { GrammarService } from '../../services/grammar.service';
 import { GrammarSRSService } from '../../services/grammarSrs.service';
+import type { AnswerResult } from '../../services/srs.service';
 import { CONSTANTS } from '../../commons/constants';
+import { calculateMasteryPercentage } from '../../utils/srs.utils';
 import type { QuizState, QuizAction } from './quizReducer';
 import {
     selectNextGrammarView,
     selectCurrentGrammarProgress,
     selectNextGrammarSessionPreview,
+    selectGrammarSessionStats,
+    collectActionableGrammarIds,
     computeBlankPlan,
     gradeGrammarAnswers,
 } from './grammarSelectors';
@@ -60,6 +64,30 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
         () => selectNextGrammarSessionPreview(state),
         [state.progress]
     );
+
+    const grammarSessionStats = useMemo(
+        () => selectGrammarSessionStats(state, hasMoreLearnableGrammar),
+        [state.progress, state.grammarSession, hasMoreLearnableGrammar]
+    );
+
+    /* ---------- Session lifecycle ---------- */
+
+    // Mirrors useQuizOrchestration's vocab session-lifecycle effect (see its doc
+    // comment for the full rationale): a grammar session is active only while the
+    // user is on /grammar AND there is review/learn work, and ends the moment
+    // either condition stops holding.
+    useEffect(() => {
+        if (!state.progress) return;
+        const onGrammarRoute = location.pathname === '/grammar';
+        const active = onGrammarRoute && (grammarNextView.sessionState === 'review' || grammarNextView.sessionState === 'learn');
+
+        if (active && !state.grammarSession) {
+            const grammarIds = collectActionableGrammarIds(state.progress.grammarQueue, new Date());
+            dispatch({ type: 'GRAMMAR_SESSION_START', payload: { grammarIds } });
+        } else if (!active && state.grammarSession) {
+            dispatch({ type: 'GRAMMAR_SESSION_END' });
+        }
+    }, [grammarNextView.sessionState, state.grammarSession, state.progress, location.pathname]);
 
     /* =========================
        ACTIONS
@@ -147,11 +175,13 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
 
             const now = new Date();
             const id = state.currentGrammarPoint.id;
+            const title = state.currentGrammarPoint.title;
 
             const target = state.progress.grammarQueue.find(g => g.grammarId === id);
             if (!target) return;
 
             let updatedQueue;
+            let historyItem: { grammarId: string; title: string; result: AnswerResult; delta: number } | null = null;
 
             if (state.currentGrammarBlankPlan?.readOnly) {
                 // No blank-eligible word anywhere in this point's examples - there's
@@ -165,11 +195,14 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
                 const latency = submitLatencyRef.current ?? 5000;
                 const { updated } = GrammarSRSService.applyAnswer(target, state.grammarFeedback.type, latency, now);
                 updatedQueue = state.progress.grammarQueue.map(g => g.grammarId === id ? updated : g);
+
+                const delta = calculateMasteryPercentage(updated.entry.memoryStrength) - calculateMasteryPercentage(target.entry.memoryStrength);
+                historyItem = { grammarId: id, title, result: state.grammarFeedback.type, delta };
             }
 
             dispatch({
                 type: 'GRAMMAR_UPDATE_AFTER_ANSWER',
-                payload: { progress: { ...state.progress, grammarQueue: updatedQueue } },
+                payload: { progress: { ...state.progress, grammarQueue: updatedQueue }, historyItem },
             });
         },
 
@@ -258,5 +291,5 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
         isGrammarReady: !!state.currentGrammarPoint && !state.isLoadingGrammar,
     };
 
-    return { grammarActions, grammarNextView, currentGrammarProgress, grammarComputed, nextGrammarSessionPreview };
+    return { grammarActions, grammarNextView, currentGrammarProgress, grammarComputed, nextGrammarSessionPreview, grammarSessionStats };
 }
