@@ -5,9 +5,17 @@ import { ReviewForecast } from "./components/ReviewForecast";
 import { DailyProgressionChart } from "./components/DailyProgressionChart";
 import { KnowledgeCurveChart } from "./components/KnowledgeCurveChart";
 import { JlptCoverageChart } from "./components/JlptCoverageChart";
+import { GrammarJlptCoverageChart } from "./components/GrammarJlptCoverageChart";
 import { SmartVocabList } from "./components/SmartVocabList";
+import { SmartGrammarList } from "./components/SmartGrammarList";
 
-export function StatsScreen({ onBack, onVocabClick }: { onBack: () => void; onVocabClick?: (vocabId: string) => void }) {
+interface StatsScreenProps {
+    onBack: () => void;
+    onVocabClick?: (vocabId: string) => void;
+    onGrammarClick?: (grammarId: string) => void;
+}
+
+export function StatsScreen({ onBack, onVocabClick, onGrammarClick }: StatsScreenProps) {
     const { state } = useQuiz();
 
     // Guard if accessible without progress (though route is protected usually)
@@ -35,6 +43,11 @@ export function StatsScreen({ onBack, onVocabClick }: { onBack: () => void; onVo
             </section>
 
             <section className="w-full p-6 bg-surface rounded-lg shadow-sm border border-divider">
+                <h2 className="text-lg mb-4 text-primary font-serif">Grammar JLPT Coverage</h2>
+                <GrammarJlptCoverageChart progress={state.progress} />
+            </section>
+
+            <section className="w-full p-6 bg-surface rounded-lg shadow-sm border border-divider">
                 <h2 className="text-lg mb-4 text-primary font-serif">Daily Progression</h2>
                 <DailyProgressionChart progress={state.progress} />
             </section>
@@ -51,6 +64,14 @@ export function StatsScreen({ onBack, onVocabClick }: { onBack: () => void; onVo
                     progress={state.progress.learningQueue}
                     settings={state.settings ?? undefined}
                     onVocabClick={onVocabClick}
+                />
+            </section>
+
+            <section className="w-full">
+                <h2 className="text-lg mb-4 text-primary font-serif">Grammar</h2>
+                <SmartGrammarList
+                    progress={state.progress.grammarQueue}
+                    onGrammarClick={onGrammarClick}
                 />
             </section>
         </div>

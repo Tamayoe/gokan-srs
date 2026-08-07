@@ -11,10 +11,11 @@ import { Button } from "../../components/ui/Button";
 import { LoadingScreen } from "../../components/LoadingScreen";
 import { Combine } from "lucide-react";
 import { VocabSentencesCard } from "./VocabSentencesCard";
-import { VocabHistoryGraph } from "../../components/VocabHistoryGraph";
+import { SRSHistoryGraph } from "../../components/SRSHistoryGraph";
 import { ReviewTimeline } from "../../components/ReviewTimeline";
 import { VocabRelationshipsCard } from "./VocabRelationshipsCard";
 import { JlptChip } from "../../components/JlptChip";
+import { THEME } from "../../commons/theme";
 
 export default function VocabDetailScreen() {
     const { vocabId } = useParams<{ vocabId: string }>();
@@ -244,9 +245,11 @@ export default function VocabDetailScreen() {
                     </div>
                 </div>
                 <div className="col-span-2">
-                    <VocabHistoryGraph
-                        readingEntry={progress.reading}
-                        meaningEntry={progress.meaning}
+                    <SRSHistoryGraph
+                        series={[
+                            { key: 'reading', label: 'Reading', entry: progress.reading, color: THEME.mastery.reading.loop1 },
+                            { key: 'meaning', label: 'Meaning', entry: progress.meaning, color: THEME.mastery.meaning.loop1 },
+                        ]}
                         introDate={progress.introductionAt ? new Date(progress.introductionAt) : null}
                     />
                 </div>
