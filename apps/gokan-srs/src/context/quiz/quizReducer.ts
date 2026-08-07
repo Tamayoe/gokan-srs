@@ -98,7 +98,7 @@ export type QuizAction =
     | { type: 'SET_NEXT_KANJI'; payload: { step: number; kanjis: string[] } | null; }
     | { type: 'LEARN_NEXT_KANJI'; payload: UserProgress }
     | { type: 'RESET_DAILY_STATS' }
-    | { type: 'SESSION_START'; payload: { taskKeys: TaskKey[] } }
+    | { type: 'SESSION_START'; payload: { taskKeys: TaskKey[]; progress?: UserProgress } }
     | { type: 'SESSION_END' }
     | { type: 'RECONCILE_REMOTE'; payload: { progress: UserProgress; settings: UserSettings } }
     | GrammarQuizAction;
@@ -295,7 +295,13 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'SESSION_START':
             // Snapshot the session's committed task set. Computed with `now` in the
             // orchestration layer (keeping this reducer free of Date.now) and passed in.
-            return { ...state, session: { committed: action.payload.taskKeys } };
+            // `progress` is only present when clearStaleNeedsRetry (issue #36) actually
+            // cleared a stale cross-session retry flag colliding with a fresh due review.
+            return {
+                ...state,
+                ...(action.payload.progress ? { progress: action.payload.progress } : {}),
+                session: { committed: action.payload.taskKeys },
+            };
 
         case 'SESSION_END':
             return state.session ? { ...state, session: null } : state;
