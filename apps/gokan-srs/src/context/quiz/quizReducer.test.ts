@@ -222,6 +222,28 @@ describe('quizReducer', () => {
         expect(next.session).toEqual({ committed: keys });
     });
 
+    it('SESSION_START leaves progress untouched when no updated progress is supplied', () => {
+        const progress = makeProgress();
+        const state: QuizState = { ...initialState, progress };
+        const keys = [taskKey('v1', 'reading')];
+        const next = quizReducer(state, { type: 'SESSION_START', payload: { taskKeys: keys } });
+        expect(next.progress).toBe(progress);
+    });
+
+    // issue #36: useQuizOrchestration passes an updated `progress` alongside
+    // taskKeys when clearStaleNeedsRetry actually cleared a stale cross-session
+    // retry flag colliding with a fresh due review - the reducer just assigns it.
+    it('SESSION_START assigns the supplied progress (stale needsRetry already cleared upstream)', () => {
+        const state: QuizState = { ...initialState, progress: makeProgress() };
+        const clearedProgress = makeProgress({
+            learningQueue: [makeVocabProgress({ needsRetry: { reading: false } })],
+        });
+        const keys = [taskKey('v1', 'reading')];
+        const next = quizReducer(state, { type: 'SESSION_START', payload: { taskKeys: keys, progress: clearedProgress } });
+        expect(next.progress).toBe(clearedProgress);
+        expect(next.session).toEqual({ committed: keys });
+    });
+
     it('SESSION_END clears an active session', () => {
         const state: QuizState = {
             ...initialState,

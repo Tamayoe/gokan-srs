@@ -162,6 +162,30 @@ describe('grammarReducer (via quizReducer)', () => {
             expect(next.grammarSession).toEqual({ committed: ['n5-001', 'n5-002'] });
         });
 
+        it('GRAMMAR_SESSION_START leaves progress untouched when no updated progress is supplied', () => {
+            const progress = makeProgress();
+            const state: QuizState = { ...initialState, progress };
+            const next = quizReducer(state, { type: 'GRAMMAR_SESSION_START', payload: { grammarIds: ['n5-001'] } });
+            expect(next.progress).toBe(progress);
+        });
+
+        // issue #36: useGrammarOrchestration passes an updated `progress` alongside
+        // grammarIds when clearStaleGrammarNeedsRetry actually cleared a stale
+        // cross-session retry flag colliding with a fresh due review - the reducer
+        // just assigns it.
+        it('GRAMMAR_SESSION_START assigns the supplied progress (stale needsRetry already cleared upstream)', () => {
+            const state: QuizState = { ...initialState, progress: makeProgress() };
+            const clearedProgress = makeProgress({
+                grammarQueue: [makeGrammarProgress({ needsRetry: false })],
+            });
+            const next = quizReducer(state, {
+                type: 'GRAMMAR_SESSION_START',
+                payload: { grammarIds: ['n5-001'], progress: clearedProgress },
+            });
+            expect(next.progress).toBe(clearedProgress);
+            expect(next.grammarSession).toEqual({ committed: ['n5-001'] });
+        });
+
         it('GRAMMAR_SESSION_END clears an active session', () => {
             const state: QuizState = { ...initialState, grammarSession: { committed: ['n5-001'] } };
             const next = quizReducer(state, { type: 'GRAMMAR_SESSION_END' });
