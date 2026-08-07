@@ -85,7 +85,7 @@ export type GrammarQuizAction =
     | { type: 'GRAMMAR_ADVANCE_QUEUE'; payload: { progress: UserProgress; candidates?: GrammarPoint[] } }
     | { type: 'GRAMMAR_INTRO_CHOICE'; grammarId: string; choice: 'learn' | 'skip'; grammarPoint?: GrammarPoint }
     | { type: 'GRAMMAR_CLEAR_FEEDBACK' }
-    | { type: 'GRAMMAR_SESSION_START'; payload: { grammarIds: string[] } }
+    | { type: 'GRAMMAR_SESSION_START'; payload: { grammarIds: string[]; progress?: UserProgress } }
     | { type: 'GRAMMAR_SESSION_END' };
 
 /** Every grammar action is prefixed GRAMMAR_ so quizReducer can delegate to this module without the two action unions needing to know about each other's cases. */
@@ -179,7 +179,14 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
         case 'GRAMMAR_SESSION_START':
             // Snapshot the session's committed grammar-id set. Computed with `now` in
             // the orchestration layer (keeping this reducer free of Date.now) and passed in.
-            return { ...state, grammarSession: { committed: action.payload.grammarIds } };
+            // `progress` is only present when clearStaleGrammarNeedsRetry (issue #36)
+            // actually cleared a stale cross-session retry flag colliding with a fresh
+            // due review.
+            return {
+                ...state,
+                ...(action.payload.progress ? { progress: action.payload.progress } : {}),
+                grammarSession: { committed: action.payload.grammarIds },
+            };
 
         case 'GRAMMAR_SESSION_END':
             return state.grammarSession ? { ...state, grammarSession: null } : state;

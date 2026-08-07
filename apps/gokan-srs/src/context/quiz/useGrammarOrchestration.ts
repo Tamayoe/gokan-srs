@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import type { GrammarPoint } from '../../models/grammar.model';
 import { GrammarService } from '../../services/grammar.service';
 import { GrammarSRSService } from '../../services/grammarSrs.service';
+import { clearStaleGrammarNeedsRetry } from '../../services/grammarScheduling';
 import type { AnswerResult } from '../../services/srs.service';
 import { CONSTANTS } from '../../commons/constants';
 import { calculateMasteryPercentage } from '../../utils/srs.utils';
@@ -82,8 +83,22 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
         const active = onGrammarRoute && (grammarNextView.sessionState === 'review' || grammarNextView.sessionState === 'learn');
 
         if (active && !state.grammarSession) {
-            const grammarIds = collectActionableGrammarIds(state.progress.grammarQueue, new Date());
-            dispatch({ type: 'GRAMMAR_SESSION_START', payload: { grammarIds } });
+            const now = new Date();
+
+            // Clear a needsRetry flag inherited from a previous session that now
+            // collides with this point's regular due review (issue #36) - see
+            // clearStaleGrammarNeedsRetry's doc comment for why, mirroring the
+            // vocab fix in useQuizOrchestration.
+            const clearedQueue = clearStaleGrammarNeedsRetry(state.progress.grammarQueue, now);
+            const progress = clearedQueue === state.progress.grammarQueue
+                ? state.progress
+                : { ...state.progress, grammarQueue: clearedQueue };
+
+            const grammarIds = collectActionableGrammarIds(progress.grammarQueue, now);
+            dispatch({
+                type: 'GRAMMAR_SESSION_START',
+                payload: { grammarIds, progress: progress === state.progress ? undefined : progress },
+            });
         } else if (!active && state.grammarSession) {
             dispatch({ type: 'GRAMMAR_SESSION_END' });
         }
