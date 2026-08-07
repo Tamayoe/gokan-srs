@@ -2,6 +2,7 @@ import type { VocabProgress } from "../models/vocabulary.model";
 import type { UserSettings } from "../models/user.model";
 import { CONSTANTS } from "../commons/constants";
 import { isMeaningQuizEnabled } from "../services/scheduling";
+import { pickStable as pickStableGeneric } from "./deterministicPick";
 
 export type QuizType = 'reading' | 'meaning';
 export type QuizMode = 'base' | 'context';
@@ -179,35 +180,18 @@ export function getNextVocabToStudy(
 
 
 
-function hashString(str: string): number {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-        hash = (hash * 31 + str.charCodeAt(i)) | 0;
-    }
-    return hash >>> 0;
-}
-
 /**
- * Deterministic "shuffled" pick: a pseudo-random choice seeded by the pool's
- * own state, so the same pool always yields the same pick. Randomizing which
- * due item comes next is intentional (prevents interference effects), but this
- * function runs inside selectNextView, which is recomputed on every state
- * change - a Math.random() pick returned a DIFFERENT card per recomputation,
- * and since loading that card changes state (currentVocab), each pick triggered
- * the next: a visible cascade of flashing cards until two consecutive rolls
- * happened to agree. The seed includes per-item review state, so every answer
- * (including retry-flag flips) naturally reshuffles the order.
+ * Vocab wrapper over the shared pickStable (utils/deterministicPick.ts): seeds
+ * the deterministic choice on each item's per-review state, so every answer
+ * (including retry-flag flips) naturally reshuffles the order. See the shared
+ * helper's doc comment for why the pick has to be stable per pool state.
  */
 function pickStable(items: VocabProgress[]): VocabProgress | null {
-    if (items.length === 0) return null;
-    const seed = items
-        .map(v => {
-            const reviewedAt = v.lastReviewedAt instanceof Date ? v.lastReviewedAt.getTime() : 0;
-            const retry = `${v.needsRetry?.reading ? 1 : 0}${v.needsRetry?.meaning ? 1 : 0}`;
-            return `${v.vocabId}:${v.totalReviews}:${reviewedAt}:${retry}`;
-        })
-        .join('|');
-    return items[hashString(seed) % items.length];
+    return pickStableGeneric(items, v => {
+        const reviewedAt = v.lastReviewedAt instanceof Date ? v.lastReviewedAt.getTime() : 0;
+        const retry = `${v.needsRetry?.reading ? 1 : 0}${v.needsRetry?.meaning ? 1 : 0}`;
+        return `${v.vocabId}:${v.totalReviews}:${reviewedAt}:${retry}`;
+    });
 }
 
 /**

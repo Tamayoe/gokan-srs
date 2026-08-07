@@ -5,6 +5,9 @@ import { isGrammarDue, grammarNextReviewAt } from '../../services/grammarSchedul
 import { VocabularyService } from '../../services/vocabulary.service';
 import type { AnswerResult } from '../../services/srs.service';
 import { SRSService } from '../../services/srs.service';
+import { hashString, pickStable } from '../../utils/deterministicPick';
+import { computeSessionState } from './sessionState';
+import { computeSessionStats, computeSessionPreview } from './sessionStats';
 import type { QuizState } from './quizReducer';
 import type { GrammarBlankPlan, PendingGrammarQuizItem } from './grammarReducer';
 
@@ -18,19 +21,9 @@ export interface GrammarNextViewResult {
     shouldShowIntro: boolean;
 }
 
-function hashString(str: string): number {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-        hash = (hash * 31 + str.charCodeAt(i)) | 0;
-    }
-    return hash >>> 0;
-}
-
-/** Deterministic pick, mirroring srs.utils.ts's pickStable - same due pool always yields the same pick, reshuffling only when the pool's own state changes (a review, a retry flip). */
+/** Grammar wrapper over the shared pickStable (utils/deterministicPick.ts): seeds on each point's per-review state so the pick reshuffles on a review or a retry flip. */
 function pickStableGrammar(items: GrammarProgress[]): GrammarProgress | null {
-    if (items.length === 0) return null;
-    const seed = items.map(g => `${g.grammarId}:${g.totalReviews}:${g.needsRetry ? 1 : 0}`).join('|');
-    return items[hashString(seed) % items.length];
+    return pickStable(items, g => `${g.grammarId}:${g.totalReviews}:${g.needsRetry ? 1 : 0}`);
 }
 
 /**
@@ -56,29 +49,16 @@ export function selectNextGrammarView(
         queueItem = picked ? { grammarId: picked.grammarId } : null;
     }
 
-    let sessionState: GrammarSessionState = 'exhausted';
-    let nextReviewAt: Date | null = null;
-
-    if (progress) {
-        const learning = progress.grammarQueue.filter(g => g.stage === 'learning');
-        const due = learning.filter(g => isGrammarDue(g, now) || g.needsRetry);
-
-        if (due.length > 0) {
-            sessionState = 'review';
-        } else {
-            nextReviewAt = learning
-                .map(g => grammarNextReviewAt(g))
-                .filter((d): d is NonNullable<typeof d> => !!d)
-                .sort((a, b) => a.getTime() - b.getTime())[0] ?? null;
-
-            const canLearn = hasMoreLearnableGrammar || grammarIntroCandidates.length > 0;
-            sessionState = canLearn
-                ? 'learn'
-                : learning.length > 0
-                    ? 'waiting'
-                    : 'exhausted';
+    const { sessionState, nextReviewAt } = computeSessionState<GrammarProgress, GrammarSessionState>(
+        progress ? progress.grammarQueue : undefined,
+        {
+            isLearning: g => g.stage === 'learning',
+            isDue: g => isGrammarDue(g, now) || !!g.needsRetry,
+            nextReviewAtOf: g => grammarNextReviewAt(g),
+            canLearn: hasMoreLearnableGrammar || grammarIntroCandidates.length > 0,
+            states: { review: 'review', learn: 'learn', waiting: 'waiting', exhausted: 'exhausted' },
         }
-    }
+    );
 
     let shouldShowIntro = false;
     if (state.currentGrammarPoint && progress) {
@@ -339,31 +319,21 @@ export function selectGrammarSessionStats(
     hasMoreLearnableGrammar: boolean,
     now: Date = new Date()
 ): GrammarSessionStats {
-    const empty: GrammarSessionStats = { done: 0, total: 0, retriesPending: 0, waiting: 0, moreNew: hasMoreLearnableGrammar };
-    if (!state.progress) return empty;
-
-    const committed = new Set(state.grammarSession?.committed ?? []);
-    const total = committed.size;
+    if (!state.progress) {
+        return { done: 0, total: 0, retriesPending: 0, waiting: 0, moreNew: hasMoreLearnableGrammar };
+    }
 
     const byId = new Map(state.progress.grammarQueue.map(g => [g.grammarId, g]));
-    const actionable = new Set(collectActionableGrammarIds(state.progress.grammarQueue, now));
 
-    let done = 0;
-    let retriesPending = 0;
-    for (const id of committed) {
-        if (!actionable.has(id)) {
-            done++;
-            continue;
-        }
-        if (byId.get(id)?.needsRetry) retriesPending++;
-    }
+    const core = computeSessionStats({
+        committed: state.grammarSession?.committed ?? [],
+        actionable: collectActionableGrammarIds(state.progress.grammarQueue, now),
+        isRetry: id => byId.get(id)?.needsRetry === true,
+        // One key per point already, so the waiting count is just distinct ids.
+        waitingCountOf: keys => new Set(keys).size,
+    });
 
-    const waiting = new Set<string>();
-    for (const id of actionable) {
-        if (!committed.has(id)) waiting.add(id);
-    }
-
-    return { done, total, retriesPending, waiting: waiting.size, moreNew: hasMoreLearnableGrammar };
+    return { ...core, moreNew: hasMoreLearnableGrammar };
 }
 
 export interface NextGrammarSessionPreview {
@@ -377,20 +347,12 @@ export function selectNextGrammarSessionPreview(
     state: Pick<QuizState, 'progress'>,
     now: Date = new Date()
 ): NextGrammarSessionPreview {
-    const preview: NextGrammarSessionPreview = { review: 0, new: 0, retries: 0 };
-    if (!state.progress) return preview;
+    if (!state.progress) return { review: 0, new: 0, retries: 0 };
 
-    for (const g of state.progress.grammarQueue) {
-        if (g.stage === 'graduated') continue;
-
-        if (g.needsRetry) {
-            preview.retries++;
-        } else if (g.totalReviews === 0) {
-            preview.new++;
-        } else if (isGrammarDue(g, now)) {
-            preview.review++;
-        }
-    }
-
-    return preview;
+    return computeSessionPreview(state.progress.grammarQueue, {
+        isGraduated: g => g.stage === 'graduated',
+        isRetry: g => !!g.needsRetry,
+        isNew: g => g.totalReviews === 0,
+        isDue: g => isGrammarDue(g, now),
+    });
 }

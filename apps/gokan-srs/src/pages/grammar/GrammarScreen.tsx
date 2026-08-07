@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import { useQuiz } from "../../context/useQuiz";
-import { CenteredCard } from "../../components/CenteredCard";
+import { ActivityStatusCard } from "../../components/ActivityStatusCard";
 import { SessionProgress } from "../../components/SessionProgress";
 import type { SessionHistoryEntry } from "../../components/SessionProgress";
 import { GrammarIntroCard } from "./GrammarIntroCard";
@@ -19,28 +18,18 @@ export function GrammarScreen() {
         case "waiting": {
             const minutes = Math.max(1, Math.ceil((grammarNextReviewAt!.getTime() - Date.now()) / 60000));
             return (
-                <CenteredCard>
-                    <h2 className="text-xl mb-4 text-primary font-serif">You're done for now</h2>
-                    <p className="text-sm mb-6 text-secondary font-serif">
-                        Your next grammar review will be available in{' '}
-                        <strong>{minutes} minute{minutes > 1 ? 's' : ''}</strong>.
-                    </p>
-                    <Link to="/" className="text-xs text-secondary hover:text-primary transition-colors">
-                        Back to activities
-                    </Link>
-                </CenteredCard>
+                <ActivityStatusCard title="You're done for now">
+                    Your next grammar review will be available in{' '}
+                    <strong>{minutes} minute{minutes > 1 ? 's' : ''}</strong>.
+                </ActivityStatusCard>
             );
         }
 
         case "exhausted":
             return (
-                <CenteredCard>
-                    <h2 className="text-xl mb-4 text-primary font-serif">All caught up</h2>
-                    <p className="text-sm text-secondary font-serif mb-6">Come back tomorrow.</p>
-                    <Link to="/" className="text-xs text-secondary hover:text-primary transition-colors">
-                        Back to activities
-                    </Link>
-                </CenteredCard>
+                <ActivityStatusCard title="All caught up">
+                    Come back tomorrow.
+                </ActivityStatusCard>
             );
 
         case "review":

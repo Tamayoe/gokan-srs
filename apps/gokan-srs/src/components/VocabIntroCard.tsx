@@ -1,13 +1,9 @@
 import type { Vocabulary } from "../models/vocabulary.model";
-import { Card } from "./ui/Card";
-
-import { CardDivider, CardSection } from "./ui/CardSection";
-import { Button } from "./ui/Button";
-import { useEffect, useRef } from "react";
-import { useResponsive } from "../context/Responsive/useResponsive";
+import { CardSection } from "./ui/CardSection";
 import { Combine } from "lucide-react";
 import { formatReadingList } from "../pages/quiz/quizFormatting";
 import { JlptChip } from "./JlptChip";
+import { IntroCardShell } from "./IntroCardShell";
 
 
 interface IntroVocabCardProps {
@@ -17,18 +13,8 @@ interface IntroVocabCardProps {
 }
 
 export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCardProps) {
-    const formRef = useRef<HTMLFormElement | null>(null);
-    const { isMobile } = useResponsive()
-
-    useEffect(() => {
-        if (formRef) {
-            const lastChild = formRef.current?.lastElementChild as HTMLElement
-            lastChild.focus()
-        }
-    }, []);
-
     return (
-        <Card size="lg">
+        <IntroCardShell onLearn={onLearn} onSkip={onSkip} learnLabel="Learn this word">
             {/* Kanji */}
             <CardSection>
                 <div className="text-center">
@@ -67,30 +53,6 @@ export default function VocabIntroCard({ vocab, onLearn, onSkip }: IntroVocabCar
                     ))}
                 </div>
             </CardSection>
-
-            <CardDivider />
-
-            <form
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    onLearn();
-                }}
-                className="flex gap-4"
-                ref={formRef}
-            >
-                <Button
-                    variant="secondary"
-                    className="flex-1"
-                    onClick={onSkip}
-                    type="button"
-                >
-                    {isMobile ? 'Skip' : 'I already know this'}
-                </Button>
-
-                <Button variant="primary" className="flex-1" type="submit">
-                    {isMobile ? 'Learn' : 'Learn this word'}
-                </Button>
-            </form>
-        </Card>
+        </IntroCardShell>
     );
 }

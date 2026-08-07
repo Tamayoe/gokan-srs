@@ -3,8 +3,9 @@ import type { ReviewLog, SRSEntry, VocabProgress } from '../models/vocabulary.mo
 import { CONSTANTS } from '../commons/constants';
 import { VocabularyService } from './vocabulary.service';
 import type { KanjiKnowledge, UserProgress, UserSettings } from '../models/user.model';
-import { isVocabFullyMastered, vocabNextReviewAt } from './scheduling';
+import { isVocabFullyMastered, vocabNextReviewAt, newSRSEntry } from './scheduling';
 import { JLPT_LEVELS } from '../models/index.model';
+import { collectJlptCandidates, countJlptCandidates } from './jlptWalk';
 
 
 export type AnswerResult = 'correct' | 'minor_error' | 'wrong' | 'pass';
@@ -480,19 +481,15 @@ export class SRSService {
                 // only skipped when the user opts into ignoreKnownKanjiRequirement.
                 const ignoreKnownKanji = !!settings.ignoreKnownKanjiRequirement;
                 const queuedIds = new Set(progress.learningQueue.map(v => v.vocabId));
-                for (const level of JLPT_LEVELS) {
-                    for (const entry of index[level] ?? []) {
-                        if (queuedIds.has(entry.id)) continue;
-
-                        const allKanjiKnown = ignoreKnownKanji || entry.containedKanji.every(k =>
-                            progress.kanjiKnowledge.kanjiSet.has(k)
-                        );
-                        if (!allKanjiKnown) continue;
-
-                        count++;
-                        if (count >= limit) return count;
-                    }
-                }
+                count = countJlptCandidates(
+                    JLPT_LEVELS,
+                    level => index[level] ?? [],
+                    entry => !queuedIds.has(entry.id) && (
+                        ignoreKnownKanji || entry.containedKanji.every(k => progress.kanjiKnowledge.kanjiSet.has(k))
+                    ),
+                    limit
+                );
+                if (count >= limit) return count;
                 break;
             }
 
@@ -598,22 +595,8 @@ export class SRSService {
             lastReviewedAt: null,
             totalReviews: 0,
             consecutiveFailures: 0,
-            reading: {
-                memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
-                interval: 0,
-                difficulty: finalDiff,
-                lastReviewedAt: null,
-                dueDate: null,
-                history: []
-            },
-            meaning: {
-                memoryStrength: CONSTANTS.srs.formula.minMemoryStrength,
-                interval: 0,
-                difficulty: finalDiff,
-                lastReviewedAt: null,
-                dueDate: null,
-                history: []
-            }
+            reading: newSRSEntry(finalDiff),
+            meaning: newSRSEntry(finalDiff)
         };
     }
 
@@ -692,19 +675,15 @@ export class SRSService {
         const index = await VocabularyService.loadJlptIndex();
         if (!index) return [];
 
-        const candidates: string[] = [];
-
-        for (const level of JLPT_LEVELS) {
-            for (const entry of index[level] ?? []) {
-                if (candidates.length >= maxToFind) return candidates;
-                if (activeIds.has(entry.id)) continue;
-
-                const allKanjiKnown = ignoreKnownKanji || entry.containedKanji.every(k =>
-                    kanjiKnowledge.kanjiSet.has(k)
-                );
-                if (allKanjiKnown) candidates.push(entry.id);
-            }
-        }
+        const candidates = collectJlptCandidates(
+            JLPT_LEVELS,
+            level => index[level] ?? [],
+            entry => entry.id,
+            entry => !activeIds.has(entry.id) && (
+                ignoreKnownKanji || entry.containedKanji.every(k => kanjiKnowledge.kanjiSet.has(k))
+            ),
+            maxToFind
+        );
 
         // JLPT lists exhausted (~6.4k words) - keep the user learning by falling
         // back to the frequency order for anything beyond N1.
