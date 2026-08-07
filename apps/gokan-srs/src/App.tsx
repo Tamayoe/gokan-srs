@@ -13,7 +13,7 @@ import { SearchBar } from './components/SearchBar';
 // Lazy Load Pages
 // Note: Adapting named exports to default exports for lazy loading where necessary
 const MainScreen = lazy(() => import('./pages/main/MainScreen').then(module => ({ default: module.MainScreen })));
-const QuizScreen = lazy(() => import('./pages/quiz/QuizScreen').then(module => ({ default: module.QuizScreen })));
+const VocabQuizScreen = lazy(() => import('./pages/quiz/VocabQuizScreen').then(module => ({ default: module.VocabQuizScreen })));
 const GrammarScreen = lazy(() => import('./pages/grammar/GrammarScreen').then(module => ({ default: module.GrammarScreen })));
 const SettingsScreen = lazy(() => import('./pages/settings/Settings').then(module => ({ default: module.SettingsScreen })));
 const UserProfileScreen = lazy(() => import('./pages/profile/UserProfileScreen').then(module => ({ default: module.UserProfileScreen })));
@@ -126,7 +126,7 @@ export const App: React.FC = () => {
                             <MainScreen />
                         } />
                         <Route path="/quiz" element={
-                            <QuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
+                            <VocabQuizScreen onVocabClick={(id) => navigate(`/vocab/${id}`)} />
                         } />
                         <Route path="/grammar" element={
                             <GrammarScreen />

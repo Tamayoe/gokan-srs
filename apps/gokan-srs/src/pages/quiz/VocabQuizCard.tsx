@@ -7,14 +7,15 @@ import { Combine } from "lucide-react";
 import { TagsLookup } from "../../models/data.model";
 import type { Tags } from "../../models/data.model";
 import { JlptChip } from "../../components/JlptChip";
-import { BaseQuizCard } from "./BaseQuizCard";
+import { VocabBaseQuizCard } from "./VocabBaseQuizCard";
 import { formatReadingList, getUniquePosTags, getUniqueRelatedCompounds, useExpandableDefinitions } from "./quizFormatting";
 
-interface QuizCardProps {
+interface VocabQuizCardProps {
     onKanjiClick?: () => void;
 }
 
-export function QuizCard({ onKanjiClick }: QuizCardProps) {
+/** The vocab reading quiz - hiragana recall for the currently-loaded vocab. */
+export function VocabQuizCard({ onKanjiClick }: VocabQuizCardProps) {
     const { state, currentProgress } = useQuiz();
     const { isMobile } = useResponsive();
 
@@ -26,7 +27,7 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
     if (!currentVocab) return null;
 
     return (
-        <BaseQuizCard
+        <VocabBaseQuizCard
             inputLabel="Reading (hiragana)"
             inputPlaceholder={CONSTANTS.quiz.hiraganaAnswerPlaceholder}
             renderCorrectAnswer={() => (
@@ -164,6 +165,6 @@ export function QuizCard({ onKanjiClick }: QuizCardProps) {
                     )}
                 </motion.div>
             )}
-        </BaseQuizCard>
+        </VocabBaseQuizCard>
     );
 }

@@ -1,9 +1,33 @@
 import React from 'react';
-import { useQuiz } from '../context/useQuiz';
 import { useResponsive } from '../context/Responsive/useResponsive';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import type { AnswerResult } from '../services/srs.service';
+
+export interface SessionProgressStats {
+    done: number;
+    total: number;
+    retriesPending: number;
+    waiting: number;
+    moreNew: boolean;
+}
+
+export interface SessionHistoryEntry {
+    /** Unique key for the ticker's animation list, e.g. `${id}-${index}`. */
+    key: string;
+    href: string;
+    label: string;
+    result: AnswerResult;
+    delta: number;
+}
+
+interface SessionProgressProps {
+    stats: SessionProgressStats;
+    history: SessionHistoryEntry[];
+    /** Plural noun for the waiting note, e.g. "vocab" or "grammar points". */
+    waitingNoun: string;
+}
 
 /**
  * The `done / total` counter, with two extra signals the flat count can't show:
@@ -12,11 +36,12 @@ import { Link } from 'react-router-dom';
  *  - waiting: reviews that came due AFTER this session started - deliberately kept
  *    out of the total so the denominator stays stable, surfaced as "n+ waiting".
  *
- * Note: `moreNew` (whether brand-new vocab remains learnable at all) is deliberately
- * NOT used on its own to show a fallback "more vocab available" line - given the
- * dataset's ~36k words, it's true for virtually every user forever, so it would
- * read as permanent, meaningless noise rather than a signal about what happens
- * after this session. It's only used as the "+" suffix on a genuine waiting count.
+ * Note: `moreNew` (whether brand-new content remains learnable at all) is
+ * deliberately NOT used on its own to show a fallback "more available" line -
+ * given the dataset's size, it's true for virtually every user forever, so it
+ * would read as permanent, meaningless noise rather than a signal about what
+ * happens after this session. It's only used as the "+" suffix on a genuine
+ * waiting count.
  */
 const SessionCounter: React.FC<{
     done: number;
@@ -33,17 +58,26 @@ const SessionCounter: React.FC<{
     </span>
 );
 
-const WaitingNote: React.FC<{ waiting: number; moreNew: boolean }> = ({ waiting, moreNew }) => {
+const WaitingNote: React.FC<{ waiting: number; moreNew: boolean; noun: string }> = ({ waiting, moreNew, noun }) => {
     if (waiting === 0) return null;
-    const label = `${waiting}${moreNew ? '+' : ''} vocab waiting after this session`;
+    const label = `${waiting}${moreNew ? '+' : ''} ${noun} waiting after this session`;
     return <span className="text-secondary-400 text-xs italic">{label}</span>;
 };
 
-export const SessionProgress: React.FC = () => {
-    const { sessionStats } = useQuiz();
+/**
+ * Session-progress header shared by both quiz activities (vocab's
+ * VocabQuizScreen and GrammarScreen) - the `done / total` counter plus a
+ * HistoryTicker of recent answers. Fully presentational: parameterized over
+ * `stats`/`history` rather than reading activity-specific context directly,
+ * so it makes no assumption about which activity produced the numbers. See
+ * quizSelectors.ts's selectSessionStats / grammarSelectors.ts's
+ * selectGrammarSessionStats for how each activity computes its own
+ * `stats`/`history` (issue #32 follow-up).
+ */
+export const SessionProgress: React.FC<SessionProgressProps> = ({ stats, history, waitingNoun }) => {
     const { isMobile } = useResponsive();
 
-    const { done, total, retriesPending, waiting, moreNew } = sessionStats;
+    const { done, total, retriesPending, waiting, moreNew } = stats;
 
     // Retries extend the denominator so the bar can't read 100% while redos remain.
     const barTotal = total + retriesPending;
@@ -70,11 +104,11 @@ export const SessionProgress: React.FC = () => {
                             />
                         </div>
 
-                        <WaitingNote waiting={waiting} moreNew={moreNew} />
+                        <WaitingNote waiting={waiting} moreNew={moreNew} noun={waitingNoun} />
                     </div>
 
                     {/* Moved History Ticker Below */}
-                    <HistoryTicker />
+                    <HistoryTicker history={history} />
                 </div>
             )}
 
@@ -95,7 +129,7 @@ export const SessionProgress: React.FC = () => {
                         />
                     </div>
                     <div className="px-1 mt-1">
-                        <WaitingNote waiting={waiting} moreNew={moreNew} />
+                        <WaitingNote waiting={waiting} moreNew={moreNew} noun={waitingNoun} />
                     </div>
                 </>
             )}
@@ -103,11 +137,8 @@ export const SessionProgress: React.FC = () => {
     );
 };
 
-const HistoryTicker: React.FC = () => {
-    const { state } = useQuiz();
-    const history = state.sessionHistory; // Most recent is at index 0
-
-    // Take top 5 recent items
+const HistoryTicker: React.FC<{ history: SessionHistoryEntry[] }> = ({ history }) => {
+    // Most recent is at index 0
     const recentItems = history.slice(0, 5);
 
     return (
@@ -115,8 +146,7 @@ const HistoryTicker: React.FC = () => {
             <AnimatePresence initial={false}>
                 {recentItems.map((item, index) => (
                     <motion.div
-                        key={`${item.vocabId}-${index}`} // Unique key even if same item appears twice (retry) - actually index helps uniqueness in mapping but strict key better if we had unique ID for history item. 
-                        // Using combination of ID and index in history array ensures stability.
+                        key={item.key}
                         initial={{ opacity: 0, y: 10, x: -10 }}
                         animate={{ opacity: 1 - (index * 0.2), y: 0, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
@@ -124,8 +154,8 @@ const HistoryTicker: React.FC = () => {
                         className="flex items-center gap-2 text-sm whitespace-nowrap"
                     >
                         <Link
-                            to={`/vocab/${item.vocabId}`}
-                            className={`font-serif hover:underline cursor-pointer ${item.result === 'correct' ? 'text-emerald-600' :
+                            to={item.href}
+                            className={`font-mincho hover:underline cursor-pointer ${item.result === 'correct' ? 'text-emerald-600' :
                                 item.result === 'minor_error' ? 'text-amber-600' :
                                     'text-desaturated-red-600'
                                 }`}
@@ -134,13 +164,13 @@ const HistoryTicker: React.FC = () => {
                                 e.stopPropagation();
                             }}
                         >
-                            {item.writtenForm}
+                            {item.label}
                         </Link>
 
                         {/* Result Icon/Indicator */}
                         {item.result === 'correct' && <CheckCircle className="w-3 h-3 text-emerald-500" />}
                         {item.result === 'minor_error' && <AlertCircle className="w-3 h-3 text-amber-500" />}
-                        {item.result === 'wrong' && <XCircle className="w-3 h-3 text-desaturated-red-500" />}
+                        {(item.result === 'wrong' || item.result === 'pass') && <XCircle className="w-3 h-3 text-desaturated-red-500" />}
 
                         {/* Delta */}
                         <span className="text-xs text-secondary-400 tabular-nums">

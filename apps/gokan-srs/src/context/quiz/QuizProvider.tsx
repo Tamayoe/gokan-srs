@@ -13,7 +13,7 @@ import type { QuizState } from './quizReducer';
 import type { SessionStats, NextSessionPreview } from './quizSelectors';
 import { useQuizOrchestration } from './useQuizOrchestration';
 import { useGrammarOrchestration } from './useGrammarOrchestration';
-import type { GrammarSessionState, NextGrammarSessionPreview } from './grammarSelectors';
+import type { GrammarSessionState, NextGrammarSessionPreview, GrammarSessionStats } from './grammarSelectors';
 
 export interface QuizContextValue {
     state: QuizState;
@@ -54,6 +54,8 @@ export interface QuizContextValue {
     currentGrammarProgress: GrammarProgress | null;
     shouldShowGrammarIntro: boolean;
     nextGrammarSessionPreview: NextGrammarSessionPreview;
+    /** Progress counter for the active grammar study session (done/total, retries, waiting) - mirrors sessionStats. */
+    grammarSessionStats: GrammarSessionStats;
     grammarActions: {
         setGrammarAnswer(index: number, value: string): void;
         revealGrammarHint(index: number): void;
@@ -83,6 +85,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         currentGrammarProgress,
         grammarComputed,
         nextGrammarSessionPreview,
+        grammarSessionStats,
     } = useGrammarOrchestration(state, dispatch);
 
     return (
@@ -103,6 +106,7 @@ export const QuizProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 currentGrammarProgress,
                 shouldShowGrammarIntro: grammarNextView.shouldShowIntro,
                 nextGrammarSessionPreview,
+                grammarSessionStats,
                 grammarActions,
                 grammarComputed,
             }}

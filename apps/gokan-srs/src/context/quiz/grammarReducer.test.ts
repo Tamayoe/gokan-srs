@@ -139,6 +139,41 @@ describe('grammarReducer (via quizReducer)', () => {
         expect(next.grammarHintLevels).toEqual([]);
     });
 
+    it('GRAMMAR_UPDATE_AFTER_ANSWER prepends a historyItem to grammarSessionHistory when provided', () => {
+        const progress = makeProgress({ grammarQueue: [makeGrammarProgress({ totalReviews: 1 })] });
+        const state: QuizState = { ...initialState, grammarSessionHistory: [] };
+        const historyItem = { grammarId: 'n5-001', title: 'A が いちばん～', result: 'correct' as const, delta: 12 };
+        const next = quizReducer(state, { type: 'GRAMMAR_UPDATE_AFTER_ANSWER', payload: { progress, historyItem } });
+
+        expect(next.grammarSessionHistory).toEqual([historyItem]);
+    });
+
+    it('GRAMMAR_UPDATE_AFTER_ANSWER leaves grammarSessionHistory untouched without a historyItem (the read-only no-credit path)', () => {
+        const progress = makeProgress({ grammarQueue: [makeGrammarProgress({ totalReviews: 1 })] });
+        const state: QuizState = { ...initialState, grammarSessionHistory: [{ grammarId: 'existing', title: 'x', result: 'correct', delta: 5 }] };
+        const next = quizReducer(state, { type: 'GRAMMAR_UPDATE_AFTER_ANSWER', payload: { progress } });
+
+        expect(next.grammarSessionHistory).toEqual(state.grammarSessionHistory);
+    });
+
+    describe('GRAMMAR_SESSION_START / GRAMMAR_SESSION_END', () => {
+        it('GRAMMAR_SESSION_START snapshots the committed grammar ids', () => {
+            const next = quizReducer(initialState, { type: 'GRAMMAR_SESSION_START', payload: { grammarIds: ['n5-001', 'n5-002'] } });
+            expect(next.grammarSession).toEqual({ committed: ['n5-001', 'n5-002'] });
+        });
+
+        it('GRAMMAR_SESSION_END clears an active session', () => {
+            const state: QuizState = { ...initialState, grammarSession: { committed: ['n5-001'] } };
+            const next = quizReducer(state, { type: 'GRAMMAR_SESSION_END' });
+            expect(next.grammarSession).toBeNull();
+        });
+
+        it('GRAMMAR_SESSION_END is a no-op (same reference) when no session is active', () => {
+            const next = quizReducer(initialState, { type: 'GRAMMAR_SESSION_END' });
+            expect(next).toBe(initialState);
+        });
+    });
+
     it('GRAMMAR_ADVANCE_QUEUE assigns progress and appends candidates when provided', () => {
         const progress = makeProgress();
         const point = makeGrammarPoint();
@@ -193,6 +228,27 @@ describe('grammarReducer (via quizReducer)', () => {
         it('is a no-op without progress', () => {
             const next = quizReducer(initialState, { type: 'GRAMMAR_INTRO_CHOICE', grammarId: 'n5-001', choice: 'learn' });
             expect(next).toBe(initialState);
+        });
+
+        it('learn with an active session adds the grammarId to grammarSession.committed', () => {
+            const state: QuizState = { ...initialState, progress: makeProgress(), grammarSession: { committed: [] } };
+            const next = quizReducer(state, { type: 'GRAMMAR_INTRO_CHOICE', grammarId: 'n5-001', choice: 'learn' });
+
+            expect(next.grammarSession).toEqual({ committed: ['n5-001'] });
+        });
+
+        it('skip with an active session does not add the grammarId', () => {
+            const state: QuizState = { ...initialState, progress: makeProgress(), grammarSession: { committed: [] } };
+            const next = quizReducer(state, { type: 'GRAMMAR_INTRO_CHOICE', grammarId: 'n5-001', choice: 'skip' });
+
+            expect(next.grammarSession).toEqual({ committed: [] });
+        });
+
+        it('learn without an active session leaves grammarSession null', () => {
+            const state: QuizState = { ...initialState, progress: makeProgress(), grammarSession: null };
+            const next = quizReducer(state, { type: 'GRAMMAR_INTRO_CHOICE', grammarId: 'n5-001', choice: 'learn' });
+
+            expect(next.grammarSession).toBeNull();
         });
     });
 });

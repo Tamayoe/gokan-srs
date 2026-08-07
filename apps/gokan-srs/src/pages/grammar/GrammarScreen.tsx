@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 import { useQuiz } from "../../context/useQuiz";
 import { CenteredCard } from "../../components/CenteredCard";
+import { SessionProgress } from "../../components/SessionProgress";
+import type { SessionHistoryEntry } from "../../components/SessionProgress";
 import { GrammarIntroCard } from "./GrammarIntroCard";
 import { GrammarQuizCard } from "./GrammarQuizCard";
 
 /**
  * Route /grammar - the Grammar activity, alongside the vocab quiz on /quiz.
- * Mirrors QuizScreen's exhaustive switch over session state, minus the
+ * Mirrors VocabQuizScreen's exhaustive switch over session state, minus the
  * 'learn-kanji' case: grammar has no kanji-gated learning step (see
  * GrammarSessionState in grammarSelectors.ts).
  */
 export function GrammarScreen() {
-    const { state, grammarSessionState, grammarNextReviewAt, shouldShowGrammarIntro, grammarActions } = useQuiz();
+    const { state, grammarSessionState, grammarNextReviewAt, shouldShowGrammarIntro, grammarActions, grammarSessionStats } = useQuiz();
 
     switch (grammarSessionState) {
         case "waiting": {
@@ -61,15 +63,27 @@ export function GrammarScreen() {
                 );
             }
 
+            const history: SessionHistoryEntry[] = state.grammarSessionHistory.map((item, index) => ({
+                key: `${item.grammarId}-${index}`,
+                href: `/grammar/${item.grammarId}`,
+                label: item.title,
+                result: item.result,
+                delta: item.delta,
+            }));
+
             return (
-                <div className="flex flex-col flex-1 items-center justify-center py-6 w-full">
-                    <GrammarQuizCard />
+                <div className="flex flex-col flex-1 items-center">
+                    <SessionProgress stats={grammarSessionStats} history={history} waitingNoun="grammar points" />
+
+                    <div className="flex-1 flex items-center justify-center py-6 w-full">
+                        <GrammarQuizCard />
+                    </div>
                 </div>
             );
         }
 
         default: {
-            // Compile-time exhaustiveness check, mirroring QuizScreen.
+            // Compile-time exhaustiveness check, mirroring VocabQuizScreen.
             const _exhaustive: never = grammarSessionState;
             return _exhaustive;
         }

@@ -21,6 +21,17 @@ export interface PendingGrammarQuizItem {
     grammarId: string;
 }
 
+/**
+ * Grammar's equivalent of vocab's SessionTracking - the set of grammar points
+ * committed to the current study session, captured once when the session
+ * begins and extended only by the user's own "Learn" choices. A GrammarProgress
+ * has a single SRSEntry/quiz type, so the committed set is just grammar ids
+ * (no per-quiz-type task keys the way vocab needs).
+ */
+export interface GrammarSessionTracking {
+    committed: string[];
+}
+
 export interface GrammarQuizState {
     currentGrammarPoint: GrammarPoint | null;
     currentGrammarQuizItem: PendingGrammarQuizItem | null;
@@ -40,6 +51,14 @@ export interface GrammarQuizState {
     isLoadingGrammar: boolean;
     /** Potential new grammar points, not yet in grammarQueue - mirrors introCandidates. */
     grammarIntroCandidates: GrammarPoint[];
+    /** Task set of the active grammar study session (null between sessions). See GrammarSessionTracking. */
+    grammarSession: GrammarSessionTracking | null;
+    grammarSessionHistory: Array<{
+        grammarId: string;
+        title: string;
+        result: AnswerResult;
+        delta: number;
+    }>;
 }
 
 export const initialGrammarState: GrammarQuizState = {
@@ -51,6 +70,8 @@ export const initialGrammarState: GrammarQuizState = {
     grammarFeedback: null,
     isLoadingGrammar: false,
     grammarIntroCandidates: [],
+    grammarSession: null,
+    grammarSessionHistory: [],
 };
 
 export type GrammarQuizAction =
@@ -60,10 +81,12 @@ export type GrammarQuizAction =
     | { type: 'GRAMMAR_SET_ANSWER'; payload: { index: number; value: string } }
     | { type: 'GRAMMAR_REVEAL_HINT'; payload: { index: number } }
     | { type: 'GRAMMAR_SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswers: string[]; perBlankResults: AnswerResult[] } }
-    | { type: 'GRAMMAR_UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress } }
+    | { type: 'GRAMMAR_UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress; historyItem?: { grammarId: string; title: string; result: AnswerResult; delta: number } | null } }
     | { type: 'GRAMMAR_ADVANCE_QUEUE'; payload: { progress: UserProgress; candidates?: GrammarPoint[] } }
     | { type: 'GRAMMAR_INTRO_CHOICE'; grammarId: string; choice: 'learn' | 'skip'; grammarPoint?: GrammarPoint }
-    | { type: 'GRAMMAR_CLEAR_FEEDBACK' };
+    | { type: 'GRAMMAR_CLEAR_FEEDBACK' }
+    | { type: 'GRAMMAR_SESSION_START'; payload: { grammarIds: string[] } }
+    | { type: 'GRAMMAR_SESSION_END' };
 
 /** Every grammar action is prefixed GRAMMAR_ so quizReducer can delegate to this module without the two action unions needing to know about each other's cases. */
 export function isGrammarAction(action: { type: string }): action is GrammarQuizAction {
@@ -135,6 +158,9 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                 grammarFeedback: null,
                 grammarAnswers: [],
                 grammarHintLevels: [],
+                grammarSessionHistory: action.payload.historyItem
+                    ? [action.payload.historyItem, ...state.grammarSessionHistory].slice(0, 50)
+                    : state.grammarSessionHistory,
             };
 
         case 'GRAMMAR_ADVANCE_QUEUE':
@@ -149,6 +175,14 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
 
         case 'GRAMMAR_CLEAR_FEEDBACK':
             return { ...state, grammarFeedback: null };
+
+        case 'GRAMMAR_SESSION_START':
+            // Snapshot the session's committed grammar-id set. Computed with `now` in
+            // the orchestration layer (keeping this reducer free of Date.now) and passed in.
+            return { ...state, grammarSession: { committed: action.payload.grammarIds } };
+
+        case 'GRAMMAR_SESSION_END':
+            return state.grammarSession ? { ...state, grammarSession: null } : state;
 
         case 'GRAMMAR_INTRO_CHOICE': {
             if (!state.progress) return state;
@@ -182,10 +216,21 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                 ];
             }
 
+            // A point the user chooses to Learn becomes part of the current session's
+            // committed workload (its single entry is now due immediately), mirroring
+            // VOCAB_INTRO_CHOICE. Skipped points graduate straight away and add nothing.
+            let nextGrammarSession = state.grammarSession;
+            if (nextGrammarSession && action.choice === 'learn') {
+                if (!nextGrammarSession.committed.includes(action.grammarId)) {
+                    nextGrammarSession = { ...nextGrammarSession, committed: [...nextGrammarSession.committed, action.grammarId] };
+                }
+            }
+
             return {
                 ...state,
                 progress: { ...state.progress, grammarQueue: updatedQueue },
                 grammarIntroCandidates: nextCandidates,
+                grammarSession: nextGrammarSession,
             };
         }
 
