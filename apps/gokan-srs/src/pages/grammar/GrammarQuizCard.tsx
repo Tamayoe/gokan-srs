@@ -1,4 +1,5 @@
 import type { FormEvent } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
@@ -55,7 +56,9 @@ export function GrammarQuizCard() {
                             <MasteryRing memoryStrength={currentGrammarProgress?.entry.memoryStrength ?? 0} size={40} />
                         </div>
                         <div className="flex items-center justify-center gap-2 mb-4">
-                            <JlptChip level={point.jlptLevel} />
+                            <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
+                                <JlptChip level={point.jlptLevel} />
+                            </Link>
                         </div>
 
                         <p className="text-center text-sm text-secondary font-gothic mb-1">
@@ -116,7 +119,9 @@ export function GrammarQuizCard() {
                         <MasteryRing memoryStrength={currentGrammarProgress?.entry.memoryStrength ?? 0} size={40} />
                     </div>
                     <div className="flex items-center justify-center gap-2 mb-4">
-                        <JlptChip level={point.jlptLevel} />
+                        <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
+                            <JlptChip level={point.jlptLevel} />
+                        </Link>
                     </div>
 
                     <p className="text-center text-sm text-secondary font-gothic mb-1">

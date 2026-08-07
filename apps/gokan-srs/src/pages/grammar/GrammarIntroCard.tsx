@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import type { GrammarPoint } from "../../models/grammar.model";
 import { Card } from "../../components/ui/Card";
 import { CardDivider, CardSection } from "../../components/ui/CardSection";
@@ -35,7 +36,9 @@ export function GrammarIntroCard({ grammarPoint, onLearn, onSkip }: GrammarIntro
                         <JlptChip level={grammarPoint.jlptLevel} />
                     </div>
                     <h2 className="text-primary font-mincho text-2xl leading-snug">
-                        {grammarPoint.title}
+                        <Link to={`/grammar/${grammarPoint.id}`} className="hover:underline">
+                            {grammarPoint.title}
+                        </Link>
                     </h2>
                 </div>
             </CardSection>

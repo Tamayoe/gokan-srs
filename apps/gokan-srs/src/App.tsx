@@ -21,6 +21,7 @@ const StatsScreen = lazy(() => import('./pages/stats/StatsScreen').then(module =
 const AboutScreen = lazy(() => import('./pages/about/AboutScreen').then(module => ({ default: module.AboutScreen })));
 const VocabDetailScreen = lazy(() => import('./pages/vocab/VocabDetailScreen'));
 const KanjiDetailScreen = lazy(() => import('./pages/kanji/KanjiDetailScreen'));
+const GrammarDetailScreen = lazy(() => import('./pages/grammar/GrammarDetailScreen'));
 
 function SyncStatusIndicator() {
     const { isUploading, isDownloading, isAuthenticated, syncPaused, login } = useGoogleDrive();
@@ -134,6 +135,7 @@ export const App: React.FC = () => {
                             <StatsScreen
                                 onBack={() => navigate('/')}
                                 onVocabClick={(id) => navigate(`/vocab/${id}`)}
+                                onGrammarClick={(id) => navigate(`/grammar/${id}`)}
                             />
                         } />
                         <Route path="/about" element={
@@ -164,6 +166,9 @@ export const App: React.FC = () => {
                         } />
                         <Route path="/kanji/:character" element={
                             <KanjiDetailScreen />
+                        } />
+                        <Route path="/grammar/:grammarId" element={
+                            <GrammarDetailScreen />
                         } />
                         <Route path="*" element={<Navigate to="/" replace />} />
                     </Routes>

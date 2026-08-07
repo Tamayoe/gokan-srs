@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { buildDailyActivity } from './activity.utils';
 import type { ReviewLog, SRSEntry, VocabProgress } from '../models/vocabulary.model';
 import type { UserProgress } from '../models/user.model';
+import type { GrammarProgress } from '../models/grammar.model';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 const now = new Date('2026-06-10T12:00:00Z');
@@ -28,11 +29,24 @@ function makeVocab(reading: ReviewLog[] = [], meaning: ReviewLog[] = []): VocabP
     };
 }
 
-function makeProgress(queue: VocabProgress[]): UserProgress {
+function makeGrammar(history: ReviewLog[] = []): GrammarProgress {
+    return {
+        grammarId: 'g1',
+        stage: 'learning',
+        introductionAt: null,
+        nextReviewAt: null,
+        lastReviewedAt: null,
+        totalReviews: 1,
+        consecutiveFailures: 0,
+        entry: makeEntry(history),
+    };
+}
+
+function makeProgress(queue: VocabProgress[], grammarQueue: GrammarProgress[] = []): UserProgress {
     return {
         kanjiKnowledge: { method: 'kklc', step: 1, kanjiSet: new Set() },
         learningQueue: queue,
-        grammarQueue: [],
+        grammarQueue,
         stats: { newLearnedToday: 0, totalLearned: 0, totalReviews: 0 },
         dailyOverride: false,
         adaptive: { level: 1.0, history: [] },
@@ -79,5 +93,20 @@ describe('buildDailyActivity', () => {
         const vocab = makeVocab([makeLog({ date: longAgo.getTime(), result: 'correct' })]);
         const buckets = buildDailyActivity(makeProgress([vocab]), 7, now);
         expect(buckets.every(b => b.correct === 0)).toBe(true);
+    });
+
+    it('folds in grammar entry.history alongside vocab reading/meaning history', () => {
+        const vocab = makeVocab([makeLog({ result: 'correct' })]);
+        const grammar = makeGrammar([makeLog({ result: 'wrong' }), makeLog({ result: 'pass' })]);
+        const buckets = buildDailyActivity(makeProgress([vocab], [grammar]), 1, now);
+        expect(buckets[0].correct).toBe(1);
+        expect(buckets[0].incorrect).toBe(1);
+    });
+
+    it('counts grammar-only activity when the learning queue is empty', () => {
+        const grammar = makeGrammar([makeLog({ result: 'minor_error' })]);
+        const buckets = buildDailyActivity(makeProgress([], [grammar]), 1, now);
+        expect(buckets[0].correct).toBe(1);
+        expect(buckets[0].incorrect).toBe(0);
     });
 });
