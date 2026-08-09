@@ -373,6 +373,9 @@ describe('computeBlankPlan', () => {
 
             const plan = (await computeBlankPlan(point, progress, 0))!;
             expect(plan.blankWordIndices).toEqual([4, 5, 6]); // 寿司 (known vocab) + が, 一番 (pattern)
+            // Classification is what lets grading credit the pattern vs the vocab
+            // separately: 寿司 is the vocab reinforcement blank, が/一番 are the pattern.
+            expect(plan.isPatternBlank).toEqual([false, true, true]);
         });
 
         it('does not double-count a pattern word that also resolves to a known vocab id', async () => {
@@ -403,6 +406,9 @@ describe('computeBlankPlan', () => {
 
             const plan = (await computeBlankPlan(point, progress, 0))!;
             expect(plan.blankWordIndices).toEqual([4]);
+            // No pattern located, so the vocab blank is not classified as pattern -
+            // grading falls back to worst-of-all at full strength.
+            expect(plan.isPatternBlank).toEqual([false]);
         });
     });
 });
@@ -475,6 +481,44 @@ describe('gradeGrammarAnswers', () => {
         it('all correct grades overall correct', () => {
             const result = gradeGrammarAnswers(twoBlankPlan, ['すし', 'なか'], [0, 0]);
             expect(result.overall).toBe('correct');
+        });
+    });
+
+    describe('pattern decides the result; vocab only scales the reward (issue #33 follow-up)', () => {
+        // blank 0 = grammar pattern marker, blank 1 = vocab reinforcement.
+        const plan = { acceptLists: [['いちばん'], ['すし']], isPatternBlank: [true, false] };
+
+        it('pattern correct + vocab wrong stays a success (correct), never wrong', () => {
+            const result = gradeGrammarAnswers(plan, ['いちばん', 'ねこ'], [0, 0]);
+            expect(result.perBlankResults).toEqual(['correct', 'wrong']);
+            expect(result.overall).toBe('correct');
+        });
+
+        it('pattern wrong is wrong even when every vocab blank is right', () => {
+            const result = gradeGrammarAnswers(plan, ['ちがう', 'すし'], [0, 0]);
+            expect(result.overall).toBe('wrong');
+            expect(result.strengthDeltaModifier).toBe(1);
+        });
+
+        it('a missed vocab blank reduces the strength gain but not below the floor', () => {
+            const bothMissed = gradeGrammarAnswers(plan, ['いちばん', 'ねこ'], [0, 0]);
+            expect(bothMissed.strengthDeltaModifier).toBe(0.5); // 1 pattern ok, 0/1 vocab -> floor
+
+            const bothRight = gradeGrammarAnswers(plan, ['いちばん', 'すし'], [0, 0]);
+            expect(bothRight.strengthDeltaModifier).toBe(1); // all vocab right -> full gain
+        });
+
+        it('partial vocab success scales the coefficient linearly between floor and 1', () => {
+            const twoVocab = { acceptLists: [['いちばん'], ['すし'], ['なか']], isPatternBlank: [true, false, false] };
+            const result = gradeGrammarAnswers(twoVocab, ['いちばん', 'すし', 'ねこ'], [0, 0, 0]);
+            expect(result.overall).toBe('correct');
+            expect(result.strengthDeltaModifier).toBe(0.75); // floor 0.5 + 0.5 * (1/2)
+        });
+
+        it('with no vocab blanks the coefficient is a full 1', () => {
+            const patternOnly = { acceptLists: [['いちばん']], isPatternBlank: [true] };
+            const result = gradeGrammarAnswers(patternOnly, ['いちばん'], [0]);
+            expect(result.strengthDeltaModifier).toBe(1);
         });
     });
 });

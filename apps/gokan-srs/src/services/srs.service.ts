@@ -269,7 +269,12 @@ export class SRSService {
         now: Date,
         expectedLatency: number, // [NEW] dynamic expected latency parameter
         intervalModifier: number = 1.0,
-        frequencyModifier: number = 1.0
+        frequencyModifier: number = 1.0,
+        // [NEW] Scales the memory-strength delta (the resultFactor * L * D gain).
+        // Default 1.0 leaves vocab behaviour untouched; the Grammar activity uses
+        // it to modulate a successful grammar answer's gain by how many of the
+        // sentence's vocab blanks were also right (see gradeGrammarAnswers).
+        strengthDeltaModifier: number = 1.0
     ): { newEntry: SRSEntry; interval: number } {
 
         // 1. Calculate Multipliers
@@ -284,7 +289,7 @@ export class SRSService {
         const resultFactor = F.resultFactors[result];
 
         // 2. Calculate Gain (Delta)
-        const delta = resultFactor * L * D;
+        const delta = resultFactor * L * D * strengthDeltaModifier;
 
         // 3. Update Memory Strength
         // S_new = max(S_min, S_old * (1 + Delta)) -- BUT only strictly enforce floor on failure recovery

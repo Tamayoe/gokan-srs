@@ -65,6 +65,29 @@ const WaitingNote: React.FC<{ waiting: number; moreNew: boolean; noun: string }>
 };
 
 /**
+ * Net knowledge points gained/lost so far this session, using the same accounting
+ * as the knowledge curve: an entry's points are its mastery percentage / 2 (see
+ * utils/knowledge.utils.ts entryKnowledgePoints), and each history delta is that
+ * entry's mastery-% change, so knowledge-point delta = delta / 2. Summed over the
+ * (session-scoped) history rather than shown per item.
+ */
+const GainsSummary: React.FC<{ history: SessionHistoryEntry[] }> = ({ history }) => {
+    if (history.length === 0) return null;
+
+    const gained = Math.round(history.filter(h => h.delta > 0).reduce((s, h) => s + h.delta, 0) / 2);
+    const lost = Math.round(Math.abs(history.filter(h => h.delta < 0).reduce((s, h) => s + h.delta, 0)) / 2);
+
+    return (
+        <span className="text-xs tabular-nums" title="Knowledge points gained and lost this session">
+            <span className="text-emerald-600">+{gained}</span>
+            <span className="text-secondary-300 mx-1">/</span>
+            <span className="text-desaturated-red-600">-{lost}</span>
+            <span className="text-secondary-400"> pts</span>
+        </span>
+    );
+};
+
+/**
  * Session-progress header shared by both quiz activities (vocab's
  * VocabQuizScreen and GrammarScreen) - the `done / total` counter plus a
  * HistoryTicker of recent answers. Fully presentational: parameterized over
@@ -90,7 +113,10 @@ export const SessionProgress: React.FC<SessionProgressProps> = ({ stats, history
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
                         <div className="flex justify-between items-end mb-1">
-                            <div className="text-secondary-400 text-sm font-medium">Session Progress</div>
+                            <div className="flex items-center gap-3">
+                                <span className="text-secondary-400 text-sm font-medium">Session Progress</span>
+                                <GainsSummary history={history} />
+                            </div>
                             <div className="text-secondary-400 text-sm font-medium">
                                 <SessionCounter done={done} total={total} retriesPending={retriesPending} />
                             </div>
@@ -128,8 +154,9 @@ export const SessionProgress: React.FC<SessionProgressProps> = ({ stats, history
                             style={{ width: `${progressPercent}%` }}
                         />
                     </div>
-                    <div className="px-1 mt-1">
+                    <div className="px-1 mt-1 flex items-center justify-between gap-2">
                         <WaitingNote waiting={waiting} moreNew={moreNew} noun={waitingNoun} />
+                        <GainsSummary history={history} />
                     </div>
                 </>
             )}

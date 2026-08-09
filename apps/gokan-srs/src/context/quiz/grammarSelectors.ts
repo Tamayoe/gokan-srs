@@ -196,9 +196,10 @@ export async function computeBlankPlan(point: GrammarPoint, progress: UserProgre
             i => !example.patternWordIndices.includes(i) && isKnown(example.words[i].vocabId!)
         );
         const blankWordIndices = [...example.patternWordIndices, ...knownVocabIndices].sort((a, b) => a - b);
+        const isPatternBlank = blankWordIndices.map(i => example.patternWordIndices.includes(i));
 
         const { acceptLists, glosses } = await buildBlankData(example, blankWordIndices);
-        return { exampleIndex, blankWordIndices, acceptLists, glosses, readOnly: false };
+        return { exampleIndex, blankWordIndices, isPatternBlank, acceptLists, glosses, readOnly: false };
     }
 
     // Pass 2: FALLBACK - pattern not locatable anywhere in this point; an example with a known word.
@@ -210,7 +211,9 @@ export async function computeBlankPlan(point: GrammarPoint, progress: UserProgre
         const knownIndices = candidateIndices.filter(i => isKnown(example.words[i].vocabId!));
         if (knownIndices.length > 0) {
             const { acceptLists, glosses } = await buildBlankData(example, knownIndices);
-            return { exampleIndex, blankWordIndices: knownIndices, acceptLists, glosses, readOnly: false };
+            // No pattern located, so none of these are pattern blanks - they grade as
+            // pure vocab (worst-of), the original pre-pattern behaviour.
+            return { exampleIndex, blankWordIndices: knownIndices, isPatternBlank: knownIndices.map(() => false), acceptLists, glosses, readOnly: false };
         }
     }
 
@@ -222,11 +225,33 @@ export async function computeBlankPlan(point: GrammarPoint, progress: UserProgre
 
         const best = await pickMostFrequentCandidate(example, candidateIndices);
         const { acceptLists, glosses } = await buildBlankData(example, [best]);
-        return { exampleIndex, blankWordIndices: [best], acceptLists, glosses, readOnly: false };
+        return { exampleIndex, blankWordIndices: [best], isPatternBlank: [false], acceptLists, glosses, readOnly: false };
     }
 
     // Pass 4: no example has any blankable word at all - read-only study material.
-    return { exampleIndex: startIndex, blankWordIndices: [], acceptLists: [], glosses: [], readOnly: true };
+    return { exampleIndex: startIndex, blankWordIndices: [], isPatternBlank: [], acceptLists: [], glosses: [], readOnly: true };
+}
+
+/** Floor of the vocab coefficient: a grammar answer whose pattern is right but whose vocab blanks were ALL missed still earns this fraction of the full strength gain (never zero, never negative - the grammar core was demonstrated). */
+export const GRAMMAR_VOCAB_COEFF_FLOOR = 0.5;
+
+/** Worst-of across a set of per-blank results: wrong > pass > minor_error > correct. */
+function worstOf(results: AnswerResult[]): AnswerResult {
+    if (results.some(r => r === 'wrong')) return 'wrong';
+    if (results.some(r => r === 'pass')) return 'pass';
+    if (results.some(r => r === 'minor_error')) return 'minor_error';
+    return 'correct';
+}
+
+/**
+ * Vocab coefficient in [GRAMMAR_VOCAB_COEFF_FLOOR, 1] from the fraction of vocab
+ * blanks answered correctly. No vocab blanks -> 1 (nothing to modulate).
+ */
+function vocabCoefficient(vocabResults: AnswerResult[]): number {
+    if (vocabResults.length === 0) return 1;
+    const successes = vocabResults.filter(r => r === 'correct' || r === 'minor_error').length;
+    const ratio = successes / vocabResults.length;
+    return GRAMMAR_VOCAB_COEFF_FLOOR + (1 - GRAMMAR_VOCAB_COEFF_FLOOR) * ratio;
 }
 
 export interface GrammarGradeResult {
@@ -234,8 +259,22 @@ export interface GrammarGradeResult {
     perBlankResults: AnswerResult[];
     /** Same order as blankWordIndices - the accepted form each blank matched (or was revealed to, for a passed blank). */
     matchedAnswers: string[];
-    /** Worst-of across every blank: wrong > pass > minor_error > correct. There's one SRSEntry per grammar point, not one per blank, so the whole exercise needs a single combined result. */
+    /**
+     * The grammar point's result. Decided by the pattern-marker blanks alone when
+     * the plan has any (pattern wrong -> wrong; else the pattern's worst-of),
+     * because there's one SRSEntry per point and it must mean grammar-point recall.
+     * A missed vocab blank never turns a demonstrated grammar core into 'wrong'.
+     * On the fallback examples with no located pattern, this falls back to
+     * worst-of across every blank (the original vocab-only behaviour).
+     */
     overall: AnswerResult;
+    /**
+     * Coefficient in [GRAMMAR_VOCAB_COEFF_FLOOR, 1] to scale the grammar point's
+     * strength gain by, from how many vocab (non-pattern) blanks were right. 1.0
+     * whenever the pattern wasn't a success (no gain to modulate) or there are no
+     * vocab blanks.
+     */
+    strengthDeltaModifier: number;
 }
 
 /**
@@ -247,9 +286,16 @@ export interface GrammarGradeResult {
  * answer still leaves an impression, so it's graded less harshly than a
  * genuinely wrong guess (matching CONSTANTS.srs.formula.resultFactors:
  * minor_error +0.10 vs wrong -0.40).
+ *
+ * The grammar CONSTRUCTION is what this quiz tests, so the point's result is
+ * driven by the pattern-marker blanks; vocab blanks are secondary reinforcement
+ * and only modulate the *reward* (strengthDeltaModifier), never the pass/fail of
+ * a demonstrated grammar core. See GrammarGradeResult.
  */
 export function gradeGrammarAnswers(
-    blankPlan: Pick<GrammarBlankPlan, 'acceptLists'>,
+    // isPatternBlank optional: a plan without it is treated as having no located
+    // pattern (every blank vocab), which is the worst-of-all fallback path.
+    blankPlan: Pick<GrammarBlankPlan, 'acceptLists'> & Partial<Pick<GrammarBlankPlan, 'isPatternBlank'>>,
     answers: string[],
     hintLevels: number[]
 ): GrammarGradeResult {
@@ -272,12 +318,27 @@ export function gradeGrammarAnswers(
         matchedAnswers.push(matchedAnswer);
     });
 
-    let overall: AnswerResult = 'correct';
-    if (perBlankResults.some(r => r === 'wrong')) overall = 'wrong';
-    else if (perBlankResults.some(r => r === 'pass')) overall = 'pass';
-    else if (perBlankResults.some(r => r === 'minor_error')) overall = 'minor_error';
+    const isPattern = blankPlan.isPatternBlank ?? [];
+    const hasPattern = perBlankResults.some((_, i) => isPattern[i]);
 
-    return { perBlankResults, matchedAnswers, overall };
+    let overall: AnswerResult;
+    let strengthDeltaModifier = 1;
+
+    if (hasPattern) {
+        const patternResults = perBlankResults.filter((_, i) => isPattern[i]);
+        const vocabResults = perBlankResults.filter((_, i) => !isPattern[i]);
+        overall = worstOf(patternResults);
+        // Only a successful grammar core has a positive gain to modulate.
+        if (overall === 'correct' || overall === 'minor_error') {
+            strengthDeltaModifier = vocabCoefficient(vocabResults);
+        }
+    } else {
+        // No located pattern (fallback examples): every blank is vocab, so keep the
+        // original worst-of-all behaviour at full strength.
+        overall = worstOf(perBlankResults);
+    }
+
+    return { perBlankResults, matchedAnswers, overall, strengthDeltaModifier };
 }
 
 export function selectCurrentGrammarProgress(

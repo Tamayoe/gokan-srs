@@ -8,6 +8,15 @@ import type { QuizState } from './quizReducer';
 export interface GrammarBlankPlan {
     exampleIndex: number;
     blankWordIndices: number[];
+    /**
+     * Per-blank flag (same order as blankWordIndices): true when this blank is one
+     * of the point's grammar-pattern markers (example.patternWordIndices), false
+     * when it's a vocab word blanked as secondary reinforcement. Grading treats the
+     * two differently - the pattern blanks decide the grammar point's result, the
+     * vocab blanks only modulate the reward (see gradeGrammarAnswers). Empty/all-false
+     * on the fallback examples that had no locatable pattern.
+     */
+    isPatternBlank: boolean[];
     /** Per-blank list of accepted answer forms (surface, reading, kanji alternatives, ...), same order as blankWordIndices - resolved once at load time so grading stays synchronous. */
     acceptLists: string[][];
     /** Per-blank English gloss for the hint control, same order as blankWordIndices. Empty string when unavailable. */
@@ -42,11 +51,15 @@ export interface GrammarQuizState {
     grammarHintLevels: number[];
     grammarFeedback: {
         show: boolean;
-        correct: boolean; // true only when every blank was strictly correct
-        type: AnswerResult; // worst-of across every blank
+        correct: boolean; // true only when every blank was strictly correct (drives auto-advance)
+        type: AnswerResult; // the grammar point's result: pattern blanks decide it, not worst-of-all
         message: string;
         matchedAnswers: string[]; // same order as blankWordIndices
         perBlankResults: AnswerResult[]; // same order as blankWordIndices - which specific blank(s) were wrong
+        /** Coefficient in [floor, 1] applied to the grammar point's strength gain, from how many vocab blanks were right. 1 = full gain. */
+        strengthDeltaModifier: number;
+        /** Vocab blanks the user got right (non-pattern, not revealed) - fed as positive-only credit to those words' own SRS on continue. */
+        vocabCredits: { vocabId: string; result: AnswerResult }[];
     } | null;
     isLoadingGrammar: boolean;
     /** Potential new grammar points, not yet in grammarQueue - mirrors introCandidates. */
@@ -80,7 +93,7 @@ export type GrammarQuizAction =
     | { type: 'GRAMMAR_LOAD_ERROR'; payload: { grammarId: string; error: any } }
     | { type: 'GRAMMAR_SET_ANSWER'; payload: { index: number; value: string } }
     | { type: 'GRAMMAR_REVEAL_HINT'; payload: { index: number } }
-    | { type: 'GRAMMAR_SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswers: string[]; perBlankResults: AnswerResult[] } }
+    | { type: 'GRAMMAR_SUBMIT_ANSWER'; payload: { type: AnswerResult; message: string; matchedAnswers: string[]; perBlankResults: AnswerResult[]; strengthDeltaModifier: number; vocabCredits: { vocabId: string; result: AnswerResult }[] } }
     | { type: 'GRAMMAR_UPDATE_AFTER_ANSWER'; payload: { progress: UserProgress; historyItem?: { grammarId: string; title: string; result: AnswerResult; delta: number } | null } }
     | { type: 'GRAMMAR_ADVANCE_QUEUE'; payload: { progress: UserProgress; candidates?: GrammarPoint[] } }
     | { type: 'GRAMMAR_INTRO_CHOICE'; grammarId: string; choice: 'learn' | 'skip'; grammarPoint?: GrammarPoint }
@@ -143,11 +156,17 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                 ...state,
                 grammarFeedback: {
                     show: true,
-                    correct: action.payload.type === 'correct',
+                    // Auto-advance only when EVERY blank was strictly correct - a
+                    // pattern-correct answer with a missed vocab blank still reports
+                    // 'correct' as the grammar result, but should pause so the user
+                    // can see which word they got wrong before continuing.
+                    correct: action.payload.perBlankResults.every(r => r === 'correct'),
                     type: action.payload.type,
                     message: action.payload.message,
                     matchedAnswers: action.payload.matchedAnswers,
                     perBlankResults: action.payload.perBlankResults,
+                    strengthDeltaModifier: action.payload.strengthDeltaModifier,
+                    vocabCredits: action.payload.vocabCredits,
                 },
             };
 
@@ -186,6 +205,9 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                 ...state,
                 ...(action.payload.progress ? { progress: action.payload.progress } : {}),
                 grammarSession: { committed: action.payload.grammarIds },
+                // Fresh session -> fresh ticker, so the gains/losses summary reflects
+                // only this session's answers.
+                grammarSessionHistory: [],
             };
 
         case 'GRAMMAR_SESSION_END':

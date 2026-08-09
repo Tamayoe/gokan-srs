@@ -39,7 +39,7 @@ describe('grammarReducer (via quizReducer)', () => {
             ...initialState,
             grammarAnswers: ['stale'],
             grammarHintLevels: [2],
-            grammarFeedback: { show: true, correct: true, type: 'correct', message: '', matchedAnswers: [], perBlankResults: [] },
+            grammarFeedback: { show: true, correct: true, type: 'correct', message: '', matchedAnswers: [], perBlankResults: [], strengthDeltaModifier: 1, vocabCredits: [] },
         };
         const next = quizReducer(state, { type: 'GRAMMAR_LOAD_START', payload: { grammarId: 'n5-001' } });
 
@@ -59,6 +59,7 @@ describe('grammarReducer (via quizReducer)', () => {
                 blankPlan: {
                     exampleIndex: 0,
                     blankWordIndices: [1, 3],
+                    isPatternBlank: [false, false],
                     acceptLists: [['なか'], ['すし']],
                     glosses: ['inside', 'sushi'],
                     readOnly: false,
@@ -115,7 +116,7 @@ describe('grammarReducer (via quizReducer)', () => {
     it('GRAMMAR_SUBMIT_ANSWER shows feedback with correct=true only for a strict correct result', () => {
         const next = quizReducer(initialState, {
             type: 'GRAMMAR_SUBMIT_ANSWER',
-            payload: { type: 'minor_error', message: 'Close.', matchedAnswers: ['えいが'], perBlankResults: ['minor_error'] },
+            payload: { type: 'minor_error', message: 'Close.', matchedAnswers: ['えいが'], perBlankResults: ['minor_error'], strengthDeltaModifier: 1, vocabCredits: [] },
         });
 
         expect(next.grammarFeedback?.show).toBe(true);
@@ -127,7 +128,7 @@ describe('grammarReducer (via quizReducer)', () => {
         const progress = makeProgress({ grammarQueue: [makeGrammarProgress({ totalReviews: 1 })] });
         const state: QuizState = {
             ...initialState,
-            grammarFeedback: { show: true, correct: true, type: 'correct', message: '', matchedAnswers: [], perBlankResults: [] },
+            grammarFeedback: { show: true, correct: true, type: 'correct', message: '', matchedAnswers: [], perBlankResults: [], strengthDeltaModifier: 1, vocabCredits: [] },
             grammarAnswers: ['x'],
             grammarHintLevels: [2],
         };
