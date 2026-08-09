@@ -301,6 +301,9 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 ...state,
                 ...(action.payload.progress ? { progress: action.payload.progress } : {}),
                 session: { committed: action.payload.taskKeys },
+                // Fresh session -> fresh ticker, so the gains/losses summary reflects
+                // only this session's answers.
+                sessionHistory: [],
             };
 
         case 'SESSION_END':

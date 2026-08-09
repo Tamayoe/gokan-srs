@@ -127,21 +127,40 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
 
             submitLatencyRef.current = startTimeRef.current ? Date.now() - startTimeRef.current : null;
 
-            const { perBlankResults, matchedAnswers, overall } = gradeGrammarAnswers(
-                state.currentGrammarBlankPlan,
+            const plan = state.currentGrammarBlankPlan;
+            const { perBlankResults, matchedAnswers, overall, strengthDeltaModifier } = gradeGrammarAnswers(
+                plan,
                 state.grammarAnswers,
                 state.grammarHintLevels
             );
 
+            // Positive-only vocab credit: the non-pattern (reinforcement) blanks the
+            // user actually answered right, without revealing the hint. Applied to
+            // those words' own SRS on continue - never for wrong/passed/revealed blanks.
+            const example = state.currentGrammarPoint.examples[plan.exampleIndex];
+            const vocabCredits: { vocabId: string; result: AnswerResult }[] = [];
+            plan.blankWordIndices.forEach((wordIndex, i) => {
+                if (plan.isPatternBlank[i]) return;
+                if ((state.grammarHintLevels[i] ?? 0) >= 2) return;
+                const r = perBlankResults[i];
+                if (r !== 'correct' && r !== 'minor_error') return;
+                const vocabId = example?.words[wordIndex]?.vocabId;
+                if (vocabId) vocabCredits.push({ vocabId, result: r });
+            });
+
+            const allStrictlyCorrect = perBlankResults.every(r => r === 'correct');
             const message = overall === 'correct'
-                ? 'Correct.'
+                // A correct grammar core with a missed vocab blank still grades
+                // 'correct' (the point's result rides on the pattern) - say so
+                // explicitly rather than a bare "Correct." next to a red blank.
+                ? (allStrictlyCorrect ? 'Correct.' : 'Grammar correct - check the highlighted word(s).')
                 : overall === 'pass'
                     ? 'Revealed - marked as passed.'
                     : overall === 'minor_error'
                         ? 'Close.'
                         : 'Incorrect.';
 
-            dispatch({ type: 'GRAMMAR_SUBMIT_ANSWER', payload: { type: overall, message, matchedAnswers, perBlankResults } });
+            dispatch({ type: 'GRAMMAR_SUBMIT_ANSWER', payload: { type: overall, message, matchedAnswers, perBlankResults, strengthDeltaModifier, vocabCredits } });
         },
 
         async advanceGrammarQueue() {
@@ -194,6 +213,7 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
             if (!target) return;
 
             let updatedQueue;
+            let updatedLearningQueue = state.progress.learningQueue;
             let historyItem: { grammarId: string; title: string; result: AnswerResult; delta: number } | null = null;
 
             if (state.currentGrammarBlankPlan?.readOnly) {
@@ -206,8 +226,18 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
             } else {
                 if (!state.grammarFeedback) return;
                 const latency = submitLatencyRef.current ?? 5000;
-                const { updated } = GrammarSRSService.applyAnswer(target, state.grammarFeedback.type, latency, now);
+                const { updated } = GrammarSRSService.applyAnswer(
+                    target, state.grammarFeedback.type, latency, now, 1.0, 1.0, state.grammarFeedback.strengthDeltaModifier
+                );
                 updatedQueue = state.progress.grammarQueue.map(g => g.grammarId === id ? updated : g);
+
+                // Positive-only vocab reinforcement (skip on a grammar retry: it's a
+                // training redo that would over-credit the same words on each loop).
+                if (!target.needsRetry && state.settings) {
+                    updatedLearningQueue = GrammarSRSService.applyVocabReinforcement(
+                        state.progress.learningQueue, state.grammarFeedback.vocabCredits, now, state.settings
+                    );
+                }
 
                 const delta = calculateMasteryPercentage(updated.entry.memoryStrength) - calculateMasteryPercentage(target.entry.memoryStrength);
                 historyItem = { grammarId: id, title, result: state.grammarFeedback.type, delta };
@@ -215,7 +245,7 @@ export function useGrammarOrchestration(state: QuizState, dispatch: Dispatch<Qui
 
             dispatch({
                 type: 'GRAMMAR_UPDATE_AFTER_ANSWER',
-                payload: { progress: { ...state.progress, grammarQueue: updatedQueue }, historyItem },
+                payload: { progress: { ...state.progress, grammarQueue: updatedQueue, learningQueue: updatedLearningQueue }, historyItem },
             });
         },
 

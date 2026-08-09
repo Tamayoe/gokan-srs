@@ -3,6 +3,8 @@ import { GrammarSRSService } from './grammarSrs.service';
 import { GrammarService } from './grammar.service';
 import { CONSTANTS } from '../commons/constants';
 import type { GrammarProgress } from '../models/grammar.model';
+import type { VocabProgress } from '../models/vocabulary.model';
+import type { UserSettings } from '../models/user.model';
 
 function makeProgress(overrides: Partial<GrammarProgress> = {}): GrammarProgress {
     return {
@@ -87,6 +89,69 @@ describe('GrammarSRSService.applyAnswer', () => {
 
         expect(updated.stage).toBe('graduated');
         expect(updated.nextReviewAt).toBeNull();
+    });
+
+    it('a reduced strengthDeltaModifier earns a smaller (but still positive) gain than a full one', () => {
+        const base = () => makeProgress({ entry: { ...makeProgress().entry, memoryStrength: 100, dueDate: now } });
+
+        const full = GrammarSRSService.applyAnswer(base(), 'correct', 5000, now, 1.0, 1.0, 1.0).updated;
+        const reduced = GrammarSRSService.applyAnswer(base(), 'correct', 5000, now, 1.0, 1.0, 0.5).updated;
+
+        expect(full.entry.memoryStrength).toBeGreaterThan(100);
+        expect(reduced.entry.memoryStrength).toBeGreaterThan(100);
+        expect(reduced.entry.memoryStrength).toBeLessThan(full.entry.memoryStrength);
+    });
+});
+
+describe('GrammarSRSService.applyVocabReinforcement (positive-only vocab credit)', () => {
+    const now = new Date('2026-06-10T00:00:00Z');
+    const settings = { learningFrequency: 'medium', enableMeaningQuiz: true } as UserSettings;
+
+    function makeVocabProgress(overrides: Partial<VocabProgress> = {}): VocabProgress {
+        const entry = () => ({
+            memoryStrength: 100, interval: 1, difficulty: 0.5,
+            lastReviewedAt: null, dueDate: now, history: [],
+        });
+        return {
+            vocabId: 'v-1',
+            stage: 'learning',
+            introductionAt: new Date('2026-06-01T00:00:00Z'),
+            nextReviewAt: now,
+            lastReviewedAt: null,
+            totalReviews: 1,
+            consecutiveFailures: 0,
+            reading: entry(),
+            meaning: entry(),
+            ...overrides,
+        };
+    }
+
+    it('boosts the reading entry of a credited word and leaves untouched words alone', () => {
+        const queue = [makeVocabProgress({ vocabId: 'v-1' }), makeVocabProgress({ vocabId: 'v-2' })];
+        const next = GrammarSRSService.applyVocabReinforcement(queue, [{ vocabId: 'v-1', result: 'correct' }], now, settings);
+
+        const v1 = next.find(v => v.vocabId === 'v-1')!;
+        const v2 = next.find(v => v.vocabId === 'v-2')!;
+        expect(v1.reading.memoryStrength).toBeGreaterThan(100);
+        expect(v2).toBe(queue[1]); // reference-equal: untouched
+    });
+
+    it('never touches the meaning entry (reading-only credit)', () => {
+        const queue = [makeVocabProgress({ vocabId: 'v-1' })];
+        const next = GrammarSRSService.applyVocabReinforcement(queue, [{ vocabId: 'v-1', result: 'correct' }], now, settings);
+
+        expect(next[0].meaning.memoryStrength).toBe(100);
+    });
+
+    it('returns the same queue reference when there are no credits', () => {
+        const queue = [makeVocabProgress()];
+        expect(GrammarSRSService.applyVocabReinforcement(queue, [], now, settings)).toBe(queue);
+    });
+
+    it('skips a credit whose word is not in the learning queue', () => {
+        const queue = [makeVocabProgress({ vocabId: 'v-1' })];
+        const next = GrammarSRSService.applyVocabReinforcement(queue, [{ vocabId: 'v-missing', result: 'correct' }], now, settings);
+        expect(next).toBe(queue);
     });
 });
 
