@@ -55,10 +55,17 @@ export function GrammarQuizCard() {
                         <div className="flex justify-end mb-2">
                             <MasteryRing memoryStrength={currentGrammarProgress?.entry.memoryStrength ?? 0} size={40} />
                         </div>
-                        <div className="flex items-center justify-center gap-2 mb-4">
-                            <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
-                                <JlptChip level={point.jlptLevel} />
-                            </Link>
+                        <div className="mb-4">
+                            <div className="flex items-center justify-center gap-2">
+                                <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
+                                    <JlptChip level={point.jlptLevel} />
+                                </Link>
+                            </div>
+                            {point.usageNote && (
+                                <p className="text-center text-xs text-secondary font-gothic italic mt-1 max-w-sm mx-auto">
+                                    {point.usageNote}
+                                </p>
+                            )}
                         </div>
 
                         <p className="text-center text-sm text-secondary font-gothic mb-1">
@@ -118,10 +125,17 @@ export function GrammarQuizCard() {
                     <div className="flex justify-end mb-2">
                         <MasteryRing memoryStrength={currentGrammarProgress?.entry.memoryStrength ?? 0} size={40} />
                     </div>
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                        <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
-                            <JlptChip level={point.jlptLevel} />
-                        </Link>
+                    <div className="mb-4">
+                        <div className="flex items-center justify-center gap-2">
+                            <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
+                                <JlptChip level={point.jlptLevel} />
+                            </Link>
+                        </div>
+                        {point.usageNote && (
+                            <p className="text-center text-xs text-secondary font-gothic italic mt-1 max-w-sm mx-auto">
+                                {point.usageNote}
+                            </p>
+                        )}
                     </div>
 
                     <p className="text-center text-sm text-secondary font-gothic mb-1">
