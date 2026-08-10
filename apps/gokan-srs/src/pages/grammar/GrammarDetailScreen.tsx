@@ -11,6 +11,15 @@ import { useResponsive } from "../../context/Responsive/useResponsive";
 import { useQuiz } from "../../context/useQuiz";
 import { GrammarService } from "../../services/grammar.service";
 import { THEME } from "../../commons/theme";
+import { GrammarRelatedPointsCard } from "./GrammarRelatedPointsCard";
+
+const FORMALITY_LABELS: Record<NonNullable<GrammarPoint['formalityLevel']>, string> = {
+    'casual': 'Casual',
+    'neutral': 'Neutral',
+    'polite': 'Polite',
+    'formal': 'Formal',
+    'very-formal-literary': 'Very formal / literary',
+};
 
 /**
  * Route /grammar/:grammarId - a single grammar point's details outside of a
@@ -62,10 +71,22 @@ export default function GrammarDetailScreen() {
                 <div className="flex justify-end w-full">
                     <MasteryRing memoryStrength={progress?.entry.memoryStrength ?? 0} size={48} />
                 </div>
-                <JlptChip level={point.jlptLevel} />
+                <div className="flex items-center justify-center gap-2 flex-wrap">
+                    <JlptChip level={point.jlptLevel} />
+                    {point.formalityLevel && (
+                        <span className="px-2 py-0.5 text-xs rounded border border-secondary/30 text-secondary font-gothic font-medium whitespace-nowrap">
+                            {FORMALITY_LABELS[point.formalityLevel]}
+                        </span>
+                    )}
+                </div>
                 <div className="text-primary font-mincho text-3xl leading-snug">
                     {point.title}
                 </div>
+                {point.usageNote && (
+                    <p className="text-sm text-secondary font-serif leading-relaxed max-w-md">
+                        {point.usageNote}
+                    </p>
+                )}
                 {!progress && (
                     <Button
                         className="w-full"
@@ -125,6 +146,8 @@ export default function GrammarDetailScreen() {
             </div>
         </Card>
     );
+
+    const relatedPointsCard = <GrammarRelatedPointsCard point={point} />;
 
     const statsCard = progress && progress.introductionAt ? (
         <Card size={isMobile ? "sm" : "md"}>
@@ -191,6 +214,7 @@ export default function GrammarDetailScreen() {
                 {formationCard}
                 {statsCard}
                 {examplesCard}
+                {relatedPointsCard}
             </main>
         </div>
     );
