@@ -54,6 +54,27 @@ export interface GrammarPoint {
     /** Formation template shown to the user, e.g. "Noun + が + いちばん + Adjective/Verb". */
     formation: string;
     examples: GrammarExample[];
+    /**
+     * Register/formality of this point, for points that have one (most don't -
+     * plain descriptive constructions with no close synonym leave this unset).
+     * Sourced from gokan-dataset's hand-authored formality.json mapping, not
+     * derived at build time - see CLAUDE.md's Grammar Dataset section. Exists
+     * specifically so a quiz card can disambiguate near-synonym points that
+     * differ mainly by register (e.g. でも/しかし/けれども all gloss as "but").
+     */
+    formalityLevel?: 'casual' | 'neutral' | 'polite' | 'formal' | 'very-formal-literary';
+    /**
+     * One short, quiz-card-length line (~60-80 chars) covering whatever actually
+     * disambiguates this point from its near-synonyms - usually register, but
+     * sometimes connotation/nuance instead (criticism, surprise, unmet
+     * expectation). Deliberately not a duplicate of longExplanation.
+     */
+    usageNote?: string;
+    /**
+     * Ids of other GrammarPoints expressing the same core idea at a different
+     * formality/nuance (symmetric - if A lists B, B should list A).
+     */
+    relatedPoints?: string[];
 }
 
 /** JLPT level (1..5) -> grammar point ids, in the source's original order (alphabetical - grammar has no frequency data to sort by, unlike vocab). */
