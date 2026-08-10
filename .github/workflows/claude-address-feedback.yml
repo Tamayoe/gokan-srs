@@ -53,6 +53,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      issues: write          # required for track_progress's tracking comment
       id-token: write       # OIDC exchange for the Claude GitHub App installation token
     steps:
       - name: Checkout
@@ -87,16 +88,34 @@ jobs:
             summarising how you addressed the feedback. Do not resolve threads you
             did not actually address.
 
-            After pushing, check whether this branch was already staged before this
-            round of fixes: `git fetch --tags` then `git tag --merged HEAD --list
-            'v*-rc.*' --sort=-v:refname`. If that lists any tag, this branch has
-            been RC-tagged and deployed to staging before - re-tag so staging picks
-            up the fix without a human having to do it manually. Take the highest
-            such tag (e.g. `v1.2.0-rc.4`), bump only the trailing rc number by one
-            (`v1.2.0-rc.5`), and `git tag -a <new-tag> -m "..." && git push origin
-            <new-tag>` on the new HEAD. Only do this once `bun run typecheck`/`test`/
-            `build` all pass on the final commit - never tag a broken build. If the
-            command lists nothing (this branch has never been staged), skip tagging
-            entirely - the first RC tag on a branch is a deliberate human call, not
-            automatic.
+            Before tagging, sync with `main` so the branch is deployable against the
+            current state of the repo: `git fetch origin main && git merge origin/main`
+            (resolve conflicts if any arise). If this PR touches the
+            `apps/gokan-srs/dataset` submodule, ALSO check whether the submodule's own
+            remote has moved past what's currently pointed at - merging gokan-srs's own
+            `main` does NOT do this automatically: `git -C apps/gokan-srs/dataset fetch
+            origin main && git -C apps/gokan-srs/dataset log HEAD..origin/main --oneline`.
+            If that shows anything relevant to this PR's changes, bump the submodule
+            pointer (`git -C apps/gokan-srs/dataset checkout origin/main && git add
+            apps/gokan-srs/dataset`) and commit it. Re-run `bun run typecheck`/`test`/
+            `build` after any merge/bump.
+
+            After that, check whether this branch was already staged: `git fetch --tags`
+            then `git tag --merged HEAD --list 'v*-rc.*' --sort=-v:refname`. If that
+            lists any tag, bump only the trailing rc number by one (e.g. `v1.2.0-rc.4` ->
+            `v1.2.0-rc.5`) and tag the new HEAD. If it lists nothing (no prior tag reaches
+            this branch - e.g. addressing feedback on a PR that predates the self-tagging
+            convention, or opened by a human rather than claude-implement-issue.yml), tag
+            it as a fresh release instead: find the highest release tag repo-wide (`git
+            tag --list 'v*.*.*-rc.*' --sort=-v:refname | head -1`), bump its MINOR version
+            by one, reset to `.0-rc.1`. Either way: `git tag -a <new-tag> -m "..." && git
+            push origin <new-tag>`, and only once `bun run typecheck`/`test`/`build` all
+            pass on the final commit - never tag a broken build.
+          # Posts an immediate tracking comment on the PR with a live-updating checklist
+          # as the agent works, replaced with the final summary on completion - restores
+          # the visibility the default @claude-mention trigger has, which a custom
+          # `prompt` input suppresses by default. Keeps the single-trigger fix from
+          # fix/dedupe-claude-triggers intact - this workflow still only fires once per
+          # comment, track_progress just changes how that one run reports back.
+          track_progress: true
           claude_args: "--model claude-sonnet-5 --max-turns 500 --allowedTools Bash,Edit,Write,Read,Glob,Grep"
