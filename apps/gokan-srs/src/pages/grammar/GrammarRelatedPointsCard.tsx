@@ -14,9 +14,9 @@ const INITIAL_COUNT = 5;
 
 /**
  * Grammar's equivalent of VocabRelationshipsCard: a linked list of the point's
- * relatedPoints (same core idea at a different formality/nuance), each
- * navigating to its own detail page. Same cap/expand pattern, since a
- * relatedPoints list can run 5-6 deep (e.g. the but/however cluster).
+ * family.relatedPoints (same core idea at a different formality/nuance), each
+ * navigating to its own detail page. Same cap/expand pattern, since a family
+ * can run 5-6 members deep (e.g. the but/however cluster).
  */
 export function GrammarRelatedPointsCard({ point }: Props) {
     const { isMobile } = useResponsive();
@@ -25,7 +25,7 @@ export function GrammarRelatedPointsCard({ point }: Props) {
     const [related, setRelated] = useState<GrammarPoint[]>([]);
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const relatedIds = point.relatedPoints || [];
+    const relatedIds = point.family?.relatedPoints || [];
     const isExpandable = relatedIds.length > INITIAL_COUNT;
     const displayedIds = isExpanded ? relatedIds : relatedIds.slice(0, INITIAL_COUNT);
 
@@ -52,7 +52,9 @@ export function GrammarRelatedPointsCard({ point }: Props) {
     return (
         <Card size={isMobile ? "sm" : "md"}>
             <h2 className="text-lg font-gothic font-semibold text-primary mb-4">
-                Related Points <span className="text-sm font-normal text-tertiary ml-2">({relatedIds.length})</span>
+                Related Points
+                {point.family?.name && <span className="text-sm font-normal text-tertiary ml-2">{point.family.name}</span>}
+                <span className="text-sm font-normal text-tertiary ml-2">({relatedIds.length})</span>
             </h2>
             <div className="space-y-3">
                 {related.map((p) => (

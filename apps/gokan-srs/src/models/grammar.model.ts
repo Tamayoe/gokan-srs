@@ -46,7 +46,10 @@ export interface GrammarExample {
 export interface GrammarPoint {
     /** Stable id assigned at build time from this vendored snapshot (e.g. "n5-001") - the upstream dataset has no ids of its own. */
     id: string;
+    /** Japanese/pattern portion only, e.g. "～けど、～" - the upstream title bundled this with a romaji transliteration in a trailing parenthetical; build-time splits them apart (see `romaji` below). */
     title: string;
+    /** Romaji transliteration split off `title`'s original trailing parenthetical, e.g. "kedo". Absent for the ~1.3% of points (9/828) with no cleanly-splittable trailing parenthetical - a dataset-side gap, not something the app fixes. */
+    romaji?: string;
     /** JLPT level (1 = N1 hardest .. 5 = N5 easiest), matching Vocabulary.jlptLevel's convention. Every grammar point carries one, since this dataset is itself organized by level. */
     jlptLevel: number;
     shortExplanation: string;
@@ -71,10 +74,19 @@ export interface GrammarPoint {
      */
     usageNote?: string;
     /**
-     * Ids of other GrammarPoints expressing the same core idea at a different
-     * formality/nuance (symmetric - if A lists B, B should list A).
+     * The named near-synonym family this point belongs to, if any - replaces
+     * the earlier flat `relatedPoints?: string[]` field. `relatedPoints` here
+     * is DERIVED at dataset build time from every other point sharing the same
+     * `family.id` (symmetric by construction - if A lists B, B lists A).
      */
-    relatedPoints?: string[];
+    family?: {
+        /** Stable slug, e.g. "contradiction" - shared by every member. */
+        id: string;
+        /** Display name, e.g. "Contradiction (But / However)". */
+        name: string;
+        /** Ids of the OTHER points in this family. */
+        relatedPoints: string[];
+    };
 }
 
 /** JLPT level (1..5) -> grammar point ids, in the source's original order (alphabetical - grammar has no frequency data to sort by, unlike vocab). */

@@ -82,6 +82,11 @@ export default function GrammarDetailScreen() {
                 <div className="text-primary font-mincho text-3xl leading-snug">
                     {point.title}
                 </div>
+                {point.romaji && (
+                    <div className="text-tertiary font-gothic text-sm -mt-2">
+                        {point.romaji}
+                    </div>
+                )}
                 {point.usageNote && (
                     <p className="text-sm text-secondary font-serif leading-relaxed max-w-md">
                         {point.usageNote}
