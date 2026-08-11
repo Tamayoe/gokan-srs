@@ -71,10 +71,19 @@ export interface GrammarPoint {
      */
     usageNote?: string;
     /**
-     * Ids of other GrammarPoints expressing the same core idea at a different
-     * formality/nuance (symmetric - if A lists B, B should list A).
+     * The named family of GrammarPoints expressing the same core idea at a
+     * different formality/nuance (symmetric - if A's family lists B, B's family
+     * lists A), derived at build time. `relatedPoints` excludes this point's own
+     * id. Absent for points with no close synonym cluster.
      */
-    relatedPoints?: string[];
+    family?: {
+        /** Stable slug, e.g. "contradiction". */
+        id: string;
+        /** Display name, e.g. "Contradiction (But / However)". */
+        name: string;
+        /** Ids of the OTHER points in this family. */
+        relatedPoints: string[];
+    };
 }
 
 /** JLPT level (1..5) -> grammar point ids, in the source's original order (alphabetical - grammar has no frequency data to sort by, unlike vocab). */
