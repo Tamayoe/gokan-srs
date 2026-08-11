@@ -12,6 +12,8 @@ import { useQuiz } from "../../context/useQuiz";
 import { GrammarService } from "../../services/grammar.service";
 import { THEME } from "../../commons/theme";
 import { GrammarRelatedPointsCard } from "./GrammarRelatedPointsCard";
+import { InteractiveSentence } from "../../components/InteractiveSentence";
+import { grammarExampleToSentence } from "../../utils/grammarSentence.utils";
 
 const FORMALITY_LABELS: Record<NonNullable<GrammarPoint['formalityLevel']>, string> = {
     'casual': 'Casual',
@@ -137,8 +139,12 @@ export default function GrammarDetailScreen() {
             <div>
                 {point.examples.map((example, i) => (
                     <div key={i} className={`pb-4 ${i < point.examples.length - 1 ? 'border-b border-divider mb-4' : ''}`}>
-                        <div className="text-xl leading-relaxed text-primary mb-1 font-gothic">
-                            {example.jp}
+                        <div className="text-xl leading-relaxed text-primary mb-1">
+                            <InteractiveSentence
+                                sentence={grammarExampleToSentence(example, i)}
+                                onVocabClick={(vid) => navigate(`/vocab/${vid}`)}
+                                showFurigana={true}
+                            />
                         </div>
                         <div className="text-sm text-tertiary font-gothic mb-1">
                             {example.romaji}
