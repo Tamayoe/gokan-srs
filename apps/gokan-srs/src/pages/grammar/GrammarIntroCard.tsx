@@ -30,6 +30,11 @@ export function GrammarIntroCard({ grammarPoint, onLearn, onSkip }: GrammarIntro
                             {grammarPoint.title}
                         </Link>
                     </h2>
+                    {grammarPoint.romaji && (
+                        <div className="text-tertiary font-gothic text-sm mt-1">
+                            {grammarPoint.romaji}
+                        </div>
+                    )}
                 </div>
             </CardSection>
 
