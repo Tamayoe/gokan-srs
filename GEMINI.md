@@ -141,6 +141,7 @@ gokan-srs/                          # monorepo root
 │   │   │   │   ├── srs.utils.ts
 │   │   │   │   ├── knowledge.utils.ts # Knowledge-points model + cumulative curve builder
 │   │   │   │   ├── activity.utils.ts  # buildDailyActivity: shared per-day review bucketing (DailyProgressionChart + Main hub's daily card)
+│   │   │   │   ├── grammarSentence.utils.ts # grammarExampleToSentence: adapts a GrammarExample into InteractiveSentence's Sentence shape (GrammarDetailScreen)
 │   │   │   │   └── quiz.utils.ts
 │   │   │   ├── App.tsx               # Root component with routing
 │   │   │   ├── main.tsx              # Entry point
@@ -625,6 +626,7 @@ Route: `/kanji/:character`. Mirrors `VocabDetailScreen`'s card-based layout at a
 
 Route: `/grammar/:grammarId` (issue #32 follow-up). Mirrors `VocabDetailScreen`'s card-based layout, letting a user look at a single grammar point outside of a live review:
 - Title, `romaji` (small muted line beneath the title, omitted cleanly when absent - issue #47), JLPT chip, a `MasteryRing` reading the point's own `GrammarProgress.entry.memoryStrength` (`0` if not yet introduced), `shortExplanation`/`longExplanation`, `formation` (safe to show here, unlike on `GrammarQuizCard` - this is a study page, not a recall test), and every one of the point's example sentences (`jp`/`romaji`/`en`)
+- **Interactive example sentences**: `jp` renders via the shared `InteractiveSentence` component (the same one `VocabSentencesCard` uses for vocab sentences) instead of plain text, so every resolved word (`GrammarExampleWord.vocabId !== null`) is clickable through to `/vocab/:id`, exactly like on `VocabDetailScreen`. `GrammarExample`'s shape (`words[]`, no `matches` offsets) differs from `Sentence`'s, so `utils/grammarSentence.utils.ts`'s `grammarExampleToSentence(example, index)` adapts one into the other - deriving each match's `start`/`length` from cumulative `surface` length rather than hand-tracking offsets, relying on the words-concatenate-to-`jp` invariant the dataset guarantees. No `targetVocabId` is passed (unlike vocab's usage, which highlights the vocab the page itself is about) since a grammar example has no single "target" word - every resolved word gets the same clickable-dashed-underline treatment.
 - **Register cue (issue #42 follow-up)**: when set, `formalityLevel` renders as a small chip next to the JLPT chip (a label lookup, e.g. `'very-formal-literary'` → "Very formal / literary") and the full `usageNote` renders as a paragraph beneath the title - unlike `GrammarQuizCard`'s trimmed, answer-adjacent placement, there's no answer to leak here, so both render unconditionally when present
 - An "Add to Grammar Queue" button when the point hasn't been introduced yet, dispatching the same `GRAMMAR_INTRO_CHOICE`-backed `grammarActions.saveGrammarIntroChoice(point, 'learn')` action `GrammarIntroCard`'s "Learn" button uses - mirrors `VocabDetailScreen`'s "Add to Learning List"
 - Once introduced, a Stats card (reviews, interval, introduced date, next review) plus the shared `SRSHistoryGraph` (see below) plotted against the point's single `entry`
@@ -738,6 +740,7 @@ The grammar dataset (issue #17) follows the same split as vocab/kanji/sentences:
 - `src/services/sync/googleDriveSync.test.ts` - CAS retry-on-conflict, duplicate-file reconciliation, write-once remote backup
 - `src/utils/knowledge.utils.test.ts` - Knowledge-points model tests: mastery-curve normalisation (a vocab mastered in reading + meaning is worth exactly 200), the interval→strength inversion (including undoing the `wrong`/`minor_error` post-processing multipliers and the frequency modifier), and curve construction (per-day bucketing, pre-window baseline collapsing, skipped-vocab crediting, knowledge loss after a failure, future-dated-log rejection)
 - `src/utils/activity.utils.test.ts` - `buildDailyActivity` tests: zeroed buckets with no history, correct/minor_error grouped as correct and wrong as incorrect with pass excluded, reading + meaning history aggregated together, calendar-day bucketing (not exact timestamp), and logs outside the requested window dropped
+- `src/utils/grammarSentence.utils.test.ts` - `grammarExampleToSentence` tests: `jp`/`en` carried over unchanged, cumulative-offset match derivation (not a hand-tracked index), particle/unresolved words excluded from `matches`/`vocabIds`, repeated occurrences of the same vocabId accumulating into one match list, and a stable per-example `id`
 - Data-pipeline tests (tokenizer/Kuromoji integration, data-integrity checks) now live in the `gokan-dataset` submodule's own test suite, not here - `vite.config.ts` explicitly excludes `dataset/**` so they aren't double-run as part of this repo's `bun run test`.
 
 **CI/CD Integration:**
