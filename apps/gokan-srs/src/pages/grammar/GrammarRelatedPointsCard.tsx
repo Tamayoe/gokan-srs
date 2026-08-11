@@ -52,9 +52,7 @@ export function GrammarRelatedPointsCard({ point }: Props) {
     return (
         <Card size={isMobile ? "sm" : "md"}>
             <h2 className="text-lg font-gothic font-semibold text-primary mb-4">
-                Related Points
-                {point.family?.name && <span className="text-sm font-normal text-tertiary ml-2">{point.family.name}</span>}
-                <span className="text-sm font-normal text-tertiary ml-2">({relatedIds.length})</span>
+                {point.family?.name || "Related Points"} <span className="text-sm font-normal text-tertiary ml-2">({relatedIds.length})</span>
             </h2>
             <div className="space-y-3">
                 {related.map((p) => (

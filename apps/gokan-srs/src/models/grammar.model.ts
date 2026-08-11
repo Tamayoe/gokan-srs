@@ -78,6 +78,7 @@ export interface GrammarPoint {
      * the earlier flat `relatedPoints?: string[]` field. `relatedPoints` here
      * is DERIVED at dataset build time from every other point sharing the same
      * `family.id` (symmetric by construction - if A lists B, B lists A).
+     * Absent for points with no close synonym cluster.
      */
     family?: {
         /** Stable slug, e.g. "contradiction" - shared by every member. */
