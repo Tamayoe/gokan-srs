@@ -75,7 +75,19 @@ export function GrammarQuizCard() {
                             {example.en}
                         </p>
                         <p className="text-center text-2xl font-gothic leading-loose text-primary">
-                            {example.jp}
+                            {example.words.map((word, i) =>
+                                word.vocabId != null ? (
+                                    <Link
+                                        key={i}
+                                        to={`/vocab/${word.vocabId}`}
+                                        className="cursor-pointer text-primary border-b border-dashed border-tertiary/50 hover:text-accent hover:border-accent transition-colors"
+                                    >
+                                        {word.surface}
+                                    </Link>
+                                ) : (
+                                    <span key={i}>{word.surface}</span>
+                                )
+                            )}
                         </p>
                     </CardSection>
 
@@ -150,6 +162,17 @@ export function GrammarQuizCard() {
                             const answerIndex = answerIndexByWordIndex.get(i);
 
                             if (answerIndex === undefined) {
+                                if (word.vocabId != null) {
+                                    return (
+                                        <Link
+                                            key={i}
+                                            to={`/vocab/${word.vocabId}`}
+                                            className="cursor-pointer text-primary border-b border-dashed border-tertiary/50 hover:text-accent hover:border-accent transition-colors"
+                                        >
+                                            {word.surface}
+                                        </Link>
+                                    );
+                                }
                                 return <span key={i}>{word.surface}</span>;
                             }
 
