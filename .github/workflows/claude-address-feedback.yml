@@ -18,8 +18,14 @@ on:
     types: [created]
 
 concurrency:
-  # One run per PR; a newer comment supersedes an in-flight one.
-  group: claude-feedback-${{ github.event.pull_request.number || github.event.issue.number }}
+  # One run per PR; a newer *human* comment supersedes an in-flight one.
+  # The agent's own track_progress comment ("Claude Code is working...") is an
+  # issue_comment:created event too, so it re-triggers this workflow while the
+  # real run is still going. Left in the shared group, cancel-in-progress would
+  # make that bot comment cancel the very run that posted it (the new run then
+  # skips via the `if` below, so nothing completes). Giving bot-authored comment
+  # events a unique group keeps them from ever cancelling a live human-triggered run.
+  group: claude-feedback-${{ github.event.pull_request.number || github.event.issue.number }}${{ github.event.comment.user.type == 'Bot' && format('-bot-{0}', github.run_id) || '' }}
   cancel-in-progress: true
 
 jobs:
