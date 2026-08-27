@@ -17,8 +17,9 @@ function makeEnvelope(version: number, overrides: Partial<SyncEnvelope['progress
             adaptive: { level: 1.0, history: [] },
             _sync: { lastModified: 0, version },
             // Already at the terminal migration version so these sync-focused tests
-            // don't also need to mock the async homograph-merge-map fetch.
-            _formatVersion: 8,
+            // don't also need to mock the async passes' fetches (the homograph
+            // merge-map, and the grammar alias index).
+            _formatVersion: 9,
             ...overrides,
         } as any,
         settings: { preferredLearningOrder: 'frequency', enableMeaningQuiz: true, learningFrequency: 'medium' } as any,

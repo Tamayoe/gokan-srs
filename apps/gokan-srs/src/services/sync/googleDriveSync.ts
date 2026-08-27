@@ -65,7 +65,7 @@ export class GoogleDriveSync {
         const remoteSettings = resolved.envelope?.settings ?? null;
 
         if (remoteProgress && MigrationService.needsMigration(remoteProgress)) {
-            remoteProgress = await MigrationService.migrateMergedVocabsAsync(remoteProgress) as ProgressWithMetadata;
+            remoteProgress = await MigrationService.migrateAsync(remoteProgress) as ProgressWithMetadata;
         }
 
         if (!localEnvelope) {
@@ -126,7 +126,7 @@ export class GoogleDriveSync {
             const remoteSettings = resolved.envelope?.settings ?? null;
 
             if (remoteProgress && MigrationService.needsMigration(remoteProgress)) {
-                remoteProgress = await MigrationService.migrateMergedVocabsAsync(remoteProgress) as ProgressWithMetadata;
+                remoteProgress = await MigrationService.migrateAsync(remoteProgress) as ProgressWithMetadata;
             }
 
             const localVersion = effectiveLocalEnvelope.progress._sync?.version ?? 0;

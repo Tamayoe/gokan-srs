@@ -87,13 +87,71 @@ export interface GrammarPoint {
         name: string;
         /** Ids of the OTHER points in this family. */
         relatedPoints: string[];
+        /**
+         * What this member adds over its family siblings - the field that makes
+         * a near-synonym cluster teachable instead of merely adjacent.
+         *
+         *  - 'register'   differs ONLY by formality. Show the ladder, with the
+         *                 siblings the user already knows marked.
+         *  - 'constraint' adds a semantic restriction that can be got wrong
+         *                 (おかげで frames the cause favourably, ばかりに
+         *                 unfavourably). Lead with that restriction.
+         *  - 'variant'    no differentiator exists; the siblings are
+         *                 interchangeable stylistic choices. Say so, rather than
+         *                 inviting the user to hunt for a difference.
+         *
+         * Absent for members the dataset hasn't classified. See the dataset's
+         * docs/SCHEMA.md (`family.axis`).
+         */
+        axis?: GrammarAxis;
     };
 }
+
+export type GrammarAxis = 'register' | 'constraint' | 'variant';
 
 /** JLPT level (1..5) -> grammar point ids, in the source's original order (alphabetical - grammar has no frequency data to sort by, unlike vocab). */
 export type GrammarJlptIndex = Record<number, string[]>;
 
 export const GRAMMAR_JLPT_LEVELS = [5, 4, 3, 2, 1] as const;
+
+/**
+ * One chapter of the dataset's authored teaching order - a run of grammar points
+ * meant to be met together. Mirrors the dataset's GrammarChapter (see its
+ * docs/SCHEMA.md for `index/teaching-order.json`).
+ */
+export interface GrammarChapter {
+    /** Stable slug, e.g. "n5-c17" - safe to persist. */
+    id: string;
+    title: string;
+    summary: string;
+    /**
+     * The chapter's POSITION in the curriculum, not a claim about every member's
+     * own level: a chapter legitimately contains harder points when they are
+     * register siblings of something it already teaches (だが N2 sits in the N5
+     * "But" chapter, because it adds only formality).
+     */
+    jlptLevel: number;
+    points: string[];
+}
+
+/**
+ * The dataset's authored introduction order. `order` is the flattening of
+ * `chapters` - every non-duplicate point exactly once - provided so a consumer
+ * that only needs "what comes next" doesn't have to flatten it.
+ */
+export interface GrammarTeachingOrder {
+    order: string[];
+    chapters: GrammarChapter[];
+}
+
+/**
+ * Dropped duplicate point id -> the surviving canonical id, from the dataset's
+ * `index/aliases.json`. 40 upstream points were the same pattern ingested twice
+ * (～ても was both n3-052 and n4-097); the dataset now emits only the canonical
+ * one. Stored user progress against a dropped id has to be transferred, or it
+ * becomes an item that can never be loaded OR cleared - see MigrationService.
+ */
+export type GrammarAliasIndex = Record<string, string>;
 
 /**
  * User's SRS progress for one grammar point. Mirrors VocabProgress but with a

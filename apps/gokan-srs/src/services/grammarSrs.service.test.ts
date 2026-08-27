@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, afterEach } from 'vitest';
+import { describe, it, expect, vi, afterEach, beforeEach } from 'vitest';
 import { GrammarSRSService } from './grammarSrs.service';
 import { GrammarService } from './grammar.service';
 import { CONSTANTS } from '../commons/constants';
@@ -185,7 +185,14 @@ describe('GrammarSRSService.deferWithoutCredit', () => {
     });
 });
 
-describe('GrammarSRSService candidate finding (JLPT order)', () => {
+describe('GrammarSRSService candidate finding (JLPT order fallback)', () => {
+    // The JLPT walk is now only the FALLBACK, used when the dataset's authored
+    // teaching order can't be loaded - so every test here stubs the order away
+    // explicitly rather than relying on the fetch happening to fail.
+    beforeEach(() => {
+        vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(null);
+    });
+
     // 1 = N1 (hardest) .. 5 = N5 (easiest). Walk order must be N5 -> N1, mirroring vocab's findCandidatesJLPT.
     const mockIndex = {
         1: ['n1-a'],
@@ -232,5 +239,81 @@ describe('GrammarSRSService candidate finding (JLPT order)', () => {
         vi.spyOn(GrammarService, 'loadJlptIndex').mockResolvedValue({ 1: [], 2: [], 3: [], 4: [], 5: [] });
 
         expect(await GrammarSRSService.hasMoreLearnableGrammar([])).toBe(false);
+    });
+});
+
+
+describe('GrammarSRSService candidate finding (authored teaching order)', () => {
+    // Deliberately NOT in JLPT order: the whole point of the authored order is
+    // that a register sibling from a harder level (n2-but) can sit next to the
+    // N5 point it differs from only in formality, while the alphabetical
+    // accident that put connectives first is gone.
+    const teachingOrder = {
+        order: ['n5-wa', 'n5-wo', 'n5-but', 'n2-but', 'n4-must', 'n1-rare'],
+        chapters: [
+            { id: 'c01', title: 'Particles', summary: '', jlptLevel: 5, points: ['n5-wa', 'n5-wo'] },
+            { id: 'c02', title: 'But', summary: '', jlptLevel: 5, points: ['n5-but', 'n2-but'] },
+            { id: 'c03', title: 'Must', summary: '', jlptLevel: 4, points: ['n4-must'] },
+            { id: 'c04', title: 'Rare', summary: '', jlptLevel: 1, points: ['n1-rare'] },
+        ],
+    };
+
+    beforeEach(() => {
+        vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(teachingOrder);
+    });
+
+    it('introduces points in the authored order, not JLPT order', async () => {
+        const jlpt = vi.spyOn(GrammarService, 'loadJlptIndex');
+
+        const candidates = await GrammarSRSService.getNextCandidates([], 6);
+
+        expect(candidates).toEqual(['n5-wa', 'n5-wo', 'n5-but', 'n2-but', 'n4-must', 'n1-rare']);
+        // The JLPT index must not even be consulted when an order exists.
+        expect(jlpt).not.toHaveBeenCalled();
+    });
+
+    it('keeps a harder-level register sibling in its authored position', async () => {
+        // n2-but comes 4th, before n4-must - a JLPT walk would put it 2nd-to-last.
+        const candidates = await GrammarSRSService.getNextCandidates([], 4);
+        expect(candidates[3]).toBe('n2-but');
+    });
+
+    it('skips points already queued, without disturbing the order', async () => {
+        const queue = [makeProgress({ grammarId: 'n5-wa' }), makeProgress({ grammarId: 'n5-but' })];
+
+        const candidates = await GrammarSRSService.getNextCandidates(queue, 3);
+
+        expect(candidates).toEqual(['n5-wo', 'n2-but', 'n4-must']);
+    });
+
+    it('respects ignoredIds', async () => {
+        const candidates = await GrammarSRSService.getNextCandidates([], 2, new Set(['n5-wa']));
+        expect(candidates).toEqual(['n5-wo', 'n5-but']);
+    });
+
+    it('stops at maxToFind', async () => {
+        expect(await GrammarSRSService.getNextCandidates([], 2)).toHaveLength(2);
+        expect(await GrammarSRSService.getNextCandidates([], 0)).toEqual([]);
+    });
+
+    it('countLearnableGrammar walks the same sequence as getNextCandidates', async () => {
+        // If these two disagree, the hub advertises new material a session can't serve.
+        const queue = [makeProgress({ grammarId: 'n5-wa' })];
+
+        const count = await GrammarSRSService.countLearnableGrammar(queue);
+        const candidates = await GrammarSRSService.getNextCandidates(queue, 1000);
+
+        expect(count).toBe(5);
+        expect(candidates).toHaveLength(count);
+    });
+
+    it('countLearnableGrammar honours its early-exit limit', async () => {
+        expect(await GrammarSRSService.countLearnableGrammar([], 2)).toBe(2);
+        expect(await GrammarSRSService.hasMoreLearnableGrammar([])).toBe(true);
+    });
+
+    it('hasMoreLearnableGrammar is false once every ordered point is queued', async () => {
+        const queue = teachingOrder.order.map(id => makeProgress({ grammarId: id }));
+        expect(await GrammarSRSService.hasMoreLearnableGrammar(queue)).toBe(false);
     });
 });

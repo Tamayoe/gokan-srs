@@ -174,7 +174,22 @@ export class GrammarSRSService {
         return changed ? next : learningQueue;
     }
 
-    /** Finds the next batch of grammar point IDs eligible for learning, in JLPT order (N5 -> N1). */
+    /**
+     * Finds the next batch of grammar point IDs eligible for learning, in the
+     * dataset's authored teaching order (see gokan-dataset's
+     * `index/teaching-order.json` and its SCHEMA.md).
+     *
+     * The old behaviour - JLPT level (N5 -> N1), then the upstream file's own
+     * order within a level - was alphabetical by title, which put the
+     * superlative first, then seven near-synonymous connectives, and the case
+     * particles at #40+ (`Noun は` #40, `Noun を` #43, `Verb て` #46). It
+     * survives only as the fallback for when the order file can't be loaded.
+     *
+     * Introduction order only. Review order is untouched and stays interleaved
+     * (`pickStableGrammar` over the due pool in grammarSelectors.ts) - teaching
+     * near-synonyms adjacently is the point, but *reviewing* them adjacently
+     * risks exactly the interference the vocab side already guards against.
+     */
     static async getNextCandidates(
         currentQueue: GrammarProgress[],
         maxToFind: number,
@@ -182,11 +197,22 @@ export class GrammarSRSService {
     ): Promise<string[]> {
         if (maxToFind <= 0) return [];
 
-        const index = await GrammarService.loadJlptIndex();
-        if (!index) return [];
-
         const activeIds = new Set(currentQueue.map(g => g.grammarId));
         for (const id of ignoredIds) activeIds.add(id);
+
+        const teachingOrder = await GrammarService.loadTeachingOrder();
+        if (teachingOrder) {
+            const found: string[] = [];
+            for (const id of teachingOrder.order) {
+                if (activeIds.has(id)) continue;
+                found.push(id);
+                if (found.length >= maxToFind) break;
+            }
+            return found;
+        }
+
+        const index = await GrammarService.loadJlptIndex();
+        if (!index) return [];
 
         return collectJlptCandidates<string>(
             GRAMMAR_JLPT_LEVELS,
@@ -197,11 +223,27 @@ export class GrammarSRSService {
         );
     }
 
+    /**
+     * Must walk the same sequence as getNextCandidates, or the hub's "more new
+     * available" signal desyncs from what a session can actually serve.
+     */
     static async countLearnableGrammar(currentQueue: GrammarProgress[], limit = Infinity): Promise<number> {
+        const activeIds = new Set(currentQueue.map(g => g.grammarId));
+
+        const teachingOrder = await GrammarService.loadTeachingOrder();
+        if (teachingOrder) {
+            let count = 0;
+            for (const id of teachingOrder.order) {
+                if (activeIds.has(id)) continue;
+                count++;
+                if (count >= limit) return count;
+            }
+            return count;
+        }
+
         const index = await GrammarService.loadJlptIndex();
         if (!index) return 0;
 
-        const activeIds = new Set(currentQueue.map(g => g.grammarId));
         return countJlptCandidates<string>(
             GRAMMAR_JLPT_LEVELS,
             level => index[level] ?? [],

@@ -102,7 +102,7 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
         if (!MigrationService.needsMigration(state.progress)) return;
         migrationTriggeredRef.current = true;
 
-        MigrationService.migrateMergedVocabsAsync(state.progress).then(updatedProgress => {
+        MigrationService.migrateAsync(state.progress).then(updatedProgress => {
             if (updatedProgress !== state.progress) {
                 dispatch({
                     type: 'SETUP_COMPLETE',

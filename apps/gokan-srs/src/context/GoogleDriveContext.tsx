@@ -93,7 +93,7 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             if (currentLocal) {
                 // Async migration before syncing to prevent local old IDs from duplicating with remote new IDs
                 if (MigrationService.needsMigration(currentLocal)) {
-                    currentLocal = await MigrationService.migrateMergedVocabsAsync(currentLocal);
+                    currentLocal = await MigrationService.migrateAsync(currentLocal);
                     StorageService.saveProgress(currentLocal);
                 }
 

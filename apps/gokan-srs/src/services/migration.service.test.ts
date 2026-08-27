@@ -1,7 +1,9 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { MigrationService } from './migration.service';
 import { CONSTANTS } from '../commons/constants';
 import type { VocabProgress } from '../models/vocabulary.model';
+import { GrammarService } from './grammar.service';
+import type { GrammarProgress } from '../models/grammar.model';
 
 describe('MigrationService', () => {
     const maxMemoryStrength = CONSTANTS.srs.formula.mastery.maxMemoryStrength;
@@ -363,9 +365,22 @@ describe('MigrationService', () => {
             expect(MigrationService.needsMigration(currentProgress)).toBe(true);
         });
 
-        it('should return false only at the true terminal version (8)', () => {
+        it('should return true at the vocab-merge version (8) - the grammar-alias pass has not run yet', () => {
+            // Same shape of regression as version 7 above, one pass later: 8 is the
+            // version migrateMergedVocabsAsync reaches, not the terminal one. The
+            // grammar-alias pass (migrateGrammarAliasesAsync) also needs a fetch, so
+            // needsMigration() must keep reporting true until it has run too.
             const currentProgress = {
                 _formatVersion: 8,
+                learningQueue: []
+            };
+
+            expect(MigrationService.needsMigration(currentProgress)).toBe(true);
+        });
+
+        it('should return false only at the true terminal version (9)', () => {
+            const currentProgress = {
+                _formatVersion: 9,
                 learningQueue: []
             };
 
@@ -485,7 +500,7 @@ describe('MigrationService', () => {
 
             const migrated = await MigrationService.migrateMergedVocabsAsync(duplicateProgress);
 
-            expect(migrated._formatVersion).toBe(8); // terminal version - only the async pass reaches it
+            expect(migrated._formatVersion).toBe(8); // the vocab-merge pass's own version, not the terminal one
             expect(migrated.learningQueue).toHaveLength(1); // Properly merged
 
             const mergedItem = migrated.learningQueue[0];
@@ -548,5 +563,126 @@ describe('MigrationService', () => {
             const migrated = MigrationService.migrateUserProgress(progress);
             expect(migrated.grammarQueue[0].nextReviewAt).toBeNull();
         });
+    });
+});
+
+describe('MigrationService.migrateGrammarAliasesAsync', () => {
+    function makeGrammar(overrides: Partial<GrammarProgress> = {}): GrammarProgress {
+        return {
+            grammarId: 'n5-078',
+            stage: 'learning',
+            introductionAt: new Date('2026-06-01T00:00:00Z'),
+            nextReviewAt: new Date('2026-07-01T00:00:00Z'),
+            lastReviewedAt: new Date('2026-06-20T00:00:00Z'),
+            totalReviews: 3,
+            consecutiveFailures: 0,
+            entry: {
+                memoryStrength: 10,
+                interval: 5,
+                difficulty: 0.5,
+                lastReviewedAt: null,
+                dueDate: null,
+                history: [{ date: 1000, result: 'correct' } as any],
+            },
+            ...overrides,
+        };
+    }
+
+    function makeProgressWith(grammarQueue: GrammarProgress[], version = 8): any {
+        return { _formatVersion: version, learningQueue: [], grammarQueue };
+    }
+
+    afterEach(() => {
+        vi.restoreAllMocks();
+    });
+
+    it('rewrites a dropped id onto its canonical, keeping the SRS entry intact', async () => {
+        vi.spyOn(GrammarService, 'loadAliases').mockResolvedValue({ 'n4-079': 'n5-078' });
+        const progress = makeProgressWith([makeGrammar({ grammarId: 'n4-079' })]);
+
+        const migrated = await MigrationService.migrateGrammarAliasesAsync(progress);
+
+        expect(migrated.grammarQueue).toHaveLength(1);
+        expect(migrated.grammarQueue[0].grammarId).toBe('n5-078');
+        expect(migrated.grammarQueue[0].entry.memoryStrength).toBe(10);
+        expect(migrated.grammarQueue[0].totalReviews).toBe(3);
+        expect(migrated._formatVersion).toBe(9);
+    });
+
+    it('merges onto the stronger entry when both the dropped and canonical id have progress', async () => {
+        // The real hazard: the user was introduced to n5-078 and n4-079
+        // independently, so two entries collapse into one and something has to win.
+        vi.spyOn(GrammarService, 'loadAliases').mockResolvedValue({ 'n4-079': 'n5-078' });
+        const progress = makeProgressWith([
+            makeGrammar({
+                grammarId: 'n5-078',
+                totalReviews: 2,
+                introductionAt: new Date('2026-06-10T00:00:00Z'),
+                nextReviewAt: new Date('2026-07-20T00:00:00Z'),
+                entry: { ...makeGrammar().entry, memoryStrength: 4, history: [{ date: 2000, result: 'wrong' } as any] },
+            }),
+            makeGrammar({
+                grammarId: 'n4-079',
+                totalReviews: 7,
+                introductionAt: new Date('2026-06-01T00:00:00Z'),
+                nextReviewAt: new Date('2026-07-05T00:00:00Z'),
+                stage: 'graduated',
+                entry: { ...makeGrammar().entry, memoryStrength: 30, history: [{ date: 1000, result: 'correct' } as any] },
+            }),
+        ]);
+
+        const migrated = await MigrationService.migrateGrammarAliasesAsync(progress);
+        const merged = migrated.grammarQueue[0];
+
+        expect(migrated.grammarQueue).toHaveLength(1);
+        expect(merged.grammarId).toBe('n5-078');
+        expect(merged.entry.memoryStrength).toBe(30);           // stronger entry wins
+        expect(merged.totalReviews).toBe(7);                    // max, not sum
+        expect(merged.stage).toBe('graduated');                 // graduated if either was
+        expect(merged.introductionAt).toEqual(new Date('2026-06-01T00:00:00Z')); // earliest
+        expect(merged.nextReviewAt).toEqual(new Date('2026-07-05T00:00:00Z'));   // soonest due
+        expect(merged.entry.history.map((h: any) => h.date)).toEqual([1000, 2000]); // union, sorted
+    });
+
+    it('leaves a queue with no aliased ids untouched but still stamps the version', async () => {
+        vi.spyOn(GrammarService, 'loadAliases').mockResolvedValue({ 'n4-079': 'n5-078' });
+        const queue = [makeGrammar({ grammarId: 'n5-001' })];
+
+        const migrated = await MigrationService.migrateGrammarAliasesAsync(makeProgressWith(queue));
+
+        expect(migrated.grammarQueue).toBe(queue); // same reference - no needless rebuild
+        expect(migrated._formatVersion).toBe(9);
+    });
+
+    it('does not touch progress when the alias index cannot be loaded', async () => {
+        // A transient fetch failure must never be allowed to drop review history.
+        // needsMigration stays true, so it simply retries next run.
+        vi.spyOn(GrammarService, 'loadAliases').mockRejectedValue(new Error('offline'));
+        const progress = makeProgressWith([makeGrammar({ grammarId: 'n4-079' })]);
+
+        const migrated = await MigrationService.migrateGrammarAliasesAsync(progress);
+
+        expect(migrated.grammarQueue[0].grammarId).toBe('n4-079');
+        expect(migrated._formatVersion).toBe(8);
+        expect(MigrationService.needsMigration(migrated)).toBe(true);
+    });
+
+    it('is a no-op once already at the terminal version', async () => {
+        const loadAliases = vi.spyOn(GrammarService, 'loadAliases');
+        const progress = makeProgressWith([makeGrammar({ grammarId: 'n4-079' })], 9);
+
+        const migrated = await MigrationService.migrateGrammarAliasesAsync(progress);
+
+        expect(migrated).toBe(progress);
+        expect(loadAliases).not.toHaveBeenCalled();
+    });
+
+    it('migrateAsync reaches the terminal version through both async passes', async () => {
+        vi.spyOn(GrammarService, 'loadAliases').mockResolvedValue({});
+        const progress = makeProgressWith([makeGrammar({ grammarId: 'n5-001' })], 8);
+
+        const migrated = await MigrationService.migrateAsync(progress);
+
+        expect(MigrationService.needsMigration(migrated)).toBe(false);
     });
 });
