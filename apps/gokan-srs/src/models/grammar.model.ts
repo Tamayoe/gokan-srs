@@ -74,6 +74,19 @@ export interface GrammarPoint {
     kind?: 'construction' | 'inflection' | 'lexical';
     /** For `kind: 'inflection'`: which derivation the point teaches, e.g. "て-form". */
     derives?: string;
+    /**
+     * Set when this point is a realization VARIANT of another: the same
+     * construction with one slot filled differently (どこへも Verb ません is
+     * どこにも Verb ません with a different particle). Variants are browsable but
+     * are NOT introduced separately - the canonical carries one SRS entry and the
+     * quiz rotates through the realizations, so mastery is shared.
+     *
+     * Never set for lexical siblings: でも / しかし / けれども are different words
+     * and stay separate items.
+     */
+    variantOf?: string;
+    /** The operation relating this point to its canonical. */
+    variantRelation?: string;
     examples: GrammarExample[];
     /**
      * Register/formality of this point, for points that have one (most don't -
@@ -177,6 +190,22 @@ export type GrammarAliasIndex = Record<string, string>;
  * read one field each.
  */
 export type GrammarKindIndex = Record<string, NonNullable<GrammarPoint['kind']>>;
+
+/** One realization within a variant group. The canonical is included, with relation 'canonical'. */
+export interface GrammarVariantMember {
+    id: string;
+    relation: string;
+    formalityLevel?: NonNullable<GrammarPoint['formalityLevel']>;
+    title: string;
+}
+
+/**
+ * Canonical point id -> every realization of that rule, from the dataset's
+ * `index/variant-groups.json`. Lets the quiz rotate through the realizations
+ * against the canonical's single SRS entry, which is what makes mastery shared
+ * rather than six separate climbs for one pattern.
+ */
+export type GrammarVariantGroupIndex = Record<string, GrammarVariantMember[]>;
 
 /** A derived form the transformation quiz can ask for. Mirrors the dataset's ConjugationForm. */
 export type ConjugationForm =

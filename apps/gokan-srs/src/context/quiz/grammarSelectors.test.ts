@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, afterEach } from 'vitest';
+import { describe, it, expect, vi, afterEach, beforeEach } from 'vitest';
 import {
     selectNextGrammarView,
     computeBlankPlan,
@@ -727,5 +727,110 @@ describe('computeConjugationPlan / computeBlankPlan for inflection points', () =
 
         expect(plan?.conjugation).toBeUndefined();
         expect(loadConjugations).not.toHaveBeenCalled();
+    });
+});
+
+describe('realization variant rotation and two-tier grading', () => {
+    // Modelled on the real `nowhere` group: a particle slot (に / へ / none)
+    // crossed with a politeness slot (ません / ないです).
+    function makeVariantPoint(id: string, title: string, pattern: string, formality: string): GrammarPoint {
+        const words = [{ surface: pattern, vocabId: null }, { surface: '行きません', vocabId: null }];
+        return {
+            id, title, jlptLevel: 5, kind: 'construction',
+            shortExplanation: '', longExplanation: '', formation: '',
+            formalityLevel: formality,
+            examples: [{ jp: pattern + '行きません', romaji: '', en: 'I do not go anywhere.', words, patternWordIndices: [0] }],
+        } as unknown as GrammarPoint;
+    }
+
+    const canonical = makeVariantPoint('n5-105', 'どこにも ません', 'どこにも', 'polite');
+    const siblings: Record<string, GrammarPoint> = {
+        'n5-107': makeVariantPoint('n5-107', 'どこへも ません', 'どこへも', 'polite'),
+        'n5-109': makeVariantPoint('n5-109', 'どこも ません', 'どこも', 'polite'),
+        // Differing register AND a differing blanked surface - the only case
+        // where the minor tier can apply. Where the surface is identical, the
+        // register is simply untestable by that blank and 'correct' is right.
+        'n5-104': makeVariantPoint('n5-104', 'どこにも ないです', 'どこにもないです', 'neutral'),
+    };
+    const group = {
+        'n5-105': [
+            { id: 'n5-105', relation: 'canonical', formalityLevel: 'polite', title: 'どこにも ません' },
+            { id: 'n5-107', relation: 'particle', formalityLevel: 'polite', title: 'どこへも ません' },
+            { id: 'n5-109', relation: 'particle', formalityLevel: 'polite', title: 'どこも ません' },
+            { id: 'n5-104', relation: 'politeness', formalityLevel: 'neutral', title: 'どこにもないです' },
+        ],
+    } as never;
+
+    beforeEach(() => {
+        vi.spyOn(GrammarService, 'loadVariantGroups').mockResolvedValue(group);
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({});
+        vi.spyOn(GrammarService, 'loadGrammarPoint').mockImplementation(async (id: string) =>
+            (siblings[id] ?? canonical));
+    });
+
+    afterEach(() => { vi.restoreAllMocks(); });
+
+    it('drills one realization per turn and rotates between reviews', async () => {
+        const seen = new Set<string>();
+        for (let i = 0; i < 16; i++) {
+            const plan = await computeBlankPlan(canonical, null, i);
+            expect(plan?.realization).toBeDefined();
+            expect(plan!.realization!.canonicalId).toBe('n5-105');
+            expect(plan!.realization!.total).toBe(4);
+            seen.add(plan!.realization!.pointId);
+        }
+        // The whole point: the learner meets every form of the rule, not just one.
+        expect(seen.size).toBeGreaterThan(1);
+    });
+
+    it('is stable within a single turn', async () => {
+        const a = await computeBlankPlan(canonical, null, 5);
+        const b = await computeBlankPlan(canonical, null, 5);
+        expect(a?.realization?.pointId).toBe(b?.realization?.pointId);
+    });
+
+    it('accepts a same-register sibling as correct: the particles are interchangeable', async () => {
+        const plan = await computeBlankPlan(canonical, null, 0);
+        const politeForms = ['どこにも', 'どこへも', 'どこも'];
+        const accepted = plan!.acceptLists[0];
+        // Every polite realization is acceptable, whichever one was asked for.
+        const overlap = politeForms.filter(f => accepted.includes(f));
+        expect(overlap.length).toBeGreaterThanOrEqual(2);
+
+        for (const form of overlap) {
+            expect(gradeGrammarAnswers(plan!, [form], [0]).overall).toBe('correct');
+        }
+    });
+
+    it('downgrades a wrong-register realization to minor_error, not wrong', async () => {
+        // The card showed the register, so this is a near miss rather than a failure.
+        let planWithMinor = null as Awaited<ReturnType<typeof computeBlankPlan>>;
+        for (let i = 0; i < 16; i++) {
+            const p = await computeBlankPlan(canonical, null, i);
+            if ((p?.acceptListsMinor?.[0]?.length ?? 0) > 0) { planWithMinor = p; break; }
+        }
+        expect(planWithMinor, 'expected a turn with a differing-register sibling').not.toBeNull();
+
+        const minorForm = planWithMinor!.acceptListsMinor![0][0];
+        expect(gradeGrammarAnswers(planWithMinor!, [minorForm], [0]).overall).toBe('minor_error');
+    });
+
+    it('still grades an unrelated answer wrong', async () => {
+        const plan = await computeBlankPlan(canonical, null, 0);
+        expect(gradeGrammarAnswers(plan!, ['まったくちがう'], [0]).overall).toBe('wrong');
+    });
+
+    it('never widens a vocab blank, only the pattern blanks', async () => {
+        const plan = await computeBlankPlan(canonical, null, 0);
+        plan!.isPatternBlank.forEach((isPattern, i) => {
+            if (!isPattern) expect(plan!.acceptListsMinor?.[i] ?? []).toEqual([]);
+        });
+    });
+
+    it('leaves a point with no variant group completely unchanged', async () => {
+        vi.spyOn(GrammarService, 'loadVariantGroups').mockResolvedValue({});
+        const plan = await computeBlankPlan(canonical, null, 0);
+        expect(plan?.realization).toBeUndefined();
+        expect(plan?.acceptListsMinor).toBeUndefined();
     });
 });

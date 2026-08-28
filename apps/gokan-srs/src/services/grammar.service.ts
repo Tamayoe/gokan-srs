@@ -1,4 +1,4 @@
-import type { GrammarAliasIndex, GrammarChapter, GrammarConjugationIndex, GrammarJlptIndex, GrammarKindIndex, GrammarPoint, GrammarTeachingOrder } from '../models/grammar.model';
+import type { GrammarAliasIndex, GrammarChapter, GrammarConjugationIndex, GrammarJlptIndex, GrammarKindIndex, GrammarPoint, GrammarTeachingOrder, GrammarVariantGroupIndex } from '../models/grammar.model';
 
 /**
  * Loads grammar data compiled by the gokan-dataset submodule's
@@ -14,6 +14,7 @@ export class GrammarService {
     private static aliases: GrammarAliasIndex | null = null;
     private static kinds: GrammarKindIndex | null = null;
     private static conjugations: GrammarConjugationIndex | null = null;
+    private static variantGroups: GrammarVariantGroupIndex | null = null;
     private static pointCache = new Map<string, GrammarPoint>();
 
     private static async fetchJson<T>(path: string): Promise<T> {
@@ -87,6 +88,23 @@ export class GrammarService {
             return this.conjugations;
         } catch (e) {
             console.error('[GrammarService] Failed to load conjugation drills; inflection points stay out of the pipeline', e);
+            return {};
+        }
+    }
+
+    /**
+     * Canonical id -> realizations. On failure returns {}, which means every point
+     * is drilled on its own examples only - the pre-variant behaviour. Safe to
+     * fail this way: the learner just never sees the alternation.
+     */
+    static async loadVariantGroups(): Promise<GrammarVariantGroupIndex> {
+        if (this.variantGroups) return this.variantGroups;
+
+        try {
+            this.variantGroups = await this.fetchJson<GrammarVariantGroupIndex>(`/data/compiled/grammar/index/variant-groups.json?v=${Date.now()}`);
+            return this.variantGroups;
+        } catch (e) {
+            console.error('[GrammarService] Failed to load variant groups; drilling canonical forms only', e);
             return {};
         }
     }

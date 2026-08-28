@@ -50,6 +50,29 @@ export interface GrammarBlankPlan {
      * `exampleIndex` is meaningless - there is no sentence.
      */
     conjugation?: GrammarConjugationPrompt;
+    /**
+     * Per-blank forms that are ACCEPTED BUT NOT IDEAL, graded `minor_error`
+     * instead of `wrong` (same order as blankWordIndices, empty array when none).
+     *
+     * Used by realization-variant drills: within a variant group, a sibling that
+     * differs only by a substitutable particle is genuinely interchangeable and
+     * grades `correct`, but one that differs in POLITENESS is the wrong register
+     * for the hint the learner was shown - a near miss, not a failure.
+     */
+    acceptListsMinor?: string[][];
+    /**
+     * Set when this turn is drilling one realization of a variant group. The
+     * realization rotates between reviews, so the learner meets every form of the
+     * rule while a single SRS entry (the canonical's) carries the mastery.
+     */
+    realization?: {
+        /** The point id actually being drilled, which may not be the canonical. */
+        pointId: string;
+        canonicalId: string;
+        /** 1-based position and group size, for "2 of 6" style display. */
+        index: number;
+        total: number;
+    };
 }
 
 /** A grammar point has exactly one quiz type, so this is just an id - no quizType/quizMode to track. */

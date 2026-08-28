@@ -222,6 +222,75 @@ export async function computeConjugationPlan(point: GrammarPoint, reviewCount: n
     };
 }
 
+/**
+ * For a canonical point that heads a variant group, swaps in one realization for
+ * this turn and widens the accept-list to the rest of the group.
+ *
+ * The realization rotates on `reviewCount`, so a learner meets どこにも, どこへも
+ * and どこも over successive reviews instead of grinding six separate points for
+ * one rule. Mastery stays on the canonical's single SRS entry.
+ *
+ * Grading follows the relation, because the two axes are not equally strict:
+ *  - a sibling differing only by PARTICLE (に / へ / none) is genuinely
+ *    interchangeable, so it grades `correct`
+ *  - a sibling differing in POLITENESS is the wrong register for the hint the
+ *    card showed, so it grades `minor_error` - a near miss, not a failure
+ */
+async function applyVariantRotation(
+    canonical: GrammarPoint,
+    reviewCount: number
+): Promise<{ point: GrammarPoint; realization: NonNullable<GrammarBlankPlan['realization']>; sameRegister: string[]; otherRegister: string[] } | null> {
+    const groups = await GrammarService.loadVariantGroups();
+    const members = groups[canonical.id];
+    if (!members || members.length < 2) return null;
+
+    const index = hashString(`${canonical.id}:variant:${reviewCount}`) % members.length;
+    const chosen = members[index];
+
+    const point = chosen.id === canonical.id
+        ? canonical
+        : await GrammarService.loadGrammarPoint(chosen.id).catch(() => null);
+    if (!point) return null;
+
+    // Every other realization's own pattern text, split by whether it shares the
+    // chosen realization's register.
+    const sameRegister: string[] = [];
+    const otherRegister: string[] = [];
+    for (const member of members) {
+        if (member.id === chosen.id) continue;
+        const sibling = member.id === canonical.id
+            ? canonical
+            : await GrammarService.loadGrammarPoint(member.id).catch(() => null);
+        if (!sibling) continue;
+
+        for (const example of sibling.examples) {
+            if (example.patternWordIndices.length === 0) continue;
+
+            // Only widen with a CLEAN pattern span - one made purely of
+            // grammatical material. Anchor spans are not consistent across a
+            // group: n5-105 anchors どこにも, but n5-104 anchors
+            // どこにも売ってないです and n3-049 anchors 寒いですから, where the
+            // span has swallowed a neighbouring content word. Accepting those as
+            // alternatives would let an unrelated string pass, so a span
+            // containing any vocab-linked word is skipped.
+            const swallowsContentWord = example.patternWordIndices
+                .some(i => example.words[i]?.vocabId !== null && example.words[i]?.vocabId !== undefined);
+            if (swallowsContentWord) continue;
+
+            const surface = example.patternWordIndices.map(i => example.words[i]?.surface ?? '').join('');
+            if (!surface) continue;
+            (member.formalityLevel === chosen.formalityLevel ? sameRegister : otherRegister).push(surface);
+        }
+    }
+
+    return {
+        point,
+        realization: { pointId: chosen.id, canonicalId: canonical.id, index: index + 1, total: members.length },
+        sameRegister: Array.from(new Set(sameRegister)),
+        otherRegister: Array.from(new Set(otherRegister)),
+    };
+}
+
 export async function computeBlankPlan(point: GrammarPoint, progress: UserProgress | null, reviewCount: number): Promise<GrammarBlankPlan | null> {
     // An inflection point cannot be tested by blanking a marker - hand it to the
     // conjugation drill. Falls through to the cloze path when the dataset has no
@@ -231,6 +300,30 @@ export async function computeBlankPlan(point: GrammarPoint, progress: UserProgre
         if (conjugationPlan) return conjugationPlan;
     }
 
+    // A canonical heading a variant group drills one realization per turn.
+    const rotation = await applyVariantRotation(point, reviewCount);
+    const effectivePoint = rotation?.point ?? point;
+
+    if (effectivePoint.examples.length === 0) return null;
+    if (rotation) {
+        const base = await computeBlankPlanFor(effectivePoint, progress, reviewCount);
+        if (!base) return null;
+        return {
+            ...base,
+            realization: rotation.realization,
+            // Widen only the PATTERN blanks: a vocab blank has nothing to do with
+            // the alternation and must keep grading strictly.
+            acceptLists: base.acceptLists.map((list, i) =>
+                base.isPatternBlank[i] ? Array.from(new Set([...list, ...rotation.sameRegister])) : list),
+            acceptListsMinor: base.acceptLists.map((_, i) =>
+                base.isPatternBlank[i] ? rotation.otherRegister : []),
+        };
+    }
+
+    return computeBlankPlanFor(effectivePoint, progress, reviewCount);
+}
+
+async function computeBlankPlanFor(point: GrammarPoint, progress: UserProgress | null, reviewCount: number): Promise<GrammarBlankPlan | null> {
     if (point.examples.length === 0) return null;
 
     const startIndex = hashString(`${point.id}:${reviewCount}`) % point.examples.length;
@@ -351,7 +444,7 @@ export interface GrammarGradeResult {
 export function gradeGrammarAnswers(
     // isPatternBlank optional: a plan without it is treated as having no located
     // pattern (every blank vocab), which is the worst-of-all fallback path.
-    blankPlan: Pick<GrammarBlankPlan, 'acceptLists'> & Partial<Pick<GrammarBlankPlan, 'isPatternBlank'>>,
+    blankPlan: Pick<GrammarBlankPlan, 'acceptLists'> & Partial<Pick<GrammarBlankPlan, 'isPatternBlank' | 'acceptListsMinor'>>,
     answers: string[],
     hintLevels: number[]
 ): GrammarGradeResult {
@@ -370,6 +463,23 @@ export function gradeGrammarAnswers(
             primary: accepted[0] ?? '',
             alternatives: accepted.slice(1),
         });
+
+        // Accepted-but-not-ideal tier: a realization of the same rule in the wrong
+        // register. Downgraded from 'wrong' to 'minor_error' rather than accepted
+        // outright, because the card showed which register was wanted.
+        const minorList = blankPlan.acceptListsMinor?.[i] ?? [];
+        if (result === 'wrong' && minorList.length > 0) {
+            const minor = SRSService.evaluateAnswer(userInput, {
+                primary: minorList[0],
+                alternatives: minorList.slice(1),
+            });
+            if (minor.result === 'correct' || minor.result === 'minor_error') {
+                perBlankResults.push('minor_error');
+                matchedAnswers.push(accepted[0] ?? minor.matchedAnswer);
+                return;
+            }
+        }
+
         perBlankResults.push(result);
         matchedAnswers.push(matchedAnswer);
     });
