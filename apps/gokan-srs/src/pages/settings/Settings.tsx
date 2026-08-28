@@ -1,7 +1,7 @@
 import { OptionGrid } from "../../components/OptionGrid";
 import type { MeaningContextThreshold, UserSettings } from "../../models/user.model";
 import { useGoogleDrive } from "../../context/GoogleDriveContext";
-import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor, Sparkles, KeyRound } from "lucide-react";
+import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor, Sparkles, KeyRound , ArrowLeft} from "lucide-react";
 import { Button } from "../../components/ui/Button";
 import { useTheme } from "../../context/ThemeContext";
 import { useState } from "react";
@@ -105,7 +105,7 @@ export function SettingsScreen({
                     onClick={onBack}
                     className="absolute left-0"
                 >
-                    ← Back
+                    <ArrowLeft className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Back
                 </Button>
 
                 <h1 className="flex-1 text-center text-xl font-serif text-primary">

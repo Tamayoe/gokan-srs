@@ -16,7 +16,7 @@ export function GrammarCard({
   onClick?: () => void;
 }) {
   function formatNextReview(date: Date | null): string {
-    if (!date) return '—';
+    if (!date) return '-';
 
     const now = new Date();
     const diffMs = date.getTime() - now.getTime();

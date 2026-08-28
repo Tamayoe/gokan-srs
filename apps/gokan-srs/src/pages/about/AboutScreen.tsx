@@ -1,4 +1,5 @@
 import { Button } from "../../components/ui/Button";
+import { ArrowLeft } from "lucide-react";
 
 interface AboutScreenProps {
     onBack: () => void;
@@ -14,7 +15,7 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
                     onClick={onBack}
                     className="absolute left-0"
                 >
-                    ← Back
+                    <ArrowLeft className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Back
                 </Button>
 
                 <h1 className="flex-1 text-center text-xl font-serif text-primary">

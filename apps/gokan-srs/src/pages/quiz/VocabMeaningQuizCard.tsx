@@ -73,7 +73,7 @@ export function VocabMeaningQuizCard({ onKanjiClick, onVocabClick }: VocabMeanin
                 </h2>
                 {contextSentenceMissing && (
                     <p className="text-xs text-secondary/70 mt-2 font-gothic italic">
-                        Context sentence unavailable — showing the standard quiz instead.
+                        Context sentence unavailable, showing the standard quiz instead.
                     </p>
                 )}
             </div>

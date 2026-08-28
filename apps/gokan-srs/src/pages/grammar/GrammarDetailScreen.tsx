@@ -14,6 +14,7 @@ import { THEME } from "../../commons/theme";
 import { GrammarRelatedPointsCard } from "./GrammarRelatedPointsCard";
 import { InteractiveSentence } from "../../components/InteractiveSentence";
 import { grammarExampleToSentence } from "../../utils/grammarSentence.utils";
+import { ArrowLeft } from "lucide-react";
 
 const FORMALITY_LABELS: Record<NonNullable<GrammarPoint['formalityLevel']>, string> = {
     'casual': 'Casual',
@@ -211,7 +212,7 @@ export default function GrammarDetailScreen() {
             {/* Header */}
             <div className="w-full flex items-center p-4 md:p-8 relative">
                 <Button variant="ghost" onClick={() => navigate(-1)} className="absolute left-4 md:left-8">
-                    ← Back
+                    <ArrowLeft className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Back
                 </Button>
                 <h1 className="flex-1 text-center text-xl font-serif text-primary">
                     Grammar Point Details

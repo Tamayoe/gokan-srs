@@ -93,7 +93,7 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                     </h1>
                     <div className="space-y-4 text-secondary leading-relaxed font-serif max-w-xl mx-auto">
                         <p>
-                            Gokan is a vocabulary SRS for Japanese learners who are actively studying kanji. It introduces words that use the kanji you already know — keeping your reading queue grounded in real, learnable material.
+                            Gokan is a vocabulary SRS for Japanese learners who are actively studying kanji. It introduces words that use the kanji you already know, keeping your reading queue grounded in real, learnable material.
                         </p>
                         <p className="text-sm text-tertiary">
                             It is a companion tool, not a complete learning system. It works best alongside a kanji method like KKLC or RTK, and becomes more valuable once you start reading native Japanese.

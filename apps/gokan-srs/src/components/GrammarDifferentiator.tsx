@@ -72,15 +72,15 @@ export function GrammarDifferentiator({ point, knownIds }: Props) {
         );
 
     const heading = axis === 'variant'
-        ? `${family.name} — interchangeable forms`
+        ? `${family.name}: interchangeable forms`
         : axis === 'register'
-            ? `${family.name} — same meaning, different register`
+            ? `${family.name}: same meaning, different register`
             : family.name;
 
     const lede = axis === 'variant'
         ? 'These are stylistic variants with no real difference in meaning or register. Learn to recognise them; you only ever need to produce one.'
         : axis === 'register'
-            ? 'Every form below means the same thing. What changes is who you can say it to — that is the whole lesson here.'
+            ? 'Every form below means the same thing. What changes is who you can say it to, and that is the whole lesson here.'
             : point.usageNote
                 ? 'This one carries a restriction its siblings do not:'
                 : null;
@@ -119,7 +119,7 @@ export function GrammarDifferentiator({ point, knownIds }: Props) {
                                     {p.title}
                                 </span>
                                 {isThis && (
-                                    <span className="text-accent font-gothic text-xs">← this one</span>
+                                    <span className="text-accent font-gothic text-xs">this one</span>
                                 )}
                                 {isKnown && (
                                     <span className="text-tertiary font-gothic text-xs">already learned</span>

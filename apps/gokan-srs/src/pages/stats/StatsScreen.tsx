@@ -8,6 +8,7 @@ import { JlptCoverageChart } from "./components/JlptCoverageChart";
 import { GrammarJlptCoverageChart } from "./components/GrammarJlptCoverageChart";
 import { SmartVocabList } from "./components/SmartVocabList";
 import { SmartGrammarList } from "./components/SmartGrammarList";
+import { ArrowLeft } from "lucide-react";
 
 interface StatsScreenProps {
     onBack: () => void;
@@ -25,7 +26,7 @@ export function StatsScreen({ onBack, onVocabClick, onGrammarClick }: StatsScree
         <div className="w-full max-w-4xl flex flex-col gap-6 animate-fade-in pb-12">
             <header className="w-full flex items-center justify-center relative h-12">
                 <Button variant="ghost" onClick={onBack} className="absolute left-0">
-                    ← Back
+                    <ArrowLeft className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Back
                 </Button>
                 <h1 className="text-xl font-serif text-primary">Statistics</h1>
             </header>

@@ -76,7 +76,7 @@ export function SetupScreen({ onComplete }: { onComplete: (values: SetupValues) 
                         {
                             value: 'jlpt',
                             label: 'JLPT Level',
-                            description: 'N5 first, up to N1 — ignores known kanji',
+                            description: 'N5 first, up to N1, ignores known kanji',
                         },
                     ]}
                 />

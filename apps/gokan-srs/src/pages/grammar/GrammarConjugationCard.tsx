@@ -1,6 +1,7 @@
 import type { FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
 import { useQuiz } from "../../context/useQuiz";
 import { useResponsive } from "../../context/Responsive/useResponsive";
 import { useQuizFocusManagement } from "../../hooks/useQuizFocusManagement";
@@ -91,7 +92,7 @@ export function GrammarConjugationCard() {
                     </div>
 
                     <div className="text-center my-4">
-                        <span className="text-tertiary font-gothic text-2xl" aria-hidden="true">↓</span>
+                        <ArrowDown className="inline-block w-5 h-5 text-tertiary" aria-hidden="true" />
                         <p className="uppercase tracking-wide text-label-neutral text-xs font-gothic mt-1">
                             {formLabel}
                         </p>

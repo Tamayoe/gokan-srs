@@ -9,7 +9,7 @@ import { useQuiz } from "../../context/useQuiz";
 import { VocabularyService } from "../../services/vocabulary.service";
 import { Button } from "../../components/ui/Button";
 import { LoadingScreen } from "../../components/LoadingScreen";
-import { Combine } from "lucide-react";
+import { Combine , ArrowLeft} from "lucide-react";
 import { VocabSentencesCard } from "./VocabSentencesCard";
 import { SRSHistoryGraph } from "../../components/SRSHistoryGraph";
 import { ReviewTimeline } from "../../components/ReviewTimeline";
@@ -312,7 +312,7 @@ export default function VocabDetailScreen() {
             {/* Header */}
             <div className="w-full flex items-center p-4 md:p-8 relative">
                 <Button variant="ghost" onClick={() => navigate(-1)} className="absolute left-4 md:left-8">
-                    ← Back
+                    <ArrowLeft className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Back
                 </Button>
                 <h1 className="flex-1 text-center text-xl font-serif text-primary">
                     Vocabulary Details

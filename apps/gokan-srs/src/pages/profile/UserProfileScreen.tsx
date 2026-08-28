@@ -1,6 +1,7 @@
 import { Button } from "../../components/ui/Button";
 import { KanjiKnowledgeEditor } from "../../components/KanjiKnowledgeEditor";
 import { useQuiz } from "../../context/useQuiz";
+import { ArrowLeft } from "lucide-react";
 
 export function UserProfileScreen({ onBack }: { onBack: () => void; onVocabClick?: (vocabId: string) => void }) {
     const { actions } = useQuiz();
@@ -14,7 +15,7 @@ export function UserProfileScreen({ onBack }: { onBack: () => void; onVocabClick
                     onClick={onBack}
                     className="absolute left-0"
                 >
-                    ← Back
+                    <ArrowLeft className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Back
                 </Button>
 
                 <h1 className="text-xl font-serif text-primary">

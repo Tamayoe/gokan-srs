@@ -11,6 +11,22 @@ import { JlptChip } from "../../components/JlptChip";
 import { MasteryRing } from "../../components/MasteryRing";
 
 /**
+ * Register hint shown while the question is still open. Deliberately the
+ * STRUCTURED formalityLevel and not the free-text usageNote: the note names the
+ * form on 37 of 379 points ("...ないです instead of ません. (どこへも variant.)"),
+ * which handed the learner the answer. A label drawn from a fixed vocabulary
+ * cannot leak it, while still disambiguating which register is being asked for -
+ * which is what #42 needed the note for in the first place.
+ */
+const FORMALITY_HINT: Record<string, string> = {
+    'casual': 'Casual',
+    'neutral': 'Neutral',
+    'polite': 'Polite',
+    'formal': 'Formal',
+    'very-formal-literary': 'Literary',
+};
+
+/**
  * The grammar quiz itself: an English prompt the user translates into
  * Japanese, with the sentence rendered as literal text interspersed with
  * discrete input blanks - one per word the user already knows from the vocab
@@ -142,12 +158,12 @@ export function GrammarQuizCard() {
                             <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
                                 <JlptChip level={point.jlptLevel} />
                             </Link>
+                            {point.formalityLevel && FORMALITY_HINT[point.formalityLevel] && (
+                                <span className="text-xs font-gothic text-secondary border border-divider rounded px-2 py-0.5">
+                                    {FORMALITY_HINT[point.formalityLevel]}
+                                </span>
+                            )}
                         </div>
-                        {point.usageNote && (
-                            <p className="text-center text-xs text-secondary font-gothic italic mt-1 max-w-sm mx-auto">
-                                {point.usageNote}
-                            </p>
-                        )}
                     </div>
 
                     <p className="text-center text-sm text-secondary font-gothic mb-1">
@@ -244,6 +260,11 @@ export function GrammarQuizCard() {
                             className={`border rounded bg-feedback-background border-divider border-l-4 p-4 mb-4 ${feedbackBorderClass}`}
                         >
                             <p className="text-sm font-gothic text-primary">{feedback.message}</p>
+                            {point.usageNote && (
+                                <p className="text-xs font-gothic text-secondary italic mt-2">
+                                    {point.usageNote}
+                                </p>
+                            )}
                         </motion.div>
                     )}
 

@@ -9,6 +9,7 @@ import { VocabularyService } from "../../services/vocabulary.service";
 import { Button } from "../../components/ui/Button";
 import { LoadingScreen } from "../../components/LoadingScreen";
 import { KanjiVocabListCard } from "./KanjiVocabListCard";
+import { ArrowLeft } from "lucide-react";
 
 export default function KanjiDetailScreen() {
     const { character } = useParams<{ character: string }>();
@@ -88,7 +89,7 @@ export default function KanjiDetailScreen() {
                         KKLC Step
                     </div>
                     <div className="text-base text-primary font-gothic">
-                        {kanji.steps.kklc ? `Step ${kanji.steps.kklc}` : '—'}
+                        {kanji.steps.kklc ? `Step ${kanji.steps.kklc}` : '-'}
                     </div>
                 </div>
                 <div>
@@ -96,7 +97,7 @@ export default function KanjiDetailScreen() {
                         Frequency
                     </div>
                     <div className="text-base text-primary font-gothic">
-                        {kanji.frequency ? `#${kanji.frequency.toLocaleString()}` : '—'}
+                        {kanji.frequency ? `#${kanji.frequency.toLocaleString()}` : '-'}
                     </div>
                 </div>
             </div>
@@ -110,7 +111,7 @@ export default function KanjiDetailScreen() {
             {/* Header */}
             <div className="w-full flex items-center p-4 md:p-8 relative">
                 <Button variant="ghost" onClick={() => navigate(-1)} className="absolute left-4 md:left-8">
-                    ← Back
+                    <ArrowLeft className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Back
                 </Button>
                 <h1 className="flex-1 text-center text-xl font-serif text-primary">
                     Kanji Details
