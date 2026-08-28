@@ -178,6 +178,39 @@ export type GrammarAliasIndex = Record<string, string>;
  */
 export type GrammarKindIndex = Record<string, NonNullable<GrammarPoint['kind']>>;
 
+/** A derived form the transformation quiz can ask for. Mirrors the dataset's ConjugationForm. */
+export type ConjugationForm =
+    | 'te' | 'tai' | 'zu' | 'chatta' | 'toku'
+    | 'causative' | 'causative-passive' | 'passive' | 'potential'
+    | 'i-adj-adverbial' | 'i-adj-te' | 'i-adj-negative-polite' | 'na-adj-adverbial';
+
+/** One drill: conjugate `lemma` into `target`. */
+export interface ConjugationDrillItem {
+    /** Keyed on the vocab id, not the surface, so 入る (はいる / いる) is unambiguous. */
+    vocabId: string;
+    lemma: string;
+    lemmaReading: string;
+    target: string;
+    targetReading: string;
+    /** Other equally correct answers, e.g. 書かされる for the causative-passive. */
+    alternatives?: string[];
+    wordClass: 'godan' | 'ichidan' | 'irregular' | 'i-adjective' | 'na-adjective';
+}
+
+/**
+ * Drill items for every `kind: 'inflection'` point, from the dataset's
+ * `grammar/conjugations.json`. These points teach a derivation, so there is no
+ * invariant marker for the cloze quiz to blank - they are served by the
+ * transformation card instead, and a point with no entry here stays out of the
+ * introduction pipeline entirely.
+ */
+export type GrammarConjugationIndex = Record<string, {
+    form: ConjugationForm;
+    /** Shown to the learner as the prompt, e.g. "て-form". */
+    formLabel: string;
+    items: ConjugationDrillItem[];
+}>;
+
 /**
  * User's SRS progress for one grammar point. Mirrors VocabProgress but with a
  * single SRSEntry (no reading/meaning split) - a grammar quiz has exactly one

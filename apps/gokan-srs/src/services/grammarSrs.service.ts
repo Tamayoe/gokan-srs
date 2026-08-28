@@ -229,21 +229,30 @@ export class GrammarSRSService {
      *
      * `kind: 'inflection'` points teach a DERIVATION (て-form, causative,
      * passive) - the correct answer differs per input word, so there is nothing
-     * invariant for `computeBlankPlan` to blank. The dataset proves the failure:
-     * `n1-178` (the potential form) is the only point in 828 with no locatable
-     * pattern, and the other 19 anchor on the wrong thing - `n5-046` (the
-     * て-form) anchors on て, so the quiz asks for a fixed kana rather than the
-     * conjugation. Drilling them with the cloze quiz teaches nothing and burns
-     * SRS slots, so they stay out of the pipeline until the transformation quiz
-     * lands. They remain fully browsable on the detail pages.
+     * invariant for `computeBlankPlan` to blank. `n5-046` (the て-form) anchors
+     * on て, so the cloze quiz would ask for a fixed kana rather than the
+     * conjugation.
      *
-     * A missing/unloadable kinds index yields "everything is teachable", i.e.
-     * the pre-kind behaviour - the right failure direction, since the
-     * alternative is silently emptying the learning queue.
+     * They are teachable once the transformation drill has items for them, so
+     * the gate is on DATA, not on kind: an inflection point is allowed through
+     * only if `conjugations.json` actually carries drill items for it. That
+     * matters for `n1-178`, which the dataset may legitimately have no items for
+     * - gating on kind alone would let it through and present an unanswerable
+     * card.
+     *
+     * Failure directions differ by index, on purpose:
+     *  - kinds unavailable  -> everything teachable (the pre-kind behaviour);
+     *    the alternative is silently emptying the learning queue.
+     *  - conjugations unavailable -> no inflection point teachable; the
+     *    alternative is serving a card with no question on it.
      */
     private static async buildTeachabilityFilter(): Promise<(id: string) => boolean> {
         const kinds = await GrammarService.loadKinds();
-        return (id: string) => kinds[id] !== 'inflection';
+        const conjugations = await GrammarService.loadConjugations();
+        return (id: string) => {
+            if (kinds[id] !== 'inflection') return true;
+            return (conjugations[id]?.items?.length ?? 0) > 0;
+        };
     }
 
     /**

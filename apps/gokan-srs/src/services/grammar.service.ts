@@ -1,4 +1,4 @@
-import type { GrammarAliasIndex, GrammarChapter, GrammarJlptIndex, GrammarKindIndex, GrammarPoint, GrammarTeachingOrder } from '../models/grammar.model';
+import type { GrammarAliasIndex, GrammarChapter, GrammarConjugationIndex, GrammarJlptIndex, GrammarKindIndex, GrammarPoint, GrammarTeachingOrder } from '../models/grammar.model';
 
 /**
  * Loads grammar data compiled by the gokan-dataset submodule's
@@ -13,6 +13,7 @@ export class GrammarService {
     private static chapterByPointId: Map<string, GrammarChapter> | null = null;
     private static aliases: GrammarAliasIndex | null = null;
     private static kinds: GrammarKindIndex | null = null;
+    private static conjugations: GrammarConjugationIndex | null = null;
     private static pointCache = new Map<string, GrammarPoint>();
 
     private static async fetchJson<T>(path: string): Promise<T> {
@@ -67,6 +68,25 @@ export class GrammarService {
             return this.kinds;
         } catch (e) {
             console.error('[GrammarService] Failed to load grammar kinds; not filtering the pipeline by kind', e);
+            return {};
+        }
+    }
+
+    /**
+     * Drill items for the inflection points. On failure returns {}, which means
+     * no inflection point is teachable - those points then stay out of the
+     * pipeline, which is the same state as before the quiz existed. Failing
+     * closed is right here: serving an inflection point with no drill item would
+     * present an unanswerable card.
+     */
+    static async loadConjugations(): Promise<GrammarConjugationIndex> {
+        if (this.conjugations) return this.conjugations;
+
+        try {
+            this.conjugations = await this.fetchJson<GrammarConjugationIndex>(`/data/compiled/grammar/conjugations.json?v=${Date.now()}`);
+            return this.conjugations;
+        } catch (e) {
+            console.error('[GrammarService] Failed to load conjugation drills; inflection points stay out of the pipeline', e);
             return {};
         }
     }

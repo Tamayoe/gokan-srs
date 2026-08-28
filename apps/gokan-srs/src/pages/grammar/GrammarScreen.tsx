@@ -4,6 +4,7 @@ import { SessionProgress } from "../../components/SessionProgress";
 import type { SessionHistoryEntry } from "../../components/SessionProgress";
 import { GrammarIntroCard } from "./GrammarIntroCard";
 import { GrammarQuizCard } from "./GrammarQuizCard";
+import { GrammarConjugationCard } from "./GrammarConjugationCard";
 
 /**
  * Route /grammar - the Grammar activity, alongside the vocab quiz on /quiz.
@@ -65,7 +66,12 @@ export function GrammarScreen() {
                     <SessionProgress stats={grammarSessionStats} history={history} waitingNoun="grammar points" />
 
                     <div className="flex-1 flex items-center justify-center py-6 w-full">
-                        <GrammarQuizCard />
+                        {/* An `inflection` point is served by the transformation
+                            drill: its identity is a derivation, so there is no
+                            invariant marker for the sentence cloze to blank. */}
+                        {state.currentGrammarBlankPlan?.conjugation
+                            ? <GrammarConjugationCard />
+                            : <GrammarQuizCard />}
                     </div>
                 </div>
             );

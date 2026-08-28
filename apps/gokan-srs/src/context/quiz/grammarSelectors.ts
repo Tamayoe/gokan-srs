@@ -5,6 +5,7 @@ import { isGrammarDue, grammarNextReviewAt } from '../../services/grammarSchedul
 import { VocabularyService } from '../../services/vocabulary.service';
 import type { AnswerResult } from '../../services/srs.service';
 import { SRSService } from '../../services/srs.service';
+import { GrammarService } from '../../services/grammar.service';
 import { hashString, pickStable } from '../../utils/deterministicPick';
 import { computeSessionState } from './sessionState';
 import { computeSessionStats, computeSessionPreview } from './sessionStats';
@@ -174,7 +175,62 @@ async function pickMostFrequentCandidate(example: GrammarExample, candidateIndic
  *    no Submit step, rather than silently auto-granting SRS credit for an
  *    empty answer.
  */
+/**
+ * Builds the drill plan for an `inflection` point - a point whose identity is a
+ * derivation (て-form, causative, passive), so there is no invariant marker for
+ * the cloze quiz to blank.
+ *
+ * Returns null when the dataset has no drill items for the point, which is
+ * deliberate rather than defensive: `GrammarSRSService` keeps such a point out
+ * of the introduction pipeline entirely, so reaching here without items would
+ * mean serving an unanswerable card.
+ *
+ * The item is picked deterministically from the point's own list, seeded the
+ * same way computeBlankPlan picks an example, so a recompute of the same turn is
+ * stable while successive reviews cycle through different verbs.
+ */
+export async function computeConjugationPlan(point: GrammarPoint, reviewCount: number): Promise<GrammarBlankPlan | null> {
+    const conjugations = await GrammarService.loadConjugations();
+    const entry = conjugations[point.id];
+    if (!entry || entry.items.length === 0) return null;
+
+    const index = hashString(`${point.id}:${reviewCount}`) % entry.items.length;
+    const item = entry.items[index];
+
+    // Kana and kanji both accepted, plus whatever the dataset marked as an
+    // equally correct alternative (書かされる for the causative-passive, the
+    // colloquial 食べれる for the ichidan potential).
+    const accepted = Array.from(new Set([item.target, item.targetReading, ...(item.alternatives ?? [])].filter(Boolean)));
+
+    return {
+        // No sentence is involved; 0 keeps the field well-formed for any consumer
+        // that indexes examples without checking `conjugation` first.
+        exampleIndex: 0,
+        blankWordIndices: [0],
+        // The derivation IS the point, so this blank decides the point's result.
+        isPatternBlank: [true],
+        acceptLists: [accepted],
+        glosses: [entry.formLabel],
+        readOnly: false,
+        conjugation: {
+            lemma: item.lemma,
+            lemmaReading: item.lemmaReading,
+            formLabel: entry.formLabel,
+            wordClass: item.wordClass,
+            target: item.target,
+        },
+    };
+}
+
 export async function computeBlankPlan(point: GrammarPoint, progress: UserProgress | null, reviewCount: number): Promise<GrammarBlankPlan | null> {
+    // An inflection point cannot be tested by blanking a marker - hand it to the
+    // conjugation drill. Falls through to the cloze path when the dataset has no
+    // items, so a partially-built dataset degrades rather than breaking.
+    if (point.kind === 'inflection') {
+        const conjugationPlan = await computeConjugationPlan(point, reviewCount);
+        if (conjugationPlan) return conjugationPlan;
+    }
+
     if (point.examples.length === 0) return null;
 
     const startIndex = hashString(`${point.id}:${reviewCount}`) % point.examples.length;

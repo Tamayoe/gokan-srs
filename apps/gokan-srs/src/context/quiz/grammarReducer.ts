@@ -5,6 +5,27 @@ import { GrammarSRSService } from '../../services/grammarSrs.service';
 import type { QuizState } from './quizReducer';
 
 /** Which example (by index) and which of its words became blanks for the CURRENT quiz turn - fixed at load time so grading matches what was shown. */
+/**
+ * Set when the plan is a CONJUGATION drill rather than a sentence cloze - i.e.
+ * the point is `kind: 'inflection'`, whose identity is an operation with no
+ * invariant marker to blank.
+ *
+ * The drill deliberately reuses GrammarBlankPlan rather than introducing a
+ * parallel state branch: a conjugation is a single blank with an accept-list, so
+ * `gradeGrammarAnswers`, the answer/hint arrays, and the whole SRS path work
+ * unchanged. `blankWordIndices` is `[0]` and `isPatternBlank` is `[true]`,
+ * because the derivation IS the point.
+ */
+export interface GrammarConjugationPrompt {
+    lemma: string;
+    lemmaReading: string;
+    /** Shown as the prompt, e.g. "て-form". */
+    formLabel: string;
+    wordClass: 'godan' | 'ichidan' | 'irregular' | 'i-adjective' | 'na-adjective';
+    /** The canonical answer, revealed by the hint and shown in feedback. */
+    target: string;
+}
+
 export interface GrammarBlankPlan {
     exampleIndex: number;
     blankWordIndices: number[];
@@ -23,6 +44,12 @@ export interface GrammarBlankPlan {
     glosses: string[];
     /** True when no word in ANY of the point's examples resolved to a vocab id - nothing gradable, rendered as read-only study material instead of a quiz. */
     readOnly: boolean;
+    /**
+     * Present only for a conjugation drill (an `inflection` point). When set,
+     * the card renders GrammarConjugationCard instead of the sentence cloze, and
+     * `exampleIndex` is meaningless - there is no sentence.
+     */
+    conjugation?: GrammarConjugationPrompt;
 }
 
 /** A grammar point has exactly one quiz type, so this is just an id - no quizType/quizMode to track. */

@@ -192,6 +192,7 @@ describe('GrammarSRSService candidate finding (JLPT order fallback)', () => {
     beforeEach(() => {
         vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(null);
         vi.spyOn(GrammarService, 'loadKinds').mockResolvedValue({});
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({});
     });
 
     // 1 = N1 (hardest) .. 5 = N5 (easiest). Walk order must be N5 -> N1, mirroring vocab's findCandidatesJLPT.
@@ -262,6 +263,7 @@ describe('GrammarSRSService candidate finding (authored teaching order)', () => 
     beforeEach(() => {
         vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(teachingOrder);
         vi.spyOn(GrammarService, 'loadKinds').mockResolvedValue({});
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({});
     });
 
     it('introduces points in the authored order, not JLPT order', async () => {
@@ -339,6 +341,7 @@ describe('GrammarSRSService pipeline filtering by kind', () => {
     beforeEach(() => {
         vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(teachingOrder);
         vi.spyOn(GrammarService, 'loadKinds').mockResolvedValue({ ...kinds });
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({});
     });
 
     it('never introduces an inflection point while only the cloze quiz exists', async () => {
@@ -383,5 +386,65 @@ describe('GrammarSRSService pipeline filtering by kind', () => {
         const candidates = await GrammarSRSService.getNextCandidates([], 10);
 
         expect(candidates).toEqual(['n5-wa', 'n5-wo', 'n4-node']);
+    });
+});
+
+describe('GrammarSRSService gates inflection points on DATA, not on kind', () => {
+    const teachingOrder = {
+        order: ['n5-wa', 'n5-te', 'n4-causative'],
+        chapters: [{ id: 'c01', title: 'x', summary: '', jlptLevel: 5, points: ['n5-wa', 'n5-te', 'n4-causative'] }],
+    };
+    const kinds = { 'n5-wa': 'construction', 'n5-te': 'inflection', 'n4-causative': 'inflection' } as const;
+
+    beforeEach(() => {
+        vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(teachingOrder);
+        vi.spyOn(GrammarService, 'loadKinds').mockResolvedValue({ ...kinds });
+    });
+
+    it('introduces an inflection point once the transformation drill has items for it', async () => {
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({
+            'n5-te': {
+                form: 'te', formLabel: 'て-form',
+                items: [{ vocabId: 'v1', lemma: '飲む', lemmaReading: 'のむ', target: '飲んで', targetReading: 'のんで', wordClass: 'godan' }],
+            },
+        });
+
+        const candidates = await GrammarSRSService.getNextCandidates([], 10);
+
+        expect(candidates).toContain('n5-te');
+        // Still excluded: classified as needing the drill, but no items exist for it.
+        expect(candidates).not.toContain('n4-causative');
+    });
+
+    it('keeps an inflection point out when the drill has no items for it', async () => {
+        // The n1-178 case: gating on kind alone would serve an unanswerable card.
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({
+            'n5-te': { form: 'te', formLabel: 'て-form', items: [] },
+        });
+
+        expect(await GrammarSRSService.getNextCandidates([], 10)).toEqual(['n5-wa']);
+    });
+
+    it('fails closed when the conjugation index cannot be loaded', async () => {
+        // Opposite direction to the kinds index on purpose: no items means no
+        // inflection point is served, rather than serving cards with no question.
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({});
+
+        expect(await GrammarSRSService.getNextCandidates([], 10)).toEqual(['n5-wa']);
+    });
+
+    it('countLearnableGrammar agrees with the data gate', async () => {
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({
+            'n5-te': {
+                form: 'te', formLabel: 'て-form',
+                items: [{ vocabId: 'v1', lemma: '飲む', lemmaReading: 'のむ', target: '飲んで', targetReading: 'のんで', wordClass: 'godan' }],
+            },
+        });
+
+        const count = await GrammarSRSService.countLearnableGrammar([]);
+        const candidates = await GrammarSRSService.getNextCandidates([], 1000);
+
+        expect(count).toBe(2);
+        expect(candidates).toHaveLength(count);
     });
 });

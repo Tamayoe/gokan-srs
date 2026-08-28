@@ -16,6 +16,7 @@ import type { VocabProgress } from '../../models/vocabulary.model';
 import { DEFAULT_VOCABULARY_PROGRESS } from '../../models/vocabulary.model';
 import type { Vocabulary } from '../../models/vocabulary.model';
 import { VocabularyService } from '../../services/vocabulary.service';
+import { GrammarService } from '../../services/grammar.service';
 
 const now = new Date('2026-06-10T00:00:00Z');
 const past = new Date('2026-06-01T00:00:00Z');
@@ -606,5 +607,125 @@ describe('selectGrammarSessionStats', () => {
         expect(stats.total).toBe(0);
         expect(stats.waiting).toBe(1);
         expect(stats.moreNew).toBe(true);
+    });
+});
+
+describe('computeConjugationPlan / computeBlankPlan for inflection points', () => {
+    const tePoint = {
+        id: 'n5-046',
+        title: 'Verb て～',
+        jlptLevel: 5,
+        kind: 'inflection' as const,
+        derives: 'て-form',
+        shortExplanation: '', longExplanation: '', formation: '',
+        examples: [{ jp: '待って', romaji: '', en: '', words: [{ surface: '待って', vocabId: null }], patternWordIndices: [0] }],
+    } as unknown as GrammarPoint;
+
+    const conjugations = {
+        'n5-046': {
+            form: 'te' as const,
+            formLabel: 'て-form',
+            items: [
+                { vocabId: 'v1', lemma: '飲む', lemmaReading: 'のむ', target: '飲んで', targetReading: 'のんで', wordClass: 'godan' as const },
+                { vocabId: 'v2', lemma: '書く', lemmaReading: 'かく', target: '書いて', targetReading: 'かいて', wordClass: 'godan' as const },
+                { vocabId: 'v3', lemma: 'する', lemmaReading: 'する', target: 'して', targetReading: 'して', wordClass: 'irregular' as const },
+            ],
+        },
+    };
+
+    afterEach(() => { vi.restoreAllMocks(); });
+
+    it('serves a conjugation drill instead of a sentence cloze', async () => {
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue(conjugations);
+
+        const plan = await computeBlankPlan(tePoint, null, 0);
+
+        expect(plan?.conjugation).toBeDefined();
+        expect(plan?.conjugation?.formLabel).toBe('て-form');
+        // One blank, and it decides the point's result - the derivation IS the point.
+        expect(plan?.blankWordIndices).toEqual([0]);
+        expect(plan?.isPatternBlank).toEqual([true]);
+        expect(plan?.readOnly).toBe(false);
+    });
+
+    it('accepts both the kanji and the kana form of the answer', async () => {
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue(conjugations);
+
+        const plan = await computeBlankPlan(tePoint, null, 0);
+        const accepted = plan!.acceptLists[0];
+
+        expect(accepted).toContain(plan!.conjugation!.target);
+        // Whichever item was picked, its reading is accepted too.
+        const item = conjugations['n5-046'].items.find(i => i.target === plan!.conjugation!.target)!;
+        expect(accepted).toContain(item.targetReading);
+    });
+
+    it('includes dataset-marked alternatives in the accept list', async () => {
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({
+            'n4-020': {
+                form: 'causative-passive' as const,
+                formLabel: 'causative-passive',
+                items: [{
+                    vocabId: 'v1', lemma: '書く', lemmaReading: 'かく',
+                    target: '書かせられる', targetReading: 'かかせられる',
+                    // Both are standard Japanese; the contracted one is commoner in speech.
+                    alternatives: ['書かされる', 'かかされる'],
+                    wordClass: 'godan' as const,
+                }],
+            },
+        });
+
+        const point = { ...tePoint, id: 'n4-020' } as GrammarPoint;
+        const plan = await computeBlankPlan(point, null, 0);
+
+        expect(plan!.acceptLists[0]).toEqual(expect.arrayContaining(['書かせられる', 'かかせられる', '書かされる', 'かかされる']));
+    });
+
+    it('picks deterministically for a turn, and cycles across reviews', async () => {
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue(conjugations);
+
+        const a = await computeBlankPlan(tePoint, null, 3);
+        const b = await computeBlankPlan(tePoint, null, 3);
+        expect(a?.conjugation?.lemma).toBe(b?.conjugation?.lemma);
+
+        const lemmas = new Set<string>();
+        for (let i = 0; i < 12; i++) {
+            const plan = await computeBlankPlan(tePoint, null, i);
+            lemmas.add(plan!.conjugation!.lemma);
+        }
+        expect(lemmas.size).toBeGreaterThan(1);
+    });
+
+    it('grades a conjugation answer through the unchanged grading path', async () => {
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue(conjugations);
+        const plan = await computeBlankPlan(tePoint, null, 0);
+        const target = plan!.conjugation!.target;
+
+        const right = gradeGrammarAnswers(plan!, [target], [0]);
+        expect(right.overall).toBe('correct');
+
+        const wrong = gradeGrammarAnswers(plan!, ['まちがい'], [0]);
+        expect(wrong.overall).toBe('wrong');
+    });
+
+    it('falls back to the cloze path when the dataset has no items for the point', async () => {
+        // A partially-built dataset must degrade, not break. The pipeline filter
+        // keeps such a point out of circulation anyway.
+        vi.spyOn(GrammarService, 'loadConjugations').mockResolvedValue({});
+
+        const plan = await computeBlankPlan(tePoint, null, 0);
+
+        expect(plan?.conjugation).toBeUndefined();
+        expect(plan).not.toBeNull();
+    });
+
+    it('leaves construction points on the cloze path entirely', async () => {
+        const loadConjugations = vi.spyOn(GrammarService, 'loadConjugations');
+        const construction = { ...tePoint, id: 'n4-110', kind: 'construction' as const, derives: undefined } as GrammarPoint;
+
+        const plan = await computeBlankPlan(construction, null, 0);
+
+        expect(plan?.conjugation).toBeUndefined();
+        expect(loadConjugations).not.toHaveBeenCalled();
     });
 });
