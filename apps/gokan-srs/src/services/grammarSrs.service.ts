@@ -199,12 +199,13 @@ export class GrammarSRSService {
 
         const activeIds = new Set(currentQueue.map(g => g.grammarId));
         for (const id of ignoredIds) activeIds.add(id);
+        const isTeachable = await this.buildTeachabilityFilter();
 
         const teachingOrder = await GrammarService.loadTeachingOrder();
         if (teachingOrder) {
             const found: string[] = [];
             for (const id of teachingOrder.order) {
-                if (activeIds.has(id)) continue;
+                if (activeIds.has(id) || !isTeachable(id)) continue;
                 found.push(id);
                 if (found.length >= maxToFind) break;
             }
@@ -218,9 +219,31 @@ export class GrammarSRSService {
             GRAMMAR_JLPT_LEVELS,
             level => index[level] ?? [],
             id => id,
-            id => !activeIds.has(id),
+            id => !activeIds.has(id) && isTeachable(id),
             maxToFind
         );
+    }
+
+    /**
+     * Excludes points the current quiz cannot actually test.
+     *
+     * `kind: 'inflection'` points teach a DERIVATION (て-form, causative,
+     * passive) - the correct answer differs per input word, so there is nothing
+     * invariant for `computeBlankPlan` to blank. The dataset proves the failure:
+     * `n1-178` (the potential form) is the only point in 828 with no locatable
+     * pattern, and the other 19 anchor on the wrong thing - `n5-046` (the
+     * て-form) anchors on て, so the quiz asks for a fixed kana rather than the
+     * conjugation. Drilling them with the cloze quiz teaches nothing and burns
+     * SRS slots, so they stay out of the pipeline until the transformation quiz
+     * lands. They remain fully browsable on the detail pages.
+     *
+     * A missing/unloadable kinds index yields "everything is teachable", i.e.
+     * the pre-kind behaviour - the right failure direction, since the
+     * alternative is silently emptying the learning queue.
+     */
+    private static async buildTeachabilityFilter(): Promise<(id: string) => boolean> {
+        const kinds = await GrammarService.loadKinds();
+        return (id: string) => kinds[id] !== 'inflection';
     }
 
     /**
@@ -229,12 +252,13 @@ export class GrammarSRSService {
      */
     static async countLearnableGrammar(currentQueue: GrammarProgress[], limit = Infinity): Promise<number> {
         const activeIds = new Set(currentQueue.map(g => g.grammarId));
+        const isTeachable = await this.buildTeachabilityFilter();
 
         const teachingOrder = await GrammarService.loadTeachingOrder();
         if (teachingOrder) {
             let count = 0;
             for (const id of teachingOrder.order) {
-                if (activeIds.has(id)) continue;
+                if (activeIds.has(id) || !isTeachable(id)) continue;
                 count++;
                 if (count >= limit) return count;
             }
@@ -247,7 +271,7 @@ export class GrammarSRSService {
         return countJlptCandidates<string>(
             GRAMMAR_JLPT_LEVELS,
             level => index[level] ?? [],
-            id => !activeIds.has(id),
+            id => !activeIds.has(id) && isTeachable(id),
             limit
         );
     }

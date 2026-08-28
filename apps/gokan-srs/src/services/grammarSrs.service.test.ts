@@ -191,6 +191,7 @@ describe('GrammarSRSService candidate finding (JLPT order fallback)', () => {
     // explicitly rather than relying on the fetch happening to fail.
     beforeEach(() => {
         vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(null);
+        vi.spyOn(GrammarService, 'loadKinds').mockResolvedValue({});
     });
 
     // 1 = N1 (hardest) .. 5 = N5 (easiest). Walk order must be N5 -> N1, mirroring vocab's findCandidatesJLPT.
@@ -260,6 +261,7 @@ describe('GrammarSRSService candidate finding (authored teaching order)', () => 
 
     beforeEach(() => {
         vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(teachingOrder);
+        vi.spyOn(GrammarService, 'loadKinds').mockResolvedValue({});
     });
 
     it('introduces points in the authored order, not JLPT order', async () => {
@@ -315,5 +317,71 @@ describe('GrammarSRSService candidate finding (authored teaching order)', () => 
     it('hasMoreLearnableGrammar is false once every ordered point is queued', async () => {
         const queue = teachingOrder.order.map(id => makeProgress({ grammarId: id }));
         expect(await GrammarSRSService.hasMoreLearnableGrammar(queue)).toBe(false);
+    });
+});
+
+
+describe('GrammarSRSService pipeline filtering by kind', () => {
+    const teachingOrder = {
+        order: ['n5-wa', 'n5-te', 'n5-wo', 'n4-causative', 'n4-node'],
+        chapters: [
+            { id: 'c01', title: 'Particles', summary: '', jlptLevel: 5, points: ['n5-wa', 'n5-te', 'n5-wo'] },
+            { id: 'c02', title: 'More', summary: '', jlptLevel: 4, points: ['n4-causative', 'n4-node'] },
+        ],
+    };
+    // n5-te (the て-form) and n4-causative teach a derivation: the answer differs
+    // per verb, so the cloze quiz has nothing invariant to blank.
+    const kinds = {
+        'n5-wa': 'construction', 'n5-te': 'inflection', 'n5-wo': 'construction',
+        'n4-causative': 'inflection', 'n4-node': 'construction',
+    } as const;
+
+    beforeEach(() => {
+        vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(teachingOrder);
+        vi.spyOn(GrammarService, 'loadKinds').mockResolvedValue({ ...kinds });
+    });
+
+    it('never introduces an inflection point while only the cloze quiz exists', async () => {
+        const candidates = await GrammarSRSService.getNextCandidates([], 10);
+
+        expect(candidates).toEqual(['n5-wa', 'n5-wo', 'n4-node']);
+        expect(candidates).not.toContain('n5-te');
+        expect(candidates).not.toContain('n4-causative');
+    });
+
+    it('excludes them from countLearnableGrammar too, so the hub agrees with the queue', async () => {
+        const count = await GrammarSRSService.countLearnableGrammar([]);
+        const candidates = await GrammarSRSService.getNextCandidates([], 1000);
+
+        expect(count).toBe(3);
+        expect(candidates).toHaveLength(count);
+    });
+
+    it('reports no more learnable grammar once every CONSTRUCTION is queued', async () => {
+        // The inflection points are still unqueued, but they are not learnable,
+        // so the activity must not advertise itself as having material left.
+        const queue = ['n5-wa', 'n5-wo', 'n4-node'].map(id => makeProgress({ grammarId: id }));
+        expect(await GrammarSRSService.hasMoreLearnableGrammar(queue)).toBe(false);
+    });
+
+    it('treats everything as learnable when the kinds index is unavailable', async () => {
+        // Failure direction matters: a missing index must not silently empty the
+        // learning queue.
+        vi.spyOn(GrammarService, 'loadKinds').mockResolvedValue({});
+
+        const candidates = await GrammarSRSService.getNextCandidates([], 10);
+
+        expect(candidates).toEqual(teachingOrder.order);
+    });
+
+    it('filters the JLPT fallback path by kind as well', async () => {
+        vi.spyOn(GrammarService, 'loadTeachingOrder').mockResolvedValue(null);
+        vi.spyOn(GrammarService, 'loadJlptIndex').mockResolvedValue({
+            1: [], 2: [], 3: [], 4: ['n4-causative', 'n4-node'], 5: ['n5-wa', 'n5-te', 'n5-wo'],
+        });
+
+        const candidates = await GrammarSRSService.getNextCandidates([], 10);
+
+        expect(candidates).toEqual(['n5-wa', 'n5-wo', 'n4-node']);
     });
 });

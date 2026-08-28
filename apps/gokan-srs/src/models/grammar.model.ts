@@ -56,6 +56,24 @@ export interface GrammarPoint {
     longExplanation: string;
     /** Formation template shown to the user, e.g. "Noun + が + いちばん + Adjective/Verb". */
     formation: string;
+    /**
+     * The nature of this point, which decides which exercise can test it. The
+     * discriminating test is about the answer key: **can you write the correct
+     * answer without knowing which word it attaches to?**
+     *
+     *  - 'construction' yes - identity is a fixed string (ので, ことがある).
+     *                   The existing cloze quiz tests it.
+     *  - 'inflection'   no - identity is an operation and the answer differs per
+     *                   input word (飲む→飲んで, する→して). Nothing invariant to
+     *                   blank, so the cloze quiz CANNOT test it. Excluded from the
+     *                   introduction pipeline until a transformation quiz exists.
+     *  - 'lexical'      yes, but the answer is one dictionary word (いつも).
+     *
+     * See the dataset's docs/SCHEMA.md. 768 / 20 / 0 as of the last build.
+     */
+    kind?: 'construction' | 'inflection' | 'lexical';
+    /** For `kind: 'inflection'`: which derivation the point teaches, e.g. "て-form". */
+    derives?: string;
     examples: GrammarExample[];
     /**
      * Register/formality of this point, for points that have one (most don't -
@@ -152,6 +170,13 @@ export interface GrammarTeachingOrder {
  * becomes an item that can never be loaded OR cleared - see MigrationService.
  */
 export type GrammarAliasIndex = Record<string, string>;
+
+/**
+ * Point id -> kind, from the dataset's `index/kinds.json`. Exists so the
+ * introduction pipeline can filter by kind without fetching 788 point files to
+ * read one field each.
+ */
+export type GrammarKindIndex = Record<string, NonNullable<GrammarPoint['kind']>>;
 
 /**
  * User's SRS progress for one grammar point. Mirrors VocabProgress but with a

@@ -1,4 +1,4 @@
-import type { GrammarAliasIndex, GrammarChapter, GrammarJlptIndex, GrammarPoint, GrammarTeachingOrder } from '../models/grammar.model';
+import type { GrammarAliasIndex, GrammarChapter, GrammarJlptIndex, GrammarKindIndex, GrammarPoint, GrammarTeachingOrder } from '../models/grammar.model';
 
 /**
  * Loads grammar data compiled by the gokan-dataset submodule's
@@ -12,6 +12,7 @@ export class GrammarService {
     private static teachingOrder: GrammarTeachingOrder | null = null;
     private static chapterByPointId: Map<string, GrammarChapter> | null = null;
     private static aliases: GrammarAliasIndex | null = null;
+    private static kinds: GrammarKindIndex | null = null;
     private static pointCache = new Map<string, GrammarPoint>();
 
     private static async fetchJson<T>(path: string): Promise<T> {
@@ -50,6 +51,23 @@ export class GrammarService {
         } catch (e) {
             console.error('[GrammarService] Failed to load teaching order; falling back to JLPT order', e);
             return null;
+        }
+    }
+
+    /**
+     * Point id -> kind. On failure returns {}, which means "treat everything as
+     * testable" - the pre-kind behaviour. That is the right failure direction:
+     * a missing index should not empty the learning queue.
+     */
+    static async loadKinds(): Promise<GrammarKindIndex> {
+        if (this.kinds) return this.kinds;
+
+        try {
+            this.kinds = await this.fetchJson<GrammarKindIndex>(`/data/compiled/grammar/index/kinds.json?v=${Date.now()}`);
+            return this.kinds;
+        } catch (e) {
+            console.error('[GrammarService] Failed to load grammar kinds; not filtering the pipeline by kind', e);
+            return {};
         }
     }
 
