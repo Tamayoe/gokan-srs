@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { MigrationService } from './migration.service';
+import { MigrationService, CURRENT_FORMAT_VERSION } from './migration.service';
 import { CONSTANTS } from '../commons/constants';
 import type { VocabProgress } from '../models/vocabulary.model';
 import { GrammarService } from './grammar.service';
@@ -378,9 +378,9 @@ describe('MigrationService', () => {
             expect(MigrationService.needsMigration(currentProgress)).toBe(true);
         });
 
-        it('should return false only at the true terminal version (9)', () => {
+        it('should return false only at the true terminal version', () => {
             const currentProgress = {
-                _formatVersion: 9,
+                _formatVersion: CURRENT_FORMAT_VERSION,
                 learningQueue: []
             };
 
@@ -606,7 +606,7 @@ describe('MigrationService.migrateGrammarAliasesAsync', () => {
         expect(migrated.grammarQueue[0].grammarId).toBe('n5-078');
         expect(migrated.grammarQueue[0].entry.memoryStrength).toBe(10);
         expect(migrated.grammarQueue[0].totalReviews).toBe(3);
-        expect(migrated._formatVersion).toBe(9);
+        expect(migrated._formatVersion).toBe(CURRENT_FORMAT_VERSION);
     });
 
     it('merges onto the stronger entry when both the dropped and canonical id have progress', async () => {
@@ -651,7 +651,7 @@ describe('MigrationService.migrateGrammarAliasesAsync', () => {
         const migrated = await MigrationService.migrateGrammarAliasesAsync(makeProgressWith(queue));
 
         expect(migrated.grammarQueue).toBe(queue); // same reference - no needless rebuild
-        expect(migrated._formatVersion).toBe(9);
+        expect(migrated._formatVersion).toBe(CURRENT_FORMAT_VERSION);
     });
 
     it('does not touch progress when the alias index cannot be loaded', async () => {
@@ -669,12 +669,30 @@ describe('MigrationService.migrateGrammarAliasesAsync', () => {
 
     it('is a no-op once already at the terminal version', async () => {
         const loadAliases = vi.spyOn(GrammarService, 'loadAliases');
-        const progress = makeProgressWith([makeGrammar({ grammarId: 'n4-079' })], 9);
+        const progress = makeProgressWith([makeGrammar({ grammarId: 'n4-079' })], CURRENT_FORMAT_VERSION);
 
         const migrated = await MigrationService.migrateGrammarAliasesAsync(progress);
 
         expect(migrated).toBe(progress);
         expect(loadAliases).not.toHaveBeenCalled();
+    });
+
+    it('re-runs for a user stamped at a PREVIOUS terminal version', async () => {
+        // Why CURRENT_FORMAT_VERSION must be bumped every time aliases.json
+        // gains entries: a user stopped at the old terminal version has progress
+        // stored against ids that have since been dropped, and without a bump
+        // this pass would skip them - leaving an item loadGrammarPoint 404s on
+        // while the scheduler still counts it as due.
+        vi.spyOn(GrammarService, 'loadAliases').mockResolvedValue({ 'n4-053': 'n4-025' });
+        const progress = makeProgressWith(
+            [makeGrammar({ grammarId: 'n4-053' })],
+            CURRENT_FORMAT_VERSION - 1
+        );
+
+        const migrated = await MigrationService.migrateGrammarAliasesAsync(progress);
+
+        expect(migrated.grammarQueue[0].grammarId).toBe('n4-025');
+        expect(migrated._formatVersion).toBe(CURRENT_FORMAT_VERSION);
     });
 
     it('migrateAsync reaches the terminal version through both async passes', async () => {

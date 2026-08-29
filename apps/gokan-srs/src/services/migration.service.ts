@@ -27,8 +27,18 @@ const MERGED_VOCAB_VERSION = 8;
  * Terminal version, reached only after the async grammar-alias pass
  * (migrateGrammarAliasesAsync) has also run. Both async passes need a network
  * fetch, so both sit behind needsMigration() rather than the synchronous pass.
+ *
+ * BUMP THIS whenever `index/aliases.json` gains entries. The alias pass is
+ * gated on `currentVersion >= CURRENT_FORMAT_VERSION`, so a user already at the
+ * terminal version never re-runs it - and progress stored against a newly
+ * dropped id then becomes exactly the stranded item this pass exists to
+ * prevent: `loadGrammarPoint` 404s while the scheduler still counts it as due,
+ * so the session can never complete. The pass is idempotent
+ * (`aliases[id] ?? id`), so re-running it costs nothing.
+ *
+ * 9  -> 10: gokan-dev/gokan-dataset#14 raised aliases from 40 to 73.
  */
-const CURRENT_FORMAT_VERSION = 9;
+export const CURRENT_FORMAT_VERSION = 10;
 
 /**
  * Migration service to handle data format upgrades

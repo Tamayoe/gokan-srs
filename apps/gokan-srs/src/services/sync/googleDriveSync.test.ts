@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { GoogleDriveSync } from './googleDriveSync';
 import { toPlainProgressJSON } from '../progressSerialization';
+import { CURRENT_FORMAT_VERSION } from '../migration.service';
 import type { SyncEnvelope } from './types';
 
 function jsonResponse(body: unknown, ok = true, status = 200): Response {
@@ -19,7 +20,7 @@ function makeEnvelope(version: number, overrides: Partial<SyncEnvelope['progress
             // Already at the terminal migration version so these sync-focused tests
             // don't also need to mock the async passes' fetches (the homograph
             // merge-map, and the grammar alias index).
-            _formatVersion: 9,
+            _formatVersion: CURRENT_FORMAT_VERSION,
             ...overrides,
         } as any,
         settings: { preferredLearningOrder: 'frequency', enableMeaningQuiz: true, learningFrequency: 'medium' } as any,
