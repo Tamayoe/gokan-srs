@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useQuiz } from "../../context/useQuiz";
 import { ActivityStatusCard } from "../../components/ActivityStatusCard";
 import { SessionProgress } from "../../components/SessionProgress";
@@ -22,6 +23,11 @@ export function GrammarScreen() {
                 <ActivityStatusCard title="You're done for now">
                     Your next grammar review will be available in{' '}
                     <strong>{minutes} minute{minutes > 1 ? 's' : ''}</strong>.
+                    <div className="mt-3">
+                        <Link to="/grammar/browse" className="text-accent font-gothic text-sm hover:underline">
+                            Browse all grammar points
+                        </Link>
+                    </div>
                 </ActivityStatusCard>
             );
         }
@@ -30,6 +36,11 @@ export function GrammarScreen() {
             return (
                 <ActivityStatusCard title="All caught up">
                     Come back tomorrow.
+                    <div className="mt-3">
+                        <Link to="/grammar/browse" className="text-accent font-gothic text-sm hover:underline">
+                            Browse all grammar points
+                        </Link>
+                    </div>
                 </ActivityStatusCard>
             );
 

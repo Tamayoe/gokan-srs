@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import type { GrammarPoint } from "../../models/grammar.model";
 import { Card } from "../../components/ui/Card";
 import { MasteryRing } from "../../components/MasteryRing";
@@ -214,6 +214,12 @@ export default function GrammarDetailScreen() {
                 <Button variant="ghost" onClick={() => navigate(-1)} className="absolute left-4 md:left-8">
                     <ArrowLeft className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Back
                 </Button>
+                <Link
+                    to="/grammar/browse"
+                    className="absolute right-4 md:right-8 text-accent font-gothic text-sm hover:underline"
+                >
+                    Browse dataset
+                </Link>
                 <h1 className="flex-1 text-center text-xl font-serif text-primary">
                     Grammar Point Details
                 </h1>

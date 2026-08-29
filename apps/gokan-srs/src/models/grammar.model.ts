@@ -207,6 +207,53 @@ export interface GrammarVariantMember {
  */
 export type GrammarVariantGroupIndex = Record<string, GrammarVariantMember[]>;
 
+/**
+ * One summary row per point, from the dataset's `index/browse.json`. Carries
+ * everything a browse card needs so the page does not have to fetch 788
+ * individual point files; the full point is one fetch away on the detail route.
+ */
+export interface GrammarBrowseRow {
+    id: string;
+    title: string;
+    romaji?: string;
+    jlptLevel: number;
+    kind: NonNullable<GrammarPoint['kind']>;
+    derives?: string;
+    formation: string;
+    shortExplanation: string;
+    formalityLevel?: NonNullable<GrammarPoint['formalityLevel']>;
+    usageNote?: string;
+    familyId?: string;
+    familyName?: string;
+    axis?: GrammarAxis;
+    /** Set when this point is a realization variant taught via its canonical. */
+    variantOf?: string;
+    variantRelation?: string;
+    /** Position in the introduction order, or null when deliberately excluded. */
+    orderIndex: number | null;
+    chapterId?: string;
+    chapterTitle?: string;
+    exampleCount: number;
+    anchoredExampleCount: number;
+    conjugationItems?: number;
+}
+
+export interface GrammarBrowseIndex {
+    points: GrammarBrowseRow[];
+    stats: {
+        points: number;
+        introduced: number;
+        variants: number;
+        variantGroups: number;
+        families: number;
+        unfamilied: number;
+        chapters: number;
+        byLevel: Record<string, number>;
+        byKind: Record<string, number>;
+        byAxis: Record<string, number>;
+    };
+}
+
 /** A derived form the transformation quiz can ask for. Mirrors the dataset's ConjugationForm. */
 export type ConjugationForm =
     | 'te' | 'tai' | 'zu' | 'chatta' | 'toku'

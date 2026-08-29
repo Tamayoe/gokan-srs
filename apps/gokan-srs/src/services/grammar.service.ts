@@ -1,4 +1,4 @@
-import type { GrammarAliasIndex, GrammarChapter, GrammarConjugationIndex, GrammarJlptIndex, GrammarKindIndex, GrammarPoint, GrammarTeachingOrder, GrammarVariantGroupIndex } from '../models/grammar.model';
+import type { GrammarAliasIndex, GrammarBrowseIndex, GrammarChapter, GrammarConjugationIndex, GrammarJlptIndex, GrammarKindIndex, GrammarPoint, GrammarTeachingOrder, GrammarVariantGroupIndex } from '../models/grammar.model';
 
 /**
  * Loads grammar data compiled by the gokan-dataset submodule's
@@ -15,6 +15,7 @@ export class GrammarService {
     private static kinds: GrammarKindIndex | null = null;
     private static conjugations: GrammarConjugationIndex | null = null;
     private static variantGroups: GrammarVariantGroupIndex | null = null;
+    private static browseIndex: GrammarBrowseIndex | null = null;
     private static pointCache = new Map<string, GrammarPoint>();
 
     private static async fetchJson<T>(path: string): Promise<T> {
@@ -106,6 +107,22 @@ export class GrammarService {
         } catch (e) {
             console.error('[GrammarService] Failed to load variant groups; drilling canonical forms only', e);
             return {};
+        }
+    }
+
+    /**
+     * The whole dataset as summary rows, for the browse page. ~70 KB gzipped, so
+     * it is fetched only when that route is opened, never as part of a session.
+     */
+    static async loadBrowseIndex(): Promise<GrammarBrowseIndex | null> {
+        if (this.browseIndex) return this.browseIndex;
+
+        try {
+            this.browseIndex = await this.fetchJson<GrammarBrowseIndex>(`/data/compiled/grammar/index/browse.json?v=${Date.now()}`);
+            return this.browseIndex;
+        } catch (e) {
+            console.error('[GrammarService] Failed to load the grammar browse index', e);
+            return null;
         }
     }
 

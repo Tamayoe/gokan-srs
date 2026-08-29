@@ -23,6 +23,19 @@
   --color-muted: var(--muted);
   --color-subtle: var(--subtle);
 
+  /*
+    Quiz-type coding, used by the grammar browse page. Named by MEANING rather
+    than by colour, so the palette can change without renaming: a construction
+    is drilled by the sentence cloze, an inflection by the conjugation drill, and
+    a lexical point is a single dictionary word. Blue / amber / violet today.
+  */
+  --color-quiz-cloze: var(--quiz-cloze);
+  --color-quiz-cloze-soft: var(--quiz-cloze-soft);
+  --color-quiz-conjugation: var(--quiz-conjugation);
+  --color-quiz-conjugation-soft: var(--quiz-conjugation-soft);
+  --color-quiz-lexical: var(--quiz-lexical);
+  --color-quiz-lexical-soft: var(--quiz-lexical-soft);
+
   --font-serif: "Source Serif 4", Georgia, serif;
   --font-mincho: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
   --font-gothic: "Sawarabi Gothic", "Noto Sans JP", "Hiragino Sans", "Meiryo", "Yu Gothic", sans-serif;
@@ -50,6 +63,12 @@
   --label-neutral: #8B8E93;
   --muted: #9ca3af;
   --subtle: #6b7280;
+  --quiz-cloze: #2F6FA8;
+  --quiz-cloze-soft: rgba(47, 111, 168, 0.10);
+  --quiz-conjugation: #A2661C;
+  --quiz-conjugation-soft: rgba(162, 102, 28, 0.12);
+  --quiz-lexical: #6B4E9A;
+  --quiz-lexical-soft: rgba(107, 78, 154, 0.10);
 }
 
 .dark {
@@ -70,6 +89,12 @@
   --label-neutral: #8b949e;
   --muted: #6e7681;
   --subtle: #484f58;
+  --quiz-cloze: #7FB3DB;
+  --quiz-cloze-soft: rgba(127, 179, 219, 0.14);
+  --quiz-conjugation: #E0A94F;
+  --quiz-conjugation-soft: rgba(224, 169, 79, 0.16);
+  --quiz-lexical: #B79BE0;
+  --quiz-lexical-soft: rgba(183, 155, 224, 0.14);
 }
 
 /* Global Styles based on Theme */

@@ -15,6 +15,7 @@ import { SearchBar } from './components/SearchBar';
 const MainScreen = lazy(() => import('./pages/main/MainScreen').then(module => ({ default: module.MainScreen })));
 const VocabQuizScreen = lazy(() => import('./pages/quiz/VocabQuizScreen').then(module => ({ default: module.VocabQuizScreen })));
 const GrammarScreen = lazy(() => import('./pages/grammar/GrammarScreen').then(module => ({ default: module.GrammarScreen })));
+const GrammarBrowseScreen = lazy(() => import('./pages/grammar/GrammarBrowseScreen').then(module => ({ default: module.GrammarBrowseScreen })));
 const SettingsScreen = lazy(() => import('./pages/settings/Settings').then(module => ({ default: module.SettingsScreen })));
 const UserProfileScreen = lazy(() => import('./pages/profile/UserProfileScreen').then(module => ({ default: module.UserProfileScreen })));
 const StatsScreen = lazy(() => import('./pages/stats/StatsScreen').then(module => ({ default: module.StatsScreen }))); // START_ADD (conceptually)
@@ -166,6 +167,9 @@ export const App: React.FC = () => {
                         } />
                         <Route path="/kanji/:character" element={
                             <KanjiDetailScreen />
+                        } />
+                        <Route path="/grammar/browse" element={
+                            <GrammarBrowseScreen />
                         } />
                         <Route path="/grammar/:grammarId" element={
                             <GrammarDetailScreen />
