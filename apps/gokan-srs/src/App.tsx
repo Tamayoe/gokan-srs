@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import './App.css';
 import { OnboardingFlow } from './pages/setup/OnboardingFlow';
 import { Logo } from './components/Logo';
-import { Settings, Cloud, CloudOff, RefreshCw, BarChart2 } from 'lucide-react';
+import { Settings, Cloud, CloudOff, RefreshCw, BarChart2, Library } from 'lucide-react';
 import { useQuiz } from "./context/useQuiz";
 import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
@@ -107,6 +107,14 @@ export const App: React.FC = () => {
 
                 <div className="flex gap-4 items-center">
                     <SyncStatusIndicator />
+                    <button
+                        onClick={() => navigate("/grammar/browse")}
+                        title="Browse grammar points"
+                        aria-label="Browse grammar points"
+                        className={`cursor-pointer transition-colors ${location.pathname === '/grammar/browse' ? 'text-primary' : 'text-secondary hover:text-primary'}`}
+                    >
+                        <Library size={18} />
+                    </button>
                     <button onClick={() => navigate("/stats")} title="Statistics" className="cursor-pointer text-secondary hover:text-primary transition-colors">
                         <BarChart2 size={18} />
                     </button>
