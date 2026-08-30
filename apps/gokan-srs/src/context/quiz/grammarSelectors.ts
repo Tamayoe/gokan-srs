@@ -218,6 +218,13 @@ export async function computeConjugationPlan(point: GrammarPoint, reviewCount: n
             formLabel: entry.formLabel,
             wordClass: item.wordClass,
             target: item.target,
+            targetReading: item.targetReading,
+            // Written forms only - the kana of each alternative is already in
+            // `accepted`, and listing both spellings of each would read as four
+            // answers rather than two.
+            ...(item.alternatives?.length
+                ? { alternatives: item.alternatives.filter(a => a !== item.targetReading && /[一-鿿]/.test(a)) }
+                : {}),
         },
     };
 }

@@ -52,7 +52,7 @@ export function GrammarConjugationCard() {
 
     if (!point || !plan?.conjugation) return null;
 
-    const { lemma, lemmaReading, formLabel, wordClass, target } = plan.conjugation;
+    const { lemma, lemmaReading, formLabel, wordClass, target, targetReading, alternatives } = plan.conjugation;
     const revealed = (state.grammarHintLevels[0] ?? 0) >= 2;
     const answer = state.grammarAnswers[0] ?? '';
 
@@ -75,9 +75,8 @@ export function GrammarConjugationCard() {
                         <MasteryRing memoryStrength={currentGrammarProgress?.entry.memoryStrength ?? 0} size={40} />
                     </div>
                     <div className="flex items-center justify-center gap-2 mb-1">
-                        <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
-                            <JlptChip level={point.jlptLevel} />
-                        </Link>
+                        <JlptChip level={point.jlptLevel} />
+                        <PointLink pointId={point.id} revealed={!!feedback?.show} />
                     </div>
                     <p className="text-center text-xs text-tertiary font-gothic">
                         {CLASS_LABELS[wordClass] ?? wordClass}
@@ -114,7 +113,9 @@ export function GrammarConjugationCard() {
                     </form>
 
                     {revealed && !feedback?.show && (
-                        <p className="text-center text-sm text-secondary font-gothic mt-3">{target}</p>
+                        <div className="text-center mt-3">
+                            <AnswerWithReading written={target} reading={targetReading} size="sm" />
+                        </div>
                     )}
                 </CardSection>
 
@@ -124,7 +125,14 @@ export function GrammarConjugationCard() {
                             {feedback.message}
                         </p>
                         {!feedback.correct && (
-                            <p className="text-center text-2xl font-mincho text-primary mt-2">{target}</p>
+                            <div className="text-center mt-3">
+                                <AnswerWithReading written={target} reading={targetReading} size="lg" />
+                                {alternatives && alternatives.length > 0 && (
+                                    <p className="text-xs text-tertiary font-gothic mt-2">
+                                        also accepted: {alternatives.join(', ')}
+                                    </p>
+                                )}
+                            </div>
                         )}
                     </CardSection>
                 )}
@@ -157,5 +165,60 @@ export function GrammarConjugationCard() {
                 </CardSection>
             </Card>
         </motion.div>
+    );
+}
+
+/**
+ * The correct answer with its reading above it as furigana.
+ *
+ * The reading is the whole point: this drill's answers are kanji-stemmed, so
+ * showing only the written form hides a READING error entirely. A learner who
+ * answered たくないです for 高くないです was shown 高くないです back and had no way
+ * to see that the mistake was in たか, not in the inflection they were being
+ * tested on.
+ *
+ * Falls back to the written form alone when the two are identical, which is the
+ * case for any kana-only answer (するとく, 見たい's kana twin) - furigana that
+ * repeats the line below it is just noise.
+ */
+function AnswerWithReading({ written, reading, size }: { written: string; reading: string; size: 'sm' | 'lg' }) {
+    const main = size === 'lg' ? 'text-2xl' : 'text-base';
+    const rt = size === 'lg' ? 'text-[0.45em]' : 'text-[0.5em]';
+
+    if (!reading || reading === written) {
+        return <p className={`${main} font-mincho text-primary`}>{written}</p>;
+    }
+
+    return (
+        <p className={`${main} font-mincho text-primary leading-loose`}>
+            <ruby>
+                {written}
+                <rt className={`${rt} font-gothic text-tertiary select-none tracking-wide`}>{reading}</rt>
+            </ruby>
+        </p>
+    );
+}
+
+/**
+ * The route to the grammar point's detail page, available only AFTER answering.
+ *
+ * Before answering it is a spoiler route: the detail page carries the point's
+ * formation and every example sentence, which is the answer. The JLPT chip used
+ * to be a link unconditionally, so it was reachable mid-question by anyone who
+ * thought to click it.
+ *
+ * After answering the opposite is true - checking the point is exactly what a
+ * learner wants to do with a form they just got wrong - so it becomes an
+ * explicit labelled link rather than a chip you have to guess is clickable.
+ */
+function PointLink({ pointId, revealed }: { pointId: string; revealed: boolean }) {
+    if (!revealed) return null;
+    return (
+        <Link
+            to={`/grammar/${pointId}`}
+            className="text-xs font-gothic text-accent hover:underline whitespace-nowrap"
+        >
+            View grammar point
+        </Link>
     );
 }

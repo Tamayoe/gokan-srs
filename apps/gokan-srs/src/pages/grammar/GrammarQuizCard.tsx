@@ -74,9 +74,9 @@ export function GrammarQuizCard() {
                         </div>
                         <div className="mb-4">
                             <div className="flex items-center justify-center gap-2">
-                                <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
-                                    <JlptChip level={point.jlptLevel} />
-                                </Link>
+                                <JlptChip level={point.jlptLevel} />
+                                {/* The study view has no answer to spoil. */}
+                                <PointLink pointId={point.id} revealed />
                             </div>
                             {point.usageNote && (
                                 <p className="text-center text-xs text-secondary font-gothic italic mt-1 max-w-sm mx-auto">
@@ -150,14 +150,13 @@ export function GrammarQuizCard() {
                     </div>
                     <div className="mb-4">
                         <div className="flex items-center justify-center gap-2">
-                            <Link to={`/grammar/${point.id}`} aria-label="View grammar point details">
-                                <JlptChip level={point.jlptLevel} />
-                            </Link>
+                            <JlptChip level={point.jlptLevel} />
                             {point.formalityLevel && FORMALITY_HINT[point.formalityLevel] && (
                                 <span className="text-xs font-gothic text-secondary border border-divider rounded px-2 py-0.5">
                                     {FORMALITY_HINT[point.formalityLevel]}
                                 </span>
                             )}
+                            <PointLink pointId={point.id} revealed={!!feedback?.show} />
                         </div>
                     </div>
 
@@ -300,5 +299,29 @@ function GlossedWord({ vocabId, surface }: { vocabId: string; surface: string })
                 {surface}
             </Link>
         </WordGlossTooltip>
+    );
+}
+
+/**
+ * The route to the grammar point's detail page, available only AFTER answering.
+ *
+ * Before answering it is a spoiler route: the detail page carries the point's
+ * formation and every example sentence, which is the answer. The JLPT chip used
+ * to be a link unconditionally, so it was reachable mid-question by anyone who
+ * thought to click it.
+ *
+ * After answering the opposite is true - checking the point is exactly what a
+ * learner wants to do with a form they just got wrong - so it becomes an
+ * explicit labelled link rather than a chip you have to guess is clickable.
+ */
+function PointLink({ pointId, revealed }: { pointId: string; revealed: boolean }) {
+    if (!revealed) return null;
+    return (
+        <Link
+            to={`/grammar/${pointId}`}
+            className="text-xs font-gothic text-accent hover:underline whitespace-nowrap"
+        >
+            View grammar point
+        </Link>
     );
 }

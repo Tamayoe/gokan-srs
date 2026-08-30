@@ -24,6 +24,15 @@ export interface GrammarConjugationPrompt {
     wordClass: 'godan' | 'ichidan' | 'irregular' | 'i-adjective' | 'na-adjective';
     /** The canonical answer, revealed by the hint and shown in feedback. */
     target: string;
+    /**
+     * The same answer in kana. Shown as furigana wherever `target` is displayed:
+     * without it, a kanji-stemmed answer hides a READING error completely - a
+     * learner who answered たくないです for 高くないです sees only the kanji form
+     * back and cannot tell that what they got wrong was たか, not the inflection.
+     */
+    targetReading: string;
+    /** Equally correct answers, so feedback can say so rather than implying one form. */
+    alternatives?: string[];
 }
 
 export interface GrammarBlankPlan {
