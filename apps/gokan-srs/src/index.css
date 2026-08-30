@@ -17,6 +17,13 @@
   --color-accent-hover: var(--accent-hover);
   --color-error: var(--error);
   --color-error-accent: var(--error-accent);
+  /*
+    Answer-result colours. `text-feedback-correct` and `text-feedback-incorrect`
+    were already in use by the grammar cards but had never been DEFINED, so both
+    resolved to nothing and those messages rendered in the inherited colour.
+  */
+  --color-feedback-correct: var(--feedback-correct);
+  --color-feedback-incorrect: var(--feedback-incorrect);
   --color-input-placeholder: var(--input-placeholder);
   --color-meaning-muted: var(--meaning-muted);
   --color-label-neutral: var(--label-neutral);
@@ -58,6 +65,8 @@
   --accent-hover: #2A405D;
   --error: #8A3A2E;
   --error-accent: rgba(138, 58, 46, 0.45);
+  --feedback-correct: #2F6B4F;
+  --feedback-incorrect: #8A3A2E;
   --input-placeholder: #9AA0A6;
   --meaning-muted: rgba(26, 26, 46, 0.6);
   --label-neutral: #8B8E93;
@@ -84,6 +93,8 @@
   --accent-hover: #8AB4D4;
   --error: #f85149;
   --error-accent: rgba(248, 81, 73, 0.45);
+  --feedback-correct: #6FBF95;
+  --feedback-incorrect: #f85149;
   --input-placeholder: #6e7681;
   --meaning-muted: rgba(232, 228, 220, 0.6);
   --label-neutral: #8b949e;

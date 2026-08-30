@@ -10,6 +10,7 @@ import { Button } from "../../components/ui/Button";
 import { JlptChip } from "../../components/JlptChip";
 import { MasteryRing } from "../../components/MasteryRing";
 import { WordGlossTooltip } from "../../components/WordGlossTooltip";
+import { blankWidthEm } from "../../utils/blankWidth";
 
 /**
  * Register hint shown while the question is still open. Deliberately the
@@ -228,7 +229,7 @@ export function GrammarQuizCard() {
                                             autoCorrect="off"
                                             autoCapitalize="off"
                                             spellCheck="false"
-                                            style={{ width: `${Math.max(4, displayValue.length + 1)}ch` }}
+                                            style={{ width: `${blankWidthEm(displayValue)}em` }}
                                             className={`border-b-2 bg-transparent text-center focus:outline-none transition-colors font-gothic caret-accent ${borderClass}`}
                                         />
                                         {!feedback?.show && !revealed && (
@@ -248,7 +249,10 @@ export function GrammarQuizCard() {
                                         </span>
                                     )}
                                     {feedback?.show && result !== 'correct' && (
-                                        <span className="text-xs text-secondary font-gothic mt-1">
+                                        // The correct form, under the wrong one. Was text-xs
+                                        // beneath a text-2xl answer, which sized the thing you
+                                        // need to read at a third of the thing you got wrong.
+                                        <span className="text-base text-feedback-correct font-gothic mt-1 whitespace-nowrap">
                                             {feedback.matchedAnswers[answerIndex]}
                                         </span>
                                     )}
