@@ -1,4 +1,5 @@
 import type { Sentence } from "../models/sentence.model";
+import { WordGlossTooltip } from "./WordGlossTooltip";
 
 interface InteractiveSentenceProps {
     sentence: Sentence;
@@ -7,6 +8,13 @@ interface InteractiveSentenceProps {
     className?: string;
     showFurigana?: boolean;
     allowTargetClickable?: boolean;
+    /**
+     * Show a reading/gloss card on hover over a matched word. On by default: a
+     * learner reading a sentence should not have to navigate away to find out
+     * what a word means. Turn it off where the surrounding UI is itself a
+     * definition and the card would only repeat it.
+     */
+    showGlossOnHover?: boolean;
 }
 
 export function InteractiveSentence({
@@ -15,7 +23,8 @@ export function InteractiveSentence({
     onVocabClick,
     className = "",
     showFurigana = false,
-    allowTargetClickable = false
+    allowTargetClickable = false,
+    showGlossOnHover = true
 }: InteractiveSentenceProps) {
     const text = sentence.original;
     const matches = sentence.matches || {};
@@ -117,39 +126,45 @@ export function InteractiveSentence({
                     return segment.content;
                 };
 
-                if (isTarget) {
+                // The word being studied is excluded from the gloss card - the
+                // surrounding card already shows its meaning, so the tooltip
+                // would only restate it.
+                const glossed = showGlossOnHover && !isTarget;
+
+                const className = isTarget
+                    ? `text-accent font-bold border-b-2 border-accent/30 mx-0.5 px-0.5 ${isClickable ? 'cursor-pointer hover:border-accent transition-colors' : ''}`
+                    : isClickable
+                        ? "cursor-pointer text-primary border-b border-dashed border-tertiary/50 hover:text-accent hover:border-accent transition-colors mx-0.5"
+                        : "";
+
+                if (!isClickable && !glossed) return <span key={i}>{renderContent()}</span>;
+
+                const handleClick = isClickable
+                    ? (e: React.MouseEvent) => {
+                        e.stopPropagation();
+                        onVocabClick?.(segment.vocabId!);
+                    }
+                    : undefined;
+
+                if (!glossed) {
                     return (
-                        <span
-                            key={i}
-                            onClick={isClickable ? (e) => {
-                                e.stopPropagation();
-                                onVocabClick?.(segment.vocabId!);
-                            } : undefined}
-                            className={`text-accent font-bold border-b-2 border-accent/30 mx-0.5 px-0.5 ${isClickable ? 'cursor-pointer hover:border-accent transition-colors' : ''}`}
-                            title={isClickable ? "Click to view details" : undefined}
-                        >
+                        <span key={i} onClick={handleClick} className={className} title="Click to view details">
                             {renderContent()}
                         </span>
                     );
                 }
 
-                if (isClickable) {
-                    return (
-                        <span
-                            key={i}
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                onVocabClick?.(segment.vocabId!);
-                            }}
-                            className="cursor-pointer text-primary border-b border-dashed border-tertiary/50 hover:text-accent hover:border-accent transition-colors mx-0.5"
-                            title="Click to view details"
-                        >
-                            {renderContent()}
-                        </span>
-                    );
-                }
-
-                return <span key={i}>{renderContent()}</span>;
+                return (
+                    <WordGlossTooltip
+                        key={i}
+                        vocabId={segment.vocabId!}
+                        className={className}
+                        onClick={handleClick}
+                        fallbackTitle={isClickable ? "Click to view details" : undefined}
+                    >
+                        {renderContent()}
+                    </WordGlossTooltip>
+                );
             })}
         </span>
     );

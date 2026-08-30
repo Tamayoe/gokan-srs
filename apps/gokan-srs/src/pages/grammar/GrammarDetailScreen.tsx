@@ -16,6 +16,12 @@ import { InteractiveSentence } from "../../components/InteractiveSentence";
 import { grammarExampleToSentence } from "../../utils/grammarSentence.utils";
 import { ArrowLeft } from "lucide-react";
 
+const KIND_LABELS: Record<string, string> = {
+    'construction': 'Construction',
+    'inflection': 'Inflection',
+    'lexical': 'Lexical',
+};
+
 const FORMALITY_LABELS: Record<NonNullable<GrammarPoint['formalityLevel']>, string> = {
     'casual': 'Casual',
     'neutral': 'Neutral',
@@ -68,34 +74,56 @@ export default function GrammarDetailScreen() {
         return <LoadingScreen />;
     }
 
+    /**
+     * Identity block. Previously a centred single column with the mastery ring
+     * alone on its own row, which left a band of empty space above the title and
+     * pushed everything else down. The ring now sits inline with the chips, and
+     * the whole card reads as one left-aligned unit.
+     */
     const headerCard = (
         <Card size={isMobile ? "sm" : "md"}>
-            <div className="flex flex-col items-center text-center gap-4">
-                <div className="flex justify-end w-full">
-                    <MasteryRing memoryStrength={progress?.entry.memoryStrength ?? 0} size={48} />
-                </div>
-                <div className="flex items-center justify-center gap-2 flex-wrap">
-                    <JlptChip level={point.jlptLevel} />
-                    {point.formalityLevel && (
-                        <span className="px-2 py-0.5 text-xs rounded border border-secondary/30 text-secondary font-gothic font-medium whitespace-nowrap">
-                            {FORMALITY_LABELS[point.formalityLevel]}
-                        </span>
+            <div className="flex items-start justify-between gap-4">
+                <div className="min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap mb-2">
+                        <JlptChip level={point.jlptLevel} />
+                        {point.formalityLevel && (
+                            <span className="px-2 py-0.5 text-xs rounded border border-secondary/30 text-secondary font-gothic font-medium whitespace-nowrap">
+                                {FORMALITY_LABELS[point.formalityLevel]}
+                            </span>
+                        )}
+                        {point.kind && (
+                            <span className="px-2 py-0.5 text-xs rounded border border-divider text-tertiary font-gothic whitespace-nowrap">
+                                {KIND_LABELS[point.kind] ?? point.kind}
+                            </span>
+                        )}
+                    </div>
+                    <h2 className="text-primary font-mincho text-2xl md:text-3xl leading-snug break-words">
+                        {point.title}
+                    </h2>
+                    {point.romaji && (
+                        <p className="text-tertiary font-gothic text-sm mt-1">{point.romaji}</p>
                     )}
                 </div>
-                <div className="text-primary font-mincho text-3xl leading-snug">
-                    {point.title}
-                </div>
-                {point.romaji && (
-                    <div className="text-tertiary font-gothic text-sm -mt-2">
-                        {point.romaji}
+                <MasteryRing memoryStrength={progress?.entry.memoryStrength ?? 0} size={48} />
+            </div>
+
+            {point.usageNote && (
+                <p className="text-sm text-secondary font-serif leading-relaxed mt-4 pt-4 border-t border-divider">
+                    {point.usageNote}
+                </p>
+            )}
+
+            <div className="mt-4 pt-4 border-t border-divider">
+                {progress ? (
+                    <div className="flex items-center justify-between gap-3">
+                        <span className="text-xs text-tertiary font-gothic uppercase tracking-wider">
+                            {progress.stage === 'graduated' ? 'Graduated' : 'In your queue'}
+                        </span>
+                        <Button variant="secondary" onClick={() => navigate('/grammar')}>
+                            Go to grammar
+                        </Button>
                     </div>
-                )}
-                {point.usageNote && (
-                    <p className="text-sm text-secondary font-serif leading-relaxed max-w-md">
-                        {point.usageNote}
-                    </p>
-                )}
-                {!progress && (
+                ) : (
                     <Button
                         className="w-full"
                         onClick={() => grammarActions.saveGrammarIntroChoice(point, 'learn')}
@@ -121,14 +149,17 @@ export default function GrammarDetailScreen() {
         </Card>
     );
 
+    /**
+     * Formation is a single short line, so a full card with a heading and a
+     * boxed row inside it was mostly padding. Rendered as a labelled row
+     * instead, and folded into the left column next to the identity block.
+     */
     const formationCard = (
         <Card size={isMobile ? "sm" : "md"}>
-            <h2 className="text-lg font-gothic font-semibold text-primary mb-4">Formation</h2>
-            <div className="rounded-lg border border-divider bg-feedback-background px-4 py-3 text-center">
-                <p className="text-primary font-gothic text-base">
-                    {point.formation}
-                </p>
-            </div>
+            <h2 className="text-xs text-tertiary uppercase tracking-wider font-gothic mb-2">Formation</h2>
+            <p className="text-primary font-gothic text-base leading-relaxed break-words whitespace-pre-line">
+                {point.formation}
+            </p>
         </Card>
     );
 
@@ -208,31 +239,62 @@ export default function GrammarDetailScreen() {
     ) : null;
 
     return (
-        <div className="min-h-screen flex flex-col md:max-w-3xl md:mx-auto w-full animate-fade-in">
-            {/* Header */}
-            <div className="w-full flex items-center p-4 md:p-8 relative">
-                <Button variant="ghost" onClick={() => navigate(-1)} className="absolute left-4 md:left-8">
+        <div className="min-h-screen flex flex-col md:max-w-5xl md:mx-auto w-full animate-fade-in">
+            {/*
+              * Three columns rather than a centred title with two absolutely
+              * positioned siblings: at 375px "Back", the title and "Browse
+              * dataset" all overlapped, because absolute children take no space
+              * and the title claimed the full width regardless.
+              */}
+            <div className="w-full flex items-center justify-between gap-2 p-4 md:p-8">
+                <Button variant="ghost" onClick={() => navigate(-1)} className="shrink-0">
                     <ArrowLeft className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Back
                 </Button>
-                <Link
-                    to="/grammar/browse"
-                    className="absolute right-4 md:right-8 text-accent font-gothic text-sm hover:underline"
-                >
-                    Browse dataset
-                </Link>
-                <h1 className="flex-1 text-center text-xl font-serif text-primary">
+                <h1 className="min-w-0 flex-1 text-center text-base md:text-xl font-serif text-primary truncate">
                     Grammar Point Details
                 </h1>
+                <Link
+                    to="/grammar/browse"
+                    className="shrink-0 text-accent font-gothic text-sm hover:underline whitespace-nowrap"
+                >
+                    <span className="hidden sm:inline">Browse dataset</span>
+                    <span className="sm:hidden">Browse</span>
+                </Link>
             </div>
 
             {/* Content */}
-            <main className="flex-1 p-4 md:p-8 pt-0 flex flex-col space-y-6">
-                {headerCard}
-                {explanationCard}
-                {formationCard}
-                {statsCard}
-                {examplesCard}
-                {relatedPointsCard}
+            <main className="flex-1 p-4 md:p-8 pt-0">
+                {isMobile ? (
+                    <div className="flex flex-col space-y-6">
+                        {headerCard}
+                        {formationCard}
+                        {explanationCard}
+                        {examplesCard}
+                        {statsCard}
+                        {relatedPointsCard}
+                    </div>
+                ) : (
+                    /*
+                     * Two columns, mirroring VocabDetailScreen. The single column
+                     * left every card as wide as the page, so short ones
+                     * (Formation, the identity block) were mostly empty space.
+                     * The narrow column takes the short, glanceable cards; the
+                     * wide one takes the prose and the examples, which are the
+                     * only things that actually need the width.
+                     */
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                        <div className="md:col-span-5 space-y-6">
+                            {headerCard}
+                            {formationCard}
+                            {statsCard}
+                            {relatedPointsCard}
+                        </div>
+                        <div className="md:col-span-7 space-y-6">
+                            {explanationCard}
+                            {examplesCard}
+                        </div>
+                    </div>
+                )}
             </main>
         </div>
     );

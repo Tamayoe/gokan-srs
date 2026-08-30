@@ -9,6 +9,7 @@ import { CardSection } from "../../components/ui/CardSection";
 import { Button } from "../../components/ui/Button";
 import { JlptChip } from "../../components/JlptChip";
 import { MasteryRing } from "../../components/MasteryRing";
+import { WordGlossTooltip } from "../../components/WordGlossTooltip";
 
 /**
  * Register hint shown while the question is still open. Deliberately the
@@ -93,13 +94,7 @@ export function GrammarQuizCard() {
                         <p className="text-center text-2xl font-gothic leading-loose text-primary">
                             {example.words.map((word, i) =>
                                 word.vocabId != null ? (
-                                    <Link
-                                        key={i}
-                                        to={`/vocab/${word.vocabId}`}
-                                        className="cursor-pointer text-primary border-b border-dashed border-tertiary/50 hover:text-accent hover:border-accent transition-colors"
-                                    >
-                                        {word.surface}
-                                    </Link>
+                                    <GlossedWord key={i} vocabId={word.vocabId} surface={word.surface} />
                                 ) : (
                                     <span key={i}>{word.surface}</span>
                                 )
@@ -179,15 +174,7 @@ export function GrammarQuizCard() {
 
                             if (answerIndex === undefined) {
                                 if (word.vocabId != null) {
-                                    return (
-                                        <Link
-                                            key={i}
-                                            to={`/vocab/${word.vocabId}`}
-                                            className="cursor-pointer text-primary border-b border-dashed border-tertiary/50 hover:text-accent hover:border-accent transition-colors"
-                                        >
-                                            {word.surface}
-                                        </Link>
-                                    );
+                                    return <GlossedWord key={i} vocabId={word.vocabId} surface={word.surface} />;
                                 }
                                 return <span key={i}>{word.surface}</span>;
                             }
@@ -291,5 +278,27 @@ export function GrammarQuizCard() {
                 </CardSection>
             </Card>
         </motion.form>
+    );
+}
+
+/**
+ * A pre-filled word in the quiz sentence: the ones NOT blanked, which are
+ * exactly the words computeBlankPlanFor judged the learner does not know yet.
+ * Those are the words worth glossing, so the hover card lands precisely where
+ * the learner is stuck without pulling them out of the review.
+ *
+ * Kept as a Link as well, so the existing click-through to the vocab page is
+ * unchanged - the gloss is an addition, not a replacement.
+ */
+function GlossedWord({ vocabId, surface }: { vocabId: string; surface: string }) {
+    return (
+        <WordGlossTooltip vocabId={vocabId} fallbackTitle="Click to view details">
+            <Link
+                to={`/vocab/${vocabId}`}
+                className="cursor-pointer text-primary border-b border-dashed border-tertiary/50 hover:text-accent hover:border-accent transition-colors"
+            >
+                {surface}
+            </Link>
+        </WordGlossTooltip>
     );
 }
