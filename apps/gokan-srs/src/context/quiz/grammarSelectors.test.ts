@@ -342,14 +342,16 @@ describe('computeBlankPlan', () => {
         it('blanks the pattern markers unconditionally, even with zero known vocab', async () => {
             const point = makePatternPoint();
             const plan = (await computeBlankPlan(point, makeProgress({ learningQueue: [] }), 0))!;
-            expect(plan.blankWordIndices).toEqual([5, 6]);
+            // One input covering both marker tokens - see blankSpansOf.
+            expect(plan.blankWordIndices).toEqual([5]);
+            expect(plan.blankWordSpans).toEqual([[5, 6]]);
             expect(plan.readOnly).toBe(false);
         });
 
         it('blanks the pattern markers even with a null progress (unauthenticated/loading state)', async () => {
             const point = makePatternPoint();
             const plan = (await computeBlankPlan(point, null, 0))!;
-            expect(plan.blankWordIndices).toEqual([5, 6]);
+            expect(plan.blankWordSpans).toEqual([[5, 6]]);
         });
 
         it('takes priority over vocab-only blanking: known vocab does NOT replace the pattern as the primary target', async () => {
@@ -362,8 +364,8 @@ describe('computeBlankPlan', () => {
             });
 
             const plan = (await computeBlankPlan(point, progress, 0))!;
-            expect(plan.blankWordIndices).toContain(5);
-            expect(plan.blankWordIndices).toContain(6);
+            expect(plan.blankWordSpans.flat()).toContain(5);
+            expect(plan.blankWordSpans.flat()).toContain(6);
         });
 
         it('layers known vocab on top of the pattern as secondary reinforcement, sorted by position', async () => {
@@ -373,10 +375,11 @@ describe('computeBlankPlan', () => {
             });
 
             const plan = (await computeBlankPlan(point, progress, 0))!;
-            expect(plan.blankWordIndices).toEqual([4, 5, 6]); // 寿司 (known vocab) + が, 一番 (pattern)
+            // 寿司 (known vocab) is its own input; が + 一番 (the pattern) are one.
+            expect(plan.blankWordSpans).toEqual([[4], [5, 6]]);
             // Classification is what lets grading credit the pattern vs the vocab
             // separately: 寿司 is the vocab reinforcement blank, が/一番 are the pattern.
-            expect(plan.isPatternBlank).toEqual([false, true, true]);
+            expect(plan.isPatternBlank).toEqual([false, true]);
         });
 
         it('does not double-count a pattern word that also resolves to a known vocab id', async () => {
@@ -387,14 +390,45 @@ describe('computeBlankPlan', () => {
             });
 
             const plan = (await computeBlankPlan(point, progress, 0))!;
-            expect(plan.blankWordIndices).toEqual([5, 6]); // no duplicate index for 一番
+            expect(plan.blankWordSpans).toEqual([[5, 6]]); // no duplicate index for 一番
         });
 
         it('leaves unknown vocab pre-filled as context, not blanked, alongside the pattern', async () => {
             const point = makePatternPoint();
             const plan = (await computeBlankPlan(point, makeProgress({ learningQueue: [] }), 0))!;
-            expect(plan.blankWordIndices).not.toContain(4); // 寿司 - not known, stays literal
-            expect(plan.blankWordIndices).not.toContain(7); // 好き - not known, stays literal
+            expect(plan.blankWordSpans.flat()).not.toContain(4); // 寿司 - not known, stays literal
+            expect(plan.blankWordSpans.flat()).not.toContain(7); // 好き - not known, stays literal
+        });
+
+        it('grades a merged span on the concatenation of its words, not per token', async () => {
+            // The bug this fixes: どこ/に/も rendered as three inputs, and there is
+            // no way to know which box wants which token. Worse, canSubmitGrammar
+            // needs EVERY input filled, so typing どこにも into the first box and
+            // leaving the others empty left the learner unable to submit at all.
+            const point = makePatternPoint();
+            const plan = (await computeBlankPlan(point, makeProgress({ learningQueue: [] }), 0))!;
+            const example = point.examples[plan.exampleIndex];
+            const joined = plan.blankWordSpans[0].map(i => example.words[i].surface).join('');
+
+            expect(plan.acceptLists).toHaveLength(1);
+            expect(plan.acceptLists[0]).toContain(joined);
+        });
+
+        it('never merges vocab blanks, with each other or into a pattern run', async () => {
+            // Adjacent vocab blanks are separate words that happen to sit side by
+            // side, and each is graded on its own - merging them would ask for two
+            // words in one box and credit neither.
+            const point = makeGrammarPoint();
+            point.examples[0].patternWordIndices = [6];
+            const progress = makeProgress({
+                learningQueue: [
+                    makeVocabProgress({ vocabId: 'v-sushi', introductionAt: past }),
+                    makeVocabProgress({ vocabId: 'v-ichiban', introductionAt: past }),
+                ],
+            });
+
+            const plan = (await computeBlankPlan(point, progress, 0))!;
+            expect(plan.blankWordSpans.every(span => span.length === 1)).toBe(true);
         });
 
         it('falls back to vocab-based blanking when the pattern is not located in any example of the point', async () => {

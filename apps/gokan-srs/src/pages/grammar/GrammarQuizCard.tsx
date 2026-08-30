@@ -117,8 +117,13 @@ export function GrammarQuizCard() {
         );
     }
 
+    // One input per SPAN. A pattern spanning several tokens (どこ/に/も) is one
+    // input covering the whole run, so the words it swallowed must not also be
+    // printed as literal text beside it - hence the second set.
     const answerIndexByWordIndex = new Map<number, number>();
+    const swallowedWordIndices = new Set<number>();
     plan.blankWordIndices.forEach((wordIndex, answerIndex) => answerIndexByWordIndex.set(wordIndex, answerIndex));
+    plan.blankWordSpans.forEach(span => span.slice(1).forEach(i => swallowedWordIndices.add(i)));
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
@@ -169,6 +174,7 @@ export function GrammarQuizCard() {
 
                     <div className="flex flex-wrap items-end justify-center gap-y-3 text-2xl font-gothic leading-loose text-primary">
                         {example.words.map((word, i) => {
+                            if (swallowedWordIndices.has(i)) return null;
                             const answerIndex = answerIndexByWordIndex.get(i);
 
                             if (answerIndex === undefined) {

@@ -59,6 +59,7 @@ describe('grammarReducer (via quizReducer)', () => {
                 blankPlan: {
                     exampleIndex: 0,
                     blankWordIndices: [1, 3],
+                    blankWordSpans: [[1], [3]],
                     isPatternBlank: [false, false],
                     acceptLists: [['なか'], ['すし']],
                     glosses: ['inside', 'sushi'],

@@ -37,7 +37,20 @@ export interface GrammarConjugationPrompt {
 
 export interface GrammarBlankPlan {
     exampleIndex: number;
+    /**
+     * One entry per input, holding the FIRST word index that input covers.
+     * See `blankWordSpans` for the rest of each span.
+     */
     blankWordIndices: number[];
+    /**
+     * The word indices each input covers, in the same order as
+     * `blankWordIndices`. Usually one index each - but a grammar pattern
+     * regularly spans several tokens (どこ/に/も is three), and rendering one
+     * input per token asks the learner to guess how the marker divides across
+     * boxes, which is unanswerable. A contiguous run of pattern blanks becomes a
+     * single input covering the whole run.
+     */
+    blankWordSpans: number[][];
     /**
      * Per-blank flag (same order as blankWordIndices): true when this blank is one
      * of the point's grammar-pattern markers (example.patternWordIndices), false

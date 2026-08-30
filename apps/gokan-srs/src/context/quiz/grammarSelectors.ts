@@ -86,11 +86,62 @@ function candidateIndicesOf(example: GrammarExample): number[] {
  * falls back to surface+reading and an empty gloss rather than blocking the
  * card - the word is still gradable, just without the extra variants.
  */
-async function buildBlankData(example: GrammarExample, blankIndices: number[]): Promise<{ acceptLists: string[][]; glosses: string[] }> {
+/**
+ * Groups blanked word indices into the spans that become one input each.
+ *
+ * A contiguous run of PATTERN blanks collapses into a single span. A grammar
+ * marker regularly spans several tokens - どこ/に/も is three, にしろ is two - and
+ * one input per token asks the learner which box wants どこ, which wants に and
+ * which wants も. That is unanswerable, and it also made the card impossible to
+ * submit: `canSubmitGrammar` requires every input non-empty, so typing どこにも
+ * into the first box and leaving the other two blank left the learner stuck with
+ * no way forward and Reveal overwriting what they had typed.
+ *
+ * Vocab blanks are never merged, with each other or into a pattern run: they are
+ * separate words that happen to sit side by side, and each is graded on its own.
+ */
+function blankSpansOf(blankIndices: number[], isPatternBlank: boolean[]): number[][] {
+    const spans: number[][] = [];
+
+    for (let i = 0; i < blankIndices.length; i++) {
+        const span = [blankIndices[i]];
+        if (isPatternBlank[i]) {
+            while (
+                i + 1 < blankIndices.length
+                && isPatternBlank[i + 1]
+                && blankIndices[i + 1] === blankIndices[i] + 1
+            ) {
+                i++;
+                span.push(blankIndices[i]);
+            }
+        }
+        spans.push(span);
+    }
+
+    return spans;
+}
+
+async function buildBlankData(example: GrammarExample, blankSpans: number[][]): Promise<{ acceptLists: string[][]; glosses: string[] }> {
     const acceptLists: string[][] = [];
     const glosses: string[] = [];
 
-    for (const wordIndex of blankIndices) {
+    for (const span of blankSpans) {
+        // A merged span is graded on the concatenation of its words. Only the
+        // surface and the reading are meaningful for a multi-token marker - a
+        // per-word vocab lookup would offer alternatives for one token of a
+        // marker, which is not a form of anything.
+        if (span.length > 1) {
+            const words = span.map(i => example.words[i]);
+            const surface = words.map(w => w.surface).join('');
+            const reading = words.every(w => w.reading || !/[一-鿿]/.test(w.surface))
+                ? words.map(w => w.reading ?? w.surface).join('')
+                : null;
+            acceptLists.push(Array.from(new Set([surface, ...(reading ? [reading] : [])])));
+            glosses.push('');
+            continue;
+        }
+
+        const wordIndex = span[0];
         const word = example.words[wordIndex];
         const forms = new Set<string>();
         forms.add(word.surface);
@@ -207,6 +258,7 @@ export async function computeConjugationPlan(point: GrammarPoint, reviewCount: n
         // that indexes examples without checking `conjugation` first.
         exampleIndex: 0,
         blankWordIndices: [0],
+        blankWordSpans: [[0]],
         // The derivation IS the point, so this blank decides the point's result.
         isPatternBlank: [true],
         acceptLists: [accepted],
@@ -273,16 +325,22 @@ async function applyVariantRotation(
         for (const example of sibling.examples) {
             if (example.patternWordIndices.length === 0) continue;
 
-            // Only widen with a CLEAN pattern span - one made purely of
-            // grammatical material. Anchor spans are not consistent across a
-            // group: n5-105 anchors どこにも, but n5-104 anchors
-            // どこにも売ってないです and n3-049 anchors 寒いですから, where the
-            // span has swallowed a neighbouring content word. Accepting those as
-            // alternatives would let an unrelated string pass, so a span
-            // containing any vocab-linked word is skipped.
-            const swallowsContentWord = example.patternWordIndices
-                .some(i => example.words[i]?.vocabId !== null && example.words[i]?.vocabId !== undefined);
-            if (swallowsContentWord) continue;
+            // Only widen with a CONTIGUOUS span. A gap means the words do not
+            // concatenate into a string that appears anywhere: n5-104's anchor is
+            // どこ|に|も ... です, spanning the verb, and joining it yields
+            // どこにもです - not a form of anything.
+            //
+            // This replaces a guard that skipped any span containing a
+            // vocab-linked word. That was written when n5-104 still anchored
+            // どこにも売ってないです and the span really had swallowed a content
+            // word - gokan-dev/gokan-dataset#21 fixed that. Afterwards the guard
+            // matched EVERY span in EVERY group, because どこ and だれ are
+            // themselves vocab entries (何処, 誰), so the accept-list widening
+            // silently did nothing at all: typing どこへも when shown どこにも
+            // graded plain wrong.
+            const indices = example.patternWordIndices;
+            const contiguous = indices.every((wordIndex, k) => k === 0 || wordIndex === indices[k - 1] + 1);
+            if (!contiguous) continue;
 
             const surface = example.patternWordIndices.map(i => example.words[i]?.surface ?? '').join('');
             if (!surface) continue;
@@ -351,11 +409,16 @@ async function computeBlankPlanFor(point: GrammarPoint, progress: UserProgress |
         const knownVocabIndices = candidateIndices.filter(
             i => !example.patternWordIndices.includes(i) && isKnown(example.words[i].vocabId!)
         );
-        const blankWordIndices = [...example.patternWordIndices, ...knownVocabIndices].sort((a, b) => a - b);
+        const blankedIndices = [...example.patternWordIndices, ...knownVocabIndices].sort((a, b) => a - b);
+        const blankWordSpans = blankSpansOf(
+            blankedIndices,
+            blankedIndices.map(i => example.patternWordIndices.includes(i))
+        );
+        const blankWordIndices = blankWordSpans.map(span => span[0]);
         const isPatternBlank = blankWordIndices.map(i => example.patternWordIndices.includes(i));
 
-        const { acceptLists, glosses } = await buildBlankData(example, blankWordIndices);
-        return { exampleIndex, blankWordIndices, isPatternBlank, acceptLists, glosses, readOnly: false };
+        const { acceptLists, glosses } = await buildBlankData(example, blankWordSpans);
+        return { exampleIndex, blankWordIndices, blankWordSpans, isPatternBlank, acceptLists, glosses, readOnly: false };
     }
 
     // Pass 2: FALLBACK - pattern not locatable anywhere in this point; an example with a known word.
@@ -366,10 +429,10 @@ async function computeBlankPlanFor(point: GrammarPoint, progress: UserProgress |
 
         const knownIndices = candidateIndices.filter(i => isKnown(example.words[i].vocabId!));
         if (knownIndices.length > 0) {
-            const { acceptLists, glosses } = await buildBlankData(example, knownIndices);
+            const { acceptLists, glosses } = await buildBlankData(example, knownIndices.map(i => [i]));
             // No pattern located, so none of these are pattern blanks - they grade as
             // pure vocab (worst-of), the original pre-pattern behaviour.
-            return { exampleIndex, blankWordIndices: knownIndices, isPatternBlank: knownIndices.map(() => false), acceptLists, glosses, readOnly: false };
+            return { exampleIndex, blankWordIndices: knownIndices, blankWordSpans: knownIndices.map(i => [i]), isPatternBlank: knownIndices.map(() => false), acceptLists, glosses, readOnly: false };
         }
     }
 
@@ -380,12 +443,12 @@ async function computeBlankPlanFor(point: GrammarPoint, progress: UserProgress |
         if (candidateIndices.length === 0) continue;
 
         const best = await pickMostFrequentCandidate(example, candidateIndices);
-        const { acceptLists, glosses } = await buildBlankData(example, [best]);
-        return { exampleIndex, blankWordIndices: [best], isPatternBlank: [false], acceptLists, glosses, readOnly: false };
+        const { acceptLists, glosses } = await buildBlankData(example, [[best]]);
+        return { exampleIndex, blankWordIndices: [best], blankWordSpans: [[best]], isPatternBlank: [false], acceptLists, glosses, readOnly: false };
     }
 
     // Pass 4: no example has any blankable word at all - read-only study material.
-    return { exampleIndex: startIndex, blankWordIndices: [], isPatternBlank: [], acceptLists: [], glosses: [], readOnly: true };
+    return { exampleIndex: startIndex, blankWordIndices: [], blankWordSpans: [], isPatternBlank: [], acceptLists: [], glosses: [], readOnly: true };
 }
 
 /** Floor of the vocab coefficient: a grammar answer whose pattern is right but whose vocab blanks were ALL missed still earns this fraction of the full strength gain (never zero, never negative - the grammar core was demonstrated). */
