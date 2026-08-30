@@ -254,6 +254,20 @@ export function GrammarBrowseScreen() {
 
     const { stats } = index;
 
+    /*
+     * Only the kinds that actually have points. `lexical` currently reads 0 -
+     * gokan-dev/gokan-dataset#15 closed without populating it, on the measured
+     * finding that the 20 genuinely lexical points work correctly as
+     * constructions. A tile reading 0 is noise, and the filter toggle was worse
+     * than noise: selecting it filtered every row out, which reads as a bug
+     * rather than as an empty category.
+     *
+     * Derived rather than deleted, so the day a kind IS populated its tile and
+     * filter come back on their own - and so this never has to be revisited for
+     * whatever the next kind turns out to be.
+     */
+    const presentKinds = (Object.keys(KIND_STYLE) as Kind[]).filter(kind => (stats.byKind[kind] ?? 0) > 0);
+
     return (
         <div className="max-w-6xl mx-auto px-4 py-6">
             <Link to="/grammar" className="text-accent font-gothic text-sm hover:underline">
@@ -266,25 +280,30 @@ export function GrammarBrowseScreen() {
             </p>
 
             {/* Coverage at a glance: what exists, what is taught, what is not. */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mb-6">
-                {(Object.keys(KIND_STYLE) as Kind[]).map(kind => (
-                    <div key={kind} className={`rounded-lg border p-2 ${KIND_STYLE[kind].bg} ${KIND_STYLE[kind].border}`}>
+            {/*
+              * flex-wrap rather than a fixed column count: the number of tiles
+              * depends on how many kinds are populated, and a fixed grid left a
+              * trailing empty cell whenever that was not exactly six.
+              */}
+            <div className="flex flex-wrap gap-2 mb-6">
+                {presentKinds.map(kind => (
+                    <div key={kind} className={`flex-1 min-w-[132px] rounded-lg border p-2 ${KIND_STYLE[kind].bg} ${KIND_STYLE[kind].border}`}>
                         <p className={`font-serif text-xl ${KIND_STYLE[kind].text}`}>{stats.byKind[kind] ?? 0}</p>
                         <p className="font-gothic text-[11px] text-secondary">{KIND_STYLE[kind].label}</p>
                         <p className="font-gothic text-[11px] text-tertiary">{KIND_STYLE[kind].quiz}</p>
                     </div>
                 ))}
-                <div className="rounded-lg border border-divider p-2">
+                <div className="flex-1 min-w-[132px] rounded-lg border border-divider p-2">
                     <p className="font-serif text-xl text-primary">{stats.families}</p>
                     <p className="font-gothic text-[11px] text-secondary">Families</p>
                     <p className="font-gothic text-[11px] text-tertiary">{stats.unfamilied} unfamilied</p>
                 </div>
-                <div className="rounded-lg border border-divider p-2">
+                <div className="flex-1 min-w-[132px] rounded-lg border border-divider p-2">
                     <p className="font-serif text-xl text-primary">{stats.variantGroups}</p>
                     <p className="font-gothic text-[11px] text-secondary">Variant groups</p>
                     <p className="font-gothic text-[11px] text-tertiary">{stats.variants} not introduced</p>
                 </div>
-                <div className="rounded-lg border border-divider p-2">
+                <div className="flex-1 min-w-[132px] rounded-lg border border-divider p-2">
                     <p className="font-serif text-xl text-primary">
                         {(stats.byAxis.register ?? 0)}/{(stats.byAxis.constraint ?? 0)}/{(stats.byAxis.variant ?? 0)}
                     </p>
@@ -314,7 +333,7 @@ export function GrammarBrowseScreen() {
 
                     <div className="flex items-center gap-1">
                         <span className="font-gothic text-[11px] text-label-neutral uppercase tracking-wide mr-1">Quiz</span>
-                        {(Object.keys(KIND_STYLE) as Kind[]).map(kind => (
+                        {presentKinds.map(kind => (
                             <Toggle
                                 key={kind}
                                 active={kinds.has(kind)}
