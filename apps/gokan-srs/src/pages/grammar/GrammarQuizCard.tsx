@@ -57,7 +57,13 @@ export function GrammarQuizCard() {
 
     if (!point || !plan) return null;
 
-    const example = point.examples[plan.exampleIndex];
+    // The plan's own example, NOT point.examples[plan.exampleIndex]: for a variant
+    // group the plan was computed against a rotated realization, and indexing the
+    // canonical here applied one sentence's blank indices to a different sentence.
+    const example = plan.example ?? point.examples[plan.exampleIndex];
+    // The register hint must describe the realization actually shown - it is the
+    // only thing distinguishing どこにも from どこへも on the card.
+    const formalityLevel = plan.realization?.formalityLevel ?? point.formalityLevel;
 
     if (plan.readOnly) {
         return (
@@ -156,9 +162,17 @@ export function GrammarQuizCard() {
                     <div className="mb-4">
                         <div className="flex items-center justify-center gap-2">
                             <JlptChip level={point.jlptLevel} />
-                            {point.formalityLevel && FORMALITY_HINT[point.formalityLevel] && (
+                            {formalityLevel && FORMALITY_HINT[formalityLevel] && (
                                 <span className="text-xs font-gothic text-secondary border border-divider rounded px-2 py-0.5">
-                                    {FORMALITY_HINT[point.formalityLevel]}
+                                    {FORMALITY_HINT[formalityLevel]}
+                                </span>
+                            )}
+                            {plan.realization && plan.realization.total > 1 && (
+                                <span
+                                    className="text-xs font-gothic text-tertiary"
+                                    title="This rule has several equivalent forms; one is drilled per review, and they share one mastery score."
+                                >
+                                    form {plan.realization.index} of {plan.realization.total}
                                 </span>
                             )}
                             <PointLink pointId={point.id} revealed={!!feedback?.show} />

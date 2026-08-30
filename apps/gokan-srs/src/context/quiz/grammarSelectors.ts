@@ -350,7 +350,13 @@ async function applyVariantRotation(
 
     return {
         point,
-        realization: { pointId: chosen.id, canonicalId: canonical.id, index: index + 1, total: members.length },
+        realization: {
+            pointId: chosen.id,
+            canonicalId: canonical.id,
+            index: index + 1,
+            total: members.length,
+            formalityLevel: point.formalityLevel,
+        },
         sameRegister: Array.from(new Set(sameRegister)),
         otherRegister: Array.from(new Set(otherRegister)),
     };
@@ -418,7 +424,7 @@ async function computeBlankPlanFor(point: GrammarPoint, progress: UserProgress |
         const isPatternBlank = blankWordIndices.map(i => example.patternWordIndices.includes(i));
 
         const { acceptLists, glosses } = await buildBlankData(example, blankWordSpans);
-        return { exampleIndex, blankWordIndices, blankWordSpans, isPatternBlank, acceptLists, glosses, readOnly: false };
+        return { exampleIndex, example, blankWordIndices, blankWordSpans, isPatternBlank, acceptLists, glosses, readOnly: false };
     }
 
     // Pass 2: FALLBACK - pattern not locatable anywhere in this point; an example with a known word.
@@ -432,7 +438,7 @@ async function computeBlankPlanFor(point: GrammarPoint, progress: UserProgress |
             const { acceptLists, glosses } = await buildBlankData(example, knownIndices.map(i => [i]));
             // No pattern located, so none of these are pattern blanks - they grade as
             // pure vocab (worst-of), the original pre-pattern behaviour.
-            return { exampleIndex, blankWordIndices: knownIndices, blankWordSpans: knownIndices.map(i => [i]), isPatternBlank: knownIndices.map(() => false), acceptLists, glosses, readOnly: false };
+            return { exampleIndex, example, blankWordIndices: knownIndices, blankWordSpans: knownIndices.map(i => [i]), isPatternBlank: knownIndices.map(() => false), acceptLists, glosses, readOnly: false };
         }
     }
 
@@ -444,11 +450,11 @@ async function computeBlankPlanFor(point: GrammarPoint, progress: UserProgress |
 
         const best = await pickMostFrequentCandidate(example, candidateIndices);
         const { acceptLists, glosses } = await buildBlankData(example, [[best]]);
-        return { exampleIndex, blankWordIndices: [best], blankWordSpans: [[best]], isPatternBlank: [false], acceptLists, glosses, readOnly: false };
+        return { exampleIndex, example, blankWordIndices: [best], blankWordSpans: [[best]], isPatternBlank: [false], acceptLists, glosses, readOnly: false };
     }
 
     // Pass 4: no example has any blankable word at all - read-only study material.
-    return { exampleIndex: startIndex, blankWordIndices: [], blankWordSpans: [], isPatternBlank: [], acceptLists: [], glosses: [], readOnly: true };
+    return { exampleIndex: startIndex, example: point.examples[startIndex], blankWordIndices: [], blankWordSpans: [], isPatternBlank: [], acceptLists: [], glosses: [], readOnly: true };
 }
 
 /** Floor of the vocab coefficient: a grammar answer whose pattern is right but whose vocab blanks were ALL missed still earns this fraction of the full strength gain (never zero, never negative - the grammar core was demonstrated). */

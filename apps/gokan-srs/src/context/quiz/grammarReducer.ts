@@ -1,5 +1,5 @@
 import type { UserProgress } from '../../models/user.model';
-import type { GrammarPoint } from '../../models/grammar.model';
+import type { GrammarExample, GrammarPoint } from '../../models/grammar.model';
 import type { AnswerResult } from '../../services/srs.service';
 import { GrammarSRSService } from '../../services/grammarSrs.service';
 import type { QuizState } from './quizReducer';
@@ -37,6 +37,22 @@ export interface GrammarConjugationPrompt {
 
 export interface GrammarBlankPlan {
     exampleIndex: number;
+    /**
+     * The example the blanks were computed against, carried on the plan rather
+     * than looked up as `point.examples[exampleIndex]`.
+     *
+     * For a variant group those are NOT the same object. `computeBlankPlan`
+     * rotates in one realization and indexes into ITS examples, while the
+     * orchestration dispatches the CANONICAL point (mastery lives on the
+     * canonical's single SRS entry, so it has to). Rendering
+     * `point.examples[exampleIndex]` therefore applied one sentence's blank
+     * indices to a different sentence: n5-107's pattern [2,3,4] landed on
+     * n5-105's どこ|に|も|お金|を|置いていません, blanking も and swallowing お金を
+     * while どこに sat there as given text. Where the realization had MORE blanks
+     * than the canonical sentence has words, the extra answer slot could never be
+     * filled and `canSubmitGrammar` locked the card permanently.
+     */
+    example?: GrammarExample;
     /**
      * One entry per input, holding the FIRST word index that input covers.
      * See `blankWordSpans` for the rest of each span.
@@ -94,6 +110,12 @@ export interface GrammarBlankPlan {
         /** 1-based position and group size, for "2 of 6" style display. */
         index: number;
         total: number;
+        /**
+         * The SHOWN realization's register. The card's formality hint is the only
+         * thing telling the learner which of several near-identical forms is
+         * wanted, so it has to come from the realization, not the canonical.
+         */
+        formalityLevel?: GrammarPoint['formalityLevel'];
     };
 }
 

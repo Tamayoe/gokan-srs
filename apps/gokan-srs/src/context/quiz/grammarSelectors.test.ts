@@ -414,6 +414,25 @@ describe('computeBlankPlan', () => {
             expect(plan.acceptLists[0]).toContain(joined);
         });
 
+        it('carries the example the blanks were computed against', async () => {
+            // The variant-rotation bug: computeBlankPlan indexes into the ROTATED
+            // realization's examples while the orchestration dispatches the
+            // canonical point, so a card rendering point.examples[exampleIndex]
+            // applied one sentence's blank indices to a different sentence -
+            // blanking the wrong words, hiding others, and (when the realization
+            // had more blanks than the canonical had words) leaving an answer slot
+            // that could never be filled, which locked Submit forever.
+            const point = makePatternPoint();
+            const plan = (await computeBlankPlan(point, makeProgress({ learningQueue: [] }), 0))!;
+
+            expect(plan.example).toBeDefined();
+            // Every blanked index must exist in the example the plan carries.
+            for (const wordIndex of plan.blankWordSpans.flat()) {
+                expect(plan.example!.words[wordIndex]).toBeDefined();
+            }
+            expect(plan.blankWordSpans.flat().length).toBeLessThanOrEqual(plan.example!.words.length);
+        });
+
         it('never merges vocab blanks, with each other or into a pattern run', async () => {
             // Adjacent vocab blanks are separate words that happen to sit side by
             // side, and each is graded on its own - merging them would ask for two
