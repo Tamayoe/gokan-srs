@@ -33,6 +33,8 @@ export interface QuizActions {
     overrideDailyLimit(): Promise<void>;
     saveVocabIntroChoice(vocabulary: Vocabulary, choice: 'learn' | 'skip'): void;
     learnNextKanji(): Promise<void>;
+    /** Wipes grammar progress only, keeping vocab, kanji and settings. */
+    resetGrammarProgress(): Promise<void>;
     reset(): void;
 }
 
@@ -46,6 +48,8 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
     const {
         logout,
         uploadProgress,
+        uploadAuthoritative,
+        isAuthenticated,
         isDownloading,
         lastDownloadTime,
         lastBackgroundMergeTime,
@@ -465,6 +469,37 @@ export function useQuizOrchestration(state: QuizState, dispatch: Dispatch<QuizAc
             };
 
             dispatch({ type: 'LEARN_NEXT_KANJI', payload: updatedProgress });
+        },
+
+        /**
+         * Wipes grammar progress only, keeping vocab, kanji and settings.
+         *
+         * Exists because the old teaching order was alphabetical and anyone who
+         * started before the curriculum landed has a queue built on it; there is
+         * no sensible migration from "learned in the wrong order" to "learned in
+         * the right one", so starting the grammar activity over is the honest
+         * option.
+         *
+         * The Drive push is AUTHORITATIVE and awaited. Both matter:
+         *
+         * - Authoritative, because mergeGrammarQueues is a pure union by id.
+         *   A normal upload fetches the remote copy and merges it, so every entry
+         *   just deleted comes straight back and the reset silently undoes
+         *   itself. This is the only place in the app that needs to express a
+         *   deletion, and the merge has no way to represent one.
+         * - Awaited, so a failure surfaces to the caller instead of leaving local
+         *   and remote disagreeing, with the remote due to win on next load.
+         */
+        async resetGrammarProgress() {
+            if (!state.progress) return;
+            const progress = { ...state.progress, grammarQueue: [] };
+
+            StorageService.saveProgress(progress);
+            dispatch({ type: 'GRAMMAR_RESET_PROGRESS', payload: { progress } });
+
+            if (isAuthenticated && state.settings) {
+                await uploadAuthoritative({ progress, settings: state.settings });
+            }
         },
 
         reset() {

@@ -217,6 +217,95 @@ describe('GoogleDriveSync', () => {
         expect(second!.envelope.progress._sync!.version).toBeGreaterThan(first!.envelope.progress._sync!.version);
     });
 
+    it('a normal sync RESURRECTS grammar entries deleted locally - the union merge cannot express a deletion', async () => {
+        // Not a bug report against the merge, which is right to union for the case
+        // it was built for (two devices each adding points). It is the reason a
+        // scoped reset needs the authoritative path below: without it, clearing
+        // grammar locally is undone by the very upload meant to publish it.
+        const remoteEnvelope = makeEnvelope(5, {
+            grammarQueue: [{ grammarId: 'n5-040', stage: 'learning', totalReviews: 3, entry: {} }],
+        } as any);
+
+        globalThis.fetch = createFetchRouter([
+            { match: isFolderSearch, respond: () => jsonResponse({ files: [{ id: 'folder-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.pre-v8-backup.json'), respond: () => jsonResponse({ files: [{ id: 'backup-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.json'), respond: () => jsonResponse({ files: [{ id: 'file-1', name: 'kanji-progress.json', modifiedTime: 'T1' }] }) },
+            { match: isContent, respond: () => jsonResponse({ progress: remoteEnvelope.progress, settings: remoteEnvelope.settings }) },
+            { match: isMetadata, respond: () => jsonResponse({ modifiedTime: 'T1' }) },
+            { match: isUpload, respond: () => jsonResponse({ id: 'file-1' }) },
+        ]);
+
+        const sync = new GoogleDriveSync('token');
+        const cleared = makeEnvelope(6, { grammarQueue: [] } as any);
+        const result = await sync.sync(cleared);
+
+        expect(result!.envelope.progress.grammarQueue).toHaveLength(1);
+    });
+
+    it('an authoritative sync publishes the deletion instead of merging it away', async () => {
+        const remoteEnvelope = makeEnvelope(5, {
+            grammarQueue: [{ grammarId: 'n5-040', stage: 'learning', totalReviews: 3, entry: {} }],
+        } as any);
+        let uploadedBody: any = null;
+
+        globalThis.fetch = createFetchRouter([
+            { match: isFolderSearch, respond: () => jsonResponse({ files: [{ id: 'folder-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.pre-v8-backup.json'), respond: () => jsonResponse({ files: [{ id: 'backup-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.json'), respond: () => jsonResponse({ files: [{ id: 'file-1', name: 'kanji-progress.json', modifiedTime: 'T1' }] }) },
+            { match: isContent, respond: () => jsonResponse({ progress: remoteEnvelope.progress, settings: remoteEnvelope.settings }) },
+            { match: isMetadata, respond: () => jsonResponse({ modifiedTime: 'T1' }) },
+            {
+                match: isUpload,
+                respond: (_i, _url, init) => {
+                    // Capture what actually goes to Drive: the local check below
+                    // would pass even if the write still carried the old queue.
+                    const body = String((init as any)?.body ?? '');
+                    const match = body.match(/\{[\s\S]*\}/);
+                    if (match) { try { uploadedBody = JSON.parse(match[0]); } catch { /* multipart preamble */ } }
+                    return jsonResponse({ id: 'file-1' });
+                },
+            },
+        ]);
+
+        const sync = new GoogleDriveSync('token');
+        const cleared = makeEnvelope(6, { grammarQueue: [] } as any);
+        const result = await sync.sync(cleared, { authoritative: true });
+
+        expect(result!.envelope.progress.grammarQueue).toEqual([]);
+        // And the remote write itself carries the empty queue.
+        if (uploadedBody?.progress) expect(uploadedBody.progress.grammarQueue).toEqual([]);
+        // Not reported as a remote pull: nothing was taken from the remote copy,
+        // so the UI must not reconcile (which would reload the active card).
+        expect(result!.pulledRemoteChanges).toBe(false);
+    });
+
+    it('an authoritative sync leaves vocab and kanji alone', async () => {
+        // The whole point of a SCOPED reset: only grammar is cleared.
+        const remoteEnvelope = makeEnvelope(5, {
+            grammarQueue: [{ grammarId: 'n5-040', stage: 'learning', totalReviews: 3, entry: {} }],
+        } as any);
+
+        globalThis.fetch = createFetchRouter([
+            { match: isFolderSearch, respond: () => jsonResponse({ files: [{ id: 'folder-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.pre-v8-backup.json'), respond: () => jsonResponse({ files: [{ id: 'backup-1' }] }) },
+            { match: (url) => isFileList(url, 'kanji-progress.json'), respond: () => jsonResponse({ files: [{ id: 'file-1', name: 'kanji-progress.json', modifiedTime: 'T1' }] }) },
+            { match: isContent, respond: () => jsonResponse({ progress: remoteEnvelope.progress, settings: remoteEnvelope.settings }) },
+            { match: isMetadata, respond: () => jsonResponse({ modifiedTime: 'T1' }) },
+            { match: isUpload, respond: () => jsonResponse({ id: 'file-1' }) },
+        ]);
+
+        const sync = new GoogleDriveSync('token');
+        const cleared = makeEnvelope(6, {
+            grammarQueue: [],
+            learningQueue: [{ vocabId: 'v-1' }],
+        } as any);
+        const result = await sync.sync(cleared, { authoritative: true });
+
+        expect(result!.envelope.progress.grammarQueue).toEqual([]);
+        expect(result!.envelope.progress.learningQueue).toHaveLength(1);
+        expect(result!.envelope.progress.kanjiKnowledge.kanjiSet).toEqual(['A']);
+    });
+
     it('ensureRemoteBackupOnce uploads exactly once even if called multiple times', async () => {
         let backupListCallCount = 0;
         let backupUploadCount = 0;

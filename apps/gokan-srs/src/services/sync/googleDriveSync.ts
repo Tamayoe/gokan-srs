@@ -102,7 +102,21 @@ export class GoogleDriveSync {
      * immediately before writing. If another device wrote in between, we
      * re-fetch and re-merge instead of clobbering that write.
      */
-    async sync(localEnvelope: SyncEnvelope): Promise<SyncOutcome | null> {
+    /**
+     * Pushes local state to Drive, merging with whatever is there.
+     *
+     * `authoritative: true` skips the merge and writes local as-is. Needed
+     * because the merge cannot represent a DELETION: mergeGrammarQueues and
+     * mergeLearningQueues are pure unions by id, so anything removed locally is
+     * restored from the remote copy on the very next upload. A scoped reset
+     * (settings -> Reset grammar progress) has to be able to say "this is the
+     * truth now", or it silently undoes itself.
+     *
+     * Only ever appropriate for an explicit, user-confirmed destructive action:
+     * it discards whatever another device wrote since this client last read.
+     * `ensureRemoteBackupOnce` still snapshots the live remote first.
+     */
+    async sync(localEnvelope: SyncEnvelope, options: { authoritative?: boolean } = {}): Promise<SyncOutcome | null> {
         await this.ensureFolder();
         await this.ensureRemoteBackupOnce();
 
@@ -141,6 +155,7 @@ export class GoogleDriveSync {
             // would make every routine upload look like a remote change and force
             // the UI to reconcile - and reload the quiz card - after every answer.
             const remoteIsOwnLastWrite =
+                options.authoritative ||
                 remoteProgress !== null &&
                 this.lastWrittenProgressSignature !== null &&
                 progressUploadSignature(remoteProgress) === this.lastWrittenProgressSignature &&
@@ -151,7 +166,7 @@ export class GoogleDriveSync {
             // genuine other-device write (fine, rare) or a broken serialize->parse
             // round trip (fast-forward silently degrading to merge-every-upload). If
             // this line appears after every answer, suspect the round trip.
-            if (!remoteIsOwnLastWrite && remoteProgress !== null && this.lastWrittenProgressSignature !== null) {
+            if (!options.authoritative && !remoteIsOwnLastWrite && remoteProgress !== null && this.lastWrittenProgressSignature !== null) {
                 console.info('[GoogleDriveSync] Remote diverged from this client\'s last write - performing full merge.');
             }
 
@@ -171,7 +186,7 @@ export class GoogleDriveSync {
                 mergedEnvelope = { progress: mergedProgress, settings: mergedSettings };
             }
 
-            const pulledRemoteChanges = remoteProgress !== null && !remoteIsOwnLastWrite;
+            const pulledRemoteChanges = !options.authoritative && remoteProgress !== null && !remoteIsOwnLastWrite;
 
             if (!resolved.fileId) {
                 // No remote file exists yet - safe to create unconditionally.

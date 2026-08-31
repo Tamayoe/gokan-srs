@@ -18,6 +18,13 @@ interface GoogleDriveContextType {
     logout: () => void;
     downloadProgress: () => Promise<void>;
     uploadProgress: (envelope: { progress: UserProgress; settings: UserSettings }) => Promise<void>;
+    /**
+     * Pushes local state to Drive WITHOUT merging, immediately (no debounce).
+     * The union merge cannot express a deletion, so a scoped reset needs this or
+     * the remote copy restores what was just removed. Explicit, confirmed
+     * destructive actions only.
+     */
+    uploadAuthoritative: (envelope: { progress: UserProgress; settings: UserSettings }) => Promise<void>;
     isDownloading: boolean;
     isUploading: boolean;
     user: GoogleUser | null;
@@ -181,6 +188,32 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
         }, 2000); // 2 second debounce to gather rapid changes (e.g. typing or quick settings toggles)
     }, []);
 
+    /**
+     * Overwrite rather than merge - see the interface doc. Deliberately NOT
+     * debounced: the caller is a one-shot user action, and a 2s window is long
+     * enough for a routine auto-upload to interleave and merge the deleted
+     * entries straight back in.
+     */
+    const uploadAuthoritative = useCallback(async (envelope: { progress: any; settings: any }) => {
+        const service = syncServiceRef.current;
+        if (!service) return;
+        if (uploadDebounceRef.current) {
+            clearTimeout(uploadDebounceRef.current);
+            uploadDebounceRef.current = null;
+        }
+        setIsUploading(true);
+        try {
+            await service.sync(envelope, { authoritative: true });
+            setSyncPaused(false);
+        } catch (error) {
+            console.error('[GoogleDriveContext] Authoritative upload failed:', error);
+            if (error instanceof GoogleAuthError) setSyncPaused(true);
+            throw error;
+        } finally {
+            setIsUploading(false);
+        }
+    }, []);
+
     const login = useGoogleLogin({
         scope: 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
         onSuccess: async (tokenResponse: TokenResponse) => {
@@ -226,6 +259,7 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
             logout,
             downloadProgress: () => syncService ? downloadProgress(syncService) : Promise.resolve(),
             uploadProgress,
+            uploadAuthoritative,
             isDownloading,
             isUploading,
             user,

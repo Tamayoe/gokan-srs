@@ -40,6 +40,8 @@ export interface QuizContextValue {
         saveVocabIntroChoice(vocabulary: Vocabulary, choice: 'learn' | 'skip'): void
         learnNextKanji(): Promise<void>;
         reset(): void;
+        /** Wipes grammar progress only, keeping vocab, kanji and settings. */
+        resetGrammarProgress(): Promise<void>;
     };
 
     computed: {

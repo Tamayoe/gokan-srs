@@ -155,6 +155,7 @@ export const App: React.FC = () => {
                                 settings={state.settings!}
                                 onUpdateSettings={actions.saveSettings}
                                 onReset={actions.reset}
+                                onResetGrammar={actions.resetGrammarProgress}
                                 onBack={() => navigate('/')}
                             />
                         } />

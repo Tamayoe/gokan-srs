@@ -81,6 +81,7 @@ interface SettingsScreenProps {
     settings: UserSettings;
     onUpdateSettings: (settings: UserSettings) => void;
     onReset: () => void;
+    onResetGrammar: () => Promise<void>;
     onBack: () => void;
 }
 
@@ -88,10 +89,13 @@ export function SettingsScreen({
     settings,
     onUpdateSettings,
     onReset,
+    onResetGrammar,
     onBack,
 }: SettingsScreenProps) {
     const { theme, setTheme } = useTheme();
     const [isConfirmingReset, setIsConfirmingReset] = useState(false);
+    const [isConfirmingGrammarReset, setIsConfirmingGrammarReset] = useState(false);
+    const [grammarResetState, setGrammarResetState] = useState<'idle' | 'working' | 'done' | 'failed'>('idle');
 
 
 
@@ -447,6 +451,70 @@ export function SettingsScreen({
                 </h2>
 
                 <div className="flex flex-col gap-4">
+                    {/*
+                      * Grammar-only reset, above the all-or-nothing one. The
+                      * grammar activity's teaching order changed wholesale, and
+                      * there is no migration from "learned in the old order" to
+                      * the new one - so starting that one activity over has to be
+                      * possible without discarding vocab and kanji too.
+                      */}
+                    {!isConfirmingGrammarReset ? (
+                        <div>
+                            <Button
+                                onClick={() => { setIsConfirmingGrammarReset(true); setGrammarResetState('idle'); }}
+                                className="w-full justify-center bg-transparent border border-secondary text-secondary hover:border-error hover:text-error transition-colors"
+                            >
+                                Reset grammar progress only
+                            </Button>
+                            {grammarResetState === 'done' && (
+                                <p className="text-xs text-center mt-2 font-gothic text-feedback-correct">
+                                    Grammar progress cleared. Vocabulary and kanji are untouched.
+                                </p>
+                            )}
+                            {grammarResetState === 'failed' && (
+                                <p className="text-xs text-center mt-2 font-gothic text-feedback-incorrect">
+                                    Cleared locally, but the sync failed - reconnect and retry, or your
+                                    cloud copy will restore it on the next load.
+                                </p>
+                            )}
+                        </div>
+                    ) : (
+                        <div className="p-4 rounded-lg bg-error/5 border border-error/20 animate-fade-in-up">
+                            <p className="text-sm text-center mb-1 font-medium text-error">
+                                Clear every grammar point you have learned?
+                            </p>
+                            <p className="text-xs text-center mb-4 font-gothic text-secondary">
+                                Vocabulary, kanji and settings are kept. This also overwrites your
+                                cloud copy, so it cannot be undone from another device.
+                            </p>
+                            <div className="flex gap-3">
+                                <Button
+                                    onClick={() => setIsConfirmingGrammarReset(false)}
+                                    disabled={grammarResetState === 'working'}
+                                    className="flex-1 justify-center bg-transparent border border-secondary text-secondary hover:text-primary hover:border-primary transition-colors"
+                                >
+                                    Cancel
+                                </Button>
+                                <Button
+                                    onClick={async () => {
+                                        setGrammarResetState('working');
+                                        try {
+                                            await onResetGrammar();
+                                            setGrammarResetState('done');
+                                        } catch {
+                                            setGrammarResetState('failed');
+                                        }
+                                        setIsConfirmingGrammarReset(false);
+                                    }}
+                                    disabled={grammarResetState === 'working'}
+                                    className="flex-1 justify-center bg-error text-white border-transparent hover:brightness-110"
+                                >
+                                    {grammarResetState === 'working' ? 'Clearing...' : 'Clear grammar'}
+                                </Button>
+                            </div>
+                        </div>
+                    )}
+
                     {!isConfirmingReset ? (
                         <Button
                             onClick={() => setIsConfirmingReset(true)}

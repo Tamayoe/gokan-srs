@@ -193,7 +193,8 @@ export type GrammarQuizAction =
     | { type: 'GRAMMAR_INTRO_CHOICE'; grammarId: string; choice: 'learn' | 'skip'; grammarPoint?: GrammarPoint }
     | { type: 'GRAMMAR_CLEAR_FEEDBACK' }
     | { type: 'GRAMMAR_SESSION_START'; payload: { grammarIds: string[]; progress?: UserProgress } }
-    | { type: 'GRAMMAR_SESSION_END' };
+    | { type: 'GRAMMAR_SESSION_END' }
+    | { type: 'GRAMMAR_RESET_PROGRESS'; payload: { progress: UserProgress } };
 
 /** Every grammar action is prefixed GRAMMAR_ so quizReducer can delegate to this module without the two action unions needing to know about each other's cases. */
 export function isGrammarAction(action: { type: string }): action is GrammarQuizAction {
@@ -356,6 +357,21 @@ export function grammarReducer(state: QuizState, action: GrammarQuizAction): Qui
                 grammarSession: nextGrammarSession,
             };
         }
+
+        /**
+         * Wipes grammar progress and nothing else. Every in-flight grammar view
+         * is reset alongside the queue - leaving `currentGrammarPoint` and its
+         * blank plan in place would keep a card on screen whose SRS entry no
+         * longer exists, and answering it would recreate the entry the user just
+         * removed. Vocab, kanji and settings are untouched by construction:
+         * `grammarQueue` is the only grammar field on UserProgress.
+         */
+        case 'GRAMMAR_RESET_PROGRESS':
+            return {
+                ...state,
+                ...initialGrammarState,
+                progress: action.payload.progress,
+            };
 
         default:
             return state;
