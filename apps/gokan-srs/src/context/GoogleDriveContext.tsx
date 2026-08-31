@@ -196,7 +196,13 @@ export const GoogleDriveProvider: React.FC<{ children: React.ReactNode }> = ({ c
      */
     const uploadAuthoritative = useCallback(async (envelope: { progress: any; settings: any }) => {
         const service = syncServiceRef.current;
-        if (!service) return;
+        // THROW rather than return: the caller has already deleted data locally
+        // and is relying on this to publish that. Returning quietly would report
+        // success while leaving the remote copy intact, and the next load would
+        // merge the deleted entries straight back in.
+        if (!service) {
+            throw new Error('No Drive sync service available - cannot publish the deletion.');
+        }
         if (uploadDebounceRef.current) {
             clearTimeout(uploadDebounceRef.current);
             uploadDebounceRef.current = null;
