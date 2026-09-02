@@ -60,9 +60,31 @@ function parseArgs(): Args {
     return { bucket, prefix, dryRun };
 }
 
-function aws(args: string[], options: { allowFailure?: boolean } = {}): string | null {
+/**
+ * `capture` decides whether the child's stdout is buffered and returned, or streamed straight
+ * to this process's own stdout.
+ *
+ * That distinction is load-bearing, not stylistic. `aws s3 sync` prints one "upload: ..." line
+ * per file, so buffering its output for a full ~38k-file run overflows execFileSync's default
+ * 1MB stdout buffer, which kills the transfer mid-flight with SIGTERM/ENOBUFS. Transfers
+ * therefore inherit stdio and pass --only-show-errors (--no-progress only drops the progress
+ * bar, not the per-file lines). The one command whose output we actually need - reading the
+ * manifest back - gets a maxBuffer far above the few MB that manifest can reach.
+ */
+function aws(
+    args: string[],
+    options: { allowFailure?: boolean; capture?: boolean } = {},
+): string | null {
     try {
-        return execFileSync('aws', args, { encoding: 'utf-8', stdio: ['ignore', 'pipe', 'pipe'] });
+        if (options.capture) {
+            return execFileSync('aws', args, {
+                encoding: 'utf-8',
+                stdio: ['ignore', 'pipe', 'pipe'],
+                maxBuffer: 256 * 1024 * 1024,
+            });
+        }
+        execFileSync('aws', args, { stdio: ['ignore', 'inherit', 'inherit'] });
+        return '';
     } catch (error) {
         if (options.allowFailure) return null;
         throw error;
@@ -94,7 +116,7 @@ function readRemoteManifest(bucket: string, prefix: string): BuildManifest | nul
     const uri = `s3://${bucket}/${prefix}/${MANIFEST_KEY}`;
     // A missing manifest is the expected case on the first deploy, so a failure here is not an
     // error: it just means "upload everything".
-    const raw = aws(['s3', 'cp', uri, '-'], { allowFailure: true });
+    const raw = aws(['s3', 'cp', uri, '-'], { allowFailure: true, capture: true });
     if (raw === null) {
         console.log('[deploy] no previous manifest found, uploading everything.');
         return null;
@@ -129,7 +151,7 @@ function uploadGroup(bucket: string, prefix: string, files: string[], cacheContr
     aws([
         's3', 'sync', STAGE_DIR, `s3://${bucket}/${prefix}/`,
         '--cache-control', cacheControl,
-        '--no-progress',
+        '--only-show-errors',
     ]);
 }
 
@@ -187,7 +209,7 @@ function main(): void {
     aws([
         's3', 'cp', manifestPath, `s3://${bucket}/${prefix}/${MANIFEST_KEY}`,
         '--cache-control', 'no-store',
-        '--no-progress',
+        '--only-show-errors',
     ]);
 
     fs.rmSync(STAGE_DIR, { recursive: true, force: true });
