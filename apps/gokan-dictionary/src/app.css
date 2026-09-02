@@ -401,3 +401,13 @@ main {
   flex-wrap: wrap;
   margin: var(--space-2) 0;
 }
+
+/* Grammar formation template, e.g. "Noun + が + いちばん + Adjective/Verb". Monospaced-ish
+   spacing so the "+" separators read as a pattern rather than as prose. */
+.formation {
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  background: var(--surface-hover);
+  border-radius: 4px;
+  line-height: 1.8;
+}

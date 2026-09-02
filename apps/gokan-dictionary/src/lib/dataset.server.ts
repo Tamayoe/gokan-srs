@@ -16,6 +16,7 @@ import type { Vocabulary } from '../models/vocabulary.model';
 import type { Kanji } from '../models/kanji.model';
 import type { Sentence } from '../models/sentence.model';
 import type { KanjiVocabIndex, SearchIndex } from '../models/index.model';
+import type { GrammarJlptIndex, GrammarPoint } from '../models/grammar.model';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -86,4 +87,29 @@ export function loadSentences(compiledDir: string, vocabId: string): Sentence[] 
 export function loadSearchIndex(compiledDir: string): SearchIndex {
     const raw = fs.readFileSync(path.join(compiledDir, 'index', 'search.json'), 'utf-8');
     return JSON.parse(raw) as SearchIndex;
+}
+
+// -- Grammar -----------------------------------------------------------------
+// Grammar lives under its own compiled/grammar/ subtree (points/{id}.json + index/jlpt.json),
+// mirroring the vocab layout one level down. Ids are ordered by JLPT level here rather than
+// read off the directory listing, because that order is the one the pages present.
+
+export function loadGrammarJlptIndex(compiledDir: string): GrammarJlptIndex {
+    const raw = fs.readFileSync(path.join(compiledDir, 'grammar', 'index', 'jlpt.json'), 'utf-8');
+    return JSON.parse(raw) as GrammarJlptIndex;
+}
+
+/** Every grammar point id, ordered easiest-first (N5 -> N1), matching the SRS's own order. */
+export function listGrammarIds(compiledDir: string): string[] {
+    const index = loadGrammarJlptIndex(compiledDir);
+    const ids: string[] = [];
+    for (const level of [5, 4, 3, 2, 1]) {
+        ids.push(...(index[String(level)] ?? []));
+    }
+    return ids;
+}
+
+export function loadGrammarPoint(compiledDir: string, id: string): GrammarPoint {
+    const raw = fs.readFileSync(path.join(compiledDir, 'grammar', 'points', `${id}.json`), 'utf-8');
+    return JSON.parse(raw) as GrammarPoint;
 }

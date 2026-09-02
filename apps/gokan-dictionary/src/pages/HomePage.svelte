@@ -1,14 +1,16 @@
 <script lang="ts">
   import { SITE_DESCRIPTION } from '../lib/site';
+  import { grammarIndexPath } from '../lib/urls';
   import SiteHeader from './SiteHeader.svelte';
   import SiteFooter from './SiteFooter.svelte';
 
   interface Props {
     vocabCount: number;
     kanjiCount: number;
+    grammarCount: number;
   }
 
-  let { vocabCount, kanjiCount }: Props = $props();
+  let { vocabCount, kanjiCount, grammarCount }: Props = $props();
 </script>
 
 <SiteHeader />
@@ -37,6 +39,7 @@
     <p class="stat-row">
       <span>{vocabCount.toLocaleString()} vocabulary entries</span>
       <span>{kanjiCount.toLocaleString()} kanji</span>
+      <span><a href={grammarIndexPath()}>{grammarCount.toLocaleString()} grammar points</a></span>
     </p>
   </div>
 </main>

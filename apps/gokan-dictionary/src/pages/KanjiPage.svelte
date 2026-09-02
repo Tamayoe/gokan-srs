@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Kanji } from '../models/kanji.model';
   import type { VocabSummary } from '../lib/types';
-  import { vocabPath } from '../lib/urls';
+  import { homePath, vocabPath } from '../lib/urls';
   import SiteHeader from './SiteHeader.svelte';
   import SiteFooter from './SiteFooter.svelte';
 
@@ -18,7 +18,7 @@
 
 <main>
   <div class="container">
-    <p class="breadcrumb"><a href="/">Dictionary</a> / <span class="jp">{kanji.character}</span></p>
+    <p class="breadcrumb"><a href={homePath()}>Dictionary</a> / <span class="jp">{kanji.character}</span></p>
 
     <h1>
       <span class="kanji-glyph kanji-glyph--lg jp">{kanji.character}</span>

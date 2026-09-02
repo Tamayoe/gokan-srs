@@ -2,7 +2,7 @@
   import type { Vocabulary } from '../models/vocabulary.model';
   import type { Sentence } from '../models/sentence.model';
   import type { VocabSummary } from '../lib/types';
-  import { kanjiPath, vocabPath } from '../lib/urls';
+  import { homePath, kanjiPath, vocabPath } from '../lib/urls';
   import SiteHeader from './SiteHeader.svelte';
   import SiteFooter from './SiteFooter.svelte';
 
@@ -30,7 +30,7 @@
 
 <main>
   <div class="container">
-    <p class="breadcrumb"><a href="/">Dictionary</a> / <span class="jp">{vocab.writtenForm.kanji}</span></p>
+    <p class="breadcrumb"><a href={homePath()}>Dictionary</a> / <span class="jp">{vocab.writtenForm.kanji}</span></p>
 
     <h1>
       <span class="jp">{vocab.writtenForm.kanji}</span>

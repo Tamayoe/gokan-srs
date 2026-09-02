@@ -1,18 +1,49 @@
-// Pure URL-building helpers, shared by the prerender script (to decide where to write files)
-// and the page components (to link between vocab/kanji pages). Keeping this as the single
-// source of truth means the file layout under dist/ and the hrefs rendered into pages can
-// never drift apart.
+// Pure URL-building helpers, shared by the prerender script (to build hrefs, canonicals and
+// sitemap entries) and the page components (to link between pages). Keeping this as the single
+// source of truth means every generated link agrees on BASE_PATH.
+//
+// Note these are URL paths, NOT on-disk paths: prerender.ts writes pages under dist/ WITHOUT
+// the base-path prefix, because the deploy step supplies that prefix as the S3 key prefix it
+// syncs into. See site.ts's BASE_PATH comment.
 
-import { SITE_URL } from './site';
+import { BASE_PATH, SITE_ORIGIN } from './site';
+
+export function homePath(): string {
+    return `${BASE_PATH}/`;
+}
 
 export function vocabPath(id: string): string {
-    return `/vocab/${id}/`;
+    return `${BASE_PATH}/vocab/${id}/`;
 }
 
 export function kanjiPath(character: string): string {
-    return `/kanji/${encodeURIComponent(character)}/`;
+    return `${BASE_PATH}/kanji/${encodeURIComponent(character)}/`;
+}
+
+export function grammarIndexPath(): string {
+    return `${BASE_PATH}/grammar/`;
+}
+
+export function grammarPath(id: string): string {
+    return `${BASE_PATH}/grammar/${id}/`;
+}
+
+/**
+ * Href for a build emitted asset, given its dist-relative file path (e.g. the
+ * content-hashed "assets/styles-BMo4ay5S.css" from Vite's client manifest).
+ */
+export function assetPath(distRelativeFile: string): string {
+    return `${BASE_PATH}/${distRelativeFile.replace(/^\//, '')}`;
+}
+
+/** Href the client search script fetches its prebuilt index from. */
+export function searchIndexPath(): string {
+    return `${BASE_PATH}/data/search.json`;
 }
 
 export function absoluteUrl(pathname: string): string {
-    return new URL(pathname, SITE_URL).toString();
+    // Resolved against the bare origin, not SITE_URL: pathname already carries BASE_PATH, and
+    // resolving an absolute path against a base with a path would be a silent no-op that only
+    // shows up as a wrong canonical.
+    return new URL(pathname, SITE_ORIGIN).toString();
 }

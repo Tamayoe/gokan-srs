@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { escapeHtml, renderDocument } from './documentShell';
+import { vocabPath, absoluteUrl } from './urls';
 
 describe('escapeHtml', () => {
     it('escapes the five HTML-significant characters', () => {
@@ -15,7 +16,7 @@ describe('renderDocument', () => {
     const base = {
         title: '思う - Gokan Dictionary',
         description: 'to think, to consider',
-        canonicalPath: '/vocab/1589350/',
+        canonicalPath: vocabPath('1589350'),
         bodyHtml: '<main>hello</main>',
         stylesheetHref: '/assets/styles-abc123.css',
     };
@@ -28,8 +29,10 @@ describe('renderDocument', () => {
 
     it('resolves the canonical path to an absolute URL', () => {
         const html = renderDocument(base);
-        expect(html).toContain('<link rel="canonical" href="https://dictionary.gokan.dev/vocab/1589350/" />');
-        expect(html).toContain('<meta property="og:url" content="https://dictionary.gokan.dev/vocab/1589350/" />');
+        const canonical = absoluteUrl(vocabPath('1589350'));
+        expect(canonical).toContain('/dictionary/vocab/1589350/');
+        expect(html).toContain(`<link rel="canonical" href="${canonical}" />`);
+        expect(html).toContain(`<meta property="og:url" content="${canonical}" />`);
     });
 
     it('links the stylesheet', () => {

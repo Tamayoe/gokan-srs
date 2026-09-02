@@ -4,6 +4,7 @@
 
 import type { Vocabulary } from '../models/vocabulary.model';
 import type { Kanji } from '../models/kanji.model';
+import type { GrammarPoint } from '../models/grammar.model';
 import { SITE_NAME } from './site';
 
 export interface PageMeta {
@@ -33,6 +34,31 @@ export function kanjiMeta(kanji: Kanji, vocabCount: number): PageMeta {
         : `The kanji ${kanji.character}: KKLC step and JLPT level.`;
 
     return { title, description };
+}
+
+export function grammarMeta(point: GrammarPoint): PageMeta {
+    const romaji = point.romaji ? ` (${point.romaji})` : '';
+    const title = `${point.title}${romaji} - JLPT ${JLPT_LABEL(point.jlptLevel)} Grammar - ${SITE_NAME}`;
+
+    // The short explanation is already a one-line summary written for a learner, so it makes a
+    // better meta description than anything synthesised from the other fields. Trimmed to keep
+    // the whole description inside the ~155 chars Google typically renders.
+    const summary = point.shortExplanation.replace(/\s+/g, ' ').trim();
+    const description = `${point.title}: ${truncate(summary, 120)} JLPT ${JLPT_LABEL(point.jlptLevel)} Japanese grammar with formation and example sentences.`;
+
+    return { title, description };
+}
+
+function truncate(value: string, maxLength: number): string {
+    if (value.length <= maxLength) return value;
+    return `${value.slice(0, maxLength - 1).trimEnd()}…`;
+}
+
+export function grammarIndexMeta(pointCount: number): PageMeta {
+    return {
+        title: `Japanese Grammar Points by JLPT Level - ${SITE_NAME}`,
+        description: `All ${pointCount} Japanese grammar points, organized from JLPT N5 to N1, each with its formation pattern, explanation, and example sentences.`,
+    };
 }
 
 export function homeMeta(): PageMeta {

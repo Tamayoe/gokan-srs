@@ -30,14 +30,17 @@ import {
     loadKanjiVocabIndex,
     loadSentences,
     loadSearchIndex,
+    listGrammarIds,
+    loadGrammarPoint,
 } from '../src/lib/dataset.server';
 import { vocabSummaryFrom } from '../src/lib/vocabSummary';
-import { vocabMeta, kanjiMeta, homeMeta } from '../src/lib/seo';
-import { vocabPath, kanjiPath } from '../src/lib/urls';
+import { vocabMeta, kanjiMeta, grammarMeta, grammarIndexMeta, homeMeta } from '../src/lib/seo';
+import { vocabPath, kanjiPath, grammarPath, grammarIndexPath, homePath, assetPath } from '../src/lib/urls';
 import { renderDocument } from '../src/lib/documentShell';
-import { buildSitemapXml, buildRobotsTxt } from '../src/lib/sitemap';
-import type { VocabSummary } from '../src/lib/types';
+import { buildSitemapXml, buildRobotsTxt, shouldEmitRobotsTxt } from '../src/lib/sitemap';
+import type { GrammarSummary, VocabSummary } from '../src/lib/types';
 import type { Vocabulary } from '../src/models/vocabulary.model';
+import type { GrammarPoint } from '../src/models/grammar.model';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const APP_ROOT = path.join(__dirname, '..');
@@ -83,14 +86,19 @@ async function main(): Promise<void> {
 
     const compiledDir = resolveCompiledDir();
     const manifest = readClientManifest();
-    const stylesheetHref = '/' + manifest['src/app.css'].file;
-    const searchScriptHref = '/' + manifest['src/client/search.ts'].file;
+    // assetPath, not a bare '/' + file: in subfolder mode every href on the page has to carry
+    // BASE_PATH, and a stylesheet 404 is the one breakage that still renders a plausible-looking
+    // (unstyled) page rather than failing loudly.
+    const stylesheetHref = assetPath(manifest['src/app.css'].file);
+    const searchScriptHref = assetPath(manifest['src/client/search.ts'].file);
 
     // Dynamic imports so scripts/svelte-ssr-loader.ts (imported above for its side effect) has
     // already registered before these .svelte files are compiled - see that file's comment.
     const { default: HomePage } = await import('../src/pages/HomePage.svelte');
     const { default: VocabPage } = await import('../src/pages/VocabPage.svelte');
     const { default: KanjiPage } = await import('../src/pages/KanjiPage.svelte');
+    const { default: GrammarPage } = await import('../src/pages/GrammarPage.svelte');
+    const { default: GrammarIndexPage } = await import('../src/pages/GrammarIndexPage.svelte');
 
     console.log('[prerender] loading dataset indexes...');
     const vocabIds = listVocabIds(compiledDir);
@@ -107,8 +115,10 @@ async function main(): Promise<void> {
         summaryById.set(id, vocabSummaryFrom(loadVocab(compiledDir, id)));
     }
 
+    const grammarIds = listGrammarIds(compiledDir);
+
     const missingRelatedIds = new Set<string>();
-    const sitemapPaths: string[] = ['/'];
+    const sitemapPaths: string[] = [homePath()];
 
     console.log(`[prerender] writing ${vocabIds.length} vocab pages...`);
     for (const id of vocabIds) {
@@ -167,9 +177,75 @@ async function main(): Promise<void> {
         sitemapPaths.push(kanjiPath(kanji.character));
     }
 
+
+    // -- Grammar --------------------------------------------------------------
+    // Loaded in full up front (755 points, small files) rather than streamed like vocab: the
+    // family/related-points list on each page needs OTHER points' titles, so a second lookup
+    // pass would just re-read the same files.
+    console.log(`[prerender] writing ${grammarIds.length} grammar pages...`);
+    const grammarPoints = new Map<string, GrammarPoint>();
+    for (const id of grammarIds) {
+        grammarPoints.set(id, loadGrammarPoint(compiledDir, id));
+    }
+
+    const grammarSummaryOf = (point: GrammarPoint): GrammarSummary => ({
+        id: point.id,
+        title: point.title,
+        jlptLevel: point.jlptLevel,
+    });
+
+    for (const id of grammarIds) {
+        const point = grammarPoints.get(id)!;
+        const related = (point.family?.relatedPoints ?? [])
+            .map(relatedId => grammarPoints.get(relatedId))
+            .filter((other): other is GrammarPoint => Boolean(other))
+            .map(grammarSummaryOf);
+
+        const { body } = render(GrammarPage, { props: { point, related } });
+        const meta = grammarMeta(point);
+        const html = renderDocument({
+            title: meta.title,
+            description: meta.description,
+            canonicalPath: grammarPath(id),
+            bodyHtml: body,
+            stylesheetHref,
+            structuredData: {
+                '@context': 'https://schema.org',
+                '@type': 'DefinedTerm',
+                name: point.title,
+                description: point.shortExplanation,
+                inDefinedTermSet: 'Japanese grammar',
+            },
+        });
+        writePage(['grammar', id], html);
+        sitemapPaths.push(grammarPath(id));
+    }
+
+    console.log('[prerender] writing grammar index page...');
+    const grammarLevels = [5, 4, 3, 2, 1]
+        .map(level => ({
+            level,
+            points: grammarIds
+                .map(id => grammarPoints.get(id)!)
+                .filter(point => point.jlptLevel === level)
+                .map(grammarSummaryOf),
+        }))
+        .filter(group => group.points.length > 0);
+
+    const { body: grammarIndexBody } = render(GrammarIndexPage, { props: { levels: grammarLevels } });
+    const grammarIndexMetaValue = grammarIndexMeta(grammarIds.length);
+    writePage(['grammar'], renderDocument({
+        title: grammarIndexMetaValue.title,
+        description: grammarIndexMetaValue.description,
+        canonicalPath: grammarIndexPath(),
+        bodyHtml: grammarIndexBody,
+        stylesheetHref,
+    }));
+    sitemapPaths.push(grammarIndexPath());
+
     console.log('[prerender] writing home page...');
     const { body: homeBody } = render(HomePage, {
-        props: { vocabCount: vocabIds.length, kanjiCount: kanjiList.length },
+        props: { vocabCount: vocabIds.length, kanjiCount: kanjiList.length, grammarCount: grammarIds.length },
     });
     const homeMetaValue = homeMeta();
     const homeHtml = renderDocument({
@@ -186,10 +262,19 @@ async function main(): Promise<void> {
     fs.mkdirSync(path.join(DIST_DIR, 'data'), { recursive: true });
     fs.writeFileSync(path.join(DIST_DIR, 'data', 'search.json'), JSON.stringify(searchIndex));
     fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), buildSitemapXml(sitemapPaths));
-    fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), buildRobotsTxt());
+    if (shouldEmitRobotsTxt()) {
+        fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), buildRobotsTxt());
+    } else {
+        // Subfolder mode: gokan-srs's public/robots.txt is the authoritative one for this host
+        // and already carries our Sitemap: line. See shouldEmitRobotsTxt().
+        console.log('[prerender] skipping robots.txt (subfolder deploy - gokan-srs owns the host root).');
+    }
 
     const elapsedSeconds = ((Date.now() - startedAt) / 1000).toFixed(1);
-    console.log(`[prerender] done: ${vocabIds.length} vocab pages, ${kanjiList.length} kanji pages, 1 home page in ${elapsedSeconds}s.`);
+    console.log(
+        `[prerender] done: ${vocabIds.length} vocab pages, ${kanjiList.length} kanji pages, ` +
+        `${grammarIds.length} grammar pages, 1 grammar index, 1 home page in ${elapsedSeconds}s.`,
+    );
 }
 
 await main();

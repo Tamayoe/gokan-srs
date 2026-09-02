@@ -9,3 +9,14 @@ export interface VocabSummary {
     reading: string;
     gloss?: string;
 }
+
+/**
+ * The GrammarPoint equivalent, used for a page's family/related-points list. Kept to the three
+ * fields a link needs so a family of 6 points doesn't pull 6 full points (with all their
+ * examples) into one page's props.
+ */
+export interface GrammarSummary {
+    id: string;
+    title: string;
+    jlptLevel: number;
+}

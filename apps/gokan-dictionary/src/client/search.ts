@@ -6,7 +6,7 @@
 // vocab/kanji pages are fully static with no JS at all.
 
 import type { SearchIndex, SearchIndexEntry } from '../models/index.model';
-import { vocabPath } from '../lib/urls';
+import { searchIndexPath, vocabPath } from '../lib/urls';
 
 const MAX_RESULTS = 20;
 const DEBOUNCE_MS = 120;
@@ -67,7 +67,7 @@ function init(): void {
     function loadIndex(): Promise<SearchIndex> {
         if (indexPromise) return indexPromise;
         status!.textContent = 'Loading search index...';
-        indexPromise = fetch('/data/search.json')
+        indexPromise = fetch(searchIndexPath())
             .then(res => {
                 if (!res.ok) throw new Error(`search index request failed: ${res.status}`);
                 return res.json() as Promise<SearchIndex>;
