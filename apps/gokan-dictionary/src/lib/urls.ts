@@ -12,6 +12,19 @@ export function homePath(): string {
     return `${BASE_PATH}/`;
 }
 
+export function vocabIndexPath(): string {
+    return `${BASE_PATH}/vocab/`;
+}
+
+/** Browse page for one JLPT level's vocabulary, e.g. "/dictionary/vocab/jlpt-n5/". */
+export function vocabJlptPath(level: number): string {
+    return `${BASE_PATH}/vocab/jlpt-n${level}/`;
+}
+
+export function kanjiIndexPath(): string {
+    return `${BASE_PATH}/kanji/`;
+}
+
 export function vocabPath(id: string): string {
     return `${BASE_PATH}/vocab/${id}/`;
 }

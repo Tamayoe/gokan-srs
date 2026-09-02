@@ -32,10 +32,30 @@ import {
     loadSearchIndex,
     listGrammarIds,
     loadGrammarPoint,
+    loadVocabJlptIndex,
 } from '../src/lib/dataset.server';
 import { vocabSummaryFrom } from '../src/lib/vocabSummary';
-import { vocabMeta, kanjiMeta, grammarMeta, grammarIndexMeta, homeMeta } from '../src/lib/seo';
-import { vocabPath, kanjiPath, grammarPath, grammarIndexPath, homePath, assetPath } from '../src/lib/urls';
+import {
+    vocabMeta,
+    kanjiMeta,
+    grammarMeta,
+    grammarIndexMeta,
+    kanjiIndexMeta,
+    vocabIndexMeta,
+    vocabJlptMeta,
+    homeMeta,
+} from '../src/lib/seo';
+import {
+    vocabPath,
+    kanjiPath,
+    grammarPath,
+    grammarIndexPath,
+    kanjiIndexPath,
+    vocabIndexPath,
+    vocabJlptPath,
+    homePath,
+    assetPath,
+} from '../src/lib/urls';
 import { renderDocument } from '../src/lib/documentShell';
 import { buildSitemapXml, buildRobotsTxt, shouldEmitRobotsTxt } from '../src/lib/sitemap';
 import type { GrammarSummary, VocabSummary } from '../src/lib/types';
@@ -99,12 +119,16 @@ async function main(): Promise<void> {
     const { default: KanjiPage } = await import('../src/pages/KanjiPage.svelte');
     const { default: GrammarPage } = await import('../src/pages/GrammarPage.svelte');
     const { default: GrammarIndexPage } = await import('../src/pages/GrammarIndexPage.svelte');
+    const { default: KanjiIndexPage } = await import('../src/pages/KanjiIndexPage.svelte');
+    const { default: VocabIndexPage } = await import('../src/pages/VocabIndexPage.svelte');
+    const { default: VocabJlptPage } = await import('../src/pages/VocabJlptPage.svelte');
 
     console.log('[prerender] loading dataset indexes...');
     const vocabIds = listVocabIds(compiledDir);
     const kanjiList = loadKanjiList(compiledDir);
     const kanjiVocabIndex = loadKanjiVocabIndex(compiledDir);
     const searchIndex = loadSearchIndex(compiledDir);
+    const vocabJlptIndex = loadVocabJlptIndex(compiledDir);
 
     // Built as a separate pass (rather than caching full Vocabulary objects while writing
     // pages below) so memory stays bounded to ~36k small {id, kanji, reading, gloss} records
@@ -117,6 +141,7 @@ async function main(): Promise<void> {
 
     const grammarIds = listGrammarIds(compiledDir);
 
+    let sentenceCount = 0;
     const missingRelatedIds = new Set<string>();
     const sitemapPaths: string[] = [homePath()];
 
@@ -125,7 +150,9 @@ async function main(): Promise<void> {
         const vocab: Vocabulary = loadVocab(compiledDir, id);
         const components = resolveSummaries(vocab.components ?? [], summaryById, missingRelatedIds);
         const parents = resolveSummaries(vocab.parents ?? [], summaryById, missingRelatedIds);
-        const sentences = (loadSentences(compiledDir, id) ?? []).slice(0, MAX_SENTENCES);
+        const allSentences = loadSentences(compiledDir, id) ?? [];
+        sentenceCount += allSentences.length;
+        const sentences = allSentences.slice(0, MAX_SENTENCES);
 
         const { body } = render(VocabPage, { props: { vocab, components, parents, sentences } });
         const meta = vocabMeta(vocab);
@@ -135,6 +162,7 @@ async function main(): Promise<void> {
             canonicalPath: vocabPath(id),
             bodyHtml: body,
             stylesheetHref,
+            scriptHref: searchScriptHref,
             structuredData: {
                 '@context': 'https://schema.org',
                 '@type': 'DefinedTerm',
@@ -168,6 +196,7 @@ async function main(): Promise<void> {
             canonicalPath: kanjiPath(kanji.character),
             bodyHtml: body,
             stylesheetHref,
+            scriptHref: searchScriptHref,
         });
         // Written under the raw character, NOT percent-encoded, unlike kanjiPath()'s URL
         // string: static hosts decode the request URL's percent-escapes before resolving a
@@ -209,6 +238,7 @@ async function main(): Promise<void> {
             canonicalPath: grammarPath(id),
             bodyHtml: body,
             stylesheetHref,
+            scriptHref: searchScriptHref,
             structuredData: {
                 '@context': 'https://schema.org',
                 '@type': 'DefinedTerm',
@@ -240,18 +270,97 @@ async function main(): Promise<void> {
         canonicalPath: grammarIndexPath(),
         bodyHtml: grammarIndexBody,
         stylesheetHref,
+        scriptHref: searchScriptHref,
     }));
     sitemapPaths.push(grammarIndexPath());
 
+    // -- Browse indexes -------------------------------------------------------
+    // These exist so every page type has a depth-1 or depth-2 path from the site root. Kanji
+    // pages in particular were previously linked only from whichever vocab pages happened to
+    // contain them, leaving the rarer characters effectively orphaned.
+    const JLPT_LEVELS = [5, 4, 3, 2, 1];
+
+    console.log('[prerender] writing kanji index...');
+    const kanjiGroups = [
+        ...JLPT_LEVELS.map(level => ({
+            level: level as number | null,
+            kanji: kanjiList.filter(kanji => kanji.steps.jlpt === level),
+        })),
+        { level: null, kanji: kanjiList.filter(kanji => kanji.steps.jlpt === undefined) },
+    ].filter(group => group.kanji.length > 0);
+
+    const { body: kanjiIndexBody } = render(KanjiIndexPage, { props: { groups: kanjiGroups } });
+    const kanjiIndexMetaValue = kanjiIndexMeta(kanjiList.length);
+    writePage(['kanji'], renderDocument({
+        title: kanjiIndexMetaValue.title,
+        description: kanjiIndexMetaValue.description,
+        canonicalPath: kanjiIndexPath(),
+        bodyHtml: kanjiIndexBody,
+        stylesheetHref,
+        scriptHref: searchScriptHref,
+    }));
+    sitemapPaths.push(kanjiIndexPath());
+
+    console.log('[prerender] writing vocabulary browse pages...');
+    const jlptLevelWords = JLPT_LEVELS.map(level => ({
+        level,
+        // The index carries only {id, containedKanji}; the display fields come from the summary
+        // map built above. An id with no summary is dropped rather than rendered blank.
+        words: (vocabJlptIndex[String(level)] ?? [])
+            .map(entry => summaryById.get(entry.id))
+            .filter((summary): summary is VocabSummary => Boolean(summary)),
+    })).filter(group => group.words.length > 0);
+
+    const availableLevels = jlptLevelWords.map(group => group.level);
+
+    for (const { level, words } of jlptLevelWords) {
+        const { body } = render(VocabJlptPage, { props: { level, words, allLevels: availableLevels } });
+        const meta = vocabJlptMeta(level, words.length);
+        writePage(['vocab', `jlpt-n${level}`], renderDocument({
+            title: meta.title,
+            description: meta.description,
+            canonicalPath: vocabJlptPath(level),
+            bodyHtml: body,
+            stylesheetHref,
+            scriptHref: searchScriptHref,
+        }));
+        sitemapPaths.push(vocabJlptPath(level));
+    }
+
+    const { body: vocabIndexBody } = render(VocabIndexPage, {
+        props: {
+            levels: jlptLevelWords.map(({ level, words }) => ({ level, count: words.length })),
+            totalCount: vocabIds.length,
+        },
+    });
+    const vocabIndexMetaValue = vocabIndexMeta(vocabIds.length);
+    writePage(['vocab'], renderDocument({
+        title: vocabIndexMetaValue.title,
+        description: vocabIndexMetaValue.description,
+        canonicalPath: vocabIndexPath(),
+        bodyHtml: vocabIndexBody,
+        stylesheetHref,
+        scriptHref: searchScriptHref,
+    }));
+    sitemapPaths.push(vocabIndexPath());
+
     console.log('[prerender] writing home page...');
     const { body: homeBody } = render(HomePage, {
-        props: { vocabCount: vocabIds.length, kanjiCount: kanjiList.length, grammarCount: grammarIds.length },
+        props: {
+            vocabCount: vocabIds.length,
+            kanjiCount: kanjiList.length,
+            grammarCount: grammarIds.length,
+            sentenceCount,
+            // The most frequent N5 words: the index is frequency-ordered, so the head of the
+            // easiest level is the closest thing the dataset has to "words a visitor will know".
+            featured: (jlptLevelWords.find(group => group.level === 5)?.words ?? []).slice(0, 12),
+        },
     });
     const homeMetaValue = homeMeta();
     const homeHtml = renderDocument({
         title: homeMetaValue.title,
         description: homeMetaValue.description,
-        canonicalPath: '/',
+        canonicalPath: homePath(),
         bodyHtml: homeBody,
         stylesheetHref,
         scriptHref: searchScriptHref,
@@ -273,7 +382,8 @@ async function main(): Promise<void> {
     const elapsedSeconds = ((Date.now() - startedAt) / 1000).toFixed(1);
     console.log(
         `[prerender] done: ${vocabIds.length} vocab pages, ${kanjiList.length} kanji pages, ` +
-        `${grammarIds.length} grammar pages, 1 grammar index, 1 home page in ${elapsedSeconds}s.`,
+        `${grammarIds.length} grammar pages, ${jlptLevelWords.length + 3} index pages, ` +
+        `1 home page in ${elapsedSeconds}s.`,
     );
 }
 

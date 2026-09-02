@@ -312,17 +312,21 @@ main {
   font-size: 0.9375rem;
 }
 
-.search-box {
+/* --- Site-wide search (SiteHeader.svelte + client/search.ts) -------------------------- */
+
+.site-search {
   position: relative;
-  margin: var(--space-3) 0;
+  flex: 1 1 18rem;
+  min-width: 0;
+  max-width: 28rem;
 }
 
 .search-input {
   width: 100%;
-  font-size: 1.125rem;
-  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  padding: 0.5rem 0.875rem;
   border: 1px solid var(--divider);
-  border-radius: 0.5rem;
+  border-radius: 999px;
   background-color: var(--surface);
   color: var(--primary);
   font-family: var(--font-gothic);
@@ -333,46 +337,80 @@ main {
   outline-offset: 1px;
 }
 
+/* The results panel overlays the page rather than pushing it down, so searching from halfway
+   through a long vocab page does not shift the content being read. */
+.search-panel {
+  position: absolute;
+  top: calc(100% + 0.375rem);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.search-status:empty {
+  display: none;
+}
+
 .search-status {
   color: var(--secondary);
   font-size: 0.875rem;
-  margin-top: 0.375rem;
+  margin: 0;
+  padding: 0.75rem 0.875rem;
 }
 
 .search-results {
   list-style: none;
   padding: 0;
-  margin: var(--space-2) 0 0;
-  border: 1px solid var(--divider);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  display: none;
+  margin: 0;
 }
 
-.search-results:not(:empty) {
-  display: block;
+.search-results li + li {
+  border-top: 1px solid var(--divider);
 }
 
-.search-results li {
-  border-bottom: 1px solid var(--divider);
-}
-
-.search-results li:last-child {
-  border-bottom: none;
-}
-
-.search-results a {
+.search-result {
   display: flex;
-  align-items: baseline;
-  gap: var(--space-2);
+  flex-direction: column;
+  gap: 0.125rem;
   padding: 0.625rem 0.875rem;
   color: var(--primary);
 }
 
-.search-results a:hover,
-.search-results a:focus-visible {
+.search-result:hover,
+.search-result:focus-visible,
+.search-result.is-active {
   background-color: var(--surface-hover);
   text-decoration: none;
+}
+
+.search-result-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+.search-result-kanji {
+  font-family: var(--font-mincho);
+  font-size: 1.125rem;
+}
+
+.search-result-reading {
+  color: var(--secondary);
+  font-size: 0.875rem;
+}
+
+.search-result-gloss {
+  color: var(--secondary);
+  font-size: 0.8125rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .stat-row {
@@ -410,4 +448,276 @@ main {
   background: var(--surface-hover);
   border-radius: 4px;
   line-height: 1.8;
+}
+
+/* --- Header layout ------------------------------------------------------------------- */
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.site-nav {
+  display: flex;
+  gap: var(--space-2);
+  font-size: 0.9375rem;
+  color: var(--secondary);
+}
+
+.site-nav a {
+  color: var(--secondary);
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+}
+
+/* --- Vocab entry page ---------------------------------------------------------------- */
+
+/* Wider than the 42rem reading measure the text-heavy pages use, because this page is a
+   two-column layout rather than a column of prose. */
+.container--wide {
+  max-width: 60rem;
+}
+
+.entry-head {
+  padding: var(--space-3) 0 var(--space-2);
+  border-bottom: 1px solid var(--divider);
+  margin-bottom: var(--space-3);
+}
+
+.entry-word {
+  font-family: var(--font-mincho);
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.entry-reading {
+  font-family: var(--font-gothic);
+  font-size: 1.25rem;
+  color: var(--secondary);
+  margin: var(--space-1) 0 0;
+}
+
+/* The definition, sitting directly under the word rather than in a card further down. Set at
+   body-copy size in the serif face so it reads as the answer to the page's question. */
+.entry-gloss {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: var(--space-2) 0 0;
+}
+
+.entry-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+  margin: var(--space-2) 0 0;
+  font-size: 0.875rem;
+}
+
+.entry-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+@media (min-width: 56rem) {
+  .entry-layout {
+    grid-template-columns: minmax(0, 1.9fr) minmax(14rem, 1fr);
+  }
+}
+
+.entry-main > .card:last-child,
+.entry-aside > .card:last-child {
+  margin-bottom: 0;
+}
+
+.entry-aside .card {
+  padding: var(--space-2);
+}
+
+/* --- Entry lists (browse pages, related words, home) ---------------------------------- */
+
+.entry-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.entry-list li + li {
+  border-top: 1px solid var(--divider);
+}
+
+.entry-row {
+  display: grid;
+  grid-template-columns: minmax(4rem, auto) minmax(4rem, auto) 1fr;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-2);
+  padding: 0.5rem 0.25rem;
+  color: var(--primary);
+}
+
+.entry-row:hover,
+.entry-row:focus-visible {
+  background-color: var(--surface-hover);
+  text-decoration: none;
+}
+
+.entry-list--compact .entry-row {
+  grid-template-columns: 1fr auto;
+}
+
+.entry-row-word {
+  font-family: var(--font-mincho);
+  font-size: 1.0625rem;
+}
+
+.entry-row-reading,
+.entry-row-gloss {
+  color: var(--secondary);
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Linked example sentences -------------------------------------------------------- */
+
+/* A dashed underline rather than the usual link styling: a sentence with 8 solid blue words in
+   it stops reading as a sentence. The cue is present but quiet until hovered. */
+.sentence-word {
+  color: inherit;
+  border-bottom: 1px dashed var(--divider);
+}
+
+.sentence-word:hover,
+.sentence-word:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
+.sentence-target {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: 2px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+/* --- Kanji index grid ---------------------------------------------------------------- */
+
+.glyph-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(2.75rem, 1fr));
+  gap: 0.375rem;
+}
+
+.glyph-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  font-family: var(--font-mincho);
+  font-size: 1.375rem;
+  color: var(--primary);
+  border: 1px solid var(--divider);
+  border-radius: 0.375rem;
+}
+
+.glyph-tile:hover,
+.glyph-tile:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: var(--surface-hover);
+  text-decoration: none;
+}
+
+/* --- Browse tiles (home, vocabulary hub) --------------------------------------------- */
+
+.browse-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-3);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-2);
+}
+
+.browse-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  height: 100%;
+  padding: var(--space-2);
+  background-color: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: 0.5rem;
+  color: var(--primary);
+}
+
+.browse-tile:hover,
+.browse-tile:focus-visible {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.browse-tile-title {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.browse-tile-count {
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.browse-tile-blurb {
+  color: var(--secondary);
+  font-size: 0.875rem;
+}
+
+.level-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+/* --- Home hero ----------------------------------------------------------------------- */
+
+.home-hero {
+  padding: var(--space-4) 0 var(--space-3);
+}
+
+.home-lede {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 38rem;
+}
+
+.home-stats {
+  font-size: 0.875rem;
+}
+
+.badge--plain {
+  border-color: var(--divider);
+  color: var(--secondary);
+}
+
+a.badge:hover {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  text-decoration: none;
 }

@@ -61,9 +61,30 @@ export function grammarIndexMeta(pointCount: number): PageMeta {
     };
 }
 
+export function kanjiIndexMeta(kanjiCount: number): PageMeta {
+    return {
+        title: `Kanji List by JLPT Level - ${SITE_NAME}`,
+        description: `All ${kanjiCount.toLocaleString()} kanji, grouped by JLPT level, each with its readings, KKLC step, and the vocabulary that uses it.`,
+    };
+}
+
+export function vocabIndexMeta(vocabCount: number): PageMeta {
+    return {
+        title: `Japanese Vocabulary Dictionary - ${SITE_NAME}`,
+        description: `${vocabCount.toLocaleString()} Japanese words with readings, English meanings, JLPT levels, and example sentences. Browse by JLPT level or search.`,
+    };
+}
+
+export function vocabJlptMeta(level: number, wordCount: number): PageMeta {
+    return {
+        title: `JLPT N${level} Vocabulary List (${wordCount.toLocaleString()} words) - ${SITE_NAME}`,
+        description: `The complete JLPT N${level} vocabulary list: ${wordCount.toLocaleString()} words ordered by frequency, each with its reading, English meaning, and example sentences.`,
+    };
+}
+
 export function homeMeta(): PageMeta {
     return {
-        title: SITE_NAME,
-        description: 'Look up Japanese kanji and vocabulary: readings, meanings, JLPT levels, and example sentences.',
+        title: `${SITE_NAME} - Japanese Dictionary with Example Sentences`,
+        description: 'Free Japanese dictionary: look up any word, kanji, or grammar point. Readings, English meanings, JLPT levels, and real example sentences with every word linked.',
     };
 }

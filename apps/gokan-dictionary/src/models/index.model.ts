@@ -15,3 +15,11 @@ export interface SearchIndexEntry {
 }
 
 export type SearchIndex = SearchIndexEntry[];
+
+/** index/jlpt.json: JLPT level (as a string key) -> that level's vocab, frequency-ordered. */
+export interface JlptIndexEntry {
+    id: string;
+    containedKanji: string[];
+}
+
+export type VocabJlptIndex = Record<string, JlptIndexEntry[]>;

@@ -15,7 +15,7 @@ import { execFileSync } from 'node:child_process';
 import type { Vocabulary } from '../models/vocabulary.model';
 import type { Kanji } from '../models/kanji.model';
 import type { Sentence } from '../models/sentence.model';
-import type { KanjiVocabIndex, SearchIndex } from '../models/index.model';
+import type { KanjiVocabIndex, SearchIndex, VocabJlptIndex } from '../models/index.model';
 import type { GrammarJlptIndex, GrammarPoint } from '../models/grammar.model';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -82,6 +82,12 @@ export function loadSentences(compiledDir: string, vocabId: string): Sentence[] 
     const file = path.join(compiledDir, 'sentences', `${vocabId}.json`);
     if (!fs.existsSync(file)) return null;
     return JSON.parse(fs.readFileSync(file, 'utf-8')) as Sentence[];
+}
+
+/** JLPT level -> that level's vocab, frequency-ordered. Only ~6.4k of ~36k vocab are listed. */
+export function loadVocabJlptIndex(compiledDir: string): VocabJlptIndex {
+    const raw = fs.readFileSync(path.join(compiledDir, 'index', 'jlpt.json'), 'utf-8');
+    return JSON.parse(raw) as VocabJlptIndex;
 }
 
 export function loadSearchIndex(compiledDir: string): SearchIndex {
