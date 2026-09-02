@@ -33,3 +33,8 @@ terraform.tfstate
 # Synced from the gokan-dataset submodule at build/dev time (bun run sync:dataset) -
 # no longer the source of truth, see apps/gokan-srs/scripts/sync-dataset.ts
 apps/gokan-srs/public/data/compiled
+
+# gokan-dictionary's content-addressed deploy (scripts/deploy-s3.ts): a staging tree of the
+# files a given deploy actually changed, and the manifest uploaded alongside the site.
+apps/gokan-dictionary/.deploy-stage/
+apps/gokan-dictionary/.build-manifest.json

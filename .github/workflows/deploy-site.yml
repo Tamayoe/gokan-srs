@@ -122,34 +122,19 @@ jobs:
             --exclude "*" \
             --include "*.html"
 
-      - name: Sync gokan-dictionary to S3
+      - name: Deploy gokan-dictionary to S3
         run: |
-          # Scoped to the dictionary/ prefix, so its own --delete can only prune its own pages.
+          # Content-addressed upload rather than `aws s3 sync`. Sync compares mtime by default,
+          # and CI rebuilds from a fresh checkout every run, so all ~38k generated pages looked
+          # new on every deploy: even a deploy touching only the SRS app re-uploaded the whole
+          # dictionary, ~20 minutes each time. The script hashes every built file, compares
+          # against a manifest stored beside the site in S3, and uploads only what differs.
           #
-          # Only this first pass carries --delete, and it excludes nothing: a --delete pass
-          # combined with --exclude/--include would treat every filtered-out file as "absent from
-          # the source" and delete it at the destination.
-          aws s3 sync apps/gokan-dictionary/dist/ s3://${{ inputs.s3_bucket }}/dictionary/ \
-            --delete \
-            --size-only \
-            --cache-control "public, max-age=31536000, immutable" \
-            --exclude "*.html"
-
-          # Page HTML: revalidate every time, same reasoning as the app's entry points. This is
-          # nearly the whole site (~39k files), so it does the bulk of the work here.
-          aws s3 sync apps/gokan-dictionary/dist/ s3://${{ inputs.s3_bucket }}/dictionary/ \
-            --cache-control "public, max-age=0, must-revalidate" \
-            --exclude "*" \
-            --include "*.html"
-
-          # Two unhashed files the first pass just marked immutable for a year. Re-uploaded with
-          # a short TTL so a dataset change actually reaches search and crawlers.
-          aws s3 cp apps/gokan-dictionary/dist/data/search.json \
-            s3://${{ inputs.s3_bucket }}/dictionary/data/search.json \
-            --cache-control "public, max-age=3600"
-          aws s3 cp apps/gokan-dictionary/dist/sitemap.xml \
-            s3://${{ inputs.s3_bucket }}/dictionary/sitemap.xml \
-            --cache-control "public, max-age=3600"
+          # --size-only would have been the tempting one-word fix and is unsafe here: asset
+          # filenames are content-hashed to a fixed length, so a CSS-only change produces HTML
+          # of identical byte length, and every page would keep pointing at a deleted
+          # stylesheet. See apps/gokan-dictionary/src/lib/deployManifest.ts.
+          bun apps/gokan-dictionary/scripts/deploy-s3.ts --bucket ${{ inputs.s3_bucket }} --prefix dictionary
 
       - name: Invalidate CloudFront cache
         run: |
