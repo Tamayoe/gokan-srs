@@ -132,6 +132,58 @@ resource "aws_acm_certificate_validation" "website" {
   validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
 }
 
+
+# Adds X-Robots-Tag: noindex to everything staging serves.
+#
+# staging.gokan-srs.com shares gokan-srs.com's robots.txt content (it is the same built app), so
+# robots.txt alone will not keep crawlers out. Once the dictionary is deployed here that means a
+# second, complete, crawlable copy of ~39k pages duplicating production - a far worse duplicate
+# content problem than the one the dictionary exists to solve. A response header is the reliable
+# way to say noindex for non-HTML responses too.
+resource "aws_cloudfront_response_headers_policy" "staging_noindex" {
+  name = "${var.project_name}-staging-noindex"
+
+  custom_headers_config {
+    items {
+      header   = "X-Robots-Tag"
+      value    = "noindex, nofollow"
+      override = true
+    }
+  }
+}
+
+# CloudFront Function rewriting directory-style dictionary URLs onto the actual S3 object key.
+#
+# This is load-bearing, not a nicety. gokan-dictionary emits one page per entry as
+# <path>/index.html, and the S3 origin is reached through OAC (the REST endpoint), which - unlike
+# the S3 *website* endpoint - performs no directory-index resolution at all. Without this
+# rewrite, a request for /dictionary/vocab/1589350/ looks up a key that does not exist, 404s,
+# and gets swallowed by the SPA custom_error_response below: every dictionary page would silently
+# serve the SRS app instead. `default_root_object` does not help, as it only applies to "/".
+resource "aws_cloudfront_function" "dictionary_directory_index" {
+  name    = "${var.project_name}-staging-dictionary-directory-index"
+  runtime = "cloudfront-js-2.0"
+  comment = "Appends index.html to directory-style dictionary URLs"
+  publish = true
+
+  code = <<-EOT
+    function handler(event) {
+      var request = event.request;
+      var uri = request.uri;
+
+      if (uri.endsWith('/')) {
+        request.uri = uri + 'index.html';
+      } else if (!uri.split('/').pop().includes('.')) {
+        // Extensionless and no trailing slash (e.g. /dictionary/vocab/1589350): treat it as the
+        // same page rather than a 404, so a hand-typed or link-shortened URL still resolves.
+        request.uri = uri + '/index.html';
+      }
+
+      return request;
+    }
+  EOT
+}
+
 resource "aws_cloudfront_distribution" "website" {
   enabled             = true
   is_ipv6_enabled     = true
@@ -149,9 +201,40 @@ resource "aws_cloudfront_distribution" "website" {
     cached_methods   = ["GET", "HEAD", "OPTIONS"]
     target_origin_id = "S3-${aws_s3_bucket.website.id}"
 
-    cache_policy_id        = "658327ea-f89d-4fab-a63d-7e88639e58f6" # Managed-CachingOptimized
+    cache_policy_id            = "658327ea-f89d-4fab-a63d-7e88639e58f6" # Managed-CachingOptimized
+    response_headers_policy_id = aws_cloudfront_response_headers_policy.staging_noindex.id
+    viewer_protocol_policy     = "redirect-to-https"
+    compress                   = true
+  }
+
+  # The dictionary (apps/gokan-dictionary) is served from the /dictionary/* prefix of this same
+  # bucket, so it shares this hostname's ranking signals instead of splitting them across a
+  # subdomain. It is fully prerendered static HTML, so it must NOT inherit the SPA fallback
+  # behavior - hence its own behavior with the directory-index function attached.
+  #
+  # Known limitation: custom_error_response is distribution-wide in CloudFront, so a genuinely
+  # missing /dictionary/* URL still returns the SPA shell with a 200 rather than a 404 (a soft
+  # 404). Every dictionary URL is generated and sitemap-listed, so this should only be reachable
+  # via a stale link after a dataset change. Fixing it properly means moving the SPA fallback off
+  # custom_error_response and into a function on the default behavior, which is a riskier change
+  # to live app routing than the problem currently warrants.
+  ordered_cache_behavior {
+    path_pattern     = "/dictionary/*"
+    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
+    cached_methods   = ["GET", "HEAD", "OPTIONS"]
+    target_origin_id = "S3-${aws_s3_bucket.website.id}"
+
+    cache_policy_id = "658327ea-f89d-4fab-a63d-7e88639e58f6" # Managed-CachingOptimized
+
     viewer_protocol_policy = "redirect-to-https"
     compress               = true
+
+    response_headers_policy_id = aws_cloudfront_response_headers_policy.staging_noindex.id
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.dictionary_directory_index.arn
+    }
   }
 
   # SPA routing: serve index.html for client-side routes.
