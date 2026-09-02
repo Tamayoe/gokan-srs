@@ -1,13 +1,11 @@
 import { OptionGrid } from "../../components/OptionGrid";
 import type { UserSettings } from "../../models/user.model";
 import { useGoogleDrive } from "../../context/GoogleDriveContext";
-import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor, Sparkles, KeyRound, ArrowLeft, ChevronDown } from "lucide-react";
+import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor, Sparkles, KeyRound, ArrowLeft } from "lucide-react";
 import { Button } from "../../components/ui/Button";
 import { SettingToggle } from "../../components/ui/SettingToggle";
 import { useTheme } from "../../context/ThemeContext";
-import { useState, type ReactNode } from "react";
-import { VocabQuizSettings } from "./sections/VocabQuizSettings";
-import { GrammarQuizSettings } from "./sections/GrammarQuizSettings";
+import { useState } from "react";
 
 function SyncControls() {
     const { login, logout, downloadProgress, isDownloading, isAuthenticated, user } = useGoogleDrive();
@@ -76,39 +74,6 @@ function SyncControls() {
                     </>
                 )}
             </Button>
-        </div>
-    );
-}
-
-/**
- * One activity's settings, collapsed by default. The cog on the activity's own
- * quiz screen is the primary way in - these disclosures exist so the options
- * stay discoverable from the settings page without pushing the genuinely
- * global options (appearance, pacing, AI, sync) further down it.
- */
-function ActivityDisclosure({ label, children }: { label: string; children: ReactNode }) {
-    const [isOpen, setIsOpen] = useState(false);
-
-    return (
-        <div className="rounded-lg border border-divider overflow-hidden">
-            <button
-                type="button"
-                onClick={() => setIsOpen(!isOpen)}
-                aria-expanded={isOpen}
-                className="w-full flex items-center justify-between p-4 text-left cursor-pointer bg-surface dark:bg-surface/5 hover:bg-surface-hover transition-colors"
-            >
-                <span className="font-medium text-primary">{label}</span>
-                <ChevronDown
-                    size={18}
-                    className={`text-secondary transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-                />
-            </button>
-
-            {isOpen && (
-                <div className="p-4 border-t border-divider animate-fade-in">
-                    {children}
-                </div>
-            )}
         </div>
     );
 }
@@ -204,7 +169,8 @@ export function SettingsScreen({
               * Review pacing is the one learning preference that is genuinely
               * global: both the vocab scheduler and grammarSrs.service read
               * learningFrequency. Everything else that used to sit here was
-              * vocabulary-only and moved to the activity section below.
+              * vocabulary-only, and now lives behind the cog on that activity's
+              * card on the Main hub (see QuizSettingsMenu / pages/settings/sections).
               */}
             <section className="w-full mb-16 animate-slide-up" style={{ animationDelay: "200ms" }}>
                 <h2 className="mb-4 uppercase tracking-wide text-xs font-gothic text-secondary">
@@ -238,28 +204,6 @@ export function SettingsScreen({
                         },
                     ]}
                 />
-            </section>
-
-            {/* Activity settings */}
-            <section className="w-full mb-16 animate-slide-up" style={{ animationDelay: "250ms" }}>
-                <h2 className="mb-2 uppercase tracking-wide text-xs font-gothic text-secondary">
-                    Activity settings
-                </h2>
-
-                <p className="text-sm text-secondary mb-4 font-gothic">
-                    Options that only affect one kind of quiz. They can also be reached
-                    mid-session from the cog at the top of that quiz.
-                </p>
-
-                <div className="flex flex-col gap-3">
-                    <ActivityDisclosure label="Vocabulary quiz">
-                        <VocabQuizSettings settings={settings} onUpdateSettings={onUpdateSettings} />
-                    </ActivityDisclosure>
-
-                    <ActivityDisclosure label="Grammar quiz">
-                        <GrammarQuizSettings />
-                    </ActivityDisclosure>
-                </div>
             </section>
 
             {/* AI Features */}

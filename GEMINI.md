@@ -567,6 +567,8 @@ The activity hub - the landing page (route `/`) after setup, replacing the previ
 
 Both activity cards render their preview description via a shared `renderSessionPreviewDescription(preview, nextReviewAt)` helper (`MainScreen.tsx`): `"{review} review · {new} new"`, with `· {retries} retries` appended (in the error color) only when `retries > 0`. When all three counts are 0, it falls back to a caught-up message, showing the next review's ETA when one is known. The vocab card sources its preview from `selectNextSessionPreview(state, now)`; the grammar card from `selectNextGrammarSessionPreview(state, now)` - see State Management for both selectors, and Modification Log `[2026-08-04]`/`[2026-08-05]`.
 
+Each activity card carries a **settings cog** in its top right corner, opening that activity's `QuizSettingsMenu` (see Per-activity quiz settings below). This is the only entry point to activity-scoped settings.
+
 `DailyActivityCard` (`pages/main/DailyActivityCard.tsx`) replaced the old ephemeral end-of-session recap (`[2026-08-02]`-era `lastSessionRecap`, removed `[2026-08-04]`): a **today** rollup (reviewed / correct / incorrect) plus a compact 7-day bar chart, both derived from `buildDailyActivity(progress, 7)` (`utils/activity.utils.ts`) - the same per-day bucketing `DailyProgressionChart` uses on the Stats screen. Reading persisted `reading.history`/`meaning.history` logs instead of session-local state means the card stays accurate across however many small sessions happen in a day, rather than being overwritten by the next session like the old recap was.
 
 ### Quiz Screen (`pages/quiz/VocabQuizScreen.tsx`)
@@ -579,8 +581,6 @@ Main study interface. Switches **exhaustively** on `sessionState` (a TypeScript 
 - **`'exhausted'`**: Show `ExhaustedScreen` (no more content). Same "Back to activities" link as `WaitingScreen`.
 - **`'learn-kanji'`**: Show `LearnKanjiCard` (KKLC step unlock)
 - **`'review'` / `'learn'`**: Loading gate, then `shouldShowIntro` (from `selectNextView`) decides `VocabIntroCard` vs. the active quiz card (`VocabQuizCard` for reading, `VocabMeaningQuizCard` for meaning, keyed on `currentQuizItem.quizType`)
-
-**Per-activity settings cog**: a `QuizSettingsMenu` holding `VocabQuizSettings` (see Per-activity quiz settings below) is rendered in a right-aligned bar at the top of the `review`/`learn` states, in **both** the intro-card and quiz-card branches, so it sits in the same place whichever card is showing. It is above the card rather than inside it: the cards already own their top-right corner (`MasteryRing`), and a cog placed there would collide with it and would have to be repeated in every card component.
 
 **Auto-advance logic**: Owned by `useQuizOrchestration`. If the queue has no valid items but can introduce new vocab, automatically calls `advanceQueue()`.
 
@@ -596,8 +596,6 @@ Route `/grammar` (issue #17). The Grammar activity - a second SRS-driven study s
 
 - **`'waiting'` / `'exhausted'`**: Inline `CenteredCard` messages (not `WaitingScreen`/`ExhaustedScreen` - those are vocab-copy-specific, e.g. "Learn more words"), each with a "Back to activities" link.
 - **`'review'` / `'learn'`**: Loading gate, then `shouldShowGrammarIntro` (from `selectNextGrammarView`) decides `GrammarIntroCard` vs. a `SessionProgress` header (`stats={grammarSessionStats}`, `history={...grammarSessionHistory mapped to /grammar/:grammarId links}`, `waitingNoun="grammar points"`) plus `GrammarQuizCard`, positioned the same way `VocabQuizScreen` positions its own `SessionProgress` above `VocabQuizCard`/`VocabMeaningQuizCard` (issue #32 follow-up).
-
-**Per-activity settings cog**: mirrors `VocabQuizScreen`'s settings bar exactly (same placement and both branches), holding `GrammarQuizSettings` - currently a placeholder, since grammar has no activity-scoped setting yet.
 
 **`GrammarIntroCard`** (`pages/grammar/GrammarIntroCard.tsx`) - mirrors `VocabIntroCard`'s layout: a top-right `MasteryRing` (`currentGrammarProgress?.entry.memoryStrength ?? 0` - reads `0` here since an intro candidate has no `GrammarProgress` entry yet, same as a fresh vocab intro card would; issue #32 follow-up RC3 item 1), JLPT chip, title (rendered in `font-mincho`, **not** `font-serif` - the title contains Japanese characters and `font-serif`'s font stack, "Source Serif 4, Georgia, serif", has no CJK fallback at all, unlike `font-mincho`/`font-gothic` which both list a Noto JP fallback; caught via a scripted browser pass, see Modification Log `[2026-08-05]`), `point.romaji` when present (a small muted line beneath the title - issue #47, one of only two places romaji ever renders, the other being `GrammarDetailScreen`), short explanation, and the `formation` template in its own bordered box - appropriate here since this is the "here's what you're about to learn" screen, unlike the quiz card below where it would be the answer.
 
@@ -640,21 +638,24 @@ Section order, top to bottom:
 1. **Account (Google Drive sync)** - moved to the top of the page from the bottom. Signing in is what makes every other setting and all progress follow the user across devices, so it is the first thing worth doing here.
 2. **Appearance** - theme.
 3. **Review pacing** - `learningFrequency` only. This is the one learning preference that is genuinely global: both `SRSService` and `grammarSrs.service.ts` read it.
-4. **Activity settings** - one collapsible `ActivityDisclosure` per activity, rendering the exact same `VocabQuizSettings` / `GrammarQuizSettings` component the activity's own cog panel renders. Collapsed by default; the in-quiz cog is the primary way in, and these exist so the options stay discoverable without pushing the global ones down the page.
-5. **AI Context Validation** - Gemini toggle, API key, validate-all toggle. Deliberately **stays global** even though only the vocab meaning quiz consumes it today: context-aware validation is expected to reach other activities.
-6. **Danger zone** - grammar-only reset, then reset-all (both with confirmation).
+4. **AI Context Validation** - Gemini toggle, API key, validate-all toggle. Deliberately **stays global** even though only the vocab meaning quiz consumes it today: context-aware validation is expected to reach other activities.
+5. **Danger zone** - grammar-only reset, then reset-all (both with confirmation).
+
+Activity-scoped settings are deliberately **not** here: they live on the Main hub's activity cards (below), so the page holds only what applies to the whole app.
 
 ### Per-activity quiz settings (`components/QuizSettingsMenu.tsx`, `pages/settings/sections/`)
 
-Settings that only affect one kind of quiz live with that quiz rather than in the global page.
+Settings that only affect one kind of quiz are reached from a cog on **that activity's card on the Main hub** (`MainScreen.tsx`), and from nowhere else - not from the global settings page, and not from inside a running session. The hub is where the user picks an activity, so it is also where they set that activity up.
 
-**`QuizSettingsMenu`** - the cog affordance and the panel chrome, nothing more. Owns open/close (Escape, backdrop click), and renders the panel through a **React portal onto `document.body`**: the quiz cards live inside framer-motion-transformed containers, which create a containing block that an inline absolutely-positioned panel would be clipped and mis-anchored by. Every panel footer links out to `/settings` for the global options.
+**`QuizSettingsMenu`** - the cog affordance and the panel chrome, nothing more. Owns open/close (Escape, backdrop click), and renders the panel through a **React portal onto `document.body`**: an inline absolutely-positioned panel would be clipped by the card and constrained by the hub's grid. Every panel footer links out to `/settings` for the global options.
 
-**`pages/settings/sections/VocabQuizSettings.tsx`** - every setting that only affects the vocabulary quiz: `preferredLearningOrder`, `ignoreKnownKanjiRequirement` (shown for every order except `kklc`, a no-op there since it's gated by step rather than by kanji set - including `jlpt`, which is kanji-filtered by default and relies on this toggle to opt back into its old unconditional behavior), `kanjiCoverageTarget`, `enableMeaningQuiz`, and `meaningContextThreshold`. Takes `{ settings, onUpdateSettings, dense }`; `dense` is the narrow single-column layout used inside the popover. Rendered from **both** the global page and the quiz cog, so the two can never drift apart.
+The cog is a **sibling** of `ActivityCard`'s `<button>`, absolutely positioned over its top right corner, not a child of it: a button nested inside a button is invalid HTML, and a nested cog's click would bubble up and start the session instead of opening the settings.
+
+**`pages/settings/sections/VocabQuizSettings.tsx`** - every setting that only affects the vocabulary quiz: `preferredLearningOrder`, `ignoreKnownKanjiRequirement` (shown for every order except `kklc`, a no-op there since it's gated by step rather than by kanji set - including `jlpt`, which is kanji-filtered by default and relies on this toggle to opt back into its old unconditional behavior), `kanjiCoverageTarget`, `enableMeaningQuiz`, and `meaningContextThreshold`. Takes `{ settings, onUpdateSettings, dense }`; `dense` is the narrow single-column layout the popover always uses.
 
 **`pages/settings/sections/GrammarQuizSettings.tsx`** - a placeholder message. Grammar genuinely has no settings of its own yet (everything a grammar session reads is shared), and the honest placeholder was preferred over inventing a grammar-only toggle just to fill the panel. The cog is still shown, for symmetry with the vocabulary quiz.
 
-**Shared controls**: `components/ui/SettingToggle.tsx` (the label + description + switch row, with `dense`/`disabled` variants) and `OptionGrid`'s `dense` prop were extracted so the same control renders identically on the settings page and in the popover.
+**Shared controls**: `components/ui/SettingToggle.tsx` (the label + description + switch row, with `dense`/`disabled` variants) and `OptionGrid`'s `dense` prop were extracted so these panels reuse the settings page's controls rather than restyling their own.
 
 ### Grammar Browse Screen (`pages/grammar/GrammarBrowseScreen.tsx`)
 
