@@ -7,8 +7,6 @@ import { VocabMeaningQuizCard } from "./VocabMeaningQuizCard";
 import { LoadingScreen } from "../../components/LoadingScreen";
 import { useQuiz } from "../../context/useQuiz";
 import VocabIntroCard from "../../components/VocabIntroCard";
-import { QuizSettingsMenu } from "../../components/QuizSettingsMenu";
-import { VocabQuizSettings } from "../settings/sections/VocabQuizSettings";
 import { LearnKanjiCard } from "../../components/LearnKanjiCard";
 
 interface VocabQuizScreenProps {
@@ -17,24 +15,6 @@ interface VocabQuizScreenProps {
 
 export function VocabQuizScreen({ onVocabClick }: VocabQuizScreenProps) {
     const { state, shouldShowIntro, sessionState, nextReviewAt, actions, sessionStats } = useQuiz();
-
-    /*
-     * The cog for settings scoped to THIS activity, pinned to the top right of
-     * the session. Rendered above the card (rather than inside it) so it sits in
-     * the same place whether an intro card, a reading quiz or a meaning quiz is
-     * showing, and so it never collides with the card's own top-right mastery ring.
-     */
-    const settingsBar = (
-        <div className="w-full max-w-2xl mx-auto flex justify-end mb-1">
-            <QuizSettingsMenu title="Vocabulary quiz settings">
-                <VocabQuizSettings
-                    settings={state.settings!}
-                    onUpdateSettings={actions.saveSettings}
-                    dense
-                />
-            </QuizSettingsMenu>
-        </div>
-    );
 
     // Exhaustive switch over every SessionState - this is the single place that
     // decides what the quiz screen shows, replacing what used to be three
@@ -72,14 +52,11 @@ export function VocabQuizScreen({ onVocabClick }: VocabQuizScreenProps) {
 
             if (shouldShowIntro) {
                 return (
-                    <div className="flex flex-col flex-1 items-center w-full">
-                        {settingsBar}
-                        <VocabIntroCard
-                            vocab={state.currentVocab}
-                            onLearn={() => actions.saveVocabIntroChoice(state.currentVocab!, 'learn')}
-                            onSkip={() => actions.saveVocabIntroChoice(state.currentVocab!, 'skip')}
-                        />
-                    </div>
+                    <VocabIntroCard
+                        vocab={state.currentVocab}
+                        onLearn={() => actions.saveVocabIntroChoice(state.currentVocab!, 'learn')}
+                        onSkip={() => actions.saveVocabIntroChoice(state.currentVocab!, 'skip')}
+                    />
                 );
             }
 
@@ -92,8 +69,7 @@ export function VocabQuizScreen({ onVocabClick }: VocabQuizScreenProps) {
             }));
 
             return (
-                <div className="flex flex-col flex-1 items-center w-full">
-                    {settingsBar}
+                <div className="flex flex-col flex-1 items-center">
                     <SessionProgress stats={sessionStats} history={history} waitingNoun="vocab" />
 
                     <div className="flex-1 flex items-center justify-center py-6 w-full">

@@ -6,8 +6,6 @@ import type { SessionHistoryEntry } from "../../components/SessionProgress";
 import { GrammarIntroCard } from "./GrammarIntroCard";
 import { GrammarQuizCard } from "./GrammarQuizCard";
 import { GrammarConjugationCard } from "./GrammarConjugationCard";
-import { QuizSettingsMenu } from "../../components/QuizSettingsMenu";
-import { GrammarQuizSettings } from "../settings/sections/GrammarQuizSettings";
 
 /**
  * Route /grammar - the Grammar activity, alongside the vocab quiz on /quiz.
@@ -17,16 +15,6 @@ import { GrammarQuizSettings } from "../settings/sections/GrammarQuizSettings";
  */
 export function GrammarScreen() {
     const { state, grammarSessionState, grammarNextReviewAt, shouldShowGrammarIntro, grammarActions, grammarSessionStats } = useQuiz();
-
-    // Mirrors VocabQuizScreen's settings bar - see the comment there for why it
-    // sits above the card rather than inside it.
-    const settingsBar = (
-        <div className="w-full max-w-2xl mx-auto flex justify-end mb-1">
-            <QuizSettingsMenu title="Grammar quiz settings">
-                <GrammarQuizSettings />
-            </QuizSettingsMenu>
-        </div>
-    );
 
     switch (grammarSessionState) {
         case "waiting": {
@@ -68,14 +56,11 @@ export function GrammarScreen() {
 
             if (shouldShowGrammarIntro) {
                 return (
-                    <div className="flex flex-col flex-1 items-center w-full">
-                        {settingsBar}
-                        <GrammarIntroCard
-                            grammarPoint={state.currentGrammarPoint}
-                            onLearn={() => grammarActions.saveGrammarIntroChoice(state.currentGrammarPoint!, 'learn')}
-                            onSkip={() => grammarActions.saveGrammarIntroChoice(state.currentGrammarPoint!, 'skip')}
-                        />
-                    </div>
+                    <GrammarIntroCard
+                        grammarPoint={state.currentGrammarPoint}
+                        onLearn={() => grammarActions.saveGrammarIntroChoice(state.currentGrammarPoint!, 'learn')}
+                        onSkip={() => grammarActions.saveGrammarIntroChoice(state.currentGrammarPoint!, 'skip')}
+                    />
                 );
             }
 
@@ -88,8 +73,7 @@ export function GrammarScreen() {
             }));
 
             return (
-                <div className="flex flex-col flex-1 items-center w-full">
-                    {settingsBar}
+                <div className="flex flex-col flex-1 items-center">
                     <SessionProgress stats={grammarSessionStats} history={history} waitingNoun="grammar points" />
 
                     <div className="flex-1 flex items-center justify-center py-6 w-full">
