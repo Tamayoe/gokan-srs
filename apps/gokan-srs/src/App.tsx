@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import './App.css';
 import { OnboardingFlow } from './pages/setup/OnboardingFlow';
 import { Logo } from './components/Logo';
-import { Settings, Cloud, CloudOff, RefreshCw, BarChart2, Library } from 'lucide-react';
+import { UserRound, Cloud, CloudOff, RefreshCw, BarChart2, Library } from 'lucide-react';
 import { useQuiz } from "./context/useQuiz";
 import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
@@ -121,8 +121,15 @@ export const App: React.FC = () => {
                     <button onClick={() => navigate("/profile")} title="Kanji Configuration" className="cursor-pointer text-secondary hover:text-primary transition-colors flex items-center justify-center">
                         <span className="font-mincho font-bold text-[18px] leading-none">漢</span>
                     </button>
-                    <button onClick={() => navigate("/settings")} title="Settings" className="cursor-pointer text-secondary hover:text-primary transition-colors">
-                        <Settings size={18} />
+                    {/*
+                      * A person icon, not a cog: the cog now belongs to the
+                      * per-activity settings on the quiz screens, so keeping one
+                      * here would read as "the same thing, globally". This page
+                      * leads with the Google account and holds what is genuinely
+                      * account-wide.
+                      */}
+                    <button onClick={() => navigate("/settings")} title="Profile and global settings" aria-label="Profile and global settings" className="cursor-pointer text-secondary hover:text-primary transition-colors">
+                        <UserRound size={18} />
                     </button>
                 </div>
             </header>
