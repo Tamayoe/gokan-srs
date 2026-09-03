@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpenText, Puzzle } from 'lucide-react';
+import { BookMarked, BookOpenText, Puzzle } from 'lucide-react';
 import { useQuiz } from '../../context/useQuiz';
 import { DailyActivityCard } from './DailyActivityCard';
 
@@ -33,9 +33,37 @@ export const MainScreen: React.FC = () => {
                     onClick={() => navigate('/grammar')}
                 />
             </div>
+
+            <DictionaryCard />
         </div>
     );
 };
+
+/**
+ * The dictionary is a reference tool, not an activity: nothing is scheduled, nothing is
+ * reviewed, and opening it does not start a session. So it sits below the activity grid as a
+ * full-width card rather than becoming a third sibling of the quiz and grammar cards, which
+ * would imply it belongs to the same rhythm they do.
+ *
+ * A plain <a>, not navigate(): gokan-dictionary is a separate statically generated app served
+ * from the /dictionary prefix of this same origin, so this is a real page load rather than a
+ * route this SPA knows about. It 404s under `bun run dev`, where only the SRS app is served.
+ */
+const DictionaryCard: React.FC = () => (
+    <a
+        href="/dictionary/"
+        className="mt-4 flex items-start gap-3 rounded-lg border border-divider bg-surface p-4 transition-colors hover:bg-surface-hover"
+    >
+        <BookMarked size={18} className="mt-0.5 shrink-0 text-secondary" />
+        <div>
+            <p className="font-serif text-primary">Dictionary</p>
+            <p className="mt-0.5 text-sm text-secondary">
+                Look up any word, kanji, or grammar point: readings, meanings, JLPT levels, and
+                example sentences. No session, no schedule.
+            </p>
+        </div>
+    </a>
+);
 
 const ActivityCard: React.FC<{
     icon: React.ReactNode;
