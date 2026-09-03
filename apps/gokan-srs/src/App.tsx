@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import './App.css';
 import { OnboardingFlow } from './pages/setup/OnboardingFlow';
 import { Logo } from './components/Logo';
-import { Settings, Cloud, CloudOff, RefreshCw, BarChart2, Library } from 'lucide-react';
+import { Settings, Cloud, CloudOff, RefreshCw, BarChart2, Library, BookMarked } from 'lucide-react';
 import { useQuiz } from "./context/useQuiz";
 import { KanjiFormProvider } from "./context/KanjiForm/KanjiFormProvider";
 import { useGoogleDrive } from "./context/GoogleDriveContext";
@@ -115,6 +115,23 @@ export const App: React.FC = () => {
                     >
                         <Library size={18} />
                     </button>
+                    {/*
+                      A plain <a>, not navigate(): the dictionary is a separate statically
+                      generated app served from the /dictionary prefix of this same origin, so
+                      it is a real page load rather than a route this SPA knows about. Same tab
+                      deliberately - it is part of the same site, and the two link back and
+                      forth (the dictionary's footer links here).
+
+                      Note this 404s under `bun run dev`, where only the SRS app is served.
+                    */}
+                    <a
+                        href="/dictionary/"
+                        title="Japanese dictionary"
+                        aria-label="Japanese dictionary"
+                        className="cursor-pointer text-secondary hover:text-primary transition-colors"
+                    >
+                        <BookMarked size={18} />
+                    </a>
                     <button onClick={() => navigate("/stats")} title="Statistics" className="cursor-pointer text-secondary hover:text-primary transition-colors">
                         <BarChart2 size={18} />
                     </button>

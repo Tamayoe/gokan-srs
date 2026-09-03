@@ -65,3 +65,27 @@ describe('renderDocument', () => {
         expect(html).toContain('<main>hello</main>');
     });
 });
+
+describe('extraScriptHref', () => {
+    const base = {
+        title: 'Grammar',
+        description: 'Grammar points',
+        canonicalPath: '/dictionary/grammar/',
+        bodyHtml: '<main>x</main>',
+        stylesheetHref: '/assets/styles.css',
+    };
+
+    it('links a second module script alongside the first', () => {
+        // The grammar index is the only page with two scripts: the shared search box plus its
+        // own interactive browser. A regression here silently ships a static-only page.
+        const html = renderDocument({ ...base, scriptHref: '/a.js', extraScriptHref: '/b.js' });
+        expect(html).toContain('<script type="module" src="/a.js"></script>');
+        expect(html).toContain('<script type="module" src="/b.js"></script>');
+    });
+
+    it('omits it when not provided', () => {
+        const html = renderDocument({ ...base, scriptHref: '/a.js' });
+        expect(html).toContain('src="/a.js"');
+        expect(html.match(/<script type="module"/g)).toHaveLength(1);
+    });
+});

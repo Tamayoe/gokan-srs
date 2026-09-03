@@ -59,6 +59,7 @@ import {
 import { renderDocument } from '../src/lib/documentShell';
 import { buildSitemapXml, buildRobotsTxt, shouldEmitRobotsTxt } from '../src/lib/sitemap';
 import type { GrammarSummary, VocabSummary } from '../src/lib/types';
+import { toBrowseRow, groupRows } from '../src/lib/grammarBrowse';
 import type { Vocabulary } from '../src/models/vocabulary.model';
 import type { GrammarPoint } from '../src/models/grammar.model';
 
@@ -109,8 +110,20 @@ async function main(): Promise<void> {
     // assetPath, not a bare '/' + file: in subfolder mode every href on the page has to carry
     // BASE_PATH, and a stylesheet 404 is the one breakage that still renders a plausible-looking
     // (unstyled) page rather than failing loudly.
-    const stylesheetHref = assetPath(manifest['src/app.css'].file);
+    const stylesheetHref = assetPath(manifest['src/styles/app.scss'].file);
+    // One stylesheet per page type, so a rule change on one page does not alter the bytes of
+    // every other page (which would re-upload the whole site - see CLAUDE.md's Deployment
+    // section). Pages built purely from shared rules pass nothing.
+    const pageStyles = {
+        home: assetPath(manifest['src/styles/pages/home.scss'].file),
+        vocab: assetPath(manifest['src/styles/pages/vocab.scss'].file),
+        kanji: assetPath(manifest['src/styles/pages/kanji.scss'].file),
+        kanjiIndex: assetPath(manifest['src/styles/pages/kanji-index.scss'].file),
+        grammar: assetPath(manifest['src/styles/pages/grammar.scss'].file),
+        grammarIndex: assetPath(manifest['src/styles/pages/grammar-index.scss'].file),
+    };
     const searchScriptHref = assetPath(manifest['src/client/search.ts'].file);
+    const grammarBrowserScriptHref = assetPath(manifest['src/client/grammarBrowser.ts'].file);
 
     // Dynamic imports so scripts/svelte-ssr-loader.ts (imported above for its side effect) has
     // already registered before these .svelte files are compiled - see that file's comment.
@@ -162,6 +175,7 @@ async function main(): Promise<void> {
             canonicalPath: vocabPath(id),
             bodyHtml: body,
             stylesheetHref,
+            pageStylesheetHref: pageStyles.vocab,
             scriptHref: searchScriptHref,
             structuredData: {
                 '@context': 'https://schema.org',
@@ -196,6 +210,7 @@ async function main(): Promise<void> {
             canonicalPath: kanjiPath(kanji.character),
             bodyHtml: body,
             stylesheetHref,
+            pageStylesheetHref: pageStyles.kanji,
             scriptHref: searchScriptHref,
         });
         // Written under the raw character, NOT percent-encoded, unlike kanjiPath()'s URL
@@ -238,6 +253,7 @@ async function main(): Promise<void> {
             canonicalPath: grammarPath(id),
             bodyHtml: body,
             stylesheetHref,
+            pageStylesheetHref: pageStyles.grammar,
             scriptHref: searchScriptHref,
             structuredData: {
                 '@context': 'https://schema.org',
@@ -252,17 +268,12 @@ async function main(): Promise<void> {
     }
 
     console.log('[prerender] writing grammar index page...');
-    const grammarLevels = [5, 4, 3, 2, 1]
-        .map(level => ({
-            level,
-            points: grammarIds
-                .map(id => grammarPoints.get(id)!)
-                .filter(point => point.jlptLevel === level)
-                .map(grammarSummaryOf),
-        }))
-        .filter(group => group.points.length > 0);
+    const browseRows = grammarIds.map(id => toBrowseRow(grammarPoints.get(id)!));
+    const grammarStaticGroups = groupRows(browseRows, 'family');
 
-    const { body: grammarIndexBody } = render(GrammarIndexPage, { props: { levels: grammarLevels } });
+    const { body: grammarIndexBody } = render(GrammarIndexPage, {
+        props: { groups: grammarStaticGroups, total: browseRows.length },
+    });
     const grammarIndexMetaValue = grammarIndexMeta(grammarIds.length);
     writePage(['grammar'], renderDocument({
         title: grammarIndexMetaValue.title,
@@ -270,7 +281,11 @@ async function main(): Promise<void> {
         canonicalPath: grammarIndexPath(),
         bodyHtml: grammarIndexBody,
         stylesheetHref,
+        pageStylesheetHref: pageStyles.grammarIndex,
         scriptHref: searchScriptHref,
+        // The only page carrying a second script: the interactive browser mounts over the
+        // static list this page also renders.
+        extraScriptHref: grammarBrowserScriptHref,
     }));
     sitemapPaths.push(grammarIndexPath());
 
@@ -297,6 +312,7 @@ async function main(): Promise<void> {
         canonicalPath: kanjiIndexPath(),
         bodyHtml: kanjiIndexBody,
         stylesheetHref,
+        pageStylesheetHref: pageStyles.kanjiIndex,
         scriptHref: searchScriptHref,
     }));
     sitemapPaths.push(kanjiIndexPath());
@@ -363,6 +379,7 @@ async function main(): Promise<void> {
         canonicalPath: homePath(),
         bodyHtml: homeBody,
         stylesheetHref,
+        pageStylesheetHref: pageStyles.home,
         scriptHref: searchScriptHref,
     });
     fs.writeFileSync(path.join(DIST_DIR, 'index.html'), homeHtml);
@@ -370,6 +387,7 @@ async function main(): Promise<void> {
     console.log('[prerender] writing search index, sitemap.xml, and robots.txt...');
     fs.mkdirSync(path.join(DIST_DIR, 'data'), { recursive: true });
     fs.writeFileSync(path.join(DIST_DIR, 'data', 'search.json'), JSON.stringify(searchIndex));
+    fs.writeFileSync(path.join(DIST_DIR, 'data', 'grammar-browse.json'), JSON.stringify(browseRows));
     fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), buildSitemapXml(sitemapPaths));
     if (shouldEmitRobotsTxt()) {
         fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), buildRobotsTxt());

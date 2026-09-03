@@ -1,0 +1,495 @@
+// Global stylesheet: the runtime theme tokens plus every rule shared by two or more page
+// types. Loaded by every page.
+//
+// Anything used by exactly one page belongs in styles/pages/<page>.scss instead, so a change
+// there does not alter the bytes of pages that never render it. That split is not only tidiness:
+// the stylesheet's content hash is embedded in every page's <link>, so a rule added here changes
+// all ~38k pages and re-uploads the whole site (see CLAUDE.md's Deployment section).
+//
+// Rules earn a place here by being used on more than one page. If something is only shared
+// because two pages happened to copy it, fix the duplication rather than promoting it.
+
+@use 'tokens' as *;
+
+:root {
+  --background: #f6f4ef;
+  --surface: #ffffff;
+  --surface-hover: #efebe2;
+  --primary: #1f2328;
+  --secondary: #5f6368;
+  --divider: #d8d6d0;
+  --accent: #2e3a59;
+  --accent-hover: #22293f;
+  --accent-contrast: #ffffff;
+
+  // Mirrored from the Sass type tokens so components can reference them where a runtime value
+  // reads better; the Sass variables remain the source used inside this stylesheet.
+  --font-serif: #{$font-serif};
+  --font-sans: #{$font-sans};
+  --font-mincho: #{$font-mincho};
+  --font-gothic: #{$font-gothic};
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #14130f;
+    --surface: #1c1b18;
+    --surface-hover: #2c2a26;
+    --primary: #e8e4dc;
+    --secondary: #a6a196;
+    --divider: #34322c;
+    --accent: #7c8db5;
+    --accent-hover: #97a6c7;
+    --accent-contrast: #14130f;
+
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--primary);
+  font-family: $font-sans;
+  line-height: 1.5;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-serif;
+  font-weight: 600;
+  margin: 0 0 $space-2;
+}
+
+main {
+  padding: $space-4 0 $space-6;
+}
+
+// -- Layout -----------------------------------------------------------------
+
+.container {
+  max-width: $measure-text;
+  margin: 0 auto;
+  padding: 0 $space-2;
+
+  &--wide {
+    max-width: $measure-wide;
+  }
+}
+
+.jp {
+  font-family: $font-gothic;
+}
+
+.muted {
+  color: var(--secondary);
+}
+
+.hero {
+  padding: $space-4 0;
+
+  p {
+    color: var(--secondary);
+    max-width: 34rem;
+  }
+}
+
+.breadcrumb {
+  font-size: $text-base;
+  color: var(--secondary);
+  margin-bottom: $space-2;
+
+  a {
+    color: var(--secondary);
+  }
+}
+
+.card {
+  @include surface;
+  margin-bottom: $space-3;
+
+  > h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--secondary);
+
+    // A group's subtitle sits inside the heading and should read as an aside, not a heading.
+    .muted {
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 400;
+      margin-left: $space-1;
+      font-size: $text-sm;
+    }
+  }
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: $radius-pill;
+  padding: 0.125rem 0.625rem;
+  font-size: $text-xs;
+  font-weight: 600;
+  margin-right: $space-1;
+
+  &--plain {
+    border-color: var(--divider);
+    color: var(--secondary);
+  }
+}
+
+a.badge:hover {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// -- Header and footer ------------------------------------------------------
+
+.site-header {
+  border-bottom: 1px solid var(--divider);
+  padding: $space-2 0;
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-family: $font-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.site-nav {
+  display: flex;
+  gap: $space-2;
+  font-size: $text-md;
+  color: var(--secondary);
+
+  a {
+    color: var(--secondary);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.site-footer {
+  border-top: 1px solid var(--divider);
+  margin-top: $space-6;
+  padding: $space-3 0;
+  color: var(--secondary);
+  font-size: $text-base;
+}
+
+// -- Site-wide search (header) ----------------------------------------------
+
+.site-search {
+  position: relative;
+  flex: 1 1 18rem;
+  min-width: 0;
+  max-width: 28rem;
+}
+
+.search-input {
+  width: 100%;
+  font-size: $text-md;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid var(--divider);
+  border-radius: $radius-pill;
+  background-color: var(--surface);
+  color: var(--primary);
+  font-family: $font-gothic;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+}
+
+// Overlays the page rather than pushing it down, so searching from halfway through a long page
+// does not shift the content being read.
+.search-panel {
+  position: absolute;
+  top: calc(100% + 0.375rem);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: $radius-lg;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.search-status {
+  color: var(--secondary);
+  font-size: $text-base;
+  margin: 0;
+  padding: 0.75rem 0.875rem;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li + li {
+    border-top: 1px solid var(--divider);
+  }
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  padding: 0.625rem 0.875rem;
+  color: var(--primary);
+
+  &:hover,
+  &:focus-visible,
+  &.is-active {
+    background-color: var(--surface-hover);
+    text-decoration: none;
+  }
+}
+
+.search-result-head {
+  display: flex;
+  align-items: baseline;
+  gap: $space-1;
+}
+
+.search-result-kanji {
+  font-family: $font-mincho;
+  font-size: $text-xl;
+}
+
+.search-result-reading {
+  color: var(--secondary);
+  font-size: $text-base;
+}
+
+.search-result-gloss {
+  color: var(--secondary);
+  font-size: $text-sm;
+  @include truncate;
+}
+
+// -- Entry lists (home, JLPT browse, vocab page aside) ----------------------
+
+.entry-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li + li {
+    border-top: 1px solid var(--divider);
+  }
+
+  &--compact .entry-row {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.entry-row {
+  display: grid;
+  grid-template-columns: minmax(4rem, auto) minmax(4rem, auto) 1fr;
+  align-items: baseline;
+  gap: $space-1 $space-2;
+  padding: 0.5rem 0.25rem;
+  color: var(--primary);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--surface-hover);
+    text-decoration: none;
+  }
+}
+
+.entry-row-word {
+  font-family: $font-mincho;
+  font-size: $text-lg;
+}
+
+.entry-row-reading,
+.entry-row-gloss {
+  color: var(--secondary);
+  font-size: $text-base;
+  @include truncate;
+}
+
+// -- Browse tiles (home, vocabulary hub) ------------------------------------
+
+.browse-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $space-3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: $space-2;
+}
+
+.browse-tile {
+  @include surface($space-2);
+  @include interactive-surface;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  height: 100%;
+  color: var(--primary);
+}
+
+.browse-tile-title {
+  font-family: $font-serif;
+  font-size: $text-xl;
+  font-weight: 600;
+}
+
+.browse-tile-count {
+  color: var(--accent);
+  font-size: $text-base;
+  font-weight: 600;
+}
+
+.browse-tile-blurb {
+  color: var(--secondary);
+  font-size: $text-base;
+}
+
+.level-nav {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+// -- Example sentences (vocab entry, grammar point) -------------------------
+
+.sentence-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sentence + .sentence {
+  margin-top: $space-2;
+  padding-top: $space-2;
+  border-top: 1px solid var(--divider);
+}
+
+.sentence-original {
+  font-family: $font-mincho;
+  font-size: $text-xl;
+  line-height: 1.9;
+  margin: 0 0 0.25rem;
+}
+
+.sentence-en {
+  color: var(--secondary);
+  font-size: $text-md;
+  margin: 0;
+}
+
+// A dashed underline rather than normal link styling: a sentence with eight solid blue words in
+// it stops reading as a sentence. The cue stays quiet until hovered.
+.sentence-word {
+  color: inherit;
+  border-bottom: 1px dashed var(--divider);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    text-decoration: none;
+  }
+}
+
+.sentence-target {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: 2px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+// -- Related-word lists (kanji page, grammar point) -------------------------
+
+.vocab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vocab-list-item {
+  display: flex;
+  align-items: baseline;
+  gap: $space-2;
+  padding: 0.375rem 0;
+
+  + .vocab-list-item {
+    border-top: 1px solid var(--divider);
+  }
+
+  .jp {
+    font-family: $font-mincho;
+    font-size: $text-lg;
+  }
+
+  .gloss {
+    color: var(--secondary);
+    font-size: $text-base;
+    @include truncate;
+  }
+}

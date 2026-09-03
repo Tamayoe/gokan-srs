@@ -1,0 +1,20 @@
+// Kanji entry page (KanjiPage.svelte) only.
+
+@use '../tokens' as *;
+
+.kanji-glyph {
+  font-family: $font-mincho;
+  line-height: 1;
+
+  &--lg {
+    font-size: 4rem;
+  }
+}
+
+.stat-row {
+  display: flex;
+  gap: $space-4;
+  color: var(--secondary);
+  font-size: $text-base;
+  flex-wrap: wrap;
+}

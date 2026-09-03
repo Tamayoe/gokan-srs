@@ -49,6 +49,20 @@ export function assetPath(distRelativeFile: string): string {
     return `${BASE_PATH}/${distRelativeFile.replace(/^\//, '')}`;
 }
 
+/**
+ * The site's favicon, served from this app's own public/ directory rather than borrowing
+ * gokan-srs's /gokan.svg: that would resolve only while the two share an origin, and would
+ * silently 404 the moment BASE_PATH is cleared for a subdomain deployment.
+ */
+export function faviconPath(): string {
+    return `${BASE_PATH}/favicon.svg`;
+}
+
+/** Href the grammar browser fetches its prebuilt row data from. */
+export function grammarBrowseDataPath(): string {
+    return `${BASE_PATH}/data/grammar-browse.json`;
+}
+
 /** Href the client search script fetches its prebuilt index from. */
 export function searchIndexPath(): string {
     return `${BASE_PATH}/data/search.json`;

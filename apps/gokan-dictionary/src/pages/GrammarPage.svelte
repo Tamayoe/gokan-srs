@@ -70,7 +70,7 @@
                   makes the ~36k vocab pages reachable by a crawler from grammar pages, instead
                   of only from kanji pages and the search box.
                 -->
-                {#each example.words as word}{#if word.vocabId}<a href={vocabPath(word.vocabId)}>{word.surface}</a>{:else}{word.surface}{/if}{/each}
+                {#each example.words as word}{#if word.vocabId}<a class="sentence-word" href={vocabPath(word.vocabId)}>{word.surface}</a>{:else}{word.surface}{/if}{/each}
               </p>
               <p class="sentence-en">{example.en}</p>
               {#if example.romaji}<p class="sentence-en muted">{example.romaji}</p>{/if}

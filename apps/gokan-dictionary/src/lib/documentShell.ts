@@ -5,7 +5,7 @@
 // isn't itself a piece of UI, and templating it directly avoids a whole extra SSR call per
 // page for something that's just string concatenation.
 
-import { absoluteUrl } from './urls';
+import { absoluteUrl, faviconPath } from './urls';
 
 export interface DocumentShellOptions {
     title: string;
@@ -15,8 +15,15 @@ export interface DocumentShellOptions {
     bodyHtml: string;
     /** Absolute href to the built global stylesheet (from the Vite client manifest). */
     stylesheetHref: string;
-    /** Absolute href to the built search script - only set on the home page. */
+    /**
+     * Absolute href to this page type's own stylesheet, if it has one. Pages built entirely from
+     * shared rules (the vocabulary hub and JLPT lists) pass nothing.
+     */
+    pageStylesheetHref?: string;
+    /** Absolute href to the built search script, linked from every page (the header owns the box). */
     scriptHref?: string;
+    /** A second module script, used only by the grammar index for its interactive browser. */
+    extraScriptHref?: string;
     /** Optional schema.org JSON-LD object, serialized verbatim into a <script type="application/ld+json">. */
     structuredData?: object;
 }
@@ -43,13 +50,14 @@ export function renderDocument(options: DocumentShellOptions): string {
 <title>${title}</title>
 <meta name="description" content="${description}" />
 <link rel="canonical" href="${canonical}" />
+<link rel="icon" type="image/svg+xml" href="${faviconPath()}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="${title}" />
 <meta property="og:description" content="${description}" />
 <meta property="og:url" content="${canonical}" />
 <meta name="twitter:card" content="summary" />
 <link rel="stylesheet" href="${options.stylesheetHref}" />
-${options.scriptHref ? `<script type="module" src="${options.scriptHref}"></script>\n` : ''}${options.structuredData ? `<script type="application/ld+json">${JSON.stringify(options.structuredData)}</script>\n` : ''}</head>
+${options.pageStylesheetHref ? `<link rel="stylesheet" href="${options.pageStylesheetHref}" />\n` : ''}${options.scriptHref ? `<script type="module" src="${options.scriptHref}"></script>\n` : ''}${options.extraScriptHref ? `<script type="module" src="${options.extraScriptHref}"></script>\n` : ''}${options.structuredData ? `<script type="application/ld+json">${JSON.stringify(options.structuredData)}</script>\n` : ''}</head>
 <body>
 ${options.bodyHtml}
 </body>
