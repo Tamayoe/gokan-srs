@@ -26,6 +26,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # The build prerenders every page from the compiled dataset. dataset.server.ts can
+          # fetch the submodule itself if it's missing, but doing it here keeps the build step's
+          # failure modes about the build.
+          submodules: true
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -45,6 +50,9 @@ jobs:
 
       - name: Typecheck
         run: bun run --cwd apps/gokan-dictionary typecheck
+
+      - name: Test
+        run: bun run --cwd apps/gokan-dictionary test
 
       - name: Build
         run: bun run --cwd apps/gokan-dictionary build

@@ -1,0 +1,20 @@
+// Grammar point page (GrammarPage.svelte) only.
+
+@use '../tokens' as *;
+
+.readings {
+  font-family: $font-gothic;
+  color: var(--secondary);
+  font-size: $text-xl;
+  margin: $space-1 0 $space-2;
+}
+
+// The formation template, e.g. "Noun + が + いちばん + Adjective/Verb". Boxed and loosely led so
+// the "+" separators read as a pattern rather than as prose.
+.formation {
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  background: var(--surface-hover);
+  border-radius: $radius-sm;
+  line-height: 1.8;
+}

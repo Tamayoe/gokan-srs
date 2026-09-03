@@ -1,0 +1,158 @@
+# Reusable deploy for BOTH apps to ONE environment: the gokan-srs SPA at the site root, and
+# gokan-dictionary under /dictionary/.
+#
+# Why one workflow rather than one per app: both apps read the same compiled dataset from the
+# same gokan-dataset submodule checkout, so a single checkout guarantees they ship from one
+# dataset version. Two workflows could deploy the app from one commit and the dictionary from
+# another, leaving an environment serving two apps built off different datasets.
+#
+# Why one workflow rather than one per environment: staging and production would otherwise hold
+# two copies of this logic and drift apart, which is the same failure one level up. Callers pass
+# only what actually differs (bucket, distribution, origin).
+
+name: "Deploy: site"
+
+# Set here, not in the callers: a reusable workflow does not inherit the caller's `env`.
+# apps/gokan-srs/vite.config.ts keys off this to skip the vite-plugin-checker typecheck pass
+# during a CI build (CI typechecks as its own step), so dropping it would change build behavior.
+env:
+  NODE_ENV: production
+
+on:
+  workflow_call:
+    inputs:
+      environment_name:
+        description: 'Environment label used in the run summary, e.g. "production"'
+        type: string
+        required: true
+      site_origin:
+        description: 'Public origin, no trailing slash, e.g. "https://gokan-srs.com". Becomes the dictionary canonical/sitemap host.'
+        type: string
+        required: true
+      s3_bucket:
+        description: 'Destination S3 bucket name'
+        type: string
+        required: true
+      aws_region:
+        type: string
+        required: true
+      ref:
+        description: 'Branch, tag or SHA to build. Defaults to the triggering ref.'
+        type: string
+        required: false
+        default: ''
+    secrets:
+      aws_access_key_id:
+        required: true
+      aws_secret_access_key:
+        required: true
+      cloudfront_distribution_id:
+        required: true
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
+          # One checkout, one submodule pin, therefore one dataset version for both apps.
+          # gokan-dataset is public, so no extra credentials are needed.
+          submodules: true
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build gokan-srs
+        run: bun run --cwd apps/gokan-srs build
+
+      # Reads the same dataset/compiled/ tree the step above synced from, and bakes it into
+      # ~39k static pages. VITE_SITE_ORIGIN is what makes staging emit staging canonicals
+      # instead of claiming to be production.
+      - name: Build gokan-dictionary
+        env:
+          VITE_SITE_ORIGIN: ${{ inputs.site_origin }}
+        run: bun run --cwd apps/gokan-dictionary build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.aws_access_key_id }}
+          aws-secret-access-key: ${{ secrets.aws_secret_access_key }}
+          aws-region: ${{ inputs.aws_region }}
+
+      - name: Sync gokan-srs to S3
+        run: |
+          # Hashed static assets and compiled data: long cache, prune stale keys.
+          #
+          # --exclude "dictionary/*" on the --delete pass is LOAD-BEARING. `aws s3 sync --delete`
+          # removes everything in the destination that is absent from the source, and the
+          # dictionary lives under that prefix in this same bucket - without this, every app
+          # deploy would silently wipe all ~39k dictionary pages with no error reported.
+          aws s3 sync apps/gokan-srs/dist/ s3://${{ inputs.s3_bucket }}/ \
+            --delete \
+            --size-only \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html" \
+            --exclude "dictionary/*"
+
+          # HTML entry points: always revalidate. No --size-only, because index.html frequently
+          # changes only its embedded asset hashes and keeps the same byte length.
+          aws s3 sync apps/gokan-srs/dist/ s3://${{ inputs.s3_bucket }}/ \
+            --cache-control "public, max-age=0, must-revalidate" \
+            --exclude "*" \
+            --include "*.html"
+
+      - name: Deploy gokan-dictionary to S3
+        run: |
+          # Content-addressed upload rather than `aws s3 sync`. Sync compares mtime by default,
+          # and CI rebuilds from a fresh checkout every run, so all ~38k generated pages looked
+          # new on every deploy: even a deploy touching only the SRS app re-uploaded the whole
+          # dictionary, ~20 minutes each time. The script hashes every built file, compares
+          # against a manifest stored beside the site in S3, and uploads only what differs.
+          #
+          # --size-only would have been the tempting one-word fix and is unsafe here: asset
+          # filenames are content-hashed to a fixed length, so a CSS-only change produces HTML
+          # of identical byte length, and every page would keep pointing at a deleted
+          # stylesheet. See apps/gokan-dictionary/src/lib/deployManifest.ts.
+          bun apps/gokan-dictionary/scripts/deploy-s3.ts --bucket ${{ inputs.s3_bucket }} --prefix dictionary
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.cloudfront_distribution_id }} \
+            --paths "/index.html" "/" "/data/compiled/*" "/dictionary/*"
+
+      - name: Deployment summary
+        run: |
+          {
+            echo "## Deploy: ${{ inputs.environment_name }}"
+            echo ""
+            echo "**Ref:** ${{ inputs.ref || github.ref_name }}"
+            echo "**App:** ${{ inputs.site_origin }}/"
+            echo "**Dictionary:** ${{ inputs.site_origin }}/dictionary/"
+            echo "**Bucket:** ${{ inputs.s3_bucket }}"
+            echo ""
+            echo "Both apps built from the same checkout, so they share one dataset version."
+            echo ""
+            echo "_Live in 1-3 minutes after CloudFront invalidation._"
+          } >> $GITHUB_STEP_SUMMARY

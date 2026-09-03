@@ -1,8 +1,15 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemap locations.
+#
+# This file is the authoritative robots.txt for the whole gokan-srs.com host, including
+# gokan-dictionary, which is served from /dictionary/. Crawlers only ever fetch robots.txt from
+# a host root, so the dictionary deliberately does not generate one of its own (a file at
+# /dictionary/robots.txt would never be read) and declares its sitemap here instead.
+# See apps/gokan-dictionary/src/lib/sitemap.ts's shouldEmitRobotsTxt().
 Sitemap: https://gokan-srs.com/sitemap.xml
+Sitemap: https://gokan-srs.com/dictionary/sitemap.xml
 
 # Block settings and profile pages from indexing (user-specific content)
 Disallow: /settings

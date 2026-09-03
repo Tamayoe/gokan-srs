@@ -1,0 +1,123 @@
+// Vocab entry page (VocabPage.svelte) only.
+//
+// The layout splits by importance rather than convenience: the definition and example sentences
+// are what the page is for and stay in the primary column, while the relationship lists are
+// navigation aids and move to the aside.
+
+@use '../tokens' as *;
+
+.entry-head {
+  padding: $space-3 0 $space-2;
+  border-bottom: 1px solid var(--divider);
+  margin-bottom: $space-3;
+}
+
+.entry-word {
+  font-family: $font-mincho;
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.entry-reading {
+  font-family: $font-gothic;
+  font-size: 1.25rem;
+  color: var(--secondary);
+  margin: $space-1 0 0;
+}
+
+// The definition, directly under the word rather than in a card further down. Set at body-copy
+// size in the serif face so it reads as the answer to the page's question.
+.entry-gloss {
+  font-family: $font-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: $space-2 0 0;
+}
+
+.entry-meta {
+  display: flex;
+  align-items: center;
+  gap: $space-1;
+  flex-wrap: wrap;
+  margin: $space-2 0 0;
+  font-size: $text-base;
+}
+
+.entry-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-3;
+  align-items: start;
+
+  @include wide {
+    grid-template-columns: minmax(0, 1.9fr) minmax(14rem, 1fr);
+  }
+}
+
+.entry-main > .card:last-child,
+.entry-aside > .card:last-child {
+  margin-bottom: 0;
+}
+
+.entry-aside .card {
+  padding: $space-2;
+}
+
+.sense-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.sense {
+  margin-bottom: $space-2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.pos-tags {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.pos-tag {
+  font-size: $text-xs;
+  color: var(--secondary);
+  border: 1px solid var(--divider);
+  border-radius: $radius-sm;
+  padding: 0.0625rem 0.375rem;
+}
+
+.chip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: $space-1;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  font-family: $font-mincho;
+  font-size: 1.5rem;
+  color: var(--primary);
+  border: 1px solid var(--divider);
+  border-radius: $radius-md;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: var(--surface-hover);
+    text-decoration: none;
+  }
+}
