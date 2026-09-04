@@ -5,19 +5,25 @@ import { CONSTANTS } from "../commons/constants";
 
 interface KanjiCountStepperProps {
     /** Increment applied by the -/+ buttons (UserSettings.kanjiCountStep). */
-    step: number;
-    /** Persists a new increment. Omitted during setup, where no settings exist yet. */
+    step?: number;
+    /**
+     * Persists a new increment. Omitted during setup, where there is no settings
+     * object to persist into - and where the whole stepping affordance is left
+     * out, since a first-time user is entering a count once, not nudging an
+     * existing one by a remembered amount.
+     */
     onStepChange?: (step: number) => void;
 }
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
 
 /**
- * Known-kanji count control: the raw number plus -/+ buttons that move it by
- * the user's own increment. Advancing the count by a fixed amount is the main
- * thing people come to the profile page to do (they studied another N kanji
- * elsewhere), so it should not require selecting the field and doing the
- * arithmetic by hand.
+ * Known-kanji count control. On the profile page (both props supplied) it is the
+ * raw number plus -/+ buttons moving it by the user's own increment: advancing
+ * the count by a fixed amount is the main thing people come there to do (they
+ * studied another N kanji elsewhere), so it should not require selecting the
+ * field and doing the arithmetic by hand. During setup it degrades to the plain
+ * number field.
  */
 export function KanjiCountStepper({ step, onStepChange }: KanjiCountStepperProps) {
     const { state, setKanjiCount } = useKanjiForm();
@@ -25,6 +31,9 @@ export function KanjiCountStepper({ step, onStepChange }: KanjiCountStepperProps
     const min = CONSTANTS.setup.minimumKanjiCount;
     // The loaded list is the real ceiling; fall back to the constant before it loads.
     const max = state.allKanji.length || CONSTANTS.setup.maximumKanjiCount;
+
+    const stepValue = step ?? CONSTANTS.setup.defaultKanjiCountStep;
+    const canStep = !!onStepChange;
 
     // Drafts so clearing a field mid-edit doesn't immediately snap to a clamped
     // value under the cursor. `null` means "not being edited", in which case the
@@ -69,16 +78,18 @@ export function KanjiCountStepper({ step, onStepChange }: KanjiCountStepperProps
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
-                <button
-                    type="button"
-                    onClick={() => adjust(-step)}
-                    disabled={state.kanjiCount <= min}
-                    className={stepButtonClass}
-                    aria-label={`Remove ${step} kanji`}
-                >
-                    <Minus className="w-3.5 h-3.5" aria-hidden="true" />
-                    {step}
-                </button>
+                {canStep && (
+                    <button
+                        type="button"
+                        onClick={() => adjust(-stepValue)}
+                        disabled={state.kanjiCount <= min}
+                        className={stepButtonClass}
+                        aria-label={`Remove ${stepValue} kanji`}
+                    >
+                        <Minus className="w-3.5 h-3.5" aria-hidden="true" />
+                        {stepValue}
+                    </button>
+                )}
 
                 <input
                     id="kanji-count"
@@ -89,41 +100,48 @@ export function KanjiCountStepper({ step, onStepChange }: KanjiCountStepperProps
                     value={countDraft ?? String(state.kanjiCount)}
                     onChange={e => commitCount(e.target.value)}
                     onBlur={() => setCountDraft(null)}
-                    className="flex-1 min-w-24 h-11 border rounded-md px-4 text-lg text-center border-divider bg-surface text-primary font-gothic tabular-nums"
+                    className={`
+                        flex-1 min-w-24 h-11 border rounded-md px-4 text-lg border-divider bg-surface
+                        text-primary font-gothic tabular-nums
+                        ${canStep ? "text-center" : ""}
+                    `.trim().replace(/\s+/g, ' ')}
                 />
 
-                <button
-                    type="button"
-                    onClick={() => adjust(step)}
-                    disabled={state.kanjiCount >= max}
-                    className={stepButtonClass}
-                    aria-label={`Add ${step} kanji`}
-                >
-                    <Plus className="w-3.5 h-3.5" aria-hidden="true" />
-                    {step}
-                </button>
+                {canStep && (
+                    <button
+                        type="button"
+                        onClick={() => adjust(stepValue)}
+                        disabled={state.kanjiCount >= max}
+                        className={stepButtonClass}
+                        aria-label={`Add ${stepValue} kanji`}
+                    >
+                        <Plus className="w-3.5 h-3.5" aria-hidden="true" />
+                        {stepValue}
+                    </button>
+                )}
             </div>
 
-            <div className="flex items-center gap-2">
-                <label htmlFor="kanji-count-step" className="text-xs text-tertiary font-gothic">
-                    Adjust by
-                </label>
-                <input
-                    id="kanji-count-step"
-                    type="number"
-                    inputMode="numeric"
-                    min={1}
-                    max={CONSTANTS.setup.maximumKanjiCountStep}
-                    value={stepDraft ?? String(step)}
-                    onChange={e => commitStep(e.target.value)}
-                    onBlur={() => setStepDraft(null)}
-                    disabled={!onStepChange}
-                    className="w-16 h-8 border rounded-md px-2 text-sm text-center border-divider bg-surface text-primary font-gothic tabular-nums disabled:opacity-50"
-                />
-                <span className="text-xs text-tertiary font-serif">
-                    kanji per click, remembered for next time
-                </span>
-            </div>
+            {canStep && (
+                <div className="flex items-center gap-2">
+                    <label htmlFor="kanji-count-step" className="text-xs text-tertiary font-gothic">
+                        Adjust by
+                    </label>
+                    <input
+                        id="kanji-count-step"
+                        type="number"
+                        inputMode="numeric"
+                        min={1}
+                        max={CONSTANTS.setup.maximumKanjiCountStep}
+                        value={stepDraft ?? String(stepValue)}
+                        onChange={e => commitStep(e.target.value)}
+                        onBlur={() => setStepDraft(null)}
+                        className="w-16 h-8 border rounded-md px-2 text-sm text-center border-divider bg-surface text-primary font-gothic tabular-nums"
+                    />
+                    <span className="text-xs text-tertiary font-serif">
+                        kanji per click, remembered for next time
+                    </span>
+                </div>
+            )}
         </section>
     );
 }

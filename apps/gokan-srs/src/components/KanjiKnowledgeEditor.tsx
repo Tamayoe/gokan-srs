@@ -3,7 +3,6 @@ import { KanjiCountStepper } from "./KanjiCountStepper";
 import { KanjiKnowledgeGrid } from "./KanjiKnowledgeGrid";
 import type { KanjiKnowledge, KanjiLearningMethod } from "../models/user.model";
 import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
-import { CONSTANTS } from "../commons/constants";
 import { useEffect } from "react";
 
 interface KanjiKnowledgeEditorProps {
@@ -15,12 +14,15 @@ interface KanjiKnowledgeEditorProps {
      */
     countStep?: number;
     onCountStepChange?: (step: number) => void;
+    /** Starting height of the kanji grid's scroll pane, which the user can then resize. */
+    gridHeight?: string;
 }
 
 export function KanjiKnowledgeEditor({
     onKanjiKnowledgeChange,
     countStep,
     onCountStepChange,
+    gridHeight,
 }: KanjiKnowledgeEditorProps) {
     const { state } = useKanjiForm();
 
@@ -48,12 +50,13 @@ export function KanjiKnowledgeEditor({
                 ]}
             />
 
-            <KanjiCountStepper
-                step={countStep ?? CONSTANTS.setup.defaultKanjiCountStep}
-                onStepChange={onCountStepChange}
-            />
+            <KanjiCountStepper step={countStep} onStepChange={onCountStepChange} />
 
-            <KanjiKnowledgeGrid allKanji={state.allKanji} method={state.kanjiMethod} />
+            <KanjiKnowledgeGrid
+                allKanji={state.allKanji}
+                method={state.kanjiMethod}
+                initialHeight={gridHeight}
+            />
         </>
     );
 }

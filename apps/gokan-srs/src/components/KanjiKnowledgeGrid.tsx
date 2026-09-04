@@ -21,9 +21,16 @@ const ORDER_LABELS: Record<KanjiLearningMethod, string> = {
 interface KanjiKnowledgeGridProps {
     allKanji: string[];
     method: KanjiLearningMethod;
+    /**
+     * Starting height of the scroll pane (any CSS length). The pane is
+     * user-resizable from there; the profile page - where browsing the list is
+     * half of why you are on the page - opens taller than the setup wizard,
+     * which only needs enough of it to confirm the count landed where expected.
+     */
+    initialHeight?: string;
 }
 
-export function KanjiKnowledgeGrid({ allKanji, method }: KanjiKnowledgeGridProps) {
+export function KanjiKnowledgeGrid({ allKanji, method, initialHeight = '22rem' }: KanjiKnowledgeGridProps) {
     const { state, toggleKanji } = useKanjiForm();
     const [query, setQuery] = useState('');
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -117,22 +124,31 @@ export function KanjiKnowledgeGrid({ allKanji, method }: KanjiKnowledgeGridProps
                 </div>
             )}
 
+            {/*
+                `resize: vertical` gives the pane a native drag handle, like a
+                textarea - how tall the list should be depends on the screen and
+                on what the user is doing, so it is theirs to set. That needs a
+                real height rather than a max-height, and the fade is top-only:
+                a bottom fade would wash out the handle sitting in that corner.
+            */}
             <div
                 ref={scrollRef}
-                className="relative max-h-[24rem] sm:max-h-[30rem] overflow-y-auto py-3 scrollbar-subtle"
+                className="relative w-full overflow-y-auto resize-y py-3 scrollbar-subtle"
                 style={{
-                    maskImage:
-                        'linear-gradient(to bottom, transparent, black 24px, black calc(100% - 24px), transparent)',
+                    height: initialHeight,
+                    minHeight: '10rem',
+                    maskImage: 'linear-gradient(to bottom, transparent, black 24px)',
                 }}
             >
                 <div className="flex flex-col gap-1.5">
                     {rows.map((row, rowIndex) => (
                         <div
                             key={rowIndex}
-                            className="grid items-center justify-center gap-1.5"
-                            /* Square-ish tiles that shrink on narrow screens rather than
-                               stretching into wide rectangles on a full-width page. */
-                            style={{ gridTemplateColumns: `2.75rem repeat(${ROW_SIZE}, minmax(0, 2.75rem))` }}
+                            className="grid items-center gap-1.5"
+                            /* Full pane width, matching the search box above it: the
+                               tiles take whatever is left after the position gutter,
+                               and stay square via aspect-square below. */
+                            style={{ gridTemplateColumns: `2.5rem repeat(${ROW_SIZE}, minmax(0, 1fr))` }}
                         >
                             {/*
                                 Position gutter: makes "the kanji around 1240" findable by eye,
@@ -156,7 +172,7 @@ export function KanjiKnowledgeGrid({ allKanji, method }: KanjiKnowledgeGridProps
                                         title={`#${position + 1} ${kanji} - ${isKnown ? 'known' : 'not known yet'}`}
                                         aria-pressed={isKnown}
                                         className={`
-                                            h-11 w-full rounded-md font-mincho text-xl leading-none transition-colors cursor-pointer
+                                            w-full aspect-square max-h-16 rounded-md font-mincho text-2xl leading-none transition-colors cursor-pointer
                                             flex items-center justify-center
                                             ${isKnown
                                                 ? "text-primary bg-feedback-background ring-1 ring-accent/25 hover:bg-surface-hover"

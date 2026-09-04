@@ -42,6 +42,7 @@ export function UserProfileScreen({ onBack }: { onBack: () => void; onVocabClick
                     onKanjiKnowledgeChange={actions.updateKanjiKnowledge}
                     countStep={countStep}
                     onCountStepChange={handleCountStepChange}
+                    gridHeight="36rem"
                 />
 
             </section>
