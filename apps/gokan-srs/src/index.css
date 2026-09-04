@@ -129,3 +129,35 @@ body {
     /* Desktop */
   }
 }
+/*
+  Subtle scrollbar for in-page scroll panes (the kanji grid, chiefly).
+  Chrome/Edge draw a wide, opaque track by default, which reads as a bright
+  band next to a dark pane; Firefox's `scrollbar-width: thin` already behaves.
+  Both are styled here so a scroll pane looks the same in either browser.
+*/
+.scrollbar-subtle {
+  scrollbar-width: thin;
+  scrollbar-color: var(--divider) transparent;
+}
+
+.scrollbar-subtle::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-subtle::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-subtle::-webkit-scrollbar-thumb {
+  background-color: var(--divider);
+  border-radius: 999px;
+}
+
+.scrollbar-subtle::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiary);
+}
+
+.scrollbar-subtle::-webkit-scrollbar-corner {
+  background: transparent;
+}

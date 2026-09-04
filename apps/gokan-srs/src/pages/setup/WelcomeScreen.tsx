@@ -164,6 +164,24 @@ export function WelcomeScreen({ onSelectBeginner, onSelectLearner }: WelcomeScre
                     </div>
                 </div>
 
+                {/*
+                  Deliberately not a third path button: the dictionary is not a way into the
+                  app, it is the way out of needing one. Someone who landed here from a search
+                  and is not ready to set up an SRS can still get an answer, and setup stops
+                  being a wall in front of the only useful thing on the page.
+
+                  A plain <a>, not a router link: gokan-dictionary is a separate statically
+                  generated app on the /dictionary prefix of this same origin. It 404s under
+                  `bun run dev`, where only this app is served.
+                */}
+                <p className="text-center text-sm text-tertiary font-serif">
+                    Just want to look something up?{' '}
+                    <a href="/dictionary/" className="text-secondary underline underline-offset-2 hover:text-primary transition-colors">
+                        Browse the dictionary
+                    </a>
+                    , no setup required.
+                </p>
+
                 {/* Load Existing */}
                 <div className="pt-8 border-t border-divider w-full max-w-sm mx-auto">
                     <GoogleLoginButton onSyncComplete={() => window.location.reload()} />

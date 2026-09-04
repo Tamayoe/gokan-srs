@@ -92,6 +92,13 @@ export interface UserSettings {
      * (kanji-aware filtering stays on for every order).
      */
     ignoreKnownKanjiRequirement?: boolean;
+    /**
+     * Increment used by the known-kanji count stepper on the profile page (the
+     * "+7 / -7" buttons). Purely a UI preference, but it lives here rather than
+     * in localStorage so it follows the user across devices like every other
+     * setting. Default `CONSTANTS.setup.defaultKanjiCountStep`.
+     */
+    kanjiCountStep?: number;
 }
 
 export const DEFAULT_SETTINGS: UserSettings = {
@@ -103,6 +110,7 @@ export const DEFAULT_SETTINGS: UserSettings = {
     alwaysUseAiForMeaningContext: true,
     meaningContextThreshold: 'normal',
     ignoreKnownKanjiRequirement: false,
+    kanjiCountStep: 10,
 };
 
 export const DEFAULT_PROGRESS: Omit<UserProgress, 'kanjiKnowledge'> = {

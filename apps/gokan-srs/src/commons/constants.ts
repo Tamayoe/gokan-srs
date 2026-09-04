@@ -4,6 +4,10 @@ export const CONSTANTS = {
         defaultKanjiLearningMethod: 'kklc',
         minimumKanjiCount: 0,
         maximumKanjiCount: 2300,
+        /** Default increment for the known-kanji count stepper (UserSettings.kanjiCountStep). */
+        defaultKanjiCountStep: 10,
+        /** Upper bound for that increment, so a typo cannot jump hundreds of kanji at once. */
+        maximumKanjiCountStep: 100,
     },
 
     quiz: {

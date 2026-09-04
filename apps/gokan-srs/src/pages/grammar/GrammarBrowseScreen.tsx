@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { usePersistControls, usePersistedControlsSnapshot } from "../../hooks/usePersistedControls";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import type { GrammarAxis, GrammarBrowseIndex, GrammarBrowseRow, GrammarPoint } from "../../models/grammar.model";
@@ -44,6 +45,23 @@ const FORMALITY_LABEL: Record<string, string> = {
 };
 
 const LEVELS = [5, 4, 3, 2, 1];
+
+// Mirrors SmartVocabList/SmartGrammarList's own keys, under one of its own.
+const BROWSE_STATE_KEY = 'gokan_grammar_browse_state';
+
+/**
+ * Sets are stored as arrays: JSON.stringify turns a Set into `{}`, which would silently persist
+ * every multi-select filter as empty and look like the filters simply were not kept.
+ */
+interface PersistedBrowseState {
+    query: string;
+    levels: number[];
+    kinds: Kind[];
+    axes: GrammarAxis[];
+    onlyVariants: boolean;
+    onlyFamilied: boolean;
+    group: GroupMode;
+}
 
 function Chip({ children, className = '' }: { children: React.ReactNode; className?: string }) {
     return (
@@ -138,13 +156,32 @@ export function GrammarBrowseScreen() {
     const [index, setIndex] = useState<GrammarBrowseIndex | null>(null);
     const [failed, setFailed] = useState(false);
 
-    const [query, setQuery] = useState('');
-    const [levels, setLevels] = useState<Set<number>>(new Set());
-    const [kinds, setKinds] = useState<Set<Kind>>(new Set());
-    const [axes, setAxes] = useState<Set<GrammarAxis>>(new Set());
-    const [onlyVariants, setOnlyVariants] = useState(false);
-    const [onlyFamilied, setOnlyFamilied] = useState(false);
-    const [group, setGroup] = useState<GroupMode>('level');
+    const persisted = usePersistedControlsSnapshot<PersistedBrowseState>(BROWSE_STATE_KEY);
+
+    const [query, setQuery] = useState(persisted.query ?? '');
+    const [levels, setLevels] = useState<Set<number>>(() => new Set(persisted.levels ?? []));
+    const [kinds, setKinds] = useState<Set<Kind>>(() => new Set(persisted.kinds ?? []));
+    const [axes, setAxes] = useState<Set<GrammarAxis>>(() => new Set(persisted.axes ?? []));
+    const [onlyVariants, setOnlyVariants] = useState(persisted.onlyVariants ?? false);
+    const [onlyFamilied, setOnlyFamilied] = useState(persisted.onlyFamilied ?? false);
+    // Family, not level: the page's reason to exist is comparing near-synonyms, and the level
+    // ordering is already what every other grammar surface (the browse index, the SRS queue)
+    // presents. Grouping by family is the view you cannot get anywhere else.
+    const [group, setGroup] = useState<GroupMode>(persisted.group ?? 'family');
+
+    usePersistControls<PersistedBrowseState>(
+        BROWSE_STATE_KEY,
+        {
+            query,
+            levels: [...levels],
+            kinds: [...kinds],
+            axes: [...axes],
+            onlyVariants,
+            onlyFamilied,
+            group,
+        },
+        [query, levels, kinds, axes, onlyVariants, onlyFamilied, group],
+    );
 
     useEffect(() => {
         GrammarService.loadBrowseIndex().then(loaded => {

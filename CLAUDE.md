@@ -269,6 +269,7 @@ gokan-srs/                          # monorepo root
 - `alwaysUseAiForMeaningContext`: boolean (default true)
 - `meaningContextThreshold`: `'early'` | `'normal'` | `'late'` (default `'normal'`). Controls the mastery % at which meaning quizzes switch to sentence/context mode (early=30%, normal=50%, late=70%).
 - `ignoreKnownKanjiRequirement`: optional boolean (default false). When true, drops the "all contained kanji must already be known" filter for the `frequency`/`kanji_coverage`/`jlpt` orders. Has no effect on `kklc` (gated by step, not by kanji set). Settings UI surfaces it for every order except `kklc`.
+- `kanjiCountStep`: optional number (default 10, `CONSTANTS.setup.defaultKanjiCountStep`). The increment the profile page's known-kanji stepper moves by, editable there and persisted so it follows the user across devices. Purely a UI preference; nothing in the SRS reads it.
 
 ### Grammar Activity (`grammar.model.ts`)
 
@@ -620,10 +621,30 @@ Calls `actions.setupComplete()` when either path produces a valid `SetupValues` 
 - "Ignore known kanji requirement" toggle (`ignoreKnownKanjiRequirement`), shown for every order except `kklc` (a no-op there, since it's gated by step rather than by kanji set) - including `jlpt`, which is kanji-filtered by default and relies on this toggle to opt back into its old unconditional behavior
 - Reset progress (with confirmation)
 
+### Grammar Browse Screen (`pages/grammar/GrammarBrowseScreen.tsx`)
+
+Route `/grammar/browse`, reached from the header toolbar. A read-only view of the whole grammar dataset, for inspection rather than study.
+
+**Grouped by family by default**, not by JLPT level. The page's reason to exist is comparing near-synonyms, and level ordering is already what every other grammar surface presents (the SRS queue, the dictionary's index): family grouping is the view that is not available anywhere else.
+
+Its filter and sort controls persist in `sessionStorage`, so navigating into a grammar detail page and back does not reset them, matching `SmartVocabList`/`SmartGrammarList`. All three now share `hooks/usePersistedControls.ts` rather than each carrying their own copy of the read/write pair. Two details in that hook are load-bearing:
+- **Sets are stored as arrays.** `JSON.stringify(new Set())` is `{}`, so persisting the multi-select filters directly would silently save them as empty and look exactly like the filters not being kept at all.
+- **The snapshot is read via a lazy `useState`, not `useRef(read(key)).current`.** A ref's argument is still evaluated on every render even though only the first result is kept, so the previous form re-ran `getItem` plus `JSON.parse` on every keystroke and discarded the result. It also reads a ref during render, which the React lint rules reject.
+
+`sessionStorage` rather than a React context: a context is lost on reload and would need a provider above every screen using it, while these are per-screen UI controls nothing else reads.
+
 ### Profile Screen (`pages/profile/UserProfileScreen.tsx`)
 
-- View/edit kanji knowledge
-- Update known kanji set
+Hosts `KanjiKnowledgeEditor` (shared with the setup wizard), built around the two things people actually come here to do:
+
+- **Move the known-kanji count by a fixed amount** (they studied another N kanji elsewhere): `KanjiCountStepper` pairs the raw count field with `-N`/`+N` buttons whose increment is the user's own, editable inline and persisted as `UserSettings.kanjiCountStep`. The profile page owns that persistence (`saveSettings`) and passes it down as `countStep`/`onCountStepChange`. The setup wizard supplies neither, and the whole stepping affordance (buttons plus increment field) is then left out rather than defaulted: a first-time user enters a count once, and there is no settings object to persist an increment into anyway.
+- **Look one kanji up and see whether it counts as known**: `KanjiKnowledgeGrid` lays the ordered list out in rows of 10 with a position gutter (so "the kanji around 1240" is findable by eye), plus a search box resolving either a position (`1240`, `#1240`) or a pasted character via `utils/kanjiSearch.utils.ts`'s pure `findKanjiMatch`. A match is ring-highlighted and scrolled into view **within the pane only** (`container.scrollTo` on `offsetTop`, not `scrollIntoView`, which would also scroll the page out from under the search box while typing). Changing the count scrolls the pane the same way, to the frontier the new count reaches (skipping the first render, so opening the page doesn't animate anywhere the user didn't ask to go). Clicking any tile still toggles it known/unknown, as does the search result's own button.
+
+The rows span the full pane width, matching the search box above them, so the tiles (and therefore the kanji) are as large as the page allows; they stay square via `aspect-square`. The scroll pane itself is user-resizable (`resize: vertical`, a native drag handle) from a starting height the host page picks via `gridHeight`/`initialHeight`: 36rem on the profile page against 22rem in the wizard. That requires a real `height` rather than a `max-height`, and the fade mask is top-only, since a bottom fade washed out the drag handle in that corner.
+
+The grid's header label comes from an order → label map keyed on `KanjiKnowledgeMethod` rather than a hardcoded "KKLC", since further orders (RTK, JLPT) are expected: only that map and the loaded list change when one arrives.
+
+Its scroll pane carries the `.scrollbar-subtle` utility (`index.css`), which styles both `scrollbar-width`/`scrollbar-color` and the `::-webkit-scrollbar` pseudo-elements. Chrome/Edge otherwise draw a wide opaque track that reads as a bright band down the side of a dark pane, where Firefox's thin scrollbar already looked right.
 
 ### Kanji Detail Screen (`pages/kanji/KanjiDetailScreen.tsx`)
 
