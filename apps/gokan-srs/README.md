@@ -1,8 +1,8 @@
-# 語感 — Gokan SRS
+# gokan-srs
 
-A Japanese vocabulary learning app built around a custom Spaced Repetition System. The name 語感 (*gokan*) means "sense of language," the intuitive feel for a language that comes from repeated, deliberate exposure.
+The SRS study app, live at [gokan-srs.com](https://gokan-srs.com). For the project overview and screenshots, see the [repository README](../../README.md); this file covers the app itself.
 
-The app was built to scratch a very specific itch: every existing SRS tool treats vocabulary as a flat list. This one doesn't. Words are unlocked based on which kanji you actually know, so you're never tested on a word you couldn't possibly read.
+A Japanese vocabulary learning app built around a custom spaced repetition system. Words unlock based on which kanji you actually know, so you are never tested on a word you could not possibly read.
 
 ## What it does
 
