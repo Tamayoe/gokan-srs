@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from "react";
+import { usePersistControls, usePersistedControlsSnapshot } from "../../../hooks/usePersistedControls";
 import type { VocabProgress, Vocabulary } from "../../../models/vocabulary.model";
 import { VocabularyService } from "../../../services/vocabulary.service";
 import { VocabCard } from "../../../components/VocabCard";
@@ -30,19 +31,11 @@ interface PersistedListState {
     showMastered: boolean;
 }
 
-function loadPersistedState(): Partial<PersistedListState> {
-    try {
-        const raw = sessionStorage.getItem(LIST_STATE_KEY);
-        return raw ? JSON.parse(raw) : {};
-    } catch {
-        return {};
-    }
-}
 
 export function SmartVocabList({ progress, settings, onVocabClick }: SmartVocabListProps) {
     const [vocabCache, setVocabCache] = useState<Record<string, Vocabulary>>({});
 
-    const persisted = useRef(loadPersistedState()).current;
+    const persisted = usePersistedControlsSnapshot<PersistedListState>(LIST_STATE_KEY);
     const [searchQuery, setSearchQuery] = useState(persisted.searchQuery ?? "");
     const [sortField, setSortField] = useState<SortField>(persisted.sortField ?? 'added_date');
     const [sortDir, setSortDir] = useState<SortDirection>(persisted.sortDir ?? 'desc');
@@ -160,14 +153,12 @@ export function SmartVocabList({ progress, settings, onVocabClick }: SmartVocabL
         setPage(1);
     }, [searchQuery, sortField, sortDir, showMastered]);
 
-    // Persist the list controls so returning from a vocab detail page restores them.
-    useEffect(() => {
-        try {
-            sessionStorage.setItem(LIST_STATE_KEY, JSON.stringify({ searchQuery, sortField, sortDir, page, showMastered }));
-        } catch {
-            // sessionStorage unavailable (private mode / quota) - non-fatal.
-        }
-    }, [searchQuery, sortField, sortDir, page, showMastered]);
+    // Persist the list controls so returning from a detail page restores them.
+    usePersistControls<PersistedListState>(
+        LIST_STATE_KEY,
+        { searchQuery, sortField, sortDir, page, showMastered },
+        [searchQuery, sortField, sortDir, page, showMastered],
+    );
 
     // Fetch all Vocab JSON files at once so search filters instantly
     useEffect(() => {

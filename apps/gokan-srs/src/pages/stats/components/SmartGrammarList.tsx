@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from "react";
+import { usePersistControls, usePersistedControlsSnapshot } from "../../../hooks/usePersistedControls";
 import type { GrammarProgress, GrammarPoint } from "../../../models/grammar.model";
 import { GrammarService } from "../../../services/grammar.service";
 import { GrammarCard } from "../../../components/GrammarCard";
@@ -28,20 +29,12 @@ interface PersistedListState {
     showMastered: boolean;
 }
 
-function loadPersistedState(): Partial<PersistedListState> {
-    try {
-        const raw = sessionStorage.getItem(LIST_STATE_KEY);
-        return raw ? JSON.parse(raw) : {};
-    } catch {
-        return {};
-    }
-}
 
 /** Grammar's equivalent of SmartVocabList - simplified since a GrammarProgress has one SRSEntry (no reading/meaning split) and grammar has no frequency data (JLPT level stands in for that sort). */
 export function SmartGrammarList({ progress, onGrammarClick }: SmartGrammarListProps) {
     const [pointCache, setPointCache] = useState<Record<string, GrammarPoint>>({});
 
-    const persisted = useRef(loadPersistedState()).current;
+    const persisted = usePersistedControlsSnapshot<PersistedListState>(LIST_STATE_KEY);
     const [searchQuery, setSearchQuery] = useState(persisted.searchQuery ?? "");
     const [sortField, setSortField] = useState<SortField>(persisted.sortField ?? 'added_date');
     const [sortDir, setSortDir] = useState<SortDirection>(persisted.sortDir ?? 'desc');
@@ -137,13 +130,11 @@ export function SmartGrammarList({ progress, onGrammarClick }: SmartGrammarListP
     }, [searchQuery, sortField, sortDir, showMastered]);
 
     // Persist the list controls so returning from a grammar detail page restores them.
-    useEffect(() => {
-        try {
-            sessionStorage.setItem(LIST_STATE_KEY, JSON.stringify({ searchQuery, sortField, sortDir, page, showMastered }));
-        } catch {
-            // sessionStorage unavailable (private mode / quota) - non-fatal.
-        }
-    }, [searchQuery, sortField, sortDir, page, showMastered]);
+    usePersistControls<PersistedListState>(
+        LIST_STATE_KEY,
+        { searchQuery, sortField, sortDir, page, showMastered },
+        [searchQuery, sortField, sortDir, page, showMastered],
+    );
 
     // Fetch all grammar-point JSON files at once so search/sort filters instantly
     useEffect(() => {

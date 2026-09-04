@@ -621,6 +621,18 @@ Calls `actions.setupComplete()` when either path produces a valid `SetupValues` 
 - "Ignore known kanji requirement" toggle (`ignoreKnownKanjiRequirement`), shown for every order except `kklc` (a no-op there, since it's gated by step rather than by kanji set) - including `jlpt`, which is kanji-filtered by default and relies on this toggle to opt back into its old unconditional behavior
 - Reset progress (with confirmation)
 
+### Grammar Browse Screen (`pages/grammar/GrammarBrowseScreen.tsx`)
+
+Route `/grammar/browse`, reached from the header toolbar. A read-only view of the whole grammar dataset, for inspection rather than study.
+
+**Grouped by family by default**, not by JLPT level. The page's reason to exist is comparing near-synonyms, and level ordering is already what every other grammar surface presents (the SRS queue, the dictionary's index): family grouping is the view that is not available anywhere else.
+
+Its filter and sort controls persist in `sessionStorage`, so navigating into a grammar detail page and back does not reset them, matching `SmartVocabList`/`SmartGrammarList`. All three now share `hooks/usePersistedControls.ts` rather than each carrying their own copy of the read/write pair. Two details in that hook are load-bearing:
+- **Sets are stored as arrays.** `JSON.stringify(new Set())` is `{}`, so persisting the multi-select filters directly would silently save them as empty and look exactly like the filters not being kept at all.
+- **The snapshot is read via a lazy `useState`, not `useRef(read(key)).current`.** A ref's argument is still evaluated on every render even though only the first result is kept, so the previous form re-ran `getItem` plus `JSON.parse` on every keystroke and discarded the result. It also reads a ref during render, which the React lint rules reject.
+
+`sessionStorage` rather than a React context: a context is lost on reload and would need a provider above every screen using it, while these are per-screen UI controls nothing else reads.
+
 ### Profile Screen (`pages/profile/UserProfileScreen.tsx`)
 
 Hosts `KanjiKnowledgeEditor` (shared with the setup wizard), built around the two things people actually come here to do:
