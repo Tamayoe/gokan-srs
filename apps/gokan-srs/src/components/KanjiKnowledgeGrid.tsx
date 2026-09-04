@@ -1,10 +1,13 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Search, X } from "lucide-react";
 import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
 import type { KanjiLearningMethod } from "../models/user.model";
 import { findKanjiMatch } from "../utils/kanjiSearch.utils";
 
 const ROW_SIZE = 10;
+
+/** Width of the position gutter, mirrored as an empty spacer on the right. */
+const GUTTER_WIDTH = '2.5rem';
 
 /**
  * The grid is labelled by the order it is laid out in, not by a hardcoded
@@ -46,21 +49,39 @@ export function KanjiKnowledgeGrid({ allKanji, method, initialHeight = '22rem' }
         return chunks;
     }, [allKanji]);
 
-    // Scroll the match into view within the pane only. scrollIntoView would also
-    // scroll the page itself, yanking the whole profile view while the user is
-    // still typing in the search box.
-    useEffect(() => {
+    // Centre one position in the pane, and in the pane only: scrollIntoView would
+    // also scroll the page itself, yanking the whole profile view while the user
+    // is still typing in the search box or holding down a stepper button.
+    const scrollToPosition = useCallback((position: number) => {
         const container = scrollRef.current;
-        if (!container || !match) return;
+        if (!container) return;
 
-        const target = container.querySelector<HTMLElement>(`[data-kanji-pos="${match.index}"]`);
+        const target = container.querySelector<HTMLElement>(`[data-kanji-pos="${position}"]`);
         if (!target) return;
 
         container.scrollTo({
             top: Math.max(0, target.offsetTop - container.clientHeight / 2 + target.offsetHeight / 2),
             behavior: 'smooth',
         });
-    }, [match]);
+    }, []);
+
+    useEffect(() => {
+        if (match) scrollToPosition(match.index);
+    }, [match, scrollToPosition]);
+
+    // Follow the count as it changes: the frontier (the last kanji the count
+    // covers) is exactly what the user is looking at when they nudge the number,
+    // and it is otherwise hundreds of rows away from wherever the pane happens to
+    // be sitting. The ref skips the first run, so opening the page doesn't
+    // animate the list somewhere the user didn't ask to go.
+    const lastCountRef = useRef<number | null>(null);
+    useEffect(() => {
+        const previous = lastCountRef.current;
+        lastCountRef.current = state.kanjiCount;
+        if (previous === null || previous === state.kanjiCount) return;
+
+        scrollToPosition(Math.max(0, state.kanjiCount - 1));
+    }, [state.kanjiCount, scrollToPosition]);
 
     const knownCount = state.knownKanji.size;
     const matchIsKnown = match ? state.knownKanji.has(match.kanji) : false;
@@ -147,8 +168,11 @@ export function KanjiKnowledgeGrid({ allKanji, method, initialHeight = '22rem' }
                             className="grid items-center gap-1.5"
                             /* Full pane width, matching the search box above it: the
                                tiles take whatever is left after the position gutter,
-                               and stay square via aspect-square below. */
-                            style={{ gridTemplateColumns: `2.5rem repeat(${ROW_SIZE}, minmax(0, 1fr))` }}
+                               and stay square via aspect-square below. The trailing
+                               column is an empty spacer mirroring that gutter (grid
+                               auto-placement never fills it), so the tiles sit centred
+                               on the page rather than pushed right by the numbers. */
+                            style={{ gridTemplateColumns: `${GUTTER_WIDTH} repeat(${ROW_SIZE}, minmax(0, 1fr)) ${GUTTER_WIDTH}` }}
                         >
                             {/*
                                 Position gutter: makes "the kanji around 1240" findable by eye,
