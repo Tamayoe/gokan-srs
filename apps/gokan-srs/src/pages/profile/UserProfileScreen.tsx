@@ -1,10 +1,20 @@
 import { Button } from "../../components/ui/Button";
 import { KanjiKnowledgeEditor } from "../../components/KanjiKnowledgeEditor";
 import { useQuiz } from "../../context/useQuiz";
+import { CONSTANTS } from "../../commons/constants";
+import { DEFAULT_SETTINGS } from "../../models/user.model";
 import { ArrowLeft } from "lucide-react";
 
 export function UserProfileScreen({ onBack }: { onBack: () => void; onVocabClick?: (vocabId: string) => void }) {
-    const { actions } = useQuiz();
+    const { state, actions } = useQuiz();
+
+    const countStep = state.settings?.kanjiCountStep ?? CONSTANTS.setup.defaultKanjiCountStep;
+
+    // The stepper's increment is a persisted preference, so it survives a reload
+    // and follows the user across devices like every other setting.
+    const handleCountStepChange = (step: number) => {
+        actions.saveSettings({ ...(state.settings ?? DEFAULT_SETTINGS), kanjiCountStep: step });
+    };
 
     return (
         <div className="w-full max-w-2xl md:max-w-3xl flex flex-col gap-2 animate-fade-in">
@@ -28,7 +38,11 @@ export function UserProfileScreen({ onBack }: { onBack: () => void; onVocabClick
                     Kanji
                 </h2>
 
-                <KanjiKnowledgeEditor onKanjiKnowledgeChange={actions.updateKanjiKnowledge} />
+                <KanjiKnowledgeEditor
+                    onKanjiKnowledgeChange={actions.updateKanjiKnowledge}
+                    countStep={countStep}
+                    onCountStepChange={handleCountStepChange}
+                />
 
             </section>
 

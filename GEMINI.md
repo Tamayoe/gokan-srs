@@ -269,6 +269,7 @@ gokan-srs/                          # monorepo root
 - `alwaysUseAiForMeaningContext`: boolean (default true)
 - `meaningContextThreshold`: `'early'` | `'normal'` | `'late'` (default `'normal'`). Controls the mastery % at which meaning quizzes switch to sentence/context mode (early=30%, normal=50%, late=70%).
 - `ignoreKnownKanjiRequirement`: optional boolean (default false). When true, drops the "all contained kanji must already be known" filter for the `frequency`/`kanji_coverage`/`jlpt` orders. Has no effect on `kklc` (gated by step, not by kanji set). Settings UI surfaces it for every order except `kklc`.
+- `kanjiCountStep`: optional number (default 10, `CONSTANTS.setup.defaultKanjiCountStep`). The increment the profile page's known-kanji stepper moves by, editable there and persisted so it follows the user across devices. Purely a UI preference; nothing in the SRS reads it.
 
 ### Grammar Activity (`grammar.model.ts`)
 
@@ -622,8 +623,14 @@ Calls `actions.setupComplete()` when either path produces a valid `SetupValues` 
 
 ### Profile Screen (`pages/profile/UserProfileScreen.tsx`)
 
-- View/edit kanji knowledge
-- Update known kanji set
+Hosts `KanjiKnowledgeEditor` (shared with the setup wizard), built around the two things people actually come here to do:
+
+- **Move the known-kanji count by a fixed amount** (they studied another N kanji elsewhere): `KanjiCountStepper` pairs the raw count field with `-N`/`+N` buttons whose increment is the user's own, editable inline and persisted as `UserSettings.kanjiCountStep`. The profile page owns that persistence (`saveSettings`) and passes it down as `countStep`/`onCountStepChange`; the setup wizard omits both props, since no settings object exists yet, and the default increment stands.
+- **Look one kanji up and see whether it counts as known**: `KanjiKnowledgeGrid` lays the ordered list out in rows of 10 with a position gutter (so "the kanji around 1240" is findable by eye), plus a search box resolving either a position (`1240`, `#1240`) or a pasted character via `utils/kanjiSearch.utils.ts`'s pure `findKanjiMatch`. A match is ring-highlighted and scrolled into view **within the pane only** (`container.scrollTo` on `offsetTop`, not `scrollIntoView`, which would also scroll the page out from under the search box while typing). Clicking any tile still toggles it known/unknown, as does the search result's own button.
+
+The grid's header label comes from an order → label map keyed on `KanjiKnowledgeMethod` rather than a hardcoded "KKLC", since further orders (RTK, JLPT) are expected: only that map and the loaded list change when one arrives.
+
+Its scroll pane carries the `.scrollbar-subtle` utility (`index.css`), which styles both `scrollbar-width`/`scrollbar-color` and the `::-webkit-scrollbar` pseudo-elements. Chrome/Edge otherwise draw a wide opaque track that reads as a bright band down the side of a dark pane, where Firefox's thin scrollbar already looked right.
 
 ### Kanji Detail Screen (`pages/kanji/KanjiDetailScreen.tsx`)
 

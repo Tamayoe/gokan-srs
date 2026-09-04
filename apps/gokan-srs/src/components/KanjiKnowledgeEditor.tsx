@@ -1,13 +1,27 @@
 import { OptionGrid } from "./OptionGrid";
-import { KanjiCountInput } from "./KanjiCountInput";
-import { KanjiField } from "./KanjiField";
+import { KanjiCountStepper } from "./KanjiCountStepper";
+import { KanjiKnowledgeGrid } from "./KanjiKnowledgeGrid";
 import type { KanjiKnowledge, KanjiLearningMethod } from "../models/user.model";
 import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
+import { CONSTANTS } from "../commons/constants";
 import { useEffect } from "react";
 
+interface KanjiKnowledgeEditorProps {
+    onKanjiKnowledgeChange?: (knowledge: KanjiKnowledge) => void;
+    /**
+     * Increment for the count stepper's -/+ buttons. Supplied (with its setter)
+     * by the profile page off UserSettings; omitted during setup, where no
+     * settings object exists yet and the default increment stands.
+     */
+    countStep?: number;
+    onCountStepChange?: (step: number) => void;
+}
+
 export function KanjiKnowledgeEditor({
-    onKanjiKnowledgeChange
-}: { onKanjiKnowledgeChange?: (knowledge: KanjiKnowledge) => void }) {
+    onKanjiKnowledgeChange,
+    countStep,
+    onCountStepChange,
+}: KanjiKnowledgeEditorProps) {
     const { state } = useKanjiForm();
 
     if (onKanjiKnowledgeChange) {
@@ -34,9 +48,12 @@ export function KanjiKnowledgeEditor({
                 ]}
             />
 
-            <KanjiCountInput />
+            <KanjiCountStepper
+                step={countStep ?? CONSTANTS.setup.defaultKanjiCountStep}
+                onStepChange={onCountStepChange}
+            />
 
-            <KanjiField allKanji={state.allKanji} />
+            <KanjiKnowledgeGrid allKanji={state.allKanji} method={state.kanjiMethod} />
         </>
     );
 }
