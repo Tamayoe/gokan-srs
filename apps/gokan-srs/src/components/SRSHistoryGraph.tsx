@@ -14,6 +14,8 @@ interface SRSHistoryGraphProps {
     introDate?: Date | null;
 }
 
+const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
+
 /**
  * Plots interval-over-time for one or more SRSEntry series, shared between
  * VocabDetailScreen (reading + meaning) and GrammarDetailScreen (a single
@@ -64,7 +66,11 @@ export function SRSHistoryGraph({ series, introDate }: SRSHistoryGraphProps) {
 
         return seriesPoints.map((p, i) => {
             const x = ((p.date - minDate) / timeSpan) * 100;
-            const y = 100 - ((p.strength / yMax) * 100);
+            // yMax is capped at the mastery ceiling, so an entry sitting at
+            // maxInterval (a skipped/mastered item, 3650d) plots far above the
+            // viewBox. Clamp instead: such a curve rides the top of the chart
+            // rather than being drawn hundreds of units outside it.
+            const y = clamp(100 - ((p.strength / yMax) * 100), 0, 100);
             return `${i === 0 ? 'M' : 'L'} ${x} ${y}`;
         }).join(" ");
     };
@@ -84,7 +90,7 @@ export function SRSHistoryGraph({ series, introDate }: SRSHistoryGraphProps) {
             </div>
 
             <div className="w-full h-32 relative">
-                <svg className="w-full h-full overflow-visible preserve-3d" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <svg className="w-full h-full overflow-hidden" viewBox="0 0 100 100" preserveAspectRatio="none">
                     {/* Grid Lines */}
                     <line x1="0" y1="0" x2="100" y2="0" stroke="currentColor" className="text-divider opacity-30" strokeWidth="0.5" strokeDasharray="2,2" />
                     <line x1="0" y1="50" x2="100" y2="50" stroke="currentColor" className="text-divider opacity-30" strokeWidth="0.5" strokeDasharray="2,2" />
