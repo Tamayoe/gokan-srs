@@ -834,6 +834,13 @@ The reason is that `aws s3 sync`'s default comparison uploads a file whose local
 
 This approach depends on the build being reproducible, which it is: two consecutive full rebuilds of `dist/` produce byte-for-byte identical output across all 38,885 files, so a rebuild with no source or dataset change yields zero uploads. If a future change introduces a timestamp, a build id, or any other nondeterminism into the generated HTML, this optimization silently degrades back to re-uploading everything.
 
+> [!WARNING]
+> **Only content-hashed files may be `immutable`.** Both apps classify by filename: anything under `assets/` is Vite-hashed, so a content change is always a new key and caching the old one for a year is harmless. Everything else keeps a stable name (the icons, `manifest.json`, `robots.txt`, `og-image.png`, `favicon.svg`, `sitemap.xml`, `data/search.json`) and gets one hour instead.
+>
+> This was got wrong once, and it failed silently. gokan-srs's asset pass marked *everything* non-HTML immutable, including its unhashed root icons, and the CloudFront invalidation never listed them. A favicon fix reached S3 and the deploy reported success, while CloudFront kept serving a copy cached months earlier under a one-year header. Nothing in the pipeline noticed: the object was correct, the deploy was green, and the live site was wrong. The one-hour TTL now means a missed invalidation heals itself instead of persisting for a year, and `deployManifest.test.ts` asserts the rule for the dictionary side.
+>
+> CloudFront accepts `*` only as the final character of an invalidation path, so there is no `/*.svg` glob: root icons are listed one by one, and the TTL is the backstop for anything added later and forgotten.
+
 Operational details worth knowing:
 - The manifest is uploaded **last**, only after every upload and delete has succeeded. An interrupted deploy therefore leaves the previous manifest in place and the next run redoes the work, rather than believing files it never uploaded are present.
 - A missing or unreadable manifest (first deploy to a bucket) falls back to uploading everything.

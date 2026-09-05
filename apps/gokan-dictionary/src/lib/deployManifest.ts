@@ -43,17 +43,25 @@ export function diffManifests(previous: BuildManifest | null, next: BuildManifes
 }
 
 /**
- * Cache-control for a dist-relative path, mirroring what the three-pass `aws s3 sync` set.
+ * Cache-control for a dist-relative path.
  *
- * `search.json` and `sitemap.xml` are the two unhashed files a reader or crawler must actually
- * see change, so they get a short TTL rather than the immutable year everything else under
- * assets/ gets. Page HTML always revalidates: it is the only thing that knows which hashed
- * asset filenames are current.
+ * Only files under `assets/` may be immutable, and the rule is the filename: Vite content-hashes
+ * everything it emits there, so changed content is always a new key and caching the old one
+ * forever is harmless.
+ *
+ * Everything else keeps a stable filename and therefore must not be immutable, however rarely it
+ * changes. `favicon.svg` is the cautionary case: the sibling gokan-srs deploy marked its own
+ * unhashed root icons immutable, and a favicon fix then sat invisible behind a CloudFront copy
+ * cached months earlier while the deploy reported success. An hour is long enough to be worth
+ * caching and short enough that a stale copy heals itself.
+ *
+ * Page HTML always revalidates: it is the only thing that knows which hashed asset filenames are
+ * current, so serving a stale page means serving links to assets that may already be pruned.
  */
 export function cacheControlFor(file: string): string {
     if (file.endsWith('.html')) return 'public, max-age=0, must-revalidate';
-    if (file === 'data/search.json' || file === 'sitemap.xml') return 'public, max-age=3600';
-    return 'public, max-age=31536000, immutable';
+    if (file.startsWith('assets/')) return 'public, max-age=31536000, immutable';
+    return 'public, max-age=3600';
 }
 
 /** Groups files by the cache-control header they need, so each group uploads as one batch. */

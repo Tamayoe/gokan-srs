@@ -58,13 +58,17 @@ describe('cacheControlFor', () => {
         expect(cacheControlFor('vocab/1/index.html')).toBe('public, max-age=0, must-revalidate');
     });
 
-    it('gives the two unhashed data files a short TTL', () => {
-        expect(cacheControlFor('data/search.json')).toBe('public, max-age=3600');
-        expect(cacheControlFor('sitemap.xml')).toBe('public, max-age=3600');
-    });
-
     it('marks content-hashed assets immutable', () => {
         expect(cacheControlFor('assets/styles-CPjhgttk.css')).toBe('public, max-age=31536000, immutable');
+        expect(cacheControlFor('assets/search-DyusAiYM.js')).toBe('public, max-age=31536000, immutable');
+    });
+
+    it('gives every unhashed file a short TTL, not the immutable year', () => {
+        // favicon.svg is the regression this exists for: a stable filename marked immutable
+        // leaves a changed icon invisible behind a year-long CloudFront cache.
+        expect(cacheControlFor('favicon.svg')).toBe('public, max-age=3600');
+        expect(cacheControlFor('data/search.json')).toBe('public, max-age=3600');
+        expect(cacheControlFor('sitemap.xml')).toBe('public, max-age=3600');
     });
 });
 
