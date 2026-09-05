@@ -3,16 +3,23 @@
 
 <head>
   <meta charset="UTF-8" />
+  <!--
+    Icon order matters. /favicon.ico is listed first and exists as a real file because
+    search engines and favicon services request it directly at the site root; with nothing
+    there, CloudFront's SPA fallback answered index.html at 200 text/html and DuckDuckGo
+    showed no icon at all. The SVG is preferred by modern browsers, and the PNG gives
+    Google the multiple-of-48px raster it documents wanting.
+    Regenerate all of them with scripts/build-favicon.py when the logo changes.
+  -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" type="image/svg+xml" href="/gokan.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary Meta Tags -->
-  <title>Gokan SRS — Japanese Vocabulary with Spaced Repetition</title>
-  <meta name="title" content="Gokan SRS — Japanese Vocabulary with Spaced Repetition" />
-  <meta name="description"
-    content="Learn Japanese vocabulary efficiently with Gokan SRS. Spaced repetition system for kanji learners. Free, simple, and effective vocabulary training." />
-  <meta name="keywords"
-    content="Japanese vocabulary, SRS, spaced repetition, kanji, JLPT, Japanese learning, vocab app, Japanese SRS, kanji vocabulary" />
+  <title>Gokan SRS: Learn Japanese Vocabulary with Spaced Repetition</title>
+  <meta name="title" content="Gokan SRS: Learn Japanese Vocabulary with Spaced Repetition" />
+  <meta name="description" content="A free spaced repetition app for Japanese vocabulary. Learn words built from the kanji you already know, with real example sentences and JLPT grammar." />
   <meta name="author" content="Gokan SRS" />
   <meta name="robots" content="index, follow" />
   <meta name="google-signin-client_id"
@@ -22,9 +29,8 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://gokan-srs.com/" />
-  <meta property="og:title" content="Gokan SRS — Japanese Vocabulary with Spaced Repetition" />
-  <meta property="og:description"
-    content="Efficient Japanese vocabulary learning with spaced repetition. Perfect for kanji learners and JLPT preparation." />
+  <meta property="og:title" content="Gokan SRS: Learn Japanese Vocabulary with Spaced Repetition" />
+  <meta property="og:description" content="Free spaced repetition for Japanese vocabulary, led by the kanji you already know. Real example sentences, JLPT grammar drills, and a 38,000 word dictionary." />
   <meta property="og:image" content="https://gokan-srs.com/og-image.png" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="ja_JP" />
@@ -32,9 +38,8 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://gokan-srs.com/" />
-  <meta name="twitter:title" content="Gokan SRS — Japanese Vocabulary with Spaced Repetition" />
-  <meta name="twitter:description"
-    content="Efficient Japanese vocabulary learning with spaced repetition. Perfect for kanji learners and JLPT preparation." />
+  <meta name="twitter:title" content="Gokan SRS: Learn Japanese Vocabulary with Spaced Repetition" />
+  <meta name="twitter:description" content="Free spaced repetition for Japanese vocabulary, led by the kanji you already know. Real example sentences, JLPT grammar drills, and a 38,000 word dictionary." />
   <meta name="twitter:image" content="https://gokan-srs.com/og-image.png" />
 
   <!-- Web App Manifest -->
@@ -54,7 +59,7 @@
           "@type": "WebApplication",
           "@id": "https://gokan-srs.com/#webapp",
           "name": "Gokan SRS",
-          "description": "Spaced repetition system for learning Japanese vocabulary efficiently. Perfect for kanji learners and JLPT preparation.",
+          "description": "Free spaced repetition for Japanese vocabulary, led by the kanji you already know. Real example sentences, JLPT grammar drills, and a 38,000 word dictionary.",
           "url": "https://gokan-srs.com/",
           "applicationCategory": "EducationalApplication",
           "offers": {
@@ -153,28 +158,38 @@
       </nav>
 
       <main>
-        <h1>Gokan SRS — Master Japanese Vocabulary with Spaced Repetition</h1>
+        <h1>Gokan SRS: Learn Japanese Vocabulary with Spaced Repetition</h1>
 
         <p>
-          Gokan SRS is a free spaced repetition system designed for Japanese learners who are
-          actively studying kanji. It surfaces vocabulary that uses only the kanji you already
-          know, keeping your reading queue grounded in real, learnable material.
+          Gokan is a free spaced repetition system for Japanese vocabulary. It knows which kanji
+          you have studied and leads with words built from those kanji, so what you review is
+          material you can actually read.
         </p>
 
         <p>
-          Unlike general-purpose flashcard apps, Gokan is built around a kanji-ordered curriculum
-          (KKLC / RTK compatible). Every word you review is readable with your current knowledge —
-          no frustrating characters you haven't encountered yet.
+          Memory works by connection. A word made of kanji you already know has something to
+          attach to, which is what makes it stick, and knowing what each character means turns a
+          compound from an arbitrary string into a small story you can tell yourself. That is
+          what keeps two-kanji words from blurring into each other, at exactly the point where
+          recognising the shape alone stops working. It runs both ways too: meeting a kanji
+          inside real words is what turns it into one you can read.
+        </p>
+
+        <p>
+          The kanji filter is a default, not a wall. Working through KKLC toward N5 means running
+          into basic, high-frequency words written with kanji that come much later, and learning
+          those from scratch is fine. They teach you the kanji from the other direction.
         </p>
 
         <h2>Key Features</h2>
         <ul>
-          <li><strong>Kanji-aware vocabulary queue</strong> — only words your kanji level can support</li>
-          <li><strong>Spaced repetition</strong> — scientifically proven review scheduling</li>
-          <li><strong>Reading and meaning reviews</strong> — paced independently to your rhythm</li>
-          <li><strong>JLPT preparation</strong> — vocabulary aligned with N5 through N1 levels</li>
-          <li><strong>Google Drive sync</strong> — progress backed up and accessible across devices</li>
-          <li><strong>Completely free</strong> — no subscription, no ads</li>
+          <li><strong>Kanji-aware vocabulary</strong>: words led by the kanji you have studied, with the filter optional</li>
+          <li><strong>Reading and meaning tested separately</strong>, on independent schedules</li>
+          <li><strong>Scheduling that reacts to how you answer</strong>, not only whether you were right</li>
+          <li><strong>755 grammar points</strong> from N5 to N1, drilled against real sentences</li>
+          <li><strong>A free dictionary</strong> covering 38,000 words, kanji, and grammar</li>
+          <li><strong>Google Drive sync</strong>, optional, writing one private file in your own Drive</li>
+          <li><strong>Free, with no ads and no account required</strong></li>
         </ul>
 
         <h2>Who Is Gokan For?</h2>
