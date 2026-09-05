@@ -20,9 +20,15 @@ toolchain is cheaper than making the normal build depend on it.
 Geometry mirrors public/gokan.svg exactly (100x100 viewBox, r=44 ring at 2.5 stroke, 34px
 text, 2px letter spacing) so the raster and the vector stay the same mark.
 
-The background is opaque white rather than the SVG's transparent, because a favicon is
-composited onto whatever chrome the client uses. The indigo mark on transparent disappears
-against a dark results page.
+The background stays transparent, matching the SVG. An opaque disc is a bet on which mode
+the viewer is in and loses half the time: white reads as a bright square on a dark results
+page, black as a dark one on a light page, which is what the previous SVG did.
+
+The mark colour is #6479A8 rather than the design system's #2E3A59 for the same reason. The
+brand indigo scores 11.3:1 against white but 1.4:1 against a dark results page, which is
+invisible; this tone holds at least 3.7:1 against white, the app's light background, Google's
+dark results and the app's dark background. One flat colour, legible on every surface the
+icon can land on.
 """
 
 import io
@@ -34,8 +40,10 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 
-INDIGO = (46, 58, 89, 255)      # #2E3A59, the design system's primary accent
-BACKGROUND = (255, 255, 255, 255)
+# See the module docstring: a mid-tone that clears 3:1 on both light and dark surfaces,
+# rather than the design system's #2E3A59 which vanishes on dark.
+MARK = (100, 121, 168, 255)     # #6479A8
+BACKGROUND = (0, 0, 0, 0)       # transparent, deliberately
 
 # Ordered by preference. All are mincho/serif faces to match the SVG's 'Noto Serif JP'.
 FONT_CANDIDATES = [
@@ -70,15 +78,14 @@ def render(size: int) -> Image.Image:
     s = size * SUPERSAMPLE
     scale = s / 100.0
 
-    image = Image.new("RGBA", (s, s), (0, 0, 0, 0))
+    image = Image.new("RGBA", (s, s), BACKGROUND)
     draw = ImageDraw.Draw(image)
 
-    # Opaque disc, then the seal ring on top, matching the SVG's r=44 / stroke 2.5.
-    draw.ellipse([(0, 0), (s - 1, s - 1)], fill=BACKGROUND)
+    # The seal ring, matching the SVG's r=44 / stroke 2.5. Nothing is drawn behind it.
     inset = (50 - 44) * scale
     draw.ellipse(
         [(inset, inset), (s - inset, s - inset)],
-        outline=INDIGO,
+        outline=MARK,
         width=max(1, round(2.5 * scale)),
     )
 
@@ -95,7 +102,7 @@ def render(size: int) -> Image.Image:
     y = (s - (ascent + descent)) / 2
 
     for ch, width in zip(TEXT, widths):
-        draw.text((x, y), ch, font=font, fill=INDIGO)
+        draw.text((x, y), ch, font=font, fill=MARK)
         x += width + tracking
 
     return image.resize((size, size), Image.LANCZOS)

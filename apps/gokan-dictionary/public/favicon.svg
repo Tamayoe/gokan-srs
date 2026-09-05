@@ -1,19 +1,23 @@
 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        .stroke-color { stroke: #2E3A59; }
-        .fill-color { fill: #2E3A59; }
-        .bg-color { fill: transparent; }
-        @media (prefers-color-scheme: dark) {
-            .stroke-color { stroke: #E2E8F0; }
-            .fill-color { fill: #E2E8F0; }
-            .bg-color { fill: #000000; }
-        }
-    </style>
-    <!-- Background circle (transparent in light mode, black in dark mode) -->
-    <circle cx="50" cy="50" r="42.5" class="bg-color" />
-    <!-- Circular seal ring -->
-    <circle cx="50" cy="50" r="44" class="stroke-color" stroke-width="2.5" fill="none"/>
-    <!-- 語感 centered inside the ring -->
+    <!--
+      Favicon and manifest icon only. The in-app logo is components/Logo.tsx, which inherits
+      the theme's colours properly; this file is what search engines and browser tabs get.
+
+      No background fill, and no prefers-color-scheme media query. Both were removed together
+      after the icon rendered as a black square in Google's results on a white page: the
+      previous version filled the disc black under a dark-scheme query, and Google rasterises
+      an SVG favicon once, server-side, then serves that one bitmap to everybody regardless of
+      the viewer's actual mode. Any background colour is therefore a bet on which mode the
+      viewer is in, and it loses half the time. A media query is worse than useless here for
+      the same reason: it just moves which half.
+
+      #6479A8 is a deliberate compromise rather than the design system's #2E3A59. The brand
+      indigo scores 11.3:1 on white but 1.4:1 on a dark results page, which is invisible. This
+      tone holds at least 3.7:1 against white, the app's light background, Google's dark
+      results and the app's dark background, so one flat colour survives every surface the
+      icon can land on.
+    -->
+    <circle cx="50" cy="50" r="44" stroke="#6479A8" stroke-width="2.5" fill="none"/>
     <text
         x="50"
         y="50"
@@ -21,7 +25,7 @@
         font-size="34"
         text-anchor="middle"
         dominant-baseline="central"
-        class="fill-color"
+        fill="#6479A8"
         letter-spacing="2"
     >語感</text>
 </svg>
