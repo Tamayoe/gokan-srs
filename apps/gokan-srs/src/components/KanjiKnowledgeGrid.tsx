@@ -3,11 +3,21 @@ import { Search, X } from "lucide-react";
 import { useKanjiForm } from "../context/KanjiForm/useKanjiForm";
 import type { KanjiLearningMethod } from "../models/user.model";
 import { findKanjiMatch } from "../utils/kanjiSearch.utils";
+import { useResponsive } from "../context/Responsive/useResponsive";
 
+/**
+ * Ten per row is the desktop layout. On a phone it left each tile around 20px
+ * wide once the two gutters and nine gaps were taken out, so a 24px glyph
+ * overflowed its own tile and nothing was big enough to tap accurately. Five
+ * keeps the tiles legible and thumb-sized; the gutter still reads in fives,
+ * which is no harder to scan than tens.
+ */
 const ROW_SIZE = 10;
+const MOBILE_ROW_SIZE = 5;
 
 /** Width of the position gutter, mirrored as an empty spacer on the right. */
 const GUTTER_WIDTH = '2.5rem';
+const MOBILE_GUTTER_WIDTH = '1.75rem';
 
 /**
  * The grid is labelled by the order it is laid out in, not by a hardcoded
@@ -35,19 +45,23 @@ interface KanjiKnowledgeGridProps {
 
 export function KanjiKnowledgeGrid({ allKanji, method, initialHeight = '22rem' }: KanjiKnowledgeGridProps) {
     const { state, toggleKanji } = useKanjiForm();
+    const { isMobile } = useResponsive();
     const [query, setQuery] = useState('');
     const scrollRef = useRef<HTMLDivElement>(null);
+
+    const rowSize = isMobile ? MOBILE_ROW_SIZE : ROW_SIZE;
+    const gutterWidth = isMobile ? MOBILE_GUTTER_WIDTH : GUTTER_WIDTH;
 
     const match = useMemo(() => findKanjiMatch(allKanji, query), [allKanji, query]);
     const hasQuery = query.trim() !== '';
 
     const rows = useMemo(() => {
         const chunks: string[][] = [];
-        for (let i = 0; i < allKanji.length; i += ROW_SIZE) {
-            chunks.push(allKanji.slice(i, i + ROW_SIZE));
+        for (let i = 0; i < allKanji.length; i += rowSize) {
+            chunks.push(allKanji.slice(i, i + rowSize));
         }
         return chunks;
-    }, [allKanji]);
+    }, [allKanji, rowSize]);
 
     // Centre one position in the pane, and in the pane only: scrollIntoView would
     // also scroll the page itself, yanking the whole profile view while the user
@@ -172,18 +186,18 @@ export function KanjiKnowledgeGrid({ allKanji, method, initialHeight = '22rem' }
                                column is an empty spacer mirroring that gutter (grid
                                auto-placement never fills it), so the tiles sit centred
                                on the page rather than pushed right by the numbers. */
-                            style={{ gridTemplateColumns: `${GUTTER_WIDTH} repeat(${ROW_SIZE}, minmax(0, 1fr)) ${GUTTER_WIDTH}` }}
+                            style={{ gridTemplateColumns: `${gutterWidth} repeat(${rowSize}, minmax(0, 1fr)) ${gutterWidth}` }}
                         >
                             {/*
                                 Position gutter: makes "the kanji around 1240" findable by eye,
                                 without going through the search box.
                             */}
                             <div className="text-[0.625rem] text-tertiary/70 font-gothic tabular-nums text-right pr-1 select-none">
-                                {rowIndex * ROW_SIZE + 1}
+                                {rowIndex * rowSize + 1}
                             </div>
 
                             {row.map((kanji, columnIndex) => {
-                                const position = rowIndex * ROW_SIZE + columnIndex;
+                                const position = rowIndex * rowSize + columnIndex;
                                 const isKnown = state.knownKanji.has(kanji);
                                 const isMatch = match?.index === position;
 

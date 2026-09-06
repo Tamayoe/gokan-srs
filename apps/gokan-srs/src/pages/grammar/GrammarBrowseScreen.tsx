@@ -358,8 +358,8 @@ export function GrammarBrowseScreen() {
                     className="w-full bg-surface border border-divider rounded px-3 py-2 text-sm font-gothic text-primary placeholder:text-input-placeholder outline-none focus:border-accent"
                 />
 
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                    <div className="flex items-center gap-1">
+                <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:gap-y-2">
+                    <div className="flex flex-wrap items-center gap-1">
                         <span className="font-gothic text-[11px] text-label-neutral uppercase tracking-wide mr-1">Level</span>
                         {LEVELS.map(level => (
                             <Toggle key={level} active={levels.has(level)} onClick={() => toggle(levels, level, setLevels)}>
@@ -368,7 +368,7 @@ export function GrammarBrowseScreen() {
                         ))}
                     </div>
 
-                    <div className="flex items-center gap-1">
+                    <div className="flex flex-wrap items-center gap-1">
                         <span className="font-gothic text-[11px] text-label-neutral uppercase tracking-wide mr-1">Quiz</span>
                         {presentKinds.map(kind => (
                             <Toggle
@@ -382,7 +382,7 @@ export function GrammarBrowseScreen() {
                         ))}
                     </div>
 
-                    <div className="flex items-center gap-1">
+                    <div className="flex flex-wrap items-center gap-1">
                         <span className="font-gothic text-[11px] text-label-neutral uppercase tracking-wide mr-1">Family</span>
                         {(Object.keys(AXIS_LABEL) as GrammarAxis[]).map(axis => (
                             <Toggle key={axis} active={axes.has(axis)} onClick={() => toggle(axes, axis, setAxes)}>
@@ -393,7 +393,7 @@ export function GrammarBrowseScreen() {
                         <Toggle active={onlyFamilied} onClick={() => setOnlyFamilied(v => !v)}>In a family</Toggle>
                     </div>
 
-                    <div className="flex items-center gap-1">
+                    <div className="flex flex-wrap items-center gap-1">
                         <span className="font-gothic text-[11px] text-label-neutral uppercase tracking-wide mr-1">Group</span>
                         <Toggle active={group === 'level'} onClick={() => setGroup('level')}>JLPT level</Toggle>
                         <Toggle active={group === 'family'} onClick={() => setGroup('family')}>Family</Toggle>
@@ -420,7 +420,7 @@ export function GrammarBrowseScreen() {
 
             {groups.map(g => (
                 <section key={g.key} className="mb-8">
-                    <div className="flex items-baseline gap-3 border-b border-divider pb-1 mb-3">
+                    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-divider pb-1 mb-3">
                         <h2 className="font-serif text-lg text-primary">{g.title}</h2>
                         <span className="font-gothic text-xs text-tertiary">{g.subtitle}</span>
                         <span className="font-gothic text-xs text-tertiary ml-auto">{g.rows.length}</span>
