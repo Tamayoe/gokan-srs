@@ -1,8 +1,9 @@
 import { OptionGrid } from "../../components/OptionGrid";
-import type { MeaningContextThreshold, UserSettings } from "../../models/user.model";
+import type { UserSettings } from "../../models/user.model";
 import { useGoogleDrive } from "../../context/GoogleDriveContext";
-import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor, Sparkles, KeyRound , ArrowLeft} from "lucide-react";
+import { Cloud, Loader2, LogIn, RefreshCw, Moon, Sun, Monitor, Sparkles, KeyRound, ArrowLeft } from "lucide-react";
 import { Button } from "../../components/ui/Button";
+import { SettingToggle } from "../../components/ui/SettingToggle";
 import { useTheme } from "../../context/ThemeContext";
 import { useState } from "react";
 
@@ -97,8 +98,6 @@ export function SettingsScreen({
     const [isConfirmingGrammarReset, setIsConfirmingGrammarReset] = useState(false);
     const [grammarResetState, setGrammarResetState] = useState<'idle' | 'working' | 'done' | 'failed'>('idle');
 
-
-
     return (
         <div className="min-h-screen flex flex-col items-center bg-background transition-colors duration-200 max-w-2xl md:max-w-3xl">
 
@@ -116,6 +115,21 @@ export function SettingsScreen({
                     Settings
                 </h1>
             </div>
+
+            {/*
+              * Account first: signing in is what makes every other setting (and
+              * all progress) follow the user across devices, so it is the first
+              * thing worth doing on this page rather than the last.
+              */}
+            <section className="w-full mb-16 animate-slide-up">
+                <h2 className="mb-4 uppercase tracking-wide text-xs font-gothic text-secondary">
+                    Account (Google Drive sync)
+                </h2>
+
+                <div className="flex flex-col gap-4">
+                    <SyncControls />
+                </div>
+            </section>
 
             {/* Appearance */}
             <section className="w-full mb-16 animate-slide-up" style={{ animationDelay: "100ms" }}>
@@ -151,189 +165,45 @@ export function SettingsScreen({
                 </div>
             </section>
 
-            {/* Learning preferences */}
+            {/*
+              * Review pacing is the one learning preference that is genuinely
+              * global: both the vocab scheduler and grammarSrs.service read
+              * learningFrequency. Everything else that used to sit here was
+              * vocabulary-only, and now lives behind the cog on that activity's
+              * card on the Main hub (see QuizSettingsMenu / pages/settings/sections).
+              */}
             <section className="w-full mb-16 animate-slide-up" style={{ animationDelay: "200ms" }}>
                 <h2 className="mb-4 uppercase tracking-wide text-xs font-gothic text-secondary">
-                    Learning preferences
+                    Review pacing
                 </h2>
 
                 <OptionGrid
-                    title="Vocabulary order"
-                    value={settings.preferredLearningOrder}
+                    title="Learning frequency"
+                    value={settings.learningFrequency}
                     onChange={(value) =>
                         onUpdateSettings({
                             ...settings,
-                            preferredLearningOrder: value,
+                            learningFrequency: value,
                         })
                     }
                     options={[
                         {
-                            value: 'kanji_coverage',
-                            label: 'Kanji Coverage Priority',
-                            description: (
-                                <span className="flex items-center gap-1.5 text-accent font-medium">
-                                    <Sparkles size={14} className="flex-shrink-0" />
-                                    Recommended: Efficiently covers known kanji
-                                </span>
-                            ),
+                            value: 'high',
+                            label: 'High',
+                            description: 'Faster pace (more frequent)',
                         },
                         {
-                            value: 'frequency',
-                            label: 'Frequency',
-                            description: 'Most common words first',
+                            value: 'medium',
+                            label: 'Medium (Default)',
+                            description: 'Balanced SRS intervals',
                         },
                         {
-                            value: 'kklc',
-                            label: 'By Kanji',
-                            description: 'Follow kanji progression',
-                        },
-                        {
-                            value: 'jlpt',
-                            label: 'JLPT Level',
-                            description: 'N5 first, up to N1',
+                            value: 'low',
+                            label: 'Low',
+                            description: 'Relaxed pace (less frequent)',
                         },
                     ]}
                 />
-
-                {settings.preferredLearningOrder !== 'kklc' && (
-                    <div className="mt-6 flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider">
-                        <div className="flex flex-col gap-1 pr-4">
-                            <span className="font-medium text-primary">Ignore known kanji requirement</span>
-                            <span className="text-secondary text-sm">
-                                Introduce vocabulary even if you haven't learned all of its kanji yet, applying the trade-off to the order selected above.
-                            </span>
-                        </div>
-                        <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
-                            <input
-                                type="checkbox"
-                                className="sr-only peer"
-                                checked={settings.ignoreKnownKanjiRequirement === true}
-                                onChange={(e) =>
-                                    onUpdateSettings({
-                                        ...settings,
-                                        ignoreKnownKanjiRequirement: e.target.checked,
-                                    })
-                                }
-                            />
-                            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent/20 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent"></div>
-                        </label>
-                    </div>
-                )}
-
-                {settings.preferredLearningOrder === 'kanji_coverage' && (
-                    <div className="mt-6 p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider">
-                        <div className="flex flex-col gap-1 mb-4">
-                            <span className="font-medium text-primary">Target vocab per Kanji</span>
-                            <span className="text-secondary text-sm">
-                                How many words to learn for each kanji before prioritizing new kanji (1-5).
-                            </span>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <input
-                                type="range"
-                                min="1"
-                                max="5"
-                                step="1"
-                                value={settings.kanjiCoverageTarget || 1}
-                                onChange={(e) =>
-                                    onUpdateSettings({
-                                        ...settings,
-                                        kanjiCoverageTarget: parseInt(e.target.value, 10),
-                                    })
-                                }
-                                className="flex-1 h-2 bg-divider rounded-lg appearance-none cursor-pointer accent-accent"
-                            />
-                            <span className="w-8 text-center font-bold text-primary">
-                                {settings.kanjiCoverageTarget || 1}
-                            </span>
-                        </div>
-                    </div>
-                )}
-
-                <div className="mt-8">
-                    <OptionGrid
-                        title="Learning frequency"
-                        value={settings.learningFrequency}
-                        onChange={(value) =>
-                            onUpdateSettings({
-                                ...settings,
-                                learningFrequency: value,
-                            })
-                        }
-                        options={[
-                            {
-                                value: 'high',
-                                label: 'High',
-                                description: 'Faster pace (more frequent)',
-                            },
-                            {
-                                value: 'medium',
-                                label: 'Medium (Default)',
-                                description: 'Balanced SRS intervals',
-                            },
-                            {
-                                value: 'low',
-                                label: 'Low',
-                                description: 'Relaxed pace (less frequent)',
-                            },
-                        ]}
-                    />
-                </div>
-
-                <div className="mt-8 flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider">
-                    <div className="flex flex-col gap-1">
-                        <span className="font-medium text-primary">Enable Meaning Quizzes</span>
-                        <span className="text-secondary text-sm">
-                            Test English meaning after reading (recommended)
-                        </span>
-                    </div>
-                    <label className="relative inline-flex items-center cursor-pointer">
-                        <input
-                            type="checkbox"
-                            className="sr-only peer"
-                            checked={settings.enableMeaningQuiz !== false}
-                            onChange={(e) =>
-                                onUpdateSettings({
-                                    ...settings,
-                                    enableMeaningQuiz: e.target.checked,
-                                })
-                            }
-                        />
-                        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent/20 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent"></div>
-                    </label>
-                </div>
-
-                {settings.enableMeaningQuiz !== false && (
-                    <div className="mt-6">
-                        <OptionGrid
-                            title="Train meaning in context"
-                            value={settings.meaningContextThreshold ?? 'normal'}
-                            onChange={(value) =>
-                                onUpdateSettings({
-                                    ...settings,
-                                    meaningContextThreshold: value as MeaningContextThreshold,
-                                })
-                            }
-                            options={[
-                                {
-                                    value: 'early',
-                                    label: 'Early',
-                                    description: 'Switch at 30% mastery',
-                                },
-                                {
-                                    value: 'normal',
-                                    label: 'Normal (Default)',
-                                    description: 'Switch at 50% mastery',
-                                },
-                                {
-                                    value: 'late',
-                                    label: 'Late',
-                                    description: 'Switch at 70% mastery',
-                                },
-                            ]}
-                        />
-                    </div>
-                )}
             </section>
 
             {/* AI Features */}
@@ -350,31 +220,19 @@ export function SettingsScreen({
                 </p>
 
                 <div className="space-y-4">
-                    {/* Enable Toggle */}
-                    <div className={`flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider ${settings.enableMeaningQuiz === false ? 'opacity-50 pointer-events-none' : ''}`}>
-                        <div className="flex flex-col gap-1 pr-4">
-                            <span className="font-medium text-primary">Enable Context-Aware Validation</span>
-                            <span className="text-secondary text-xs sm:text-sm">
-                                Use AI during meaning quizzes that have a sentence context. Required for sentence quizzes.
-                            </span>
-                        </div>
-                        <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
-                            <input
-                                type="checkbox"
-                                className="sr-only peer"
-                                checked={settings.enableGeminiContext === true}
-                                onChange={(e) =>
-                                    onUpdateSettings({
-                                        ...settings,
-                                        enableGeminiContext: e.target.checked,
-                                    })
-                                }
-                            />
-                            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent/20 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent"></div>
-                        </label>
-                    </div>
+                    <SettingToggle
+                        label="Enable Context-Aware Validation"
+                        description="Use AI during meaning quizzes that have a sentence context. Required for sentence quizzes."
+                        checked={settings.enableGeminiContext === true}
+                        disabled={settings.enableMeaningQuiz === false}
+                        onChange={(checked) =>
+                            onUpdateSettings({
+                                ...settings,
+                                enableGeminiContext: checked,
+                            })
+                        }
+                    />
 
-                    {/* API Key Input */}
                     {settings.enableGeminiContext && (
                         <div className="p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider animate-fade-in-up">
                             <label className="flex items-center gap-2 mb-2 font-medium text-primary text-sm font-gothic">
@@ -404,43 +262,21 @@ export function SettingsScreen({
                         </div>
                     )}
 
-                    {/* Validate All Correct Answers Toggle */}
                     {settings.enableGeminiContext && (
-                        <div className={`flex items-center justify-between p-4 bg-surface dark:bg-surface/5 rounded-lg border border-divider animate-fade-in-up ${settings.enableMeaningQuiz === false ? 'opacity-50 pointer-events-none' : ''}`} style={{ animationDelay: "100ms" }}>
-                            <div className="flex flex-col gap-1 pr-4">
-                                <span className="font-medium text-primary">AI Validation on All Answers</span>
-                                <span className="text-secondary text-xs sm:text-sm">
-                                    When enabled, AI validates every answer in sentence quizzes. When disabled, AI only validates answers initially marked wrong or imprecise.
-                                </span>
-                            </div>
-                            <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
-                                <input
-                                    type="checkbox"
-                                    className="sr-only peer"
-                                    checked={settings.alwaysUseAiForMeaningContext !== false}
-                                    disabled={settings.enableMeaningQuiz === false}
-                                    onChange={(e) =>
-                                        onUpdateSettings({
-                                            ...settings,
-                                            alwaysUseAiForMeaningContext: e.target.checked,
-                                        })
-                                    }
-                                />
-                                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent/20 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent"></div>
-                            </label>
-                        </div>
+                        <SettingToggle
+                            className="animate-fade-in-up"
+                            label="AI Validation on All Answers"
+                            description="When enabled, AI validates every answer in sentence quizzes. When disabled, AI only validates answers initially marked wrong or imprecise."
+                            checked={settings.alwaysUseAiForMeaningContext !== false}
+                            disabled={settings.enableMeaningQuiz === false}
+                            onChange={(checked) =>
+                                onUpdateSettings({
+                                    ...settings,
+                                    alwaysUseAiForMeaningContext: checked,
+                                })
+                            }
+                        />
                     )}
-                </div>
-            </section>
-
-            {/* Cloud Sync */}
-            <section className="w-full mb-16">
-                <h2 className="mb-4 uppercase tracking-wide text-xs font-gothic text-secondary">
-                    Cloud Sync (Google Drive)
-                </h2>
-
-                <div className="flex flex-col gap-4">
-                    <SyncControls />
                 </div>
             </section>
 

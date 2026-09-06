@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { BookOpenText, Puzzle } from 'lucide-react';
 import { useQuiz } from '../../context/useQuiz';
 import { DailyActivityCard } from './DailyActivityCard';
+import { QuizSettingsMenu } from '../../components/QuizSettingsMenu';
+import { VocabQuizSettings } from '../settings/sections/VocabQuizSettings';
+import { GrammarQuizSettings } from '../settings/sections/GrammarQuizSettings';
 
 /**
  * The activity hub - the app's landing page after setup. Activities (the main
@@ -11,7 +14,7 @@ import { DailyActivityCard } from './DailyActivityCard';
  * they aren't activities themselves. See issue #16.
  */
 export const MainScreen: React.FC = () => {
-    const { state, nextReviewAt, nextSessionPreview, grammarNextReviewAt, nextGrammarSessionPreview } = useQuiz();
+    const { state, actions, nextReviewAt, nextSessionPreview, grammarNextReviewAt, nextGrammarSessionPreview } = useQuiz();
     const navigate = useNavigate();
 
     return (
@@ -26,11 +29,25 @@ export const MainScreen: React.FC = () => {
                     preview={nextSessionPreview}
                     nextReviewAt={nextReviewAt}
                     onClick={() => navigate('/quiz')}
+                    settings={
+                        <QuizSettingsMenu title="Vocabulary quiz settings">
+                            <VocabQuizSettings
+                                settings={state.settings!}
+                                onUpdateSettings={actions.saveSettings}
+                                dense
+                            />
+                        </QuizSettingsMenu>
+                    }
                 />
                 <GrammarActivityCard
                     preview={nextGrammarSessionPreview}
                     nextReviewAt={grammarNextReviewAt}
                     onClick={() => navigate('/grammar')}
+                    settings={
+                        <QuizSettingsMenu title="Grammar quiz settings">
+                            <GrammarQuizSettings />
+                        </QuizSettingsMenu>
+                    }
                 />
             </div>
         </div>
@@ -42,17 +59,30 @@ const ActivityCard: React.FC<{
     title: string;
     description: React.ReactNode;
     onClick: () => void;
-}> = ({ icon, title, description, onClick }) => (
-    <button
-        onClick={onClick}
-        className="text-left border border-divider rounded p-6 bg-surface hover:border-accent transition-colors duration-200 flex flex-col gap-3 cursor-pointer"
-    >
-        {icon}
-        <div>
-            <h2 className="font-serif text-lg text-primary mb-1">{title}</h2>
-            <p className="text-sm text-secondary">{description}</p>
+    /** The activity's own settings cog, pinned to the card's top right corner. */
+    settings: React.ReactNode;
+}> = ({ icon, title, description, onClick, settings }) => (
+    <div className="relative h-full">
+        <button
+            onClick={onClick}
+            className="w-full h-full text-left border border-divider rounded p-6 bg-surface hover:border-accent transition-colors duration-200 flex flex-col gap-3 cursor-pointer"
+        >
+            {icon}
+            <div>
+                <h2 className="font-serif text-lg text-primary mb-1">{title}</h2>
+                <p className="text-sm text-secondary">{description}</p>
+            </div>
+        </button>
+
+        {/*
+          * A sibling of the card button rather than a child of it: a button
+          * nested in a button is invalid HTML, and a nested cog's click would
+          * bubble up and start the session instead of opening the settings.
+          */}
+        <div className="absolute top-5 right-4">
+            {settings}
         </div>
-    </button>
+    </div>
 );
 
 /** Minutes-until-next-review, rounded up, matching WaitingScreen's phrasing. */
@@ -91,12 +121,14 @@ const QuizActivityCard: React.FC<{
     preview: SessionPreview;
     nextReviewAt: Date | null;
     onClick: () => void;
-}> = ({ preview, nextReviewAt, onClick }) => (
+    settings: React.ReactNode;
+}> = ({ preview, nextReviewAt, onClick, settings }) => (
     <ActivityCard
         icon={<BookOpenText size={22} className="text-accent" />}
         title="Vocabulary quiz session"
         description={renderSessionPreviewDescription(preview, nextReviewAt)}
         onClick={onClick}
+        settings={settings}
     />
 );
 
@@ -104,11 +136,13 @@ const GrammarActivityCard: React.FC<{
     preview: SessionPreview;
     nextReviewAt: Date | null;
     onClick: () => void;
-}> = ({ preview, nextReviewAt, onClick }) => (
+    settings: React.ReactNode;
+}> = ({ preview, nextReviewAt, onClick, settings }) => (
     <ActivityCard
         icon={<Puzzle size={22} className="text-accent" />}
         title="Grammar quiz session"
         description={renderSessionPreviewDescription(preview, nextReviewAt)}
         onClick={onClick}
+        settings={settings}
     />
 );
