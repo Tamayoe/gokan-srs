@@ -568,6 +568,21 @@ Both activity cards render their preview description via a shared `renderSession
 
 `DailyActivityCard` (`pages/main/DailyActivityCard.tsx`) replaced the old ephemeral end-of-session recap (`[2026-08-02]`-era `lastSessionRecap`, removed `[2026-08-04]`): a **today** rollup (reviewed / correct / incorrect) plus a compact 7-day bar chart, both derived from `buildDailyActivity(progress, 7)` (`utils/activity.utils.ts`) - the same per-day bucketing `DailyProgressionChart` uses on the Stats screen. Reading persisted `reading.history`/`meaning.history` logs instead of session-local state means the card stays accurate across however many small sessions happen in a day, rather than being overwritten by the next session like the old recap was.
 
+### Header toolbar and search (`App.tsx`, `components/SearchBar.tsx`)
+
+The toolbar renders outside `<Routes>`, so it is present on every page. It is **one row from `md` up, two rows on a phone**: the logo and the five icons stay on row one, and the search bar wraps onto a full-width row of its own beneath them.
+
+The wrap is done with `flex-wrap` plus per-breakpoint `order` on a single header, not with two markup blocks swapped by `isMobile`. One header in the DOM means nothing remounts when the viewport crosses the breakpoint, so the field cannot lose focus or its query mid-search. The search bar is therefore **last in the DOM** and pulled back between the logo and the spacer by `md:order-2`.
+
+`SearchBar` takes its width and order from a `className` the header passes in, and owns no placement of its own, so where it sits at each breakpoint is decided in exactly one place.
+
+**Two things about the mobile results panel are load-bearing:**
+
+- It is `fixed` with a **measured** `top` (the field's `getBoundingClientRect().bottom`), not `absolute top-full`, because it has to span the viewport rather than the field's own width. The top is measured rather than derived from a header height, which changes with the toolbar's padding and with where the bar wraps. The page is scroll-locked while it is open, which is what keeps that measurement valid: nothing can scroll out from under a fixed panel.
+- Its height comes from `window.visualViewport?.height` when available, falling back to `innerHeight`, so the panel ends above the on-screen keyboard instead of running underneath it.
+
+The input is `text-base` on mobile and `md:text-sm` above it. Anything under 16px makes iOS Safari zoom the page in on focus, which on the old narrow field left the typed text scrolled out of view.
+
 ### Quiz Screen (`pages/quiz/VocabQuizScreen.tsx`)
 
 Route `/quiz`. The study session itself - **explicit and boundable**, per the Main Screen's activity model: starting it snapshots the vocab available at that moment (`session.committed`, see State Management), and it ends the moment the user navigates to any other page (Main hub, Settings, Stats, ...) or naturally runs out of due work. Leaving early and running out both end the session identically - there's no separate "abandoned session" state. Resuming later (navigating back to `/quiz`) starts a brand new session against whatever is available then, never reopening the previous one.

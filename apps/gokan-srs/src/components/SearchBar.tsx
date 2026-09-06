@@ -1,18 +1,38 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { Search, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { VocabularyService } from '../services/vocabulary.service';
 import type { SearchIndex } from '../models/index.model';
 import { useResponsive } from '../context/Responsive/useResponsive';
 
-export const SearchBar: React.FC = () => {
+interface SearchBarProps {
+    /**
+     * Placement classes supplied by the header (width, flex order). The bar owns
+     * no placement of its own, so the header stays the single place deciding
+     * where it sits at each breakpoint.
+     */
+    className?: string;
+}
+
+export const SearchBar: React.FC<SearchBarProps> = ({ className = '' }) => {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState<SearchIndex>([]);
     const [isOpen, setIsOpen] = useState(false);
     const [isSearching, setIsSearching] = useState(false);
+    const [panel, setPanel] = useState({ top: 0, height: 0 });
     const wrapperRef = useRef<HTMLDivElement>(null);
+    const fieldRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
     const { isMobile } = useResponsive();
+
+    const isPanelOpen = isOpen && query.trim().length > 0;
+
+    /**
+     * On a phone the results take the whole screen below the field. They used to
+     * inherit the field's width, which was whatever was left between the logo and
+     * five toolbar icons: too narrow to read a word, its reading and its gloss.
+     */
+    const isFullScreen = isMobile && isPanelOpen;
 
     useEffect(() => {
         const fetchResults = async () => {
@@ -43,6 +63,51 @@ export const SearchBar: React.FC = () => {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [wrapperRef]);
 
+    useEffect(() => {
+        if (!isPanelOpen) return;
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setIsOpen(false);
+        };
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [isPanelOpen]);
+
+    /**
+     * The full-screen panel is `fixed`, so it needs the field's viewport position
+     * rather than being able to sit at `top-full` like the desktop dropdown.
+     * Measured rather than derived from a hardcoded header height, which changes
+     * with the toolbar's padding and with where the bar wraps.
+     *
+     * Height comes from `visualViewport` when available, so the panel ends above
+     * the on-screen keyboard instead of running underneath it.
+     */
+    useLayoutEffect(() => {
+        if (!isFullScreen) return;
+
+        const measure = () => {
+            const rect = fieldRef.current?.getBoundingClientRect();
+            if (!rect) return;
+            const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
+            setPanel({ top: rect.bottom, height: Math.max(0, viewportHeight - rect.bottom) });
+        };
+
+        measure();
+        window.addEventListener('resize', measure);
+        window.visualViewport?.addEventListener('resize', measure);
+        return () => {
+            window.removeEventListener('resize', measure);
+            window.visualViewport?.removeEventListener('resize', measure);
+        };
+    }, [isFullScreen]);
+
+    /** Locking the page keeps the measured `top` valid: nothing can scroll out from under a fixed panel. */
+    useEffect(() => {
+        if (!isFullScreen) return;
+        const previous = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        return () => { document.body.style.overflow = previous; };
+    }, [isFullScreen]);
+
     const handleSelect = (id: string) => {
         setIsOpen(false);
         setQuery('');
@@ -51,8 +116,8 @@ export const SearchBar: React.FC = () => {
     };
 
     return (
-        <div ref={wrapperRef} className={`relative ${isMobile ? 'flex-1 mx-2' : 'w-64 md:w-96 mx-4'}`}>
-            <div className="relative">
+        <div ref={wrapperRef} className={`relative ${className}`}>
+            <div ref={fieldRef} className="relative">
                 <input
                     type="text"
                     value={query}
@@ -62,12 +127,14 @@ export const SearchBar: React.FC = () => {
                     }}
                     onFocus={() => setIsOpen(true)}
                     placeholder="Search vocabulary..."
-                    className="w-full bg-surface border border-divider rounded-full py-1.5 md:py-2 pl-10 pr-10 text-sm focus:outline-none focus:ring-1 focus:ring-primary text-primary placeholder-tertiary transition-colors"
+                    /* text-base on mobile: under 16px, iOS Safari zooms the page in on focus. */
+                    className="w-full bg-surface border border-divider rounded-full py-2 pl-10 pr-10 text-base md:text-sm focus:outline-none focus:ring-1 focus:ring-primary text-primary placeholder-tertiary transition-colors"
                 />
                 <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary" />
                 {query && (
-                    <button 
+                    <button
                         onClick={() => { setQuery(''); setResults([]); }}
+                        aria-label="Clear search"
                         className="absolute right-3 top-1/2 -translate-y-1/2 text-tertiary hover:text-primary transition-colors cursor-pointer"
                     >
                         <X size={16} />
@@ -75,8 +142,15 @@ export const SearchBar: React.FC = () => {
                 )}
             </div>
 
-            {isOpen && query.trim().length > 0 && (
-                <div className="absolute top-full mt-2 w-full bg-surface border border-divider rounded-lg shadow-xl overflow-hidden z-50 max-h-96 overflow-y-auto">
+            {isPanelOpen && (
+                <div
+                    style={isFullScreen ? { top: panel.top, height: panel.height } : undefined}
+                    className={
+                        isFullScreen
+                            ? 'fixed left-0 right-0 z-50 bg-surface border-t border-divider overflow-y-auto'
+                            : 'absolute top-full mt-2 w-full bg-surface border border-divider rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto'
+                    }
+                >
                     {isSearching ? (
                         <div className="p-4 text-center text-sm text-tertiary">Searching...</div>
                     ) : results.length > 0 ? (

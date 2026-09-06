@@ -96,16 +96,22 @@ export const App: React.FC = () => {
 
     return (
         <div className="min-h-screen flex flex-col relative bg-background transition-colors duration-200">
-            {/* Top bar */}
-            <header className={'flex flex-row items-center gap-2 p-4 md:p-8 md:gap-4'}>
-                <Link to="/" className="cursor-pointer shrink-0">
+            {/*
+              * Top bar. One row from `md` up; on a phone the search bar wraps onto
+              * a second full-width row of its own, because sharing row one with the
+              * logo and five icons left it too narrow to read what you had typed.
+              * `order` (rather than two separate markup blocks) keeps a single
+              * header in the DOM, so nothing remounts when the viewport crosses the
+              * breakpoint and the field does not lose focus mid-search.
+              */}
+            <header className={'flex flex-wrap items-center gap-x-2 gap-y-3 p-4 md:flex-nowrap md:gap-x-4 md:p-8'}>
+                <Link to="/" className="order-1 cursor-pointer shrink-0">
                     <Logo />
                 </Link>
-                
-                <SearchBar />
-                <div className={'grow'}></div>
 
-                <div className="flex gap-4 items-center">
+                <div className={'order-2 grow md:order-3'}></div>
+
+                <div className="order-3 flex gap-4 items-center md:order-4">
                     <SyncStatusIndicator />
                     <button
                         onClick={() => navigate("/grammar/browse")}
@@ -125,6 +131,9 @@ export const App: React.FC = () => {
                         <Settings size={18} />
                     </button>
                 </div>
+
+                {/* Last in the DOM, but `order` puts it between the logo and the spacer from `md` up. */}
+                <SearchBar className="order-4 w-full md:order-2 md:w-64 lg:w-96" />
             </header>
 
             {/* Screen content */}
